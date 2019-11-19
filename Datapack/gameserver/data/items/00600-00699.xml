@@ -1,380 +1,301 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <armor id="600" name="Sealed Avadon Boots" icon="icon.armor_t66_b_i02">
-        <set name="bodypart" val="feet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="69"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="1170"/>
-        <set name="price" val="519000"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="FEET"/>
-        <stats>
-            <stat type="pDef">41</stat>
-        </stats>
-    </armor>
-    <armor id="601" name="Sealed Doom Boots" icon="icon.armor_t71_b_i02">
-        <set name="bodypart" val="feet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="107"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="1130"/>
-        <set name="price" val="804000"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="FEET"/>
-        <stats>
-            <stat type="pDef">44</stat>
-        </stats>
-    </armor>
-    <armor id="603" name="Divine Boots" icon="icon.armor_t67_b_i00">
-        <set name="bodypart" val="feet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="143"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1200"/>
-        <set name="price" val="358000"/>
-        <set name="commissionItemType" val="FEET"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pDef">39</stat>
-        </stats>
-    </armor>
-    <armor id="604" name="Quality Leather Gloves" icon="icon.armor_t09_g_i00">
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="38"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="650"/>
-        <set name="price" val="20900"/>
-        <set name="commissionItemType" val="GLOVES"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pDef">19</stat>
-        </stats>
-    </armor>
-    <armor id="605" name="Leather Gauntlets" icon="icon.armor_t18_g_i00">
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="60"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="640"/>
-        <set name="price" val="33300"/>
-        <set name="commissionItemType" val="GLOVES"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pDef">22</stat>
-        </stats>
-    </armor>
-    <armor id="606" name="Rip Gauntlets" icon="icon.armor_t40_g_i00">
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="135"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="630"/>
-        <set name="price" val="74700"/>
-        <set name="commissionItemType" val="GLOVES"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pDef">27</stat>
-        </stats>
-    </armor>
-    <armor id="607" name="Ogre Power Gauntlets" icon="icon.armor_t45_g_i00">
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="177"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="620"/>
-        <set name="price" val="97800"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="GLOVES"/>
-        <stats>
-            <stat type="pDef">29</stat>
-        </stats>
-    </armor>
-    <armor id="608" name="Mithril Gauntlets" icon="icon.armor_t61_g_i00">
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="98"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="600"/>
-        <set name="price" val="245000"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="GLOVES"/>
-        <stats>
-            <stat type="pDef">36</stat>
-        </stats>
-    </armor>
-    <armor id="609" name="Gauntlets of Ghost" icon="icon.armor_gauntlet_i00">
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="143"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1920"/>
-        <set name="price" val="275100"/>
-        <set name="commissionItemType" val="GLOVES"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pDef">39</stat>
-        </stats>
-    </armor>
-    <armor id="612" name="Sealed Zubei's Gauntlets" icon="icon.armor_t64_g_i02">
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="69"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="590"/>
-        <set name="price" val="519000"/>
-        <set name="commissionItemType" val="GLOVES"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pDef">41</stat>
-        </stats>
-    </armor>
-    <armor id="625" name="Bone Shield" icon="icon.shield_bone_shield_i00">
-        <set name="bodypart" val="lhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1380"/>
-        <set name="commissionItemType" val="SHIELD"/>
-        <set name="price" val="12900"/>
-        <stats>
-            <stat type="rEvas">-8</stat>
-            <stat type="rShld">20</stat>
-            <stat type="sDef">90</stat>
-        </stats>
-    </armor>
-    <armor id="626" name="Bronze Shield" icon="icon.shield_bronze_shield_i00">
-        <set name="bodypart" val="lhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="39"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1370"/>
-        <set name="price" val="21900"/>
-        <set name="commissionItemType" val="SHIELD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="rEvas">-8</stat>
-            <stat type="rShld">20</stat>
-            <stat type="sDef">101</stat>
-        </stats>
-    </armor>
-    <armor id="627" name="Aspis" icon="icon.shield_aspis_i00">
-        <set name="bodypart" val="lhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="63"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1350"/>
-        <set name="price" val="35000"/>
-        <set name="commissionItemType" val="SHIELD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="rEvas">-8</stat>
-            <stat type="rShld">20</stat>
-            <stat type="sDef">114</stat>
-        </stats>
-    </armor>
-    <armor id="628" name="Hoplon" icon="icon.shield_hoplon_i00">
-        <set name="bodypart" val="lhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="96"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1340"/>
-        <set name="price" val="53300"/>
-        <set name="commissionItemType" val="SHIELD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="rEvas">-8</stat>
-            <stat type="rShld">20</stat>
-            <stat type="sDef">128</stat>
-        </stats>
-    </armor>
-    <armor id="629" name="Kite Shield" icon="icon.shield_kite_shield_i00">
-        <set name="bodypart" val="lhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="142"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1320"/>
-        <set name="price" val="78400"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="SHIELD"/>
-        <stats>
-            <stat type="rEvas">-8</stat>
-            <stat type="rShld">20</stat>
-            <stat type="sDef">142</stat>
-        </stats>
-    </armor>
-    <armor id="630" name="Square Shield" icon="icon.shield_square_shield_i00">
-        <set name="bodypart" val="lhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="187"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1310"/>
-        <set name="price" val="103000"/>
-        <set name="commissionItemType" val="SHIELD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="rEvas">-8</stat>
-            <stat type="rShld">20</stat>
-            <stat type="sDef">154</stat>
-        </stats>
-    </armor>
-    <armor id="631" name="Eldarake" icon="icon.shield_eldarake_i00">
-        <set name="bodypart" val="lhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="53"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1290"/>
-        <set name="price" val="133000"/>
-        <set name="commissionItemType" val="SHIELD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="rEvas">-8</stat>
-            <stat type="rShld">20</stat>
-            <stat type="sDef">166</stat>
-        </stats>
-    </armor>
-    <armor id="632" name="Knight's Shield" icon="icon.shield_knight_shield_i00">
-        <set name="bodypart" val="lhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="67"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1260"/>
-        <set name="price" val="169000"/>
-        <set name="commissionItemType" val="SHIELD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="rEvas">-8</stat>
-            <stat type="rShld">20</stat>
-            <stat type="sDef">178</stat>
-        </stats>
-    </armor>
-    <armor id="633" name="Zubei's Shield" icon="icon.shield_shrnoens_shield_i00">
-        <set name="bodypart" val="lhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="72"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="1210"/>
-        <set name="price" val="545000"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="SHIELD"/>
-        <stats>
-            <stat type="rEvas">-8</stat>
-            <stat type="rShld">20</stat>
-            <stat type="sDef">216</stat>
-        </stats>
-    </armor>
-    <armor id="641" name="Dark Crystal Shield" icon="icon.shield_dark_crystal_shield_i00">
-        <set name="bodypart" val="lhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="75"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1190"/>
-        <set name="price" val="935000"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="SHIELD"/>
-        <stats>
-            <stat type="rEvas">-8</stat>
-            <stat type="rShld">20</stat>
-            <stat type="sDef">243</stat>
-        </stats>
-    </armor>
-    <armor id="673" name="Avadon Shield" icon="icon.shield_avadon_shield_i00">
-        <set name="bodypart" val="lhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="72"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="1210"/>
-        <set name="price" val="545000"/>
-        <set name="commissionItemType" val="SHIELD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="rEvas">-8</stat>
-            <stat type="rShld">20</stat>
-            <stat type="sDef">216</stat>
-        </stats>
-    </armor>
-    <item id="686" name="Chair" icon="icon.etc_branch_blue_i00">
-        <!-- Chair -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <set name="commissionItemType" val="OTHER_ITEM"/>
-        <set name="price" val="1000"/>
-    </item>
-    <item id="687" name="Darin's Letter" icon="icon.etc_scroll_gray_i00">
-        <!-- The love letter that Darin has written to Roxxy. Darin Has asked you to deliver this letter to Gatekeeper Roxxy. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="688" name="Roxxy's Kerchief" icon="icon.etc_piece_of_cloth_white_i00">
-        <!-- Roxxy's handkerchief. This is the reply that Roxxy has given to Darin's letter, and must be delivered to Darin. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="689" name="Poetry Book" icon="icon.etc_spell_books_red_i00">
-        <!-- Poetry book treasured by Arujien. The book contains poems that he Has written. Take this to Greenis. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="690" name="Lyrics Book" icon="icon.item_normal06">
-        <!-- The lyrics book of Herbien -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="691" name="Romance Novel" icon="icon.item_normal07">
-        <!-- Romance novel -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="692" name="Arujien's Letter" icon="icon.item_canuse37">
-        <!-- Arujien's letter -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="693" name="Greenis' Letter" icon="icon.etc_letter_white_i00">
-        <!-- Greenis' letter, refusing Arujien's love. Take this to Arujien. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="694" name="Ingredient List" icon="icon.item_normal37">
-        <!-- List of ingredients: 3 omen Animal Bloods, 2 mana seeker husks, 2 gargoyle horns -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="695" name="Onyx Beast's Blood" icon="icon.item_canuse48">
-        <!-- The blood of an Onyx Beast. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="696" name="Mana Seeker's Husk" icon="icon.item_normal30">
-        <!-- The husk of a mana seeker. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="697" name="Gargoyle's Horn" icon="icon.item_normal24">
-        <!-- The horn of a gargoyle. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="698" name="Gilbert's List" icon="icon.item_normal37">
-        <!-- List of things to eliminate: orcs, hobgoblins, walking fungus -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="699" name="Orc's Nose" icon="icon.item_canuse05">
-        <!-- Orc's Nose -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
+	<armor id="600" name="Sealed Avadon Boots" type="NONE" body-part="FEET" icon="icon.armor_t66_b_i02">
+	<!-- Sealed Avadon Boots. The seal can be removed by a blacksmith in any village. -->
+		<restriction freightable="false"/>
+		<attributes weight="1170" price="519000" commission-type="FEET" />
+		<crystal type="B" count="69"/>
+		<stats>
+			<stat type="pDef" value="41.0"/>
+		</stats>
+	</armor>
+
+	<armor id="601" name="Sealed Doom Boots" type="NONE" body-part="FEET" icon="icon.armor_t71_b_i02">
+	<!-- Sealed Doom Boots. The seal can be removed by a blacksmith in any village. -->
+		<restriction freightable="false"/>
+		<attributes weight="1130" price="804000" commission-type="FEET" />
+		<crystal type="B" count="107"/>
+		<stats>
+			<stat type="pDef" value="44.0"/>
+		</stats>
+	</armor>
+
+	<armor id="603" name="Divine Boots" type="NONE" body-part="FEET" icon="icon.armor_t67_b_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1200" price="358000" commission-type="FEET" />
+		<crystal type="C" count="143"/>
+		<stats>
+			<stat type="pDef" value="39.0"/>
+		</stats>
+	</armor>
+
+	<armor id="604" name="Quality Leather Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t09_g_i00">
+		<restriction freightable="false"/>
+		<attributes weight="650" price="20900" commission-type="GLOVES" />
+		<crystal type="D" count="38"/>
+		<stats>
+			<stat type="pDef" value="19.0"/>
+		</stats>
+	</armor>
+
+	<armor id="605" name="Leather Gauntlets" type="NONE" body-part="GLOVES" icon="icon.armor_t18_g_i00">
+		<restriction freightable="false"/>
+		<attributes weight="640" price="33300" commission-type="GLOVES" />
+		<crystal type="D" count="60"/>
+		<stats>
+			<stat type="pDef" value="22.0"/>
+		</stats>
+	</armor>
+
+	<armor id="606" name="Rip Gauntlets" type="NONE" body-part="GLOVES" icon="icon.armor_t40_g_i00">
+		<restriction freightable="false"/>
+		<attributes weight="630" price="74700" commission-type="GLOVES" />
+		<crystal type="D" count="135"/>
+		<stats>
+			<stat type="pDef" value="27.0"/>
+		</stats>
+	</armor>
+
+	<armor id="607" name="Ogre Power Gauntlets" type="NONE" body-part="GLOVES" icon="icon.armor_t45_g_i00">
+		<restriction freightable="false"/>
+		<attributes weight="620" price="97800" commission-type="GLOVES" />
+		<crystal type="D" count="177"/>
+		<stats>
+			<stat type="pDef" value="29.0"/>
+		</stats>
+	</armor>
+
+	<armor id="608" name="Mithril Gauntlets" type="NONE" body-part="GLOVES" icon="icon.armor_t61_g_i00">
+		<restriction freightable="false"/>
+		<attributes weight="600" price="245000" commission-type="GLOVES" />
+		<crystal type="C" count="98"/>
+		<stats>
+			<stat type="pDef" value="36.0"/>
+		</stats>
+	</armor>
+
+	<armor id="609" name="Gauntlets of Ghost" type="NONE" body-part="GLOVES" icon="icon.armor_gauntlet_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1920" price="275100" commission-type="GLOVES" />
+		<crystal type="C" count="143"/>
+		<stats>
+			<stat type="pDef" value="39.0"/>
+		</stats>
+	</armor>
+
+	<armor id="612" name="Sealed Zubei's Gauntlets" type="NONE" body-part="GLOVES" icon="icon.armor_t64_g_i02">
+	<!-- Sealed Zubei's Gauntlets. The seal can be removed by a blacksmith in any village. -->
+		<restriction freightable="false"/>
+		<attributes weight="590" price="519000" commission-type="GLOVES" />
+		<crystal type="B" count="69"/>
+		<stats>
+			<stat type="pDef" value="41.0"/>
+		</stats>
+	</armor>
+
+	<armor id="625" name="Bone Shield" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_bone_shield_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1380" price="12900" commission-type="SHIELD" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="rEvas" value="-8.0"/>
+			<stat type="rShld" value="20.0"/>
+			<stat type="sDef" value="90.0"/>
+		</stats>
+	</armor>
+
+	<armor id="626" name="Bronze Shield" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_bronze_shield_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1370" price="21900" commission-type="SHIELD" />
+		<crystal type="D" count="39"/>
+		<stats>
+			<stat type="rEvas" value="-8.0"/>
+			<stat type="rShld" value="20.0"/>
+			<stat type="sDef" value="101.0"/>
+		</stats>
+	</armor>
+
+	<armor id="627" name="Aspis" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_aspis_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1350" price="35000" commission-type="SHIELD" />
+		<crystal type="D" count="63"/>
+		<stats>
+			<stat type="rEvas" value="-8.0"/>
+			<stat type="rShld" value="20.0"/>
+			<stat type="sDef" value="114.0"/>
+		</stats>
+	</armor>
+
+	<armor id="628" name="Hoplon" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_hoplon_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1340" price="53300" commission-type="SHIELD" />
+		<crystal type="D" count="96"/>
+		<stats>
+			<stat type="rEvas" value="-8.0"/>
+			<stat type="rShld" value="20.0"/>
+			<stat type="sDef" value="128.0"/>
+		</stats>
+	</armor>
+
+	<armor id="629" name="Kite Shield" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_kite_shield_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1320" price="78400" commission-type="SHIELD" />
+		<crystal type="D" count="142"/>
+		<stats>
+			<stat type="rEvas" value="-8.0"/>
+			<stat type="rShld" value="20.0"/>
+			<stat type="sDef" value="142.0"/>
+		</stats>
+	</armor>
+
+	<armor id="630" name="Square Shield" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_square_shield_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1310" price="103000" commission-type="SHIELD" />
+		<crystal type="D" count="187"/>
+		<stats>
+			<stat type="rEvas" value="-8.0"/>
+			<stat type="rShld" value="20.0"/>
+			<stat type="sDef" value="154.0"/>
+		</stats>
+	</armor>
+
+	<armor id="631" name="Eldarake" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_eldarake_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1290" price="133000" commission-type="SHIELD" />
+		<crystal type="C" count="53"/>
+		<stats>
+			<stat type="rEvas" value="-8.0"/>
+			<stat type="rShld" value="20.0"/>
+			<stat type="sDef" value="166.0"/>
+		</stats>
+	</armor>
+
+	<armor id="632" name="Knight's Shield" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_knight_shield_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1260" price="169000" commission-type="SHIELD" />
+		<crystal type="C" count="67"/>
+		<stats>
+			<stat type="rEvas" value="-8.0"/>
+			<stat type="rShld" value="20.0"/>
+			<stat type="sDef" value="178.0"/>
+		</stats>
+	</armor>
+
+	<armor id="633" name="Zubei's Shield" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_shrnoens_shield_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1210" price="545000" commission-type="SHIELD" />
+		<crystal type="B" count="72"/>
+		<stats>
+			<stat type="rEvas" value="-8.0"/>
+			<stat type="rShld" value="20.0"/>
+			<stat type="sDef" value="216.0"/>
+		</stats>
+	</armor>
+
+	<armor id="641" name="Dark Crystal Shield" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_dark_crystal_shield_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1190" price="935000" commission-type="SHIELD" />
+		<crystal type="A" count="75"/>
+		<stats>
+			<stat type="rEvas" value="-8.0"/>
+			<stat type="rShld" value="20.0"/>
+			<stat type="sDef" value="243.0"/>
+		</stats>
+	</armor>
+
+	<armor id="673" name="Avadon Shield" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_avadon_shield_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1210" price="545000" commission-type="SHIELD" />
+		<crystal type="B" count="72"/>
+		<stats>
+			<stat type="rEvas" value="-8.0"/>
+			<stat type="rShld" value="20.0"/>
+			<stat type="sDef" value="216.0"/>
+		</stats>
+	</armor>
+
+	<item id="686" name="Chair" type="NONE" icon="icon.etc_branch_blue_i00">
+	<!-- Chair -->
+		<restriction freightable="false" depositable="false"/>
+		<attributes weight="100" price="1000" immediate-effect="true"/>
+	</item>
+
+	<item id="687" name="Darin's Letter" type="NONE" icon="icon.etc_scroll_gray_i00">
+	<!-- The love letter that Darin Has written to Roxxy. Darin Has asked you to deliver this letter to Gatekeeper Roxxy. -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="688" name="Roxxy's Kerchief" type="NONE" icon="icon.etc_piece_of_cloth_white_i00">
+	<!-- Roxxy's Kerchief. Roxxy handed this over as a reply to Darin's letter. It must be delivered to Darin. -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="689" name="Poetry Book" type="NONE" icon="icon.etc_spell_books_red_i00">
+	<!-- Poetry book treasured by Arujien. The book contains poems that he Has written. Take this to Greenis. -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="690" name="Lyrics Book" type="NONE" icon="icon.item_normal06">
+	<!-- The lyrics book of Herbien -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="691" name="Romance Novel" type="NONE" icon="icon.item_normal07">
+	<!-- Romance novel -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="692" name="Arujien's Letter" type="NONE" icon="icon.item_canuse37">
+	<!-- Arujien's letter -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="693" name="Greenis' Letter" type="NONE" icon="icon.etc_letter_white_i00">
+	<!-- Greenis' letter, refusing Arujien's love. Take this to Arujien. -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="694" name="Ingredient List" type="NONE" icon="icon.item_normal37">
+	<!-- List of ingredients: 3 omen Animal Bloods, 2 mana seeker husks, 2 gargoyle horns -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="695" name="Onyx Beast's Blood" type="NONE" icon="icon.item_canuse48">
+	<!-- The blood of an Onyx Beast. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="696" name="Mana Seeker's Husk" type="NONE" icon="icon.item_normal30">
+	<!-- The husk of a mana seeker. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="697" name="Gargoyle's Horn" type="NONE" icon="icon.item_normal24">
+	<!-- The horn of a gargoyle. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="698" name="Gilbert's List" type="NONE" icon="icon.item_normal37">
+	<!-- List of things to eliminate: orcs, hobgoblins, walking fungus -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="699" name="Orc's Nose" type="NONE" icon="icon.item_canuse05">
+	<!-- The nose of an orc. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
 </list>

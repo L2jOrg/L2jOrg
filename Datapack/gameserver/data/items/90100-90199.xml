@@ -1,705 +1,737 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="90100" name="Scroll: Block Wind Walk" icon="icon.etc_magic_book_white_i00">
-        <!-- Scroll needed to learn the Block Wind Walk skill. Available to Hierophant. Level required to obtain the scroll: 77 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90101" name="Scroll: Turn to Stone" icon="icon.etc_magic_book_white_i00">
-        <!-- Scroll needed to learn the Turn to Stone skill. Available to Hierophant. Level required to obtain the scroll: 79 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90102" name="Scroll: Counter Critical" icon="icon.etc_magic_book_white_i00">
-        <!-- Scroll needed to learn the Counter Critical skill. Available to Hierophant. Level required to obtain the scroll: 80 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90103" name="Scroll: Prophecy of Water" icon="icon.etc_magic_book_white_i00">
-        <!-- Scroll needed to learn the Prophecy of Water skill. Available to Eva's Saint. Level required to obtain the scroll: 76 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90104" name="Scroll: Mass Cure Poison" icon="icon.etc_magic_book_white_i00">
-        <!-- Scroll needed to learn the Mass Cure Poison skill. Available to Eva's Saint and Shillien Saint. Level required to obtain the scroll: 77 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90105" name="Scroll: Mass Vitalize" icon="icon.etc_magic_book_white_i00">
-        <!-- Scroll needed to learn the Mass Vitalize skill. Available to Eva's Saint. Level required to obtain the scroll: 77 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90106" name="Scroll: Mana Gain" icon="icon.etc_magic_book_white_i00">
-        <!-- Scroll needed to learn the Mana Gain skill. Available to Eva's Saint and Shillien Saint. Level required to obtain the scroll: 79 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90107" name="Scroll: Eva's Blessing" icon="icon.etc_magic_book_white_i00">
-        <!-- Scroll needed to learn the Blessing of Eva skill. Available to Eva's Saint. Level required to obtain the scroll: 80 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90108" name="Scroll: Prophecy of Wind" icon="icon.etc_magic_book_white_i00">
-        <!-- Scroll needed to learn the Prophecy of Wind skill. Available to Shillien Saint. Level required to obtain the scroll: 76 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90109" name="Scroll: Mass Purify" icon="icon.etc_magic_book_white_i00">
-        <!-- Scroll needed to learn the Mass Purify skill. Available to Shillien Saint. Level required to obtain the scroll: 77 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90110" name="Scroll: Lord of Vampires" icon="icon.etc_magic_book_white_i00">
-        <!-- Scroll needed to learn the Lord of Vampires skill. Available to Shillien Saint. Level required to obtain the scroll: 80 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90111" name="Scroll: Enlightenment" icon="icon.etc_magic_book_white_i00">
-        <!-- Scroll needed to learn the Enlightenment skill. Available to Hierophant, Shillien Saint, and Eva's Saint. Level required to obtain the scroll: 78 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90112" name="Scroll: Chant of Victory" icon="icon.etc_magic_book_white_i00">
-        <!-- Scroll needed to learn the Chant of Victory skill. Available to Doomcryer. Level required to obtain the scroll: 76 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90113" name="Scroll: Chant of Spirit" icon="icon.etc_magic_book_white_i00">
-        <!-- Scroll needed to learn the Chant of Spirit skill. Available to Doomcryer. Level required to obtain the scroll: 77 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90114" name="Scroll: Chant of Gate" icon="icon.etc_magic_book_white_i00">
-        <!-- Scroll needed to learn the Chant of Gate skill. Available to Doomcryer. Level required to obtain the scroll: 78 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90115" name="Scroll: Chant of Protection" icon="icon.etc_magic_book_white_i00">
-        <!-- Scroll needed to learn the Chant of Protection skill. Available to Doomcryer. Level required to obtain the scroll: 79 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90116" name="Scroll: Great Fury" icon="icon.etc_magic_book_white_i00">
-        <!-- Scroll needed to learn the Great Fury skill. Available to Doomcryer. Level required to obtain the scroll: 80 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90117" name="Scroll: Victories of Pa'agrio" icon="icon.etc_magic_book_white_i00">
-        <!-- Scroll needed to learn the Victories of Pa?grio skill. Available to Dominator. Level required to obtain the scroll: 76 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90118" name="Scroll: Seal of Disease" icon="icon.etc_magic_book_white_i00">
-        <!-- Scroll needed to learn the Seal of Disease skill. Available to Dominator. Level required to obtain the scroll: 77 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90119" name="Scroll: Pa'agrio's Fist" icon="icon.etc_magic_book_white_i00">
-        <!-- Scroll needed to learn the Pa'agrio's Fist skill. Available to Dominator. Level required to obtain the scroll: 78 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90120" name="Scroll: Seal of Despair" icon="icon.etc_magic_book_white_i00">
-        <!-- Scroll needed to learn the Seal of Despair skill. Available to Dominator. Level required to obtain the scroll: 79 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90121" name="Scroll: Flames of Invincibility" icon="icon.etc_magic_book_white_i00">
-        <!-- Scroll needed to learn the Flames of Invincibility skill. Available to Dominator. Level required to obtain the scroll: 80 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90122" name="Scroll: Balance Life" icon="icon.etc_magic_book_white_i00">
-        <!-- Scroll needed to learn the Balance Life skill. Available to Cardinal. Level required to obtain the scroll: 76 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90123" name="Scroll: Cleanse" icon="icon.etc_magic_book_white_i00">
-        <!-- Scroll needed to learn the Cleanse skill. Available to Cardinal. Level required to obtain the scroll: 77 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90124" name="Scroll: Chain Heal" icon="icon.etc_magic_book_white_i00">
-        <!-- Scroll needed to learn the Chain Heal skill. Available to Cardinal. Level required to obtain the scroll: 78 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90125" name="Scroll: Salvation" icon="icon.etc_magic_book_white_i00">
-        <!-- Scroll needed to learn the Salvation skill. Available to Cardinal. Level required to obtain the scroll: 79 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90126" name="Scroll: Miracle" icon="icon.etc_magic_book_white_i00">
-        <!-- Scroll needed to learn the Miracle skill. Available to Cardinal. Level required to obtain the scroll: 80 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90127" name="Scroll: Warrior Servitor" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Warrior Servitor skill. Available to Arcana Lord. Level required to obtain the scroll: 78 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90128" name="Scroll: Wizard Servitor" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Wizard Servitor skill. Available to Elemental Master. Level required to obtain the scroll: 78 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90129" name="Scroll: Assassin Servitor" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Assassin Servitor skill. Available to Spectral Master. Level required to obtain the scroll: 78 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90130" name="Scroll: Final Servitor" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Final Servitor skill. Available to Arcana Lord, Elemental Master, and Spectral Master. Level required to obtain the scroll: 79 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90131" name="Scroll: Servitor Share" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Servitor Share skill. Available to Arcana Lord, Elemental Master, and Spectral Master. Level required to obtain the scroll: 80 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <armor id="90132" name="Monster Arena Belt" icon="icon.belt_of_tiat">
-        <!-- CON +1, MEN +1, HP Recovery +2.31, MP Recovery +1.54, CP Recovery +3.07, Max. HP/ MP/ CP +10%, Received damage -3%. Duration: 7-day. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="waist"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="500"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">10</stat>
-        </stats>
-    </armor>
-    <item id="90133" name="Scroll: Exciting Adventure" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Exciting Adventure skill. Available to Adventurer. Level required to obtain the scroll: 80 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90134" name="Scroll: Wind Riding" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Wind Riding skill. Available to Wind Rider. Level required to obtain the scroll: 80 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90135" name="Scroll: Ghost Walking" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Ghost Walking skill. Available to Ghost Hunter. Level required to obtain the scroll: 80 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90136" name="Dimensional Gift" icon="icon.etc_box_of_adventure_5_i00">
-        <!-- Double-click to obtain one of the following items: Scroll of Mood Melody, Scroll: Enchant Armor/Weapon (C), Accessory/Weapon/Armor Box (C), Spellbook Chest, Angel Cat's Blessing, Dark Assassin Transformation Potion, or Dimensional Blessing. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="handler" val="ItemSkills"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-        <skills>
-            <skill id="39207" level="1"/> <!-- Dimensional Gift -->
-        </skills>
-    </item>
-    <item id="90137" name="Pendant Matte Varnish" icon="icon.bm_pendant_varnish">
-        <!-- Varnish that enhances effects of a Pendant. For a Pendant enchanted up to +6. If an enchantment is failed, the pendant doesn't disappear and has the previous level of enchantment. Cannot be dropped. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="90138" name="Pendant Shiny Varnish" icon="icon.bm_pendant_varnish_premium">
-        <!-- Varnish that enhances effects of a Pendant. For a Pendant enchanted up to +9. If an enchantment is failed, the pendant doesn't disappear and has the previous level of enchantment. Cannot be dropped. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="90139" name="Silver Bait" icon="icon.bm_silver_lure">
-        <!-- A fishing bait enabling to catch a Whale. At a low probability, you may get Golden Mermaid's Tears. Cannot be exchanged, dropped, sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <armor id="90140" name="Cadmus Transformation Bracelet - Prophet" icon="icon.pi_high_agathion_bracelet_i00">
-        <!-- A 7-day item. Transforms you into Prophet Cadmus. Can be used once a day. After the transformation, you can use the following skills for 4 hours: Might, Shield, Wind Walk, Return, Focus, Death Whisper, Guidance, Haste, Acumen, and Heal. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="underwear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="90141" name="Cadmus Transformation Bracelet - Shillien Elder" icon="icon.pi_high_agathion_bracelet_i00">
-        <!-- A 7-day item. Transforms you into Shillien Elder Cadmus. Can be used once a day. After the transformation, you can use the following skills for 4 hours: Might, Shield, Wind Walk, Return, Vampiric Rage, Empower, Death Whisper, Guidance, and Heal. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="underwear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="90142" name="Cadmus Transformation Bracelet - Elven Elder" icon="icon.pi_high_agathion_bracelet_i00">
-        <!-- A 7-day item. Transforms you into Elven Elder Cadmus. Can be used once a day. After the transformation, you can use the following skills for 4 hours: Might, Shield, Wind Walk, Return, Clarity, Agility, Decrease Weight, Regeneration, and Greater Heal. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="underwear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <item id="90143" name="Einsahad’s Protection" icon="icon.etc_dragons_blood_i03">
-        <!-- Increases XP/SP gain by 100% for 1 hour. Reuse Time: 1 hour. The effect persists through death. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="90144" name="White Assassin Transformation Scroll" icon="icon.scroll_of_verification_i06">
-        <!-- For 15 minutes transforms you into White Assassin. The effect persists through death. Transformation into White Assassin: Max HP/ MP +7%, P./ M. Accuracy +2, P./ M. Atk. +3%, P./ M. Def. +3%, Atk. Spd. +5%, M. Critical Rate +20, Speed +5. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <armor id="90145" name="Ring of Savior" icon="icon.event_classic_ring">
-        <!-- Stun Resistance +5%, HP Recovery +1.8 and MP Recovery +1.1.when running. Effects do not stack if two identical rings are equipped. Cannot be enchanted. -->
-        <set name="bodypart" val="rfinger;lfinger"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" freightable="true"/>
-        <stats>
-            <stat type="mDef">32</stat>
-        </stats>
-    </armor>
-    <item id="90146" name="Savior’s Cube" icon="icon.crystal_cube_event_i00">
-        <!-- A 30-day item. Double-click to obtain one Enchant Savior? Weapon Scroll and one Savior' Growth Scroll (can be used only once a day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. The item will be removed after the event is over. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="time" val="43200"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="90147" name="Mark of Savior" icon="icon.etc_ev_kalie_token">
-        <!-- Using Dimensional Merchant, you can trade it for a Savior? weapon (30-day). Cannot be exchanged, dropped, or sold in a private store. Can be transferred between characters on one account and be stored in a private warehouse. The item will be removed after the event is over. -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="90148" name="Savior' Growth Scroll" icon="icon.etc_kalie_hero_scroll">
-        <!-- XP/SP gain +50% for 2 hours. Reuse Time: 2 hours. The effects persists through death. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. The item will be removed after the event is over. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="90149" name="Savior Scroll: Enchant Weapon" icon="icon.yogi_scroll_of_enchant_weapon_grade_i00">
-        <!-- Only for Savior? weapons. If an enchantment is failed, the item is not destroyed preserving its current level of enchantment. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. The item will be removed after the event is over. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="weight" val="100"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <weapon id="90150" name="Savior’s Dualsword" icon="icon.weapon_dual_sword_i00">
-        <!-- A 30-day item. <Soul Crystal Enhancement>. Atk. Spd. +5%. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2340"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="time" val="43200"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">162</stat>
-            <stat type="mAtk">73</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="90151" name="Savior’s Staff" icon="icon.weapon_crystal_staff_i00">
-        <!-- A 30-day item. <Soul Crystal Enhancement>. Casting Spd. +12%. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1010"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">135</stat>
-            <stat type="mAtk">111</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="90152" name="Savior’s Bow" icon="icon.weapon_crystallized_ice_bow_i00">
-        <!-- A 30-day item. <Soul Crystal Enhancement>. P. Crit. Rate. +52. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1740"/>
-        <set name="soulshots" val="4"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="3"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="time" val="43200"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">316</stat>
-            <stat type="mAtk">84</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">227</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="90153" name="Savior’s Dagger" icon="icon.weapon_dark_screamer_i00">
-        <!-- A 30-day item. <Soul Crystal Enhancement>. P. Crit. Rate. +66. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1010"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="time" val="43200"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">122</stat>
-            <stat type="mAtk">76</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="90154" name="Savior's Spear" icon="icon.weapon_scorpion_i00">
-        <!-- A 30-day item. <Soul Crystal Enhancement>. 25% chance to stun the target by Crit. Atk. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2010"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="time" val="43200"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">139</stat>
-            <stat type="mAtk">76</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <item id="90155" name="Savior’s Herald" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain one Talisman of Border - Lv. +6 (30-day) and one Fire Dragon Pendant +6 (30-day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. The item will be removed after the event is over. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <armor id="90156" name="Talisman of Border - Lv. 6" icon="icon.bm_magic_square_talisman">
-        <!-- A 30-day item. P./ M. Def. +24, P./ M. Skills Evasion +2, HP/ MP/ CP +160, Speed +5, P./ M. Atk. Spd. +15, Acquired XP/ SP +4%. Allows using Border Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. The item will be removed after the event is over. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="time" val="43200"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="90157" name="Warrior’s Talisman - Attack" icon="icon.r90_sp_talisman_dr_mp_active">
-        <!-- PvE Damage +3%, P./ M. Critical Damage +20, P./ M. Skill Power +2%, P./ M. Accuracy +1. Duration: 7-day. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="bodypart" val="talisman"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <skills>
-            <skill id="35036" level="1"/> <!-- Warrior s Talisman - Attack -->
-        </skills>
-    </armor>
-    <armor id="90158" name="Fire Dragon Pendant +6" icon="icon.bm_pendant_pve">
-        <!-- M. Def. +16, XP/SP gain +10%, P./ M. Atk. +20. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="underwear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="time" val="43200"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <skills>
-            <skill id="35007" level="6"/> <!-- Fire Dragon Pendant Enchant Effect -->
-        </skills>
-        <stats>
-            <stat type="pDef">40</stat>
-        </stats>
-    </armor>
-    <armor id="90159" name="Talisman of Battle - Liberate" icon="icon.etc_talisman_i03">
-        <!-- Clears all abnormal states and debuffs. Reuse Time: 10 minutes. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="talisman"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="handler" val="ItemSkills"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <cond addName="1" msgId="113">
-            <player insideZoneId="311,312,313,314"/>
-        </cond>
-        <skills>
-            <skill id="35045" level="1"/> <!-- Talisman of Battle - Liberate -->
-        </skills>
-    </armor>
-    <armor id="90160" name="Warrior’s Talisman - Defense" icon="icon.r99_talisman_pd_up_passive">
-        <!-- Received PvE damage -3%, M. Damage Resistance +2%, P./ M. Skill Evasion +4%, Debuff Resistance +3%, Pull Resistance +10%. Duration: 7-day. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="bodypart" val="talisman"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <skills>
-            <skill id="35037" level="1"/> <!-- Warrior s Talisman - Defense -->
-        </skills>
-    </armor>
-    <item id="90161" name="Chest of Glory" icon="icon.etc_readybox_gold">
-        <!-- Double-click to obtain one Monster Arena Belt (7-day). <Note> After you open the chest, you cannot move the item. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="time" val="10080"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="90162" name="Warrior’s Talisman Pack - Attack" icon="icon.new_user_box">
-        <!-- Double-click to obtain one Warrior? Talisman - Attack (7-day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="handler" val="ExtractableItems"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-        <capsuled_items>
-        <item id="90157" min="1" max="1" chance="100"/> <!-- Warrior? Talisman - Attack - 7-day -->
-        </capsuled_items>
-    </item>
-    <item id="90163" name="Warrior’s Talisman Pack - Defense" icon="icon.new_user_box">
-        <!-- Double-click to obtain one Warrior? Talisman - Defense (7-day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="handler" val="ExtractableItems"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-        <capsuled_items>
-        <item id="90160" min="1" max="1" chance="100"/> <!-- Warrior? Talisman - Defense - 7-day -->
-        </capsuled_items>
-    </item>
-    <item id="90164" name="Battle Cure" icon="icon.super_elixir_potion">
-        <!-- HP/ MP +1. Reuse Time: 10 minutes. Intended for use only at the Monster Arena. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="weight" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="90165" name="Ticket for Monster Arena" icon="icon.etc_ticket_red_i00">
-        <!-- An additional ticket of admission to a daily dungeon. Double-click to reset the Arena Monster attendance counter. This item can be used only once a day. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="90166" name="Elite Ticket for Monster Arena" icon="icon.etc_ticket_red_i00">
-        <!-- An additional ticket of admission to a daily dungeon. Double-click to reset the Arena Monster attendance counter. This item can be used only once a day. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="90167" name="Banana for a Monkey" icon="Icon.ev_monkey_banana">
-        <!-- For 5 minutes, Acquired XP/ SPed through hunting +10%, P./ M. Atk. +15%, P./ M. Def. +15%, Atk. Spd./ Casting Spd. +10%, Speed +10. Deleted when entering the Olympiad. Deleted upon logout. Can be stacked with all XP/SP bonuses. -->
-        <set name="handler" val="ItemSkills"/>
-        <set name="for_npc" val="true"/>
-        <restriction tradable="false" destroyable="false" depositable="false" sellable="false" clan-depositable="false" mailable="false"/>
-        <skills>
-            <skill id="39223" level="1"/> <!-- Herb Banana Monkey Event -->
-        </skills>
-    </item>
-    <item id="90168" name="Strawberry Banana Cocktail" icon="icon.etc_fruit_cocktail_i01">
-        <!-- Activates Strawberry Banana Cocktail effect for 5 minutes (Scroll: Prophecy of Fire - Lv. 1). <Note>Effects do not stack if two cocktails are used. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="reuse_delay" val="3000"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="for_npc" val="true"/>
-        <restriction stackable="true" olympiad-restricted="true" commissionable="false"/>
-        <skills>
-            <skill id="39224" level="1"/> <!-- Strawberry-Banana Cocktail -->
-        </skills>
-    </item>
-    <item id="90169" name="Mango Banana Cocktail" icon="icon.etc_fruit_cocktail_i03">
-        <!-- Activates Mango Banana Cocktail effect for 5 minutes (Scroll: Prophecy of Water - Lv. 1). <Note>Effects do not stack if two cocktails are used. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="reuse_delay" val="3000"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="for_npc" val="true"/>
-        <restriction stackable="true" olympiad-restricted="true" commissionable="false"/>
-        <skills>
-            <skill id="39225" level="1"/> <!-- Mango-Banana Cocktail -->
-        </skills>
-    </item>
-    <item id="90170" name="Cherry Banana Cocktail" icon="icon.etc_fruit_cocktail_i02">
-        <!-- Activates Cherry Banana Cocktail effect for 5 minutes (Scroll: Prophecy of Wind - Lv. 1). <Note>Effects do not stack if two cocktails are used. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="reuse_delay" val="3000"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="for_npc" val="true"/>
-        <restriction stackable="true" olympiad-restricted="true" commissionable="false"/>
-        <skills>
-            <skill id="39226" level="1"/> <!-- Cherry-Banana Cocktail -->
-        </skills>
-    </item>
-    <item id="90171" name="Monkey Bait" icon="icon.etc_gludio_fish_lure_i00">
-        <!-- Fishing Time: 20 seconds. Fishing Standby Time: 10 seconds. Fish bait bought from Chef Monkey. Fish using this bait to catch Tuna. Cannot be exchanged, dropped, sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. Deleted after event. -->
-        <set name="bodypart" val="lhand"/>
-        <set name="etcitem_type" val="LURE"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="90172" name="Gemstone of Border" icon="icon.ensoul_big_mm">
-        <!-- For enchanting Talisman of Border above Lv. 4. Give this item, along with a low-level Talisman of Border, to Baggins, and you will get a higher-level Talisman of Border. <Note>. Cannot be used to enchant Talisman of Border Lv. 10 and Blessed Talisman of Border. -->
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="90173" name="Tuna" icon="icon.fish_huge_i12">
-        <!-- Double-click to recover some amount of SP. You can exchange it for SP Scroll with a Fishing Guildsman. Cannot be dropped. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" stackable="true"/>
-    </item>
-    <item id="90174" name="Silver Bait Box" icon="icon.bm_silver_lure_box">
-        <!-- Double-click to obtain Fishing Rod Chest (10-day), 1080 Silver Baits. Cannot be dropped. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" stackable="true"/>
-    </item>
-    <item id="90175" name="Golden Bait Box" icon="icon.bm_gold_lure_special_box">
-        <!-- Double-click to obtain 180 pcs. of Golden Bait, 180 pcs. of Fishing Shot. Cannot be dropped. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" stackable="true"/>
-    </item>
-    <item id="90176" name="Golden Fishing kit Lv. 1" icon="icon.bm_freya_sirr_box">
-        <!-- Double-click to obtain Mermaid Golden Fishing Rod Chest (30-day), 2160 Silver Baits. Cannot be dropped. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" stackable="true"/>
-    </item>
-    <item id="90177" name="Golden Fishing kit Lv. 2" icon="icon.bm_freya_sirr_box">
-        <!-- Double-click to obtain Mermaid Golden Fishing Rod Chest (30-day), 2160 Silver Baits, 2 of Einhasad's Protection. Cannot be dropped. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" stackable="true"/>
-    </item>
-    <item id="90178" name="Golden Fishing kit Lv. 3" icon="icon.bm_freya_sirr_box">
-        <!-- Double-click to obtain Mermaid Golden Fishing Rod Chest (30-day), 6480 Silver Baits, 4 of Einhasad's Protection. Cannot be dropped. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" stackable="true"/>
-    </item>
-    <item id="90179" name="Golden Fishing kit Lv. 4" icon="icon.bm_freya_sirr_box">
-        <!-- Double-click to obtain Mermaid Golden Fishing Rod Chest (30-day), 6480 Silver Baits, 10 of Einhasad's Protection, Refined Romantic Chapeau (Special Ability). Cannot be dropped. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" stackable="true"/>
-    </item>
-    <item id="90180" name="Golden Fishing kit Lv. 5" icon="icon.bm_freya_sirr_box">
-        <!-- Double-click to obtain Mermaid Golden Fishing Rod Chest (30-day), 12960 Silver Baits, 15 of Einhasad's Protection, Refined Romantic Chapeau (Special Ability), Refined Rare Accessory Pack (30-day). Cannot be dropped. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" stackable="true"/>
-    </item>
-    <item id="90181" name="Shiny Coin" icon="icon.ev_festival_goldcoin">
-        <!-- Coins can be exchanged for the following items with a Fishing Guild member: Fishing Rod Chest (10-day), Silver Bait Box, Golden Fishing Kit Lv. 1~5, Shiny Fishing Kit Lv. 1~2. Exact item depends on the number of coins. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse or shared within account. -->
-        <restriction tradable="false" dropable="false" depositable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="90182" name="Shining Golden Bait" icon="icon.bm_gold_lure">
-        <!-- Fishing Bait. Can be used for fishing a Glowing Whale with a low probability of getting a Shiny Coin. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" stackable="true"/>
-    </item>
-    <item id="90183" name="Chef's Fish Stew: Victory" icon="icon.fish_stew_residence_cha">
-        <!-- For 10 min. activates Chant of Victory Lv. 1. Cannot be dropped. <Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" stackable="true"/>
-    </item>
-    <item id="90184" name="Chef's Fish Stew: Fire" icon="icon.fish_stew_residence_cha">
-        <!-- For 10 min. activates Prophecy of Fire Lv. 1. Cannot be dropped. <Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" stackable="true"/>
-    </item>
-    <item id="90185" name="Chef's Fish Stew: Water" icon="icon.fish_stew_residence_cha">
-        <!-- For 10 min. activates Prophecy of Water Lv. 1. Cannot be dropped. <Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" stackable="true"/>
-    </item>
-    <item id="90186" name="Chef's Fish Stew: Wind" icon="icon.fish_stew_residence_cha">
-        <!-- For 10 min. activates Prophecy of Wind Lv. 1. Cannot be dropped. <Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" stackable="true"/>
-    </item>
-    <item id="90187" name="Gold Urn" icon="icon.bm_gold_pot">
-        <!-- Double-click on the Gold Urn to get one of its treasures. Cannot be dropped. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction dropable="false" stackable="true"/>
-    </item>
-    <item id="90188" name="Glowing Whale" icon="icon.fish_huge_i15">
-        <!-- Double-click to restore a certain amount of SP. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="90189" name="Blue Spinel" icon="icon.ensoul_big_m">
-        <!-- A reward item. You can receive it for helping Grocer Pink and use it to exchange for rare items with Pink. -->
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <armor id="90190" name="Dandy Pendant" icon="icon.bm_pendant_pve">
-        <!-- M. Def. +20, Acquired XP/ SP +30%, P./ M. Atk. +50, P./ M. Critical Damage +5%. Allows using the Blessing of Fire Dragon skill. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="underwear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">49</stat>
-        </stats>
-    </armor>
-    <armor id="90191" name="Dandy Shining Pendant" icon="icon.bm_pendant_pve">
-        <!-- M. Def. +21, Acquired XP/ SP +30%, P./ M. Atk. +60, P./ M. Critical Damage +5%. Allows using the Blessing of Fire Dragon and Fire Dragon Protection skills. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="underwear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">52</stat>
-        </stats>
-    </armor>
-    <item id="90192" name="Giant's Enchant Scroll Pack" icon="icon.etc_bm_jewelbox_main_i00">
-        <!-- Double-click to obtain one Average, Improved, Solid, or Blessed Scroll: Enchant Weapon (C/B). -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="90193" name="Low-grade Arena Loot" icon="icon.etc_jewel_box_i00">
-        <!-- Arena Reward. Double-click to obtain one of the following items: Toy Knight's Home Run Ball, Angel Cat's Blessing, Sayha's Holy Water, Soulshot Ticket, Major Warrior Healing Potion. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="90194" name="Intermediate Arena Loot" icon="icon.etc_jewel_box_i00">
-        <!-- Arena Reward. Double-click to obtain one of the following items: Spellbook Box - 3rd Class Transfer, Magic Gem, Spellbook Chest, Common Life Stone, Scroll of Mood Melody. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="90195" name="High-grade Arena Loot" icon="icon.etc_jewel_box_i00">
-        <!-- Arena Reward. Double-click to obtain one of the following items: Refined Rare Accessory Pack (30-day), Rare Accessory Box (15-day), Unidentified Stone, Dandy Shining Pendant (7-day), Dandy Shining Pendant (1-day), Dandy Pendant (7-day), Dandy Pendant (1-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <armor id="90196" name="Dandy Pendant" icon="icon.bm_pendant_pve">
-        <!-- M. Def. +20, Acquired XP/ SP +30%, P./ M. Atk. +50, P./ M. Critical Damage +5%. Allows using the Blessing of Fire Dragon skill. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="underwear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="time" val="120"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">49</stat>
-        </stats>
-    </armor>
-    <armor id="90197" name="Dandy Shining Pendant" icon="icon.bm_pendant_pve">
-        <!-- M. Def. +21, Acquired XP/ SP +30%, P./ M. Atk. +60, P./ M. Critical Damage +5%. Allows using the Blessing of Fire Dragon and Fire Dragon Protection skills. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="underwear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="time" val="120"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">52</stat>
-        </stats>
-    </armor>
-    <item id="90198" name="MOPP Combat Ration" icon="icon.ev_mopp_herb">
-        <!-- MOPP Combat Ration. Acquired XP/ SP by +10%, P./ M. Atk. +15%, P./ M. Def. +15%, Atk. Spd./ Casting Spd. +10%, Speed +10. Sayha Grace points +30% Duration: 5 minutes. The effect is removed if the game is reloaded. -->
-        <restriction tradable="false" destroyable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="90199" name="Hunter's Memo" icon="icon.etc_paper_red_i00">
-        <!-- Altran asked you to kill monsters who raided tombs of his family graveyard. Slay monsters from the list. -->
-        <set name="default_action" val="SHOW_HTML"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="handler" val="Bypass"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
-    </item>
+	<item id="90100" name="Scroll: Block Wind Walk" type="NONE" icon="icon.etc_magic_book_white_i00">
+	<!-- Scroll needed to learn Block Wind Walk. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90101" name="Scroll: Turn to Stone" type="NONE" icon="icon.etc_magic_book_white_i00">
+	<!-- Scroll needed to learn Turn to Stone. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90102" name="Scroll: Counter Critical" type="NONE" icon="icon.etc_magic_book_white_i00">
+	<!-- Scroll needed to learn Counter Critical. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90103" name="Scroll: Prophecy of Water" type="NONE" icon="icon.etc_magic_book_white_i00">
+	<!-- Scroll needed to learn Prophecy of Water. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90104" name="Scroll: Mass Cure Poison" type="NONE" icon="icon.etc_magic_book_white_i00">
+	<!-- Scroll needed to learn Mass Cure Poison. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90105" name="Scroll: Mass Vitalize" type="NONE" icon="icon.etc_magic_book_white_i00">
+	<!-- Scroll needed to learn Mass Vitalize. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90106" name="Codex - Mana Gain" type="NONE" icon="icon.etc_magic_book_white_i00">
+	<!-- Scroll needed to learn Mana Gain. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90107" name="Scroll: Blessing of Eva" type="NONE" icon="icon.etc_magic_book_white_i00">
+	<!-- Scroll needed to learn Blessing of Eva. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90108" name="Scroll: Prophecy of Wind" type="NONE" icon="icon.etc_magic_book_white_i00">
+	<!-- Scroll needed to learn Prophecy of Wind. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90109" name="Scroll: Mass Purify" type="NONE" icon="icon.etc_magic_book_white_i00">
+	<!-- Scroll needed to learn Mass Purify. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90110" name="Scroll: Lord of Vampires" type="NONE" icon="icon.etc_magic_book_white_i00">
+	<!-- Scroll needed to learn Lord of Vampires. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90111" name="Scroll: Enlightenment" type="NONE" icon="icon.etc_magic_book_white_i00">
+	<!-- Scroll needed to learn Enlightenment. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90112" name="Scroll: Chant of Victory" type="NONE" icon="icon.etc_magic_book_white_i00">
+	<!-- Scroll needed to learn Chant of Victory. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90113" name="Scroll: Chant of Spirit" type="NONE" icon="icon.etc_magic_book_white_i00">
+	<!-- Scroll needed to learn Chant of Spirit. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90114" name="Scroll: Chant of Gate" type="NONE" icon="icon.etc_magic_book_white_i00">
+	<!-- Scroll needed to learn Chant of Gate. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90115" name="Scroll: Chant of Protection" type="NONE" icon="icon.etc_magic_book_white_i00">
+	<!-- Scroll needed to learn Chant of Protection. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90116" name="Scroll: Great Fury" type="NONE" icon="icon.etc_magic_book_white_i00">
+	<!-- Scroll needed to learn Great Fury. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90117" name="Scroll: Victories of Pa'agrio" type="NONE" icon="icon.etc_magic_book_white_i00">
+	<!-- Scroll needed to learn Victories of Pa'agrio. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90118" name="Scroll: Seal of Disease" type="NONE" icon="icon.etc_magic_book_white_i00">
+	<!-- Scroll needed to learn Seal of Disease. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90119" name="Scroll: Pa'agrio's Fist" type="NONE" icon="icon.etc_magic_book_white_i00">
+	<!-- Scroll needed to learn Pa'agrio's Fist. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90120" name="Scroll: Seal of Despair" type="NONE" icon="icon.etc_magic_book_white_i00">
+	<!-- Scroll needed to learn Seal of Despair. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90121" name="Scroll: Flames of Invincibility" type="NONE" icon="icon.etc_magic_book_white_i00">
+	<!-- Scroll needed to learn Flames of Invincibility. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90122" name="Scroll: Balance Life" type="NONE" icon="icon.etc_magic_book_white_i00">
+	<!-- Scroll needed to learn Balance Life. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90123" name="Scroll: Cleanse" type="NONE" icon="icon.etc_magic_book_white_i00">
+	<!-- Scroll needed to learn Cleanse. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90124" name="Scroll: Chain Heal" type="NONE" icon="icon.etc_magic_book_white_i00">
+	<!-- Scroll needed to learn Chain Heal. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90125" name="Scroll: Salvation" type="NONE" icon="icon.etc_magic_book_white_i00">
+	<!-- Scroll needed to learn Salvation. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90126" name="Scroll: Miracle" type="NONE" icon="icon.etc_magic_book_white_i00">
+	<!-- Scroll needed to learn Miracle. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90127" name="Scroll: Warrior Servitor" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Warrior Servitor. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90128" name="Codex - Wizard Servitor" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Wizard Servitor. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90129" name="Scroll: Assassin Servitor" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Assassin Servitor. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90130" name="Scroll: Final Servitor" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Final Servitor. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90131" name="Scroll: Servitor Share" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Servitor Share. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<armor id="90132" name="Monster Arena Belt" type="LIGHT" body-part="BELT" icon="icon.belt_of_tiat">
+	<!-- CON +1, MEN +1, HP Recovery +2.31, MP Recovery +1.54, CP Recovery +3.07, Max. HP/MP/CP +10%, Received damage -3%. Duration: 7 days.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="500" duration="10080" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="10.0"/>
+		</stats>
+	</armor>
+
+	<item id="90133" name="Scroll: Exciting Adventure" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Exciting Adventure. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90134" name="Scroll: Wind Riding" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Wind Riding. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90135" name="Scroll: Ghost Walking" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Ghost Walking. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90136" name="Dimensional Gift" type="NONE" icon="icon.etc_box_of_adventure_5_i00">
+	<!-- Double-click to receive one of the following items: Scroll of Mood Melody, Scroll: Enchant Armor/Weapon (C), Accessory/Weapon/Armor Box (C), Spellbook Chest, Angel Cat's Blessing, Dark Assassin Transformation Potion, or Dimensional Blessing. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39207" level="1"/>  <!-- Dimensional Gift -->
+		</skill-reducer>
+	</item>
+
+	<item id="90137" name="Pendant Matte Varnish" type="SOLID_ENCHANT_ARMOR" icon="icon.bm_pendant_varnish">
+	<!-- Varnish that enhances effects of a Pendant. For a Pendant enchanted up to +6. If an enchantment is failed, the pendant doesn't disappear and has the previous level of enchantment.   -->
+		<restriction stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90138" name="Pendant Glittering Varnish" type="SOLID_ENCHANT_ARMOR" icon="icon.bm_pendant_varnish_premium">
+	<!-- Varnish that enhances effects of a Pendant. For a Pendant enchanted up to +9. If an enchantment is failed, the pendant doesn't disappear and has the previous level of enchantment.   -->
+		<restriction stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90139" name="Silver Bait" type="LURE" icon="icon.bm_silver_lure">
+	<!-- A fishing bait enabling to catch a Whale. -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<armor id="90140" name="Cadmus Transformation Bracelet - Prophet" type="NONE" body-part="LEFT_BRACELET" icon="icon.pi_high_agathion_bracelet_i00">
+	<!-- A 7-day item. Transforms you into Prophet Cadmus. Can be used once a day. After the transformation, you can use the following skills for 4 hours: Might, Shield, Wind Walk, Return, Focus, Death Whisper, Guidance, Haste, Acumen, and Heal.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes duration="10080" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="90141" name="Cadmus Transformation Bracelet - Shillien Elder" type="NONE" body-part="LEFT_BRACELET" icon="icon.pi_high_agathion_bracelet_i00">
+	<!-- A 7-day item. Transforms you into Shillien Elder Cadmus. Can be used once a day. After the transformation, you can use the following skills for 4 hours: Might, Shield, Wind Walk, Return, Vampiric Rage, Empower, Death Whisper, Guidance, and Heal.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes duration="10080" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="90142" name="Cadmus Transformation Bracelet - Elven Elder" type="NONE" body-part="LEFT_BRACELET" icon="icon.pi_high_agathion_bracelet_i00">
+	<!-- A 7-day item. Transforms you into Elven Elder Cadmus. Can be used once a day. After the transformation, you can use the following skills for 4 hours: Might, Shield, Wind Walk, Return, Clarity, Agility, Decrease Weight, Regeneration, and Greater Heal.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes duration="10080" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<item id="90143" name="Einsahad’s Protection" type="SCROLL" icon="icon.etc_dragons_blood_i03">
+	<!-- Increases XP/SP gain by 100% for 1 hour. Cooldown: 1 hour. The effect persists through death. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90144" name="Transformation Scroll: White Assassin" type="POTION" icon="icon.scroll_of_verification_i06">
+	<!-- For 15 minutes transforms you into White Assassin. Will not be deleted upon death. \\nTransformation into White Assassin: Max HP/MP +7%, P./M. Accuracy +2, P./M. Atk. +3%, P./M. Def. +3%, Atk. Spd. +5%, M. Critical Rate +20, Speed +5.  -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="90145" name="Ring of Savior" type="NONE" body-part="FINGER" icon="icon.event_classic_ring">
+	<!-- Stun Resistance +5%, HP Recovery Bonus +1.8 and MP Recovery Bonus +1.1 when running. When two identical rings are equipped, the effect of only one ring will be applied. Cannot be enchanted. -->
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="32.0"/>
+		</stats>
+	</armor>
+
+	<item id="90146" name="Savior’s Cube" type="COUPON" icon="icon.crystal_cube_event_i00">
+	<!-- u,A 30-day item. Double-click to get one Enchant Savior’s Weapon Scroll and one Savior' Growth Scroll (can be used only once a day).  -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes duration="43200"/>
+	</item>
+
+	<item id="90147" name="Mark of Savior" type="NONE" icon="icon.etc_ev_kalie_token">
+	<!-- u,Using Dimensional Merchant, you can trade it for a Savior’s weapon (30-day).  Can be transferred between characters on one account and be stored in a private warehouse.  -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90148" name="Savior' Growth Scroll" type="NONE" icon="icon.etc_kalie_hero_scroll">
+	<!-- XP/SP gain +50% for 2 hours. Cooldown: 2 hours. The effects persists through death.   -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90149" name="Savior Scroll: Enchant Weapon" type="SOLID_ENCHANT_WEAPON" icon="icon.yogi_scroll_of_enchant_weapon_grade_i00">
+	<!-- Only for Savior's weapons. The item is not destroyed and will retain the current enchant value even if enchantment fails.   -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="100"/>
+	</item>
+
+	<weapon id="90150" name="Savior’s Dual Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- A 30-day item.\\n<Soul Crystal Enhancement>\\nAtk. Spd. +5%.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="2340" commission-type="OTHER_ITEM" duration="43200"/>
+		<crystal type="C"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="162.0"/>
+			<stat type="mAtk" value="73.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="90151" name="Savior’s Staff" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_crystal_staff_i00" magic="true">
+	<!-- A 30-day item.\\n<Soul Crystal Enhancement>\\nCasting Spd. +12%.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1010" commission-type="OTHER_ITEM" duration="43200"/>
+		<crystal type="C"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="135.0"/>
+			<stat type="mAtk" value="111.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="90152" name="Savior’s Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_crystallized_ice_bow_i00">
+	<!-- A 30-day item.\\n<Soul Crystal Enhancement>\\nP. Crit. Rate. +52.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1740" commission-type="OTHER_ITEM" duration="43200"/>
+		<crystal type="C"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="3"/>
+		<stats>
+			<stat type="pAtk" value="316.0"/>
+			<stat type="mAtk" value="84.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="227.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="90153" name="Savior’s Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_dark_screamer_i00">
+	<!-- A 30-day item.\\n<Soul Crystal Enhancement>\\nP. Crit. Rate. +66.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1010" commission-type="OTHER_ITEM" duration="43200"/>
+		<crystal type="C"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="122.0"/>
+			<stat type="mAtk" value="76.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="90154" name="Savior's Spear" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_scorpion_i00">
+	<!-- A 30-day item.\\n<Soul Crystal Enhancement>\\n25% chance to stun the target by Crit. Atk.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="2010" commission-type="OTHER_ITEM" duration="43200"/>
+		<crystal type="C"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="139.0"/>
+			<stat type="mAtk" value="76.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<item id="90155" name="Savior’s Herald" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to get one Talisman of Fate - Lv. +6 (30-day) and one Fire Dragon Pendant +6 (30-day).  -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<armor id="90156" name="Talisman of Fate - Lv. 6" type="NONE" body-part="TALISMAN" icon="icon.bm_magic_square_talisman">
+	<!-- A 30-day item. P./M. Def. +24, P./M. Evasion +2, HP/MP/CP +160, Movement Speed +5, P./M. Atk. Spd. +15, XP and SP gain +4%. Allows using Border Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). When two or more Talismans of identical effects are equipped, the effect of only one Talisman will be applied.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes duration="43200" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="90157" name="Warrior’s Talisman - Attack" type="NONE" body-part="TALISMAN" icon="icon.r90_sp_talisman_dr_mp_active">
+	<!-- PvE Damage +3%, P./M. Critical Damage +20, P./M. Skill Power +2%, P./M. Accuracy +1. Duration: 7 days.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="120" duration="10080" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="35036" level="1"/>  <!-- Warrior's Talisman - Attack -->
+		</skills>
+	</armor>
+
+	<armor id="90158" name="Fire Dragon Pendant +6" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_pve">
+	<!-- M. Def. +16, XP/SP gain +10%, P./M. Atk. +20.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes duration="43200" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="35007" level="6"/>  <!-- Fire Dragon Pendant +1 -->
+		</skills>
+	</armor>
+
+	<armor id="90159" name="Talisman of Battle - Liberate" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i03">
+	<!-- Clears all abnormal states and debuffs. Cooldown is 10 minutes.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<condition add-name="true" msg-id="113">
+			<player zone="311,312,313,314"/>
+		</condition>
+		<attributes weight="120" duration="43200" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="35045" level="1"/>  <!-- Talisman of Battle - Liberate -->
+		</skills>
+	</armor>
+
+	<armor id="90160" name="Warrior’s Talisman - Defense" type="NONE" body-part="TALISMAN" icon="icon.r99_talisman_pd_up_passive">
+	<!-- Received PvE damage -3%, Magic Attack Resistance +2%, P./M. Skill Evasion +4%, Debuff Resistance +3%, Pull Resistance +10%.  Duration: 7 days.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="120" duration="10080" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="35037" level="1"/>  <!-- Warrior's Talisman - Defense -->
+		</skills>
+	</armor>
+
+	<item id="90161" name="Chest of Glory" type="NONE" icon="icon.etc_readybox_gold">
+	<!-- Double-click to receive one Monster Arena Belt (7-day).\\n<Note> After you open the chest, you cannot move the item. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes duration="10080" immediate-effect="true"/>
+	</item>
+
+	<item id="90162" name="Warrior’s Talisman Pack - Attack" type="NONE" icon="icon.new_user_box">
+	<!-- u,Double-click to receive one Warrior’s Talisman - Attack (7-day).  -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes duration="10080" immediate-effect="true"/>
+		<extract >
+			<item id="90157" min-count="1" max-count="1" chance="100000"/>  <!-- Warrior’s Talisman - Attack -->
+		</extract>
+	</item>
+
+	<item id="90163" name="Warrior’s Talisman Pack - Defense" type="NONE" icon="icon.new_user_box">
+	<!-- u,Double-click to receive one Warrior’s Talisman - Defense (7-day).  -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes duration="10080" immediate-effect="true"/>
+		<extract >
+			<item id="90160" min-count="1" max-count="1" chance="100000"/>  <!-- Warrior’s Talisman - Defense -->
+		</extract>
+	</item>
+
+	<item id="90164" name="Battle Cure" type="COUPON" icon="icon.super_elixir_potion">
+	<!-- HP/MP +1. Cooldown: 10 minutes. Intended for use only at the Monster Arena.  -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="2"/>
+	</item>
+
+	<item id="90165" name="Ticket for Monster Arena" type="NONE" icon="icon.etc_ticket_red_i00">
+	<!-- An additional ticket of admission to a daily dungeon. Double-click to reset the Arena Monster attendance counter. This item can be used only once a day.  -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90166" name="Elite Ticket for Monster Arena" type="NONE" icon="icon.etc_ticket_red_i00">
+	<!-- An additional ticket of admission to a daily dungeon. Double-click to reset the Arena Monster attendance counter. This item can be used only once a day.  -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90167" name="Bunch of Bananas" type="NONE" icon="Icon.ev_monkey_banana">
+	<!-- For 5 minutes, XP and SP gained through hunting +10%, P./M. Atk. +15%, P./M. Def. +15%, Atk. Spd./Casting Spd. +10%, Speed +10. Deleted when entering the Olympiad. Deleted upon logout. Can be stacked with all XP/SP bonuses. -->
+		<restriction freightable="false" destroyable="false" tradable="false" depositable="false"/>
+		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39223" level="1"/>  <!-- Bunch of Bananas -->
+		</skill-reducer>
+	</item>
+
+	<item id="90168" name="Strawberry Banana Cocktail" type="SCROLL" icon="icon.etc_fruit_cocktail_i01">
+	<!-- Activates Strawberry Banana Cocktail effect for 5 minutes (Scroll: Prophecy of Fire - Lv. 1).\\n<Note>Effects do not stack if two cocktails are used. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<attributes reuse-delay="3000" for-npc="true" immediate-effect="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39224" level="1"/>  <!-- Strawberry-Banana Cocktail -->
+		</skill-reducer>
+	</item>
+
+	<item id="90169" name="Mango Banana Cocktail" type="SCROLL" icon="icon.etc_fruit_cocktail_i03">
+	<!-- Activates Mango Banana Cocktail effect for 5 minutes (Scroll: Prophecy of Water - Lv. 1).\\n<Note>Effects do not stack if two cocktails are used. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<attributes reuse-delay="3000" for-npc="true" immediate-effect="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39225" level="1"/>  <!-- Mango-Banana Cocktail -->
+		</skill-reducer>
+	</item>
+
+	<item id="90170" name="Cherry Banana Cocktail" type="SCROLL" icon="icon.etc_fruit_cocktail_i02">
+	<!-- Activates Cherry Banana Cocktail effect for 5 minutes (Scroll: Prophecy of Wind - Lv. 1).\\n<Note>Effects do not stack if two cocktails are used. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<attributes reuse-delay="3000" for-npc="true" immediate-effect="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39226" level="1"/>  <!-- Cherry-Banana Cocktail -->
+		</skill-reducer>
+	</item>
+
+	<item id="90171" name="Monkey Bait" type="LURE" icon="icon.etc_gludio_fish_lure_i00">
+	<!-- Fishing Time: 20 seconds\\nFishing Standby Time: 10 seconds\\n\\nFish bait bought from Chef Monkey. Fish using this bait to catch Tuna.  -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="90172" name="Gemstone of Fate" type="NONE" icon="icon.ensoul_big_mm">
+	<!-- For enchanting Talisman of Fate above Lv. 4. Give this item, along with a low-level Talisman of Fate, to Baggins, and you will get a higher-level Talisman of Fate.\\n\\n<Note>\\nCannot be used to enchant Talisman of Fate Lv. 10 and Blessed Talisman of Fate.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90173" name="Tuna" type="SCROLL" icon="icon.fish_huge_i12">
+	<!-- Double-click to recover a small amount of SP. You can exchange it for a scroll that replenishes SP through a Fishing Guild Member.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90174" name="Silver Bait Box" type="NONE" icon="icon.bm_silver_lure_box">
+	<!-- Double-click to obtain 1 Fishing Rod Pack (10-day) and 1080 Silver Bait.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="90175" name="Golden Bait Box" type="NONE" icon="icon.bm_gold_lure_special_box">
+	<!-- Double-click to obtain 180 Golden Bait, 180 Fishing Shots.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="90176" name="Golden Fishing kit Lv. 1" type="NONE" icon="icon.bm_freya_sirr_box">
+	<!-- Double-click to obtain 1 Golden Mermaid's Fishing Rod Pack (30-day) and 2160 Silver Bait.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="90177" name="Golden Fishing kit Lv. 2" type="NONE" icon="icon.bm_freya_sirr_box">
+	<!-- Double-click to obtain 1 Golden Mermaid's Fishing Rod Pack (30-day), 2160 Silver Bait, and 2 Einhasad's Protections.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="90178" name="Golden Fishing kit Lv. 3" type="NONE" icon="icon.bm_freya_sirr_box">
+	<!-- Double-click to obtain 1 Golden Mermaid's Fishing Rod Pack (30-day), 6480 Silver Bait, and 4 Einhasad's Protections.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="90179" name="Golden Fishing kit Lv. 4" type="NONE" icon="icon.bm_freya_sirr_box">
+	<!-- Double-click to obtain 1 Golden Mermaid's Fishing Rod Pack (30-day), 6480 Silver Bait, 10 Einhasad's Protections, and 1 Refined Romantic Chapeau (Special Ability).  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="90180" name="Golden Fishing kit Lv. 5" type="NONE" icon="icon.bm_freya_sirr_box">
+	<!-- Double-click to obtain 1 Golden Mermaid's Fishing Rod Pack (30-day), 12960 Silver Bait, 15 Einhasad's Protections, 1 Refined Romantic Chapeau (Special Ability), and 1 Refined Rare Accessory Pack (30-day).  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="90181" name="Shiny Coin" type="NONE" icon="icon.ev_festival_goldcoin">
+	<!-- Coins can be exchanged for the following items with a Fishing Guild Member: Fishing Rod Pack (10-day), Silver Bait Box, Golden Fishing kit Lv. 1~5, Shining Fishing kit Lv. 1~2. Exact item depends on the number of coins.  Can be stored in a private warehouse or shared within account through Dimensional Merchant. -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90182" name="Shining Golden Bait" type="LURE" icon="icon.bm_gold_lure">
+	<!-- Fishing Bait. Can be used for fishing a Glowing Whale with a low probability of getting a Shiny Coin.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="90183" name="Chef's Fish Stew - Victory" type="SCROLL" icon="icon.fish_stew_residence_cha">
+	<!-- For 10 min. activates Chant of Victory Lv. 1. \\n<Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90184" name="Chef's Fish Stew - Fire" type="SCROLL" icon="icon.fish_stew_residence_cha">
+	<!-- For 10 min. activates Prophecy of Fire Lv. 1. \\n<Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90185" name="Chef's Fish Stew - Water" type="SCROLL" icon="icon.fish_stew_residence_cha">
+	<!-- For 10 min. activates Prophecy of Water Lv. 1. \\n<Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90186" name="Chef's Fish Stew - Wind" type="SCROLL" icon="icon.fish_stew_residence_cha">
+	<!-- For 10 min. activates Prophecy of Wind Lv. 1. \\n<Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90187" name="Gold Urn" type="NONE" icon="icon.bm_gold_pot">
+	<!-- Double-click on the Gold Urn to get one of its treasures.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90188" name="Glowing  Whale" type="SCROLL" icon="icon.fish_huge_i15">
+	<!-- Double-click to restore a small amount of SP. You can exchange it for a scroll that replenishes SP through a Fishing Guild Member.   -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90189" name="Blue Spinel" type="NONE" icon="icon.ensoul_big_m">
+	<!-- A reward item.\\nYou can receive it for helping Grocer Pink and use it to exchange for rare items with Pink. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="90190" name="Dandy Pendant" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_pve">
+	<!-- M. Def. +20, XP and SP gain +30%, P./M. Atk. +50, P./M. Critical Damage +5%. Allows using the Blessing of Fire Dragon skill.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes duration="10080" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="49.0"/>
+		</stats>
+	</armor>
+
+	<armor id="90191" name="Dandy Shining Pendant" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_pve">
+	<!-- M. Def. +21, XP and SP gain +30%, P./M. Atk. +60, P./M. Critical Damage +5%. Allows using the Blessing of Fire Dragon and Fire Dragon's Protection skills.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes duration="10080" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="52.0"/>
+		</stats>
+	</armor>
+
+	<item id="90192" name="Giant's Enchant Scroll Pack" type="NONE" icon="icon.etc_bm_jewelbox_main_i00">
+	<!-- Double-click to receive one Average, Improved, Solid, or Blessed Scroll: Enchant Weapon (C/B). -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90193" name="Low-grade Arena Loot" type="NONE" icon="icon.etc_jewel_box_i00">
+	<!-- Arena Reward\\nDouble-click to receive one of the following items: Dandy's Home Run Ball, Angel Cat's Blessing, Sayha's Holy Water, Soulshot Ticket, Warrior's Major HP Potion.   -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90194" name="Intermediate Arena Loot" type="NONE" icon="icon.etc_jewel_box_i00">
+	<!-- Arena Reward\\nDouble-click to receive one of the following items: Spellbook Box - 3rd Class Transfer, Magic Tablet, Spellbook Box, Common Life Stone, Scroll of Mood Melody.   -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90195" name="High-grade Arena Loot" type="NONE" icon="icon.etc_jewel_box_i00">
+	<!-- Arena Reward\\nDouble-click to receive one of the following items: Refined Rare Accessory Pack (30-day), Rare Accessory Pack (15-day), Unidentified Stone, Dandy's Shining Pendant (7-day), Dandy's Shining Pendant (1-day), Dandy's Pendant (7-day), Dandy Pendant (1-day).   -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="90196" name="Dandy Pendant" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_pve">
+	<!-- M. Def. +20, XP and SP gain +30%, P./M. Atk. +50, P./M. Critical Damage +5%. Allows using the Blessing of Fire Dragon skill.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes duration="120" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="49.0"/>
+		</stats>
+	</armor>
+
+	<armor id="90197" name="Dandy Shining Pendant" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_pve">
+	<!-- M. Def. +21, XP and SP gain +30%, P./M. Atk. +60, P./M. Critical Damage +5%. Allows using the Blessing of Fire Dragon and Fire Dragon's Protection skills.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes duration="120" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="52.0"/>
+		</stats>
+	</armor>
+
+	<item id="90198" name="MOPP Combat Ration" type="NONE" icon="icon.ev_mopp_herb">
+	<!-- MOPP Combat Ration. XP and SP gain by +10%, P./M. Atk. +15%, P./M. Def. +15%, Atk. Spd./Casting Spd. +10%, Speed +10. Sayha Grace points +30% Duration: 5 minutes. The effect is removed if the game is reloaded.  -->
+		<restriction freightable="false" destroyable="false" tradable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90199" name="Hunter's Memo" type="NONE" icon="icon.etc_paper_red_i00">
+	<!-- Altran asked you to kill monsters who raided tombs of his family graveyard. Slay monsters from the list. -->
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+		<action handler="Bypass"/>
+	</item>
+
 </list>

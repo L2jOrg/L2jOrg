@@ -1,198 +1,140 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <armor id="500" name="Great Helmet" icon="icon.armor_helmet_i00">
-        <set name="bodypart" val="head"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="96"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="610"/>
-        <set name="price" val="242000"/>
-        <set name="commissionItemType" val="HELMET"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pDef">51</stat>
-        </stats>
-    </armor>
-    <armor id="503" name="Zubei's Helmet" icon="icon.armor_helmet_i02">
-        <set name="bodypart" val="head"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="96"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="590"/>
-        <set name="price" val="778000"/>
-        <set name="commissionItemType" val="HELMET"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pDef">62</stat>
-        </stats>
-    </armor>
-    <armor id="512" name="Dark Crystal Helmet" icon="icon.armor_helmet_i00">
-        <set name="bodypart" val="head"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="96"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="570"/>
-        <set name="price" val="1336000"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="HELMET"/>
-        <stats>
-            <stat type="pDef">69</stat>
-        </stats>
-    </armor>
-    <armor id="517" name="Compound Helmet" icon="icon.armor_leather_helmet_i00">
-        <set name="bodypart" val="head"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="147"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="610"/>
-        <set name="price" val="368000"/>
-        <set name="commissionItemType" val="HELMET"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pDef">54</stat>
-        </stats>
-    </armor>
-    <armor id="547" name="Tallum Helmet" icon="icon.armor_helmet_i00">
-        <set name="bodypart" val="head"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="147"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="570"/>
-        <set name="price" val="1336000"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="HELMET"/>
-        <stats>
-            <stat type="pDef">69</stat>
-        </stats>
-    </armor>
-    <armor id="553" name="Iron Boots" icon="icon.armor_t10_b_i00">
-        <set name="bodypart" val="feet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="92"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1280"/>
-        <set name="price" val="50800"/>
-        <set name="commissionItemType" val="FEET"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pDef">24</stat>
-        </stats>
-    </armor>
-    <armor id="554" name="Sealed Zubei's Boots" icon="icon.armor_t64_b_i02">
-        <set name="bodypart" val="feet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="69"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="1180"/>
-        <set name="price" val="519000"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="FEET"/>
-        <stats>
-            <stat type="pDef">41</stat>
-        </stats>
-    </armor>
-    <armor id="563" name="Dark Crystal Boots" icon="icon.armor_t15_b_i00">
-        <set name="bodypart" val="feet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="69"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1110"/>
-        <set name="price" val="890000"/>
-        <set name="commissionItemType" val="FEET"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pDef">45</stat>
-        </stats>
-    </armor>
-    <armor id="572" name="Boots of Silence" icon="icon.armor_t65_b_i00">
-        <set name="bodypart" val="feet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="69"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="1190"/>
-        <set name="price" val="399100"/>
-        <set name="commissionItemType" val="FEET"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pDef">41</stat>
-        </stats>
-    </armor>
-    <armor id="582" name="Paradia Boots" icon="icon.armor_t68_b_i00">
-        <set name="bodypart" val="feet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="107"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="1140"/>
-        <set name="price" val="804000"/>
-        <set name="commissionItemType" val="FEET"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pDef">44</stat>
-        </stats>
-    </armor>
-    <armor id="583" name="Majestic Boots" icon="icon.armor_t45_b_i00">
-        <set name="bodypart" val="feet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="107"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1110"/>
-        <set name="price" val="1355000"/>
-        <set name="commissionItemType" val="FEET"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pDef">48</stat>
-        </stats>
-    </armor>
-    <armor id="588" name="Elemental Boots" icon="icon.armor_t71_b_i00">
-        <set name="bodypart" val="feet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="107"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="1130"/>
-        <set name="price" val="804000"/>
-        <set name="commissionItemType" val="FEET"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pDef">44</stat>
-        </stats>
-    </armor>
-    <armor id="590" name="Boots of Grace" icon="icon.armor_t71_b_i00">
-        <set name="bodypart" val="feet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="107"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="1130"/>
-        <set name="price" val="804000"/>
-        <set name="commissionItemType" val="FEET"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pDef">44</stat>
-        </stats>
-    </armor>
-    <armor id="595" name="Boots of Blessing" icon="icon.armor_t56_b_i00">
-        <set name="bodypart" val="feet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="69"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="1160"/>
-        <set name="price" val="519000"/>
-        <set name="commissionItemType" val="FEET"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pDef">41</stat>
-        </stats>
-    </armor>
-    <armor id="598" name="Tallum Boots" icon="icon.armor_t45_b_i00">
-        <set name="bodypart" val="feet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="69"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1130"/>
-        <set name="price" val="890000"/>
-        <set name="commissionItemType" val="FEET"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pDef">45</stat>
-        </stats>
-    </armor>
+	<armor id="500" name="Great Helmet" type="NONE" body-part="HEAD" icon="icon.armor_helmet_i00">
+		<restriction freightable="false"/>
+		<attributes weight="610" price="242000" commission-type="HELMET" />
+		<crystal type="C" count="96"/>
+		<stats>
+			<stat type="pDef" value="51.0"/>
+		</stats>
+	</armor>
+
+	<armor id="503" name="Sealed Zubei's Helmet" type="NONE" body-part="HEAD" icon="icon.armor_helmet_i02">
+	<!-- Sealed Zubei's Helmet. The seal can be removed by a blacksmith in any village. -->
+		<restriction freightable="false"/>
+		<attributes weight="590" price="778000" commission-type="HELMET" />
+		<crystal type="B" count="96"/>
+		<stats>
+			<stat type="pDef" value="62.0"/>
+		</stats>
+	</armor>
+
+	<armor id="512" name="Dark Crystal Helmet" type="NONE" body-part="HEAD" icon="icon.armor_helmet_i00">
+		<restriction freightable="false"/>
+		<attributes weight="570" price="1336000" commission-type="HELMET" />
+		<crystal type="A" count="96"/>
+		<stats>
+			<stat type="pDef" value="69.0"/>
+		</stats>
+	</armor>
+
+	<armor id="517" name="Compound Helmet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
+		<restriction freightable="false"/>
+		<attributes weight="610" price="368000" commission-type="HELMET" />
+		<crystal type="C" count="147"/>
+		<stats>
+			<stat type="pDef" value="54.0"/>
+		</stats>
+	</armor>
+
+	<armor id="547" name="Tallum Helmet" type="NONE" body-part="HEAD" icon="icon.armor_helmet_i00">
+		<restriction freightable="false"/>
+		<attributes weight="570" price="1336000" commission-type="HELMET" />
+		<crystal type="A" count="147"/>
+		<stats>
+			<stat type="pDef" value="69.0"/>
+		</stats>
+	</armor>
+
+	<armor id="553" name="Iron Boots" type="NONE" body-part="FEET" icon="icon.armor_t10_b_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1280" price="50800" commission-type="FEET" />
+		<crystal type="D" count="92"/>
+		<stats>
+			<stat type="pDef" value="24.0"/>
+		</stats>
+	</armor>
+
+	<armor id="554" name="Sealed Zubei's Boots" type="NONE" body-part="FEET" icon="icon.armor_t64_b_i02">
+	<!-- Sealed Zubei's Boots. The seal can be removed by a blacksmith in any village. -->
+		<restriction freightable="false"/>
+		<attributes weight="1180" price="519000" commission-type="FEET" />
+		<crystal type="B" count="69"/>
+		<stats>
+			<stat type="pDef" value="41.0"/>
+		</stats>
+	</armor>
+
+	<armor id="563" name="Dark Crystal Boots" type="NONE" body-part="FEET" icon="icon.armor_t15_b_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1110" price="890000" commission-type="FEET" />
+		<crystal type="A" count="69"/>
+		<stats>
+			<stat type="pDef" value="45.0"/>
+		</stats>
+	</armor>
+
+	<armor id="572" name="Boots of Silence" type="NONE" body-part="FEET" icon="icon.armor_t65_b_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1190" price="399100" commission-type="FEET" />
+		<crystal type="B" count="69"/>
+		<stats>
+			<stat type="pDef" value="41.0"/>
+		</stats>
+	</armor>
+
+	<armor id="582" name="Paradia Boots" type="NONE" body-part="FEET" icon="icon.armor_t68_b_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1140" price="804000" commission-type="FEET" />
+		<crystal type="B" count="107"/>
+		<stats>
+			<stat type="pDef" value="44.0"/>
+		</stats>
+	</armor>
+
+	<armor id="583" name="Majestic Boots" type="NONE" body-part="FEET" icon="icon.armor_t45_b_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1110" price="1355000" commission-type="FEET" />
+		<crystal type="A" count="107"/>
+		<stats>
+			<stat type="pDef" value="48.0"/>
+		</stats>
+	</armor>
+
+	<armor id="588" name="Elemental Boots" type="NONE" body-part="FEET" icon="icon.armor_t71_b_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1130" price="804000" commission-type="FEET" />
+		<crystal type="B" count="107"/>
+		<stats>
+			<stat type="pDef" value="44.0"/>
+		</stats>
+	</armor>
+
+	<armor id="590" name="Boots of Grace" type="NONE" body-part="FEET" icon="icon.armor_t71_b_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1130" price="804000" commission-type="FEET" />
+		<crystal type="B" count="107"/>
+		<stats>
+			<stat type="pDef" value="44.0"/>
+		</stats>
+	</armor>
+
+	<armor id="595" name="Boots of Blessing" type="NONE" body-part="FEET" icon="icon.armor_t56_b_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1160" price="519000" commission-type="FEET" />
+		<crystal type="B" count="69"/>
+		<stats>
+			<stat type="pDef" value="41.0"/>
+		</stats>
+	</armor>
+
+	<armor id="598" name="Tallum Boots" type="NONE" body-part="FEET" icon="icon.armor_t45_b_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1130" price="890000" commission-type="FEET" />
+		<crystal type="A" count="69"/>
+		<stats>
+			<stat type="pDef" value="45.0"/>
+		</stats>
+	</armor>
+
 </list>

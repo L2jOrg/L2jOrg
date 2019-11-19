@@ -1,287 +1,270 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="6700" name="Sealed Tateossian Necklace Chain" icon="icon.etc_jewel_box_i00">
-        <!-- Main ingredient required for a Dwarf to make a Sealed Tateossian Necklace. Can be sold at ordinary shops. -->
-        <set name="weight" val="60"/>
-        <set name="price" val="16706"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="6701" name="Sealed Imperial Crusader Breastplate Part" icon="icon.etc_plate_silver_i00">
-        <!-- Main ingredient required for a Dwarf to make a Sealed Imperial Crusader Breastplate. Can be sold at ordinary shops. -->
-        <set name="weight" val="60"/>
-        <set name="price" val="37565"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="6702" name="Sealed Imperial Crusader Gaiter Pattern" icon="icon.etc_pouch_brown_i00">
-        <!-- Main ingredient required for a Dwarf to make Sealed Imperial Crusader Gaiters. Can be sold at ordinary shops. -->
-        <set name="weight" val="60"/>
-        <set name="price" val="29182"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="6703" name="Sealed Imperial Crusader Gauntlets Design" icon="icon.etc_pouch_brown_i00">
-        <!-- Main ingredient required for a Dwarf to make Sealed Imperial Crusader Gauntlets. Can be sold at ordinary shops. -->
-        <set name="weight" val="60"/>
-        <set name="price" val="14047"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="6704" name="Sealed Imperial Crusader Boots Design" icon="icon.etc_pouch_brown_i00">
-        <!-- Main ingredient required for a Dwarf to make Sealed Imperial Crusader Boots. Can be sold at ordinary shops. -->
-        <set name="weight" val="60"/>
-        <set name="price" val="14047"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="6705" name="Sealed Imperial Crusader Shield Fragment" icon="icon.etc_plate_silver_i00">
-        <!-- Main ingredient required for a Dwarf to make Sealed Imperial Crusader Shield. Can be sold at ordinary shops. -->
-        <set name="weight" val="60"/>
-        <set name="price" val="14341"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="6706" name="Sealed Imperial Crusader Helmet Pattern" icon="icon.etc_pouch_brown_i00">
-        <!-- Main ingredient required for a Dwarf to make a Sealed Imperial Crusader Helmet. Can be sold at ordinary shops. -->
-        <set name="weight" val="60"/>
-        <set name="price" val="12329"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="6707" name="Sealed Draconic Leather Armor Part" icon="icon.etc_leather_gray_i00">
-        <!-- Main ingredient required for a Dwarf to make Sealed Draconic Leather Armor. Can be sold at ordinary shops. -->
-        <set name="weight" val="60"/>
-        <set name="price" val="40365"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="6708" name="Sealed Draconic Leather Glove Fabric" icon="icon.etc_leather_gray_i00">
-        <!-- Main ingredient required for a Dwarf to make Sealed Draconic Leather Gloves. Can be sold at ordinary shops. -->
-        <set name="weight" val="60"/>
-        <set name="price" val="14047"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="6709" name="Sealed Draconic Leather Boots Design" icon="icon.etc_pouch_brown_i00">
-        <!-- Main ingredient required for a Dwarf to make Sealed Draconic Leather Boots. Can be sold at ordinary shops. -->
-        <set name="weight" val="60"/>
-        <set name="price" val="14047"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="6710" name="Sealed Draconic Leather Helmet Pattern" icon="icon.etc_pouch_brown_i00">
-        <!-- Main ingredient required for a Dwarf to make Sealed Draconic Leather Helmet. Can be sold at ordinary shops. -->
-        <set name="weight" val="60"/>
-        <set name="price" val="12329"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="6711" name="Sealed Major Arcana Robe Part" icon="icon.etc_plate_silver_i00">
-        <!-- Main ingredient required for a Dwarf to make a Sealed Major Arcana Robe. Can be sold at ordinary shops. -->
-        <set name="weight" val="60"/>
-        <set name="price" val="40365"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="6712" name="Sealed Major Arcana Gloves fabric" icon="icon.etc_leather_gray_i00">
-        <!-- Main ingredient required for a Dwarf to make Sealed Major Arcana Gloves. Can be sold at ordinary shops. -->
-        <set name="weight" val="60"/>
-        <set name="price" val="14047"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="6713" name="Sealed Major Arcana Boots Design" icon="icon.etc_pouch_brown_i00">
-        <!-- Main ingredient required for a Dwarf to make Sealed Major Arcana Boots. Can be sold at ordinary shops. -->
-        <set name="weight" val="60"/>
-        <set name="price" val="14047"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="6714" name="Sealed Major Arcana Circlet Pattern" icon="icon.etc_pouch_brown_i00">
-        <!-- Main ingredient required for a Dwarf to make a Sealed Major Arcana Circlet. Can be sold at ordinary shops. -->
-        <set name="weight" val="60"/>
-        <set name="price" val="12329"/>
-        <restriction stackable="true"/>
-    </item>
-    <weapon id="6715" name="Monster Only (Silenos Archer)" icon="icon.weapon_monster_i00">
-        <set name="weapon_type" val="RAPIER"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1950"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="1"/>
-        <stats>
-            <stat type="pAtk">16</stat>
-            <stat type="mAtk">6</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">293</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="6716" name="Monster Only (Silenos Shaman)" icon="icon.weapon_monster_i00">
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="price" val="2500"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false"/>
-        <stats>
-            <stat type="pAtk">11</stat>
-            <stat type="mAtk">12</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="6717" name="Monster Only (Einhasad Warrior)" icon="icon.weapon_monster_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1560"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <stats>
-            <stat type="pAtk">24</stat>
-            <stat type="mAtk">17</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="6718" name="Monster Only (Einhasad Shaman)" icon="icon.weapon_monster_i00">
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1560"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">24</stat>
-            <stat type="mAtk">17</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="6719" name="Monster Only (Ketra Orc Chieftain)" icon="icon.weapon_monster_i00">
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;46;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="990"/>
-        <set name="price" val="956000"/>
-        <set name="soulshots" val="3"/>
-        <set name="spiritshots" val="3"/>
-        <set name="is_magic_weapon" val="true"/>
-        <set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON"/>
-        <set name="for_npc" val="true"/>
-        <stats>
-            <stat type="pAtk">141</stat>
-            <stat type="mAtk">104</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="6720" name="Monster Only (Halisha's Shadow)" icon="icon.weapon_monster_i00">
-        <set name="weapon_type" val="RAPIER"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1950"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="1"/>
-        <stats>
-            <stat type="pAtk">16</stat>
-            <stat type="mAtk">6</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">293</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <armor id="6721" name="Monster Only (Shield of Imperial Warlord Zombie)" icon="icon.weapon_monster_i00">
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1430"/>
-        <stats>
-            <stat type="rEvas">-8</stat>
-            <stat type="rShld">20</stat>
-            <stat type="sDef">47</stat>
-        </stats>
-    </armor>
-    <weapon id="6722" name="Monster Only (Ahrimanes)" icon="icon.weapon_monster_i00">
-        <set name="weapon_type" val="ANCIENTSWORD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2080"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <stats>
-            <stat type="pAtk">236</stat>
-            <stat type="mAtk">99</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="6723" name="Monster Only (Vampire Warrior)" icon="icon.weapon_monster_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2090"/>
-        <set name="soulshots" val="3"/>
-        <set name="spiritshots" val="3"/>
-        <stats>
-            <stat type="pAtk">112</stat>
-            <stat type="mAtk">54</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <armor id="6724" name="Sealed Tateossian Earring" icon="icon.accessory_tateossian_earring_i02">
-        <!-- The seal can be removed by a blacksmith in any village. Once the seal is removed, M. Def. +13 and MP +31. -->
-        <set name="bodypart" val="rear;lear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="157"/>
-        <set name="crystal_type" val="S"/>
-        <set name="weight" val="150"/>
-        <set name="price" val="3270000"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="mDef">68</stat>
-        </stats>
-    </armor>
-    <armor id="6725" name="Sealed Tateossian Ring" icon="icon.accessory_tateossian_ring_i02">
-        <!-- The seal can be removed by a blacksmith in any village. Once the seal is removed, M. Def. +13 and MP +21. -->
-        <set name="bodypart" val="rfinger;lfinger"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="105"/>
-        <set name="crystal_type" val="S"/>
-        <set name="weight" val="150"/>
-        <set name="price" val="2180000"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="mDef">46</stat>
-        </stats>
-    </armor>
-    <armor id="6726" name="Sealed Tateossian Necklace" icon="icon.accessory_tateossian_necklace_i02">
-        <!-- The seal can be removed by a blacksmith in any village. Once the seal is removed, M. Def. +29 and MP +42. -->
-        <set name="bodypart" val="neck"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="209"/>
-        <set name="crystal_type" val="S"/>
-        <set name="weight" val="150"/>
-        <set name="price" val="4361000"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="mDef">91</stat>
-        </stats>
-    </armor>
+	<item id="6700" name="Sealed Tateossian Necklace Chain" type="MATERIAL" icon="icon.etc_jewel_box_i00">
+	<!-- Key material that Dwarves need to make a Sealed Tateossian Necklace. Can be sold in any shop. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="16706"/>
+	</item>
+
+	<item id="6701" name="Sealed Imperial Crusader Breastplate Part" type="MATERIAL" icon="icon.etc_plate_silver_i00">
+	<!-- Key material that Dwarves need to make a Sealed Imperial Crusader Breastplate. Can be sold in any shop. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="37565"/>
+	</item>
+
+	<item id="6702" name="Sealed Imperial Crusader Gaiter Pattern" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Key material that Dwarves need to make a pair of Sealed Imperial Crusader Gaiters. Can be sold in any shop. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="29182"/>
+	</item>
+
+	<item id="6703" name="Sealed Imperial Crusader Gauntlet Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Key material that Dwarves need to make a pair of Sealed Imperial Crusader Gauntlets. Can be sold in any shop. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="14047"/>
+	</item>
+
+	<item id="6704" name="Sealed Imperial Crusader Boot Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Key material that Dwarves need to make a pair of Sealed Imperial Crusader Boots. Can be sold in any shop. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="14047"/>
+	</item>
+
+	<item id="6705" name="Sealed Imperial Crusader Shield Fragment" type="MATERIAL" icon="icon.etc_plate_silver_i00">
+	<!-- Key material that Dwarves need to make a Sealed Imperial Crusader Shield. Can be sold in any shop. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="14341"/>
+	</item>
+
+	<item id="6706" name="Sealed Imperial Crusader Helmet Pattern" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Key material that Dwarves need to make a Sealed Imperial Crusader Helmet. Can be sold in any shop. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="12329"/>
+	</item>
+
+	<item id="6707" name="Sealed Draconic Leather Armor Part" type="MATERIAL" icon="icon.etc_leather_gray_i00">
+	<!-- Key material that Dwarves need to make a Sealed Draconic Leather Armor. Can be sold in any shop. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="40365"/>
+	</item>
+
+	<item id="6708" name="Sealed Draconic Leather Glove Fabric" type="MATERIAL" icon="icon.etc_leather_gray_i00">
+	<!-- Key material that Dwarves need to make a pair of Sealed Draconic Leather Gloves. Can be sold in any shop. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="14047"/>
+	</item>
+
+	<item id="6709" name="Sealed Draconic Leather Boot Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Key material that Dwarves need to make a pair of Sealed Draconic Leather Boots. Can be sold in any shop. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="14047"/>
+	</item>
+
+	<item id="6710" name="Sealed Draconic Leather Helmet Pattern" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Key material that Dwarves need to make a Sealed Draconic Leather Helmet. Can be sold in any shop. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="12329"/>
+	</item>
+
+	<item id="6711" name="Sealed Major Arcana Robe Part" type="MATERIAL" icon="icon.etc_plate_silver_i00">
+	<!-- Key material that Dwarves need to make a Sealed Major Arcana Robe. Can be sold in any shop. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="40365"/>
+	</item>
+
+	<item id="6712" name="Sealed Major Arcana Glove Fabric" type="MATERIAL" icon="icon.etc_leather_gray_i00">
+	<!-- Key material that Dwarves need to make a pair of Sealed Major Arcana Gloves. Can be sold in any shop. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="14047"/>
+	</item>
+
+	<item id="6713" name="Sealed Major Arcana Boot Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Key material that Dwarves need to make a pair of Sealed Major Arcana Boots. Can be sold in any shop. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="14047"/>
+	</item>
+
+	<item id="6714" name="Sealed Major Arcana Circlet Pattern" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Key material that Dwarves need to make a Sealed Major Arcana Circlet. Can be sold in any shop. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="12329"/>
+	</item>
+
+	<weapon id="6715" name="Monster Only (Silenos Archer)" type="BOW" body-part="TWO_HAND" icon="icon.weapon_monster_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1950" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="1"/>
+		<stats>
+			<stat type="pAtk" value="16.0"/>
+			<stat type="mAtk" value="6.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="293.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="6716" name="Monster Only (Silenos Shaman)" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_monster_i00" magic="true">
+		<restriction freightable="false"/>
+		<attributes weight="1080" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="11.0"/>
+			<stat type="mAtk" value="12.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="6717" name="Monster Only (Einhasad Warrior)" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_monster_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1560" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="24.0"/>
+			<stat type="mAtk" value="17.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="6718" name="Monster Only (Einhasad Shaman)" type="HAMMER" body-part="TWO_HAND" icon="icon.weapon_monster_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1560" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="24.0"/>
+			<stat type="mAtk" value="17.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="6719" name="Monster Only (Ketra Orc Chieftain)" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_monster_i00" magic="true">
+		<restriction freightable="false"/>
+		<attributes weight="990" commission-type="TWO_HAND_BLUNT_WEAPON" for-npc="true" enchant-enabled="false"/>
+		<crystal type="C"/>
+		<damage radius="46" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="141.0"/>
+			<stat type="mAtk" value="104.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="6720" name="Monster Only (Halisha's Shadow)" type="BOW" body-part="TWO_HAND" icon="icon.weapon_monster_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1950" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="1"/>
+		<stats>
+			<stat type="pAtk" value="16.0"/>
+			<stat type="mAtk" value="6.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="293.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+	</weapon>
+
+	<armor id="6721" name="Monster Only (Shield of Imperial Warlord Zombie)" type="SHIELD" body-part="LEFT_HAND" icon="icon.weapon_monster_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1430" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="rEvas" value="-8.0"/>
+			<stat type="rShld" value="20.0"/>
+			<stat type="sDef" value="47.0"/>
+		</stats>
+	</armor>
+
+	<weapon id="6722" name="Monster Only (Ahrimanes)" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_monster_i00">
+		<restriction freightable="false"/>
+		<attributes weight="2080" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal type="B"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="236.0"/>
+			<stat type="mAtk" value="99.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="6723" name="Monster Only (Vampire Warrior)" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_monster_i00">
+		<restriction freightable="false"/>
+		<attributes weight="2090" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="112.0"/>
+			<stat type="mAtk" value="54.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<armor id="6724" name="Sealed Tateossian Earring" type="NONE" body-part="EAR" icon="icon.accessory_tateossian_earring_i02">
+	<!-- Only the blacksmith in each village can remove the seal. Effects upon removing the seal are M. Def. +23 and MP +31. -->
+		<restriction freightable="false"/>
+		<attributes weight="150" price="3270000" />
+		<crystal type="S" count="157"/>
+		<stats>
+			<stat type="mDef" value="68.0"/>
+		</stats>
+	</armor>
+
+	<armor id="6725" name="Sealed Tateossian Ring" type="NONE" body-part="FINGER" icon="icon.accessory_tateossian_ring_i02">
+	<!-- Only the blacksmith in each village can remove the seal. Effects upon removing the seal are M. Def. +19 and MP +21. -->
+		<restriction freightable="false"/>
+		<attributes weight="150" price="2180000" />
+		<crystal type="S" count="105"/>
+		<stats>
+			<stat type="mDef" value="46.0"/>
+		</stats>
+	</armor>
+
+	<armor id="6726" name="Sealed Tateossian Necklace" type="NONE" body-part="NECK" icon="icon.accessory_tateossian_necklace_i02">
+	<!-- Only the blacksmith in each village can remove the seal. Effects upon removing the seal are M. Def. +43 and MP +42. -->
+		<restriction freightable="false"/>
+		<attributes weight="150" price="4361000" />
+		<crystal type="S" count="209"/>
+		<stats>
+			<stat type="mDef" value="91.0"/>
+		</stats>
+	</armor>
+
 </list>

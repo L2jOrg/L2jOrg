@@ -1,585 +1,585 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="3503" name="Deliverymen Certificate" icon="icon.etc_paper_white_i00">
-        <!-- Official certification for making deliveries. Issued by the Iron Gate Guild. Seal of Lockirin of the Iron Gate is affixed. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3504" name="Kiruna's Horn" icon="icon.etc_horn_i00">
-        <!-- Item that Warehouse Chief Gesto entrusted saying to take it to High Prefect Penatus. You must deliver it quickly. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3505" name="Mithril Mold" icon="icon.etc_silver_mold_i00">
-        <!-- Item that Warehouse Chief Gesto entrusted saying to take it to Blacksmith Rupio. You must deliver it quickly. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3506" name="Bloody Letter" icon="icon.etc_recipe_red_i00">
-        <!-- Item that Warehouse Chief Gesto entrusted saying to take it to Martin. You must deliver it quickly. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3507" name="Supplies" icon="icon.etc_squares_wood_i00">
-        <!-- Supply item. It's really heavy. Let's take it to Alex in Florin Village. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3508" name="Supplies" icon="icon.etc_squares_wood_i00">
-        <!-- Supply item. It's really heavy. Let's take it to Watchman Endrigo at the Execution Grounds. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3509" name="Alex's Coins" icon="icon.etc_coins_gold_i00">
-        <!-- Return gift given by Alex as expression of thanks for having brought enough of the supply item. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3510" name="Watchman's Appreciation" icon="icon.etc_paper_blue_i00">
-        <!-- Letter of thanks given by Watchman Endrigo of the Execution Grounds as expression of thanks for having brought enough of the supplied items. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3511" name="Black Box to Orim" icon="icon.etc_squares_gray_i00">
-        <!-- Item that Warehouse Chief Gesto entrusted saying to take it to Shadow Orim. What could be inside...? -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3512" name="Deluxe Windsus Ham" icon="icon.etc_meat_i00">
-        <!-- Item that Warehouse Chief Gesto entrusted saying to take it to Shadow Orim. What could be inside...? -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3513" name="Heart of Silenos" icon="icon.etc_heart_i00">
-        <!-- Heart obtained by killing silenos. Item specially ordered by Shadow Orim. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3514" name="Request Giran" icon="icon.etc_letter_blue_i00">
-        <!-- Order received from the warehouse of Town of Giran. You can receive the delivery fee by taking this and the receipt. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3515" name="Request Gludin" icon="icon.etc_letter_white_i00">
-        <!-- Order received from the warehouse of the Town of Gludio. You can receive the delivery fee by taking this and the receipt. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3516" name="Request Hunters" icon="icon.etc_letter_red_i00">
-        <!-- Order received from the warehouse of Hunter Village. You can receive the delivery fee by taking this and the receipt. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3517" name="Red Delivery Slip" icon="icon.etc_ticket_red_i00">
-        <!-- Certificate received each time a delivery is completed successfully. If you collect 50 certificates, you can exchange it for a blue delivery statement. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3518" name="Blue Delivery Slip" icon="icon.etc_ticket_blue_i00">
-        <!-- Certificate that you can receive if you successfully complete 50 deliveries. The delivery fee increases by 4% for each certificate. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3519" name="Deliverymen Advanced Certificate Super" icon="icon.etc_paper_black_i00">
-        <!-- Certificate of a Master Deliveryman received for having successfully completed 1,000 deliveries. Received 120% of the delivery fee! -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3520" name="Delivery Receipt" icon="icon.etc_piece_of_paper_white_i00">
-        <!-- Confirmation form the person receiving delivery of an item signs. Collect three sheets and take it to Warehouse Chief Gesto. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3521" name="Delivery Receipt" icon="icon.etc_piece_of_paper_white_i00">
-        <!-- Confirmation form the person receiving delivery of an item signs. Collect two sheets and take it to Warehouse Chief Gesto. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3522" name="Scroll" icon="icon.etc_roll_of_paper_blue_i00">
-        <!-- Scroll to be taken to Magister Baulro of Einhasad Temple on Talking Island. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3523" name="Send Mail" icon="icon.etc_letter_envelope_i00">
-        <!-- Letter to be taken to Lighthouse Keeper Rockswell of Talking Island. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3524" name="Book" icon="icon.etc_spellbook_red_i00">
-        <!-- Book to be taken to Marius at the private beach house on the north side of Talking Island. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3525" name="Document" icon="icon.etc_paper_white_i00">
-        <!-- Document to be taken to Matheo at the ruins near the port on Talking Island. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3526" name="Send Mail" icon="icon.etc_letter_envelope_i00">
-        <!-- Letter to be taken to Sir Collin Windawood in front of the Obelisk of Victory on Talking Island. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3527" name="Shaft" icon="icon.etc_pouch_yellow_i00">
-        <!-- Shaft to be taken to Orc Guild High Prefect Osborn of Gludin Village. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3528" name="Send Mail" icon="icon.etc_letter_envelope_i00">
-        <!-- Letter to be taken to Lighthouse Keeper Perrin at the wharf in Gludin Village. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3529" name="Picture" icon="icon.etc_painting_i00">
-        <!-- Picture to be taken to Wharf Manager Clancy of Gludin Village. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3530" name="Urn" icon="icon.etc_oil_pot_white_i00">
-        <!-- Urn to be taken to Sir Karrel Vasper of Gludin Village. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3531" name="Box" icon="icon.etc_squares_gray_i00">
-        <!-- Box to be taken to Samed of the Town of Gludio. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3532" name="Urn" icon="icon.etc_oil_pot_white_i00">
-        <!-- Urn to be taken to Priestess Vivyan at Einhasad Temple in the Town of Gludio. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3533" name="Box" icon="icon.etc_squares_silver_i00">
-        <!-- Box to be taken to Warrior Guild Master Leona in the Town of Gludio. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3534" name="Machine" icon="icon.etc_instrument_i00">
-        <!-- Mechanical device to be taken to Blacksmith Pinter at the blacksmith' shop in the Town of Gludio. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3535" name="Jewelry Box" icon="icon.etc_jewel_box_i00">
-        <!-- Jewelry box to be taken to Sentinel Knight Alberius in Elven Village. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3536" name="Jewelry Box" icon="icon.etc_jewel_box_i00">
-        <!-- Jewelry box to be taken to Pixy Murika in front of the Mother Tree of Elven Village. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3537" name="Send Mail" icon="icon.etc_letter_envelope_i00">
-        <!-- Letter to be taken to Karna in Dark Elf Village. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3538" name="Book" icon="icon.etc_spellbook_blue_i00">
-        <!-- Book to be taken to Magister Harne in Dark Elf Village. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3539" name="Statue" icon="icon.etc_holy_statue_bronze_i00">
-        <!-- Statue to be taken to Sir Ortho Lancer in Town of Giran. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3540" name="Box" icon="icon.etc_squares_gray_i00">
-        <!-- Box to be taken to Martin in Town of Giran. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3541" name="Statue" icon="icon.etc_statue_of_einhasad_silver_i00">
-        <!-- Statue to be taken to Bishop Maximillian of Einhasad Temple in Town of Giran. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3542" name="Jewelry Box" icon="icon.etc_jewel_box_i00">
-        <!-- Jewelry box to be taken to Master Stapin of Dark Elf Guild in Town of Giran. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3543" name="Document" icon="icon.etc_paper_white_i00">
-        <!-- Document to be taken to Master Genwitter at the Warrior Guild in Town of Giran. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3544" name="Medicine" icon="icon.etc_potion_gold_i00">
-        <!-- Medicine bottle to be taken to High Prefect Clogg at the Orc Guild in the Town of Dion. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3545" name="Statue" icon="icon.etc_holy_statue_bronze_i00">
-        <!-- Statue to be taken to Sir Kiel Nighthawk in the Town of Dion. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3546" name="Ore" icon="icon.etc_synthetic_cokes_i00">
-        <!-- Ore to be taken to Blacksmith Poitan at the blacksmith' shop in the Town of Dion. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3547" name="Book" icon="icon.etc_spellbook_gray_i00">
-        <!-- Book to be taken to Cardinal Seresin of Einhasad Temple in the Town of Oren. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3548" name="Scroll" icon="icon.etc_roll_of_paper_white_i00">
-        <!-- Scroll to be taken to Duda-Mara Chief Takuna near the Orc Guild in the Town of Oren. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3549" name="Picture" icon="icon.etc_painting_i00">
-        <!-- Picture to be taken to Hunter Guild Member Colin in Hunter Village. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3550" name="Cloth" icon="icon.etc_piece_of_cloth_blue_i00">
-        <!-- Fabric to be taken to Guard Makhis in Hunter Village. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3551" name="Urn" icon="icon.etc_oil_pot_black_i00">
-        <!-- Jar which should be taken to Elder Cronos in Hunter Village. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3552" name="Diamond" icon="icon.etc_gem_blue_i00">
-        <!-- Diamond to be taken to Grand Magister Scraide of Mystic Guild in Hunter Village. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3553" name="Jewelry Box" icon="icon.etc_jewel_box_i00">
-        <!-- Jewelry box to be taken to Grocer Pano in Floran Village. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3554" name="Gold Bar" icon="icon.etc_lump_yellow_i00">
-        <!-- Gold nuggets to be taken to Alex in Floran Village. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3555" name="Shaft" icon="icon.etc_pouch_brown_i00">
-        <!-- Shaft to be taken to Militiaman Leirynn in Floran Village. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3556" name="Send Mail" icon="icon.etc_letter_envelope_i00">
-        <!-- Letter to be taken to Fisherman Evert in Floran Village. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3557" name="Cloth" icon="icon.etc_piece_of_cloth_blue_i00">
-        <!-- Fabric to be taken to Astrologer Creta in Floran Village. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3558" name="Book" icon="icon.etc_spellbook_red_i00">
-        <!-- Book to be taken to Magister Kaiena of Dark Elf Guild on the 4th floor of the Ivory Tower. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3559" name="Ore" icon="icon.etc_synthetic_cokes_i00">
-        <!-- Ore to be taken to Rex in the underground shopping area at the Ivory Tower. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3560" name="Medicine" icon="icon.etc_potion_gold_i00">
-        <!-- Medicine bottle to be taken to Uruha near the waterfall in the north of the marshlands in the Dark Elven region. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3561" name="Small Boxes" icon="icon.etc_adamantite_i00">
-        <!-- Small boxes to be taken to Sentry Irene in front of the western bridge of the Neutral Zone. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3562" name="Document" icon="icon.etc_paper_white_i00">
-        <!-- Document to be taken to Sentinel Trionell in front of the eastern bridge of the Neutral Zone. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3563" name="Scroll" icon="icon.etc_roll_of_paper_red_i00">
-        <!-- Scroll to be taken to Northwind in front of the Underground Fortress in the Elven region. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3564" name="Document" icon="icon.etc_paper_white_i00">
-        <!-- Document to be taken to Thalia on the east side of Iris Lake in the Elven region. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3565" name="Box" icon="icon.etc_squares_silver_i00">
-        <!-- Box to be taken to Peter of the Turek orc encampment in the south of the Dark Elven autonomous region. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3566" name="Shaft" icon="icon.etc_pouch_brown_i00">
-        <!-- Shaft to be taken to Bodyguard Jax on the coastal road in the Southern Wastelands. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3567" name="Key" icon="icon.etc_key_i00">
-        <!-- Key to be taken to Researcher Lorain near the entrance to Cruma Tower. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3568" name="Machine" icon="icon.etc_instrument_i00">
-        <!-- Mechanical device to be taken to Maestro Nikola on the southwest side of Cruma Tower. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3569" name="Document" icon="icon.etc_paper_white_i00">
-        <!-- Document to be taken to Warden Roderik of the Execution Grounds. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3570" name="Small Boxes" icon="icon.etc_adamantite_i00">
-        <!-- Small boxes to be taken to Summoner Belthus on the southeast side of Cruma Tower. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3571" name="Shaft" icon="icon.etc_pouch_gray_i00">
-        <!-- Shaft to be taken to Enku Chief Kepra on the southern coast of Floran Village. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3572" name="Box" icon="icon.etc_squares_wood_i00">
-        <!-- Box to be taken to Summoner Celestiel at the ruins of the Circular Coliseum to the south of the Underground Fortress of the Elven autonomous region. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3573" name="Picture" icon="icon.etc_painting_i00">
-        <!-- Picture to be delivered to Orphanage Master Gupu in the Wastelands, west of the Town of Gludio. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3574" name="Scroll" icon="icon.etc_roll_of_paper_blue_i00">
-        <!-- Scroll to be delivered to Summoner Basillia on the coastal road, south of the Wastelands. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3575" name="Box" icon="icon.etc_squares_wood_i00">
-        <!-- Box to be delivered to Sir Aaron Tanford on the coastal road, south of the Wastelands. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3576" name="Urn" icon="icon.etc_oil_pot_black_i00">
-        <!-- Urn to be delivered to Prophet Sla on the east side of the Ant Tunnel Dungeon. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3577" name="Jewelry Box" icon="icon.etc_jewel_box_i00">
-        <!-- Jewelry box to be delivered to Windy Shaoring on the west side of the Ant Tunnel Dungeon. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3578" name="Book" icon="icon.etc_spellbook_blue_i00">
-        <!-- Book which should be taken to Elder Casian at the south-side of the Ant Tunnel Dungeon located in the Wastelands. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3579" name="Medicine" icon="icon.etc_lesser_potion_scarlet_i00">
-        <!-- Medicine bottle to be taken to Annika on the south side of the Black Magic Laboratory in the Dark Elven autonomous region. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3580" name="Scroll" icon="icon.etc_roll_of_paper_white_i00">
-        <!-- Scroll to be taken to Slein Shining Blade on the east side of the Altar of Coming-of-Age Ceremony in the Dark Elven autonomous region. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3581" name="Small Boxes" icon="icon.etc_silver_i00">
-        <!-- Small boxes to be taken to Shaman Varika at the Altar of Coming-of-Age Ceremony in the Dark Elven autonomous region. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3582" name="Medicine" icon="icon.etc_lesser_potion_scarlet_i00">
-        <!-- Medicine bottle to be taken to Tyra across the western road at the Altar of Rites in the Dark Elven autonomous region. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3583" name="Scroll" icon="icon.etc_roll_of_paper_red_i00">
-        <!-- Scroll to be taken to Piper Longbow at the altar on the north side of the marshlands waterfall in the Dark Elven autonomous region. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3584" name="Send Mail" icon="icon.etc_letter_envelope_i00">
-        <!-- Letter to be taken to Katari at the altar on the north side of the marshlands waterfall in the Dark Elven autonomous region. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3585" name="Jewelry Box" icon="icon.etc_jewel_box_i00">
-        <!-- Jewelry box to be taken to Summoner Camoniell at the southern coast of Floran Village. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3586" name="Sample" icon="icon.etc_parasite_i00">
-        <!-- Sample to be taken to Shadow Orim at the north side of Death Pass in Giran Territory. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3587" name="Shaft" icon="icon.etc_pouch_yellow_i00">
-        <!-- Shaft to be taken to Breka Chief Voltar at the north-eastern side of the Death Pass in Giran Territory. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3588" name="Book" icon="icon.etc_spellbook_gray_i00">
-        <!-- Book to be taken to Summoner Brynthea at the north-western side of Town of Giran. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3589" name="Delivery Receipt" icon="icon.etc_piece_of_paper_white_i00">
-        <!-- Confirmation document received when delivering item. It is signed by Magister Baulro. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3590" name="Delivery Receipt" icon="icon.etc_piece_of_paper_white_i00">
-        <!-- Confirmation document received when delivering item. It is signed by Rockswell. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3591" name="Delivery Receipt" icon="icon.etc_piece_of_paper_white_i00">
-        <!-- Confirmation document received when delivering item. It is signed by Marius. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3592" name="Delivery Receipt" icon="icon.etc_piece_of_paper_white_i00">
-        <!-- Confirmation document received when delivering item. It is signed by Matheo. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3593" name="Delivery Receipt" icon="icon.etc_piece_of_paper_white_i00">
-        <!-- Confirmation document received when delivering item. It is signed by Sir Collin Windawood. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3594" name="Delivery Receipt" icon="icon.etc_piece_of_paper_white_i00">
-        <!-- Confirmation document received when delivering item. It is signed by High Prefect Osborn. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3595" name="Delivery Receipt" icon="icon.etc_piece_of_paper_white_i00">
-        <!-- Confirmation document received when delivering item. It is signed by Perrin. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3596" name="Delivery Receipt" icon="icon.etc_piece_of_paper_white_i00">
-        <!-- Confirmation document received when delivering item. It is signed by Clancy. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3597" name="Delivery Receipt" icon="icon.etc_piece_of_paper_white_i00">
-        <!-- Confirmation document received when delivering item. It is signed by Sir Karrel Vasper. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3598" name="Delivery Receipt" icon="icon.etc_piece_of_paper_white_i00">
-        <!-- Confirmation document received when delivering item. It is signed by Samed. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="3599" name="Delivery Receipt" icon="icon.etc_piece_of_paper_white_i00">
-        <!-- Confirmation document received when delivering item. It is signed by Priestess Vivyan. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
+	<item id="3503" name="Deliverymen Certificate" type="NONE" icon="icon.etc_paper_white_i00">
+	<!-- Official certification for making deliveries. Issued by the Iron Gate Guild. Seal of Lockirin of the Iron Gate is affixed. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3504" name="Kiruna's Horn" type="NONE" icon="icon.etc_horn_i00">
+	<!-- Item that Warehouse Chief Gesto entrusted saying to take it to High Prefect Penatus. You must deliver it quickly. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3505" name="Mithril Mold" type="NONE" icon="icon.etc_silver_mold_i00">
+	<!-- Item that Warehouse Chief Gesto entrusted saying to take it to Blacksmith Rupio. You must deliver it quickly. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3506" name="Bloody Letter" type="NONE" icon="icon.etc_recipe_red_i00">
+	<!-- Item that Warehouse Chief Gesto entrusted saying to take it to Martin. You must deliver it quickly. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3507" name="Supplies to Alex" type="NONE" icon="icon.etc_squares_wood_i00">
+	<!-- Supply item. It's really heavy. Let's take it to Alex in Florin Village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3508" name="Supplies to Endrigo" type="NONE" icon="icon.etc_squares_wood_i00">
+	<!-- Supply item. It's really heavy. Let's take it to Watchman Endrigo at the Execution Grounds. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3509" name="Alex's Coins" type="NONE" icon="icon.etc_coins_gold_i00">
+	<!-- Return gift given by Alex as expression of thanks for having brought enough of the supply item. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3510" name="Watchman's Appreciation" type="NONE" icon="icon.etc_paper_blue_i00">
+	<!-- Letter of thanks given by Watchman Endrigo of the Execution Grounds as expression of thanks for having brought enough of the supplied items. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3511" name="Black Box to Orim" type="NONE" icon="icon.etc_squares_gray_i00">
+	<!-- Item that Warehouse Chief Gesto entrusted saying to take it to Orim the Shadow. What could be inside...? -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3512" name="Deluxe Windsus Ham" type="NONE" icon="icon.etc_meat_i00">
+	<!-- Item that Warehouse Chief Gesto entrusted saying to take it to Orim the Shadow. What could be inside...? -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3513" name="Heart of Silenos" type="NONE" icon="icon.etc_heart_i00">
+	<!-- Heart obtained by killing silenos. Item specially ordered by Orim the Shadow. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3514" name="Request Giran" type="NONE" icon="icon.etc_letter_blue_i00">
+	<!-- Order received from the warehouse of Town of Giran. You can receive the delivery fee by taking this and the receipt. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3515" name="Request Gludin" type="NONE" icon="icon.etc_letter_white_i00">
+	<!-- Order received from the warehouse of the Town of Gludio. You can receive the delivery fee by taking this and the receipt. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3516" name="Request Hunters" type="NONE" icon="icon.etc_letter_red_i00">
+	<!-- Order received from the warehouse of Hunter Village. You can receive the delivery fee by taking this and the receipt. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3517" name="Red Delivery Slip" type="NONE" icon="icon.etc_ticket_red_i00">
+	<!-- Certificate received each time a delivery is completed successfully. If you collect 50 certificates, you can exchange it for a blue delivery statement. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3518" name="Blue Delivery Slip" type="NONE" icon="icon.etc_ticket_blue_i00">
+	<!-- Certificate that you can receive if you successfully complete 50 deliveries. The delivery fee increases by 4% for each certificate. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3519" name="Deliverymen Advanced Certificate Super" type="NONE" icon="icon.etc_paper_black_i00">
+	<!-- Certificate of a Master Deliveryman received for having successfully completed 1,000 deliveries. Received 120% of the delivery fee! -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3520" name="Delivery Receipt" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
+	<!-- Confirmation form the person receiving delivery of an item signs. Collect three sheets and take it to Warehouse Chief Gesto. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3521" name="Delivery Receipt" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
+	<!-- Confirmation form the person receiving delivery of an item signs. Collect two sheets and take it to Warehouse Chief Gesto. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3522" name="Scroll" type="NONE" icon="icon.etc_roll_of_paper_blue_i00">
+	<!-- Scroll to be taken to Magister Baulro of Einhasad Temple on Talking Island. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3523" name="Letter" type="NONE" icon="icon.etc_letter_envelope_i00">
+	<!-- Letter to be taken to Lighthouse Keeper Rockswell of Talking Island. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3524" name="Book" type="NONE" icon="icon.etc_spellbook_red_i00">
+	<!-- Book to be taken to Marius at the private beach house on the north side of Talking Island. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3525" name="Document" type="NONE" icon="icon.etc_paper_white_i00">
+	<!-- Document to be taken to Matheo at the ruins near the port on Talking Island. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3526" name="Letter" type="NONE" icon="icon.etc_letter_envelope_i00">
+	<!-- Letter to be taken to Sir Collin Windawood in front of the Obelisk of Victory on Talking Island. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3527" name="Shaft" type="NONE" icon="icon.etc_pouch_yellow_i00">
+	<!-- Shaft to be taken to Orc Guild High Prefect Osborn of Gludin Village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3528" name="Letter" type="NONE" icon="icon.etc_letter_envelope_i00">
+	<!-- Letter to be taken to Lighthouse Keeper Perrin at the wharf in Gludin Village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3529" name="Picture" type="NONE" icon="icon.etc_painting_i00">
+	<!-- Picture to be taken to Wharf Manager Clancy of Gludin Village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3530" name="Urn" type="NONE" icon="icon.etc_oil_pot_white_i00">
+	<!-- Urn to be taken to Sir Karrel Vasper of Gludin Village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3531" name="Box" type="NONE" icon="icon.etc_squares_gray_i00">
+	<!-- Box to be taken to Samed of the Town of Gludio. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3532" name="Urn" type="NONE" icon="icon.etc_oil_pot_white_i00">
+	<!-- Urn to be taken to Priestess Vivyan at Einhasad Temple in the Town of Gludio. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3533" name="Box" type="NONE" icon="icon.etc_squares_silver_i00">
+	<!-- Box to be taken to Warrior Guild Master Leona in the Town of Gludio. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3534" name="Machine" type="NONE" icon="icon.etc_instrument_i00">
+	<!-- Mechanical device to be taken to Blacksmith Pinter at the blacksmith' shop in the Town of Gludio. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3535" name="Jewelry Box" type="NONE" icon="icon.etc_jewel_box_i00">
+	<!-- Jewelry box to be taken to Sentinel Knight Alberius in Elven Village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3536" name="Jewelry Box" type="NONE" icon="icon.etc_jewel_box_i00">
+	<!-- Jewelry box to be taken to Pixy Murika in front of the Mother Tree of Elven Village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3537" name="Letter" type="NONE" icon="icon.etc_letter_envelope_i00">
+	<!-- Letter to be taken to Karna in Dark Elf Village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3538" name="Book" type="NONE" icon="icon.etc_spellbook_blue_i00">
+	<!-- Book to be taken to Magister Harne in Dark Elf Village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3539" name="Statue" type="NONE" icon="icon.etc_holy_statue_bronze_i00">
+	<!-- Statue to be taken to Sir Ortho Lancer in Town of Giran. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3540" name="Box" type="NONE" icon="icon.etc_squares_gray_i00">
+	<!-- Box to be taken to Martin in Town of Giran. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3541" name="Statue" type="NONE" icon="icon.etc_statue_of_einhasad_silver_i00">
+	<!-- Statue to be taken to Bishop Maximillian of Einhasad Temple in Town of Giran. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3542" name="Jewelry Box" type="NONE" icon="icon.etc_jewel_box_i00">
+	<!-- Jewelry box to be taken to Master Stapin of Dark Elf Guild in Town of Giran. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3543" name="Document" type="NONE" icon="icon.etc_paper_white_i00">
+	<!-- Document to be taken to Master Genwitter at the Warrior Guild in Town of Giran. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3544" name="Medicine" type="NONE" icon="icon.etc_potion_gold_i00">
+	<!-- Medicine bottle to be taken to High Prefect Clogg at the Orc Guild in the Town of Dion. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3545" name="Statue" type="NONE" icon="icon.etc_holy_statue_bronze_i00">
+	<!-- Statue to be taken to Sir Kiel Nighthawk in the Town of Dion. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3546" name="Ore" type="NONE" icon="icon.etc_synthetic_cokes_i00">
+	<!-- Ore to be taken to Blacksmith Poitan at the blacksmith' shop in the Town of Dion. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3547" name="Book" type="NONE" icon="icon.etc_spellbook_gray_i00">
+	<!-- Book to be taken to Cardinal Seresin of Einhasad Temple in the Town of Oren. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3548" name="Scroll" type="NONE" icon="icon.etc_roll_of_paper_white_i00">
+	<!-- Scroll to be taken to Duda-Mara Chief Takuna near the Orc Guild in the Town of Oren. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3549" name="Picture" type="NONE" icon="icon.etc_painting_i00">
+	<!-- Picture to be taken to Hunter Guild Member Colin in Hunter Village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3550" name="Fabric" type="NONE" icon="icon.etc_piece_of_cloth_blue_i00">
+	<!-- Fabric to be taken to Guard Makhis in Hunter Village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3551" name="Urn" type="NONE" icon="icon.etc_oil_pot_black_i00">
+	<!-- Jar which should be taken to Elder Cronos in Hunter Village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3552" name="Diamond" type="NONE" icon="icon.etc_gem_blue_i00">
+	<!-- Diamond to be taken to Grand Magister Scraide of Mystic Guild in Hunter Village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3553" name="Jewelry Box" type="NONE" icon="icon.etc_jewel_box_i00">
+	<!-- Jewelry box to be taken to Grocer Pano in Floran Village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3554" name="Gold Bar" type="NONE" icon="icon.etc_lump_yellow_i00">
+	<!-- Gold nuggets to be taken to Alex in Floran Village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3555" name="Shaft" type="NONE" icon="icon.etc_pouch_brown_i00">
+	<!-- Shaft to be taken to Militiaman Leirynn in Floran Village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3556" name="Letter" type="NONE" icon="icon.etc_letter_envelope_i00">
+	<!-- Letter to be taken to Fisherman Evert in Floran Village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3557" name="Fabric" type="NONE" icon="icon.etc_piece_of_cloth_blue_i00">
+	<!-- Fabric to be taken to Astrologer Creta in Floran Village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3558" name="Book" type="NONE" icon="icon.etc_spellbook_red_i00">
+	<!-- Book to be taken to Magister Kaiena of Dark Elf Guild on the 4th floor of the Ivory Tower. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3559" name="Ore" type="NONE" icon="icon.etc_synthetic_cokes_i00">
+	<!-- Ore to be taken to Rex in the underground shopping area at the Ivory Tower. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3560" name="Medicine" type="NONE" icon="icon.etc_potion_gold_i00">
+	<!-- Medicine bottle to be taken to Uruha near the waterfall in the north of the marshlands in the Dark Elven region. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3561" name="Small Boxes" type="NONE" icon="icon.etc_adamantite_i00">
+	<!-- Small boxes to be taken to Sentry Irene in front of the western bridge of the Neutral Zone. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3562" name="Document" type="NONE" icon="icon.etc_paper_white_i00">
+	<!-- Document to be taken to Sentinel Trionell in front of the eastern bridge of the Neutral Zone. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3563" name="Scroll" type="NONE" icon="icon.etc_roll_of_paper_red_i00">
+	<!-- Scroll to be taken to Northwind in front of the Underground Fortress in the Elven region. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3564" name="Document" type="NONE" icon="icon.etc_paper_white_i00">
+	<!-- Document to be taken to Thalia on the east side of Iris Lake in the Elven region. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3565" name="Box" type="NONE" icon="icon.etc_squares_silver_i00">
+	<!-- Box to be taken to Peter of the Turek orc encampment in the south of the Dark Elven autonomous region. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3566" name="Shaft" type="NONE" icon="icon.etc_pouch_brown_i00">
+	<!-- Shaft to be taken to Bodyguard Jax on the coastal road in the Southern Wastelands. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3567" name="Key" type="NONE" icon="icon.etc_key_i00">
+	<!-- Key to be taken to Researcher Lorain near the entrance to Cruma Tower. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3568" name="Machine" type="NONE" icon="icon.etc_instrument_i00">
+	<!-- Mechanical device to be taken to Maestro Nikola on the southwest side of Cruma Tower. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3569" name="Document" type="NONE" icon="icon.etc_paper_white_i00">
+	<!-- Document to be taken to Warden Roderik of the Execution Grounds. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3570" name="Small Boxes" type="NONE" icon="icon.etc_adamantite_i00">
+	<!-- Small boxes to be taken to Summoner Belthus on the southeast side of Cruma Tower. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3571" name="Shaft" type="NONE" icon="icon.etc_pouch_gray_i00">
+	<!-- Shaft to be taken to Enku Chief Kepra on the southern coast of Floran Village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3572" name="Box" type="NONE" icon="icon.etc_squares_wood_i00">
+	<!-- Box to be taken to Summoner Celestiel at the ruins of the Circular Coliseum to the south of the Underground Fortress of the Elven autonomous region. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3573" name="Picture" type="NONE" icon="icon.etc_painting_i00">
+	<!-- Picture to be delivered to Orphanage Master Gupu in the Wastelands, west of the Town of Gludio. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3574" name="Scroll" type="NONE" icon="icon.etc_roll_of_paper_blue_i00">
+	<!-- Scroll to be delivered to Summoner Basillia on the coastal road, south of the Wastelands. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3575" name="Box" type="NONE" icon="icon.etc_squares_wood_i00">
+	<!-- Box to be delivered to Sir Aaron Tanford on the coastal road, south of the Wastelands. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3576" name="Urn" type="NONE" icon="icon.etc_oil_pot_black_i00">
+	<!-- Urn to be delivered to Prophet Sla on the east side of the Ant Tunnel Dungeon. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3577" name="Jewelry Box" type="NONE" icon="icon.etc_jewel_box_i00">
+	<!-- Jewelry box to be delivered to Windy Shaoring on the west side of the Ant Tunnel Dungeon. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3578" name="Book" type="NONE" icon="icon.etc_spellbook_blue_i00">
+	<!-- Book which should be taken to Elder Casian at the south-side of the Ant Tunnel Dungeon located in the Wastelands. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3579" name="Medicine" type="NONE" icon="icon.etc_lesser_potion_scarlet_i00">
+	<!-- Medicine bottle to be taken to Annika on the south side of the Black Magic Laboratory in the Dark Elven autonomous region. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3580" name="Scroll" type="NONE" icon="icon.etc_roll_of_paper_white_i00">
+	<!-- Scroll to be taken to Slein Shining Blade on the east side of the Altar of Coming-of-Age Ceremony in the Dark Elven autonomous region. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3581" name="Small Boxes" type="NONE" icon="icon.etc_silver_i00">
+	<!-- Small boxes to be taken to Shaman Varika at the Altar of Coming-of-Age Ceremony in the Dark Elven autonomous region. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3582" name="Medicine" type="NONE" icon="icon.etc_lesser_potion_scarlet_i00">
+	<!-- Medicine bottle to be taken to Tyra across the western road at the Altar of Rites in the Dark Elven autonomous region. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3583" name="Scroll" type="NONE" icon="icon.etc_roll_of_paper_red_i00">
+	<!-- Scroll to be taken to Piper Longbow at the altar on the north side of the marshlands waterfall in the Dark Elven autonomous region. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3584" name="Letter" type="NONE" icon="icon.etc_letter_envelope_i00">
+	<!-- Letter to be taken to Katari at the altar on the north side of the marshlands waterfall in the Dark Elven autonomous region. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3585" name="Jewelry Box" type="NONE" icon="icon.etc_jewel_box_i00">
+	<!-- Jewelry box to be taken to Summoner Camoniell at the southern coast of Floran Village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3586" name="Sample" type="NONE" icon="icon.etc_parasite_i00">
+	<!-- Sample to be taken to Orim the Shadow at the north side of Death Pass in Giran Territory. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3587" name="Shaft" type="NONE" icon="icon.etc_pouch_yellow_i00">
+	<!-- Shaft to be taken to Breka Chief Voltar at the north-eastern side of the Death Pass in Giran Territory. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3588" name="Book" type="NONE" icon="icon.etc_spellbook_gray_i00">
+	<!-- Book to be taken to Summoner Brynthea at the north-western side of Town of Giran. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3589" name="Delivery Receipt" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
+	<!-- Confirmation document received when delivering item. It is signed by Magister Baulro. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3590" name="Delivery Receipt" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
+	<!-- Confirmation document received when delivering item. It is signed by Rockswell. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3591" name="Delivery Receipt" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
+	<!-- Confirmation document received when delivering item. It is signed by Marius. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3592" name="Delivery Receipt" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
+	<!-- Confirmation document received when delivering item. It is signed by Matheo. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3593" name="Delivery Receipt" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
+	<!-- Confirmation document received when delivering item. It is signed by Sir Collin Windawood. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3594" name="Delivery Receipt" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
+	<!-- Confirmation document received when delivering item. It is signed by High Prefect Osborn. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3595" name="Delivery Receipt" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
+	<!-- Confirmation document received when delivering item. It is signed by Perrin. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3596" name="Delivery Receipt" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
+	<!-- Confirmation document received when delivering item. It is signed by Clancy. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3597" name="Delivery Receipt" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
+	<!-- Confirmation document received when delivering item. It is signed by Sir Karrel Vasper. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3598" name="Delivery Receipt" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
+	<!-- Confirmation document received when delivering item. It is signed by Samed. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="3599" name="Delivery Receipt" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
+	<!-- Confirmation document received when delivering item. It is signed by Priestess Vivyan. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
 </list>

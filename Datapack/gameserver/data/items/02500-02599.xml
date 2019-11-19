@@ -1,2283 +1,1711 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <weapon id="2500" name="Dark Legion's Edge" icon="icon.weapon_dark_legions_edge_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1659"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1320"/>
-        <set name="price" val="20741000"/>
-        <set name="change_weaponId" val="9340"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_SWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">232</stat>
-            <stat type="mAtk">114</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2501" name="Bone Club" icon="icon.weapon_club_i00">
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1850"/>
-        <set name="price" val="136000"/>
-        <set name="soulshots" val="1"/>
-        <set name="commissionItemType" val="BLUNT_WEAPON"/>
-        <set name="spiritshots" val="1"/>
-        <stats>
-            <stat type="pAtk">24</stat>
-            <stat type="mAtk">17</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2502" name="Dwarven War Hammer" icon="icon.weapon_dwarven_warhammer_i00">
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1148"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1670"/>
-        <set name="price" val="2870000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="BLUNT_WEAPON"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">122</stat>
-            <stat type="mAtk">68</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2503" name="Yaksa Mace" icon="icon.weapon_yaksa_mace_i00">
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2452"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1640"/>
-        <set name="price" val="6130000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="BLUNT_WEAPON"/>
-        <stats>
-            <stat type="pAtk">156</stat>
-            <stat type="mAtk">83</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2504" name="Meteor Shower" icon="icon.weapon_meteor_shower_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1128"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1600"/>
-        <set name="price" val="14098000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="BLUNT_WEAPON"/>
-        <stats>
-            <stat type="pAtk">213</stat>
-            <stat type="mAtk">107</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2507" name="Lizardspear" icon="icon.weapon_doomed_dagger_i00">
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="300"/>
-        <set name="price" val="409000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="PET_EQUIPMENT"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">5</stat>
-            <stat type="mAtk">5</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <item id="2508" name="Cursed Bone" icon="icon.etc_piece_bone_red_i00">
-        <set name="etcitem_type" val="MATERIAL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="3"/>
-        <set name="price" val="240"/>
-        <set name="commissionItemType" val="OTHER_ITEM"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="2509" name="Spiritshot (No-grade)" icon="icon.etc_spell_shot_white_i00">
-        <!-- A Spiritshot bestowed on a weapon increases its M. Atk. Used with a No-grade weapon. -->
-        <set name="default_action" val="SPIRITSHOT"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="4"/>
-        <set name="price" val="15"/>
-        <set name="etcitem_type" val="SOULSHOT"/>
-        <restriction stackable="true"/>
-        <skills>
-            <skill id="2047" level="1"/> <!-- Spiritshot (No-grade) -->
-        </skills>
-    </item>
-    <item id="2510" name="Spiritshot (D-grade)" icon="icon.etc_spell_shot_blue_i00">
-        <!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a D-grade weapon. -->
-        <set name="default_action" val="SPIRITSHOT"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="4"/>
-        <set name="price" val="18"/>
-        <set name="etcitem_type" val="SOULSHOT"/>
-        <restriction stackable="true"/>
-        <skills>
-            <skill id="2155" level="1"/> <!-- Spiritshot (D-grade) -->
-        </skills>
-    </item>
-    <item id="2511" name="Spiritshot (C-grade)" icon="icon.etc_spell_shot_green_i00">
-        <!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a C-grade weapon. -->
-        <set name="default_action" val="SPIRITSHOT"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2"/>
-        <set name="price" val="35"/>
-        <set name="etcitem_type" val="SOULSHOT"/>
-        <restriction stackable="true"/>
-        <skills>
-            <skill id="2156" level="1"/> <!-- Spiritshot (C-grade) -->
-        </skills>
-    </item>
-    <item id="2512" name="Spiritshot (B-grade)" icon="icon.etc_spell_shot_red_i00">
-        <!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a B-grade weapon. -->
-        <set name="default_action" val="SPIRITSHOT"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2"/>
-        <set name="price" val="100"/>
-        <set name="etcitem_type" val="SOULSHOT"/>
-        <restriction stackable="true"/>
-        <skills>
-            <skill id="2157" level="1"/> <!-- Spiritshot (B-grade) -->
-        </skills>
-    </item>
-    <item id="2513" name="Spiritshot (A-grade)" icon="icon.etc_spell_shot_silver_i00">
-        <!-- The power of a Spiritshot is bestowed upon a weapon, temporarily increasing the power of magic attack. Used with A-grade weapons. -->
-        <set name="default_action" val="SPIRITSHOT"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1"/>
-        <set name="price" val="120"/>
-        <set name="etcitem_type" val="SOULSHOT"/>
-        <restriction stackable="true"/>
-        <skills>
-            <skill id="2158" level="1"/> <!-- Spiritshot (A-grade) -->
-        </skills>
-    </item>
-    <item id="2514" name="Spiritshot (S-grade)" icon="icon.etc_spell_shot_gold_i00">
-        <!-- The power of Spiritshot is bestowed upon a weapon, temporarily increasing its magical power. Used with S-grade weapons. -->
-        <set name="default_action" val="SPIRITSHOT"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1"/>
-        <set name="price" val="150"/>
-        <set name="etcitem_type" val="SOULSHOT"/>
-        <restriction stackable="true"/>
-        <skills>
-            <skill id="2159" level="1"/> <!-- Spiritshot (S-grade) -->
-        </skills>
-    </item>
-    <weapon id="2516" name="Saber*Saber" icon="icon.weapon_dual_sword_i00">
-        <!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1594"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2530"/>
-        <set name="price" val="877000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">73</stat>
-            <stat type="mAtk">37</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2517" name="Saber*Bastard Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1927"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2520"/>
-        <set name="price" val="1060000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">83</stat>
-            <stat type="mAtk">41</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2518" name="Saber*Spinebone Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1927"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2530"/>
-        <set name="price" val="1060000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">83</stat>
-            <stat type="mAtk">41</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2519" name="Saber*Artisan's Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1927"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2520"/>
-        <set name="price" val="1060000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">83</stat>
-            <stat type="mAtk">41</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2520" name="Saber*Knight's Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1927"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2510"/>
-        <set name="price" val="1060000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">83</stat>
-            <stat type="mAtk">41</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2521" name="Saber*Crimson Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2545"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2530"/>
-        <set name="price" val="1400000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">96</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2522" name="Saber*Elven Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2545"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2510"/>
-        <set name="price" val="1400000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">96</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2523" name="Saber*Sword of Revolution" icon="icon.weapon_dual_sword_i00">
-        <!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="784"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2420"/>
-        <set name="price" val="1960000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">118</stat>
-            <stat type="mAtk">56</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2524" name="Saber*Elven Long Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="916"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2420"/>
-        <set name="price" val="2290000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">130</stat>
-            <stat type="mAtk">61</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2525" name="Bastard Sword*Bastard Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2545"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2470"/>
-        <set name="price" val="1400000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">96</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2526" name="Bastard Sword*Spinebone Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2545"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2470"/>
-        <set name="price" val="1400000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">96</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2527" name="Bastard Sword*Artisan's Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2545"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2480"/>
-        <set name="price" val="1400000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">96</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2528" name="Bastard Sword*Knight's Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2545"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2500"/>
-        <set name="price" val="1400000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">96</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2529" name="Bastard Sword*Crimson Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="3018"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2470"/>
-        <set name="price" val="1660000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">107</stat>
-            <stat type="mAtk">51</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2530" name="Bastard Sword*Elven Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="3018"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2460"/>
-        <set name="price" val="1660000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <stats>
-            <stat type="pAtk">107</stat>
-            <stat type="mAtk">51</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2531" name="Bastard Sword*Sword of Revolution" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="848"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2450"/>
-        <set name="price" val="2120000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">124</stat>
-            <stat type="mAtk">58</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2532" name="Bastard Sword*Elven Long Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="988"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2430"/>
-        <set name="price" val="2470000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">136</stat>
-            <stat type="mAtk">63</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2533" name="Spinebone Sword*Spinebone Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2545"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2520"/>
-        <set name="price" val="1400000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">96</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2534" name="Spinebone Sword*Artisan's Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2545"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2460"/>
-        <set name="price" val="1400000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">96</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2535" name="Spinebone Sword*Knight's Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2545"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2470"/>
-        <set name="price" val="1400000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">96</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2536" name="Spinebone Sword*Crimson Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="3018"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2520"/>
-        <set name="price" val="1660000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">107</stat>
-            <stat type="mAtk">51</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2537" name="Spinebone Sword*Elven Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="3018"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2460"/>
-        <set name="price" val="1660000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">107</stat>
-            <stat type="mAtk">51</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2538" name="Spinebone Sword*Sword of Revolution" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="848"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2460"/>
-        <set name="price" val="2120000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">124</stat>
-            <stat type="mAtk">58</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2539" name="Spinebone Sword*Elven Long Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="988"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2390"/>
-        <set name="price" val="2470000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">136</stat>
-            <stat type="mAtk">63</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2540" name="Artisan's Sword*Artisan's Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2545"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2480"/>
-        <set name="price" val="1400000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">96</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2541" name="Artisan's Sword*Knight's Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2545"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2470"/>
-        <set name="price" val="1400000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">96</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2542" name="Artisan's Sword*Crimson Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="3018"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2450"/>
-        <set name="price" val="1660000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">107</stat>
-            <stat type="mAtk">51</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2543" name="Artisan's Sword*Elven Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="3018"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2470"/>
-        <set name="price" val="1660000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">107</stat>
-            <stat type="mAtk">51</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2544" name="Artisan's Sword*Sword of Revolution" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="848"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2420"/>
-        <set name="price" val="2120000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">124</stat>
-            <stat type="mAtk">58</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2545" name="Artisan's Sword*Elven Long Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="988"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2410"/>
-        <set name="price" val="2470000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">136</stat>
-            <stat type="mAtk">63</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2546" name="Knight's Sword*Knight's Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2545"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2460"/>
-        <set name="price" val="1400000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">96</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2547" name="Knight's Sword*Crimson Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="3018"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2460"/>
-        <set name="price" val="1660000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">107</stat>
-            <stat type="mAtk">51</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2548" name="Knight's Sword*Elven Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="3018"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2450"/>
-        <set name="price" val="1660000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">107</stat>
-            <stat type="mAtk">51</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2549" name="Knight's Sword*Sword of Revolution" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="848"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2430"/>
-        <set name="price" val="2120000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">124</stat>
-            <stat type="mAtk">58</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2550" name="Knight's Sword*Elven Long Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="988"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2370"/>
-        <set name="price" val="2470000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">136</stat>
-            <stat type="mAtk">63</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2551" name="Crimson Sword*Crimson Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="784"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2440"/>
-        <set name="price" val="1960000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <stats>
-            <stat type="pAtk">118</stat>
-            <stat type="mAtk">56</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2552" name="Crimson Sword*Elven Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="784"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2450"/>
-        <set name="price" val="1960000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">118</stat>
-            <stat type="mAtk">56</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2553" name="Crimson Sword*Sword of Revolution" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="988"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2390"/>
-        <set name="price" val="2470000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">136</stat>
-            <stat type="mAtk">63</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2554" name="Crimson Sword*Elven Long Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1148"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2360"/>
-        <set name="price" val="2870000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3046" level="2" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Guidance -->
-        </skills>
-        <stats>
-            <stat type="pAtk">148</stat>
-            <stat type="mAtk">68</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2555" name="Elven Sword*Elven Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="784"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2440"/>
-        <set name="price" val="1960000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">118</stat>
-            <stat type="mAtk">56</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2556" name="Elven Sword*Sword of Revolution" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="988"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2410"/>
-        <set name="price" val="2470000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">136</stat>
-            <stat type="mAtk">63</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2557" name="Elven Sword*Elven Long Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1148"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2410"/>
-        <set name="price" val="2870000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3042" level="2" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Critical Damage -->
-        </skills>
-        <stats>
-            <stat type="pAtk">148</stat>
-            <stat type="mAtk">68</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2558" name="Sword of Revolution*Sword of Revolution" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1148"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2360"/>
-        <set name="price" val="2870000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3013" level="1" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Health -->
-        </skills>
-        <stats>
-            <stat type="pAtk">148</stat>
-            <stat type="mAtk">68</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2559" name="Sword of Revolution*Elven Long Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1336"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2340"/>
-        <set name="price" val="3340000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3044" level="3" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Focus -->
-        </skills>
-        <stats>
-            <stat type="pAtk">155</stat>
-            <stat type="mAtk">70</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2560" name="Elven Long Sword*Elven Long Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1528"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2340"/>
-        <set name="price" val="3820000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3045" level="4" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Haste -->
-        </skills>
-        <stats>
-            <stat type="pAtk">162</stat>
-            <stat type="mAtk">73</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2561" name="StormBringer*StormBringer" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1912"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2330"/>
-        <set name="price" val="4780000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3046" level="6" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Guidance -->
-        </skills>
-        <stats>
-            <stat type="pAtk">175</stat>
-            <stat type="mAtk">78</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2562" name="StormBringer*Shamshir" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2112"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2300"/>
-        <set name="price" val="5280000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3042" level="7" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Critical Damage -->
-        </skills>
-        <stats>
-            <stat type="pAtk">183</stat>
-            <stat type="mAtk">81</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2563" name="StormBringer*Katana" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2112"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2320"/>
-        <set name="price" val="5280000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3013" level="1" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Health -->
-        </skills>
-        <stats>
-            <stat type="pAtk">183</stat>
-            <stat type="mAtk">81</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2564" name="StormBringer*Spirit Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2112"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2310"/>
-        <set name="price" val="5280000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3044" level="7" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Focus -->
-        </skills>
-        <stats>
-            <stat type="pAtk">183</stat>
-            <stat type="mAtk">81</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2565" name="StormBringer*Raid Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2112"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2340"/>
-        <set name="price" val="5280000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3045" level="7" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Haste -->
-        </skills>
-        <stats>
-            <stat type="pAtk">183</stat>
-            <stat type="mAtk">81</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2566" name="StormBringer*Caliburs" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="930"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2260"/>
-        <set name="price" val="6980000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3046" level="9" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Guidance -->
-        </skills>
-        <stats>
-            <stat type="pAtk">197</stat>
-            <stat type="mAtk">86</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2567" name="StormBringer*Ultimate Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="930"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2240"/>
-        <set name="price" val="6980000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3042" level="9" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Critical Damage -->
-        </skills>
-        <stats>
-            <stat type="pAtk">197</stat>
-            <stat type="mAtk">86</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2568" name="StormBringer*Sword of Delusion" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="930"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2230"/>
-        <set name="price" val="6980000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3013" level="1" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Health -->
-        </skills>
-        <stats>
-            <stat type="pAtk">197</stat>
-            <stat type="mAtk">86</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2569" name="StormBringer*Sword of Nightmare" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="930"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2250"/>
-        <set name="price" val="6980000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3044" level="9" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Focus -->
-        </skills>
-        <stats>
-            <stat type="pAtk">197</stat>
-            <stat type="mAtk">86</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2570" name="StormBringer*Tsurugi" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="930"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2220"/>
-        <set name="price" val="6980000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3045" level="9" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Haste -->
-        </skills>
-        <stats>
-            <stat type="pAtk">197</stat>
-            <stat type="mAtk">86</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2571" name="StormBringer*Samurai Long sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1157"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2150"/>
-        <set name="price" val="8680000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3046" level="11" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Guidance -->
-        </skills>
-        <stats>
-            <stat type="pAtk">213</stat>
-            <stat type="mAtk">91</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2572" name="Shamshir*Shamshir" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2452"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2330"/>
-        <set name="price" val="6130000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3046" level="8" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Guidance -->
-        </skills>
-        <stats>
-            <stat type="pAtk">190</stat>
-            <stat type="mAtk">83</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2573" name="Shamshir*Katana" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2452"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2310"/>
-        <set name="price" val="6130000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3042" level="8" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Critical Damage -->
-        </skills>
-        <stats>
-            <stat type="pAtk">190</stat>
-            <stat type="mAtk">83</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2574" name="Shamshir*Spirit Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2452"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2280"/>
-        <set name="price" val="6130000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3013" level="1" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Health -->
-        </skills>
-        <stats>
-            <stat type="pAtk">190</stat>
-            <stat type="mAtk">83</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2575" name="Shamshir*Raid Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2452"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2280"/>
-        <set name="price" val="6130000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3044" level="8" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Focus -->
-        </skills>
-        <stats>
-            <stat type="pAtk">190</stat>
-            <stat type="mAtk">83</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2576" name="Shamshir*Caliburs" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1044"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2230"/>
-        <set name="price" val="7830000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3046" level="10" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Guidance -->
-        </skills>
-        <stats>
-            <stat type="pAtk">204</stat>
-            <stat type="mAtk">89</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2577" name="Shamshir*Ultimate Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1044"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2240"/>
-        <set name="price" val="7830000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3042" level="10" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Critical Damage -->
-        </skills>
-        <stats>
-            <stat type="pAtk">204</stat>
-            <stat type="mAtk">89</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2578" name="Shamshir*Sword of Delusion" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1044"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2200"/>
-        <set name="price" val="7830000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3013" level="1" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Health -->
-        </skills>
-        <stats>
-            <stat type="pAtk">204</stat>
-            <stat type="mAtk">89</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2579" name="Shamshir*Sword of Nightmare" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1044"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2210"/>
-        <set name="price" val="7830000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3044" level="10" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Focus -->
-        </skills>
-        <stats>
-            <stat type="pAtk">204</stat>
-            <stat type="mAtk">89</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2580" name="Shamshir*Tsurugi" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1044"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2220"/>
-        <set name="price" val="7830000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3045" level="10" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Haste -->
-        </skills>
-        <stats>
-            <stat type="pAtk">204</stat>
-            <stat type="mAtk">89</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2581" name="Shamshir*Samurai Long Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1273"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2110"/>
-        <set name="price" val="9550000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3046" level="12" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Guidance -->
-        </skills>
-        <stats>
-            <stat type="pAtk">220</stat>
-            <stat type="mAtk">94</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2582" name="Katana*Katana" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2452"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2270"/>
-        <set name="price" val="6130000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3045" level="8" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Haste -->
-        </skills>
-        <stats>
-            <stat type="pAtk">190</stat>
-            <stat type="mAtk">83</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2583" name="Katana*Spirit Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2452"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2250"/>
-        <set name="price" val="6130000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3046" level="8" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Guidance -->
-        </skills>
-        <stats>
-            <stat type="pAtk">190</stat>
-            <stat type="mAtk">83</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2584" name="Katana*Raid Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2452"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2270"/>
-        <set name="price" val="6130000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3042" level="8" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Critical Damage -->
-        </skills>
-        <stats>
-            <stat type="pAtk">190</stat>
-            <stat type="mAtk">83</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2585" name="Katana*Caliburs" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1044"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2220"/>
-        <set name="price" val="7830000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3046" level="10" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Guidance -->
-        </skills>
-        <stats>
-            <stat type="pAtk">204</stat>
-            <stat type="mAtk">89</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2586" name="Katana*Ultimate Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1044"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2180"/>
-        <set name="price" val="7830000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3042" level="10" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Critical Damage -->
-        </skills>
-        <stats>
-            <stat type="pAtk">204</stat>
-            <stat type="mAtk">89</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2587" name="Katana*Sword of Delusion" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1044"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2190"/>
-        <set name="price" val="7830000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3013" level="1" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Health -->
-        </skills>
-        <stats>
-            <stat type="pAtk">204</stat>
-            <stat type="mAtk">89</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2588" name="Katana*Sword of Nightmare" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1044"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2170"/>
-        <set name="price" val="7830000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3044" level="10" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Focus -->
-        </skills>
-        <stats>
-            <stat type="pAtk">204</stat>
-            <stat type="mAtk">89</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2589" name="Katana*Tsurugi" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1044"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2210"/>
-        <set name="price" val="7830000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3045" level="10" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Haste -->
-        </skills>
-        <stats>
-            <stat type="pAtk">204</stat>
-            <stat type="mAtk">89</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2590" name="Katana*Samurai Long Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1273"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2130"/>
-        <set name="price" val="9550000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3042" level="12" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Critical Damage -->
-        </skills>
-        <stats>
-            <stat type="pAtk">220</stat>
-            <stat type="mAtk">94</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2591" name="Spirit Sword*Spirit Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2452"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2240"/>
-        <set name="price" val="6130000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3013" level="1" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Health -->
-        </skills>
-        <stats>
-            <stat type="pAtk">190</stat>
-            <stat type="mAtk">83</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2592" name="Spirit Sword*Raid Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2452"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2260"/>
-        <set name="price" val="6130000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3044" level="8" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Focus -->
-        </skills>
-        <stats>
-            <stat type="pAtk">190</stat>
-            <stat type="mAtk">83</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2593" name="Spirit Sword*Caliburs" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1044"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2240"/>
-        <set name="price" val="7830000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3046" level="10" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Guidance -->
-        </skills>
-        <stats>
-            <stat type="pAtk">204</stat>
-            <stat type="mAtk">89</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2594" name="Spirit Sword*Ultimate Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1044"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2240"/>
-        <set name="price" val="7830000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3042" level="10" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Critical Damage -->
-        </skills>
-        <stats>
-            <stat type="pAtk">204</stat>
-            <stat type="mAtk">89</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2595" name="Spirit Sword*Sword of Delusion" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1044"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2250"/>
-        <set name="price" val="7830000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3013" level="1" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Health -->
-        </skills>
-        <stats>
-            <stat type="pAtk">204</stat>
-            <stat type="mAtk">89</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2596" name="Spirit Sword*Sword of Nightmare" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1044"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2250"/>
-        <set name="price" val="7830000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3044" level="10" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Focus -->
-        </skills>
-        <stats>
-            <stat type="pAtk">204</stat>
-            <stat type="mAtk">89</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2597" name="Spirit Sword*Tsurugi" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1044"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2220"/>
-        <set name="price" val="7830000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3045" level="10" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Haste -->
-        </skills>
-        <stats>
-            <stat type="pAtk">204</stat>
-            <stat type="mAtk">89</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2598" name="Spirit Sword*Samurai Long Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1273"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2110"/>
-        <set name="price" val="9550000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3013" level="1" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Health -->
-        </skills>
-        <stats>
-            <stat type="pAtk">220</stat>
-            <stat type="mAtk">94</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2599" name="Raid Sword*Raid Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2452"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2250"/>
-        <set name="price" val="6130000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3045" level="8" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Haste -->
-        </skills>
-        <stats>
-            <stat type="pAtk">190</stat>
-            <stat type="mAtk">83</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
+	<weapon id="2500" name="Dark Legion's Edge" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_dark_legions_edge_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1320" price="20741000" commission-type="ONE_HAND_SWORD" change-weapon="9340"/>
+		<crystal type="A" count="1659"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="232.0"/>
+			<stat type="mAtk" value="114.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2501" name="Bone Club" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_club_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1850" price="136000" commission-type="BLUNT_WEAPON" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="24.0"/>
+			<stat type="mAtk" value="17.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2502" name="Dwarven War Hammer" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_dwarven_warhammer_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1670" price="2870000" commission-type="BLUNT_WEAPON"/>
+		<crystal type="C" count="1148"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="122.0"/>
+			<stat type="mAtk" value="68.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2503" name="Yaksa Mace" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_yaksa_mace_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1640" price="6130000" commission-type="BLUNT_WEAPON"/>
+		<crystal type="C" count="2452"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="156.0"/>
+			<stat type="mAtk" value="83.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2504" name="Meteor Shower" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_meteor_shower_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1600" price="14098000" commission-type="BLUNT_WEAPON"/>
+		<crystal type="A" count="1128"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="213.0"/>
+			<stat type="mAtk" value="107.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2507" name="Lizardspear" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_doomed_dagger_i00">
+		<restriction freightable="false"/>
+		<attributes weight="300" price="409000" commission-type="PET_EQUIPMENT"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="5.0"/>
+			<stat type="mAtk" value="5.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<item id="2508" name="Cursed Bone" type="MATERIAL" icon="icon.etc_piece_bone_red_i00">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="3" price="240" immediate-effect="true"/>
+	</item>
+
+	<item id="2509" name="Spiritshot (No-grade)" type="NONE" icon="icon.etc_spell_shot_white_i00">
+	<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a No-grade weapon. Exchange for a new Spiritshot through the Dimensional Merchant. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="4" price="15" commission-type="SPIRITSHOT" immediate-effect="true"/>
+		<action handler="SpiritShot"/>
+	</item>
+
+	<item id="2510" name="Spiritshot (D-grade)" type="NONE" icon="icon.etc_spell_shot_blue_i00">
+	<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a D-grade weapon. Exchange for a new Spiritshot through the Dimensional Merchant. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="4" price="18" commission-type="SPIRITSHOT" immediate-effect="true"/>
+		<action handler="SpiritShot"/>
+	</item>
+
+	<item id="2511" name="Spiritshot (C-grade)" type="NONE" icon="icon.etc_spell_shot_green_i00">
+	<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a C-grade weapon. Exchange for a new Spiritshot through the Dimensional Merchant. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="2" price="35" commission-type="SPIRITSHOT" immediate-effect="true"/>
+		<action handler="SpiritShot"/>
+	</item>
+
+	<item id="2512" name="Spiritshot (B-grade)" type="NONE" icon="icon.etc_spell_shot_red_i00">
+	<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a B-grade weapon. Exchange for a new Spiritshot through the Dimensional Merchant. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="2" price="100" commission-type="SPIRITSHOT" immediate-effect="true"/>
+		<action handler="SpiritShot"/>
+	</item>
+
+	<item id="2513" name="Spiritshot (A-grade)" type="NONE" icon="icon.etc_spell_shot_silver_i00">
+	<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a A-grade weapon. Exchange for a new Spiritshot through the Dimensional Merchant. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="1" price="120" commission-type="SPIRITSHOT" immediate-effect="true"/>
+		<action handler="SpiritShot"/>
+	</item>
+
+	<item id="2514" name="Spiritshot (S-grade)" type="NONE" icon="icon.etc_spell_shot_gold_i00">
+	<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to spontaneously increase. Used with an S-grade weapon. Exchange for a new Spiritshot through the Dimensional Merchant. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="1" price="150" commission-type="SPIRITSHOT" immediate-effect="true"/>
+		<action handler="SpiritShot"/>
+	</item>
+
+	<weapon id="2516" name="Saber*Saber" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2530" price="877000" commission-type="DUALSWORD"/>
+		<crystal type="D" count="1594"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="73.0"/>
+			<stat type="mAtk" value="37.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2517" name="Saber*Bastard Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2520" price="1060000" commission-type="DUALSWORD"/>
+		<crystal type="D" count="1927"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="83.0"/>
+			<stat type="mAtk" value="41.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2518" name="Saber*Spinebone Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2530" price="1060000" commission-type="DUALSWORD"/>
+		<crystal type="D" count="1927"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="83.0"/>
+			<stat type="mAtk" value="41.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2519" name="Saber*Artisan's Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2520" price="1060000" commission-type="DUALSWORD"/>
+		<crystal type="D" count="1927"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="83.0"/>
+			<stat type="mAtk" value="41.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2520" name="Saber*Knight's Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2510" price="1060000" commission-type="DUALSWORD"/>
+		<crystal type="D" count="1927"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="83.0"/>
+			<stat type="mAtk" value="41.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2521" name="Saber*Crimson Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2530" price="1400000" commission-type="DUALSWORD"/>
+		<crystal type="D" count="2545"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="96.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2522" name="Saber*Elven Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2510" price="1400000" commission-type="DUALSWORD"/>
+		<crystal type="D" count="2545"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="96.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2523" name="Saber*Sword of Revolution" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2420" price="1960000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="784"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="118.0"/>
+			<stat type="mAtk" value="56.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2524" name="Saber*Elven Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2420" price="2290000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="916"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="130.0"/>
+			<stat type="mAtk" value="61.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2525" name="Bastard Sword*Bastard Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2470" price="1400000" commission-type="DUALSWORD"/>
+		<crystal type="D" count="2545"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="96.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2526" name="Bastard Sword*Spinebone Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2470" price="1400000" commission-type="DUALSWORD"/>
+		<crystal type="D" count="2545"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="96.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2527" name="Bastard Sword*Artisan's Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2480" price="1400000" commission-type="DUALSWORD"/>
+		<crystal type="D" count="2545"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="96.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2528" name="Bastard Sword*Knight's Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2500" price="1400000" commission-type="DUALSWORD"/>
+		<crystal type="D" count="2545"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="96.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2529" name="Bastard Sword*Crimson Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2470" price="1660000" commission-type="DUALSWORD"/>
+		<crystal type="D" count="3018"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="107.0"/>
+			<stat type="mAtk" value="51.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2530" name="Bastard Sword*Elven Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2460" price="1660000" commission-type="DUALSWORD"/>
+		<crystal type="D" count="3018"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="107.0"/>
+			<stat type="mAtk" value="51.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2531" name="Bastard Sword*Sword of Revolution" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2450" price="2120000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="848"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="124.0"/>
+			<stat type="mAtk" value="58.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2532" name="Bastard Sword*Elven Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2430" price="2470000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="988"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="136.0"/>
+			<stat type="mAtk" value="63.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2533" name="Spinebone Sword*Spinebone Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2520" price="1400000" commission-type="DUALSWORD"/>
+		<crystal type="D" count="2545"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="96.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2534" name="Spinebone Sword*Artisan's Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2460" price="1400000" commission-type="DUALSWORD"/>
+		<crystal type="D" count="2545"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="96.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2535" name="Spinebone Sword*Knight's Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2470" price="1400000" commission-type="DUALSWORD"/>
+		<crystal type="D" count="2545"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="96.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2536" name="Spinebone Sword*Crimson Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2520" price="1660000" commission-type="DUALSWORD"/>
+		<crystal type="D" count="3018"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="107.0"/>
+			<stat type="mAtk" value="51.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2537" name="Spinebone Sword*Elven Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2460" price="1660000" commission-type="DUALSWORD"/>
+		<crystal type="D" count="3018"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="107.0"/>
+			<stat type="mAtk" value="51.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2538" name="Spinebone Sword*Sword of Revolution" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2460" price="2120000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="848"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="124.0"/>
+			<stat type="mAtk" value="58.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2539" name="Spinebone Sword*Elven Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2390" price="2470000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="988"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="136.0"/>
+			<stat type="mAtk" value="63.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2540" name="Artisan's Sword*Artisan's Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2480" price="1400000" commission-type="DUALSWORD"/>
+		<crystal type="D" count="2545"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="96.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2541" name="Artisan's Sword*Knight's Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2470" price="1400000" commission-type="DUALSWORD"/>
+		<crystal type="D" count="2545"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="96.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2542" name="Artisan's Sword*Crimson Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2450" price="1660000" commission-type="DUALSWORD"/>
+		<crystal type="D" count="3018"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="107.0"/>
+			<stat type="mAtk" value="51.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2543" name="Artisan's Sword*Elven Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2470" price="1660000" commission-type="DUALSWORD"/>
+		<crystal type="D" count="3018"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="107.0"/>
+			<stat type="mAtk" value="51.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2544" name="Artisan's Sword*Sword of Revolution" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2420" price="2120000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="848"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="124.0"/>
+			<stat type="mAtk" value="58.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2545" name="Artisan's Sword*Elven Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2410" price="2470000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="988"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="136.0"/>
+			<stat type="mAtk" value="63.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2546" name="Knight's Sword*Knight's Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2460" price="1400000" commission-type="DUALSWORD"/>
+		<crystal type="D" count="2545"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="96.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2547" name="Knight's Sword*Crimson Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2460" price="1660000" commission-type="DUALSWORD"/>
+		<crystal type="D" count="3018"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="107.0"/>
+			<stat type="mAtk" value="51.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2548" name="Knight's Sword*Elven Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2450" price="1660000" commission-type="DUALSWORD"/>
+		<crystal type="D" count="3018"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="107.0"/>
+			<stat type="mAtk" value="51.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2549" name="Knight's Sword*Sword of Revolution" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2430" price="2120000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="848"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="124.0"/>
+			<stat type="mAtk" value="58.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2550" name="Knight's Sword*Elven Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2370" price="2470000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="988"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="136.0"/>
+			<stat type="mAtk" value="63.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2551" name="Crimson Sword*Crimson Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2440" price="1960000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="784"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="118.0"/>
+			<stat type="mAtk" value="56.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2552" name="Crimson Sword*Elven Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2450" price="1960000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="784"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="118.0"/>
+			<stat type="mAtk" value="56.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2553" name="Crimson Sword*Sword of Revolution" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2390" price="2470000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="988"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="136.0"/>
+			<stat type="mAtk" value="63.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2554" name="Crimson Sword*Elven Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2360" price="2870000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="1148"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="148.0"/>
+			<stat type="mAtk" value="68.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3046" level="2" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Guidance -->
+		</skills>
+	</weapon>
+
+	<weapon id="2555" name="Elven Sword*Elven Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2440" price="1960000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="784"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="118.0"/>
+			<stat type="mAtk" value="56.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2556" name="Elven Sword*Sword of Revolution" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2410" price="2470000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="988"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="136.0"/>
+			<stat type="mAtk" value="63.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2557" name="Elven Sword*Elven Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2410" price="2870000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="1148"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="148.0"/>
+			<stat type="mAtk" value="68.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3042" level="2" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: P. Critical Damage -->
+		</skills>
+	</weapon>
+
+	<weapon id="2558" name="Sword of Revolution*Sword of Revolution" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2360" price="2870000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="1148"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="148.0"/>
+			<stat type="mAtk" value="68.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3013" level="1" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Health -->
+		</skills>
+	</weapon>
+
+	<weapon id="2559" name="Sword of Revolution*Elven Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2340" price="3340000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="1336"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="155.0"/>
+			<stat type="mAtk" value="70.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3044" level="3" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Focus -->
+		</skills>
+	</weapon>
+
+	<weapon id="2560" name="Elven Long Sword*Elven Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2340" price="3820000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="1528"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="162.0"/>
+			<stat type="mAtk" value="73.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3045" level="4" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Haste -->
+		</skills>
+	</weapon>
+
+	<weapon id="2561" name="Stormbringer*Stormbringer" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2330" price="4780000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="1912"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="175.0"/>
+			<stat type="mAtk" value="78.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3046" level="6" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Guidance -->
+		</skills>
+	</weapon>
+
+	<weapon id="2562" name="Stormbringer*Shamshir" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2300" price="5280000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="2112"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="183.0"/>
+			<stat type="mAtk" value="81.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3042" level="7" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: P. Critical Damage -->
+		</skills>
+	</weapon>
+
+	<weapon id="2563" name="Stormbringer*Katana" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2320" price="5280000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="2112"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="183.0"/>
+			<stat type="mAtk" value="81.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3013" level="1" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Health -->
+		</skills>
+	</weapon>
+
+	<weapon id="2564" name="Stormbringer*Spirit Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2310" price="5280000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="2112"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="183.0"/>
+			<stat type="mAtk" value="81.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3044" level="7" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Focus -->
+		</skills>
+	</weapon>
+
+	<weapon id="2565" name="Stormbringer*Raid Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2340" price="5280000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="2112"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="183.0"/>
+			<stat type="mAtk" value="81.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3045" level="7" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Haste -->
+		</skills>
+	</weapon>
+
+	<weapon id="2566" name="Stormbringer*Caliburs" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2260" price="6980000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="930"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="197.0"/>
+			<stat type="mAtk" value="86.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3046" level="9" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Guidance -->
+		</skills>
+	</weapon>
+
+	<weapon id="2567" name="Stormbringer*Ultimate Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2240" price="6980000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="930"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="197.0"/>
+			<stat type="mAtk" value="86.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3042" level="9" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: P. Critical Damage -->
+		</skills>
+	</weapon>
+
+	<weapon id="2568" name="Stormbringer*Sword of Delusion" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2230" price="6980000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="930"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="197.0"/>
+			<stat type="mAtk" value="86.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3013" level="1" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Health -->
+		</skills>
+	</weapon>
+
+	<weapon id="2569" name="Stormbringer*Sword of Nightmare" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2250" price="6980000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="930"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="197.0"/>
+			<stat type="mAtk" value="86.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3044" level="9" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Focus -->
+		</skills>
+	</weapon>
+
+	<weapon id="2570" name="Stormbringer*Tsurugi" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2220" price="6980000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="930"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="197.0"/>
+			<stat type="mAtk" value="86.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3045" level="9" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Haste -->
+		</skills>
+	</weapon>
+
+	<weapon id="2571" name="Stormbringer*Samurai Long sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2150" price="8680000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1157"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="213.0"/>
+			<stat type="mAtk" value="91.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3046" level="11" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Guidance -->
+		</skills>
+	</weapon>
+
+	<weapon id="2572" name="Shamshir*Shamshir" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2330" price="6130000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="2452"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="190.0"/>
+			<stat type="mAtk" value="83.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3046" level="8" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Guidance -->
+		</skills>
+	</weapon>
+
+	<weapon id="2573" name="Shamshir*Katana" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2310" price="6130000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="2452"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="190.0"/>
+			<stat type="mAtk" value="83.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3042" level="8" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: P. Critical Damage -->
+		</skills>
+	</weapon>
+
+	<weapon id="2574" name="Shamshir*Spirit Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2280" price="6130000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="2452"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="190.0"/>
+			<stat type="mAtk" value="83.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3013" level="1" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Health -->
+		</skills>
+	</weapon>
+
+	<weapon id="2575" name="Shamshir*Raid Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2280" price="6130000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="2452"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="190.0"/>
+			<stat type="mAtk" value="83.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3044" level="8" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Focus -->
+		</skills>
+	</weapon>
+
+	<weapon id="2576" name="Shamshir*Caliburs" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2230" price="7830000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1044"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="204.0"/>
+			<stat type="mAtk" value="89.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3046" level="10" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Guidance -->
+		</skills>
+	</weapon>
+
+	<weapon id="2577" name="Shamshir*Ultimate Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2240" price="7830000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1044"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="204.0"/>
+			<stat type="mAtk" value="89.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3042" level="10" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: P. Critical Damage -->
+		</skills>
+	</weapon>
+
+	<weapon id="2578" name="Shamshir*Sword of Delusion" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2200" price="7830000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1044"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="204.0"/>
+			<stat type="mAtk" value="89.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3013" level="1" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Health -->
+		</skills>
+	</weapon>
+
+	<weapon id="2579" name="Shamshir*Sword of Nightmare" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2210" price="7830000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1044"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="204.0"/>
+			<stat type="mAtk" value="89.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3044" level="10" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Focus -->
+		</skills>
+	</weapon>
+
+	<weapon id="2580" name="Shamshir*Tsurugi" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2220" price="7830000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1044"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="204.0"/>
+			<stat type="mAtk" value="89.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3045" level="10" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Haste -->
+		</skills>
+	</weapon>
+
+	<weapon id="2581" name="Shamshir*Samurai Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2110" price="9550000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1273"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="220.0"/>
+			<stat type="mAtk" value="94.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3046" level="12" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Guidance -->
+		</skills>
+	</weapon>
+
+	<weapon id="2582" name="Katana*Katana" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2270" price="6130000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="2452"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="190.0"/>
+			<stat type="mAtk" value="83.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3045" level="8" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Haste -->
+		</skills>
+	</weapon>
+
+	<weapon id="2583" name="Katana*Spirit Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2250" price="6130000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="2452"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="190.0"/>
+			<stat type="mAtk" value="83.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3046" level="8" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Guidance -->
+		</skills>
+	</weapon>
+
+	<weapon id="2584" name="Katana*Raid Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2270" price="6130000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="2452"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="190.0"/>
+			<stat type="mAtk" value="83.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3042" level="8" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: P. Critical Damage -->
+		</skills>
+	</weapon>
+
+	<weapon id="2585" name="Katana*Caliburs" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2220" price="7830000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1044"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="204.0"/>
+			<stat type="mAtk" value="89.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3046" level="10" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Guidance -->
+		</skills>
+	</weapon>
+
+	<weapon id="2586" name="Katana*Ultimate Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2180" price="7830000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1044"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="204.0"/>
+			<stat type="mAtk" value="89.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3042" level="10" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: P. Critical Damage -->
+		</skills>
+	</weapon>
+
+	<weapon id="2587" name="Katana*Sword of Delusion" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2190" price="7830000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1044"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="204.0"/>
+			<stat type="mAtk" value="89.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3013" level="1" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Health -->
+		</skills>
+	</weapon>
+
+	<weapon id="2588" name="Katana*Sword of Nightmare" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2170" price="7830000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1044"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="204.0"/>
+			<stat type="mAtk" value="89.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3044" level="10" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Focus -->
+		</skills>
+	</weapon>
+
+	<weapon id="2589" name="Katana*Tsurugi" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2210" price="7830000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1044"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="204.0"/>
+			<stat type="mAtk" value="89.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3045" level="10" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Haste -->
+		</skills>
+	</weapon>
+
+	<weapon id="2590" name="Katana*Samurai Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2130" price="9550000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1273"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="220.0"/>
+			<stat type="mAtk" value="94.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3042" level="12" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: P. Critical Damage -->
+		</skills>
+	</weapon>
+
+	<weapon id="2591" name="Spirit Sword*Spirit Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2240" price="6130000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="2452"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="190.0"/>
+			<stat type="mAtk" value="83.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3013" level="1" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Health -->
+		</skills>
+	</weapon>
+
+	<weapon id="2592" name="Spirit Sword*Raid Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2260" price="6130000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="2452"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="190.0"/>
+			<stat type="mAtk" value="83.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3044" level="8" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Focus -->
+		</skills>
+	</weapon>
+
+	<weapon id="2593" name="Spirit Sword*Caliburs" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2240" price="7830000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1044"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="204.0"/>
+			<stat type="mAtk" value="89.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3046" level="10" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Guidance -->
+		</skills>
+	</weapon>
+
+	<weapon id="2594" name="Spirit Sword*Ultimate Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2240" price="7830000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1044"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="204.0"/>
+			<stat type="mAtk" value="89.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3042" level="10" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: P. Critical Damage -->
+		</skills>
+	</weapon>
+
+	<weapon id="2595" name="Spirit Sword*Sword of Delusion" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2250" price="7830000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1044"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="204.0"/>
+			<stat type="mAtk" value="89.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3013" level="1" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Health -->
+		</skills>
+	</weapon>
+
+	<weapon id="2596" name="Spirit Sword*Sword of Nightmare" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2250" price="7830000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1044"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="204.0"/>
+			<stat type="mAtk" value="89.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3044" level="10" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Focus -->
+		</skills>
+	</weapon>
+
+	<weapon id="2597" name="Spirit Sword*Tsurugi" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2220" price="7830000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1044"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="204.0"/>
+			<stat type="mAtk" value="89.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3045" level="10" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Haste -->
+		</skills>
+	</weapon>
+
+	<weapon id="2598" name="Spirit Sword*Samurai Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2110" price="9550000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1273"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="220.0"/>
+			<stat type="mAtk" value="94.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3013" level="1" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Health -->
+		</skills>
+	</weapon>
+
+	<weapon id="2599" name="Raid Sword*Raid Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2250" price="6130000" commission-type="DUALSWORD"/>
+		<crystal type="C" count="2452"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="190.0"/>
+			<stat type="mAtk" value="83.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3045" level="8" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Haste -->
+		</skills>
+	</weapon>
+
 </list>

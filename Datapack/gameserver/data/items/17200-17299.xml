@@ -1,16 +1,16 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <armor id="17270" name="Agathion Bracelet Agathion - Nevit's Herald Kanna" icon="icon.pi_high_agathion_bracelet_i00">
-        <!-- A bracelet summoning Agathion, Nevit's Herald Kanna. -->
-        <set name="bodypart" val="lbracelet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <skills>
-            <skill id="8522" level="1"/>
-        </skills>
-        <stats>
-            <stat type="mDef">40</stat>
-        </stats>
-    </armor>
+	<armor id="17270" name="Agathion Bracelet Agathion - Nevit's Herald Kanna" type="NONE" body-part="LEFT_BRACELET" icon="icon.pi_high_agathion_bracelet_i00">
+	<!-- A bracelet summoning Agathion, Nevit's Herald Kanna. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="8522" level="1"/>  <!-- Summon Agathion - Nevit's Herald Kanna -->
+		</skills>
+	</armor>
+
 </list>

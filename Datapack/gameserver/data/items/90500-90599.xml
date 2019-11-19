@@ -1,520 +1,610 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="90500" name="Dragon’s Treasure Chest" icon="icon.bm_dragon_present">
-        <!-- Double-click to randomly receive one of Enchantment Scrolls or one rare item. Cannot be dropped or sold. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="90501" name="Dragon's Shining Treasure Chest" icon="icon.bm_dragon_shinning_present">
-        <!-- Double-click to randomly receive one of the following items: rare belt, level 5 jewel, any Armor Enchant Stone, any other rare item. Cannot be dropped or sold. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="90502" name="Lucky Enchant Stone: Armor (D-grade)" icon="icon.bless_ench_amr_stone_i00">
-        <!-- Enchant success rate +10% for armor (D-grade) when using a standard scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. Cannot be exchanged, dropped or sold. Can be stored in private warehouse. -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="90503" name="Lucky Enchant Stone: Armor (C-grade)" icon="icon.bless_ench_amr_stone_i00">
-        <!-- Enchant success rate +10% for armor (C-grade) when using a standard scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. Cannot be exchanged, dropped or sold. Can be stored in private warehouse. -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="90504" name="Lucky Enchant Stone: Armor (B-grade)" icon="icon.bless_ench_amr_stone_i00">
-        <!-- Enchant success rate +10% for armor (B-grade) when using a standard scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. Cannot be exchanged, dropped or sold. Can be stored in private warehouse. -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="90505" name="Lucky Enchant Stone: Armor (A-grade)" icon="icon.bless_ench_amr_stone_i00">
-        <!-- Enchant success rate +10% for armor (A-grade) when using a standard scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. Cannot be exchanged, dropped or sold. Can be stored in private warehouse. -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="90506" name="Valuable Mark of Balthus Knights" icon="icon.ev_balthus_token">
-        <!-- XP/SP gain ++20% and a chance to get Special Supplies for 2 hour. Intended for Lv. 20 and higher. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse and transferred between characters on the same account. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="handler" val="ItemSkills"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-        <skills>
-            <skill id="39272" level="1"/> <!-- Officer of Balthus Knights -->
-        </skills>
-    </item>
-    <item id="90507" name="Dragon's Balthus Chest" icon="icon.bm_dragon_present">
-        <!-- Double-click to obtain Dragon Treasure Chest that can have random rare accessories or one of many Enchanted Scrolls. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="90508" name="Special Dragon's Fruit" icon="icon.bm_dragon_fruit">
-        <!-- For 20 minutes, P./ M. Atk. +12%, P./ M. Def. +15%, Max HP/ CP/ MP +25%, HP/ MP Recovery Bonus +30%. P./ M. Critical Rate +10, P./ M. Critical Damage +5%. Vampiric Rage Effect +5%. Acquired XP/SP +10%. Cooldown is 1 minute. Buff remains after death. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="90509" name="Dragon’s Gold Key" icon="icon.bm_dragon_key">
-        <!-- Take 1 Gold Key and 15 Melissa's Recovery Potions to the Dimensional Merchant to exchange them for Shining Dragon Treasure Chest. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. The item will be removed after the event is over on Jule 6, 2016. -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="90510" name="Talisman of Border Pack +5" icon="icon.bm_special_pendant_abradant_box">
-        <!-- Double-click to obtain Talisman of Border - Lv. 5. Cannot be dropped. Note: cannot be returned once opened. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="90511" name="Talisman of Border Pack +6" icon="icon.bm_special_pendant_abradant_box">
-        <!-- Double-click to obtain Talisman of Border - Lv. 6. Cannot be dropped. Note: cannot be returned once opened. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="90512" name="Talisman of Border Pack +7" icon="icon.bm_special_pendant_abradant_box">
-        <!-- Double-click to obtain Talisman of Border - Lv. 7. Cannot be dropped. Note: cannot be returned once opened. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="90513" name="Talisman of Border Pack Lv. 8" icon="icon.bm_special_pendant_abradant_box">
-        <!-- Double-click to obtain Talisman of Border - Lv. 8. Cannot be dropped. Note: cannot be returned once opened. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="90514" name="Talisman of Border Pack Lv. 9" icon="icon.bm_special_pendant_abradant_box">
-        <!-- Double-click to obtain Talisman of Border - Lv. 9. Cannot be dropped. Note: cannot be returned once opened. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="90515" name="Talisman of Border Pack Lv. 10" icon="icon.bm_special_pendant_abradant_box">
-        <!-- Double-click to obtain Talisman of Border - Lv. 10. Cannot be dropped. Note: cannot be returned once opened. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="90516" name="Lesser GM's Blessing Chest" icon="icon.event_six_party_box_i00">
-        <!-- Double-click to obtain one of the following items: Toy Knight's Home Run Ball, Angel Cat's Blessing, Sayha's Holy Water, Soulshot Ticket, Major Warrior Healing Potion. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="90517" name="Greater GM's Blessing Chest" icon="icon.event_six_party_box_i00">
-        <!-- Double-click to obtain one of the following items: Spellbook Box - 3rd Class Transfer, Magic Gem, Spellbook Chest, Common Life Stone, Scroll of Mood Melody. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="90518" name="Greatest GM's Blessing Chest" icon="icon.event_six_party_box_i00">
-        <!-- Double-click to obtain one of the following items: Refined Rare Accessory Pack (30-day), Rare Accessory Box (15-day), Unidentified Stone, Dandy Shining Pendant (7-day), Dandy Shining Pendant (1-day), Dandy Pendant (7-day), Dandy Pendant (1-day). Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="90519" name="Shining Scroll of Mood Melody" icon="icon.bm_magmeld">
-        <!-- For 20 minutes activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Purity, Wild Magic, Concentration. Cannot be used together with Scroll of Mood Melody. This effect will not be removed after death. Cannot be dropped. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="90520" name="Fire Dragon's Blessing Scroll" icon="icon.bm_blessing_dragon">
-        <!-- For 20 minutes. Blessing Of Fire Dragon: Buff/ debuff effects remain after death, but Blessing of Fire Dragon is consumed. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="90521" name="Golden Fishing Rod Pouch" icon="Icon.bm_gold_fishing_poket">
-        <!-- Double-click to obtain 180 pcs. of Golden Bait, 180 pcs. of Fishing Shot. Cannot be dropped. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="90522" name="Golden Treasure Chest" icon="icon.bm_gold_relic_box">
-        <!-- Double-click on the Golden Treasure Chest to get one of its treasures. Cannot be dropped. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="90523" name="Shining Fishing kit" icon="icon.bm_freya_gift_box">
-        <!-- Double-click to obtain 2 Mermaid Golden Fishing Rod Chests (30-day), 25920 Silver Baits, 20 of Einhasad's Protection, Talisman of Baium Box (30-day), Jewel Box (30-day). Cannot be dropped. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="90524" name="Lucky Enchant Stone Chest - A-grade" icon="icon.etc_pi_gift_box_i03">
-        <!-- Double-click to randomly receive one of the following items: Lucky Enchant Stone: Armor (A-grade), Lucky Enchant Stone: Save Armor (A-grade), Lucky Enchant Stone: Protect Armor (A-grade). Cannot be dropped or sold. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="90525" name="Lucky Enchant Stone Chest - B-grade" icon="icon.etc_pi_gift_box_i02">
-        <!-- Double-click to randomly receive one of the following items: Lucky Enchant Stone: Armor (B-grade), Lucky Enchant Stone: Save Armor (B-grade), Lucky Enchant Stone: Protect Armor (B-grade). Cannot be dropped or sold. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="90526" name="Talisman of Baium Box" icon="icon.npoint_tauti_30day_box">
-        <!-- Double-click to obtain a Talisman of Baium (30-day). Cannot be dropped. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <armor id="90527" name="Talisman of Baium" icon="icon.tallisman_baium">
-        <!-- A 30-day item. P. Atk. +284, M. Atk. +392, M. Damage Resistance +10%, Skill Power +5%, Resistance to All Weapons +5%, CON +1, MEN +1, STR +1, INT +1, DEX +1, WIT +1. P./ M. Critical Rate +20. Skill MP Consumption -5%. Skill Cooldown -3%. Can only be used by characters Lv. 60 and above. Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <item id="90528" name="Shining Jewel Box" icon="icon.etc_pi_box_wish_pack">
-        <!-- Double-click to obtain Lv. 5 Jade (30-day). Lv. 5 Vital Stone (30-day), Lv. 5 Garnet (30-day). Cannot be dropped. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <armor id="90529" name="Lv. 5 Jade" icon="icon.etc_bm_jewel_jade_i00">
-        <!-- 30-day item. Atk. Spd./ Casting Spd. +14%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="brooch_jewel"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="90530" name="Lv. 5 Vital Stone" icon="icon.etc_bm_jewel_vital">
-        <!-- A 30-day item. Sayha Grace XP/SP +15%, Sayha Grace Consumption -30% while hunting. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="brooch_jewel"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="90531" name="Lv. 5 Garnet" icon="icon.etc_bm_jewel_garnet">
-        <!-- 30-day item. Stun/ Pulling/ Silence/ Petrification/ Fear Resistance +20%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="brooch_jewel"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <item id="90532" name="Refined Rare Accessory Pack" icon="icon.npoint_earthworm_30day_box">
-        <!-- Double-click to randomly receive one of the following items: Refined Queen Ant's Ring, Refined Orfen's Earring, Refined Ring of Core, Refined Baium's Ring. Cannot be dropped or sold. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="90533" name="Rare Accessory Box" icon="icon.npoint_valakas_30day_box">
-        <!-- Double-click to randomly receive one of the following items: Queen Ant's Ring, Orfen's Earring, Ring of Core, Baium's Ring. Cannot be dropped or sold. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="90534" name="Sigel’s Rune - Stage 1" icon="BranchIcon.Icon.g_rune_sigel_lv00">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90535" name="Sigel’s Rune - Stage 2" icon="BranchIcon.Icon.g_rune_sigel_lv00">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90536" name="Sigel’s Rune - Stage 3" icon="BranchIcon.Icon.g_rune_sigel_lv00">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90537" name="Sigel’s Rune - Stage 4" icon="BranchIcon.Icon.g_rune_sigel_lv00">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90538" name="Sigel’s Rune - Stage 5" icon="BranchIcon.Icon.g_rune_sigel_lv00">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90539" name="Sigel’s Rune - Stage 6" icon="BranchIcon.Icon.g_rune_sigel_lv01">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90540" name="Sigel’s Rune - Stage 7" icon="BranchIcon.Icon.g_rune_sigel_lv01">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90541" name="Sigel’s Rune - Stage 8" icon="BranchIcon.Icon.g_rune_sigel_lv01">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90542" name="Sigel’s Rune - Stage 9" icon="BranchIcon.Icon.g_rune_sigel_lv01">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90543" name="Sigel’s Rune - Stage 10" icon="BranchIcon.Icon.g_rune_sigel_lv01">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90544" name="Sigel’s Rune - Stage 11" icon="BranchIcon.Icon.g_rune_sigel_lv02">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90545" name="Sigel’s Rune - Stage 12" icon="BranchIcon.Icon.g_rune_sigel_lv02">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90546" name="Sigel’s Rune - Stage 13" icon="BranchIcon.Icon.g_rune_sigel_lv02">
-        <!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90547" name="Sigel’s Rune - Stage 14" icon="BranchIcon.Icon.g_rune_sigel_lv02">
-        <!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90548" name="Sigel’s Rune - Stage 15" icon="BranchIcon.Icon.g_rune_sigel_lv02">
-        <!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90549" name="Sigel’s Rune - Stage 16" icon="icon.ensoul_big_p">
-        <!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90550" name="Sigel’s Rune - Stage 17" icon="icon.ensoul_big_p">
-        <!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90551" name="Sigel’s Rune - Stage 18" icon="icon.ensoul_big_p">
-        <!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90552" name="Sigel’s Rune - Stage 19" icon="icon.ensoul_big_p">
-        <!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90553" name="Sigel’s Rune - Stage 20" icon="icon.ensoul_big_p">
-        <!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90554" name="Tyrr’s Rune - Stage 1" icon="BranchIcon.Icon.g_rune_tir_lv00">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90555" name="Tyrr’s Rune - Stage 2" icon="BranchIcon.Icon.g_rune_tir_lv00">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90556" name="Tyrr’s Rune - Stage 3" icon="BranchIcon.Icon.g_rune_tir_lv00">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90557" name="Tyrr’s Rune - Stage 4" icon="BranchIcon.Icon.g_rune_tir_lv00">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90558" name="Tyrr’s Rune - Stage 5" icon="BranchIcon.Icon.g_rune_tir_lv00">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90559" name="Tyrr’s Rune - Stage 6" icon="BranchIcon.Icon.g_rune_tir_lv01">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90560" name="Tyrr’s Rune - Stage 7" icon="BranchIcon.Icon.g_rune_tir_lv01">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90561" name="Tyrr’s Rune - Stage 8" icon="BranchIcon.Icon.g_rune_tir_lv01">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90562" name="Tyrr’s Rune - Stage 9" icon="BranchIcon.Icon.g_rune_tir_lv01">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90563" name="Tyrr’s Rune - Stage 10" icon="BranchIcon.Icon.g_rune_tir_lv01">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90564" name="Tyrr’s Rune - Stage 11" icon="BranchIcon.Icon.g_rune_tir_lv02">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90565" name="Tyrr’s Rune - Stage 12" icon="BranchIcon.Icon.g_rune_tir_lv02">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90566" name="Tyrr’s Rune - Stage 13" icon="BranchIcon.Icon.g_rune_tir_lv02">
-        <!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90567" name="Tyrr’s Rune - Stage 14" icon="BranchIcon.Icon.g_rune_tir_lv02">
-        <!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90568" name="Tyrr’s Rune - Stage 15" icon="BranchIcon.Icon.g_rune_tir_lv02">
-        <!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90569" name="Tyrr’s Rune - Stage 16" icon="icon.ensoul_big_p">
-        <!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90570" name="Tyrr’s Rune - Stage 17" icon="icon.ensoul_big_p">
-        <!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90571" name="Tyrr’s Rune - Stage 18" icon="icon.ensoul_big_p">
-        <!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90572" name="Tyrr’s Rune - Stage 19" icon="icon.ensoul_big_p">
-        <!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90573" name="Tyrr’s Rune - Stage 20" icon="icon.ensoul_big_p">
-        <!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90574" name="Othell’s Rune - Stage 1" icon="BranchIcon.Icon.g_rune_othel_lv01">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90575" name="Othell’s Rune - Stage 2" icon="BranchIcon.Icon.g_rune_othel_lv01">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90576" name="Othell’s Rune - Stage 3" icon="BranchIcon.Icon.g_rune_othel_lv01">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90577" name="Othell’s Rune - Stage 4" icon="BranchIcon.Icon.g_rune_othel_lv01">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90578" name="Othell’s Rune - Stage 5" icon="BranchIcon.Icon.g_rune_othel_lv01">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90579" name="Othell’s Rune - Stage 6" icon="BranchIcon.Icon.g_rune_othel_lv02">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90580" name="Othell’s Rune - Stage 7" icon="BranchIcon.Icon.g_rune_othel_lv02">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90581" name="Othell’s Rune - Stage 8" icon="BranchIcon.Icon.g_rune_othel_lv02">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90582" name="Othell’s Rune - Stage 9" icon="BranchIcon.Icon.g_rune_othel_lv02">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90583" name="Othell’s Rune - Stage 10" icon="BranchIcon.Icon.g_rune_othel_lv02">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90584" name="Othell’s Rune - Stage 11" icon="BranchIcon.Icon.g_rune_othel_lv03">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90585" name="Othell’s Rune - Stage 12" icon="BranchIcon.Icon.g_rune_othel_lv03">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90586" name="Othell’s Rune - Stage 13" icon="BranchIcon.Icon.g_rune_othel_lv03">
-        <!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90587" name="Othell’s Rune - Stage 14" icon="BranchIcon.Icon.g_rune_othel_lv03">
-        <!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90588" name="Othell’s Rune - Stage 15" icon="BranchIcon.Icon.g_rune_othel_lv03">
-        <!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90589" name="Othell’s Rune - Stage 16" icon="icon.ensoul_big_p">
-        <!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90590" name="Othell’s Rune - Stage 17" icon="icon.ensoul_big_p">
-        <!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90591" name="Othell’s Rune - Stage 18" icon="icon.ensoul_big_p">
-        <!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90592" name="Othell’s Rune - Stage 19" icon="icon.ensoul_big_p">
-        <!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90593" name="Othell’s Rune - Stage 20" icon="icon.ensoul_big_p">
-        <!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90594" name="Yul’s Rune - Stage 1" icon="BranchIcon.Icon.g_rune_yr_lv01">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90595" name="Yul’s Rune - Stage 2" icon="BranchIcon.Icon.g_rune_yr_lv01">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90596" name="Yul’s Rune - Stage 3" icon="BranchIcon.Icon.g_rune_yr_lv01">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90597" name="Yul’s Rune - Stage 4" icon="BranchIcon.Icon.g_rune_yr_lv01">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90598" name="Yul’s Rune - Stage 5" icon="BranchIcon.Icon.g_rune_yr_lv01">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90599" name="Yul’s Rune - Stage 6" icon="BranchIcon.Icon.g_rune_yr_lv02">
-        <!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-        <set name="weight" val="20"/>
-        <restriction stackable="true"/>
-    </item>
+	<item id="90500" name="Dragon's Treasure Chest" type="NONE" icon="icon.bm_dragon_present">
+	<!-- Double-click to randomly receive a rare item such as one of Enchant Scroll.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90501" name="Dragon's Shining Treasure Chest" type="NONE" icon="icon.bm_dragon_shinning_present">
+	<!-- Double-click to randomly receive one of the following items: Rare Belt, Lv. 5 Gem, Armor Enchant Stone, any other rare item. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90502" name="Lucky Enchant Stone: Armor (D-grade)" type="LUCKY_ENCHANT" icon="icon.bless_ench_amr_stone_i00">
+	<!-- Enchant success rate +10% for standard armor (D-grade) when using an Enchant Scroll. Only for items enchanted between +3 and +8. For full-body armor, enchant must be between +4 and +8. Can be stored in private warehouse. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90503" name="Lucky Enchant Stone: Armor (C-grade)" type="LUCKY_ENCHANT" icon="icon.bless_ench_amr_stone_i00">
+	<!-- Enchant success rate +10% for standard armor (C-grade) when using an Enchant Scroll. Only for items enchanted between +3 and +8. For full-body armor, enchant must be between +4 and +8. Can be stored in private warehouse. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90504" name="Lucky Enchant Stone: Armor (B-grade)" type="LUCKY_ENCHANT" icon="icon.bless_ench_amr_stone_i00">
+	<!-- Enchant success rate +10% for standard armor (B-grade) when using an Enchant Scroll. Only for items enchanted between +3 and +8. For full-body armor, enchant must be between +4 and +8. Can be stored in private warehouse. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90505" name="Lucky Enchant Stone: Armor (A-grade)" type="LUCKY_ENCHANT" icon="icon.bless_ench_amr_stone_i00">
+	<!-- Enchant success rate +10% for standard armor (A-grade) when using an Enchant Scroll. Only for items enchanted between +3 and +8. For full-body armor, enchant must be between +4 and +8. Can be stored in private warehouse. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90506" name="Valuable Mark of Balthus Knights" type="SCROLL" icon="icon.ev_balthus_token">
+	<!-- XP/SP Gain +20% and a chance to get Special Supplies for 2 hour. Intended for Lv. 20 and higher.   -->
+		<restriction stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39272" level="1"/>  <!-- Officer of Balthus Knights -->
+		</skill-reducer>
+	</item>
+
+	<item id="90507" name="Dragon's Balthus Chest" type="NONE" icon="icon.bm_dragon_present">
+	<!-- Double-click to receive 30 Dragon's Treasure Chests that can contain random rare accessories or various Enchant Scrolls.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="90508" name="Golden Fruit Buff" type="SCROLL" icon="icon.bm_dragon_fruit">
+	<!-- For 20 minutes, P./M. Atk. +12%, P./M. Def. +15%, Max. HP/CP/MP +25%, P./M. Critical Rate +10, P./M. Critical Damage +5%, HP/MP Recovery +30%. At a certain chance absorbs 5% of the damage inflicted on target as HP. XP and SP gained through hunting +10%. Cooldown is 1 minute. Buff remains after death. Can be stored in private warehouse. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90509" name="Dragon's Gold Key" type="NONE" icon="icon.bm_dragon_key">
+	<!-- Take 1 Gold Key and 15 Maliss's HP Potions to the Dimensional Merchant to exchange them for Shining Dragon's Treasure Chest. -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90510" name="Talisman of Fate Pack +5" type="NONE" icon="icon.bm_special_pendant_abradant_box">
+	<!-- Double-click to obtain Talisman of Fate - Lv. 5. \\n\\nNote: cannot be returned once opened.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="90511" name="Talisman of Fate Pack +6" type="NONE" icon="icon.bm_special_pendant_abradant_box">
+	<!-- Double-click to obtain Talisman of Fate - Lv. 6. \\n\\nNote: cannot be returned once opened. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="90512" name="Talisman of Fate Pack +7" type="NONE" icon="icon.bm_special_pendant_abradant_box">
+	<!-- Double-click to obtain Talisman of Fate - Lv. 7. \\n\\nNote: cannot be returned once opened. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="90513" name="Talisman of Fate Pack Lv. 8" type="NONE" icon="icon.bm_special_pendant_abradant_box">
+	<!-- Double-click to obtain Talisman of Fate - Lv. 8. \\n\\nNote: cannot be returned once opened. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="90514" name="Talisman of Fate Pack Lv. 9" type="NONE" icon="icon.bm_special_pendant_abradant_box">
+	<!-- Double-click to obtain Talisman of Fate - Lv. 9. \\n\\nNote: cannot be returned once opened. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="90515" name="Talisman of Fate Pack Lv. 10" type="NONE" icon="icon.bm_special_pendant_abradant_box">
+	<!-- Double-click to obtain Talisman of Fate - Lv. 10. \\n\\nNote: cannot be returned once opened. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="90516" name="Lesser GM's Blessing Chest" type="NONE" icon="icon.event_six_party_box_i00">
+	<!-- Double-click to receive one of the following items: Dandy's Home Run Ball, Angel Cat's Blessing, Sayha's Holy Water, Soulshot Ticket, Warrior's Major HP Potion.  -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90517" name="Greater GM's Blessing Chest" type="NONE" icon="icon.event_six_party_box_i00">
+	<!-- Double-click to receive one of the following items: Spellbook Box - 3rd Class Transfer, Magic Tablet, Spellbook Box, Common Life Stone, Scroll of Mood Melody.  -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90518" name="Greatest GM's Blessing Chest" type="NONE" icon="icon.event_six_party_box_i00">
+	<!-- Double-click to receive one of the following items: Refined Rare Accessory Pack (30-day), Rare Accessory Pack (15-day), Unidentified Stone, Dandy's Shining Pendant (7-day), Dandy's Shining Pendant (1-day), Dandy's Pendant (7-day), Dandy's Pendant (1-day).  -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90519" name="Shining Scroll of Mood Melody" type="SCROLL" icon="icon.bm_magmeld">
+	<!-- For 20 minutes activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Purity, Wild Magic, Concentration. Cannot be used together with Scroll of Mood Melody. This effect will not be removed after death.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90520" name="Fire Dragon's Blessing Scroll" type="SCROLL" icon="icon.bm_blessing_dragon">
+	<!-- For 20 minutes.\\n\\nBlessing Of Fire Dragon: Buff/ debuff effects remain after death, but Blessing of Fire Dragon is consumed. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90521" name="Golden Fishing Rod Pouch" type="NONE" icon="Icon.bm_gold_fishing_poket">
+	<!-- Double-click to obtain 180 Golden Bait, 180 Fishing Shots.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="90522" name="Golden Treasure Chest" type="NONE" icon="icon.bm_gold_relic_box">
+	<!-- Double-click on the Golden Treasure Chest to obtain one of its treasures.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90523" name="Shining Fishing kit Lv. 1" type="NONE" icon="icon.bm_freya_gift_box">
+	<!-- Double-click to obtain 2 Golden Mermaid's Fishing Rod Packs (30-day), 25920 Silver Bait, 20 Einhasad's Protections, 1 Talisman of Baium Pack (30-day), and 1 Shining Jewel Box (30-day).  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="90524" name="Lucky Enchant Stone Chest - A-grade" type="NONE" icon="icon.etc_pi_gift_box_i03">
+	<!-- Double-click to randomly receive one of the following items: Lucky Enchant Stone: Armor (A-grade), Lucky Enchant Stone: Save Armor (A-grade), Lucky Enchant Stone: Protect Armor (A-grade).  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90525" name="Lucky Enchant Stone Chest - B-grade" type="NONE" icon="icon.etc_pi_gift_box_i02">
+	<!-- Double-click to randomly receive one of the following items: Lucky Enchant Stone: Armor (B-grade), Lucky Enchant Stone: Save Armor (B-grade), Lucky Enchant Stone: Protect Armor (B-grade).  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90526" name="Talisman of Baium Box" type="NONE" icon="icon.npoint_tauti_30day_box">
+	<!-- Double-click to obtain a Talisman of Baium Pack (30-day).  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<armor id="90527" name="Talisman of Baium" type="NONE" body-part="TALISMAN" icon="icon.tallisman_baium">
+	<!-- A 30-day item. P. Atk. +284, M. Atk. +392, Magic Attack Resistance +10%, Skill Power +5%, all kinds of Weapon Resistance +5%, CON +1, MEN +1, STR +1, INT +1, DEX +1, WIT +1. P./ M. Critical Rate +20. MP Consumption for skill use -5%. Skill Reuse Time -3%. Available only for Lv. 60 and higher. Effects from two such Talismans do not stack.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="120" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<item id="90528" name="Shining Jewel Box" type="NONE" icon="icon.etc_pi_box_wish_pack">
+	<!-- Double-click to obtain 1 Jade Lv. 5 (30-day), 1 Vital Stone Lv. 5 (30-day), and 1 Garnet Lv. 5 (30-day).  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<armor id="90529" name="Jade Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_jade_i00">
+	<!-- 30-day item. Atk. Spd./Casting Spd. +14%, when equipped. Effect does not stack with additional jewels of the same type.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="90530" name="Vital Stone Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_vital">
+	<!-- A 30-day item. XP/SP gain +15% and Sayha's Grace Consumption Rate -30% while hunting during Sayha's Grace effect. If identical Gems are equipped, only the effect of the highest level Gem is applied.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="90531" name="Garnet Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_garnet">
+	<!-- 30-day item. Stun/Pulling/Silence/Paralysis/Fear Resistance +20% when equipped. Invincibility with Debuff effective for 15 sec when skill is used. Effect does not stack with additional jewels of the same type.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<item id="90532" name="Rare Accessory Lv. 3 Box" type="NONE" icon="icon.npoint_earthworm_30day_box">
+	<!-- Double-click to randomly obtain one of the following items: Queen Ant's Ring Lv. 3, Orfen's Earring Lv. 3, Ring of Core Lv. 3, Baium's Ring Lv. 3. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90533" name="Rare Accessory Lv. 1 Box" type="NONE" icon="icon.npoint_valakas_30day_box">
+	<!-- Double-click to randomly receive one of the following items: Queen Ant's Ring Lv. 1, Orfen's Earring Lv. 1, Ring of Core Lv. 1, Baium's Ring Lv. 1. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90534" name="Sigel’s Rune - Stage 1" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_sigel_lv00">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90535" name="Sigel’s Rune - Stage 2" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_sigel_lv00">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90536" name="Sigel’s Rune - Stage 3" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_sigel_lv00">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90537" name="Sigel’s Rune - Stage 4" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_sigel_lv00">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90538" name="Sigel’s Rune - Stage 5" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_sigel_lv00">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90539" name="Sigel’s Rune - Stage 6" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_sigel_lv01">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90540" name="Sigel’s Rune - Stage 7" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_sigel_lv01">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90541" name="Sigel’s Rune - Stage 8" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_sigel_lv01">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90542" name="Sigel’s Rune - Stage 9" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_sigel_lv01">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90543" name="Sigel’s Rune - Stage 10" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_sigel_lv01">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90544" name="Sigel’s Rune - Stage 11" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_sigel_lv02">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90545" name="Sigel’s Rune - Stage 12" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_sigel_lv02">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90546" name="Sigel’s Rune - Stage 13" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_sigel_lv02">
+	<!-- A stone with a symbol of ancient Giants engraved. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90547" name="Sigel’s Rune - Stage 14" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_sigel_lv02">
+	<!-- A stone with a symbol of ancient Giants engraved. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90548" name="Sigel’s Rune - Stage 15" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_sigel_lv02">
+	<!-- A stone with a symbol of ancient Giants engraved. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90549" name="Sigel's Rune - Stage 16" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<!-- A stone with a symbol of ancient Giants engraved. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90550" name="Sigel's Rune - Stage 17" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<!-- A stone with a symbol of ancient Giants engraved. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90551" name="Sigel's Rune - Stage 18" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<!-- A stone with a symbol of ancient Giants engraved. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90552" name="Sigel's Rune - Stage 19" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<!-- A stone with a symbol of ancient Giants engraved. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90553" name="Sigel's Rune - Stage 20" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<!-- A stone with a symbol of ancient Giants engraved. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90554" name="Tyrr’s Rune - Stage 1" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_tir_lv00">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90555" name="Tyrr’s Rune - Stage 2" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_tir_lv00">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90556" name="Tyrr’s Rune - Stage 3" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_tir_lv00">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90557" name="Tyrr’s Rune - Stage 4" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_tir_lv00">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90558" name="Tyrr’s Rune - Stage 5" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_tir_lv00">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90559" name="Tyrr’s Rune - Stage 6" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_tir_lv01">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90560" name="Tyrr’s Rune - Stage 7" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_tir_lv01">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90561" name="Tyrr’s Rune - Stage 8" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_tir_lv01">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90562" name="Tyrr’s Rune - Stage 9" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_tir_lv01">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90563" name="Tyrr’s Rune - Stage 10" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_tir_lv01">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90564" name="Tyrr’s Rune - Stage 11" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_tir_lv02">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90565" name="Tyrr’s Rune - Stage 12" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_tir_lv02">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90566" name="Tyrr’s Rune - Stage 13" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_tir_lv02">
+	<!-- A stone with a symbol of ancient Giants engraved. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90567" name="Tyrr’s Rune - Stage 14" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_tir_lv02">
+	<!-- A stone with a symbol of ancient Giants engraved. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90568" name="Tyrr’s Rune - Stage 15" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_tir_lv02">
+	<!-- A stone with a symbol of ancient Giants engraved. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90569" name="Tyrr’s Rune - Stage 16" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<!-- A stone with a symbol of ancient Giants engraved. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90570" name="Tyrr’s Rune - Stage 17" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<!-- A stone with a symbol of ancient Giants engraved. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90571" name="Tyrr’s Rune - Stage 18" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<!-- A stone with a symbol of ancient Giants engraved. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90572" name="Tyrr’s Rune - Stage 19" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<!-- A stone with a symbol of ancient Giants engraved. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90573" name="Tyrr’s Rune - Stage 20" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<!-- A stone with a symbol of ancient Giants engraved. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90574" name="Othell’s Rune - Stage 1" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_othel_lv01">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90575" name="Othell’s Rune - Stage 2" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_othel_lv01">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90576" name="Othell’s Rune - Stage 3" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_othel_lv01">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90577" name="Othell’s Rune - Stage 4" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_othel_lv01">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90578" name="Othell’s Rune - Stage 5" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_othel_lv01">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90579" name="Othell’s Rune - Stage 6" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_othel_lv02">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90580" name="Othell’s Rune - Stage 7" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_othel_lv02">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90581" name="Othell’s Rune - Stage 8" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_othel_lv02">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90582" name="Othell’s Rune - Stage 9" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_othel_lv02">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90583" name="Othell’s Rune - Stage 10" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_othel_lv02">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90584" name="Othell’s Rune - Stage 11" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_othel_lv03">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90585" name="Othell’s Rune - Stage 12" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_othel_lv03">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90586" name="Othell’s Rune - Stage 13" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_othel_lv03">
+	<!-- A stone with a symbol of ancient Giants engraved. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90587" name="Othell’s Rune - Stage 14" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_othel_lv03">
+	<!-- A stone with a symbol of ancient Giants engraved. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90588" name="Othell’s Rune - Stage 15" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_othel_lv03">
+	<!-- A stone with a symbol of ancient Giants engraved. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90589" name="Othell’s Rune - Stage 16" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<!-- A stone with a symbol of ancient Giants engraved. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90590" name="Othell’s Rune - Stage 17" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<!-- A stone with a symbol of ancient Giants engraved. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90591" name="Othell’s Rune - Stage 18" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<!-- A stone with a symbol of ancient Giants engraved. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90592" name="Othell’s Rune - Stage 19" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<!-- A stone with a symbol of ancient Giants engraved. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90593" name="Othell’s Rune - Stage 20" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
+	<!-- A stone with a symbol of ancient Giants engraved. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90594" name="Yul’s Rune - Stage 1" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_yr_lv01">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90595" name="Yul’s Rune - Stage 2" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_yr_lv01">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90596" name="Yul’s Rune - Stage 3" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_yr_lv01">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90597" name="Yul’s Rune - Stage 4" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_yr_lv01">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90598" name="Yul’s Rune - Stage 5" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_yr_lv01">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90599" name="Yul’s Rune - Stage 6" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_yr_lv02">
+	<!-- A stone with a symbol of ancient Giants engraved. Can be Enchanted through Compounding to make a Top-grade Rune. If a top-rank blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
 </list>

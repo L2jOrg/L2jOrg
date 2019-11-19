@@ -1,1575 +1,1208 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <weapon id="1" name="Short Sword" icon="icon.weapon_small_sword_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1600"/>
-        <set name="price" val="768"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <stats>
-            <stat type="pAtk">8</stat>
-            <stat type="mAtk">6</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2" name="Long Sword" icon="icon.weapon_long_sword_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1560"/>
-        <set name="price" val="136000"/>
-        <set name="soulshots" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_SWORD"/>
-        <set name="spiritshots" val="1"/>
-        <stats>
-            <stat type="pAtk">24</stat>
-            <stat type="mAtk">17</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="3" name="Broadsword" icon="icon.weapon_broad_sword_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1590"/>
-        <set name="price" val="12500"/>
-        <set name="soulshots" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_SWORD"/>
-        <set name="spiritshots" val="1"/>
-        <stats>
-            <stat type="pAtk">11</stat>
-            <stat type="mAtk">9</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="4" name="Club" icon="icon.weapon_club_i00">
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1870"/>
-        <set name="price" val="768"/>
-        <set name="soulshots" val="1"/>
-        <set name="commissionItemType" val="BLUNT_WEAPON"/>
-        <set name="spiritshots" val="1"/>
-        <stats>
-            <stat type="pAtk">8</stat>
-            <stat type="mAtk">6</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5" name="Mace" icon="icon.weapon_mace_i00">
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1880"/>
-        <set name="price" val="12500"/>
-        <set name="soulshots" val="1"/>
-        <set name="commissionItemType" val="BLUNT_WEAPON"/>
-        <set name="spiritshots" val="1"/>
-        <stats>
-            <stat type="pAtk">11</stat>
-            <stat type="mAtk">9</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="6" name="Apprentice's Wand" icon="icon.weapon_apprentices_wand_i00">
-        <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1350"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON"/>
-        <set name="is_magic_weapon" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false"/>
-        <stats>
-            <stat type="pAtk">5</stat>
-            <stat type="mAtk">7</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="7" name="Apprentice's Rod" icon="icon.weapon_apprentices_rod_i00">
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1330"/>
-        <set name="price" val="768"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON"/>
-        <set name="is_magic_weapon" val="true"/>
-        <stats>
-            <stat type="pAtk">6</stat>
-            <stat type="mAtk">8</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="8" name="Willow Staff" icon="icon.weapon_willow_staff_i00">
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;46;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1080"/>
-        <set name="price" val="12500"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON"/>
-        <set name="is_magic_weapon" val="true"/>
-        <stats>
-            <stat type="pAtk">11</stat>
-            <stat type="mAtk">13</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="9" name="Cedar Staff" icon="icon.weapon_cedar_staff_i00">
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;46;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1090"/>
-        <set name="price" val="54100"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON"/>
-        <set name="is_magic_weapon" val="true"/>
-        <stats>
-            <stat type="pAtk">16</stat>
-            <stat type="mAtk">18</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="10" name="Dagger" icon="icon.weapon_dagger_i00">
-        <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1160"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DAGGER"/>
-        <restriction sellable="false" tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false"/>
-        <stats>
-            <stat type="pAtk">5</stat>
-            <stat type="mAtk">5</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="11" name="Bone Dagger" icon="icon.weapon_bone_dagger_i00">
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1150"/>
-        <set name="price" val="768"/>
-        <set name="soulshots" val="1"/>
-        <set name="commissionItemType" val="DAGGER"/>
-        <set name="spiritshots" val="1"/>
-        <stats>
-            <stat type="pAtk">7</stat>
-            <stat type="mAtk">6</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="12" name="Knife" icon="icon.weapon_knife_i00">
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1140"/>
-        <set name="price" val="12500"/>
-        <set name="soulshots" val="1"/>
-        <set name="commissionItemType" val="DAGGER"/>
-        <set name="spiritshots" val="1"/>
-        <stats>
-            <stat type="pAtk">10</stat>
-            <stat type="mAtk">9</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="13" name="Short Bow" icon="icon.weapon_short_bow_i00">
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;10;0"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1950"/>
-        <set name="price" val="768"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="1"/>
-        <set name="commissionItemType" val="BOW"/>
-        <set name="reuse_delay" val="1500"/>
-        <stats>
-            <stat type="pAtk">16</stat>
-            <stat type="mAtk">6</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">293</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="14" name="Bow" icon="icon.weapon_bow_i00">
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;10;0"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1930"/>
-        <set name="price" val="12500"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="1"/>
-        <set name="commissionItemType" val="BOW"/>
-        <set name="reuse_delay" val="1500"/>
-        <stats>
-            <stat type="pAtk">23</stat>
-            <stat type="mAtk">9</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">293</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="15" name="Short Spear" icon="icon.weapon_short_spear_i00">
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;66;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2140"/>
-        <set name="price" val="136000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="SPEAR"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">24</stat>
-            <stat type="mAtk">17</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="16" name="Great Spear" icon="icon.weapon_long_spear_i00">
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;66;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2120"/>
-        <set name="price" val="244000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="SPEAR"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">31</stat>
-            <stat type="mAtk">21</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <item id="17" name="Wooden Arrow" icon="icon.etc_wooden_quiver_i00">
-        <!-- An arrow made of wood. It is an arrow used for a No-grade bow. -->
-        <set name="etcitem_type" val="ARROW"/>
-        <set name="bodypart" val="lhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="6"/>
-        <set name="price" val="2"/>
-        <set name="commissionItemType" val="OTHER_ITEM"/>
-        <restriction stackable="true"/>
-    </item>
-    <armor id="18" name="Leather Shield" icon="icon.shield_leather_shield_i00">
-        <set name="bodypart" val="lhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1430"/>
-        <set name="commissionItemType" val="SHIELD"/>
-        <set name="price" val="39"/>
-        <stats>
-            <stat type="rEvas">-8</stat>
-            <stat type="rShld">20</stat>
-            <stat type="sDef">47</stat>
-        </stats>
-    </armor>
-    <armor id="19" name="Small Shield" icon="icon.shield_small_shield_i00">
-        <set name="bodypart" val="lhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1420"/>
-        <set name="commissionItemType" val="SHIELD"/>
-        <set name="price" val="638"/>
-        <stats>
-            <stat type="rEvas">-8</stat>
-            <stat type="rShld">20</stat>
-            <stat type="sDef">56</stat>
-        </stats>
-    </armor>
-    <armor id="20" name="Buckler" icon="icon.shield_buckler_i00">
-        <set name="bodypart" val="lhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1410"/>
-        <set name="commissionItemType" val="SHIELD"/>
-        <set name="price" val="2780"/>
-        <stats>
-            <stat type="rEvas">-8</stat>
-            <stat type="rShld">20</stat>
-            <stat type="sDef">67</stat>
-        </stats>
-    </armor>
-    <armor id="21" name="Shirt" icon="icon.armor_t02_u_i00">
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="4830"/>
-        <set name="commissionItemType" val="ARMOR_TOP"/>
-        <set name="price" val="147"/>
-        <stats>
-            <stat type="pDef">36</stat>
-        </stats>
-    </armor>
-    <armor id="22" name="Leather Shirt" icon="icon.armor_t04_u_i00">
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="4830"/>
-        <set name="commissionItemType" val="ARMOR_TOP"/>
-        <set name="price" val="2430"/>
-        <stats>
-            <stat type="pDef">43</stat>
-        </stats>
-    </armor>
-    <armor id="23" name="Wooden Breastplate" icon="icon.armor_t06_u_i00">
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="4820"/>
-        <set name="commissionItemType" val="ARMOR_TOP"/>
-        <set name="price" val="7960"/>
-        <stats>
-            <stat type="pDef">47</stat>
-        </stats>
-    </armor>
-    <armor id="24" name="Bone Breastplate" icon="icon.armor_t32_u_i00">
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="4770"/>
-        <set name="commissionItemType" val="ARMOR_TOP"/>
-        <set name="price" val="20300"/>
-        <stats>
-            <stat type="pDef">50</stat>
-        </stats>
-    </armor>
-    <armor id="25" name="Piece Bone Breastplate" icon="icon.armor_t33_u_i00">
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="8970"/>
-        <set name="price" val="31800"/>
-        <set name="commissionItemType" val="ARMOR_TOP"/>
-        <stats>
-            <stat type="pDef">62</stat>
-        </stats>
-    </armor>
-    <armor id="26" name="Bronze Breastplate" icon="icon.armor_t34_u_i00">
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="8920"/>
-        <set name="commissionItemType" val="ARMOR_TOP"/>
-        <set name="price" val="49200"/>
-        <stats>
-            <stat type="pDef">68</stat>
-        </stats>
-    </armor>
-    <armor id="27" name="Durable Leather Shirt" icon="icon.armor_t30_u_i00">
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="4720"/>
-        <set name="commissionItemType" val="ARMOR_TOP"/>
-        <set name="price" val="36900"/>
-        <stats>
-            <stat type="pDef">53</stat>
-        </stats>
-    </armor>
-    <armor id="28" name="Pants" icon="icon.armor_t02_l_i00">
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1740"/>
-        <set name="commissionItemType" val="ARMOR_PANTS"/>
-        <set name="price" val="92"/>
-        <stats>
-            <stat type="pDef">22</stat>
-        </stats>
-    </armor>
-    <armor id="29" name="Leather Pants" icon="icon.armor_t04_l_i00">
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1730"/>
-        <set name="commissionItemType" val="ARMOR_PANTS"/>
-        <set name="price" val="1520"/>
-        <stats>
-            <stat type="pDef">27</stat>
-        </stats>
-    </armor>
-    <armor id="30" name="Durable Leather Pants" icon="icon.armor_t06_l_i00">
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1700"/>
-        <set name="commissionItemType" val="ARMOR_PANTS"/>
-        <set name="price" val="4970"/>
-        <stats>
-            <stat type="pDef">29</stat>
-        </stats>
-    </armor>
-    <armor id="31" name="Bone Gaiters" icon="icon.armor_t32_l_i00">
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1680"/>
-        <set name="commissionItemType" val="ARMOR_PANTS"/>
-        <set name="price" val="12700"/>
-        <stats>
-            <stat type="pDef">32</stat>
-        </stats>
-    </armor>
-    <armor id="32" name="Piece Bone Gaiters" icon="icon.armor_t33_l_i00">
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="4020"/>
-        <set name="commissionItemType" val="ARMOR_PANTS"/>
-        <set name="price" val="19900"/>
-        <stats>
-            <stat type="pDef">39</stat>
-        </stats>
-    </armor>
-    <armor id="33" name="Durable Leather Gaiters" icon="icon.armor_t30_l_i00">
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1610"/>
-        <set name="commissionItemType" val="ARMOR_PANTS"/>
-        <set name="price" val="23000"/>
-        <stats>
-            <stat type="pDef">33</stat>
-        </stats>
-    </armor>
-    <armor id="34" name="Bronze Gaiters" icon="icon.armor_t34_l_i00">
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="3960"/>
-        <set name="commissionItemType" val="ARMOR_PANTS"/>
-        <set name="price" val="30700"/>
-        <stats>
-            <stat type="pDef">43</stat>
-        </stats>
-    </armor>
-    <armor id="35" name="Cloth Shoes" icon="icon.armor_t02_b_i00">
-        <set name="bodypart" val="feet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1320"/>
-        <set name="commissionItemType" val="FEET"/>
-        <set name="price" val="37"/>
-        <stats>
-            <stat type="pDef">9</stat>
-        </stats>
-    </armor>
-    <armor id="36" name="Leather Sandals" icon="icon.armor_t03_b_i00">
-        <set name="bodypart" val="feet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1320"/>
-        <set name="commissionItemType" val="FEET"/>
-        <set name="price" val="37"/>
-        <stats>
-            <stat type="pDef">9</stat>
-        </stats>
-    </armor>
-    <armor id="37" name="Leather Shoes" icon="icon.armor_t05_b_i00">
-        <set name="bodypart" val="feet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1320"/>
-        <set name="commissionItemType" val="FEET"/>
-        <set name="price" val="2650"/>
-        <stats>
-            <stat type="pDef">13</stat>
-        </stats>
-    </armor>
-    <armor id="38" name="Low Boots" icon="icon.armor_t32_b_i00">
-        <set name="bodypart" val="feet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1320"/>
-        <set name="commissionItemType" val="FEET"/>
-        <set name="price" val="6770"/>
-        <stats>
-            <stat type="pDef">15</stat>
-        </stats>
-    </armor>
-    <armor id="39" name="Boots" icon="icon.armor_t30_b_i00">
-        <set name="bodypart" val="feet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1310"/>
-        <set name="commissionItemType" val="FEET"/>
-        <set name="price" val="12300"/>
-        <stats>
-            <stat type="pDef">17</stat>
-        </stats>
-    </armor>
-    <armor id="40" name="Leather Boots" icon="icon.armor_t09_b_i00">
-        <set name="bodypart" val="feet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="38"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1300"/>
-        <set name="price" val="20900"/>
-        <set name="commissionItemType" val="FEET"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pDef">19</stat>
-        </stats>
-    </armor>
-    <armor id="41" name="Cloth Cap" icon="icon.armor_cloth_helmet_i00">
-        <set name="bodypart" val="head"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="660"/>
-        <set name="price" val="55"/>
-        <set name="commissionItemType" val="HELMET"/>
-        <stats>
-            <stat type="pDef">13</stat>
-        </stats>
-    </armor>
-    <armor id="42" name="Leather Cap" icon="icon.armor_leather_helmet_i00">
-        <set name="bodypart" val="head"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="660"/>
-        <set name="commissionItemType" val="HELMET"/>
-        <set name="price" val="911"/>
-        <stats>
-            <stat type="pDef">16</stat>
-        </stats>
-    </armor>
-    <armor id="43" name="Wooden Helmet" icon="icon.armor_leather_helmet_i00">
-        <set name="bodypart" val="head"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="660"/>
-        <set name="commissionItemType" val="HELMET"/>
-        <set name="price" val="3980"/>
-        <stats>
-            <stat type="pDef">19</stat>
-        </stats>
-    </armor>
-    <armor id="44" name="Leather Helmet" icon="icon.armor_leather_helmet_i00">
-        <set name="bodypart" val="head"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="650"/>
-        <set name="commissionItemType" val="HELMET"/>
-        <set name="price" val="10200"/>
-        <stats>
-            <stat type="pDef">23</stat>
-        </stats>
-    </armor>
-    <armor id="45" name="Bone Helmet" icon="icon.armor_leather_helmet_i00">
-        <set name="bodypart" val="head"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="56"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="640"/>
-        <set name="price" val="31300"/>
-        <set name="commissionItemType" val="HELMET"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pDef">29</stat>
-        </stats>
-    </armor>
-    <armor id="46" name="Bronze Helmet" icon="icon.armor_helmet_i00">
-        <set name="bodypart" val="head"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="90"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="630"/>
-        <set name="price" val="50000"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="HELMET"/>
-        <stats>
-            <stat type="pDef">33</stat>
-        </stats>
-    </armor>
-    <armor id="47" name="Headgear" icon="icon.armor_helmet_i00">
-        <set name="bodypart" val="head"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="138"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="640"/>
-        <set name="price" val="76200"/>
-        <set name="commissionItemType" val="HELMET"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pDef">37</stat>
-        </stats>
-    </armor>
-    <armor id="48" name="Short Gloves" icon="icon.armor_t02_g_i00">
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="660"/>
-        <set name="commissionItemType" val="GLOVES"/>
-        <set name="price" val="37"/>
-        <stats>
-            <stat type="pDef">9</stat>
-        </stats>
-    </armor>
-    <armor id="49" name="Gloves" icon="icon.armor_t06_g_i00">
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="660"/>
-        <set name="commissionItemType" val="GLOVES"/>
-        <set name="price" val="2650"/>
-        <stats>
-            <stat type="pDef">13</stat>
-        </stats>
-    </armor>
-    <armor id="50" name="Leather Gloves" icon="icon.armor_t32_g_i00">
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="650"/>
-        <set name="commissionItemType" val="GLOVES"/>
-        <set name="price" val="6770"/>
-        <stats>
-            <stat type="pDef">15</stat>
-        </stats>
-    </armor>
-    <armor id="51" name="Bracer" icon="icon.armor_t30_g_i00">
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="650"/>
-        <set name="commissionItemType" val="GLOVES"/>
-        <set name="price" val="12300"/>
-        <stats>
-            <stat type="pDef">17</stat>
-        </stats>
-    </armor>
-    <item id="57" name="Adena" icon="icon.etc_adena_i00">
-        <set name="immediate_effect" val="true"/>
-        <set name="price" val="1"/>
-        <restriction sellable="false" commissionable="false" stackable="true"/>
-    </item>
-    <armor id="58" name="Mithril Breastplate" icon="icon.armor_t19_u_i00">
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="332"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="8670"/>
-        <set name="price" val="183000"/>
-        <set name="commissionItemType" val="ARMOR_TOP"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pDef">95</stat>
-        </stats>
-    </armor>
-    <armor id="59" name="Mithril Gaiters" icon="icon.armor_t19_l_i00">
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="230"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="3830"/>
-        <set name="price" val="127000"/>
-        <set name="commissionItemType" val="ARMOR_PANTS"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pDef">61</stat>
-        </stats>
-    </armor>
-    <armor id="60" name="Compound Armor" icon="icon.armor_t61_ul_i00">
-        <!-- Full body armor. -->
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="onepiece"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="576"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="10980"/>
-        <set name="price" val="1440000"/>
-        <set name="commissionItemType" val="FULL_BODY"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pDef">224</stat>
-        </stats>
-    </armor>
-    <armor id="61" name="Mithril Gloves" icon="icon.armor_t46_g_i00">
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="177"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="630"/>
-        <set name="price" val="97800"/>
-        <set name="commissionItemType" val="GLOVES"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pDef">29</stat>
-        </stats>
-    </armor>
-    <armor id="62" name="Reinforced Mithril Boots" icon="icon.armor_t47_b_i00">
-        <set name="bodypart" val="feet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="50"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1230"/>
-        <set name="price" val="126000"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="FEET"/>
-        <stats>
-            <stat type="pDef">32</stat>
-        </stats>
-    </armor>
-    <armor id="63" name="Gauntlets" icon="icon.armor_t10_g_i00">
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="92"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="640"/>
-        <set name="price" val="50800"/>
-        <set name="commissionItemType" val="GLOVES"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pDef">24</stat>
-        </stats>
-    </armor>
-    <armor id="64" name="Compound Boots" icon="icon.armor_t61_b_i00">
-        <set name="bodypart" val="feet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="98"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1220"/>
-        <set name="price" val="245000"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="FEET"/>
-        <stats>
-            <stat type="pDef">36</stat>
-        </stats>
-    </armor>
-    <weapon id="66" name="Gladius" icon="icon.weapon_gladius_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1570"/>
-        <set name="price" val="54100"/>
-        <set name="soulshots" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_SWORD"/>
-        <set name="spiritshots" val="1"/>
-        <stats>
-            <stat type="pAtk">17</stat>
-            <stat type="mAtk">12</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="67" name="Orcish Sword" icon="icon.weapon_orcish_sword_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1570"/>
-        <set name="price" val="54100"/>
-        <set name="soulshots" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_SWORD"/>
-        <set name="spiritshots" val="1"/>
-        <stats>
-            <stat type="pAtk">17</stat>
-            <stat type="mAtk">12</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="68" name="Falchion" icon="icon.weapon_falchion_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1530"/>
-        <set name="price" val="244000"/>
-        <set name="soulshots" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_SWORD"/>
-        <set name="spiritshots" val="1"/>
-        <stats>
-            <stat type="pAtk">31</stat>
-            <stat type="mAtk">21</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="69" name="Bastard Sword" icon="icon.weapon_bastard_sword_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;42;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1170"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1510"/>
-        <set name="price" val="644000"/>
-        <set name="change_weaponId" val="9213"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_SWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">51</stat>
-            <stat type="mAtk">32</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="70" name="Claymore" icon="icon.weapon_claymore_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="3272"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2090"/>
-        <set name="price" val="1800000"/>
-        <set name="change_weaponId" val="9226"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="TWO_HAND_SWORD"/>
-        <stats>
-            <stat type="pAtk">112</stat>
-            <stat type="mAtk">54</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="71" name="Flamberge" icon="icon.weapon_flamberge_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="916"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2010"/>
-        <set name="price" val="2290000"/>
-        <set name="change_weaponId" val="9232"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="TWO_HAND_SWORD"/>
-        <stats>
-            <stat type="pAtk">130</stat>
-            <stat type="mAtk">61</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="72" name="StormBringer" icon="icon.weapon_stormbringer_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="916"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1430"/>
-        <set name="price" val="2290000"/>
-        <set name="change_weaponId" val="9228"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_SWORD"/>
-        <stats>
-            <stat type="pAtk">107</stat>
-            <stat type="mAtk">61</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="73" name="Shamshir" icon="icon.weapon_shamshir_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1148"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1420"/>
-        <set name="price" val="2870000"/>
-        <set name="change_weaponId" val="9240"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_SWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">122</stat>
-            <stat type="mAtk">68</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="74" name="Katana" icon="icon.weapon_katana_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1148"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1420"/>
-        <set name="price" val="2870000"/>
-        <set name="change_weaponId" val="9244"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_SWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">122</stat>
-            <stat type="mAtk">68</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="75" name="Caliburs" icon="icon.weapon_caliburs_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1720"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1400"/>
-        <set name="price" val="4300000"/>
-        <set name="change_weaponId" val="9264"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_SWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">139</stat>
-            <stat type="mAtk">76</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="76" name="Sword of Delusion" icon="icon.weapon_sword_of_delusion_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1720"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1400"/>
-        <set name="price" val="4300000"/>
-        <set name="change_weaponId" val="9268"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_SWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">139</stat>
-            <stat type="mAtk">76</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="77" name="Tsurugi" icon="icon.weapon_tsurugi_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1720"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1400"/>
-        <set name="price" val="4300000"/>
-        <set name="change_weaponId" val="9272"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_SWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">139</stat>
-            <stat type="mAtk">76</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="78" name="Great Sword" icon="icon.weapon_great_sword_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1157"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="1930"/>
-        <set name="price" val="8680000"/>
-        <set name="change_weaponId" val="9308"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="TWO_HAND_SWORD"/>
-        <stats>
-            <stat type="pAtk">213</stat>
-            <stat type="mAtk">91</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="79" name="Damascus Sword" icon="icon.weapon_sword_of_damascus_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1746"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="1350"/>
-        <set name="price" val="13100000"/>
-        <set name="change_weaponId" val="9316"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_SWORD"/>
-        <stats>
-            <stat type="pAtk">194</stat>
-            <stat type="mAtk">99</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="80" name="Tallum Blade" icon="icon.weapon_tallum_blade_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1128"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1330"/>
-        <set name="price" val="14098000"/>
-        <set name="change_weaponId" val="9328"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_SWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">213</stat>
-            <stat type="mAtk">107</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="81" name="Dragon Slayer" icon="icon.weapon_dragon_slayer_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;46;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1659"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1840"/>
-        <set name="price" val="20741000"/>
-        <set name="change_weaponId" val="9344"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="TWO_HAND_SWORD"/>
-        <stats>
-            <stat type="pAtk">282</stat>
-            <stat type="mAtk">114</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="83" name="Sword of Magic" icon="icon.weapon_sword_of_magic_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1301"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="970"/>
-        <set name="price" val="716000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD"/>
-        <set name="is_magic_weapon" val="true"/>
-        <stats>
-            <stat type="pAtk">43</stat>
-            <stat type="mAtk">45</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="84" name="Homunkulus' Sword" icon="icon.weapon_homunkuluss_sword_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1720"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="950"/>
-        <set name="price" val="4300000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD"/>
-        <stats>
-            <stat type="pAtk">111</stat>
-            <stat type="mAtk">101</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="86" name="Tomahawk" icon="icon.weapon_tomahawk_i00">
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1170"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1780"/>
-        <set name="price" val="644000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="BLUNT_WEAPON"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">51</stat>
-            <stat type="mAtk">32</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="87" name="Iron Hammer" icon="icon.weapon_iron_hammer_i00">
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1850"/>
-        <set name="price" val="244000"/>
-        <set name="soulshots" val="1"/>
-        <set name="commissionItemType" val="BLUNT_WEAPON"/>
-        <set name="spiritshots" val="1"/>
-        <stats>
-            <stat type="pAtk">31</stat>
-            <stat type="mAtk">21</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="88" name="Morning Star" icon="icon.weapon_morning_star_i00">
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2545"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1720"/>
-        <set name="price" val="1400000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="BLUNT_WEAPON"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">79</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="89" name="Big Hammer" icon="icon.weapon_big_hammer_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="916"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1710"/>
-        <set name="price" val="2290000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="BLUNT_WEAPON"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">107</stat>
-            <stat type="mAtk">61</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="90" name="Goat Head Staff" icon="icon.weapon_goathead_staff_i00">
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;46;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2545"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1000"/>
-        <set name="price" val="1400000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON"/>
-        <set name="is_magic_weapon" val="true"/>
-        <stats>
-            <stat type="pAtk">77</stat>
-            <stat type="mAtk">69</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="91" name="Heavy War Axe" icon="icon.weapon_heavy_war_axe_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1157"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="1620"/>
-        <set name="price" val="8680000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="BLUNT_WEAPON"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">175</stat>
-            <stat type="mAtk">91</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="92" name="Spirit's Staff" icon="icon.weapon_sprites_staff_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;46;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1157"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="960"/>
-        <set name="price" val="8680000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON"/>
-        <set name="is_magic_weapon" val="true"/>
-        <stats>
-            <stat type="pAtk">170</stat>
-            <stat type="mAtk">134</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="93" name="Winged Spear" icon="icon.weapon_winged_spear_i00">
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;66;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2545"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2060"/>
-        <set name="price" val="1400000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="SPEAR"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">79</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="94" name="Bec de Corbin" icon="icon.weapon_bech_de_corbin_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;66;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1148"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2020"/>
-        <set name="price" val="2870000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="SPEAR"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">122</stat>
-            <stat type="mAtk">68</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="95" name="Poleaxe" icon="icon.weapon_poleaxe_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;66;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1720"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2010"/>
-        <set name="price" val="4300000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="SPEAR"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">139</stat>
-            <stat type="mAtk">76</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="96" name="Scythe" icon="icon.weapon_scythe_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;66;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="916"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2040"/>
-        <set name="price" val="2290000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="SPEAR"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">107</stat>
-            <stat type="mAtk">61</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="97" name="Lance" icon="icon.weapon_lancia_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;66;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1746"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="1920"/>
-        <set name="price" val="13100000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="SPEAR"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">194</stat>
-            <stat type="mAtk">99</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="98" name="Halberd" icon="icon.weapon_halbard_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;66;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1128"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1900"/>
-        <set name="price" val="14098000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="SPEAR"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">213</stat>
-            <stat type="mAtk">107</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="99" name="Apprentice's Spellbook" icon="icon.weapon_apprentices_spellbook_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="650"/>
-        <set name="price" val="12500"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="OTHER_WEAPON"/>
-        <set name="is_magic_weapon" val="true"/>
-        <stats>
-            <stat type="pAtk">9</stat>
-            <stat type="mAtk">12</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
+	<weapon id="1" name="Short Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_small_sword_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1600" price="768" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="8.0"/>
+			<stat type="mAtk" value="6.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="2" name="Long Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_long_sword_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1560" price="136000" commission-type="ONE_HAND_SWORD" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="24.0"/>
+			<stat type="mAtk" value="17.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="3" name="Broadsword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_broad_sword_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1590" price="12500" commission-type="ONE_HAND_SWORD" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="11.0"/>
+			<stat type="mAtk" value="9.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="4" name="Club" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_club_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1870" price="768" commission-type="BLUNT_WEAPON" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="8.0"/>
+			<stat type="mAtk" value="6.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="5" name="Mace" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_mace_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1880" price="12500" commission-type="BLUNT_WEAPON" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="11.0"/>
+			<stat type="mAtk" value="9.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="6" name="Apprentice's Wand" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_apprentices_wand_i00" magic="true">
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false"/>
+		<attributes weight="1350" price="138" commission-type="ONE_HAND_MAGIC_BLUNT_WEAPON" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="5.0"/>
+			<stat type="mAtk" value="7.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="7" name="Apprentice's Rod" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_apprentices_rod_i00" magic="true">
+		<restriction freightable="false"/>
+		<attributes weight="1330" price="768" commission-type="ONE_HAND_MAGIC_BLUNT_WEAPON" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="6.0"/>
+			<stat type="mAtk" value="8.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="8" name="Willow Staff" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_willow_staff_i00" magic="true">
+		<restriction freightable="false"/>
+		<attributes weight="1080" price="12500" commission-type="TWO_HAND_MAGIC_BLUNT_WEAPON" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="46" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="11.0"/>
+			<stat type="mAtk" value="13.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="9" name="Cedar Staff" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_cedar_staff_i00" magic="true">
+		<restriction freightable="false"/>
+		<attributes weight="1090" price="54100" commission-type="TWO_HAND_MAGIC_BLUNT_WEAPON" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="46" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="16.0"/>
+			<stat type="mAtk" value="18.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="10" name="Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_dagger_i00">
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false"/>
+		<attributes weight="1160" price="138" commission-type="DAGGER" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="5.0"/>
+			<stat type="mAtk" value="5.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="11" name="Bone Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_bone_dagger_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1150" price="768" commission-type="DAGGER" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="7.0"/>
+			<stat type="mAtk" value="6.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="12" name="Knife" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_knife_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1140" price="12500" commission-type="DAGGER" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="10.0"/>
+			<stat type="mAtk" value="9.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="13" name="Short Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_short_bow_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1950" price="768" commission-type="BOW" reuse-delay="1500" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="10" angle="360"/>
+		<consume  soulshots="2" mana="1"/>
+		<stats>
+			<stat type="pAtk" value="16.0"/>
+			<stat type="mAtk" value="6.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="293.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="14" name="Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_bow_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1930" price="12500" commission-type="BOW" reuse-delay="1500" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="10" angle="360"/>
+		<consume  soulshots="2" mana="1"/>
+		<stats>
+			<stat type="pAtk" value="23.0"/>
+			<stat type="mAtk" value="9.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="293.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="15" name="Short Spear" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_short_spear_i00">
+		<restriction freightable="false"/>
+		<attributes weight="2140" price="136000" commission-type="SPEAR" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="66" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="24.0"/>
+			<stat type="mAtk" value="17.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="16" name="Great Spear" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_long_spear_i00">
+		<restriction freightable="false"/>
+		<attributes weight="2120" price="244000" commission-type="SPEAR" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="66" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="31.0"/>
+			<stat type="mAtk" value="21.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<item id="17" name="Wooden Arrow" type="ARROW" icon="icon.etc_wooden_quiver_i00">
+	<!-- Arrow made of wood. It is an arrow used for a No-grade bow. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="6" price="2" immediate-effect="true"/>
+	</item>
+
+	<armor id="18" name="Leather Shield" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_leather_shield_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1430" price="39" commission-type="SHIELD" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="rEvas" value="-8.0"/>
+			<stat type="rShld" value="20.0"/>
+			<stat type="sDef" value="47.0"/>
+		</stats>
+	</armor>
+
+	<armor id="19" name="Small Shield" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_small_shield_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1420" price="638" commission-type="SHIELD" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="rEvas" value="-8.0"/>
+			<stat type="rShld" value="20.0"/>
+			<stat type="sDef" value="56.0"/>
+		</stats>
+	</armor>
+
+	<armor id="20" name="Buckler" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_buckler_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1410" price="2780" commission-type="SHIELD" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="rEvas" value="-8.0"/>
+			<stat type="rShld" value="20.0"/>
+			<stat type="sDef" value="67.0"/>
+		</stats>
+	</armor>
+
+	<armor id="21" name="Shirt" type="LIGHT" body-part="CHEST" icon="icon.armor_t02_u_i00">
+		<restriction freightable="false"/>
+		<attributes weight="4830" price="147" commission-type="ARMOR_TOP" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="36.0"/>
+		</stats>
+	</armor>
+
+	<armor id="22" name="Leather Shirt" type="LIGHT" body-part="CHEST" icon="icon.armor_t04_u_i00">
+		<restriction freightable="false"/>
+		<attributes weight="4830" price="2430" commission-type="ARMOR_TOP" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="43.0"/>
+		</stats>
+	</armor>
+
+	<armor id="23" name="Wooden Breastplate" type="LIGHT" body-part="CHEST" icon="icon.armor_t06_u_i00">
+		<restriction freightable="false"/>
+		<attributes weight="4820" price="7960" commission-type="ARMOR_TOP" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="47.0"/>
+		</stats>
+	</armor>
+
+	<armor id="24" name="Bone Breastplate" type="LIGHT" body-part="CHEST" icon="icon.armor_t32_u_i00">
+		<restriction freightable="false"/>
+		<attributes weight="4770" price="20300" commission-type="ARMOR_TOP" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="50.0"/>
+		</stats>
+	</armor>
+
+	<armor id="25" name="Piece Bone Breastplate" type="HEAVY" body-part="CHEST" icon="icon.armor_t33_u_i00">
+		<restriction freightable="false"/>
+		<attributes weight="8970" price="31800" commission-type="ARMOR_TOP" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="62.0"/>
+		</stats>
+	</armor>
+
+	<armor id="26" name="Bronze Breastplate" type="HEAVY" body-part="CHEST" icon="icon.armor_t34_u_i00">
+		<restriction freightable="false"/>
+		<attributes weight="8920" price="49200" commission-type="ARMOR_TOP" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="68.0"/>
+		</stats>
+	</armor>
+
+	<armor id="27" name="Durable Leather Shirt" type="LIGHT" body-part="CHEST" icon="icon.armor_t30_u_i00">
+		<restriction freightable="false"/>
+		<attributes weight="4720" price="36900" commission-type="ARMOR_TOP" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="53.0"/>
+		</stats>
+	</armor>
+
+	<armor id="28" name="Pants" type="LIGHT" body-part="LEGS" icon="icon.armor_t02_l_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1740" price="92" commission-type="ARMOR_PANTS" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="22.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29" name="Leather Pants" type="LIGHT" body-part="LEGS" icon="icon.armor_t04_l_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1730" price="1520" commission-type="ARMOR_PANTS" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="27.0"/>
+		</stats>
+	</armor>
+
+	<armor id="30" name="Durable Leather Pants" type="LIGHT" body-part="LEGS" icon="icon.armor_t06_l_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1700" price="4970" commission-type="ARMOR_PANTS" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="29.0"/>
+		</stats>
+	</armor>
+
+	<armor id="31" name="Bone Gaiters" type="LIGHT" body-part="LEGS" icon="icon.armor_t32_l_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1680" price="12700" commission-type="ARMOR_PANTS" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="32.0"/>
+		</stats>
+	</armor>
+
+	<armor id="32" name="Piece Bone Gaiters" type="HEAVY" body-part="LEGS" icon="icon.armor_t33_l_i00">
+		<restriction freightable="false"/>
+		<attributes weight="4020" price="19900" commission-type="ARMOR_PANTS" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="39.0"/>
+		</stats>
+	</armor>
+
+	<armor id="33" name="Durable Leather Gaiters" type="LIGHT" body-part="LEGS" icon="icon.armor_t30_l_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1610" price="23000" commission-type="ARMOR_PANTS" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="33.0"/>
+		</stats>
+	</armor>
+
+	<armor id="34" name="Bronze Gaiters" type="HEAVY" body-part="LEGS" icon="icon.armor_t34_l_i00">
+		<restriction freightable="false"/>
+		<attributes weight="3960" price="30700" commission-type="ARMOR_PANTS" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="43.0"/>
+		</stats>
+	</armor>
+
+	<armor id="35" name="Cloth Shoes" type="NONE" body-part="FEET" icon="icon.armor_t02_b_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1320" price="37" commission-type="FEET" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="9.0"/>
+		</stats>
+	</armor>
+
+	<armor id="36" name="Leather Sandals" type="NONE" body-part="FEET" icon="icon.armor_t03_b_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1320" price="37" commission-type="FEET" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="9.0"/>
+		</stats>
+	</armor>
+
+	<armor id="37" name="Leather Shoes" type="NONE" body-part="FEET" icon="icon.armor_t05_b_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1320" price="2650" commission-type="FEET" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="13.0"/>
+		</stats>
+	</armor>
+
+	<armor id="38" name="Low Boots" type="NONE" body-part="FEET" icon="icon.armor_t32_b_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1320" price="6770" commission-type="FEET" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="15.0"/>
+		</stats>
+	</armor>
+
+	<armor id="39" name="Boots" type="NONE" body-part="FEET" icon="icon.armor_t30_b_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1310" price="12300" commission-type="FEET" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="17.0"/>
+		</stats>
+	</armor>
+
+	<armor id="40" name="Leather Boots" type="NONE" body-part="FEET" icon="icon.armor_t09_b_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1300" price="20900" commission-type="FEET" />
+		<crystal type="D" count="38"/>
+		<stats>
+			<stat type="pDef" value="19.0"/>
+		</stats>
+	</armor>
+
+	<armor id="41" name="Cloth Cap" type="NONE" body-part="HEAD" icon="icon.armor_cloth_helmet_i00">
+		<restriction freightable="false"/>
+		<attributes weight="660" price="55" commission-type="HELMET" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="13.0"/>
+		</stats>
+	</armor>
+
+	<armor id="42" name="Leather Cap" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
+		<restriction freightable="false"/>
+		<attributes weight="660" price="911" commission-type="HELMET" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="16.0"/>
+		</stats>
+	</armor>
+
+	<armor id="43" name="Wooden Helmet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
+		<restriction freightable="false"/>
+		<attributes weight="660" price="3980" commission-type="HELMET" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="19.0"/>
+		</stats>
+	</armor>
+
+	<armor id="44" name="Leather Helmet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
+		<restriction freightable="false"/>
+		<attributes weight="650" price="10200" commission-type="HELMET" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="23.0"/>
+		</stats>
+	</armor>
+
+	<armor id="45" name="Bone Helmet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
+		<restriction freightable="false"/>
+		<attributes weight="640" price="31300" commission-type="HELMET" />
+		<crystal type="D" count="56"/>
+		<stats>
+			<stat type="pDef" value="29.0"/>
+		</stats>
+	</armor>
+
+	<armor id="46" name="Bronze Helmet" type="NONE" body-part="HEAD" icon="icon.armor_helmet_i00">
+		<restriction freightable="false"/>
+		<attributes weight="630" price="50000" commission-type="HELMET" />
+		<crystal type="D" count="90"/>
+		<stats>
+			<stat type="pDef" value="33.0"/>
+		</stats>
+	</armor>
+
+	<armor id="47" name="Helmet" type="NONE" body-part="HEAD" icon="icon.armor_helmet_i00">
+		<restriction freightable="false"/>
+		<attributes weight="640" price="76200" commission-type="HELMET" />
+		<crystal type="D" count="138"/>
+		<stats>
+			<stat type="pDef" value="37.0"/>
+		</stats>
+	</armor>
+
+	<armor id="48" name="Short Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t02_g_i00">
+		<restriction freightable="false"/>
+		<attributes weight="660" price="37" commission-type="GLOVES" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="9.0"/>
+		</stats>
+	</armor>
+
+	<armor id="49" name="Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t06_g_i00">
+		<restriction freightable="false"/>
+		<attributes weight="660" price="2650" commission-type="GLOVES" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="13.0"/>
+		</stats>
+	</armor>
+
+	<armor id="50" name="Leather Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t32_g_i00">
+		<restriction freightable="false"/>
+		<attributes weight="650" price="6770" commission-type="GLOVES" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="15.0"/>
+		</stats>
+	</armor>
+
+	<armor id="51" name="Bracer" type="NONE" body-part="GLOVES" icon="icon.armor_t30_g_i00">
+		<restriction freightable="false"/>
+		<attributes weight="650" price="12300" commission-type="GLOVES" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="17.0"/>
+		</stats>
+	</armor>
+
+	<item id="57" name="Adena" type="NONE" icon="icon.etc_adena_i00">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes price="1" immediate-effect="true"/>
+	</item>
+
+	<armor id="58" name="Mithril Breastplate" type="HEAVY" body-part="CHEST" icon="icon.armor_t19_u_i00">
+		<restriction freightable="false"/>
+		<attributes weight="8670" price="183000" commission-type="ARMOR_TOP" />
+		<crystal type="D" count="332"/>
+		<stats>
+			<stat type="pDef" value="95.0"/>
+		</stats>
+	</armor>
+
+	<armor id="59" name="Mithril Gaiters" type="HEAVY" body-part="LEGS" icon="icon.armor_t19_l_i00">
+		<restriction freightable="false"/>
+		<attributes weight="3830" price="127000" commission-type="ARMOR_PANTS" />
+		<crystal type="D" count="230"/>
+		<stats>
+			<stat type="pDef" value="61.0"/>
+		</stats>
+	</armor>
+
+	<armor id="60" name="Compound Armor" type="HEAVY" body-part="FULL_ARMOR" icon="icon.armor_t61_ul_i00">
+	<!-- Full body armor. -->
+		<restriction freightable="false"/>
+		<attributes weight="10980" price="1440000" commission-type="FULL_BODY" />
+		<crystal type="C" count="576"/>
+		<stats>
+			<stat type="pDef" value="224.0"/>
+		</stats>
+	</armor>
+
+	<armor id="61" name="Mithril Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t46_g_i00">
+		<restriction freightable="false"/>
+		<attributes weight="630" price="97800" commission-type="GLOVES" />
+		<crystal type="D" count="177"/>
+		<stats>
+			<stat type="pDef" value="29.0"/>
+		</stats>
+	</armor>
+
+	<armor id="62" name="Reinforced Mithril Boots" type="NONE" body-part="FEET" icon="icon.armor_t47_b_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1230" price="126000" commission-type="FEET" />
+		<crystal type="C" count="50"/>
+		<stats>
+			<stat type="pDef" value="32.0"/>
+		</stats>
+	</armor>
+
+	<armor id="63" name="Gauntlets" type="NONE" body-part="GLOVES" icon="icon.armor_t10_g_i00">
+		<restriction freightable="false"/>
+		<attributes weight="640" price="50800" commission-type="GLOVES" />
+		<crystal type="D" count="92"/>
+		<stats>
+			<stat type="pDef" value="24.0"/>
+		</stats>
+	</armor>
+
+	<armor id="64" name="Compound Boots" type="NONE" body-part="FEET" icon="icon.armor_t61_b_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1220" price="245000" commission-type="FEET" />
+		<crystal type="C" count="98"/>
+		<stats>
+			<stat type="pDef" value="36.0"/>
+		</stats>
+	</armor>
+
+	<weapon id="66" name="Gladius" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_gladius_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1570" price="54100" commission-type="ONE_HAND_SWORD" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="17.0"/>
+			<stat type="mAtk" value="12.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="67" name="Orcish Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_orcish_sword_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1570" price="54100" commission-type="ONE_HAND_SWORD" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="17.0"/>
+			<stat type="mAtk" value="12.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="68" name="Falchion" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_falchion_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1530" price="244000" commission-type="ONE_HAND_SWORD" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="31.0"/>
+			<stat type="mAtk" value="21.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="69" name="Bastard Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_bastard_sword_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1510" price="644000" commission-type="ONE_HAND_SWORD" change-weapon="9213"/>
+		<crystal type="D" count="1170"/>
+		<damage radius="42" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="51.0"/>
+			<stat type="mAtk" value="32.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="70" name="Claymore" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_claymore_i00">
+		<restriction freightable="false"/>
+		<attributes weight="2090" price="1800000" commission-type="TWO_HAND_SWORD" change-weapon="9226"/>
+		<crystal type="D" count="3272"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="112.0"/>
+			<stat type="mAtk" value="54.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="71" name="Flamberge" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_flamberge_i00">
+		<restriction freightable="false"/>
+		<attributes weight="2010" price="2290000" commission-type="TWO_HAND_SWORD" change-weapon="9232"/>
+		<crystal type="C" count="916"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="130.0"/>
+			<stat type="mAtk" value="61.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="72" name="Stormbringer" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_stormbringer_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1430" price="2290000" commission-type="ONE_HAND_SWORD" change-weapon="9228"/>
+		<crystal type="C" count="916"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="107.0"/>
+			<stat type="mAtk" value="61.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="73" name="Shamshir" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_shamshir_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1420" price="2870000" commission-type="ONE_HAND_SWORD" change-weapon="9240"/>
+		<crystal type="C" count="1148"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="122.0"/>
+			<stat type="mAtk" value="68.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="74" name="Katana" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_katana_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1420" price="2870000" commission-type="ONE_HAND_SWORD" change-weapon="9244"/>
+		<crystal type="C" count="1148"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="122.0"/>
+			<stat type="mAtk" value="68.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="75" name="Caliburs" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_caliburs_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1400" price="4300000" commission-type="ONE_HAND_SWORD" change-weapon="9264"/>
+		<crystal type="C" count="1720"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="139.0"/>
+			<stat type="mAtk" value="76.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="76" name="Sword of Delusion" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_delusion_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1400" price="4300000" commission-type="ONE_HAND_SWORD" change-weapon="9268"/>
+		<crystal type="C" count="1720"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="139.0"/>
+			<stat type="mAtk" value="76.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="77" name="Tsurugi" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_tsurugi_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1400" price="4300000" commission-type="ONE_HAND_SWORD" change-weapon="9272"/>
+		<crystal type="C" count="1720"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="139.0"/>
+			<stat type="mAtk" value="76.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="78" name="Great Sword" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_great_sword_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1930" price="8680000" commission-type="TWO_HAND_SWORD" change-weapon="9308"/>
+		<crystal type="B" count="1157"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="213.0"/>
+			<stat type="mAtk" value="91.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="79" name="Damascus Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_damascus_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1350" price="13100000" commission-type="ONE_HAND_SWORD" change-weapon="9316"/>
+		<crystal type="B" count="1746"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="194.0"/>
+			<stat type="mAtk" value="99.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="80" name="Tallum Blade" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_tallum_blade_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1330" price="14098000" commission-type="ONE_HAND_SWORD" change-weapon="9328"/>
+		<crystal type="A" count="1128"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="213.0"/>
+			<stat type="mAtk" value="107.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="81" name="Dragon Slayer" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_dragon_slayer_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1840" price="20741000" commission-type="TWO_HAND_SWORD" change-weapon="9344"/>
+		<crystal type="A" count="1659"/>
+		<damage radius="46" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="282.0"/>
+			<stat type="mAtk" value="114.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="83" name="Sword of Magic" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_magic_i00" magic="true">
+		<restriction freightable="false"/>
+		<attributes weight="970" price="716000" commission-type="ONE_HAND_MAGIC_SWORD"/>
+		<crystal type="D" count="1301"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="43.0"/>
+			<stat type="mAtk" value="45.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="84" name="Homunkulus' Sword" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_homunkuluss_sword_i00" magic="true">
+		<restriction freightable="false"/>
+		<attributes weight="950" price="4300000" commission-type="ONE_HAND_MAGIC_SWORD"/>
+		<crystal type="C" count="1720"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="111.0"/>
+			<stat type="mAtk" value="101.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="86" name="Tomahawk" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_tomahawk_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1780" price="644000" commission-type="BLUNT_WEAPON"/>
+		<crystal type="D" count="1170"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="51.0"/>
+			<stat type="mAtk" value="32.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="87" name="Iron Hammer" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_iron_hammer_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1850" price="244000" commission-type="BLUNT_WEAPON" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="31.0"/>
+			<stat type="mAtk" value="21.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="88" name="Morning Star" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_morning_star_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1720" price="1400000" commission-type="BLUNT_WEAPON"/>
+		<crystal type="D" count="2545"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="79.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="89" name="Big Hammer" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_big_hammer_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1710" price="2290000" commission-type="BLUNT_WEAPON"/>
+		<crystal type="C" count="916"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="107.0"/>
+			<stat type="mAtk" value="61.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="90" name="Goat Head Staff" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_goathead_staff_i00" magic="true">
+		<restriction freightable="false"/>
+		<attributes weight="1000" price="1400000" commission-type="ONE_HAND_MAGIC_BLUNT_WEAPON"/>
+		<crystal type="D" count="2545"/>
+		<damage radius="46" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="77.0"/>
+			<stat type="mAtk" value="69.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="91" name="Heavy War Axe" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_heavy_war_axe_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1620" price="8680000" commission-type="BLUNT_WEAPON"/>
+		<crystal type="B" count="1157"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="175.0"/>
+			<stat type="mAtk" value="91.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="92" name="Spirit's Staff" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_sprites_staff_i00" magic="true">
+		<restriction freightable="false"/>
+		<attributes weight="960" price="8680000" commission-type="TWO_HAND_MAGIC_BLUNT_WEAPON"/>
+		<crystal type="B" count="1157"/>
+		<damage radius="46" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="170.0"/>
+			<stat type="mAtk" value="134.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="93" name="Winged Spear" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_winged_spear_i00">
+		<restriction freightable="false"/>
+		<attributes weight="2060" price="1400000" commission-type="SPEAR"/>
+		<crystal type="D" count="2545"/>
+		<damage radius="66" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="79.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="94" name="Bec de Corbin" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_bech_de_corbin_i00">
+		<restriction freightable="false"/>
+		<attributes weight="2020" price="2870000" commission-type="SPEAR"/>
+		<crystal type="C" count="1148"/>
+		<damage radius="66" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="122.0"/>
+			<stat type="mAtk" value="68.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="95" name="Poleaxe" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_poleaxe_i00">
+		<restriction freightable="false"/>
+		<attributes weight="2010" price="4300000" commission-type="SPEAR"/>
+		<crystal type="C" count="1720"/>
+		<damage radius="66" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="139.0"/>
+			<stat type="mAtk" value="76.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="96" name="Scythe" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_scythe_i00">
+		<restriction freightable="false"/>
+		<attributes weight="2040" price="2290000" commission-type="SPEAR"/>
+		<crystal type="C" count="916"/>
+		<damage radius="66" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="107.0"/>
+			<stat type="mAtk" value="61.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="97" name="Lance" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_lancia_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1920" price="13100000" commission-type="SPEAR"/>
+		<crystal type="B" count="1746"/>
+		<damage radius="66" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="194.0"/>
+			<stat type="mAtk" value="99.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="98" name="Halberd" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_halbard_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1900" price="14098000" commission-type="SPEAR"/>
+		<crystal type="A" count="1128"/>
+		<damage radius="66" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="213.0"/>
+			<stat type="mAtk" value="107.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="99" name="Apprentice's Spellbook" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_apprentices_spellbook_i00" magic="true">
+		<restriction freightable="false"/>
+		<attributes weight="650" price="12500" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="9.0"/>
+			<stat type="mAtk" value="12.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
 </list>

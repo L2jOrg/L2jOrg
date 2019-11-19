@@ -1,481 +1,427 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <weapon id="5800" name="Nephilim Lord" icon="icon.weapon_monster_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1380"/>
-        <set name="price" val="1226000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_SWORD"/>
-        <set name="for_npc" val="true"/>
-        <stats>
-            <stat type="pAtk">156</stat>
-            <stat type="mAtk">83</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5801" name="Dusk" icon="icon.weapon_monster_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1380"/>
-        <set name="price" val="1226000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_SWORD"/>
-        <set name="for_npc" val="true"/>
-        <stats>
-            <stat type="pAtk">156</stat>
-            <stat type="mAtk">83</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5802" name="Dawn" icon="icon.weapon_monster_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="lhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1380"/>
-        <set name="price" val="1226000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_SWORD"/>
-        <set name="for_npc" val="true"/>
-        <stats>
-            <stat type="pAtk">156</stat>
-            <stat type="mAtk">83</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <item id="5803" name="Lucky Charm (D-grade)" icon="icon.etc_charm_of_luck_i00">
-        <!-- Bestows blessing on its owner such that when the owner dies during a boss/raid war, his/her abilities will not be diminished. This item can only be used on self, by characters level 20 - 39. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="etcitem_type" val="SCROLL"/>
-        <set name="weight" val="10"/>
-        <set name="price" val="330"/>
-        <set name="reuse_delay" val="10000"/>
-        <set name="commissionItemType" val="OTHER_ITEM"/>
-        <restriction stackable="true" olympiad-restricted="true"/>
-        <cond addName="1" msgId="113">
-            <player flyMounted="false"/>
-        </cond>
-        <skills>
-            <skill id="2168" level="2"/> <!-- Lucky Charm -->
-        </skills>
-    </item>
-    <item id="5804" name="Lucky Charm (C-grade)" icon="icon.etc_charm_of_luck_i00">
-        <!-- Bestows blessing on its owner such that when the owner dies during a boss/raid war, his/her abilities will not be diminished. This item can only be used on self by characters level 40 - 51. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="etcitem_type" val="SCROLL"/>
-        <set name="weight" val="10"/>
-        <set name="price" val="660"/>
-        <set name="reuse_delay" val="10000"/>
-        <set name="commissionItemType" val="OTHER_ITEM"/>
-        <restriction stackable="true" olympiad-restricted="true"/>
-        <cond addName="1" msgId="113">
-            <player flyMounted="false"/>
-        </cond>
-        <skills>
-            <skill id="2168" level="3"/> <!-- Lucky Charm -->
-        </skills>
-    </item>
-    <item id="5805" name="Lucky Charm (B-grade)" icon="icon.etc_charm_of_luck_i00">
-        <!-- Bestows blessing on its owner such that when the owner dies during a boss/raid war, his/her abilities will not be diminished. This item can only be used on self by characters level 52 - 60. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="etcitem_type" val="SCROLL"/>
-        <set name="weight" val="10"/>
-        <set name="price" val="1300"/>
-        <set name="reuse_delay" val="10000"/>
-        <set name="commissionItemType" val="OTHER_ITEM"/>
-        <restriction stackable="true" olympiad-restricted="true"/>
-        <cond addName="1" msgId="113">
-            <player flyMounted="false"/>
-        </cond>
-        <skills>
-            <skill id="2168" level="4"/> <!-- Lucky Charm -->
-        </skills>
-    </item>
-    <armor id="5808" name="Party Mask" icon="icon.etc_party_mask_i00">
-        <!-- A fashion item used to display a unique appearance. -->
-        <set name="bodypart" val="hair"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <set name="price" val="1300"/>
-        <set name="enchant_enabled" val="7"/>
-        <set name="commissionItemType" val="HAIR_ACCESSORY"/>
-    </armor>
-    <item id="5809" name="Spellbook: Aqua Splash" icon="icon.etc_spell_books_element_i00">
-        <!-- Spellbook needed to learn Aqua Splash. Used by Spellsingers. Required level: 58 -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="6750"/>
-        <set name="commissionItemType" val="SPELLBOOK"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="5810" name="Spellbook: Rain of Fire" icon="icon.etc_spell_books_element_i00">
-        <!-- Spellbook needed to learn Rain of Fire. Used by Sorcerers and Spellsingers. Required level: 58 -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="6750"/>
-        <set name="commissionItemType" val="SPELLBOOK"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="5811" name="Spellbook: Mass Slow" icon="icon.etc_spell_books_black_i00">
-        <!-- Spellbook needed to learn Mass Slow. Used by Necromancers. Required level: 61 -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="200000"/>
-        <set name="commissionItemType" val="SPELLBOOK"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="5812" name="Spellbook: Servitor Empowerment" icon="icon.etc_spell_books_summon_i00">
-        <!-- Spellbook needed to learn Servitor Empowerment. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 52 -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="5400"/>
-        <set name="commissionItemType" val="SPELLBOOK"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="5813" name="Spellbook: Servitor Cure" icon="icon.etc_spell_books_summon_i00">
-        <!-- Spellbook needed to learn Servitor Cure. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 40 -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="3200"/>
-        <set name="commissionItemType" val="SPELLBOOK"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="5814" name="Spellbook: Servitor Blessing" icon="icon.etc_spell_books_summon_i00">
-        <!-- Spellbook needed to learn Servitor Blessing. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 62 -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="7700"/>
-        <set name="commissionItemType" val="SPELLBOOK"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="5815" name="Spellbook: Wild Magic" icon="icon.etc_spell_books_assistance_i00">
-        <!-- Spellbook needed to learn Wild. Used by Elven Elders and Shillien Elders. Required level: 62 -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="200000"/>
-        <set name="commissionItemType" val="SPELLBOOK"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="5816" name="Spellbook: Advanced Block" icon="icon.etc_spell_books_assistance_i00">
-        <!-- Spellbook needed to learn Advanced Block. Used by Elven Elders. Required level: 42 -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="50000"/>
-        <set name="commissionItemType" val="SPELLBOOK"/>
-        <restriction stackable="true"/>
-    </item>
-    <weapon id="5817" name="Chrono Campana" icon="icon.weapon_chrono_campana_i00">
-        <!-- Chronicle III Souvenir! Cannot be dropped. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;66;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="commissionItemType" val="SPEAR"/>
-        <restriction dropable="false"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">1</stat>
-            <stat type="mAtk">1</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <item id="5858" name="Blessed Scroll of Escape: Clan Hall" icon="icon.etc_scroll_of_return_agit_i01">
-        <!-- Magical scroll that transports you to your clan hall. If you don't belong to a clan that possesses a clan hall, this scroll will have no effect. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="etcitem_type" val="SCROLL"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="100000"/>
-        <set name="commissionItemType" val="SCROLL_OTHER"/>
-        <restriction stackable="true" olympiad-restricted="true"/>
-        <cond addName="1" msgId="113">
-            <player flyMounted="false"/>
-        </cond>
-        <skills>
-            <skill id="2177" level="1"/> <!-- Blessed Scroll of Escape: Clan Hall -->
-        </skills>
-    </item>
-    <item id="5859" name="Blessed Scroll of Escape: Castle" icon="icon.etc_scroll_of_return_castle_i01">
-        <!-- Magical scroll that transports you to your castle. If you don't belong to a clan that controls a castle, this scroll will have no effect. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="etcitem_type" val="SCROLL"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="80000"/>
-        <set name="commissionItemType" val="SCROLL_OTHER"/>
-        <restriction stackable="true" olympiad-restricted="true"/>
-        <cond addName="1" msgId="113">
-            <player flyMounted="false"/>
-        </cond>
-        <skills>
-            <skill id="2178" level="1"/> <!-- Blessed Scroll of Escape: Castle -->
-        </skills>
-    </item>
-    <item id="5860" name="Lienrik Egg" icon="icon.etc_dragon_egg_i02">
-        <!-- Lienrik's egg. It's the item that Pet Manager Rood of Heine asked you to find for him. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5861" name="Lienrik Egg" icon="icon.etc_dragon_egg_i01">
-        <!-- Lienrik's shiny red egg. Pet Manager Rood of Heine asked you to find it for him, but...? -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5862" name="Stone of Contract" icon="icon.etc_bead_silver_i00">
-        <!-- In order to obtain the power of darkness, you will first need to secure this item. Take it to Trader Galman in Dragon Valley. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5863" name="Alligator Tooth" icon="icon.etc_fang_red_i00">
-        <!-- Sharp tooth of the Alligator. Take it to Morita on the shore of Alligator Island. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5864" name="Mysterious Map Piece" icon="icon.etc_map_piece_ivory_i00">
-        <!-- Faded piece of paper. Possibly part of a map. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5865" name="Zoogenous Spores" icon="icon.etc_pouch_gray_i00">
-        <!-- Spore sample collected from a Spore Zombie from the Sea of Spores. It is used as research material by Magister Gauen of the Ivory Tower. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5866" name="Phytogenic Spores" icon="icon.etc_pouch_yellow_i00">
-        <!-- Spore sample collected from a rotting tree from the Sea of Spores. It is used as research material by Magister Gauen of the Ivory Tower. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5867" name="Jade Crystal" icon="icon.etc_gem_green_i00">
-        <!-- Jade crystal collected from the Enchanted Valley. Take it to Warehouse Freightman Silva of Hunter's Village. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5868" name="Snake Scale" icon="icon.etc_scale_of_medusa_blue_i00">
-        <!-- Snake scale from the bodies of Palibati and Trives. Take it to Priest Ruvard in Aden. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5869" name="Remains of Aden Residents" icon="icon.etc_ashes_white_i00">
-        <!-- Remains of residents of Aden Castle who were killed during the Aden-Elmore war. Collect 60 of them and take them to High Priest Orven. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5870" name="Supply Receipt" icon="icon.etc_piece_of_paper_white_i00">
-        <!-- Document made from collected mysterious document pieces. Take it to Guard Coleman. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5871" name="Suspicious Document Piece" icon="icon.etc_piece_of_report_i00">
-        <!-- Piece of document that seems to contain some suspicious contents. If you collect 5 of them, you may be able to decipher the information the document conveys. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5872" name="Supplies" icon="icon.etc_squares_wood_i00">
-        <!-- Supply items of Taik Orcs. Take them to Priest Ruvard and he will reward you. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5873" name="Pirate's Treasure Chest" icon="icon.etc_jewel_box_i00">
-        <!-- Treasure chest that was obtained by slaying Zaken's followers. Take it to Warehouse Keeper Randolf of Town of Giran. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5874" name="Sairon's Silver Hair" icon="icon.etc_pouch_gray_i00">
-        <!-- Sairon's hair. Take it to Magister Dieter of Town of Giran. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5875" name="Lesser Giant's Lamp" icon="icon.etc_bead_gold_i00">
-        <!-- It is called a Lesser Giant's Lamp. It is not lit. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5876" name="Lesser Giant's Lamp" icon="icon.etc_bead_silver_i00">
-        <!-- It is called a Lesser Giant's Lamp. It is burning dimly. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5877" name="Lesser Giant's Lamp" icon="icon.etc_bead_silver_i00">
-        <!-- It is called a Lesser Giant's Lamp. It is lit. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5878" name="Lesser Giant's Lamp" icon="icon.etc_bead_silver_i00">
-        <!-- It is called a Lesser Giant's Lamp. It is lit. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5879" name="Lesser Giant's Lamp" icon="icon.etc_bead_white_i00">
-        <!-- It is called a Lesser Giant's Lamp. It is shining brightly. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5880" name="Broken Lesser Giant's Lamp" icon="icon.etc_broken_crystal_silver_i00">
-        <!-- Broken Lesser Giant's Lamp. Take it to Lorain. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5881" name="Blade Stakato Fang" icon="icon.etc_claw_i00">
-        <!-- Fang that was obtained from killing a blade stakato. Take it to Eva's Priestess Restina in Heine. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5882" name="Fire Crystal" icon="icon.etc_echo_crystal_i00">
-        <!-- Flare shard obtained from the Forgotten Temple. Take it to Magister Nell of Gludin Village. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5883" name="Ice Shard" icon="icon.etc_echo_crystal_i01">
-        <!-- Water Crystal obtained from the Forgotten Temple. Take it to Magister Nell of Gludin Village. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5884" name="Cave Beast Tooth" icon="icon.etc_fang_red_i00">
-        <!-- Ingredient used by Orc Shamans during a ritual. Take it to Priest Vanutu. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5885" name="Death Wave Light" icon="icon.etc_crystal_ball_green_i00">
-        <!-- Ingredient used by Orc Shamans during a ritual. Take it to Priest Vanutu. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5886" name="Sealed Mysterious Stone" icon="icon.etc_dragon_egg_i02">
-        <!-- Pebble that radiates a strange aura. It sends out a dim light. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5887" name="Mysterious Stone" icon="icon.etc_dragon_egg_i00">
-        <!-- Pebble that radiates a strange aura. It is shining brightly. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5888" name="Karik Horn" icon="icon.etc_horn_i00">
-        <!-- Ingredient used by Orc Shamans during a ritual. Take it to Priest Vanutu. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5889" name="Limal Karinness Blood" icon="icon.etc_reagent_red_i00">
-        <!-- Ingredient used by Orc Shamans during a ritual. Take it to Priest Vanutu. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5890" name="Mysterious Book" icon="icon.etc_spellbook_blue_i00">
-        <!-- Book obtained from the Giant's Cave. Written in an ancient language, its contents cannot be deciphered. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5891" name="Ancient Language Dictionary: Basic Level" icon="icon.etc_spellbook_gray_i00">
-        <!-- Simple dictionary published by scholars of ancient times. By using this, you can interpret some of the texts of the Lesser Giants. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5892" name="Ancient Language Dictionary: Intermediate Level" icon="icon.etc_spellbook_red_i00">
-        <!-- Dictionary published by scholars of ancient times. By using this, you can interpret the entire texts of the Lesser Giants. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5893" name="Leaf of Eucalyptus" icon="icon.etc_herb_red_i00">
-        <!-- One of the ingredients used to make wine. Collect 80 of them and take them to Guard Harlan located in the Town of Dion. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5894" name="Stone of Icy Air" icon="icon.etc_crystal_ball_blue_i00">
-        <!-- Magical stone used by Enku Orc Shamans when they cast ice magic. Collect 100 of these and take them to Guard Harlan located in the Town of Dion. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5895" name="Ritron's Fruit" icon="icon.etc_cobol_i05">
-        <!-- Fruit with a tough, hard outer skin and a fragrant smell. Collect 4 of these and take them to Magister Rollant in the Town of Dion. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5896" name="Moon Face Flower" icon="icon.etc_flower_i00">
-        <!-- Flower that is said to bloom only under moonlight. Collect 20 of these and take them to Magister Rollant in the Town of Dion. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5897" name="Leech Fluids" icon="icon.etc_reagent_red_i00">
-        <!-- The bodily fluids of a Leech that can be obtained from the Cruma Marshlands. Collect 10 of these and take them to Magister Rollant in the Town of Dion. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5898" name="Royal Membership" icon="icon.etc_royal_membership_i00">
-        <!-- It's a coin collectors' dream! Take it to Head Blacksmith Vergara. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="5899" name="Kail's Coin" icon="icon.etc_magic_coin_blood_i00">
-        <!-- Coin owned by Sorcerer Kail who used to be an aid of Beleth. Take it to Warehouse Keeper Sorint. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
+	<weapon id="5800" name="Nephilim Lord" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_monster_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1380" commission-type="ONE_HAND_SWORD" for-npc="true"/>
+		<crystal type="C"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="156.0"/>
+			<stat type="mAtk" value="83.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="5801" name="For NPC (Dusk)" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_monster_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1380" commission-type="ONE_HAND_SWORD" for-npc="true"/>
+		<crystal type="C"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="156.0"/>
+			<stat type="mAtk" value="83.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="5802" name="For NPC (Dawn)" type="BOW" body-part="TWO_HAND" icon="icon.weapon_monster_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1380" commission-type="ONE_HAND_SWORD" for-npc="true"/>
+		<crystal type="C"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2"/>
+		<stats>
+			<stat type="pAtk" value="156.0"/>
+			<stat type="mAtk" value="83.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<item id="5803" name="Lucky Charm (D-grade)" type="SCROLL" icon="icon.etc_charm_of_luck_i00">
+	<!-- Bestows blessing on its owner such that when the owner dies during a boss/raid war, their abilities will not be diminished. This item can only be used on self by a character level 20-39. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<condition add-name="true" msg-id="113">
+			<player flying="false"/>
+		</condition>
+		<attributes weight="10" price="330" reuse-delay="10000"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="2168" level="2"/>  <!-- Lucky Charm -->
+		</skill-reducer>
+	</item>
+
+	<item id="5804" name="Lucky Charm (C-grade)" type="SCROLL" icon="icon.etc_charm_of_luck_i00">
+	<!-- Bestows blessing on its owner such that when the owner dies during a boss/raid war, their abilities will not be diminished. This item can only be used on self by a character level 40-51. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<condition add-name="true" msg-id="113">
+			<player flying="false"/>
+		</condition>
+		<attributes weight="10" price="660" reuse-delay="10000"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="2168" level="3"/>  <!-- Lucky Charm -->
+		</skill-reducer>
+	</item>
+
+	<item id="5805" name="Lucky Charm (B-grade)" type="SCROLL" icon="icon.etc_charm_of_luck_i00">
+	<!-- Bestows blessing on its owner such that when the owner dies during a boss/raid war, their abilities will not be diminished. This item can only be used on self by a character level 52-60. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<condition add-name="true" msg-id="113">
+			<player flying="false"/>
+		</condition>
+		<attributes weight="10" price="1300" reuse-delay="10000"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="2168" level="4"/>  <!-- Lucky Charm -->
+		</skill-reducer>
+	</item>
+
+	<armor id="5808" name="Party Mask" type="NONE" body-part="HAIR" icon="icon.etc_party_mask_i00">
+	<!-- Fashion item used to display a unique appearance. -->
+		<restriction freightable="false"/>
+		<attributes weight="10" commission-type="HAIR_ACCESSORY" />
+		<crystal />
+	</armor>
+
+	<item id="5809" name="Spellbook: Aqua Splash" type="NONE" icon="icon.etc_spell_books_element_i00">
+	<!-- Spellbook needed to learn Aqua Splash. Used by Spellsingers.\\nRequired level: 58 -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="6750" commission-type="SPELLBOOK" immediate-effect="true"/>
+	</item>
+
+	<item id="5810" name="Spellbook: Rain of Fire" type="NONE" icon="icon.etc_spell_books_element_i00">
+	<!-- Spellbook needed to learn Rain of Fire. Used by Sorcerers and Spellsingers.\\nRequired level: 58 -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="6750" commission-type="SPELLBOOK" immediate-effect="true"/>
+	</item>
+
+	<item id="5811" name="Spellbook: Mass Slow" type="NONE" icon="icon.etc_spell_books_black_i00">
+	<!-- Spellbook needed to learn Mass Slow. Used by Necromancers.\\nRequired level: 61 -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="200000" commission-type="SPELLBOOK" immediate-effect="true"/>
+	</item>
+
+	<item id="5812" name="Spellbook: Servitor Empowerment" type="NONE" icon="icon.etc_spell_books_summon_i00">
+	<!-- Spellbook needed to learn Servitor Empowerment. Used by Warlocks, Elemental Summoners and Phantom Summoners.\\nRequired level: 52 -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="5400" commission-type="SPELLBOOK" immediate-effect="true"/>
+	</item>
+
+	<item id="5813" name="Spellbook: Servitor Cure" type="NONE" icon="icon.etc_spell_books_summon_i00">
+	<!-- Spellbook needed to learn Servitor Cure. Used by Warlocks, Elemental Summoners and Phantom Summoners.\\nRequired level: 40 -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
+	</item>
+
+	<item id="5814" name="Spellbook: Servitor Blessing" type="NONE" icon="icon.etc_spell_books_summon_i00">
+	<!-- Spellbook needed to learn Servitor Blessing. Used by Warlocks, Elemental Summoners and Phantom Summoners.\\nRequired level: 62 -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="7700" commission-type="SPELLBOOK" immediate-effect="true"/>
+	</item>
+
+	<item id="5815" name="Spellbook: Wild Magic" type="NONE" icon="icon.etc_spell_books_assistance_i00">
+	<!-- Spellbook needed to learn Wild. Used by Elven Elders and Shillien Elders.\\nRequired level: 62 -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="200000" commission-type="SPELLBOOK" immediate-effect="true"/>
+	</item>
+
+	<item id="5816" name="Spellbook: Advanced Block" type="NONE" icon="icon.etc_spell_books_assistance_i00">
+	<!-- Spellbook needed to learn Advanced Block. Used by Elven Elders.\\nRequired level: 42 -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="50000" commission-type="SPELLBOOK" immediate-effect="true"/>
+	</item>
+
+	<weapon id="5817" name="Chrono Campana" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_chrono_campana_i00">
+	<!-- Chronicle III Souvenir!  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes commission-type="SPEAR" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="66" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="1.0"/>
+			<stat type="mAtk" value="1.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<item id="5858" name="Blessed Scroll of Escape: Clan Hall" type="SCROLL" icon="icon.etc_scroll_of_return_agit_i01">
+	<!-- Magical scroll that transports you to your clan hall. If you don't belong to a clan that possesses a clan hall, this scroll will have no effect. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<condition add-name="true" msg-id="113">
+			<player flying="false"/>
+		</condition>
+		<attributes weight="120" price="100000" commission-type="SCROLL_OTHER"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="2177" level="1"/>  <!-- Blessed Scroll of Escape: Clan Hall -->
+		</skill-reducer>
+	</item>
+
+	<item id="5859" name="Blessed Scroll of Escape: Castle" type="SCROLL" icon="icon.etc_scroll_of_return_castle_i01">
+	<!-- Magical scroll that transports you to your castle. If you don't belong to a clan that controls a castle, this scroll will have no effect. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<condition add-name="true" msg-id="113">
+			<player flying="false"/>
+		</condition>
+		<attributes weight="120" price="80000" commission-type="SCROLL_OTHER"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="2178" level="1"/>  <!-- Blessed Scroll of Escape: Castle -->
+		</skill-reducer>
+	</item>
+
+	<item id="5860" name="Lienrik Egg" type="NONE" icon="icon.etc_dragon_egg_i02">
+	<!-- Lienrik's egg. It's the item that Pet Manager Rood of Heine asked you to find for him. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5861" name="Lienrik Egg" type="NONE" icon="icon.etc_dragon_egg_i01">
+	<!-- Lienrik's shiny red egg. Pet Manager Rood of Heine asked you to find it for him, but...? -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5862" name="Stone of Contract" type="NONE" icon="icon.etc_bead_silver_i00">
+	<!-- In order to obtain the power of darkness, you will first need to secure this item. Take it to Trader Galman in Dragon Valley. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5863" name="Alligator Tooth" type="NONE" icon="icon.etc_fang_red_i00">
+	<!-- Sharp canine tooth of the Alligator. Bring this to Morita near the entrance of Alligator Island. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5864" name="Mysterious Map Piece" type="NONE" icon="icon.etc_map_piece_ivory_i00">
+	<!-- Faded piece of paper. Possibly part of a map. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5865" name="Carnivore Spores" type="NONE" icon="icon.etc_pouch_gray_i00">
+	<!-- Tissue sample collected from a spore zombie from the Sea of Spores. It is used as research material by Magister Gauen of the Ivory Tower. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5866" name="Herbivorous Spores" type="NONE" icon="icon.etc_pouch_yellow_i00">
+	<!-- Spore sample collected from a rotting tree from the Sea of Spores. It is used as research material by Magister Gauen of the Ivory Tower. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5867" name="Jade Crystal" type="NONE" icon="icon.etc_gem_green_i00">
+	<!-- Jade crystal collected from the Enchanted Valley. Take it to Warehouse Freightman Silva of Hunter's Village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5868" name="Snake Scale" type="NONE" icon="icon.etc_scale_of_medusa_blue_i00">
+	<!-- Snake scale from the bodies of Palibati and Trives. Take it to Priest Luvard of Town of Aden. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5869" name="Remains of Aden Residents" type="NONE" icon="icon.etc_ashes_white_i00">
+	<!-- Remains of residents of Aden Castle who were killed during the Aden-Elmore war. Collect 60 of them and take them to High Priest Orven. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5870" name="Supply Receipt" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
+	<!-- Document made from collected mysterious document pieces. Take it to Guard Coleman. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5871" name="Suspicious Document Piece" type="NONE" icon="icon.etc_piece_of_report_i00">
+	<!-- Piece of document that seems to contain some suspicious contents. If you collect 5 of them, you may be able to decipher the information the document conveys. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5872" name="Supply Items" type="NONE" icon="icon.etc_squares_wood_i00">
+	<!-- Supply items for Taik Orcs. Take it to Guard Coleman and he will give you a reward. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5873" name="Pirate's Treasure Chest" type="NONE" icon="icon.etc_jewel_box_i00">
+	<!-- Treasure chest that was obtained by slaying Zaken's followers. Take it to Warehouse Keeper Randolf of Town of Giran. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5874" name="Sairon's Silver Hair" type="NONE" icon="icon.etc_pouch_gray_i00">
+	<!-- Sairon's hair. Take it to Magister Dieter of Town of Giran. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5875" name="Lesser Giant's Lamp" type="NONE" icon="icon.etc_bead_gold_i00">
+	<!-- It is called a Lesser Giant's Lamp. It is not lit. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5876" name="Lesser Giant's Lamp" type="NONE" icon="icon.etc_bead_silver_i00">
+	<!-- It is called a Lesser Giant's Lamp. It is burning dimly. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5877" name="Lesser Giant's Lamp" type="NONE" icon="icon.etc_bead_silver_i00">
+	<!-- It is called a Lesser Giant's Lamp. It is lit. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5878" name="Lesser Giant's Lamp" type="NONE" icon="icon.etc_bead_silver_i00">
+	<!-- It is called a Lesser Giant's Lamp. It is lit. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5879" name="Lesser Giant's Lamp" type="NONE" icon="icon.etc_bead_white_i00">
+	<!-- It is called a Lesser Giant's Lamp. It is shining brightly. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5880" name="Broken Lesser Giant's Lamp" type="NONE" icon="icon.etc_broken_crystal_silver_i00">
+	<!-- Broken Lesser Giant's Lamp. Take it to Lorain. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5881" name="Blade Stakato Fang" type="NONE" icon="icon.etc_claw_i00">
+	<!-- Fang that was obtained from killing a blade stakato. Take it to Eva's Priestess Restina in Heine. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5882" name="Flare Shard" type="NONE" icon="icon.etc_echo_crystal_i00">
+	<!-- Flare shard obtained from the Forgotten Temple. Take it to Magister Nell of Gludin Village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5883" name="Freezing Shard" type="NONE" icon="icon.etc_echo_crystal_i01">
+	<!-- Water Crystal obtained from the Forgotten Temple. Take it to Magister Nell of Gludin Village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5884" name="Cave Beast Tooth" type="NONE" icon="icon.etc_fang_red_i00">
+	<!-- Ingredient used by Orc Shamans during a ritual. Take it to Priest Vanutu. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5885" name="Death Wave Light" type="NONE" icon="icon.etc_crystal_ball_green_i00">
+	<!-- Ingredient used by Orc Shamans during their ritual. Take it to Priest Vanutu. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5886" name="Sealed Mysterious Stone" type="NONE" icon="icon.etc_dragon_egg_i02">
+	<!-- Pebble that radiates a strange aura. It sends out a dim light. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5887" name="Mysterious Stone" type="NONE" icon="icon.etc_dragon_egg_i00">
+	<!-- Pebble that radiates a strange aura. It is shining brightly. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5888" name="Karik Horn" type="NONE" icon="icon.etc_horn_i00">
+	<!-- Ingredient used by Orc Shamans during a ritual. Take it to Priest Vanutu. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5889" name="Limal Karinness Blood" type="NONE" icon="icon.etc_reagent_red_i00">
+	<!-- Ingredient used by Orc Shamans during a ritual. Take it to Priest Vanutu. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5890" name="Mysterious Book" type="NONE" icon="icon.etc_spellbook_blue_i00">
+	<!-- Book obtained from the Giant's Cave. Written in an ancient language, its contents cannot be deciphered. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5891" name="Ancient Language Dictionary: Basic Level" type="NONE" icon="icon.etc_spellbook_gray_i00">
+	<!-- Simple dictionary published by scholars of ancient times. By using this, you can interpret some of the texts of the Lesser Giants. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5892" name="Ancient Language Dictionary: Intermediate Level" type="NONE" icon="icon.etc_spellbook_red_i00">
+	<!-- Dictionary published by scholars of ancient times. By using this, you can interpret the entire texts of the Lesser Giants. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5893" name="Leaf of Eucalyptus" type="NONE" icon="icon.etc_herb_red_i00">
+	<!-- One of the ingredients used to make wine. Collect 80 of them and take them to Guard Harlan located in the Town of Dion. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5894" name="Stone of Icy Air" type="NONE" icon="icon.etc_crystal_ball_blue_i00">
+	<!-- Magical stone used by Enku Orc Shamans when they cast ice magic. Collect 100 of these and take them to Guard Harlan located in the Town of Dion. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5895" name="Ritron's Fruit" type="NONE" icon="icon.etc_cobol_i05">
+	<!-- Fruit with a tough, hard outer skin and a fragrant smell. Collect 4 of these and take them to Magister Rollant in the Town of Dion. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5896" name="Moon Face Flower" type="NONE" icon="icon.etc_flower_i00">
+	<!-- Flower that is said to bloom only under moonlight. Collect 20 of these and take them to Magister Rollant in the Town of Dion. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5897" name="Leech Fluids" type="NONE" icon="icon.etc_reagent_red_i00">
+	<!-- The bodily fluids of a Leech that can be obtained from the Cruma Marshlands. Collect 10 of these and take them to Magister Rollant in the Town of Dion. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5898" name="Royal Membership" type="NONE" icon="icon.etc_royal_membership_i00">
+	<!-- It's a coin collectors' dream! Take it to Head Blacksmith Vergara. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="5899" name="Kail's Coin" type="NONE" icon="icon.etc_magic_coin_blood_i00">
+	<!-- Coin owned by Sorcerer Kail who used to be an aid of Beleth. Take it to Warehouse Keeper Sorint. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
 </list>

@@ -1,670 +1,591 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="1400" name="Spellbook: Surrender to Fire" icon="icon.etc_spell_books_element_i00">
-        <!-- Spellbook needed to learn Surrender to Fire. Used by Human Wizards. Required level: 25 -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="1250"/>
-        <set name="commissionItemType" val="SPELLBOOK"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1401" name="Spellbook: Acumen" icon="icon.etc_spell_books_assistance_i00">
-        <!-- Spellbook needed to learn Acumen. Used by Clerics. Required level: 20 -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="7461"/>
-        <set name="commissionItemType" val="SPELLBOOK"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1402" name="Spellbook: Agility" icon="icon.etc_spell_books_assistance_i00">
-        <!-- Spellbook needed to learn Agility. Used by Elven Oracles. Required level: 25 -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="1250"/>
-        <set name="commissionItemType" val="SPELLBOOK"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1403" name="Spellbook: Summon Kat the Cat" icon="icon.etc_spell_books_summon_i00">
-        <!-- Spellbook needed to learn Summon Kat the Cat. Used by Human Wizards. Required level: 20 -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="800"/>
-        <set name="commissionItemType" val="SPELLBOOK"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1404" name="Spellbook: Servitor Recharge" icon="icon.etc_spell_books_summon_i00">
-        <!-- Spellbook needed to learn Servitor Recharge. Used by Human Wizards, Elven Wizards, and Dark Wizards. Required level: 25 -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="1250"/>
-        <set name="commissionItemType" val="SPELLBOOK"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1405" name="Spellbook: Servitor Heal" icon="icon.etc_spell_books_summon_i00">
-        <!-- Spellbook needed to learn Servitor Heal. Used by Human Wizards, Elven Wizards, and Dark Wizards. Required level: 20 -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="800"/>
-        <set name="commissionItemType" val="SPELLBOOK"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1406" name="Spellbook: Servitor Wind Walk" icon="icon.etc_spell_books_summon_i00">
-        <!-- Spellbook needed to learn Servitor Wind Walk. Used by Human Wizards. Required level: 35 -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="2450"/>
-        <set name="commissionItemType" val="SPELLBOOK"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1407" name="Spellbook: Servitor Magic Boost" icon="icon.etc_spell_books_summon_i00">
-        <!-- Spellbook needed to learn Servitor Magic Boost. Used by Elven Wizards. Required level: 35 -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="2450"/>
-        <set name="commissionItemType" val="SPELLBOOK"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1408" name="Spellbook: Mighty Servitor" icon="icon.etc_spell_books_summon_i00">
-        <!-- Spellbook needed to learn Mighty Servitor. Used by Dark Wizards. Required level: 35 -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="2450"/>
-        <set name="commissionItemType" val="SPELLBOOK"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1409" name="Spellbook: Slow" icon="icon.etc_spell_books_black_i00">
-        <!-- Spellbook needed to learn Slow. Used by Human Wizards and Dark Wizards. Required level: 35 -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="43681"/>
-        <set name="commissionItemType" val="SPELLBOOK"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1410" name="Spellbook: Poisonous Cloud" icon="icon.etc_spell_books_black_i00">
-        <!-- Spellbook needed to learn Poisonous Cloud. Used by Human Wizards and Dark Wizards. Required level: 25 -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="1250"/>
-        <set name="commissionItemType" val="SPELLBOOK"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1411" name="Spellbook: Aura Burn" icon="icon.etc_spell_books_element_i00">
-        <!-- Spellbook needed to learn Aura Burn. Used by Wizards, Elven Wizards and Dark Wizards. Required level: 20 -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="800"/>
-        <set name="commissionItemType" val="SPELLBOOK"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1412" name="Spellbook: Water Resistance" icon="icon.etc_spell_books_assistance_i00">
-        <!-- Spellbook needed to learn Water Resistance. Used by Elven Wizards and Prophets. Required level: Elven Wizard - 25, Prophet - 58 -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="2450"/>
-        <set name="commissionItemType" val="SPELLBOOK"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1413" name="Spellbook: Wind Resistance" icon="icon.etc_spell_books_assistance_i00">
-        <!-- Spellbook needed to learn Wind Resistance. Used by Shillien Oracles and Prophets. Required level: Shillien Oracle - 35, Prophet - 58 -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="2450"/>
-        <set name="commissionItemType" val="SPELLBOOK"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1414" name="Spellbook: Fire Resistance" icon="icon.etc_spell_books_assistance_i00">
-        <!-- Spellbook needed to learn Fire Resistance. Used by Clerics. Required level: 30 -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="1800"/>
-        <set name="commissionItemType" val="SPELLBOOK"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1415" name="Spellbook: Dryad Root" icon="icon.etc_spell_books_assistance_i00">
-        <!-- Spellbook needed to learn Dryard Root. Used by Clerics, Oracles and Shillien Oracles. Required level: 23 -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="10603"/>
-        <set name="commissionItemType" val="SPELLBOOK"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1416" name="Spellbook: Curse Chaos" icon="icon.etc_spell_books_black_i00">
-        <!-- Spellbook needed to learn Curse Chaos. Used by Human Wizards and Dark Wizards. Required level: 35 -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="43681"/>
-        <set name="commissionItemType" val="SPELLBOOK"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1417" name="Spellbook: Surrender to Earth" icon="icon.etc_spell_books_element_i00">
-        <!-- Spellbook needed to learn Surrender to Earth. Used by Elven Wizards. Required level: 35 -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="1250"/>
-        <set name="commissionItemType" val="SPELLBOOK"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1418" name="Spellbook: Surrender to Poison" icon="icon.etc_spell_books_black_i00">
-        <!-- Spellbook needed to learn Surrender to Poison. Used by Dark Wizards. Required level: 25 -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="1250"/>
-        <set name="commissionItemType" val="SPELLBOOK"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1419" name="Proof of Blood" icon="icon.etc_broken_crystal_red_i00">
-        <!-- Item needed to upgrade a clan to level 5. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="commissionItemType" val="OTHER_ITEM"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1420" name="Ingredient List" icon="icon.etc_piece_of_paper_white_i00">
-        <!-- List of cooking ingredients from Jonas. Mandragora essence. Honey. Dionian potato. Marsh moss. Floating eye meat. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1421" name="Sonia's Botany Book" icon="icon.etc_spell_books_blue_i00">
-        <!-- Picture that shows what a mandragora looks like. You need this to get mandragora roots. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1422" name="Red Mandragora Root" icon="icon.etc_pouch_yellow_i00">
-        <!-- Red mandragora root. Collect these to take them to Trader Sonia. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1423" name="White Mandragora Root" icon="icon.etc_pouch_gray_i00">
-        <!-- Rare white mandragora root. Collect these to take them to Trader Sonia. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1424" name="Red Mandragora Sap" icon="icon.etc_potion_red_i00">
-        <!-- Red mandragora sap. One of the five ingredients needed for Jonas' cooking. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1425" name="White Mandragora Sap" icon="icon.etc_potion_clear_i00">
-        <!-- Transparent mandragora sap. One of the ingredients needed for Jonas' cooking. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1426" name="Jacob's Insect Book" icon="icon.etc_spell_books_red_i00">
-        <!-- Diagram that depicts the drawing of a bee. You must possess this in order to obtain nectar and royal jelly from the bloody bee or the Weird Wasp. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1427" name="Nectar" icon="icon.etc_reagent_gold_i00">
-        <!-- Honey water taken from a giant bee. Collect 20 of these to take them to Guard Jacob. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1428" name="Royal Jelly" icon="icon.etc_reagent_white_i00">
-        <!-- Rare ingredient that can be taken only from newborn working bees. Collect these and take them to Guard Jacob. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1429" name="Honey" icon="icon.etc_potion_yellow_i00">
-        <!-- Honey made from the nectar you collected from bees. One of the five ingredients needed for Jonas' cooking. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1430" name="Golden Honey" icon="icon.etc_potion_gold_i00">
-        <!-- Golden honey made from the nectar and the royal jelly you collected from bees. One of the five ingredients needed for Jonas' cooking. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1431" name="Pano's Contract" icon="icon.etc_letter_blue_i00">
-        <!-- Contract Grocer Pano gave you. It says, if you kill Hobgoblins and bring 30 pieces of proof, he will give you potatoes as a reward. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1432" name="Hobgoblin Amulet" icon="icon.etc_feather_black_i00">
-        <!-- Amulet made of a feather that Hobgoblins carry on themselves. Collect 30 of these and take them to Grocer Pano. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1433" name="Dionian Potato" icon="icon.etc_pouch_brown_i00">
-        <!-- The highest-quality potatoes grown in the rich soil of southern Dion. One of the five ingredients needed for Jonas' cooking. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1434" name="Glyvka's Botany Book" icon="icon.etc_spell_books_blue_i00">
-        <!-- Picture that explains how to collect moss. You need this to collect marsh moss from grey ants or crimson ants. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1435" name="Green Marsh Moss" icon="icon.etc_branch_green_i00">
-        <!-- Green marsh moss is sometimes used in cooking. Collect this and take it to Priestess Glyvka. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1436" name="Brown Marsh Moss" icon="icon.etc_branch_gold_i00">
-        <!-- Rare brown marsh moss. Its flavors are superior to the green ones. Collect this and take it to Priestess Glyvka. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1437" name="Green Moss Bundle" icon="icon.etc_bark_green_i00">
-        <!-- Bundle of well-cared-for moss, collected from a marshy place for cooking. One of the five ingredients needed for Jonas' cooking. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1438" name="Brown Moss Bundle" icon="icon.etc_bark_gold_i00">
-        <!-- Bundle of well-cared-for moss, collected from a marshy place for cooking. One of the five ingredients needed for Jonas' cooking. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1439" name="Rollant's Creature Book" icon="icon.etc_spell_books_red_i00">
-        <!-- Picture that shows what a monster eye looks like. You need this to collect the right monster eye searcher or the monster eye gazer. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1440" name="Body of Monster Eye" icon="icon.etc_leather_brown_i00">
-        <!-- Severed Deadman's Flesh body of monster eye. Take this to Magister Rollant. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1441" name="Monster Eye's Meat" icon="icon.etc_pouch_yellow_i00">
-        <!-- The meat of monster eye, ready to cook. One of the five ingredients needed for Jonas' cooking. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1442" name="Jonas' 1st Steak Dish" icon="icon.etc_jewel_box_i00">
-        <!-- Plate that contains Jonas' monster eye steak. Take this to Magister Mirien. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1443" name="Jonas' 1st Steak Dish" icon="icon.etc_jewel_box_i00">
-        <!-- Plate that contains Jonas' monster eye steak. Take this to Magister Mirien. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1444" name="Jonas' 1st Steak Dish" icon="icon.etc_jewel_box_i00">
-        <!-- Plate that contains Jonas' monster eye steak. Take this to Magister Mirien. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1445" name="Jonas' 1st Steak Dish" icon="icon.etc_jewel_box_i00">
-        <!-- Plate that contains Jonas' monster eye steak. Take this to Magister Mirien. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1446" name="Jonas' 1st Steak Dish" icon="icon.etc_jewel_box_i00">
-        <!-- Plate that contains Jonas' monster eye steak. Take this to Magister Mirien. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1447" name="Mirien's Review" icon="icon.etc_letter_red_i00">
-        <!-- Letter from Magister Mirien about the taste of Jonas' dish. Take this to Jonas. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1452" name="Harpy's Feather" icon="icon.etc_feather_white_i00">
-        <!-- Feather taken from a harpy. Collect these and take them to Guard Belton. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1453" name="Medusa's Venom" icon="icon.etc_potion_green_i00">
-        <!-- Poison extracted from the snake hair of a medusa. Collect these and take them to Guard Belton. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1454" name="Wyrm's Tooth" icon="icon.etc_claw_i00">
-        <!-- Sharp fang of a Wyrm. Collect these and take them to Guard Belton. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1455" name="Jonas' Salad Recipe" icon="icon.item_canuse39">
-        <!-- Jonas' recipe for making marsh moss salad. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1456" name="Jonas' Sauce Recipe" icon="icon.item_canuse39">
-        <!-- Jonas' recipe for making mandragora sauce. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1457" name="Jonas' Steak Recipe" icon="icon.item_canuse39">
-        <!-- Jonas' recipe for making monster eye meat steak. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1458" name="Crystal (D-grade)" icon="icon.etc_crystal_blue_i00">
-        <!-- Crystal of D-grade. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="price" val="650"/>
-        <set name="commissionItemType" val="CRYSTAL"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1459" name="Crystal (C-grade)" icon="icon.etc_crystal_green_i00">
-        <!-- Crystal of C-grade. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="price" val="3000"/>
-        <set name="commissionItemType" val="CRYSTAL"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1460" name="Crystal (B-grade)" icon="icon.etc_crystal_red_i00">
-        <!-- Crystal of B-grade. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="price" val="9000"/>
-        <set name="commissionItemType" val="CRYSTAL"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1461" name="Crystal (A-grade)" icon="icon.etc_crystal_silver_i00">
-        <!-- Crystal of A-grade. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="price" val="12500"/>
-        <set name="commissionItemType" val="CRYSTAL"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1462" name="Crystal (S-grade)" icon="icon.etc_crystal_gold_i00">
-        <!-- Crystal of S-grade. -->
-        <set name="crystal_type" val="S"/>
-        <set name="price" val="15000"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1463" name="Soulshot (D-grade)" icon="icon.etc_spirit_bullet_blue_i00">
-        <!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a D-grade weapon. -->
-        <set name="default_action" val="SOULSHOT"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2"/>
-        <set name="price" val="10"/>
-        <set name="commissionItemType" val="SOULSHOT"/>
-        <restriction stackable="true"/>
-        <skills>
-            <skill id="2150" level="1"/> <!-- Soulshot (D-grade) -->
-        </skills>
-    </item>
-    <item id="1464" name="Soulshot (C-grade)" icon="icon.etc_spirit_bullet_green_i00">
-        <!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a C-grade weapon. -->
-        <set name="default_action" val="SOULSHOT"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2"/>
-        <set name="price" val="15"/>
-        <set name="commissionItemType" val="SOULSHOT"/>
-        <restriction stackable="true"/>
-        <skills>
-            <skill id="2151" level="1"/> <!-- Soulshot (C-grade) -->
-        </skills>
-    </item>
-    <item id="1465" name="Soulshot (B-grade)" icon="icon.etc_spirit_bullet_red_i00">
-        <!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a B-grade weapon. -->
-        <set name="default_action" val="SOULSHOT"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1"/>
-        <set name="price" val="50"/>
-        <set name="commissionItemType" val="SOULSHOT"/>
-        <restriction stackable="true"/>
-        <skills>
-            <skill id="2152" level="1"/> <!-- Soulshot (B-grade) -->
-        </skills>
-    </item>
-    <item id="1466" name="Soulshot (A-grade)" icon="icon.etc_spirit_bullet_silver_i00">
-        <!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. Used with A-grade weapons. -->
-        <set name="default_action" val="SOULSHOT"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1"/>
-        <set name="price" val="80"/>
-        <set name="commissionItemType" val="SOULSHOT"/>
-        <restriction stackable="true"/>
-        <skills>
-            <skill id="2153" level="1"/> <!-- Soulshot (A-grade) -->
-        </skills>
-    </item>
-    <item id="1467" name="Soulshot (S-grade)" icon="icon.etc_spirit_bullet_gold_i00">
-        <!-- The power of Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. Used with S-grade weapons. -->
-        <set name="default_action" val="SOULSHOT"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1"/>
-        <set name="price" val="100"/>
-        <set name="commissionItemType" val="SOULSHOT"/>
-        <restriction stackable="true"/>
-        <skills>
-            <skill id="2154" level="1"/> <!-- Soulshot (S-grade) -->
-        </skills>
-    </item>
-    <weapon id="1471" name="Silenos Blowgun" icon="icon.weapon_monster_i00">
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;300;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="101"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="300"/>
-        <set name="price" val="80"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="DAGGER"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">5</stat>
-            <stat type="mAtk">5</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="1472" name="Dreadbane" icon="icon.weapon_monster_i00">
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;66;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="101"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="300"/>
-        <set name="price" val="80"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="SPEAR"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">50</stat>
-            <stat type="mAtk">26</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <item id="1473" name="Kasha Wolf Fang" icon="icon.etc_claw_i00">
-        <!-- Fang that is obtained by killing a kasha wolf. Collect fifty and take these to Praetorian Rukain. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1474" name="Grave Robber's Head" icon="icon.etc_skull_black_i00">
-        <!-- The head of goblin robbers, who damaged the graves of Orc ancestors. Collect 50 to take to Seer Livina. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1475" name="Black Soulstone" icon="icon.etc_bead_gold_i00">
-        <!-- Black soulstone pulled out of the heart of a Rakeclaw Imp. Collect these to take to Atuba Chief Varkees. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1476" name="Red Soulstone" icon="icon.etc_crystal_ball_red_i00">
-        <!-- Red soulstone pulled out of the heart of a Rakeclaw Imp. Collect these to take to Atuba Chief Varkees. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1477" name="Maraku Werewolf Head" icon="icon.etc_skull_red_i00">
-        <!-- The head of a Maraku werewolf that has been cut off after they were defeated. Collect 40 of these and take them to Prefect Brukurse. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1478" name="Blackwing Bat Fang" icon="icon.etc_horn_i00">
-        <!-- Fang of a Blackwing Bat. Collect 70 of these and take them to Neruga Chief Tantus. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1479" name="Varangka's Parasite" icon="icon.etc_totem_black_i00">
-        <!-- Evil parasite that can summon Varangka's Tracker. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1480" name="Kasha's Parasitic Spirit" icon="icon.etc_totem_black_i00">
-        <!-- Parasite-type evil spirit that comes out of the grey bear polluted by kasha's evil spirit. This is the key calling forth the kasha totem spirit. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1481" name="Kasha's Crystal" icon="icon.etc_crystal_green_i00">
-        <!-- Crystal obtained by killing the grey bear totem polluted by kasha's evil spirit. Take this to Seer Tanapi. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1482" name="Black Wolf Pelt" icon="icon.etc_leather_gray_i00">
-        <!-- Pelt of a black wolf. Collect 40 to take to Maryse Redbonnet. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1483" name="Goblin Necklace" icon="icon.etc_totem_necklace_black_i00">
-        <!-- Necklace obtained by killing a low-level goblin. Collect these and take them to Golden Wheel's Spiron. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1484" name="Goblin Pendant" icon="icon.etc_totem_necklace_red_i00">
-        <!-- Necklace obtained by killing a high-level goblin. Collect these and take them to Golden Wheel's Spiron. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1485" name="Goblin Lord Pendant" icon="icon.etc_totem_necklace_green_i00">
-        <!-- Necklace obtained by killing the goblin lord. Collect these and take them to Golden Wheel's Spiron. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1486" name="Suspicious Memo" icon="icon.etc_piece_of_paper_gray_i00">
-        <!-- Suspicious memo obtained by killing a goblin brigand leader. Take this to Golden Wheel's Spiron. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1487" name="Suspicious Contract" icon="icon.etc_letter_white_i00">
-        <!-- Suspicious contract completed by collecting suspicious memos. This contract reveals that the Silver Scale Guild requested the brigands to attack the freight wagons. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1488" name="Chrysolite Ore" icon="icon.etc_plate_blue_i00">
-        <!-- Chrysolite Ore received from defeating Utuku Orcs. Collect these and take them to Filaur of the Grey Pillar. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1489" name="Torn Map Piece" icon="icon.etc_piece_of_paper_black_i00">
-        <!-- Part of the map that reveals the hidden vein of Chrysolite. Collect 4 of these pieces to complete the map. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1490" name="Hidden Ore Map" icon="icon.etc_recipe_blue_i00">
-        <!-- Map that reveals a hidden vein of Chrysolite. Take this to Filaur of the Grey Pillar. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1491" name="Bat Fang" icon="icon.etc_claw_i00">
-        <!-- Fang taken by killing a blade bat or a barb bat. Collect 100 and take them to Bronze Key's Keef -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1492" name="Floating Stone" icon="icon.etc_crystal_ball_blue_i00">
-        <!-- Stone that floats on water. Obtain it from a magical weaver. Collect 50 and take them to Black Anvil's Arin. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1493" name="Tarantula's Spider Silk" icon="icon.etc_skein_white_i00">
-        <!-- The spider silk that makes when making their nests. Collect these and take them to Trader Mion. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1494" name="Tarantula Spinnerette" icon="icon.etc_pouch_gray_i00">
-        <!-- Pocket shaped organ that makes spider silk. Take this to Defender Nathan. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1495" name="Giant Spider's Skin" icon="icon.etc_leather_gray_i00">
-        <!-- The husk of a giant spider that you peel off. Collect them and take them to Edmond. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1496" name="Mark of Flame" icon="icon.etc_scroll_of_enchant_weapon_i01">
-        <!-- This mark represents the qualification of Orc fighters. Take this and go to the Flame Guardian Vulkus. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1497" name="Necklace of Flame" icon="icon.item_normal142">
-        <!-- The Necklace of Flame given to you by Vulkus. Hand this to Pa'agrio Lord Kakai, king of the Orcs. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1498" name="Mining License" icon="icon.etc_letter_blue_i00">
-        <!-- License given to Dwarves to allow them to mine. Take this and go to Foreman Laferon. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1499" name="Laferon's Recommendation" icon="icon.item_canuse15">
-        <!-- The recommendation of Foreman Laferon. Take this and go to First Elder Lockirin. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
+	<item id="1400" name="Spellbook: Surrender to Fire" type="NONE" icon="icon.etc_spell_books_element_i00">
+	<!-- Spellbook needed to learn Surrender to Fire. Used by Human Wizards.\\nRequired level: 25 -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="1250" commission-type="SPELLBOOK" immediate-effect="true"/>
+	</item>
+
+	<item id="1401" name="Spellbook: Acumen" type="NONE" icon="icon.etc_spell_books_assistance_i00">
+	<!-- Spellbook needed to learn Acumen. Used by Clerics.\\nRequired level: 20 -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="7461" commission-type="SPELLBOOK" immediate-effect="true"/>
+	</item>
+
+	<item id="1402" name="Spellbook: Agility" type="NONE" icon="icon.etc_spell_books_assistance_i00">
+	<!-- Spellbook needed to learn Agility. Used by Elven Oracles.\\nRequired level: 25 -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="1250" commission-type="SPELLBOOK" immediate-effect="true"/>
+	</item>
+
+	<item id="1403" name="Spellbook: Summon Kat the Cat" type="NONE" icon="icon.etc_spell_books_summon_i00">
+	<!-- Spellbook needed to learn Summon Kat the Cat. Used by Human Wizards.\\nRequired level: 20 -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
+	</item>
+
+	<item id="1404" name="Spellbook: Servitor Recharge" type="NONE" icon="icon.etc_spell_books_summon_i00">
+	<!-- Spellbook needed to learn Servitor Recharge. Used by Human Wizards, Elven Wizards, and Dark Wizards.\\nRequired level: 25 -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="1250" commission-type="SPELLBOOK" immediate-effect="true"/>
+	</item>
+
+	<item id="1405" name="Spellbook: Servitor Heal" type="NONE" icon="icon.etc_spell_books_summon_i00">
+	<!-- Spellbook needed to learn Servitor Heal. Used by Human Wizards, Elven Wizards, and Dark Wizards.\\nRequired level: 20 -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
+	</item>
+
+	<item id="1406" name="Spellbook: Servitor Wind Walk" type="NONE" icon="icon.etc_spell_books_summon_i00">
+	<!-- Spellbook needed to learn Servitor Wind Walk. Used by Human Wizards.\\nRequired level: 35 -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="2450" commission-type="SPELLBOOK" immediate-effect="true"/>
+	</item>
+
+	<item id="1407" name="Spellbook: Servitor Magic Boost" type="NONE" icon="icon.etc_spell_books_summon_i00">
+	<!-- Spellbook needed to learn Servitor Magic Boost. Used by Elven Wizards.\\nRequired level: 35 -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="2450" commission-type="SPELLBOOK" immediate-effect="true"/>
+	</item>
+
+	<item id="1408" name="Spellbook: Mighty Servitor" type="NONE" icon="icon.etc_spell_books_summon_i00">
+	<!-- Spellbook needed to learn Mighty Servitor. Used by Dark Wizards.\\nRequired level: 35 -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="2450" commission-type="SPELLBOOK" immediate-effect="true"/>
+	</item>
+
+	<item id="1409" name="Spellbook: Slow" type="NONE" icon="icon.etc_spell_books_black_i00">
+	<!-- Spellbook needed to learn Slow. Used by Human Wizards and Dark Wizards.\\nRequired level: 35 -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="43681" commission-type="SPELLBOOK" immediate-effect="true"/>
+	</item>
+
+	<item id="1410" name="Spellbook: Poisonous Cloud" type="NONE" icon="icon.etc_spell_books_black_i00">
+	<!-- Spellbook needed to learn Poisonous Cloud. Used by Human Wizards and Dark Wizards.\\nRequired level: 25 -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="1250" commission-type="SPELLBOOK" immediate-effect="true"/>
+	</item>
+
+	<item id="1411" name="Spellbook: Aura Burn" type="NONE" icon="icon.etc_spell_books_element_i00">
+	<!-- Spellbook needed to learn Aura Burn. Used by Wizards, Elven Wizards and Dark Wizards.\\nRequired level: 20 -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
+	</item>
+
+	<item id="1412" name="Spellbook: Water Resistance" type="NONE" icon="icon.etc_spell_books_assistance_i00">
+	<!-- Spellbook needed to learn Water Resistance. Used by Elven Wizards and Prophets.\\nRequired level: Elven Wizard - 25, Prophet - 58 -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="2450" commission-type="SPELLBOOK" immediate-effect="true"/>
+	</item>
+
+	<item id="1413" name="Spellbook: Wind Resistance" type="NONE" icon="icon.etc_spell_books_assistance_i00">
+	<!-- Spellbook needed to learn Wind Resistance. Used by Shillien Oracles and Prophets.\\nRequired level: Shillien Oracle - 35, Prophet - 58 -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="2450" commission-type="SPELLBOOK" immediate-effect="true"/>
+	</item>
+
+	<item id="1414" name="Spellbook: Fire Resistance" type="NONE" icon="icon.etc_spell_books_assistance_i00">
+	<!-- Spellbook needed to learn Fire Resistance. Used by Clerics.\\nRequired level: 30 -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="1800" commission-type="SPELLBOOK" immediate-effect="true"/>
+	</item>
+
+	<item id="1415" name="Spellbook: Dryad Root" type="NONE" icon="icon.etc_spell_books_assistance_i00">
+	<!-- Spellbook needed to learn Dryad Root. Used by Clerics, Oracles, and Shillien Oracles.\\nRequired level: 23 -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="10603" commission-type="SPELLBOOK" immediate-effect="true"/>
+	</item>
+
+	<item id="1416" name="Spellbook: Curse Chaos" type="NONE" icon="icon.etc_spell_books_black_i00">
+	<!-- Spellbook needed to learn Curse Chaos. Used by Human Wizards and Dark Wizards.\\nRequired level: 35 -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="43681" commission-type="SPELLBOOK" immediate-effect="true"/>
+	</item>
+
+	<item id="1417" name="Spellbook: Surrender to Earth" type="NONE" icon="icon.etc_spell_books_element_i00">
+	<!-- Spellbook needed to learn Surrender to Earth. Used by Elven Wizards.\\nRequired level: 35 -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="1250" commission-type="SPELLBOOK" immediate-effect="true"/>
+	</item>
+
+	<item id="1418" name="Spellbook: Surrender to Poison" type="NONE" icon="icon.etc_spell_books_black_i00">
+	<!-- Spellbook needed to learn Surrender to Poison. Used by Dark Wizards.\\nRequired level: 25 -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="1250" commission-type="SPELLBOOK" immediate-effect="true"/>
+	</item>
+
+	<item id="1419" name="Proof of Blood" type="NONE" icon="icon.etc_broken_crystal_red_i00">
+	<!-- Item needed to upgrade a clan to level 5. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="1420" name="Ingredient List" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
+	<!-- List of cooking ingredients from Jonas. Mandragora essence. Honey. Dionian potato. Marsh moss. Floating eye meat. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1421" name="Sonia's Botany Book" type="NONE" icon="icon.etc_spell_books_blue_i00">
+	<!-- Picture that shows what a mandragora looks like. You need this to get mandragora roots. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1422" name="Red Mandragora Root" type="NONE" icon="icon.etc_pouch_yellow_i00">
+	<!-- Red mandragora root. Collect these to take them to Trader Sonia. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1423" name="White Mandragora Root" type="NONE" icon="icon.etc_pouch_gray_i00">
+	<!-- Rare white mandragora root. Collect these to take them to Trader Sonia. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1424" name="Red Mandragora Sap" type="NONE" icon="icon.etc_potion_red_i00">
+	<!-- Red mandragora sap. One of the five ingredients needed for Jonas' cooking. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1425" name="White Mandragora Sap" type="NONE" icon="icon.etc_potion_clear_i00">
+	<!-- Transparent mandragora sap. One of the ingredients needed for Jonas' cooking. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1426" name="Jacob's Insect Book" type="NONE" icon="icon.etc_spell_books_red_i00">
+	<!-- Diagram that depicts the drawing of a bee. You must possess this in order to obtain nectar and royal jelly from the bloody bee or the Weird Wasp. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1427" name="Nectar" type="NONE" icon="icon.etc_reagent_gold_i00">
+	<!-- Honey water taken from a giant bee. Collect 20 of these to take them to Guard Jacob. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1428" name="Royal Jelly" type="NONE" icon="icon.etc_reagent_white_i00">
+	<!-- Rare ingredient that can be taken only from newborn working bees. Collect these and take them to Guard Jacob. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1429" name="Honey" type="NONE" icon="icon.etc_potion_yellow_i00">
+	<!-- Honey made from the nectar you collected from bees. One of the five ingredients needed for Jonas' cooking. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1430" name="Golden Honey" type="NONE" icon="icon.etc_potion_gold_i00">
+	<!-- Golden honey made from the nectar and the royal jelly you collected from bees. One of the five ingredients needed for Jonas' cooking. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1431" name="Pano's Contract" type="NONE" icon="icon.etc_letter_blue_i00">
+	<!-- Contract Grocer Pano gave you. It says, if you kill Hobgoblins and bring 30 pieces of proof, he will give you potatoes as a reward. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1432" name="Hobgoblin Amulet" type="NONE" icon="icon.etc_feather_black_i00">
+	<!-- Amulet made of a feather that Hobgoblins carry on themselves. Collect 30 of these and take them to Grocer Pano. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1433" name="Dionian Potato" type="NONE" icon="icon.etc_pouch_brown_i00">
+	<!-- The highest-quality potatoes grown in the rich soil of southern Dion. One of the five ingredients needed for Jonas' cooking. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1434" name="Glyvka's Botany Book" type="NONE" icon="icon.etc_spell_books_blue_i00">
+	<!-- Picture that explains how to collect moss. You need this to collect marsh moss from grey ants or crimson ants. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1435" name="Green Marsh Moss" type="NONE" icon="icon.etc_branch_green_i00">
+	<!-- Green marsh moss is sometimes used in cooking. Collect this and take it to Priestess Glyvka. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1436" name="Brown Marsh Moss" type="NONE" icon="icon.etc_branch_gold_i00">
+	<!-- Rare brown marsh moss. Its flavors are superior to the green ones. Collect this and take it to Priestess Glyvka. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1437" name="Green Moss Bundle" type="NONE" icon="icon.etc_bark_green_i00">
+	<!-- Bundle of well-cared-for moss, collected from a marshy place for cooking. One of the five ingredients needed for Jonas' cooking. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1438" name="Brown Moss Bundle" type="NONE" icon="icon.etc_bark_gold_i00">
+	<!-- Bundle of well-cared-for moss, collected from a marshy place for cooking. One of the five ingredients needed for Jonas' cooking. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1439" name="Rollant's Creature Book" type="NONE" icon="icon.etc_spell_books_red_i00">
+	<!-- Picture that shows what a monster eye looks like. You need this to collect the right monster eye searcher or the monster eye gazer. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1440" name="Body of Monster Eye" type="NONE" icon="icon.etc_leather_brown_i00">
+	<!-- Severed Deadman's Flesh body of monster eye. Take this to Magister Rollant. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1441" name="Monster Eye Meat" type="NONE" icon="icon.etc_pouch_yellow_i00">
+	<!-- The dead body of a monster eye, ready to cook. One of the five ingredients needed for Jonas' cooking. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1442" name="Jonas' 1st Steak Dish" type="NONE" icon="icon.etc_jewel_box_i00">
+	<!-- Plate that contains Jonas' monster eye steak. Take this to Magister Mirien. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1443" name="Jonas' 2nd Steak Dish" type="NONE" icon="icon.etc_jewel_box_i00">
+	<!-- Plate that contains Jonas' monster eye steak. Take this to Magister Mirien. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1444" name="Jonas' 3rd Steak Dish" type="NONE" icon="icon.etc_jewel_box_i00">
+	<!-- Plate that contains Jonas' monster eye steak. Take this to Magister Mirien. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1445" name="Jonas' 4th Steak Dish" type="NONE" icon="icon.etc_jewel_box_i00">
+	<!-- Plate that contains Jonas' monster eye steak. Take this to Magister Mirien. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1446" name="Jonas' 5th Steak Dish" type="NONE" icon="icon.etc_jewel_box_i00">
+	<!-- Plate that contains Jonas' monster eye steak. Take this to Magister Mirien. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1447" name="Mirien's Review" type="NONE" icon="icon.etc_letter_red_i00">
+	<!-- Letter from Magister Mirien about the taste of Jonas' dish. Take this to Jonas. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1452" name="Harpy's Feather" type="NONE" icon="icon.etc_feather_white_i00">
+	<!-- Feather taken from a harpy. Collect these and take them to Guard Belton. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1453" name="Medusa's Venom" type="NONE" icon="icon.etc_potion_green_i00">
+	<!-- Poison extracted from the snake hair of a medusa. Collect these and take them to Guard Belton. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1454" name="Wyrm's Tooth" type="NONE" icon="icon.etc_claw_i00">
+	<!-- Sharp fang of a Wyrm. Collect these and take them to Guard Belton. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1455" name="Jonas' Salad Recipe" type="NONE" icon="icon.item_canuse39">
+	<!-- Jonas' recipe for making marsh moss salad. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes price="9000" immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1456" name="Jonas' Sauce Recipe" type="NONE" icon="icon.item_canuse39">
+	<!-- Jonas' recipe for making mandragora sauce. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes price="11250" immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1457" name="Jonas' Steak Recipe" type="NONE" icon="icon.item_canuse39">
+	<!-- Jonas' recipe for making monster eye meat steak. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes price="13500" immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1458" name="Crystal (D-grade)" type="NONE" icon="icon.etc_crystal_blue_i00">
+	<!-- Crystal of D-grade . -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes price="650" commission-type="CRYSTAL" immediate-effect="true"/>
+	</item>
+
+	<item id="1459" name="Crystal (C-grade)" type="NONE" icon="icon.etc_crystal_green_i00">
+	<!-- Crystal of C-grade . -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes price="3000" commission-type="CRYSTAL" immediate-effect="true"/>
+	</item>
+
+	<item id="1460" name="Crystal (B-grade)" type="NONE" icon="icon.etc_crystal_red_i00">
+	<!-- Crystal of B-grade . -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes price="9000" commission-type="CRYSTAL" immediate-effect="true"/>
+	</item>
+
+	<item id="1461" name="Crystal (A-grade)" type="NONE" icon="icon.etc_crystal_silver_i00">
+	<!-- Crystal of A-grade. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes price="12500" commission-type="CRYSTAL" immediate-effect="true"/>
+	</item>
+
+	<item id="1462" name="Crystal (S-grade)" type="NONE" icon="icon.etc_crystal_gold_i00">
+	<!-- An S-grade crystal. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes price="15000"/>
+	</item>
+
+	<item id="1463" name="Soulshot (D-grade)" type="NONE" icon="icon.etc_spirit_bullet_blue_i00">
+	<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a D-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="2" price="10" commission-type="SOULSHOT" immediate-effect="true"/>
+		<action handler="SoulShots"/>
+	</item>
+
+	<item id="1464" name="Soulshot (C-grade)" type="NONE" icon="icon.etc_spirit_bullet_green_i00">
+	<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a C-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="2" price="15" commission-type="SOULSHOT" immediate-effect="true"/>
+		<action handler="SoulShots"/>
+	</item>
+
+	<item id="1465" name="Soulshot (B-grade)" type="NONE" icon="icon.etc_spirit_bullet_red_i00">
+	<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a B-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="1" price="50" commission-type="SOULSHOT" immediate-effect="true"/>
+		<action handler="SoulShots"/>
+	</item>
+
+	<item id="1466" name="Soulshot (A-grade)" type="NONE" icon="icon.etc_spirit_bullet_silver_i00">
+	<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. Used with A-grade weapons. Exchange for a new Soulshot through the Dimensional Merchant. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="1" price="80" commission-type="SOULSHOT" immediate-effect="true"/>
+		<action handler="SoulShots"/>
+	</item>
+
+	<item id="1467" name="Soulshot (S-grade)" type="NONE" icon="icon.etc_spirit_bullet_gold_i00">
+	<!-- The power of a higher-level spirit is bestowed upon a weapon, spontaneously increasing power of attack. Used with an S-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="1" price="100" commission-type="SOULSHOT" immediate-effect="true"/>
+		<action handler="SoulShots"/>
+	</item>
+
+	<weapon id="1471" name="Silenos Blowgun" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_monster_i00">
+		<restriction freightable="false"/>
+		<attributes weight="300" commission-type="DAGGER"/>
+		<crystal type="D" count="101"/>
+		<damage radius="300" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="5.0"/>
+			<stat type="mAtk" value="5.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="1472" name="Dreadbane" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_monster_i00">
+		<restriction freightable="false"/>
+		<attributes weight="300" commission-type="SPEAR"/>
+		<crystal type="D" count="101"/>
+		<damage radius="66" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="50.0"/>
+			<stat type="mAtk" value="26.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<item id="1473" name="Kasha Wolf Fang" type="NONE" icon="icon.etc_claw_i00">
+	<!-- Fang that is obtained by killing a kasha wolf. Collect fifty and take these to Praetorian Rukain. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1474" name="Grave Robber's Head" type="NONE" icon="icon.etc_skull_black_i00">
+	<!-- The head of goblin robbers, who damaged the graves of Orc ancestors. Collect 50 to take to Seer Livina. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1475" name="Black Soulstone" type="NONE" icon="icon.etc_bead_gold_i00">
+	<!-- Black soulstone pulled out of the heart of a rakeclaw imp. Collect these to take to Atuba Chief Varkees. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1476" name="Red Soulstone" type="NONE" icon="icon.etc_crystal_ball_red_i00">
+	<!-- Red soulstone pulled out of the heart of a rakeclaw imp. Collect these to take to Atuba Chief Varkees. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1477" name="Maraku Werewolf Head" type="NONE" icon="icon.etc_skull_red_i00">
+	<!-- The head of a Maraku werewolf that has been cut off after they were defeated. Collect 40 of these and take them to Prefect Brukurse. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1478" name="Blackwing Bat Fang" type="NONE" icon="icon.etc_horn_i00">
+	<!-- Fang of a Blackwing Bat. Collect 70 of these and take them to Neruga Chief Tantus. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1479" name="Varangka's Parasite" type="NONE" icon="icon.etc_totem_black_i00">
+	<!-- Evil parasite that summons Varangka's trackers. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1480" name="Kasha's Parasitic Spirit" type="NONE" icon="icon.etc_totem_black_i00">
+	<!-- Parasite-type evil spirit that comes out of the grey bear polluted by kasha's evil spirit. This is the key calling forth the kasha totem spirit. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1481" name="Kasha's Crystal" type="NONE" icon="icon.etc_crystal_green_i00">
+	<!-- Crystal obtained by killing the grey bear totem polluted by kasha's evil spirit. Take this to Seer Tanapi. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1482" name="Black Wolf Pelt" type="NONE" icon="icon.etc_leather_gray_i00">
+	<!-- Pelt of a black wolf. Collect 40 to take to Maryse Redbonnet. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1483" name="Goblin Necklace" type="NONE" icon="icon.etc_totem_necklace_black_i00">
+	<!-- Necklace obtained by killing a low-level goblin. Collect these and take them to Golden Wheel's Spiron. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1484" name="Goblin Pendant" type="NONE" icon="icon.etc_totem_necklace_red_i00">
+	<!-- Necklace obtained by killing a high-level goblin. Collect these and take them to Golden Wheel's Spiron. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1485" name="Goblin Lord Pendant" type="NONE" icon="icon.etc_totem_necklace_green_i00">
+	<!-- Necklace obtained by killing the goblin lord. Collect these and take them to Golden Wheel's Spiron. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1486" name="Suspicious Memo" type="NONE" icon="icon.etc_piece_of_paper_gray_i00">
+	<!-- Suspicious memo obtained by killing a goblin brigand leader. Take this to Golden Wheel's Spiron. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1487" name="Suspicious Contract" type="NONE" icon="icon.etc_letter_white_i00">
+	<!-- Suspicious contract completed by collecting Suspicious Memos. This contract reveals that the Silver Scale Guild requested the brigands to attack the freight wagons. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1488" name="Chrysolite Ore" type="NONE" icon="icon.etc_plate_blue_i00">
+	<!-- Chrysolite Ore received from defeating Utuku Orcs. Collect these and take them to Filaur of the Grey Pillar. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1489" name="Torn Map Piece" type="NONE" icon="icon.etc_piece_of_paper_black_i00">
+	<!-- Part of the map that reveals the hidden vein of Chrysolite. Collect 4 of these pieces to complete the map. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1490" name="Hidden Ore Map" type="NONE" icon="icon.etc_recipe_blue_i00">
+	<!-- Map that reveals a hidden vein of Chrysolite. Take this to Filaur of the Grey Pillar. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1491" name="Bat Fang" type="NONE" icon="icon.etc_claw_i00">
+	<!-- Fang taken by killing a blade bat or a barb bat. Collect 100 and take them to Bronze Key's Keef -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1492" name="Floating Stone" type="NONE" icon="icon.etc_crystal_ball_blue_i00">
+	<!-- Stone that floats on water. Obtain it from a magical weaver. Collect 50 and take them to Black Anvil's Arin. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1493" name="Tarantula Spider Silk" type="NONE" icon="icon.etc_skein_white_i00">
+	<!-- The spider silk that makes when making their nests. Collect these and take them to Trader Mion. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1494" name="Tarantula Spinnerette" type="NONE" icon="icon.etc_pouch_gray_i00">
+	<!-- Pocket shaped organ that makes spider silk. Take this to Defender Nathan. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1495" name="Giant Spider's Skin" type="NONE" icon="icon.etc_leather_gray_i00">
+	<!-- The husk of a giant spider that you peel off. Collect them and take them to Edmond. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1496" name="Mark of Flame" type="NONE" icon="icon.etc_scroll_of_enchant_weapon_i01">
+	<!-- This mark represents the qualification of Orc fighters. Take this and go to the Flame Guardian Vulkus. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1497" name="Necklace of Flame" type="NONE" icon="icon.item_normal142">
+	<!-- The necklace of flame given by Vulkus. Hand this to Kakai, the Lord of Flame, king of the Orcs. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="1498" name="Mining License" type="NONE" icon="icon.etc_letter_blue_i00">
+	<!-- License given to Dwarves to allow them to mine. Take this and go to Foreman Laferon. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1499" name="Laferon's Recommendation" type="NONE" icon="icon.item_canuse15">
+	<!-- The recommendation of Foreman Laferon. Take this and go to First Elder Lockirin. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
 </list>

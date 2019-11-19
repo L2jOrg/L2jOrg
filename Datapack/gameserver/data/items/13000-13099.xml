@@ -1,54 +1,49 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="13009" name="Inventory3" icon="icon.bookmark_book_i00">
-        <!-- Doesn't exist in client. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="ex_immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" stackable="true"/>
-    </item>
-    <item id="13015" name="My Teleport Book" icon="">
-        <!-- A dimensional item.  Increases the number of return points to save by 3. The maximum number is 18. -->
-        <set name="default_action" val="CALL_SKILL"/>
-        <set name="weight" val="5"/>
-        <set name="handler" val="ItemSkills"/>
-        <restriction sellable="false" stackable="true" freightable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-        <skills>
-            <skill id="2587" level="1"/> <!-- Increase number of teleport slots. -->
-        </skills>
-    </item>
-    <item id="13016" name="My Teleport Scroll" icon="icon.bookmark_scroll_i00">
-        <!-- Dimensional Object. The item disappears after use. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <set name="etcitem_type" val="TELEPORTBOOKMARK"/>
-        <restriction sellable="false" clan-depositable="false" mailable="false" commissionable="false" freightable="true" stackable="true"/>
-    </item>
-    <item id="13021" name="Color Title" icon="icon.color_name_i00">
-        <!-- A dimensional item. An item which can be used to change the color of a character's title. Upon leaving a clan, the color title disappears, just as the regular one does (for everyone except Noblesse) -->
-        <set name="default_action" val="NICK_COLOR"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <set name="handler" val="NicknameColor"/>
-        <restriction sellable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false" freightable="true"/>
-    </item>
-    <armor id="13025" name="Agathion - Joy" icon="icon.etc_rbracelet_aga_agit_i00">
-        <!-- Enables to summon Agathion of Joy when equipped. <Skill used>. 1. Agathion's Escape: Allows to relocate to Giran, Gludio, Dion, Oren, Hunters Village. (Cooldown: 1 min). <Item Skill>. 1. Search for Evidence: Speed +66 for 15 sec. <Item Skill>. 2. Hidden Search: monsters don't attack first. -->
-        <set name="bodypart" val="agathion"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="time" val="43200"/>
-        <restriction tradable="false" dropable="false" sellable="false" clan-depositable="false" mailable="false" commissionable="false"/>
-        <skills>
-            <skill id="8256" level="1"/> <!-- Release Agathion's Seal - Joy -->
-            <skill id="5955" level="1"/> <!-- Agathion Cute Trick - Joy -->
-            <skill id="3267" level="1" type="ON_UNEQUIP"/> <!-- Seal Agathion -->
-            <skill id="39056" level="1"/> <!-- Agathion Teleport: Oren -->
-            <skill id="39055" level="1"/> <!--Agathion Teleport: Giran-->
-            <skill id="39054" level="1"/> <!--Agathion Teleport: Dion-->
-            <skill id="39053" level="1"/> <!--Agathion Teleport: Gludio-->
-            <skill id="39100" level="1"/> <!--Agathion Teleport - Hunters Village-->
-            <skill id="39101" level="1"/> <!-- Evidence Chase -->
-            <skill id="39102" level="1"/> <!-- Secret Investigation -->
-        </skills>
-    </armor>
+	<item id="13009" name="Inventory3" type="NONE" icon="None">
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" ex-immediate-effect="true"/>
+	</item>
+
+	<item id="13015" name="My Teleport Book" type="NONE" icon="icon.bookmark_book_i00">
+	<!-- Dimensional Item\\nAdds 3 slots to My Teleport, which can save specific locations. My Teleport can be expanded to up to 48 slots. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="5"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="2587" level="1"/>  <!-- Additional My Teleport slots -->
+		</skill-reducer>
+	</item>
+
+	<item id="13016" name="My Teleport Scroll" type="TELEPORT_BOOKMARK" icon="icon.bookmark_scroll_i00">
+	<!-- Dimensional Item\\nThis item is consumed to teleport to a saved location. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="5" immediate-effect="true"/>
+	</item>
+
+	<item id="13021" name="Color Title" type="COLOR_CHANGE" icon="icon.color_name_i00">
+	<!-- u,A dimensional item\\nAn item which can be used to change the color of a character’s title. Upon leaving a clan, the color title disappears, just as the regular one does. However, upon joining a clan and obtaining a new title, the color reappears. After changing the title color, enter '/ resetname’ command in order to bring back the initial color. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="5" immediate-effect="true"/>
+		<action handler="NicknameColor"/>
+	</item>
+
+	<armor id="13025" name="Agathion Bracelet - Joy" type="NONE" body-part="LEFT_BRACELET" icon="icon.etc_rbracelet_aga_agit_i00">
+	<!-- Enables to summon Agathion of Joy when equipped.\\n\\n<Skill used>\\n1. Agathion's Escape: Allows to relocate to Giran, Gludio, Dion, Oren, Hunters Village. (Cooldown: 1 min)\\n\\n<Item Skill>\\n1. Search for Evidence: Speed +66 for 15 sec. \\n\\n<Item Skill>\\n2. Hidden Search: monsters don't attack first. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="30" duration="43200" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="8256" level="1"/>  <!-- Release Agathion's Seal - Joy -->
+			<skill id="5955" level="1"/>  <!-- Agathion Cute Trick - Joy -->
+			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+			<skill id="39056" level="1"/>  <!-- Agathion Teleport: Oren -->
+			<skill id="39055" level="1"/>  <!-- Agathion Teleport: Giran -->
+			<skill id="39054" level="1"/>  <!-- Agathion Teleport: Dion -->
+			<skill id="39053" level="1"/>  <!-- Agathion Teleport: Gludio -->
+			<skill id="39100" level="1"/>  <!-- Agathion Teleport - Hunters Village -->
+			<skill id="39101" level="1"/>  <!-- Evidence Chase -->
+			<skill id="39102" level="1"/>  <!-- Secret Investigation -->
+		</skills>
+	</armor>
+
 </list>

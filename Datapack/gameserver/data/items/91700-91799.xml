@@ -1,590 +1,627 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="91700" name="Crystal Dagger +7" icon="icon.weapon_crystal_dagger_i00">
-        <!-- Double-click to obtain Crystal Dagger enchanted to +7. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91701" name="Eminence Bow +7" icon="icon.weapon_eminence_bow_i00">
-        <!-- Double-click to obtain Eminence Bow enchanted to +7. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91702" name="Orcish Poleaxe +7" icon="icon.weapon_orcish_poleaxe_i00">
-        <!-- Double-click to obtain Orcish Poleaxe enchanted to +7. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91703" name="Katana*Katana +7" icon="icon.weapon_dual_sword_i00">
-        <!-- Double-click to obtain Katana*Katana enchanted to +7. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91704" name="Yaksa Mace +7" icon="icon.weapon_yaksa_mace_i00">
-        <!-- Double-click to obtain Yaksa Mace enchanted to +7. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91705" name="Berserker Blade +7" icon="icon.weapon_berserker_blade_i00">
-        <!-- Double-click to obtain Berserker Blade enchanted to +7. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91706" name="Great Pata +7" icon="icon.weapon_great_pata_i00">
-        <!-- Double-click to obtain Great Pata enchanted to +7. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91707" name="Highest Quality Armor Set (C-grade) Chest +4" icon="icon.armor_t62_ul_i00">
-        <!-- Double-click to obtain Full Plate Helmet, Full Plate Armor, Full Plate Gauntlets and Full Plate Boots, all equipment enchanted to +4. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91708" name="Highest Quality Armor Set (C-grade) Chest +4" icon="icon.armor_t45_ul_i00">
-        <!-- Double-click to obtain Full Plate Helmet, Drake Leather Armor, Drake Leather Gloves and Drake Leather Boots, all equipment enchanted to +4. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91709" name="Highest Quality Armor Set (C-grade) Chest +4" icon="icon.armor_t53_u_i00">
-        <!-- Double-click to obtain Full Plate Helmet, Karmian Tunic, Karmian Stockings, Karmian Gloves and Karmian Boots, all equipment enchanted to +4. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91710" name="Weapon Ticket" icon="icon.bm_royal_white_save_ticket">
-        <!-- Required to unleash the power of Spear/ Falchion/ Iron Hammer/ Voodoo Doll/ Flanged Mace/ Sword Breaker/ Viper Fang/ Compound Bow Amulet. Can be used to obtain a D-grade enchanted weapon. -->
-        <restriction dropable="false" stackable="true"/>
-    </item>
-    <item id="91711" name="Sayha's Mark" icon="icon.bm_sayha_token">
-        <!-- Double-click to obtain Wind's Blessing Chest and Sayha's Storm Lv. 3. Gives a chance to obtain Sayha's Treasure or Sayha's Shining Treasure. Until the maintenance 01/30/2019 has a certain chance to give Sayha's Summon Stick that can be used to summon various monsters. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91712" name="Sayha's Storm Lv. 3" icon="icon.bm_sayha_storm">
-        <!-- Sayha's Grace points +100%, Acquired XP/ SP +200%. The effect remains after death. Duration: 20 min. Cooldown: 1 min. Available if Sayha's Grace point bar is filled by more than one unit. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91713" name="Sayha's Storm Lv. 3" icon="icon.bm_sayha_storm">
-        <!-- Sayha's Grace points +100%, Acquired XP/ SP +200%. The effect remains after death. Duration: 20 min. Cooldown: 1 min. Available if Sayha's Grace point bar is filled by more than one unit. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91714" name="Sayha's Summoning Stick" icon="icon.etc_stick_i00">
-        <!-- Randomly summons 1 of the 6 monsters. The killer of that monster receives a certain amount of XP that is not affected by any bonus XP effects. Cooldown: 10 sec. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91715" name="Sayha's Treasure" icon="icon.sayha2017_box_i01">
-        <!-- Double-click to obtain 1 rare item, including rare necklaces and Sayha's Cloak +10. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91716" name="Sayha's Shining Treasure" icon="icon.sayha2017_box_i03">
-        <!-- Double-click to obtain 1 rare item, incuding S-grade Weapon/ Armor Pack, Enchant Scroll Chest, and Manuscript Chest. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91717" name="High Grade Stable Scroll: Enchant Weapon (S-grade)" icon="icon.giant_scrl_of_ench_wp_s">
-        <!-- For S-grade weapons. P. Atk. +5 for one-handed swords/ blunts, daggers, spears. P. Atk. +6 for two-handed swords/ blunts, dual sword, fists. P. Atk. +10 for bows. M. Atk. +4 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. In case of failure the item is not crystallized, but its enchant value is reset to 0. Can be used with weapons enchanted from +7 to +15. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="91718" name="High Grade Stable Scroll: Enchant Armor (S-grade)" icon="icon.giant_scrl_of_ench_am_s">
-        <!-- For S-grade armor and accessories from +6 to +9. P. Def. +2. Starting from +4, P. Def. +8, Max HP increased with each enchant level. In case of failure the item is not crystallized, but its enchant value is reset to 0. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction stackable="true"/>
-    </item>
-    <armor id="91719" name="Special Black Sayha's Cloak" icon="icon.bm_2018_sayha_cloak_back_i02">
-        <!-- A cloak filled with Sayha's energy. Can be upgraded only with Scrolls: Enchant Special Sayha's Cloak. Activates special effects depending on the enchant level. -->
-        <set name="bodypart" val="back"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="220"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="91720" name="Special White Sayha's Cloak" icon="icon.bm_2018_sayha_cloak_back_i01">
-        <!-- A cloak filled with Sayha's energy. Can be upgraded only with Scrolls: Enchant Special Sayha's Cloak. Activates special effects depending on the enchant level. -->
-        <set name="bodypart" val="back"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="220"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="91721" name="Special Red Sayha's Cloak" icon="icon.bm_2018_sayha_cloak_back_i03">
-        <!-- A cloak filled with Sayha's energy. Can be upgraded only with Scrolls: Enchant Special Sayha's Cloak. Activates special effects depending on the enchant level. -->
-        <set name="bodypart" val="back"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="220"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <item id="91722" name="Scroll: Enchant Special Sayha's Cloak" icon="icon.sayha2017_scrl">
-        <!-- Can be used only for enchanting Special Sayha's Cloak. In case of failure the item doesn't disappear, and its enchant value remains the same. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <armor id="91723" name="Iron Bracelet" icon="icon.etc_rbracelet_c_i00">
-        <!-- Available for 15 days. Unlocks 1 talisman slot. -->
-        <set name="bodypart" val="rbracelet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <item id="91724" name="Iron Bracelet Chest" icon="icon.etc_treasure_box_i00">
-        <!-- Double-click to obtain Iron Bracelet (15-day). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91725" name="Scroll of Escape: Abandoned Camp" icon="icon.etc_scroll_of_return_i04">
-        <!-- Can be used to teleport to the Abandoned Camp. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
-    </item>
-    <item id="91726" name="Scroll of Escape: Windmill Hill" icon="icon.etc_scroll_of_return_i04">
-        <!-- Can be used to teleport to the Windmill Hill. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
-    </item>
-    <item id="91727" name="Scroll of Escape: Ruins of Agony" icon="icon.etc_scroll_of_return_i04">
-        <!-- Can be used to teleport to the Ruins of Agony. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
-    </item>
-    <item id="91728" name="Reinforced Spear Chest" icon="icon.weapon_long_spear_i00">
-        <!-- Double-click to obtain Spear +16. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91729" name="Reinforced Falchion Chest" icon="icon.weapon_falchion_i00">
-        <!-- Double-click to obtain Falchion enchanted to +16. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91730" name="Reinforced Iron Hammer Chest" icon="icon.weapon_iron_hammer_i00">
-        <!-- Double-click to obtain Iron Hammer +16. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91731" name="Reinforced Voodoo Doll Chest" icon="icon.weapon_voodoo_doll_i00">
-        <!-- Double-click to obtain Voodoo Doll +16. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91732" name="Reinforced Flanged Mace Chest" icon="icon.weapon_buzdygan_i00">
-        <!-- Double-click to obtain Flanged Mace +16. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91733" name="Reinforced Sword Breaker" icon="icon.weapon_sword_breaker_i00">
-        <!-- Double-click to obtain Sword Breaker +16. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91734" name="Reinforced Viper Fang Chest" icon="icon.weapon_vipers_canine_i00">
-        <!-- Double-click to obtain Viper Fang +16. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91735" name="Reinforced Compound Bow Chest" icon="icon.weapon_composition_bow_i00">
-        <!-- Double-click to obtain Compound Bow +16. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91736" name="Scroll of Escape: High Priest Raymond" icon="icon.etc_scroll_of_return_i04">
-        <!-- Can be used to teleport to High Priest Raymond in Gludio. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
-    </item>
-    <armor id="91737" name="Brooch Lv. 1" icon="icon.etc_bm_brooch_lavianrose_i00">
-        <!-- Available for 15 days. Opens up 2 jewel slots. -->
-        <set name="bodypart" val="underwear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <item id="91738" name="Brooch Chest Lv. 1" icon="icon.etc_treasure_box_i00">
-        <!-- Double-click to obtain Brooch Lv. 1 (15-day). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91739" name="Exuberance Amulet" icon="icon.bm_sayha_rune">
-        <!-- Available for 30 days. When in inventory, CON/ MEN/ DEX/ WIT/ STR/ INT +1, Acquired XP/ SP (hunting) +20%. -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="91740" name="Special Blessing Box" icon="icon.bm_gold_lure_box">
-        <!-- Double-click to obtain 1 rare item, including Sayha's Blessing (Event), Talisman of Baium, Land/ Fire Dragon Belt, L-Coins, etc. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" stackable="true"/>
-    </item>
-    <item id="91741" name="Einhasad's Protection" icon="icon.etc_dragons_blood_i03">
-        <!-- Acquired XP/ SP +100% for 1 h. Cooldown: 1 min. The effect remains after death. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91742" name="Master Fisherman's Chest" icon="icon.etc_readybox_bronze">
-        <!-- Double-click to obtain one of the following items: Soulshot Ticket, Fishing Shot, Weapon Coupon. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="91743" name="Apiggy" icon="icon.etc_pig_adena_i01">
-        <!-- Special coin from the Magic Laboratory that was used for branding Enchanted Piglet and Golden Piglet. Take several of these to Magic Laboratory Assistant to exchange them for valuable items. -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91744" name="Insolence Crafting Pack" icon="icon.bm_pirate_treasure_box">
-        <!-- Contains materials for crafting Talisman of Insolence. Double-click to obtain Energy of Insolence (10 pcs), 120 Talisman Crystals, 250 Elemental Stones. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <armor id="91745" name="Talisman of Aden" icon="icon.bm_ensoul_stone_pvp">
-        <!-- Contains the energy of Aden's royal family. Can be enchanted up to +10 with a Scroll: Enchant Talisman of Aden. Activates special effects depending on the enchant value. The enchanting is safe up to +1. Effects of two identical talismans do not stack. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="91746" name="Rudolph Costume" icon="icon.gomdori_chest_change">
-        <!-- When equipped, it is impossible to wear armor. Hats, weapons and accessories are not removed. -->
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="alldress"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false"/>
-    </armor>
-    <item id="91747" name="Blue Wolf Heavy Armor Set" icon="icon.armor_t68_u_i00">
-        <!-- Double-click to obtain Blue Wolf heavy armor set (breastplate, gaiters, helmet, gloves, boots). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91748" name="Blue Wolf Light Armor Set" icon="icon.armor_t69_ul_i00">
-        <!-- Double-click to obtain Blue Wolf light armor set (leather armor, helmet, gloves, boots). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91749" name="Blue Wolf Robe Set" icon="icon.armor_t70_u_i00">
-        <!-- Double-click to obtain Blue Wolf robe set (tunic, stockings, helmet, gloves, boots). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91750" name="Doom Heavy Armor Set" icon="icon.armor_t71_ul_i00">
-        <!-- Double-click to obtain the Doom heavy armor set (plate armor, helmet, gloves, boots). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91751" name="Doom Light Armor Set" icon="icon.armor_t72_ul_i00">
-        <!-- Double-click to obtain the Doom light armor set (leather armor, helmet, gloves, boots). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91752" name="Doom Robe Set" icon="icon.armor_t73_u_i00">
-        <!-- Double-click to obtain Doom robe set (tunic, stockings, helmet, gloves, boots). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91753" name="Black Ore Set" icon="icon.accessary_necklace_of_black_ore_i00">
-        <!-- Double-click to obtain 2 Black Ore Rings, 2 Black Ore Earrings and Black Ore Necklace. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91754" name="Chest: 800 L-Coins" icon="icon.bm_sayhas_talisman_box">
-        <!-- Double-click to obtain 800 L-Coins. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91755" name="Chest: 8000 L-Coins" icon="icon.bm_sayha_blessed_box">
-        <!-- Double-click to obtain 8000 L-Coins. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91756" name="Scroll: Enchant Talisman of Aden" icon="icon.bless_scroll_r99">
-        <!-- Required for enchanting Talisman of Aden. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91757" name="Magic Lantern Acceleration Potion" icon="icon.etc_recall_potion2">
-        <!-- For 1 h., magic lantern recharge rate +20%. Cooldown: 1 min. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <armor id="91758" name="Ruby Lv. 5" icon="icon.etc_bm_jewel_ruby_i00">
-        <!-- Available for 3 days. Soulshot, Blessed Soulshot and Beast Soulshot damage +16%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
-        <set name="bodypart" val="brooch_jewel"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="91759" name="Sapphire Lv. 5" icon="icon.etc_bm_jewel_sapphire_i00">
-        <!-- Available for 3 days. Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +16%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
-        <set name="bodypart" val="brooch_jewel"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="91760" name="Brooch Lv. 5" icon="icon.etc_bm_brooch_lavianrose_i06">
-        <!-- Available for 30 days. Activates 6 jewel slots. Inventory Slots +15. -->
-        <set name="bodypart" val="underwear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <item id="91761" name="PA Treasure Chest" icon="icon.bm_dragon_present">
-        <!-- An attendance reward for PA users. Double-click to obtain one of the following items: Special Dragon Fruit, PA Coins, Talisman of Baium, Weapon Pack (S-grade). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91762" name="PA Treasure Chest" icon="icon.bm_dragon_present">
-        <!-- An attendance reward for PA users. Double-click to obtain one of the following items: Special Dragon Fruit, PA Coins, Talisman of Baium, Weapon Pack (Best A-grade). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91763" name="PA Coin" icon="icon.etc_coins_blue_i00">
-        <!-- Double-click to obtain 300 PA points. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91764" name="Avadon Heavy Armor Set" icon="icon.armor_t66_u_i00">
-        <!-- Double-click to obtain the Avadon heavy armor set (breastplate, gaiters, circlet, gloves, boots). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91765" name="Avadon Light Armor Set" icon="icon.armor_t67_ul_i00">
-        <!-- Double-click to obtain the Avadon light armor set (leather armor, circlet, gloves, boots). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91766" name="Avadon Robe Set" icon="icon.armor_t59_ul_i00">
-        <!-- Double-click to obtain the Avadon robe set (robe, circlet, gloves, boots). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91767" name="Talisman of Aden Enchant Pack" icon="icon.bm_sheep_agathion_30d_box">
-        <!-- Double-click to obtain Talisman of Aden and 10 Scrolls: Enchant Talisman of Aden. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91768" name="Scroll of Escape: High Priest Orven" icon="icon.etc_scroll_of_return_i04">
-        <!-- Can be used to teleport to High Priest Orven in Aden. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
-    </item>
-    <armor id="91769" name="Shining Savior's Earring" icon="icon.r2_earring_i01">
-        <!-- Available for 1 day. Acquired XP/ SP +2%, Max HP +50, Max MP +30, Mental/ Stun Resistance +4%. Activates the Vampiric Rage effect. Effects of two identical earrings do not stack. -->
-        <set name="bodypart" val="rear;lear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="mDef">78</stat>
-        </stats>
-    </armor>
-    <armor id="91770" name="Shining Savior's Earring" icon="icon.r2_earring_i01">
-        <!-- Available for 30 day. Acquired XP/ SP +2%, Max HP +50, Max MP +30, Stun/ Mental Resistance +4%. Activates Vampiric Rage effect. The effect does not stack if two identical earrings are equipped. -->
-        <set name="bodypart" val="rear;lear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="mDef">78</stat>
-        </stats>
-    </armor>
-    <item id="91771" name="Doll of Border - Frintezza" icon="icon.bm_doll_frintessa_30d">
-        <!-- Available for 7 days. When in inventory, improves the character's parameters. <Frintezza Doll's Spell>. CON/ MEN/ WIT/ DEX/ STR/ INT +1, Stun/ Paralysis Atk. Rate +10%. -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="91772" name="Scroll: PK" icon="icon.etc_ev_draco_pk_count_down">
-        <!-- Double-click to lower PK value by 1. Can only be used when the PK value is 1 or higher. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="weight" val="10"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91773" name="Sayha's Grace Set" icon="icon.bm_artifact_box_i00">
-        <!-- Double-click to obtain Sayha's Blessing (200 pc.), Sayha's Storm Lv. 3 (30 pc.), and other items. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91774" name="Miraculous Rudolph Potion" icon="BranchSys2.icon.event_lbracelet_rudolph">
-        <!-- Transforms into Rudolph for 5 min. P./ M. Atk. +150, P./ M. Def. +100, Atk. Spd./ Casting Spd. +100, Speed +10, HP/ MP Recovery Rate +30%. -->
-        <restriction tradable="false" destroyable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="91775" name="Plated Leather Armor Set" icon="icon.armor_t47_u_i00">
-        <!-- Double-click to obtain Plated Leather set (armor, gaiters, boots). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91776" name="Sayha's Gust" icon="icon.ev_magic_flame_game_wind2">
-        <!-- Required level: 1-74. Sayha's Grace points +100%, Acquired XP/ SP +300%. The effect remains after death. Duration: 20 min. Cooldown: 1 min. Available if Sayha's Grace point bar is filled by more than one unit. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91777" name="Magic Fire" icon="icon.bm_soul_of_shilen">
-        <!-- Required level: 1-74. For 1 h., magic lantern recharge rate +100%. Cooldown: 1 min. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91778" name="Sayha's Storm Lv. 3" icon="icon.bm_sayha_storm">
-        <!-- Sayha's Grace points +100%, Acquired XP/ SP +200%. The effect remains after death. Duration: 1 h. Cooldown: 1 min. Available if Sayha's Grace point bar is filled by more than one unit. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="time" val="60"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91779" name="Aden Supply Box" icon="icon.etc_treasure_box_i00">
-        <!-- Double-click to obtain one of the following items: +16 Weapon Pack (B-grade), Antharas' Earring, Talisman of Baium, Ancient Book: Divine Inspiration, Rice Cake of Flaming Fighting Spirit, Dragon Scroll, Sayha's Effect Scroll. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91780" name="Dragon Scroll" icon="icon.ev_charge_scroll">
-        <!-- For 20 min., P. Atk. +200, M. Atk. +350, P./ M. Critical Rate +30, Atk. Spd./ Casting Spd. +50, P./ M. Def. +200, Max HP/ MP/ CP +500. Cooldown: 1 min. The effect remains after death. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91781" name="Sayha's Effect Scroll" icon="icon.etc_ssq_i00">
-        <!-- For 20 min., grants the following effects: Sayha's Shield, Sayha's Magic Barrier, Sayha's Decrease Weight, Sayha's Clarity, Sayha's Berserker Spirit, Sayha's Wind Walk, Sayha's Might, Sayha's Focus, Sayha's Haste, Sayha's Death Whisper, Sayha's Empower, Sayha's Wild Magic, Sayha's Acumen, Sayha's Concentration, Sayha's Prophecy, Sayha's Recover HP, Sayha's Recover MP. Cooldown: 1 min. Can't be used when the Sayha's Recover MP effect is active. Note: The Sayha's Victory effect does not stack if the identical effect is active. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91782" name="Nuia's Gift" icon="icon.npoint_valakas_30day_box">
-        <!-- Double-click to obtain one of the following items: Special Dragon Fruit, PA Coins, Talisman of Baium, Weapon Pack (Best S-grade). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91783" name="Einhasad's Spellbook Chest" icon="icon.sayha2017_box_i01">
-        <!-- Double-click to obtain a Spellbook that can be used by Humans after the 2nd class transfer. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91784" name="Eva's Spellbook Chest" icon="icon.sayha2017_box_i01">
-        <!-- Double-click to obtain a Spellbook that can be used by Elves after the 2nd class transfer. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91785" name="Shilen's Spellbook Chest" icon="icon.sayha2017_box_i01">
-        <!-- Double-click to obtain a Spellbook that can be used by Dark Elves after the 2nd class transfer. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91786" name="Pa'agrio's Spellbook Chest" icon="icon.sayha2017_box_i01">
-        <!-- Double-click to obtain a Spellbook that can be used by Orcs after the 2nd class transfer. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91787" name="Maphr's Spellbook Chest" icon="icon.sayha2017_box_i01">
-        <!-- Double-click to obtain a Spellbook that can be used by Dwarves after the 2nd class transfer. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <armor id="91788" name="Dragon Belt" icon="icon.r2_belt_i01">
-        <!-- Belt imbued with the dragon's power. Can be enchanted up to +10 with Dragon Belt's Decorations. -->
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="waist"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">14</stat>
-        </stats>
-    </armor>
-    <item id="91789" name="Dragon Belt's Decoration" icon="icon.etc_piece_belt_blue_i00">
-        <!-- Required to enchant Dragon Belt. The maximum enchant level is +10. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91790" name="Dragon Belt Chest" icon="icon.etc_readybox_bronze">
-        <!-- Double-click to obtain Dragon Belt and 10 Dragon Belt's Decorations. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <armor id="91791" name="Venir's Talisman Lv. 25" icon="icon.etc_all_stat_talisman_i02">
-        <!-- CON/ MEN/ DEX/ WIT/ STR/ INT +6, P./ M. Skill Cooldown -7%. With a certain chance absorbs 16% of the inflicted damage as HP and 8% as MP. Can be upgraded if combined with the identical talisman. The effect doesn't stack if two identical talismans are equipped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="91792" name="Venir's Talisman Lv. 26" icon="icon.etc_all_stat_talisman_i02">
-        <!-- CON/ MEN/ DEX/ WIT/ STR/ INT +8, P./ M. Skill Cooldown -7%. With a certain chance absorbs 16% of the inflicted damage as HP and 8% as MP. The effect doesn't stack if two identical talismans are equipped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <item id="91793" name="Lakfi-Lakfi's Lucky Box" icon="BranchSys.icon.br_valentine_agathion_pack_i00">
-        <!-- Golden Pig's chest filled with happiness for the new 2019 year. Double-click to obtain the Lakfi-Lakfi's Energy buff. No level requirements. Can be used once a day. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="91794" name="Lakfi-Lakfi's Oink" icon="icon.accessory_pig_cap_i00">
-        <!-- For 1 h., Atk. Spd./ Casting Spd. +100, Speed +20, Acquired XP/ SP +10%. The effect remains after death and logout. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91795" name="Star Candy" icon="icon.etc_whiteday_candy_i04">
-        <!-- Sayha's Grace points +140,000. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91796" name="Lucky Sack" icon="icon.christmas_card_box2">
-        <!-- Lakfi-Lakfi's gift to celebrate the new year of Golden Pig. Double-click to obtain the Lakfi-Lakfi's Oink buff and an event reward. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91797" name="Lucky Sack" icon="icon.christmas_card_box2">
-        <!-- Lakfi-Lakfi's gift to celebrate the new year of Golden Pig. Double-click to obtain the Lakfi-Lakfi's Oink buff and an event reward. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91798" name="Golden Lucky Sack" icon="icon.christmas_card_box1">
-        <!-- Lakfi-Lakfi's gift to celebrate the new year of Golden Pig. Double-click to obtain the Lakfi-Lakfi's Energy buff and an event reward. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91799" name="Golden Lucky Sack" icon="icon.christmas_card_box1">
-        <!-- Lakfi-Lakfi's gift to celebrate the new year of Golden Pig. Double-click to obtain the Lakfi-Lakfi's Energy buff and an event reward. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
+	<item id="91700" name="+7 Crystal Dagger" type="NONE" icon="icon.weapon_crystal_dagger_i00">
+	<!-- Double-click to obtain +7 Enchanted Crystal Dagger. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91701" name="+7 Eminence Bow" type="NONE" icon="icon.weapon_eminence_bow_i00">
+	<!-- Double-click to obtain +7 Enchanted Eminence Bow. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91702" name="+7 Orcish Poleaxe" type="NONE" icon="icon.weapon_orcish_poleaxe_i00">
+	<!-- Double-click to obtain +7 Enchanted Orcish Poleaxe. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91703" name="+7 KatanaKatana" type="NONE" icon="icon.weapon_dual_sword_i00">
+	<!-- Double-click to obtain +7 Enchanted KatanaKatana. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91704" name="+7 Yaksa Mace" type="NONE" icon="icon.weapon_yaksa_mace_i00">
+	<!-- Double-click to obtain +7 Enchanted Yaksa Mace. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91705" name="+7 Berserker Blade" type="NONE" icon="icon.weapon_berserker_blade_i00">
+	<!-- Double-click to obtain +7 Enchanted Berserker Blade. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91706" name="+7 Great Pata" type="NONE" icon="icon.weapon_great_pata_i00">
+	<!-- Double-click to obtain +7 Enchanted Great Pata. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91707" name="+4 C-grade Top-grade Armor Set Pack" type="NONE" icon="icon.armor_t62_ul_i00">
+	<!-- Double-click to obtain +4 Enchanted Full Plate Helmet, Full Plate Armor, Full Plate Gauntlets, and Full Plate Boots. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91708" name="+4 C-grade Top-grade Armor Set Pack" type="NONE" icon="icon.armor_t45_ul_i00">
+	<!-- Double-click to obtain +4 Enchanted Full Plate Helmet, Drake Leather Armor, Drake Leather Gloves, and Drake Leather Boots -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91709" name="+4 C-grade Top-grade Armor Set Pack" type="NONE" icon="icon.armor_t53_u_i00">
+	<!-- Double-click to obtain +4 Enchanted Full Plate Helmet, Karmian Tunic, Karmian Stockings, Karmian Gloves, and Karmian Boots. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91710" name="Weapon Summoning Coupon" type="NONE" icon="icon.bm_royal_white_save_ticket">
+	<!-- A materials required to use Great Spear, Falchion, Iron Hammer, Voodoo Doll, Flanged Mace, Sword Breaker, Viper Fang, and Compound Bow Charm skills. Top-grade enchanted weapon (D-grade). -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91711" name="Sayha's Mark" type="NONE" icon="icon.bm_sayha_token">
+	<!-- u,Double-click to obtain one Blessing of Wind Box and one Sayha's Storm Lv. 3. If you’re lucky, you can also gain one Sayha's Treasure or Shining Sayha's Treasure. Will be deleted when the event ends.\\n\\nYou have a chance to gain Sayha's Summoning Stick that summons various monsters until the event ends. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91712" name="Sayha's Storm Lv. 3" type="NONE" icon="icon.bm_sayha_storm">
+	<!-- Sayha's Grace Consumption +100% and XP/SP Gain +200% while hunting monsters. The effect remains active even after death. Duration 20 minutes. Cooldown 1 minute. Available only when Sayha's Grace is 35,000 points or higher. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91713" name="Sayha's Storm Lv. 3" type="NONE" icon="icon.bm_sayha_storm">
+	<!-- Sayha's Grace Consumption +100% and XP/SP Gain +200% while hunting monsters. The effect remains active even after death. Duration 20 minutes. Cooldown 1 minute. Available only when Sayha's Grace is 35,000 points or higher. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91714" name="Sayha's Summoning Stick" type="NONE" icon="icon.etc_stick_i00">
+	<!-- Double-click to spawn one of the six types of Wind Monsters. If the monster is hunted, the summoner gains certain XP. No XP bonus effect is applied. Cooldown 10 seconds. Will be deleted when the event ends. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91715" name="Sayha's Treasure" type="NONE" icon="icon.sayha2017_box_i01">
+	<!-- Double-click to obtain one Rare Necklace, +10 Sayha's Cloak, or consumable at random. Will be deleted when the event ends. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91716" name="Shining Sayha's Treasure" type="NONE" icon="icon.sayha2017_box_i03">
+	<!-- Double-click to obtain one S-grade Weapon/Armor Pack, Item Box enchanted to high level, Codex Box, or rare item at random. Will be deleted when the event ends. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91717" name="Advanced Stable Scroll: Enchant Weapon (S-grade)" type="SOLID_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_s">
+	<!-- Upon enchantment, P. Atk. +5 for S-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +6 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +10 for bows. M. Atk. +4 for all weapons. From +4, P. Atk./M. Atk. bonus effect quadruples. Even if enchantment fails, the item will not be crystallized and will retain its enchant level. It can be used only on +7 to +15 enchanted items. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91718" name="Advanced Stable Scroll: Enchant Armor (S-grade)" type="SOLID_ENCHANT_ARMOR" icon="icon.giant_scrl_of_ench_am_s">
+	<!-- Upon enchantment, P. Def. +2 for S-grade armor or accessory. From +4, P. Def. +8. Even if enchantment fails, the item will not be crystallized and will retain its enchant level. Starting at +4 armor, HP increases depending on the enchant value. It can be used only on +6 to +9 enchanted items. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="91719" name="Sayha's Supreme Cloak - Black" type="NONE" body-part="BACK" icon="icon.bm_2018_sayha_cloak_back_i02">
+	<!-- u,A cloak imbued with Supreme Sayha's Energy. Can be enchanted only by Sayha’s Supreme Scroll: Enchant Cloak. Various options are added to the cloak depending on enchant level. -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes weight="220" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91720" name="Sayha's Supreme Cloak - White" type="NONE" body-part="BACK" icon="icon.bm_2018_sayha_cloak_back_i01">
+	<!-- u,A cloak imbued with Supreme Sayha's Energy. Can be enchanted only by Sayha’s Supreme Scroll: Enchant Cloak. Various options are added to the cloak depending on enchant level. -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes weight="220" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91721" name="Sayha's Supreme Cloak - Red" type="NONE" body-part="BACK" icon="icon.bm_2018_sayha_cloak_back_i03">
+	<!-- u,A cloak imbued with Supreme Sayha's Energy. Can be enchanted only by Sayha’s Supreme Scroll: Enchant Cloak. Various options are added to the cloak depending on enchant level. -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes weight="220" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<item id="91722" name="Sayha's Supreme Scroll: Enchant Cloak" type="SOLID_ENCHANT_ARMOR" icon="icon.sayha2017_scrl">
+	<!-- A varnish that enhances Sayha's Supreme Cloak. Can be used only on Sayha's Supreme Cloak. Even if enchantment fails, Sayha's Cloak will not disappear and will retain its enchant level. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="91723" name="Iron Bracelet" type="NONE" body-part="RIGHT_BRACELET" icon="icon.etc_rbracelet_c_i00">
+	<!-- 15-day. Activates one talisman slot when equipped. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<item id="91724" name="Iron Bracelet Box" type="NONE" icon="icon.etc_treasure_box_i00">
+	<!-- Double-click to obtain one Iron Bracelet (15-day). -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91725" name="Escape - Abandoned Camp" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
+	<!-- A magic scroll that teleports you to Abandoned Camp. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91726" name="Escape - Windmill Hill" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
+	<!-- A magic scroll that automatically teleports to Windmill Hill. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91727" name="Escape - Ruins of Agony" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
+	<!-- A magic scroll that teleports you to Ruins of Agony. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91728" name="Enchanted Great Spear Box" type="NONE" icon="icon.weapon_long_spear_i00">
+	<!-- Double-click to obtain +16 Enchanted Great Spear. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91729" name="Enchanted Falchion Box" type="NONE" icon="icon.weapon_falchion_i00">
+	<!-- Double-click to obtain +16 Enchanted Falchion. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91730" name="Enchanted Iron Hammer Box" type="NONE" icon="icon.weapon_iron_hammer_i00">
+	<!-- Double-click to obtain +16 Enchanted Iron Hammer. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91731" name="Enchanted Voodoo Doll Box" type="NONE" icon="icon.weapon_voodoo_doll_i00">
+	<!-- Double-click to obtain +16 Enchanted Voodoo Doll. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91732" name="Enchanted Flanged Mace Box" type="NONE" icon="icon.weapon_buzdygan_i00">
+	<!-- Double-click to obtain +16 Enchanted Flanged Mace. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91733" name="Enchanted Sword Breaker" type="NONE" icon="icon.weapon_sword_breaker_i00">
+	<!-- Double-click to obtain +16 Enchanted Sword Breaker. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91734" name="Enchanted Viper Fang Box" type="NONE" icon="icon.weapon_vipers_canine_i00">
+	<!-- Double-click to obtain +16 Enchanted Viper Fang. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91735" name="Enchanted Compound Bow Box" type="NONE" icon="icon.weapon_composition_bow_i00">
+	<!-- Double-click to obtain +16 Enchanted Compound Bow. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91736" name="Escape - High Priest Raymond" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
+	<!-- A magic scroll that teleports you to High Priest Raymond in the Town of Gludio. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="91737" name="Brooch Lv. 1" type="NONE" body-part="UNDERWEAR" icon="icon.etc_bm_brooch_lavianrose_i00">
+	<!-- Brooch Lv. 1, 15-day. When equipped, it opens up 2 Gem slots. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="10" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<item id="91738" name="Brooch Lv. 1 Box" type="NONE" icon="icon.etc_treasure_box_i00">
+	<!-- Double-click to obtain one Lv. 1 brooch (15-day). -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91739" name="Abundance Charm" type="RUNE" icon="icon.bm_sayha_rune">
+	<!-- 30-day item. When stored in the inventory, CON/MEN/DEX/WIT/STR/INT +1. Hunting XP/SP Gain +20%. -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91740" name="Special Blessing Box" type="NONE" icon="icon.bm_gold_lure_box">
+	<!-- Double-click to obtain Sayha's Blessing (Event). There is also a chance to obtain L2 Coins and a rare item such as Talisman of Baium, Earth Dragon Belt, or Fire Dragon Belt. Will be deleted when the event ends. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91741" name="Einhasad's Protection" type="SCROLL" icon="icon.etc_dragons_blood_i03">
+	<!-- When used, Hunting XP/SP Gain +100% for 1 hour. Cooldown 1 minute. The effect remains active even after death. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91742" name="Angler's Box" type="NONE" icon="icon.etc_readybox_bronze">
+	<!-- Double-click to obtain one of the following items at random: Fishing Shot, Soulshot Ticket, and Weapon Exchange Ticket. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="10" immediate-effect="true"/>
+	</item>
+
+	<item id="91743" name="Apiga" type="NONE" icon="icon.etc_pig_adena_i01">
+	<!-- A special coin that the Magic Research Institute imprints with magic on the Pig of Love or Golden Pig. Take a certain quantity of this coin to the Employee of Magic Research Institute to exchange for a reward item. Will be deleted when the Pig Event ends. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91744" name="Crafting Package of Insolence" type="NONE" icon="icon.bm_pirate_treasure_box">
+	<!-- A package used to craft Talisman of Insolence. Double-click to obtain 10 Aura of Insolence, 120 Talisman Crystals, and 250 Elemental Stones. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<armor id="91745" name="Aden Talisman" type="NONE" body-part="TALISMAN" icon="icon.bm_ensoul_stone_pvp">
+	<!-- A talisman imbued with the energy of the royal family of Aden. Can be enchanted up to +10 with the Enchant Scroll: Aden Talisman. Combination adds various effects, and enchantment increases stats of these option effects. If +1 or higher level enchantment fails, the talisman will disappear. Effects from two such Talismans do not stack. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="120" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91746" name="Rudolph Outfit" type="HEAVY" body-part="ALL_DRESS" icon="icon.gomdori_chest_change">
+	<!-- u,Rudolph outfit. It doesn’t remove hair accessories, weapons, and magic armor. -->
+		<restriction freightable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<item id="91747" name="Blue Wolf Heavy Armor Set" type="NONE" icon="icon.armor_t68_u_i00">
+	<!-- Double-click to obtain Blue Wolf Breastplate, Blue Wolf Gaiters, Blue Wolf Helmet (Heavy Armor), Blue Wolf Gloves (Heavy Armor), and Blue Wolf Boots(Heavy Armor), one for each. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91748" name="Blue Wolf Light Armor Set" type="NONE" icon="icon.armor_t69_ul_i00">
+	<!-- Double-click to obtain Blue Wolf Leather Armor, Blue Wolf Helmet (Light Armor), Blue Wolf Gloves (Light Armor), and Blue Wolf Boots (Light Armor), one for each. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91749" name="Blue Wolf Robe Set" type="NONE" icon="icon.armor_t70_u_i00">
+	<!-- Double-click to obtain Blue Wolf Tunic, Blue Wolf Stockings, Blue Wolf Helmet (Robe), Blue Wolf Gloves (Robe), and Blue Wolf Boots (Robe), one for each. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91750" name="Doom Heavy Armor Set" type="NONE" icon="icon.armor_t71_ul_i00">
+	<!-- Double-click to obtain Doom Plate Armor, Doom Helmet (Heavy Armor), Doom Gloves (Heavy Armor), and Doom Boots (Heavy Armor), one for each. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91751" name="Doom Light Armor Set" type="NONE" icon="icon.armor_t72_ul_i00">
+	<!-- Double-click to obtain Leather Armor of Doom, Doom Helmet (Light Armor), Doom Gloves (Light Armor), and Doom Boots (Light Armor), one for each. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91752" name="Doom Robe Set" type="NONE" icon="icon.armor_t73_u_i00">
+	<!-- Double-click to obtain Tunic of Doom, Stockings of Doom, Doom Helmet (Robe), Doom Gloves (Robe), and Doom Boots (Robe), one for each. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91753" name="Dark Light Accessory Set" type="NONE" icon="icon.accessary_necklace_of_black_ore_i00">
+	<!-- Double-click to obtain 2 Black Ore Rings, 2 Black Ore Earrings, and 1 Black Ore Necklace. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91754" name="800 L2 Coin Box" type="NONE" icon="icon.bm_sayhas_talisman_box">
+	<!-- Double-click to obtain 800 L2 Coins. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91755" name="8000 L2 Coin Box" type="NONE" icon="icon.bm_sayha_blessed_box">
+	<!-- Double-click to obtain 8,000 L2 Coins. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91756" name="Aden Talisman Enchant Scroll" type="ENCHANT_ARMOR" icon="icon.bless_scroll_r99">
+	<!-- A scroll used to enchant Aden Talisman. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91757" name="Magic Lamp Acceleration Potion" type="NONE" icon="icon.etc_recall_potion2">
+	<!-- 20% Magic Lamp gauge recharge for 1 hour when used. Cooldown 1 minute. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="91758" name="Ruby Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_ruby_i00">
+	<!-- 3-day. When equipped, 16% damage bonus for Soulshot, Blessed Soulshot, and Beast Soulshot. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91759" name="Sapphire Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_sapphire_i00">
+	<!-- 3-day. When equipped, 16% damage bonus for Spiritshot, Blessed Spiritshot, and Beast Spiritshot. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91760" name="Brooch Lv. 5" type="NONE" body-part="UNDERWEAR" icon="icon.etc_bm_brooch_lavianrose_i06">
+	<!-- 30-day. When equipped, it opens up 6 Gem slots and adds 15 slots to the inventory. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="10" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<item id="91761" name="Player Commendation Treasure Chest" type="NONE" icon="icon.bm_dragon_present">
+	<!-- A box rewarded for PC Cafe login. Double-click to obtain one of the following items at random: Special Dragon's Fruit, PC Point Recharge Coin, Talisman of Baium, and S-grade Weapon Pack. Will be deleted when the event ends. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91762" name="Player Commendation Treasure Chest" type="NONE" icon="icon.bm_dragon_present">
+	<!-- A box rewarded for PC Cafe login. Double-click to obtain one of the following items at random: Special Dragon's Fruit, PC Point Recharge Coin, Talisman of Baium, and Top-grade Weapon Pack (A-grade). Will be deleted when the event ends. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91763" name="PC Point Recharge Coin" type="NONE" icon="icon.etc_coins_blue_i00">
+	<!-- Double-click to obtain 300 PC Points. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91764" name="Avadon Heavy Armor Set" type="NONE" icon="icon.armor_t66_u_i00">
+	<!-- Double-click to obtain Avadon Breastplate, Avadon Gaiters, Avadon Circlet (Heavy Armor), Avadon Gloves (Heavy Armor), and Avadon Boots (Heavy Armor), one for each. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91765" name="Avadon Light Armor Set" type="NONE" icon="icon.armor_t67_ul_i00">
+	<!-- Double-click to obtain Avadon Leather Armor, Avadon Circlet (Light Armor), Avadon Gloves (Light Armor), and Avadon Boots (Light Armor), one for each. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91766" name="Avadon Robe Set" type="NONE" icon="icon.armor_t59_ul_i00">
+	<!-- Double-click to obtain Avadon Robe, Avadon Circlet (Robe), Avadon Gloves (Robe), and Avadon Boots (Robe), one for each. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91767" name="Aden Talisman Enchant Package" type="NONE" icon="icon.bm_sheep_agathion_30d_box">
+	<!-- A package used to upgrade Aden Talismans. Double-click to obtain 1 Aden Talisman and 10 Enchant Scroll: Aden Talisman. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91768" name="Escape - High Priest Orven" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
+	<!-- A magic scroll that teleports you to High Priest Orven in the Town of Aden. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="91769" name="Shining Savior's Earring" type="NONE" body-part="EAR" icon="icon.r2_earring_i01">
+	<!-- 1-day. When equipped, XP/SP Gain +2%, Max MP30, Max HP +50, MEN/Stun Attack Resistance +4%. Vampiric Rage effect. The effect does not stack if two identical earrings are worn. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="78.0"/>
+		</stats>
+	</armor>
+
+	<armor id="91770" name="Shining Savior's Earring" type="NONE" body-part="EAR" icon="icon.r2_earring_i01">
+	<!-- 30-day. When equipped, XP/SP Gain +2%, Max MP +30, Max HP +50, MEN/Stun Attack Resistance +4%. Vampiric Rage effect. The effect does not stack if two identical earrings are worn. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="78.0"/>
+		</stats>
+	</armor>
+
+	<item id="91771" name="Doll of Border - Frintezza Doll" type="RUNE" icon="icon.bm_doll_frintessa_30d">
+	<!-- 7-day item. Boosts abilities with Frintezza Doll's Spell when stored in the inventory.\\n\\n<Frintezza Doll's Spell Lv. 1>\\nCON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun/Paralysis Atk. Rate +10%. -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91772" name="Scroll: PK" type="SCROLL" icon="icon.etc_ev_draco_pk_count_down">
+	<!-- Double-click to lower PK value by 1. It can only be used when PK is 1 or higher and Inclination is 0. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="10"/>
+	</item>
+
+	<item id="91773" name="Sayha's Grace Kit" type="NONE" icon="icon.bm_artifact_box_i00">
+	<!-- u,Double-click to obtain 200 Sayha's Blessing and 30 Sayha's Storm Lv. 3. If you’re lucky, you can also gain one of various items. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91774" name="Amazing Rudolph Herb" type="NONE" icon="BranchSys2.icon.event_lbracelet_rudolph">
+	<!-- Amazing Rudolph Herb. Transforms into Rudolph for 5 minutes. P. Atk./M. Atk. +150, P. Def./M. Def./Atk. Spd./Casting Spd. +100, Movement Speed +10, HP/MP Recovery Bonus +30%. -->
+		<restriction freightable="false" destroyable="false" tradable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91775" name="Plated Leather Set" type="NONE" icon="icon.armor_t47_u_i00">
+	<!-- Double-click to obtain Plated Leather Armor, Plated Leather Gaiters, and Plated Leather Boots, one for each. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91776" name="Sayha's Gust" type="NONE" icon="icon.ev_magic_flame_game_wind2">
+	<!-- Only for Lv. 75 or lower level characters. Sayha's Grace Consumption +100% and XP/SP Gain +300% while hunting monsters. The effect remains active even after death. Duration 20 minutes. Cooldown 1 minute. Available only when Sayha's Grace is 35,000 or higher. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91777" name="Magic Flame" type="NONE" icon="icon.bm_soul_of_shilen">
+	<!-- Only for Lv. 75 or lower level characters. 100% Magic Lamp gauge recharge for 1 hour when used. Cooldown 1 minute. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91778" name="Sayha's Storm Lv. 3" type="NONE" icon="icon.bm_sayha_storm">
+	<!-- Sayha's Grace Consumption +100% and XP/SP Gain +200% while hunting monsters. The effect remains active even after death. Duration 1 hour. Cooldown 1 minute. Available only when Sayha's Grace is 35,000 points or higher. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes duration="60"/>
+	</item>
+
+	<item id="91779" name="Aden Supply Box" type="NONE" icon="icon.etc_treasure_box_i00">
+	<!-- Double-click to obtain one of the following items with a certain chance: +16 B-grade Weapon Pack, Antharas' Earring, Talisman of Baium, Ancient Book: Divine Inspiration, Morale Bean Cake, Dragon Scroll, and Sayha's Buff Scroll. Will be deleted when the event ends. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91780" name="Dragon Scroll" type="NONE" icon="icon.ev_charge_scroll">
+	<!-- For 20 minutes, P. Atk. +200, M. Atk. +350, P. Critical/M. Critical Rate +30, Atk. Spd./Casting Spd. +50, P. Def./M. Def. +200, Max HP/Max MP/Max CP +500. The effect remains active even after death. Cooldown 1 minute. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91781" name="Sayha's Buff Scroll" type="NONE" icon="icon.etc_ssq_i00">
+	<!-- Activates Sayha's Shield, Sayha's Magic Barrier, Sayha's Decrease Weight, Sayha's Clarity, Sayha's Berserker Spirit, Sayha's Wind Walk, Sayha's Might, Sayha's Focus, Sayha's Haste, Sayha's Death Whisper, Sayha's Empower, Sayha's Wild Magic, Sayha's Acumen, Sayha's Concentration, Sayha's Prophecy, Sayha's Restore HP, and Sayha's Restore MP effects for 20 minutes on use. No item can be used while Sayha's Restore MP is active. Cooldown 1 minute. Caution: If used while having Sayha's Victory effect, the Sayha's Victory buff effect will not be applied. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91782" name="Nuia's Gift" type="NONE" icon="icon.npoint_valakas_30day_box">
+	<!-- Double-click to obtain one of the following items at random: Special Dragon's Fruit, PC Point Recharge Coin, Talisman of Baium, and S-grade Weapon Pack. Will be deleted when the event ends. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91783" name="Einhasad's Spellbook Box" type="NONE" icon="icon.sayha2017_box_i01">
+	<!-- Double-click to obtain 1 of the Spellbooks for the Humans after the 2nd Class Transfer. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91784" name="Eva's Spellbook Box" type="NONE" icon="icon.sayha2017_box_i01">
+	<!-- Double-click to obtain 1 of the Spellbooks for the Elves after the 2nd Class Transfer. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91785" name="Shilen's Spellbook Box" type="NONE" icon="icon.sayha2017_box_i01">
+	<!-- Double-click to obtain 1 of the Spellbooks for the Dark Elves after the 2nd Class Transfer. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91786" name="Pa'agrio's Spellbook Box" type="NONE" icon="icon.sayha2017_box_i01">
+	<!-- Double-click to obtain 1 of the Spellbooks for the Orcs after the 2nd Class Transfer. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91787" name="Maphr's Spellbook Box" type="NONE" icon="icon.sayha2017_box_i01">
+	<!-- Double-click to obtain 1 of the Spellbooks for the Dwarves after the 2nd Class Transfer. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<armor id="91788" name="Dragon's Belt" type="LIGHT" body-part="BELT" icon="icon.r2_belt_i01">
+	<!-- Ornament imbued with the Dragon's power. Can enchant up to +10 with Dragon's Belt Ornament. -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="14.0"/>
+		</stats>
+	</armor>
+
+	<item id="91789" name="Dragon's Belt Ornament" type="ENCHANT_ARMOR" icon="icon.etc_piece_belt_blue_i00">
+	<!-- Belt ornament to enchant Dragon's Belt. Can enchant up to +10. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91790" name="Dragon's Belt Box" type="NONE" icon="icon.etc_readybox_bronze">
+	<!-- Double-click to obtain 1 Dragon's Belt and 10 Dragon's Belt Ornament.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<armor id="91791" name="Venir's Talisman Lv. 25" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<!-- Increases CON/MEN/DEX/WIT/STR/INT +6 when equipped. P./M. Skill Cooldown -7%. Drains damage delivered enemy to HP 16%/MP 8%. Effect does not stack with 2 or more talismans of the same type. -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91792" name="Venir's Talisman Lv. 26" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<!-- Increases CON/MEN/DEX/WIT/STR/INT +8 when equipped. P./M. Skill Cooldown -7%. Drains damage delivered enemy to HP 16%/MP 8%. Effect does not stack with 2 or more talismans of the same type. -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<item id="91793" name="Lucky Pig Happiness Box" type="COUPON" icon="BranchSys.icon.br_valentine_agathion_pack_i00">
+	<!-- A box containing the good luck of the 2019 Gold Pig. Use to receive Lucky Pig's Energy. (Can be used once a day.) -->
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91794" name="Lucky Pig Honey Buff" type="NONE" icon="icon.accessory_pig_cap_i00">
+	<!-- When used, Atk. Spd. +100, Casting Spd. +100, Speed +20, XP/SP Gain when hunting +10 for 1 hour. Does not disappear when dying or restarting. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91795" name="Blessing Star Candy" type="POTION" icon="icon.etc_whiteday_candy_i04">
+	<!-- Recharges 140,000 Sayha's Grace Points. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91796" name="Lucky Pouch" type="NONE" icon="icon.christmas_card_box2">
+	<!-- Lucky Pig's lucky pouch to celebrate the year of the Golden Pig. Receive Lucky Pig's Honey Buff and the event reward. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91797" name="Lucky Pouch" type="NONE" icon="icon.christmas_card_box2">
+	<!-- Lucky Pig's lucky pouch to celebrate the year of the Golden Pig. Receive Lucky Pig's Honey Buff and the event reward. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91798" name="Golden Lucky Pouch" type="NONE" icon="icon.christmas_card_box1">
+	<!-- Lucky Pig's Golden Lucky Pouch to celebrate the year of the Golden Pig. Receive Lucky Pig's Lucky Pig Honey Buff, Lucky Pig Vitality Star Candy and the event reward. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91799" name="Golden Lucky Pouch" type="NONE" icon="icon.christmas_card_box1">
+	<!-- Lucky Pig's Golden Lucky Pouch to celebrate the year of the Golden Pig. Receive Lucky Pig's Lucky Pig Honey Buff, Lucky Pig Vitality Star Candy and the event reward. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
 </list>

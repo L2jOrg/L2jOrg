@@ -1,726 +1,769 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="91500" name="Basalt Battlehammer Crafting Pack" icon="icon.event_hero_treasure_box_i00">
-        <!-- Double-click to obtain Recipe: Basalt Battlehammer (30%) and Basalt Battlehammer Head (25 pcs.). Cannot be dropped or sold. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91501" name="Imperial Staff Crafting Pack" icon="icon.event_hero_treasure_box_i00">
-        <!-- Double-click to obtain Recipe: Imperial Staff (30%) and Imperial Staff Head (25 pcs.). Cannot be dropped or sold. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91502" name="Angel Slayer Crafting Pack" icon="icon.event_hero_treasure_box_i00">
-        <!-- Double-click to obtain Recipe: Angel Slayer (30%) and Angel Slayer Blade (25 pcs.). Cannot be dropped or sold. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91503" name="Dragon Hunter Axe Crafting Pack" icon="icon.event_hero_treasure_box_i00">
-        <!-- Double-click to obtain Recipe: Dragon Hunter Axe (30%) and Dragon Hunter Axe Blade (25 pcs.). Cannot be dropped or sold. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91504" name="Saint Spear Crafting Pack" icon="icon.event_hero_treasure_box_i00">
-        <!-- Double-click to obtain Recipe: Saint Spear (30%) and Saint Spear Blade (25 pcs.). Cannot be dropped or sold. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91505" name="Demon Splinter Crafting Pack" icon="icon.event_hero_treasure_box_i00">
-        <!-- Double-click to obtain Recipe: Demon Splinter (30%) and Demon Splinter Blade (25 pcs.). Cannot be dropped or sold. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91506" name="Heaven's Divider Crafting Pack" icon="icon.event_hero_treasure_box_i00">
-        <!-- Double-click to obtain Recipe: Heaven's Divider (30%) and Heaven's Divider Edge (25 pcs.). Cannot be dropped or sold. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91507" name="Arcana Mace Crafting Pack" icon="icon.event_hero_treasure_box_i00">
-        <!-- Double-click to obtain Recipe: Arcana Mace (30%) and Arcana Mace Head (25 pcs.). Cannot be dropped or sold. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91508" name="Draconic Bow Crafting Pack" icon="icon.event_hero_treasure_box_i00">
-        <!-- Double-click to obtain Recipe: Draconic Bow (30%) and Draconic Bow Shaft (25 pcs.). Cannot be dropped or sold. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91509" name="Sealed Imperial Crusader Breastplate Crafting Pack" icon="icon.event_hero_treasure_box_i00">
-        <!-- Double-click to obtain Recipe: Sealed Imperial Crusader Breastplate (30%) and Sealed Imperial Crusader Breastplate Part (35 pcs.). Cannot be dropped or sold. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91510" name="Sealed Imperial Crusader Gaiters Crafting Pack" icon="icon.event_hero_treasure_box_i00">
-        <!-- Double-click to obtain Recipe: Sealed Imperial Crusader Gaiters (30%) and Sealed Imperial Crusader Gaiters Part (35 pcs.). Cannot be dropped or sold. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91511" name="Sealed Imperial Crusader Gauntlets Crafting Pack" icon="icon.event_hero_treasure_box_i00">
-        <!-- Double-click to obtain Recipe: Sealed Imperial Crusader Gauntlets (30%) and Sealed Imperial Crusader Gauntlets Design (35 pcs.). Cannot be dropped or sold. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91512" name="Sealed Imperial Crusader Boots Crafting Pack" icon="icon.event_hero_treasure_box_i00">
-        <!-- Double-click to obtain Recipe: Sealed Imperial Crusader Boots (30%) and Sealed Imperial Crusader Boots Design (35 pcs.). Cannot be dropped or sold. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91513" name="Sealed Imperial Crusader Shield Crafting Pack" icon="icon.event_hero_treasure_box_i00">
-        <!-- Double-click to obtain Recipe: Sealed Imperial Crusader Shield (30%) and Sealed Imperial Crusader Shield Fragment (35 pcs.). Cannot be dropped or sold. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91514" name="Sealed Imperial Crusader Helmet Crafting Pack" icon="icon.event_hero_treasure_box_i00">
-        <!-- Double-click to obtain Recipe: Sealed Imperial Crusader Helmet (30%) and Sealed Imperial Crusader Helmet Pattern (35 pcs.). Cannot be dropped or sold. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91515" name="Sealed Draconic Leather Armor Crafting Pack" icon="icon.event_hero_treasure_box_i00">
-        <!-- Double-click to obtain Recipe: Sealed Draconic Leather Armor (30%) and Sealed Draconic Leather Armor Part (35 pcs.). Cannot be dropped or sold. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91516" name="Sealed Draconic Leather Gloves Crafting Pack" icon="icon.event_hero_treasure_box_i00">
-        <!-- Double-click to obtain Recipe: Sealed Draconic Leather Gloves (30%) and Sealed Draconic Leather Glove Fabric (35 pcs.). Cannot be dropped or sold. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91517" name="Sealed Draconic Leather Boots Crafting Pack" icon="icon.event_hero_treasure_box_i00">
-        <!-- Double-click to obtain Recipe: Sealed Draconic Leather Boots (30%) and Sealed Draconic Leather Boots Design (35 pcs.). Cannot be dropped or sold. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91518" name="Sealed Draconic Leather Helmet Crafting Pack" icon="icon.event_hero_treasure_box_i00">
-        <!-- Double-click to obtain Recipe: Sealed Draconic Leather Helmet (30%) and Sealed Draconic Leather Helmet Pattern (35 pcs.). Cannot be dropped or sold. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91519" name="Sealed Major Arcana Robe Crafting Pack" icon="icon.event_hero_treasure_box_i00">
-        <!-- Double-click to obtain Recipe: Sealed Major Arcana Robe (30%) and Sealed Major Arcana Robe Part (35 pcs.). Cannot be dropped or sold. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91520" name="Sealed Major Arcana Gloves Crafting Pack" icon="icon.event_hero_treasure_box_i00">
-        <!-- Double-click to obtain Recipe: Sealed Major Arcana Gloves (30%) and Sealed Major Arcana Gloves Fabric (35 pcs.). Cannot be dropped or sold. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91521" name="Sealed Major Arcana Boots Crafting Pack" icon="icon.event_hero_treasure_box_i00">
-        <!-- Double-click to obtain Recipe: Sealed Major Arcana Boots (30%) and Sealed Major Arcana Boots Design (35 pcs.). Cannot be dropped or sold. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91522" name="Sealed Major Arcana Circlet Crafting Pack" icon="icon.event_hero_treasure_box_i00">
-        <!-- Double-click to obtain Recipe: Sealed Major Arcana Circlet (30%) and Sealed Major Arcana Circlet Pattern (35 pcs.). Cannot be dropped or sold. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91523" name="Sealed Tateossian Earring Crafting Pack" icon="icon.event_hero_treasure_box_i00">
-        <!-- Double-click to obtain Recipe: Sealed Tateossian Earring (30%) and Sealed Tateossian Earring Part (35 pcs.). Cannot be dropped or sold. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91524" name="Sealed Tateossian Ring Crafting Pack" icon="icon.event_hero_treasure_box_i00">
-        <!-- Double-click to obtain Recipe: Sealed Tateossian Ring (30%) and Sealed Tateossian Ring Gem (35 pcs.). Cannot be dropped or sold. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91525" name="Sealed Tateossian Necklace Crafting Pack" icon="icon.event_hero_treasure_box_i00">
-        <!-- Double-click to obtain Recipe: Sealed Tateossian Necklace (30%) and Sealed Tateossian Necklace Chain (35 pcs.). Cannot be dropped or sold. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91526" name="Weapon Varnish (D-grade)" icon="icon.etc_earth_crystal_1_i00">
-        <!-- Low quality varnish for D-grade weapon allowing to increase its stats. Head Blacksmith Ferris in Aden can help to upgrade your weapon. Cannot be dropped. -->
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91527" name="Elite Weapon Varnish (D-grade)" icon="icon.etc_fire_crystal_1_i00">
-        <!-- High quality varnish for D-grade weapon allowing to upgrade it to C-grade. Head Blacksmith Ferris in Aden can help to upgrade your weapon. Cannot be dropped. -->
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91528" name="Weapon Varnish (C-grade)" icon="icon.etc_earth_crystal_1_i00">
-        <!-- Low quality varnish for C-grade weapon allowing to increase its stats. Head Blacksmith Ferris in Aden can help to upgrade your weapon. Cannot be dropped. -->
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91529" name="Elite Weapon Varnish (C-grade)" icon="icon.etc_fire_crystal_1_i00">
-        <!-- High quality varnish for C-grade weapon allowing to upgrade it to B-grade. Head Blacksmith Ferris in Aden can help to upgrade your weapon. Cannot be dropped. -->
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91530" name="Weapon Varnish (B-grade)" icon="icon.etc_earth_crystal_1_i00">
-        <!-- Low quality varnish for B-grade weapon allowing to increase its stats. Head Blacksmith Ferris in Aden can help to upgrade your weapon. Cannot be dropped. -->
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91531" name="Elite Weapon Varnish (B-grade)" icon="icon.etc_fire_crystal_1_i00">
-        <!-- High quality varnish for B-grade weapon allowing to upgrade it to A-grade. Head Blacksmith Ferris in Aden can help to upgrade your weapon. Cannot be dropped. -->
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91532" name="Weapon Varnish (A-grade)" icon="icon.etc_earth_crystal_1_i00">
-        <!-- Low quality varnish for A-grade weapon allowing to increase its stats. Head Blacksmith Ferris in Aden can help to upgrade your weapon. Cannot be dropped. -->
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91533" name="Armor Varnish (D-grade)" icon="icon.etc_water_crystal_1_i00">
-        <!-- Low quality varnish for D-grade armor allowing to increase its stats. Head Blacksmith Ferris in Aden can help to upgrade your armor. Cannot be dropped. -->
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91534" name="Elite Armor Varnish (D-grade)" icon="icon.etc_unholy_crystal_1_i00">
-        <!-- High quality varnish for D-grade armor allowing to upgrade it to C-grade. Head Blacksmith Ferris in Aden can help to upgrade your armor. Cannot be dropped. -->
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91535" name="Armor Varnish (C-grade)" icon="icon.etc_water_crystal_1_i00">
-        <!-- Low quality varnish for C-grade armor allowing to increase its stats. Head Blacksmith Ferris in Aden can help to upgrade your armor. Cannot be dropped. -->
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91536" name="Elite Armor Varnish (C-grade)" icon="icon.etc_unholy_crystal_1_i00">
-        <!-- High quality varnish for C-grade armor allowing to upgrade it to B-grade. Head Blacksmith Ferris in Aden can help to upgrade your armor. Cannot be dropped. -->
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91537" name="Armor Varnish (B-grade)" icon="icon.etc_water_crystal_1_i00">
-        <!-- Low quality varnish for B-grade armor allowing to increase its stats. Head Blacksmith Ferris in Aden can help to upgrade your armor. Cannot be dropped. -->
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91538" name="Elite Armor Varnish (B-grade)" icon="icon.etc_unholy_crystal_1_i00">
-        <!-- High quality varnish for B-grade armor allowing to upgrade it to A-grade. Head Blacksmith Ferris in Aden can help to upgrade your armor. Cannot be dropped. -->
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91539" name="Armor Varnish (A-grade)" icon="icon.etc_water_crystal_1_i00">
-        <!-- Low quality varnish for A-grade armor allowing to increase its stats. Head Blacksmith Ferris in Aden can help to upgrade your armor. Cannot be dropped. -->
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91540" name="Accessory Varnish (D-grade)" icon="icon.etc_holy_crystal_1_i00">
-        <!-- Low quality varnish for D-grade accessories allowing to increase their stats. Head Blacksmith Ferris in Aden can help to upgrade your accessories. Cannot be dropped. -->
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91541" name="Elite Accessory Varnish (D-grade)" icon="icon.etc_wind_crystal_1_i00">
-        <!-- High quality varnish for D-grade accessories allowing to upgrade them to C-grade. Head Blacksmith Ferris in Aden can help to upgrade your accessories. Cannot be dropped. -->
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91542" name="Accessory Varnish (C-grade)" icon="icon.etc_holy_crystal_1_i00">
-        <!-- Low quality varnish for C-grade accessories allowing to increase their stats. Head Blacksmith Ferris in Aden can help to upgrade your accessories. Cannot be dropped. -->
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91543" name="Elite Accessory Varnish (C-grade)" icon="icon.etc_wind_crystal_1_i00">
-        <!-- High quality varnish for C-grade accessories allowing to upgrade them to B-grade. Head Blacksmith Ferris in Aden can help to upgrade your accessories. Cannot be dropped. -->
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91544" name="Accessory Varnish (B-grade)" icon="icon.etc_holy_crystal_1_i00">
-        <!-- Low quality varnish for B-grade accessories allowing to increase their stats. Head Blacksmith Ferris in Aden can help to upgrade your accessories. Cannot be dropped. -->
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91545" name="Elite Accessory Varnish (B-grade)" icon="icon.etc_wind_crystal_1_i00">
-        <!-- High quality varnish for B-grade accessories allowing to upgrade them to A-grade. Head Blacksmith Ferris in Aden can help to upgrade your accessories. Cannot be dropped. -->
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91546" name="Accessory Varnish (A-grade)" icon="icon.etc_holy_crystal_1_i00">
-        <!-- Low quality varnish for A-grade accessories allowing to increase their stats. Head Blacksmith Ferris in Aden can help to upgrade your accessories. Cannot be dropped. -->
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91547" name="Special Weapon Varnish (A-grade)" icon="icon.etc_crystal_cave_crystal_i01">
-        <!-- High quality varnish for A-grade weapon allowing to upgrade it to S-grade. Head Blacksmith Ferris in Aden can help to upgrade your weapon. Cannot be dropped. -->
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91548" name="Special Armor Varnish (A-grade)" icon="icon.etc_crystal_cave_crystal_i00">
-        <!-- High quality varnish for A-grade armor allowing to upgrade it to S-grade. Head Blacksmith Ferris in Aden can help to upgrade your armor. Cannot be dropped. -->
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91549" name="Special Accessory Varnish (A-grade)" icon="icon.etc_crystal_cave_crystal_i0">
-        <!-- High quality varnish for A-grade accessories allowing to upgrade them to S-grade. Head Blacksmith Ferris in Aden can help to upgrade your accessories. Cannot be dropped. -->
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <armor id="91550" name="Frintezza's Necklace" icon="icon.accessory_necklace_of_frintessa_i00">
-        <!-- MP +29, Water Attack Resistance / Atk. Rate +10%, Paralysis Resistance / Atk. Rate +5%, Skill Cooldown -2%, Damage Reflection Resistance +2%. Cannot be enchanted. -->
-        <set name="bodypart" val="neck"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <stats>
-            <stat type="mDef">83</stat>
-            <stat type="maxMp">29</stat>
-        </stats>
-    </armor>
-    <armor id="91551" name="Enhanced Frintezza's Necklace" icon="icon.accessory_necklace_of_frintessa_i03">
-        <!-- MP +36, Water Attack Resistance / Atk. Rate +15%, Paralysis Resistance / Atk. Rate +10%, Skill Cooldown -3%, Damage Reflection Resistance +3%. Cannot be enchanted. -->
-        <set name="bodypart" val="neck"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <stats>
-            <stat type="mDef">96</stat>
-            <stat type="maxMp">36</stat>
-        </stats>
-    </armor>
-    <armor id="91552" name="Refined Frintezza's Necklace" icon="icon.accessory_necklace_of_frintessa_i04">
-        <!-- MP +44, Water Attack Resistance / Atk. Rate +20%, Paralysis Resistance / Atk. Rate +15%, Skill Cooldown -5%, Damage Reflection Resistance +4%, Buff-canceling Attack Resistance +10%. Cannot be enchanted. -->
-        <set name="bodypart" val="neck"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <stats>
-            <stat type="mDef">109</stat>
-            <stat type="maxMp">44</stat>
-        </stats>
-    </armor>
-    <armor id="91553" name="Immortal Frintezza's Necklace" icon="icon.accessory_necklace_of_frintessa_i05">
-        <!-- MP +65, Water Attack Resistance / Atk. Rate +30%, Paralysis Resistance / Atk. Rate +20%, Skill Cooldown -10%, Damage Reflection Resistance +10%, Buff-canceling Attack Resistance +20%. Increase Cooldown debuff available. Cannot be enchanted. -->
-        <set name="bodypart" val="neck"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <stats>
-            <stat type="mDef">125</stat>
-            <stat type="maxMp">65</stat>
-        </stats>
-    </armor>
-    <item id="91554" name="Essence of Frintezza" icon="icon.frintessa_essence_i01">
-        <!-- Take this item and Majestic Necklace enchanted for +10 to +12 to Head Blacksmith Ferris to Aden Village to upgrade it and get an Immortal Frintezza's Necklace. -->
-        <restriction destroyable="false" stackable="true"/>
-    </item>
-    <item id="91555" name="Special Summer Box" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain one of the items: Anakim/ Lilith Rune - Stage 9, Land/ Fire Dragon Belt - Venir's Blessing Lv. 4, +10 Agathion Box. Cannot be dropped or sold. The item will be removed after the event is over. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <weapon id="91556" name="Enhanced Hero's Shining Dual Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- 30-day item. Atk. Spd. +5%. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Enchantment, soul storing and augmenting are impossible. -->
-        <set name="weapon_type" val="ANCIENTSWORD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2330"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="time" val="43200"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">200</stat>
-            <stat type="mAtk">93</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="91557" name="Enhanced Hero's Shining Staff" icon="icon.weapon_sages_staff_i01">
-        <!-- 30-day item. Casting Spd. +12%. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Enchantment, soul storing and augmenting are impossible. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">160</stat>
-            <stat type="mAtk">126</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="91558" name="Enhanced Hero's Shining Bow" icon="icon.weapon_akat_long_bow_i01">
-        <!-- 30-day item. P. Critical +52. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Enchantment, soul storing and augmenting are impossible. -->
-        <set name="weapon_type" val="RAPIER"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1740"/>
-        <set name="soulshots" val="4"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="3"/>
-        <set name="time" val="43200"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">348</stat>
-            <stat type="mAtk">99</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">227</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="91559" name="Enhanced Hero's Shining Dagger" icon="icon.weapon_grace_dagger_i01">
-        <!-- 30-day item. P. Critical +66. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Enchantment, soul storing and augmenting are impossible. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1020"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="time" val="43200"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">142</stat>
-            <stat type="mAtk">91</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="91560" name="Enhanced Hero's Shining Spear" icon="icon.weapon_poleaxe_i01">
-        <!-- 30-day item. Stun Atk. Rate +25%. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Enchantment, soul storing and augmenting are impossible. -->
-        <set name="weapon_type" val="ETC"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2010"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="time" val="43200"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">159</stat>
-            <stat type="mAtk">91</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <armor id="91561" name="Enhanced Hero's Shining Helmet" icon="icon.armor_leather_helmet_i00">
-        <!-- 30-day item. A fragment of heavy armor. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
-        <set name="bodypart" val="head"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="600"/>
-        <set name="time" val="43200"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">58</stat>
-        </stats>
-    </armor>
-    <armor id="91562" name="Enhanced Hero's Shining Armor" icon="icon.armor_t62_ul_i00">
-        <!-- 30-day item. A fragment of heavy armor. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="onepiece"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="10480"/>
-        <set name="time" val="43200"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">239</stat>
-        </stats>
-    </armor>
-    <armor id="91563" name="Enhanced Hero's Shining Gauntlets" icon="icon.armor_t62_g_i00">
-        <!-- 30-day item. A fragment of heavy armor. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="600"/>
-        <set name="time" val="43200"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">39</stat>
-        </stats>
-    </armor>
-    <armor id="91564" name="Enhanced Hero's Shining Boots" icon="icon.armor_t62_b_i00">
-        <!-- 30-day item. A fragment of heavy armor. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
-        <set name="bodypart" val="feet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1200"/>
-        <set name="time" val="43200"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">39</stat>
-        </stats>
-    </armor>
-    <armor id="91565" name="Enhanced Hero's Shining Helmet" icon="icon.armor_leather_helmet_i00">
-        <!-- 30-day item. A fragment of light armor. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
-        <set name="bodypart" val="head"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="620"/>
-        <set name="time" val="43200"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">47</stat>
-        </stats>
-    </armor>
-    <armor id="91566" name="Enhanced Hero's Shining Leather Armor" icon="icon.armor_t45_ul_i00">
-        <!-- 30-day item. A fragment of light armor. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="onepiece"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="5800"/>
-        <set name="time" val="43200"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">179</stat>
-        </stats>
-    </armor>
-    <armor id="91567" name="Enhanced Hero's Shining Leather Gloves" icon="icon.armor_t45_g_i00">
-        <!-- 30-day item. A fragment of light armor. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="600"/>
-        <set name="time" val="43200"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">39</stat>
-        </stats>
-    </armor>
-    <armor id="91568" name="Enhanced Hero's Shining Leather Boots" icon="icon.armor_t45_b_i00">
-        <!-- 30-day item. A fragment of light armor. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
-        <set name="bodypart" val="feet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1210"/>
-        <set name="time" val="43200"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">39</stat>
-        </stats>
-    </armor>
-    <armor id="91569" name="Enhanced Hero's Shining Circlet" icon="icon.armor_circlet_i00">
-        <!-- 30-day item. A fragment of magic armor. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
-        <set name="bodypart" val="head"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="600"/>
-        <set name="time" val="43200"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">54</stat>
-        </stats>
-    </armor>
-    <armor id="91570" name="Enhanced Hero's Shining Tunic" icon="icon.armor_t57_u_i00">
-        <!-- 30-day item. A fragment of magic armor. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
-        <set name="armor_type" val="MAGIC"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1980"/>
-        <set name="time" val="43200"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">74</stat>
-            <stat type="maxMp">314</stat>
-        </stats>
-    </armor>
-    <armor id="91571" name="Enhanced Hero's Shining Stockings" icon="icon.armor_t57_l_i00">
-        <!-- 30-day item. A fragment of magic armor. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
-        <set name="armor_type" val="MAGIC"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="960"/>
-        <set name="time" val="43200"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">46</stat>
-            <stat type="maxMp">196</stat>
-        </stats>
-    </armor>
-    <armor id="91572" name="Enhanced Hero's Shining Gloves" icon="icon.armor_t57_g_i00">
-        <!-- 30-day item. A fragment of magic armor. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="610"/>
-        <set name="time" val="43200"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">39</stat>
-        </stats>
-    </armor>
-    <armor id="91573" name="Enhanced Hero's Shining Shoes" icon="icon.armor_t57_b_i00">
-        <!-- 30-day item. A fragment of magic armor. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
-        <set name="bodypart" val="feet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1210"/>
-        <set name="time" val="43200"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">34</stat>
-        </stats>
-    </armor>
-    <weapon id="91574" name="Saint Sword Excalibur" icon="icon.weapon_plenitas_i00">
-        <!-- When successfully enchanted, a reward can be acquired from Expedition Leader Excalibur. The item will be deleted after the event is over. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <stats>
-            <stat type="pAtk">92</stat>
-            <stat type="mAtk">54</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <item id="91575" name="Scroll: Enchant Excalibur" icon="icon.yogi_scroll_of_enchant_weapon_grade_i00">
-        <!-- Enchant Scroll for Saint Sword Excalibur. Starting from +3, P. Atk. +5/ M. Atk. +3. Starting from +4, P./ M. Atk. x2. Can be enchanted up to +20. The item will be deleted after the event is over. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="91576" name="Jewel Chest" icon="icon.etc_treasure_box_i00">
-        <!-- Double-click to obtain a Jewel of D-S grade. Cannot be dropped or sold. The item will be deleted after the event is over. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction dropable="false" stackable="true"/>
-    </item>
-    <item id="91577" name="Life Stone Chest" icon="icon.etc_treasure_box_i01">
-        <!-- Double-click to obtain one of the items: Common Life Stone, Mid-grade Life Stone, Top-grade Life Stone, Shining Life Stone. Cannot be dropped or sold. The item will be deleted after the event is over. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction dropable="false" stackable="true"/>
-    </item>
-    <item id="91578" name="Solid Scroll: Enchant Box" icon="icon.etc_treasure_box_i02">
-        <!-- Double-click to obtain one of the items: Solid Scroll: Enchant Weapon (D-S grade) or Solid Scroll: Enchant Armor (D-S grade). Cannot be dropped or sold. The item will be deleted after the event is over. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction dropable="false" stackable="true"/>
-    </item>
-    <item id="91579" name="Solid Scroll: Enchant Large Box" icon="icon.etc_treasure_box_i03">
-        <!-- Double-click to obtain one of the items: Enhanced Solid Scroll: Enchant Weapon (D-S grade) or Enhanced Solid Scroll: Enchant Armor (D-S grade). Cannot be dropped or sold. The item will be deleted after the event is over. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction dropable="false" stackable="true"/>
-    </item>
-    <item id="91580" name="Armor/ Accessories Varnish Box" icon="icon.etc_treasure_box_i04">
-        <!-- Double-click to randomly obtain Armor/ Accessories Varnish (D-A grade). Cannot be dropped or sold. The item will be deleted after the event is over. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction dropable="false" stackable="true"/>
-    </item>
-    <item id="91581" name="Weapon Varnish Box" icon="icon.etc_treasure_box_i05">
-        <!-- Double-click to randomly obtain Weapon Varnish (D-A grade). Cannot be dropped or sold. The item will be deleted after the event is over. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction dropable="false" stackable="true"/>
-    </item>
-    <item id="91582" name="Elite Armor/ Accessories Varnish Box" icon="icon.etc_treasure_box_i06">
-        <!-- Double-click to randomly obtain Elite Armor/ Accessories Varnish (D-A grade). Cannot be dropped or sold. The item will be deleted after the event is over. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction dropable="false" stackable="true"/>
-    </item>
-    <item id="91583" name="Elite Weapon Varnish Box" icon="icon.etc_treasure_box_i07">
-        <!-- Double-click to randomly obtain Elite Weapon Varnish (D-A grade). Cannot be dropped or sold. The item will be deleted after the event is over. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction dropable="false" stackable="true"/>
-    </item>
-    <item id="91584" name="Special Varnish Box" icon="icon.etc_treasure_box_i08">
-        <!-- Double-click to randomly obtain Special Weapon/ Armor/ Accessories Varnish (A grade). Cannot be dropped or sold. The item will be deleted after the event is over. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction dropable="false" stackable="true"/>
-    </item>
-    <weapon id="91585" name="Test Fishing Rod" icon="icon.fishing_rod05">
-        <!-- Training Fishing Rod -->
-        <set name="weapon_type" val="DUALDAGGER"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1000"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">1</stat>
-            <stat type="mAtk">1</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">1</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <item id="91586" name="Gran Kain Treasure Chest" icon="icon.bm_gold_lure_special_box">
-        <!-- Double-click to obtain Einsahad's Protection or Dragon Miracle Potion. There is a certain chance to get Golden/ Silver Gran Kain Chest. Cannot be dropped or sold. The item will be deleted after the event is over. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91587" name="Silver Gran Kain Chest" icon="icon.bm_silver_lure_box">
-        <!-- Double-click to obtain one of the items, including enhanced rare accessories, Solid Scrolls: Enchant Weapon or Armor (A-B grade), and various supplies. Cannot be dropped or sold. The item will be deleted after the event is over. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91588" name="Golden Gran Kain Chest" icon="icon.bm_gold_lure_box">
-        <!-- Double-click to obtain one of the items: Frintezza's Necklace, various rare items and chests, Solid and Enhanced Scrolls: Enchant Weapon A/ B/ C grade, and enchantment items. Cannot be dropped or sold. The item will be deleted after the event is over. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91589" name="Special Gran Kain Chest" icon="icon.bm_gold_lure_box">
-        <!-- Double-click to obtain one of the items, including Golden/ Silver Gran Kain Chest, as well as various supplies and enchantment items, including rare ones. Cannot be dropped or sold. The item will be deleted after the event is over. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91590" name="Manuscript Chest" icon="icon.etc_bm_lure_box_i00">
-        <!-- Double-click to obtain one of the pages, from 1 to 4. Cannot be dropped or sold. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91591" name="Dimensional Spirit" icon="icon.bm_dimension_soul">
-        <!-- Material to create and upgrade a Dimensional Talisman. Take it to Alchemist Veruti in Giran. Cannot be dropped. -->
-        <set name="etcitem_type" val="MATERIAL"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <armor id="91592" name="Dimensional Talisman Lv. 1" icon="icon.bm_dimension_tallisman">
-        <!-- When equipped, P./ M. Def. +25, P./ M. Evasion +1, Max. HP/ MP/ CP +150, Speed +5, Atk. Spd./ Casting Spd. +10, Acquired XP/ SP +3%. Activates Dimensional Border Power (at a certain probability, increases attack abilities) Lv. 1. Take it to Alchemist Veruti in Giran for upgrade. Dimensional powers cancel the power of Talisman of Border. Effect does not stack with the Talisman of Border. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="91593" name="Dimensional Talisman Lv. 2" icon="icon.bm_dimension_tallisman">
-        <!-- When equipped, P./ M. Def. +30, P./ M. Evasion +2, Max. HP/ MP/ CP +200, Speed +7, Atk. Spd./ Casting Spd. +15, Acquired XP/ SP +5%. Activates Dimensional Border Power (at a certain probability, increases attack abilities) Lv. 1, Dimensional Guard Lv. 2 (reduced chance of being hit by a quick stab attack for a certain amount of time) skill can be used. Take it to Alchemist Veruti in Giran for upgrade. Dimensional powers cancel the power of Talisman of Border. Effect does not stack with the Talisman of Border. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="91594" name="Dimensional Talisman Lv. 3" icon="icon.bm_dimension_tallisman">
-        <!-- When equipped, P./ M. Def. +35, P./ M. Evasion +2, Max. HP/ MP/ CP +250, Speed +7, Atk. Spd./ Casting Spd. +15, Acquired XP/ SP +6%. Activates Dimensional Border Power (at a certain probability, increases attack abilities) Lv. 2, Dimensional Guard Lv. 3 (reduced chance of being hit by a quick stab attack for a certain amount of time) skill can be used. Take it to Alchemist Veruti in Giran for upgrade. Dimensional powers cancel the power of Talisman of Border. Effect does not stack with the Talisman of Border. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="91595" name="Dimensional Talisman Lv. 4" icon="icon.bm_dimension_tallisman">
-        <!-- When equipped, P./ M. Def. +40, P./ M. Evasion +2, Max. HP/ MP/ CP +300, Speed +7, Atk. Spd./ Casting Spd. +15, Acquired XP/ SP +7%. Activates Dimensional Border Power (at a certain probability, increases attack abilities) Lv. 3, Dimensional Guard Lv. 4 (reduced chance of being hit by a quick stab attack for a certain amount of time) skill can be used. Take it to Alchemist Veruti in Giran for upgrade. Dimensional powers cancel the power of Talisman of Border. Effect does not stack with the Talisman of Border. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="91596" name="Dimensional Talisman Lv. 5" icon="icon.bm_dimension_tallisman">
-        <!-- When equipped, P./ M. Def. +45, P./ M. Evasion +3, Max. HP/ MP/ CP +400, Speed +8, Atk. Spd./ Casting Spd. +20, Acquired XP/ SP +8%. Activates Dimensional Border Power (at a certain probability, increases attack abilities) Lv. 4, Dimensional Guard Lv. 5 (reduced chance of being hit by a quick stab attack for a certain amount of time and reduced Received P./ M. Critical Damage) skill can be used. Take it to Alchemist Veruti in Giran for upgrade. Dimensional powers cancel the power of Talisman of Border. Effect does not stack with the Talisman of Border. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="91597" name="Dimensional Talisman Lv. 6" icon="icon.bm_dimension_tallisman">
-        <!-- When equipped, P./ M. Def. +50, P./ M. Evasion +3, Max. HP/ MP/ CP +500, Speed +8, Atk. Spd./ Casting Spd. +30, Acquired XP/ SP +10%. Activates Dimensional Border Power (at a certain probability, increases attack abilities) Lv. 5, Dimensional Guard Lv. 6 (reduced chance of being hit by a quick stab attack for a certain amount of time and reduced Received P./ M. Critical Damage) skill can be used. Take it to Alchemist Veruti in Giran for upgrade. Dimensional powers cancel the power of Talisman of Border. Effect does not stack with the Talisman of Border. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="91598" name="Dimensional Talisman Lv. 7" icon="icon.bm_dimension_tallisman">
-        <!-- When equipped, P./ M. Def. +70, P./ M. Evasion +4, Max. HP/ MP/ CP +1000, Speed +9, Atk. Spd. +40, Casting Spd. +50, Acquired XP/ SP +12%. Activates Dimensional Border Power (at a certain probability, increases attack abilities) Lv. 6, Dimensional Guard Lv. 7 (reduced chance of being hit by a quick stab attack for a certain amount of time and reduced Received P./ M. Critical Damage) skill can be used. Take it to Alchemist Veruti in Giran for upgrade. Dimensional powers cancel the power of Talisman of Border. Effect does not stack with the Talisman of Border. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="91599" name="Dimensional Talisman Lv. 8" icon="icon.bm_dimension_tallisman">
-        <!-- When equipped, P./ M. Def. +80, P./ M. Evasion +4, Max. HP/ MP/ CP +1300, Speed +9, Atk. Spd. +40, Casting Spd. +65, Acquired XP/ SP +15%. Activates Dimensional Border Power (at a certain probability, increases attack abilities) Lv. 7, Dimensional Guard Lv. 8 (reduced chance of being hit by a quick stab attack for a certain amount of time, reduced Received P./ M. Critical Damage, increased M. Damage Resistance) skill can be used. Take it to Alchemist Veruti in Giran for upgrade. Dimensional powers cancel the power of Talisman of Border. Effect does not stack with the Talisman of Border. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
+	<item id="91500" name="Crafting Pack - Basalt Battlehammer" type="NONE" icon="icon.event_hero_treasure_box_i00">
+	<!-- Double-click to obtain 1 Recipe: Basalt Battlehammer (30%) and 25 Basalt Battlehammer Heads.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91501" name="Crafting Pack - Imperial Staff" type="NONE" icon="icon.event_hero_treasure_box_i00">
+	<!-- Double-click to obtain 1 Recipe: Imperial Staff (30%) and 25 Imperial Staff Heads. Cannot be dropped or sold at an NPC's store. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91502" name="Crafting Pack - Angel Slayer" type="NONE" icon="icon.event_hero_treasure_box_i00">
+	<!-- Double-click to obtain 1 Recipe: Angel Slayer (30%) and 25 Angel Slayer Blades.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91503" name="Crafting Pack - Dragon Hunter Axe" type="NONE" icon="icon.event_hero_treasure_box_i00">
+	<!-- Double-click to obtain 1 Recipe: Dragon Hunter Axe (30%) and 25 Dragon Hunter Axe Blades.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91504" name="Crafting Pack - Saint Spear" type="NONE" icon="icon.event_hero_treasure_box_i00">
+	<!-- Double-click to obtain 1 Recipe: Saint Spear (30%) and 25 Saint Spear Blades.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91505" name="Crafting Pack - Demon Splinter" type="NONE" icon="icon.event_hero_treasure_box_i00">
+	<!-- Double-click to obtain 1 Recipe: Demon Splinter (30%) and 25 Demon Splinter Blades.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91506" name="Crafting Pack - Heaven's Divider" type="NONE" icon="icon.event_hero_treasure_box_i00">
+	<!-- Double-click to obtain 1 Recipe: Heaven's Divider (30%) and 25 Heaven's Divider Edges.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91507" name="Crafting Pack - Arcana Mace" type="NONE" icon="icon.event_hero_treasure_box_i00">
+	<!-- Double-click to obtain 1 Recipe: Arcana Mace (30%) and 25 Arcana Mace Heads.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91508" name="Crafting Pack - Draconic Bow" type="NONE" icon="icon.event_hero_treasure_box_i00">
+	<!-- Double-click to obtain 1 Recipe: Draconic Bow (30%) and 25 Draconic Bow Shafts.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91509" name="Crafting Pack - Sealed Imperial Crusader Breastplate" type="NONE" icon="icon.event_hero_treasure_box_i00">
+	<!-- Double-click to obtain 1 Recipe: Sealed Imperial Crusader Breastplate (30%) and 35 Sealed Imperial Crusader Breastplate Parts.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91510" name="Crafting Pack - Sealed Imperial Crusader Gaiters" type="NONE" icon="icon.event_hero_treasure_box_i00">
+	<!-- Double-click to obtain 1 Recipe: Sealed Imperial Crusader Gaiters (30%) and 35 Sealed Imperial Crusader Gaiter Patterns.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91511" name="Crafting Pack - Sealed Imperial Crusader Gauntlets" type="NONE" icon="icon.event_hero_treasure_box_i00">
+	<!-- Double-click to obtain 1 Recipe: Sealed Imperial Crusader Gauntlets (30%) and 35 Sealed Imperial Crusader Gauntlet Designs.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91512" name="Crafting Pack - Sealed Imperial Crusader Boots" type="NONE" icon="icon.event_hero_treasure_box_i00">
+	<!-- Double-click to obtain 1 Recipe: Sealed Imperial Crusader Boots (30%) and 35 Sealed Imperial Crusader Boot Designs.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91513" name="Crafting Pack - Sealed Imperial Crusader Shield" type="NONE" icon="icon.event_hero_treasure_box_i00">
+	<!-- Double-click to obtain 1 Recipe: Sealed Imperial Crusader Shield (30%) and 35 Sealed Imperial Crusader Shield Fragments.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91514" name="Crafting Pack - Sealed Imperial Crusader Helmet" type="NONE" icon="icon.event_hero_treasure_box_i00">
+	<!-- Double-click to obtain 1 Recipe: Sealed Imperial Crusader Helmet (30%) and 35 Sealed Imperial Crusader Helmet Patterns.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91515" name="Crafting Pack - Sealed Draconic Leather Armor" type="NONE" icon="icon.event_hero_treasure_box_i00">
+	<!-- Double-click to obtain 1 Recipe: Sealed Draconic Leather Armor (30%) and 35 Sealed Draconic Leather Armor Parts.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91516" name="Crafting Pack - Sealed Draconic Leather Gloves" type="NONE" icon="icon.event_hero_treasure_box_i00">
+	<!-- Double-click to obtain 1 Recipe: Sealed Draconic Leather Gloves (30%) and 35 Sealed Draconic Leather Glove Fabric.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91517" name="Crafting Pack - Sealed Draconic Leather Boots" type="NONE" icon="icon.event_hero_treasure_box_i00">
+	<!-- Double-click to obtain 1 Recipe: Sealed Draconic Leather Boots (30%) and 35 Sealed Draconic Leather Boot Designs.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91518" name="Crafting Pack - Sealed Draconic Leather Helmet" type="NONE" icon="icon.event_hero_treasure_box_i00">
+	<!-- Double-click to obtain 1 Recipe: Sealed Draconic Leather Helmet (30%) and 35 Sealed Draconic Leather Helmet Patterns.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91519" name="Crafting Pack - Sealed Major Arcana Robe" type="NONE" icon="icon.event_hero_treasure_box_i00">
+	<!-- Double-click to obtain 1 Recipe: Sealed Major Arcana Robe (30%) and 35 Sealed Major Arcana Robe Parts.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91520" name="Crafting Pack - Sealed Major Arcana Gloves" type="NONE" icon="icon.event_hero_treasure_box_i00">
+	<!-- Double-click to obtain 1 Recipe: Sealed Major Arcana Gloves (30%) and 35 Sealed Major Arcana Glove Fabric.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91521" name="Crafting Pack - Sealed Major Arcana Boots" type="NONE" icon="icon.event_hero_treasure_box_i00">
+	<!-- Double-click to obtain 1 Recipe: Sealed Major Arcana Boots (30%) and 35 Sealed Major Arcana Boot Designs.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91522" name="Crafting Pack - Sealed Major Arcana Circlet" type="NONE" icon="icon.event_hero_treasure_box_i00">
+	<!-- Double-click to obtain 1 Recipe: Sealed Major Arcana Circlet (30%) and 35 Sealed Major Arcana Circlet Patterns.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91523" name="Crafting Pack - Sealed Tateossian Earring" type="NONE" icon="icon.event_hero_treasure_box_i00">
+	<!-- Double-click to obtain 1 Recipe: Sealed Tateossian Earring (30%) and 35 Sealed Tateossian Earring Parts.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91524" name="Crafting Pack - Sealed Tateossian Ring" type="NONE" icon="icon.event_hero_treasure_box_i00">
+	<!-- Double-click to obtain 1 Recipe: Sealed Tateossian Ring (30%) and 35 Sealed Tateossian Ring Gems.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91525" name="Crafting Pack - Sealed Tateossian Necklace" type="NONE" icon="icon.event_hero_treasure_box_i00">
+	<!-- Double-click to obtain 1 Recipe: Sealed Tateossian Necklace (30%) and 35 Sealed Tateossian Necklace Chains.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91526" name="Weapon Varnish (D-grade)" type="NONE" icon="icon.etc_earth_crystal_1_i00">
+	<!-- A varnish used to upgrade a low-level weapon (D-grade) to a top-grade weapon (D-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91527" name="High-grade Weapon Varnish (D-grade)" type="NONE" icon="icon.etc_fire_crystal_1_i00">
+	<!-- A varnish used to upgrade a top-grade weapon (D-grade) to a top-grade weapon (C-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91528" name="Weapon Varnish (C-grade)" type="NONE" icon="icon.etc_earth_crystal_1_i00">
+	<!-- A varnish used to upgrade a low-level weapon (C-grade) to a top-grade weapon (C-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91529" name="High-grade Weapon Varnish (C-grade)" type="NONE" icon="icon.etc_fire_crystal_1_i00">
+	<!-- A varnish used to upgrade a top-grade weapon (C-grade) to a top-grade weapon (B-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91530" name="Weapon Varnish (B-grade)" type="NONE" icon="icon.etc_earth_crystal_1_i00">
+	<!-- A varnish used to upgrade a low-level weapon (B-grade) to a top-grade weapon (B-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91531" name="High-grade Weapon Varnish (B-grade)" type="NONE" icon="icon.etc_fire_crystal_1_i00">
+	<!-- A varnish used to upgrade a top-grade weapon (B-grade) to a top-grade weapon (A-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91532" name="Weapon Varnish (A-grade)" type="NONE" icon="icon.etc_earth_crystal_1_i00">
+	<!-- A varnish used to upgrade a low-level weapon (A-grade) to a top-grade weapon (A-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91533" name="Armor Varnish (D-grade)" type="NONE" icon="icon.etc_water_crystal_1_i00">
+	<!-- A varnish used to upgrade low-level armor (D-grade) to top-grade armor (D-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91534" name="High-grade Armor Varnish (D-grade)" type="NONE" icon="icon.etc_unholy_crystal_1_i00">
+	<!-- A varnish used to upgrade top-grade armor (D-grade) to top-grade armor (C-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91535" name="Armor Varnish (C-grade)" type="NONE" icon="icon.etc_water_crystal_1_i00">
+	<!-- A varnish used to upgrade low-level armor (C-grade) to top-grade armor (C-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91536" name="High-grade Armor Varnish (C-grade)" type="NONE" icon="icon.etc_unholy_crystal_1_i00">
+	<!-- A varnish used to upgrade top-grade armor (C-grade) to top-grade armor (B-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91537" name="Armor Varnish (B-grade)" type="NONE" icon="icon.etc_water_crystal_1_i00">
+	<!-- A varnish used to upgrade low-level armor (B-grade) to top-grade armor (B-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91538" name="High-grade Armor Varnish (B-grade)" type="NONE" icon="icon.etc_unholy_crystal_1_i00">
+	<!-- A varnish used to upgrade top-grade armor (B-grade) to top-grade armor (A-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91539" name="Armor Varnish (A-grade)" type="NONE" icon="icon.etc_water_crystal_1_i00">
+	<!-- A varnish used to upgrade low-level armor (A-grade) to top-grade armor (A-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91540" name="Accessory Varnish (D-grade)" type="NONE" icon="icon.etc_holy_crystal_1_i00">
+	<!-- A varnish used to upgrade a low-level accessory (D-grade) to a top-grade accessory (D-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91541" name="High-grade Accessory Varnish (D-grade)" type="NONE" icon="icon.etc_wind_crystal_1_i00">
+	<!-- A varnish used to upgrade a top-grade accessory (D-grade) to a top-grade accessory (C-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91542" name="Accessory Varnish (C-grade)" type="NONE" icon="icon.etc_holy_crystal_1_i00">
+	<!-- A varnish used to upgrade a low-level accessory (C-grade) to a top-grade accessory (C-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91543" name="High-grade Accessory Varnish (C-grade)" type="NONE" icon="icon.etc_wind_crystal_1_i00">
+	<!-- A varnish used to upgrade a top-grade accessory (C-grade) to a top-grade accessory (B-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91544" name="Accessory Varnish (B-grade)" type="NONE" icon="icon.etc_holy_crystal_1_i00">
+	<!-- A varnish used to upgrade a low-level accessory (B-grade) to a top-grade accessory (B-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91545" name="High-grade Accessory Varnish (B-grade)" type="NONE" icon="icon.etc_wind_crystal_1_i00">
+	<!-- A varnish used to upgrade a top-grade accessory (B-grade) to a top-grade accessory (A-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91546" name="Accessory Varnish (A-grade)" type="NONE" icon="icon.etc_holy_crystal_1_i00">
+	<!-- A varnish used to upgrade a low-level accessory (A-grade) to a top-grade accessory (A-grade). Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91547" name="Special Weapon Varnish (A-grade)" type="NONE" icon="icon.etc_crystal_cave_crystal_i01">
+	<!-- A varnish used to upgrade an A-grade weapon to an S-grade weapon. Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91548" name="Special Armor Varnish (A-grade)" type="NONE" icon="icon.etc_crystal_cave_crystal_i00">
+	<!-- A varnish used to upgrade A-grade armor to S-grade armor. Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91549" name="Special Accessory Varnish (A-grade)" type="NONE" icon="icon.etc_crystal_cave_crystal_i0">
+	<!-- A varnish used to upgrade an A-grade accessory to an S-grade accessory. Go to Head Blacksmith Ferris in the Town of Aden for the upgrade.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="91550" name="Frintezza's Necklace Lv 1" type="NONE" body-part="NECK" icon="icon.accessory_necklace_of_frintessa_i00">
+	<!-- MP +29, Sleep Attack and Resistance +10%, Paralysis Attack and Resistance +5%, Skill Cooldown -2%, Damage Reflect Resistance +2%, P./M. Skill Power +5%. Cannot be enchanted. -->
+		<restriction freightable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="83.0"/>
+			<stat type="maxMp" value="29.0"/>
+		</stats>
+	</armor>
+
+	<armor id="91551" name="Frintezza's Necklace Lv 2" type="NONE" body-part="NECK" icon="icon.accessory_necklace_of_frintessa_i03">
+	<!-- MP +36, Sleep Attack and Resistance +15%, Paralysis Attack and Resistance +10%, Skill Cooldown -3%, Damage Reflect Resistance +3%, P./M. Skill Power +10%. Cannot be enchanted. -->
+		<restriction freightable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="96.0"/>
+			<stat type="maxMp" value="36.0"/>
+		</stats>
+	</armor>
+
+	<armor id="91552" name="Frintezza's Necklace Lv 3" type="NONE" body-part="NECK" icon="icon.accessory_necklace_of_frintessa_i04">
+	<!-- MP +44, Sleep Attack and Resistance +20%, Paralysis Attack and Resistance +15%, Skill Cooldown -5%, Chance to be hit by P. Critical Attack -5%, Chance to be hit by M. Critical Attack -2%, Damage Reflect Resistance +4%, P. Skill Power/M. Skill Power +15%. Cannot be Enchanted. -->
+		<restriction freightable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="109.0"/>
+			<stat type="maxMp" value="44.0"/>
+		</stats>
+	</armor>
+
+	<armor id="91553" name="Frintezza's Necklace Lv 4" type="NONE" body-part="NECK" icon="icon.accessory_necklace_of_frintessa_i05">
+	<!-- MP +65, Sleep Attack and Resistance +30%, Paralysis Attack and Resistance +20%, Skill Cooldown -10%, Chance to be hit by P. Critical Attack -10%, Chance to be hit by M. Critical Attack -5%, Damage Reflect Resistance +10%, P. Skill Power/M. Skill Power +20%. Allows using delay increase debuffs. Cannot be Enchanted. -->
+		<restriction freightable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="125.0"/>
+			<stat type="maxMp" value="65.0"/>
+		</stats>
+	</armor>
+
+	<item id="91554" name="Frintezza Essence" type="NONE" icon="icon.frintessa_essence_i01">
+	<!-- Take the essence and a +10 to +12 Majestic Necklace to Head Blacksmith Ferris in the Town of Aden to obtain the Immortal Frintezza's Necklace Lv. 4 via upgrade. -->
+		<restriction freightable="false" stackable="true" destroyable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91555" name="Special Summer Box" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to randomly obtain 1 Anakim/Lilith Rune Stage 9, Earth Dragon Belt/Fire Dragon Belt - Venir's Blessing Lv. 4, or +10 Agathion Pack. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<weapon id="91556" name="Enchanted Warrior's Shiny Dualsword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- A 30-day item. When equipped, Atk. Spd. +5%. Cannot be enchanted or augmented, and has no Soul Crystal option. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="2330" commission-type="OTHER_ITEM" duration="43200" enchant-enabled="false"/>
+		<crystal type="C"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="200.0"/>
+			<stat type="mAtk" value="93.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="91557" name="Enchanted Warrior's Shiny Staff" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_sages_staff_i01" magic="true">
+	<!-- A 30-day item. When equipped, Casting Spd. +12%. Cannot be enchanted or augmented, and has no Soul Crystal option. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1000" commission-type="OTHER_ITEM" duration="43200" enchant-enabled="false"/>
+		<crystal type="C"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="160.0"/>
+			<stat type="mAtk" value="126.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="91558" name="Enchanted Warrior's Shiny Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_akat_long_bow_i01">
+	<!-- A 30-day item. When equipped, P. Critical Damage +52. Cannot be enchanted or augmented, and has no Soul Crystal option. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1740" commission-type="OTHER_ITEM" duration="43200" enchant-enabled="false"/>
+		<crystal type="C"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="3"/>
+		<stats>
+			<stat type="pAtk" value="348.0"/>
+			<stat type="mAtk" value="99.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="227.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="91559" name="Enchanted Warrior's Shiny Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_grace_dagger_i01">
+	<!-- A 30-day item. When equipped, P. Critical Damage +66. Cannot be enchanted or augmented, and has no Soul Crystal option. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1020" commission-type="OTHER_ITEM" duration="43200" enchant-enabled="false"/>
+		<crystal type="C"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="142.0"/>
+			<stat type="mAtk" value="91.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="91560" name="Enchanted Warrior's Shiny Spear" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_poleaxe_i01">
+	<!-- A 30-day item. When equipped, has a 25% chance to stun on critical hit. Cannot be enchanted or augmented, and has no Soul Crystal option. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="2010" commission-type="OTHER_ITEM" duration="43200" enchant-enabled="false"/>
+		<crystal type="C"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="159.0"/>
+			<stat type="mAtk" value="91.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+	</weapon>
+
+	<armor id="91561" name="Enchanted Warrior's Shiny Helmet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
+	<!-- A 30-day item. For Heavy Armor. Cannot be enchanted. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="600" duration="43200" enchant-enabled="false" />
+		<crystal type="C"/>
+		<stats>
+			<stat type="pDef" value="58.0"/>
+		</stats>
+	</armor>
+
+	<armor id="91562" name="Enchanted Warrior's Shiny Armor" type="HEAVY" body-part="FULL_ARMOR" icon="icon.armor_t62_ul_i00">
+	<!-- A 30-day item. For Heavy Armor. Cannot be enchanted. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="10480" duration="43200" enchant-enabled="false" />
+		<crystal type="C"/>
+		<stats>
+			<stat type="pDef" value="239.0"/>
+		</stats>
+	</armor>
+
+	<armor id="91563" name="Enchanted Warrior's Shiny Gauntlets" type="NONE" body-part="GLOVES" icon="icon.armor_t62_g_i00">
+	<!-- A 30-day item. For Heavy Armor. Cannot be enchanted. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="600" duration="43200" enchant-enabled="false" />
+		<crystal type="C"/>
+		<stats>
+			<stat type="pDef" value="39.0"/>
+		</stats>
+	</armor>
+
+	<armor id="91564" name="Enchanted Warrior's Shiny Boots" type="NONE" body-part="FEET" icon="icon.armor_t62_b_i00">
+	<!-- A 30-day item. For Heavy Armor. Cannot be enchanted. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1200" duration="43200" enchant-enabled="false" />
+		<crystal type="C"/>
+		<stats>
+			<stat type="pDef" value="39.0"/>
+		</stats>
+	</armor>
+
+	<armor id="91565" name="Enchanted Warrior's Shiny Headgear" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
+	<!-- A 30-day item. For Light Armor. Cannot be enchanted. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="620" duration="43200" enchant-enabled="false" />
+		<crystal type="C"/>
+		<stats>
+			<stat type="pDef" value="47.0"/>
+		</stats>
+	</armor>
+
+	<armor id="91566" name="Enchanted Warrior's Shiny Coat" type="LIGHT" body-part="FULL_ARMOR" icon="icon.armor_t45_ul_i00">
+	<!-- A 30-day item. For Light Armor. Cannot be enchanted. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="5800" duration="43200" enchant-enabled="false" />
+		<crystal type="C"/>
+		<stats>
+			<stat type="pDef" value="179.0"/>
+		</stats>
+	</armor>
+
+	<armor id="91567" name="Enchanted Warrior's Shiny Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t45_g_i00">
+	<!-- A 30-day item. For Light Armor. Cannot be enchanted. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="600" duration="43200" enchant-enabled="false" />
+		<crystal type="C"/>
+		<stats>
+			<stat type="pDef" value="39.0"/>
+		</stats>
+	</armor>
+
+	<armor id="91568" name="Enchanted Warrior's Shiny Footwear" type="NONE" body-part="FEET" icon="icon.armor_t45_b_i00">
+	<!-- A 30-day item. For Light Armor. Cannot be enchanted. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1210" duration="43200" enchant-enabled="false" />
+		<crystal type="C"/>
+		<stats>
+			<stat type="pDef" value="39.0"/>
+		</stats>
+	</armor>
+
+	<armor id="91569" name="Enchanted Warrior's Shiny Circlet" type="NONE" body-part="HEAD" icon="icon.armor_circlet_i00">
+	<!-- A 30-day item. For Robe. Cannot be enchanted. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="600" duration="43200" enchant-enabled="false" />
+		<crystal type="C"/>
+		<stats>
+			<stat type="pDef" value="54.0"/>
+		</stats>
+	</armor>
+
+	<armor id="91570" name="Enchanted Warrior's Shiny Tunic" type="MAGIC" body-part="CHEST" icon="icon.armor_t57_u_i00">
+	<!-- A 30-day item. For Robe. Cannot be enchanted. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1980" duration="43200" enchant-enabled="false" />
+		<crystal type="C"/>
+		<stats>
+			<stat type="pDef" value="74.0"/>
+			<stat type="maxMp" value="314.0"/>
+		</stats>
+	</armor>
+
+	<armor id="91571" name="Enchanted Warrior's Shiny Stockings" type="MAGIC" body-part="LEGS" icon="icon.armor_t57_l_i00">
+	<!-- A 30-day item. For Robe. Cannot be enchanted. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="960" duration="43200" enchant-enabled="false" />
+		<crystal type="C"/>
+		<stats>
+			<stat type="pDef" value="46.0"/>
+			<stat type="maxMp" value="196.0"/>
+		</stats>
+	</armor>
+
+	<armor id="91572" name="Enchanted Warrior's Shiny Mitt" type="NONE" body-part="GLOVES" icon="icon.armor_t57_g_i00">
+	<!-- A 30-day item. For Robe. Cannot be enchanted. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="610" duration="43200" enchant-enabled="false" />
+		<crystal type="C"/>
+		<stats>
+			<stat type="pDef" value="39.0"/>
+		</stats>
+	</armor>
+
+	<armor id="91573" name="Enchanted Warrior's Shiny Shoes" type="NONE" body-part="FEET" icon="icon.armor_t57_b_i00">
+	<!-- A 30-day item. For Robe. Cannot be enchanted. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1210" duration="43200" enchant-enabled="false" />
+		<crystal type="C"/>
+		<stats>
+			<stat type="pDef" value="34.0"/>
+		</stats>
+	</armor>
+
+	<weapon id="91574" name="Sacred Sword Excalibur" type="TWO_HAND_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_plenitas_i00">
+	<!-- Sacred Sword Excalibur. Enchant the sword and give it to the Excalibur Expeditionary Force Leader to receive various rewards. Will be deleted during maintenance on Wednesday, August 29th, 2018. -->
+		<restriction freightable="false"/>
+		<attributes weight="100" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="92.0"/>
+			<stat type="mAtk" value="54.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<item id="91575" name="Scroll: Enchant Excalibur" type="ENCHANT_WEAPON" icon="icon.yogi_scroll_of_enchant_weapon_grade_i00">
+	<!-- A weapon enchant scroll that can be used on the Sacred Sword Excalibur. Up to enchant level +3, P. Atk. +5 and M. Atk. +3. Starting at +4, P. Atk./M. Atk. bonus doubles. Can only be used up to +20. Will be deleted during maintenance on Wednesday, August 29th, 2018. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91576" name="Gemstone Box" type="NONE" icon="icon.etc_treasure_box_i00">
+	<!-- Double-click to randomly obtain 1 D- to S-grade Gemstone.   -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91577" name="Life Stone Pack" type="NONE" icon="icon.etc_treasure_box_i01">
+	<!-- Double-click to randomly obtain 1 Standard, Intermediate, High-grade, or Top-grade Shining Life Stone.   -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91578" name="Stable Enchant Scroll Pack" type="NONE" icon="icon.etc_treasure_box_i02">
+	<!-- Double-click to randomly obtain 1 Stable Scroll: Enchant Armor/Weapon (D- to S-grade).   -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91579" name="Greater Enchant Scroll Pack" type="NONE" icon="icon.etc_treasure_box_i03">
+	<!-- Double-click to randomly obtain 1 Advanced Scroll: Enchant Armor/Weapon (D- to S-grade).   -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91580" name="Armor/Accessory Varnish Box" type="NONE" icon="icon.etc_treasure_box_i04">
+	<!-- Double-click to randomly obtain 1 Armor/Accessory Varnish (D- to A-grade).   -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91581" name="Weapon Varnish Box" type="NONE" icon="icon.etc_treasure_box_i05">
+	<!-- Double-click to randomly obtain 1 Weapon Varnish (D- to A-grade).   -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91582" name="High-grade Armor/Accessory Varnish Box" type="NONE" icon="icon.etc_treasure_box_i06">
+	<!-- Double-click to randomly obtain 1 High-grade Armor/Accessory Varnish (D- to B-grade).   -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91583" name="High-grade Weapon Varnish Box" type="NONE" icon="icon.etc_treasure_box_i07">
+	<!-- Double-click to randomly obtain 1 High-Grade Weapon Varnish (D- to B-grade).   -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91584" name="Special Varnish Box" type="NONE" icon="icon.etc_treasure_box_i08">
+	<!-- Double-click to randomly obtain 1 Special Armor/Weapon/Accessory Varnish (A-grade).   -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<weapon id="91585" name="Test Fishing Rod" type="FISHING_ROD" body-part="TWO_HAND" icon="icon.fishing_rod05">
+	<!-- Fishing Rod (Test) -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="1.0"/>
+			<stat type="mAtk" value="1.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="1.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<item id="91586" name="Gran Kain's Treasure Chest" type="NONE" icon="icon.bm_gold_lure_special_box">
+	<!-- Double-click to obtain 1 Einhasad's Protection or Dragon's Miracle Potion. If you're lucky, you can also get 1 Gran Kain's Golden Box or Gran Kain's Silver Box.   -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91587" name="Gran Kain's Silver Box" type="NONE" icon="icon.bm_silver_lure_box">
+	<!-- Double-click to obtain a Refined Rare Accessory, Stable/Improved Scroll: Enchant Armor (A-/B-grade), or a consumable.   -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91588" name="Gran Kain's Golden Box" type="NONE" icon="icon.bm_gold_lure_box">
+	<!-- Double-click to obtain a Frintezza's Necklace, Codex Box, Stable/Improved Scroll: Enchant Weapon (A-/B-/C-grade) or other rare item.   -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91589" name="Gran Kain's Special Box" type="NONE" icon="icon.bm_gold_lure_box">
+	<!-- Double-click to obtain a high-grade item obtainable from Gran Kain's Golden/Silver Box, enhancement item, or consumable.   -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91590" name="Codex Box" type="NONE" icon="icon.etc_bm_lure_box_i00">
+	<!-- Double-click to obtain Codex Chapters 1 to 4.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91591" name="Dimensional Soul" type="NONE" icon="icon.bm_dimension_soul">
+	<!-- A material used to craft and upgrade Dimensional Talismans. Take it to Veruti in the Town of Giran to use it.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="91592" name="Dimensional Talisman Lv. 1" type="NONE" body-part="TALISMAN" icon="icon.bm_dimension_tallisman">
+	<!-- When equipped, P. Def/M. Def +25, P./M. Evasion +1, Max HP/MP/CP +150, Movement Speed +5, Atk. Spd./Casting Spd. +10, XP/SP gain +3%. Allows use of Dimension Guard - Lv. 1 (temporarily decreases the chance of getting hit by Deadly Stabs). Can be upgraded to a higher-grade Talisman through Veruti in the Town of Giran. When both the Dimensional Power and the Talisman of Fate are equipped, only the Dimensional Power is applied.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91593" name="Dimensional Talisman Lv. 2" type="NONE" body-part="TALISMAN" icon="icon.bm_dimension_tallisman">
+	<!-- When equipped, P. Def/M. Def +30, P./M. Evasion +2, Max HP/MP/CP +200, Movement Speed +7, Atk. Spd./Casting Spd. +15, XP/SP gain +5%. Applies the Dimensional Power of Fate - Lv. 1 (has a chance to increase Attack Abilities on attack) and allows using the Dimension Guard - Lv. 2 (temporarily decreases the chance of getting hit by Deadly Stabs). Can be upgraded to a higher-grade Talisman through Veruti in the Town of Giran. When both the Dimensional Power and the Talisman of Fate are equipped, only the Dimensional Power is applied.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91594" name="Dimensional Talisman Lv. 3" type="NONE" body-part="TALISMAN" icon="icon.bm_dimension_tallisman">
+	<!-- When equipped, P. Def/M. Def +35, P./M. Evasion +2, Max HP/MP/CP +250, Movement Speed +7, Atk. Spd./Casting Spd. +15, XP/SP gain +6%. Applies the Dimensional Power of Fate - Lv. 2 (has a chance to increase Attack Abilities on attack) and allows use of Dimension Guard - Lv. 3 (temporarily decreases the chance of getting hit by Deadly Stabs). Can be upgraded to a higher-grade Talisman through Veruti in the Town of Giran. When both the Dimensional Power and the Talisman of Fate are equipped, only the Dimensional Power is applied.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91595" name="Dimensional Talisman Lv. 4" type="NONE" body-part="TALISMAN" icon="icon.bm_dimension_tallisman">
+	<!-- When equipped, P. Def/M. Def +40, P./M. Evasion +2, Max HP/MP/CP +300, Movement Speed +7, Atk. Spd./Casting Spd. +15, XP/SP gain +7%. Applies the Dimensional Power of Fate - Lv. 3 (has a chance to increase Attack Abilities on attack) and allows use of Dimension Guard - Lv. 4 (temporarily decreases the chance of getting hit by Deadly Stabs). Can be upgraded to a higher-grade Talisman through Veruti in the Town of Giran. When both the Dimensional Power and the Talisman of Fate are equipped, only the Dimensional Power is applied.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91596" name="Dimensional Talisman Lv. 5" type="NONE" body-part="TALISMAN" icon="icon.bm_dimension_tallisman">
+	<!-- When equipped, P. Def/M. Def +45, P./M. Evasion +3, Max HP/MP/CP +400, Movement Speed +8, Atk. Spd./Casting Spd. +20, XP/SP gain +8%. Applies the Dimensional Power of Fate - Lv. 4 (has a chance to increase Attack Abilities on attack) and allows use of Dimension Guard - Lv. 5 (temporarily decreases the chance of getting hit by Deadly Stabs and P./M. Critical Damage Received). Can be upgraded to a higher-grade Talisman through Veruti in the Town of Giran. When both the Dimensional Power and the Talisman of Fate are equipped, only the Dimensional Power is applied.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91597" name="Dimensional Talisman Lv. 6" type="NONE" body-part="TALISMAN" icon="icon.bm_dimension_tallisman">
+	<!-- When equipped, P. Def/M. Def +50, P./M. Evasion +3, Max HP/MP/CP +500, Movement Speed +8, Atk. Spd./Casting Spd. +30, XP/SP gain +10%. Applies the Dimensional Power of Fate - Lv. 5 (has a chance to increase Attack Abilities on attack) and allows use of Dimension Guard - Lv. 6 (temporarily decreases the chance of getting hit by Deadly Stabs and P./M. Critical Damage Received). Can be upgraded to a higher-grade Talisman through Veruti in the Town of Giran. When both the Dimensional Power and the Talisman of Fate are equipped, only the Dimensional Power is applied.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91598" name="Dimensional Talisman Lv. 7" type="NONE" body-part="TALISMAN" icon="icon.bm_dimension_tallisman">
+	<!-- When equipped, P. Def/M. Def +70, P./M. Evasion +4, Max HP/MP/CP +1000, Movement Speed +9, Atk. Spd. +40, Casting Spd. +50, XP/SP gain +12%. Applies the Dimensional Power of Fate - Lv. 6 (has a chance to increase Attack Abilities on attack) and allows use of Dimension Guard - Lv. 7 (temporarily decreases the chance of getting hit by Deadly Stabs and P./M. Critical Damage Received). Can be upgraded to a higher-grade Talisman through Veruti in the Town of Giran. When both the Dimensional Power and the Talisman of Fate are equipped, only the Dimensional Power is applied.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91599" name="Dimensional Talisman Lv. 8" type="NONE" body-part="TALISMAN" icon="icon.bm_dimension_tallisman">
+	<!-- When equipped, P. Def/M. Def +80, P./M. Evasion +4, Max HP/MP/CP +1300, Movement Speed +9, Atk. Spd. +40, Casting Spd. +65, XP/SP gain +15%. Applies the Dimensional Power of Fate - Lv. 7 (has a chance to increase Attack Abilities on attack) and allows use of Dimension Guard - Lv. 8 (temporarily decreases the chance of getting hit by Deadly Stabs and P./M. Critical Damage Received, and increases M. Def). Can be upgraded to a higher-grade Talisman through Veruti in the Town of Giran. When both the Dimensional Power and the Talisman of Fate are equipped, only the Dimensional Power is applied.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
 </list>

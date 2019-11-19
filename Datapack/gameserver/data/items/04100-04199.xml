@@ -1,981 +1,681 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="4100" name="Sealed Zubei's Gauntlet Fragment" icon="icon.etc_plate_silver_i00">
-        <!-- Main ingredient definitely required for a Dwarf to make Zubei's Gauntlets. Can be sold. -->
-        <set name="etcitem_type" val="MATERIAL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="60"/>
-        <set name="price" val="3843"/>
-        <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4101" name="Zubei's Shield Fragment" icon="icon.etc_plate_silver_i00">
-        <!-- Main ingredient definitely required for a Dwarf to make Zubei's Shield. Can be sold. -->
-        <set name="etcitem_type" val="MATERIAL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="60"/>
-        <set name="price" val="3450"/>
-        <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4102" name="Zubei's Helmet Design" icon="icon.etc_pouch_brown_i00">
-        <!-- Main ingredient definitely required for a Dwarf to make Zubei's Helmet. Can be sold. -->
-        <set name="etcitem_type" val="MATERIAL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="60"/>
-        <set name="price" val="4453"/>
-        <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4103" name="Pata Blade" icon="icon.etc_sword_body_i00">
-        <!-- Main ingredient definitely required for a Dwarf to make Pata. Can be sold. -->
-        <set name="etcitem_type" val="MATERIAL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="60"/>
-        <set name="price" val="32950"/>
-        <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4104" name="Great Sword Blade" icon="icon.etc_sword_body_i00">
-        <!-- Main ingredient definitely required for a Dwarf to Great Sword. Can be sold. -->
-        <set name="etcitem_type" val="MATERIAL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="60"/>
-        <set name="price" val="34950"/>
-        <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4105" name="Heavy War Axe Head" icon="icon.etc_squares_gray_i00">
-        <!-- Main ingredient definitely required for a Dwarf to make Heavy War Axe. Can be sold. -->
-        <set name="etcitem_type" val="MATERIAL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="60"/>
-        <set name="price" val="34950"/>
-        <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4106" name="Spirit's Staff Head" icon="icon.etc_squares_gray_i00">
-        <!-- Main ingredient definitely required for a Dwarf to make a Spirit's Staff. Can be sold. -->
-        <set name="etcitem_type" val="MATERIAL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="60"/>
-        <set name="price" val="35533"/>
-        <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4107" name="Keshanberk Blade" icon="icon.etc_sword_body_i00">
-        <!-- Main ingredient definitely required for a Dwarf to make Keshanberk. Can be sold. -->
-        <set name="etcitem_type" val="MATERIAL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="60"/>
-        <set name="price" val="35500"/>
-        <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4108" name="Sword of Valhalla Blade" icon="icon.etc_sword_body_i00">
-        <!-- Main ingredient definitely required for a Dwarf to make Sword of Valhalla. Can be sold. -->
-        <set name="etcitem_type" val="MATERIAL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="60"/>
-        <set name="price" val="35500"/>
-        <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4109" name="Kris Edge" icon="icon.etc_sword_body_i00">
-        <!-- Main ingredient definitely required for a Dwarf to make a Kris. Can be sold. -->
-        <set name="etcitem_type" val="MATERIAL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="60"/>
-        <set name="price" val="35500"/>
-        <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4110" name="Twilight Knife Edge" icon="icon.etc_sword_body_i00">
-        <!-- Main ingredient definitely required for a Dwarf to make Twilight Knife. Can be sold. -->
-        <set name="etcitem_type" val="MATERIAL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="60"/>
-        <set name="price" val="35500"/>
-        <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4111" name="Arthro Nail Blade" icon="icon.etc_sword_body_i00">
-        <!-- Main ingredient definitely required for a Dwarf to make Arthro Nail. Can be sold. -->
-        <set name="etcitem_type" val="MATERIAL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="60"/>
-        <set name="price" val="34950"/>
-        <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4112" name="Dark Elven Longbow Shaft" icon="icon.etc_branch_gold_i00">
-        <!-- Main ingredient definitely required for a Dwarf to make Dark Elven Longbow. Can be sold. -->
-        <set name="etcitem_type" val="MATERIAL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="60"/>
-        <set name="price" val="35325"/>
-        <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4113" name="Great Axe Head" icon="icon.etc_squares_gray_i00">
-        <!-- Main ingredient definitely required for a Dwarf to make Great Axe. Can be sold. -->
-        <set name="etcitem_type" val="MATERIAL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="60"/>
-        <set name="price" val="38867"/>
-        <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4114" name="Damascus Sword Blade" icon="icon.etc_sword_body_i00">
-        <!-- Main ingredient definitely required for a Dwarf to make Damascus Sword. Can be sold. -->
-        <set name="etcitem_type" val="MATERIAL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="60"/>
-        <set name="price" val="45692"/>
-        <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4115" name="Lance Blade" icon="icon.etc_sword_body_i00">
-        <!-- Main ingredient definitely required for a Dwarf to make a Lance. Can be sold. -->
-        <set name="etcitem_type" val="MATERIAL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="60"/>
-        <set name="price" val="45846"/>
-        <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4116" name="Deadman's Glory Stone" icon="icon.etc_squares_gray_i00">
-        <!-- Main ingredient definitely required for a Dwarf to make Deadman's Glory. Can be sold. -->
-        <set name="etcitem_type" val="MATERIAL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="60"/>
-        <set name="price" val="45769"/>
-        <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4117" name="Art of Battle Axe Blade" icon="icon.etc_sword_body_i00">
-        <!-- Main ingredient definitely required for a Dwarf to make Art of Battle Axe. Can be sold. -->
-        <set name="etcitem_type" val="MATERIAL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="60"/>
-        <set name="price" val="45769"/>
-        <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4118" name="Evil Spirit Head" icon="icon.etc_squares_gray_i00">
-        <!-- Main ingredient definitely required for a Dwarf to make the Staff of Evil Spirits. Can be sold. -->
-        <set name="etcitem_type" val="MATERIAL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="60"/>
-        <set name="price" val="48308"/>
-        <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4119" name="Demon's Dagger Edge" icon="icon.etc_sword_body_i00">
-        <!-- Main ingredient definitely required for a Dwarf to make a Demon's Dagger. Can be sold. -->
-        <set name="etcitem_type" val="MATERIAL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="60"/>
-        <set name="price" val="45692"/>
-        <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4120" name="Bellion Cestus Edge" icon="icon.etc_sword_body_i00">
-        <!-- Main ingredient definitely required for a Dwarf to make Bellion Cestus. Can be sold. -->
-        <set name="etcitem_type" val="MATERIAL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="60"/>
-        <set name="price" val="45769"/>
-        <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4121" name="Bow of Peril Shaft" icon="icon.etc_branch_gold_i00">
-        <!-- Main ingredient definitely required for a Dwarf to make a Bow of Peril. Can be sold. -->
-        <set name="etcitem_type" val="MATERIAL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="60"/>
-        <set name="price" val="45923"/>
-        <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4122" name="Recipe: Maestro Holder" icon="icon.etc_recipe_yellow_i00">
-        <!-- For Dwarves only. Recipe for Maestro Holder. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="4500"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4123" name="Recipe: Maestro Anvil Lock" icon="icon.etc_recipe_yellow_i00">
-        <!-- For Dwarves only. Recipe for Maestro Anvil Lock. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="4500"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4124" name="Recipe: Craftsman Mold" icon="icon.etc_recipe_yellow_i00">
-        <!-- For Dwarves only. Recipe for Craftsman Mold. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="4500"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4125" name="Recipe: Maestro Mold" icon="icon.etc_recipe_yellow_i00">
-        <!-- For Dwarves only. Recipe for Maestro Mold. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="4500"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4126" name="Recipe: Adamantite Earring" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for Adamantite Earring. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="12120"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4127" name="Recipe: Adamantite Ring" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for an Adamantite Ring. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="8080"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4128" name="Recipe: Adamantite Necklace" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for an Adamantite Necklace. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="16160"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4129" name="Recipe: Black Ore Earring" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for Black Ore Earring. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="18480"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4130" name="Recipe: Black Ore Ring" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a Black Ore Ring. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="12320"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4131" name="Recipe: Black Ore Necklace" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a Black Ore Necklace. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="24600"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4132" name="Recipe: Compound Shield" icon="icon.etc_recipe_yellow_i00">
-        <!-- For Dwarves only. Recipe for a Compound Shield. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="5160"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4133" name="Recipe: Zubei's Breastplate" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a Zubei's Breastplate. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="41600"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4134" name="Recipe: Zubei's Gaiters" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for Zubei's Gaiters. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="26000"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4135" name="Recipe: Implosion Boots" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for Boots of implosion. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="16080"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4136" name="Recipe: Boots of Silence" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for Boots of Silence. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="10380"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4137" name="Recipe: Guardian's Boots" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for the Guardian's Boots. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="10380"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4138" name="Recipe: Paradia Boots" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for Paradia Boots. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="16080"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4139" name="Recipe: Elemental Boots" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for Elemental Boots. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="16080"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4140" name="Recipe: Boots of Grace" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for Boots of Grace. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="16080"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4141" name="Recipe: Avadon Breastplate" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for an Avadon Breastplate. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="41600"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4142" name="Recipe: Avadon Gaiters" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for Avadon Gaiters. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="26000"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4143" name="Recipe: Zubei's Leather Shirt" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a Zubei's Leather Shirt. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="31200"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4144" name="Recipe: Zubei's Leather Gaiters" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for Zubei's Leather Gaiters. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="19460"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4145" name="Recipe: Avadon Leather Armor" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for Avadon Leather Armor. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="45600"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4146" name="Recipe: Tunic of Zubei" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a Tunic of Zubei. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="31200"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4147" name="Recipe: Stockings of Zubei" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for Stockings of Zubei. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="19460"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4148" name="Recipe: Avadon Robe" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for an Avadon Robe. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="45600"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4149" name="Recipe: Avadon Circlet" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for an Avadon Circlet. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="15560"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4150" name="Recipe: Sealed Avadon Gloves" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for the Sealed Avadon Gloves. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="10380"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4151" name="Recipe: Chain Gloves of Silence" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for Chain Gloves of Silence. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="10380"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4152" name="Recipe: Guardian's Gloves" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for the Guardian's Gloves. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="10380"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4153" name="Recipe: Gloves of Blessing" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for Gloves of Blessing. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="10380"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4154" name="Recipe: Doom Shield" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a Doom Shield. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="16900"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4155" name="Recipe: Blue Wolf Breastplate" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a Blue Wolf Breastplate. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="64400"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4156" name="Recipe: Boots of Blessing" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for Boots of Blessing. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="10380"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4157" name="Recipe: Blue Wolf Gaiters" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for the Blue Wolf Gaiters. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="40200"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4158" name="Recipe: Doom Plate Armor" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a Doom Plate Armor. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="94200"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4159" name="Recipe: Blue Wolf Leather Armor" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a Blue Wolf Leather Armor. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="70600"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4160" name="Recipe: Leather Armor of Doom" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a Leather Armor of Doom. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="70600"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4161" name="Recipe: Blue Wolf Tunic" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a Blue Wolf Tunic. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="48200"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4162" name="Recipe: Tunic of Doom" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a Tunic of Doom. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="48200"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4163" name="Recipe: Blue Wolf Stockings" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for Blue Wolf Stockings. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="30200"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4164" name="Recipe: Stockings of Doom" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for Stockings of Doom. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="30200"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4165" name="Recipe: Blue Wolf Helmet" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a Blue Wolf Helmet. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="24200"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4166" name="Recipe: Doom Helmet" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a Doom Helmet. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="24200"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4167" name="Recipe: Sealed Blue Wolf Boots" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a sealed Blue Wolf Boots. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="16080"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4168" name="Recipe: Sealed Doom Gloves" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a Sealed Doom Gloves. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="16080"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4169" name="Recipe: Elemental Gloves" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for Elemental Gloves. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="16080"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4170" name="Recipe: Gloves of Grace" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for Gloves of Grace. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="16080"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4171" name="Recipe: Implosion Gauntlets" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for Implosion Gauntlets. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="16080"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4172" name="Recipe: Paradia Gloves" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for Paradia Gloves. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="16080"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4173" name="Recipe: Sealed Blue Wolf Gloves" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for Blue Wolf Gloves. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="16080"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4174" name="Recipe: Sealed Zubei's Boots" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for the Sealed Zubei's Boots. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="10380"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4175" name="Recipe: Sealed Avadon Boots" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for the Sealed Avadon Boots. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="10380"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4176" name="Recipe: Sealed Doom Boots" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for the sealed Doom Boots. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="16080"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4177" name="Recipe: Sealed Zubei's Gauntlets" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a sealed Zubei's Gauntlets. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="10380"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4178" name="Recipe: Zubei's Shield" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a Zubei's Shield. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="10900"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4179" name="Recipe: Zubei's Helmet" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a Zubei's Helmet. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="15560"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4180" name="Recipe: Silver Arrow" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a Silver Arrow. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="1800"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4181" name="Recipe: Pata" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a Pata. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="156600"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4182" name="Recipe: Great Sword" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a Great Sword. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="173600"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4183" name="Recipe: Heavy War Axe" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a Heavy War Axe. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="173600"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4184" name="Recipe: Spirit's Staff" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a Spirit's Staff. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="173600"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4185" name="Recipe: Keshanberk" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a Keshanberk. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="173600"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4186" name="Recipe: Sword of Valhalla" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a Sword of Valhalla. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="173600"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4187" name="Recipe: Kris" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a Kris. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="173600"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4188" name="Recipe: Twilight Knife" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a Twilight Knife. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="173600"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4189" name="Recipe: Arthro Nail" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for an Arthro Nail. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="173600"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4190" name="Recipe: Dark Elven Longbow" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a Dark Elven Longbow. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="173600"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4191" name="Recipe: Great Axe" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a Great Axe. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="173600"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4192" name="Recipe: Damascus Sword" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a Damascus Sword. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="262000"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4193" name="Recipe: Lance" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a Lance. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="262000"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4194" name="Recipe: Deadman's Glory" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for the Deadman's Glory. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="262000"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4195" name="Recipe: Art of Battle Axe" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for an Art of Battle Axe. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="262000"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4196" name="Recipe: Staff of Evil Spirits" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="262000"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4197" name="Recipe: Demon's Dagger" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a Demon's Dagger. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="262000"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4198" name="Recipe: Bellion Cestus" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a Bellion Cestus. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="262000"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="4199" name="Recipe: Bow of Peril" icon="icon.etc_recipe_red_i00">
-        <!-- For Dwarves only. Recipe for a Bow of Peril. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="262000"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
+	<item id="4100" name="Sealed Zubei's Gauntlet Fragment" type="MATERIAL" icon="icon.etc_plate_silver_i00">
+	<!-- Main ingredient definitely required for a Dwarf to make Zubei's Gauntlets. Can also be sold at ordinary shops. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="3843" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
+	</item>
+
+	<item id="4101" name="Zubei's Shield Fragment" type="MATERIAL" icon="icon.etc_plate_silver_i00">
+	<!-- Main ingredient definitely required for a Dwarf to make Zubei's Shield. Can also be sold at ordinary shops. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="3450" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
+	</item>
+
+	<item id="4102" name="Sealed Zubei's Helmet Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Main ingredient definitely required for a Dwarf to make Sealed Zubei's Helmet. Can be sold. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="4453" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
+	</item>
+
+	<item id="4103" name="Pata Blade" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Main ingredient definitely required for a Dwarf to make Pata. Can also be sold at ordinary shops. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="32950" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
+	</item>
+
+	<item id="4104" name="Great Sword Blade" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Main ingredient definitely required for a Dwarf to Great Sword. Can also be sold at ordinary shops. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="34950" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
+	</item>
+
+	<item id="4105" name="Heavy War Axe Head" type="MATERIAL" icon="icon.etc_squares_gray_i00">
+	<!-- Main ingredient definitely required for a Dwarf to make Heavy War Axe. Can also be sold at ordinary shops. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="34950" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
+	</item>
+
+	<item id="4106" name="Spirit's Staff Head" type="MATERIAL" icon="icon.etc_squares_gray_i00">
+	<!-- Main ingredient definitely required for a Dwarf to make a Spirit's Staff. Can also be sold at ordinary shops. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="35533" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
+	</item>
+
+	<item id="4107" name="Keshanberk Blade" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Main ingredient definitely required for a Dwarf to make Keshanberk. Can also be sold at ordinary shops. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="35500" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
+	</item>
+
+	<item id="4108" name="Sword of Valhalla Blade" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Main ingredient definitely required for a Dwarf to make Sword of Valhalla. Can also be sold at ordinary shops. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="35500" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
+	</item>
+
+	<item id="4109" name="Kris Edge" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Main ingredient definitely required for a Dwarf to make a Kris. Can also be sold at ordinary shops. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="35500" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
+	</item>
+
+	<item id="4110" name="Twilight Knife Edge" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Main ingredient definitely required for a Dwarf to make Twilight Knife. Can also be sold at ordinary shops. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="35500" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
+	</item>
+
+	<item id="4111" name="Arthro Nail Blade" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Main ingredient definitely required for a Dwarf to make Arthro Nail. Can also be sold at ordinary shops. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="34950" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
+	</item>
+
+	<item id="4112" name="Dark Elven Longbow Shaft" type="MATERIAL" icon="icon.etc_branch_gold_i00">
+	<!-- Main ingredient definitely required for a Dwarf to make a Dark Elven Longbow. Can also be sold at ordinary shops. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="35325" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
+	</item>
+
+	<item id="4113" name="Great Axe Head" type="MATERIAL" icon="icon.etc_squares_gray_i00">
+	<!-- Main ingredient definitely required for a Dwarf to Great Axe. Can also be sold at ordinary shops. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="38867" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
+	</item>
+
+	<item id="4114" name="Damascus Sword Blade" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Main ingredient definitely required for a Dwarf to make Damascus Sword. Can also be sold at ordinary shops. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="45692" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
+	</item>
+
+	<item id="4115" name="Lance Blade" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Main ingredient definitely required for a Dwarf to make a Lance. Can also be sold at ordinary shops. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="45846" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
+	</item>
+
+	<item id="4116" name="Deadman's Glory Stone" type="MATERIAL" icon="icon.etc_squares_gray_i00">
+	<!-- Main ingredient definitely required for a Dwarf to make Deadman's Glory. Can also be sold at ordinary shops. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="45769" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
+	</item>
+
+	<item id="4117" name="Art of Battle Axe Blade" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Main ingredient definitely required for a Dwarf to make Art of Battle Axe. Can also be sold at ordinary shops. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="45769" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
+	</item>
+
+	<item id="4118" name="Evil Spirit Head" type="MATERIAL" icon="icon.etc_squares_gray_i00">
+	<!-- Main ingredient definitely required for a Dwarf to make the Staff of Evil Spirits. May also be sold at ordinary shops. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="48308" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
+	</item>
+
+	<item id="4119" name="Demon's Dagger Edge" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Main ingredient definitely required for a Dwarf to make a Demon's Dagger. Can also be sold at ordinary shops. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="45692" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
+	</item>
+
+	<item id="4120" name="Bellion Cestus Edge" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Main ingredient definitely required for a Dwarf to make Bellion Cestus. Can also be sold at ordinary shops. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="45769" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
+	</item>
+
+	<item id="4121" name="Bow of Peril Shaft" type="MATERIAL" icon="icon.etc_branch_gold_i00">
+	<!-- Main ingredient definitely required for a Dwarf to make a Bow of Peril. Can also be sold at ordinary shops. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="60" price="45923" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
+	</item>
+
+	<item id="4122" name="Recipe: Maestro Holder" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
+	<!-- For Dwarves only. Recipe for Maestro Holder. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="4500" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4123" name="Recipe: Maestro Anvil Lock" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
+	<!-- For Dwarves only. Recipe for Maestro Anvil Lock. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="4500" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4124" name="Recipe: Craftsman Mold" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
+	<!-- For Dwarves only. Recipe for Craftsman Mold. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="4500" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4125" name="Recipe: Maestro Mold" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
+	<!-- For Dwarves only. Recipe for Maestro Mold. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="4500" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4126" name="Recipe: Adamantite Earring" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for Adamantite Earring. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="12120" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4127" name="Recipe: Adamantite Ring" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for an Adamantite Ring. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="8080" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4128" name="Recipe: Adamantite Necklace" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for an Adamantite Necklace. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="16160" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4129" name="Recipe: Black Ore Earring" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for Black Ore Earring. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="18480" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4130" name="Recipe: Black Ore Ring" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a Black Ore Ring. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="12320" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4131" name="Recipe: Black Ore Necklace" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a Black Ore Necklace. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="24600" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4132" name="Recipe: Compound Shield" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
+	<!-- For Dwarves only. Recipe for a Compound Shield. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="5160" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4133" name="Recipe: Zubei's Breastplate" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a Zubei's Breastplate. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="41600" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4134" name="Recipe: Zubei's Gaiters" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for Zubei's Gaiters. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="26000" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4135" name="Recipe: Implosion Boots" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for Boots of implosion. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="16080" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4136" name="Recipe: Boots of Silence" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for Boots of Silence. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="10380" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4137" name="Recipe: Guardian's Boots" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for the Guardian's Boots. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="10380" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4138" name="Recipe: Paradia Boots" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for Paradia Boots. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="16080" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4139" name="Recipe: Elemental Boots" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for Elemental Boots. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="16080" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4140" name="Recipe: Boots of Grace" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for Boots of Grace. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="16080" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4141" name="Recipe: Avadon Breastplate" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for an Avadon Breastplate. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="41600" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4142" name="Recipe: Avadon Gaiters" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for Avadon Gaiters. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="26000" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4143" name="Recipe: Zubei's Leather Shirt" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a Zubei's Leather Shirt. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="31200" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4144" name="Recipe: Zubei's Leather Gaiters" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for Zubei's Leather Gaiters. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="19460" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4145" name="Recipe: Avadon Leather Armor" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for Avadon Leather Armor. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="45600" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4146" name="Recipe: Tunic of Zubei" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a Tunic of Zubei. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="31200" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4147" name="Recipe: Stockings of Zubei" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for Stockings of Zubei. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="19460" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4148" name="Recipe: Avadon Robe" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for an Avadon Robe. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="45600" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4149" name="Recipe: Sealed Avadon Circlet (100%)" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a Sealed Avadon Circlet. Requires Create Item - Skill Lv. 6. The success rate is 100%.  -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="15560" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4150" name="Recipe: Sealed Avadon Gloves" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for the Sealed Avadon Gloves. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="10380" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4151" name="Recipe: Chain Gloves of Silence" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for Chain Gloves of Silence. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="10380" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4152" name="Recipe: Guardian's Gloves" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for the Guardian's Gloves. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="10380" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4153" name="Recipe: Gloves of Blessing" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for Gloves of Blessing. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="10380" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4154" name="Recipe: Doom Shield" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a Doom Shield. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="16900" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4155" name="Recipe: Blue Wolf Breastplate" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a Blue Wolf Breastplate. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="64400" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4156" name="Recipe: Boots of Blessing" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for Boots of Blessing. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="10380" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4157" name="Recipe: Blue Wolf Gaiters" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for the Blue Wolf Gaiters. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="40200" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4158" name="Recipe: Doom Plate Armor" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a Doom Plate Armor. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="94200" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4159" name="Recipe: Blue Wolf Leather Armor" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a Blue Wolf Leather Armor. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="70600" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4160" name="Recipe: Leather Armor of Doom" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a Leather Armor of Doom. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="70600" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4161" name="Recipe: Blue Wolf Tunic" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a Blue Wolf Tunic. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="48200" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4162" name="Recipe: Tunic of Doom" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a Tunic of Doom. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="48200" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4163" name="Recipe: Blue Wolf Stockings" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for Blue Wolf Stockings. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="30200" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4164" name="Recipe: Stockings of Doom" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for Stockings of Doom. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="30200" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4165" name="Recipe: Sealed Blue Wolf Helmet (100%)" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a Sealed Blue Wolf Helmet. Requires Create Item - Skill Lv. 7. The success rate is 100%.  -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="24200" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4166" name="Recipe: Sealed Doom Helmet (100%)" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a Sealed Doom Helmet. Requires Create Item - Skill Lv. 7. The success rate is 100%.  -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="24200" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4167" name="Recipe: Sealed Blue Wolf Boots" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a sealed Blue Wolf Boots. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="16080" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4168" name="Recipe: Sealed Doom Gloves" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a Sealed Doom Gloves. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="16080" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4169" name="Recipe: Elemental Gloves" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for Elemental Gloves. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="16080" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4170" name="Recipe: Gloves of Grace" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for Gloves of Grace. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="16080" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4171" name="Recipe: Implosion Gauntlets" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for Implosion Gauntlets. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="16080" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4172" name="Recipe: Paradia Gloves" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for Paradia Gloves. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="16080" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4173" name="Recipe: Sealed Blue Wolf Gloves" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for Blue Wolf Gloves. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="16080" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4174" name="Recipe: Sealed Zubei's Boots" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for the Sealed Zubei's Boots. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="10380" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4175" name="Recipe: Sealed Avadon Boots" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for the Sealed Avadon Boots. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="10380" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4176" name="Recipe: Sealed Doom Boots" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for the sealed Doom Boots. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="16080" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4177" name="Recipe: Sealed Zubei's Gauntlets" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a sealed Zubei's Gauntlets. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="10380" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4178" name="Recipe: Zubei's Shield" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a Zubei's Shield. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="10900" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4179" name="Recipe: Sealed Zubei's Helmet (100%)" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a Sealed Zubei's Helmet. Requires Create Item - Skill Lv. 6. The success rate is 100%.  -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="15560" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4180" name="Recipe: Silver Arrow" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a Silver Arrow. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="1800" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4181" name="Recipe: Pata" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a Pata. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="156600" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4182" name="Recipe: Great Sword" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a Great Sword. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="173600" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4183" name="Recipe: Heavy War Axe" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a Heavy War Axe. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="173600" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4184" name="Recipe: Spirit's Staff" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a Spirit's Staff. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="173600" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4185" name="Recipe: Keshanberk" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a Keshanberk. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="173600" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4186" name="Recipe: Sword of Valhalla" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a Sword of Valhalla. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="173600" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4187" name="Recipe: Kris" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a Kris. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="173600" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4188" name="Recipe: Twilight Knife" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a Twilight Knife. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="173600" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4189" name="Recipe: Arthro Nail" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for an Arthro Nail. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="173600" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4190" name="Recipe: Dark Elven Longbow" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a Dark Elven Longbow. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="173600" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4191" name="Recipe: Great Axe" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a Great Axe. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="173600" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4192" name="Recipe: Damascus Sword" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a Damascus Sword. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="262000" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4193" name="Recipe: Lance" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a Lance. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="262000" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4194" name="Recipe: Deadman's Glory" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for the Deadman's Glory. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="262000" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4195" name="Recipe: Art of Battle Axe" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for an Art of Battle Axe. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="262000" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4196" name="Recipe: Staff of Evil Spirits" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="262000" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4197" name="Recipe: Demon's Dagger" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a Demon's Dagger. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="262000" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4198" name="Recipe: Bellion Cestus" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a Bellion Cestus. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="262000" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="4199" name="Recipe: Bow of Peril" type="RECIPE" icon="icon.etc_recipe_red_i00">
+	<!-- For Dwarves only. Recipe for a Bow of Peril. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="262000" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
 </list>

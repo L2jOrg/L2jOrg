@@ -1,581 +1,657 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="90000" name="Best Dye of DEX (DEX + 4 CON - 2)" icon="icon.lv4_1_dye_dex">
-        <!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
-        <set name="weight" val="150"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90001" name="Best Dye of INT (INT + 4 MEN - 2)" icon="icon.lv4_1_dye_int">
-        <!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
-        <set name="weight" val="150"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90002" name="Best Dye of INT (INT + 4 WIT - 2)" icon="icon.lv4_1_dye_int">
-        <!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 1st class transfer, before 2nd class transfer. -->
-        <set name="weight" val="150"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90003" name="Best Dye of MEN (MEN + 4 INT - 2)" icon="icon.lv4_1_dye_men">
-        <!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards after 3rd Class Transfer. -->
-        <set name="weight" val="150"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90004" name="Best Dye of MEN (MEN + 4 WIT - 2)" icon="icon.lv4_1_dye_men">
-        <!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers after 3rd Class Transfer. -->
-        <set name="weight" val="150"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90005" name="Best Dye of WIT (WIT + 4 INT - 2)" icon="icon.lv4_1_dye_wit">
-        <!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 3rd Class Transfer. -->
-        <set name="weight" val="150"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90006" name="Best Dye of WIT (WIT + 4 MEN - 2)" icon="icon.lv4_1_dye_wit">
-        <!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers after 3rd Class Transfer. -->
-        <set name="weight" val="150"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90007" name="Plain Life Stone" icon="icon.etc_mineral_general_i00">
-        <!-- A mineral formed inside a monster under an immense impact. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Jeros. Augmentation requires D-grade Gemstones (200 pcs.). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-        <set name="etcitem_type" val="MATERIAL"/>
-        <set name="weight" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="90008" name="Remnant Ashes" icon="icon.etc_broken_crystal_silver_i00">
-        <!-- An item you got from a prisoner of the Dungeon of Abyss. -->
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="90009" name="Image of Evil" icon="icon.etc_broken_crystal_red_i00">
-        <!-- An item you got from an especially dangerous prisoner of the Dungeon of Abyss. -->
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="90010" name="Key to the West Wing of the Dungeon of Abyss" icon="icon.etc_dark_key_i00">
-        <!-- Key to the door in the West Wing of the Dungeon of Abyss. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
-    </item>
-    <item id="90011" name="Key to the East Wing of the Dungeon of Abyss" icon="icon.etc_dark_key_i00">
-        <!-- Key to the door in the East Wing of the Dungeon of Abyss. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
-    </item>
-    <item id="90012" name="Low-grade Life Stone" icon="icon.etc_mineral_general_i00">
-        <!-- A mineral formed inside a monster under an immense impact. Serves as a material in weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Jeros. Augmentation requires D-grade Gemstones (200 pcs.). Cannot be sold at an NPC's store. -->
-        <set name="etcitem_type" val="MATERIAL"/>
-        <set name="weight" val="2"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="90013" name="Mid-grade Life Stone" icon="icon.etc_mineral_special_i03">
-        <!-- A mineral formed inside a monster under an immense impact. Serves as a material in weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Jeros. Augmentation requires C-grade Gemstones (300 pcs.). Cannot be sold at an NPC's store. -->
-        <set name="etcitem_type" val="MATERIAL"/>
-        <set name="weight" val="2"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="90014" name="High-grade Life Stone" icon="icon.etc_mineral_rare_i03">
-        <!-- A mineral formed inside a monster under an immense impact. Serves as a material in weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Jeros. Augmentation requires B-grade Gemstones (400 pcs.). Cannot be sold at an NPC's store. -->
-        <set name="etcitem_type" val="MATERIAL"/>
-        <set name="weight" val="2"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="90015" name="Top-grade Life Stone" icon="icon.etc_mineral_unique_i03">
-        <!-- A mineral formed inside a monster under an immense impact. Serves as a material in weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Jeros. Augmentation requires A-grade Gemstones (500 pcs.). Cannot be sold at an NPC's store. -->
-        <set name="etcitem_type" val="MATERIAL"/>
-        <set name="weight" val="2"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="90016" name="Shining Life Stone" icon="icon.renewal_mineral_r">
-        <!-- A mineral formed inside a monster under an immense impact. Serves as a material in weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Jeros. Augmentation requires B-grade Gemstones (400 pcs.). Cannot be sold at an NPC's store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-        <set name="etcitem_type" val="MATERIAL"/>
-        <set name="weight" val="2"/>
-        <restriction sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="90017" name="Weapons Ingredient Box (A-grade)" icon="icon.etc_box_of_adventure_1_i00">
-        <!-- Double-click to obtain one of A-grade Weapon Ingredients. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="90018" name="Elite Symbol of Monster Arena" icon="icon.etc_residence_token_royalguard">
-        <!-- Received as a reward for winning in the Elite Monster Arena. Can be traded for a special item with Arena Manager Lau. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. -->
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="90019" name="Symbol of Monster Arena" icon="icon.etc_residence_token_giantchaser">
-        <!-- Received as a reward for winning in the Monster Arena. Can be traded for a special item with Arena Manager Lau. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. -->
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="90020" name="Box of Best Dye" icon="icon.etc_box_of_adventure_4_i00">
-        <!-- Double-click to obtain one of the following Dyes for 3rd Class Transfer: Best Dye of STR, Best Dye of CON, Best Dye of DEX, Best Dye of INT, Best Dye of WIT, or Best Dye of MEN. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <armor id="90021" name="Warrior’s Talisman - Attack" icon="icon.r90_sp_talisman_dr_mp_active">
-        <!-- PvE Damage +3%, P./ M. Critical Damage +20, P./ M. Skill Power +2%, P./ M. Accuracy +1. Duration: 30-day. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="time" val="43200"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="90022" name="Warrior’s Talisman - Defense" icon="icon.r99_talisman_pd_up_passive">
-        <!-- Received PvE damage -3%, M. Damage Resistance +2%, P./ M. Skill Evasion +4%, Debuff Resistance +3%, Pull Resistance +10%. Duration: 30-day. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="time" val="43200"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="90023" name="Belt" icon="icon.belt_i00">
-        <!-- Inventory Slots +2/ Weight Limit +1,000. Use a Magic Rune Clip to upgrade it to Rag Belt. -->
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="waist"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="500"/>
-        <restriction sellable="false"/>
-        <skills>
-            <skill id="35040" level="1"/> <!-- Belt -->
-        </skills>
-        <stats>
-            <stat type="pDef">10</stat>
-        </stats>
-    </armor>
-    <armor id="90024" name="Rag Belt" icon="icon.belt_i01">
-        <!-- Inventory Slots +2/ Weight Limit +2,000/ HP Recovery +1.24/ MP Recovery +0.83/ CP Recovery +1.66. Use a mid-grade Magic Rune Clip to upgrade it to Leather Belt. -->
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="waist"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="500"/>
-        <restriction sellable="false"/>
-        <skills>
-            <skill id="35041" level="1"/> <!-- Rag Belt -->
-        </skills>
-        <stats>
-            <stat type="pDef">10</stat>
-        </stats>
-    </armor>
-    <armor id="90025" name="Leather Belt" icon="icon.belt_i02">
-        <!-- Inventory Slots +3/ Weight Limit +3,000/ HP Recovery +1.47/ MP Recovery +0.98/ CP Recovery +1.96/ Max. HP/ MP/ CP +100. Use a high-grade Magic Rune Clip to upgrade it to Iron Belt. -->
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="waist"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="500"/>
-        <restriction sellable="false"/>
-        <skills>
-            <skill id="35042" level="1"/> <!-- Leather Belt -->
-        </skills>
-        <stats>
-            <stat type="pDef">10</stat>
-        </stats>
-    </armor>
-    <armor id="90026" name="Iron Belt" icon="icon.belt_i03">
-        <!-- Inventory Slots +4/ Weight Limit +4,000/ HP Recovery +1.70/ MP Recovery +1.13/ CP Recovery +2.26/ Max. HP/ MP/ CP +150. Use a top-grade Magic Rune Clip to upgrade it to Mithril Belt. -->
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="waist"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="500"/>
-        <restriction sellable="false"/>
-        <skills>
-            <skill id="35043" level="1"/> <!-- Iron Belt -->
-        </skills>
-        <stats>
-            <stat type="pDef">10</stat>
-        </stats>
-    </armor>
-    <armor id="90027" name="Mithril Belt" icon="icon.belt_i04">
-        <!-- Inventory Slots +5/ Weight Limit +5,000/ HP Recovery +1.92/ MP Recovery +1.28/ CP Recovery +2.56/ Max. HP/ MP/ CP +200. -->
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="waist"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="500"/>
-        <restriction sellable="false"/>
-        <skills>
-            <skill id="35044" level="1"/> <!-- Mithril Belt -->
-        </skills>
-        <stats>
-            <stat type="pDef">10</stat>
-        </stats>
-    </armor>
-    <item id="90028" name="Clasp" icon="icon.pin_i00">
-        <!-- A clasp which improves Belt? properties. Arena Manager Lau can enhance the Clasp for you. -->
-        <set name="weight" val="20"/>
-        <restriction sellable="false"/>
-    </item>
-    <item id="90029" name="Mid-grade Clasp" icon="icon.pin_i01">
-        <!-- A clasp which improves Belt? properties. Arena Manager Lau can enhance the Clasp for you. -->
-        <set name="weight" val="20"/>
-        <restriction sellable="false"/>
-    </item>
-    <item id="90030" name="High-grade Clasp" icon="icon.pin_i02">
-        <!-- A clasp which improves Belt? properties. Arena Manager Lau can enhance the Clasp for you. -->
-        <set name="weight" val="20"/>
-        <restriction sellable="false"/>
-    </item>
-    <item id="90031" name="Top-grade Clasp" icon="icon.pin_i03">
-        <!-- A clasp which improves Belt? properties. Arena Manager Lau can enhance the Clasp for you. -->
-        <set name="weight" val="20"/>
-        <restriction sellable="false"/>
-    </item>
-    <item id="90032" name="Elixir of Life" icon="icon.etc_super_hp_potion_i00">
-        <!-- Restores a large amount of HP. Reuse Time: 3 minutes. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="weight" val="5"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="90033" name="Elixir of Mind" icon="icon.etc_super_mp_potion_i00">
-        <!-- Restores a large amount of MP. Reuse Time: 3 minutes. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="weight" val="5"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="90034" name="Spellbook Box - 3rd Class Transfer" icon="icon.etc_readybox_silver">
-        <!-- Double-click to obtain one of the Spellbooks for 3rd Class Transfer. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="90035" name="Life Stone Pack" icon="icon.event_hero_treasure_box_i00">
-        <!-- Double-click to obtain one of the following items: High/Medium/Average Quality Life Stone. -->
-        <set name="default_action" val="CAPSULE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <restriction sellable="false" stackable="true"/>
-        <skills>
-            <skill id="39203" level="1"/> <!-- Life Stone Pack -->
-        </skills>
-    </item>
-    <armor id="90036" name="Hero’s Talisman - Attack" icon="icon.r90_sp_talisman_dr_hp_active">
-        <!-- PvP Damage +3%, P./ M. Critical Damage +20, Skill Power +2%, P./ M. Accuracy +1. Duration: 30-day. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="talisman"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="handler" val="ItemSkills"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <skills>
-            <skill id="35038" level="1"/> <!-- Hero’s Talisman - Attack -->
-        </skills>
-    </armor>
-    <armor id="90037" name="Hero’s Talisman - Defense" icon="icon.r95_talisman_ca_down_active">
-        <!-- Received PvP damage +3%, M. Damage Resistance +2%, P./ M. Skill Evasion +4%, Debuff Resistance +3%. Duration: 30-day. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="talisman"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="handler" val="ItemSkills"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <skills>
-            <skill id="35039" level="1"/> <!-- Hero’s Talisman - Defense -->
-        </skills>
-    </armor>
-    <item id="90038" name="Spellbook: Mount Golden Lion" icon="icon.etc_spellbook_red_i00">
-        <!-- Allows learning the Mount Golden Lion skill. Required for Lv. 76 after 3rd class transfer. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="weight" val="120"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="90039" name="Spellbook: Mount Pegasus" icon="icon.etc_spellbook_red_i00">
-        <!-- Allows learning the Mount Pegasus skill. Required for Lv. 76 after 3rd class transfer. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="weight" val="120"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="90040" name="Spellbook: Mount Saber Tooth Cougar" icon="icon.etc_spellbook_red_i00">
-        <!-- Allows learning the Mount Saber Tooth Cougar skill. Required for Lv. 76 after 3rd class transfer. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="weight" val="120"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="90041" name="Spellbook: Mount Kukuru" icon="icon.etc_spellbook_red_i00">
-        <!-- Allows learning the Mount Kukuru skill. Required for Lv. 76 after 3rd class transfer. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="weight" val="120"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="90042" name="Spellbook: Mount Black Bear" icon="icon.etc_spellbook_red_i00">
-        <!-- Allows learning the Mount Black Bear skill. Required for Lv. 76 after 3rd class transfer. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="weight" val="120"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="90043" name="Dark Assassin Transformation Potion" icon="icon.empty_bottle">
-        <!-- For 15 minutes transforms you into Dark Assassin. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Transformation into Dark Assassin: Max HP/ MP +5%, P./ M. Accuracy +1, P./ M. Atk. +2%, P./ M. Def. +2%, Atk. Spd. +3%, M. Critical Rate +1, Speed +4. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="etcitem_type" val="POTION"/>
-        <set name="weight" val="5"/>
-        <set name="handler" val="ItemSkills"/>
-        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" sellable="false" stackable="true"/>
-        <skills>
-            <skill id="39205" level="1"/> <!-- Dark Assassin Transformation Potion -->
-        </skills>
-    </item>
-    <item id="90044" name="Dimensional Blessing" icon="icon.etc_blessed_kalie_i00">
-        <!-- Provides 37 million XP and 1.11 million SP. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="etcitem_type" val="SCROLL"/>
-        <set name="commissionItemType" val="SCROLL_OTHER"/>
-        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" sellable="false" stackable="true" olympiad-restricted="true"/>
-        <skills>
-            <skill id="39204" level="1"/> <!-- Dimensional Blessing -->
-        </skills>
-    </item>
-    <item id="90045" name="Magical Tablet" icon="icon.etc_hidden_1st_page_i00">
-        <!-- A tablet filled with magic power. Collect 31 tablets and give them to Trader Lorenzo or Harmony to get Spellbook: 3rd Class Transfer. -->
-        <restriction stackable="true"/>
-    </item>
-    <item id="90046" name="Scroll: Vengeance" icon="icon.etc_magic_book_black_i00">
-        <!-- Scroll needed to learn the Vengeance skill. Used by: Phoenix Knight, Hell Knight, Eva's Templar, and Shillien Templar. Level required to obtain the scroll: 77 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90047" name="Scroll: Touch of Life" icon="icon.etc_magic_book_black_i00">
-        <!-- Scroll needed to learn the Touch of Life skill. Available to Phoenix Knight, and Eva's Templar. Level required to obtain the scroll: 78 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90048" name="Scroll: Touch of Death" icon="icon.etc_magic_book_black_i00">
-        <!-- Scroll needed to learn the Touch of Death skill. Available to Hell Knight and Shillien Templar. Level required to obtain the scroll: 78 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90049" name="Scroll: Shield of Faith" icon="icon.etc_magic_book_black_i00">
-        <!-- Scroll needed to learn the Shield of Faith skill. Available to Phoenix Knight, Hell Knight, Eva's Templar, and Shillien Templar. Level required to obtain the scroll: 79 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90050" name="Scroll: Shield of Sacrifice" icon="icon.etc_magic_book_black_i00">
-        <!-- Scroll needed to learn the Shield of Sacrifice skill. Available to Phoenix Knight. Level required to obtain the scroll: 80 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90051" name="Scroll: Insane Crusher" icon="icon.etc_magic_book_black_i00">
-        <!-- Scroll needed to learn the Insane Crusher skill. Available to Hell Knight. Level required to obtain the scroll: 80 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90052" name="Scroll: Eva’s Protection" icon="icon.etc_magic_book_black_i00">
-        <!-- Scroll needed to learn the Eva? Protection skill. Available to Eva's Templar. Level required to obtain the scroll: 80 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90053" name="Scroll: Mass Lightning Strike" icon="icon.etc_magic_book_black_i00">
-        <!-- Scroll needed to learn the Mass Lightning Strike skill. Available to Shillien Templar. Level required to obtain the scroll: 80 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90054" name="Scroll: Clear Movements" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Clear Movements skill. Available to Adventurer, Wind Rider, and Ghost Hunter. Level required to obtain the scroll: 77 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90055" name="Scroll: Critical Wound" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Critical Wound skill. Available to Adventurer, Wind Rider, and Ghost Hunter. Level required to obtain the scroll: 77 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90056" name="Scroll: Focus Power" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Focus Power skill. Available to Adventurer and Ghost Hunter. Level required to obtain the scroll: 78 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90057" name="Scroll: Focus Chance" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Focus Chance skill. Available to Adventurer and Wind Rider. Level required to obtain the scroll: 78 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90058" name="Scroll: Focus Death" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Focus Death skill. Available to Wind Rider and Ghost Hunter. Level required to obtain the scroll: 78 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90059" name="Scroll: Mirage" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Mirage skill. Available to Adventurer. Level required to obtain the scroll: 79 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90060" name="Scroll: Evasion" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Evasion skill. Available to Wind Rider. Level required to obtain the scroll: 79 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90061" name="Scroll: Counterattack" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Counterattack skill. Available to Ghost Hunter. Level required to obtain the scroll: 79 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90062" name="Scroll: Real Target" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Real Target skill. Available to Sagittarius, Moonlight Sentinel, and Ghost Sentinel. Level required to obtain the scroll: 78 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90063" name="Scroll: Death Sting" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Death Sting skill. Available to Sagittarius, Moonlight Sentinel, and Ghost Sentinel. Level required to obtain the scroll: 79 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90064" name="Scroll: Flame Hawk" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Flame Hawk skill. Available to Sagittarius. Level required to obtain the scroll: 80 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90065" name="Scroll: Arrow Rain" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Arrow Rain skill. Available to Moonlight Sentinel. Level required to obtain the scroll: 80 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90066" name="Scroll: Ghost Piercing" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Ghost Piercing skill. Available to Ghost Sentinel. Level required to obtain the scroll: 80 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90067" name="Scroll: Sonic Barrier" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Sonic Barrier skill. Available to Duelist. Level required to obtain the scroll: 77 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90068" name="Scroll: Indestructible Sound" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Indestructible Sound skill. Available to Duelist. Level required to obtain the scroll: 78 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90069" name="Scroll: Maximum Sonic Focus" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Maximum Sonic Focus skill. Available to Duelist. Level required to obtain the scroll: 80 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90070" name="Scroll: Force Barrier" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Force Barrier skill. Available to Grand Khavatari. Level required to obtain the scroll: 77 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90071" name="Scroll: Rush" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Rush skill. Available to Grand Khavatari. Level required to obtain the scroll: 78 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90072" name="Scroll: Maximum Force Focus" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Maximum Force Focus skill. Available to Grand Khavatari. Level required to obtain the scroll: 80 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90073" name="Scroll: Destroyer’s Roar" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Destroyer? Roar skill. Available to Titan. Level required to obtain the scroll: 77 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90074" name="Scroll: Over the Body" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Over the Body skill. Available to Titan. Level required to obtain the scroll: 78 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90075" name="Scroll: Demolition Impact" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Demolition Impact skill. Available to Titan. Level required to obtain the scroll: 80 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90076" name="Scroll: Stun Blast" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Stun Blast skill. Available to Dreadnought. Level required to obtain the scroll: 77 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90077" name="Scroll: Spear Howl" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Spear Howl skill. Available to Dreadnought. Level required to obtain the scroll: 80 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90078" name="Scroll: Armor Crush" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Armor Crush skill. Available to Maestro, Fortune Seeker and Titan. Level required to obtain the scroll: 77 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90079" name="Scroll: Spoil Crush" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Spoil Crush skill. Available to Fortune Seeker. Level required to obtain the scroll: 77 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90080" name="Scroll: Final Secret" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Final Secret skill. Available to Duelist, Dreadnought, Titan, Grand Khavatari, Maestro, and Fortune Seeker. Level required to obtain the scroll: 79 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90081" name="Scroll: Arcane Power" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Arcane Power skill. Available to Archmage, Mystic Muse, and Storm Screamer. Level required to obtain the scroll: 77 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90082" name="Scroll: Fire Vortex Buster" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Fire Vortex Buster. Available to Archmage. Level required to obtain the scroll: 78 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90083" name="Scroll: Ice Vortex Crusher" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Ice Vortex Cruster. Available to Mystic Muse. Level required to obtain the scroll: 78 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90084" name="Scroll: Wind Vortex Slug" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Wind Vortex Slug skill. Available to Storm Screamer. Level required to obtain the scroll: 78 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90085" name="Scroll: Arcane Chaos" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Arcane Chaos skill. Available to Archmage, Mystic Muse, and Storm Screamer. Level required to obtain the scroll: 79 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90086" name="Scroll: Arcane Shield" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Arcane Shield skill. Available to Archmage, Mystic Muse, and Storm Screamer. Level required to obtain the scroll: 80 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90087" name="Scroll: Curse of Doom" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Curse of Doom skill. Available to Souleater. Level required to obtain the scroll: 77 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90088" name="Scroll: Curse of Abyss" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Curse of Abyss skill. Available to Souleater. Level required to obtain the scroll: 78 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90089" name="Scroll: Vampiric Mist" icon="icon.etc_magic_book_red_i00">
-        <!-- Scroll needed to learn the Vampiric Mist skill. Available to Souleater. Level required to obtain the scroll: 80 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90090" name="Scroll: Song of Renewal" icon="icon.etc_magic_book_blue_i00">
-        <!-- Scroll needed to learn the Song of Renewal skill. Available to Sword Muse. Level required to obtain the scroll: 77 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90091" name="Scroll: Champion Song" icon="icon.etc_magic_book_blue_i00">
-        <!-- Scroll needed to learn the Champion Song skill. Available to Sword Muse. Level required to obtain the scroll: 78 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90092" name="Scroll: Song of Silence" icon="icon.etc_magic_book_blue_i00">
-        <!-- Scroll needed to learn the Song of Silence skill. Available to Sword Muse. Level required to obtain the scroll: 79 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90093" name="Scroll: Song of Purification" icon="icon.etc_magic_book_blue_i00">
-        <!-- Scroll needed to learn the Song of Purification skill. Available to Sword Muse. Level required to obtain the scroll: 80 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90094" name="Scroll: Dance of Shadows" icon="icon.etc_magic_book_blue_i00">
-        <!-- Scroll needed to learn the Dance of Shadows skill. Available to Spectral Dancer. Level required to obtain the scroll: 77 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90095" name="Scroll: Dance of Siren" icon="icon.etc_magic_book_blue_i00">
-        <!-- Scroll needed to learn the Dance of Siren skill. Available to Spectral Dancer. Level required to obtain the scroll: 78 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90096" name="Scroll: Dance of Medusa" icon="icon.etc_magic_book_blue_i00">
-        <!-- Scroll needed to learn the Dance of Medusa skill. Available to Spectral Dancer. Level required to obtain the scroll: 79 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90097" name="Scroll: Dance of Berserker" icon="icon.etc_magic_book_blue_i00">
-        <!-- Scroll needed to learn the Dance of Berserker skill. Available to Spectral Dancer. Level required to obtain the scroll: 80 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90098" name="Scroll: Prophecy of Fire" icon="icon.etc_magic_book_white_i00">
-        <!-- Scroll needed to learn the Prophecy of Fire skill. Available to Hierophant. Level required to obtain the scroll: 76 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="90099" name="Scroll: Block Shield" icon="icon.etc_magic_book_white_i00">
-        <!-- Scroll needed to learn the Block Shield skill. Available to Hierophant. Level required to obtain the scroll: 77 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
+	<item id="90000" name="Superior Dye of DEX (DEX +4 CON -2)" type="DYE" icon="icon.lv4_1_dye_dex">
+	<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 3rd Class Transfer classes. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="150" price="800000"/>
+	</item>
+
+	<item id="90001" name="Superior Dye of INT (INT +4 MEN -2)" type="DYE" icon="icon.lv4_1_dye_int">
+	<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 3rd Class Transfer classes. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="150" price="800000"/>
+	</item>
+
+	<item id="90002" name="Superior Dye of INT (INT +4 WIT -2)" type="DYE" icon="icon.lv4_1_dye_int">
+	<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 3rd Class Transfer classes. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="150" price="800000"/>
+	</item>
+
+	<item id="90003" name="Superior Dye of MEN (MEN +4 INT -2)" type="DYE" icon="icon.lv4_1_dye_men">
+	<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 3rd Class Transfer classes. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="150" price="800000"/>
+	</item>
+
+	<item id="90004" name="Superior Dye of MEN (MEN +4 WIT -2)" type="DYE" icon="icon.lv4_1_dye_men">
+	<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 3rd Class Transfer classes. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="150" price="800000"/>
+	</item>
+
+	<item id="90005" name="Superior Dye of WIT (WIT +4 INT -2)" type="DYE" icon="icon.lv4_1_dye_wit">
+	<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 3rd Class Transfer classes. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="150" price="800000"/>
+	</item>
+
+	<item id="90006" name="Superior Dye of WIT (WIT +4 MEN -2)" type="DYE" icon="icon.lv4_1_dye_wit">
+	<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 3rd Class Transfer classes. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="150" price="800000"/>
+	</item>
+
+	<item id="90007" name="Common Life Stone" type="NONE" icon="icon.etc_mineral_general_i00">
+	<!-- Standard mineral formed inside a monster by Physical and Magic hits. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Zelos.\\n\\nAugmentation requires 100 Gemstones (D-grade).  -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="2"/>
+	</item>
+
+	<item id="90008" name="Remnant Ashes" type="NONE" icon="icon.etc_broken_crystal_silver_i00">
+	<!-- An item you got from a prisoner of the Dungeon of Abyss. -->
+		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes quest-item="true"/>
+	</item>
+
+	<item id="90009" name="Image of Evil" type="NONE" icon="icon.etc_broken_crystal_red_i00">
+	<!-- An item you got from an especially dangerous prisoner of the Dungeon of Abyss. -->
+		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes quest-item="true"/>
+	</item>
+
+	<item id="90010" name="Key to the West Wing of the Dungeon of Abyss" type="NONE" icon="icon.etc_dark_key_i00">
+	<!-- Key to the door in the West Wing of the Dungeon of Abyss.  -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90011" name="Key to the East Wing of the Dungeon of Abyss" type="NONE" icon="icon.etc_dark_key_i00">
+	<!-- Key to the door in the East Wing of the Dungeon of Abyss.  -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90012" name="Common Life Stone" type="NONE" icon="icon.etc_mineral_general_i00">
+	<!-- Standard mineral formed inside a monster by Physical and Magic hits. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Zelos.\\n\\nAugmentation requires 100 Gemstones (D-grade).  -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="2" price="100000"/>
+	</item>
+
+	<item id="90013" name="Mid-grade Life Stone" type="NONE" icon="icon.etc_mineral_special_i03">
+	<!-- Standard mineral formed inside a monster by Physical and Magic hits. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Zelos.\\n\\nAugmentation requires 200 Gemstones (C-grade).  -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="2" price="300000"/>
+	</item>
+
+	<item id="90014" name="High-grade Life Stone" type="NONE" icon="icon.etc_mineral_rare_i03">
+	<!-- Standard mineral formed inside a monster by Physical and Magic hits. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Zelos.\\n\\nAugmentation requires 200 Gemstones (B-grade).  -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="2" price="900000"/>
+	</item>
+
+	<item id="90015" name="Top-grade Life Stone" type="NONE" icon="icon.etc_mineral_unique_i03">
+	<!-- Standard mineral formed inside a monster by Physical and Magic hits. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Zelos.\\n\\nAugmentation requires 200 Gemstones (A-grade).  -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="2" price="2700000"/>
+	</item>
+
+	<item id="90016" name="Shining Life Stone" type="NONE" icon="icon.renewal_mineral_r">
+	<!-- Standard mineral formed inside a monster by Physical and Magic hits. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Zelos.\\n\\nAugmentation requires 200 Gemstones (S-grade).  -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="2"/>
+	</item>
+
+	<item id="90017" name="Weapons Ingredient Box (A-grade)" type="NONE" icon="icon.etc_box_of_adventure_1_i00">
+	<!-- Double-click to receive one of A-grade Weapon Ingredients. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90018" name="Elite Symbol of Monster Arena" type="NONE" icon="icon.etc_residence_token_royalguard">
+	<!-- A mark granted to those who have showed great valor in the Elite Monster Arena. Can be traded for a special item with Arena Manager Lau.  -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90019" name="Symbol of Monster Arena" type="NONE" icon="icon.etc_residence_token_giantchaser">
+	<!-- A mark granted to those who have showed great valor in the Monster Arena. Can be traded for a special item with Arena Manager Lau.  -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90020" name="Box of Superior Dye" type="NONE" icon="icon.etc_box_of_adventure_4_i00">
+	<!-- Double-click to receive one of the following Dyes for 3rd Class Transfer: Superior Dye of STR, Superior Dye of CON, Superior Dye of DEX, Superior Dye of INT, Superior Dye of WIT, or Superior Dye of MEN.  -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="90021" name="Warrior’s Talisman - Attack" type="NONE" body-part="TALISMAN" icon="icon.r90_sp_talisman_dr_mp_active">
+	<!-- PvE Damage +3%, P./M. Critical Damage +20, P./M. Skill Power +2%, P./M. Accuracy +1. Duration: 30 days.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="120" duration="43200" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="90022" name="Warrior’s Talisman - Defense" type="NONE" body-part="TALISMAN" icon="icon.r99_talisman_pd_up_passive">
+	<!-- Received PvE damage -3%, Magic Attack Resistance +2%, P./M. Skill Evasion +4%, Debuff Resistance +3%, Pull Resistance +10%. Duration: 30 days.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="120" duration="43200" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="90023" name="Belt" type="LIGHT" body-part="BELT" icon="icon.belt_i00">
+	<!-- Inventory Slots +2/ Weight Limit +1,000. Use a Magic Rune Clip to upgrade it to Rag Belt. -->
+		<restriction freightable="false"/>
+		<attributes weight="500" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="10.0"/>
+		</stats>
+		<skills>
+			<skill id="35040" level="1"/>  <!-- Belt -->
+		</skills>
+	</armor>
+
+	<armor id="90024" name="Rag Belt" type="LIGHT" body-part="BELT" icon="icon.belt_i01">
+	<!-- Inventory Slots +2/ Weight Limit +2,000/ HP Recovery +1.24/ MP Recovery +0.83/ CP Recovery +1.66. Use a mid-grade Magic Rune Clip to upgrade it to Leather Belt. -->
+		<restriction freightable="false"/>
+		<attributes weight="500" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="10.0"/>
+		</stats>
+		<skills>
+			<skill id="35041" level="1"/>  <!-- Rag Belt -->
+		</skills>
+	</armor>
+
+	<armor id="90025" name="Leather Belt" type="LIGHT" body-part="BELT" icon="icon.belt_i02">
+	<!-- Inventory Slots +3/ Weight Limit +3,000/ HP Recovery +1.47/ MP Recovery +0.98/ CP Recovery +1.96/ Max. HP/MP/CP +100. Use a high-grade Magic Rune Clip to upgrade it to Iron Belt. -->
+		<restriction freightable="false"/>
+		<attributes weight="500" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="10.0"/>
+		</stats>
+		<skills>
+			<skill id="35042" level="1"/>  <!-- Leather Belt -->
+		</skills>
+	</armor>
+
+	<armor id="90026" name="Iron Belt" type="LIGHT" body-part="BELT" icon="icon.belt_i03">
+	<!-- Inventory Slots +4/ Weight Limit +4,000/ HP Recovery +1.70/ MP Recovery +1.13/ CP Recovery +2.26/ Max. HP/MP/CP +150. Use a top-grade Magic Rune Clip to upgrade it to Mithril Belt. -->
+		<restriction freightable="false"/>
+		<attributes weight="500" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="10.0"/>
+		</stats>
+		<skills>
+			<skill id="35043" level="1"/>  <!-- Iron Belt -->
+		</skills>
+	</armor>
+
+	<armor id="90027" name="Mithril Belt" type="LIGHT" body-part="BELT" icon="icon.belt_i04">
+	<!-- Inventory Slots +5/ Weight Limit +5,000/ HP Recovery +1.92/ MP Recovery +1.28/ CP Recovery +2.56/ Max. HP/MP/CP +200.  -->
+		<restriction freightable="false"/>
+		<attributes weight="500" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="10.0"/>
+		</stats>
+		<skills>
+			<skill id="35044" level="1"/>  <!-- Mithril Belt -->
+		</skills>
+	</armor>
+
+	<item id="90028" name="Clasp" type="NONE" icon="icon.pin_i00">
+	<!-- A magic clasp which improves Belt's properties. Arena Manager Lau can enhance the Belt. -->
+		<restriction freightable="false" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90029" name="Mid-grade Clasp" type="NONE" icon="icon.pin_i01">
+	<!-- A magic clasp which improves Belt's properties. Arena Manager Lau can enhance the Belt. -->
+		<restriction freightable="false" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90030" name="High-grade Clasp" type="NONE" icon="icon.pin_i02">
+	<!-- A magic clasp which improves Belt's properties. Arena Manager Lau can enhance the Belt. -->
+		<restriction freightable="false" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90031" name="Top-grade Clasp" type="NONE" icon="icon.pin_i03">
+	<!-- A magic clasp which improves Belt's properties. Arena Manager Lau can enhance the Belt. -->
+		<restriction freightable="false" depositable="false"/>
+		<attributes weight="20"/>
+	</item>
+
+	<item id="90032" name="Elixir of Life" type="COUPON" icon="icon.etc_super_hp_potion_i00">
+	<!-- Restores a large amount of HP. Cooldown: 3 minutes. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="5"/>
+	</item>
+
+	<item id="90033" name="Elixir of Mind" type="COUPON" icon="icon.etc_super_mp_potion_i00">
+	<!-- Restores a large amount of MP. Cooldown: 3 minutes. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="5"/>
+	</item>
+
+	<item id="90034" name="Spellbook Box - 3rd Class Transfer" type="NONE" icon="icon.etc_readybox_silver">
+	<!-- Double-click to receive one of the Spellbooks for 3rd Class Transfer. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90035" name="Life Stone Pack" type="NONE" icon="icon.event_hero_treasure_box_i00">
+	<!-- Double-click to receive one of the following items: High/Medium/Average Quality Life Stone. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39203" level="1"/>  <!-- Life Stone Pack -->
+		</skill-reducer>
+	</item>
+
+	<armor id="90036" name="Hero’s Talisman - Attack" type="NONE" body-part="TALISMAN" icon="icon.r90_sp_talisman_dr_hp_active">
+	<!-- PvP Damage +3%, P./M. Critical Damage +20, Skill Power +2%, P./M. Accuracy +1. Duration: 30 days.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="120" duration="43200" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="35038" level="1"/>  <!-- Hero's Talisman - Attack -->
+		</skills>
+	</armor>
+
+	<armor id="90037" name="Hero’s Talisman - Defense" type="NONE" body-part="TALISMAN" icon="icon.r95_talisman_ca_down_active">
+	<!-- Received PvP damage +3%, Magic Attack Resistance +2%, P./M. Skill Evasion +4%, Debuff Resistance +3%. Duration: 30 days.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="120" duration="43200" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="35039" level="1"/>  <!-- Hero's Talisman - Defense -->
+		</skills>
+	</armor>
+
+	<item id="90038" name="Spellbook: Mount Golden Lion" type="NONE" icon="icon.etc_spellbook_red_i00">
+	<!-- Allows you to learn Mount Golden Lion. Required item for level 76 characters who have completed the 3rd class transfer to learn the skill.  -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90039" name="Spellbook: Mount Pegasus" type="NONE" icon="icon.etc_spellbook_red_i00">
+	<!-- Allows you to learn Riding the Pegasus. Required item for level 76 characters who have completed the 3rd class transfer to learn the skill.  -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90040" name="Spellbook: Mount Saber Tooth Cougar" type="NONE" icon="icon.etc_spellbook_red_i00">
+	<!-- Allows you to learn Mount Saber Tooth Cougar. Required item for level 76 characters who have completed the 3rd class transfer to learn the skill.  -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90041" name="Spellbook: Mount Kukuru" type="NONE" icon="icon.etc_spellbook_red_i00">
+	<!-- Allows you to learn Mount Kukuru. Required item for level 76 characters who have completed the 3rd class transfer to learn the skill.  -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90042" name="Spellbook: Mount Black Bear" type="NONE" icon="icon.etc_spellbook_red_i00">
+	<!-- Allows you to learn Mount Black Bear. Required item for level 76 characters who have completed the 3rd class transfer to learn the skill.  -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90043" name="Dark Assassin Transformation Potion" type="POTION" icon="icon.empty_bottle">
+	<!-- For 15 minutes transforms you into Dark Assassin. \\nTransformation into Dark Assassin: Max HP/MP +5%, P./M. Accuracy +1, P./M. Atk. +2%, P./M. Def. +2%, Atk. Spd. +3%, M. Critical Rate +1, Speed +4. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="5"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39205" level="1"/>  <!-- Dark Assassin Transformation Potion -->
+		</skill-reducer>
+	</item>
+
+	<item id="90044" name="Dimensional Blessing" type="SCROLL" icon="icon.etc_blessed_kalie_i00">
+	<!-- Provides 37 million XP and 1.11 million SP.  -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes commission-type="SCROLL_OTHER"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39204" level="1"/>  <!-- Dimensional Blessing -->
+		</skill-reducer>
+	</item>
+
+	<item id="90045" name="Magical Tablet" type="NONE" icon="icon.etc_hidden_1st_page_i00">
+	<!-- A tablet filled with magic power. Collect 31 tablets and give them to Trader Lorenzo or Harmony to get Spellbook: 3rd Class Transfer. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="90046" name="Scroll: Vengeance" type="NONE" icon="icon.etc_magic_book_black_i00">
+	<!-- Scroll needed to learn Vengeance. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90047" name="Scroll: Touch of Life" type="NONE" icon="icon.etc_magic_book_black_i00">
+	<!-- Scroll needed to learn Touch of Life. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90048" name="Scroll: Touch of Death" type="NONE" icon="icon.etc_magic_book_black_i00">
+	<!-- Scroll needed to learn Touch of Death. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90049" name="Scroll: Shield of Faith" type="NONE" icon="icon.etc_magic_book_black_i00">
+	<!-- Scroll needed to learn Shield of Faith. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90050" name="Scroll: Shield of Sacrifice" type="NONE" icon="icon.etc_magic_book_black_i00">
+	<!-- Scroll needed to learn Shield of Sacrifice. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90051" name="Scroll: Insane Crusher" type="NONE" icon="icon.etc_magic_book_black_i00">
+	<!-- Scroll needed to learn Insane Crusher. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90052" name="Scroll: Eva's Protection" type="NONE" icon="icon.etc_magic_book_black_i00">
+	<!-- Scroll needed to learn Eva's Protection. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90053" name="Scroll: Mass Lightning Strike" type="NONE" icon="icon.etc_magic_book_black_i00">
+	<!-- Scroll needed to learn Mass Lightning Strike. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90054" name="Scroll: Clear Movements" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Reset Movement. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90055" name="Scroll: Critical Wound" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Critical Wound. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90056" name="Scroll: Focus Power" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Focus Power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90057" name="Scroll: Focus Chance" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Focus Chance. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90058" name="Scroll: Focus Death" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Focus Death. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90059" name="Scroll: Mirage" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Mirage. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90060" name="Scroll: Evasion" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Evasion. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90061" name="Scroll: Counterattack" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Counterattack. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90062" name="Scroll: Real Target" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Real Target. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90063" name="Scroll: Death Sting" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Death Sting. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90064" name="Scroll: Flame Hawk" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Flame Hawk. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90065" name="Scroll: Arrow Rain" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Arrow Rain. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90066" name="Scroll: Ghost Piercing" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Ghost Piercing. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90067" name="Scroll: Sonic Barrier" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Sonic Barrier. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90068" name="Scroll: Indestructible Sound" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Indestructible Sound. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90069" name="Scroll: Maximum Sonic Focus" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Maximum Sonic Focus. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90070" name="Scroll: Force Barrier" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Force Barrier. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90071" name="Scroll: Rush" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Rush. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90072" name="Scroll: Maximum Force Focus" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Maximum Force Focus. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90073" name="Scroll: Destroyer's Roar" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Destroyer's Roar. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90074" name="Scroll: Over the Body" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Over the Body. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90075" name="Scroll: Demolition Impact" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Demolition Impact. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90076" name="Scroll: Stun Blast" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Stun Blast. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90077" name="Scroll: Spear Howl" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Spear Howl. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90078" name="Scroll: Armor Crush" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Armor Crush. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90079" name="Scroll: Spoil Crush" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Spoil Crush. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90080" name="Scroll: Final Secret" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Final Secret. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90081" name="Scroll: Arcane Power" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Arcane Power. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90082" name="Scroll: Fire Vortex Buster" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Fire Vortex Buster. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90083" name="Scroll: Ice Vortex Crusher" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn the Ice Vortex Cruster. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90084" name="Scroll: Wind Vortex Slug" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Wind Vortex Slug. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90085" name="Scroll: Arcane Chaos" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Arcane Chaos. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90086" name="Scroll: Arcane Shield" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Arcane Shield. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90087" name="Scroll: Curse of Doom" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Curse of Doom. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90088" name="Scroll: Curse of Abyss" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Curse of Abyss. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90089" name="Scroll: Vampiric Mist" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll needed to learn Vampiric Mist. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90090" name="Scroll: Song of Renewal" type="NONE" icon="icon.etc_magic_book_blue_i00">
+	<!-- Scroll needed to learn Song of Renewal. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90091" name="Scroll: Champion Song" type="NONE" icon="icon.etc_magic_book_blue_i00">
+	<!-- Scroll needed to learn Champion Song. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90092" name="Scroll: Song of Silence" type="NONE" icon="icon.etc_magic_book_blue_i00">
+	<!-- Scroll needed to learn Song of Silence. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90093" name="Scroll: Song of Purification" type="NONE" icon="icon.etc_magic_book_blue_i00">
+	<!-- Scroll needed to learn Song of Purification. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90094" name="Scroll: Dance of Shadows" type="NONE" icon="icon.etc_magic_book_blue_i00">
+	<!-- Scroll needed to learn Dance of Shadows. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90095" name="Scroll: Dance of Siren" type="NONE" icon="icon.etc_magic_book_blue_i00">
+	<!-- Scroll needed to learn Dance of Siren. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90096" name="Scroll: Dance of Medusa" type="NONE" icon="icon.etc_magic_book_blue_i00">
+	<!-- Scroll needed to learn Dance of Medusa. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90097" name="Scroll: Dance of Berserker" type="NONE" icon="icon.etc_magic_book_blue_i00">
+	<!-- Scroll needed to learn Dance of Berserker. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90098" name="Scroll: Prophecy of Fire" type="NONE" icon="icon.etc_magic_book_white_i00">
+	<!-- Scroll needed to learn Prophecy of Fire. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="90099" name="Scroll: Block Shield" type="NONE" icon="icon.etc_magic_book_white_i00">
+	<!-- Scroll needed to learn Block Shield. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
 </list>

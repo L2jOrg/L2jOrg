@@ -1,18 +1,19 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="46254" name="Toy Knight's Home Run Ball" icon="BranchIcon.icon.g_ev_homerunball">
-        <!-- Golden Ball received from Dandy. Increases XP and SP gain by 100% for an hour. Changes the look of your armor to NC Dinos Uniform. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <armor id="46261" name="Ninja Assassin Outfit" icon="icon.bm2018_ninja_i01">
-        <!-- Ninja Assassin outfit. -->
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="alldress"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false"/>
-        <stats>
-            <stat type="pDef">400</stat>
-        </stats>
-    </armor>
+	<item id="46254" name="Dandy's Home Run Ball" type="SCROLL" icon="BranchIcon.icon.g_ev_homerunball">
+	<!-- Golden Ball received from Dandy. For 1 hr., acquired XP/SP +100%. Cannot be stacked with Fish Stew - The Guild's Gratitude. Changes the appearance of your armor into that of a Lineage II Uniform. Buff remains after death.\\n\\n -->
+		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="46261" name="Ninja Assassin Outfit" type="HEAVY" body-part="ALL_DRESS" icon="icon.bm2018_ninja_i01">
+	<!-- Ninja outfit. -->
+		<restriction freightable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="400.0"/>
+		</stats>
+	</armor>
+
 </list>

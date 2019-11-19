@@ -1,51 +1,51 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <weapon id="47927" name="Magic Fan - Blue" icon="icon.ev_kr_13th_present_blue">
-        <!-- Within the swift breezes you can feel a magic energy. This magic fan is given out to commemorate the 13th anniversary of Lineage 2. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">1</stat>
-            <stat type="mAtk">1</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">1</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <item id="47928" name="Magic Woodpile" icon="icon.ev_firewood_seed_solo">
-        <!-- Double-click to use a magic woodpile for one player. If you have the Magic Fan equipped, you can use the skills Breeze and Gust to set fire to the woodpile. Will be deleted after the event. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="47929" name="Large Magic Woodpile" icon="icon.ev_firewood_seed_party">
-        <!-- Double-click to use a magic woodpile for party use. If you have the Magic Fan equipped, you can use the skills Breeze and Gust to set fire to the woodpile. Will be deleted after the event. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction stackable="true"/>
-    </item>
-    <weapon id="47945" name="Magic Fan - Yellow" icon="icon.ev_kr_13th_present_yellow">
-        <!-- Within the swift breezes you can feel a magic energy. This magic fan is given out to commemorate the 13th anniversary of Lineage 2. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">1</stat>
-            <stat type="mAtk">1</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">1</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
+	<weapon id="47927" name="Magic Fan - Blue" type="ROD" body-part="RIGHT_HAND" icon="icon.ev_kr_13th_present_blue" magic="true">
+	<!-- Within the swift breezes you can feel a magic energy. This magic fan is given out to commemorate the 13th anniversary of Lineage 2. -->
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="150" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="1.0"/>
+			<stat type="mAtk" value="1.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="1.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<item id="47928" name="Magic Woodpile" type="NONE" icon="icon.ev_firewood_seed_solo">
+	<!-- Double-click to use a Magic Woodpile for one player. If you have the Magic Fan equipped, you can use magic to set fire to the woodpile. Will be deleted during maintenance on Wednesday, December 7th, 2016. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="47929" name="Large Magic Woodpile" type="NONE" icon="icon.ev_firewood_seed_party">
+	<!-- Double-click to use a Large Magic Woodpile for party use. If you have the Magic Fan equipped, you can use magic to set fire to the woodpile. Will be deleted during maintenance on Wednesday, December 7th, 2016. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<weapon id="47945" name="Magic Fan - Yellow" type="ROD" body-part="RIGHT_HAND" icon="icon.ev_kr_13th_present_yellow" magic="true">
+	<!-- Within the swift breezes you can feel a magic energy. This magic fan is given out to commemorate the 13th anniversary of Lineage 2. -->
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="150" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="1.0"/>
+			<stat type="mAtk" value="1.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="1.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
 </list>

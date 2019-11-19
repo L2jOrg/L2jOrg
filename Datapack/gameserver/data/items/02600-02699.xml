@@ -1,1143 +1,981 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <weapon id="2600" name="Raid Sword*Caliburs" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1044"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2190"/>
-        <set name="price" val="7830000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3046" level="10" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Guidance -->
-        </skills>
-        <stats>
-            <stat type="pAtk">204</stat>
-            <stat type="mAtk">89</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2601" name="Raid Sword*Ultimate Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1044"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2170"/>
-        <set name="price" val="7830000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3042" level="10" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Critical Damage -->
-        </skills>
-        <stats>
-            <stat type="pAtk">204</stat>
-            <stat type="mAtk">89</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2602" name="Raid Sword*Sword of Delusion" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1044"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2180"/>
-        <set name="price" val="7830000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3013" level="1" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Health -->
-        </skills>
-        <stats>
-            <stat type="pAtk">204</stat>
-            <stat type="mAtk">89</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2603" name="Raid Sword*Sword of Nightmare" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1044"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2170"/>
-        <set name="price" val="7830000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3044" level="10" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Focus -->
-        </skills>
-        <stats>
-            <stat type="pAtk">204</stat>
-            <stat type="mAtk">89</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2604" name="Raid Sword*Tsurugi" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1044"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2170"/>
-        <set name="price" val="7830000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3045" level="10" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Haste -->
-        </skills>
-        <stats>
-            <stat type="pAtk">204</stat>
-            <stat type="mAtk">89</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2605" name="Raid Sword*Samurai Long Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1273"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2130"/>
-        <set name="price" val="9550000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3044" level="12" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Focus -->
-        </skills>
-        <stats>
-            <stat type="pAtk">220</stat>
-            <stat type="mAtk">94</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2606" name="Caliburs*Caliburs" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1157"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2140"/>
-        <set name="price" val="8680000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3042" level="11" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Critical Damage -->
-        </skills>
-        <stats>
-            <stat type="pAtk">213</stat>
-            <stat type="mAtk">91</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2607" name="Caliburs*Ultimate Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1157"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2150"/>
-        <set name="price" val="8680000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3013" level="1" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Health -->
-        </skills>
-        <stats>
-            <stat type="pAtk">213</stat>
-            <stat type="mAtk">91</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2608" name="Caliburs*Sword of Delusion" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1157"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2140"/>
-        <set name="price" val="8680000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3044" level="11" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Focus -->
-        </skills>
-        <stats>
-            <stat type="pAtk">213</stat>
-            <stat type="mAtk">91</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2609" name="Caliburs*Sword of Nightmare" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1157"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2170"/>
-        <set name="price" val="8680000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3045" level="11" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Haste -->
-        </skills>
-        <stats>
-            <stat type="pAtk">213</stat>
-            <stat type="mAtk">91</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2610" name="Caliburs*Tsurugi" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1157"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2150"/>
-        <set name="price" val="8680000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3046" level="11" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Guidance -->
-        </skills>
-        <stats>
-            <stat type="pAtk">213</stat>
-            <stat type="mAtk">91</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2611" name="Caliburs*Samurai Long Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1506"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2120"/>
-        <set name="price" val="11300000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3045" level="13" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Haste -->
-        </skills>
-        <stats>
-            <stat type="pAtk">228</stat>
-            <stat type="mAtk">97</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2612" name="Ultimate Sword*Ultimate Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1157"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2140"/>
-        <set name="price" val="8680000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3042" level="11" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Critical Damage -->
-        </skills>
-        <stats>
-            <stat type="pAtk">213</stat>
-            <stat type="mAtk">91</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2613" name="Ultimate Sword*Sword of Delusion" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1157"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2140"/>
-        <set name="price" val="8680000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3013" level="1" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Health -->
-        </skills>
-        <stats>
-            <stat type="pAtk">213</stat>
-            <stat type="mAtk">91</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2614" name="Ultimate Sword*Sword of Nightmare" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1157"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2130"/>
-        <set name="price" val="8680000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3044" level="11" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Focus -->
-        </skills>
-        <stats>
-            <stat type="pAtk">213</stat>
-            <stat type="mAtk">91</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2615" name="Ultimate Sword*Tsurugi" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1157"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2120"/>
-        <set name="price" val="8680000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3045" level="11" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Haste -->
-        </skills>
-        <stats>
-            <stat type="pAtk">213</stat>
-            <stat type="mAtk">91</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2616" name="Ultimate Sword*Samurai Long Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1506"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2100"/>
-        <set name="price" val="11300000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3046" level="13" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Guidance -->
-        </skills>
-        <stats>
-            <stat type="pAtk">228</stat>
-            <stat type="mAtk">97</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2617" name="Sword of Delusion*Sword of Delusion" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1157"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2150"/>
-        <set name="price" val="8680000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3046" level="11" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Guidance -->
-        </skills>
-        <stats>
-            <stat type="pAtk">213</stat>
-            <stat type="mAtk">91</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2618" name="Sword of Delusion*Sword of Nightmare" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1157"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2130"/>
-        <set name="price" val="8680000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3042" level="11" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Critical Damage -->
-        </skills>
-        <stats>
-            <stat type="pAtk">213</stat>
-            <stat type="mAtk">91</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2619" name="Sword of Delusion*Tsurugi" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1157"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2140"/>
-        <set name="price" val="8680000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3013" level="1" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Health -->
-        </skills>
-        <stats>
-            <stat type="pAtk">213</stat>
-            <stat type="mAtk">91</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2620" name="Sword of Delusion*Samurai Long Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1506"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2110"/>
-        <set name="price" val="11300000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3042" level="13" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Critical Damage -->
-        </skills>
-        <stats>
-            <stat type="pAtk">228</stat>
-            <stat type="mAtk">97</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2621" name="Sword of Nightmare*Sword of Nightmare" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1157"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2130"/>
-        <set name="price" val="8680000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3044" level="11" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Focus -->
-        </skills>
-        <stats>
-            <stat type="pAtk">213</stat>
-            <stat type="mAtk">91</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2622" name="Sword of Nightmare*Tsurugi" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1157"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2140"/>
-        <set name="price" val="8680000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3045" level="11" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Haste -->
-        </skills>
-        <stats>
-            <stat type="pAtk">213</stat>
-            <stat type="mAtk">91</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2623" name="Sword of Nightmare*Samurai Long Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1506"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2080"/>
-        <set name="price" val="11300000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3013" level="1" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Health -->
-        </skills>
-        <stats>
-            <stat type="pAtk">228</stat>
-            <stat type="mAtk">97</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2624" name="Tsurugi*Tsurugi" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1157"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2120"/>
-        <set name="price" val="8680000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3044" level="11" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Focus -->
-        </skills>
-        <stats>
-            <stat type="pAtk">213</stat>
-            <stat type="mAtk">91</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2625" name="Tsurugi*Samurai Long Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1506"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2090"/>
-        <set name="price" val="11300000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3044" level="13" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Focus -->
-        </skills>
-        <stats>
-            <stat type="pAtk">228</stat>
-            <stat type="mAtk">97</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="2626" name="Samurai Long Sword*Samurai Long Sword" icon="icon.weapon_dual_sword_i00">
-        <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1746"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="2080"/>
-        <set name="price" val="13100000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DUALSWORD"/>
-        <skills>
-            <skill id="3045" level="14" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Haste -->
-        </skills>
-        <stats>
-            <stat type="pAtk">236</stat>
-            <stat type="mAtk">99</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <item id="2627" name="Mark of Challenger" icon="icon.etc_jewel_silver_i00">
-        <!-- Mark given to those who have passed the Trial of the Challenger. Item for class transfer. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2628" name="Letter of Kash" icon="icon.etc_scroll_gray_i00">
-        <!-- Kash's introduction letter. Take this letter to Martien in Town of Giran. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2629" name="Watcher's 1st Eye" icon="icon.etc_eyeball_i00">
-        <!-- Item obtained from the monster, Gorr. Take this to Martien in Town of Giran. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2630" name="Watcher's 1st Eye" icon="icon.etc_eyeball_i00">
-        <!-- Item obtained from the monster Baraham. Show this to Raldo and... -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2631" name="Scroll of Shyslassys" icon="icon.etc_scroll_of_enchant_weapon_i01">
-        <!-- Ancient scroll obtained by slaying Shyslassys. Take this to Kash in the Town of Dion. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2632" name="Broken Key" icon="icon.etc_mold_i00">
-        <!-- Key obtained by slaying Shyslassys. This key is needed in order to open the Chest of Shyslassys. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2633" name="Mark of Duty" icon="icon.accessary_necklace_of_holy_spirit_i00">
-        <!-- Mark given to those who have passed the Trial of Duty. Item for class transfer. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2634" name="Letter of Dustin" icon="icon.etc_piece_of_paper_white_i00">
-        <!-- Letter given by Dustin. Deliver the letter to Grand Master Hannavalt in Town of Giran. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2635" name="Knight's Tear" icon="icon.etc_crystal_ball_red_i00">
-        <!-- Obtained from the Spirit of Sir Herod. Take this to Sir Aaron Tanford. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2636" name="Mirror of Orpic" icon="icon.etc_mirror_i00">
-        <!-- This is needed in order to speak with the Spirit Of Sir Talianus. Use this to defeat the Hangman Tree. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2637" name="Tear of Confession" icon="icon.etc_crystal_ball_white_i00">
-        <!-- Obtained from the Spirit Of Sir Talianus. Take this to Sir Kiel Nighthawk. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2638" name="Report Piece" icon="icon.etc_leather_gray_i00">
-        <!-- You may obtain this by hunting Strains and Ghouls. Gather 10 pieces and put them together to create Talianus' report. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2639" name="Report of Sir Talianus" icon="icon.etc_letter_white_i00">
-        <!-- The completed report. After speaking with Sir Kiel Nighthawk, deliver the report to the Spirit Of Sir Talianus. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2640" name="Tear of Loyalty" icon="icon.etc_crystal_ball_silver_i00">
-        <!-- This item can be obtained from Isael Silvershadow. Take it to Priest Dustin. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2641" name="Militas Article" icon="icon.etc_jewel_box_i00">
-        <!-- You can receive this item when you catch a Leto Lizardman. Collect 20 of them and take them to Isael Silvershadow. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2642" name="Saint's Ash Urn" icon="icon.etc_oil_pot_white_i00">
-        <!-- Object received from Priest Dustin. Deliver this to Sir Windawood. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2643" name="Athebaldt's Skull" icon="icon.etc_skull_white_i00">
-        <!-- You can obtain this item from a Breka Orc Prefect. Take it to Priest Dustin along with Athebaldt's ribs and Athebaldt's shin. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2644" name="Athebaldt's Ribs" icon="icon.etc_rib_white_i00">
-        <!-- You can obtain this item from a Breka Orc Prefect. Take it to Priest Dustin along with Athebaldt's skull and Athebaldt's shin. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2645" name="Athebaldt's Shin" icon="icon.etc_piece_bone_white_i00">
-        <!-- You can obtain this item from a Breka Orc Prefect. Take it to Priest Dustin along with Athebaldt's ribs and Athebaldt's skull. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2646" name="Letter of Windawood" icon="icon.etc_letter_blue_i00">
-        <!-- Letter received from Sir Colin Windawood. Show this to Priest Dustin. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2647" name="Dufner's Letter" icon="icon.etc_scroll_white_i00">
-        <!-- Letter sent from Master Dufner to Master Terry in the Town of Dion. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2648" name="Terry's 1st Order" icon="icon.etc_scroll_of_resurrection_i01">
-        <!-- Investigate the Neer Crawler Berserkers of the Execution Grounds. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2649" name="Terry's 1st Order" icon="icon.etc_scroll_of_return_i00">
-        <!-- Investigate the Ol Mahum Captain, Turek Orc Prefect, Ant Captain and Turak Bugbear Warrior. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2650" name="Terry's Letter" icon="icon.etc_letter_blue_i00">
-        <!-- Letter sent by Master Terry to Weapon Merchant Viktor of Hunters Village. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2651" name="Viktor's Letter" icon="icon.etc_letter_red_i00">
-        <!-- Letter sent by Trader Viktor to Master Terry in the Town of Dion. The letter Has Terry's seal. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2652" name="Hawkeye's Letter" icon="icon.etc_letter_white_i00">
-        <!-- Letter sent by Hawkeye to Trader Viktor of the Hunter's Village. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2653" name="Mysterious Spirit Ore" icon="icon.etc_crystal_blue_i00">
-        <!-- Mysterious Spirit Ore obtained after slaying Neer Crawler Berserkers. Take this to Master Terry. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2654" name="Ol Mahum Spirit Ore" icon="icon.etc_crystal_red_i00">
-        <!-- Mysterious Spirit Ore obtained after slaying the Ol Mahum Captain. Take this to Master Terry. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2655" name="Turek Spirit Ore" icon="icon.etc_crystal_silver_i00">
-        <!-- Mysterious Spirit Ore obtained after slaying the Turek Orc Prefect. Take this to Master Terry. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2656" name="Ant Spirit Ore" icon="icon.etc_crystal_white_i00">
-        <!-- Mysterious Spirit Ore obtained after slaying the Ant Captain. Take this to Master Terry. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2657" name="Turak Bugbear Spirit Ore" icon="icon.etc_crystal_gold_i00">
-        <!-- Mysterious Spirit Ore obtained after slaying the Turak Bugbear Warrior. Take this to Master Terry. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2658" name="Terry's Box" icon="icon.etc_jewel_box_i00">
-        <!-- Chest containing the mysterious Spirit Ore. Take this to Weapon Merchant Viktor of the Hunters Village. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2659" name="Viktor's Request" icon="icon.etc_scroll_of_enchant_armor_i01">
-        <!-- Request issued by Trader Viktor. Please gather 10 Medusa Scales.\0 -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2660" name="Medusa Scales" icon="icon.etc_parasite_i00">
-        <!-- The scales of the Medusa. Gather 10 of these and take them to Weapon Merchant Viktor. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2661" name="Dark Bezoar" icon="icon.etc_crystal_green_i00">
-        <!-- Strange Spirit Ore obtained from the bodies of mutant species. They seem to be related to Shilen, the goddess of death. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2662" name="Analysis Request" icon="icon.etc_recipe_blue_i00">
-        <!-- Request letter sent to Magister Marina of the Ivory Tower from Weapon Merchant. The letter asks Marina to analyze the Abyss Spirit Ore. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2663" name="Marina's Letter" icon="icon.etc_piece_of_paper_white_i00">
-        <!-- Letter sent by Magister Marina to Blacksmith Brunon of the Dwarven Village. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2664" name="Experiment Tools" icon="icon.etc_squares_wood_i00">
-        <!-- ExperiMental tools crafted by Blacksmith Brunon. Deliver these to Magister Marina of the Ivory Tower. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2665" name="Analysis Result" icon="icon.etc_recipe_red_i00">
-        <!-- Document where Magister Marina Has organized the analyzed results of the Abyss Spirit Ore. Deliver this to Master Terry in the Town of Dion. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2666" name="Terry's 1st Order" icon="icon.etc_scroll_of_enchant_weapon_i01">
-        <!-- Master Terry's orders. The orders give instructions to come back for the next task after reaching level 36. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2667" name="Host List" icon="icon.etc_piece_of_paper_black_i00">
-        <!-- List of the bezoar hosts. Marsh Stakato Drone, Breka Orc Prefect, Ant Warrior Captain, Leto Lizardman Warrior.\0 -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2668" name="Dark Bezoar" icon="icon.etc_crystal_blue_i00">
-        <!-- The dark bezoar retrieved from the body of a Marsh Stakato Drone. Take this to Master Terry. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2669" name="Dark Bezoar" icon="icon.etc_crystal_silver_i00">
-        <!-- The Spirit Ore retrieved from the body of the Breka Orc Prefect. Take this to Master Terry. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2670" name="Dark Bezoar" icon="icon.etc_crystal_white_i00">
-        <!-- The Spirit Ore retrieved from the body of the Ant Warrior Captain. Take this to Master Terry. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2671" name="Dark Bezoar" icon="icon.etc_crystal_green_i00">
-        <!-- The Spirit Ore retrieved from the body of the Leto Lizardman Warrior. Take this to Master Terry. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2672" name="Terry's Report" icon="icon.etc_scroll_of_enchant_weapon_i00">
-        <!-- Report detailing information about the Spirit Ore incident. Take this to Master Dufner of Town of Giran. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2673" name="Mark of Seeker" icon="icon.etc_jewel_green_i00">
-        <!-- Mark given to those who have passed the Trial of the Seeker. Class transfer related item. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2674" name="Mark of Scholar" icon="icon.etc_jewel_blue_i00">
-        <!-- Mark given to those who have passed the Trial of the Scholar. Class transfer related item. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2675" name="Mirien's 1st Badge" icon="icon.shield_shield_of_mana_i00">
-        <!-- A badge given by Magister Mirien while giving orders to complete High Priest Sylvain's request. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2676" name="Mirien's 1st Badge" icon="icon.shield_shield_of_pledge_i00">
-        <!-- A badge given by Magister Mirien while giving orders to complete Grand Magister Jurek's request. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2677" name="Mirien's 1st Badge" icon="icon.shield_round_shield_i00">
-        <!-- A badge given by Magister Mirien when giving orders to complete Elder Cronos' request. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2678" name="Mirien's Instruction" icon="icon.etc_scroll_gray_i00">
-        <!-- Note that contains Magister Mirien's instructions. The note gives instructions to come back for the next task after reaching level 36. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2679" name="Maria's Letter" icon="icon.etc_letter_blue_i00">
-        <!-- Letter sent by Maria to Captain Lucas in the Town of Dion. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2680" name="Maria's Letter" icon="icon.etc_letter_red_i00">
-        <!-- Letter sent by Maria to Astrologer Creta of the village of Floran. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2681" name="Lucas' Letter" icon="icon.etc_letter_white_i00">
-        <!-- Letter sent by Captain Lucas in the Town of Dion to Maria. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2682" name="Lucilla's Handbag" icon="icon.etc_pouch_yellow_i00">
-        <!-- The handbag left by Maria's friend Lucillas on the night of the theft. Take this to Astrologer Creta. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2683" name="Creta's 1st Letter" icon="icon.etc_letter_blue_i00">
-        <!-- Letter sent by the Astrologer Creta to Maria in the Town of Dion. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2684" name="Creta's Painting1" icon="icon.etc_scroll_of_enchant_armor_i00">
-        <!-- Painting by Astrologer Creta. It contains a shadow presumed to be that of the thief. Take this to Maria. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2685" name="Creta's Painting1" icon="icon.etc_scroll_of_resurrection_i00">
-        <!-- Painting by Astrologer Creta. It contains a shadow presumed to be that of the thief. Take this to Captain Lucas. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2686" name="Creta's Painting1" icon="icon.etc_scroll_of_return_i00">
-        <!-- Painting painted by Astrologer Creta. The shadow in the painting is that of a Leto lizardman warrior. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2687" name="Brown Scroll Scrap" icon="icon.etc_map_piece_yellow_i00">
-        <!-- Scrap of a scroll that contains directions on how to create the crystal of purity. Gather 5 of these and take them to Maria. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2688" name="Crystal of Purity" icon="icon.etc_gem_clear_i00">
-        <!-- Crystal used to purify the earth. Take this to High Priest Sylvain in the Town of Dion. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2689" name="High Priest's Badge" icon="icon.shield_sages_shield_i01">
-        <!-- A badge received from High Priest Sylvain. Proof given to those who are carrying out the orders of the High Priest. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2690" name="Grand Magister's Badge" icon="icon.shield_doom_shield_i00">
-        <!-- A badge received from Grand Magister Jurek. Proof given to those who are carrying out the orders of the Grand Magister. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2691" name="Crono's Badge" icon="icon.shield_another_worlds_shield_i01">
-        <!-- A badge received from Elder Cronos. This signifies proof that someone is carrying out orders from Elder Cronos. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2692" name="Sylvain's Letter" icon="icon.etc_piece_of_paper_gray_i00">
-        <!-- High Priest Sylvain's letter. Take this to Maria in the Town of Dion. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2693" name="Mark of Sylvain" icon="icon.etc_coins_blue_i00">
-        <!-- Mark given to those who have passed High Priest Sylvain's test. Take this to Magister Mirien in the Town of Dion. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2694" name="Jurek's List" icon="icon.etc_piece_of_paper_black_i00">
-        <!-- The list of evil creatures that Grand Magister Jurek asked you to investigate: Monster eye destroyer, Breka orc shaman, and shackle. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2695" name="Monster Eye Destroyer's Skin" icon="icon.etc_leather_yellow_i00">
-        <!-- Beamer's skin. Gather 5 of these and take them to Grand Magister Jurek of Town of Giran. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2696" name="Shaman's Necklace" icon="icon.etc_totem_necklace_red_i00">
-        <!-- A Breka orc shaman's necklace. Gather 5 of these and take them to Grand Magister Jurek in Town of Giran. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2697" name="Shackle's Scalp" icon="icon.etc_leather_brown_i00">
-        <!-- Skin of the shackle's head. Gather 2 of these and take them to Grand Magister Jurek of Town of Giran. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2698" name="Mark of Jurek" icon="icon.etc_coins_gold_i00">
-        <!-- Mark given to those who have passed Grand Magister Jurek's test. Take this to Magister Mirien in the Town of Dion. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="2699" name="Cronos Letter" icon="icon.etc_letter_red_i00">
-        <!-- Letter sent by Elder Cronos to Magister Dieter in the Town of Giran. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
+	<weapon id="2600" name="Raid Sword*Caliburs" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2190" price="7830000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1044"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="204.0"/>
+			<stat type="mAtk" value="89.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3046" level="10" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Guidance -->
+		</skills>
+	</weapon>
+
+	<weapon id="2601" name="Raid Sword*Ultimate Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2170" price="7830000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1044"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="204.0"/>
+			<stat type="mAtk" value="89.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3042" level="10" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: P. Critical Damage -->
+		</skills>
+	</weapon>
+
+	<weapon id="2602" name="Raid Sword*Sword of Delusion" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2180" price="7830000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1044"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="204.0"/>
+			<stat type="mAtk" value="89.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3013" level="1" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Health -->
+		</skills>
+	</weapon>
+
+	<weapon id="2603" name="Raid Sword*Sword of Nightmare" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2170" price="7830000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1044"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="204.0"/>
+			<stat type="mAtk" value="89.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3044" level="10" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Focus -->
+		</skills>
+	</weapon>
+
+	<weapon id="2604" name="Raid Sword*Tsurugi" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2170" price="7830000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1044"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="204.0"/>
+			<stat type="mAtk" value="89.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3045" level="10" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Haste -->
+		</skills>
+	</weapon>
+
+	<weapon id="2605" name="Raid Sword*Samurai Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2130" price="9550000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1273"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="220.0"/>
+			<stat type="mAtk" value="94.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3044" level="12" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Focus -->
+		</skills>
+	</weapon>
+
+	<weapon id="2606" name="Caliburs*Caliburs" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2140" price="8680000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1157"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="213.0"/>
+			<stat type="mAtk" value="91.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3042" level="11" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: P. Critical Damage -->
+		</skills>
+	</weapon>
+
+	<weapon id="2607" name="Caliburs*Ultimate Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2150" price="8680000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1157"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="213.0"/>
+			<stat type="mAtk" value="91.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3013" level="1" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Health -->
+		</skills>
+	</weapon>
+
+	<weapon id="2608" name="Caliburs*Sword of Delusion" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2140" price="8680000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1157"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="213.0"/>
+			<stat type="mAtk" value="91.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3044" level="11" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Focus -->
+		</skills>
+	</weapon>
+
+	<weapon id="2609" name="Caliburs*Sword of Nightmare" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2170" price="8680000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1157"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="213.0"/>
+			<stat type="mAtk" value="91.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3045" level="11" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Haste -->
+		</skills>
+	</weapon>
+
+	<weapon id="2610" name="Caliburs*Tsurugi" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2150" price="8680000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1157"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="213.0"/>
+			<stat type="mAtk" value="91.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3046" level="11" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Guidance -->
+		</skills>
+	</weapon>
+
+	<weapon id="2611" name="Caliburs*Samurai Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2120" price="11300000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1506"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="228.0"/>
+			<stat type="mAtk" value="97.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3045" level="13" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Haste -->
+		</skills>
+	</weapon>
+
+	<weapon id="2612" name="Ultimate Sword*Ultimate Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2140" price="8680000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1157"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="213.0"/>
+			<stat type="mAtk" value="91.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3042" level="11" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: P. Critical Damage -->
+		</skills>
+	</weapon>
+
+	<weapon id="2613" name="Ultimate Sword*Sword of Delusion" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2140" price="8680000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1157"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="213.0"/>
+			<stat type="mAtk" value="91.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3013" level="1" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Health -->
+		</skills>
+	</weapon>
+
+	<weapon id="2614" name="Ultimate Sword*Sword of Nightmare" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2130" price="8680000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1157"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="213.0"/>
+			<stat type="mAtk" value="91.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3044" level="11" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Focus -->
+		</skills>
+	</weapon>
+
+	<weapon id="2615" name="Ultimate Sword*Tsurugi" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2120" price="8680000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1157"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="213.0"/>
+			<stat type="mAtk" value="91.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3045" level="11" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Haste -->
+		</skills>
+	</weapon>
+
+	<weapon id="2616" name="Ultimate Sword*Samurai Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2100" price="11300000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1506"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="228.0"/>
+			<stat type="mAtk" value="97.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3046" level="13" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Guidance -->
+		</skills>
+	</weapon>
+
+	<weapon id="2617" name="Sword of Delusion*Sword of Delusion" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2150" price="8680000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1157"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="213.0"/>
+			<stat type="mAtk" value="91.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3046" level="11" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Guidance -->
+		</skills>
+	</weapon>
+
+	<weapon id="2618" name="Sword of Delusion*Sword of Nightmare" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2130" price="8680000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1157"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="213.0"/>
+			<stat type="mAtk" value="91.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3042" level="11" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: P. Critical Damage -->
+		</skills>
+	</weapon>
+
+	<weapon id="2619" name="Sword of Delusion*Tsurugi" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2140" price="8680000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1157"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="213.0"/>
+			<stat type="mAtk" value="91.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3013" level="1" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Health -->
+		</skills>
+	</weapon>
+
+	<weapon id="2620" name="Sword of Delusion*Samurai Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2110" price="11300000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1506"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="228.0"/>
+			<stat type="mAtk" value="97.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3042" level="13" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: P. Critical Damage -->
+		</skills>
+	</weapon>
+
+	<weapon id="2621" name="Sword of Nightmare*Sword of Nightmare" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2130" price="8680000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1157"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="213.0"/>
+			<stat type="mAtk" value="91.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3044" level="11" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Focus -->
+		</skills>
+	</weapon>
+
+	<weapon id="2622" name="Sword of Nightmare*Tsurugi" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2140" price="8680000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1157"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="213.0"/>
+			<stat type="mAtk" value="91.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3045" level="11" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Haste -->
+		</skills>
+	</weapon>
+
+	<weapon id="2623" name="Sword of Nightmare*Samurai Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2080" price="11300000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1506"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="228.0"/>
+			<stat type="mAtk" value="97.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3013" level="1" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Health -->
+		</skills>
+	</weapon>
+
+	<weapon id="2624" name="Tsurugi*Tsurugi" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2120" price="8680000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1157"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="213.0"/>
+			<stat type="mAtk" value="91.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3044" level="11" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Focus -->
+		</skills>
+	</weapon>
+
+	<weapon id="2625" name="Tsurugi*Samurai Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2090" price="11300000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1506"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="228.0"/>
+			<stat type="mAtk" value="97.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3044" level="13" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Focus -->
+		</skills>
+	</weapon>
+
+	<weapon id="2626" name="Samurai Long Sword*Samurai Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction freightable="false"/>
+		<attributes weight="2080" price="13100000" commission-type="DUALSWORD"/>
+		<crystal type="B" count="1746"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="236.0"/>
+			<stat type="mAtk" value="99.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3045" level="14" type="ON_ENCHANT" value="4"/>  <!-- Special Ability: Haste -->
+		</skills>
+	</weapon>
+
+	<item id="2627" name="Mark of Challenger" type="NONE" icon="icon.etc_jewel_silver_i00">
+	<!-- Mark given to those who have passed the Trial of the Challenger. Item for occupational change. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2628" name="Letter of Kash" type="NONE" icon="icon.etc_scroll_gray_i00">
+	<!-- Kash's introduction letter. Take this letter to Martien in Town of Giran. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2629" name="Watcher's 1st Eye" type="NONE" icon="icon.etc_eyeball_i00">
+	<!-- Item obtained from the monster, Gorr. Take this to Martien in Town of Giran. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2630" name="Watcher's 2nd Eye" type="NONE" icon="icon.etc_eyeball_i00">
+	<!-- Item obtained from the monster Baraham. Show this to Raldo and... -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2631" name="Scroll of Shyslassys" type="NONE" icon="icon.etc_scroll_of_enchant_weapon_i01">
+	<!-- Ancient scroll obtained by slaying Shyslassys. Take this to Kash in the Town of Dion. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2632" name="Broken Key" type="NONE" icon="icon.etc_mold_i00">
+	<!-- Key obtained by slaying Shyslassys. This key is needed in order to open the Chest of Shyslassys. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2633" name="Mark of Duty" type="NONE" icon="icon.accessary_necklace_of_holy_spirit_i00">
+	<!-- Mark given to those who have passed the Trial of Duty. Item for occupational change. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2634" name="Letter of Dustin" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
+	<!-- Letter given by Dustin. Deliver the letter to Grand Master Hannavalt in Town of Giran. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2635" name="Knight's Tear" type="NONE" icon="icon.etc_crystal_ball_red_i00">
+	<!-- Obtained from the Spirit of Sir Herod. Take this to Sir Aaron Tanford who is waiting for you in a house near Ol Mahum Checkpoint, south of the Wastelands. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2636" name="Mirror of Orpic" type="NONE" icon="icon.etc_mirror_i00">
+	<!-- This is needed in order to speak with the Spirit Of Sir Talianus. Follow him to Execution Grounds and destroy the Hangman Tree. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2637" name="Tear of Confession" type="NONE" icon="icon.etc_crystal_ball_white_i00">
+	<!-- Obtained from the Spirit Of Sir Talianus. Take this to Sir Kiel Nighthawk of the Dark Elf Guild in the Town of Dion. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2638" name="Report Piece" type="NONE" icon="icon.etc_leather_gray_i00">
+	<!-- Report Scrap obtained from killing a Lesser Ghoul or a Lesser Strain in the Execution Grounds. Collect 10 pieces to get the full Report of Sir Talianus. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2639" name="Talianus' Report" type="NONE" icon="icon.etc_letter_white_i00">
+	<!-- The completed report. After speaking with Sir Kiel Nighthawk of the Dark Elf Guild in the Town of Dion, deliver the report to the Spirit Of Sir Talianus. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2640" name="Tear of Loyalty" type="NONE" icon="icon.etc_crystal_ball_silver_i00">
+	<!-- This item can be obtained from Isael Silvershadow in Hunters Village. Take it to Priest Dustin who can be found in the Temple of Einhasad in Giran. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2641" name="Militia's Article" type="NONE" icon="icon.etc_jewel_box_i00">
+	<!-- You can receive this item when you catch a Leto Lizardman on the Plains of the Lizardmen. Collect 20 of them and take them to Isael Silvershadow in Hunters Village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2642" name="Saint's Ash Urn" type="NONE" icon="icon.etc_oil_pot_white_i00">
+	<!-- Object received from Priest Dustin of the Temple of Einhasad in Giran. Deliver this to Sir Windawood who are waiting for you near the Obelisk of Victory on Talking Island. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2643" name="Athebaldt's Skull" type="NONE" icon="icon.etc_skull_white_i00">
+	<!-- Item from a Breka Orc Prefect obtained in Breka's Stronghold. Take it, along with ribs and shin, to Priest Dustin of the Temple of Einhasad in Giran. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2644" name="Athebaldt's Ribs" type="NONE" icon="icon.etc_rib_white_i00">
+	<!-- Item from a Breka Orc Prefect obtained in Breka's Stronghold. Take it, along with skull and shin, to Priest Dustin of the Temple of Einhasad in Giran. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2645" name="Athebaldt's Shin" type="NONE" icon="icon.etc_piece_bone_white_i00">
+	<!-- Item from a Breka Orc Prefect obtained in Breka's Stronghold. Take it, along with ribs and skull, to Priest Dustin of the Temple of Einhasad in Giran. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2646" name="Letter of Windawood" type="NONE" icon="icon.etc_letter_blue_i00">
+	<!-- Letter received from Sir Windawood near the Obelisk of Victory on Talking Island. Show it to Priest Dustin of the Temple of Einhasad in Giran. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2647" name="Dufner's Letter" type="NONE" icon="icon.etc_scroll_white_i00">
+	<!-- Letter sent by Master Genwitter from the Warrior Guild of Giran to Master Terry in Dion.  -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2648" name="Terry's 1st Order" type="NONE" icon="icon.etc_scroll_of_resurrection_i01">
+	<!-- Investigate the Neer Ghoul Berserkers of the Execution Grounds.  -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2649" name="Terry's 2nd Order" type="NONE" icon="icon.etc_scroll_of_return_i00">
+	<!-- Investigate the Neer Ghoul Berserkers of the Execution Grounds.  -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2650" name="Terry's Letter" type="NONE" icon="icon.etc_letter_blue_i00">
+	<!-- Letter sent by Master Terry of the Warrior Guild of Dion to Weapon Merchant Viktor of Hunters Village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2651" name="Viktor's Letter" type="NONE" icon="icon.etc_letter_red_i00">
+	<!-- Letter sent by Trader Viktor to Master Terry in the Town of Dion. The letter Has Terry's seal. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2652" name="Hawkeye's Letter" type="NONE" icon="icon.etc_letter_white_i00">
+	<!-- Letter sent by Hawkeye to Trader Viktor of the Hunter's Village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2653" name="Mysterious Spirit Ore" type="NONE" icon="icon.etc_crystal_blue_i00">
+	<!-- Mysterious Spirit Ore obtained after slaying Neer Crawler Berserkers on the Execution Grounds. Take this to Master Terry. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2654" name="Ol Mahum Spirit Ore" type="NONE" icon="icon.etc_crystal_red_i00">
+	<!-- Mysterious Spirit Ore obtained after slaying the Ol Mahum Captain in Partisan's Hideaway. Take this to Master Terry of the Warrior Guild of Dion. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2655" name="Turek Spirit Ore" type="NONE" icon="icon.etc_crystal_silver_i00">
+	<!-- Mysterious Spirit Ore obtained after slaying the Turek Orc Prefect in Orc Barracks. Take this to Master Terry of the Warrior Guild of Dion. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2656" name="Ant Spirit Ore" type="NONE" icon="icon.etc_crystal_white_i00">
+	<!-- Mysterious Spirit Ore obtained after slaying the Ant Captain in the Wastelands. Take this to Master Terry of the Warrior Guild of Dion. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2657" name="Turak Bugbear Spirit Ore" type="NONE" icon="icon.etc_crystal_gold_i00">
+	<!-- Mysterious Spirit Ore obtained after slaying the Turak Bugbear Warrior in the Gorgon Flower Garden. Take this to Master Terry of the Warrior Guild of Dion. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2658" name="Terry's Box" type="NONE" icon="icon.etc_jewel_box_i00">
+	<!-- Chest containing the mysterious Spirit Ore. Take this to Weapon Merchant Viktor of the Hunters Village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2659" name="Viktor's Request" type="NONE" icon="icon.etc_scroll_of_enchant_armor_i01">
+	<!-- Request issued by Trader Viktor. "Please kill Medusa in the Gorgon Flower Garden and gather 10 Medusa Scales." -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2660" name="Medusa Scales" type="NONE" icon="icon.etc_parasite_i00">
+	<!-- Medusa Scales obtained from killing Medusa in the Gorgon Flower Garden. Collect 10 such scales and take them to Trader Viktor. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2661" name="Abyss Spirit Ore" type="NONE" icon="icon.etc_crystal_green_i00">
+	<!-- Strange Spirit Ore obtained from the bodies of mutant species. They seem to be related to Shilen, the goddess of death. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2662" name="Analysis Request" type="NONE" icon="icon.etc_recipe_blue_i00">
+	<!-- Request letter sent to Magister Marina of the Ivory Tower from Weapon Merchant Viktor. The letter asks Marina to analyze the Abyss Spirit Ore. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2663" name="Marina's Letter" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
+	<!-- Letter sent by Magister Marina to Blacksmith Brunon of the Dwarven Village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2664" name="Experiment Tools" type="NONE" icon="icon.etc_squares_wood_i00">
+	<!-- ExperiMental tools crafted by Blacksmith Brunon. Deliver these to Magister Marina of the Ivory Tower. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2665" name="Analysis Result" type="NONE" icon="icon.etc_recipe_red_i00">
+	<!-- Document where Magister Marina Has organized the analyzed results of the Abyss Spirit Ore. Deliver this to Master Terry in the Town of Dion. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2666" name="Terry's 3rd Order" type="NONE" icon="icon.etc_scroll_of_enchant_weapon_i01">
+	<!-- Master Terry's orders. The orders give instructions to come back for the next task after reaching level 36. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2667" name="Host List" type="NONE" icon="icon.etc_piece_of_paper_black_i00">
+	<!-- List of the Spirit Ore hosts. "Marsh Stakato Drone in Cruma Marshlands, Breka Orc Prefect, in Breka's Stronghold, Ant Warrior Captain in the Ant Nest, Leto Lizardman Warrior on the Plains of the Lizardmen". -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2668" name="Abyss Spirit Ore" type="NONE" icon="icon.etc_crystal_blue_i00">
+	<!-- Spirit Ore retrieved from the body of a Marsh Stakato Drone in Cruma Marshlands. Take this to Master Terry of the Warrior Guild of Dion. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2669" name="Abyss Spirit Ore" type="NONE" icon="icon.etc_crystal_silver_i00">
+	<!-- The Spirit Ore retrieved from the body of the Breka Orc Prefect in Breka's Stronghold. Take this to Master Terry of the Warrior Guild of Dion. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2670" name="Abyss Spirit Ore" type="NONE" icon="icon.etc_crystal_white_i00">
+	<!-- The Spirit Ore retrieved from the body of the Ant Warrior Captain in the Ant Nest. Take this to Master Terry of the Warrior Guild of Dion. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2671" name="Abyss Spirit Ore" type="NONE" icon="icon.etc_crystal_green_i00">
+	<!-- The Spirit Ore retrieved from the body of the Leto Lizardman Warrior on the Plains of the Lizardmen. Take this to Master Terry of the Warrior Guild of Dion. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2672" name="Terry's Report" type="NONE" icon="icon.etc_scroll_of_enchant_weapon_i00">
+	<!-- Report detailing information about the Spirit Ore incident. Take this to Master Dufner of the Warrior Guild of Giran. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2673" name="Mark of Seeker" type="NONE" icon="icon.etc_jewel_green_i00">
+	<!-- Mark given to those who have passed the Trial of the Seeker. Occupation change related item. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2674" name="Mark of Scholar" type="NONE" icon="icon.etc_jewel_blue_i00">
+	<!-- Mark given to those who have passed the Trial of the Scholar. Occupation change related item. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2675" name="Mirien's 1st Badge" type="NONE" icon="icon.shield_shield_of_mana_i00">
+	<!-- A badge given by Magister Mirien from Dion while giving orders to complete High Priest Sylvain's request. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2676" name="Mirien's 2nd Badge" type="NONE" icon="icon.shield_shield_of_pledge_i00">
+	<!-- A badge given by Magister Mirien from Dion while giving orders to complete Grand Magister Jurek's request. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2677" name="Mirien's 3rd Badge" type="NONE" icon="icon.shield_round_shield_i00">
+	<!-- A badge given by Magister Mirien from Dion when giving orders to complete Elder Cronos' request. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2678" name="Mirien's Instruction" type="NONE" icon="icon.etc_scroll_gray_i00">
+	<!-- Note that contains instructions of Magister Mirien from Dion. The note gives instructions to come back for the next task after reaching level 36. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2679" name="Maria's Letter" type="NONE" icon="icon.etc_letter_blue_i00">
+	<!-- Letter sent by Maria from the Grocery Shop to Captain Lucas in the Town of Dion. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2680" name="Maria's Letter" type="NONE" icon="icon.etc_letter_red_i00">
+	<!-- Letter sent by Maria from the Grocery Shop of Dion. Take it to Astrologer Creta of the village of Floran. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2681" name="Lucas' Letter" type="NONE" icon="icon.etc_letter_white_i00">
+	<!-- Letter sent by Captain Lucas in the Town of Dion to Maria from the Grocery Shop of Dion. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2682" name="Lucilla's Handbag" type="NONE" icon="icon.etc_pouch_yellow_i00">
+	<!-- The handbag left by Lucill friend of Maria from the Grocery Shop of Dion, on the night of the theft. Take this to Astrologer Creta. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2683" name="Creta's 1st Letter" type="NONE" icon="icon.etc_letter_blue_i00">
+	<!-- Letter sent by the Astrologer Creta to Maria from the Grocery Shop in the Town of Dion. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2684" name="Creta's Painting 1" type="NONE" icon="icon.etc_scroll_of_enchant_armor_i00">
+	<!-- Painting by Astrologer Creta. It contains a shadow presumed to be that of the thief. Take this to Maria from the Grocery Shop of Dion. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2685" name="Creta's Painting 2" type="NONE" icon="icon.etc_scroll_of_resurrection_i00">
+	<!-- Painting by Astrologer Creta. It contains a shadow presumed to be that of the thief. Take this to Captain Lucas. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2686" name="Creta's Painting 3" type="NONE" icon="icon.etc_scroll_of_return_i00">
+	<!-- Painting painted by Astrologer Creta. The shadow in the painting is that of a Leto Lizardman warrior from the Plains of the Lizardmen. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2687" name="Brown Scroll Scrap" type="NONE" icon="icon.etc_map_piece_yellow_i00">
+	<!-- Scrap of a scroll that contains directions on how to create the Crystal of purity. Gather 5 of these and take them to Maria from the Grocery Shop of Dion. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2688" name="Crystal of Purity" type="NONE" icon="icon.etc_gem_clear_i00">
+	<!-- Crystal used to purify the earth. Take this to High Priest Sylvain in the Town of Dion. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2689" name="High Priest's Badge" type="NONE" icon="icon.shield_sages_shield_i01">
+	<!-- A badge received from High Priest Sylvain. Proof given to those who are carrying out the orders of the High Priest. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2690" name="Grand Magister's Badge" type="NONE" icon="icon.shield_doom_shield_i00">
+	<!-- A badge received from Grand Magister Jurek. Proof given to those who are carrying out the orders of the Grand Magister. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2691" name="Crono's Badge" type="NONE" icon="icon.shield_another_worlds_shield_i01">
+	<!-- A badge received from Elder Cronos. This signifies proof that someone is carrying out orders from Elder Cronos. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2692" name="Sylvain's Letter" type="NONE" icon="icon.etc_piece_of_paper_gray_i00">
+	<!-- High Priest Sylvain's letter. Take this to Maria from the Grocery Shop in the Town of Dion. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2693" name="Mark of Sylvain" type="NONE" icon="icon.etc_coins_blue_i00">
+	<!-- Mark given to those who have passed High Priest Sylvain's test. Take this to Magister Mirien in the Town of Dion. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2694" name="Jurek's List" type="NONE" icon="icon.etc_piece_of_paper_black_i00">
+	<!-- The list of evil creatures that Grand Magister Jurek asked you to investigate. "Monster Eye Destroyer from the Plains of Dion, Breka Orc Shaman from Breka's Stronghold, Shackle from Ivory Tower Crater." -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2695" name="Monster Eye Destroyer's Skin" type="NONE" icon="icon.etc_leather_yellow_i00">
+	<!-- Skin of Monster Eye Destroyer from the Plains of Dion. Gather 5 of these and take them to Grand Magister Jurek of Town of Giran. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2696" name="Shaman's Necklace" type="NONE" icon="icon.etc_totem_necklace_red_i00">
+	<!-- A Breka Orc Shaman's Necklace from Breka's Stronghold. Gather 5 of these and take them to Grand Magister Jurek in Town of Giran. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2697" name="Shackle's Scalp" type="NONE" icon="icon.etc_leather_brown_i00">
+	<!-- Skin of the Shackle's head from Ivory Tower Crater. Gather 2 of these and take them to Grand Magister Jurek of Town of Giran. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2698" name="Mark of Jurek" type="NONE" icon="icon.etc_coins_gold_i00">
+	<!-- Mark given to those who have passed Grand Magister Jurek's test. Take this to Magister Mirien in the Town of Dion. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="2699" name="Cronos Letter" type="NONE" icon="icon.etc_letter_red_i00">
+	<!-- Letter sent by Elder Cronos to Magister Dieter in the Town of Giran. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
 </list>

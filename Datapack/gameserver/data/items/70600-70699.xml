@@ -1,837 +1,778 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="70600" name="Mysterious Blessed Soulshot (D-grade)" icon="icon.etc_bless_spirit_bullet_blue_i00">
-        <!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Deals 15% more damage than regular Soulshots. Used with a D-grade weapon. -->
-        <set name="default_action" val="SOULSHOT"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70601" name="Mysterious Blessed Soulshot (C-grade)" icon="icon.etc_bless_spirit_bullet_green_i00">
-        <!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Deals 15% more damage than regular Soulshots. Used with a C-grade weapon. -->
-        <set name="default_action" val="SOULSHOT"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70602" name="Mysterious Blessed Soulshot (B-grade)" icon="icon.etc_bless_spirit_bullet_red_i00">
-        <!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Deals 15% more damage than regular Soulshots. Used with a B-grade weapon. -->
-        <set name="default_action" val="SOULSHOT"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="B"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70603" name="Mysterious Blessed Soulshot (A-grade)" icon="icon.etc_bless_spirit_bullet_silver_i00">
-        <!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Deals 15% more damage than regular Soulshots. Used with an A-grade weapon. -->
-        <set name="default_action" val="SOULSHOT"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="A"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70604" name="Mysterious Blessed Spiritshot (A-grade)" icon="icon.etc_spell_shot_silver_i01">
-        <!-- The power of a Spiritshot is bestowed upon a weapon, temporarily increasing its magical power. Used with A-grade weapons. -->
-        <set name="default_action" val="SPIRITSHOT"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="A"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70605" name="Mysterious Blessed Soulshot Pack (No-grade)" icon="br_cashtex.item.br_cash_pack_of_soulshot_a_i00">
-        <!-- Double-click to acquire 10000 Mysterious Blessed Soulshots Pack (No-grade). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70606" name="Mysterious Blessed Soulshot Pack (D-grade)" icon="br_cashtex.item.br_cash_pack_of_soulshot_d_i00">
-        <!-- Double-click to acquire 10000 Mysterious Blessed Soulshots Pack (D-grade). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70607" name="Mysterious Blessed Soulshot Pack (C-grade)" icon="br_cashtex.item.br_cash_pack_of_soulshot_c_i00">
-        <!-- Double-click to acquire 10000 Mysterious Blessed Soulshots Pack (C-grade). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70608" name="Mysterious Blessed Soulshot Pack (B-grade)" icon="br_cashtex.item.br_cash_pack_of_soulshot_b_i00">
-        <!-- Double-click to acquire 10000 Mysterious Blessed Soulshots Pack (B-grade). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70609" name="Mysterious Blessed Soulshot Pack (A-grade)" icon="br_cashtex.item.br_cash_pack_of_soulshot_a_i00">
-        <!-- Double-click to acquire 10000 Mysterious Blessed Soulshots Pack (A-grade). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70610" name="Mysterious Blessed Spiritshot Pack (No-grade)" icon="br_cashtex.item.br_cash_pack_of_spiritshot_a_i00">
-        <!-- Double-click to acquire 10000 Mysterious Blessed Spiritshots Pack (No-grade). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70611" name="Mysterious Blessed Spiritshot Pack (D-grade)" icon="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_d_i00">
-        <!-- Double-click to acquire 10000 Mysterious Blessed Spiritshots Pack (D-grade). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70612" name="Mysterious Blessed Spiritshot Pack (C-grade)" icon="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_c_i00">
-        <!-- Double-click to acquire 10000 Mysterious Blessed Spiritshots Pack (C-grade). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70613" name="Mysterious Blessed Spiritshot Pack (B-grade)" icon="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_b_i00">
-        <!-- Double-click to acquire 10000 Mysterious Blessed Spiritshots Pack (B-grade). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70614" name="Mysterious Blessed Spiritshot Pack (A-grade)" icon="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_a_i00">
-        <!-- Double-click to acquire 10000 Mysterious Blessed Spiritshots Pack (A-grade). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <armor id="70615" name="Mount - Gold Maned Lion" icon="icon.pi_high_agathion_bracelet_i00">
-        <!-- Allows to mount a Golden Lion. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. Duration: 7 days. -->
-        <set name="bodypart" val="lbracelet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="70616" name="Mount - Princess Ant" icon="icon.pi_high_agathion_bracelet_i00">
-        <!-- Allows to mount Princess Ant. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. Duration: 7 days. -->
-        <set name="bodypart" val="lbracelet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <item id="70617" name="Mount - Gold Maned Lion (7-day)" icon="icon.etc_pi_gift_box_i00">
-        <!-- Mount - Gold Maned Lion Pack (7-day). Cannot be exchanged, dropped or sold in private store. Can store in a warehouse. Can be transferred between characters on one account using Dimensional Merchant. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="70618" name="Mount - Princess Ant (7-day)" icon="icon.etc_pi_gift_box_i01">
-        <!-- Mount - Princess Ant Pack (7-day). Cannot be exchanged, dropped or sold in private store. Can store in a warehouse. Can be transferred between characters on one account using Dimensional Merchant. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="70619" name="Major Quick Recovery Potion" icon="icon.bm_freya_potion">
-        <!-- Instantly recovers HP. Provides HP +600 and uses the remaining points to recover CP. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="weight" val="2"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70620" name="The Finest Quick Recovery Potion" icon="icon.bm_freya_potion">
-        <!-- Instantly recovers HP. Provides HP +1000 and uses the remaining points to recover CP. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="weight" val="2"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70621" name="Einhasad's Protection" icon="BranchSys2.icon.br_soulavatar_regen_i00">
-        <!-- Einhasad's Protection maintains buffs and debuffs even after death. The item disappears if a character dies. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="70622" name="Einhasad's Salvation" icon="BranchSys2.icon.br_soulavatar_active_i00">
-        <!-- Einhasad's Salvation maintains buffs and debuffs even after death, allows to resurrect with full HP. The item disappears if a character dies. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="70623" name="Lucky Charm" icon="BranchSys.icon.br_four_leaf_clover_i00">
-        <!-- Character doesn't lose items if dies from ordinary monster and has Lucky Charm in his inventory. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. Duration: 1 day. -->
-        <set name="time" val="1440"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="70624" name="Lucky Charm Pack (1-day)" icon="BranchSys.icon.br_silver_box_i00">
-        <!-- Double-click to acquire Lucky Charm (1-day). Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="70625" name="XP Growth Amulet" icon="icon.skill19226">
-        <!-- If stored in the inventory, acquired XP/ SP +40%. If used with High-grade XP Growth Amulet only the item with higher grade will take effect. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. Duration: 1 day. -->
-        <set name="time" val="1440"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="70626" name="High-grade XP Growth Amulet" icon="icon.skill19226">
-        <!-- If stored in the inventory, acquired XP/ SP +60%. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. Duration: 1 day. -->
-        <set name="time" val="1440"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="70627" name="XP Growth Amulet Chest (1-day)" icon="BranchSys.icon.br_lucky_bag_box_i00">
-        <!-- Double-click to acquire Fishing XP Growth Amulet (1-day). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70628" name="High-grade XP Growth Amulet Pack (1-day)" icon="BranchSys.icon.br_lucky_bag_box_i00">
-        <!-- Double-click to acquire High-grade XP Growth Amulet (1-day). Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="70629" name="Fishing XP Growth Amulet" icon="icon.fishing_zone_ticket">
-        <!-- If stored in the inventory during fishing, for 1 day acquired XP/ SP +30%. If used with High-grade Fishing XP Growth Amulet only the item with higher grade will take effect. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
-        <set name="time" val="1440"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="70630" name="High-grade Fishing XP Growth Amulet" icon="icon.fishing_zone_ticket">
-        <!-- If stored in the inventory during fishing, acquired XP/ SP +50%. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. Duration: 1 day. -->
-        <set name="time" val="1440"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="70631" name="Fishing XP Growth Amulet Pack (1-day)" icon="BranchSys.icon.br_four_leaf_clover_box_i00">
-        <!-- Double-click to acquire Fishing XP Growth Amulet (1-day). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70632" name="High-grade Fishing XP Growth Amulet Pack (1-day)" icon="BranchSys.icon.br_four_leaf_clover_box_i00">
-        <!-- Double-click to acquire High-grade Fishing XP Growth Amulet (1-day). Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="70633" name="Blue Dynasty Transformation Scroll" icon="icon.etc_charm_of_courage_i01">
-        <!-- Makes you armor look like Blue Dynasty one. P. / M. Atk. +3%, P. / M. Def. +3%, Atk. Spd. +5%, Max. HP/MP +7%, Speed +5, P. / M. Accuracy +2, M. Critical Rate +2. Duration: 30 minutes. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70634" name="Red Zubei Transformation Scroll" icon="icon.etc_charm_of_courage_i04">
-        <!-- Makes you armor look like Red Zubei one. P. / M. Atk. +2%, P. / M. Def. +2%, Atk. Spd. +3%, Max. HP/MP +5%, Speed +4, P. / M. Accuracy +1, M. Critical Rate +1. Duration: 30 minutes. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70635" name="Formal Wear Appearance Scroll" icon="icon.etc_charm_of_courage_i02">
-        <!-- For 30 min. character's armor appearance to Formal Wear one. Remains after death. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70636" name="Party Buff Scroll - Lv. 1" icon="icon.etc_trans_4f_s_b_01">
-        <!-- For 20 min., character's and nearby party members' P. / M. Atk. +3%. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="weight" val="120"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="70637" name="Party Buff Scroll - Lv. 2" icon="icon.etc_trans_4f_s_b_01">
-        <!-- For 20 min., character's and nearby party members' P. / M. Atk. / Atk. Spd. / Casting Spd. +5%. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="weight" val="120"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="70638" name="Special Warrior's Fruit" icon="icon.etc_cobol_i01">
-        <!-- For 20 min., P. / M. Atk. +8%, P. / M. Def. +15%, HP/MP/CP +18%, HP/MP Recovery +24%. Recovers as HP 3% of the physical damage inflicted on the enemy with a certain probability. Cannot be stacked with Special Pirate Fruit. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="weight" val="10"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="70639" name="Warrior's XP/SP Scroll" icon="icon.exp_bottle_scroll">
-        <!-- For 20 min. XP / SP +50%. Cannot be stacked with other XP / SP scrolls. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="weight" val="10"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="70640" name="Warrior's Recovery Potion" icon="icon.etc_potion_scarlet_i00">
-        <!-- Immediately restores 200 HP. Cannot be used, when HP is full. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="weight" val="10"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="70641" name="Warrior's Major Recovery Potion" icon="icon.etc_potion_red_i00">
-        <!-- Immediately restores 500 HP. Cannot be used, when HP is full. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="weight" val="10"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="70642" name="Hero's MP Recovery Potion" icon="icon.etc_potion_blue_i00">
-        <!-- Immediately restores 60 MP. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="weight" val="10"/>
-        <set name="etcitem_type" val="POTION"/>
-        <set name="commissionItemType" val="POTION"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-        <skills>
-            <skill id="39258" level="1"/> <!-- Warrior MP Recovery Potion -->
-        </skills>
-    </item>
-    <item id="70643" name="Golden Mermaid's Scale" icon="icon.etc_oren_fish_scale_i00">
-        <!-- For 3 hours, during fishing XP / SP +10%. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. Duration: 7 days. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="weight" val="50"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="70644" name="Growth Amulet" icon="BranchSys3.lcon.g_rune_itemdrop_up">
-        <!-- If stored in the inventory, acquired XP/ SP +40%. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. Duration: 3 days. -->
-        <set name="weight" val="50"/>
-        <set name="time" val="4320"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </item>
-    <weapon id="70645" name="Warrior's Shining Dualsword" icon="icon.weapon_dual_sword_i00">
-        <!-- Atk. Spd. +5%. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">200</stat>
-            <stat type="mAtk">93</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="70646" name="Warrior's Shining Staff" icon="icon.weapon_sages_staff_i01">
-        <!-- Casting Spd. +12%. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">160</stat>
-            <stat type="mAtk">126</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="70647" name="Warrior's Shining Bow" icon="icon.weapon_akat_long_bow_i01">
-        <!-- P. Critical Rate +52. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1"/>
-        <set name="soulshots" val="4"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="3"/>
-        <set name="enchant_enabled" val="1"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">348</stat>
-            <stat type="mAtk">99</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">227</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="70648" name="Warrior's Shining Dagger" icon="icon.weapon_grace_dagger_i01">
-        <!-- P. Critical Rate +66. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">142</stat>
-            <stat type="mAtk">91</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="70649" name="Warrior's Shining Spear" icon="icon.weapon_poleaxe_i01">
-        <!-- Has a 25% chance of casting Stun on the target during a Critical Attack. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">159</stat>
-            <stat type="mAtk">91</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <armor id="70650" name="Warrior's Shining Helmet" icon="icon.armor_leather_helmet_i00">
-        <!-- Heavy Armor. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="bodypart" val="head"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="600"/>
-        <set name="enchant_enabled" val="1"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">58</stat>
-        </stats>
-    </armor>
-    <armor id="70651" name="Warrior's Shining Armor" icon="icon.armor_t62_ul_i00">
-        <!-- Heavy Armor. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="onepiece"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="10480"/>
-        <set name="enchant_enabled" val="1"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">239</stat>
-        </stats>
-    </armor>
-    <armor id="70652" name="Warrior's Shining Gauntlets" icon="icon.armor_t62_g_i00">
-        <!-- Heavy Armor. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="600"/>
-        <set name="enchant_enabled" val="1"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">39</stat>
-        </stats>
-    </armor>
-    <armor id="70653" name="Warrior's Shining Boots" icon="icon.armor_t62_b_i00">
-        <!-- Heavy Armor. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="bodypart" val="feet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1200"/>
-        <set name="enchant_enabled" val="1"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">39</stat>
-        </stats>
-    </armor>
-    <armor id="70654" name="Warrior's Shining Helmet" icon="icon.armor_leather_helmet_i00">
-        <!-- Light Armor. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="bodypart" val="head"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="620"/>
-        <set name="enchant_enabled" val="1"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">47</stat>
-        </stats>
-    </armor>
-    <armor id="70655" name="Warrior's Shining Rags" icon="icon.armor_t45_ul_i00">
-        <!-- Light Armor. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="onepiece"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="5800"/>
-        <set name="enchant_enabled" val="1"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">179</stat>
-        </stats>
-    </armor>
-    <armor id="70656" name="Warrior's Shining Gloves" icon="icon.armor_t45_g_i00">
-        <!-- Light Armor. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="600"/>
-        <set name="enchant_enabled" val="1"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">39</stat>
-        </stats>
-    </armor>
-    <armor id="70657" name="Warrior's Shining Shoes" icon="icon.armor_t45_b_i00">
-        <!-- Light Armor. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="bodypart" val="feet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1210"/>
-        <set name="enchant_enabled" val="1"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">39</stat>
-        </stats>
-    </armor>
-    <armor id="70658" name="Warrior's Shining Circlet" icon="icon.armor_circlet_i00">
-        <!-- Robe. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="bodypart" val="head"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="600"/>
-        <set name="enchant_enabled" val="1"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">54</stat>
-        </stats>
-    </armor>
-    <armor id="70659" name="Warrior's Shining Tunic" icon="icon.armor_t57_u_i00">
-        <!-- Robe. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="armor_type" val="MAGIC"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1980"/>
-        <set name="enchant_enabled" val="1"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">74</stat>
-            <stat type="maxMp">314</stat>
-        </stats>
-    </armor>
-    <armor id="70660" name="Warrior's Shining Stockings" icon="icon.armor_t57_l_i00">
-        <!-- Robe. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="armor_type" val="MAGIC"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="960"/>
-        <set name="enchant_enabled" val="1"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">46</stat>
-            <stat type="maxMp">196</stat>
-        </stats>
-    </armor>
-    <armor id="70661" name="Warrior's Shining Gloves" icon="icon.armor_t57_g_i00">
-        <!-- Robe. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="610"/>
-        <set name="enchant_enabled" val="1"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">39</stat>
-        </stats>
-    </armor>
-    <armor id="70662" name="Warrior's Shining Shoes" icon="icon.armor_t57_b_i00">
-        <!-- Robe. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="bodypart" val="feet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1210"/>
-        <set name="enchant_enabled" val="1"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">34</stat>
-        </stats>
-    </armor>
-    <item id="70663" name="Party Support Cube - Lv. 1" icon="icon.etc_clear_crystal_cube_pc_i00">
-        <!-- Double-click to get one of the following: from 1 to 3 Party Buff Scrolls - Lv. 1. <Note:>. Support Cube can be used only once a day. A new day starts every day at 18:30. Cannot be stacked with other Support Cube. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 7 days. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="70664" name="Soulshot Support Cube" icon="icon.etc_violet_crystal_cube_pc_i00">
-        <!-- Double-click to get one of the following: from 150 to 1500 Mysterious Soulshots (C-grade). <Note:>. Support Cube can be used only once a day. A new day starts every day at 18:30. Cannot be stacked with other Support Cube. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 7 days. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="70665" name="Spiritshot Support Cube" icon="icon.etc_pink_crystal_cube_pc_i00">
-        <!-- Double-click to get one of the following: from 100 to 1000 Mysterious Spiritshots (C-grade). <Note:>. Support Cube can be used only once a day. A new day starts every day at 18:30. Cannot be stacked with other Support Cube. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 7 days. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="70666" name="Buff Support Cube" icon="icon.etc_dkbrown_crystal_cube_pc_i00">
-        <!-- Double-click to get one of the following: from 1 to 3 Special Warrior's Fruits or XP/SP Warrior's Scroll. <Note:>. Support Cube can be used only once a day. A new day starts every day at 18:30. Cannot be stacked with other Support Cube. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 7 days. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="70667" name="Potion Support Cube - Lv. 1" icon="icon.etc_black_crystal_cube_pc_i00">
-        <!-- Double-click to get one of the following: from 3 to 10 Warrior's Recovery Potions or from 3 to 5 Warrior's MP Recovery Potions. <Note:>. Support Cube can be used only once a day. A new day starts every day at 18:30. Cannot be stacked with other Support Cube. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 7 days. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="70668" name="Blessed Support Cube" icon="icon.etc_golden_ore_cube_pc_i00">
-        <!-- Double-click to get one of the following: 3 Blessed Scrolls of Escape / 2 Blessed Scrolls of Resurrection / Feather of Blessing. <Note:>. Support Cube can be used only once a day. A new day starts every day at 18:30. Cannot be stacked with other Support Cube. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 7 days. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="70669" name="Party Support Cube - Lv. 2" icon="icon.etc_silver_ore_cube_pc_i00">
-        <!-- Double-click to get from 1 to 5 Support Cubes - Lv. 2. <Note:>. Support Cube can be used only once a day. A new day starts every day at 18:30. Cannot be stacked with other Support Cube. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 7 days. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="70670" name="Fishing Support Cube" icon="icon.etc_cupreous_ore_cube_pc_i00">
-        <!-- Double-click to get Elite Fishing Rod of Golden Mermaid (1-day) and one of the following: Golden Mermaid's Scale (7-day) / 20 Fishing Shots / 20 Normal Baits. <Note:>. Support Cube can be used only once a day. A new day starts every day at 18:30. Cannot be stacked with other Support Cube. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 7 days. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="70671" name="Potion Support Cube - Lv. 2" icon="icon.etc_earthen_ore_cube_pc_i00">
-        <!-- Double-click to get one of the following: 5 Warrior's Major Recovery Potions / from 5 to 10 Warrior's Recovery Potions / from 3 to 5 Warrior's MP Recovery Potions. <Note:>. Support Cube can be used only once a day. A new day starts every day at 18:30. Cannot be stacked with other Support Cube. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 7 days. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="70672" name="Progression Support Cube" icon="icon.etc_crystal_cube_event_i00">
-        <!-- Double-click to get one of the following: 1 or 2 Golden Necklaces of Mermaid (7-day). <Note:>. Support Cube can be used only once a day. A new day starts every day at 18:30. Cannot be stacked with other Support Cube. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 7 days. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
-    </item>
-    <armor id="70673" name="Warrior's Bracelet" icon="icon.dimension_bracelet_i05">
-        <!-- Special Bracelet for Returning Heroes. Activates 4 Talisman slots. HP/MP/CP +5%. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
-        <set name="bodypart" val="underwear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="70674" name="Returning Hero's Talisman" icon="icon.npoint_talisman_stat">
-        <!-- Special Talisman for Returning Heroes. P. Def. +22, M. Def. +11, P. / M. Evasion +1, Max. HP/MP/CP +80, Atk./Casting Spd. +9, Speed +4. Cannot be exchanged, dropped or sold, shared within account. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <item id="70675" name="Returning Hero's Reward - Heavy Armor" icon="icon.event_six_party_box_i00">
-        <!-- Double-click to acquire Warrior's Shining Heavy Armor Set (30-day) / Warrior's Shining Weapon Set (30-day) / Expertise Rune (C-grade) and Returning Hero's Reward - Lv. 30, Party Support Cube - Lv. 1 (7-day). Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="70676" name="Returning Hero's Reward - Light Armor" icon="icon.event_six_party_box_i00">
-        <!-- Double-click to acquire Warrior's Shining Light Armor Set (30-day) / Warrior's Shining Weapon Set (30-day) / Expertise Rune (C-grade) and Returning Hero's Reward - Lv. 30, Party Support Cube - Lv. 1 (7-day). Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="70677" name="Returning Hero's Reward - Robe" icon="icon.event_six_party_box_i00">
-        <!-- Double-click to acquire Warrior's Shining Robe Set (30-day) / Warrior's Shining Weapon Set (30-day) / Expertise Rune (C-grade) and Returning Hero's Reward - Lv. 30, Party Support Cube - Lv. 1 (7-day). Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="70678" name="Expertise Rune (C-grade)" icon="br_cashtex.item.br_cash_rune_of_feather_i00">
-        <!-- When possessed, gives Expertise C Skill. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="70679" name="Returning Hero's Reward - Lv. 30" icon="icon.npoint_earring_of_lind_30day_box">
-        <!-- Double-click to acquire: 1 Growth Amulet (3-day), 1 Returning Hero's Reward - Lv. 40, 1 Soulshot Support Cube (7-day), 1 Spiritshot Support Cube (7-day). Can be used by characters with lvl 30 and above. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="70680" name="Returning Hero's Reward - Lv. 40" icon="icon.npoint_antaras_30day_box">
-        <!-- Double-click to acquire: 1 Cadmus Transformation Bracelet - Prophet (7-day), 1 Returning Hero's Reward - Lv. 45, 1 Soulshot Support Cube (7-day). Can be used by characters with lvl 40 and above. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="70681" name="Returning Hero's Reward - Lv. 45" icon="icon.npoint_valakas_30day_box">
-        <!-- Double-click to acquire: 1 Growth Amulet (3-day), 1 Returning Hero's Reward - Lv. 50, 1 Potion Support Cube - Lv. 1 (7-day). Can be used by characters with lvl 45 and above. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="70682" name="Returning Hero's Reward - Lv. 50" icon="icon.npoint_tauti_30day_box">
-        <!-- Double-click to acquire: 1 Refined Ring of Core / Orfen /Princess Ant's Ring (7-day), 1 Returning Hero's Reward - Lv. 54, 1 Blessed Support Cube (7-day). Can be used by characters with lvl 50 and above. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="70683" name="Returning Hero's Reward - Lv. 54" icon="icon.npoint_earthworm_30day_box">
-        <!-- Double-click to acquire: 5 Golden Necklaces of Mermaid (7-day), 10 Rice Cakes of Flaming Fighting Spirit (event) and Returning Hero's Reward - Lv. 56, Party Support Cube - Lv. 2. Can be used by characters with lvl 54 and above. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="70684" name="Returning Hero's Reward - Lv. 56" icon="icon.etc_pi_box_love_pack">
-        <!-- Double-click to acquire: 1 Growth Amulet (3-day), 1 Returning Hero's Reward - Lv. 58, 1 Fishing Support Cube (7-day). Can be used by characters with lvl 56 and above. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="70685" name="Returning Hero's Reward - Lv. 58" icon="icon.etc_pi_box_wish_pack">
-        <!-- Double-click to acquire: 1 Cadmus Transformation Bracelet - Prophet (7-day), 1 Returning Hero's Reward - Lv. 60, 1 Potion Support Cube - Lv. 2 (7-day). Can be used by characters with lvl 58 and above. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="70686" name="Returning Hero's Reward - Lv. 60" icon="icon.etc_pi_box_joy_pack">
-        <!-- Double-click to acquire: 1 Agathion - Aries (60-day), 1 Warrior's Bracelet (30-day), 1 Returning Hero's Talisman (30-day), 1 Progression Support Cube (7-day). Can be used by characters with lvl 56 and above. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <armor id="70687" name="Artisan's Goggles (STR+1 INT+1)" icon="icon.accessory_dwarf_goggle_i00">
-        <!-- Large goggles that protect the eyes. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="bodypart" val="hairall"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <set name="handler" val="ItemSkills"/>
-        <restriction dropable="false" sellable="false" freightable="true"/>
-        <skills>
-            <skill id="55605" level="1"/> <!-- Artisan's Goggles (STR+1 INT+1) -->
-        </skills>
-    </armor>
-    <armor id="70688" name="Artisan's Goggles (DEX+1 WIT+1)" icon="icon.accessory_dwarf_goggle_i00">
-        <!-- Large goggles that protect the eyes. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="bodypart" val="hairall"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <set name="handler" val="ItemSkills"/>
-        <restriction dropable="false" sellable="false" freightable="true"/>
-        <skills>
-            <skill id="55606" level="1"/> <!-- Artisan's Goggles (DEX +1 WIT +1) -->
-        </skills>
-    </armor>
-    <armor id="70689" name="Artisan's Goggles (CON+1 MEN+1)" icon="icon.accessory_dwarf_goggle_i00">
-        <!-- Large goggles that protect the eyes. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="bodypart" val="hairall"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <set name="handler" val="ItemSkills"/>
-        <restriction dropable="false" sellable="false" freightable="true"/>
-        <skills>
-            <skill id="55607" level="1"/> <!-- Artisan's Goggles (CON+1 MEN+1) -->
-        </skills>
-    </armor>
-    <armor id="70690" name="Uniform Hat (STR+1 INT+1)" icon="BranchSys.icon.br_Uniform_Hat_i00">
-        <!-- Stylish uniform hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="bodypart" val="hairall"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <set name="handler" val="ItemSkills"/>
-        <restriction dropable="false" sellable="false" freightable="true"/>
-        <skills>
-            <skill id="55608" level="1"/> <!-- Uniform Hat (STR+1 INT+1) -->
-        </skills>
-    </armor>
-    <armor id="70691" name="Uniform Hat (DEX+1 WIT+1)" icon="BranchSys.icon.br_Uniform_Hat_i00">
-        <!-- Stylish uniform hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="bodypart" val="hairall"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <set name="handler" val="ItemSkills"/>
-        <restriction dropable="false" sellable="false" freightable="true"/>
-        <skills>
-            <skill id="55609" level="1"/> <!-- Uniform Hat (DEX +1 WIT +1) -->
-        </skills>
-    </armor>
-    <armor id="70692" name="Uniform Hat (CON+1 MEN+1)" icon="BranchSys.icon.br_Uniform_Hat_i00">
-        <!-- Stylish uniform hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="bodypart" val="hairall"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <set name="handler" val="ItemSkills"/>
-        <restriction dropable="false" sellable="false" freightable="true"/>
-        <skills>
-            <skill id="55610" level="1"/> <!-- Uniform Hat (CON+1 MEN+1) -->
-        </skills>
-    </armor>
-    <armor id="70693" name="Assassin's Bamboo Hat (STR+1 INT+1)" icon="BranchSys.icon.br_Bamboo_Hat_i00">
-        <!-- Wide-brimmed hat fashioned out of bamboo. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="bodypart" val="hairall"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <set name="handler" val="ItemSkills"/>
-        <restriction dropable="false" sellable="false" freightable="true"/>
-        <skills>
-            <skill id="55611" level="1"/> <!-- Assassin's Bamboo Hat (STR+1 INT+1) -->
-        </skills>
-    </armor>
-    <armor id="70694" name="Assassin's Bamboo Hat (DEX+1 WIT+1)" icon="BranchSys.icon.br_Bamboo_Hat_i00">
-        <!-- Wide-brimmed hat fashioned out of bamboo. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="bodypart" val="hairall"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <set name="handler" val="ItemSkills"/>
-        <restriction dropable="false" sellable="false" freightable="true"/>
-        <skills>
-            <skill id="55612" level="1"/> <!-- Assassin's Bamboo Hat (DEX +1 WIT +1) -->
-        </skills>
-    </armor>
-    <armor id="70695" name="Assassin's Bamboo Hat (CON+1 MEN+1)" icon="BranchSys.icon.br_Bamboo_Hat_i00">
-        <!-- Wide-brimmed hat fashioned out of bamboo. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="bodypart" val="hairall"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <set name="handler" val="ItemSkills"/>
-        <restriction dropable="false" sellable="false" freightable="true"/>
-        <skills>
-            <skill id="55613" level="1"/> <!-- Assassin's Bamboo Hat (CON+1 MEN+1) -->
-        </skills>
-    </armor>
-    <armor id="70696" name="Valkyrie Hat (STR+1 INT+1)" icon="BranchSys.icon.br_valkyrie_cap_i00">
-        <!-- The hat with Valkyrie's power in it.STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="bodypart" val="hairall"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <set name="handler" val="ItemSkills"/>
-        <restriction dropable="false" sellable="false" freightable="true"/>
-        <skills>
-            <skill id="55614" level="1"/> <!-- Valkyrie Hat (STR+1 INT+1) -->
-        </skills>
-    </armor>
-    <armor id="70697" name="Valkyrie Hat (DEX+1 WIT+1)" icon="BranchSys.icon.br_valkyrie_cap_i00">
-        <!-- The hat with Valkyrie's power in it.DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="bodypart" val="hairall"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <set name="handler" val="ItemSkills"/>
-        <restriction dropable="false" sellable="false" freightable="true"/>
-        <skills>
-            <skill id="55615" level="1"/> <!-- Valkyrie Hat (DEX +1 WIT +1) -->
-        </skills>
-    </armor>
-    <armor id="70698" name="Valkyrie Hat (CON+1 MEN+1)" icon="BranchSys.icon.br_valkyrie_cap_i00">
-        <!-- The hat with Valkyrie's power in it.CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="bodypart" val="hairall"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <set name="handler" val="ItemSkills"/>
-        <restriction dropable="false" sellable="false" freightable="true"/>
-        <skills>
-            <skill id="55616" level="1"/> <!-- Valkyrie Hat (CON+1 MEN+1) -->
-        </skills>
-    </armor>
-    <armor id="70699" name="Gatekeeper Hat (STR+1 INT+1)" icon="BranchSys.icon.br_gatekeeper_of_hat_i00">
-        <!-- Gatekeeper Hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="bodypart" val="hairall"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <set name="handler" val="ItemSkills"/>
-        <restriction dropable="false" sellable="false" freightable="true"/>
-        <skills>
-            <skill id="55617" level="1"/> <!-- Gatekeeper Hat (STR+1 INT+1) -->
-        </skills>
-    </armor>
+	<item id="70600" name="Mysterious Blessed Soulshot (D-grade)" type="SOULSHOT" icon="icon.etc_bless_spirit_bullet_blue_i00">
+	<!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Deals 15% more damage than regular Soulshots. Used with a D-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="70601" name="Mysterious Blessed Soulshot (C-grade)" type="SOULSHOT" icon="icon.etc_bless_spirit_bullet_green_i00">
+	<!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Deals 15% more damage than regular Soulshots. Used with a C-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="70602" name="Mysterious Blessed Soulshot (B-grade)" type="SOULSHOT" icon="icon.etc_bless_spirit_bullet_red_i00">
+	<!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Deals 15% more damage than regular Soulshots. Used with a B-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="70603" name="Mysterious Blessed Soulshot (A-grade)" type="SOULSHOT" icon="icon.etc_bless_spirit_bullet_silver_i00">
+	<!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Deals 15% more damage than regular Soulshots. Used with an A-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="70604" name="Mysterious Blessed Spiritshot (A-grade)" type="SOULSHOT" icon="icon.etc_spell_shot_silver_i01">
+	<!-- The power of a Spiritshot is bestowed upon a weapon, temporarily increasing its magical power. Used with A-grade weapons. Exchange for a new Soulshot through the Dimensional Merchant. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="70605" name="Blessed Soulshot 3335-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_soulshot_a_i00">
+	<!-- Double-click to obtain 3335 Blessed Soulshots. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="70606" name="Blessed Soulshot 5000-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_soulshot_d_i00">
+	<!-- Double-click to obtain 5000 Blessed Soulshots. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="70607" name="Blessed Soulshot 10000-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_soulshot_c_i00">
+	<!-- Double-click to obtain 10000 Blessed Soulshots. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="70608" name="Blessed Soulshot 30000-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_soulshot_b_i00">
+	<!-- Double-click to obtain 30000 Blessed Soulshots. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="70609" name="Blessed Soulshot 50000-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_soulshot_a_i00">
+	<!-- Double-click to obtain 50000 Blessed Soulshots. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="70610" name="Blessed Spiritshot 3335-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_spiritshot_a_i00">
+	<!-- Double-click to obtain 3335 Blessed Spiritshots. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="70611" name="Blessed Spiritshot 5000-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_d_i00">
+	<!-- Double-click to obtain 5000 Blessed Spiritshots. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="70612" name="Blessed Spiritshot 10000-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_c_i00">
+	<!-- Double-click to obtain 10000 Blessed Spiritshots. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="70613" name="Blessed Spiritshot 30000-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_b_i00">
+	<!-- Double-click to obtain 30000 Blessed Spiritshots. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="70614" name="Blessed Spiritshot 50000-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_a_i00">
+	<!-- Double-click to obtain 50000 Blessed Spiritshots. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<armor id="70615" name="Mount - Gold Maned Lion" type="NONE" body-part="LEFT_BRACELET" icon="icon.pi_high_agathion_bracelet_i00">
+	<!-- Allows to mount a Golden Lion. Duration: 7 days. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="30" duration="10080" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="70616" name="Mount - Princess Ant" type="NONE" body-part="LEFT_BRACELET" icon="icon.pi_high_agathion_bracelet_i00">
+	<!-- Allows to mount Princess Ant. Duration: 7 days. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="30" duration="10080" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<item id="70617" name="Mount - Gold Maned Lion (7-day)" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Mount - Gold Maned Lion Pack (7-day).\\n -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="70618" name="Mount - Princess Ant (7-day)" type="NONE" icon="icon.etc_pi_gift_box_i01">
+	<!-- Mount - Princess Ant Pack (7-day).\\n -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="70619" name="Major Quick Recovery Potion" type="POTION" icon="icon.bm_freya_potion">
+	<!-- Instantly recovers HP. Provides HP +600 and uses the remaining points to recover CP. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="2"/>
+	</item>
+
+	<item id="70620" name="The Finest Quick Recovery Potion" type="POTION" icon="icon.bm_freya_potion">
+	<!-- Instantly recovers HP. Provides HP +1000 and uses the remaining points to recover CP. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="2"/>
+	</item>
+
+	<item id="70621" name="Einhasad's Protection" type="SCROLL" icon="BranchSys2.icon.br_soulavatar_regen_i00">
+	<!-- Einhasad's Protection maintains buffs and debuffs even after death. The item disappears if a character dies.\\n -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="70622" name="Einhasad's Salvation" type="SCROLL" icon="BranchSys2.icon.br_soulavatar_active_i00">
+	<!-- Einhasad's Salvation maintains buffs and debuffs even after death, allows to resurrect with full HP. The item disappears if a character dies.\\n -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="70623" name="Lucky Charm" type="RUNE" icon="BranchSys.icon.br_four_leaf_clover_i00">
+	<!-- Chance of dropping items -$s1 when character dies if character has Lucky Charm in his inventory. Cannot be used by chaotic characters. \\nDuration: 3 hours. -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes duration="1440"/>
+	</item>
+
+	<item id="70624" name="Lucky Charm Pack (3 hours)" type="NONE" icon="BranchSys.icon.br_silver_box_i00">
+	<!-- Double-click to acquire Lucky Charm (3 hours).\\n -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="70625" name="XP Growth Amulet" type="RUNE" icon="icon.skill19226">
+	<!-- If stored in the inventory, acquired XP/ SP +40%. If used with High-grade XP Growth Amulet only the item with higher grade will take effect.\\nDuration: 1 day. -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes duration="1440"/>
+	</item>
+
+	<item id="70626" name="High-grade XP Growth Amulet" type="RUNE" icon="icon.skill19226">
+	<!-- If stored in the inventory, acquired XP/ SP +60%.\\nDuration: 1 day. -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes duration="1440"/>
+	</item>
+
+	<item id="70627" name="XP Growth Amulet Chest (1-day)" type="NONE" icon="BranchSys.icon.br_lucky_bag_box_i00">
+	<!-- Double-click to acquire Fishing XP Growth Amulet (1-day). -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="70628" name="High-grade XP Growth Amulet Pack (1-day)" type="NONE" icon="BranchSys.icon.br_lucky_bag_box_i00">
+	<!-- Double-click to acquire High-grade XP Growth Amulet (1-day).\\n -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="70629" name="Fishing XP Growth Amulet" type="RUNE" icon="icon.fishing_zone_ticket">
+	<!-- If stored in the inventory during fishing, for 1 day acquired XP/ SP +30%. If used with High-grade Fishing XP Growth Amulet only the item with higher grade will take effect.\\n -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes duration="1440"/>
+	</item>
+
+	<item id="70630" name="High-grade Fishing XP Growth Amulet" type="RUNE" icon="icon.fishing_zone_ticket">
+	<!-- If stored in the inventory during fishing, acquired XP/ SP +50%.\\nDuration: 1 day. -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes duration="1440"/>
+	</item>
+
+	<item id="70631" name="Fishing XP Growth Amulet Pack (1-day)" type="NONE" icon="BranchSys.icon.br_four_leaf_clover_box_i00">
+	<!-- Double-click to acquire Fishing XP Growth Amulet (1-day). -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="70632" name="High-grade Fishing XP Growth Amulet Pack (1-day)" type="NONE" icon="BranchSys.icon.br_four_leaf_clover_box_i00">
+	<!-- Double-click to acquire High-grade Fishing XP Growth Amulet (1-day).\\n -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="70633" name="Blue Dynasty Transformation Scroll" type="POTION" icon="icon.etc_charm_of_courage_i01">
+	<!-- Transforms you into Blue Dynasty for 30 min. P./ M. Atk. +3%, P./ M. Def. +3%, Atk. Spd. +5%, Max. HP/MP +7%, Speed +5, P./ M. Accuracy +2, M. Critical Rate +2. Effect remains after death -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="70634" name="Red Zubei Transformation Scroll" type="POTION" icon="icon.etc_charm_of_courage_i04">
+	<!-- Transforms you into Red Zubei for 30 minutes. P./ M. Atk. +2%, P./ M. Def. +2%, Atk. Spd. +3%, Max. HP/MP +5%, Speed +4, P./ M. Accuracy +1, M. Critical Rate +1. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="70635" name="Formal Wear Appearance Scroll" type="POTION" icon="icon.etc_charm_of_courage_i02">
+	<!-- Transforms you into Formal Wear for 30 min. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="70636" name="Party Buff Scroll - Lv. 1" type="SCROLL" icon="icon.etc_trans_4f_s_b_01">
+	<!-- For 20 min., character's and nearby party members' P./ M. Atk. +3%. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="70637" name="Party Buff Scroll - Lv. 2" type="SCROLL" icon="icon.etc_trans_4f_s_b_01">
+	<!-- For 20 min., character's and nearby party members' P./ M. Atk./ Atk. Spd./ Casting Spd. +5%. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="70638" name="Special Hero's Fruit" type="POTION" icon="icon.etc_cobol_i01">
+	<!-- For 20 min., P./ M. Atk. +8%, P./ M. Def. +15%, HP/MP/CP +18%, HP/MP Recovery +24%. Recovers as HP 3% of the physical damage inflicted on the enemy with a certain probability. Cannot be stacked with Special Fruit Buff.\\n -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="10"/>
+	</item>
+
+	<item id="70639" name="Hero's XP/SP Scroll" type="SCROLL" icon="icon.exp_bottle_scroll">
+	<!-- For 20 min. XP/ SP +50%.\\n -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="10"/>
+	</item>
+
+	<item id="70640" name="Hero's Recovery Potion" type="POTION" icon="icon.etc_potion_scarlet_i00">
+	<!-- Immediately restores 200 HP. Cannot be used, when HP is full.\\n -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="10"/>
+	</item>
+
+	<item id="70641" name="Hero's Major Recovery Potion" type="POTION" icon="icon.etc_potion_red_i00">
+	<!-- Immediately restores 500 HP. Cannot be used, when HP is full.\\n -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="10"/>
+	</item>
+
+	<item id="70642" name="Hero's MP Recovery Potion" type="POTION" icon="icon.etc_potion_blue_i00">
+	<!-- Immediately restores 60 MP.\\n -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="10" commission-type="POTION" immediate-effect="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39258" level="1"/>  <!-- Warrior MP Recovery Potion -->
+		</skill-reducer>
+	</item>
+
+	<item id="70643" name="Golden Mermaid's Scale" type="SCROLL" icon="icon.etc_oren_fish_scale_i00">
+	<!-- For 3 hours, during fishing XP/ SP +10%.\\nDuration: 7 days. -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="50" duration="10080"/>
+	</item>
+
+	<item id="70644" name="Growth Amulet" type="RUNE" icon="BranchSys3.lcon.g_rune_itemdrop_up">
+	<!-- If stored in the inventory, acquired XP/ SP +40%.\\nDuration: 3 days. -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="50" duration="4320"/>
+	</item>
+
+	<weapon id="70645" name="Hero's Shining Dual Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- Atk. Spd. +5%.\\n Duration: 30 days. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="2330" commission-type="OTHER_ITEM"/>
+		<crystal type="C"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="200.0"/>
+			<stat type="mAtk" value="93.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="70646" name="Hero's Shining Staff" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_sages_staff_i01" magic="true">
+	<!-- Casting Spd. +12%.\\n Duration: 30 days. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1000" commission-type="OTHER_ITEM"/>
+		<crystal type="C"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="160.0"/>
+			<stat type="mAtk" value="126.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="70647" name="Hero's Shining Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_akat_long_bow_i01">
+	<!-- P. Critical Rate +52.\\n Duration: 30 days. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1740" commission-type="OTHER_ITEM"/>
+		<crystal type="C"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="4" mana="3"/>
+		<stats>
+			<stat type="pAtk" value="348.0"/>
+			<stat type="mAtk" value="99.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="227.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="70648" name="Hero's Shining Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_grace_dagger_i01">
+	<!-- P. Critical Rate +66.\\n Duration: 30 days. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1020" commission-type="OTHER_ITEM"/>
+		<crystal type="C"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="142.0"/>
+			<stat type="mAtk" value="91.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="70649" name="Hero's Shining Spear" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_poleaxe_i01">
+	<!-- Has a 25% chance of casting Stun on the target during a Critical Attack.\\n Duration: 30 days. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="2010" commission-type="OTHER_ITEM"/>
+		<crystal type="C"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="159.0"/>
+			<stat type="mAtk" value="91.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<armor id="70650" name="Hero's Shining Helmet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
+	<!-- Heavy Armor.\\n Duration: 30 days. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="600" />
+		<crystal type="C"/>
+		<stats>
+			<stat type="pDef" value="58.0"/>
+		</stats>
+	</armor>
+
+	<armor id="70651" name="Hero's Shining Armor" type="HEAVY" body-part="FULL_ARMOR" icon="icon.armor_t62_ul_i00">
+	<!-- Heavy Armor.\\n Duration: 30 days. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="10480" />
+		<crystal type="C"/>
+		<stats>
+			<stat type="pDef" value="239.0"/>
+		</stats>
+	</armor>
+
+	<armor id="70652" name="Hero's Shining Gauntlets" type="NONE" body-part="GLOVES" icon="icon.armor_t62_g_i00">
+	<!-- Heavy Armor.\\n Duration: 30 days. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="600" />
+		<crystal type="C"/>
+		<stats>
+			<stat type="pDef" value="39.0"/>
+		</stats>
+	</armor>
+
+	<armor id="70653" name="Hero's Shining Boots" type="NONE" body-part="FEET" icon="icon.armor_t62_b_i00">
+	<!-- Heavy Armor.\\n Duration: 30 days. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1200" />
+		<crystal type="C"/>
+		<stats>
+			<stat type="pDef" value="39.0"/>
+		</stats>
+	</armor>
+
+	<armor id="70654" name="Hero's Shining Helmet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
+	<!-- Light Armor.\\n Duration: 30 days. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="620" />
+		<crystal type="C"/>
+		<stats>
+			<stat type="pDef" value="47.0"/>
+		</stats>
+	</armor>
+
+	<armor id="70655" name="Hero's Shining Leather Armor" type="LIGHT" body-part="FULL_ARMOR" icon="icon.armor_t45_ul_i00">
+	<!-- Light Armor.\\n Duration: 30 days. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="5800" />
+		<crystal type="C"/>
+		<stats>
+			<stat type="pDef" value="179.0"/>
+		</stats>
+	</armor>
+
+	<armor id="70656" name="Hero's Shining Leather Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t45_g_i00">
+	<!-- Light Armor.\\n Duration: 30 days. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="600" />
+		<crystal type="C"/>
+		<stats>
+			<stat type="pDef" value="39.0"/>
+		</stats>
+	</armor>
+
+	<armor id="70657" name="Hero's Shining Leather Boots" type="NONE" body-part="FEET" icon="icon.armor_t45_b_i00">
+	<!-- Light Armor.\\n Duration: 30 days. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1210" />
+		<crystal type="C"/>
+		<stats>
+			<stat type="pDef" value="39.0"/>
+		</stats>
+	</armor>
+
+	<armor id="70658" name="Hero's Shining Circlet" type="NONE" body-part="HEAD" icon="icon.armor_circlet_i00">
+	<!-- Robe.\\n Duration: 30 days. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="600" />
+		<crystal type="C"/>
+		<stats>
+			<stat type="pDef" value="54.0"/>
+		</stats>
+	</armor>
+
+	<armor id="70659" name="Hero's Shining Tunic" type="MAGIC" body-part="CHEST" icon="icon.armor_t57_u_i00">
+	<!-- Robe.\\n Duration: 30 days. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1980" />
+		<crystal type="C"/>
+		<stats>
+			<stat type="pDef" value="74.0"/>
+			<stat type="maxMp" value="314.0"/>
+		</stats>
+	</armor>
+
+	<armor id="70660" name="Hero's Shining Stockings" type="MAGIC" body-part="LEGS" icon="icon.armor_t57_l_i00">
+	<!-- Robe.\\n Duration: 30 days. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="960" />
+		<crystal type="C"/>
+		<stats>
+			<stat type="pDef" value="46.0"/>
+			<stat type="maxMp" value="196.0"/>
+		</stats>
+	</armor>
+
+	<armor id="70661" name="Hero's Shining Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t57_g_i00">
+	<!-- Robe.\\n Duration: 30 days. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="610" />
+		<crystal type="C"/>
+		<stats>
+			<stat type="pDef" value="39.0"/>
+		</stats>
+	</armor>
+
+	<armor id="70662" name="Hero's Shining Shoes" type="NONE" body-part="FEET" icon="icon.armor_t57_b_i00">
+	<!-- Robe.\\n Duration: 30 days. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1210" />
+		<crystal type="C"/>
+		<stats>
+			<stat type="pDef" value="34.0"/>
+		</stats>
+	</armor>
+
+	<item id="70663" name="Party Support Cube - Lv. 1" type="COUPON" icon="icon.etc_clear_crystal_cube_pc_i00">
+	<!-- Double-click to get one of the following: from 1 to 3 Party Buff Scrolls - Lv. 1.\\n<Note:> \\nSupport Cube can be used only once a day. A new day starts every day at 6:30 AM.  Duration: 7 days. -->
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes duration="10080"/>
+	</item>
+
+	<item id="70664" name="Soulshot Support Cube" type="COUPON" icon="icon.etc_violet_crystal_cube_pc_i00">
+	<!-- Double-click to get one of the following: from 150 to 1500 Soulshots.\\n<Note:> \\nSupport Cube can be used only once a day. A new day starts every day at 6:30 AM.  Duration: 7 days. -->
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes duration="10080"/>
+	</item>
+
+	<item id="70665" name="Spiritshot Support Cube" type="COUPON" icon="icon.etc_pink_crystal_cube_pc_i00">
+	<!-- Double-click to get one of the following: from 100 to 1000 Spiritshots.\\n<Note:> \\nSupport Cube can be used only once a day. A new day starts every day at 6:30 AM.  Duration: 7 days. -->
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes duration="10080"/>
+	</item>
+
+	<item id="70666" name="Buff Support Cube" type="COUPON" icon="icon.etc_dkbrown_crystal_cube_pc_i00">
+	<!-- Double-click to get one of the following: from 1 to 3 Special Hero's Fruits or XP/SP Hero's Scroll.\\n<Note:> \\nSupport Cube can be used only once a day. A new day starts every day at 6:30 AM.  Duration: 7 days. -->
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes duration="10080"/>
+	</item>
+
+	<item id="70667" name="Potion Support Cube - Lv. 1" type="COUPON" icon="icon.etc_black_crystal_cube_pc_i00">
+	<!-- Double-click to get one of the following: from 3 to 10 Hero's Recovery Potions or from 3 to 5 Hero's MP Recovery Potions.\\n<Note:> \\nSupport Cube can be used only once a day. A new day starts every day at 6:30 AM.  Duration: 7 days. -->
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes duration="10080"/>
+	</item>
+
+	<item id="70668" name="Blessed Support Cube" type="COUPON" icon="icon.etc_golden_ore_cube_pc_i00">
+	<!-- Double-click to get one of the following: 3 Blessed Scrolls of Escape/ 2 Blessed Scrolls of Resurrection/ Feather of Blessing.\\n<Note:> \\nSupport Cube can be used only once a day. A new day starts every day at 6:30 AM.  Duration: 7 days. -->
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes duration="10080"/>
+	</item>
+
+	<item id="70669" name="Party Support Cube - Lv. 2" type="COUPON" icon="icon.etc_silver_ore_cube_pc_i00">
+	<!-- Double-click to get from 1 to 5 Party Buff Scrolls - Lv. 2.\\n<Note:> \\nSupport Cube can be used only once a day. A new day starts every day at 6:30 AM.  Duration: 7 days. -->
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes duration="10080"/>
+	</item>
+
+	<item id="70670" name="Fishing Support Cube" type="COUPON" icon="icon.etc_cupreous_ore_cube_pc_i00">
+	<!-- Double-click to get Golden Mermaid's Fishing Rod (1-day) and one of the following: Golden Mermaid's Scale (7-day)/ 20 Fishing Shots/ 20 Normal Baits.\\n<Note:> \\nSupport Cube can be used only once a day. A new day starts every day at 6:30 AM.  Duration: 7 days. -->
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes duration="10080"/>
+	</item>
+
+	<item id="70671" name="Potion Support Cube - Lv. 2" type="COUPON" icon="icon.etc_earthen_ore_cube_pc_i00">
+	<!-- Double-click to get one of the following: 5 Hero's Major Recovery Potions/ from 5 to 10 Hero's Recovery Potions/ from 3 to 5 Hero's MP Recovery Potions.\\n<Note:> \\nSupport Cube can be used only once a day. A new day starts every day at 6:30 AM.  Duration: 7 days. -->
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes duration="10080"/>
+	</item>
+
+	<item id="70672" name="Progression Support Cube" type="COUPON" icon="icon.etc_clear_crystal_cube_pc_i00">
+	<!-- Double-click to get one of the following: 1 or 2 Golden Mermaid's Tears (7-day).\\n<Note:> \\nSupport Cube can be used only once a day. A new day starts every day at 6:30 AM.  Duration: 7 days. -->
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes duration="10080"/>
+	</item>
+
+	<armor id="70673" name="Hero's Bracelet" type="NONE" body-part="UNDERWEAR" icon="icon.dimension_bracelet_i05">
+	<!-- Special Bracelet for Returning Heroes. Activates 4 Talisman slots. HP/MP/CP +5%.\\n -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="70674" name="Returning Hero's Talisman" type="NONE" body-part="TALISMAN" icon="icon.npoint_talisman_stat">
+	<!-- Special Talisman for Returning Heroes. P. Def. +22, M. Def. +11, P./ M. Evasion +1, Max. HP/MP/CP +80, Atk./Casting Spd. +9, Speed +4.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="120" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<item id="70675" name="Returning Hero's Reward - Heavy Armor" type="NONE" icon="icon.event_six_party_box_i00">
+	<!-- Double-click to acquire Hero's Shining Heavy Armor Set (30-day)/ Hero's Shining Weapon Set (30-day)/ Expertise Rune (C-grade) and Returning Hero's Reward - Lv. 30, Party Support Cube - Lv. 1 (7-day).\\n -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="70676" name="Returning Hero's Reward - Light Armor" type="NONE" icon="icon.event_six_party_box_i00">
+	<!-- Double-click to acquire Hero's Shining Light Armor Set (30-day)/ Hero's Shining Weapon Set (30-day)/ Expertise Rune (C-grade) and Returning Hero's Reward - Lv. 30, Party Support Cube - Lv. 1 (7-day).\\n -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="70677" name="Returning Hero's Reward - Robe" type="NONE" icon="icon.event_six_party_box_i00">
+	<!-- Double-click to acquire Hero's Shining Robe Set (30-day)/ Hero's Shining Weapon Set (30-day)/ Expertise Rune (C-grade) and Returning Hero's Reward - Lv. 30, Party Support Cube - Lv. 1 (7-day).\\n -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="70678" name="Expertise Rune (C-grade)" type="RUNE" icon="br_cashtex.item.br_cash_rune_of_feather_i00">
+	<!-- When possessed, gives Expertise C Skill. \\nDuration: 30 days. -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="70679" name="Returning Hero's Reward - Lv. 30" type="NONE" icon="icon.npoint_earring_of_lind_30day_box">
+	<!-- Double-click to acquire: Growth Amulet (3-day), Returning Hero's Reward - Lv. 40, Soulshot Support Cube (7-day), Spiritshot Support Cube (7-day). Can be used by characters with lvl 30 and above.\\n -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="70680" name="Returning Hero's Reward - Lv. 40" type="NONE" icon="icon.npoint_antaras_30day_box">
+	<!-- Double-click to acquire: Cadmus Transformation Bracelet - Prophet (7-day), Returning Hero's Reward - Lv. 45, Buff Support Cube (7-day). Can be used by characters with lvl 40 and above.\\n -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="70681" name="Returning Hero's Reward - Lv. 45" type="NONE" icon="icon.npoint_valakas_30day_box">
+	<!-- Double-click to acquire: Growth Amulet (3-day), Returning Hero's Reward - Lv. 50, Potion Support Cube - Lv. 1 (7-day). Can be used by characters with lvl 45 and above.\\n -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="70682" name="Returning Hero's Reward Lv. 50" type="NONE" icon="icon.npoint_tauti_30day_box">
+	<!-- Double-click to acquire: Rare Core/Orfen/Queen Ant's Accessory Lv. 3 (7-day), Returning Hero's Reward - Lv. 54, Blessed Support Cube (7-day). Only for characters level 50 and above. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="70683" name="Returning Hero's Reward - Lv. 54" type="NONE" icon="icon.npoint_earthworm_30day_box">
+	<!-- Double-click to acquire: 5 Golden Necklaces of Mermaid (7-day), 10 Rice Cakes of Flaming Fighting Spirit (event) and Returning Hero's Reward - Lv. 56, Party Support Cube - Lv. 2. Can be used by characters with lvl 54 and above.\\n -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="70684" name="Returning Hero's Reward - Lv. 56" type="NONE" icon="icon.etc_pi_box_love_pack">
+	<!-- Double-click to acquire: Growth Amulet (3-day), Returning Hero's Reward - Lv. 58, Fishing Support Cube (7-day). Can be used by characters with lvl 56 and above.\\n -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="70685" name="Returning Hero's Reward - Lv. 58" type="NONE" icon="icon.etc_pi_box_wish_pack">
+	<!-- Double-click to acquire: Cadmus Transformation Bracelet - Prophet (7-day), Returning Hero's Reward - Lv. 60, Potion Support Cube - Lv. 2 (7-day). Can be used by characters with lvl 58 and above.\\n -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="70686" name="Returning Hero's Reward - Lv. 60" type="NONE" icon="icon.etc_pi_box_joy_pack">
+	<!-- Double-click to acquire: Agathion Aries (60-day), Hero's Bracelet (30-day), Returning Hero's Talisman (30-day), Progression Support Cube (7-day). Can be used by characters with lvl 60 and above.\\n -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<armor id="70687" name="Artisan's Goggles (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_dwarf_goggle_i00">
+	<!-- Large goggles that protect the eyes. STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
+		<restriction dropable="false"/>
+		<attributes weight="10" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="55605" level="1"/>  <!-- Artisan's Goggles (STR+1 INT+1) -->
+		</skills>
+	</armor>
+
+	<armor id="70688" name="Artisan's Goggles (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_dwarf_goggle_i00">
+	<!-- Large goggles that protect the eyes. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
+		<restriction dropable="false"/>
+		<attributes weight="10" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="55606" level="1"/>  <!-- Artisan's Goggles (DEX +1 WIT +1) -->
+		</skills>
+	</armor>
+
+	<armor id="70689" name="Artisan's Goggles (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_dwarf_goggle_i00">
+	<!-- Large goggles that protect the eyes. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
+		<restriction dropable="false"/>
+		<attributes weight="10" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="55607" level="1"/>  <!-- Artisan's Goggles (CON+1 MEN+1) -->
+		</skills>
+	</armor>
+
+	<armor id="70690" name="Uniform Hat (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_Uniform_Hat_i00">
+	<!-- Stylish uniform hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
+		<restriction dropable="false"/>
+		<attributes weight="10" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="55608" level="1"/>  <!-- Uniform Hat (STR+1 INT+1) -->
+		</skills>
+	</armor>
+
+	<armor id="70691" name="Uniform Hat (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_Uniform_Hat_i00">
+	<!-- Stylish uniform hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
+		<restriction dropable="false"/>
+		<attributes weight="10" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="55609" level="1"/>  <!-- Uniform Hat (DEX +1 WIT +1) -->
+		</skills>
+	</armor>
+
+	<armor id="70692" name="Uniform Hat (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_Uniform_Hat_i00">
+	<!-- Stylish uniform hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
+		<restriction dropable="false"/>
+		<attributes weight="10" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="55610" level="1"/>  <!-- Uniform Hat (CON+1 MEN+1) -->
+		</skills>
+	</armor>
+
+	<armor id="70693" name="Assassin's Bamboo Hat (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_Bamboo_Hat_i00">
+	<!-- Wide-brimmed hat fashioned out of bamboo. STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
+		<restriction dropable="false"/>
+		<attributes weight="10" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="55611" level="1"/>  <!-- Assassin's Bamboo Hat (STR+1 INT+1) -->
+		</skills>
+	</armor>
+
+	<armor id="70694" name="Assassin's Bamboo Hat (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_Bamboo_Hat_i00">
+	<!-- Wide-brimmed hat fashioned out of bamboo. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
+		<restriction dropable="false"/>
+		<attributes weight="10" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="55612" level="1"/>  <!-- Assassin's Bamboo Hat (DEX +1 WIT +1) -->
+		</skills>
+	</armor>
+
+	<armor id="70695" name="Assassin's Bamboo Hat (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_Bamboo_Hat_i00">
+	<!-- Wide-brimmed hat fashioned out of bamboo. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
+		<restriction dropable="false"/>
+		<attributes weight="10" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="55613" level="1"/>  <!-- Assassin's Bamboo Hat (CON+1 MEN+1) -->
+		</skills>
+	</armor>
+
+	<armor id="70696" name="Valkyrie Hat (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_valkyrie_cap_i00">
+	<!-- The hat with Valkyrie's power in it.STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
+		<restriction dropable="false"/>
+		<attributes weight="10" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="55614" level="1"/>  <!-- Valkyrie Hat (STR+1 INT+1) -->
+		</skills>
+	</armor>
+
+	<armor id="70697" name="Valkyrie Hat (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_valkyrie_cap_i00">
+	<!-- The hat with Valkyrie's power in it.DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
+		<restriction dropable="false"/>
+		<attributes weight="10" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="55615" level="1"/>  <!-- Valkyrie Hat (DEX +1 WIT +1) -->
+		</skills>
+	</armor>
+
+	<armor id="70698" name="Valkyrie Hat (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_valkyrie_cap_i00">
+	<!-- The hat with Valkyrie's power in it.CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
+		<restriction dropable="false"/>
+		<attributes weight="10" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="55616" level="1"/>  <!-- Valkyrie Hat (CON+1 MEN+1) -->
+		</skills>
+	</armor>
+
+	<armor id="70699" name="Gatekeeper Hat (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_gatekeeper_of_hat_i00">
+	<!-- Gatekeeper Hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
+		<restriction dropable="false"/>
+		<attributes weight="10" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="55617" level="1"/>  <!-- Gatekeeper Hat (STR+1 INT+1) -->
+		</skills>
+	</armor>
+
 </list>

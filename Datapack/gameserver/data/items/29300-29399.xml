@@ -1,1352 +1,1240 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <weapon id="29300" name="Atuba Mace" icon="icon.weapon_atuba_mace_i00">
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1010"/>
-        <set name="soulshots" val="5"/>
-        <set name="spiritshots" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">90</stat>
-            <stat type="mAtk">79</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29301" name="Lesser Giant's Hammer" icon="icon.weapon_giants_hammer_i00">
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2100"/>
-        <set name="soulshots" val="5"/>
-        <set name="spiritshots" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">96</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29302" name="Short Spear" icon="icon.weapon_short_spear_i00">
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2140"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">24</stat>
-            <stat type="mAtk">17</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="29303" name="Great Spear" icon="icon.weapon_long_spear_i00">
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2120"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">31</stat>
-            <stat type="mAtk">21</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="29304" name="Winged Spear" icon="icon.weapon_winged_spear_i00">
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2060"/>
-        <set name="soulshots" val="5"/>
-        <set name="spiritshots" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">79</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="29305" name="Trident" icon="icon.weapon_trident_i00">
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2100"/>
-        <set name="soulshots" val="3"/>
-        <set name="spiritshots" val="3"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">40</stat>
-            <stat type="mAtk">26</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="29306" name="Pike" icon="icon.weapon_pike_i00">
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2090"/>
-        <set name="soulshots" val="3"/>
-        <set name="spiritshots" val="3"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">51</stat>
-            <stat type="mAtk">32</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="29307" name="War Hammer" icon="icon.weapon_war_hammer_i00">
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2080"/>
-        <set name="soulshots" val="3"/>
-        <set name="spiritshots" val="3"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">64</stat>
-            <stat type="mAtk">39</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="29308" name="War Pick" icon="icon.weapon_hammer_in_flames_i00">
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2050"/>
-        <set name="soulshots" val="5"/>
-        <set name="spiritshots" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">79</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="29309" name="Dwarven Trident" icon="icon.weapon_dwarven_trident_i00">
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2090"/>
-        <set name="soulshots" val="3"/>
-        <set name="spiritshots" val="3"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">51</stat>
-            <stat type="mAtk">32</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="29310" name="Dwarven Pike" icon="icon.weapon_dwarven_pike_i00">
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2070"/>
-        <set name="soulshots" val="3"/>
-        <set name="spiritshots" val="3"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">64</stat>
-            <stat type="mAtk">39</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="29311" name="Glaive" icon="icon.weapon_glaive_i00">
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2050"/>
-        <set name="soulshots" val="5"/>
-        <set name="spiritshots" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">92</stat>
-            <stat type="mAtk">54</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="29312" name="Short Bow" icon="icon.weapon_short_bow_i00">
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1950"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <set name="mp_consume" val="1"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">16</stat>
-            <stat type="mAtk">6</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">293</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="29313" name="Bow" icon="icon.weapon_bow_i00">
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1930"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <set name="mp_consume" val="1"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">23</stat>
-            <stat type="mAtk">9</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">293</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="29314" name="Hunting Bow" icon="icon.weapon_hunting_bow_i00">
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1910"/>
-        <set name="soulshots" val="5"/>
-        <set name="spiritshots" val="2"/>
-        <set name="mp_consume" val="1"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">34</stat>
-            <stat type="mAtk">12</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">293</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="29315" name="Forest Bow" icon="icon.weapon_short_bow_i00">
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1900"/>
-        <set name="soulshots" val="6"/>
-        <set name="spiritshots" val="2"/>
-        <set name="mp_consume" val="1"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">49</stat>
-            <stat type="mAtk">17</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">293</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="29316" name="Compound Bow" icon="icon.weapon_composition_bow_i00">
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1880"/>
-        <set name="soulshots" val="6"/>
-        <set name="spiritshots" val="2"/>
-        <set name="mp_consume" val="1"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">64</stat>
-            <stat type="mAtk">21</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">293</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="29317" name="Reinforced Bow" icon="icon.weapon_strengthening_bow_i00">
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1870"/>
-        <set name="soulshots" val="7"/>
-        <set name="spiritshots" val="3"/>
-        <set name="mp_consume" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">82</stat>
-            <stat type="mAtk">26</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">293</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="29318" name="Longbow" icon="icon.weapon_long_bow_i00">
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1830"/>
-        <set name="soulshots" val="7"/>
-        <set name="spiritshots" val="3"/>
-        <set name="mp_consume" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">114</stat>
-            <stat type="mAtk">35</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">227</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="29319" name="Elven Bow" icon="icon.weapon_elven_bow_i00">
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1850"/>
-        <set name="soulshots" val="7"/>
-        <set name="spiritshots" val="3"/>
-        <set name="mp_consume" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">105</stat>
-            <stat type="mAtk">32</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">293</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="29320" name="Dark Elven Bow" icon="icon.weapon_dark_elven_bow_i00">
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1830"/>
-        <set name="soulshots" val="7"/>
-        <set name="spiritshots" val="3"/>
-        <set name="mp_consume" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">105</stat>
-            <stat type="mAtk">32</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">293</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="29321" name="Gastraphetes" icon="icon.weapon_gastraphetes_i00">
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1840"/>
-        <set name="soulshots" val="11"/>
-        <set name="spiritshots" val="3"/>
-        <set name="mp_consume" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">132</stat>
-            <stat type="mAtk">39</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">293</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="29322" name="Reinforced Longbow" icon="icon.weapon_strengthening_long_bow_i00">
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1820"/>
-        <set name="soulshots" val="16"/>
-        <set name="spiritshots" val="5"/>
-        <set name="mp_consume" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">179</stat>
-            <stat type="mAtk">51</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">227</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="29323" name="Light Crossbow" icon="icon.weapon_cyclone_bow_i00">
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1810"/>
-        <set name="soulshots" val="16"/>
-        <set name="spiritshots" val="5"/>
-        <set name="mp_consume" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">191</stat>
-            <stat type="mAtk">54</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">293</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="29324" name="Spiked Gloves" icon="icon.weapon_spike_glove_i00">
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1590"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">10</stat>
-            <stat type="mAtk">6</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29325" name="Iron Gloves" icon="icon.weapon_iron_glove_i00">
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1580"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">13</stat>
-            <stat type="mAtk">9</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29326" name="Fox Claw Gloves" icon="icon.weapon_foxs_nail_i00">
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1560"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">21</stat>
-            <stat type="mAtk">12</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29327" name="Cestus" icon="icon.weapon_vipers_canine_i00">
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1570"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">29</stat>
-            <stat type="mAtk">17</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29328" name="Viper Fang" icon="icon.weapon_vipers_canine_i00">
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1560"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">38</stat>
-            <stat type="mAtk">21</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29329" name="Fist of Butcher" icon="icon.weapon_iron_glove_i00">
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1400"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">16</stat>
-            <stat type="mAtk">10</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29330" name="Bagh-Nakh" icon="icon.weapon_baghnakh_i00">
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1540"/>
-        <set name="soulshots" val="3"/>
-        <set name="spiritshots" val="3"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">49</stat>
-            <stat type="mAtk">26</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29331" name="Single-Edged Jamadhr" icon="icon.weapon_single-edged_jamadhr_i00">
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1550"/>
-        <set name="soulshots" val="3"/>
-        <set name="spiritshots" val="3"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">62</stat>
-            <stat type="mAtk">32</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29332" name="Triple-Edged Jamadhr" icon="icon.weapon_triple-edged_jamadhr_i00">
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1540"/>
-        <set name="soulshots" val="3"/>
-        <set name="spiritshots" val="3"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">78</stat>
-            <stat type="mAtk">39</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29333" name="Bich'Hwa" icon="icon.weapon_bichhwa_i00">
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1510"/>
-        <set name="soulshots" val="5"/>
-        <set name="spiritshots" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">96</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29334" name="Scallop Jamadhr" icon="icon.weapon_scallop_jamadhr_i00">
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1520"/>
-        <set name="soulshots" val="5"/>
-        <set name="spiritshots" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">112</stat>
-            <stat type="mAtk">54</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <armor id="29335" name="Bronze Breastplate" icon="icon.armor_t34_u_i00">
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="8920"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">68</stat>
-        </stats>
-    </armor>
-    <armor id="29336" name="Piece Bone Breastplate" icon="icon.armor_t33_u_i00">
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="8970"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">62</stat>
-        </stats>
-    </armor>
-    <armor id="29337" name="Bronze Gaiters" icon="icon.armor_t34_l_i00">
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="3960"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">43</stat>
-        </stats>
-    </armor>
-    <armor id="29338" name="Piece Bone Gaiters" icon="icon.armor_t33_l_i00">
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="4020"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">39</stat>
-        </stats>
-    </armor>
-    <armor id="29339" name="Compound Scale Mail" icon="icon.armor_t20_u_i00">
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="8620"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">95</stat>
-        </stats>
-    </armor>
-    <armor id="29340" name="Dwarven Scale Mail" icon="icon.armor_t15_u_i00">
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="8540"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">95</stat>
-        </stats>
-    </armor>
-    <armor id="29341" name="Breastplate" icon="icon.armor_t40_u_i00">
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="8420"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">97</stat>
-        </stats>
-    </armor>
-    <armor id="29342" name="Brigandine" icon="icon.armor_t43_u_i00">
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="8320"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">103</stat>
-        </stats>
-    </armor>
-    <armor id="29343" name="Half Plate Armor" icon="icon.armor_t46_u_i00">
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="8220"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">111</stat>
-        </stats>
-    </armor>
-    <armor id="29344" name="Mithril Breastplate" icon="icon.armor_t19_u_i00">
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="8670"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">95</stat>
-        </stats>
-    </armor>
-    <armor id="29345" name="Scale Mail" icon="icon.armor_t08_u_i00">
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="8720"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">87</stat>
-        </stats>
-    </armor>
-    <armor id="29346" name="Ring Breastplate" icon="icon.armor_t12_u_i00">
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="8820"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">77</stat>
-        </stats>
-    </armor>
-    <armor id="29347" name="Plate Gaiters" icon="icon.armor_t46_l_i00">
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="3770"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">70</stat>
-        </stats>
-    </armor>
-    <armor id="29348" name="Brigandine Gaiters" icon="icon.armor_t43_l_i00">
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="3820"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">64</stat>
-        </stats>
-    </armor>
-    <armor id="29349" name="Mithril Scale Gaiters" icon="icon.armor_t40_l_i00">
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="3870"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">64</stat>
-        </stats>
-    </armor>
-    <armor id="29350" name="Dwarven Scale Gaiters" icon="icon.armor_t15_l_i00">
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="3840"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">61</stat>
-        </stats>
-    </armor>
-    <armor id="29351" name="Compound Scale Gaiters" icon="icon.armor_t20_l_i00">
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="3770"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">61</stat>
-        </stats>
-    </armor>
-    <armor id="29352" name="Mithril Gaiters" icon="icon.armor_t19_l_i00">
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="3830"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">61</stat>
-        </stats>
-    </armor>
-    <armor id="29353" name="Iron Plate Gaiters" icon="icon.armor_t12_l_i00">
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="3820"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">48</stat>
-        </stats>
-    </armor>
-    <armor id="29354" name="Scale Gaiters" icon="icon.armor_t08_l_i00">
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="3860"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">54</stat>
-        </stats>
-    </armor>
-    <armor id="29355" name="Durable Leather Shirt" icon="icon.armor_t30_u_i00">
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="4720"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">53</stat>
-        </stats>
-    </armor>
-    <armor id="29356" name="Cotton Shirt" icon="icon.armor_t07_u_i00">
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="4770"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">50</stat>
-        </stats>
-    </armor>
-    <armor id="29357" name="Bone Breastplate" icon="icon.armor_t32_u_i00">
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="4770"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">50</stat>
-        </stats>
-    </armor>
-    <armor id="29358" name="Wooden Breastplate" icon="icon.armor_t06_u_i00">
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="4820"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">47</stat>
-        </stats>
-    </armor>
-    <armor id="29359" name="Leather Shirt" icon="icon.armor_t04_u_i00">
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="4830"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">43</stat>
-        </stats>
-    </armor>
-    <armor id="29360" name="Shirt" icon="icon.armor_t02_u_i00">
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="4830"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">36</stat>
-        </stats>
-    </armor>
-    <armor id="29361" name="Durable Leather Gaiters" icon="icon.armor_t30_l_i00">
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1610"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">33</stat>
-        </stats>
-    </armor>
-    <armor id="29362" name="Cotton Pants" icon="icon.armor_t07_l_i00">
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1630"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">32</stat>
-        </stats>
-    </armor>
-    <armor id="29363" name="Bone Gaiters" icon="icon.armor_t32_l_i00">
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1680"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">32</stat>
-        </stats>
-    </armor>
-    <armor id="29364" name="Wooden Gaiters" icon="icon.armor_t06_l_i00">
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1670"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">29</stat>
-        </stats>
-    </armor>
-    <armor id="29365" name="Pants" icon="icon.armor_t02_l_i00">
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1740"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">22</stat>
-        </stats>
-    </armor>
-    <armor id="29366" name="Leather Pants" icon="icon.armor_t04_l_i00">
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1730"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">27</stat>
-        </stats>
-    </armor>
-    <armor id="29367" name="Durable Leather Pants" icon="icon.armor_t06_l_i00">
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1700"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">29</stat>
-        </stats>
-    </armor>
-    <armor id="29368" name="Puma Skin Shirt" icon="icon.armor_t09_u_i00">
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="4700"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">58</stat>
-        </stats>
-    </armor>
-    <armor id="29369" name="Lion Skin Shirt" icon="icon.armor_t18_u_i00">
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="4580"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">65</stat>
-        </stats>
-    </armor>
-    <armor id="29370" name="Mithril Banded Mail" icon="icon.armor_t10_u_i00">
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="4570"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">73</stat>
-        </stats>
-    </armor>
-    <armor id="29371" name="Reinforced Leather Shirt" icon="icon.armor_t13_u_i00">
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="4570"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">73</stat>
-        </stats>
-    </armor>
-    <armor id="29372" name="Manticore Skin Shirt" icon="icon.armor_t42_u_i00">
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="4520"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">77</stat>
-        </stats>
-    </armor>
-    <armor id="29373" name="Puma Skin Gaiters" icon="icon.armor_t09_l_i00">
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1600"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">36</stat>
-        </stats>
-    </armor>
-    <armor id="29374" name="Lion Skin Gaiters" icon="icon.armor_t18_l_i00">
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1570"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">41</stat>
-        </stats>
-    </armor>
-    <armor id="29375" name="Mithril Banded Gaiters" icon="icon.armor_t10_l_i00">
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1580"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">46</stat>
-        </stats>
-    </armor>
-    <armor id="29376" name="Reinforced Leather Gaiters" icon="icon.armor_t13_l_i00">
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1570"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">46</stat>
-        </stats>
-    </armor>
-    <armor id="29377" name="Manticore Skin Gaiters" icon="icon.armor_t42_l_i00">
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1550"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">48</stat>
-        </stats>
-    </armor>
-    <armor id="29378" name="Salamander Skin Mail" icon="icon.armor_t45_ul_i00">
-        <!-- One-piece upper and lower body armor. Additional lower body armor cannot be worn while wearing this. -->
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="onepiece"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="6100"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">136</stat>
-        </stats>
-    </armor>
-    <armor id="29379" name="Tunic of Devotion" icon="icon.armor_t55_u_i00">
-        <set name="armor_type" val="MAGIC"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2090"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">30</stat>
-            <stat type="maxMp">67</stat>
-        </stats>
-    </armor>
-    <armor id="29380" name="Tunic of Magic" icon="icon.armor_t58_u_i00">
-        <!-- Tunic, comfortably designed for mages. -->
-        <set name="armor_type" val="MAGIC"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2080"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">34</stat>
-            <stat type="maxMp">86</stat>
-        </stats>
-    </armor>
-    <armor id="29381" name="Leather Tunic" icon="icon.armor_t05_u_i00">
-        <set name="armor_type" val="MAGIC"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2110"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">25</stat>
-            <stat type="maxMp">52</stat>
-        </stats>
-    </armor>
-    <armor id="29382" name="Cotton Tunic" icon="icon.armor_t50_u_i00">
-        <!-- Tunic made of tough cotton. -->
-        <set name="armor_type" val="MAGIC"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2120"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">21</stat>
-            <stat type="maxMp">38</stat>
-        </stats>
-    </armor>
-    <armor id="29383" name="Tunic" icon="icon.armor_t03_u_i00">
-        <set name="armor_type" val="MAGIC"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2150"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">18</stat>
-            <stat type="maxMp">24</stat>
-        </stats>
-    </armor>
-    <armor id="29384" name="Feriotic Tunic" icon="icon.armor_t52_u_i00">
-        <set name="armor_type" val="MAGIC"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2140"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">21</stat>
-            <stat type="maxMp">38</stat>
-        </stats>
-    </armor>
-    <armor id="29385" name="Cotton Stockings" icon="icon.armor_t50_l_i00">
-        <!-- Pair of pants made of tough cotton. -->
-        <set name="armor_type" val="MAGIC"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1060"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">13</stat>
-            <stat type="maxMp">23</stat>
-        </stats>
-    </armor>
-    <armor id="29386" name="Stockings of Devotion" icon="icon.armor_t55_l_i00">
-        <!-- Part of the devotion set. -->
-        <set name="armor_type" val="MAGIC"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1040"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">19</stat>
-            <stat type="maxMp">42</stat>
-        </stats>
-    </armor>
-    <armor id="29387" name="Stockings of Magic" icon="icon.armor_t58_l_i00">
-        <!-- Pair of pants, comfortably designed for mages. -->
-        <set name="armor_type" val="MAGIC"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1030"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">21</stat>
-            <stat type="maxMp">54</stat>
-        </stats>
-    </armor>
-    <armor id="29388" name="Stockings" icon="icon.armor_t03_l_i00">
-        <set name="armor_type" val="MAGIC"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1080"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">11</stat>
-            <stat type="maxMp">15</stat>
-        </stats>
-    </armor>
-    <armor id="29389" name="Feriotic Stockings" icon="icon.armor_t52_l_i00">
-        <set name="armor_type" val="MAGIC"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1070"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">13</stat>
-            <stat type="maxMp">23</stat>
-        </stats>
-    </armor>
-    <armor id="29390" name="Leather Stockings" icon="icon.armor_t05_l_i00">
-        <set name="armor_type" val="MAGIC"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1020"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">16</stat>
-            <stat type="maxMp">33</stat>
-        </stats>
-    </armor>
-    <armor id="29391" name="Elven Mithril Tunic" icon="icon.armor_elven_tunic_i00">
-        <set name="armor_type" val="MAGIC"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="720"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">54</stat>
-            <stat type="maxMp">169</stat>
-        </stats>
-    </armor>
-    <armor id="29392" name="Cursed Tunic" icon="icon.armor_t14_u_i00">
-        <set name="armor_type" val="MAGIC"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2090"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">39</stat>
-            <stat type="maxMp">106</stat>
-        </stats>
-    </armor>
-    <armor id="29393" name="Elven Tunic" icon="icon.armor_t11_u_i00">
-        <set name="armor_type" val="MAGIC"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2080"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">43</stat>
-            <stat type="maxMp">126</stat>
-        </stats>
-    </armor>
-    <armor id="29394" name="White Tunic" icon="icon.armor_t16_u_i00">
-        <set name="armor_type" val="MAGIC"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2040"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">43</stat>
-            <stat type="maxMp">126</stat>
-        </stats>
-    </armor>
-    <armor id="29395" name="Wizard Tunic" icon="icon.armor_t17_u_i00">
-        <set name="armor_type" val="MAGIC"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2030"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">43</stat>
-            <stat type="maxMp">126</stat>
-        </stats>
-    </armor>
-    <armor id="29396" name="Tunic of Knowledge" icon="icon.armor_t41_u_i00">
-        <set name="armor_type" val="MAGIC"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2020"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">49</stat>
-            <stat type="maxMp">147</stat>
-        </stats>
-    </armor>
-    <armor id="29397" name="Mithril Tunic" icon="icon.armor_t51_u_i00">
-        <set name="armor_type" val="MAGIC"/>
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2010"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">52</stat>
-            <stat type="maxMp">169</stat>
-        </stats>
-    </armor>
-    <armor id="29398" name="Mithril Stockings" icon="icon.armor_elven_hose_i00">
-        <set name="armor_type" val="MAGIC"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2400"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">34</stat>
-            <stat type="maxMp">105</stat>
-        </stats>
-    </armor>
-    <armor id="29399" name="Cursed Stockings" icon="icon.armor_t14_l_i00">
-        <set name="armor_type" val="MAGIC"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1020"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pDef">24</stat>
-            <stat type="maxMp">66</stat>
-        </stats>
-    </armor>
+	<weapon id="29300" name="Atuba Mace" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_atuba_mace_i00" magic="true">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1010" price="1800000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="90.0"/>
+			<stat type="mAtk" value="79.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29301" name="Lesser Giant's Hammer" type="HAMMER" body-part="TWO_HAND" icon="icon.weapon_giants_hammer_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="2100" price="1400000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="96.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29302" name="Short Spear" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_short_spear_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="2140" price="136000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="24.0"/>
+			<stat type="mAtk" value="17.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="29303" name="Great Spear" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_long_spear_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="2120" price="244000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="31.0"/>
+			<stat type="mAtk" value="21.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="29304" name="Winged Spear" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_winged_spear_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="2060" price="1400000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="79.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="29305" name="Trident" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_trident_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="2100" price="409000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="40.0"/>
+			<stat type="mAtk" value="26.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="29306" name="Pike" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_pike_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="2090" price="644000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="51.0"/>
+			<stat type="mAtk" value="32.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="29307" name="War Hammer" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_war_hammer_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="2080" price="967000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="64.0"/>
+			<stat type="mAtk" value="39.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="29308" name="War Pick" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_hammer_in_flames_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="2050" price="1400000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="79.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="29309" name="Dwarven Trident" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_dwarven_trident_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="2090" price="644000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="51.0"/>
+			<stat type="mAtk" value="32.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="29310" name="Dwarven Pike" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_dwarven_pike_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="2070" price="967000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="64.0"/>
+			<stat type="mAtk" value="39.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="29311" name="Glaive" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_glaive_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="2050" price="1800000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="92.0"/>
+			<stat type="mAtk" value="54.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="29312" name="Short Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_short_bow_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1950" price="768" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="1"/>
+		<stats>
+			<stat type="pAtk" value="16.0"/>
+			<stat type="mAtk" value="6.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="293.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29313" name="Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_bow_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1930" price="12500" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="1"/>
+		<stats>
+			<stat type="pAtk" value="23.0"/>
+			<stat type="mAtk" value="9.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="293.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29314" name="Hunting Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_hunting_bow_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1910" price="54100" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="1"/>
+		<stats>
+			<stat type="pAtk" value="34.0"/>
+			<stat type="mAtk" value="12.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="293.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29315" name="Forest Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_short_bow_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1900" price="136000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="1"/>
+		<stats>
+			<stat type="pAtk" value="49.0"/>
+			<stat type="mAtk" value="17.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="293.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29316" name="Compound Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_composition_bow_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1880" price="244000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="1"/>
+		<stats>
+			<stat type="pAtk" value="64.0"/>
+			<stat type="mAtk" value="21.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="293.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29317" name="Reinforced Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_strengthening_bow_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1870" price="409000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="2"/>
+		<stats>
+			<stat type="pAtk" value="82.0"/>
+			<stat type="mAtk" value="26.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="293.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29318" name="Longbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_long_bow_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1830" price="644000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="2"/>
+		<stats>
+			<stat type="pAtk" value="114.0"/>
+			<stat type="mAtk" value="35.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="227.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29319" name="Elven Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_elven_bow_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1850" price="644000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="2"/>
+		<stats>
+			<stat type="pAtk" value="105.0"/>
+			<stat type="mAtk" value="32.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="293.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29320" name="Dark Elven Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_dark_elven_bow_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1830" price="644000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="2"/>
+		<stats>
+			<stat type="pAtk" value="105.0"/>
+			<stat type="mAtk" value="32.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="293.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29321" name="Gastraphetes" type="BOW" body-part="TWO_HAND" icon="icon.weapon_gastraphetes_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1840" price="967000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="2"/>
+		<stats>
+			<stat type="pAtk" value="132.0"/>
+			<stat type="mAtk" value="39.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="293.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29322" name="Reinforced Longbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_strengthening_long_bow_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1820" price="1400000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="2"/>
+		<stats>
+			<stat type="pAtk" value="179.0"/>
+			<stat type="mAtk" value="51.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="227.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29323" name="Light Crossbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_cyclone_bow_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1810" price="1800000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="2"/>
+		<stats>
+			<stat type="pAtk" value="191.0"/>
+			<stat type="mAtk" value="54.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="293.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29324" name="Spiked Gloves" type="FIST" body-part="TWO_HAND" icon="icon.weapon_spike_glove_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1590" price="768" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="10.0"/>
+			<stat type="mAtk" value="6.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29325" name="Iron Gloves" type="FIST" body-part="TWO_HAND" icon="icon.weapon_iron_glove_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1580" price="12500" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="13.0"/>
+			<stat type="mAtk" value="9.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29326" name="Fox Claw Gloves" type="FIST" body-part="TWO_HAND" icon="icon.weapon_foxs_nail_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1560" price="54100" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="21.0"/>
+			<stat type="mAtk" value="12.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29327" name="Cestus" type="FIST" body-part="TWO_HAND" icon="icon.weapon_vipers_canine_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1570" price="136000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="29.0"/>
+			<stat type="mAtk" value="17.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29328" name="Viper Fang" type="FIST" body-part="TWO_HAND" icon="icon.weapon_vipers_canine_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1560" price="244000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="38.0"/>
+			<stat type="mAtk" value="21.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29329" name="Fist of Butcher" type="FIST" body-part="TWO_HAND" icon="icon.weapon_iron_glove_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1400" price="25500" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="16.0"/>
+			<stat type="mAtk" value="10.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29330" name="Bagh-Nakh" type="FIST" body-part="TWO_HAND" icon="icon.weapon_baghnakh_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1540" price="409000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="49.0"/>
+			<stat type="mAtk" value="26.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29331" name="Single-Edged Jamadhr" type="FIST" body-part="TWO_HAND" icon="icon.weapon_single-edged_jamadhr_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1550" price="644000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="62.0"/>
+			<stat type="mAtk" value="32.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29332" name="Triple-Edged Jamadhr" type="FIST" body-part="TWO_HAND" icon="icon.weapon_triple-edged_jamadhr_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1540" price="967000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="78.0"/>
+			<stat type="mAtk" value="39.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29333" name="Bich'Hwa" type="FIST" body-part="TWO_HAND" icon="icon.weapon_bichhwa_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1510" price="1400000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="96.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29334" name="Scallop Jamadhr" type="FIST" body-part="TWO_HAND" icon="icon.weapon_scallop_jamadhr_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1520" price="1800000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="112.0"/>
+			<stat type="mAtk" value="54.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<armor id="29335" name="Bronze Breastplate" type="HEAVY" body-part="CHEST" icon="icon.armor_t34_u_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="8920" price="49200" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="68.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29336" name="Piece Bone Breastplate" type="HEAVY" body-part="CHEST" icon="icon.armor_t33_u_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="8970" price="31800" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="62.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29337" name="Bronze Gaiters" type="HEAVY" body-part="LEGS" icon="icon.armor_t34_l_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="3960" price="30700" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="43.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29338" name="Piece Bone Gaiters" type="HEAVY" body-part="LEGS" icon="icon.armor_t33_l_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="4020" price="19900" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="39.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29339" name="Compound Scale Mail" type="HEAVY" body-part="CHEST" icon="icon.armor_t20_u_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="8620" price="183000" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="95.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29340" name="Dwarven Scale Mail" type="HEAVY" body-part="CHEST" icon="icon.armor_t15_u_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="8540" price="183000" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="95.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29341" name="Breastplate" type="HEAVY" body-part="CHEST" icon="icon.armor_t40_u_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="8420" price="203000" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="97.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29342" name="Brigandine" type="HEAVY" body-part="CHEST" icon="icon.armor_t43_u_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="8320" price="299000" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="103.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29343" name="Half Plate Armor" type="HEAVY" body-part="CHEST" icon="icon.armor_t46_u_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="8220" price="391000" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="111.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29344" name="Mithril Breastplate" type="HEAVY" body-part="CHEST" icon="icon.armor_t19_u_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="8670" price="183000" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="95.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29345" name="Scale Mail" type="HEAVY" body-part="CHEST" icon="icon.armor_t08_u_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="8720" price="133000" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="87.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29346" name="Ring Breastplate" type="HEAVY" body-part="CHEST" icon="icon.armor_t12_u_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="8820" price="83500" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="77.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29347" name="Plate Gaiters" type="HEAVY" body-part="LEGS" icon="icon.armor_t46_l_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="3770" price="244000" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="70.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29348" name="Brigandine Gaiters" type="HEAVY" body-part="LEGS" icon="icon.armor_t43_l_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="3820" price="187000" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="64.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29349" name="Mithril Scale Gaiters" type="HEAVY" body-part="LEGS" icon="icon.armor_t40_l_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="3870" price="187000" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="64.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29350" name="Dwarven Scale Gaiters" type="HEAVY" body-part="LEGS" icon="icon.armor_t15_l_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="3840" price="127000" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="61.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29351" name="Compound Scale Gaiters" type="HEAVY" body-part="LEGS" icon="icon.armor_t20_l_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="3770" price="127000" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="61.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29352" name="Mithril Gaiters" type="HEAVY" body-part="LEGS" icon="icon.armor_t19_l_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="3830" price="127000" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="61.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29353" name="Iron Plate Gaiters" type="HEAVY" body-part="LEGS" icon="icon.armor_t12_l_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="3820" price="52200" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="48.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29354" name="Scale Gaiters" type="HEAVY" body-part="LEGS" icon="icon.armor_t08_l_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="3860" price="83300" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="54.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29355" name="Durable Leather Shirt" type="LIGHT" body-part="CHEST" icon="icon.armor_t30_u_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="4720" price="36900" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="53.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29356" name="Cotton Shirt" type="LIGHT" body-part="CHEST" icon="icon.armor_t07_u_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="4770" price="20300" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="50.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29357" name="Bone Breastplate" type="LIGHT" body-part="CHEST" icon="icon.armor_t32_u_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="4770" price="20300" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="50.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29358" name="Wooden Breastplate" type="LIGHT" body-part="CHEST" icon="icon.armor_t06_u_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="4820" price="7960" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="47.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29359" name="Leather Shirt" type="LIGHT" body-part="CHEST" icon="icon.armor_t04_u_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="4830" price="2430" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="43.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29360" name="Shirt" type="LIGHT" body-part="CHEST" icon="icon.armor_t02_u_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="4830" price="147" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="36.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29361" name="Durable Leather Gaiters" type="LIGHT" body-part="LEGS" icon="icon.armor_t30_l_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1610" price="23000" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="33.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29362" name="Cotton Pants" type="LIGHT" body-part="LEGS" icon="icon.armor_t07_l_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1630" price="12700" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="32.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29363" name="Bone Gaiters" type="LIGHT" body-part="LEGS" icon="icon.armor_t32_l_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1680" price="12700" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="32.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29364" name="Wooden Gaiters" type="LIGHT" body-part="LEGS" icon="icon.armor_t06_l_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1670" price="4970" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="29.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29365" name="Pants" type="LIGHT" body-part="LEGS" icon="icon.armor_t02_l_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1740" price="92" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="22.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29366" name="Leather Pants" type="LIGHT" body-part="LEGS" icon="icon.armor_t04_l_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1730" price="1520" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="27.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29367" name="Durable Leather Pants" type="LIGHT" body-part="LEGS" icon="icon.armor_t06_l_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1700" price="4970" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="29.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29368" name="Puma Skin Shirt" type="LIGHT" body-part="CHEST" icon="icon.armor_t09_u_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="4700" price="62600" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="58.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29369" name="Lion Skin Shirt" type="LIGHT" body-part="CHEST" icon="icon.armor_t18_u_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="4580" price="99900" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="65.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29370" name="Mithril Banded Mail" type="LIGHT" body-part="CHEST" icon="icon.armor_t10_u_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="4570" price="152000" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="73.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29371" name="Reinforced Leather Shirt" type="LIGHT" body-part="CHEST" icon="icon.armor_t13_u_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="4570" price="152000" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="73.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29372" name="Manticore Skin Shirt" type="LIGHT" body-part="CHEST" icon="icon.armor_t42_u_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="4520" price="224000" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="77.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29373" name="Puma Skin Gaiters" type="LIGHT" body-part="LEGS" icon="icon.armor_t09_l_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1600" price="39100" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="36.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29374" name="Lion Skin Gaiters" type="LIGHT" body-part="LEGS" icon="icon.armor_t18_l_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1570" price="62500" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="41.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29375" name="Mithril Banded Gaiters" type="LIGHT" body-part="LEGS" icon="icon.armor_t10_l_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1580" price="95200" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="46.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29376" name="Reinforced Leather Gaiters" type="LIGHT" body-part="LEGS" icon="icon.armor_t13_l_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1570" price="95200" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="46.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29377" name="Manticore Skin Gaiters" type="LIGHT" body-part="LEGS" icon="icon.armor_t42_l_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1550" price="140000" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="48.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29378" name="Salamander Skin Mail" type="LIGHT" body-part="FULL_ARMOR" icon="icon.armor_t45_ul_i00">
+	<!-- One-piece upper and lower body armor. Additional lower body armor cannot be worn while wearing this. -->
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="6100" price="429000" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="136.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29379" name="Tunic of Devotion" type="MAGIC" body-part="CHEST" icon="icon.armor_t55_u_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="2090" price="20300" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="30.0"/>
+			<stat type="maxMp" value="67.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29380" name="Tunic of Magic" type="MAGIC" body-part="CHEST" icon="icon.armor_t58_u_i00">
+	<!-- Tunic that is designed to be comfortable for those who use magic. -->
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="2080" price="36900" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="34.0"/>
+			<stat type="maxMp" value="86.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29381" name="Leather Tunic" type="MAGIC" body-part="CHEST" icon="icon.armor_t05_u_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="2110" price="7960" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="25.0"/>
+			<stat type="maxMp" value="52.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29382" name="Cotton Tunic" type="MAGIC" body-part="CHEST" icon="icon.armor_t50_u_i00">
+	<!-- Tunic made of tough cotton. -->
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="2120" price="2430" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="21.0"/>
+			<stat type="maxMp" value="38.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29383" name="Tunic" type="MAGIC" body-part="CHEST" icon="icon.armor_t03_u_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="2150" price="147" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="18.0"/>
+			<stat type="maxMp" value="24.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29384" name="Feriotic Tunic" type="MAGIC" body-part="CHEST" icon="icon.armor_t52_u_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="2140" price="2430" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="21.0"/>
+			<stat type="maxMp" value="38.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29385" name="Cotton Stockings" type="MAGIC" body-part="LEGS" icon="icon.armor_t50_l_i00">
+	<!-- Pair of pants made of tough cotton. -->
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1060" price="1520" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="13.0"/>
+			<stat type="maxMp" value="23.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29386" name="Stockings of Devotion" type="MAGIC" body-part="LEGS" icon="icon.armor_t55_l_i00">
+	<!-- Part of the devotion set. -->
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1040" price="12700" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="19.0"/>
+			<stat type="maxMp" value="42.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29387" name="Stockings of Magic" type="MAGIC" body-part="LEGS" icon="icon.armor_t58_l_i00">
+	<!-- Pair of pants that is designed to be comfortable for those who use magic. -->
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1030" price="23000" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="21.0"/>
+			<stat type="maxMp" value="54.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29388" name="Stockings" type="MAGIC" body-part="LEGS" icon="icon.armor_t03_l_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1080" price="92" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="11.0"/>
+			<stat type="maxMp" value="15.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29389" name="Feriotic Stockings" type="MAGIC" body-part="LEGS" icon="icon.armor_t52_l_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1070" price="1520" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="13.0"/>
+			<stat type="maxMp" value="23.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29390" name="Leather Stockings" type="MAGIC" body-part="LEGS" icon="icon.armor_t05_l_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1020" price="4970" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="16.0"/>
+			<stat type="maxMp" value="33.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29391" name="Elven Mithril Tunic" type="MAGIC" body-part="CHEST" icon="icon.armor_elven_tunic_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="720" price="224000" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="54.0"/>
+			<stat type="maxMp" value="169.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29392" name="Cursed Tunic" type="MAGIC" body-part="CHEST" icon="icon.armor_t14_u_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="2090" price="62600" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="39.0"/>
+			<stat type="maxMp" value="106.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29393" name="Elven Tunic" type="MAGIC" body-part="CHEST" icon="icon.armor_t11_u_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="2080" price="99900" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="43.0"/>
+			<stat type="maxMp" value="126.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29394" name="White Tunic" type="MAGIC" body-part="CHEST" icon="icon.armor_t16_u_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="2040" price="99900" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="43.0"/>
+			<stat type="maxMp" value="126.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29395" name="Wizard Tunic" type="MAGIC" body-part="CHEST" icon="icon.armor_t17_u_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="2030" price="99900" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="43.0"/>
+			<stat type="maxMp" value="126.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29396" name="Tunic of Knowledge" type="MAGIC" body-part="CHEST" icon="icon.armor_t41_u_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="2020" price="152000" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="49.0"/>
+			<stat type="maxMp" value="147.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29397" name="Mithril Tunic" type="MAGIC" body-part="CHEST" icon="icon.armor_t51_u_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="2010" price="224000" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="52.0"/>
+			<stat type="maxMp" value="169.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29398" name="Mithril Stockings" type="MAGIC" body-part="LEGS" icon="icon.armor_elven_hose_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="2400" price="140000" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="34.0"/>
+			<stat type="maxMp" value="105.0"/>
+		</stats>
+	</armor>
+
+	<armor id="29399" name="Cursed Stockings" type="MAGIC" body-part="LEGS" icon="icon.armor_t14_l_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1020" price="39100" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="24.0"/>
+			<stat type="maxMp" value="66.0"/>
+		</stats>
+	</armor>
+
 </list>

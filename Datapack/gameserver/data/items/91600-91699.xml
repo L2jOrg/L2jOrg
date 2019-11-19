@@ -1,651 +1,722 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <armor id="91600" name="Dimensional Talisman Lv. 9" icon="icon.bm_dimension_tallisman">
-        <!-- When equipped, P./ M. Def. +90, P./ M. Evasion +4, Max. HP/ MP/ CP +1600, Speed +9, Atk. Spd. +50, Casting Spd. +80, Acquired XP/ SP +20%. Activates Dimensional Border Power (at a certain probability, increases attack abilities) Lv. 8, Dimensional Guard Lv. 9 (reduced chance of being hit by a quick stab attack for a certain amount of time, reduced Received P./ M. Critical Damage, increased M. Damage Resistance) skill can be used. Take it to Alchemist Veruti in Giran for upgrade. Dimensional powers cancel the power of Talisman of Border. Effect does not stack with the Talisman of Border. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="91601" name="Dimensional Talisman Lv. 10" icon="icon.bm_dimension_tallisman">
-        <!-- When equipped, P./ M. Def. +100, P./ M. Evasion +5, Max. HP/ MP/ CP +2000, Speed +10, Atk. Spd. +50, Casting Spd. +100, Acquired XP/ SP +30%. Activates Dimensional Border Power (at a certain probability, increases attack abilities) Lv. 9, Dimensional Guard Lv. 10 (reduced chance of being hit by a quick stab attack for a certain amount of time, reduced Received P./ M. Critical Damage, increased M. Damage Resistance) skill can be used, Dimensional Barrier (for 15 sec. protection from 10 enemy attacks) can be used. Effect does not stack with the Talisman of Border. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <item id="91602" name="Sealed Doll of Border - Frintezza" icon="icon.bm_doll_frintessa_30d">
-        <!-- Double-click to obtain Doll of Border - Frintezza (30-day). Take it to Alchemist Veruti in Giran to upgrade to Lv. 1-2. Cannot be dropped. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="time" val="43200"/>
-        <restriction dropable="false" stackable="true"/>
-    </item>
-    <item id="91603" name="Doll of Border - Frintezza" icon="icon.bm_doll_frintessa_30d">
-        <!-- A 30-day item. When in inventory, improves the character's stats. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. This item will be deleted after the event is over. <Frintezza Doll Spell>. CON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun/ Paralysis Atk. Rate +10%. -->
-        <set name="time" val="43200"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="91604" name="Frintezza Doll" icon="icon.bm_doll_frintessa_30d">
-        <!-- When in inventory, improves the character's stats. Take it to Alchemist Veruti in Giran to upgrade to Lv. 1-2. Cannot be dropped. <Frintezza Doll Spell Lv. 1>. CON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun/ Paralysis Atk. Rate +10%. -->
-        <restriction dropable="false" sellable="false"/>
-    </item>
-    <item id="91605" name="Frintezza Doll" icon="icon.bm_doll_frintessa_30d">
-        <!-- When in inventory, improves the character's stats. Cannot be dropped. <Frintezza Doll Spell Lv. 2>. CON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun/ Paralysis Atk. Rate +20%, Speed +5. -->
-        <restriction dropable="false"/>
-    </item>
-    <armor id="91606" name="High Quality Agathion Virgo" icon="icon.agathion_virgo_star_1">
-        <!-- Agathion Virgo that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases M. Def. and Mental Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Virgo (Land Dragon) by Pona. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="91607" name="High Quality Agathion Capricorn" icon="icon.agathion_capr_star_1">
-        <!-- Agathion Capricorn that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases M. Critical Rate. Decreases cooldown for M. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Capricorn (Land Dragon) by Pona. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="91608" name="High Quality Agathion Libra" icon="icon.agathion_lib_star_1">
-        <!-- Agathion Libra that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases Casting Spd. Decreases MP Consumption for M. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Libra (Land Dragon) by Pona. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="91609" name="High Quality Agathion Taurus" icon="icon.agathion_tau_star_1">
-        <!-- Agathion Taurus that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases P. Def. and Stun Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Taurus (Land Dragon) by Pona. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="91610" name="High Quality Agathion Leo" icon="icon.agathion_leo_star_1">
-        <!-- Agathion Leo that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases P. Atk. and Paralysis Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Leo (Land Dragon) by Pona. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="91611" name="High Quality Agathion Scorpio" icon="icon.agathion_sco_star_1">
-        <!-- Agathion Scorpio that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases P. Critical Rate. Decreases cooldown for P. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Scorpio (Land Dragon) by Pona. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="91612" name="High Quality Agathion Aquarius" icon="icon.agathion_aqu_star_1">
-        <!-- Agathion Aquarius that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases M. Atk. and Hold/ Sleep Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Aquarius (Land Dragon) by Pona. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="91613" name="High Quality Agathion Sagittarius" icon="icon.agathion_sag_star_1">
-        <!-- Agathion Sagittarius that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases Atk. Spd. Decreases MP Consumption for P. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Sagittarius (Land Dragon) by Pona. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="91614" name="High Quality Agathion Virgo" icon="icon.agathion_virgo_star_1">
-        <!-- Agathion Virgo that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases M. Def. and Mental Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Virgo (Fire Dragon) by Pona. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="91615" name="High Quality Agathion Capricorn" icon="icon.agathion_capr_star_1">
-        <!-- Agathion Capricorn that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases M. Critical Rate. Decreases cooldown for M. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Capricorn (Fire Dragon) by Pona. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="91616" name="High Quality Agathion Libra" icon="icon.agathion_lib_star_1">
-        <!-- Agathion Libra that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases Casting Spd. Decreases MP Consumption for M. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Libra (Fire Dragon) by Pona. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="91617" name="High Quality Agathion Taurus" icon="icon.agathion_tau_star_1">
-        <!-- Agathion Taurus that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases P. Def. and Stun Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Taurus (Fire Dragon) by Pona. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="91618" name="High Quality Agathion Leo" icon="icon.agathion_leo_star_1">
-        <!-- Agathion Leo that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases P. Atk. and Paralysis Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Leo (Fire Dragon) by Pona. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="91619" name="High Quality Agathion Scorpio" icon="icon.agathion_sco_star_1">
-        <!-- Agathion Scorpio that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases P. Critical Rate. Decreases cooldown for P. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Scorpio (Fire Dragon) by Pona. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="91620" name="High Quality Agathion Aquarius" icon="icon.agathion_aqu_star_1">
-        <!-- Agathion Aquarius that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases M. Atk. and Hold/ Sleep Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Aquarius (Fire Dragon) by Pona. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="91621" name="High Quality Agathion Sagittarius" icon="icon.agathion_sag_star_1">
-        <!-- Agathion Sagittarius that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases Atk. Spd. Decreases MP Consumption for M. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Sagittarius (Fire Dragon) by Pona. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="91622" name="High Quality Agathion Gemini" icon="icon.agathion_gem_star_1">
-        <!-- Agathion Gemini that contains the dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases the Sayha's Grace effect and Max HP/ MP. Starting from +6, increases Max CP. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <item id="91623" name="Stable Scroll: Enchant High Quality Agathion" icon="icon.guard_giantscrl_of_ench_ag">
-        <!-- Only for High Quality Zodiac Agathion. Increases M. Def. Can be enchanted maximum to +10. Starting from +1, the Agathion special abilities are enhanced with each enchant level. In case of failure the item will not be destroyed, and its enchant value remains the same. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91624" name="Agathion Gift Box" icon="icon.bm_gold_relic_box">
-        <!-- Double-click to obtain various S-grade items, special items and materials, materials for Agathion enchantment. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91625" name="Weapon Pack (S-grade)" icon="icon.event_hero_treasure_box_i00">
-        <!-- Double-click to obtain an S-grade weapon. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91626" name="Armor Pack (S-grade)" icon="icon.event_hero_treasure_box_i00">
-        <!-- Double-click to obtain an S-grade armor or accessory. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91627" name="+10 Armor Pack (A-grade)" icon="icon.etc_treasure_box_i00">
-        <!-- Double-click to obtain a +10 A-grade armor. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91628" name="+10 Armor Pack (B-grade)" icon="icon.etc_treasure_box_i04">
-        <!-- Double-click to obtain a +10 B-grade armor. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91629" name="+10 Accessory Supply Box (A-grade)" icon="icon.etc_treasure_box_i02">
-        <!-- Double-click to obtain a +10 A-grade accessory. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91630" name="+10 Accessory Supply Box (B-grade)" icon="icon.etc_treasure_box_i05">
-        <!-- Double-click to obtain a +10 B-grade accessory. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91631" name="Crafting Supplies Coupon" icon="icon.etc_exchange_ticket_i02">
-        <!-- Take it to any Dimensional Merchant to exchange for high-quality crafting supplies. <Exchange Price> 2,500,000 adena. -->
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91632" name="Fire Dragon's Soulstone" icon="icon.r99_soul_stone_i00">
-        <!-- Required for upgrading Zodiac Agathion with the dragon's power and for changing the dragon's element. Can be obtained from Pona in Giran. -->
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91633" name="Land Dragon's Soulstone" icon="icon.r99_soul_stone_i04">
-        <!-- Required for upgrading Zodiac Agathion with the dragon's power and for changing the dragon's element. Can be obtained from Pona in Giran. -->
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91634" name="Agathion's Soulstone" icon="icon.r99_soul_stone_i05">
-        <!-- Required for upgrading Agathion Gemini to High Quality Agathion. Can be obtained from Pona in Giran. -->
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91635" name="Master Fisherman's Treasure Chest" icon="icon.etc_treasure_box_i08">
-        <!-- Double-click to obtain one of the following items: Soulshot Ticket, Weapon Exchange Coupon, Shiny Coin. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="weight" val="10"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="91636" name="Goldberg's Room Key" icon="icon.etc_old_key_i02">
-        <!-- A shiny key lost by Goldberg's Steward. Take it to Sora in Aden to go to Goldberg's room. -->
-        <restriction stackable="true"/>
-    </item>
-    <armor id="91637" name="15th Anniversary Talisman" icon="icon.ev_L2_soul_ore">
-        <!-- Acquired XP/ SP (hunting) +15%. Allows use of the transformation skill. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <item id="91638" name="Chronicle Cube" icon="icon.ev_15th_cube">
-        <!-- Double-click to obtain Chronicle Cube Gift (maximum 15 times). Can be used only once a day. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="91639" name="Rare Accessory Pack Lv. 3" icon="icon.etc_box_of_adventure_3_i00">
-        <!-- Double-click to obtain one of the following items: Queen Ant's Ring Lv. 3 (30-day), Orfen's Earring Lv. 3 (30-day), Ring of Core Lv. 3 (30-day). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <armor id="91640" name="Refined Romantic Chapeau: Gold" icon="icon.bm_romantic_chaperon_gold">
-        <!-- Uses 2 hair accessory slots. <Active Skills>. 1. Refined Romantic Gold Chapeau Teleport: Teleports to the nearest village. Cooldown: 20 min. 2. Mysterious Aura: Enlarges the user's head for 10 min. Cooldown: 20 min. -->
-        <set name="bodypart" val="hairall"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <item id="91641" name="Sayha's Blessing" icon="icon.etc_wind_potion_i00">
-        <!-- Sayha's Grace points +35,000. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91642" name="15th Anniversary Gift Box" icon="icon.event_six_party_box_i00">
-        <!-- Double-click to obtain one of the following items: Manuscript Chest, Dragon Dye Box, Spirit Transformation Scroll - Singer, Transformation Scroll: White Assassin, Rice Cake of Fighting Spirit. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91643" name="Chronicle Chest" icon="icon.new_user_box">
-        <!-- Double-click to obtain an enchanted rare accessory or crafting supply (30-day). -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91644" name="Chronicle Cube Gift" icon="icon.etc_treasure_box_i11">
-        <!-- Double-click to obtain Dandy's Home Run Ball and Chronicle Chest. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91645" name="15th Anniversary Wondrous Fork" icon="icon.ev_15th_foke">
-        <!-- Can be used for the 15th Anniversary Event Cake raids (daily, 11 am - 8 pm). Use it on the Event Cake to choose a random number from 1 to 6. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="91646" name="Scroll of Escape: Unbearable Wolves' Howling" icon="icon.etc_scroll_of_return_i04">
-        <!-- Teleports to Jackson in the Talking Island Village. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
-    </item>
-    <item id="91647" name="Scroll of Escape: Troubled Forest" icon="icon.etc_scroll_of_return_i04">
-        <!-- Teleports to Herbiel in Elven Village. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
-    </item>
-    <item id="91648" name="Scroll of Escape: Cleaning-up the Grounds" icon="icon.etc_scroll_of_return_i04">
-        <!-- Teleports to Vollodos in Dark Elf Village. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
-    </item>
-    <item id="91649" name="Scroll of Escape: Plundered Graves" icon="icon.etc_scroll_of_return_i04">
-        <!-- Teleports to Uska in the Orc Village. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
-    </item>
-    <item id="91650" name="Scroll of Escape: Dangerous Predators" icon="icon.etc_scroll_of_return_i04">
-        <!-- Teleports to Gerald in Dwarven Village. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
-    </item>
-    <item id="91651" name="Scroll of Escape: Captain Bathis" icon="icon.etc_scroll_of_return_i04">
-        <!-- Teleports to Captain Bathis in Giran Castle. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
-    </item>
-    <item id="91652" name="Giant Cobweb" icon="icon.etc_cobweb_i00">
-        <!-- A light and shiny cobweb made by Giant Spiders. -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91653" name="Tarantula's Venom Sac" icon="icon.etc_poison_pouch_i00">
-        <!-- A venom sac from a Tarantula. -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91654" name="Adventurer's Mark Lv. 1" icon="icon.etc_crest_blue_i00">
-        <!-- Received after completing the Adventurer's Journey mission. When in inventory, HP Recovery Bonus +5%, MP Recovery Bonus +10%. The effect doesn't stack if several identical marks are in inventory, the higher-level mark takes precedence. Double-click to see the list of hunting zones for each character level. -->
-        <set name="default_action" val="SHOW_HTML"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <restriction tradable="false" dropable="false" depositable="false"/>
-    </item>
-    <item id="91655" name="Adventurer's Mark Lv. 2" icon="icon.etc_crest_blue_i00">
-        <!-- Received after completing the Adventurer's Journey mission. When in inventory, HP Recovery Bonus +10%, MP Recovery Bonus +15%. The effect doesn't stack if several identical marks are in inventory, the higher-level mark takes precedence. Double-click to see the list of hunting zones for each character level. -->
-        <set name="default_action" val="SHOW_HTML"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <restriction tradable="false" dropable="false" depositable="false"/>
-    </item>
-    <item id="91656" name="Adventurer's Mark Lv. 3" icon="icon.etc_crest_blue_i00">
-        <!-- Received after completing the Adventurer's Journey mission. When in inventory, HP Recovery Bonus +15%, MP Recovery Bonus +20%. The effect doesn't stack if several identical marks are in inventory, the higher-level mark takes precedence. Double-click to see the list of hunting zones for each character level. -->
-        <set name="default_action" val="SHOW_HTML"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <restriction tradable="false" dropable="false" depositable="false"/>
-    </item>
-    <item id="91657" name="Adventurer's Mark Lv. 4" icon="icon.etc_crest_blue_i00">
-        <!-- Received after completing the Adventurer's Journey mission. When in inventory, HP Recovery Bonus +20%, MP Recovery Bonus +25%. Double-click to see the list of hunting zones for each character level. -->
-        <set name="default_action" val="SHOW_HTML"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <restriction tradable="false" dropable="false" depositable="false"/>
-    </item>
-    <item id="91658" name="Chicken Box" icon="icon.ev_chicken_box_i01">
-        <!-- Only for the Essence server. Double-click to obtain Shining Scroll of Mood Melody or Yummy Chicken. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91659" name="Yummy Chicken" icon="icon.ev_chicken_ticket_i01">
-        <!-- Very delicious chicken from Chicken Box. Sell it in the GM shop to obtain a gift certificate that can be exchange for the real (and by that we mean real real!) chicken! The number of certificates is limited to 1000, so if you have Yummy Chicken, don't hesitate to sell it! The GM shop is located on the Monster Race Track, and it will work only until all 1000 coupons are distributed. Can be sold for a certain sum of adena. -->
-        <set name="price" val="600000"/>
-        <restriction dropable="false" stackable="true"/>
-    </item>
-    <item id="91660" name="Shining Scroll of Mood Melody" icon="icon.bm_magmeld">
-        <!-- For 1 h., grants the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. The effect remains after death. <Note>. 1. Cannot be used together with Scroll of Mood Melody. 2. The effect of the last applied item will be active. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="time" val="60"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91661" name="Shining Scroll of Mood Melody" icon="icon.bm_magmeld">
-        <!-- For 4 h., grants the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. The effect remains after death. <Note>. 1. Cannot be used together with Scroll of Mood Melody. 2. The effect of the last applied item will be active. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="time" val="240"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91662" name="Shining Scroll of Mood Melody" icon="icon.bm_magmeld">
-        <!-- For 8 h., grants the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. The effect remains after death. <Note>. 1. Cannot be used together with Scroll of Mood Melody. 2. The effect of the last applied item will be active. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="time" val="480"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91663" name="L-Coin" icon="icon.etc_11th_token">
-        <!-- Can be used to buy various items in L-Coin Store. -->
-        <set name="price" val="1"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91664" name="Scroll: 10,000 SP" icon="icon.etc_sp_scroll2_i00">
-        <!-- Double-click to recover 10,000 SP. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
-    </item>
-    <item id="91665" name="Scroll: 100,000 SP" icon="icon.etc_sp_scroll3_i00">
-        <!-- Double-click to recover 100,000 SP. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
-    </item>
-    <item id="91666" name="Sayha's Storm Lv. 1" icon="icon.bm_sayha_storm">
-        <!-- Sayha's Grace points +100%, Acquired XP/ SP +100%. The effect remains after death. Duration: 20 min. Cooldown: 1 min. Available if Sayha's Grace point bar is filled by more than one unit. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <armor id="91667" name="White Sayha's Cloak +7" icon="icon.sayha2017_back_i03">
-        <!-- Available for 30 days. Max HP/ MP +15%, Acquired XP/ SP +20%, P. Def. +8%, P./ M. Critical Damage +5%. -->
-        <set name="bodypart" val="back"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="220"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <item id="91668" name="Red Lantern" icon="icon.r99_soul_stone_i00">
-        <!-- <Reward for achieving the 1st place in the Magic Lantern event>. XP +100,000,000, SP +2,700,000. Can be exchanged by the Dimensional Merchant for the Red Lantern (transferable to other characters on the account). -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91669" name="Purple Lantern" icon="icon.r99_soul_stone_i05">
-        <!-- <Reward for achieving the 2nd place in the Magic Lantern event>. XP +30,000,000, SP +810,000. Can be exchanged by the Dimensional Merchant for the Purple Lantern (transferable to other characters on the account). -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91670" name="Blue Lantern" icon="icon.r99_soul_stone_i02">
-        <!-- <Reward for achieving the 3rd place in the Magic Lantern event>. XP +10,000,000, SP +270,000. Can be exchanged by the Dimensional Merchant for the Blue Lantern (transferable to other characters on the account). -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91671" name="Green Lantern" icon="icon.r99_soul_stone_i04">
-        <!-- <Reward for achieving the 4th place in the Magic Lantern event>. XP +5,000,000, SP +135,000. Can be exchanged by the Dimensional Merchant for the Green Lantern (transferable to other characters on the account). -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91672" name="Adena Fortune Box" icon="icon.bm_nebit_present">
-        <!-- Double-click to obtain a random amount of adena. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <weapon id="91673" name="Reinforced Spear" icon="icon.weapon_long_spear_i00">
-        <!-- Cannot be enchanted/ augmented, runes cannot be inserted. -->
-        <set name="weapon_type" val="ETC"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2120"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <restriction tradable="false" dropable="false" depositable="false"/>
-        <stats>
-            <stat type="pAtk">31</stat>
-            <stat type="mAtk">21</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="91674" name="Reinforced Falchion" icon="icon.weapon_falchion_i00">
-        <!-- Cannot be enchanted/ augmented, runes cannot be inserted. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1530"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <restriction tradable="false" dropable="false" depositable="false"/>
-        <stats>
-            <stat type="pAtk">31</stat>
-            <stat type="mAtk">21</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="91675" name="Reinforced Iron Hammer" icon="icon.weapon_iron_hammer_i00">
-        <!-- Cannot be enchanted/ augmented, runes cannot be inserted. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1850"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <restriction tradable="false" dropable="false" depositable="false"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">31</stat>
-            <stat type="mAtk">21</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-        </stats>
-    </weapon>
-    <weapon id="91676" name="Reinforced Voodoo Doll" icon="icon.weapon_voodoo_doll_i00">
-        <!-- Cannot be enchanted/ augmented, runes cannot be inserted. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="630"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <restriction tradable="false" dropable="false" depositable="false"/>
-        <stats>
-            <stat type="pAtk">25</stat>
-            <stat type="mAtk">28</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-        </stats>
-    </weapon>
-    <weapon id="91677" name="Reinforced Flanged Mace" icon="icon.weapon_buzdygan_i00">
-        <!-- Cannot be enchanted/ augmented, runes cannot be inserted. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1800"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <restriction tradable="false" dropable="false" depositable="false"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">31</stat>
-            <stat type="mAtk">21</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-        </stats>
-    </weapon>
-    <weapon id="91678" name="Reinforced Sword Breaker" icon="icon.weapon_sword_breaker_i00">
-        <!-- Cannot be enchanted/ augmented, runes cannot be inserted. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1110"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <restriction tradable="false" dropable="false" depositable="false"/>
-        <stats>
-            <stat type="pAtk">27</stat>
-            <stat type="mAtk">21</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="91679" name="Reinforced Viper Fang" icon="icon.weapon_vipers_canine_i00">
-        <!-- Cannot be enchanted/ augmented, runes cannot be inserted. -->
-        <set name="weapon_type" val="FISHINGROD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1560"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <restriction tradable="false" dropable="false" depositable="false"/>
-        <stats>
-            <stat type="pAtk">38</stat>
-            <stat type="mAtk">21</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="91680" name="Reinforced Compound Bow" icon="icon.weapon_composition_bow_i00">
-        <!-- Cannot be enchanted/ augmented, runes cannot be inserted. -->
-        <set name="weapon_type" val="RAPIER"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1880"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="1"/>
-        <restriction tradable="false" dropable="false" depositable="false"/>
-        <stats>
-            <stat type="pAtk">64</stat>
-            <stat type="mAtk">21</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">293</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <item id="91681" name="Spear Amulet" icon="icon.bm_freya_bloody_rune">
-        <!-- Available for 30 days. Contains the Reinforced Spear's power. <Active Skill> Reinforced Spear's Power: Double-click to obtain Glaive (D-grade) enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Can be used only once a day. -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="91682" name="Falchion Amulet" icon="icon.bm_freya_bloody_rune">
-        <!-- Available for 30 days. Contains the Reinforced Falchion's power. <Active Skill> Reinforced Falchion's Power I: Double-click to obtain Elven Long Sword (D-grade) enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Reinforced Falchion's Power II: Double-click to obtain Bastard Sword*Crimson Sword (D-grade) enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Can be used only once a day. -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="91683" name="Iron Hammer Amulet" icon="icon.bm_freya_bloody_rune">
-        <!-- Available for 30 days. Contains the Reinforced Iron Hammer's power. <Active Skill> Reinforced Iron Hammer's Power: Double-click to obtain Bonebreaker (D-grade) enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Can be used only once a day. -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="91684" name="Voodoo Doll Amulet" icon="icon.bm_freya_bloody_rune">
-        <!-- Available for 30 days. Contains the Reinforced Voodoo Doll's power. <Active Skill> Reinforced Voodoo Doll's Power: Double-click to obtain Staff of Life (D-grade) enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Can be used only once a day. -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="91685" name="Flanged Mace Amulet" icon="icon.bm_freya_bloody_rune">
-        <!-- Available for 30 days. Contains the Reinforced Flanged Mace's power. <Active Skill> Reinforced Flanged Mace's Power: Double-click to obtain Claymore (D-grade) enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Can be used only once a day. -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="91686" name="Sword Breaker Amulet" icon="icon.bm_freya_bloody_rune">
-        <!-- Available for 30 days. Contains the Reinforced Sword Breaker's power. <Active Skill> Reinforced Sword Breaker's Power: Double-click to obtain Mithril Dagger (D-grade) enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Can be used only once a day. -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="91687" name="Viper Fang Amulet" icon="icon.bm_freya_bloody_rune">
-        <!-- Available for 30 days. Contains the Reinforced Viper Fang's power. <Active Skill> Reinforced Viper Fang's Power: Double-click to obtain Scallop Jamadhr (D-grade) enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Can be used only once a day. -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="91688" name="Compound Bow Amulet" icon="icon.bm_freya_bloody_rune">
-        <!-- Available for 30 days. Contains the Reinforced Compound Bow's power. <Active Skill> Reinforced Compound Bow's Power: Double-click to obtain Light Bow (D-grade) enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Can be used only once a day. -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="91689" name="Improved Scroll of Escape" icon="icon.etc_scroll_of_return_i01">
-        <!-- Teleports to the nearest village. Its casting time is very short. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91690" name="Maliss' HP Recovery Potion" icon="BranchSys.icon.br_vitality_potion_i01">
-        <!-- Instantly recovers 500 HP. The remaining points are used to recover CP. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91691" name="Maliss' MP Recovery Potion" icon="icon.freya_potion">
-        <!-- Instantly recovers MP. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91692" name="Blessing of Plenty - 100% (Event)" icon="icon.aden_bless_rune_i01">
-        <!-- Available for 3 days. L-Coin drop rate +100%. -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="91693" name="Blessing of Plenty - 100%" icon="icon.aden_bless_rune_i02">
-        <!-- Available for 1 day. L-Coin drop rate +100%, Acquired XP/ SP +10%, Sayha's Grace Consumption -20%. -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="91694" name="Blessing of Plenty - 100%" icon="icon.aden_bless_rune_i02">
-        <!-- Available for 30 days. L-Coin drop rate +100%, Acquired XP/ SP +10%, Sayha's Grace Consumption -20%. -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="91695" name="Mark of Aden's Braveheart" icon="icon.bm_royal_gold_ticket_all">
-        <!-- Can be sold for adena. -->
-        <set name="price" val="1000000"/>
-        <restriction dropable="false" stackable="true"/>
-    </item>
-    <item id="91696" name="Growth Treasure Chest" icon="icon.bm_gold_lure_box">
-        <!-- Double-click to obtain a rare item including various enchant scrolls and materials, +16 Weapon Pack (B-grade), Queen Ant's Ring, Orfen's Earring, Ring of Core, Baium's Ring. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" stackable="true"/>
-    </item>
-    <item id="91697" name="Samurai Long Sword +7" icon="icon.weapon_samurai_old_longsword_i00">
-        <!-- Double-click to obtain Samurai Long Sword enchanted to +7. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91698" name="Demon's Staff +7" icon="icon.weapon_demons_staff_i00">
-        <!-- Double-click to obtain Demon's Staff enchanted to +7. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91699" name="Mace of Underworld +7" icon="icon.weapon_mace_of_underworld_i00">
-        <!-- Double-click to obtain Mace of Underworld enchanted to +7. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
+	<armor id="91600" name="Dimensional Talisman Lv. 9" type="NONE" body-part="TALISMAN" icon="icon.bm_dimension_tallisman">
+	<!-- When equipped, P. Def/M. Def +90, P./M. Evasion +4, Max HP/MP/CP +1600, Movement Speed +9, Atk. Spd. +50, Casting Spd. +80, XP/SP gain +20%. Applies the Dimensional Power of Fate - Lv. 8 (has a chance to increase Attack Abilities on attack) and allows use of Dimension Guard - Lv. 9 (temporarily decreases the chance of getting hit by Deadly Stabs and P./M. Critical Damage Received, and increases M. Def). Can be upgraded to a higher-grade Talisman through Veruti in the Town of Giran. When both the Dimensional Power and the Talisman of Fate are equipped, only the Dimensional Power is applied.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91601" name="Dimensional Talisman Lv. 10" type="NONE" body-part="TALISMAN" icon="icon.bm_dimension_tallisman">
+	<!-- When equipped, P. Def/M. Def +100, P./M. Evasion +5, Max HP/MP/CP +2000, Movement Speed +10, Atk. Spd. +50, Casting Spd. +100, XP/SP gain +30%. Applies the Dimensional Power of Fate - Lv. 9 (has a chance to increase Attack Abilities on attack) and allows se of Dimension Guard - Lv. 10 (temporarily decreases the chance of getting hit by Deadly Stabs and P./M. Critical Damage Received, and increases M. Def). and the Dimensional Barrier (defending enemy attacks 10 times for 15 sec). When both the Dimensional Power and the Talisman of Fate are equipped, only the Dimensional Power is applied.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<item id="91602" name="Sealed Doll of Border - Frintezza" type="NONE" icon="icon.bm_doll_frintessa_30d">
+	<!-- Double-click to obtain 1 Doll of Border - Frintezza (30-day). Can be upgraded to Lv. 1 or Lv. 2 through Veruti in the Town of Giran.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes duration="43200" immediate-effect="true"/>
+	</item>
+
+	<item id="91603" name="Doll of Border - Frintezza" type="RUNE" icon="icon.bm_doll_frintessa_30d">
+	<!-- A 30-day item. Boosts abilities with Frintezza Doll's Spell when stored in the inventory. \\n\\n<Frintezza Doll's Spell Lv. 1>\\nCON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun and Paralysis Atk. Rate +10% -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes duration="43200"/>
+	</item>
+
+	<item id="91604" name="Frintezza Doll Lv. 1" type="RUNE" icon="icon.bm_doll_frintessa_30d">
+	<!-- Boosts abilities with Frintezza Doll's Spell when stored in the inventory. Can be upgraded to Lv. 1 or 2 through Veruti in the Town of Giran. \\n\\n<Frintezza Doll's Spell Lv. 1>\\nCON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun and Paralysis Atk. Rate +10% -->
+		<restriction freightable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91605" name="Frintezza Doll Lv 2" type="RUNE" icon="icon.bm_doll_frintessa_30d">
+	<!-- Boosts abilities with Frintezza Doll's Spell stored in the inventory. \\n\\n<Frintezza Doll's Spell Lv. 2>\\nCON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun and Paralysis Atk. Rate +20%, Movement Speed +5 -->
+		<restriction freightable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="91606" name="Advanced Virgo Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_virgo_star_1">
+	<!-- u,Virgo Agathion imbued with Fire Dragon’s soul.\\n\\nCan be summoned when equipped in the main slot.\\nActivates its unique ability when equipped.\\n<Unique Ability>\\nIncreases M. Def. and Mental Atk. Rate. Activates Fire Dragon Power from +6.\\n\\nCan be changed to Advanced Virgo Agathion (Earth Dragon) through NPC Pona. -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91607" name="Advanced Capricorn Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_capr_star_1">
+	<!-- u,Capricorn Agathion imbued with Fire Dragon’s soul.\\n\\nCan be summoned when equipped in the main slot.\\nActivates its unique ability when equipped.\\n<Unique Ability>\\nIncreases M. Critical Rate and decreases cooldown of magic, song, and dance skills. Activates Fire Dragon Power from +6.\\n\\nCan be changed to Advanced Capricorn Agathion (Earth Dragon) through NPC Pona. -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91608" name="Advanced Libra Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_lib_star_1">
+	<!-- u,Libra Agathion imbued with Fire Dragon’s soul.\\n\\nCan be summoned when equipped in the main slot.\\nActivates its unique ability when equipped.\\n<Unique Ability>\\nIncreases Casting Spd. and decreases MP Consumption of magic, song, and dance skills. Activates Fire Dragon Power from +6.\\n\\nCan be changed to Advanced Libra Agathion (Earth Dragon) through NPC Pona. -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91609" name="Advanced Taurus Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_tau_star_1">
+	<!-- u,Taurus Agathion imbued with Fire Dragon’s soul.\\n\\nCan be summoned when equipped in the main slot.\\nActivates its unique ability when equipped.\\n<Unique Ability>\\nIncreases P. Def. and Stun Atk. Rate. Activates Fire Dragon Power from +6.\\n\\nCan be changed to Advanced Taurus Agathion (Earth Dragon) through NPC Pona. -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91610" name="Advanced Leo Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_leo_star_1">
+	<!-- u,Leo Agathion imbued with Fire Dragon’s soul.\\n\\nCan be summoned when equipped in the main slot.\\nActivates its unique ability when equipped.\\n<Unique Ability>\\nIncreases P. Atk. and Paralysis Atk. Rate. Activates Fire Dragon Power from +6.\\n\\nCan be changed to Advanced Leo Agathion (Earth Dragon) through NPC Pona. -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91611" name="Advanced Scorpio Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_sco_star_1">
+	<!-- u,Scorpio Agathion imbued with Fire Dragon’s soul.\\n\\nCan be summoned when equipped in the main slot.\\nActivates its unique ability when equipped.\\n<Unique Ability>\\nIncreases P. Critical Rate and decreases cooldown of physical, song, and dance skills. Activates Fire Dragon Power from +6.\\n\\nCan be changed to Advanced Scorpio Agathion (Earth Dragon) through NPC Pona. -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91612" name="Advanced Aquarius Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_aqu_star_1">
+	<!-- u,Aquarius Agathion imbued with Fire Dragon’s soul.\\n\\nCan be summoned when equipped in the main slot.\\nActivates its unique ability when equipped.\\n<Unique Ability>\\nIncreases M. Atk. and Hold/Sleep Atk. Rate. Activates Fire Dragon Power from +6.\\n\\nCan be changed to Advanced Aquarius Agathion (Earth Dragon) through NPC Pona. -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91613" name="Advanced Sagittarius Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_sag_star_1">
+	<!-- u,Sagittarius Agathion imbued with Fire Dragon’s soul.\\n\\nCan be summoned when equipped in the main slot.\\nActivates its unique ability when equipped.\\n<Unique Ability>\\nIncreases Atk. Spd. and decreases MP Consumption of physical, song, and dance skills. Activates Fire Dragon Power from +6.\\n\\nCan be changed to Advanced Sagittarius Agathion (Earth Dragon) through NPC Pona. -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91614" name="Advanced Virgo Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_virgo_star_1">
+	<!-- u,Virgo Agathion imbued with Earth Dragon’s soul.\\n\\nCan be summoned when equipped in the main slot.\\nActivates its unique ability when equipped.\\n<Unique Ability>\\nIncreases M. Def. and Mental Atk. Rate. Activates Earth Dragon Power from +6.\\n\\nCan be changed to Advanced Virgo Agathion (Fire Dragon) through NPC Pona. -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91615" name="Advanced Capricorn Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_capr_star_1">
+	<!-- u,Capricorn Agathion imbued with Earth Dragon’s soul.\\n\\nCan be summoned when equipped in the main slot.\\nActivates its unique ability when equipped.\\n<Unique Ability>\\nIncreases M. Critical Rate and decreases cooldown of magic, song, and dance skills. Activates Earth Dragon Power from +6.\\n\\nCan be changed to Advanced Capricorn Agathion (Fire Dragon) through NPC Pona. -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91616" name="Advanced Libra Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_lib_star_1">
+	<!-- u,Libra Agathion imbued with Earth Dragon’s soul.\\n\\nCan be summoned when equipped in the main slot.\\nActivates its unique ability when equipped.\\n<Unique Ability>\\nIncreases Casting Spd. and decreases MP Consumption of magic, song, and dance skills. Activates Earth Dragon Power from +6.\\n\\nCan be changed to Advanced Libra Agathion (Fire Dragon) through NPC Pona. -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91617" name="Advanced Taurus Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_tau_star_1">
+	<!-- u,Taurus Agathion imbued with Earth Dragon’s soul.\\n\\nCan be summoned when equipped in the main slot.\\nActivates its unique ability when equipped.\\n<Unique Ability>\\nIncreases P. Def. and Stun Atk. Rate. Activates Earth Dragon Power from +6.\\n\\nCan be changed to Advanced Taurus Agathion (Fire Dragon) through NPC Pona. -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91618" name="Advanced Leo Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_leo_star_1">
+	<!-- u,Leo Agathion imbued with Earth Dragon’s soul.\\n\\nCan be summoned when equipped in the main slot.\\nActivates its unique ability when equipped.\\n<Unique Ability>\\nIncreases P. Atk. and Paralysis Atk. Rate. Activates Earth Dragon Power from +6.\\n\\nCan be changed to Advanced Leo Agathion (Fire Dragon) through NPC Pona. -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91619" name="Advanced Scorpio Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_sco_star_1">
+	<!-- u,Scorpio Agathion imbued with Earth Dragon’s soul.\\n\\nCan be summoned when equipped in the main slot.\\nActivates its unique ability when equipped.\\n<Unique Ability>\\nIncreases P. Critical Rate and decreases cooldown of physical, song, and dance skills. Activates Earth Dragon Power from +6.\\n\\nCan be changed to Advanced Scorpio Agathion (Fire Dragon) through NPC Pona. -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91620" name="Advanced Aquarius Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_aqu_star_1">
+	<!-- u,Aquarius Agathion imbued with Earth Dragon’s soul.\\n\\nCan be summoned when equipped in the main slot.\\nActivates its unique ability when equipped.\\n<Unique Ability>\\nIncreases M. Atk. and Hold/Sleep Atk. Rate. Activates Earth Dragon Power from +6.\\n\\nCan be changed to Advanced Aquarius Agathion (Fire Dragon) through NPC Pona. -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91621" name="Advanced Sagittarius Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_sag_star_1">
+	<!-- u,Sagittarius Agathion imbued with Earth Dragon’s soul.\\n\\nCan be summoned when equipped in the main slot.\\nActivates its unique ability when equipped.\\n<Unique Ability>\\nIncreases Atk. Spd. and decreases MP Consumption of physical, song, and dance skills. Activates Earth Dragon Power from +6.\\n\\nCan be changed to Advanced Sagittarius Agathion (Fire Dragon) through NPC Pona. -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91622" name="Advanced Gemini Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_gem_star_1">
+	<!-- u,Gemini Agathion imbued with Agathion’s soul.\\n\\nCan be summoned when equipped in the main slot.\\nActivates its unique ability when equipped.\\n<Unique Ability>\\nIncreases Sayha's Grace effect and Max HP/MP. Increases Max CP from +6. -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<item id="91623" name="Advanced Stable Agathion Enchant Scroll" type="SEVEN_SINS_AGATHION_ENCHANT" icon="icon.guard_giantscrl_of_ench_ag">
+	<!-- An enchant scroll exclusive to Advanced Zodiac Agathion. Enchanting Agathion increases M. Def. Can enchant up to +10. Increases unique abilities gradually from +1. Even if enchantment fails, Agathion will not be destroyed and will retain the current enchant value. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91624" name="Agathion Gift Box" type="NONE" icon="icon.bm_gold_relic_box">
+	<!-- Double-click to obtain a S-grade item box, special item, consumable, Agathion enchantment material, or exchange coupon. Will be deleted when the event ends. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91625" name="S-grade Weapon Pack" type="NONE" icon="icon.event_hero_treasure_box_i00">
+	<!-- Double-click to obtain one of the S-grade weapons. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91626" name="S-grade Armor Pack" type="NONE" icon="icon.event_hero_treasure_box_i00">
+	<!-- Double-click to obtain one S-grade armor or accessory. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91627" name="+10 A-grade Armor Pack" type="NONE" icon="icon.etc_treasure_box_i00">
+	<!-- Double-click to obtain a +10 enchanted A-grade armor. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91628" name="+10 B-grade Armor Pack" type="NONE" icon="icon.etc_treasure_box_i04">
+	<!-- Double-click to obtain a +10 enchanted B-grade armor. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91629" name="+10 A-grade Accessory Pack" type="NONE" icon="icon.etc_treasure_box_i02">
+	<!-- Double-click to obtain +10 enchanted A-grade accessory. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91630" name="+10 B-grade Accessory Pack" type="NONE" icon="icon.etc_treasure_box_i05">
+	<!-- Double-click to obtain a +10 enchanted B-grade accessory. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91631" name="Material Coupon" type="NONE" icon="icon.etc_exchange_ticket_i02">
+	<!-- Can be exchanged to a high-grade material through Dimensional Merchant.\\n<Exchange Fee> Adena 2,500,000. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91632" name="Fire Dragon Soulstone" type="NONE" icon="icon.r99_soul_stone_i00">
+	<!-- u,Used to upgrade an Agathion to Advanced Zodiac Agathion imbued with Fire Dragon’s soul or to a Fire Dragon option. Can be used through NPC Pona in Town of Giran. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91633" name="Earth Dragon Soulstone" type="NONE" icon="icon.r99_soul_stone_i04">
+	<!-- u,Used to upgrade an Agathion to Advanced Zodiac Agathion imbued with Earth Dragon’s soul or to a Earth Dragon option. Can be used through NPC Pona in Town of Giran. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91634" name="Agathion Soulstone" type="NONE" icon="icon.r99_soul_stone_i05">
+	<!-- Used to upgrade Gemini Agathion to Advanced Zodiac Agathion. Can be used through NPC Pona in Town of Giran. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91635" name="Angler's Treasure Chest" type="NONE" icon="icon.etc_treasure_box_i08">
+	<!-- Double-click to obtain one of the following items at random: Fishing Shot, Soulshot Ticket, Weapon Exchange Ticket, and Shining Coin. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="10"/>
+	</item>
+
+	<item id="91636" name="Goldberg’s Room Key" type="NONE" icon="icon.etc_old_key_i02">
+	<!-- u,A shining key dropped by Goldberg’s steward. Take it to Sora in the Town of Aden to enter Goldberg’s Room. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="91637" name="15th Anniversary Talisman" type="NONE" body-part="TALISMAN" icon="icon.ev_L2_soul_ore">
+	<!-- A talisman that commemorates the 15th Anniversary. Increases Hunting XP/SP by 15% when equipped. Enables Transformation Skills. Will be deleted when the event ends. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<item id="91638" name="Chronicle Cube" type="NONE" icon="icon.ev_15th_cube">
+	<!-- Can be used up to 15 times. Rewards 1 Gift when used. (Can be used only once a day) -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91639" name="Rare Accessory Lv. 3 Box" type="NONE" icon="icon.etc_box_of_adventure_3_i00">
+	<!-- Double-click to obtain the following: Enhanced Queen Ant's Ring Lv. 3 (30-day), Enhanced Orfen's Earring Lv. 3 (30-day), Enhanced Ring of Core Lv. 3 (30-day). -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<armor id="91640" name="Refined Romantic Chapeau: Gold" type="NONE" body-part="HAIR_ALL" icon="icon.bm_romantic_chaperon_gold">
+	<!-- u,Refined Romantic Chapeau: Gold. Occupies 2 hair accessory slots. \\n\\n<Active Skill>\\n1. Chapeau’s Escape: Quickly returns to a near village. Cooldown 20 minutes.\\n2. Mysterious Aura: Enlarges your head for 10 minutes. Cooldown 20 minutes. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<item id="91641" name="Sayha's Blessing" type="POTION" icon="icon.etc_wind_potion_i00">
+	<!-- Recharges 35,000 Sayha's Grace Points. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91642" name="15th Anniversary Gift Box" type="NONE" icon="icon.event_six_party_box_i00">
+	<!-- Double-click to obtain one Codex Box, Dragon's Dye Box, Transformation Scroll (Song Dance), White Assassin Transformation Scroll, or Morale Bean Cake at random. Will be deleted when the event ends. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91643" name="Chronicle Box" type="NONE" icon="icon.new_user_box">
+	<!-- Double-click to obtain one consumable or refined rare accessory (30-day). -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91644" name="Chronicle Cube’s Gift" type="NONE" icon="icon.etc_treasure_box_i11">
+	<!-- Double-click to obtain 1 Dandy's Home Run Ball and 1 Chronicle Box. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91645" name="15th Anniversary Mysterious Fork" type="NONE" icon="icon.ev_15th_foke">
+	<!-- Summons one number from 1 to 6 at random when used on the 15th Anniversary Cake. Used in the Cake Raid Events that take place everyday at 11:00 and 20:00. Will be deleted when the event ends. -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91646" name="Escape - Loud Wolves" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
+	<!-- A magic scroll that teleports you to Jackson in Talking Island Village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91647" name="Escape - Troublemaker of Forest" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
+	<!-- A magic scroll that teleports you to Herbiel in Elven Village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91648" name="Escape - Clean the Yard" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
+	<!-- A magic scroll that teleports you to Vollodos in Dark Elf Village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91649" name="Escape - Suspicious Men" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
+	<!-- A magic scroll that teleports you to Uska in Orc Village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91650" name="Escape - Disruptors" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
+	<!-- A magic scroll that teleports you to Gerald in Dwarven Village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91651" name="Escape - Captain Bathis" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
+	<!-- A magic scroll that teleports you to Captain Bathis in the Town of Gludio. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91652" name="Big Spiderweb" type="NONE" icon="icon.etc_cobweb_i00">
+	<!-- Spiderweb made by big spiders. It is light and glossy. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes quest-item="true"/>
+	</item>
+
+	<item id="91653" name="Tarantula’s Venom Sac" type="NONE" icon="icon.etc_poison_pouch_i00">
+	<!-- u,Tarantula’s Venom Sac. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes quest-item="true"/>
+	</item>
+
+	<item id="91654" name="Mark of Journey Lv. 1" type="NONE" icon="icon.etc_crest_blue_i00">
+	<!-- u,A mark awarded only to those adventurers who complete Adventurer’s Journey Mission. It increases HP Recovery Bonus by 5% and MP Recovery Bonus by 10% when stored in the inventory. If several marks are in the inventory, only the effect of the highest one is applied. Double-click to see recommended hunting grounds for each level. -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="10" immediate-effect="true"/>
+	</item>
+
+	<item id="91655" name="Mark of Journey Lv. 2" type="NONE" icon="icon.etc_crest_blue_i00">
+	<!-- u,A mark awarded only to those adventurers who complete Adventurer’s Journey Mission. It increases HP Recovery Bonus by 10% and MP Recovery Bonus by 15% when stored in the inventory. If several marks are in the inventory, only the effect of the highest one is applied. Double-click to see recommended hunting grounds for each level. -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="10" immediate-effect="true"/>
+	</item>
+
+	<item id="91656" name="Mark of Journey Lv. 3" type="NONE" icon="icon.etc_crest_blue_i00">
+	<!-- u,A mark awarded only to those adventurers who complete Adventurer’s Journey Mission. It increases HP Recovery Bonus by 20% and MP Recovery Bonus by 15% when stored in the inventory. If several marks are in the inventory, only the effect of the highest one is applied. Double-click to see recommended hunting grounds for each level. -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="10" immediate-effect="true"/>
+	</item>
+
+	<item id="91657" name="Mark of Journey Lv. 4" type="NONE" icon="icon.etc_crest_blue_i00">
+	<!-- u,A mark awarded only to those adventurers who complete Adventurer’s Journey Mission. It increases HP Recovery Bonus by 20% and MP Recovery Bonus by 25% when stored in the inventory. Double-click to see recommended hunting grounds for each level. -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="10" immediate-effect="true"/>
+	</item>
+
+	<item id="91658" name="Chicken Lucky Box" type="NONE" icon="icon.ev_chicken_box_i01">
+	<!-- Chicken Lucky Box that can be obtained only in the Mysterious Aden Server. Double-click to obtain Shining Scroll of Mood Melody or Delicious Chicken. Will be deleted when the event ends. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91659" name="Delicious Chicken" type="NONE" icon="icon.ev_chicken_ticket_i01">
+	<!-- Delicious Chicken obtained from Chicken Lucky Box. It is a gifticon that can be exchanged for real chicken when sold to GM Store. However, only first 1,000 are accepted. If you get a Delicious Chicken item, sell it to GM Store as quickly as possible. GM Store is open in the Monster Race Track until 1,000 Delicious Chickens are exchanged. Delicious Chicken can be also sold to NPC Store for Adena. Will be deleted when the event ends. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes price="600000"/>
+	</item>
+
+	<item id="91660" name="Shining Scroll of Mood Melody" type="SCROLL" icon="icon.bm_magmeld">
+	<!-- Activates Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration effects for 1 hour. The buff effect doesn't disappear upon death\\n\\n<Note>\\n1. Shining Scroll of Mood Melody cannot be stacked with Scroll of Mood Melody.\\n\\n2. Its duration is equal to that of the last used item. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes duration="60"/>
+	</item>
+
+	<item id="91661" name="Shining Scroll of Mood Melody" type="SCROLL" icon="icon.bm_magmeld">
+	<!-- Activates Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration effects for 4 hours. The buff effect doesn't disappear upon death\\n\\n<Note>\\n1. Shining Scroll of Mood Melody cannot be stacked with Scroll of Mood Melody.\\n\\n2. Its duration is equal to that of the last used item. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes duration="240"/>
+	</item>
+
+	<item id="91662" name="Shining Scroll of Mood Melody" type="SCROLL" icon="icon.bm_magmeld">
+	<!-- Activates Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration effects for 8 hours. The buff effect doesn't disappear upon death\\n\\n<Note>\\n1. Shining Scroll of Mood Melody cannot be stacked with Scroll of Mood Melody.\\n\\n2. Its duration is equal to that of the last used item. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes duration="480"/>
+	</item>
+
+	<item id="91663" name="L2 Coin" type="NONE" icon="icon.etc_11th_token">
+	<!-- Used to buy various items at the L2 Coin Shop. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes price="1"/>
+	</item>
+
+	<item id="91664" name="Scroll: 10,000 SP" type="SCROLL" icon="icon.etc_sp_scroll2_i00">
+	<!-- A scroll that recharges 10,000 SP. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91665" name="Scroll: 100,000 SP" type="SCROLL" icon="icon.etc_sp_scroll3_i00">
+	<!-- A scroll that recharges 100,000 SP. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91666" name="Sayha's Storm Lv. 1" type="NONE" icon="icon.bm_sayha_storm">
+	<!-- Sayha's Grace Consumption +100% and XP/SP Gain +100% while hunting monsters. The effect remains active even after death. Duration 20 minutes. Cooldown 1 minute. Available only when Sayha's Grace is 35,000 or higher. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="91667" name="+7 Sayha's Cloak - White" type="NONE" body-part="BACK" icon="icon.sayha2017_back_i03">
+	<!-- 30-day item. When equipped, Max HP/MP +15%, XP/SP Gain +20%, P. Def. +8%, P. Critical/M. Critical Damage +5%. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="220" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<item id="91668" name="Red Arc" type="SCROLL" icon="icon.r99_soul_stone_i00">
+	<!-- <Magic Lamp 1st Place Reward>\\nRecharges 100,000,000 XP and 2,700,000 SP. Take it to the Dimensional Merchant to exchange for a Red Arc that can be shared within the account. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91669" name="Purple Arc" type="SCROLL" icon="icon.r99_soul_stone_i05">
+	<!-- <Magic Lamp 2nd Place Reward>\\nRecharges 30,000,000 XP and 810,000 SP. Take it to the Dimensional Merchant to exchange for a Purple Arc that can be shared within the account. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91670" name="Blue Arc" type="SCROLL" icon="icon.r99_soul_stone_i02">
+	<!-- <Magic Lamp 3rd Place Reward>\\nRecharges 10,000,000 XP and 270,000 SP. Take it to the Dimensional Merchant to exchange for a Blue Arc that can be shared within the account. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91671" name="Green Arc" type="SCROLL" icon="icon.r99_soul_stone_i04">
+	<!-- <Magic Lamp 4th Place Reward>\\nRecharges 5,000,000 XP and 135,000 SP. Take it to the Dimensional Merchant to exchange for a Green Arc that can be shared within the account. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91672" name="Lucky Adena Box" type="NONE" icon="icon.bm_nebit_present">
+	<!-- Double-click to obtain a certain amount of Adena at random. -->
+		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<weapon id="91673" name="Enchanted Great Spear" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_long_spear_i00">
+	<!-- Enchanted Great Spear. Cannot be enchanted, augmented, or equipped with a rune. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="2120" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="31.0"/>
+			<stat type="mAtk" value="21.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="91674" name="Enchanted Falchion" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_falchion_i00">
+	<!-- Enchanted Falchion. Cannot be enchanted, augmented, or equipped with a rune. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1530" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="31.0"/>
+			<stat type="mAtk" value="21.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="91675" name="Enchanted Iron Hammer" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_iron_hammer_i00">
+	<!-- Enchanted Iron Hammer. Cannot be enchanted, augmented, or equipped with a rune. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1850" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="31.0"/>
+			<stat type="mAtk" value="21.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="91676" name="Enchanted Voodoo Doll" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_voodoo_doll_i00" magic="true">
+	<!-- Enchanted Voodoo Doll. Cannot be enchanted, augmented, or equipped with a rune. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="630" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="25.0"/>
+			<stat type="mAtk" value="28.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="91677" name="Enchanted Flanged Mace" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_buzdygan_i00">
+	<!-- Enchanted Flanged Mace. Cannot be enchanted, augmented, or equipped with a rune. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1800" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="31.0"/>
+			<stat type="mAtk" value="21.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="91678" name="Enchanted Sword Breaker" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_sword_breaker_i00">
+	<!-- Enchanted Sword Breaker. Cannot be enchanted, augmented, or equipped with a rune. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1110" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="27.0"/>
+			<stat type="mAtk" value="21.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="91679" name="Enchanted Viper Fang" type="FIST" body-part="TWO_HAND" icon="icon.weapon_vipers_canine_i00">
+	<!-- Enchanted Viper Fang. Cannot be enchanted, augmented, or equipped with a rune. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1560" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="38.0"/>
+			<stat type="mAtk" value="21.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="91680" name="Enchanted Compound Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_composition_bow_i00">
+	<!-- Enchanted Compound Bow. Cannot be enchanted, augmented, or equipped with a rune. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1880" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="1"/>
+		<stats>
+			<stat type="pAtk" value="64.0"/>
+			<stat type="mAtk" value="21.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="293.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+	</weapon>
+
+	<item id="91681" name="Great Spear Charm" type="RUNE" icon="icon.bm_freya_bloody_rune">
+	<!-- 30-day item. A charm imbued with Enchanted Great Spear Power.\\n\\n<Active Skill> Enchanted Great Spear Power: Double-click to obtain Top-grade +8 to +16 Enchanted Glaive (D-grade) with a certain chance.\\n\\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\\nThis skill can be used only once a day. -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91682" name="Falchion Charm" type="RUNE" icon="icon.bm_freya_bloody_rune">
+	<!-- 30-day item. A charm imbued with Enchanted Falchion Power.\\n\\n<Active Skill> Enchanted Falchion Power I: Double-click to obtain Top-grade +8 to +16 Enchanted Elven Long Sword (D-grade) with a certain chance.\\n\\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\\n Enchanted Falchion Power II: Double-click to obtain Top-grade +8 to +16 Enchanted Bastard*Crimson Sword (D-grade) with a certain chance.\\n\\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\\nThis skill can be used only once a day. -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91683" name="Iron Hammer Charm" type="RUNE" icon="icon.bm_freya_bloody_rune">
+	<!-- 30-day item. A charm imbued with Enchanted Iron Hammer Power.\\n\\n<Active Skill> Enchanted Iron Hammer Power: Double-click to obtain Top-grade +8 to +16 Enchanted Bonebreaker (D-grade) with a certain chance.\\n\\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\\nThis skill can be used only once a day. -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91684" name="Voodoo Doll Charm" type="RUNE" icon="icon.bm_freya_bloody_rune">
+	<!-- 30-day item. A charm imbued with Enchanted Voodoo Doll Power.\\n\\n<Active Skill> Enchanted Voodoo Doll Power: Double-click to obtain Top-grade +8 to +16 Enchanted Staff of Life (D-grade) with a certain chance.\\n\\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\\nThis skill can be used only once a day. -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91685" name="Flanged Mace Charm" type="RUNE" icon="icon.bm_freya_bloody_rune">
+	<!-- 30-day item. A charm imbued with Enchanted Flanged Mace Power.\\n\\n<Active Skill> Enchanted Flanged Mace Power: Double-click to obtain Top-grade +8 to +16 Enchanted Claymore (D-grade) with a certain chance.\\n\\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\\nThis skill can be used only once a day. -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91686" name="Sword Breaker Charm" type="RUNE" icon="icon.bm_freya_bloody_rune">
+	<!-- 30-day item. A charm imbued with Enchanted Sword Breaker Power.\\n\\n<Active Skill> Enchanted Sword Breaker Power: Double-click to obtain Top-grade +8 to +16 Enchanted Mithril Dagger (D-grade) with a certain chance.\\n\\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\\nThis skill can be used only once a day. -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91687" name="Viper Fang Charm" type="RUNE" icon="icon.bm_freya_bloody_rune">
+	<!-- 30-day item. A talisman imbued with Enchanted Viper Fang Power.\\n\\n<Active Skill> Enchanted Viper Fang Power: Double-click to obtain Top-grade +8 to +16 Enchanted Scallop Jamadhr (D-grade) with a certain chance.\\n\\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\\nThis skill can be used only once a day. -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91688" name="Compound Bow Charm" type="RUNE" icon="icon.bm_freya_bloody_rune">
+	<!-- 30-day item. A talisman imbued with Enchanted Compound Bow Power.\\n\\n<Active Skill> Enchanted Compound Bow Power: Double-click to obtain Top-grade +8 to +16 Enchanted Light Crossbow (D-grade) with a certain chance.\\n\\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\\nThis skill can be used only once a day. -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91689" name="Advanced Scroll of Escape" type="SCROLL" icon="icon.etc_scroll_of_return_i01">
+	<!-- A magic scroll that quickly teleports you to the nearest village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91690" name="Maliss's HP Potion" type="POTION" icon="BranchSys.icon.br_vitality_potion_i01">
+	<!-- After instant 500 HP Recovery, CP Recovery with remaining points. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91691" name="Maliss's MP Recovery Potion" type="POTION" icon="icon.freya_potion">
+	<!-- An item that instantly recovers MP. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91692" name="Blessing of Abundance - 100% (Event)" type="RUNE" icon="icon.aden_bless_rune_i01">
+	<!-- 3-day item. L2 Coin Gain +100% during hunting. -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91693" name="Blessing of Abundance - 100%" type="RUNE" icon="icon.aden_bless_rune_i02">
+	<!-- 1-day item. L2 Coin Gain +100% during hunting, XP/SP Gain +10%, Sayha's Grace Consumption -20%. -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91694" name="Blessing of Abundance - 100%" type="RUNE" icon="icon.aden_bless_rune_i02">
+	<!-- 30-day item. L2 Coin Gain +100% during hunting, XP/SP Gain +10%, Sayha's Grace Consumption -20%. -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91695" name="Aden Warrior's Mark" type="NONE" icon="icon.bm_royal_gold_ticket_all">
+	<!-- Aden Warrior's Mark. Take it to Store NPC to receive fund. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes price="1000000"/>
+	</item>
+
+	<item id="91696" name="Abundant Treasure Chest" type="NONE" icon="icon.bm_gold_lure_box">
+	<!-- Double-click to obtain one of the following items with a certain chance: enchant scrolls, consumables, or rare items, such as +16 B-grade Weapon Pack, Queen Ant's Ring, Orfen's Earring, Ring of Core, or Baium's Ring. Will be deleted when the event ends. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91697" name="+7 Samurai Long Sword" type="NONE" icon="icon.weapon_samurai_old_longsword_i00">
+	<!-- Double-click to obtain +7 Enchanted Samurai Long Sword. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91698" name="+7 Demon's Staff" type="NONE" icon="icon.weapon_demons_staff_i00">
+	<!-- Double-click to obtain +7 Enchanted Demon's Staff. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91699" name="+7 Mace of Underworld" type="NONE" icon="icon.weapon_mace_of_underworld_i00">
+	<!-- Double-click to obtain +7 Enchanted Mace of Underworld. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
 </list>

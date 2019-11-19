@@ -1,941 +1,882 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <armor id="70100" name="Stockings of Devotion" icon="icon.armor_t55_l_i00">
-        <!-- A 7-day item. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="armor_type" val="MAGIC"/>
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" clan-depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">19</stat>
-            <stat type="maxMp">42</stat>
-        </stats>
-    </armor>
-    <armor id="70101" name="Refined Romantic Chapeau: Gold" icon="icon.bm_romantic_chaperon_gold">
-        <!-- A 7-day item. Requires 2 hair accessory slots. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. <Active Skills>. 1. Holiday Hat: resurrects a dead target and restores 50% XP. Consumes 1 Spirit Ore(s). Reuse Time: 30 min. 2 Overwhelming Power of a Holiday Hat: increases Acquired XP/ SP by 5% for 20 minutes. Reuse Time: 60 min. 3. Side Effect: makes character's head bigger for 10 minutes. Reuse Time: 30 min. -->
-        <set name="bodypart" val="hairall"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" clan-depositable="false" sellable="false"/>
-        <skills>
-            <skill id="39043" level="1"/>    <!-- 	Side Effect	-->
-            <skill id="39044" level="1"/>    <!-- 	Ability of Resurrection	-->
-            <skill id="39045" level="1"/>    <!-- 	Holiday Hat	-->
-        </skills>
-    </armor>
-    <item id="70102" name="Adventurer’s Potion - Atk. Spd." icon="icon.etc_reagent_green_i00">
-        <!-- Increases Atk. Spd. for 20 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="etcitem_type" val="POTION"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <set name="for_npc" val="true"/>
-        <restriction tradable="false" dropable="false" clan-depositable="false" sellable="false" stackable="true" olympiad-restricted="true"/>
-        <cond addName="1" msgId="113">
-            <player flyMounted="false"/>
-        </cond>
-        <skills>
-            <skill id="55235" level="1"/>    <!-- 	Adventurer Potion Atk. Spd. lvl 1	-->
-        </skills>
-    </item>
-    <item id="70103" name="Adventurer’s Potion - Casting Spd." icon="icon.etc_potion_of_acumen2_i00">
-        <!-- Increases Casting Spd. for 20 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="etcitem_type" val="POTION"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="for_npc" val="true"/>
-        <restriction stackable="true" olympiad-restricted="true" tradable="false" dropable="false" clan-depositable="false" sellable="false"/>
-        <cond addName="1" msgId="113">
-            <player flyMounted="false"/>
-        </cond>
-        <skills>
-            <skill id="55236" level="1"/>    <!-- 	Adventurer Potion Casting Speed lvl 1	-->
-        </skills>
-    </item>
-    <item id="70104" name="Scroll: Vampiric Rage" icon="icon.etc_scroll_white_i00">
-        <!-- Recovers 6% HP from the received physical damage for 20 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="etcitem_type" val="SCROLL"/>
-        <set name="weight" val="5"/>
-        <set name="commissionItemType" val="SCROLL_OTHER"/>
-        <restriction tradable="false" dropable="false" clan-depositable="false" sellable="false" stackable="true"/>
-        <skills>
-            <skill id="55237" level="1"/> <!-- Vampiric Rage	-->
-        </skills>
-    </item>
-    <item id="70105" name="Scroll of Mana" icon="icon.etc_scroll_white_i00">
-        <!-- Increases MP Recovery Rate for 20 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="etcitem_type" val="SCROLL"/>
-        <set name="weight" val="5"/>
-        <set name="commissionItemType" val="SCROLL_OTHER"/>
-        <restriction tradable="false" dropable="false" clan-depositable="false" sellable="false" stackable="true"/>
-        <skills>
-            <skill id="55241" level="1"/> <!-- Mana Regeneration	-->
-        </skills>
-    </item>
-    <item id="70106" name="Rune of Boost" icon="BranchSys3.lcon.g_rune_itemdrop_up">
-        <!-- A 7-day item. When in inventory, STR +1, INT +1, CON +1, MEN +1, DEX +1, WIT +1. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="handler" val="ItemSkills"/>
-        <restriction tradable="false" dropable="false" clan-depositable="false" sellable="false" commissionable="false"/>
-        <skills>
-            <skill id="55246" level="1"/> <!-- Rune of Boost	-->
-        </skills>
-    </item>
-    <item id="70107" name="Scroll: Berserker Spirit" icon="icon.etc_scroll_white_i00">
-        <!-- When used, P. Def. -5%, M. Def. -10%, Evasion -2 -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="etcitem_type" val="SCROLL"/>
-        <set name="weight" val="5"/>
-        <set name="commissionItemType" val="SCROLL_OTHER"/>
-        <restriction tradable="false" dropable="false" clan-depositable="false" sellable="false" stackable="true"/>
-        <skills>
-            <skill id="55242" level="1"/> <!-- Scroll: Berserker Spirit	-->
-        </skills>
-    </item>
-    <armor id="70108" name="Fire Dragon Pendant - Lv. 3" icon="BranchIcon.Icon.bm_pendant_pve">
-        <!-- A 7-day item. Provides the effect of Fire Dragon Pendant enchanted to Lv. +3. Further enchanting or combining is not possible. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="underwear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" clan-depositable="false" sellable="false"/>
-        <skills>
-            <skill id="55094" level="1"/> <!-- Fire Dragon Pendant - Lv. 3	-->
-        </skills>
-        <stats>
-            <stat type="pDef">28</stat>
-        </stats>
-    </armor>
-    <armor id="70109" name="Water Dragon Pendant - Lv. 3" icon="BranchIcon.Icon.bm_pendant_pvp_blue">
-        <!-- A 7-day item. Provides the effect of Water Dragon Pendant enchanted to Lv. +3. Further enchanting or combining is not possible. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="underwear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" clan-depositable="false" sellable="false"/>
-        <skills>
-            <skill id="55104" level="1"/> <!-- Water Dragon Pendant Basic Effect Lv. 3	-->
-        </skills>
-        <stats>
-            <stat type="pDef">28</stat>
-        </stats>
-    </armor>
-    <item id="70110" name="Scroll: Dance of the Warrior" icon="BranchIcon.Icon.etc_g_bm_dance_scroll_i00">
-        <!-- Provides Dance of the Warrior effect for 10 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="weight" val="5"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction clan-depositable="false" mailable="false" tradable="false" dropable="false" sellable="false" olympiad-restricted="true" stackable="true"/>
-        <skills>
-            <skill id="271" level="1"/> <!-- Dance of Warrior -->
-        </skills>
-    </item>
-    <item id="70111" name="Scroll: Dance of the Mystic" icon="BranchIcon.Icon.etc_g_bm_dance_scroll_i00">
-        <!-- Provides Dance of the Mystic effect for 10 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="weight" val="5"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction clan-depositable="false" mailable="false" tradable="false" dropable="false" sellable="false" olympiad-restricted="true" stackable="true"/>
-        <skills>
-            <skill id="273" level="1"/> <!-- Dance of Warrior -->
-        </skills>
-    </item>
-    <armor id="70112" name="Refined Romantic Chapeau - Special Trait" icon="icon.accessory_archer_hat2_i00">
-        <!-- A 7-day item. When equipped, increases P. Atk. and M. Atk. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="weight" val="10"/>
-        <set name="bodypart" val="hairall"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="time" val="10080"/>
-        <restriction clan-depositable="false" mailable="false" tradable="false" dropable="false" sellable="false" stackable="true"/>
-        <skills>
-            <skill id="35011" level="1"/> <!-- Refined Romantic Chapeau lvl 1 - Teleport lv1 -->
-            <skill id="55047" level="1"/> <!-- Refined Romantic Chapeau lvl 1 - Blessed Body lv1 -->
-            <skill id="55048" level="1"/> <!-- Refined Romantic Chapeau lvl 1 - Wind Walk lv1 -->
-            <skill id="55247" level="1"/> <!-- Refined Romantic Chapeau lvl 1 - P. Atk - M. Atk -->
-        </skills>
-    </armor>
-    <item id="70113" name="Scroll of Escape: Town of Aden" icon="icon.etc_scroll_of_return_i04">
-        <!-- A magical scroll that relocates you to the Town of Aden. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="35000"/>
-        <set name="commissionItemType" val="SCROLL_OTHER"/>
-        <restriction stackable="true" olympiad-restricted="true"/>
-        <cond addName="1" msgId="113">
-            <player flyMounted="false"/>
-        </cond>
-        <skills>
-            <skill id="2213" level="12"/> <!-- Teleport: Town of Aden -->
-        </skills>
-    </item>
-    <armor id="70114" name="Agathion - Singer and Dancer" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
-        <!-- A 7-day item. Summons Agathion Singer & Dancer when equipped. Cannot be exchanged, dropped, or sold. <Active Skills>. 1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes. 2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes. 3. Song of Wind: increases Speed by 20 for 5 minutes. Reuse Time: 10 min. <Note>. Dance of Fury, Dance of Concentration, and Song of Wind effects do not stack. Only one effect can be applied at a time. -->
-        <set name="bodypart" val="lbracelet"/>
-        <set name="time" val="10800"/>
-        <restriction clan-depositable="false" mailable="false" tradable="false" dropable="false" sellable="false" commissionable="false" olympiad-restricted="true"/>
-        <skills>
-            <skill id="21233" level="1"/> <!-- Release Agathion's Seal - Singer and Dancer -->
-            <skill id="23234" level="1"/> <!-- Singer and Dancer Agathion Cute Trick -->
-            <skill id="3267" level="1" type="ON_UNEQUIP"/> <!-- Seal Agathion -->
-            <skill id="39016" level="1"/> <!-- Seal Agathion -->
-            <skill id="39017" level="1"/> <!-- Seal Agathion -->
-            <skill id="39018" level="1"/> <!-- Seal Agathion -->
-        </skills>
-    </armor>
-    <item id="70115" name="Fishing Coin" icon="icon.fairy_adena_joke">
-        <!-- The coin you found in the whale caught using Golden Bait. Can be exchanged for various items in the Fishermen's Guild. -->
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <weapon id="70116" name="Mermaid's Elite Golden Fishing Rod" icon="icon.bm_gold_fishing_pole">
-        <!-- A 1-day item. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Bobber usage: 1. When used, XP and SP Bonus +50% from fishing, enables teleporting to Giran/Gludin Harbor. Reuse Time: 1 min. -->
-        <set name="weapon_type" val="FISHINGROD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1000"/>
-        <set name="time" val="1440"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">1</stat>
-            <stat type="mAtk">1</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">1</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="70117" name="Mermaid's Elite Golden Fishing Rod" icon="icon.bm_gold_fishing_pole">
-        <!-- A 3-day item. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Bobber usage: 1. When used, Acquired XP/ SP +50% from fishing, enables teleporting to Giran/Gludin Harbor. Reuse Time: 1 min. -->
-        <set name="weapon_type" val="FISHINGROD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1000"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">1</stat>
-            <stat type="mAtk">1</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">1</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="70118" name="Mermaid's Elite Golden Fishing Rod" icon="icon.bm_gold_fishing_pole">
-        <!-- A 7-day item. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Bobber usage: 1. When used, Acquired XP/ SP +50% from fishing, enables teleporting to Giran/Gludin Harbor. Reuse Time: 1 min. -->
-        <set name="weapon_type" val="FISHINGROD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1000"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">1</stat>
-            <stat type="mAtk">1</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">1</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="70119" name="Mermaid's Elite Golden Fishing Rod" icon="icon.bm_gold_fishing_pole">
-        <!-- A 30-day item. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Bobber usage: 1. When used, XP and SP Bonus +50% from fishing, enables teleporting to Giran/Gludin Harbor. Reuse Time: 1 min. -->
-        <set name="weapon_type" val="FISHINGROD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1000"/>
-        <set name="time" val="43200"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">1</stat>
-            <stat type="mAtk">1</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">1</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="70120" name="Mermaid's Elite Golden Fishing Rod" icon="icon.bm_gold_fishing_pole">
-        <!-- Cannot be dropped. Can be stored in a warehouse. Bobber usage: 1. When used, Acquired XP/ SP +50% from fishing, enables teleporting to Giran/Gludin Harbor. Reuse Time: 1 min. -->
-        <set name="weapon_type" val="FISHINGROD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1000"/>
-        <restriction dropable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">1</stat>
-            <stat type="mAtk">1</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">1</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <item id="70121" name="Full Plate Armor Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Full Plate Armor. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70122" name="Full Plate Helmet Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Full Plate Helmet. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70123" name="Full Plate Shield Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Full Plate Shield. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70124" name="Drake Leather Armor Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Drake Leather Armor. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70125" name="Drake Leather Boots Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Drake Leather Boots. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70126" name="Divine Tunic Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Divine Tunic. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70127" name="Divine Stockings Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Divine Stockings. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70128" name="Divine Gloves Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Divine Gloves. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70129" name="Doom Shield Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Doom Shield. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70130" name="Doom Plate Armor Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Doom Plate Armor. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70131" name="Doom Helmet Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Doom Helmet. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70132" name="Doom Gloves Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Doom Gloves. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70133" name="Doom Boots Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Doom Boots. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70134" name="Blue Wolf Breastplate Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Blue Wolf Breastplate. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70135" name="Blue Wolf Gaiters Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Blue Wolf Gaiters. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70136" name="Blue Wolf Helmet Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Blue Wolf Helmet. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70137" name="Blue Wolf Gloves Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Blue Wolf Gloves. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70138" name="Blue Wolf Boots Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Blue Wolf Boots. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70139" name="Doom Leather Armor Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Doom Leather Armor. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70140" name="Avadon Robe Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Avadon Robe. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70141" name="Avadon Circlet Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Avadon Circlet. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70142" name="Avadon Gloves Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Full Plate Armor. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70143" name="Avadon Boots Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Avadon Boots. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70144" name="Blue Wolf Tunic Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Blue Wolf Tunic. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70145" name="Blue Wolf Stockings Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Blue Wolf Stockings. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70146" name="Black Ore Necklace Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Black Ore Necklace. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70147" name="Black Ore Ring Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Black Ore Ring. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70148" name="Black Ore Earring Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Black Ore Earring. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70149" name="Brigandine Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Brigandine. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70150" name="Brigandine Gaiters Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Brigandine Gaiters. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70151" name="Brigandine Helmet Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Brigandine Helmet. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70152" name="Brigandine Shield Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Brigandine Shield. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70153" name="Manticore Skin Shirt Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Manticore Skin Shirt. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70154" name="Manticore Skin Gaiters Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Manticore Skin Gaiters. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70155" name="Manticore Skin Boots Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Manticore Skin Boots. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70156" name="Mithril Tunic Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Mithril Tunic. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70157" name="Mithril Stockings Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Mithril Stockings. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70158" name="Elven Mithril Gloves Crafting Pack" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain all the ingredients necessary for making Elven Mithril Gloves. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70159" name="Mana Recovery Potion" icon="icon.etc_potion_blue_i00">
-        <!-- Instantly recovers MP without a continuous effect. Cannot be used when MP is full. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="weight" val="5"/>
-        <set name="commissionItemType" val="POTION"/>
-        <restriction stackable="true"/>
-        <cond addName="1" msgId="113">
-            <player flyMounted="false"/>
-        </cond>
-        <skills>
-            <skill id="26030" level="1"/> <!-- Mana Potion -->
-        </skills>
-    </item>
-    <item id="70160" name="1st Anniversary Coin" icon="icon.etc_11th_token">
-        <!-- A coin commemorating the 1st anniversary. Maybe, if you collect many of such coins, something good will happen?Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70161" name="My Teleport Pack" icon="icon.etc_pi_gift_box_i01">
-        <!-- Double-click to obtain 1 My Teleport Book, 3 My Teleports, or 10 My Teleport Scrolls. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70162" name="Valakas Treasure Chest" icon="icon.bm_sheep_agathion_30d_box">
-        <!-- Double-click the chest to get one of the treasures, gathered by Fire Dragon Valakas. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="70163" name="Energy of Development" icon="BranchIcon.Icon.etc_g_bonus_herb_i00">
-        <!-- XP/SP gain +5% for 10 minutes. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="ex_immediate_effect" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="for_npc" val="true"/>
-        <restriction depositable="false" clan-depositable="false" mailable="false"/>
-        <skills>
-            <skill id="55273" level="1"/> <!-- Energy of Development -->
-        </skills>
-    </item>
-    <item id="70164" name="Powerful Energy of Development" icon="BranchIcon.Icon.etc_g_bonus_herb_i00">
-        <!-- XP/SP gain +7% for 10 minutes. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="ex_immediate_effect" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="for_npc" val="true"/>
-        <restriction depositable="false" clan-depositable="false" mailable="false"/>
-        <skills>
-            <skill id="55273" level="2"/> <!-- Energy of Development -->
-        </skills>
-    </item>
-    <item id="70165" name="Great Energy of Development" icon="BranchIcon.Icon.etc_g_bonus_herb_i00">
-        <!-- XP/SP gain +10% for 10 minutes. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="ex_immediate_effect" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="for_npc" val="true"/>
-        <restriction depositable="false" clan-depositable="false" mailable="false"/>
-        <skills>
-            <skill id="55273" level="3"/> <!-- Energy of Development -->
-        </skills>
-    </item>
-    <item id="70166" name="Energy of Speed" icon="BranchIcon.Icon.etc_g_bonus_herb_i01">
-        <!-- Speed +2 for 10 minutes. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="ex_immediate_effect" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="for_npc" val="true"/>
-        <restriction depositable="false" clan-depositable="false" mailable="false"/>
-        <skills>
-            <skill id="55274" level="1"/> <!-- Energy of Speed -->
-        </skills>
-    </item>
-    <item id="70167" name="Powerful Energy of Speed" icon="BranchIcon.Icon.etc_g_bonus_herb_i01">
-        <!-- Speed +3 for 10 minutes. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="ex_immediate_effect" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="for_npc" val="true"/>
-        <restriction depositable="false" clan-depositable="false" mailable="false"/>
-        <skills>
-            <skill id="55274" level="2"/> <!-- Energy of Speed -->
-        </skills>
-    </item>
-    <item id="70168" name="Great Energy of Speed" icon="BranchIcon.Icon.etc_g_bonus_herb_i01">
-        <!-- Speed +5 for 10 minutes. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="ex_immediate_effect" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="for_npc" val="true"/>
-        <restriction depositable="false" clan-depositable="false" mailable="false"/>
-        <skills>
-            <skill id="55274" level="3"/> <!-- Energy of Speed -->
-        </skills>
-    </item>
-    <item id="70169" name="Energy of Accuracy" icon="BranchIcon.Icon.etc_g_bonus_herb_i02">
-        <!-- P. Accuracy +1 for 10 minutes. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="ex_immediate_effect" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="for_npc" val="true"/>
-        <restriction depositable="false" clan-depositable="false" mailable="false"/>
-        <skills>
-            <skill id="55275" level="1"/> <!-- Energy of Accuracy -->
-        </skills>
-    </item>
-    <item id="70170" name="Powerful Energy of Accuracy" icon="BranchIcon.Icon.etc_g_bonus_herb_i02">
-        <!-- P. Accuracy +2 for 10 minutes. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="ex_immediate_effect" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="for_npc" val="true"/>
-        <restriction depositable="false" clan-depositable="false" mailable="false"/>
-        <skills>
-            <skill id="55275" level="2"/> <!-- Energy of Accuracy -->
-        </skills>
-    </item>
-    <item id="70171" name="Great Energy of Accuracy" icon="BranchIcon.Icon.etc_g_bonus_herb_i02">
-        <!-- P. Accuracy +4 for 10 minutes. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="ex_immediate_effect" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="for_npc" val="true"/>
-        <restriction depositable="false" clan-depositable="false" mailable="false"/>
-        <skills>
-            <skill id="55275" level="3"/> <!-- Energy of Accuracy -->
-        </skills>
-    </item>
-    <item id="70172" name="Coin of Tears" icon="BranchIcon.Icon.vip_silver_coin">
-        <!-- A coin saturated with grief. You can find it in the Ruins of Agony once in a while. -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="70173" name="Decayed Coin" icon="BranchIcon.Icon.vip_silver_coin">
-        <!-- A coin which decayed over time. You can find it in the Ruins of Agony once in a while. -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="70174" name="Shabby Coin" icon="BranchIcon.Icon.vip_silver_coin">
-        <!-- A coin worn off due to frequent use. It was lying in the Abandoned Camp. -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="70175" name="Crude Coin" icon="BranchIcon.Icon.vip_silver_coin">
-        <!-- This coin was hastily crafted by an amateurish Orc. You can find it in Orc Barracks once in a while/ -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="70176" name="Old Coin" icon="BranchIcon.Icon.vip_silver_coin">
-        <!-- A very old coin. Someone dropped it Cruma Tower long ago. -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="70177" name="Box of Tears" icon="icon.bm_sheep_agathion_30d_box">
-        <!-- A box saturated with grief. You can find it in the Ruins of Agony once in a while. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="70178" name="Decayed Box" icon="icon.bm_sheep_agathion_30d_box">
-        <!-- A box which decayed over time. You can find it in the Ruins of Agony once in a while. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="70179" name="Shabby Box" icon="icon.bm_sheep_agathion_30d_box">
-        <!-- A box from the Abandoned Camp, shabby and very old. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="70180" name="Crude Box" icon="icon.bm_sheep_agathion_30d_box">
-        <!-- This box was hastily crafted by an amateurish Orc. You can find it in Orc Barracks once in a while. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="70181" name="Old Box" icon="icon.bm_sheep_agathion_30d_box">
-        <!-- A very old box. Someone dropped it Cruma Tower long ago. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <armor id="70182" name="Devi’s Ring (15-day)" icon="icon.ev_11th_rare_acc_ring">
-        <!-- A 15-day item. When equipped, increases Max HP by 20, M. Atk. by 3, P. Atk. by 5. The effect does not stack if two identical rings are equipped. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="rfinger;lfinger"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <skills>
-            <skill id="55290" level="1"/> <!-- Devi s Ring -->
-        </skills>
-        <stats>
-            <stat type="mDef">20</stat>
-        </stats>
-    </armor>
-    <armor id="70183" name="Devi’s Ring" icon="icon.ev_11th_rare_acc_ring">
-        <!-- When equipped, increases HP by 20, M. Atk. by 3, P. Atk. by 5. The effect does not stack, if two identical rings are equipped. -->
-        <set name="bodypart" val="rfinger;lfinger"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="mDef">20</stat>
-        </stats>
-    </armor>
-    <armor id="70184" name="Devi’s Earring (15-day)" icon="icon.ev_11th_rare_acc_earing">
-        <!-- 15-day item. When equipped, increases MP recovery rate by 0.2, Healing received by 2%. The effect does not stack, if two identical earrings are equipped. MP +10. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="rear;lear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <set name="time" val="21600"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="mDef">30</stat>
-            <stat type="maxMp">10</stat>
-        </stats>
-    </armor>
-    <armor id="70185" name="Devi’s Earring" icon="icon.ev_11th_rare_acc_earing">
-        <!-- When equipped, increases MP recovery rate by +0.2, Healing received by 2%. The effect does not stack, if two identical earrings are equipped. Additionally increases MP by 10. -->
-        <set name="bodypart" val="rear;lear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="mDef">30</stat>
-            <stat type="maxMp">10</stat>
-        </stats>
-    </armor>
-    <armor id="70186" name="Devi’s Necklace (15-day)" icon="icon.ev_11th_rare_acc_necklace">
-        <!-- 15-day item. When equipped, increases MP by 20, M. Def. by 3, P. Def. by 5. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="neck"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <skills>
-            <skill id="55294" level="1"/> <!-- Devi s Necklace -->
-        </skills>
-        <stats>
-            <stat type="mDef">40</stat>
-            <stat type="maxMp">20</stat>
-        </stats>
-    </armor>
-    <armor id="70187" name="Devi’s Necklace" icon="icon.ev_11th_rare_acc_necklace">
-        <!-- When equipped, increases MP by 20, M. Def. by 3, P. Def. by 5. -->
-        <set name="bodypart" val="neck"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="mDef">40</stat>
-            <stat type="maxMp">20</stat>
-        </stats>
-    </armor>
-    <weapon id="70188" name="1 Weapon Slot" icon="icon.weapon_mace_of_judgment_i00">
-        <!-- Test Item -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1280"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">41</stat>
-            <stat type="mAtk">43</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="70189" name="2 Weapon Slots" icon="icon.weapon_mace_of_judgment_i00">
-        <!-- Test Item -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1280"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">41</stat>
-            <stat type="mAtk">43</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="70190" name="3 Weapon Slots" icon="icon.weapon_mace_of_judgment_i00">
-        <!-- Test Item -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1280"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">41</stat>
-            <stat type="mAtk">43</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="70191" name="4 Weapon Slots" icon="icon.weapon_mace_of_judgment_i00">
-        <!-- Test Item -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1280"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">41</stat>
-            <stat type="mAtk">43</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <armor id="70192" name="Earring of Chronicle Heir" icon="icon.accessary_onyxbeastseye_earing_i00">
-        <!-- When equipped, increases MP recovery rate by 1%, Max. MP +1%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be shared within account through Dimensional Merchant. -->
-        <set name="bodypart" val="rear;lear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="mDef">2</stat>
-        </stats>
-    </armor>
-    <armor id="70193" name="Earring of Chronicle Heir" icon="icon.accessary_onyxbeastseye_earing_i00">
-        <!-- When equipped, increases MP recovery rate by 2%, Max. MP +2%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be shared within account through Dimensional Merchant. -->
-        <set name="bodypart" val="rear;lear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="mDef">4</stat>
-        </stats>
-    </armor>
-    <armor id="70194" name="Earring of Chronicle Heir" icon="icon.accessary_onyxbeastseye_earing_i00">
-        <!-- When equipped, increases MP recovery rate by 3%, Max. MP +3%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be shared within account through Dimensional Merchant. -->
-        <set name="bodypart" val="rear;lear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="mDef">6</stat>
-        </stats>
-    </armor>
-    <armor id="70195" name="Earring of Chronicle Heir" icon="icon.accessary_onyxbeastseye_earing_i00">
-        <!-- When equipped, increases MP recovery rate by 4%, Max. MP +4%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. -->
-        <set name="bodypart" val="rear;lear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="mDef">8</stat>
-        </stats>
-    </armor>
-    <armor id="70196" name="Earring of Chronicle Heir" icon="icon.accessary_onyxbeastseye_earing_i00">
-        <!-- When equipped, increases MP recovery rate by 5%, Max. MP +5%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be shared within account through Dimensional Merchant. -->
-        <set name="bodypart" val="rear;lear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="mDef">10</stat>
-        </stats>
-    </armor>
-    <armor id="70197" name="Earring of Chronicle Heir" icon="icon.accessary_onyxbeastseye_earing_i00">
-        <!-- When equipped, increases MP recovery rate by 6%, Max. MP +6%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be shared within account through Dimensional Merchant. -->
-        <set name="bodypart" val="rear;lear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="mDef">12</stat>
-        </stats>
-    </armor>
-    <armor id="70198" name="Earring of Chronicle Heir" icon="icon.accessary_onyxbeastseye_earing_i00">
-        <!-- When equipped, increases MP recovery rate by 7%, Max. MP +7%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be shared within account through Dimensional Merchant. -->
-        <set name="bodypart" val="rear;lear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="mDef">14</stat>
-        </stats>
-    </armor>
-    <armor id="70199" name="Earring of Chronicle Heir" icon="icon.accessary_onyxbeastseye_earing_i00">
-        <!-- When equipped, increases MP recovery rate by 8%, Max. MP +8%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be shared within account through Dimensional Merchant. -->
-        <set name="bodypart" val="rear;lear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="mDef">16</stat>
-        </stats>
-    </armor>
+	<armor id="70100" name="Stockings of Devotion" type="MAGIC" body-part="LEGS" icon="icon.armor_t55_l_i00">
+	<!-- A 7-day item.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes duration="10080" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="19.0"/>
+			<stat type="maxMp" value="42.0"/>
+		</stats>
+	</armor>
+
+	<armor id="70101" name="Refined Romantic Chapeau: Gold" type="NONE" body-part="HAIR_ALL" icon="icon.bm_romantic_chaperon_gold">
+	<!-- A 7-day item. Requires 2 hair accessory slots. \\n\\n<Active Skills>\\n1. Holiday Hat: resurrects a dead target and restores 50% XP. Consumes 1 Spirit Ore(s). Cooldown: 30 min.\\n2 Overwhelming Power of a Holiday Hat: increases XP and SP gain by 5% for 20 minutes. Cooldown: 60 min.\\n3. Side Effect: makes character's head bigger for 10 minutes. Cooldown: 30 min. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes duration="10080" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="39043" level="1"/>  <!-- Side Effect -->
+			<skill id="39044" level="1"/>  <!-- Holiday Hat -->
+			<skill id="39045" level="1"/>  <!-- Overwhelming Power of a Holiday Hat -->
+		</skills>
+	</armor>
+
+	<item id="70102" name="Adventurer’s Potion - Atk. Spd." type="POTION" icon="icon.etc_reagent_green_i00">
+	<!-- Increases Atk. Spd. for 20 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<condition add-name="true" msg-id="113">
+			<player flying="false"/>
+		</condition>
+		<attributes weight="5" commission-type="POTION" for-npc="true" immediate-effect="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="55235" level="1"/>  <!-- Adventurer's Potion - Atk. Spd. -->
+		</skill-reducer>
+	</item>
+
+	<item id="70103" name="Adventurer’s Potion - Casting Spd." type="POTION" icon="icon.etc_potion_of_acumen2_i00">
+	<!-- Increases Casting Spd. for 20 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<condition add-name="true" msg-id="113">
+			<player flying="false"/>
+		</condition>
+		<attributes weight="5" commission-type="POTION" for-npc="true" immediate-effect="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="55236" level="1"/>  <!-- Adventurer's Potion - Casting Spd. -->
+		</skill-reducer>
+	</item>
+
+	<item id="70104" name="Scroll: Vampiric Rage" type="SCROLL" icon="icon.etc_scroll_white_i00">
+	<!-- Recovers 6% HP from the received physical damage for 20 minutes.  -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="5" commission-type="SCROLL_OTHER"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="55237" level="1"/>  <!-- Scroll: Vampiric Rage -->
+		</skill-reducer>
+	</item>
+
+	<item id="70105" name="Scroll of Mana" type="SCROLL" icon="icon.etc_scroll_white_i00">
+	<!-- Increases MP Recovery Rate for 20 minutes.  -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="5" commission-type="SCROLL_OTHER"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="55241" level="1"/>  <!-- Scroll: Mana Regeneration -->
+		</skill-reducer>
+	</item>
+
+	<item id="70106" name="Rune of Boost" type="RUNE" icon="BranchSys3.lcon.g_rune_itemdrop_up">
+	<!-- A 7-day item. When in inventory, STR +1, INT +1, CON +1, MEN +1, DEX +1, WIT +1.  -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes duration="10080" immediate-effect="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="55246" level="1"/>  <!-- Rune of Boost -->
+		</skill-reducer>
+	</item>
+
+	<item id="70107" name="Scroll: Berserker Spirit" type="SCROLL" icon="icon.etc_scroll_white_i00">
+	<!-- When used, P. Def. -5%, M. Def. -10%, Evasion -2; P. Atk. +5%, M. Atk. +10%, Atk. Spd. +5%, Casting Spd. +5%, Speed +5. Duration: 20 minutes.  -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="5" commission-type="SCROLL_OTHER"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="55242" level="1"/>  <!-- Scroll: Berserker Spirit -->
+		</skill-reducer>
+	</item>
+
+	<armor id="70108" name="Fire Dragon Pendant Lv. 3" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pve">
+	<!-- A 7-day item. For Adventurer. Provides the effect of Fire Dragon Pendant Lv. 3 enchanted to Lv. +3. Further enchanting or combining is not possible. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes duration="10080" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="28.0"/>
+		</stats>
+		<skills>
+			<skill id="55094" level="1"/>  <!-- Fire Dragon Pendant Basic Effect Lv. 3 -->
+		</skills>
+	</armor>
+
+	<armor id="70109" name="Water Dragon Pendant Lv. 3" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pvp_blue">
+	<!-- A 7-day item. For Adventurer. Provides the effect of Water Dragon Pendant Lv. 3 enchanted to Lv. +3. Further enchanting or combining is not possible. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes duration="10080" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="28.0"/>
+		</stats>
+		<skills>
+			<skill id="55104" level="1"/>  <!-- Water Dragon Pendant Basic Effect Lv. 3 -->
+		</skills>
+	</armor>
+
+	<item id="70110" name="Scroll: Dance of the Warrior" type="SCROLL" icon="BranchIcon.Icon.etc_g_bm_dance_scroll_i00">
+	<!-- Provides Dance of the Warrior effect for 10 minutes.  -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="5" commission-type="SCROLL_OTHER" immediate-effect="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="271" level="1"/>  <!-- Dance of the Warrior -->
+		</skill-reducer>
+	</item>
+
+	<item id="70111" name="Scroll: Dance of the Mystic" type="SCROLL" icon="BranchIcon.Icon.etc_g_bm_dance_scroll_i00">
+	<!-- Provides Dance of the Mystic effect for 10 minutes.  -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="5" commission-type="SCROLL_OTHER" immediate-effect="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="273" level="1"/>  <!-- Dance of the Mystic -->
+		</skill-reducer>
+	</item>
+
+	<armor id="70112" name="Refined Romantic Chapeau - Special Trait" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_archer_hat2_i00">
+	<!-- A 7-day item. When equipped, increases P. Atk. and M. Atk. Occupies 2 Hair Accessory slots.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes commission-type="HAIR_ACCESSORY" duration="10080" />
+		<crystal />
+		<skills>
+			<skill id="35011" level="1"/>  <!-- Refined Romantic Chapeau: Teleport -->
+			<skill id="55047" level="1"/>  <!-- Romantic Chapeau - Blessed Body -->
+			<skill id="55048" level="1"/>  <!-- Romantic Chapeau - Wind Walk -->
+			<skill id="55247" level="1"/>  <!-- Refined Romantic Chapeau -->
+		</skills>
+	</armor>
+
+	<item id="70113" name="Scroll of Escape: Town of Aden" type="NONE" icon="icon.etc_scroll_of_return_i04">
+	<!-- A magical scroll that relocates you to the Town of Aden.  -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<condition add-name="true" msg-id="113">
+			<player flying="false"/>
+		</condition>
+		<attributes weight="30" commission-type="SCROLL_OTHER"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="2213" level="12"/>  <!-- Scroll of Escape -->
+		</skill-reducer>
+	</item>
+
+	<armor id="70114" name="Agathion - Singer and Dancer" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
+	<!-- A 7-day item. Summons Singer & Dancer Agathion when equipped. \\n<Active Skills>\\n1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes.\\n\\n2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes.\\n\\n3. Song of Wind: increases Speed by 20 for 5 minutes. Cooldown: 10 min.\\n\\n<Note>\\nDance of Fury, Dance of Concentration, and Song of Wind effects do not stack. Only one effect can be applied at a time. -->
+		<restriction freightable="false" olympiad-restricted="true" tradable="false" dropable="false"/>
+		<attributes weight="150" duration="10800" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="21233" level="1"/>  <!-- Summon Agathion - Singer and Dancer -->
+			<skill id="23234" level="1"/>  <!-- Singer and Dancer Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+			<skill id="39016" level="1"/>  <!-- Dance of Fury -->
+			<skill id="39017" level="1"/>  <!-- Dance of Concentration -->
+			<skill id="39018" level="1"/>  <!-- Song of Wind -->
+		</skills>
+	</armor>
+
+	<item id="70115" name="Fishing Coin" type="NONE" icon="icon.fairy_adena_joke">
+	<!-- The coin you found in the whale caught using Golden Bait. Can be exchanged for various items in the Fishermen's Guild. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<weapon id="70116" name="Golden Mermaid's Fishing Rod" type="FISHING_ROD" body-part="TWO_HAND" icon="icon.bm_gold_fishing_pole">
+	<!-- A 1-day item.  Bobber usage: 1\\n\\nWhen used, XP and SP Bonus +50% from fishing, enables teleporting to Giran/Gludin Harbor. Cooldown: 1 min. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1000" commission-type="OTHER_ITEM" duration="1440" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="1.0"/>
+			<stat type="mAtk" value="1.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="1.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="70117" name="Golden Mermaid's Fishing Rod" type="FISHING_ROD" body-part="TWO_HAND" icon="icon.bm_gold_fishing_pole">
+	<!-- A 3-day item.  Bobber usage: 1\\n\\nWhen used, XP and SP Bonus +50% from fishing, enables teleporting to Giran/Gludin Harbor. Cooldown: 1 min. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="1.0"/>
+			<stat type="mAtk" value="1.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="1.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="70118" name="Golden Mermaid's Fishing Rod" type="FISHING_ROD" body-part="TWO_HAND" icon="icon.bm_gold_fishing_pole">
+	<!-- A 7-day item.  Bobber usage: 1\\n\\nWhen used, XP and SP Bonus +50% from fishing, enables teleporting to Giran/Gludin Harbor. Cooldown: 1 min. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1000" commission-type="OTHER_ITEM" duration="10080" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="1.0"/>
+			<stat type="mAtk" value="1.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="1.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="70119" name="Golden Mermaid's Fishing Rod" type="FISHING_ROD" body-part="TWO_HAND" icon="icon.bm_gold_fishing_pole">
+	<!-- A 30-day item.  Bobber usage: 1\\n\\nWhen used, XP and SP Bonus +50% from fishing, enables teleporting to Giran/Gludin Harbor. Cooldown: 1 min. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1000" commission-type="OTHER_ITEM" duration="43200" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="1.0"/>
+			<stat type="mAtk" value="1.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="1.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="70120" name="Golden Mermaid's Fishing Rod" type="FISHING_ROD" body-part="TWO_HAND" icon="icon.bm_gold_fishing_pole">
+	<!--  Bobber usage: 1\\n\\nWhen used, XP and SP Bonus +50% from fishing, enables teleporting to Giran/Gludin Harbor. Cooldown: 1 min. -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes weight="1000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="1.0"/>
+			<stat type="mAtk" value="1.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="1.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+	</weapon>
+
+	<item id="70121" name="Full Plate Armor Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Full Plate Armor. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70122" name="Full Plate Helmet Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Full Plate Helmet. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70123" name="Full Plate Shield Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Full Plate Shield. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70124" name="Drake Leather Armor Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Drake Leather Armor. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70125" name="Drake Leather Boots Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Drake Leather Boots. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70126" name="Divine Tunic Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Divine Tunic. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70127" name="Divine Stockings Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Divine Stockings. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70128" name="Divine Gloves Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Divine Gloves. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70129" name="Doom Shield Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Doom Shield. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70130" name="Doom Plate Armor Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Doom Plate Armor. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70131" name="Doom Helmet Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Doom Helmet. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70132" name="Doom Gloves Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Doom Gloves. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70133" name="Doom Boots Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Doom Boots. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70134" name="Blue Wolf Breastplate Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Blue Wolf Breastplate. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70135" name="Blue Wolf Gaiters Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Blue Wolf Gaiters. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70136" name="Blue Wolf Helmet Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Blue Wolf Helmet. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70137" name="Blue Wolf Gloves Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Blue Wolf Gloves. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70138" name="Blue Wolf Boots Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Blue Wolf Boots. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70139" name="Doom Leather Armor Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Doom Leather Armor. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70140" name="Avadon Robe Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Avadon Robe. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70141" name="Avadon Circlet Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Avadon Circlet. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70142" name="Avadon Gloves Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Full Plate Armor. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70143" name="Avadon Boots Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Avadon Boots. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70144" name="Blue Wolf Tunic Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Blue Wolf Tunic. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70145" name="Blue Wolf Stockings Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Blue Wolf Stockings. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70146" name="Black Ore Necklace Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Black Ore Necklace. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70147" name="Black Ore Ring Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Black Ore Ring. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70148" name="Black Ore Earring Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Black Ore Earring. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70149" name="Brigandine Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Brigandine. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70150" name="Brigandine Gaiters Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Brigandine Gaiters. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70151" name="Brigandine Helmet Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Brigandine Helmet. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70152" name="Brigandine Shield Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Brigandine Shield. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70153" name="Manticore Skin Shirt Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Manticore Skin Shirt. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70154" name="Manticore Skin Gaiters Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Manticore Skin Gaiters. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70155" name="Manticore Skin Boots Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Manticore Skin Boots. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70156" name="Mithril Tunic Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Mithril Tunic. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70157" name="Mithril Stockings Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Mithril Stockings. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70158" name="Elven Mithril Gloves Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain all the ingredients necessary for making Elven Mithril Gloves. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="70159" name="Mana Recovery Potion" type="POTION" icon="icon.etc_potion_blue_i00">
+	<!-- Instantly recovers MP without a continuous effect. Cannot be used when MP is full.  -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<condition add-name="true" msg-id="113">
+			<player flying="false"/>
+		</condition>
+		<attributes weight="5" price="10000" commission-type="POTION" immediate-effect="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="26030" level="1"/>  <!-- Mana Potion -->
+		</skill-reducer>
+	</item>
+
+	<item id="70160" name="1st Anniversary Coin" type="NONE" icon="icon.etc_11th_token">
+	<!-- u,A coin commemorating the 1st anniversary. Maybe, if you collect many of such coins, something good will happen…  -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="70161" name="My Teleport Pack" type="NONE" icon="icon.etc_pi_gift_box_i01">
+	<!-- Double-click to get 1 My Teleport Book, 3 My Teleport Flags, and 10 Scrolls of Escape. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="70162" name="Valakas Treasure Chest" type="NONE" icon="icon.bm_sheep_agathion_30d_box">
+	<!-- Double-click the chest to get one of the treasures, gathered by Fire Dragon Valakas. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="70163" name="Energy of Development" type="NONE" icon="BranchIcon.Icon.etc_g_bonus_herb_i00">
+	<!-- XP/SP gain +5% for 10 minutes. -->
+		<restriction freightable="false" sellable="false" depositable="false"/>
+		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="55273" level="1"/>  <!-- Energy of Development -->
+		</skill-reducer>
+	</item>
+
+	<item id="70164" name="Powerful Energy of Development" type="NONE" icon="BranchIcon.Icon.etc_g_bonus_herb_i00">
+	<!-- XP/SP gain +7% for 10 minutes. -->
+		<restriction freightable="false" sellable="false" depositable="false"/>
+		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="55273" level="2"/>  <!-- Energy of Development -->
+		</skill-reducer>
+	</item>
+
+	<item id="70165" name="Great Energy of Development" type="NONE" icon="BranchIcon.Icon.etc_g_bonus_herb_i00">
+	<!-- XP/SP gain +10% for 10 minutes. -->
+		<restriction freightable="false" sellable="false" depositable="false"/>
+		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="55273" level="3"/>  <!-- Energy of Development -->
+		</skill-reducer>
+	</item>
+
+	<item id="70166" name="Energy of Speed" type="NONE" icon="BranchIcon.Icon.etc_g_bonus_herb_i01">
+	<!-- Speed +2 for 10 minutes. -->
+		<restriction freightable="false" sellable="false" depositable="false"/>
+		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="55274" level="1"/>  <!-- Energy of Speed -->
+		</skill-reducer>
+	</item>
+
+	<item id="70167" name="Powerful Energy of Speed" type="NONE" icon="BranchIcon.Icon.etc_g_bonus_herb_i01">
+	<!-- Speed +3 for 10 minutes. -->
+		<restriction freightable="false" sellable="false" depositable="false"/>
+		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="55274" level="2"/>  <!-- Energy of Speed -->
+		</skill-reducer>
+	</item>
+
+	<item id="70168" name="Great Energy of Speed" type="NONE" icon="BranchIcon.Icon.etc_g_bonus_herb_i01">
+	<!-- Speed +5 for 10 minutes. -->
+		<restriction freightable="false" sellable="false" depositable="false"/>
+		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="55274" level="3"/>  <!-- Energy of Speed -->
+		</skill-reducer>
+	</item>
+
+	<item id="70169" name="Energy of Accuracy" type="NONE" icon="BranchIcon.Icon.etc_g_bonus_herb_i02">
+	<!-- P. Accuracy +1 for 10 minutes. -->
+		<restriction freightable="false" sellable="false" depositable="false"/>
+		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="55275" level="1"/>  <!-- Energy of Accuracy -->
+		</skill-reducer>
+	</item>
+
+	<item id="70170" name="Powerful Energy of Accuracy" type="NONE" icon="BranchIcon.Icon.etc_g_bonus_herb_i02">
+	<!-- P. Accuracy +2 for 10 minutes. -->
+		<restriction freightable="false" sellable="false" depositable="false"/>
+		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="55275" level="2"/>  <!-- Energy of Accuracy -->
+		</skill-reducer>
+	</item>
+
+	<item id="70171" name="Great Energy of Accuracy" type="NONE" icon="BranchIcon.Icon.etc_g_bonus_herb_i02">
+	<!-- P. Accuracy +4 for 10 minutes. -->
+		<restriction freightable="false" sellable="false" depositable="false"/>
+		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="55275" level="3"/>  <!-- Energy of Accuracy -->
+		</skill-reducer>
+	</item>
+
+	<item id="70172" name="Coin of Tears" type="MATERIAL" icon="BranchIcon.Icon.vip_silver_coin">
+	<!-- A coin saturated with grief. You can find it in the Ruins of Agony once in a while. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="70173" name="Decayed Coin" type="MATERIAL" icon="BranchIcon.Icon.vip_silver_coin">
+	<!-- A coin which decayed over time. You can find it in the Ruins of Agony once in a while. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="70174" name="Shabby Coin" type="MATERIAL" icon="BranchIcon.Icon.vip_silver_coin">
+	<!-- A coin worn off due to frequent use. It was lying in the Abandoned Camp. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="70175" name="Crude Coin" type="MATERIAL" icon="BranchIcon.Icon.vip_silver_coin">
+	<!-- This coin was hastily crafted by an amateurish Orc. You can find it in Orc Barracks once in a while/ -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="70176" name="Old Coin" type="MATERIAL" icon="BranchIcon.Icon.vip_silver_coin">
+	<!-- A very old coin. Someone dropped it Cruma Tower long ago. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="70177" name="Box of Tears" type="NONE" icon="icon.bm_sheep_agathion_30d_box">
+	<!-- A box saturated with grief. You can find it in the Ruins of Agony once in a while. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="70178" name="Decayed Box" type="NONE" icon="icon.bm_sheep_agathion_30d_box">
+	<!-- A box which decayed over time. You can find it in the Ruins of Despair once in a while. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="70179" name="Shabby Box" type="NONE" icon="icon.bm_sheep_agathion_30d_box">
+	<!-- A box from the Abandoned Camp, shabby and very old. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="70180" name="Crude Box" type="NONE" icon="icon.bm_sheep_agathion_30d_box">
+	<!-- This box was hastily crafted by an amateurish Orc. You can find it in Orc Barracks once in a while. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="70181" name="Old Box" type="NONE" icon="icon.bm_sheep_agathion_30d_box">
+	<!-- A very old box. Someone dropped it Cruma Tower long ago. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="70182" name="Devi’s Ring (15-day)" type="NONE" body-part="FINGER" icon="icon.ev_11th_rare_acc_ring">
+	<!-- 15-day item. When equipped, increases HP by 20, M. Atk. by 3, P. Atk. by 5. The effect does not stack, if two identical rings are equipped.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" duration="21600" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="20.0"/>
+		</stats>
+		<skills>
+			<skill id="55290" level="1"/>  <!-- Devi's Ring -->
+		</skills>
+	</armor>
+
+	<armor id="70183" name="Devi’s Ring" type="NONE" body-part="FINGER" icon="icon.ev_11th_rare_acc_ring">
+	<!-- When equipped, increases HP by 20, M. Atk. by 3, P. Atk. by 5. The effect does not stack, if two identical rings are equipped. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="20.0"/>
+		</stats>
+	</armor>
+
+	<armor id="70184" name="Devi’s Earring (15-day)" type="NONE" body-part="EAR" icon="icon.ev_11th_rare_acc_earing">
+	<!-- 15-day item. When equipped, increases MP recovery rate by 0.2, Healing received by 2%. The effect does not stack, if two identical earrings are equipped. MP +10.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" duration="21600" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="30.0"/>
+			<stat type="maxMp" value="10.0"/>
+		</stats>
+	</armor>
+
+	<armor id="70185" name="Devi’s Earring" type="NONE" body-part="EAR" icon="icon.ev_11th_rare_acc_earing">
+	<!-- When equipped, increases MP recovery rate by +0.2, Healing received by 2%. The effect does not stack, if two identical earrings are equipped. Additionally increases MP by 10. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="30.0"/>
+			<stat type="maxMp" value="10.0"/>
+		</stats>
+	</armor>
+
+	<armor id="70186" name="Devi’s Necklace (15-day)" type="NONE" body-part="NECK" icon="icon.ev_11th_rare_acc_necklace">
+	<!-- 15-Day Item. When equipped, MP +20, M. Def. +3, P. Def. +5. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" duration="21600" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="40.0"/>
+			<stat type="maxMp" value="20.0"/>
+		</stats>
+		<skills>
+			<skill id="55294" level="1"/>  <!-- Devi's Necklace -->
+		</skills>
+	</armor>
+
+	<armor id="70187" name="Devi’s Necklace" type="NONE" body-part="NECK" icon="icon.ev_11th_rare_acc_necklace">
+	<!-- MP +20, M. Def. +3, P. Def. +5. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="40.0"/>
+			<stat type="maxMp" value="20.0"/>
+		</stats>
+	</armor>
+
+	<weapon id="70188" name="Test Slot 1 Weapon" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_mace_of_judgment_i00" magic="true">
+	<!-- Test -->
+		<restriction freightable="false"/>
+		<attributes weight="1280" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="41.0"/>
+			<stat type="mAtk" value="43.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="70189" name="Test Slot 2 Weapon" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_mace_of_judgment_i00" magic="true">
+	<!-- Test -->
+		<restriction freightable="false"/>
+		<attributes weight="1280" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="41.0"/>
+			<stat type="mAtk" value="43.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="70190" name="Test Slot 3 Weapon" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_mace_of_judgment_i00" magic="true">
+	<!-- Test -->
+		<restriction freightable="false"/>
+		<attributes weight="1280" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="41.0"/>
+			<stat type="mAtk" value="43.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="70191" name="Test BM Slot Open Weapon" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_mace_of_judgment_i00" magic="true">
+	<!-- Test -->
+		<restriction freightable="false"/>
+		<attributes weight="1280" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="41.0"/>
+			<stat type="mAtk" value="43.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<armor id="70192" name="Chronicle Heir Earring Lv. 1" type="NONE" body-part="EAR" icon="icon.accessary_onyxbeastseye_earing_i00">
+	<!-- When equipped, MP Recovery Bonus +1%, Max. MP +1%. The effect does not stack if two identical earrings are equipped. -->
+		<restriction destroyable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="2.0"/>
+		</stats>
+	</armor>
+
+	<armor id="70193" name="Chronicle Heir Earring Lv. 2" type="NONE" body-part="EAR" icon="icon.accessary_onyxbeastseye_earing_i00">
+	<!-- When equipped, MP Recovery Bonus +2%, Max. MP +2%. The effect does not stack if two identical earrings are equipped. -->
+		<restriction destroyable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="4.0"/>
+		</stats>
+	</armor>
+
+	<armor id="70194" name="Chronicle Heir Earring Lv. 3" type="NONE" body-part="EAR" icon="icon.accessary_onyxbeastseye_earing_i00">
+	<!-- When equipped, MP Recovery Bonus +3%, Max. MP +3%. The effect does not stack if two identical earrings are equipped. -->
+		<restriction destroyable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="6.0"/>
+		</stats>
+	</armor>
+
+	<armor id="70195" name="Chronicle Heir Earring Lv. 4" type="NONE" body-part="EAR" icon="icon.accessary_onyxbeastseye_earing_i00">
+	<!-- When equipped, MP Recovery Bonus +4%, Max. MP +4%. The effect does not stack if two identical earrings are equipped. -->
+		<restriction destroyable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="8.0"/>
+		</stats>
+	</armor>
+
+	<armor id="70196" name="Chronicle Heir Earring Lv. 5" type="NONE" body-part="EAR" icon="icon.accessary_onyxbeastseye_earing_i00">
+	<!-- When equipped, MP Recovery Bonus +5%, Max. MP +5%. The effect does not stack if two identical earrings are equipped. -->
+		<restriction destroyable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="10.0"/>
+		</stats>
+	</armor>
+
+	<armor id="70197" name="Chronicle Heir Earring Lv. 6" type="NONE" body-part="EAR" icon="icon.accessary_onyxbeastseye_earing_i00">
+	<!-- When equipped, MP Recovery Bonus +6%, Max. MP +6%. The effect does not stack if two identical earrings are equipped. -->
+		<restriction destroyable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="12.0"/>
+		</stats>
+	</armor>
+
+	<armor id="70198" name="Chronicle Heir Earring Lv. 7" type="NONE" body-part="EAR" icon="icon.accessary_onyxbeastseye_earing_i00">
+	<!-- When equipped, MP Recovery Bonus +7%, Max. MP +7%. The effect does not stack if two identical earrings are equipped. -->
+		<restriction destroyable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="14.0"/>
+		</stats>
+	</armor>
+
+	<armor id="70199" name="Chronicle Heir Earring Lv. 8" type="NONE" body-part="EAR" icon="icon.accessary_onyxbeastseye_earing_i00">
+	<!-- When equipped, MP Recovery Bonus +8%, Max. MP +8%. The effect does not stack if two identical earrings are equipped. -->
+		<restriction destroyable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="16.0"/>
+		</stats>
+	</armor>
+
 </list>

@@ -1,922 +1,907 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <armor id="91800" name="Queen Ant's Ring Lv. 4" icon="icon.accessory_ring_of_queen_ant_i04">
-        <!-- Available for 15 days. Max MP +30, Poison Resistance/ Atk. Rate +30%, P./ M. Accuracy +5, P. Atk. +10%, M. Atk. +15%, P. Critical Damage +15%, M. Critical Damage +10%. The effect doesn't stack if two identical rings are equipped. Cannot be enchanted. -->
-        <set name="bodypart" val="rfinger;lfinger"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="mDef">62</stat>
-            <stat type="maxMp">30</stat>
-        </stats>
-    </armor>
-    <armor id="91801" name="Orfen's Earring Lv. 4" icon="icon.accessory_earring_of_orfen_i04">
-        <!-- Available for 15 days. Max MP +40, Mental Resistance/ Atk. Rate +20%, Hold Resistance/ Atk. Rate +30%, Received Healing +12%, Skill MP Consumption -10%. Has a chance of absorbing 10% of the inflicted damage as MP. The effect doesn't stack if two identical earrings are equipped. Cannot be enchanted. -->
-        <set name="bodypart" val="rear;lear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="mDef">83</stat>
-            <stat type="maxMp">40</stat>
-        </stats>
-    </armor>
-    <armor id="91802" name="Ring of Core Lv. 4" icon="icon.accessory_ring_of_core_i04">
-        <!-- MP +30, Mental Resistance and Atk. Rate +30%, P./ M. Evasion +5, Received P./ M. Damage -10%, Sleep Resistance +20%. Enables to use a special ability to remove debuffs. The effect doesn't stack if two identical rings are worn. Cannot be enchanted. -->
-        <set name="bodypart" val="rfinger;lfinger"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="mDef">62</stat>
-            <stat type="maxMp">30</stat>
-        </stats>
-    </armor>
-    <item id="91803" name="Rare Accessory Pack Lv. 4" icon="icon.bm_gold_lure_special_box">
-        <!-- Double-click to obtain one of the following items: Queen Ant's Ring Lv. 4 (15-day), Orfen's Earring Lv. 4 (15-day), Ring of Core Lv. 4 (15-day). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <armor id="91804" name="Baium's Ring Lv. 1" icon="icon.accessory_ring_of_baium_i00">
-        <!-- Available for 15 days. Max MP +15, Stun Resistance/ Atk. Rate +10%, Bleed Resistance/ Atk. Rate +5%, P./ M. Accuracy +2, Atk. Spd./ Casting Spd. +3%, P./ M. Skill Power +3%. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
-        <set name="bodypart" val="rfinger;lfinger"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="mDef">40</stat>
-            <stat type="maxMp">15</stat>
-        </stats>
-    </armor>
-    <armor id="91805" name="Zaken's Earring Lv. 1" icon="icon.accessory_earring_of_zaken_i00">
-        <!-- Available for 15 days. Max MP +22, Bleed Resistance/ Atk. Rate +10%, Stun Resistance/ Atk. Rate +5%, Mental Resistance/ Atk. Rate +5%, Received Healing +4%, HP Recovery Bonus +10%, Skill MP Consumption -2%. The effect doesn't stack if two identical earrings are equipped. -->
-        <set name="bodypart" val="rear;lear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="mDef">64</stat>
-            <stat type="maxMp">22</stat>
-        </stats>
-    </armor>
-    <item id="91806" name="Vital Stone Jewelry Box Lv. 5" icon="icon.etc_bm_jewelbox_vital_i00">
-        <!-- Double-click to obtain Vital Stone Lv. 5 (3-day). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91807" name="Jade Jewelry Box Lv. 5" icon="icon.etc_bm_jewelbox_jade_i00">
-        <!-- Double-click to obtain Jade Lv. 5 (3-day). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91808" name="Ruby Jewelry Box Lv. 5" icon="icon.etc_bm_jewelbox_ruby_i00">
-        <!-- Double-click to obtain Ruby Lv. 5 (3-day). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91809" name="Sapphire Jewelry Box Lv. 5" icon="icon.etc_bm_jewelbox_sapphire_i00">
-        <!-- Double-click to obtain Sapphire Lv. 5 (3-day). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91810" name="Agathion Bracelet Pack Lv. 1" icon="icon.etc_treasure_box_i09">
-        <!-- Double-click to obtain Agathion Bracelet Lv. 1 (15-day). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <armor id="91811" name="Agathion Capricorn +3" icon="icon.agathion_capr_star_1">
-        <!-- Available for 3 days. Can be used to obtain the power of Agathion Capricorn. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. M. Critical Rate increased. Starting from +6, cooldown for M. Skills and songs/ dances decreased. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="91812" name="Agathion Libra +3" icon="icon.agathion_lib_star_1">
-        <!-- Available for 3 days. Can be used to obtain the power of Agathion Libra. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Casting Spd. increased. Starting from +6, MP Consumption for M. Skills and songs/ dances decreased. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="91813" name="Agathion Leo +3" icon="icon.agathion_leo_star_1">
-        <!-- Available for 3 days. Can be used to obtain the power of Agathion Leo. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. P. Atk. increased. Starting from +6, bonus to paralyzing attacks. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="91814" name="Agathion Scorpio +3" icon="icon.agathion_sco_star_1">
-        <!-- Available for 3 days. Can be used to obtain the power of Agathion Scorpio. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. P. Critical Rate increased. Starting from +6, cooldown for P. Skills and songs/ dances decreased. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="91815" name="Agathion Aquarius +3" icon="icon.agathion_aqu_star_1">
-        <!-- Available for 3 days. Can be used to obtain the power of Agathion Aquarius. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. M. Atk. increased. Starting from +6, bonus to hold/ sleep attacks. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="91816" name="Agathion Sagittarius +3" icon="icon.agathion_sag_star_1">
-        <!-- Available for 3 days. Can be used to obtain the power of Agathion Sagittarius. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Atk. Spd. increased. Starting from +6, MP Consumption for P. Skills and songs/ dances decreased. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <item id="91817" name="Sealed Agathion Capricorn +3" icon="icon.agathion_capr_star_1">
-        <!-- Double-click to obtain Agathion Capricorn +3 (3-day). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91818" name="Sealed Agathion Libra +3" icon="icon.agathion_lib_star_1">
-        <!-- Double-click to obtain Agathion Libra +3 (3-day). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91819" name="Sealed Agathion Leo +3" icon="icon.agathion_leo_star_1">
-        <!-- Double-click to obtain Agathion Leo +3 (3-day). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91820" name="Sealed Agathion Scorpio +3" icon="icon.agathion_sco_star_1">
-        <!-- Double-click to obtain Agathion Scorpio +3 (3-day). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91821" name="Sealed Agathion Aquarius +3" icon="icon.agathion_aqu_star_1">
-        <!-- Double-click to obtain Agathion Aquarius +3 (3-day). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91822" name="Sealed Agathion Sagittarius +3" icon="icon.agathion_sag_star_1">
-        <!-- Double-click to obtain Agathion Sagittarius +3 (3-day). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91823" name="Rare Accessory Pack Lv. 1" icon="icon.bm_gold_lure_special_box">
-        <!-- Double-click to obtain one of the following items: Queen Ant's Ring Lv. 1 (15-day), Orfen's Earring Lv. 1 (15-day), Ring of Core Lv. 1 (15-day). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91824" name="Chef's Fish Stew - Victory" icon="icon.fish_stew_residence_cha">
-        <!-- Activates Prophecy of Victory Lv. 1 for 3 h. <Note> Does not stack with Prophecy-type buffs. The effect remains after death. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91825" name="Adventurer's Scroll: High Priest Transformation" icon="icon.bm2018_healer_i01">
-        <!-- Changes the appearance to that of High Priest for 20 min. The effect remains after death. <High Priest Energy> P. Atk. +63, M. Atk. +70, Acquired XP/ SP +5%. Has a chance to recover HP/ MP of all party members in case of successful attack or skill use. Cooldown: 1 min. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91826" name="Adventurer's Scroll: Valkyrie Transformation" icon="icon.bm2018_valkyrie_i01">
-        <!-- Changes the appearance to that of Valkyrie for 20 min. The effect remains after death. <Valkyrie Energy> P. Atk. +63, M. Atk. +70, Atk. Spd./ Casting Spd. +50, P./ M. Critical Rate +20, Speed +10, Sayha's Grace Consumption -5%. There is a chance to deal additional damage in case of successful attack or skill use. Cooldown: 1 min. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91827" name="Adventurer's Scroll: Dragon Berserker Transformation" icon="icon.bm2018_dragon_i01">
-        <!-- Changes the appearance to that of Dragon Berserker for 20 min. The effect remains after death. <Dragon Berserker Energy> P. Atk. +135, M. Atk. +150, Atk. Spd./ Casting Spd. +100, P./ M. Critical Rate +50, Speed +15, Sayha's Grace Consumption +10%. In case of successful attack or skill use there is a chance to boost parameters: P./ M. Atk. +300, Atk. Spd./ Casting Spd. +100, P./ M. Critical Damage +135, Damage Reflection +15%. Cooldown: 1 min. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91828" name="Adventurer's Chest: High Priest Transformation" icon="icon.bm_sayha_gold_present">
-        <!-- Double-click to obtain 3 Adventurer's Scrolls: High Priest Transformation. There is a chance to obtain Adventurer's Scroll: Dragon Berserker Transformation. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91829" name="Adventurer's Chest: Valkyrie Transformation" icon="icon.bm_sayha_present">
-        <!-- Double-click to obtain 3 Adventurer's Scrolls: Valkyrie Transformation. There is a chance to obtain Adventurer's Scroll: Dragon Berserker Transformation. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91830" name="Improved Fire Attack Potion" icon="icon.etc_fire_potion_i00">
-        <!-- Fire Attack Power +80 for 20 min. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="weight" val="5"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="etcitem_type" val="POTION"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-        <skills>
-            <skill id="54122" level="1"/> <!-- Improved Fire Attribute Attack Potion -->
-        </skills>
-    </item>
-    <item id="91831" name="Improved Water Attack Potion" icon="icon.etc_water_potion_i00">
-        <!-- Water Attack Power +80 for 20 min. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="weight" val="5"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="etcitem_type" val="POTION"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-        <skills>
-            <skill id="54123" level="1"/> <!-- Improved Water Attribute Attack Potion -->
-        </skills>
-    </item>
-    <item id="91832" name="Improved Wind Attack Potion" icon="icon.etc_wind_potion_i00">
-        <!-- Wind Attack Power +80 for 20 min. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="weight" val="5"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="etcitem_type" val="POTION"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-        <skills>
-            <skill id="54124" level="1"/> <!-- Improved Wind Attribute Attack Potion -->
-        </skills>
-    </item>
-    <item id="91833" name="Improved Earth Attack Potion" icon="icon.etc_earth_potion_i00">
-        <!-- Earth Attack Power +80 for 20 min. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="weight" val="5"/>
-        <set name="etcitem_type" val="POTION"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-        <skills>
-            <skill id="54125" level="1"/> <!-- Improved Earth Attribute Attack Potion -->
-        </skills>
-    </item>
-    <item id="91834" name="Saiha's Grace Box" icon="icon.bm_2018_special_box">
-        <!-- Double-click to obtain Sayha's Blessing (200 pc.), Sayha's Storm Lv. 3 (30 pc.), and other items. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91835" name="Sayha's Blessing Chest" icon="icon.freya_box_i01">
-        <!-- Double-click to obtain Sayha's Blessing (10 pc.). There is a small chance to obtain an additional item. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91836" name="Sayha's Effect Chest" icon="icon.present_of_destination_event">
-        <!-- Double-click to obtain 20 Sayha's Effect Scrolls. There is a small chance to obtain an additional item. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91837" name="Amulet: Chant of Clarity" icon="icon.etc_orcish_talisman_i00">
-        <!-- Amulet needed to learn Chant of Clarity. Class: Overlord. -->
-        <set name="weight" val="120"/>
-        <set name="price" val="100000"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="91838" name="My Teleport Scroll" icon="icon.bookmark_scroll_i00">
-        <!-- Can be used to teleport to a previously saved location. -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91839" name="Improved Scroll of Escape" icon="icon.etc_scroll_of_return_i01">
-        <!-- Magic scroll that allows you to quickly teleport to the nearest village. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91840" name="Rice Cake of Flaming Fighting Spirit" icon="icon.bm_rice_cake_i01">
-        <!-- Acquired XP/ SP +30% for 20 min. The effect remains after death. Cooldown: 1 min. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
-    </item>
-    <item id="91841" name="Transformation Scroll: White Assassin" icon="icon.scroll_of_verification_i06">
-        <!-- Transforms into White Assassin for 20 minutes. The effect remains after death. White Assassin Transformation: Max HP/ MP +7%, P./ M. Accuracy +2, P./ M. Atk. +3%, P./ M. Def. +3%, Atk. Spd. +5%, M. Critical Rate +20, Speed +5. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91842" name="Einhasad's Protection" icon="icon.etc_dragons_blood_i03">
-        <!-- Acquired XP/ SP +100% for 1 h. Cooldown: 1 min. The effect remains after death. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91843" name="Hero's HP Recovery Potion" icon="icon.etc_lesser_potion_red_i00">
-        <!-- Instantly recovers 500 HP. The remaining points are used to recover CP. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91844" name="Hero's MP Recovery Potion" icon="icon.etc_lesser_potion_blue_i00">
-        <!-- Magical potion which recovers MP. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91845" name="Home Furnishing Guide I" icon="icon.etc_book_building_01">
-        <!-- Home Furnishing Guide for Piggy who lives in the sky. But Wild Orc has scattered the guide's sheets all over Aden. Find Home Furnishing Guide II and Struggle for Better Home, take them to Piggy and get Piggy-Bank as a reward. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
-    </item>
-    <item id="91846" name="Home Furnishing Guide II" icon="icon.etc_book_building_02">
-        <!-- Home Furnishing Guide for Piggy who lives in the sky. But Wild Orc has scattered the guide's sheets all over Aden. Find Home Furnishing Guide I and Struggle for Better Home, take them to Piggy and get Piggy-Bank as a reward. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
-    </item>
-    <item id="91847" name="Struggle for Better Home" icon="icon.etc_book_building_03">
-        <!-- Home Furnishing Guide for Piggy who lives in the sky. But Wild Orc has scattered the guide's sheets all over Aden. Find Home Furnishing Guide I and II, take them to Piggy and get Piggy-Bank as a reward. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
-    </item>
-    <item id="91848" name="Piggy-Bank" icon="icon.etc_piggy_bank">
-        <!-- Piggy's bank. Double-click to get a reward for participating in the event. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91849" name="Golden Piggy-Bank" icon="icon.etc_golden_piggy_bank">
-        <!-- Special Piggy's bank. Double-click to get a reward for participating in the event. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91850" name="Piggy-Bank" icon="icon.etc_piggy_bank">
-        <!-- Piggy's bank. Double-click to get a reward for participating in the event. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91851" name="Golden Piggy-Bank" icon="icon.etc_golden_piggy_bank">
-        <!-- Special Piggy's bank. Double-click to get a reward for participating in the event. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91852" name="Little Piggy's Star Candy" icon="icon.etc_whiteday_candy_i03">
-        <!-- Sayha's Grace points +30,000. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91853" name="Old Home's Treasure Chest" icon="icon.bm_elmoaden_box">
-        <!-- Double-click to obtain Special Dragon Fruit and Special Dragon's Miracle Potion. There is a chance to obtain Old Home's Golden/ Silver Chest. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91854" name="Old Home's Golden Chest" icon="icon.bm_elmoaden_gold_box">
-        <!-- Double-click to obtain a Weapon/ Armor Pack (S-grade), a Stable Scroll: Enchant Weapon/ Armor (S-grade), Dimensional Spirit, or another rare item. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91855" name="Old Home's Silver Chest" icon="icon.bm_elmoaden_silver_box">
-        <!-- Double-click to obtain a rare accessory Lv. 3, Sealed Rune Lv. 11-13, Golden/ Silver Sayha's Blessing, Einhasad's Protection, or other rare items. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91856" name="Special Dragon's Miracle Potion" icon="icon.bm_dragon_posion">
-        <!-- For 20 min., Acquired XP/ SP +50%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, P./ M. Critical Rate +30, P./ M. Critical Damage +10%, Atk. Spd./ Casting Spd. +50, Max HP/ CP +2500, Max MP +1500, HP/ MP Recovery Bonus +10, Sayha's Grace Consumption -20%. Has a certain chance to absorb 5% of the inflicted damage as HP. <Note> If used when the Dragon's Miracle Potion effect is active, the buff will be replaced. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91857" name="Mid-grade HP Recovery Potion" icon="icon.etc_lesser_potion_red_i00">
-        <!-- Instantly recovers 100 HP. The remaining points are used to recover CP. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="weight" val="1"/>
-        <set name="price" val="2000"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="91858" name="Lit Red Lantern" icon="icon.r99_soul_stone_i00">
-        <!-- Magic lantern given as a reward for achieving the 1st place. XP +100,000,000, SP +2,700,000. Cannot be transferred to lower-level characters. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91859" name="Lit Purple Lantern" icon="icon.r99_soul_stone_i05">
-        <!-- Magic lantern given as a reward for achieving the 2nd place. XP +30,000,000, SP +810,000. Cannot be transferred to lower-level characters. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91860" name="Lit Blue Lantern" icon="icon.r99_soul_stone_i02">
-        <!-- Magic lantern given as a reward for achieving the 3rd place. XP +10,000,000, SP +270,000. Cannot be transferred to lower-level characters. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91861" name="Lit Green Lantern" icon="icon.r99_soul_stone_i04">
-        <!-- Magic lantern given as a reward for achieving the 4th place. XP +5,000,000, SP +135,000. Cannot be transferred to lower-level characters. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <armor id="91862" name="Dragon Belt" icon="icon.r2_belt_i01">
-        <!-- A belt imbued with the dragon's power. Can be enchanted up to +10. -->
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="waist"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">14</stat>
-        </stats>
-    </armor>
-    <item id="91863" name="Scroll: Enchant Dragon Belt" icon="icon.etc_blesscharm_ward_val_i00">
-        <!-- Required to enchant Dragon Belt. The maximum enchant level is +10. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91864" name="Dragon Belt Chest" icon="icon.etc_readybox_bronze">
-        <!-- Double-click to obtain Dragon Belt and 10 Scrolls: Enchant Dragon Belt. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91865" name="Pa'agrio's Summoning Stick (PA Event)" icon="icon.etc_imperial_scepter_i00">
-        <!-- Double-click to summon 1 of the 2 random Orc monsters. Cooldown: 5 sec. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <weapon id="91866" name="Caliburs (PA Event)" icon="icon.weapon_plenitas_i00">
-        <!-- Use a PA Event Enchant Scroll to try your luck and reach the maximum enchant level. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">92</stat>
-            <stat type="mAtk">54</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <item id="91867" name="Enchant Scroll (PA Event)" icon="icon.yogi_scroll_of_enchant_weapon_grade_i00">
-        <!-- Required to enchant Caliburs (PA Event). -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91868" name="Special Enchant Scroll (PA Event)" icon="icon.yogi_scroll_of_enchant_weapon_grade_i00">
-        <!-- Required to enchant Caliburs (PA Event). In case of failure the item is not crystallized, its enchant value remains the same. Cannot be used for weapons enchanted to +7 or higher. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91869" name="Support Box (Siege Event)" icon="icon.bm_pirate_battle_box">
-        <!-- Contains items for the Siege Event. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91870" name="Jewel Box (Siege Event)" icon="icon.bm_special_jewelbox_lv5">
-        <!-- Contains items for the Siege Event. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91871" name="Rare Accessory Pack (Siege Event)" icon="icon.ev_charge_box">
-        <!-- Contains items for the Siege Event. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91872" name="Weapon Pack (Siege Event)" icon="icon.sayha2017_box_i01">
-        <!-- Contains items for the Siege Event. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91873" name="Armor Pack (Siege Event)" icon="icon.sayha2017_box_i02">
-        <!-- Contains items for the Siege Event. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="91874" name="Accessory Pack (Siege Event)" icon="icon.npoint_earthworm_30day_box">
-        <!-- Contains items for the Siege Event. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <armor id="91875" name="Shadow Kamael Transformation" icon="icon.gomdori_chest_change">
-        <!-- When equipped, it is impossible to wear armor. Hats, weapons and accessories are not removed. -->
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="alldress"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false"/>
-    </armor>
-    <armor id="91876" name="Light Kamael Transformation" icon="icon.gomdori_chest_change">
-        <!-- When equipped, it is impossible to wear armor. Hats, weapons and accessories are not removed. -->
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="alldress"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false"/>
-    </armor>
-    <weapon id="91877" name="Ancient Warrior's Sword" icon="icon.weapon_tulwar_i00">
-        <set name="weapon_type" val="DUALBLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1530"/>
-        <set name="price" val="244000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <stats>
-            <stat type="pAtk">35</stat>
-            <stat type="mAtk">21</stat>
-            <stat type="rCrit">10</stat>
-            <stat type="accCombat">5</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">15</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="91878" name="Katzbalger" icon="icon.weapon_tulwar_i00">
-        <set name="weapon_type" val="DUALBLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1530"/>
-        <set name="price" val="1400000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">102</stat>
-            <stat type="mAtk">54</stat>
-            <stat type="rCrit">10</stat>
-            <stat type="accCombat">5</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">15</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="91879" name="Field Sword" icon="icon.weapon_tulwar_i00">
-        <set name="weapon_type" val="DUALBLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1530"/>
-        <set name="price" val="967000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">87</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">10</stat>
-            <stat type="accCombat">5</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">15</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="91880" name="Military Talwar" icon="icon.weapon_tulwar_i00">
-        <set name="weapon_type" val="DUALBLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1530"/>
-        <set name="price" val="644000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">71</stat>
-            <stat type="mAtk">39</stat>
-            <stat type="rCrit">10</stat>
-            <stat type="accCombat">5</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">15</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="91881" name="Talwar" icon="icon.weapon_tulwar_i00">
-        <set name="weapon_type" val="DUALBLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1530"/>
-        <set name="price" val="409000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">57</stat>
-            <stat type="mAtk">26</stat>
-            <stat type="rCrit">10</stat>
-            <stat type="accCombat">5</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">15</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="91882" name="Saber Tooth" icon="icon.weapon_invincible_blade_i00">
-        <set name="weapon_type" val="DUALBLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1530"/>
-        <set name="price" val="6130000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">172</stat>
-            <stat type="mAtk">91</stat>
-            <stat type="rCrit">10</stat>
-            <stat type="accCombat">5</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">15</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="91883" name="Immortal Edge" icon="icon.weapon_invincible_blade_i00">
-        <set name="weapon_type" val="DUALBLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1530"/>
-        <set name="price" val="4300000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">153</stat>
-            <stat type="mAtk">83</stat>
-            <stat type="rCrit">10</stat>
-            <stat type="accCombat">5</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">15</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="91884" name="Schlager" icon="icon.weapon_schlaeger_i00">
-        <set name="weapon_type" val="DUALBLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1530"/>
-        <set name="price" val="2290000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">135</stat>
-            <stat type="mAtk">67</stat>
-            <stat type="rCrit">10</stat>
-            <stat type="accCombat">5</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">15</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="91885" name="Dismantler" icon="icon.weapon_dismantler_i00">
-        <set name="weapon_type" val="DUALBLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="1530"/>
-        <set name="price" val="13100000"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">214</stat>
-            <stat type="mAtk">111</stat>
-            <stat type="rCrit">10</stat>
-            <stat type="accCombat">5</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">15</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="91886" name="Innominate Victory" icon="icon.weapon_nameless_victory_i00">
-        <set name="weapon_type" val="DUALBLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="1530"/>
-        <set name="price" val="8680000"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">193</stat>
-            <stat type="mAtk">102</stat>
-            <stat type="rCrit">10</stat>
-            <stat type="accCombat">5</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">15</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="91887" name="Durendal" icon="icon.weapon_death_bringer_i00">
-        <set name="weapon_type" val="DUALBLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1530"/>
-        <set name="price" val="26968400"/>
-        <set name="soulshots" val="3"/>
-        <set name="spiritshots" val="3"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">277</stat>
-            <stat type="mAtk">137</stat>
-            <stat type="rCrit">10</stat>
-            <stat type="accCombat">5</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">15</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="91888" name="Undertaker" icon="icon.weapon_death_bringer_i00">
-        <set name="weapon_type" val="DUALBLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1530"/>
-        <set name="price" val="20741000"/>
-        <set name="soulshots" val="3"/>
-        <set name="spiritshots" val="3"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">256</stat>
-            <stat type="mAtk">129</stat>
-            <stat type="rCrit">10</stat>
-            <stat type="accCombat">5</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">15</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="91889" name="Divine Pain" icon="icon.weapon_pain_of_godness_i00">
-        <set name="weapon_type" val="DUALBLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1530"/>
-        <set name="price" val="14098000"/>
-        <set name="soulshots" val="3"/>
-        <set name="spiritshots" val="3"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">235</stat>
-            <stat type="mAtk">121</stat>
-            <stat type="rCrit">10</stat>
-            <stat type="accCombat">5</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">15</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="91890" name="Gram" icon="icon.weapon_gram_i00">
-        <set name="weapon_type" val="DUALBLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="S"/>
-        <set name="weight" val="1530"/>
-        <set name="price" val="42759400"/>
-        <set name="soulshots" val="4"/>
-        <set name="spiritshots" val="4"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">310</stat>
-            <stat type="mAtk">151</stat>
-            <stat type="rCrit">10</stat>
-            <stat type="accCombat">5</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">15</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="91891" name="Warrior's Rapier" icon="icon.weapon_sealed_rapier_i00">
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1300"/>
-        <set name="price" val="244000"/>
-        <stats>
-            <stat type="pAtk">30</stat>
-            <stat type="mAtk">26</stat>
-            <stat type="rCrit">10</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">406</stat>
-            <stat type="randomDamage">20</stat>
-        </stats>
-    </weapon>
-    <weapon id="91892" name="Grand ?p?e" icon="icon.weapon_rapier_i00">
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1300"/>
-        <set name="price" val="1800000"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">88</stat>
-            <stat type="mAtk">57</stat>
-            <stat type="rCrit">10</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">406</stat>
-            <stat type="randomDamage">20</stat>
-        </stats>
-    </weapon>
-    <weapon id="91893" name="?p?e" icon="icon.weapon_rapier_i00">
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1300"/>
-        <set name="price" val="1400000"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">76</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">10</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">406</stat>
-            <stat type="randomDamage">20</stat>
-        </stats>
-    </weapon>
-    <weapon id="91894" name="Estoc" icon="icon.weapon_rapier_i00">
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1300"/>
-        <set name="price" val="967000"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">61</stat>
-            <stat type="mAtk">41</stat>
-            <stat type="rCrit">10</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">406</stat>
-            <stat type="randomDamage">20</stat>
-        </stats>
-    </weapon>
-    <weapon id="91895" name="Fleuret" icon="icon.weapon_rapier_i00">
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1300"/>
-        <set name="price" val="644000"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">49</stat>
-            <stat type="mAtk">32</stat>
-            <stat type="rCrit">10</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">406</stat>
-            <stat type="randomDamage">20</stat>
-        </stats>
-    </weapon>
-    <weapon id="91896" name="Admiral's Estoc" icon="icon.weapon_blink_slasher_i00">
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1300"/>
-        <set name="price" val="6130000"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">149</stat>
-            <stat type="mAtk">110</stat>
-            <stat type="rCrit">10</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">406</stat>
-            <stat type="randomDamage">20</stat>
-        </stats>
-    </weapon>
-    <weapon id="91897" name="Blinzlasher" icon="icon.weapon_blink_slasher_i00">
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1300"/>
-        <set name="price" val="4300000"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">133</stat>
-            <stat type="mAtk">100</stat>
-            <stat type="rCrit">10</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">406</stat>
-            <stat type="randomDamage">20</stat>
-        </stats>
-    </weapon>
-    <weapon id="91898" name="Chevalier Rapier" icon="icon.weapon_soldat_estoc_i00">
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1300"/>
-        <set name="price" val="2870000"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">116</stat>
-            <stat type="mAtk">90</stat>
-            <stat type="rCrit">10</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">406</stat>
-            <stat type="randomDamage">20</stat>
-        </stats>
-    </weapon>
-    <weapon id="91899" name="Soldat Estoc" icon="icon.weapon_soldat_estoc_i00">
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1300"/>
-        <set name="price" val="2290000"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">102</stat>
-            <stat type="mAtk">73</stat>
-            <stat type="rCrit">10</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">406</stat>
-            <stat type="randomDamage">20</stat>
-        </stats>
-    </weapon>
+	<armor id="91800" name="Queen Ant's Ring Lv. 4" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_queen_ant_i04">
+	<!-- 15-day item. MP +30, Poison Attack and Resistance +30%, P./M. Accuracy +5, P. Atk. +10%, M. Atk. +15%, P. Critical Damage +15%, M. Critical Damage +10%. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="62.0"/>
+			<stat type="maxMp" value="30.0"/>
+		</stats>
+	</armor>
+
+	<armor id="91801" name="Orfen's Earring Lv. 4" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_orfen_i04">
+	<!-- 15-day item. MP +40, MEN Attack and Resistance +20%, Hold Attack and Resistance +30%, Heal Received +12%, Skill MP Consumption -10%. MP Drain effect. Enables a skill that decreases enemy MP by 10%. When two identical earrings are equipped, the effect of only one earring will be applied. Cannot be enchanted. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="83.0"/>
+			<stat type="maxMp" value="40.0"/>
+		</stats>
+	</armor>
+
+	<armor id="91802" name="Ring of Core Lv 4" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_core_i04">
+	<!-- MP +30, MEN Attack and Resistance +30%, P./M. Evasion +5, P./M. Damage Received -10%, Sleep Resistance +20%. Enables debuff removal skills. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="62.0"/>
+			<stat type="maxMp" value="30.0"/>
+		</stats>
+	</armor>
+
+	<item id="91803" name="Rare Accessory Lv. 4 Box" type="NONE" icon="icon.bm_gold_lure_special_box">
+	<!-- Double-click to obtain Immortal Queen Ant's Ring Lv. 4 (15-day), Immortal Orfen's Earring Lv. 4 (15-day), and Ring of Core Lv. 4 (15-day), one for each. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<armor id="91804" name="Baium's Ring Lv. 1" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_baium_i00">
+	<!-- 15-day item. MP +15, Stun Resistance and Stun Atk. Rate +10%, Bleed Atk. and Bleed Resistance +5%, P./M. Accuracy +2, Atk. Spd./Casting Spd. +3%, P./M. Skill Power +3%. The effect does not stack even if two identical rings are equipped. Cannot be enchanted. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="40.0"/>
+			<stat type="maxMp" value="15.0"/>
+		</stats>
+	</armor>
+
+	<armor id="91805" name="Zaken's Earring Lv. 1" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_zaken_i00">
+	<!-- 15-day item. MP +22, Bleed Attack and Resistance +10%, Stun/MEN Attack and Resistance +5%, Heal Received +4%, HP Recovery+10%, Skill MP Consumption -2%. When two identical earrings are equipped, the effect of only one earring will be applied. Cannot be enchanted. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="64.0"/>
+			<stat type="maxMp" value="22.0"/>
+		</stats>
+	</armor>
+
+	<item id="91806" name="Vital Stone Lv. 5 Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_vital_i00">
+	<!-- Double-click to obtain 1 +5 Vital Stone (3-day). -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91807" name="Jade Lv. 5 Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_jade_i00">
+	<!-- Double-click to obtain 1 +5 Jade (3-day). -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91808" name="Ruby Lv. 5 Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_ruby_i00">
+	<!-- Double-click to obtain 1 +5 Ruby (3-day). -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91809" name="Sapphire Lv. 5 Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_sapphire_i00">
+	<!-- Double-click to obtain 1 +5 Sapphire (3-day). -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91810" name="Agathion Bracelet Lv. 1 Box" type="NONE" icon="icon.etc_treasure_box_i09">
+	<!-- Double-click to obtain 1 Agathion Bracelet Lv. 1 (15-day). -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<armor id="91811" name="+3 Capricorn Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_capr_star_1">
+	<!-- An item which can be used to obtain the power of the Capricorn Agathion.\\n\\nSummons Agathion from the main slot.\\nActivates Unique Ability.\\n<Unique Ability>\\nM. Critical Rate increased.\\nStarting at +6, cooldown of M. Skills and songs/dances decreased. 3-day. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91812" name="+3 Libra Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_lib_star_1">
+	<!-- An item which can be used to obtain the power of the Libra Agathion.\\n\\nSummons Agathion from the main slot.\\nActivates Unique Ability.\\n<Unique Ability>\\nCasting Spd. increased.\\nStarting at +6, MP Consumption for M. Skills and songs/dances decreased. 3-day. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91813" name="+3 Leo Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_leo_star_1">
+	<!-- An item which can be used to obtain the power of the Leo Agathion.\\n\\nSummons Agathion from the main slot.\\nActivates Unique Ability.\\n<Unique Ability>\\nP. Atk.. increased.\\nStarting at +6, increases Paralysis Atk. Rate. 3-day. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91814" name="+3 Scorpio Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_sco_star_1">
+	<!-- An item which can be used to obtain the power of the Scorpio Agathion.\\n\\nSummons Agathion from the main slot.\\nActivates Unique Ability.\\n<Unique Ability>\\nP. Critical Rate increased.\\nStarting at +6, cooldown of M. Skills and songs/dances decreased. 3-day. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91815" name="+3 Aquarius Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_aqu_star_1">
+	<!-- An item which can be used to obtain the power of the Aquarius Agathion.\\n\\nSummons Agathion from the main slot.\\nActivates Unique Ability.\\n<Unique Ability>\\nM. Atk. increased.\\nStarting at +6, increases Atk. Rate of Hold/Sleep. 3-day. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91816" name="+3 Sagittarius Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_sag_star_1">
+	<!-- An item which can be used to obtain the power of the Sagittarius Agathion.\\n\\nSummons Agathion from the main slot.\\nActivates Unique Ability.\\n<Unique Ability>\\nAtk. Spd. increased.\\nStarting at +6, MP Consumption for P. Skills and songs/dances decreased. 3-day. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<item id="91817" name="+3 Sealed Agathion - Capricorn" type="NONE" icon="icon.agathion_capr_star_1">
+	<!-- Double-click to obtain +3 Enchanted Capricorn Agathion (3-day). -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91818" name="+3 Sealed Agathion - Libra" type="NONE" icon="icon.agathion_lib_star_1">
+	<!-- Double-click to obtain +3 Enchanted Libra Agathion (3-day). -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91819" name="+3 Sealed Agathion - Leo" type="NONE" icon="icon.agathion_leo_star_1">
+	<!-- Double-click to obtain +3 Enchanted Leo Agathion (3-day). -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91820" name="+3 Sealed Agathion - Scorpio" type="NONE" icon="icon.agathion_sco_star_1">
+	<!-- Double-click to obtain +3 Enchanted Scorpio Agathion (3-day). -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91821" name="+3 Sealed Agathion - Aquarius" type="NONE" icon="icon.agathion_aqu_star_1">
+	<!-- Double-click to obtain +3 Enchanted Aquarius Agathion (3-day). -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91822" name="+3 Sealed Agathion - Sagittarius" type="NONE" icon="icon.agathion_sag_star_1">
+	<!-- Double-click to obtain +3 Enchanted Sagittarius Agathion (3-day). -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91823" name="Rare Accessory Lv. 1 Box" type="NONE" icon="icon.bm_gold_lure_special_box">
+	<!-- Double-click to obtain Queen Ant's Ring Lv. 1 (15-day), Orfen's Earring Lv. 1 (15-day), Ring of Core Lv. 1 (15-day), one for each. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91824" name="Chef's Fish Stew - Victory" type="SCROLL" icon="icon.fish_stew_residence_cha">
+	<!-- When used, Prophecy of Victory Lv. 1 is applied for 3 hours. \\n<Caution> Prophecy effects can only be applied one at a time. Effect remains even after death.\\n -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91825" name="Adventurer's High Priest Transformation Scroll" type="POTION" icon="icon.bm2018_healer_i01">
+	<!-- Transforms you into High Priest for 20 minutes. Effect remains even after death.\\n\\n<High Priest's Energy> P. Atk. +63, M. Atk. +70, XP/SP Gain when hunting +5%. Has a chance to recover party members' HP/MP when attacking or using skills. Cooldown 1 minute. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91826" name="Adventurer's Valkyrie Transformation Scroll" type="POTION" icon="icon.bm2018_valkyrie_i01">
+	<!-- Transforms you into Valkyrie for 20 minutes. Effect remains even after death.\\n\\n<Valkyrie's Energy> P. Atk. +63, M. Atk. +70, Atk. Spd./Casting Spd. +50, P./M. Critical Rate +20, Speed +10, Sayha's Grace Consumption Speed -5%. Has a chance to inflict additional damage when attacking and using skills. Cooldown 1 minute. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91827" name="Adventurer's Dragon Berserker Transformation Scroll" type="POTION" icon="icon.bm2018_dragon_i01">
+	<!-- Transforms you into Dragon Berserker for 20 minutes. Effect remains even after death.\\n\\n<Dragon Berserker's Energy> P. Atk. +135, M. Atk. +150, Atk. Spd./Casting Spd. +100, P./M. Critical Rate +50, Speed +15, Sayha's Grace Consumption Speed -10%. When attacking and using skills there's a chance for P. Atk. +300, M. Atk. +300, Atk. Spd +100, Casting Spd +100, P./M. Critical Damage +135, and returns 15% of received damage back to the enemy. Cooldown 1 minute. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91828" name="Adventurer's High Priest Transformation Box" type="NONE" icon="icon.bm_sayha_gold_present">
+	<!-- Double-click to obtain 3 Adventurer's Priest Transformation Scroll, and have a certain chance to obtain 1 Adventurer's Dragon Berserker Transformation Scroll. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91829" name="Adventurer's Valkyrie Transformation Box" type="NONE" icon="icon.bm_sayha_present">
+	<!-- Double-click to obtain 3 Adventurer's Valkyrie Transformation Scroll, and have a certain chance to obtain 1 Adventurer's Dragon Berserker Transformation Scroll. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91830" name="Greater Fire Attack Potion" type="POTION" icon="icon.etc_fire_potion_i00">
+	<!-- Increases Fire Attack +80 for 20 min. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes weight="5" immediate-effect="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="54122" level="1"/>  <!-- Improved Fire Attack Potion -->
+		</skill-reducer>
+	</item>
+
+	<item id="91831" name="Greater Water Attack Potion" type="POTION" icon="icon.etc_water_potion_i00">
+	<!-- Increases Water Attack +80 for 20 min. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes weight="5" immediate-effect="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="54123" level="1"/>  <!-- Improved Water Attack Potion -->
+		</skill-reducer>
+	</item>
+
+	<item id="91832" name="Greater Wind Attack Potion" type="POTION" icon="icon.etc_wind_potion_i00">
+	<!-- Increases Wind Attack +80 for 20 min. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes weight="5" immediate-effect="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="54124" level="1"/>  <!-- Improved Wind Attack Potion -->
+		</skill-reducer>
+	</item>
+
+	<item id="91833" name="Greater Earth Attack Potion" type="POTION" icon="icon.etc_earth_potion_i00">
+	<!-- Increases Earth Attack +80 for 20 min. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes weight="5" immediate-effect="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="54125" level="1"/>  <!-- Improved Earth Attack Potion -->
+		</skill-reducer>
+	</item>
+
+	<item id="91834" name="Sayha's Grace Box" type="NONE" icon="icon.bm_2018_special_box">
+	<!-- Double-click to obtain 200 Sayha's Blessing and 30 Sayha's Storm Lv. 3. If you're lucky, you can also gain one of various items. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91835" name="Sayha's Blessing Box" type="NONE" icon="icon.freya_box_i01">
+	<!-- Double-click to obtain 10 Sayha's Blessing. If you are lucky, you can also gain one of various items. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91836" name="Sayha's Buff Box" type="NONE" icon="icon.present_of_destination_event">
+	<!-- Double-click to obtain 20 Sayha's Buff Scrolls. If you are lucky, you can also gain one of various items. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91837" name="Amulet: Chant of Clarity" type="NONE" icon="icon.etc_orcish_talisman_i00">
+	<!-- Amulet required for the Chant of Clarity spell. Used by Overlords. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="100000"/>
+	</item>
+
+	<item id="91838" name="My Teleport Scroll" type="TELEPORT_BOOKMARK" icon="icon.bookmark_scroll_i00">
+	<!-- This consumable item allows you to magically transport yourself to a specific location. \\n -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91839" name="Advanced Scroll of Escape" type="SCROLL" icon="icon.etc_scroll_of_return_i01">
+	<!-- A magic scroll that quickly teleports you to the nearest village. \\n -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91840" name="Rice Cake of Flaming Fighting Spirit" type="NONE" icon="icon.bm_rice_cake_i01">
+	<!-- When used, XP/SP Gain when hunting +30% for 20 minutes. The effect remains active even after death. Cooldown 1 minute. \\n -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91841" name="White Assassin Transformation Scroll" type="POTION" icon="icon.scroll_of_verification_i06">
+	<!-- Transforms you into White Assassin for 20 min. Effect remains after death. \\nWhite Assassin Transformation: Max HP/MP +7%, P../M. Accuracy +2, P./M. Atk. +3%, P./M. Def. +3%, Atk. Spd. +5%, M. Critical Rate +20, Speed +5. \\n -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91842" name="Einhasad's Protection" type="SCROLL" icon="icon.etc_dragons_blood_i03">
+	<!-- When used, Hunting XP/SP Gain when hunting +100% for 1 hour. Cooldown 1 minute. The effect remains active even after death.\\n -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91843" name="Hero’s HP Potion" type="POTION" icon="icon.etc_lesser_potion_red_i00">
+	<!-- After instant 500 HP Recovery, CP Recovery with remaining points. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91844" name="Warrior's MP Potion" type="POTION" icon="icon.etc_lesser_potion_blue_i00">
+	<!-- A magic potion that recovers MP. \\n -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91845" name="Buying My House Guide 1" type="SCROLL" icon="icon.etc_book_building_01">
+	<!-- Guidebook that Little Pig has found to buy a house. Wild Orc spread them all over Aden. It's a set with Buying My House Guide 2 and Buying My House Unsupported Fight. Find them all and take them to Little Pig to receive a Pig Coin Bank. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91846" name="Buying My House Guide 2" type="SCROLL" icon="icon.etc_book_building_02">
+	<!-- Guidebook that Little Pig has found to buy a house. Wild Orc spread them all over Aden. It's a set with Buying My House Guide 1 and Buying My House Unsupported Fight. Find them all and take them to Little Pig to receive a Pig Coin Bank. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91847" name="Buying My House Unsupported Fight" type="SCROLL" icon="icon.etc_book_building_03">
+	<!-- Guidebook that Little Pig has found to buy a house. Wild Orc spread them all over Aden. It's a set with Buying My House Guide 1 and Buying My House Guide 2. Find them all and take them to Little Pig to receive a Pig Coin Bank. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91848" name="Pig Coin Bank" type="NONE" icon="icon.etc_piggy_bank">
+	<!-- Little Pig's precious coin bank. Receive an event reward. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91849" name="Golden Pig Coin Bank" type="NONE" icon="icon.etc_golden_piggy_bank">
+	<!-- Little Pig's special coin bank. Receive an event reward. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91850" name="Pig Coin Bank" type="NONE" icon="icon.etc_piggy_bank">
+	<!-- Little Pig's precious coin bank. Receive an event reward. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91851" name="Golden Pig Coin Bank" type="NONE" icon="icon.etc_golden_piggy_bank">
+	<!-- Little Pig's special coin bank. Receive an event reward. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91852" name="Little Pig Blessing Star Candy" type="POTION" icon="icon.etc_whiteday_candy_i03">
+	<!-- Recharges 30,000 Sayha's Grace Points. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91853" name="Ancient Imperial Treasure Chest" type="NONE" icon="icon.bm_elmoaden_box">
+	<!-- Double-click to obtain 1 Special Dragon's Fruit and 1 Dragon's Special Elixir, and either an Ancient Imperial Gold Box or Silver Box. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91854" name="Ancient Imperial Gold Box" type="NONE" icon="icon.bm_elmoaden_gold_box">
+	<!-- Double-click to obtain one of the following: S-grade Weapon/Armor Pack, Stable Weapon/Armor Enchant Scroll (S-grade), Dimensional Soul, Armor Jewel. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91855" name="Ancient Imperial Silver Box" type="NONE" icon="icon.bm_elmoaden_silver_box">
+	<!-- Double-click to obtain 1 of the following: Rare Accessory Lv. 3, Sealed Rune Lv.11-13, Sayha's Silver Blessing, Sayha's Gold Blessing, Einhasad's Protection. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91856" name="Dragon's Special Elixir" type="SCROLL" icon="icon.bm_dragon_posion">
+	<!-- When used, XP/SP Gain +50%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, P/M. Critical Rate +30, P./M. Critical Damage +10%, Atk. Spd./Casting Spd. +50, HP +2500, MP +1500, CP +2500, HP/MP Recovery Bonus +10, Sayha's Grace Consumption Speed -20% for 20 minutes. Has a chance to recover 5% of damage dealt to enemy as HP.\\n<Caution> When Dragon's Special Elixir is used while having Dragon's Miracle Potion applied, the effect will change to that of the Dragon's Special Elixir. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91857" name="Intermediate HP Potion" type="POTION" icon="icon.etc_lesser_potion_red_i00">
+	<!-- After instant 100 HP Recovery, CP Recovery with remaining points. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="1" price="2000"/>
+	</item>
+
+	<item id="91858" name="Activated Red Arc" type="SCROLL" icon="icon.r99_soul_stone_i00">
+	<!-- u,<Magic Lamp 1st Place Reward>\\nActivated Arc. Recharges 100,000,000 XP and 2,700,000 SP.\\nCan’t be shred with characters higher than your own level. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91859" name="Activated Purple Arc" type="SCROLL" icon="icon.r99_soul_stone_i05">
+	<!-- u,<Magic Lamp 2nd Place Reward>\\nActivated Arc. Recharges 30,000,000 XP and 810,000 SP.\\nCan’t be shred with characters higher than your own level. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91860" name="Activated Blue Arc" type="SCROLL" icon="icon.r99_soul_stone_i02">
+	<!-- u,<Magic Lamp 3rd Place Reward>\\nActivated Arc. Recharges 10,000,000 XP and 270,000 SP.\\nCan’t be shred with characters higher than your own level. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91861" name="Activated Green Arc" type="SCROLL" icon="icon.r99_soul_stone_i04">
+	<!-- u,<Magic Lamp 4th Place Reward>\\nActivated Arc. Recharges 5,000,000 XP and 135,000 SP.\\nCan’t be shred with characters higher than your own level. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="91862" name="Dragon's Belt" type="LIGHT" body-part="BELT" icon="icon.r2_belt_i01">
+	<!-- Belt imbued with the Dragon's power. Can enchant up to +10 with Enchant Scroll: Dragon's Belt. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="14.0"/>
+		</stats>
+	</armor>
+
+	<item id="91863" name="Enchant Scroll: Dragon's Belt" type="ENCHANT_ARMOR" icon="icon.etc_blesscharm_ward_val_i00">
+	<!-- Enchant scroll for Dragon's Belt. Can enchant up to +10. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91864" name="Dragon's Belt Box" type="NONE" icon="icon.etc_readybox_bronze">
+	<!-- Double-click to obtain 1 Dragon's Belt and 10 Enchant Scroll: Dragon's Belt.  -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91865" name="PC Cafe Event Pa'agrio's Summoning Stick" type="NONE" icon="icon.etc_imperial_scepter_i00">
+	<!-- Double-click to spawn one of the 2 types of Orc Monsters. Cooldown 5 seconds. -->
+		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<weapon id="91866" name="PC Cafe Event Excalibur" type="TWO_HAND_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_plenitas_i00">
+	<!-- Enchant with the PC Cafe Event Excalibur and get the best enchantment! -->
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false"/>
+		<attributes weight="100" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="92.0"/>
+			<stat type="mAtk" value="54.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<item id="91867" name="PC Cafe Event Enchant Scroll" type="ENCHANT_WEAPON" icon="icon.yogi_scroll_of_enchant_weapon_grade_i00">
+	<!-- An enchant scroll you can use on PC Cafe Event Excalibur. -->
+		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91868" name="PC Cafe Event Special Enchant Scroll" type="ENCHANT_WEAPON" icon="icon.yogi_scroll_of_enchant_weapon_grade_i00">
+	<!-- An enchant scroll you can use on PC Cafe Event Excalibur. Even if enchantment fails, the item will not be crystallized and will retain its enchant level. Cannot use on weapons above +7. -->
+		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="91869" name="Castle Siege Event Support Box" type="NONE" icon="icon.bm_pirate_battle_box">
+	<!-- A box containing support items for the Castle Siege event. -->
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91870" name="Castle Siege Event Gem Box" type="NONE" icon="icon.bm_special_jewelbox_lv5">
+	<!-- A box containing support items for the Castle Siege event. -->
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91871" name="Castle Siege Event Rare Accessory Pack" type="NONE" icon="icon.ev_charge_box">
+	<!-- A box containing support items for the Castle Siege event. -->
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91872" name="Castle Siege Event Weapon Support Box" type="NONE" icon="icon.sayha2017_box_i01">
+	<!-- A box containing support items for the Castle Siege event. -->
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91873" name="Castle Siege Event Armor Support Box" type="NONE" icon="icon.sayha2017_box_i02">
+	<!-- A box containing support items for the Castle Siege event. -->
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="91874" name="Castle Siege Event Agathion Pack" type="NONE" icon="icon.npoint_earthworm_30day_box">
+	<!-- A box containing support items for the Castle Siege event. -->
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<armor id="91875" name="Kamael Dark Appearance" type="HEAVY" body-part="ALL_DRESS" icon="icon.gomdori_chest_change">
+	<!-- Appearance of dark Kamael. Hair accessories, weapon, and magic armor are not removed. -->
+		<restriction freightable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="91876" name="Kamael White Appearance" type="HEAVY" body-part="ALL_DRESS" icon="icon.gomdori_chest_change">
+	<!-- Appearance of white Kamael. Hair accessories, weapon, and magic armor are not removed. -->
+		<restriction freightable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<weapon id="91877" name="Warrior's Ancient Sword" type="ANCIENT_SWORD" body-part="TWO_HAND" icon="icon.weapon_tulwar_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1530" price="244000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="35.0"/>
+			<stat type="mAtk" value="21.0"/>
+			<stat type="rCrit" value="10.0"/>
+			<stat type="accCombat" value="5.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="15.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="91878" name="Katzbalger" type="ANCIENT_SWORD" body-part="TWO_HAND" icon="icon.weapon_tulwar_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1530" price="1400000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="102.0"/>
+			<stat type="mAtk" value="54.0"/>
+			<stat type="rCrit" value="10.0"/>
+			<stat type="accCombat" value="5.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="15.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="91879" name="Field Sword" type="ANCIENT_SWORD" body-part="TWO_HAND" icon="icon.weapon_tulwar_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1530" price="967000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="87.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="10.0"/>
+			<stat type="accCombat" value="5.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="15.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="91880" name="Military Talwar" type="ANCIENT_SWORD" body-part="TWO_HAND" icon="icon.weapon_tulwar_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1530" price="644000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="71.0"/>
+			<stat type="mAtk" value="39.0"/>
+			<stat type="rCrit" value="10.0"/>
+			<stat type="accCombat" value="5.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="15.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="91881" name="Talwar" type="ANCIENT_SWORD" body-part="TWO_HAND" icon="icon.weapon_tulwar_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1530" price="409000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="57.0"/>
+			<stat type="mAtk" value="26.0"/>
+			<stat type="rCrit" value="10.0"/>
+			<stat type="accCombat" value="5.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="15.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="91882" name="Saber Tooth" type="ANCIENT_SWORD" body-part="TWO_HAND" icon="icon.weapon_invincible_blade_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1530" price="6130000" commission-type="OTHER_ITEM"/>
+		<crystal type="C"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="172.0"/>
+			<stat type="mAtk" value="91.0"/>
+			<stat type="rCrit" value="10.0"/>
+			<stat type="accCombat" value="5.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="15.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="91883" name="Immortal Edge" type="ANCIENT_SWORD" body-part="TWO_HAND" icon="icon.weapon_invincible_blade_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1530" price="4300000" commission-type="OTHER_ITEM"/>
+		<crystal type="C"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="153.0"/>
+			<stat type="mAtk" value="83.0"/>
+			<stat type="rCrit" value="10.0"/>
+			<stat type="accCombat" value="5.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="15.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="91884" name="Schlager" type="ANCIENT_SWORD" body-part="TWO_HAND" icon="icon.weapon_schlaeger_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1530" price="2290000" commission-type="OTHER_ITEM"/>
+		<crystal type="C"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="135.0"/>
+			<stat type="mAtk" value="67.0"/>
+			<stat type="rCrit" value="10.0"/>
+			<stat type="accCombat" value="5.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="15.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="91885" name="Dismantler" type="ANCIENT_SWORD" body-part="TWO_HAND" icon="icon.weapon_dismantler_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1530" price="13100000" commission-type="OTHER_ITEM"/>
+		<crystal type="B"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="214.0"/>
+			<stat type="mAtk" value="111.0"/>
+			<stat type="rCrit" value="10.0"/>
+			<stat type="accCombat" value="5.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="15.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="91886" name="Innominate Victory" type="ANCIENT_SWORD" body-part="TWO_HAND" icon="icon.weapon_nameless_victory_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1530" price="8680000" commission-type="OTHER_ITEM"/>
+		<crystal type="B"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="193.0"/>
+			<stat type="mAtk" value="102.0"/>
+			<stat type="rCrit" value="10.0"/>
+			<stat type="accCombat" value="5.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="15.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="91887" name="Durendal" type="ANCIENT_SWORD" body-part="TWO_HAND" icon="icon.weapon_death_bringer_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1530" price="26968400" commission-type="OTHER_ITEM"/>
+		<crystal type="A"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="277.0"/>
+			<stat type="mAtk" value="137.0"/>
+			<stat type="rCrit" value="10.0"/>
+			<stat type="accCombat" value="5.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="15.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="91888" name="Undertaker" type="ANCIENT_SWORD" body-part="TWO_HAND" icon="icon.weapon_death_bringer_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1530" price="20741000" commission-type="OTHER_ITEM"/>
+		<crystal type="A"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="256.0"/>
+			<stat type="mAtk" value="129.0"/>
+			<stat type="rCrit" value="10.0"/>
+			<stat type="accCombat" value="5.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="15.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="91889" name="Divine Pain" type="ANCIENT_SWORD" body-part="TWO_HAND" icon="icon.weapon_pain_of_godness_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1530" price="14098000" commission-type="OTHER_ITEM"/>
+		<crystal type="A"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="235.0"/>
+			<stat type="mAtk" value="121.0"/>
+			<stat type="rCrit" value="10.0"/>
+			<stat type="accCombat" value="5.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="15.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="91890" name="Gram" type="ANCIENT_SWORD" body-part="TWO_HAND" icon="icon.weapon_gram_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1530" price="42759400" commission-type="OTHER_ITEM"/>
+		<crystal type="S"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="4" spiritshots="4"/>
+		<stats>
+			<stat type="pAtk" value="310.0"/>
+			<stat type="mAtk" value="151.0"/>
+			<stat type="rCrit" value="10.0"/>
+			<stat type="accCombat" value="5.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="15.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="91891" name="Warrior's Rapier" type="RAPIER" body-part="RIGHT_HAND" icon="icon.weapon_sealed_rapier_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1300" price="244000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="30.0"/>
+			<stat type="mAtk" value="26.0"/>
+			<stat type="rCrit" value="10.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="406.0"/>
+			<stat type="randomDamage" value="20.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="91892" name="Grand Épée" type="RAPIER" body-part="RIGHT_HAND" icon="icon.weapon_rapier_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1300" price="1800000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="88.0"/>
+			<stat type="mAtk" value="57.0"/>
+			<stat type="rCrit" value="10.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="406.0"/>
+			<stat type="randomDamage" value="20.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="91893" name="Épée" type="RAPIER" body-part="RIGHT_HAND" icon="icon.weapon_rapier_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1300" price="1400000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="76.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="10.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="406.0"/>
+			<stat type="randomDamage" value="20.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="91894" name="Estoc" type="RAPIER" body-part="RIGHT_HAND" icon="icon.weapon_rapier_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1300" price="967000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="61.0"/>
+			<stat type="mAtk" value="41.0"/>
+			<stat type="rCrit" value="10.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="406.0"/>
+			<stat type="randomDamage" value="20.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="91895" name="Fleuret" type="RAPIER" body-part="RIGHT_HAND" icon="icon.weapon_rapier_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1300" price="644000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="49.0"/>
+			<stat type="mAtk" value="32.0"/>
+			<stat type="rCrit" value="10.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="406.0"/>
+			<stat type="randomDamage" value="20.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="91896" name="Admiral's Estoc" type="RAPIER" body-part="RIGHT_HAND" icon="icon.weapon_blink_slasher_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1300" price="6130000" commission-type="OTHER_ITEM"/>
+		<crystal type="C"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="149.0"/>
+			<stat type="mAtk" value="110.0"/>
+			<stat type="rCrit" value="10.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="406.0"/>
+			<stat type="randomDamage" value="20.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="91897" name="Blinzlasher" type="RAPIER" body-part="RIGHT_HAND" icon="icon.weapon_blink_slasher_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1300" price="4300000" commission-type="OTHER_ITEM"/>
+		<crystal type="C"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="133.0"/>
+			<stat type="mAtk" value="100.0"/>
+			<stat type="rCrit" value="10.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="406.0"/>
+			<stat type="randomDamage" value="20.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="91898" name="Chevalier Rapier" type="RAPIER" body-part="RIGHT_HAND" icon="icon.weapon_soldat_estoc_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1300" price="2870000" commission-type="OTHER_ITEM"/>
+		<crystal type="C"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="116.0"/>
+			<stat type="mAtk" value="90.0"/>
+			<stat type="rCrit" value="10.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="406.0"/>
+			<stat type="randomDamage" value="20.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="91899" name="Soldat Estoc" type="RAPIER" body-part="RIGHT_HAND" icon="icon.weapon_soldat_estoc_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1300" price="2290000" commission-type="OTHER_ITEM"/>
+		<crystal type="C"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="102.0"/>
+			<stat type="mAtk" value="73.0"/>
+			<stat type="rCrit" value="10.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="406.0"/>
+			<stat type="randomDamage" value="20.0"/>
+		</stats>
+	</weapon>
+
 </list>

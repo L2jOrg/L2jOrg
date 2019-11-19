@@ -1,565 +1,660 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <armor id="71200" name="Agathion Gowther" icon="BranchIcon.icon.g_bm_gowther_agathion_charm_lv1_jp">
-        <!-- Activates the power of the Agathion Gowther. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Gowther Lv. 3. -->
-        <set name="bodypart" val="agathion"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <skills>
-            <skill id="56041" level="1"/>
-        </skills>
-    </armor>
-    <armor id="71201" name="Agathion Escanor" icon="BranchIcon.icon.g_bm_escanor_agathion_charm_lv1_jp">
-        <!-- Activates the power of the Agathion Escanor. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Escanor Lv. 3. -->
-        <set name="bodypart" val="agathion"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <skills>
-            <skill id="56042" level="1"/>
-        </skills>
-    </armor>
-    <armor id="71202" name="Agathion Meliodas" icon="BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp">
-        <!-- Activates the power of the Agathion Meliodas. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. -->
-        <set name="bodypart" val="agathion"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction sellable="false"/>
-        <skills>
-            <skill id="56034" level="1"/>
-        </skills>
-    </armor>
-    <armor id="71203" name="Agathion Elizabeth" icon="BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp">
-        <!-- Activates the power of the Agathion Elizabeth. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. -->
-        <set name="bodypart" val="agathion"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction sellable="false"/>
-        <skills>
-            <skill id="56035" level="1"/>
-        </skills>
-    </armor>
-    <armor id="71204" name="Agathion Hawk" icon="BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp">
-        <!-- Activates the power of the Agathion Hawk. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. -->
-        <set name="bodypart" val="agathion"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction sellable="false"/>
-        <skills>
-            <skill id="56036" level="1"/>
-        </skills>
-    </armor>
-    <armor id="71205" name="Agathion Ban" icon="BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp">
-        <!-- Activates the power of the Agathion Ban. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. -->
-        <set name="bodypart" val="agathion"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction sellable="false"/>
-        <skills>
-            <skill id="56037" level="1"/>
-        </skills>
-    </armor>
-    <armor id="71206" name="Agathion Diane" icon="BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp">
-        <!-- Activates the power of the Agathion Diane. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. -->
-        <set name="bodypart" val="agathion"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction sellable="false"/>
-        <skills>
-            <skill id="56038" level="1"/>
-        </skills>
-    </armor>
-    <armor id="71207" name="Agathion King" icon="BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp">
-        <!-- Activates the power of the Agathion King. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. -->
-        <set name="bodypart" val="agathion"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction sellable="false"/>
-        <skills>
-            <skill id="56039" level="1"/>
-        </skills>
-    </armor>
-    <armor id="71208" name="Agathion Merlin" icon="BranchIcon.icon.g_bm_merlin_agathion_charm_lv1_jp">
-        <!-- Activates the power of the Agathion Merlin. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. -->
-        <set name="bodypart" val="agathion"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction sellable="false"/>
-        <skills>
-            <skill id="56040" level="1"/>
-        </skills>
-    </armor>
-    <armor id="71209" name="Agathion Gowther" icon="BranchIcon.icon.g_bm_gowther_agathion_charm_lv1_jp">
-        <!-- Activates the power of the Agathion Gowther. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. -->
-        <set name="bodypart" val="agathion"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction sellable="false"/>
-        <skills>
-            <skill id="56041" level="1"/>
-        </skills>
-    </armor>
-    <armor id="71210" name="Agathion Escanor" icon="BranchIcon.icon.g_bm_escanor_agathion_charm_lv1_jp">
-        <!-- Activates the power of the Agathion Escanor. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. -->
-        <set name="bodypart" val="agathion"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction sellable="false"/>
-        <skills>
-            <skill id="56042" level="1"/>
-        </skills>
-    </armor>
-    <item id="71211" name="Seven Sins Agathion Growth Book" icon="BranchIcon.icon.g_bm_7th_sins_enchant_jp">
-        <!-- For Seven Sins Agathion enchantment. Enchantment level does not change in case of enchant failure. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71212" name="Seven Sins Agathion Upgrade Stone" icon="BranchIcon.icon.g_bm_7th_sins_upgrade_jp">
-        <!-- The item necessary to upgrade a Seven Sins Agathion Blacksmith Ferris in Aden can exhcnage a +7 Seven Sins Agathion Lv. 1 to a Seven Sins Agathion Lv. 2. Different amount of Seven Sins Agathion Upgrade Stones are needed to upgrade Agathion of different types and levels. -->
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <armor id="71213" name="Merlin's Magical Bracelet" icon="BranchIcon.icon.g_bm_7th_sins_lbracelet_30d_jp">
-        <!-- 30-day item. A magical bracelet made by Merlin. If equipped, 1 main and 2 side Agathion slots are available. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="lbracelet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <set name="time" val="43200"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <skills>
-            <skill id="51025" level="1"/> <!-- Expand Primary and Secondary Agathion Slots -->
-        </skills>
-    </armor>
-    <item id="71214" name="Merlin's Magical Bracelet Box (30-day)" icon="icon.sayha2017_box_i03">
-        <!-- Double-click to obtain Merlin's Magical Bracelet (30-day). Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. Will be deleted after the event. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71215" name="Seven Deadly Sins Special Pie" icon="BranchSys3.icon1.g_torun_gingerbread_pl">
-        <!-- Special item of the Seven Deadly Sins squad. When in use for 20 min. activates the following effects: Might, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration, Blessed Body, Blessed Soul, Magic Barrier. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. Will be deleted after the event. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71216" name="Seven Deadly Sins Special Beer" icon="BranchSys3.icon1.g_beerfestival_octoberfest_beer">
-        <!-- Special item of the Seven Deadly Sins squad. When in use for 20 min. activates Chant of Victory Lv. 1. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. Will be deleted after the event. <Attention>. Does not stack with Prophecy type buffs. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71217" name="Seven Deadly Sins Card - Meliodas" icon="BranchIcon.icon.icon_card_sin_meli">
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71218" name="Seven Deadly Sins Card - Fisherman Meliodas" icon="BranchIcon.icon.icon_card_sin_meli_fish">
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71219" name="Seven Deadly Sins Card - Diane" icon="BranchIcon.icon.icon_card_sin_meli_dian">
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71220" name="Seven Deadly Sins Card - Ban" icon="BranchIcon.icon.icon_card_sin_meli_van">
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71221" name="Seven Deadly Sins Card - King" icon="BranchIcon.icon.icon_card_sin_king">
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71222" name="Seven Deadly Sins Card - Gowther" icon="BranchIcon.icon.icon_card_sin_go">
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71223" name="Seven Deadly Sins Card - Merlin" icon="BranchIcon.icon.icon_card_sin_merlin">
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71224" name="Seven Deadly Sins Card - Escanor" icon="BranchIcon.icon.icon_card_sin_esca">
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71225" name="Liones Kingdom Card - Elizabeth Liones" icon="BranchIcon.icon.icon_card_sin_eli">
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71226" name="Dreyfus Card - Gilthunder" icon="BranchIcon.icon.icon_card_sin_meli_gil">
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71227" name="Dreyfus Card - Howzer" icon="BranchIcon.icon.icon_card_sin_meli_how">
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71228" name="Hendrickson Card - Jericho" icon="BranchIcon.icon.icon_card_sin_meli_yuri">
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71229" name="Ten Commandments Card - Zeldris" icon="BranchIcon.icon.icon_card_sin_jeru">
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71230" name="Ten Commandments Card - Estarossa" icon="BranchIcon.icon.icon_card_sin_meli_rotsa">
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71231" name="Ten Commandments Card - Drole" icon="BranchIcon.icon.icon_card_sin_meli_tung">
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71232" name="Britannia" icon="BranchIcon.icon.icon_card_sin_meli_bri">
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71233" name="Domestic Animal Card - Hawk" icon="BranchIcon.icon.icon_card_sin_meli_hawk">
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71234" name="Legendary Knights Card - Seven Deadly Sins" icon="BranchIcon.icon.icon_card_sin_meli_legend">
-        <!-- Cannot be exchanged, dropped, destroyed, sold or shared within account. Can be stored in a private warehouse. Will be deleted after the event. -->
-        <set name="weight" val="120"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="71235" name="Purse with the Seven Deadly Sins Cards" icon="icon.card_event_dragon_pocket">
-        <!-- Double-click to obtain 7 cards with Seven Deadly Sins squad characters. Intended for Lv. 40 and higher. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. Will be deleted after the event. -->
-        <set name="default_action" val="CAPSULE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71236" name="Package: Legendary Knights Card - Seven Deadly Sins (2 h.)" icon="BranchIcon.icon.icon_card_sin_meli_legend">
-        <!-- Double-click to obtain Legendary Knights Card - Seven Deadly Sins (2 h.). Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. Will be deleted after the event. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <armor id="71237" name="Agathion Hawk - Lv. 3" icon="BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp">
-        <!-- 7-day item. Activates the power of the Agathion Hawk. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Cannot be enchanted, exchanged, dropped, sold or shared within account. Can be stored in a private warehouse. Will be deleted after the event. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <item id="71238" name="+5 Agathion Hawk - Lv. 3 (7-day) Box" icon="icon.sayha2017_box_i02">
-        <!-- Double-click to obtain +5 Agathion Hawk - Lv. 3 (7-day). Will be deleted after the event. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <armor id="71239" name="Merlin's Magical Bracelet" icon="BranchIcon.icon.g_bm_7th_sins_lbracelet_30d_jp">
-        <!-- 7-day item. A magical bracelet made by Merlin. If equipped, 1 main and 2 side Agathion slots are available. Cannot be enchanted, exchanged, dropped, sold or shared within account. Can be stored in a private warehouse. Will be deleted after the event. -->
-        <set name="bodypart" val="lbracelet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <item id="71240" name="Merlin's Magical Bracelet Box (7-day)" icon="icon.sayha2017_box_i04">
-        <!-- Double-click to obtain Merlin's Magical Bracelet (7-day). Cannot be enchanted, exchanged, dropped, sold or shared within account. Can be stored in a private warehouse. Will be deleted after the event. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71241" name="XP and SP Rune - 50%" icon="icon.skill19226">
-        <!-- 1-hour item. When in inventory, Acquired XP/ SP +50%. Cannot be exchanged, dropped, sold or shared within account. Can be stored in a private warehouse. -->
-        <set name="time" val="60"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="71242" name="XP and SP Rune - 50%" icon="icon.skill19226">
-        <!-- 5-hour item. When in inventory, Acquired XP/ SP +50%. Cannot be exchanged, dropped, sold or shared within account. Can be stored in a private warehouse. -->
-        <set name="time" val="300"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="71243" name="XP and SP Rune - 50%" icon="icon.skill19226">
-        <!-- 1-day item. When in inventory, Acquired XP/ SP +50%. Cannot be exchanged, dropped, sold or shared within account. Can be stored in a private warehouse. -->
-        <set name="time" val="1440"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="71244" name="XP and SP Rune - 50%" icon="icon.skill19226">
-        <!-- 7-day item. When in inventory, Acquired XP/ SP +50%. Cannot be exchanged, dropped, sold or shared within account. Can be stored in a private warehouse. -->
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="71245" name="XP and SP Rune - 50%" icon="icon.skill19226">
-        <!-- 30-day item. When in inventory, Acquired XP/ SP +50%. Cannot be exchanged, dropped, sold or shared within account. Can be stored in a private warehouse. -->
-        <set name="time" val="43200"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="71246" name="Package: XP and SP Rune - 50% (1 hour)" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain XP and SP Rune - 50% (1 hour). Cannot be exchanged, dropped or sold. Can be stored in a private warehouse and shared within account. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71247" name="Package: XP and SP Rune - 50% (5 hours)" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain XP and SP Rune - 50% (5 hours). Cannot be exchanged, dropped or sold. Can be stored in a private warehouse and shared within account. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71248" name="Package: XP and SP Rune - 50% (1-day)" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain XP and SP Rune - 50% (1-day). Cannot be exchanged, dropped or sold. Can be stored in a private warehouse and shared within account. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71249" name="Package: XP and SP Rune - 50% (7-day)" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain XP and SP Rune - 50% (7-day). Cannot be exchanged, dropped or sold. Can be stored in a private warehouse and shared within account. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71250" name="Package: XP and SP Rune - 50% (30-day)" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain XP and SP Rune - 50% (30-day). Cannot be exchanged, dropped or sold. Can be stored in a private warehouse and shared within account. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71251" name="Agathion Box: Dryad" icon="icon.npoint_antaras_30day_box">
-        <!-- Double-click to obtain Agathion Dryad. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse and shared within account. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71252" name="Agathion Box: Bugbear" icon="icon.npoint_tauti_30day_box">
-        <!-- Double-click to obtain Agathion Bugbear. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse and shared within account. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71253" name="Agathion Box: Griffin" icon="icon.npoint_valakas_30day_box">
-        <!-- Double-click to obtain Agathion Griffin. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse and shared within account. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71254" name="Mysterious Soulshot Pack (No-grade)" icon="br_cashtex.item.br_cash_pack_of_soulshot_a_i00">
-        <!-- Double-click to obtain 1000 Mysterious Soulshots (No-grade). Cannot be exchanged, dropped or sold. Can be stored in a private warehouse and shared within account. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71255" name="Mysterious Soulshot Pack (D-grade)" icon="br_cashtex.item.br_cash_pack_of_soulshot_d_i00">
-        <!-- Double-click to obtain 1000 Mysterious Soulshots (D-grade). Cannot be exchanged, dropped or sold. Can be stored in a private warehouse and shared within account. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71256" name="Mysterious Soulshot Pack (C-grade)" icon="br_cashtex.item.br_cash_pack_of_soulshot_c_i00">
-        <!-- Double-click to obtain 1000 Mysterious Soulshots (C-grade). Cannot be exchanged, dropped or sold. Can be stored in a private warehouse and shared within account. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71257" name="Mysterious Soulshot Pack (B-grade)" icon="br_cashtex.item.br_cash_pack_of_soulshot_b_i00">
-        <!-- Double-click to obtain 1000 Mysterious Soulshots (B-grade). Cannot be exchanged, dropped or sold. Can be stored in a private warehouse and shared within account. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71258" name="Mysterious Soulshot Pack (A-grade)" icon="br_cashtex.item.br_cash_pack_of_soulshot_a_i00">
-        <!-- Double-click to obtain 1000 Mysterious Soulshots (A-grade). Cannot be exchanged, dropped or sold. Can be stored in a private warehouse and shared within account. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71259" name="Mysterious Blessed Spiritshot Pack (No-grade)" icon="br_cashtex.item.br_cash_pack_of_spiritshot_a_i00">
-        <!-- Double-click to obtain 10000 Mysterious Blessed Spiritshot (No-grade). Cannot be exchanged, dropped or sold. Can be stored in a private warehouse and shared within account. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71260" name="Mysterious Blessed Spiritshot Pack (D-grade)" icon="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_d_i00">
-        <!-- Double-click to obtain 10000 Mysterious Blessed Spiritshot (D-grade). Cannot be exchanged, dropped or sold. Can be stored in a private warehouse and shared within account. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71261" name="Mysterious Blessed Spiritshot Pack (C-grade)" icon="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_c_i00">
-        <!-- Double-click to obtain 10000 Mysterious Blessed Spiritshot (C-grade). Cannot be exchanged, dropped or sold. Can be stored in a private warehouse and shared within account. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71262" name="Mysterious Blessed Spiritshot Pack (B-grade)" icon="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_b_i00">
-        <!-- Double-click to obtain 10000 Mysterious Blessed Spiritshot (B-grade). Cannot be exchanged, dropped or sold. Can be stored in a private warehouse and shared within account. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71263" name="Mysterious Blessed Spiritshot Pack (A-grade)" icon="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_a_i00">
-        <!-- Double-click to obtain 10000 Mysterious Blessed Spiritshot (A-grade). Cannot be exchanged, dropped or sold. Can be stored in a private warehouse and shared within account. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71264" name="Name Change Ticket Box" icon="icon.etc_pi_gift_box_i01">
-        <!-- Box containing Name Change Ticket. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse and shared within account. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71265" name="Gender Change Ticket Box" icon="icon.etc_pi_gift_box_i01">
-        <!-- Box containing Gender Change Ticket. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse and shared within account. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71266" name="Change Clan Name Ticket Box" icon="icon.etc_pi_gift_box_i01">
-        <!-- Box containing Change Clan Name Ticket. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse and shared within account. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71267" name="Temporary Hero's Weapon Coupon - Lv. 54" icon="icon.etc_level_bustup_ticket_i00">
-        <!-- Take it to Dimenstional Merchant to exchange for a +10 B-grade weapon (15-day). For characters Lv. 54 or above. Cannot be exchanged, dropped, sold or shared within account. Can be stored in a private warehouse. -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71268" name="VIP Gain Scroll" icon="BranchIcon.Icon.g_bm_vip_potion_i00">
-        <!-- Allows to regain 27 VIP Points when used. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="weight" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71269" name="Good VIP Gain Scroll" icon="BranchIcon.Icon.g_bm_vip_potion_i00">
-        <!-- Allows to regain 273 VIP Points when used. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="weight" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71270" name="Venir's Talisman Fragment" icon="icon.bm_ensoul_stone_PvP_empty">
-        <!-- Material used to upgrade Venir's Talisman. If upgrade fails, the talisman level value will drop to 1. Cannot be dropped. -->
-        <set name="etcitem_type" val="MATERIAL"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <armor id="71271" name="Venir's Talisman Lv. 1" icon="icon.etc_all_stat_talisman_i00">
-        <!-- When equipped, CON +1. Can be upgraded to higher level using Venir's Talisman Fragment. Does not disappear if upgrade fails. Effects from two such talismans do not stack. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="71272" name="Venir's Talisman Lv. 2" icon="icon.etc_all_stat_talisman_i00">
-        <!-- When equipped, CON, MEN +1. Can be upgraded to higher level using Venir's Talisman Fragment. If upgrade fails, you'll get Venir's Talisman Lv. 1. Effects from two such talismans do not stack. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="71273" name="Venir's Talisman Lv. 3" icon="icon.etc_all_stat_talisman_i00">
-        <!-- When equipped, CON, MEN, DEX +1. Can be upgraded to higher level using Venir's Talisman Fragment. If upgrade fails, you'll get Venir's Talisman Lv. 1. Effects from two such talismans do not stack. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="71274" name="Venir's Talisman Lv. 4" icon="icon.etc_all_stat_talisman_i00">
-        <!-- When equipped, CON, MEN, DEX, WIT +1. Can be upgraded to higher level using Venir's Talisman Fragment. If upgrade fails, you'll get Venir's Talisman Lv. 1. Effects from two such talismans do not stack. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="71275" name="Venir's Talisman Lv. 5" icon="icon.etc_all_stat_talisman_i00">
-        <!-- When equipped, CON, MEN, DEX, WIT, STR +1. Can be upgraded to higher level using Venir's Talisman Fragment. If upgrade fails, you'll get Venir's Talisman Lv. 1. Effects from two such talismans do not stack. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="71276" name="Venir's Talisman Lv. 6" icon="icon.etc_all_stat_talisman_i00">
-        <!-- When equipped, CON, MEN, DEX, WIT, STR, INT +1. Can be upgraded to higher level using Venir's Talisman Fragment. If upgrade fails, you'll get Venir's Talisman Lv. 6. Effects from two such talismans do not stack. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="71277" name="Venir's Talisman Lv. 7" icon="icon.etc_all_stat_talisman_i01">
-        <!-- When equipped, CON +2, MEN, DEX, WIT, STR, INT +1. Can be upgraded to higher level using Venir's Talisman Fragment. If upgrade fails, you'll get Venir's Talisman Lv. 6. Effects from two such talismans do not stack. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="71278" name="Venir's Talisman Lv. 8" icon="icon.etc_all_stat_talisman_i01">
-        <!-- When equipped, CON, MEN +2, DEX, WIT, STR, INT +1. Can be upgraded to higher level using Venir's Talisman Fragment. If upgrade fails, you'll get Venir's Talisman Lv. 6. Effects from two such talismans do not stack. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="71279" name="Venir's Talisman Lv. 9" icon="icon.etc_all_stat_talisman_i01">
-        <!-- When equipped, CON, MEN, DEX +2, WIT, STR, INT +1. Can be upgraded to higher level using Venir's Talisman Fragment. If upgrade fails, you'll get Venir's Talisman Lv. 6. Effects from two such talismans do not stack. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="71280" name="Venir's Talisman Lv. 10" icon="icon.etc_all_stat_talisman_i01">
-        <!-- When equipped, CON, MEN, DEX, WIT +2, STR, INT +1. Can be upgraded to higher level using Venir's Talisman Fragment. If upgrade fails, you'll get Venir's Talisman Lv. 6. Effects from two such talismans do not stack. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="71281" name="Venir's Talisman Lv. 11" icon="icon.etc_all_stat_talisman_i01">
-        <!-- When equipped, CON, MEN, DEX, WIT, STR +2, INT +1. Can be upgraded to higher level using Venir's Talisman Fragment. If upgrade fails, you'll get Venir's Talisman Lv. 6. Effects from two such talismans do not stack. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="71282" name="Venir's Talisman Lv. 12" icon="icon.etc_all_stat_talisman_i01">
-        <!-- When equipped, CON, MEN, DEX, WIT, STR, INT +2. Additionally has a chance of recovering 4% of damage inflicted on the enemy as HP or 2% as MP. Can be upgraded to higher level using Venir's Talisman Fragment. If upgrade fails, you'll get Venir's Talisman Lv. 12. Effects from two such talismans do not stack. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="71283" name="Venir's Talisman Lv. 13" icon="icon.etc_all_stat_talisman_i02">
-        <!-- When equipped, CON +3, MEN, DEX, WIT, STR, INT +2. Additionally has a chance of recovering 4% of damage inflicted on the enemy as HP or 2% as MP. Can be upgraded to higher level using Venir's Talisman Fragment. If upgrade fails, you'll get Venir's Talisman Lv. 12. Effects from two such talismans do not stack. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="71284" name="Venir's Talisman Lv. 14" icon="icon.etc_all_stat_talisman_i02">
-        <!-- When equipped, CON, MEN +3, DEX, WIT, STR, INT +2. Additionally has a chance of recovering 4% of damage inflicted on the enemy as HP or 2% as MP. Can be upgraded to higher level using Venir's Talisman Fragment. If upgrade fails, you'll get Venir's Talisman Lv. 12. Effects from two such talismans do not stack. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="71285" name="Venir's Talisman Lv. 15" icon="icon.etc_all_stat_talisman_i02">
-        <!-- When equipped, CON, MEN, DEX +3, WIT, STR, INT +2. Additionally has a chance of recovering 4% of damage inflicted on the enemy as HP or 2% as MP. Can be upgraded to higher level using Venir's Talisman Fragment. If upgrade fails, you'll get Venir's Talisman Lv. 12. Effects from two such talismans do not stack. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="71286" name="Venir's Talisman Lv. 16" icon="icon.etc_all_stat_talisman_i02">
-        <!-- When equipped, CON, MEN, DEX, WIT +3, STR, INT +2. Additionally has a chance of recovering 4% of damage inflicted on the enemy as HP or 2% as MP. Can be upgraded to higher level using Venir's Talisman Fragment. If upgrade fails, you'll get Venir's Talisman Lv. 12. Effects from two such talismans do not stack. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="71287" name="Venir's Talisman Lv. 17" icon="icon.etc_all_stat_talisman_i02">
-        <!-- When equipped, CON, MEN, DEX, WIT, STR +3, INT +2. Additionally has a chance of recovering 4% of damage inflicted on the enemy as HP or 2% as MP. Can be upgraded to higher level using Venir's Talisman Fragment. If upgrade fails, you'll get Venir's Talisman Lv. 12. Effects from two such talismans do not stack. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="71288" name="Venir's Talisman Lv. 18" icon="icon.etc_all_stat_talisman_i02">
-        <!-- When equipped, CON, MEN, DEX, WIT, STR, INT +2, P./ M. Skill Cooldown -7%. Additionally, has a chance of recovering 4% of damage inflicted on the enemy as HP or 2% as MP. Effects from two such talismans do not stack. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="71289" name="Venir's Talisman Lv. 19" icon="icon.etc_all_stat_talisman_i02">
-        <!-- When equipped, CON +4, MEN, DEX, WIT, STR, INT +3, P./ M. Skill Cooldown -7%. Additionally, has a chance of recovering 8% of damage inflicted on the enemy as HP or 4% as MP. Effects from two such talismans do not stack. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="71290" name="Venir's Talisman Lv. 20" icon="icon.etc_all_stat_talisman_i02">
-        <!-- When equipped, CON, MEN +4, DEX, WIT, STR, INT +3, P./ M. Skill Cooldown -7%. Additionally, has a chance of recovering 8% of damage inflicted on the enemy as HP or 4% as MP. Effects from two such talismans do not stack. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="71291" name="Venir's Talisman Lv. 21" icon="icon.etc_all_stat_talisman_i02">
-        <!-- When equipped, CON, MEN, DEX +4, WIT, STR, INT +3, P./ M. Skill Cooldown -7%. Additionally, has a chance of recovering 8% of damage inflicted on the enemy as HP or 4% as MP. Effects from two such talismans do not stack. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="71292" name="Venir's Talisman Lv. 22" icon="icon.etc_all_stat_talisman_i02">
-        <!-- When equipped, CON, MEN, DEX, WIT +4, STR, INT +3, P./ M. Skill Cooldown -7%. Additionally, has a chance of recovering 8% of damage inflicted on the enemy as HP or 4% as MP. Effects from two such talismans do not stack. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="71293" name="Venir's Talisman Lv. 23" icon="icon.etc_all_stat_talisman_i02">
-        <!-- When equipped, CON, MEN, DEX, WIT, STR +4, INT +3, P./ M. Skill Cooldown -7%. Additionally, has a chance of recovering 8% of damage inflicted on the enemy as HP or 4% as MP. Effects from two such talismans do not stack. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <armor id="71294" name="Venir's Talisman Lv. 24" icon="icon.etc_all_stat_talisman_i02">
-        <!-- When equipped, CON, MEN, DEX, WIT, STR, INT +4, P./ M. Skill Cooldown -7%. Additionally, has a chance of recovering 8% of damage inflicted on the enemy as HP or 4% as MP. Effects from two such talismans do not stack. Cannot be dropped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-    </armor>
-    <item id="71295" name="Artisan's Scroll: Enchant Weapon (A-grade)" icon="icon.giant_scrl_of_ench_wp_a">
-        <!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears. P. Atk. +5 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus is doubleds. If enchanting is failed, items are not broken into crystals and remain enchanted to prior level. Cannot be applied to items enchanted to +20 or higher. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="71296" name="Workman's Scroll: Enchant Weapon (A-grade)" icon="icon.giant_scrl_of_ench_wp_a">
-        <!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears. P. Atk. +5 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus is doubleds. If enchant is successful the enchant success rate is increased for 1 to 3. If enchanting is failed, items are not broken into crystals and remain enchanted to prior level. Cannot be applied to items enchanted to +20 or higher. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="71297" name="Divine Scroll: Enchant Weapon (A-grade)" icon="icon.giant_scrl_of_ench_wp_a">
-        <!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears. P. Atk. +5 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus is doubleds. Enchanting is safe. Cannot be applied to items enchanted to +12 or higher.\r\n -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="71298" name="Bright Jewel Box" icon="icon.bm_special_jewelbox_lv4">
-        <!-- Double-click to obtain Vital Stone, Diamond, Pearl, Aquamarine, Sapphire, Ruby, Jade, Garnet, Topaz, Red Cat's Eye or Blue Cat's Eye Lv. 4. Cannot be dropped. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71299" name="Bright Jewel Box" icon="icon.bm_special_jewelbox_lv4">
-        <!-- Double-click to obtain Vital Stone, Diamond, Pearl, Aquamarine, Sapphire, Ruby, Jade, Garnet, Topaz, Red Cat's Eye or Blue Cat's Eye Lv. 5. Cannot be dropped. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
+	<armor id="71200" name="Gowther Agathion Lv. 2" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_gowther_agathion_charm_lv1_jp">
+	<!-- An Agathion that activates the power of Gowther. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> Gowther Agathion +7 to upgrade to Lv. 3. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="56041" level="1"/>  <!-- Summon Agathion Gowther -->
+		</skills>
+	</armor>
+
+	<armor id="71201" name="Escanor Agathion Lv. 2" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_escanor_agathion_charm_lv1_jp">
+	<!-- An Agathion that activates the power of Escanor. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> Escanor Agathion +7 to upgrade to Stage 3. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="56042" level="1"/>  <!-- Summon Agathion Escanor -->
+		</skills>
+	</armor>
+
+	<armor id="71202" name="Meliodas Agathion Lv. 3" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp">
+	<!-- An Agathion that activates the power of Meliodas. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
+		<restriction freightable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="56034" level="1"/>  <!-- Summon Agathion Meliodas -->
+		</skills>
+	</armor>
+
+	<armor id="71203" name="Elizabeth Agathion Lv. 3" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp">
+	<!-- An Agathion that activates the power of Elizabeth. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
+		<restriction freightable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="56035" level="1"/>  <!-- Summon Agathion Elizabeth -->
+		</skills>
+	</armor>
+
+	<armor id="71204" name="Hawk Agathion Lv. 3" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp">
+	<!-- An Agathion that activates the power of Hawk. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
+		<restriction freightable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="56036" level="1"/>  <!-- Summon Agathion Hawk -->
+		</skills>
+	</armor>
+
+	<armor id="71205" name="Ban Agathion Lv. 3" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp">
+	<!-- An Agathion that activates the power of Ban. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
+		<restriction freightable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="56037" level="1"/>  <!-- Summon Agathion Ban -->
+		</skills>
+	</armor>
+
+	<armor id="71206" name="Diane Agathion Lv. 3" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp">
+	<!-- An Agathion that activates the power of Diane. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
+		<restriction freightable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="56038" level="1"/>  <!-- Summon Agathion Diane -->
+		</skills>
+	</armor>
+
+	<armor id="71207" name="King Agathion Lv. 3" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp">
+	<!-- An Agathion that activates the power of King. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
+		<restriction freightable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="56039" level="1"/>  <!-- Summon Agathion King -->
+		</skills>
+	</armor>
+
+	<armor id="71208" name="Merlin Agathion Lv. 3" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_merlin_agathion_charm_lv1_jp">
+	<!-- An Agathion that activates the power of Merlin. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
+		<restriction freightable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="56040" level="1"/>  <!-- Summon Agathion Merlin -->
+		</skills>
+	</armor>
+
+	<armor id="71209" name="Gowther Agathion Lv. 3" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_gowther_agathion_charm_lv1_jp">
+	<!-- An Agathion that activates the power of Gowther. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
+		<restriction freightable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="56041" level="1"/>  <!-- Summon Agathion Gowther -->
+		</skills>
+	</armor>
+
+	<armor id="71210" name="Escanor Agathion Lv. 3" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_escanor_agathion_charm_lv1_jp">
+	<!-- An Agathion that activates the power of Escanor. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
+		<restriction freightable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="56042" level="1"/>  <!-- Summon Agathion Escanor -->
+		</skills>
+	</armor>
+
+	<item id="71211" name="Seven Deadly Sins Agathion Book of Growth" type="SEVEN_SINS_AGATHION_ENCHANT" icon="BranchIcon.icon.g_bm_7th_sins_enchant_jp">
+	<!-- Book of Growth for the Seven Deadly Sins Agathion Charms.\\nThe enchant level remains the same even if enchantment fails. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71212" name="Seven Deadly Sins Agathion Upgrade Stone" type="MATERIAL" icon="BranchIcon.icon.g_bm_7th_sins_upgrade_jp">
+	<!-- Material needed to upgrade Seven Deadly Sins Agathions. Talk to Head Blacksmith Ferris of Aden to upgrade +7 Agathions of Stage 1 and Stage 2, and the amount of upgrade stones needed will depend on the type and level of the Agathion. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="71213" name="Merlin's Magic Bracelet" type="NONE" body-part="LEFT_BRACELET" icon="BranchIcon.icon.g_bm_7th_sins_lbracelet_30d_jp">
+	<!-- A magic bracelet prototype made by Merlin. Activates 1 main slot and 2 side slots. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" duration="43200" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="51025" level="1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
+		</skills>
+	</armor>
+
+	<item id="71214" name="Merlin's Magic Bracelet (30-day) Pack" type="NONE" icon="icon.sayha2017_box_i03">
+	<!-- Double-click to obtain Merlin's Magic Bracelet (30-day).  -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="10" immediate-effect="true"/>
+	</item>
+
+	<item id="71215" name="Seven Deadly Sins Special Pie" type="POTION" icon="BranchSys3.icon1.g_torun_gingerbread_pl">
+	<!-- Buff to celebrate the collaboration with Seven Deadly Sins. Might, Haste, Empower, Acument, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration, Blessed Body, Blessed Soul, Magic Barrier applied for 20 minutes.  -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71216" name="Seven Deadly Sins Special Beer" type="SCROLL" icon="BranchSys3.icon1.g_beerfestival_octoberfest_beer">
+	<!-- Buff to celebrate the collaboration with Seven Deadly Sins. Chant of Victory Lv. 1 applied for 20 minutes. \\n<Warning>\\n Cannot be used with Prophecy type effects. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71217" name="Seven Deadly Sins Card: Meliodas" type="CARD" icon="BranchIcon.icon.icon_card_sin_meli">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71218" name="Seven Deadly Sins Card: Meliodas 2" type="CARD" icon="BranchIcon.icon.icon_card_sin_meli_fish">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71219" name="Seven Deadly Sins Card: Diane" type="CARD" icon="BranchIcon.icon.icon_card_sin_meli_dian">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71220" name="Seven Deadly Sins Card: Ban" type="CARD" icon="BranchIcon.icon.icon_card_sin_meli_van">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71221" name="Seven Deadly Sins Card: King" type="CARD" icon="BranchIcon.icon.icon_card_sin_king">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71222" name="Seven Deadly Sins Card: Gowther" type="CARD" icon="BranchIcon.icon.icon_card_sin_go">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71223" name="Seven Deadly Sins Card: Merlin" type="CARD" icon="BranchIcon.icon.icon_card_sin_merlin">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71224" name="Seven Deadly Sins Card: Escanor" type="CARD" icon="BranchIcon.icon.icon_card_sin_esca">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71225" name="Lioneth Kingdom Card: Elizabeth Lioneth" type="CARD" icon="BranchIcon.icon.icon_card_sin_eli">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71226" name="Dreyfus Card: Gil Sanda" type="CARD" icon="BranchIcon.icon.icon_card_sin_meli_gil">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71227" name="Dreyfus Card: Howzer" type="CARD" icon="BranchIcon.icon.icon_card_sin_meli_how">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71228" name="Handsen Card: Yurigo" type="CARD" icon="BranchIcon.icon.icon_card_sin_meli_yuri">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71229" name="Ten Commandments Card: Jerudoris" type="CARD" icon="BranchIcon.icon.icon_card_sin_jeru">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71230" name="Ten Commandments Card: Estarossa" type="CARD" icon="BranchIcon.icon.icon_card_sin_meli_rotsa">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71231" name="Ten Commandments Card: Tung" type="CARD" icon="BranchIcon.icon.icon_card_sin_meli_tung">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71232" name="Brittania" type="CARD" icon="BranchIcon.icon.icon_card_sin_meli_bri">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71233" name="Pet Card: Hawk" type="CARD" icon="BranchIcon.icon.icon_card_sin_meli_hawk">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71234" name="Legendary Knights Card: Seven Deadly Sins" type="CARD" icon="BranchIcon.icon.icon_card_sin_meli_legend">
+	<!-- Will be deleted after the event. -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="71235" name="Seven Deadly Sins Card Pouch" type="NONE" icon="icon.card_event_dragon_pocket">
+	<!-- Card pouch filled with magic power. Double-click to obtain one of the 7 cards of the characters from Seven Deadly Sins. Must be level 45 or above.   -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes weight="10" immediate-effect="true"/>
+	</item>
+
+	<item id="71236" name="Legendary Knights Card: Seven Deadly Sins (2-hr) Pack" type="NONE" icon="BranchIcon.icon.icon_card_sin_meli_legend">
+	<!-- Pack containing Legendary Knights Card: Seven Deadly Sins (2-hr). -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<armor id="71237" name="Hawk Agathion Lv. 3" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp">
+	<!-- An Agathion that activates the power of the Hawk Agathion. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied. 7-day. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="5" duration="10080" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<item id="71238" name="+5 Hawk Agathion Lv. 3 (7-day) Box" type="NONE" icon="icon.sayha2017_box_i02">
+	<!-- Double-click to obtain a +5 Hawk Agathion - Lv. 3 (7-day). Will be deleted after the event. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="71239" name="Merlin's Magic Bracelet" type="NONE" body-part="LEFT_BRACELET" icon="BranchIcon.icon.g_bm_7th_sins_lbracelet_30d_jp">
+	<!-- A magic bracelet prototype made by Merlin. Activates 1 main slot and 2 side slots. 7-day.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" duration="10080" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<item id="71240" name="Merlin's Magic Bracelet (7-day) Pack" type="NONE" icon="icon.sayha2017_box_i04">
+	<!-- Double-click to obtain Merlin's Magic Bracelet (7-day).   -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="10" immediate-effect="true"/>
+	</item>
+
+	<item id="71241" name="XP/SP Rune - 50%" type="RUNE" icon="icon.skill19226">
+	<!-- 1-hour item. When in inventory, your XP and SP gain is increased by 50%. -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes duration="60"/>
+	</item>
+
+	<item id="71242" name="XP/SP Rune - 50%" type="RUNE" icon="icon.skill19226">
+	<!-- 5-hour item. When in inventory, your XP and SP gain is increased by 50%. -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes duration="300"/>
+	</item>
+
+	<item id="71243" name="XP/SP Rune - 50%" type="RUNE" icon="icon.skill19226">
+	<!-- 1-day item. When in inventory, your XP and SP gain is increased by 50%. -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes duration="1440"/>
+	</item>
+
+	<item id="71244" name="XP/SP Rune - 50%" type="RUNE" icon="icon.skill19226">
+	<!-- 7-day item. When in inventory, your XP and SP gain is increased by 50%. -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes duration="10080"/>
+	</item>
+
+	<item id="71245" name="XP/SP Rune - 50%" type="RUNE" icon="icon.skill19226">
+	<!-- 30-day item. When in inventory, your XP and SP gain is increased by 50%. -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes duration="43200"/>
+	</item>
+
+	<item id="71246" name="XP/SP Rune - 50% (1-hour) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain XP/SP Rune - 50% (1 hour). -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="71247" name="XP/SP Rune - 50% (5-hour) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain XP/SP Rune - 50% (5-hour). -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="71248" name="XP/SP Rune - 50% (1-day) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain XP/SP Rune - 50% (1-day). -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="71249" name="XP/SP Rune - 50% (7-day) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain XP/SP Rune - 50% (7-day). -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="71250" name="XP/SP Rune - 50% (30-day) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain XP/SP Rune - 50% (30-day). -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="71251" name="Agathion Box: Dryad" type="NONE" icon="icon.npoint_antaras_30day_box">
+	<!-- Double-click to obtain an Agathion - Dryad. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="71252" name="Agathion Box: Bugbear" type="NONE" icon="icon.npoint_tauti_30day_box">
+	<!-- Double-click to obtain an Agathion - Bugbear. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="71253" name="Agathion Box: Griffin" type="NONE" icon="icon.npoint_valakas_30day_box">
+	<!-- Double-click to obtain an Agathion - Griffin. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="71254" name="Soulshot 335-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_soulshot_a_i00">
+	<!-- Double-click to obtain 335 Blessed Soulshots. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="71255" name="Soulshot 500-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_soulshot_d_i00">
+	<!-- Double-click to obtain 500 Blessed Soulshots. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="71256" name="Soulshot 1000-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_soulshot_c_i00">
+	<!-- Double-click to obtain 1000 Blessed Soulshots. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="71257" name="Soulshot 3000-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_soulshot_b_i00">
+	<!-- Double-click to obtain 3000 Blessed Soulshots. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="71258" name="Soulshot 5000-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_soulshot_a_i00">
+	<!-- Double-click to obtain 5000 Blessed Soulshots. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="71259" name="Blessed Spiritshot 335-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_spiritshot_a_i00">
+	<!-- Double-click to obtain 335 Blessed Spiritshots. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="71260" name="Blessed Spiritshot 500-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_d_i00">
+	<!-- Double-click to obtain 500 Blessed Spiritshots. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="71261" name="Blessed Spiritshot 1000-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_c_i00">
+	<!-- Double-click to obtain 1000 Blessed Spiritshots. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="71262" name="Blessed Spiritshot 3000-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_b_i00">
+	<!-- Double-click to obtain 3000 Blessed Spiritshots. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="71263" name="Blessed Spiritshot 5000-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_a_i00">
+	<!-- Double-click to obtain 5000 Blessed Spiritshots. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="71264" name="Name Change Ticket Pack" type="NONE" icon="icon.etc_pi_gift_box_i01">
+	<!-- Pack containing a Name Change Ticket. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="71265" name="Gender Change Ticket Pack" type="NONE" icon="icon.etc_pi_gift_box_i01">
+	<!-- Pack containing a Gender Change Ticket. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="71266" name="Clan Name Change Ticket Pack" type="NONE" icon="icon.etc_pi_gift_box_i01">
+	<!-- Pack containing a Clan Name Change Ticket. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="71267" name="Hero's Weapon Exchange Ticket - Lv. 54" type="MATERIAL" icon="icon.etc_level_bustup_ticket_i00">
+	<!-- Take it to the Dimensional Merchant after reaching Lv. 54 to exchange for a +10 B-grade Weapon (15-day). -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71268" name="VIP Scroll" type="SCROLL" icon="BranchIcon.Icon.g_bm_vip_potion_i00">
+	<!-- Recharges 27 VIP points.  -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="5"/>
+	</item>
+
+	<item id="71269" name="Greater VIP Scroll" type="SCROLL" icon="BranchIcon.Icon.g_bm_vip_potion_i00">
+	<!-- Recharges 273 VIP points.  -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="5"/>
+	</item>
+
+	<item id="71270" name="Venir's Talisman Fragment" type="NONE" icon="icon.bm_ensoul_stone_PvP_empty">
+	<!-- Material used to upgrade Venir's Talisman by combining. When upgrading fails, the level falls to Lv. 1.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="71271" name="Venir's Talisman Lv. 1" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i00">
+	<!-- When equipped, CON +1. It can be upgraded if combined with Venir's Talisman Fragment. Does not disappear even if it fails. Effect does not stack with identical ones.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71272" name="Venir's Talisman Lv. 2" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i00">
+	<!-- When equipped, CON, MEN +1. It can be upgraded if combined with Venir's Talisman Fragment. If it fails, you'll get a Venir's Talisman Lv. 1. Effect does not stack with identical ones.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71273" name="Venir's Talisman Lv. 3" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i00">
+	<!-- When equipped, CON, MEN, DEX +1. It can be upgraded if combined with Venir's Talisman Fragment. If it fails, you'll get a Venir's Talisman Lv. 1. Effect does not stack with identical ones.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71274" name="Venir's Talisman Lv. 4" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i00">
+	<!-- When equipped, CON, MEN, DEX, WIT +1. It can be upgraded if combined with Venir's Talisman Fragment. If it fails, you'll get a Venir's Talisman Lv. 1. Effect does not stack with identical ones.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71275" name="Venir's Talisman Lv. 5" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i00">
+	<!-- When equipped, CON, MEN, DEX, WIT, STR +1. It can be upgraded if combined with Venir's Talisman Fragment. If it fails, you'll get a Venir's Talisman Lv. 1. Effect does not stack with identical ones.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71276" name="Venir's Talisman Lv. 6" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i00">
+	<!-- When equipped, CON, MEN, DEX, WIT, STR, INT +1. It can be upgraded if combined with Venir's Talisman Fragment. If it fails, you'll get a Venir's Talisman Lv. 6. Effect does not stack with identical ones.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71277" name="Venir's Talisman Lv. 7" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i01">
+	<!-- When equipped, CON +2, MEN, DEX, WIT, STR, INT +1. It can be upgraded if combined with Venir's Talisman Fragment. If it fails, you'll get a Venir's Talisman Lv. 6. Effect does not stack with identical ones.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71278" name="Venir's Talisman Lv. 8" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i01">
+	<!-- When equipped, CON, MEN +2, DEX, WIT, STR, INT +1. It can be upgraded if combined with Venir's Talisman Fragment. If it fails, you'll get a Venir's Talisman Lv. 6. Effect does not stack with identical ones.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71279" name="Venir's Talisman Lv. 9" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i01">
+	<!-- When equipped, CON, MEN, DEX +2, WIT, STR, INT +1. It can be upgraded if combined with Venir's Talisman Fragment. If it fails, you'll get a Venir's Talisman Lv. 6. Effect does not stack with identical ones.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71280" name="Venir's Talisman Lv. 10" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i01">
+	<!-- When equipped, CON, MEN, DEX, WIT +2, STR, INT +1. It can be upgraded if combined with Venir's Talisman Fragment. If it fails, you'll get a Venir's Talisman Lv. 6. Effect does not stack with identical ones.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71281" name="Venir's Talisman Lv. 11" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i01">
+	<!-- When equipped, CON, MEN, DEX, WIT, STR +2,INT +1. It can be upgraded if combined with Venir's Talisman Fragment. If it fails, you'll get a Venir's Talisman Lv. 6. Effect does not stack with identical ones.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71282" name="Venir's Talisman Lv. 12" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i01">
+	<!-- When equipped, CON, MEN, DEX, WIT, STR, INT +2. Additionally, can absorb 4% of damage dealt to enemy as HP and 2% as MP at a certain rate. It can be upgraded if combined with Venir's Talisman Fragment. If it fails, you'll get a Venir's Talisman Lv. 12. Effect does not stack with identical ones.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71283" name="Venir's Talisman Lv. 13" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<!-- When equipped, CON +3, MEN, DEX, WIT, STR, INT +2. Additionally, can absorb 4% of damage dealt to enemy as HP and 2% as MP at a certain rate. It can be upgraded if combined with Venir's Talisman Fragment. If it fails, you'll get a Venir's Talisman Lv. 12. Effect does not stack with identical ones.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71284" name="Venir's Talisman Lv. 14" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<!-- When equipped, CON, MEN +3, DEX, WIT, STR, INT +2. Additionally, can absorb 4% of damage dealt to enemy as HP and 2% as MP at a certain rate. It can be upgraded if combined with Venir's Talisman Fragment. If it fails, you'll get a Venir's Talisman Lv. 12. Effect does not stack with identical ones.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71285" name="Venir's Talisman Lv. 15" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<!-- When equipped, CON, MEN, DEX +3, WIT, STR, INT +2. Additionally, can absorb 4% of damage dealt to enemy as HP and 2% as MP at a certain rate. It can be upgraded if combined with Venir's Talisman Fragment. If it fails, you'll get a Venir's Talisman Lv. 12. Effect does not stack with identical ones.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71286" name="Venir's Talisman Lv. 16" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<!-- When equipped, CON, MEN, DEX, WIT +3, STR, INT +2. Additionally, can absorb 4% of damage dealt to enemy as HP and 2% as MP at a certain rate. It can be upgraded if combined with Venir's Talisman Fragment. If it fails, you'll get a Venir's Talisman Lv. 12. Effect does not stack with identical ones.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71287" name="Venir's Talisman Lv. 17" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<!-- When equipped, CON, MEN, DEX, WIT, STR +3, INT +2. Additionally, can absorb 4% of damage dealt to enemy as HP and 2% as MP at a certain rate. It can be upgraded if combined with Venir's Talisman Fragment. If it fails, you'll get a Venir's Talisman Lv. 12. Effect does not stack with identical ones.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71288" name="Venir's Talisman Lv. 18" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<!-- When equipped, CON, MEN, DEX, WIT, STR, INT +3. Additionally, reduces cooldown of P. / M. skills by 7% and can absorb 8% of damage dealt to enemy as HP and 4% as MP at a certain rate. Effect does not stack with identical ones.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71289" name="Venir's Talisman Lv. 19" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<!-- When equipped, CON +4, MEN, DEX, WIT, STR, INT +3. Additionally, reduces cooldown of P. / M. skills by 7% and can absorb 8% of damage dealt to enemy as HP and 4% as MP at a certain rate. Effect does not stack with identical ones.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71290" name="Venir's Talisman Lv. 20" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<!-- When equipped, CON, MEN +4, DEX, WIT, STR, INT +3. Additionally, reduces cooldown of P. / M. skills by 7% and can absorb 8% of damage dealt to enemy as HP and 4% as MP at a certain rate. Effect does not stack with identical ones.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71291" name="Venir's Talisman Lv. 21" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<!-- When equipped, CON, MEN, DEX +4, WIT, STR, INT +3. Additionally, reduces cooldown of P. / M. skills by 7% and can absorb 8% of damage dealt to enemy as HP and 4% as MP at a certain rate. Effect does not stack with identical ones.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71292" name="Venir's Talisman Lv. 22" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<!-- When equipped, CON, MEN, DEX, WIT +4, STR, INT +3. Additionally, reduces cooldown of P. / M. skills by 7% and can absorb 8% of damage dealt to enemy as HP and 4% as MP at a certain rate. Effect does not stack with identical ones.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71293" name="Venir's Talisman Lv. 23" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<!-- When equipped, CON, MEN, DEX, WIT, STR +4, INT +3. Additionally, reduces cooldown of P. / M. skills by 7% and can absorb 8% of damage dealt to enemy as HP and 4% as MP at a certain rate. Effect does not stack with identical ones.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71294" name="Venir's Talisman Lv. 24" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<!-- When equipped, CON, MEN, DEX, WIT, STR, INT +4. Additionally, reduces cooldown of P. / M. skills by 7% and can absorb 16% of damage dealt to enemy as HP and 8% as MP at a certain rate. Effect does not stack with identical ones.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<item id="71295" name="Artisan's Scroll: Enchant Weapon (A-grade)" type="SOLID_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_a">
+	<!-- When enchanted, increases P. Atk. by 4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. Increases P. Atk. by 5 for two-handed swords, two-handed blunts, dual swords, and fist weapons. Increases P. Atk. by 8 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./M. Atk doubles starting at +4. Failure to enchant does not crystallize the item and the enchantment level is retained thanks to Goddess of Destruction's power. Can be used on weapons enchanted up to +20. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71296" name="Master's Scroll: Enchant Weapon (A-grade)" type="SOLID_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_a">
+	<!-- When enchanted, increases P. Atk. by 4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. Increases P. Atk. by 5 for two-handed swords, two-handed blunts, dual swords, and fist weapons. Increases P. Atk. by 8 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./M. Atk doubles starting at +4. If enchantment succeeds, it may increase +1 - +3. Failure to enchant does not crystallize the item and the enchantment level is retained thanks to Goddess of Destruction's power. Can be used on weapons enchanted up to +20. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71297" name="Holy Scroll: Enchant Weapon (A-grade)" type="SOLID_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_a">
+	<!-- When enchanted, increases P. Atk. by 4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. Increases P. Atk. by 5 for two-handed swords, two-handed blunts, dual swords, and fist weapons. Increases P. Atk. by 8 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./M. Atk doubles starting at +4. Has 100% to succeed in enchantment if used. Can be used on weapons enchanted up to +12. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71298" name="Brilliant Jewelry Box Lv. 4" type="NONE" icon="icon.bm_special_jewelbox_lv4">
+	<!-- Double-click to obtain 1 of the following: Vital Stone/Diamond/Pearl/Aquamarine/Sapphire/Ruby/Jade/Garnet/Topaz/Red Cat's Eye/Blue Cat's Eye Lv. 4 Jewelry Box. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71299" name="Brilliant Jewelry Box Lv. 5" type="NONE" icon="icon.bm_special_jewelbox_lv4">
+	<!-- Double-click to obtain 1 of the following: Vital Stone/Diamond/Pearl/Aquamarine/Sapphire/Ruby/Jade/Garnet/Topaz/Red Cat's Eye/Blue Cat's Eye Lv. 5 Jewelry Box. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
 </list>

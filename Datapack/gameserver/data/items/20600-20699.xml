@@ -1,31 +1,29 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <armor id="20662" name="Agathion - Uthanka" icon="BranchSys.icon.br_aga_uthanka_i00">
-        <!-- Bracelet that can be used to summon Agathion - Uthanka. Cannot be exchanged, dropped, or sold. -->
-        <set name="bodypart" val="agathion"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" sellable="false" olympiad-restricted="true" clan-depositable="false" mailable="false" commissionable="false" freightable="true"/>
-        <skills>
-            <skill id="21109" level="1"/> <!-- Release Agathion's Seal - Uthanka -->
-            <skill id="23087" level="1"/> <!-- Uthanka Agathion Cute Trick -->
-            <skill id="3267" level="1" type="ON_UNEQUIP"/> <!-- Seal Agathion -->
-        </skills>
-    </armor>
-    <armor id="20666" name="Valkyrie Hat" icon="BranchSys.icon.br_valkyrie_cap_i00">
-        <!-- A hat endowed with Valkyrie power. Occupies 2 Hair Accessory slots. -->
-        <set name="bodypart" val="hairall"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <set name="enchant_enabled" val="7"/>
-        <restriction tradable="false" dropable="false" sellable="false" olympiad-restricted="true" clan-depositable="false" commissionable="false" mailable="false"/>
-    </armor>
-    <armor id="20678" name="Gatekeeper Hat" icon="BranchSys.icon.br_gatekeeper_of_hat_i00">
-        <!-- Occupies 2 Hair Accessory slots. -->
-        <set name="bodypart" val="hairall"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <set name="enchant_enabled" val="7"/>
-        <restriction tradable="false" dropable="false" sellable="false" olympiad-restricted="true" clan-depositable="false" commissionable="false" mailable="false"/>
-    </armor>
+	<armor id="20662" name="Agathion - Uthanka" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_uthanka_i00">
+	<!-- Bracelet that summons an Agathion - Uthanka. -->
+		<restriction olympiad-restricted="true" tradable="false" dropable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="21109" level="1"/>  <!-- Summon Agathion - Uthanka -->
+			<skill id="23087" level="1"/>  <!-- Uthanka Agathion Skill -->
+			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+		</skills>
+	</armor>
+
+	<armor id="20666" name="Valkyrie Hat" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_valkyrie_cap_i00">
+	<!-- A hat endowed with Valkyrie power. Occupies 2 Hair Accessory slots. -->
+		<restriction freightable="false" olympiad-restricted="true" dropable="false"/>
+		<attributes weight="10" />
+		<crystal />
+	</armor>
+
+	<armor id="20678" name="Gatekeeper Hat" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_gatekeeper_of_hat_i00">
+	<!-- Hat worn by Gatekeepers. Uses 2 hair accessory slots.  -->
+		<restriction freightable="false" olympiad-restricted="true" dropable="false"/>
+		<attributes weight="10" />
+		<crystal />
+	</armor>
+
 </list>

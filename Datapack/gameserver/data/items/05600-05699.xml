@@ -1,1243 +1,924 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <weapon id="5600" name="Meteor Shower" icon="icon.weapon_meteor_shower_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1128"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1600"/>
-        <set name="price" val="14098000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="BLUNT_WEAPON"/>
-        <skills>
-            <skill id="3052" level="1" type="ON_CRITICAL_SKILL"/> <!-- Special Ability: Critical Bleed -->
-        </skills>
-        <stats>
-            <stat type="pAtk">213</stat>
-            <stat type="mAtk">107</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5601" name="Meteor Shower" icon="icon.weapon_meteor_shower_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. +247 during a Critical Attack. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1128"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1600"/>
-        <set name="price" val="14098000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="BLUNT_WEAPON"/>
-        <skills>
-            <skill id="3056" level="2"/> <!-- Special Ability: Rsk. Haste -->
-        </skills>
-        <stats>
-            <stat type="pAtk">213</stat>
-            <stat type="mAtk">107</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5602" name="Elysian" icon="icon.weapon_elysian_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1659"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1580"/>
-        <set name="price" val="20741000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="BLUNT_WEAPON"/>
-        <skills>
-            <skill id="3013" level="3"/> <!-- Special Ability: Health -->
-        </skills>
-        <stats>
-            <stat type="pAtk">232</stat>
-            <stat type="mAtk">114</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5603" name="Elysian" icon="icon.weapon_elysian_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1659"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1580"/>
-        <set name="price" val="20741000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="BLUNT_WEAPON"/>
-        <stats>
-            <stat type="pAtk">232</stat>
-            <stat type="mAtk">114</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5604" name="Elysian" icon="icon.weapon_elysian_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. +256 during a Critical Attack. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1659"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1580"/>
-        <set name="price" val="20741000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="BLUNT_WEAPON"/>
-        <skills>
-            <skill id="3059" level="2" type="ON_CRITICAL_SKILL"/> <!-- Special Ability: Critical Drain -->
-        </skills>
-        <stats>
-            <stat type="pAtk">232</stat>
-            <stat type="mAtk">114</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5605" name="Branch of the Mother Tree" icon="icon.weapon_worldtrees_branch_i01">
-        <!-- <Soul Crystal Enhancement>. M. Atk. +151. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1659"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="900"/>
-        <set name="price" val="20741000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON"/>
-        <skills>
-            <skill id="3048" level="2"/> <!-- Special Ability: Conversion -->
-        </skills>
-        <stats>
-            <stat type="pAtk">226</stat>
-            <stat type="mAtk">167</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5606" name="Branch of the Mother Tree" icon="icon.weapon_worldtrees_branch_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1659"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="900"/>
-        <set name="price" val="20741000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON"/>
-        <skills>
-            <skill id="3049" level="2" type_chance="30" type="ON_MAGIC_SKILL"/> <!-- Special Ability: Magic Damage -->
-        </skills>
-        <stats>
-            <stat type="pAtk">226</stat>
-            <stat type="mAtk">167</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5607" name="Branch of the Mother Tree" icon="icon.weapon_worldtrees_branch_i01">
-        <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 12%. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1659"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="900"/>
-        <set name="price" val="20741000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON"/>
-        <skills>
-            <skill id="3047" level="2"/> <!-- Special Ability: Acumen -->
-        </skills>
-        <stats>
-            <stat type="pAtk">226</stat>
-            <stat type="mAtk">167</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5608" name="Carnage Bow" icon="icon.weapon_carnium_bow_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 40. -->
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;10;0"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1128"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="900"/>
-        <set name="price" val="14098000"/>
-        <set name="change_weaponId" val="9337"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="5"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="reuse_delay" val="1500"/>
-        <set name="commissionItemType" val="BOW"/>
-        <skills>
-            <skill id="3498" level="1"/> <!-- Special Ability: Light -->
-        </skills>
-        <stats>
-            <stat type="pAtk">440</stat>
-            <stat type="mAtk">107</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">293</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="5609" name="Carnage Bow" icon="icon.weapon_carnium_bow_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;10;0"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1128"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1670"/>
-        <set name="price" val="14098000"/>
-        <set name="change_weaponId" val="9338"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="5"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="reuse_delay" val="1500"/>
-        <set name="commissionItemType" val="BOW"/>
-        <skills>
-            <skill id="3053" level="1" type="ON_CRITICAL_SKILL"/> <!-- Special Ability: Critical Bleed -->
-        </skills>
-        <stats>
-            <stat type="pAtk">440</stat>
-            <stat type="mAtk">107</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">293</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="5610" name="Carnage Bow" icon="icon.weapon_carnium_bow_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. +164 during a Critical Attack. -->
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;10;0"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1128"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1670"/>
-        <set name="price" val="14098000"/>
-        <set name="change_weaponId" val="9339"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="5"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="reuse_delay" val="1500"/>
-        <set name="commissionItemType" val="BOW"/>
-        <skills>
-            <skill id="3014" level="2"/> <!-- Special Ability: Mana Up -->
-        </skills>
-        <stats>
-            <stat type="pAtk">440</stat>
-            <stat type="mAtk">107</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">293</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="5611" name="Soul Bow" icon="icon.weapon_soul_bow_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 40. -->
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;10;0"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1659"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1660"/>
-        <set name="price" val="20741000"/>
-        <set name="change_weaponId" val="9349"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="5"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="reuse_delay" val="820"/>
-        <set name="commissionItemType" val="BOW"/>
-        <set name="reduced_mp_consume" val="38,1"/>
-        <stats>
-            <stat type="pAtk">528</stat>
-            <stat type="mAtk">125</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">227</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="5612" name="Soul Bow" icon="icon.weapon_soul_bow_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;10;0"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1659"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1660"/>
-        <set name="price" val="20741000"/>
-        <set name="change_weaponId" val="9350"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="5"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="reuse_delay" val="697"/>
-        <set name="commissionItemType" val="BOW"/>
-        <stats>
-            <stat type="pAtk">528</stat>
-            <stat type="mAtk">125</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">227</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="5613" name="Soul Bow" icon="icon.weapon_soul_bow_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. +180 during a Critical Attack. -->
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;10;0"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1659"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1660"/>
-        <set name="price" val="20741000"/>
-        <set name="change_weaponId" val="9351"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="5"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="reuse_delay" val="820"/>
-        <set name="commissionItemType" val="BOW"/>
-        <skills>
-            <skill id="3062" level="2" type="ON_CRITICAL_SKILL"/> <!-- Special Ability: Critical Poison -->
-        </skills>
-        <stats>
-            <stat type="pAtk">528</stat>
-            <stat type="mAtk">125</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">227</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="5614" name="Bloody Orchid" icon="icon.weapon_bloody_orchid_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 58. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1128"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="960"/>
-        <set name="price" val="14098000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DAGGER"/>
-        <stats>
-            <stat type="pAtk">186</stat>
-            <stat type="mAtk">107</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5615" name="Bloody Orchid" icon="icon.weapon_bloody_orchid_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 5%. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1128"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="960"/>
-        <set name="price" val="14098000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DAGGER"/>
-        <stats>
-            <stat type="pAtk">186</stat>
-            <stat type="mAtk">107</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5616" name="Bloody Orchid" icon="icon.weapon_bloody_orchid_i01">
-        <!-- <Soul Crystal Enhancement>. Increases the probability of a deadly attack. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1128"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="960"/>
-        <set name="price" val="14098000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DAGGER"/>
-        <skills>
-            <skill id="3054" level="1" type="ON_CRITICAL_SKILL"/> <!-- Special Ability: Critical Bleed -->
-        </skills>
-        <stats>
-            <stat type="pAtk">186</stat>
-            <stat type="mAtk">107</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5617" name="Soul Separator" icon="icon.weapon_soul_separator_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 58. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1659"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="950"/>
-        <set name="price" val="20741000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DAGGER"/>
-        <stats>
-            <stat type="pAtk">203</stat>
-            <stat type="mAtk">114</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5618" name="Soul Separator" icon="icon.weapon_soul_separator_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 5%. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1659"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="950"/>
-        <set name="price" val="20741000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DAGGER"/>
-        <stats>
-            <stat type="pAtk">203</stat>
-            <stat type="mAtk">114</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5619" name="Soul Separator" icon="icon.weapon_soul_separator_i01">
-        <!-- <Soul Crystal Enhancement>. Increases the probability of a deadly attack. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1659"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="950"/>
-        <set name="price" val="20741000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DAGGER"/>
-        <skills>
-            <skill id="3056" level="2"/> <!-- Special Ability: Rsk. Haste -->
-        </skills>
-        <stats>
-            <stat type="pAtk">203</stat>
-            <stat type="mAtk">114</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5620" name="Blood Tornado" icon="icon.weapon_blood_tornado_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;32;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1128"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1370"/>
-        <set name="price" val="14098000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="FIST_WEAPON"/>
-        <skills>
-            <skill id="3068" level="2"/> <!-- Special Ability: Haste -->
-        </skills>
-        <stats>
-            <stat type="pAtk">259</stat>
-            <stat type="mAtk">107</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5621" name="Blood Tornado" icon="icon.weapon_blood_tornado_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;32;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1128"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1370"/>
-        <set name="price" val="14098000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="FIST_WEAPON"/>
-        <stats>
-            <stat type="pAtk">259</stat>
-            <stat type="mAtk">107</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5622" name="Blood Tornado" icon="icon.weapon_blood_tornado_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. +288 during a Critical Attack. -->
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;32;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1128"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1370"/>
-        <set name="price" val="14098000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="FIST_WEAPON"/>
-        <stats>
-            <stat type="pAtk">259</stat>
-            <stat type="mAtk">107</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5623" name="Dragon Grinder" icon="icon.weapon_dragon_grinder_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;32;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1659"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1350"/>
-        <set name="price" val="20741000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="FIST_WEAPON"/>
-        <skills>
-            <skill id="3069" level="1"/> <!-- Special Ability: Rsk. Evasion -->
-        </skills>
-        <stats>
-            <stat type="pAtk">282</stat>
-            <stat type="mAtk">114</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5624" name="Dragon Grinder" icon="icon.weapon_dragon_grinder_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;32;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1659"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1350"/>
-        <set name="price" val="20741000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="FIST_WEAPON"/>
-        <stats>
-            <stat type="pAtk">282</stat>
-            <stat type="mAtk">114</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5625" name="Dragon Grinder" icon="icon.weapon_dragon_grinder_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. +297 during a Critical Attack. -->
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;32;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1659"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1350"/>
-        <set name="price" val="20741000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="FIST_WEAPON"/>
-        <skills>
-            <skill id="3013" level="3"/> <!-- Special Ability: Health -->
-        </skills>
-        <stats>
-            <stat type="pAtk">282</stat>
-            <stat type="mAtk">114</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5626" name="Halberd" icon="icon.weapon_halbard_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;66;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1128"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1900"/>
-        <set name="price" val="14098000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="SPEAR"/>
-        <skills>
-            <skill id="3601" level="7"/> <!-- Special Ability: Haste -->
-        </skills>
-        <stats>
-            <stat type="pAtk">213</stat>
-            <stat type="mAtk">107</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="5627" name="Halberd" icon="icon.weapon_halbard_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;66;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1128"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1900"/>
-        <set name="price" val="14098000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="SPEAR"/>
-        <skills>
-            <skill id="3070" level="1" type="ON_CRITICAL_SKILL"/> <!-- Special Ability: Critical Stun -->
-        </skills>
-        <stats>
-            <stat type="pAtk">213</stat>
-            <stat type="mAtk">107</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="5628" name="Halberd" icon="icon.weapon_halbard_i01">
-        <!-- <Soul Crystal Enhancement>. 24% chance of casting Stun upon the target during a Critical Attack. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;66;180"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1128"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1900"/>
-        <set name="price" val="14098000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="SPEAR"/>
-        <stats>
-            <stat type="pAtk">213</stat>
-            <stat type="mAtk">107</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="5632" name="Tallum Glaive" icon="icon.weapon_tallum_glaive_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;66;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1659"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1840"/>
-        <set name="price" val="20741000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="SPEAR"/>
-        <skills>
-            <skill id="3602" level="8"/> <!-- Special Ability: Guidance -->
-        </skills>
-        <stats>
-            <stat type="pAtk">232</stat>
-            <stat type="mAtk">114</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="5633" name="Tallum Glaive" icon="icon.weapon_tallum_glaive_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;66;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1659"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1840"/>
-        <set name="price" val="20741000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="SPEAR"/>
-        <skills>
-            <skill id="3013" level="4"/> <!-- Special Ability: Health -->
-        </skills>
-        <stats>
-            <stat type="pAtk">232</stat>
-            <stat type="mAtk">114</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="5634" name="Tallum Glaive" icon="icon.weapon_tallum_glaive_i01">
-        <!-- <Soul Crystal Enhancement>. 24% chance of casting Stun upon the target during a Critical Attack. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;66;180"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1659"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1840"/>
-        <set name="price" val="20741000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="SPEAR"/>
-        <stats>
-            <stat type="pAtk">232</stat>
-            <stat type="mAtk">114</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="5635" name="Tallum Blade" icon="icon.weapon_tallum_blade_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 52. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1128"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1330"/>
-        <set name="price" val="14098000"/>
-        <set name="change_weaponId" val="9329"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_SWORD"/>
-        <skills>
-            <skill id="3061" level="1" type="ON_CRITICAL_SKILL"/> <!-- Special Ability: Critical Poison -->
-        </skills>
-        <stats>
-            <stat type="pAtk">213</stat>
-            <stat type="mAtk">107</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5636" name="Tallum Blade" icon="icon.weapon_tallum_blade_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1128"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1330"/>
-        <set name="price" val="14098000"/>
-        <set name="change_weaponId" val="9330"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_SWORD"/>
-        <skills>
-            <skill id="3068" level="2"/> <!-- Special Ability: Haste -->
-        </skills>
-        <stats>
-            <stat type="pAtk">213</stat>
-            <stat type="mAtk">107</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5637" name="Tallum Blade" icon="icon.weapon_tallum_blade_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. +247 during a Critical Attack. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1128"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1330"/>
-        <set name="price" val="14098000"/>
-        <set name="change_weaponId" val="9331"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_SWORD"/>
-        <stats>
-            <stat type="pAtk">213</stat>
-            <stat type="mAtk">107</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5638" name="Elemental Sword" icon="icon.weapon_elemental_sword_i01">
-        <!-- <Soul Crystal Enhancement>. M. Atk. +144. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1128"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="830"/>
-        <set name="price" val="14098000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD"/>
-        <stats>
-            <stat type="pAtk">170</stat>
-            <stat type="mAtk">143</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5639" name="Elemental Sword" icon="icon.weapon_elemental_sword_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1128"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="830"/>
-        <set name="price" val="14098000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD"/>
-        <skills>
-            <skill id="3075" level="1" type_chance="5" type="ON_MAGIC_SKILL"/> <!-- Special Ability: Magic Paralyze -->
-        </skills>
-        <stats>
-            <stat type="pAtk">170</stat>
-            <stat type="mAtk">143</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5640" name="Elemental Sword" icon="icon.weapon_elemental_sword_i01">
-        <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 12%. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1128"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="830"/>
-        <set name="price" val="14098000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD"/>
-        <stats>
-            <stat type="pAtk">170</stat>
-            <stat type="mAtk">143</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5641" name="Sword of Miracles" icon="icon.weapon_sword_of_miracle_i01">
-        <!-- <Soul Crystal Enhancement>. M. Atk. +151. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1659"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="840"/>
-        <set name="price" val="20741000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD"/>
-        <stats>
-            <stat type="pAtk">186</stat>
-            <stat type="mAtk">152</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5642" name="Sword of Miracles" icon="icon.weapon_sword_of_miracle_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1659"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="840"/>
-        <set name="price" val="20741000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD"/>
-        <skills>
-            <skill id="3074" level="2" type_chance="10" type="ON_MAGIC_SKILL"/> <!-- Special Ability: Magic Silence -->
-        </skills>
-        <stats>
-            <stat type="pAtk">186</stat>
-            <stat type="mAtk">152</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5643" name="Sword of Miracles" icon="icon.weapon_sword_of_miracle_i01">
-        <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 12%. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1659"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="840"/>
-        <set name="price" val="20741000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD"/>
-        <skills>
-            <skill id="3047" level="2"/> <!-- Special Ability: Acumen -->
-        </skills>
-        <stats>
-            <stat type="pAtk">186</stat>
-            <stat type="mAtk">152</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5644" name="Dragon Slayer" icon="icon.weapon_dragon_slayer_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;46;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1659"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1840"/>
-        <set name="price" val="20741000"/>
-        <set name="change_weaponId" val="9345"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="TWO_HAND_SWORD"/>
-        <skills>
-            <skill id="3013" level="3"/> <!-- Special Ability: Health -->
-        </skills>
-        <stats>
-            <stat type="pAtk">282</stat>
-            <stat type="mAtk">114</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5645" name="Dragon Slayer" icon="icon.weapon_dragon_slayer_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;46;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1659"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1840"/>
-        <set name="price" val="20741000"/>
-        <set name="change_weaponId" val="9346"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="TWO_HAND_SWORD"/>
-        <skills>
-            <skill id="3055" level="2" type="ON_CRITICAL_SKILL"/> <!-- Special Ability: Critical Bleed -->
-        </skills>
-        <stats>
-            <stat type="pAtk">282</stat>
-            <stat type="mAtk">114</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5646" name="Dragon Slayer" icon="icon.weapon_dragon_slayer_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. +297 during a Critical Attack. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;46;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1659"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1840"/>
-        <set name="price" val="20741000"/>
-        <set name="change_weaponId" val="9347"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="TWO_HAND_SWORD"/>
-        <skills>
-            <skill id="3060" level="2" type="ON_CRITICAL_SKILL"/> <!-- Special Ability: Critical Drain -->
-        </skills>
-        <stats>
-            <stat type="pAtk">282</stat>
-            <stat type="mAtk">114</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5647" name="Dark Legion's Edge" icon="icon.weapon_dark_legions_edge_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 52. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1659"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1320"/>
-        <set name="price" val="20741000"/>
-        <set name="change_weaponId" val="9341"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_SWORD"/>
-        <stats>
-            <stat type="pAtk">232</stat>
-            <stat type="mAtk">114</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5648" name="Dark Legion's Edge" icon="icon.weapon_dark_legions_edge_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1659"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1320"/>
-        <set name="price" val="20741000"/>
-        <set name="change_weaponId" val="9342"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_SWORD"/>
-        <skills>
-            <skill id="3013" level="3"/> <!-- Special Ability: Health -->
-        </skills>
-        <stats>
-            <stat type="pAtk">232</stat>
-            <stat type="mAtk">114</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="5649" name="Dark Legion's Edge" icon="icon.weapon_dark_legions_edge_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. +255 during a Critical Attack. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1659"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1320"/>
-        <set name="price" val="20741000"/>
-        <set name="change_weaponId" val="9343"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_SWORD"/>
-        <skills>
-            <skill id="3071" level="2"/> <!-- Special Ability: Rsk. Focus -->
-        </skills>
-        <stats>
-            <stat type="pAtk">232</stat>
-            <stat type="mAtk">114</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
+	<weapon id="5600" name="Meteor Shower" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_meteor_shower_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by about 6%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1600" price="14098000" commission-type="BLUNT_WEAPON"/>
+		<crystal type="A" count="1128"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="213.0"/>
+			<stat type="mAtk" value="107.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3052" level="1" type="ON_CRITICAL_SKILL"/>  <!-- Special Ability: Critical Bleed -->
+		</skills>
+	</weapon>
+
+	<weapon id="5601" name="Meteor Shower" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_meteor_shower_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. +247 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="1600" price="14098000" commission-type="BLUNT_WEAPON"/>
+		<crystal type="A" count="1128"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="213.0"/>
+			<stat type="mAtk" value="107.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3056" level="2"/>  <!-- Special Ability: Risk Haste -->
+		</skills>
+	</weapon>
+
+	<weapon id="5602" name="Elysian" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_elysian_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Crit. Rate by 54. -->
+		<restriction freightable="false"/>
+		<attributes weight="1580" price="20741000" commission-type="BLUNT_WEAPON"/>
+		<crystal type="A" count="1659"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="232.0"/>
+			<stat type="mAtk" value="114.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3013" level="3"/>  <!-- Special Ability: Health -->
+		</skills>
+	</weapon>
+
+	<weapon id="5603" name="Elysian" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_elysian_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by about 6%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1580" price="20741000" commission-type="BLUNT_WEAPON"/>
+		<crystal type="A" count="1659"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="232.0"/>
+			<stat type="mAtk" value="114.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="5604" name="Elysian" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_elysian_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. +256 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="1580" price="20741000" commission-type="BLUNT_WEAPON"/>
+		<crystal type="A" count="1659"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="232.0"/>
+			<stat type="mAtk" value="114.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3059" level="2" type="ON_CRITICAL_SKILL"/>  <!-- Special Ability: Critical Absorption -->
+		</skills>
+	</weapon>
+
+	<weapon id="5605" name="Branch of the Mother Tree" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_worldtrees_branch_i01" magic="true">
+	<!-- <Soul Crystal Enhancement>\\nM. Atk. +151. -->
+		<restriction freightable="false"/>
+		<attributes weight="900" price="20741000" commission-type="TWO_HAND_MAGIC_BLUNT_WEAPON"/>
+		<crystal type="A" count="1659"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="226.0"/>
+			<stat type="mAtk" value="167.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3048" level="2"/>  <!-- Special Ability: Conversion -->
+		</skills>
+	</weapon>
+
+	<weapon id="5606" name="Branch of the Mother Tree" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_worldtrees_branch_i01" magic="true">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 12%. -->
+		<restriction freightable="false"/>
+		<attributes weight="900" price="20741000" commission-type="TWO_HAND_MAGIC_BLUNT_WEAPON"/>
+		<crystal type="A" count="1659"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="226.0"/>
+			<stat type="mAtk" value="167.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3049" level="2" type="ON_MAGIC_SKILL" chance="30"/>  <!-- Special Ability: Magic Damage -->
+		</skills>
+	</weapon>
+
+	<weapon id="5607" name="Branch of the Mother Tree" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_worldtrees_branch_i01" magic="true">
+	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Bonus by 12%. -->
+		<restriction freightable="false"/>
+		<attributes weight="900" price="20741000" commission-type="TWO_HAND_MAGIC_BLUNT_WEAPON"/>
+		<crystal type="A" count="1659"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="226.0"/>
+			<stat type="mAtk" value="167.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3047" level="2"/>  <!-- Special Ability: Acumen -->
+		</skills>
+	</weapon>
+
+	<weapon id="5608" name="Carnage Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_carnium_bow_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Crit. Rate by 40. -->
+		<restriction freightable="false"/>
+		<attributes weight="900" price="14098000" commission-type="BOW" reuse-delay="1500" change-weapon="9337"/>
+		<crystal type="A" count="1128"/>
+		<damage radius="10" angle="360"/>
+		<consume  soulshots="4" spiritshots="3" mana="5"/>
+		<stats>
+			<stat type="pAtk" value="440.0"/>
+			<stat type="mAtk" value="107.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="293.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+		<skills>
+			<skill id="3498" level="1"/>  <!-- Special Ability: Lightness -->
+		</skills>
+	</weapon>
+
+	<weapon id="5609" name="Carnage Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_carnium_bow_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by about 7%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1670" price="14098000" commission-type="BOW" reuse-delay="1500" change-weapon="9338"/>
+		<crystal type="A" count="1128"/>
+		<damage radius="10" angle="360"/>
+		<consume  soulshots="4" spiritshots="3" mana="5"/>
+		<stats>
+			<stat type="pAtk" value="440.0"/>
+			<stat type="mAtk" value="107.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="293.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+		<skills>
+			<skill id="3053" level="1" type="ON_CRITICAL_SKILL"/>  <!-- Special Ability: Critical Bleed -->
+		</skills>
+	</weapon>
+
+	<weapon id="5610" name="Carnage Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_carnium_bow_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. +164 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="1670" price="14098000" commission-type="BOW" reuse-delay="1500" change-weapon="9339"/>
+		<crystal type="A" count="1128"/>
+		<damage radius="10" angle="360"/>
+		<consume  soulshots="4" spiritshots="3" mana="5"/>
+		<stats>
+			<stat type="pAtk" value="440.0"/>
+			<stat type="mAtk" value="107.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="293.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+		<skills>
+			<skill id="3014" level="2"/>  <!-- Special Ability: Boost Mana -->
+		</skills>
+	</weapon>
+
+	<weapon id="5611" name="Soul Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_soul_bow_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Crit. Rate by 40. -->
+		<restriction freightable="false"/>
+		<attributes weight="1660" price="20741000" commission-type="BOW" reuse-delay="820" change-weapon="9349"/>
+		<crystal type="A" count="1659"/>
+		<damage radius="10" angle="360"/>
+		<consume  soulshots="4" spiritshots="3" mana="5"/>
+		<stats>
+			<stat type="pAtk" value="528.0"/>
+			<stat type="mAtk" value="125.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="227.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="5612" name="Soul Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_soul_bow_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by about 7%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1660" price="20741000" commission-type="BOW" reuse-delay="697" change-weapon="9350"/>
+		<crystal type="A" count="1659"/>
+		<damage radius="10" angle="360"/>
+		<consume  soulshots="4" spiritshots="3" mana="5"/>
+		<stats>
+			<stat type="pAtk" value="528.0"/>
+			<stat type="mAtk" value="125.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="227.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="5613" name="Soul Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_soul_bow_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. +180 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="1660" price="20741000" commission-type="BOW" reuse-delay="820" change-weapon="9351"/>
+		<crystal type="A" count="1659"/>
+		<damage radius="10" angle="360"/>
+		<consume  soulshots="4" spiritshots="3" mana="5"/>
+		<stats>
+			<stat type="pAtk" value="528.0"/>
+			<stat type="mAtk" value="125.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="227.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+		<skills>
+			<skill id="3062" level="2" type="ON_CRITICAL_SKILL"/>  <!-- Special Ability: Critical Poison -->
+		</skills>
+	</weapon>
+
+	<weapon id="5614" name="Bloody Orchid" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_bloody_orchid_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Crit. Rate by 58. -->
+		<restriction freightable="false"/>
+		<attributes weight="960" price="14098000" commission-type="DAGGER"/>
+		<crystal type="A" count="1128"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="186.0"/>
+			<stat type="mAtk" value="107.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="5615" name="Bloody Orchid" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_bloody_orchid_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 5%. -->
+		<restriction freightable="false"/>
+		<attributes weight="960" price="14098000" commission-type="DAGGER"/>
+		<crystal type="A" count="1128"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="186.0"/>
+			<stat type="mAtk" value="107.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="5616" name="Bloody Orchid" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_bloody_orchid_i01">
+	<!-- <Soul Crystal Enhancement>\\Increases the chance of success of  performing the skills hitting vulnerable spots on enemy's body. -->
+		<restriction freightable="false"/>
+		<attributes weight="960" price="14098000" commission-type="DAGGER"/>
+		<crystal type="A" count="1128"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="186.0"/>
+			<stat type="mAtk" value="107.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3054" level="1" type="ON_CRITICAL_SKILL"/>  <!-- Special Ability: Critical Bleed -->
+		</skills>
+	</weapon>
+
+	<weapon id="5617" name="Soul Separator" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_soul_separator_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Crit. Rate by 58. -->
+		<restriction freightable="false"/>
+		<attributes weight="950" price="20741000" commission-type="DAGGER"/>
+		<crystal type="A" count="1659"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="203.0"/>
+			<stat type="mAtk" value="114.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="5618" name="Soul Separator" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_soul_separator_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 5%. -->
+		<restriction freightable="false"/>
+		<attributes weight="950" price="20741000" commission-type="DAGGER"/>
+		<crystal type="A" count="1659"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="203.0"/>
+			<stat type="mAtk" value="114.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="5619" name="Soul Separator" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_soul_separator_i01">
+	<!-- <Soul Crystal Enhancement>\\Increases the chance of success of  performing the skills hitting vulnerable spots on enemy's body. -->
+		<restriction freightable="false"/>
+		<attributes weight="950" price="20741000" commission-type="DAGGER"/>
+		<crystal type="A" count="1659"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="203.0"/>
+			<stat type="mAtk" value="114.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3056" level="2"/>  <!-- Special Ability: Risk Haste -->
+		</skills>
+	</weapon>
+
+	<weapon id="5620" name="Blood Tornado" type="FIST" body-part="TWO_HAND" icon="icon.weapon_blood_tornado_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Crit. Rate by 54. -->
+		<restriction freightable="false"/>
+		<attributes weight="1370" price="14098000" commission-type="FIST_WEAPON"/>
+		<crystal type="A" count="1128"/>
+		<damage radius="32" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="259.0"/>
+			<stat type="mAtk" value="107.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3068" level="2"/>  <!-- Special Ability: Haste -->
+		</skills>
+	</weapon>
+
+	<weapon id="5621" name="Blood Tornado" type="FIST" body-part="TWO_HAND" icon="icon.weapon_blood_tornado_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by about 7%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1370" price="14098000" commission-type="FIST_WEAPON"/>
+		<crystal type="A" count="1128"/>
+		<damage radius="32" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="259.0"/>
+			<stat type="mAtk" value="107.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="5622" name="Blood Tornado" type="FIST" body-part="TWO_HAND" icon="icon.weapon_blood_tornado_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. +288 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="1370" price="14098000" commission-type="FIST_WEAPON"/>
+		<crystal type="A" count="1128"/>
+		<damage radius="32" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="259.0"/>
+			<stat type="mAtk" value="107.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="5623" name="Dragon Grinder" type="FIST" body-part="TWO_HAND" icon="icon.weapon_dragon_grinder_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Crit. Rate by 54. -->
+		<restriction freightable="false"/>
+		<attributes weight="1350" price="20741000" commission-type="FIST_WEAPON"/>
+		<crystal type="A" count="1659"/>
+		<damage radius="32" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="282.0"/>
+			<stat type="mAtk" value="114.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3069" level="1"/>  <!-- Special Ability: Risk Evasion -->
+		</skills>
+	</weapon>
+
+	<weapon id="5624" name="Dragon Grinder" type="FIST" body-part="TWO_HAND" icon="icon.weapon_dragon_grinder_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by about 7%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1350" price="20741000" commission-type="FIST_WEAPON"/>
+		<crystal type="A" count="1659"/>
+		<damage radius="32" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="282.0"/>
+			<stat type="mAtk" value="114.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="5625" name="Dragon Grinder" type="FIST" body-part="TWO_HAND" icon="icon.weapon_dragon_grinder_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. +297 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="1350" price="20741000" commission-type="FIST_WEAPON"/>
+		<crystal type="A" count="1659"/>
+		<damage radius="32" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="282.0"/>
+			<stat type="mAtk" value="114.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3013" level="3"/>  <!-- Special Ability: Health -->
+		</skills>
+	</weapon>
+
+	<weapon id="5626" name="Halberd" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_halbard_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Crit. Rate by 54. -->
+		<restriction freightable="false"/>
+		<attributes weight="1900" price="14098000" commission-type="SPEAR"/>
+		<crystal type="A" count="1128"/>
+		<damage radius="66" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="213.0"/>
+			<stat type="mAtk" value="107.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3601" level="7"/>  <!-- Special Ability: Haste -->
+		</skills>
+	</weapon>
+
+	<weapon id="5627" name="Halberd" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_halbard_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by about 7%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1900" price="14098000" commission-type="SPEAR"/>
+		<crystal type="A" count="1128"/>
+		<damage radius="66" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="213.0"/>
+			<stat type="mAtk" value="107.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3070" level="1" type="ON_CRITICAL_SKILL"/>  <!-- Special Ability: Critical Stun -->
+		</skills>
+	</weapon>
+
+	<weapon id="5628" name="Halberd" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_halbard_i01">
+	<!-- <Soul Crystal Enhancement>\\n24% chance of casting Stun upon the target during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="1900" price="14098000" commission-type="SPEAR"/>
+		<crystal type="A" count="1128"/>
+		<damage radius="66" angle="180"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="213.0"/>
+			<stat type="mAtk" value="107.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="5632" name="Tallum Glaive" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_tallum_glaive_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Crit. Rate by 54. -->
+		<restriction freightable="false"/>
+		<attributes weight="1840" price="20741000" commission-type="SPEAR"/>
+		<crystal type="A" count="1659"/>
+		<damage radius="66" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="232.0"/>
+			<stat type="mAtk" value="114.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3602" level="8"/>  <!-- Special Ability: Guidance -->
+		</skills>
+	</weapon>
+
+	<weapon id="5633" name="Tallum Glaive" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_tallum_glaive_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by about 7%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1840" price="20741000" commission-type="SPEAR"/>
+		<crystal type="A" count="1659"/>
+		<damage radius="66" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="232.0"/>
+			<stat type="mAtk" value="114.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3013" level="4"/>  <!-- Special Ability: Health -->
+		</skills>
+	</weapon>
+
+	<weapon id="5634" name="Tallum Glaive" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_tallum_glaive_i01">
+	<!-- <Soul Crystal Enhancement>\\n24% chance of casting Stun upon the target during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="1840" price="20741000" commission-type="SPEAR"/>
+		<crystal type="A" count="1659"/>
+		<damage radius="66" angle="180"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="232.0"/>
+			<stat type="mAtk" value="114.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="5635" name="Tallum Blade" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_tallum_blade_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Crit. Rate by 52. -->
+		<restriction freightable="false"/>
+		<attributes weight="1330" price="14098000" commission-type="ONE_HAND_SWORD" change-weapon="9329"/>
+		<crystal type="A" count="1128"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="213.0"/>
+			<stat type="mAtk" value="107.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3061" level="1" type="ON_CRITICAL_SKILL"/>  <!-- Special Ability: Critical Poison -->
+		</skills>
+	</weapon>
+
+	<weapon id="5636" name="Tallum Blade" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_tallum_blade_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by about 6%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1330" price="14098000" commission-type="ONE_HAND_SWORD" change-weapon="9330"/>
+		<crystal type="A" count="1128"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="213.0"/>
+			<stat type="mAtk" value="107.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3068" level="2"/>  <!-- Special Ability: Haste -->
+		</skills>
+	</weapon>
+
+	<weapon id="5637" name="Tallum Blade" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_tallum_blade_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. +247 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="1330" price="14098000" commission-type="ONE_HAND_SWORD" change-weapon="9331"/>
+		<crystal type="A" count="1128"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="213.0"/>
+			<stat type="mAtk" value="107.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="5638" name="Elemental Sword" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_elemental_sword_i01" magic="true">
+	<!-- <Soul Crystal Enhancement>\\nM. Atk. +144. -->
+		<restriction freightable="false"/>
+		<attributes weight="830" price="14098000" commission-type="ONE_HAND_MAGIC_SWORD"/>
+		<crystal type="A" count="1128"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="170.0"/>
+			<stat type="mAtk" value="143.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="5639" name="Elemental Sword" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_elemental_sword_i01" magic="true">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 12%. -->
+		<restriction freightable="false"/>
+		<attributes weight="830" price="14098000" commission-type="ONE_HAND_MAGIC_SWORD"/>
+		<crystal type="A" count="1128"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="170.0"/>
+			<stat type="mAtk" value="143.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3075" level="1" type="ON_MAGIC_SKILL" chance="5"/>  <!-- Special Ability: Magic Paralysis -->
+		</skills>
+	</weapon>
+
+	<weapon id="5640" name="Elemental Sword" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_elemental_sword_i01" magic="true">
+	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Bonus by 12%. -->
+		<restriction freightable="false"/>
+		<attributes weight="830" price="14098000" commission-type="ONE_HAND_MAGIC_SWORD"/>
+		<crystal type="A" count="1128"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="170.0"/>
+			<stat type="mAtk" value="143.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="5641" name="Sword of Miracles" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_miracle_i01" magic="true">
+	<!-- <Soul Crystal Enhancement>\\nM. Atk. +151. -->
+		<restriction freightable="false"/>
+		<attributes weight="840" price="20741000" commission-type="ONE_HAND_MAGIC_SWORD"/>
+		<crystal type="A" count="1659"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="186.0"/>
+			<stat type="mAtk" value="152.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="5642" name="Sword of Miracles" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_miracle_i01" magic="true">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 12%. -->
+		<restriction freightable="false"/>
+		<attributes weight="840" price="20741000" commission-type="ONE_HAND_MAGIC_SWORD"/>
+		<crystal type="A" count="1659"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="186.0"/>
+			<stat type="mAtk" value="152.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3074" level="2" type="ON_MAGIC_SKILL" chance="10"/>  <!-- Special Ability: Magic Silence -->
+		</skills>
+	</weapon>
+
+	<weapon id="5643" name="Sword of Miracles" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_miracle_i01" magic="true">
+	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Bonus by 12%. -->
+		<restriction freightable="false"/>
+		<attributes weight="840" price="20741000" commission-type="ONE_HAND_MAGIC_SWORD"/>
+		<crystal type="A" count="1659"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="186.0"/>
+			<stat type="mAtk" value="152.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3047" level="2"/>  <!-- Special Ability: Acumen -->
+		</skills>
+	</weapon>
+
+	<weapon id="5644" name="Dragon Slayer" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_dragon_slayer_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Crit. Rate by 54. -->
+		<restriction freightable="false"/>
+		<attributes weight="1840" price="20741000" commission-type="TWO_HAND_SWORD" change-weapon="9345"/>
+		<crystal type="A" count="1659"/>
+		<damage radius="46" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="282.0"/>
+			<stat type="mAtk" value="114.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3013" level="3"/>  <!-- Special Ability: Health -->
+		</skills>
+	</weapon>
+
+	<weapon id="5645" name="Dragon Slayer" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_dragon_slayer_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by about 7%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1840" price="20741000" commission-type="TWO_HAND_SWORD" change-weapon="9346"/>
+		<crystal type="A" count="1659"/>
+		<damage radius="46" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="282.0"/>
+			<stat type="mAtk" value="114.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3055" level="2" type="ON_CRITICAL_SKILL"/>  <!-- Special Ability: Critical Bleed -->
+		</skills>
+	</weapon>
+
+	<weapon id="5646" name="Dragon Slayer" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_dragon_slayer_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. +297 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="1840" price="20741000" commission-type="TWO_HAND_SWORD" change-weapon="9347"/>
+		<crystal type="A" count="1659"/>
+		<damage radius="46" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="282.0"/>
+			<stat type="mAtk" value="114.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3060" level="2" type="ON_CRITICAL_SKILL"/>  <!-- Special Ability: Critical Absorption -->
+		</skills>
+	</weapon>
+
+	<weapon id="5647" name="Dark Legion's Edge" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_dark_legions_edge_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Crit. Rate by 52. -->
+		<restriction freightable="false"/>
+		<attributes weight="1320" price="20741000" commission-type="ONE_HAND_SWORD" change-weapon="9341"/>
+		<crystal type="A" count="1659"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="232.0"/>
+			<stat type="mAtk" value="114.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="5648" name="Dark Legion's Edge" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_dark_legions_edge_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by about 6%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1320" price="20741000" commission-type="ONE_HAND_SWORD" change-weapon="9342"/>
+		<crystal type="A" count="1659"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="232.0"/>
+			<stat type="mAtk" value="114.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3013" level="3"/>  <!-- Special Ability: Health -->
+		</skills>
+	</weapon>
+
+	<weapon id="5649" name="Dark Legion's Edge" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_dark_legions_edge_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. +255 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="1320" price="20741000" commission-type="ONE_HAND_SWORD" change-weapon="9343"/>
+		<crystal type="A" count="1659"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="232.0"/>
+			<stat type="mAtk" value="114.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3071" level="2"/>  <!-- Special Ability: Risk Focus -->
+		</skills>
+	</weapon>
+
 </list>

@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <armor id="93039" name="Worthy Warrior Transformation" icon="icon.gomdori_chest_change">
-        <!-- When equipped, it is impossible to wear armor. Hats, weapons and accessories are not removed. -->
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="alldress"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false"/>
-    </armor>
+	<armor id="93039" name="Race Ranker Appearance" type="HEAVY" body-part="ALL_DRESS" icon="icon.gomdori_chest_change">
+	<!-- Race Ranker's appearance. Headpieces, weapon and magic armor are not removed.  -->
+		<restriction freightable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
 </list>

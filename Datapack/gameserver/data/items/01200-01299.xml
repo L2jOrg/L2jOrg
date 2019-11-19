@@ -1,686 +1,670 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="1200" name="Lionel's Covenant" icon="icon.etc_letter_red_i00">
-        <!-- Lionel's pledge not to use the forbidden book again. Give it to Priest Zigaunt and receive the mark of faith. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1201" name="Mark of Faith" icon="icon.accessary_earing_of_wisdom_i00">
-        <!-- Take this token to the high priest of the temple to change your class to a Cleric. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1202" name="Sorius' Letter" icon="icon.etc_scroll_white_i00">
-        <!-- Letter received from Master Sorius to be given to Blacksmith Kluto in the Village of Gludin. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1203" name="Kluto Box" icon="icon.etc_jewel_box_i00">
-        <!-- Box that Kluto asked to give to Master Sorius. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1204" name="Elven Knight Brooch" icon="icon.accessary_elven_earing_i00">
-        <!-- Take this brooch to the Grand Master of the Fighter Guild and he will change your class to a Knight. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1205" name="Topaz Piece" icon="icon.etc_jewel_gold_i00">
-        <!-- Piece of topaz obtained from the undead in the ruins. Collect 20 to take to Master Sorius. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1206" name="Emerald Piece" icon="icon.etc_jewel_green_i00">
-        <!-- Piece of emerald obtained from the Ol Mahum Novices. Collect 20 of these to take to Blacksmith Kluto. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1207" name="Reisa's Letter" icon="icon.etc_scroll_white_i00">
-        <!-- Master Reisa's letter to Guard Moretti. Find Guard Moretti and give him the letter. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1208" name="Prias' 1st Torn Letter" icon="icon.etc_piece_of_paper_black_i00">
-        <!-- Torn piece of letter written by Prias and is not legible. Collect all four torn pieces and take them to Guard Moretti. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1209" name="Prias' 2nd Torn Letter" icon="icon.etc_piece_of_paper_black_i00">
-        <!-- Torn piece of letter written by Prias and is not legible. Collect all four torn pieces and take them to Guard Moretti. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1210" name="Prias' 3rd Torn Letter" icon="icon.etc_piece_of_paper_black_i00">
-        <!-- Torn piece of letter written by Prias and is not legible. Collect all four torn pieces and take them to Guard Moretti. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1211" name="Prias' 4th Torn Letter" icon="icon.etc_piece_of_paper_black_i00">
-        <!-- Torn piece of letter written by Prias and is not legible. Collect all four torn pieces and take them to Guard Moretti. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1212" name="Moretti's Herb" icon="icon.etc_herb_green_i00">
-        <!-- An herb that Guard Moretti asked to give to Prias. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <weapon id="1213" name="Guard's Bow" icon="icon.weapon_bow_i00">
-        <!-- Bow given by Guard Moretti. May be efficiently used for some purpose. Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;10;0"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1800"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="1"/>
-        <set name="reuse_delay" val="1500"/>
-        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">49</stat>
-            <stat type="mAtk">17</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">293</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <item id="1214" name="Moretti's Letter" icon="icon.etc_scroll_gray_i00">
-        <!-- Urgent letter from Guard Moretti to Prias. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1215" name="Prias' Letter" icon="icon.etc_piece_of_paper_white_i00">
-        <!-- Reply of Prias to the letter from Guard Moretti. Hand this to Moretti. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1216" name="Moretti's Letter" icon="icon.etc_letter_red_i00">
-        <!-- Letter written by Guard Moretti to Master Reisa. Take it to Master Reisa. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1217" name="Reisa's Recommendation" icon="icon.etc_letter_blue_i00">
-        <!-- Take this recommendation to the Grand Master of the Fighter Guild to change your class to an Elven Scout. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1218" name="Rosella's Letter" icon="icon.etc_scroll_white_i00">
-        <!-- Letter from Rosella to Elven Magister Greenis. Related to ruby, the symbol of fire. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1219" name="Red Down" icon="icon.etc_mane_i00">
-        <!-- Material needed to make ruby of magical powers. Collect 5 and take them to Magister Greenis for the magical power ruby. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1220" name="Ruby of Magic" icon="icon.etc_jewel_red_i00">
-        <!-- Ruby that symbolizes fire. Gather 4 jewels that symbolize nature and take them to Rosella for permission to change your class. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1221" name="Pure Aquamarine" icon="icon.etc_jewel_blue_i00">
-        <!-- Aquamarine that symbolizes water. Gather the 4 jewels that symbolize nature and take them to Rosella for permission to change your class. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1222" name="Appetizing Apple" icon="icon.etc_fruit_red_i00">
-        <!-- Very ripe apple. Give it to Thalia for information on the aquamarine of water. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1223" name="Gold Leaves" icon="icon.etc_leaf_gold_i00">
-        <!-- Leaves used as fertilizer for the Mother Tree. Collect five leaves and give them to Thalia for an aquamarine. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1224" name="Immortal Love" icon="icon.etc_spell_books_blue_i00">
-        <!-- Book Northwind wanted to borrow. If you give this book to Northwind, you can obtain information on the amethyst. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1225" name="Amethyst" icon="icon.etc_crystal_red_i00">
-        <!-- Amethyst obtained by killing sukar wererat. Give two to Northwind for nobility amethyst. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1226" name="Nobility Amethyst" icon="icon.etc_jewel_red_i00">
-        <!-- Amethyst that symbolizes wind. Gather 4 jewels that symbolize nature and take them to Rosella for permission to change your class. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1227" name="Rosella's Recommendation" icon="icon.item_normal131">
-        <!-- Rosella's recommendation. If you show this to Varsak, you can get information on the fertility peridot. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1228" name="Peridot" icon="icon.item_normal16">
-        <!-- Peridot you can get if you kill a sniper skeleton. If you collect 3 and show them to Varsak, you can get the fertility peridot. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1229" name="Fertility Peridot" icon="icon.etc_jewel_green_i00">
-        <!-- Peridot that symbolizes the earth. Gather 4 jewels that symbolize nature and take them to Rosella for permission to change your class. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1230" name="Eternity Diamond" icon="icon.etc_jewel_silver_i00">
-        <!-- Take this token to the Grand Master of the Mystic Guild to change your class to an Elven Wizard. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1231" name="Crystal Medallion" icon="icon.accessary_blue_diamond_necklace_i00">
-        <!-- Necklace given by Priest Manuel. Take this and go to the port Gludin to find the girl who works miracles. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1232" name="Swindler's Money" icon="icon.etc_coins_gold_i00">
-        <!-- Money from Perrin's swindling. Give it to Allana. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1233" name="Allana's Diary" icon="icon.etc_spell_books_red_i00">
-        <!-- Diary with records of fraud miracle. Show this to Priest Manuel as proof. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1234" name="Lizard Captain Order" icon="icon.etc_scroll_gray_i00">
-        <!-- Order of lizard captain to kidnap the sacred flame of prophecy. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1235" name="Leaf of Oracle" icon="icon.etc_leaf_green_i00">
-        <!-- Take this to the high priest to change your class to an Oracle. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1236" name="Half of Diary" icon="icon.etc_piece_of_paper_gray_i00">
-        <!-- Half of the diary given by Allana. You must get money from Perrin and find the other half of the diary. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1237" name="Palus Charm" icon="icon.accessary_earing_of_grace_i00">
-        <!-- Charm inscribed with palus runes that symbolize a deep lake. Carry this and hunt Lycanthropes in the Neutral Zone. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1238" name="Lycanthrope Skull" icon="icon.etc_skull_black_i00">
-        <!-- Skull obtained after killing a Lycanthrope. Collect thirteen and take them to Master Virgil. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1239" name="Virgil's Letter" icon="icon.etc_scroll_gray_i00">
-        <!-- Letter written by Master Virgil. Take this to Abyssal Celebrant Kalinta of the village of Gludin. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1240" name="Morte Talisman" icon="icon.accessary_necklace_of_binding_i00">
-        <!-- Talisman with inscription of rune of Morte, symbol of death. Carry this and find materials needed for coffin. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1241" name="Giant Venomous Spider's Carapace" icon="icon.etc_bark_blue_i00">
-        <!-- The hard carapace of a Venomous Spider. Take this and five Arachnid Tracker Silk threads to Abyssal Celebrant Kalinta. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1242" name="Arachnid Tracker Silk" icon="icon.etc_skein_gray_i00">
-        <!-- Arachnid Tracker web threads. Take five of these and a giant Venomous Spider Carapace to Abyssal Celebrant Kalinta. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1243" name="Coffin of Eternal Rest" icon="icon.shield_tower_shield_i00">
-        <!-- Coffin used in funeral of Dark Elven Knight. Take this to Master Virgil. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1244" name="Gaze of Abyss" icon="icon.etc_eyeball_i00">
-        <!-- Take this token to the Grand Master of the Dark Elf guild to change your class to a Palus Knight. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1245" name="Shilen's Call" icon="icon.etc_scroll_white_i00">
-        <!-- Letter received from Triskel. Go to Witch Arkenia of the Altar of Rites. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1246" name="Arkenia's Letter" icon="icon.etc_piece_of_paper_white_i00">
-        <!-- Letter received from Arkenia. Take this to Guard Leikan to obtain information about the thieves. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1247" name="Leikan's Note" icon="icon.etc_piece_of_paper_black_i00">
-        <!-- Simple contract given by Guard Leikan. Hunt Moonstone Beasts and collect their molars. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1248" name="Moonstone Beast's Molar" icon="icon.etc_molar_white_i00">
-        <!-- Molar obtained after killing a Moonstone Beast. Collect 10 of these to take to Guard Leikan. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1249" name="Leikan's Knife" icon="icon.weapon_ss09">
-        <!-- Knife received as present from Leikan. They say it works well against the Calpicos. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1250" name="Shilen's Tears" icon="icon.etc_lesser_potion_blue_i00">
-        <!-- Magic liquid stolen from the Altar of Rites. Give this to Witch Arkenia. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1251" name="Arkenia's Recommendation" icon="icon.etc_letter_red_i00">
-        <!-- Token of thanks received from Arkenia. Take this to Triskel. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1252" name="Iron Heart" icon="icon.accessary_earing_of_mana_i00">
-        <!-- Take this to the Grand Master of the Dark Elf Guild to change your class to an Assassin. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1253" name="Seed of Anger" icon="icon.etc_bead_red_i00">
-        <!-- Seed obtained from Charkeren, who is full of anger. Take this to Witch Varika. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1254" name="Seed of Despair" icon="icon.etc_bead_silver_i00">
-        <!-- Seed obtained from Witch Varika. You must obtain all four seeds to earn the Dark Jewel. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1255" name="Seed of Horror" icon="icon.etc_bead_gold_i00">
-        <!-- Seed obtained from Annika, who is full of horror. Take this to Witch Varika. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1256" name="Seed of Lunacy" icon="icon.etc_bead_green_i00">
-        <!-- Seed obtained from a lunatic. Take this to Witch Varika. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1257" name="Family's Remains" icon="icon.etc_ashes_black_i00">
-        <!-- Remains of Charkeren's slain family. Find 3 and return to Charkeren. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1258" name="Varika's Liquor" icon="icon.item_canuse47">
-        <!-- Medicine Varika made for the son of Duchess Dwell. If you give it to Duchess, you can obtain the Seed of Despair. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1259" name="Knee Bone" icon="icon.etc_piece_bone_black_i00">
-        <!-- The knee bone of undead that Annika was looking for. Give this to Annika to obtain the Seed of Horror. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1260" name="Heart of Lunacy" icon="icon.etc_pouch_brown_i00">
-        <!-- The hearts of those who have been turned into a skeletons by a sorcerer of lunacy. Collect 3 Hearts of Lunacy and take them to Arkenia. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1261" name="Dark Jewel" icon="icon.accessary_necklace_of_phantom_i00">
-        <!-- Take this token to the Grand Master of the Dark Elf guild to change your class to a Dark Wizard. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1262" name="Sidra's Letter" icon="icon.etc_letter_white_i00">
-        <!-- The letter of introduction written by Magister Sidra. Take this to Magister Talbot. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1263" name="Blank Sheet" icon="icon.etc_scroll_white_i00">
-        <!-- Blank scroll. Take this and hunt dark Succubus to obtain bloody runes. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1264" name="Bloody Rune" icon="icon.etc_piece_of_paper_black_i00">
-        <!-- Runes written with the blood of Dark Succubus. Collect 5 and take to Magister Talbot. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1265" name="Garmiel's Book" icon="icon.etc_spell_books_blue_i00">
-        <!-- The sacred book of Gran Kain, god of darkness, written in elven language. One of two books Sidra told you to find. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1266" name="Prayer of Adonius" icon="icon.etc_spell_books_red_i00">
-        <!-- The widely beloved prayer book. Take this to Priest Adonius in the village of Gludin. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1267" name="Penitent's Badge" icon="icon.accessary_earing_of_holy_spirit_i00">
-        <!-- A badge that shows one is in the course of repenting one's sins. Carry this and hunt Skeletons and Zombies in the Ruins of Despair. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1268" name="Ashen Bones" icon="icon.etc_piece_bone_black_i00">
-        <!-- Bones from the skeletons and zombies in the Ruins of Despair. Gather 10 and take them to Priest Adonius. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1269" name="Andariel Book" icon="icon.etc_spell_books_blue_i00">
-        <!-- The sacred book of Einhasad, goddess of light, written in the Elven language. One of two books Sidra told you to find. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1270" name="Orb of Abyss" icon="icon.etc_bead_blue_i00">
-        <!-- Take this token to a Grand Master of a Dark Elf Guild in any major city to change your class to a Shillien Oracle. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1271" name="Squire's Badge" icon="icon.accessary_earing_of_wisdom_i00">
-        <!-- A badge that indicates an esquire. Wander around the villages in Gludio and meet with guard captains and high priests. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1272" name="Greenis' Charm" icon="icon.accessary_aquastone_necklace_i00">
-        <!-- Greenis' good luck charm. Kill pincer spiders and give 5 red down to Greenis. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1273" name="Sap of the Mother Tree" icon="icon.etc_potion_green_i00">
-        <!-- Sap of Mother Tree that dryad elders like. Find 5 gold leaves and give them to Thalia. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1274" name="Lucky Potpourri" icon="icon.etc_oil_pot_black_i00">
-        <!-- Northwind's lucky potpourri. Give Northwind 2 amethysts obtained from killing sukar wererats. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1275" name="Tamil's Necklace" icon="icon.etc_totem_necklace_green_i00">
-        <!-- Tamil's necklace. Show it to Perrin. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1276" name="Kluto's Memo" icon="icon.etc_piece_of_paper_gray_i00">
-        <!-- Memo from Blacksmith Kluto asking to defeat the Ol Mahum Novices. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1277" name="Lucky Key" icon="icon.etc_key_i00">
-        <!-- Bronze key. Hunt zombies in the swamp area, collect 3 remains, and take them to Charkeren. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1278" name="Candle" icon="icon.etc_spirit_bullet_white_i00">
-        <!-- Candle that lights up the dark. Collect 2 knee bones from the undead and give them to Annika for the Seed of Horror. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1279" name="Herb Scent" icon="icon.etc_oil_pot_black_i00">
-        <!-- Fragrant herb potpourri. Obtain 3 Hearts of Lunacy from a Skeleton Scout and take them to Arkenia. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1280" name="Map of Light" icon="icon.etc_recipe_blue_i00">
-        <!-- Map given by the Flame Salamander. Kill Ratman Warriors and give the key of flame to the Flame Salamander in exchange for the token of fire. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1281" name="Key of Flame" icon="icon.etc_key_i00">
-        <!-- The key that can be obtained by killing a Ratman Warrior. When you give it to the Flame Salamander, it will give you the token of fire. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1282" name="Flame Earring" icon="icon.accessary_earing_of_mana_i00">
-        <!-- The token of fire given by fire spirit salamander. Collect four tokens and give them to Parina to receive the token that enables changing occupations. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1283" name="Broken Bronze Mirror" icon="icon.etc_mirror_i00">
-        <!-- The mirror given by the Wind Sylph. Go to the lizardmen of the Wastelands and obtain the Wind Feather and return it to the Wind Sylph. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1284" name="Wind Feather" icon="icon.etc_feather_white_i00">
-        <!-- The feather hidden by the Wind Sylph near the Wastelands. Return this to the Wind Sylph to receive a Wind Token. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1285" name="Wind Bangle" icon="icon.accessary_blue_coral_ring_i00">
-        <!-- The Wind Token given to you by the Wind Spirit Sylph. Collect all four tokens and give them to Parina to receive a special token that will enable you to class transfers. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1286" name="Rama's Diary" icon="icon.etc_spell_books_red_i00">
-        <!-- Kill Water Seers and take two Sparkle Pebbles to Water Undine for the token of water. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1287" name="Sparkle Pebble" icon="icon.etc_crystal_ball_white_i00">
-        <!-- Kill Water Seers in Lake Fellmere for stones. If you give this to Water Undine, she will give you the token of water. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1288" name="Water Necklace" icon="icon.accessary_necklace_of_assistance_i00">
-        <!-- The token of water given by water spirit Undine. Collect four tokens and give them to Parina to receive the token that enables changing occupations. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1289" name="Rusty Coin" icon="icon.etc_coins_gold_i00">
-        <!-- The coin given by Earth Snake. Kill Read Bears and get the Red Soil to give it to the Earth Snake for Token of Earth. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1290" name="Red Soil" icon="icon.etc_powder_red_i00">
-        <!-- The soil obtained from killing Red Bears. Give to the Earth Snake for the token of earth. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1291" name="Earth Ring" icon="icon.accessary_ring_of_firefly_i00">
-        <!-- Token of Earth given by Earth Snake. Collect 4 tokens and give them to Parina to receive the token that enables class transfers. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1292" name="Bead of Season" icon="icon.etc_crystal_ball_green_i00">
-        <!-- Take this bead to the high priest of the temple to change your class to a Wizard. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1293" name="Rusted Key" icon="icon.etc_key_i00">
-        <!-- The key that unlocks Prias' shackles. Take this and go to Prias. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="1294" name="Spellbook: Defense Aura" icon="icon.etc_spell_books_efighter_i00">
-        <!-- Spellbook needed to learn Defense Aura. Used by Elven Fighters and Dark Fighters. Required level: 5 -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="75"/>
-        <set name="commissionItemType" val="SPELLBOOK"/>
-        <restriction stackable="true"/>
-    </item>
-    <weapon id="1295" name="Long Sword" icon="icon.weapon_long_sword_i00">
-        <!-- Temporary item for Kamex -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="200"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <restriction tradable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">22</stat>
-            <stat type="mAtk">6</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="1296" name="Gladius" icon="icon.weapon_gladius_i00">
-        <!-- Temporary item for Kamex -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="300"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <restriction tradable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">22</stat>
-            <stat type="mAtk">6</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="1297" name="Bastard Sword" icon="icon.weapon_bastard_sword_i00">
-        <!-- Temporary item for Kamex -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;42;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="400"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <restriction tradable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">22</stat>
-            <stat type="mAtk">6</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="1298" name="Caliburs" icon="icon.weapon_caliburs_i00">
-        <!-- Temporary item for Kamex -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="500"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <restriction tradable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">22</stat>
-            <stat type="mAtk">6</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="1299" name="Great Sword" icon="icon.weapon_2hs03">
-        <!-- Temporary item for Kamex -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="500"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <restriction tradable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">200</stat>
-            <stat type="mAtk">6</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
+	<item id="1200" name="Lionel's Covenant" type="NONE" icon="icon.etc_letter_red_i00">
+	<!-- Lionel's pledge not to use the forbidden book again. Give it to Priest Zigaunt and receive the mark of faith. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1201" name="Mark of Faith" type="NONE" icon="icon.accessary_earing_of_wisdom_i00">
+	<!-- Take this token to the high priest of the temple to change your occupation to a Cleric. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1202" name="Sorius' Letter" type="NONE" icon="icon.etc_scroll_white_i00">
+	<!-- Letter received from Master Sorius to be given to Blacksmith Kluto in the Village of Gludin. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1203" name="Kluto Box" type="NONE" icon="icon.etc_jewel_box_i00">
+	<!-- Box that Kluto asked to give to Master Sorius. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1204" name="Elven Knight Brooch" type="NONE" icon="icon.accessary_elven_earing_i00">
+	<!-- Take this brooch to the Grand Master of the Fighter Guild and he will change your occupation to a Knight. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1205" name="Topaz Piece" type="NONE" icon="icon.etc_jewel_gold_i00">
+	<!-- Piece of topaz obtained from the undead in the ruins. Collect 20 to take to Master Sorius. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1206" name="Emerald Piece" type="NONE" icon="icon.etc_jewel_green_i00">
+	<!-- Piece of emerald obtained from the Ol Mahum Novices. Collect 20 of these to take to Blacksmith Kluto. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1207" name="Reisa's Letter" type="NONE" icon="icon.etc_scroll_white_i00">
+	<!-- Master Reisa's letter to Guard Moretti. Find Guard Moretti and give him the letter. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1208" name="Prias' 1st Torn Letter" type="NONE" icon="icon.etc_piece_of_paper_black_i00">
+	<!-- Torn piece of letter written by Prias and is not legible. Collect all four torn pieces and take them to Guard Moretti. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1209" name="Prias' 2nd Torn Letter" type="NONE" icon="icon.etc_piece_of_paper_black_i00">
+	<!-- Torn piece of letter written by Prias and is not legible Collect all four torn pieces and take them to Guard Moretti. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1210" name="Prias' 3rd Torn Letter" type="NONE" icon="icon.etc_piece_of_paper_black_i00">
+	<!-- Torn piece of letter written by Prias and is not legible. Collect all four torn pieces and take them to Guard Moretti. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1211" name="Prias' 4th Torn Letter" type="NONE" icon="icon.etc_piece_of_paper_black_i00">
+	<!-- Torn piece of letter written by Prias and is not legible. Collect all four torn pieces and take them to Guard Moretti. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1212" name="Moretti's Herb" type="NONE" icon="icon.etc_herb_green_i00">
+	<!-- An herb that Guard Moretti asked to give to Prias. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<weapon id="1213" name="Guard's Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_bow_i00">
+	<!-- Bow given by Guard Moretti. May be efficiently used for some purpose.  -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false"/>
+		<attributes weight="1800" price="136000" commission-type="OTHER_ITEM" reuse-delay="1500" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="10" angle="360"/>
+		<consume  soulshots="2" mana="1"/>
+		<stats>
+			<stat type="pAtk" value="49.0"/>
+			<stat type="mAtk" value="17.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="293.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<item id="1214" name="Moretti's Letter" type="NONE" icon="icon.etc_scroll_gray_i00">
+	<!-- Urgent letter from Guard Moretti to Prias. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1215" name="Prias' Letter" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
+	<!-- Reply of Prias to the letter from Guard Moretti. Hand this to Moretti. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1216" name="Honorary Guard" type="NONE" icon="icon.etc_letter_red_i00">
+	<!-- Letter written by Guard Moretti to Master Reisa. Take it to Master Reisa. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1217" name="Reisa's Recommendation" type="NONE" icon="icon.etc_letter_blue_i00">
+	<!-- Take this recommendation to the Grand Master of the Fighter Guild to change your occupation to an Elven Scout. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1218" name="Rosella's Letter" type="NONE" icon="icon.etc_scroll_white_i00">
+	<!-- Letter from Rosella to Elven Magister Greenis. Related to ruby, the symbol of fire. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1219" name="Red Down" type="NONE" icon="icon.etc_mane_i00">
+	<!-- Material needed to make ruby of magical powers. Collect 5 and take them to Magister Greenis for the magical power ruby. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1220" name="Ruby of Magic" type="NONE" icon="icon.etc_jewel_red_i00">
+	<!-- Ruby that symbolizes fire. Gather 4 jewels that symbolize nature and take them to Rosella for a token to change occupations. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1221" name="Pure Aquamarine" type="NONE" icon="icon.etc_jewel_blue_i00">
+	<!-- Aquamarine that symbolizes water. Gather the 4 jewels that symbolize nature and take them to Rosella for a token to change occupations. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1222" name="Appetizing Apple" type="NONE" icon="icon.etc_fruit_red_i00">
+	<!-- Very ripe apple. Give it to Thalia for information on the aquamarine of water. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1223" name="Gold Leaves" type="NONE" icon="icon.etc_leaf_gold_i00">
+	<!-- Leaves used as fertilizer for the Mother Tree. Collect five leaves and give them to Thalia for an aquamarine. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1224" name="Immortal Love" type="NONE" icon="icon.etc_spell_books_blue_i00">
+	<!-- Book Northwind wanted to borrow. If you give this book to Northwind, you can obtain information on the amethyst. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1225" name="Amethyst" type="NONE" icon="icon.etc_crystal_red_i00">
+	<!-- Amethyst obtained by killing Mist Terror. Give two to Northwind for a Nobility Amethyst. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1226" name="Nobility Amethyst" type="NONE" icon="icon.etc_jewel_red_i00">
+	<!-- Amethyst that symbolizes wind. Gather 4 jewels that symbolize nature and take them to Rosella for a token to change occupations. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1227" name="Rosella's Recommendation" type="NONE" icon="icon.item_normal131">
+	<!-- Rosella's recommendation. If you show this to Varsak, you can get information on the fertility peridot. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="1228" name="Peridot" type="NONE" icon="icon.item_normal16">
+	<!-- Peridot you can get if you kill a sniper skeleton. If you collect 3 and show them to Varsak, you can get the fertility peridot. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="1229" name="Fertility Peridot" type="NONE" icon="icon.etc_jewel_green_i00">
+	<!-- Peridot that symbolizes the earth. Gather 4 jewels that symbolize nature and take them to Rosella for a token to change occupations. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1230" name="Eternity Diamond" type="NONE" icon="icon.etc_jewel_silver_i00">
+	<!-- Take this token to the Grand Master of the Magician Guild to change your occupation to an Elven Wizard. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1231" name="Crystal Medallion" type="NONE" icon="icon.accessary_blue_diamond_necklace_i00">
+	<!-- Necklace given by Priest Manuel. Take this and go to the port Gludin to find the girl who works miracles. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1232" name="Swindler's Money" type="NONE" icon="icon.etc_coins_gold_i00">
+	<!-- Money from Perrin's swindling. Give it to Allana. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1233" name="Allana's Diary" type="NONE" icon="icon.etc_spell_books_red_i00">
+	<!-- Diary with records of fraud miracle. Show this to Priest Manuel as proof. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1234" name="Lizard Captain Order" type="NONE" icon="icon.etc_scroll_gray_i00">
+	<!-- Order of lizard captain to kidnap the sacred flame of prophecy. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1235" name="Leaf of Oracle" type="NONE" icon="icon.etc_leaf_green_i00">
+	<!-- Take this to the high priest to change your occupation to an Oracle. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1236" name="Half of Diary" type="NONE" icon="icon.etc_piece_of_paper_gray_i00">
+	<!-- Half of the diary given by Allana. You must get money from Perrin and find the other half of the diary. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1237" name="Palus Charm" type="NONE" icon="icon.accessary_earing_of_grace_i00">
+	<!-- Charm inscribed with palus runes that symbolize a deep lake. Carry this and hunt lycanthrope in the Neutral Zone. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1238" name="Lycanthrope Skull" type="NONE" icon="icon.etc_skull_black_i00">
+	<!-- Skull obtained after killing Lycanthrope. Collect thirteen and take them to Master Virgil. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1239" name="Virgil's Letter" type="NONE" icon="icon.etc_scroll_gray_i00">
+	<!-- Letter written by Master Virgil. Take this to Abyssal Celebrant Kalinta of the village of Gludin. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1240" name="Morte Talisman" type="NONE" icon="icon.accessary_necklace_of_binding_i00">
+	<!-- Talisman with inscription of rune of Morte, symbol of death. Carry this and find materials needed for coffin. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1241" name="Giant Venomous Spider's Carapace" type="NONE" icon="icon.etc_bark_blue_i00">
+	<!-- The hard carapace of a Venomous Spider. Take this and five Arachnid Tracker Silk threads to Abyssal Celebrant Kalinta. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1242" name="Arachnid Tracker Silk" type="NONE" icon="icon.etc_skein_gray_i00">
+	<!-- Arachnid Tracker web threads. Take five of these and a giant Venomous Spider carapace to Abyssal Celebrant Kalinta. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1243" name="Coffin of Eternal Rest" type="NONE" icon="icon.shield_tower_shield_i00">
+	<!-- Coffin used in funeral of Dark Elven Knight. Take this to Master Virgil. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1244" name="Gaze of Abyss" type="NONE" icon="icon.etc_eyeball_i00">
+	<!-- Take this token to the Grand Master of the Fighter Guild to change your occupation to a Knight. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1245" name="Shilen's Call" type="NONE" icon="icon.etc_scroll_white_i00">
+	<!-- Letter received from Triskel. Go to Witch Arkenia of the Altar of Rites. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1246" name="Arkenia's Letter" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
+	<!-- Letter received from Arkenia. Take this to Guard Leikan to obtain information about the thief. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1247" name="Leikan's Note" type="NONE" icon="icon.etc_piece_of_paper_black_i00">
+	<!-- Simple contract given by Guard Leikan. Must hunt moonstone beasts and collect their molars. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1248" name="Moonstone Beast's Molar" type="NONE" icon="icon.etc_molar_white_i00">
+	<!-- Molar obtained after killing a moonstone beast. Collect 10 of these to take to Guard Leikan. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1249" name="Leikan's Knife" type="NONE" icon="icon.weapon_ss09">
+	<!-- Knife received as present from Leikan. They say it works well against the Calpicos. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="1250" name="Shilen's Tears" type="NONE" icon="icon.etc_lesser_potion_blue_i00">
+	<!-- Magic liquid stolen from the Altar of Rites. Give this to Witch Arkenia. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1251" name="Arkenia's Recommendation" type="NONE" icon="icon.etc_letter_red_i00">
+	<!-- Token of thanks received from Arkenia. Take this to Triskel. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1252" name="Iron Heart" type="NONE" icon="icon.accessary_earing_of_mana_i00">
+	<!-- Take this to the Grand Master of the Dark Elf Guild to change your occupation to an Assassin. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1253" name="Seed of Anger" type="NONE" icon="icon.etc_bead_red_i00">
+	<!-- Seed obtained from Charkeren, who is full of anger. Take this to Witch Varika. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1254" name="Seed of Despair" type="NONE" icon="icon.etc_bead_silver_i00">
+	<!-- Seed obtained from Witch Varika. You must obtain all four seeds to earn the Dark Jewel. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1255" name="Seed of Horror" type="NONE" icon="icon.etc_bead_gold_i00">
+	<!-- Seed obtained from Annik who is full of horror. Take this to Witch Varika. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1256" name="Seed of Lunacy" type="NONE" icon="icon.etc_bead_green_i00">
+	<!-- Seed obtained from a lunatic. Take this to Witch Varika. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1257" name="Family's Remains" type="NONE" icon="icon.etc_ashes_black_i00">
+	<!-- Remains of Charkeren's slain family. Find 3 and return to Charkeren. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1258" name="Varika's Liquor" type="NONE" icon="icon.item_canuse47">
+	<!-- Medicine Varika made for the son of Duchess Dwell. If you give it to Duchess, you can obtain the Seed of Despair. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="1259" name="Knee Bone" type="NONE" icon="icon.etc_piece_bone_black_i00">
+	<!-- The knee bone of undead that Annika was looking for. Give this to Annika to obtain the Seed of Horror. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1260" name="Heart of Lunacy" type="NONE" icon="icon.etc_pouch_brown_i00">
+	<!-- The hearts of those who have been turned into a skeletons by a sorcerer of lunacy. Collect 3 Hearts of Lunacy and take them to Arkenia. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1261" name="Dark Jewel" type="NONE" icon="icon.accessary_necklace_of_phantom_i00">
+	<!-- Take this token to the Grand Master of the Dark Elf guild to change your occupation to a Dark Wizard. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1262" name="Sidra's Letter" type="NONE" icon="icon.etc_letter_white_i00">
+	<!-- The letter of introduction written by Magister Sidra. Take this to Magister Talbot. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1263" name="Blank Sheet" type="NONE" icon="icon.etc_scroll_white_i00">
+	<!-- Blank scroll. Take this and hunt dark Succubus to obtain bloody runes. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1264" name="Bloody Rune" type="NONE" icon="icon.etc_piece_of_paper_black_i00">
+	<!-- Runes written with the blood of dark Succubus. Collect 5 and take to Magister Talbot. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1265" name="Garmiel's Book" type="NONE" icon="icon.etc_spell_books_blue_i00">
+	<!-- The sacred book of Gran Kain, god of darkness, written in elven language. One of two books Sidra told you to find. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1266" name="Prayer of Adonius" type="NONE" icon="icon.etc_spell_books_red_i00">
+	<!-- The widely beloved prayer book. Take this to Priest Adonius in the village of Gludin. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1267" name="Penitent's Badge" type="NONE" icon="icon.accessary_earing_of_holy_spirit_i00">
+	<!-- A badge that shows one is in the course of repenting one's sins. Carry this and hunt skeletons and zombies in the Ruins of Despair. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1268" name="Ashen Bones" type="NONE" icon="icon.etc_piece_bone_black_i00">
+	<!-- Bones from the skeletons and zombies in the Ruins of Despair. Gather 10 and take them to Priest Adonius. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1269" name="Andariel Book" type="NONE" icon="icon.etc_spell_books_blue_i00">
+	<!-- The sacred book of Einhasad, goddess of light, written in the Elven language. One of two books Sidra told you to find. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1270" name="Orb of Abyss" type="NONE" icon="icon.etc_bead_blue_i00">
+	<!-- Take this token to a Grand Master of a Dark Elf Guild in any major city to change your occupation to a Shillien Oracle. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1271" name="Squire's Badge" type="NONE" icon="icon.accessary_earing_of_wisdom_i00">
+	<!-- A badge that indicates an esquire. Wander around the villages in Gludio and meet with guard captains and high priests. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1272" name="Greenis' Charm" type="NONE" icon="icon.accessary_aquastone_necklace_i00">
+	<!-- Greenis' good luck charm. Kill pincer spiders and give 5 red down to Greenis. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1273" name="Sap of the Mother Tree" type="NONE" icon="icon.etc_potion_green_i00">
+	<!-- Sap of Mother Tree that dryad elders like. Find 5 gold leaves and give them to Thalia. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1274" name="Lucky Potpourri" type="NONE" icon="icon.etc_oil_pot_black_i00">
+	<!-- Northwind's Lucky Potpourri. Give Northwind 2 Amethysts obtained by killing Mist Terror. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1275" name="Tamil's Necklace" type="NONE" icon="icon.etc_totem_necklace_green_i00">
+	<!-- Tamil's necklace. Show it to Perrin. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1276" name="Kluto's Memo" type="NONE" icon="icon.etc_piece_of_paper_gray_i00">
+	<!-- Memo from Blacksmith Kluto asking to defeat the Ol Mahum Novices. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1277" name="Lucky Key" type="NONE" icon="icon.etc_key_i00">
+	<!-- Bronze key. Hunt zombies in the swamp are collect 3 remains, and take them to Charkeren. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1278" name="Candle" type="NONE" icon="icon.etc_spirit_bullet_white_i00">
+	<!-- Candle that lights up the dark. Collect 2 knee bones from the undead and give them to Annika for the Seed of Horror. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1279" name="Herb Scent" type="NONE" icon="icon.etc_oil_pot_black_i00">
+	<!-- Fragrant herb potpourri. Obtain 3 Hearts of Lunacy from a skeleton scout and take them to Arkenia. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1280" name="Map of Light" type="NONE" icon="icon.etc_recipe_blue_i00">
+	<!-- Map given by the Flame Salamander. Kill ratman fighters and give the key of flame to the salamander in exchange for the token of fire. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1281" name="Key of Flame" type="NONE" icon="icon.etc_key_i00">
+	<!-- The key that can be obtained by killing a ratman fighter. When you give it to a salamander, he will give you the token of fire. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1282" name="Flame Earring" type="NONE" icon="icon.accessary_earing_of_mana_i00">
+	<!-- The token of fire given by fire spirit salamander. Collect four tokens and give them to Parina to receive the token that enables changing occupations. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1283" name="Broken Bronze Mirror" type="NONE" icon="icon.etc_mirror_i00">
+	<!-- The mirror given by the Wind Sylph. Go to the lizardmen of the Wastelands and obtain the Wind Feather and return it to the Wind Sylph. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1284" name="Wind Feather" type="NONE" icon="icon.etc_feather_white_i00">
+	<!-- The feather hidden by the Wind Sylph near the Wastelands. Return this to the Wind Sylph to receive a Wind Token. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1285" name="Wind Bangle" type="NONE" icon="icon.accessary_blue_coral_ring_i00">
+	<!-- The Wind Token given to you by the Wind Spirit Sylph. Collect all four tokens and give them to Parina to receive a special token that will enable you to change occupations. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1286" name="Rama's Diary" type="NONE" icon="icon.etc_spell_books_red_i00">
+	<!-- Kill water seer and take two sparkle pebbles to water Undine for the token of water. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1287" name="Sparkle Pebble" type="NONE" icon="icon.etc_crystal_ball_white_i00">
+	<!-- Kill water seer in Lake Fellmere for stones. If you give this to Water Undine, she will give you the token of water. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1288" name="Water Necklace" type="NONE" icon="icon.accessary_necklace_of_assistance_i00">
+	<!-- The token of water given by water spirit Undine. Collect four tokens and give them to Parina to receive the token that enables changing occupations. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1289" name="Rusty Coin" type="NONE" icon="icon.etc_coins_gold_i00">
+	<!-- The coin given by earth snake. Kill red bear and give red soil to earth snake for Token of Earth. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1290" name="Red Soil" type="NONE" icon="icon.etc_powder_red_i00">
+	<!-- The soil obtained from killing red bear. Give to the earth snake for the token of earth. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1291" name="Earth Ring" type="NONE" icon="icon.accessary_ring_of_firefly_i00">
+	<!-- Token of Earth given by earth snake. Collect 4 tokens and give them to Parina to receive the token that enables changing occupations. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1292" name="Bead of Season" type="NONE" icon="icon.etc_crystal_ball_green_i00">
+	<!-- Take this bead to the high priest of the temple to change your occupation to a Wizard. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1293" name="Rusted Key" type="NONE" icon="icon.etc_key_i00">
+	<!-- The key that unlocks Prias' shackles. Take this and go to Prias. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="1294" name="Spellbook: Defense Aura" type="NONE" icon="icon.etc_spell_books_efighter_i00">
+	<!-- Spellbook needed to learn Defense Aura. Used by Elven Fighters and Dark Fighters.\\nRequired level: 5 -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="75" commission-type="SPELLBOOK" immediate-effect="true"/>
+	</item>
+
+	<weapon id="1295" name="Long Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_long_sword_i00">
+	<!-- Temporary item for Kamex -->
+		<restriction freightable="false" tradable="false" sellable="false"/>
+		<attributes weight="200" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="22.0"/>
+			<stat type="mAtk" value="6.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="1296" name="Gladius" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_gladius_i00">
+	<!-- Temporary item for Kamex -->
+		<restriction freightable="false" tradable="false" sellable="false"/>
+		<attributes weight="300" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="22.0"/>
+			<stat type="mAtk" value="6.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="1297" name="Bastard Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_bastard_sword_i00">
+	<!-- Temporary item for Kamex -->
+		<restriction freightable="false" tradable="false" sellable="false"/>
+		<attributes weight="400" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="42" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="22.0"/>
+			<stat type="mAtk" value="6.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="1298" name="Caliburs" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_caliburs_i00">
+	<!-- Temporary item for Kamex -->
+		<restriction freightable="false" tradable="false" sellable="false"/>
+		<attributes weight="500" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="22.0"/>
+			<stat type="mAtk" value="6.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="1299" name="Great Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_2hs03">
+	<!-- Temporary item for Kamex -->
+		<restriction freightable="false" tradable="false" sellable="false"/>
+		<attributes weight="500" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="200.0"/>
+			<stat type="mAtk" value="6.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
 </list>

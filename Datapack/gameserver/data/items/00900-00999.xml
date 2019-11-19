@@ -1,799 +1,635 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <armor id="900" name="Ring of Grace" icon="icon.accessary_ring_of_grace_i00">
-        <set name="bodypart" val="rfinger;lfinger"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="150"/>
-        <set name="price" val="404000"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="mDef">34</stat>
-        </stats>
-    </armor>
-    <armor id="901" name="Ring of Holy Spirit" icon="icon.accessary_ring_of_holy_spirit_i00">
-        <set name="bodypart" val="rfinger;lfinger"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="9"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="150"/>
-        <set name="price" val="404000"/>
-        <set name="commissionItemType" val="RING"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="mDef">36</stat>
-        </stats>
-    </armor>
-    <armor id="902" name="Phoenix Ring" icon="icon.accessary_phoenixs_ring_i00">
-        <!-- Phoenix Ring. Provides additional MP +13. -->
-        <set name="bodypart" val="rfinger;lfinger"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="54"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="150"/>
-        <set name="price" val="670000"/>
-        <set name="commissionItemType" val="RING"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="mDef">40</stat>
-            <stat type="maxMp">13</stat>
-        </stats>
-    </armor>
-    <armor id="905" name="Ring of Blessing" icon="icon.accessary_ring_of_blessing_i00">
-        <set name="bodypart" val="rfinger;lfinger"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="54"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="150"/>
-        <set name="price" val="404000"/>
-        <set name="commissionItemType" val="RING"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="mDef">34</stat>
-        </stats>
-    </armor>
-    <armor id="906" name="Necklace of Knowledge" icon="icon.accessary_necklace_of_knowledge_i00">
-        <!-- Silver necklace engraved with rune characters of knowledge. -->
-        <set name="bodypart" val="neck"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <set name="commissionItemType" val="NECKLACE"/>
-        <set name="price" val="1080"/>
-        <stats>
-            <stat type="mDef">18</stat>
-        </stats>
-    </armor>
-    <armor id="907" name="Necklace of Anguish" icon="icon.accessary_necklace_of_anguish_i00">
-        <!-- Silver necklace engraved with rune characters of anguish. -->
-        <set name="bodypart" val="neck"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <set name="commissionItemType" val="NECKLACE"/>
-        <set name="price" val="4680"/>
-        <stats>
-            <stat type="mDef">21</stat>
-        </stats>
-    </armor>
-    <armor id="908" name="Necklace of Wisdom" icon="icon.accessary_necklace_of_wisdom_i00">
-        <set name="bodypart" val="neck"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <set name="commissionItemType" val="NECKLACE"/>
-        <set name="price" val="11900"/>
-        <stats>
-            <stat type="mDef">25</stat>
-        </stats>
-    </armor>
-    <armor id="909" name="Blue Diamond Necklace" icon="icon.accessary_blue_diamond_necklace_i00">
-        <set name="bodypart" val="neck"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <set name="commissionItemType" val="NECKLACE"/>
-        <set name="price" val="21300"/>
-        <stats>
-            <stat type="mDef">28</stat>
-        </stats>
-    </armor>
-    <armor id="910" name="Necklace of Devotion" icon="icon.accessary_necklace_of_devotion_i00">
-        <set name="bodypart" val="neck"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="65"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="150"/>
-        <set name="price" val="35900"/>
-        <set name="commissionItemType" val="NECKLACE"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="mDef">32</stat>
-        </stats>
-    </armor>
-    <armor id="911" name="Magic Necklace" icon="icon.accessary_enchanted_necklace_i00">
-        <set name="bodypart" val="neck"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="103"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="150"/>
-        <set name="price" val="56800"/>
-        <set name="commissionItemType" val="NECKLACE"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="mDef">36</stat>
-        </stats>
-    </armor>
-    <armor id="912" name="Near Forest Necklace" icon="icon.accessary_near_forest_necklace_i00">
-        <set name="bodypart" val="neck"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="155"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="150"/>
-        <set name="price" val="85700"/>
-        <set name="commissionItemType" val="NECKLACE"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="mDef">40</stat>
-        </stats>
-    </armor>
-    <armor id="913" name="Elven Necklace" icon="icon.accessary_elven_necklace_i00">
-        <set name="bodypart" val="neck"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="227"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="150"/>
-        <set name="price" val="125000"/>
-        <set name="commissionItemType" val="NECKLACE"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="mDef">45</stat>
-        </stats>
-    </armor>
-    <armor id="914" name="Dark Necklace" icon="icon.accessary_necklace_of_darkness_i00">
-        <set name="bodypart" val="neck"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="294"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="150"/>
-        <set name="price" val="162000"/>
-        <set name="commissionItemType" val="NECKLACE"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="mDef">48</stat>
-        </stats>
-    </armor>
-    <armor id="915" name="Aquastone Necklace" icon="icon.accessary_aquastone_necklace_i00">
-        <set name="bodypart" val="neck"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="82"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="150"/>
-        <set name="price" val="207000"/>
-        <set name="commissionItemType" val="NECKLACE"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="mDef">52</stat>
-        </stats>
-    </armor>
-    <armor id="916" name="Necklace of Protection" icon="icon.accessary_necklace_of_protection_i00">
-        <set name="bodypart" val="neck"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="104"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="150"/>
-        <set name="price" val="261000"/>
-        <set name="commissionItemType" val="NECKLACE"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="mDef">56</stat>
-        </stats>
-    </armor>
-    <armor id="917" name="Necklace of Mermaid" icon="icon.accessary_necklace_of_mermaid_i00">
-        <set name="bodypart" val="neck"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="157"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="150"/>
-        <set name="price" val="393000"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="NECKLACE"/>
-        <stats>
-            <stat type="mDef">60</stat>
-        </stats>
-    </armor>
-    <armor id="918" name="Adamantite Necklace" icon="icon.accessary_adamantite_necklace_i00">
-        <set name="bodypart" val="neck"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="107"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="150"/>
-        <set name="price" val="808000"/>
-        <set name="commissionItemType" val="NECKLACE"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="mDef">68</stat>
-        </stats>
-    </armor>
-    <armor id="919" name="Blessed Necklace" icon="icon.accessary_blessed_necklace_i00">
-        <set name="bodypart" val="neck"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="226"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="150"/>
-        <set name="price" val="565000"/>
-        <set name="commissionItemType" val="NECKLACE"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="mDef">64</stat>
-        </stats>
-    </armor>
-    <armor id="920" name="Tateossian Necklace" icon="icon.accessory_tateossian_necklace_i00">
-        <!-- When equipped, MP +42. -->
-        <set name="bodypart" val="neck"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="209"/>
-        <set name="crystal_type" val="S"/>
-        <set name="weight" val="150"/>
-        <set name="price" val="4361000"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="mDef">120</stat>
-            <stat type="maxMp">42</stat>
-        </stats>
-    </armor>
-    <armor id="922" name="Sage's Necklace" icon="icon.accessary_sages_necklace_i00">
-        <set name="bodypart" val="neck"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="226"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="150"/>
-        <set name="price" val="1230000"/>
-        <set name="commissionItemType" val="NECKLACE"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="mDef">72</stat>
-        </stats>
-    </armor>
-    <armor id="924" name="Majestic Necklace" icon="icon.accessary_inferno_necklace_i00">
-        <!-- Majestic Necklace. Provides additional MP +33. -->
-        <set name="bodypart" val="neck"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="226"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="150"/>
-        <set name="price" val="1998000"/>
-        <set name="commissionItemType" val="NECKLACE"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="mDef">85</stat>
-            <stat type="maxMp">33</stat>
-        </stats>
-    </armor>
-    <armor id="926" name="Black Ore Necklace" icon="icon.accessary_necklace_of_black_ore_i00">
-        <set name="bodypart" val="neck"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="164"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="150"/>
-        <set name="price" val="1230000"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="NECKLACE"/>
-        <stats>
-            <stat type="mDef">72</stat>
-        </stats>
-    </armor>
-    <armor id="931" name="Necklace of Grace" icon="icon.accessary_necklace_of_grace_i00">
-        <set name="bodypart" val="neck"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="164"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="150"/>
-        <set name="price" val="808000"/>
-        <set name="commissionItemType" val="NECKLACE"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="mDef">68</stat>
-        </stats>
-    </armor>
-    <armor id="933" name="Phoenix Necklace" icon="icon.accessary_phoenixs_necklace_i00">
-        <!-- Phoenix Necklace. Provides additional MP +26. -->
-        <set name="bodypart" val="neck"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="164"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="150"/>
-        <set name="price" val="1340000"/>
-        <set name="commissionItemType" val="NECKLACE"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="mDef">80</stat>
-            <stat type="maxMp">26</stat>
-        </stats>
-    </armor>
-    <armor id="936" name="Necklace of Blessing" icon="icon.accessary_necklace_of_blessing_i00">
-        <set name="bodypart" val="neck"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="164"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="150"/>
-        <set name="price" val="808000"/>
-        <set name="commissionItemType" val="NECKLACE"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="mDef">68</stat>
-        </stats>
-    </armor>
-    <item id="937" name="Directions to Ruins" icon="icon.etc_piece_of_paper_gray_i00">
-        <!-- Follow the northwestern path from the village, and head west when you meet the Obelisk of Victory. The entrance to the ruins lies at the slope of the mountain. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="938" name="Deck" icon="icon.etc_spell_books_red_i00">
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
-    </item>
-    <item id="939" name="Gara's Quest Item #11" icon="icon.item_normal52">
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="940" name="Gara's Quest Item #12" icon="icon.item_normal52">
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="941" name="Gara's Mark of Bravery" icon="icon.item_normal52">
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="942" name="Gara's Mark of Justice" icon="icon.item_normal52">
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="943" name="Gara's Mark of Despair" icon="icon.item_normal52">
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="944" name="Deathknight Skull" icon="icon.armor_head15">
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <armor id="945" name="Skeleton Buckler" icon="icon.shield_skeleton_buckler_i00">
-        <!-- Small wooden shield that perpetrators of mages use. -->
-        <set name="bodypart" val="lhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1400"/>
-        <set name="commissionItemType" val="SHIELD"/>
-        <set name="price" val="3440"/>
-        <stats>
-            <stat type="rEvas">-8</stat>
-            <stat type="rShld">20</stat>
-            <stat type="sDef">69</stat>
-        </stats>
-    </armor>
-    <weapon id="946" name="Skeleton Dagger" icon="icon.weapon_dagger_i00">
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1100"/>
-        <set name="price" val="66600"/>
-        <set name="soulshots" val="1"/>
-        <set name="commissionItemType" val="DAGGER"/>
-        <set name="spiritshots" val="1"/>
-        <stats>
-            <stat type="pAtk">16</stat>
-            <stat type="mAtk">13</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <item id="947" name="Scroll: Enchant Weapon (B-grade)" icon="icon.etc_scroll_of_enchant_weapon_i03">
-        <!-- When enchanted, P. Atk. + 4 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 8 for bows. M. Atk. + 3 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to + 3. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="etcitem_type" val="ENCHT_WP"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="500000"/>
-        <set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON"/>
-        <restriction stackable="true" olympiad-restricted="true"/>
-        <skills>
-            <skill id="2015" level="1"/> <!-- Scroll: Enchant Weapon (B-grade) -->
-        </skills>
-    </item>
-    <item id="948" name="Scroll: Enchant Armor (B-grade)" icon="icon.etc_scroll_of_enchant_armor_i03">
-        <!-- P. Def. + 1 for B-grade armor and accessories. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="etcitem_type" val="ENCHT_AM"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="80000"/>
-        <set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR"/>
-        <restriction stackable="true" olympiad-restricted="true"/>
-        <skills>
-            <skill id="2016" level="1"/> <!-- Scroll: Enchant Armor (B-grade) -->
-        </skills>
-    </item>
-    <item id="951" name="Scroll: Enchant Weapon (C-grade)" icon="icon.etc_scroll_of_enchant_weapon_i02">
-        <!-- When enchanted, P. Atk. +4 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="etcitem_type" val="ENCHT_WP"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="110000"/>
-        <set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON"/>
-        <restriction stackable="true" olympiad-restricted="true"/>
-        <skills>
-            <skill id="2017" level="1"/> <!-- Scroll: Enchant Weapon (C-grade) -->
-        </skills>
-    </item>
-    <item id="952" name="Scroll: Enchant Armor (C-grade)" icon="icon.etc_scroll_of_enchant_armor_i02">
-        <!-- P. Def. + 1 for C-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="etcitem_type" val="ENCHT_AM"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="15000"/>
-        <set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR"/>
-        <restriction stackable="true" olympiad-restricted="true"/>
-        <skills>
-            <skill id="2018" level="1"/> <!-- Scroll: Enchant Armor (C-grade) -->
-        </skills>
-    </item>
-    <item id="955" name="Scroll: Enchant Weapon (D-grade)" icon="icon.etc_scroll_of_enchant_weapon_i01">
-        <!-- When enchanted, P. Atk. +4 for D-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="etcitem_type" val="ENCHT_WP"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="50000"/>
-        <set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON"/>
-        <restriction stackable="true" olympiad-restricted="true"/>
-        <skills>
-            <skill id="2019" level="1"/> <!-- Scroll: Enchant Weapon (D-grade) -->
-        </skills>
-    </item>
-    <item id="956" name="Scroll: Enchant Armor (D-grade)" icon="icon.etc_scroll_of_enchant_armor_i01">
-        <!-- P. Def. + 1 for D-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="etcitem_type" val="ENCHT_AM"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="6000"/>
-        <set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR"/>
-        <restriction stackable="true" olympiad-restricted="true"/>
-        <skills>
-            <skill id="2020" level="1"/> <!-- Scroll: Enchant Armor (D-grade) -->
-        </skills>
-    </item>
-    <item id="959" name="Scroll: Enchant Weapon (S-grade)" icon="icon.etc_scroll_of_enchant_weapon_i05">
-        <!-- When enchanted, P. Atk. +5 for S-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +6 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +10 for bows. M. Atk. +4 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus is doubled. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="etcitem_type" val="ENCHT_WP"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="5000000"/>
-        <set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON"/>
-        <restriction stackable="true" olympiad-restricted="true"/>
-        <skills>
-            <skill id="2021" level="1"/> <!-- Scroll: Enchant Weapon (S-grade) -->
-        </skills>
-    </item>
-    <item id="960" name="Scroll: Enchant Armor (S-grade)" icon="icon.etc_scroll_of_enchant_armor_i05">
-        <!-- P. Def. +2 for S-grade armor and accessories. Starting from +4, P. Def. +8. Ordinary armor can be safely enchanted up to +3. One-piece armor can be safely enchanted up to +4. After +4 increases HP. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="etcitem_type" val="ENCHT_AM"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="500000"/>
-        <set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR"/>
-        <restriction stackable="true" olympiad-restricted="true"/>
-        <skills>
-            <skill id="2022" level="1"/> <!-- Scroll: Enchant Armor (S-grade) -->
-        </skills>
-    </item>
-    <item id="963" name="Orc Arrowhead" icon="icon.weapon_winged_spear_i00">
-        <!-- Arrowhead that Turath orc marksmen use on Talking Island. Collect these and take to Master Minia. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="964" name="Alberius' Letter" icon="icon.etc_scroll_white_i00">
-        <!-- Letter from Alberius. Take this to Master Cobendell. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="965" name="Evergreen Amulet" icon="icon.accessary_near_forest_necklace_i00">
-        <!-- Necklace set with a green Elemental stone. You must possess this to slay the dryad and obtain the dryad's tears. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="966" name="Dryad's Tears" icon="icon.etc_crystal_ball_green_i00">
-        <!-- Jewel that contains the essence of a dryad's soul. Gather ten of these and take them to Master Cobendell. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="967" name="Cobendell's Medicine" icon="icon.item_canuse24">
-        <!-- Cobendell's medicine -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="968" name="Karrod's Letter" icon="icon.etc_scroll_gray_i00">
-        <!-- Letter written by Blacksmith Karrod. Take this to the Abyssal Celebrant Cecktinon in the Shilen Temple. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="969" name="Cecktinon's First Voucher" icon="icon.etc_letter_red_i00">
-        <!-- Introduction letter from the Abyssal Celebrant Cecktinon. Take this and seek Magister Harne in the village. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="970" name="Cecktinon's Second Voucher" icon="icon.etc_letter_red_i00">
-        <!-- Introduction letter from the Abyssal Celebrant Cecktinon. Go to the School of Dark Arts, hunt skeletons, and gather 10 bone fragments. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="971" name="Soul Catcher" icon="icon.weapon_voodoo_doll_i00">
-        <!-- Item used during the exorcism ritual to call upon a spirit of the dead. Take this to the Abyssal Celebrant Cecktinon. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="972" name="Preserving Oil" icon="icon.etc_potion_clear_i00">
-        <!-- Oil that prevents the rotting of corpses. Take this and go hunt zombies in the Marshlands. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="973" name="Zombie Head" icon="icon.etc_skull_black_i00">
-        <!-- The head of tree Elf zombies that have been cut after they are defeated. Take this to the abyssal celebrant Cecktinon. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="974" name="Steelbender Head" icon="icon.etc_skull_red_i00">
-        <!-- Please, I beg of you! Don't take me to that nasty-tempered blacksmith! -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <weapon id="975" name="Blood Saber" icon="icon.weapon_broad_sword_i00">
-        <!-- An Oriharukon sword crafted in the Abella style of the east. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1450"/>
-        <set name="price" val="33600"/>
-        <set name="soulshots" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_SWORD"/>
-        <set name="spiritshots" val="1"/>
-        <stats>
-            <stat type="pAtk">14</stat>
-            <stat type="mAtk">11</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <item id="976" name="1st Badge of Sentinel" icon="icon.item_system03">
-        <!-- A badge that certifies that its bearer is an Elven Sentinel. Destroy an orc Tanuki skullcrusher and report to Sentinel Kendell. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="977" name="1st Badge of Sentinel" icon="icon.item_system03">
-        <!-- A badge that certifies that its bearer is an Elven Sentinel. Destroy an orc Bhato bloodspear and report to Sentinel Kendell. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="978" name="Skullcrusher Amulet" icon="icon.item_normal145">
-        <!-- The amulet that represents the Skullcrusher Orc tribe. Take this to Sentinel Kendell. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="979" name="Bloodspear Amulet" icon="icon.item_normal89">
-        <!-- The amulet that represents the Bloodspear Orc tribe. Take this to Sentinel Kendell. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <weapon id="981" name="Red Sunset Sword" icon="icon.weapon_brandish_i00">
-        <!-- Sword used by warriors belonging to the Red Sunset clan. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1300"/>
-        <set name="price" val="25500"/>
-        <set name="soulshots" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_SWORD"/>
-        <set name="spiritshots" val="1"/>
-        <stats>
-            <stat type="pAtk">16</stat>
-            <stat type="mAtk">10</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <item id="982" name="Esrandell's Letter" icon="icon.item_normal20">
-        <!-- Esrandell's introduction -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="983" name="Kendell's Letter" icon="icon.item_normal20">
-        <!-- Kendell's letter -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="984" name="1st Onyx Talisman" icon="icon.accessary_sages_necklace_i00">
-        <!-- Necklace crafted of onyx. Take this to Abyssal Celebrant Kartia. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="985" name="1st Onyx Talisman" icon="icon.accessary_sages_necklace_i00">
-        <!-- Necklace crafted of onyx. Recover the original scrolls from the blackskull Orcs and bring them to Abyssal Celebrant Kartia. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="986" name="Ancient Scroll" icon="icon.etc_scroll_gray_i00">
-        <!-- Ancient scroll called Kaysha's Revelation. Take it along with the clay tablet to Abyssal Celebrant Kartia. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="987" name="Ancient Clay Tablet" icon="icon.etc_plate_glay_i00">
-        <!-- Ancient clay tablet engraved with text. Take it along with the ancient scroll to Abyssal Celebrant Kartia. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="988" name="Kartia's Translation" icon="icon.etc_piece_of_paper_gray_i00">
-        <!-- Kartia's translation of Kaysha's Revelations. Take it to Hierarch Thifiell. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <weapon id="989" name="Eldritch Dagger" icon="icon.weapon_knife_i00">
-        <!-- Steel dagger engraved with the runes of Shilen and Gran Kain. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1130"/>
-        <set name="price" val="25500"/>
-        <set name="soulshots" val="1"/>
-        <set name="commissionItemType" val="DAGGER"/>
-        <set name="spiritshots" val="1"/>
-        <stats>
-            <stat type="pAtk">11</stat>
-            <stat type="mAtk">10</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <armor id="990" name="Fist000" icon="icon.item_canuse27">
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="60"/>
-        <set name="commissionItemType" val="GLOVES"/>
-        <set name="price" val="37"/>
-        <stats>
-            <stat type="pDef">9</stat>
-        </stats>
-    </armor>
-    <armor id="991" name="Fist001" icon="icon.item_normal26">
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="60"/>
-        <set name="commissionItemType" val="GLOVES"/>
-        <set name="price" val="37"/>
-        <stats>
-            <stat type="pDef">9</stat>
-        </stats>
-    </armor>
-    <armor id="992" name="Fist002" icon="icon.armor_head15">
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="60"/>
-        <set name="commissionItemType" val="GLOVES"/>
-        <set name="price" val="37"/>
-        <stats>
-            <stat type="pDef">9</stat>
-        </stats>
-    </armor>
-    <armor id="993" name="Fist003" icon="icon.armor_head15">
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="60"/>
-        <set name="commissionItemType" val="GLOVES"/>
-        <set name="price" val="37"/>
-        <stats>
-            <stat type="pDef">9</stat>
-        </stats>
-    </armor>
-    <armor id="994" name="Fist004" icon="icon.item_normal46">
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="60"/>
-        <set name="commissionItemType" val="GLOVES"/>
-        <set name="price" val="37"/>
-        <stats>
-            <stat type="pDef">9</stat>
-        </stats>
-    </armor>
-    <armor id="995" name="Fist005" icon="icon.item_normal20">
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="60"/>
-        <set name="commissionItemType" val="GLOVES"/>
-        <set name="price" val="37"/>
-        <stats>
-            <stat type="pDef">9</stat>
-        </stats>
-    </armor>
-    <armor id="996" name="Fist006" icon="icon.weapon_ss08">
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="60"/>
-        <set name="commissionItemType" val="GLOVES"/>
-        <set name="price" val="37"/>
-        <stats>
-            <stat type="pDef">9</stat>
-        </stats>
-    </armor>
-    <armor id="997" name="Fist007" icon="icon.item_normal50">
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="60"/>
-        <set name="commissionItemType" val="GLOVES"/>
-        <set name="price" val="37"/>
-        <stats>
-            <stat type="pDef">9</stat>
-        </stats>
-    </armor>
-    <armor id="998" name="Fist008" icon="icon.item_normal07">
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="60"/>
-        <set name="commissionItemType" val="GLOVES"/>
-        <set name="price" val="37"/>
-        <stats>
-            <stat type="pDef">9</stat>
-        </stats>
-    </armor>
-    <armor id="999" name="Fist009" icon="icon.item_normal07">
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="60"/>
-        <set name="commissionItemType" val="GLOVES"/>
-        <set name="price" val="37"/>
-        <stats>
-            <stat type="pDef">9</stat>
-        </stats>
-    </armor>
+	<armor id="900" name="Ring of Grace" type="NONE" body-part="FINGER" icon="icon.accessary_ring_of_grace_i00">
+		<restriction freightable="false"/>
+		<attributes weight="150" price="404000" />
+		<crystal type="B"/>
+		<stats>
+			<stat type="mDef" value="34.0"/>
+		</stats>
+	</armor>
+
+	<armor id="902" name="Phoenix Ring" type="NONE" body-part="FINGER" icon="icon.accessary_phoenixs_ring_i00">
+	<!-- Phoenix Ring. Provides additional MP +13. -->
+		<restriction freightable="false"/>
+		<attributes weight="150" price="670000" commission-type="RING" />
+		<crystal type="A" count="54"/>
+		<stats>
+			<stat type="mDef" value="40.0"/>
+			<stat type="maxMp" value="13.0"/>
+		</stats>
+	</armor>
+
+	<armor id="905" name="Ring of Blessing" type="NONE" body-part="FINGER" icon="icon.accessary_ring_of_blessing_i00">
+		<restriction freightable="false"/>
+		<attributes weight="150" price="404000" commission-type="RING" />
+		<crystal type="B" count="54"/>
+		<stats>
+			<stat type="mDef" value="34.0"/>
+		</stats>
+	</armor>
+
+	<armor id="906" name="Necklace of Knowledge" type="NONE" body-part="NECK" icon="icon.accessary_necklace_of_knowledge_i00">
+	<!-- Silver necklace engraved with rune characters of knowledge. -->
+		<restriction freightable="false"/>
+		<attributes weight="150" price="1080" commission-type="NECKLACE" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="18.0"/>
+		</stats>
+	</armor>
+
+	<armor id="907" name="Necklace of Anguish" type="NONE" body-part="NECK" icon="icon.accessary_necklace_of_anguish_i00">
+	<!-- Silver necklace engraved with rune characters of anguish. -->
+		<restriction freightable="false"/>
+		<attributes weight="150" price="4680" commission-type="NECKLACE" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="21.0"/>
+		</stats>
+	</armor>
+
+	<armor id="908" name="Necklace of Wisdom" type="NONE" body-part="NECK" icon="icon.accessary_necklace_of_wisdom_i00">
+		<restriction freightable="false"/>
+		<attributes weight="150" price="11900" commission-type="NECKLACE" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="25.0"/>
+		</stats>
+	</armor>
+
+	<armor id="909" name="Blue Diamond Necklace" type="NONE" body-part="NECK" icon="icon.accessary_blue_diamond_necklace_i00">
+		<restriction freightable="false"/>
+		<attributes weight="150" price="21300" commission-type="NECKLACE" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="28.0"/>
+		</stats>
+	</armor>
+
+	<armor id="910" name="Necklace of Devotion" type="NONE" body-part="NECK" icon="icon.accessary_necklace_of_devotion_i00">
+		<restriction freightable="false"/>
+		<attributes weight="150" price="35900" commission-type="NECKLACE" />
+		<crystal type="D" count="65"/>
+		<stats>
+			<stat type="mDef" value="32.0"/>
+		</stats>
+	</armor>
+
+	<armor id="911" name="Magic Necklace" type="NONE" body-part="NECK" icon="icon.accessary_enchanted_necklace_i00">
+		<restriction freightable="false"/>
+		<attributes weight="150" price="56800" commission-type="NECKLACE" />
+		<crystal type="D" count="103"/>
+		<stats>
+			<stat type="mDef" value="36.0"/>
+		</stats>
+	</armor>
+
+	<armor id="912" name="Near Forest Necklace" type="NONE" body-part="NECK" icon="icon.accessary_near_forest_necklace_i00">
+		<restriction freightable="false"/>
+		<attributes weight="150" price="85700" commission-type="NECKLACE" />
+		<crystal type="D" count="155"/>
+		<stats>
+			<stat type="mDef" value="40.0"/>
+		</stats>
+	</armor>
+
+	<armor id="913" name="Elven Necklace" type="NONE" body-part="NECK" icon="icon.accessary_elven_necklace_i00">
+		<restriction freightable="false"/>
+		<attributes weight="150" price="125000" commission-type="NECKLACE" />
+		<crystal type="D" count="227"/>
+		<stats>
+			<stat type="mDef" value="45.0"/>
+		</stats>
+	</armor>
+
+	<armor id="914" name="Necklace of Darkness" type="NONE" body-part="NECK" icon="icon.accessary_necklace_of_darkness_i00">
+		<restriction freightable="false"/>
+		<attributes weight="150" price="162000" commission-type="NECKLACE" />
+		<crystal type="D" count="294"/>
+		<stats>
+			<stat type="mDef" value="48.0"/>
+		</stats>
+	</armor>
+
+	<armor id="915" name="Aquastone Necklace" type="NONE" body-part="NECK" icon="icon.accessary_aquastone_necklace_i00">
+		<restriction freightable="false"/>
+		<attributes weight="150" price="207000" commission-type="NECKLACE" />
+		<crystal type="C" count="82"/>
+		<stats>
+			<stat type="mDef" value="52.0"/>
+		</stats>
+	</armor>
+
+	<armor id="916" name="Necklace of Protection" type="NONE" body-part="NECK" icon="icon.accessary_necklace_of_protection_i00">
+		<restriction freightable="false"/>
+		<attributes weight="150" price="261000" commission-type="NECKLACE" />
+		<crystal type="C" count="104"/>
+		<stats>
+			<stat type="mDef" value="56.0"/>
+		</stats>
+	</armor>
+
+	<armor id="917" name="Necklace of Mermaid" type="NONE" body-part="NECK" icon="icon.accessary_necklace_of_mermaid_i00">
+		<restriction freightable="false"/>
+		<attributes weight="150" price="393000" commission-type="NECKLACE" />
+		<crystal type="C" count="157"/>
+		<stats>
+			<stat type="mDef" value="60.0"/>
+		</stats>
+	</armor>
+
+	<armor id="918" name="Adamantite Necklace" type="NONE" body-part="NECK" icon="icon.accessary_adamantite_necklace_i00">
+		<restriction freightable="false"/>
+		<attributes weight="150" price="808000" commission-type="NECKLACE" />
+		<crystal type="B" count="107"/>
+		<stats>
+			<stat type="mDef" value="68.0"/>
+		</stats>
+	</armor>
+
+	<armor id="919" name="Blessed Necklace" type="NONE" body-part="NECK" icon="icon.accessary_blessed_necklace_i00">
+		<restriction freightable="false"/>
+		<attributes weight="150" price="565000" commission-type="NECKLACE" />
+		<crystal type="C" count="226"/>
+		<stats>
+			<stat type="mDef" value="64.0"/>
+		</stats>
+	</armor>
+
+	<armor id="920" name="Tateossian Necklace" type="NONE" body-part="NECK" icon="icon.accessory_tateossian_necklace_i00">
+	<!-- Tateossian Necklace. Boosts MP by 42. -->
+		<restriction freightable="false"/>
+		<attributes weight="150" price="4361000" />
+		<crystal type="S" count="209"/>
+		<stats>
+			<stat type="mDef" value="120.0"/>
+			<stat type="maxMp" value="42.0"/>
+		</stats>
+	</armor>
+
+	<armor id="922" name="Sage's Necklace" type="NONE" body-part="NECK" icon="icon.accessary_sages_necklace_i00">
+		<restriction freightable="false"/>
+		<attributes weight="150" price="1230000" commission-type="NECKLACE" />
+		<crystal type="B" count="226"/>
+		<stats>
+			<stat type="mDef" value="72.0"/>
+		</stats>
+	</armor>
+
+	<armor id="924" name="Majestic Necklace" type="NONE" body-part="NECK" icon="icon.accessary_inferno_necklace_i00">
+	<!-- Majestic Necklace. Provides additional MP +33. -->
+		<restriction freightable="false"/>
+		<attributes weight="150" price="1998000" commission-type="NECKLACE" />
+		<crystal type="A" count="226"/>
+		<stats>
+			<stat type="mDef" value="85.0"/>
+			<stat type="maxMp" value="33.0"/>
+		</stats>
+	</armor>
+
+	<armor id="926" name="Black Ore Necklace" type="NONE" body-part="NECK" icon="icon.accessary_necklace_of_black_ore_i00">
+		<restriction freightable="false"/>
+		<attributes weight="150" price="1230000" commission-type="NECKLACE" />
+		<crystal type="B" count="164"/>
+		<stats>
+			<stat type="mDef" value="72.0"/>
+		</stats>
+	</armor>
+
+	<armor id="931" name="Necklace of Grace" type="NONE" body-part="NECK" icon="icon.accessary_necklace_of_grace_i00">
+		<restriction freightable="false"/>
+		<attributes weight="150" price="808000" commission-type="NECKLACE" />
+		<crystal type="B" count="164"/>
+		<stats>
+			<stat type="mDef" value="68.0"/>
+		</stats>
+	</armor>
+
+	<armor id="933" name="Phoenix Necklace" type="NONE" body-part="NECK" icon="icon.accessary_phoenixs_necklace_i00">
+	<!-- Phoenix Necklace. Provides additional MP +26. -->
+		<restriction freightable="false"/>
+		<attributes weight="150" price="1340000" commission-type="NECKLACE" />
+		<crystal type="A" count="164"/>
+		<stats>
+			<stat type="mDef" value="80.0"/>
+			<stat type="maxMp" value="26.0"/>
+		</stats>
+	</armor>
+
+	<armor id="936" name="Necklace of Blessing" type="NONE" body-part="NECK" icon="icon.accessary_necklace_of_blessing_i00">
+		<restriction freightable="false"/>
+		<attributes weight="150" price="808000" commission-type="NECKLACE" />
+		<crystal type="B" count="164"/>
+		<stats>
+			<stat type="mDef" value="68.0"/>
+		</stats>
+	</armor>
+
+	<item id="937" name="Directions to Ruins" type="NONE" icon="icon.etc_piece_of_paper_gray_i00">
+	<!-- Follow the northwestern path from the village, and head west when you meet the Obelisk of Victory. The entrance to the ruins lies at the slope of the mountain. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="938" name="Deck" type="NONE" icon="icon.etc_spell_books_red_i00">
+		<restriction freightable="false" tradable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="939" name="Gara's Quest Item #11" type="NONE" icon="icon.item_normal52">
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="940" name="Gara's Quest Item #12" type="NONE" icon="icon.item_normal52">
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="941" name="Gara's Mark of Bravery" type="NONE" icon="icon.item_normal52">
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="942" name="Gara's Mark of Justice" type="NONE" icon="icon.item_normal52">
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="943" name="Gara's Mark of Despair" type="NONE" icon="icon.item_normal52">
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="944" name="Deathknight Skull" type="NONE" icon="icon.armor_head15">
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<armor id="945" name="Skeleton Buckler" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_skeleton_buckler_i00">
+	<!-- Small wooden shield that perpetrators of mages use. -->
+		<restriction freightable="false"/>
+		<attributes weight="1400" price="3440" commission-type="SHIELD" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="rEvas" value="-8.0"/>
+			<stat type="rShld" value="20.0"/>
+			<stat type="sDef" value="69.0"/>
+		</stats>
+	</armor>
+
+	<weapon id="946" name="Skeleton Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_dagger_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1100" price="66600" commission-type="DAGGER" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="16.0"/>
+			<stat type="mAtk" value="13.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<item id="947" name="Scroll: Enchant Weapon (B-grade)" type="ENCHANT_WEAPON" icon="icon.etc_scroll_of_enchant_weapon_i03">
+	<!-- When enchanted, P. Atk. +4 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<attributes weight="120" price="500000" commission-type="SCROLL_ENCHANT_WEAPON" immediate-effect="true"/>
+		<action handler="EnchantScrolls"/>
+	</item>
+
+	<item id="948" name="Scroll: Enchant Armor (B-grade)" type="ENCHANT_ARMOR" icon="icon.etc_scroll_of_enchant_armor_i03">
+	<!-- P. Def. + 1 for B-grade armor and accessories. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<attributes weight="120" price="80000" commission-type="SCROLL_ENCHANT_ARMOR" immediate-effect="true"/>
+		<action handler="EnchantScrolls"/>
+	</item>
+
+	<item id="951" name="Scroll: Enchant Weapon (C-grade)" type="ENCHANT_WEAPON" icon="icon.etc_scroll_of_enchant_weapon_i02">
+	<!-- When enchanted, P. Atk. +4 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<attributes weight="120" price="110000" commission-type="SCROLL_ENCHANT_WEAPON" immediate-effect="true"/>
+		<action handler="EnchantScrolls"/>
+	</item>
+
+	<item id="952" name="Scroll: Enchant Armor (C-grade)" type="ENCHANT_ARMOR" icon="icon.etc_scroll_of_enchant_armor_i02">
+	<!-- P. Def. + 1 for C-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<attributes weight="120" price="15000" commission-type="SCROLL_ENCHANT_ARMOR" immediate-effect="true"/>
+		<action handler="EnchantScrolls"/>
+	</item>
+
+	<item id="955" name="Scroll: Enchant Weapon (D-grade)" type="ENCHANT_WEAPON" icon="icon.etc_scroll_of_enchant_weapon_i01">
+	<!-- When enchanted, P. Atk. +4 for D-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<attributes weight="120" price="50000" commission-type="SCROLL_ENCHANT_WEAPON" immediate-effect="true"/>
+		<action handler="EnchantScrolls"/>
+	</item>
+
+	<item id="956" name="Scroll: Enchant Armor (D-grade)" type="ENCHANT_ARMOR" icon="icon.etc_scroll_of_enchant_armor_i01">
+	<!-- P. Def. + 1 for D-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<attributes weight="120" price="6000" commission-type="SCROLL_ENCHANT_ARMOR" immediate-effect="true"/>
+		<action handler="EnchantScrolls"/>
+	</item>
+
+	<item id="959" name="Scroll: Enchant Weapon (S-grade)" type="ENCHANT_WEAPON" icon="icon.etc_scroll_of_enchant_weapon_i05">
+	<!-- When enchanted, P. Atk. +5 for S-grade one-handed swords/blunts, daggers, spears, and other weapons. P. Atk. +6 for two-handed swords/blunts, dualswords, and two-handed fist weapons. P. Atk. +10 for bows. M. Atk. +4 for all weapons. Starting at +4, P. Atk./M. Atk. bonus quadruples. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<attributes weight="120" price="2000000" commission-type="SCROLL_ENCHANT_WEAPON" immediate-effect="true"/>
+		<action handler="EnchantScrolls"/>
+	</item>
+
+	<item id="960" name="Scroll: Enchant Armor (S-grade)" type="ENCHANT_ARMOR" icon="icon.etc_scroll_of_enchant_armor_i05">
+	<!-- When enchanted, P. Def. +2 for S-grade armor and accessories. Starting at +4, P. Def. +8. Enchanting is safe up to +3, but full-body armor can be safely enchanted up to +4. Starting at +4 armor, HP increases depending on the enchant value. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<attributes weight="120" price="300000" commission-type="SCROLL_ENCHANT_ARMOR" immediate-effect="true"/>
+		<action handler="EnchantScrolls"/>
+	</item>
+
+	<item id="963" name="Orc Arrowhead" type="NONE" icon="icon.weapon_winged_spear_i00">
+	<!-- Arrowhead that Turath orc marksmen use on Talking Island. Collect these and take to Master Minia. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="964" name="Alberius' Letter" type="NONE" icon="icon.etc_scroll_white_i00">
+	<!-- Letter from Alberius. Take this to Master Cobendell. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="965" name="Evergreen Amulet" type="NONE" icon="icon.accessary_near_forest_necklace_i00">
+	<!-- Necklace set with a green Elemental stone. You must possess this to slay the dryad and obtain the dryad's tears. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="966" name="Dryad's Tears" type="NONE" icon="icon.etc_crystal_ball_green_i00">
+	<!-- Jewel that contains the essence of a dryad's soul. Gather ten of these and take them to Master Cobendell. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="967" name="Cobendell's Medicine" type="NONE" icon="icon.item_canuse24">
+	<!-- Cobendell's medicine -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="968" name="Karrod's Letter" type="NONE" icon="icon.etc_scroll_gray_i00">
+	<!-- Letter written by Blacksmith Karrod. Take this to the Abyssal Celebrant Cecktinon in the Shilen Temple. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="969" name="Cecktinon's First Voucher" type="NONE" icon="icon.etc_letter_red_i00">
+	<!-- Introduction letter from the Abyssal Celebrant Cecktinon. Take this and seek Magister Harne in the village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="970" name="Cecktinon's Second Voucher" type="NONE" icon="icon.etc_letter_red_i00">
+	<!-- Introduction letter from the Abyssal Celebrant Cecktinon. Go to the School of Dark Arts, hunt skeletons, and gather 10 bone fragments. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="971" name="Soul Catcher" type="NONE" icon="icon.weapon_voodoo_doll_i00">
+	<!-- Item used during the exorcism ritual to call upon a spirit of the dead. Take this to the Abyssal Celebrant Cecktinon. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="972" name="Preserving Oil" type="NONE" icon="icon.etc_potion_clear_i00">
+	<!-- Oil that when used, prevents the rotting of corpses. Take this and go hunt zombies in the swamps. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="973" name="Zombie Head" type="NONE" icon="icon.etc_skull_black_i00">
+	<!-- The head of tree Elf zombies that have been cut after they are defeated. Take this to the abyssal celebrant Cecktinon. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="974" name="Steelbender Head" type="NONE" icon="icon.etc_skull_red_i00">
+	<!-- Please, I beg of you! Don't take me to that nasty-tempered blacksmith! -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<weapon id="975" name="Blood Saber" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_broad_sword_i00">
+	<!-- An Oriharukon sword crafted in the Abella style of the east. -->
+		<restriction freightable="false"/>
+		<attributes weight="1450" price="33600" commission-type="ONE_HAND_SWORD" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="14.0"/>
+			<stat type="mAtk" value="11.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<item id="976" name="1st Badge of Sentinel" type="NONE" icon="icon.item_system03">
+	<!-- A badge that certifies that its bearer is an Elven Sentinel. Destroy an orc Tanuki skullcrusher and report to Sentinel Kendell. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="977" name="2nd Badge of Sentinel" type="NONE" icon="icon.item_system03">
+	<!-- A badge that certifies that its bearer is an Elven Sentinel. Destroy an orc Bhato bloodspear and report to Sentinel Kendell. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="978" name="Skullcrusher Amulet" type="NONE" icon="icon.item_normal145">
+	<!-- The amulet that represents the Skullcrusher Orc tribe. Take this to Sentinel Kendell. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="979" name="Bloodspear Amulet" type="NONE" icon="icon.item_normal89">
+	<!-- The amulet that represents the Bloodspear Orc tribe. Take this to Sentinel Kendell. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<weapon id="981" name="Red Sunset Sword" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_brandish_i00">
+	<!-- Sword used by warriors belonging to the Red Sunset clan. -->
+		<restriction freightable="false"/>
+		<attributes weight="1300" price="25500" commission-type="ONE_HAND_SWORD" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="16.0"/>
+			<stat type="mAtk" value="10.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<item id="982" name="Esrandell's Letter" type="NONE" icon="icon.item_normal20">
+	<!-- Esrandell's introduction -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="983" name="Kendell's Letter" type="NONE" icon="icon.item_normal20">
+	<!-- Kendell's letter -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="984" name="1st Onyx Talisman" type="NONE" icon="icon.accessary_sages_necklace_i00">
+	<!-- Necklace crafted of onyx. Take this to Abyssal Celebrant Kartia. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="985" name="2nd Onyx Talisman" type="NONE" icon="icon.accessary_sages_necklace_i00">
+	<!-- Necklace crafted of onyx. Recover the original scrolls from the blackskull Orcs and bring them to Abyssal Celebrant Kartia. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="986" name="Ancient Scroll" type="NONE" icon="icon.etc_scroll_gray_i00">
+	<!-- Ancient scroll called Kaysha's Revelation. Take it along with the clay tablet to Abyssal Celebrant Kartia. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="987" name="Ancient Clay Tablet" type="NONE" icon="icon.etc_plate_glay_i00">
+	<!-- Ancient clay tablet engraved with text. Take it along with the ancient scroll to Abyssal Celebrant Kartia. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="988" name="Kartia's Translation" type="NONE" icon="icon.etc_piece_of_paper_gray_i00">
+	<!-- Kartia's translation of Kaysha's Revelations. Take it to Tetrarch Thifiell. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<weapon id="989" name="Eldritch Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_knife_i00">
+	<!-- Steel dagger engraved with the runes of Shilen and Gran Kain. -->
+		<restriction freightable="false"/>
+		<attributes weight="1130" price="25500" commission-type="DAGGER" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="11.0"/>
+			<stat type="mAtk" value="10.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<armor id="990" name="Fist000" type="NONE" body-part="GLOVES" icon="icon.item_canuse27">
+		<restriction freightable="false"/>
+		<attributes weight="60" price="37" commission-type="GLOVES" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="9.0"/>
+		</stats>
+	</armor>
+
+	<armor id="991" name="Fist001" type="NONE" body-part="GLOVES" icon="icon.item_normal26">
+		<restriction freightable="false"/>
+		<attributes weight="60" price="37" commission-type="GLOVES" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="9.0"/>
+		</stats>
+	</armor>
+
+	<armor id="992" name="Fist002" type="NONE" body-part="GLOVES" icon="icon.armor_head15">
+		<restriction freightable="false"/>
+		<attributes weight="60" price="37" commission-type="GLOVES" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="9.0"/>
+		</stats>
+	</armor>
+
+	<armor id="993" name="Fist003" type="NONE" body-part="GLOVES" icon="icon.armor_head15">
+		<restriction freightable="false"/>
+		<attributes weight="60" price="37" commission-type="GLOVES" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="9.0"/>
+		</stats>
+	</armor>
+
+	<armor id="994" name="Fist004" type="NONE" body-part="GLOVES" icon="icon.item_normal46">
+		<restriction freightable="false"/>
+		<attributes weight="60" price="37" commission-type="GLOVES" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="9.0"/>
+		</stats>
+	</armor>
+
+	<armor id="995" name="Fist005" type="NONE" body-part="GLOVES" icon="icon.item_normal20">
+		<restriction freightable="false"/>
+		<attributes weight="60" price="37" commission-type="GLOVES" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="9.0"/>
+		</stats>
+	</armor>
+
+	<armor id="996" name="Fist006" type="NONE" body-part="GLOVES" icon="icon.weapon_ss08">
+		<restriction freightable="false"/>
+		<attributes weight="60" price="37" commission-type="GLOVES" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="9.0"/>
+		</stats>
+	</armor>
+
+	<armor id="997" name="Fist007" type="NONE" body-part="GLOVES" icon="icon.item_normal50">
+		<restriction freightable="false"/>
+		<attributes weight="60" price="37" commission-type="GLOVES" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="9.0"/>
+		</stats>
+	</armor>
+
+	<armor id="998" name="Fist008" type="NONE" body-part="GLOVES" icon="icon.item_normal07">
+		<restriction freightable="false"/>
+		<attributes weight="60" price="37" commission-type="GLOVES" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="9.0"/>
+		</stats>
+	</armor>
+
+	<armor id="999" name="Fist009" type="NONE" body-part="GLOVES" icon="icon.item_normal07">
+		<restriction freightable="false"/>
+		<attributes weight="60" price="37" commission-type="GLOVES" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="9.0"/>
+		</stats>
+	</armor>
+
 </list>

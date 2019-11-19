@@ -1,594 +1,660 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <weapon id="71100" name="Wedding Bouquet" icon="BranchSys2.icon.br_wedding_bouquet_i00">
-        <!-- A Wedding Bouquet composed of lovely flowers, intended for female characters only. Cannot be exchanged, dropped, sold. Can be stored in private warehouse. -->
-        <set name="weapon_type" val="ETC"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">1</stat>
-            <stat type="mAtk">1</stat>
-            <stat type="rCrit">1</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">1</stat>
-        </stats>
-    </weapon>
-    <item id="71101" name="XP and SP Rune - 50%" icon="icon.skill19226">
-        <!-- 1-hour item. When in inventory, your Acquired XP/ SP is increased by 50%. Intended for Lv. 1 - 75 characters. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
-        <set name="time" val="60"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71102" name="Package: XP and SP Rune - 50% (1 hour)" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain XP & SP Rune - 50% (1 hour). Intended for Lv. 1 - 75 characters. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="71103" name="XP and SP Rune - 50%" icon="icon.skill19226">
-        <!-- 5-hour item?. When in inventory, your Acquired XP/ SP is increased by 50%. Intended for Lv. 1 - 75 characters. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
-        <set name="time" val="300"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71104" name="Package: XP and SP Rune - 50% (5 hours)" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain XP & SP Rune - 50% (5 hours). Intended for Lv. 1 - 75 characters. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="71105" name="XP and SP Rune - 50%" icon="icon.skill19226">
-        <!-- 7-day item. When in inventory, your Acquired XP/ SP is increased by 50%. Intended for Lv. 1 - 75 characters. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="71106" name="Package: XP and SP Rune - 50% (7-day)" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtainXP & SP Rune - 50% (7-day). Intended for Lv. 1 - 75 characters. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="71107" name="Irene' Hourglass - 1 Hour" icon="icon.etc_dragons_blood_i03">
-        <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 1~19. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="71108" name="Package: Irene' Hourglass (1 hour)" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click to obtain Irene's Hourglass - 1 Hour. Intended for Lv. 1 - 75 characters. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="71109" name="Package: Golden Mermaid's Fishing Rod (7-day)" icon="icon.etc_pi_gift_box_i04">
-        <!-- Double-click to obtain Golden Mermaid's Fishing Rod (7-day). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="71110" name="Package: Golden Mermaid's Fishing Rod (30-day)" icon="icon.etc_pi_gift_box_i04">
-        <!-- Double-click to obtain Golden Mermaid's Fishing Rod (30-day). -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <armor id="71111" name="Ruthless Tribe Mask" icon="BranchSys.icon.br_mask_i00">
-        <!-- A mask which formerly belonged to Looters. Occupies 1 Hair Accessory slot. Cannot be exchanged, dropped, sold. Can be stored in private warehouse or shared within account. -->
-        <set name="bodypart" val="brooch_jewel"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" freightable="true"/>
-    </armor>
-    <armor id="71112" name="Artisan's Goggles" icon="icon.accessory_dwarf_goggle_i00">
-        <!-- Large goggles used to protect eyes. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, sold. Can be stored in private warehouse or shared within account.. -->
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="alldress"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1000"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" freightable="true"/>
-    </armor>
-    <armor id="71113" name="Fairy Antennae" icon="icon.accessory_hair_feeler_i00">
-        <!-- A lovely hair accessory shaped as antennae with starlets. Occupies 1 Hair Accessory slot. Cannot be exchanged, dropped, sold. Can be stored in private warehouse or shared within account. -->
-        <set name="bodypart" val="rear;lear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" freightable="true"/>
-        <stats>
-            <stat type="maxMp">22</stat>
-        </stats>
-    </armor>
-    <armor id="71114" name="Assassin's Bamboo Hat" icon="BranchSys.icon.br_Bamboo_Hat_i00">
-        <!-- A hat made from bulrush. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, sold. Can be stored in private warehouse or shared within account. -->
-        <set name="bodypart" val="rear;lear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" freightable="true"/>
-        <stats>
-            <stat type="maxMp">28</stat>
-        </stats>
-    </armor>
-    <armor id="71115" name="Little Angel Wings" icon="icon.accessory_hair_ring_i00">
-        <!-- A hair accessory shaped as a little white wing. Occupies 1 Hair Accessory slot. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse or shared within account. -->
-        <set name="bodypart" val="rear;lear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" freightable="true"/>
-        <stats>
-            <stat type="maxMp">34</stat>
-        </stats>
-    </armor>
-    <armor id="71116" name="Black Gem Mask" icon="BranchSys.icon.br_black_gem_mask_i00">
-        <!-- A luxurious black colored accessory. Occupies 1 Hair Accessory slot. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse or shared within account. -->
-        <set name="bodypart" val="rear;lear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" freightable="true"/>
-        <stats>
-            <stat type="maxMp">22</stat>
-        </stats>
-    </armor>
-    <armor id="71117" name="Circlet of Eva" icon="BranchSys.icon.br_circlet_of_eva_i00">
-        <!-- A crown containing mysterious power. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse or shared within account. -->
-        <set name="bodypart" val="hairall"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" freightable="true"/>
-    </armor>
-    <armor id="71118" name="Outlaw Eyepatch" icon="icon.accessory_outlaw_eyepatch_i00">
-        <!-- A purple colored accessory that will certainly adorn its owner. Occupies 1 Hair Accessory slot. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse or shared within account. -->
-        <set name="bodypart" val="hairall"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" freightable="true"/>
-    </armor>
-    <armor id="71119" name="Monocle" icon="icon.accessory_glasses_i00">
-        <!-- An accessory for those who like to stand out from the crowd. Occupies 1 Hair Accessory slot. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse or shared within account. -->
-        <set name="bodypart" val="hairall"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" freightable="true"/>
-    </armor>
-    <item id="71120" name="Sing Of Adventurer - Recovery" icon="BranchSys3.Icon.g_sing_of_adventurer_recovery">
-        <!-- Endowed with a mysterious power, the song allows resurrecting a character and restoring their lost experience at the death of an NPC. -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <armor id="71121" name="Agathion - Bugbear" icon="BranchSys.icon.br_aga_bugbear_i00">
-        <!-- Equipping it in the main slot summons the Agathion. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="hairall"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" freightable="true"/>
-    </armor>
-    <armor id="71122" name="Agathion - Dryad" icon="BranchSys.icon.br_aga_dryad_i00">
-        <!-- Equipping it in the main slot summons the Agathion. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="hairall"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" freightable="true"/>
-    </armor>
-    <armor id="71123" name="Agathion - Griffin" icon="BranchIcon.icon.Item_g_rbracelet_griffin">
-        <!-- Equipping it in the main slot summons the Agathion. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="underwear"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" freightable="true"/>
-    </armor>
-    <item id="71124" name="Stable Cloak Enchantment Scroll - Legendary" icon="BranchIcon.icon.g_bm_cloak_enchant_scroll_normal">
-        <!-- Enchant scroll for the Ancient Kingdom's Cloak. Can be enchanted between +1-+10. Enchant level goes up by 1 when it succeeds, and if it fails, the enchant level remains the same. -->
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71125" name="Legendary Scroll (High-grade)" icon="BranchIcon.icon.g_bm_cloak_legend_scroll">
-        <!-- Exchange a Elmoreden/Aden/Elmore/Ferios Cloak for a legendary cloak through the Dimensional Merchant. -->
-        <set name="weight" val="2"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71126" name="High-grade Life Stone - Ancient Kingdom" icon="BranchIcon.icon.g_bm_cloak_mineral_normal">
-        <!-- High-grade Life Stone for the Ancient Kingdom's Cloak. Can augment all ancient kingdom cloaks when they have been enchanted to +10, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +10 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
-        <restriction sellable="false"/>
-    </item>
-    <item id="71127" name="High-grade Life Stone - Elmoreden" icon="BranchIcon.icon.g_bm_cloak_mineral_elmoreden">
-        <!-- High-grade Life Stone for the Elmoreden Cloak. Can augment Legendary Elmoreden kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
-        <restriction sellable="false"/>
-    </item>
-    <item id="71128" name="High-grade Life Stone - Aden" icon="BranchIcon.icon.g_bm_cloak_mineral_aden">
-        <!-- High-grade Life Stone for the Aden Cloak. Can augment Legendary Aden kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
-        <restriction sellable="false"/>
-    </item>
-    <item id="71129" name="High-grade Life Stone - Elmore" icon="BranchIcon.icon.g_bm_cloak_mineral_elmore">
-        <!-- High-grade Life Stone for the Elmore Cloak. Can augment Legendary Elmore kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71130" name="High-grade Life Stone - Ferios" icon="BranchIcon.icon.g_bm_cloak_mineral_perios">
-        <!-- High-grade Life Stone for the Ferios Cloak. Can augment Legendary Ferios kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71131" name="High-grade Life Stone Pack - Legendary" icon="icon.bm_freya_2016_gift_box">
-        <!-- Double-click to obtain 1 High-grade Life Stone - Ancient Kingdom/Elmoreden/Aden/Elmore/Ferios randomly. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71132" name="High-grade Life Stone Pack - Cloak" icon="icon.bm_freya_2016_gift_box">
-        <!-- Double-click to obtain 1 High-grade Life Stone - Ancient Kingdom/Elmoreden/Aden/Elmore/Ferios randomly. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <armor id="71133" name="Mermaid Agathion" icon="icon.agathion_base">
-        <!-- Enables to summon Agathion Mermaid when equipped. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <item id="71134" name="Master's Fishing Coin" icon="icon.etc_coins_blue_i00">
-        <!-- Coin obtained when fishing. Take it to the Dimensional Merchant to exchange for Fishing XP Boxes. -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="71135" name="Agathion Mermaid Enchant Scroll" icon="icon.star_scrl_of_ench_ag">
-        <!-- Only for Agathion Mermaid. Increases M. Def. when the Agathion grows. Can be safely strengthened up to +3 and can be enhanced up to +10. Starting from +1 enchanting special abilities increases step by step. If enchanting fails, the enchanl level is maintained. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71136" name="Mermaid's Trace" icon="icon.etc_oren_fish_scale_i00">
-        <!-- Mermaid's Trace. Collect 20 and take them to the Dimensional Merchant to obtain Agathion Mermaid. -->
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71137" name="Master's Fishing Potion" icon="BranchIcon.etc_sign_agathion_feed_blue_i00">
-        <!-- For 1 h., EXP/ SP bonus +100% when fishing succeeds. Applied to all bait. Can be stacked with Fishermen's Guild Support Certificate. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71139" name="Fishing XP Box" icon="icon.bm_special_pendant_abradant_box">
-        <!-- Double-click to obtain Fishing XP Scroll. Has a low chance to obtain Shining Fishing Box. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="71140" name="Shining Fishing Box" icon="icon.bm_sheep_agathion_30d_box">
-        <!-- Double-click to obtain a random item. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71141" name="Fishing XP Scroll" icon="icon.exp_bottle_scroll">
-        <!-- Allows to obtain additional XP during fishing. Cannot be used by chaotic characters. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="71142" name="Complete Arms Supplies Pack" icon="icon.etc_treasure_box_i07">
-        <!-- Double-click to obtain one item for powerful weapon at random. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <armor id="71143" name="Cloak of Light for the Chosen" icon="icon.amor_goodness_cloak">
-        <!-- Cloak of Light for those who have proven themselves as testers in Lineage II. P. Def. +100, M. Def. +80, and STR/ MEN/ DEX/ WIT/ INT/ CON +2. Damage received during PvP decreases by 5%. Can use Blessed Escape. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="71144" name="Cloak of Darkness for the Chosen" icon="icon.amor_evilness_cloak">
-        <!-- Cloak of Darkness for those who have proven themselves as testers in Lineage II. P. Def. +100, M. Def. +80, and STR/ MEN/ DEX/ WIT/ INT/ CON +2. Damage received during PvP decreases by 5%. Can use Blessed Escape. -->
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <item id="71145" name="Improved Scroll: Castle Blessing - Party" icon="icon.etc_scroll_white_i00">
-        <!-- Gives Castle Blessing buff for all party members. Maintains buffs and debuffs even after death. The Noblesse Blessing and the Lucky Charm disappear, however. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="weight" val="120"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71146" name="Scroll: Improved Castle Buff - Party" icon="icon.etc_scroll_white_i00">
-        <!-- Gives Might Lv. 2, Empower Lv. 2, Acumen Lv. 2, Haste Lv. 1 for all party members. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="weight" val="120"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71147" name="Scroll: Castle Wind Walk - Party" icon="icon.etc_scroll_white_i00">
-        <!-- Speed +33 for all party members. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="weight" val="120"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <armor id="71148" name="Reinforced Castle Ring (10-day)" icon="icon.ev_11th_rare_acc_ring">
-        <!-- 10-day item. When equipped, Max HP +25, M. Atk. +3%, P. Atk. +3%. The effect does not stack, if two identical rings are equipped. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="rfinger;lfinger"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" depositable="false"/>
-        <stats>
-            <stat type="mDef">32</stat>
-        </stats>
-    </armor>
-    <armor id="71149" name="Reinforced Castle Earring (10-day)" icon="icon.ev_11th_rare_acc_earing">
-        <!-- 10-day item. When equipped, Max MP +15, MP recovery rate +0.2, Healing Power +2%, Skil lMP Consumption -1%. The effect does not stack, if two identical earrings are equipped. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="rear;lear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" depositable="false"/>
-        <stats>
-            <stat type="mDef">48</stat>
-        </stats>
-    </armor>
-    <armor id="71150" name="Reinforced Castle Necklace (10-day)" icon="icon.ev_11th_rare_acc_necklace">
-        <!-- 10-day item. When equipped, Max MP +25, M. Def. +3, P. Def. +5, Mental Attack and Resistance +3%, Skill MP Consumption -1%. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="neck"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" depositable="false"/>
-        <stats>
-            <stat type="mDef">64</stat>
-        </stats>
-    </armor>
-    <armor id="71151" name="Agathion Bracelet - Lv. 3" icon="icon.lbracelet_agathion_charm">
-        <!-- When worn, 1 Agathion's main slot and 2 Agathion's side slot activated. STR/ INT/ CON/ MEN +1. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="lbracelet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <skills>
-            <skill id="51025" level="4"/> <!-- Expand Primary and Secondary Agathion Slots -->
-            <skill id="55885" level="1"/> <!-- Agathion Bracelet Stats Increase -->
-        </skills>
-    </armor>
-    <armor id="71152" name="Agathion Bracelet - Lv. 5" icon="icon.lbracelet_agathion_charm">
-        <!-- When worn,1 Agathion's main slot and 4 Agathion's side slot activated. STR/ INT/ CON/ MEN/ DEX/ WIT +1. Mental/ stun/ sleep/ paralyse attacks resistance +8%. Cannot be dropped. -->
-        <set name="bodypart" val="lbracelet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction dropable="false" sellable="false"/>
-        <skills>
-            <skill id="51025" level="4"/> <!-- Expand Primary and Secondary Agathion Slots -->
-            <skill id="55885" level="1"/> <!-- Agathion Bracelet Stats Increase -->
-            <skill id="55886" level="1"/> <!-- Agathion Bracelet Resistance Increase -->
-        </skills>
-    </armor>
-    <item id="71153" name="+7 Elmoreden Cloak Box" icon="BranchIcon.icon.etc_g_bm_godspirit_box">
-        <!-- Double-click to obtain a +7 Elmoreden Cloak. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71154" name="+7 Aden Cloak Box" icon="BranchIcon.icon.etc_g_bm_godspirit_box">
-        <!-- Double-click to obtain a +7 Aden Cloak. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71155" name="+7 Elmore Cloak Box" icon="BranchIcon.icon.etc_g_bm_godspirit_box">
-        <!-- Double-click to obtain a +7 Elmore Cloak. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71156" name="+7 Ferios Cloak Box" icon="BranchIcon.icon.etc_g_bm_godspirit_box">
-        <!-- Double-click to obtain a +7 Ferios Cloak. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <armor id="71157" name="Agathion Ball Trapping Gnosian" icon="BranchSys2.icon.br_aga_kball_male_i00">
-        <!-- Equipping it in the main slot summons Agathion Ball Trapping Gnosian. He wears a red uniform. -->
-        <set name="bodypart" val="lbracelet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="71158" name="Agathion Ball Trapping Orodriel" icon="BranchSys2.icon.br_aga_kball_female_i00">
-        <!-- Equipping it in the main slot summons Agathion Ball Trapping Orodriel. He wears a red uniform. -->
-        <set name="bodypart" val="lbracelet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="71159" name="Agathion Penalty Kick" icon="BranchSys2.icon.br_aga_kball_kick_i00">
-        <!-- Equipping it in the main slot summons Gnosian or Orodriel to make a penalty kick. They wear a red uniform. -->
-        <set name="bodypart" val="lbracelet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
-    </armor>
-    <item id="71160" name="Seven Signs Miracle Box" icon="icon.bm_sayha_gold_present">
-        <!-- Double-click to randomly receive one of the items. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71161" name="Legendary Card: Antharas" icon="icon.card_dragon_anta">
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71162" name="Legendary Card: Valakas" icon="icon.card_dragon_vala">
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71163" name="Legendary Card: Lindvior" icon="icon.card_dragon_rind">
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71164" name="Legendary Card: Astair van Halter" icon="icon.card_hero_holter">
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71165" name="Legendary Card: Amadeo Cadmus" icon="icon.card_hero_amadeose">
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71166" name="Legendary Card: Lionel Hunter" icon="icon.card_hero_hunter">
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71167" name="Legendary Card: Sieghardt Ein" icon="icon.card_hero_zigharte">
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71168" name="Legendary Card: Elcadia" icon="icon.card_hero_elcardia">
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71169" name="Legendary Card: Baium" icon="icon.card_devil_baium">
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71170" name="Legendary Card: Beleth" icon="icon.card_devil_verese">
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71171" name="Legendary Card: Tiat" icon="icon.card_devil_tiate">
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71172" name="Legendary Card: Lilith" icon="icon.card_devil_lilith">
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71173" name="Legendary Card: Paulina" icon="icon.card_angel_polline">
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71174" name="Legendary Card: Anakim" icon="icon.card_angel_anakim">
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71175" name="Aspiring Orc Ruler of Aden" icon="icon.card_orc">
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71176" name="Hidden Card" icon="icon.card_hidden">
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71177" name="Daily Present - VIP 1" icon="BranchIcon.Icon.etc_vip_present_i00">
-        <!-- Double-click the item to receive 1 Scroll of Escape, 3 Healing Potions, 5 VIP Coins. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71178" name="Daily Present - VIP 2" icon="BranchIcon.Icon.etc_vip_present_i01">
-        <!-- Double-click the item to receive 1 Scroll of Resurrection, 3 Healing Potions, 10 VIP Coins. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71179" name="Daily Present - VIP 3" icon="BranchIcon.Icon.etc_vip_present_i02">
-        <!-- Double-click the item to receive 1 Scroll of Escape, 1 Scroll of Resurrection, 5 Healing Potions, 15 VIP Coins. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71180" name="Daily Present - VIP 4" icon="BranchIcon.Icon.etc_vip_present_i03">
-        <!-- Double-click the item to receive 1 Scroll of Escape, 1 Scroll of Resurrection, 3 Greater Healing Potions, 25 VIP Coins. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71181" name="Daily Present - VIP 5" icon="BranchIcon.Icon.etc_vip_present_i04">
-        <!-- Double-click the item to receive 1 Blessed Scroll of Escape, 3 Greater Healing Potions, 40 VIP Coins. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71182" name="Daily Present - VIP 6" icon="BranchIcon.Icon.etc_vip_present_i05">
-        <!-- Double-click on the item to receive 1 Blessed Scroll of Resurrection, 3 Greater Healing Potions, 100 VIP Coins. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71183" name="Daily Present - VIP 7" icon="BranchIcon.Icon.etc_vip_present_i06">
-        <!-- Double-click the item to receive 1 Blessed Scroll of Escape, 1 Blessed Scroll of Resurrection, 3 Greater Healing Potions, 150 VIP Coins. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="10"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <armor id="71184" name="Agathion Meliodas" icon="BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp">
-        <!-- Activates the power of the Agathion Meliodas. Special abilities may be activated if the Agathion is summoned from the main slot. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Meliodas Lv. 2. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="71185" name="Agathion Elizabeth" icon="BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp">
-        <!-- Activates the power of the Agathion Elizabeth. Special abilities may be activated if the Agathion is summoned from the main slot. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Elizabeth Lv. 2. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="71186" name="Agathion Hawk" icon="BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp">
-        <!-- Activates the power of the Agathion Hawk. Special abilities may be activated if the Agathion is summoned from the main slot. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Hawk Lv. 2. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="71187" name="Agathion Ban" icon="BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp">
-        <!-- Activates the power of the Agathion Ban. Special abilities may be activated if the Agathion is summoned from the main slot. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Ban Lv. 2. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="71188" name="Agathion Diane" icon="BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp">
-        <!-- Activates the power of the Agathion Diane. Special abilities may be activated if the Agathion is summoned from the main slot. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Diane Lv. 2. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="71189" name="Agathion King" icon="BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp">
-        <!-- Activates the power of the Agathion King. Special abilities may be activated if the Agathion is summoned from the main slot. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion King Lv. 2. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="71190" name="Agathion Merlin" icon="BranchIcon.icon.g_bm_merlin_agathion_charm_lv1_jp">
-        <!-- Activates the power of the Agathion Merlin. Special abilities may be activated if the Agathion is summoned from the main slot. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Merlin Lv. 2. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="71191" name="Agathion Gowther" icon="BranchIcon.icon.g_bm_gowther_agathion_charm_lv1_jp">
-        <!-- Activates the power of the Agathion Gowther. Special abilities may be activated if the Agathion is summoned from the main slot. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Gowther Lv. 2. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="71192" name="Agathion Escanor" icon="BranchIcon.icon.g_bm_escanor_agathion_charm_lv1_jp">
-        <!-- Activates the power of the Agathion Escanor. Special abilities may be activated if the Agathion is summoned from the main slot. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Escanor Lv. 2. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="71193" name="Agathion Meliodas" icon="BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp">
-        <!-- Activates the power of the Agathion Meliodas. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Meliodas Lv. 3. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="71194" name="Agathion Elizabeth" icon="BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp">
-        <!-- Activates the power of the Agathion Elizabeth. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Elizabeth Lv. 3. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="71195" name="Agathion Hawk" icon="BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp">
-        <!-- Activates the power of the Agathion Hawk. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Hawk Lv. 3. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="71196" name="Agathion Ban" icon="BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp">
-        <!-- Activates the power of the Agathion Ban. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Ban Lv. 3. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="71197" name="Agathion Diane" icon="BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp">
-        <!-- Activates the power of the Agathion Diane. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Diane Lv. 3. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="71198" name="Agathion King" icon="BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp">
-        <!-- Activates the power of the Agathion King. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion King Lv. 3. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
-    <armor id="71199" name="Agathion Merlin" icon="BranchIcon.icon.g_bm_merlin_agathion_charm_lv1_jp">
-        <!-- Activates the power of the Agathion Merlin. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Merlin Lv. 3. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-    </armor>
+	<weapon id="71100" name="Wedding Bouquet" type="ETC" body-part="RIGHT_HAND" icon="BranchSys2.icon.br_wedding_bouquet_i00">
+	<!-- A Wedding Bouquet composed of lovely flowers, intended for female characters only. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1600" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="1.0"/>
+			<stat type="mAtk" value="1.0"/>
+			<stat type="rCrit" value="1.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="1.0"/>
+		</stats>
+	</weapon>
+
+	<item id="71101" name="XP/SP Rune - 50%" type="RUNE" icon="icon.skill19226">
+	<!-- 1-hour item. When in inventory, your XP and SP gain is increased by 50%. Intended for Lv. 1 - 75 characters. \\n -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes duration="60"/>
+	</item>
+
+	<item id="71102" name="XP/SP Rune - 50% (1-hour) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain XP/SP Rune - 50% (1 hour).\\nIntended for Lv. 1 - 75 characters. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="71103" name="XP/SP Rune - 50%" type="RUNE" icon="icon.skill19226">
+	<!-- u,5-hour itemв. When in inventory, your XP and SP gain is increased by 50%. \\nIntended for Lv. 1 - 75 characters.\\n -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes duration="300"/>
+	</item>
+
+	<item id="71104" name="XP/SP Rune - 50% (5-hour) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain XP/SP Rune - 50% (5 hours).\\nIntended for Lv. 1 - 75 characters. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="71105" name="XP/SP Rune - 50%" type="RUNE" icon="icon.skill19226">
+	<!-- 7-day item. When in inventory, your XP and SP gain is increased by 50%.\\nIntended for Lv. 1 - 75 characters.\\n -->
+		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes duration="10080"/>
+	</item>
+
+	<item id="71106" name="XP/SP Rune - 50% (7-day) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain XP/SP Rune - 50% (7 days).\\nIntended for Lv. 1 - 75 characters. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="71107" name="Irene' Hourglass - 1 Hour" type="POTION" icon="icon.etc_dragons_blood_i03">
+	<!-- When used, provides 50% XP bonus for 1 hour.\\nIntended for Lv. 1~19.  -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71108" name="Package: Irene' Hourglass (1 hour)" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain Irene' Hourglass - 1 Hour.\\nIntended for Lv. 1 - 75 characters.  -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="71109" name="Golden Mermaid's Fishing Rod Pack (7-day)" type="NONE" icon="icon.etc_pi_gift_box_i04">
+	<!-- Double-click to obtain Golden Mermaid's Fishing Rod (7 days). -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="71110" name="Golden Mermaid's Fishing Rod Pack (30-day)" type="NONE" icon="icon.etc_pi_gift_box_i04">
+	<!-- Double-click to obtain Golden Mermaid's Fishing Rod (30 days). -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<armor id="71111" name="Ruthless Tribe Mask" type="NONE" body-part="HAIR" icon="BranchSys.icon.br_mask_i00">
+	<!-- A mask which formerly belonged to Looters. -->
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="10" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71112" name="Artisan's Goggles" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_dwarf_goggle_i00">
+	<!-- Large goggles used to protect eyes. Occupies 2 Accessory slots. -->
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="10" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71113" name="Fairy Antennae" type="NONE" body-part="HAIR2" icon="icon.accessory_hair_feeler_i00">
+	<!-- A lovely hair accessory shaped as antennae with stars. -->
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="10" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="maxMp" value="22.0"/>
+		</stats>
+	</armor>
+
+	<armor id="71114" name="Assassin's Bamboo Hat" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_Bamboo_Hat_i00">
+	<!-- A bamboo hat made from bulrush. Occupies 2 Hair Accessory slots. -->
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="10" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="maxMp" value="28.0"/>
+		</stats>
+	</armor>
+
+	<armor id="71115" name="Little Angel Wings" type="NONE" body-part="HAIR2" icon="icon.accessory_hair_ring_i00">
+	<!-- A hair accessory in the shape of a wing.Can be shared within the account. -->
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="10" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="maxMp" value="34.0"/>
+		</stats>
+	</armor>
+
+	<armor id="71116" name="Black Gem Mask" type="NONE" body-part="HAIR" icon="BranchSys.icon.br_black_gem_mask_i00">
+	<!-- A luxurious Black Gem Mask made of metal.Can be shared within the account. -->
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="10" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="maxMp" value="22.0"/>
+		</stats>
+	</armor>
+
+	<armor id="71117" name="Circlet of Eva" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_circlet_of_eva_i00">
+	<!-- A circlet imbued with Eva's mysterious power. Occupies 2 Hair Accessory slots.Can be shared within the account. -->
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="10" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71118" name="Outlaw Eyepatch" type="NONE" body-part="HAIR" icon="icon.accessory_outlaw_eyepatch_i00">
+	<!-- A purple colored eye patch accessory.Can be shared within the account. -->
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="10" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71119" name="Monocle" type="NONE" body-part="HAIR" icon="icon.accessory_glasses_i00">
+	<!-- An monocle accessory with a ring attached.Can be shared within the account. -->
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="10" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<item id="71120" name="Sing Of Adventurer - Recovery" type="NONE" icon="BranchSys3.Icon.g_sing_of_adventurer_recovery">
+	<!-- Endowed with a mysterious power, the song allows resurrecting a character and restoring their lost experience at the death of an NPC. -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="71121" name="Agathion - Bugbear" type="NONE" body-part="AGATHION" icon="BranchSys.icon.br_aga_bugbear_i00">
+	<!--  Equipping it in the main slot summons the Agathion.\\n -->
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71122" name="Agathion - Dryad" type="NONE" body-part="AGATHION" icon="BranchSys.icon.br_aga_dryad_i00">
+	<!--  Equipping it in the main slot summons the Agathion.\\n -->
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71123" name="Agathion - Griffin" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.Item_g_rbracelet_griffin">
+	<!--  Equipping it in the main slot summons the Agathion.\\n -->
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<item id="71124" name="Stable Cloak Enchantment Scroll - Legendary" type="SOLID_ENCHANT_ARMOR" icon="BranchIcon.icon.g_bm_cloak_enchant_scroll_normal">
+	<!-- Enchant scroll for the Ancient Kingdom's Cloak. Can be enchanted between +1-+10. Enchant level goes up by 1 when it succeeds, and if it fails, the enchant level remains the same. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71125" name="Legendary Scroll (High-grade)" type="NONE" icon="BranchIcon.icon.g_bm_cloak_legend_scroll">
+	<!-- Exchange a Elmoreden/Aden/Elmore/Ferios Cloak for a legendary cloak through the Dimensional Merchant. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71126" name="High-grade Life Stone - Ancient Kingdom" type="NONE" icon="BranchIcon.icon.g_bm_cloak_mineral_normal">
+	<!-- High-grade Life Stone for the Ancient Kingdom Cloak. Can augment all Ancient Kingdom Cloaks enchanted to +10 or higher and add a random effect. The effect bestowed through augmentation applies to the cloak when its enchant level is +10 or higher. Once augmented, it cannot be canceled but can be augmented again. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71127" name="High-grade Life Stone - Elmoreden" type="NONE" icon="BranchIcon.icon.g_bm_cloak_mineral_elmoreden">
+	<!-- High-grade Life Stone for the Legendary Elmoreden Cloak. Can augment Legendary Elmoreden Cloaks enchanted to +15 or higher and add a random effect. The effect bestowed through augmentation applies to the cloak when its enchant level is +15 or higher. Once augmented, it cannot be canceled but can be augmented again. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71128" name="High-grade Life Stone - Aden" type="NONE" icon="BranchIcon.icon.g_bm_cloak_mineral_aden">
+	<!-- High-grade Life Stone for the Legendary Aden Cloak. Can augment Legendary Aden Cloaks enchanted to +15 or higher and add a random effect. The effect bestowed through augmentation applies to the cloak when its enchant level is +15 or higher. Once augmented, it cannot be canceled but can be augmented again. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71129" name="High-grade Life Stone - Elmore" type="NONE" icon="BranchIcon.icon.g_bm_cloak_mineral_elmore">
+	<!-- High-grade Life Stone for the Legendary Elmore Cloak. Can augment Legendary Elmore Cloaks enchanted to +15 or higher and add a random effect. The effect bestowed through augmentation applies to the cloak when its enchant level is +15 or higher. Once augmented, it cannot be canceled but can be augmented again. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71130" name="High-grade Life Stone - Ferios" type="NONE" icon="BranchIcon.icon.g_bm_cloak_mineral_perios">
+	<!-- High-grade Life Stone for the Legendary Ferios Cloak. Can augment Legendary Ferios Cloaks enchanted to +15 or higher and add a random effect. The effect bestowed through augmentation applies to the cloak when its enchant level is +15 or higher. Once augmented, it cannot be canceled but can be augmented again. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71131" name="High-grade Life Stone Pack - Legendary" type="SCROLL" icon="icon.bm_freya_2016_gift_box">
+	<!-- Double-click to obtain 1 High-grade Life Stone - Ancient Kingdom/Elmoreden/Aden/Elmore/Ferios randomly. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71132" name="High-grade Life Stone Pack - Cloak" type="SCROLL" icon="icon.bm_freya_2016_gift_box">
+	<!-- Double-click to obtain 1 High-grade Life Stone - Ancient Kingdom/Elmoreden/Aden/Elmore/Ferios randomly. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="71133" name="Mermaid Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_base">
+	<!-- Equip it to summon a Mermaid Agathion. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="120" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<item id="71134" name="Master's Fishing Coin" type="NONE" icon="icon.etc_coins_blue_i00">
+	<!-- A coin obtainable from Master Fishing. Take the coin to a Dimensional Merchant to exchange for a Fishing XP Box. -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71135" name="Mermaid Agathion Enchant Scroll" type="AGATHION_ENCHANT" icon="icon.star_scrl_of_ench_ag">
+	<!-- An enchant scroll for mermaid Agathion. Increases the Agathion's magic resistance and also adds a special ability from +4 enchantment. Can enchant a mermaid Agathion safely to +3 and up to a max of +10. Increases unique abilities gradually from +1. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="71136" name="Mermaid's Trace" type="NONE" icon="icon.etc_oren_fish_scale_i00">
+	<!-- Gather 20 Mermaid's Traces and take them to a Dimensional Merchant to get the Mermaid Agathion Charm. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71137" name="Master's Fishing Potion" type="SCROLL" icon="BranchIcon.etc_sign_agathion_feed_blue_i00">
+	<!-- Increases XP/SP gain for successful fishing by 50% for 1 hour when used.\\nApplies to all bait.\\nCan be used together with the Fishing Guild's Support Certificate. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71139" name="Fishing XP Box" type="SCROLL" icon="icon.bm_special_pendant_abradant_box">
+	<!-- Contains a Scroll: Fishing XP. A chance to get a Shining Fishing Box additionally. -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="71140" name="Shining Fishing Box" type="SCROLL" icon="icon.bm_sheep_agathion_30d_box">
+	<!-- Shining Fishing Box. Use it to obtain an item. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71141" name="Scroll: Fishing XP" type="SCROLL" icon="icon.exp_bottle_scroll">
+	<!-- A fishing XP scroll rewarded for hard fishing. Cannot be used on chaotic characters. -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="71142" name="Full Load Support Pack" type="NONE" icon="icon.etc_treasure_box_i07">
+	<!-- Double-click to get one of the items in the Full Load Support Pack Box. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="71143" name="Cloak of Light of the Chosen" type="NONE" body-part="BACK" icon="icon.amor_goodness_cloak">
+	<!-- A cloak for a few chosen ones who have proven themselves as Lineage 2 Game Testers. Increases Max. HP/MP/CP by 5%, P. Def. by 3%, Magic Resistance by 5% and Speed by 10 when equipped. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71144" name="Cloak of Darkness of the Chosen" type="NONE" body-part="BACK" icon="icon.amor_evilness_cloak">
+	<!-- A cloak for a few chosen ones who have proven themselves as Lineage 2 Game Testers. Increases Max. HP/MP/CP by 5%, P. Def. by 3%, Magic Resistance by 5% and Speed by 10 when equipped. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<item id="71145" name="Greater Blessing of Castle Scroll - Party" type="SCROLL" icon="icon.etc_scroll_white_i00">
+	<!-- Gives the Blessing of Castle effect to all party members. Buffs and debuffs do not disappear upon death, but Noblesse Blessing and Lucky Charm disappear. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="71146" name="Castle Enchant Buff Scroll - Party" type="SCROLL" icon="icon.etc_scroll_white_i00">
+	<!-- Bestows all party members with the effects of Might Lv. 2, Empower Lv. 2, Acumen Lv. 1, and Haste Lv. 1. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="71147" name="Castle Wind Walk Scroll - Party" type="SCROLL" icon="icon.etc_scroll_white_i00">
+	<!-- Increases Speed of all party members by 33. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<armor id="71148" name="Enchanted Castle Ring - 10-day" type="NONE" body-part="FINGER" icon="icon.ev_11th_rare_acc_ring">
+	<!-- 10-day item. HP +25, M. Atk. +3%, and P. Atk. +3%. The effects do not stack even if two identical earrings are equipped.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="32.0"/>
+		</stats>
+	</armor>
+
+	<armor id="71149" name="Enchanted Castle Earrings - 10-day" type="NONE" body-part="EAR" icon="icon.ev_11th_rare_acc_earing">
+	<!-- 10-day item. MP +15, MP Recovery +0.2, Healing Effect +2%, Skill MP Cost -1%. The effect does not stack if two identical earrings are worn. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="48.0"/>
+		</stats>
+	</armor>
+
+	<armor id="71150" name="Enchanted Castle Necklace - 10-day" type="NONE" body-part="NECK" icon="icon.ev_11th_rare_acc_necklace">
+	<!-- 10-day item. MP +25, M. Def +3, P. Def. +5, MEN Attack and Resistance +3%, Skill MP Cost -1%.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="64.0"/>
+		</stats>
+	</armor>
+
+	<armor id="71151" name="Agathion Bracelet - Stage 3" type="NONE" body-part="LEFT_BRACELET" icon="icon.lbracelet_agathion_charm">
+	<!-- 60-day item. Opens 1 main Agathion slot and 2 subslots when equipped. STR/INT/CON/MEN +1.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="100" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="51025" level="4"/>  <!-- Expand Primary and Secondary Agathion Slots -->
+			<skill id="55885" level="1"/>  <!-- Agathion Bracelet Stats Increase -->
+		</skills>
+	</armor>
+
+	<armor id="71152" name="Agathion Bracelet - Stage 5" type="NONE" body-part="LEFT_BRACELET" icon="icon.lbracelet_agathion_charm">
+	<!-- Opens 1 main Agathion slot and 4 subslots when equipped. STR/INT/CON/MEN/DEX/WIT +1, MEN/Stun/Sleep/Paralysis Resistance +8%.  -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes weight="100" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="51025" level="4"/>  <!-- Expand Primary and Secondary Agathion Slots -->
+			<skill id="55885" level="1"/>  <!-- Agathion Bracelet Stats Increase -->
+			<skill id="55886" level="1"/>  <!-- Agathion Bracelet Resistance Increase -->
+		</skills>
+	</armor>
+
+	<item id="71153" name="+7 Elmoreden Cloak Box" type="NONE" icon="BranchIcon.icon.etc_g_bm_godspirit_box">
+	<!-- Double-click to obtain a +7 Elmoreden Cloak. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71154" name="+7 Aden Cloak Box" type="NONE" icon="BranchIcon.icon.etc_g_bm_godspirit_box">
+	<!-- Double-click to obtain a +7 Aden Cloak. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71155" name="+7 Elmore Cloak Box" type="NONE" icon="BranchIcon.icon.etc_g_bm_godspirit_box">
+	<!-- Double-click to obtain a +7 Elmore Cloak. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71156" name="+7 Ferios Cloak Box" type="NONE" icon="BranchIcon.icon.etc_g_bm_godspirit_box">
+	<!-- Double-click to obtain a +7 Ferios Cloak. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="71157" name="Agathion Charm - Ball Trapping Gnosian" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys2.icon.br_aga_kball_male_i00">
+	<!-- Bracelet that summons a ball trapping Gnosian. It wears a red uniform. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71158" name="Agathion Charm - Ball Trapping Orodriel" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys2.icon.br_aga_kball_female_i00">
+	<!-- Bracelet that summons a ball trapping Orodriel. It wears a red uniform. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71159" name="Agathion Charm - Penalty Kick" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys2.icon.br_aga_kball_kick_i00">
+	<!-- Bracelet that summons a Gnosian and Orodriel who are practicing penalty kicks. All are wearing red uniforms. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<item id="71160" name="Seven Signs Miracle Box" type="NONE" icon="icon.bm_sayha_gold_present">
+	<!-- Double-click to obtain a random item. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71161" name="Legendary Card: Antharas" type="CARD" icon="icon.card_dragon_anta">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71162" name="Legendary Card: Valakas" type="CARD" icon="icon.card_dragon_vala">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71163" name="Legendary Card: Lindvior" type="CARD" icon="icon.card_dragon_rind">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71164" name="Legendary Card: Astair van Halter" type="CARD" icon="icon.card_hero_holter">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71165" name="Legendary Card: Amadeo Cadmus" type="CARD" icon="icon.card_hero_amadeose">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71166" name="Legendary Card: Lionel Hunter" type="CARD" icon="icon.card_hero_hunter">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71167" name="Legendary Card: Sieghardt Ein" type="CARD" icon="icon.card_hero_zigharte">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71168" name="Legendary Card: Elcadia" type="CARD" icon="icon.card_hero_elcardia">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71169" name="Legendary Card: Baium" type="CARD" icon="icon.card_devil_baium">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71170" name="Legendary Card: Beleth" type="CARD" icon="icon.card_devil_verese">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71171" name="Legendary Card: Tiat" type="CARD" icon="icon.card_devil_tiate">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71172" name="Legendary Card: Lilith" type="CARD" icon="icon.card_devil_lilith">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71173" name="Legendary Card: Paulina" type="CARD" icon="icon.card_angel_polline">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71174" name="Legendary Card: Anakim" type="CARD" icon="icon.card_angel_anakim">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71175" name="Aspiring Orc Ruler of Aden" type="CARD" icon="icon.card_orc">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71176" name="Hidden Card" type="CARD" icon="icon.card_hidden">
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71177" name="Daily Gift - VIP 1" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i00">
+	<!-- Double-click to obtain the following: 1 Scroll of Escape, 3 Healing Potions. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="10" immediate-effect="true"/>
+	</item>
+
+	<item id="71178" name="Daily Gift - VIP 2" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i01">
+	<!-- Double-click to obtain the following: 1 Scroll of Resurrection, 3 Healing Potions. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="10" immediate-effect="true"/>
+	</item>
+
+	<item id="71179" name="Daily Gift - VIP 3" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i02">
+	<!-- Double-click to obtain the following: 1 Scroll of Escape, 1 Scroll of Resurrection, 5 Healing Potions. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="10" immediate-effect="true"/>
+	</item>
+
+	<item id="71180" name="Daily Gift - VIP 4" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i03">
+	<!-- Double-click to obtain the following: 1 Scroll of Escape, 1 Scroll of Resurrection, 3 Greater Healing Potions. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="10" immediate-effect="true"/>
+	</item>
+
+	<item id="71181" name="Daily Gift - VIP 5" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i04">
+	<!-- Double-click to obtain the following: 1 Blessed Scroll of Escape, 3 High-grade Healing Potions, and 40 VIP Coins. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="10" immediate-effect="true"/>
+	</item>
+
+	<item id="71182" name="Daily Gift - VIP 6" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i05">
+	<!-- Double-click to obtain the following: 1 Blessed Scroll of Resurrection, 3 High-grade Healing Potions, and 100 VIP Coins. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="10" immediate-effect="true"/>
+	</item>
+
+	<item id="71183" name="Daily Gift - VIP 7" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i06">
+	<!-- Double-click to obtain the following: 1 Blessed Scroll of Escape, 1 Blessed Scroll of Resurrection, 3 High-grade Healing Potions, and 150 VIP Coins. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="10" immediate-effect="true"/>
+	</item>
+
+	<armor id="71184" name="Meliodas Agathion Lv. 1" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp">
+	<!-- An Agathion that activates the power of Meliodas. Equipping it in the main slot summons the Agathion and activates the Special Ability option.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> Meliodas Agathion +7 to upgrade to Lv. 2. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71185" name="Elizabeth Agathion Lv. 1" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp">
+	<!-- An Agathion that activates the power of the Elizabeth Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> Elizabeth Agathion +7 to upgrade to Stage 2. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71186" name="Hawk Agathion Lv. 1" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp">
+	<!-- An Agathion that activates the power of Hawk. Equipping it in the main slot summons the Agathion and activates the Special Ability option.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> Hawk Agathion +7 to upgrade to Lv. 2. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71187" name="Ban Agathion Lv. 1" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp">
+	<!-- An Agathion that activates the power of Ban. Equipping it in the main slot summons the Agathion and activates the Special Ability option.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> Ban Agathion +7 to upgrade to Lv. 2. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71188" name="Diane Agathion Lv. 1" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp">
+	<!-- An Agathion that activates the power of Diane. Equipping it in the main slot summons the Agathion and activates the Special Ability option.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> Diane Agathion +7 to upgrade to Lv. 2. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71189" name="King Agathion Lv. 1" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp">
+	<!-- An Agathion that activates the power of King. Equipping it in the main slot summons the Agathion and activates the Special Ability option.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> King Agathion +7 to upgrade to Lv. 2. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71190" name="Merlin Agathion Lv. 1" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_merlin_agathion_charm_lv1_jp">
+	<!-- An Agathion that activates the power of Merlin. Equipping it in the main slot summons the Agathion and activates the Special Ability option.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> Merlin Agathion +7 to upgrade to Lv. 2. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71191" name="Gowther Agathion Lv. 1" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_gowther_agathion_charm_lv1_jp">
+	<!-- An Agathion that activates the power of Gowther. Equipping it in the main slot summons the Agathion and activates the Special Ability option.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> Gowther Agathion +7 to upgrade to Lv. 2. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71192" name="Escanor Agathion Lv. 1" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_escanor_agathion_charm_lv1_jp">
+	<!-- An Agathion that activates the power of Escanor. Equipping it in the main slot summons the Agathion and activates the Special Ability option.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> Escanor Agathion +7 to upgrade to Stage 2. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71193" name="Meliodas Agathion Lv. 2" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp">
+	<!-- An Agathion that activates the power of Meliodas. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> Meliodas Agathion +7 to upgrade to Lv. 3. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71194" name="Elizabeth Agathion Lv. 2" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp">
+	<!-- An Agathion that activates the power of Elizabeth. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> Elizabeth Agathion +7 to upgrade to Stage 3. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71195" name="Hawk Agathion Lv. 2" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp">
+	<!-- An Agathion that activates the power of Hawk. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> Hawk Agathion +7 to upgrade to Stag Lv. 3. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71196" name="Ban Agathion Lv. 2" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp">
+	<!-- An Agathion that activates the power of Ban. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> Ban Agathion +7 to upgrade to Lv. 3. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71197" name="Diane Agathion Lv. 2" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp">
+	<!-- An Agathion that activates the power of Diane. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> Diane Agathion +7 to upgrade to Lv. 3. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71198" name="King Agathion Lv 2" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp">
+	<!-- An Agathion that activates the power of King. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> King Agathion +7 to upgrade to Lv. 3. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
+	<armor id="71199" name="Merlin Agathion Lv. 2" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_merlin_agathion_charm_lv1_jp">
+	<!-- An Agathion that activates the power of Merlin. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> Merlin Agathion +7 to upgrade to Lv. 3. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="5" enchant-enabled="false" />
+		<crystal />
+	</armor>
+
 </list>

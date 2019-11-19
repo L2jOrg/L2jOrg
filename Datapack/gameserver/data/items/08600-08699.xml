@@ -1,427 +1,302 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="8615" name="Summoning Crystal" icon="icon.etc_recall_crystal_i00">
-        <!-- Crystal imbued with mystical power. Used for teleportation magic. -->
-        <set name="weight" val="10"/>
-        <set name="price" val="35000"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="8618" name="Ancient Book: Divine Inspiration (Modern Language Version)" icon="icon.etc_add_buffslot_i00">
-        <!-- Restores forgotten abilities. The book was re-published after being translated into a the modern language. (Can only be used by characters level 52 or above.) -->
-        <set name="immediate_effect" val="false"/>
-        <set name="weight" val="120"/>
-        <set name="commissionItemType" val="SPELLBOOK"/>
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="handler" val="ItemSkills"/>
-        <restriction stackable="true"/>
-        <skills>
-            <skill id="1405" level="1"/> <!-- Divine Inspiration -->
-        </skills>
-    </item>
-    <item id="8619" name="Ancient Book: Divine Inspiration (Original Language Version)" icon="icon.etc_add_buffslot_i01">
-        <!-- Restores forgotten abilities. This book was published by ancient scholars for research purposes. It contains more information than the modern language version. (Can only be used by characters level 61 or above.) -->
-        <set name="immediate_effect" val="false"/>
-        <set name="weight" val="120"/>
-        <set name="commissionItemType" val="SPELLBOOK"/>
-        <restriction stackable="true"/>
-        <skills>
-            <skill id="1405" level="2"/> <!-- Divine Inspiration -->
-        </skills>
-    </item>
-    <item id="8620" name="Ancient Book: Divine Inspiration (Manuscript)" icon="icon.etc_add_buffslot_i02">
-        <!-- Restores forgotten abilities. This book is a hand-written copy of the original. It is almost the same as the original version. (Can only be used by characters level 76 or above.) -->
-        <set name="immediate_effect" val="false"/>
-        <set name="weight" val="120"/>
-        <set name="commissionItemType" val="SPELLBOOK"/>
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="handler" val="ItemSkills"/>
-        <restriction stackable="true"/>
-        <skills>
-            <skill id="1405" level="3"/> <!-- Divine Inspiration -->
-        </skills>
-    </item>
-    <item id="8621" name="Ancient Book: Divine Inspiration (Original Version)" icon="icon.etc_add_buffslot_i03">
-        <!-- Awakens a forgotten ability. Those who lack the requisite knowledge cannot understand its contents. (Can only be used by characters level 76 or above.) -->
-        <set name="immediate_effect" val="false"/>
-        <set name="weight" val="120"/>
-        <set name="commissionItemType" val="SPELLBOOK"/>
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="handler" val="ItemSkills"/>
-        <restriction stackable="true"/>
-        <skills>
-            <skill id="1405" level="4"/> <!-- Divine Inspiration -->
-        </skills>
-    </item>
-    <weapon id="8678" name="Sirra's Blade" icon="icon.weapon_sirr_blade_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2157"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1300"/>
-        <set name="price" val="26968400"/>
-        <set name="change_weaponId" val="9352"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_SWORD"/>
-        <stats>
-            <stat type="pAtk">251</stat>
-            <stat type="mAtk">121</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="8679" name="Sword of Ipos" icon="icon.weapon_sword_of_ipos_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;46;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2157"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1820"/>
-        <set name="price" val="26968400"/>
-        <set name="change_weaponId" val="9356"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="TWO_HAND_SWORD"/>
-        <stats>
-            <stat type="pAtk">305</stat>
-            <stat type="mAtk">121</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="8680" name="Barakiel's Axe" icon="icon.weapon_barakiel_axe_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2157"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1550"/>
-        <set name="price" val="26968400"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="BLUNT_WEAPON"/>
-        <stats>
-            <stat type="pAtk">251</stat>
-            <stat type="mAtk">121</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="8681" name="Behemoth' Tuning Fork" icon="icon.weapon_tuning_fork_of_behemoth_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2157"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1890"/>
-        <set name="price" val="26968400"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON"/>
-        <stats>
-            <stat type="pAtk">305</stat>
-            <stat type="mAtk">121</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="8682" name="Naga Storm" icon="icon.weapon_naga_storm_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2157"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="930"/>
-        <set name="price" val="26968400"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="DAGGER"/>
-        <stats>
-            <stat type="pAtk">220</stat>
-            <stat type="mAtk">121</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="8683" name="Tiphon's Spear" icon="icon.weapon_tiphon_spear_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;66;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2157"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1820"/>
-        <set name="price" val="26968400"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="SPEAR"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">251</stat>
-            <stat type="mAtk">121</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="8684" name="Shyeed's Bow" icon="icon.weapon_shyid_bow_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;10;0"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2157"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1640"/>
-        <set name="price" val="26968400"/>
-        <set name="change_weaponId" val="9360"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="5"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="reuse_delay" val="820"/>
-        <set name="commissionItemType" val="BOW"/>
-        <stats>
-            <stat type="pAtk">570</stat>
-            <stat type="mAtk">133</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">227</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="8685" name="Sobekk's Hurricane" icon="icon.weapon_sobekk_hurricane_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;32;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2157"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1330"/>
-        <set name="price" val="26968400"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="FIST_WEAPON"/>
-        <stats>
-            <stat type="pAtk">305</stat>
-            <stat type="mAtk">121</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="8686" name="Themis' Tongue" icon="icon.weapon_tongue_of_themis_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2157"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="820"/>
-        <set name="price" val="26968400"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD"/>
-        <stats>
-            <stat type="pAtk">202</stat>
-            <stat type="mAtk">161</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="8687" name="Cabrio's Hand" icon="icon.weapon_hand_of_cabrio_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2157"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1510"/>
-        <set name="price" val="26968400"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON"/>
-        <stats>
-            <stat type="pAtk">202</stat>
-            <stat type="mAtk">161</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="8688" name="Daimon Crystal" icon="icon.weapon_crystal_of_deamon_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2157"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="880"/>
-        <set name="price" val="26968400"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON"/>
-        <stats>
-            <stat type="pAtk">245</stat>
-            <stat type="mAtk">177</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <item id="8690" name="Recipe: Sirra's Blade (60%)" icon="icon.etc_recipe_violet_i00">
-        <!-- For Dwarves only. Recipe for Sirra's Blade. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="706000"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="8691" name="Recipe: Sirra's Blade (100%)" icon="icon.etc_recipe_violet_i00">
-        <!-- For Dwarves only. Recipe for Sirra's Blade. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="706000"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="8692" name="Recipe: Sword of Ipos (60%)" icon="icon.etc_recipe_violet_i00">
-        <!-- For Dwarves only. Recipe for Sword of Ipos. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="706000"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="8693" name="Recipe: Sword of Ipos (100%)" icon="icon.etc_recipe_violet_i00">
-        <!-- For Dwarves only. Recipe for Sword of Ipos. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="706000"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="8694" name="Recipe: Barakiel's Axe (60%)" icon="icon.etc_recipe_violet_i00">
-        <!-- For Dwarves only. Recipe for Barakiel's Axe. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="706000"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="8695" name="Recipe: Barakiel's Axe (100%)" icon="icon.etc_recipe_violet_i00">
-        <!-- For Dwarves only. Recipe for Barakiel's Axe. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="706000"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="8696" name="Recipe: Behemoth' Tuning Fork (60%)" icon="icon.etc_recipe_violet_i00">
-        <!-- For Dwarves only. Recipe for Behemoth' Tuning Fork. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="706000"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="8697" name="Recipe: Behemoth' Tuning Fork (100%)" icon="icon.etc_recipe_violet_i00">
-        <!-- For Dwarves only. Recipe for Behemoth' Tuning Fork. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="706000"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="8698" name="Recipe: Naga Storm (60%)" icon="icon.etc_recipe_violet_i00">
-        <!-- For Dwarves only. Recipe for Naga Storm. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="706000"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="8699" name="Recipe: Naga Storm (100%)" icon="icon.etc_recipe_violet_i00">
-        <!-- For Dwarves only. Recipe for Naga Storm. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="706000"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
+	<item id="8615" name="Summoning Crystal" type="MATERIAL" icon="icon.etc_recall_crystal_i00">
+	<!-- Crystal imbued with mystical power. Used for teleportation magic. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="10" price="35000"/>
+	</item>
+
+	<item id="8618" name="Ancient Book: Divine Inspiration (Modern Language Version)" type="NONE" icon="icon.etc_add_buffslot_i00">
+	<!-- Restores forgotten abilities. The book was re-published after being translated into a the modern language. (Can only be used by characters level 52 or above.) -->
+		<restriction freightable="false" depositable="false"/>
+		<attributes weight="120" commission-type="SPELLBOOK"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="1405" level="1"/>  <!-- Divine Inspiration -->
+		</skill-reducer>
+	</item>
+
+	<item id="8619" name="Ancient Book: Divine Inspiration (Original Language Version)" type="NONE" icon="icon.etc_add_buffslot_i01">
+	<!-- Restores forgotten abilities. This book was published by ancient scholars for research purposes. It contains more information than the modern language version. (Can only be used by characters level 61 or above.) -->
+		<restriction freightable="false" depositable="false"/>
+		<attributes weight="120" commission-type="SPELLBOOK"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="1405" level="2"/>  <!-- Divine Inspiration -->
+		</skill-reducer>
+	</item>
+
+	<item id="8620" name="Ancient Book: Divine Inspiration (Manuscript)" type="NONE" icon="icon.etc_add_buffslot_i02">
+	<!-- Restores forgotten abilities. This book is a hand-written copy of the original. It is almost the same as the original version. (Can only be used by characters level 76 or above.) -->
+		<restriction freightable="false" depositable="false"/>
+		<attributes weight="120" commission-type="SPELLBOOK"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="1405" level="3"/>  <!-- Divine Inspiration -->
+		</skill-reducer>
+	</item>
+
+	<item id="8621" name="Ancient Book: Divine Inspiration (Original Version)" type="NONE" icon="icon.etc_add_buffslot_i03">
+	<!-- Awakens a forgotten ability. Those who lack the requisite knowledge cannot understand its contents. (Can only be used by characters level 76 or above.) -->
+		<restriction freightable="false" depositable="false"/>
+		<attributes weight="120" commission-type="SPELLBOOK"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="1405" level="4"/>  <!-- Divine Inspiration -->
+		</skill-reducer>
+	</item>
+
+	<weapon id="8678" name="Sirra's Blade" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sirr_blade_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1300" price="26968400" commission-type="ONE_HAND_SWORD" change-weapon="9352"/>
+		<crystal type="A" count="2157"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="251.0"/>
+			<stat type="mAtk" value="121.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="8679" name="Sword of Ipos" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_sword_of_ipos_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1820" price="26968400" commission-type="TWO_HAND_SWORD" change-weapon="9356"/>
+		<crystal type="A" count="2157"/>
+		<damage radius="46" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="305.0"/>
+			<stat type="mAtk" value="121.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="8680" name="Barakiel's Axe" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_barakiel_axe_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1550" price="26968400" commission-type="BLUNT_WEAPON"/>
+		<crystal type="A" count="2157"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="251.0"/>
+			<stat type="mAtk" value="121.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="8681" name="Behemoth' Tuning Fork" type="HAMMER" body-part="TWO_HAND" icon="icon.weapon_tuning_fork_of_behemoth_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1890" price="26968400" commission-type="ONE_HAND_MAGIC_BLUNT_WEAPON"/>
+		<crystal type="A" count="2157"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="305.0"/>
+			<stat type="mAtk" value="121.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="8682" name="Naga Storm" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_naga_storm_i00">
+		<restriction freightable="false"/>
+		<attributes weight="930" price="26968400" commission-type="DAGGER"/>
+		<crystal type="A" count="2157"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="220.0"/>
+			<stat type="mAtk" value="121.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="8683" name="Tiphon's Spear" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_tiphon_spear_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1820" price="26968400" commission-type="SPEAR"/>
+		<crystal type="A" count="2157"/>
+		<damage radius="66" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="251.0"/>
+			<stat type="mAtk" value="121.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="8684" name="Shyeed's Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_shyid_bow_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1640" price="26968400" commission-type="BOW" reuse-delay="820" change-weapon="9360"/>
+		<crystal type="A" count="2157"/>
+		<damage radius="10" angle="360"/>
+		<consume  soulshots="4" spiritshots="3" mana="5"/>
+		<stats>
+			<stat type="pAtk" value="570.0"/>
+			<stat type="mAtk" value="133.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="227.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="8685" name="Sobekk's Hurricane" type="FIST" body-part="TWO_HAND" icon="icon.weapon_sobekk_hurricane_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1330" price="26968400" commission-type="FIST_WEAPON"/>
+		<crystal type="A" count="2157"/>
+		<damage radius="32" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="305.0"/>
+			<stat type="mAtk" value="121.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="8686" name="Themis' Tongue" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_tongue_of_themis_i00" magic="true">
+		<restriction freightable="false"/>
+		<attributes weight="820" price="26968400" commission-type="ONE_HAND_MAGIC_SWORD"/>
+		<crystal type="A" count="2157"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="202.0"/>
+			<stat type="mAtk" value="161.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="8687" name="Cabrio's Hand" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_hand_of_cabrio_i00" magic="true">
+		<restriction freightable="false"/>
+		<attributes weight="1510" price="26968400" commission-type="ONE_HAND_MAGIC_BLUNT_WEAPON"/>
+		<crystal type="A" count="2157"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="202.0"/>
+			<stat type="mAtk" value="161.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="8688" name="Daimon Crystal" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_crystal_of_deamon_i00" magic="true">
+		<restriction freightable="false"/>
+		<attributes weight="880" price="26968400" commission-type="TWO_HAND_MAGIC_BLUNT_WEAPON"/>
+		<crystal type="A" count="2157"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="245.0"/>
+			<stat type="mAtk" value="177.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<item id="8690" name="Recipe: Sirra's Blade (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
+	<!-- For Dwarves only. Recipe for Sirra's Blade. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="8691" name="Recipe: Sirra's Blade (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
+	<!-- For Dwarves only. Recipe for Sirra's Blade. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="8692" name="Recipe: Sword of Ipos (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
+	<!-- For Dwarves only. Recipe for Sword of Ipos. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="8693" name="Recipe: Sword of Ipos (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
+	<!-- For Dwarves only. Recipe for Sword of Ipos. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="8694" name="Recipe: Barakiel's Axe (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
+	<!-- For Dwarves only. Recipe for Barakiel's Axe. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="8695" name="Recipe: Barakiel's Axe (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
+	<!-- For Dwarves only. Recipe for Barakiel's Axe. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="8696" name="Recipe: Behemoth' Tuning Fork (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
+	<!-- For Dwarves only. Recipe for Behemoth' Tuning Fork. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="8697" name="Recipe: Behemoth' Tuning Fork (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
+	<!-- For Dwarves only. Recipe for Behemoth' Tuning Fork. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="8698" name="Recipe: Naga Storm (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
+	<!-- For Dwarves only. Recipe for Naga Storm. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="8699" name="Recipe: Naga Storm (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
+	<!-- For Dwarves only. Recipe for Naga Storm. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
 </list>

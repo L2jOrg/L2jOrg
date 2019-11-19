@@ -1,1029 +1,999 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <weapon id="49400" name="Conjuror's Staff" icon="icon.weapon_conjure_staff_i01">
-        <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1030"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <stats>
-            <stat type="pAtk">50</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49401" name="Staff of Mana" icon="icon.weapon_staff_of_mana_i01">
-        <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1040"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <stats>
-            <stat type="pAtk">50</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49402" name="Staff of Mana" icon="icon.weapon_staff_of_mana_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1040"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <stats>
-            <stat type="pAtk">50</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49403" name="Staff of Mana" icon="icon.weapon_staff_of_mana_i01">
-        <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1040"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <stats>
-            <stat type="pAtk">50</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49404" name="Staff of Magic" icon="icon.weapon_staff_of_magicpower_i01">
-        <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1020"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <stats>
-            <stat type="pAtk">62</stat>
-            <stat type="mAtk">57</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49405" name="Staff of Magic" icon="icon.weapon_staff_of_magicpower_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1020"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <stats>
-            <stat type="pAtk">62</stat>
-            <stat type="mAtk">57</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49406" name="Staff of Magic" icon="icon.weapon_staff_of_magicpower_i01">
-        <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1020"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <stats>
-            <stat type="pAtk">62</stat>
-            <stat type="mAtk">57</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49407" name="Atuba Hammer" icon="icon.weapon_atuba_hammer_i01">
-        <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1010"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">90</stat>
-            <stat type="mAtk">79</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49408" name="Atuba Hammer" icon="icon.weapon_atuba_hammer_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1010"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">90</stat>
-            <stat type="mAtk">79</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49409" name="Atuba Hammer" icon="icon.weapon_atuba_hammer_i01">
-        <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1010"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">90</stat>
-            <stat type="mAtk">79</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49410" name="Ghost Staff" icon="icon.weapon_ghost_staff_i01">
-        <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <stats>
-            <stat type="pAtk">90</stat>
-            <stat type="mAtk">79</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49411" name="Ghost Staff" icon="icon.weapon_ghost_staff_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <stats>
-            <stat type="pAtk">90</stat>
-            <stat type="mAtk">79</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49412" name="Ghost Staff" icon="icon.weapon_ghost_staff_i01">
-        <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <stats>
-            <stat type="pAtk">90</stat>
-            <stat type="mAtk">79</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49413" name="Atuba Mace" icon="icon.weapon_atuba_mace_i01">
-        <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1010"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">90</stat>
-            <stat type="mAtk">79</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49414" name="Atuba Mace" icon="icon.weapon_atuba_mace_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1010"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">90</stat>
-            <stat type="mAtk">79</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49415" name="Atuba Mace" icon="icon.weapon_atuba_mace_i01">
-        <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1010"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">90</stat>
-            <stat type="mAtk">79</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <item id="49416" name="Blade Spirit" icon="icon.etc_soul_of_blade">
-        <!-- Used to exchange Soul Crystals. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="49417" name="Spirit Energy" icon="icon.etc_power_of_soul">
-        <!-- Used to exchange Soul Crystals. Cannot be dropped. -->
-        <restriction dropable="false" stackable="true"/>
-    </item>
-    <item id="49418" name="Cube of Sayha" icon="icon.sa_cube">
-        <!-- 30-day item. Double-click the Cube to receive 1 Scroll: Summon Storm and 1 Sayha's Treasure Chest. (Can be used only once per day.) Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="time" val="43200"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="49419" name="Cube of Sayha" icon="icon.sa_cube">
-        <!-- 90-day item. Double-click the Cube to receive 1 Scroll: Summon Storm and 1 Sayha's Treasure Chest. (Can be used only once per day.) Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="time" val="129600"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="49420" name="Scroll: Summon Storm" icon="icon.scrl_of_storm">
-        <!-- Fills you with Storm Energy, granting 50% XP and SP gain bonus for 2 hours. Cooldown: 2 hours. Storm Energy does not disappear after character's death. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Available since level 40. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="49421" name="Package: Cube of Sayha (30-day)" icon="icon.shirt_special_box_i03">
-        <!-- Double-click the package to receive 30-day Cube of Sayha. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. Available since level 40. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="49422" name="Package: Cube of Sayha (90-day)" icon="icon.shirt_special_box_i03">
-        <!-- Double-click the package to receive 90-day Cube of Sayha. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. Available since level 40. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="49423" name="Spellbook: Dual Weapon Defense" icon="icon.etc_spell_books_hfighter_i00">
-        <!-- Spellbook needed to learn Dual Weapon Defense. Used by Gladiator. Required level: 41 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="49424" name="Spellbook: Broad Sweep" icon="icon.etc_spell_books_hfighter_i00">
-        <!-- Spellbook needed to learn Broad Sweep. Used by Warlords. Required level: 51 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="49425" name="Spellbook: Immortal Life" icon="icon.etc_spell_books_hfighter_i00">
-        <!-- Spellbook needed to learn Immortal Life. Used by Destroyers. Required level: 52 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="49426" name="Spellbook: Break Duress" icon="icon.etc_spell_books_hfighter_i00">
-        <!-- Spellbook needed to learn Break Duress. Used by Tyrants. Required level: 52 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="49427" name="Spellbook: Shield Deflect Magic" icon="icon.etc_spell_books_hfighter_i00">
-        <!-- Spellbook needed to learn Magic Deflection Shield. Used by Knights. Required level: 60 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="49428" name="Spellbook: Aegis" icon="icon.etc_spell_books_hfighter_i00">
-        <!-- Spellbook needed to learn Aegis. Used by Eva's Templars, Shillien Knights. Required level: 52 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="49429" name="Spellbook: Hide" icon="icon.etc_spell_books_defighter_i00">
-        <!-- Spellbook needed to learn Hide. Profession: Rogue. Required level: 51 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="49430" name="Spellbook: Mystic Immunity" icon="icon.etc_spell_books_assistance_i00">
-        <!-- Spellbook needed to learn Mystic Immunity. Used by Prophets. Required level: 51 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="49431" name="Spellbook: Divine Power" icon="icon.etc_spell_books_white_i00">
-        <!-- Spellbook needed to learn Divine Power. Used by Bishops. Required level: 51 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="49432" name="Spellbook: Stigma of Shilen" icon="icon.etc_spell_books_assistance_i00">
-        <!-- Spellbook needed to learn Stigma of Shilen. Used by Shillien Elders. Required level: 40 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="49433" name="Amulet: Chant of Movement" icon="icon.etc_orcish_talisman_i00">
-        <!-- Amulet required for the Chant of Movement spell. Used by Warcryers. Required level: 44 -->
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="49434" name="Sayha's Treasure Chest" icon="icon.etc_ev_kalie_treasure_box">
-        <!-- Open the chest to receive the Adena or Buff Scroll with a certain probability. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="49435" name="Scroll: Berserker Spirit" icon="icon.etc_scroll_white_i00">
-        <!-- P. Def. -5%, M. Def. -10%, Evasion -2 -->
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <restriction stackable="true"/>
-    </item>
-    <weapon id="49436" name="Blue Mackerel: One-handed Sword" icon="icon.wp_fishing1">
-        <!-- 7-day item. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1450"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">79</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49437" name="Trumpetfish: Dagger" icon="icon.wp_fishing2">
-        <!-- 7-day item. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1070"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">62</stat>
-            <stat type="mAtk">42</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49438" name="Shark: Two-handed Sword" icon="icon.wp_fishing3">
-        <!-- 7-day item. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2020"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">96</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49439" name="Squid: Spear" icon="icon.wp_fishing4">
-        <!-- 7-day item. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2060"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">79</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="49440" name="Sea Horse: Two-handed Magic Blunt Weapon" icon="icon.wp_fishing5">
-        <!-- 7-day item. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">77</stat>
-            <stat type="mAtk">69</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49441" name="Lobster: Fist Weapon" icon="icon.wp_fishing6">
-        <!-- 7-day item. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1510"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">96</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49442" name="Giant Crab: Bow" icon="icon.wp_fishing7">
-        <!-- 7-day item. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1820"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="2"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">179</stat>
-            <stat type="mAtk">51</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">227</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <armor id="49443" name="Turtle: Shield" icon="icon.wp_fishing10">
-        <!-- 7-day item. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="lhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1320"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="rEvas">-8</stat>
-            <stat type="rShld">20</stat>
-            <stat type="sDef">142</stat>
-        </stats>
-    </armor>
-    <weapon id="49444" name="Blue Mackerel: Dualsword" icon="icon.wp_fishing11">
-        <!-- 7-day item. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2530"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">96</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49445" name="Blue Mackerel: One-handed Blunt Weapon" icon="icon.wp_fishing1">
-        <!-- 7-day item. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1720"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">79</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <item id="49446" name="Blue Mackerel Chest: One-handed Sword" icon="icon.etc_raid_d_i00">
-        <!-- Open the chest to receive 1 7-day Blue Mackerel: One-handed Sword. The chest cannot be transferred to another character on the same account, once opened. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="49447" name="Trumpetfish Chest: Dagger" icon="icon.etc_raid_d_i00">
-        <!-- Open the chest to receive 1 7-day Trumpetfish: Dagger. The chest cannot be transferred to another character on the same account, once opened. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="49448" name="Shark Chest: Two-handed Sword" icon="icon.etc_raid_d_i00">
-        <!-- Open the chest to receive 1 7-day Shark: Two-handed Sword. The chest cannot be transferred to another character on the same account, once opened. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="49449" name="Squid Chest: Spear" icon="icon.etc_raid_d_i00">
-        <!-- Open the chest to receive 1 7-day Squid: Spear. The chest cannot be transferred to another character on the same account, once opened. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="49450" name="Sea Horse Chest: Two-handed Magic Blunt Weapon" icon="icon.etc_raid_d_i00">
-        <!-- Open the chest to receive 1 7-day Sea Horse: Two-handed Magic Blunt Weapon. The chest cannot be transferred to another character on the same account, once opened. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="49451" name="Lobster Chest: Fist Weapon" icon="icon.etc_raid_d_i00">
-        <!-- Open the chest to receive 1 7-day Lobster: Fist Weapon. The chest cannot be transferred to another character on the same account, once opened. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="49452" name="Giant Crab Chest: Bow" icon="icon.etc_raid_d_i00">
-        <!-- Open the chest to receive 1 7-day Giant Crab: Bow. The chest cannot be transferred to another character on the same account, once opened. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="49453" name="Turtle Chest: Shield" icon="icon.etc_raid_d_i00">
-        <!-- Open the chest to receive 1 7-day Turtle: Shield. The chest cannot be transferred to another character on the same account, once opened. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="49454" name="Blue Mackerel Chest: Dualsword" icon="icon.etc_raid_d_i00">
-        <!-- Open the chest to receive 1 7-day Blue Mackerel: Dualsword. The chest cannot be transferred to another character on the same account, once opened. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="49455" name="Blue Mackerel Chest: One-handed Blunt Weapon" icon="icon.etc_raid_d_i00">
-        <!-- Open the chest to receive 1 7-day Blue Mackerel: One-handed Blunt Weapon. The chest cannot be transferred to another character on the same account, once opened. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="49456" name="Blade Spirit Chest (5 pcs.)" icon="icon.etc_equip_item_box_i02">
-        <!-- Open the chest to receive 5 Blade Spirit pieces. The chest cannot be transferred to another character on the same account, once opened. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="49457" name="Letter Collector's Gift" icon="icon.shield_bread_i00">
-        <!-- Letter Collector's Gift. Increases XP and SP gain by 10%, Max. HP / MP by 10%, Speed by 5 for 1 hour. Your armor changes to Santa Suit. The item will be deleted after the event is over. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <armor id="49458" name="Agathion - Pisces" icon="icon.agathion_magmeld_teleport">
-        <!-- Bracelet that can be used to summon Agathion - Pisces. 15-day item. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Active Skill>. Agathion Teleport: grants the ability to teleport to Gludio / Dion / Giran / Oren. (Cooldown: 60 minutes) -->
-        <set name="bodypart" val="agathion"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <set name="time" val="21600"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <skills>
-            <skill id="17619" level="1"/> <!-- Release Agathion - Pisces -->
-            <skill id="3267" level="1" type="ON_UNEQUIP"/> <!-- Seal Agathion -->
-            <skill id="39053" level="1"/> <!-- Agathion Teleport: Gludio -->
-            <skill id="39054" level="1"/> <!-- Agathion Teleport: Dion -->
-            <skill id="39055" level="1"/> <!-- Agathion Teleport: Giran -->
-            <skill id="39056" level="1"/> <!-- Agathion Teleport: Oren -->
-        </skills>
-    </armor>
-    <armor id="49459" name="Agathion - Cancer" icon="icon.agathion_magmeld_teleport">
-        <!-- Bracelet that can be used to summon Agathion - Cancer. 15-day item. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Active Skill>. Agathion Teleport: grants the ability to teleport to Gludio / Dion / Giran / Oren. (Cooldown: 60 minutes) -->
-        <set name="bodypart" val="lbracelet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <set name="time" val="21600"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <skills>
-            <skill id="17621" level="1"/> <!-- Release Agathion - Cancer -->
-            <skill id="3267" level="1" type="ON_UNEQUIP"/> <!-- Seal Agathion -->
-            <skill id="39053" level="1"/> <!-- Agathion Teleport: Gludio -->
-            <skill id="39054" level="1"/> <!-- Agathion Teleport: Dion -->
-            <skill id="39055" level="1"/> <!-- Agathion Teleport: Giran -->
-            <skill id="39056" level="1"/> <!-- Agathion Teleport: Oren -->
-        </skills>
-    </armor>
-    <item id="49460" name="Fish Stew: Might" icon="icon.fish_stew_buff">
-        <!-- Increases P. Atk. by 8% for 20 minutes. The item cannot be dropped. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="for_npc" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
-        <skills>
-            <skill id="39047" level="1"/> <!-- Fish Stew: Might -->
-        </skills>
-    </item>
-    <item id="49461" name="Fish Stew: Shield" icon="icon.fish_stew_buff">
-        <!-- Increases P. Def. by 8% for 20 minutes. The item cannot be dropped. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="for_npc" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
-        <skills>
-            <skill id="39048" level="1"/> <!-- Fish Stew: Shield -->
-        </skills>
-    </item>
-    <item id="49462" name="Fish Stew: Magic Barrier" icon="icon.fish_stew_buff">
-        <!-- Increases M. Def. by 23% for 20 minutes. The item cannot be dropped. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="for_npc" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
-        <skills>
-            <skill id="39049" level="1"/> <!-- Fish Stew: Magic Barrier -->
-        </skills>
-    </item>
-    <item id="49463" name="Fish Stew: Vampiric Rage" icon="icon.fish_stew_buff">
-        <!-- Restores 6% from received physical damage for 20 minutes. The item cannot be dropped. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="for_npc" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
-        <skills>
-            <skill id="39050" level="1"/> <!-- Fish Stew: Vampiric Rage -->
-        </skills>
-    </item>
-    <item id="49464" name="Fish Stew: Empower" icon="icon.fish_stew_buff">
-        <!-- Increases M. Atk. by 55% for 20 minutes. The item cannot be dropped. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="for_npc" val="true"/>
-        <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
-        <skills>
-            <skill id="39051" level="1"/> <!-- Fish Stew: Empower -->
-        </skills>
-    </item>
-    <weapon id="49465" name="Fishing Rod" icon="icon.weapon_fishing_rod_i03">
-        <set name="weapon_type" val="FISHINGROD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1000"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">1</stat>
-            <stat type="mAtk">1</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">1</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <item id="49466" name="Warrior Experience Rune" icon="icon.skill70094">
-        <!-- 30-day item. Increases XP and SP gain by 20%. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="etcitem_type" val="ENCHT_ATTR_RUNE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="time" val="43200"/>
-        <restriction tradable="false" dropable="false" sellable="false" clan-depositable="false" mailable="false" commissionable="false" olympiad-restricted="true"/>
-        <skills>
-            <skill id="39057" level="1"/> <!-- Hero Experience Rune -->
-        </skills>
-    </item>
-    <armor id="49467" name="Fire Dragon Pendant" icon="icon.bm_pendant_pve">
-        <!-- Pendant holding the sealed power of Fire Dragon. Can be enchanted up to +10 using Pendant Polish / Shining Pendant Polish. Starting from +4 adds passive skills, when enchanted to +9 grants special skills. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="underwear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="enchant_enabled" val="10"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">28</stat>
-        </stats>
-    </armor>
-    <armor id="49468" name="Land Dragon Pendant" icon="icon.bm_pendant_pvp">
-        <!-- Pendant holding the sealed power of Land Dragon. Can be enchanted up to +10 using Pendant Polish / Shining Pendant Polish. Starting from +4 adds passive skills, when enchanted to +9 grants special skills. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="underwear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="enchant_enabled" val="10"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">28</stat>
-        </stats>
-    </armor>
-    <item id="49469" name="Pendant Polish" icon="icon.bm_pendant_varnish">
-        <!-- Polish that enhances characteristics of a Pendant. Can be enchanted to +3 with 100% probability. Maximum Enchant Level is +10. Grants special characteristics starting from level +4, depending on Pendant type. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="49470" name="Shining Pendant Polish" icon="icon.bm_pendant_varnish_premium">
-        <!-- Shiny Polish, enhancing pendants characteristics. Can be used on a pendant enchanted up to +8. If an enchantment is failed, the pendent doesn't disappear and has the previous level of enchantment. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="49471" name="Fire Dragon Pendant Chest" icon="icon.bm_pendant_pve_box">
-        <!-- Double-click the chest to get 1 Fire Dragon Pendant and 10 Pendant Polishes. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="handler" val="ExtractableItems"/>
-        <restriction sellable="false" stackable="true"/>
-        <capsuled_items>
-            <item id="49467" min="1" max="1" chance="100"/ icon="icon.bm_pendant_pvp_box">
-            <item id="49469" min="10" max="10" chance="100"/>
-        </capsuled_items>
-    </item>
-    <item id="49472" name="Land Dragon Pendant Chest">
-        <!-- Double-click the chest to get 1 Land Dragon Pendant and 10 Pendant Polishes. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="49473" name="Mr. K's Hand of God Gift Basket" icon="icon.mrk_basket_i00">
-        <!-- Gift Basket that contains the spirit of Mr. K's Hand of God. Open it to receive 1 Black Mask, 30 Rice Cakes of Flaming Fighting Spirit, and 50 Rice Cakes of Fighting Spirit (XP). Cannot be exchanged, dropped, or sold. Can be stored in private warehouse. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="49474" name="Scroll Part: Enchant Weapon" icon="icon.weapon_enchant_piece">
-        <!-- Take those to exquisite goods merchant Galladucci. If you are lucky, you will get one of these Scrolls: Scroll: Enchant Weapon D / C / B. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
-    </item>
-    <item id="49475" name="Scroll Part: Enchant Armor" icon="icon.armor_enchant_piece">
-        <!-- Take those to exquisite goods merchant Galladucci. If you are lucky, you will get one of these Scrolls: Scroll: Enchant Armor D / C / B. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
-    </item>
-    <item id="49476" name="Refined Scroll Part: Enchant Weapon" icon="icon.high_weapon_enchant_piece">
-        <!-- Take those to exquisite goods merchant Galladucci. If you are lucky, you will get one of Enhanced Scrolls: Scroll: Enchant Weapon D / C / B. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
-    </item>
-    <armor id="49477" name="Queen Ant's Ring" icon="icon.accessory_ring_of_queen_ant_i00">
-        <!-- 15-day item. MP +9, Poison Resistance/Poison Attack Rate +10%, P./M. Accuracy +1, P./M. Atk. +4%. The effect doesn't stack if two identical rings are worn. Cannot be enchanted. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="rfinger;lfinger"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <set name="time" val="21600"/>
-        <restriction clan-depositable="false" tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-        <skills>
-            <skill id="3562" level="1"/>
-        </skills>
-        <stats>
-            <stat type="mDef">32</stat>
-            <stat type="maxMp">9</stat>
-        </stats>
-    </armor>
-    <item id="49478" name="Refined Scroll Part: Enchant Armor" icon="icon.high_armor_enchant_piece">
-        <!-- Take those to exquisite goods merchant Galladucci. If you are lucky, you will get one of Enhanced Scrolls: Scroll: Enchant Armor D / C / B. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
-    </item>
-    <item id="49479" name="Solid Scroll Part: Enchant Weapon" icon="icon.safe_weapon_enchant_piece">
-        <!-- Take those to exquisite goods merchant Galladucci. If you are lucky, you will get one of Solid Scrolls: Scroll: Enchant Weapon D / C / B. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
-    </item>
-    <item id="49480" name="Solid Scroll Part: Enchant Armor" icon="icon.safe_armor_enchant_piece">
-        <!-- Take those to exquisite goods merchant Galladucci. If you are lucky, you will get one of Solid Scrolls: Scroll: Enchant Armor D / C / B. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
-    </item>
-    <item id="49481" name="Solid Scroll: Enchant Armor (D-grade)" icon="icon.giant_scrl_of_ench_am_d">
-        <!-- P. Def. +1 for D-grade armor and accessories. Starting from +4, P. Def. +3. If an item is enchanted up to more than +4, HP is increased proportionally. Safe enchantment. If enchantment is failed, the item is not broken into crystals and preserves the enchantment level. Cannot be applied to armor enchanted by 6 and higher. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="49482" name="Solid Scroll: Enchant Weapon (D-grade)" icon="icon.giant_scrl_of_ench_wp_d">
-        <!-- When enchanted, P. Atk. +4 for D-grade one-handed swords, one-handed blunts, daggers, and spears. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. Enchanting is safe. If enchanting is failed, items are not broken into crystals and remain enchanted to prior level. Cannot be applied to items enchanted to +7 or higher. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="49483" name="Solid Scroll: Enchant Armor (C-grade)" icon="icon.giant_scrl_of_ench_am_c">
-        <!-- P. Def. +1 for C-grade armor and accessories. Starting from +4, P. Def. +3. If an item is enchanted up to more than +4, HP is increased proportionally. Safe enchantment. If enchantment is failed, the item is not broken into crystals and preserves the enchantment level. Cannot be applied to armor enchanted by 6 and higher. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="49484" name="Solid Scroll: Enchant Weapon (C-grade)" icon="icon.giant_scrl_of_ench_wp_c">
-        <!-- When enchanted, P. Atk. +4 for C-grade one-handed swords, one-handed blunts, daggers, and spears. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. Enchanting is safe. If enchanting is failed, items are not broken into crystals and remain enchanted to prior level. Cannot be applied to items enchanted to +7 or higher. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="49485" name="Solid Scroll: Enchant Armor (B-grade)" icon="icon.giant_scrl_of_ench_am_b">
-        <!-- P. Def. +1 for B-grade armor and accessories. Starting from +4, P. Def. +3. If an item is enchanted up to more than +4, HP is increased proportionally. Safe enchantment. If enchantment is failed, the item is not broken into crystals and preserves the enchantment level. Cannot be applied to armor enchanted by 6 and higher. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="49486" name="Solid Scroll: Enchant Weapon (B-grade)" icon="icon.giant_scrl_of_ench_wp_b">
-        <!-- When enchanted, P. Atk. +2 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +2 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +4 for bows. M. Atk. +2 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. Enchanting is safe. If enchanting is failed, items are not broken into crystals and remain enchanted to prior level. Cannot be applied to items enchanted to +7 or higher. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="49487" name="Soulshot Ticket" icon="icon.etc_exchange_ticket_i03">
-        <!-- Can be exchanged through Dimensional Merchant to get Soulshot, Spiritshot, Blessed Spiritshot (No-grade/D-grade/C-grade).Cannot be exchanged, dropped, sold, or stored in private warehouse. Can be stored in a private warehouse. -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="49488" name="Major Healing Potion" icon="icon.etc_reagent_white_i00">
-        <!-- Magic potion that quickly restores HP. Duration: 15 sec. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="etcitem_type" val="POTION"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="5"/>
-        <set name="reuse_delay" val="10000"/>
-        <set name="handler" val="ItemSkills"/>
-        <restriction olympiad-restricted="true" freightable="true" coc-restricted="true" tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-        <skills>
-            <skill id="39069" level="1"/> <!-- Major Healing Potion -->
-        </skills>
-    </item>
-    <item id="49489" name="Parts of Enchantment Scrolls Chest" icon="icon.etc_treasure_box_i08">
-        <!-- Double-click to receive a Part of Enchantment Scroll. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. <Note>. Be careful before opening the items as their relocation is restricted. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="49490" name="Fishing kit" icon="icon.etc_elite_marguene_collection_box_i00">
-        <!-- Double-click to receive 1 Fishing Rod (1-day), Bait (720 pcs), 1 Hero's Dual Swords, 1 Soulshot Ticket. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. <Note>. Be careful before opening the items as their relocation is restricted. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="49491" name="Weapon Supply Box (D-grade)" icon="icon.etc_raid_e_i01">
-        <!-- Double-click to get the highest quality D-grade weapon. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="49492" name="Weapon Supply Box (C-grade)" icon="icon.etc_raid_e_i00">
-        <!-- Double-click to get the highest quality C-grade weapon. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <armor id="49493" name="Orfen's Earring" icon="icon.accessory_earring_of_orfen_i00">
-        <!-- 15-day item. MP +19, Mental Resistance and Atk. Rate +5%, Hold Resistance and Atk. Rate +10%, Healing Power +2%, Skill MP Consumption -2%. The effect doesn't stack if two identical earrings are worn. Cannot be enchanted. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="rear;lear"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <set name="time" val="21600"/>
-        <restriction clan-depositable="false" tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-        <skills>
-            <skill id="3560" level="1"/> <!-- Orfen's Earring -->
-        </skills>
-        <stats>
-            <stat type="mDef">51</stat>
-            <stat type="maxMp">19</stat>
-        </stats>
-    </armor>
-    <item id="49494" name="Buff Scrolls Chest" icon="icon.new_user_box">
-        <!-- Double-click to get 1 Scroll: Greater Acumen, Empowerment, Speed, Death Whisper, Wind Walk Lv. 1. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <weapon id="49495" name="Hero's Dual Swords" icon="icon.weapon_r_dualsword_i00">
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="2460"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="time" val="21600"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">107</stat>
-            <stat type="mAtk">51</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <item id="49496" name="Luck Cube" icon="icon.special_cube_i00">
-        <!-- 7-day item. Available at level 20 or higher. Double-click the Cube to receive Soulshot Ticket, Buff Scrolls Chest, Major Healing Potion, Angel Cat's Blessing, Improved Scroll of Escape, Parts of Enchantment Scrolls Chest, Fishing kit chest, My Teleport Package, Weapon Supply Box (D-grade), Weapon Supply Box (C-grade). (Can be used only once per day.) Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="time" val="10080"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
-    </item>
-    <item id="49497" name="Hero's Fishing kit" icon="icon.etc_elite_marguene_collection_box_i00">
-        <!-- Double-click to receive 1 Fishing Rod (1-day), Bait (720 pcs), 1 Hero's Dual Swords, 1 Soulshot Ticket. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. <Note>. Be careful before opening the items as their relocation is restricted. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="49498" name="My Teleport Scroll Package" icon="icon.etc_pi_gift_box_i01">
-        <!-- Double-click to get 1 My Teleport Book or 30 My Teleport Scrolls. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="49499" name="Angel Cat's Energy" icon="icon.skilltransform4">
-        <!-- Increases Max. HP / MP by 5%, XP and SP gain by 20%. This effect remains after character's death. Cannot be exchanged, dropped, or sold. Duration: 30 minutes. -->
-        <set name="weight" val="5"/>
-        <restriction clan-depositable="false" mailable="false" tradable="false" dropable="false" destroyable="false" sellable="false" commissionable="false" olympiad-restricted="true"/>
-        <skills>
-            <skill id="39074" level="1"/> <!-- Angel Cat's Energy -->
-        </skills>
-    </item>
+	<weapon id="49400" name="Conjuror's Staff" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_conjure_staff_i01" magic="true">
+	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1030" price="644000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="50.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49401" name="Staff of Mana" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_staff_of_mana_i01" magic="true">
+	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+		<restriction freightable="false"/>
+		<attributes weight="1040" price="644000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="50.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49402" name="Staff of Mana" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_staff_of_mana_i01" magic="true">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1040" price="644000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="50.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49403" name="Staff of Mana" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_staff_of_mana_i01" magic="true">
+	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1040" price="644000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="50.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49404" name="Staff of Magic" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_staff_of_magicpower_i01" magic="true">
+	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+		<restriction freightable="false"/>
+		<attributes weight="1020" price="967000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="62.0"/>
+			<stat type="mAtk" value="57.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49405" name="Staff of Magic" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_staff_of_magicpower_i01" magic="true">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1020" price="967000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="62.0"/>
+			<stat type="mAtk" value="57.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49406" name="Staff of Magic" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_staff_of_magicpower_i01" magic="true">
+	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1020" price="967000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="62.0"/>
+			<stat type="mAtk" value="57.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49407" name="Atuba Hammer" type="STAFF" body-part="RIGHT_HAND" icon="icon.weapon_atuba_hammer_i01" magic="true">
+	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+		<restriction freightable="false"/>
+		<attributes weight="1010" price="1800000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="90.0"/>
+			<stat type="mAtk" value="79.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49408" name="Atuba Hammer" type="STAFF" body-part="RIGHT_HAND" icon="icon.weapon_atuba_hammer_i01" magic="true">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1010" price="1800000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="90.0"/>
+			<stat type="mAtk" value="79.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49409" name="Atuba Hammer" type="STAFF" body-part="RIGHT_HAND" icon="icon.weapon_atuba_hammer_i01" magic="true">
+	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1010" price="1800000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="90.0"/>
+			<stat type="mAtk" value="79.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49410" name="Ghost Staff" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_ghost_staff_i01" magic="true">
+	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+		<restriction freightable="false"/>
+		<attributes weight="1000" price="1800000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="90.0"/>
+			<stat type="mAtk" value="79.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49411" name="Ghost Staff" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_ghost_staff_i01" magic="true">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1000" price="1800000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="90.0"/>
+			<stat type="mAtk" value="79.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49412" name="Ghost Staff" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_ghost_staff_i01" magic="true">
+	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1000" price="1800000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="90.0"/>
+			<stat type="mAtk" value="79.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49413" name="Atuba Mace" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_atuba_mace_i01" magic="true">
+	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+		<restriction freightable="false"/>
+		<attributes weight="1010" price="1800000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="90.0"/>
+			<stat type="mAtk" value="79.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49414" name="Atuba Mace" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_atuba_mace_i01" magic="true">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1010" price="1800000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="90.0"/>
+			<stat type="mAtk" value="79.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49415" name="Atuba Mace" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_atuba_mace_i01" magic="true">
+	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1010" price="1800000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="90.0"/>
+			<stat type="mAtk" value="79.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<item id="49416" name="Blade Spirit" type="NONE" icon="icon.etc_soul_of_blade">
+	<!--  Can be stored in a private warehouse or transferred between characters on the same account through Dimensional Merchants. -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="49417" name="Spirit Energy" type="NONE" icon="icon.etc_power_of_soul">
+	<!-- Item is not in use.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes price="50000"/>
+	</item>
+
+	<item id="49418" name="Cube of Sayha" type="COUPON" icon="icon.sa_cube">
+	<!-- 30-day item. Double-click the Cube to receive 1 Scroll: Summon Storm and 1 Sayha's Treasure Chest. (Can be used only once per day.)  -->
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes duration="43200"/>
+	</item>
+
+	<item id="49419" name="Cube of Sayha" type="COUPON" icon="icon.sa_cube">
+	<!-- 90-day item. Double-click the Cube to receive 1 Scroll: Summon Storm and 1 Sayha's Treasure Chest. (Can be used only once per day.)  -->
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes duration="129600"/>
+	</item>
+
+	<item id="49420" name="Scroll: Summon Storm" type="NONE" icon="icon.scrl_of_storm">
+	<!-- Fills you with Storm Energy, granting +50% XP and SP gain bonus for 2 hours. Cooldown: 2 hours. Storm Energy does not disappear after character's death.  Available since level 40. -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="49421" name="Package: Cube of Sayha (30-day)" type="NONE" icon="icon.shirt_special_box_i03">
+	<!-- Double-click the package to receive 30-day Cube of Sayha.   Available since level 40. -->
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="49422" name="Package: Cube of Sayha (90-day)" type="NONE" icon="icon.shirt_special_box_i03">
+	<!-- Double-click the package to receive 90-day Cube of Sayha.   Available since level 40. -->
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="49423" name="Spellbook: Dual Weapon Defence" type="NONE" icon="icon.etc_spell_books_hfighter_i00">
+	<!-- Magic book that teaches the principles of defence from dual weapons. Used by Gladiators.\\nRequired level: 41. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="50000"/>
+	</item>
+
+	<item id="49424" name="Spellbook: Fell Swoop" type="NONE" icon="icon.etc_spell_books_hfighter_i00">
+	<!-- Magic book that teaches the Fell Swoop skill. Used by Dreadnoughts.\\nRequired level: 51.  -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="50000"/>
+	</item>
+
+	<item id="49425" name="Spellbook: Immortal Life" type="NONE" icon="icon.etc_spell_books_hfighter_i00">
+	<!-- Magic book that teaches the Immortal Life skill. Used by Crashers.\\nRequired level: 52.  -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="100000"/>
+	</item>
+
+	<item id="49426" name="Spellbook: Break Duress" type="NONE" icon="icon.etc_spell_books_hfighter_i00">
+	<!-- Magic book that teaches the Break Duress skill. Used by Hermits.\\nRequired level: 52.  -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="50000"/>
+	</item>
+
+	<item id="49427" name="Spellbook: Shield Deflect Magic" type="NONE" icon="icon.etc_spell_books_hfighter_i00">
+	<!-- Magic book that teaches the Shield Deflect Magic skill. Used by Knights.\\nRequired level: 60. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="50000"/>
+	</item>
+
+	<item id="49428" name="Spellbook: Aegis" type="NONE" icon="icon.etc_spell_books_hfighter_i00">
+	<!-- Spellbook needed to learn Aegis. Used by Templars and Shillien Knights.\\nRequired level: 52. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="100000"/>
+	</item>
+
+	<item id="49429" name="Spellbook: Hide" type="NONE" icon="icon.etc_spell_books_defighter_i00">
+	<!-- Magic book that teaches the Hide skill. Used by Rogues.\\nRequired level: 51.  -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="100000"/>
+	</item>
+
+	<item id="49430" name="Spellbook: Mystic Immunity" type="NONE" icon="icon.etc_spell_books_assistance_i00">
+	<!-- Magic book that teaches the Mystic Immunity skill. Used by Prophets.\\nRequired level: 51.  -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="50000"/>
+	</item>
+
+	<item id="49431" name="Spellbook: Divine Power" type="NONE" icon="icon.etc_spell_books_white_i00">
+	<!-- Magic book that teaches the Divine Power skill. Used by Bishops.\\nRequired level: 51.  -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="50000"/>
+	</item>
+
+	<item id="49432" name="Spellbook: Stigma of Shilen" type="NONE" icon="icon.etc_spell_books_assistance_i00">
+	<!-- Magic book that teaches the Stigma of Shilen skill. Used by Shillien Elders.\\nRequired level: 40. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="50000"/>
+	</item>
+
+	<item id="49433" name="Talisman: Chant of Movement" type="NONE" icon="icon.etc_orcish_talisman_i00">
+	<!-- Talisman needed to learn Chant of Movement. Used by Warcryers.\\nRequired level: 44. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" price="50000"/>
+	</item>
+
+	<item id="49434" name="Sayha's Treasure Chest" type="NONE" icon="icon.etc_ev_kalie_treasure_box">
+	<!-- Open the chest to receive the Adena or Buff Scroll with a certain probability.   -->
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="49435" name="Scroll: Berserker Spirit" type="SCROLL" icon="icon.etc_scroll_white_i00">
+	<!-- For 20 min., P. Atk. + 5%, M. Atk. + 10%, Atk. Spd. + 5%, Casting Spd. + 5%, and Speed + 5. P. Def. - 5%, M. Def. - 10%, and Evasion - 2. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="120" immediate-effect="true"/>
+	</item>
+
+	<weapon id="49436" name="Blue Mackerel: One-handed Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.wp_fishing1">
+	<!-- 7-day item.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1450" commission-type="OTHER_ITEM" duration="10080" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="79.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49437" name="Trumpetfish: Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.wp_fishing2">
+	<!-- 7-day item.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1070" commission-type="OTHER_ITEM" duration="10080" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="62.0"/>
+			<stat type="mAtk" value="42.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49438" name="Shark: Two-handed Sword" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.wp_fishing3">
+	<!-- 7-day item.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="2020" commission-type="OTHER_ITEM" duration="10080" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="96.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49439" name="Squid: Spear" type="SPEAR" body-part="TWO_HAND" icon="icon.wp_fishing4">
+	<!-- 7-day item.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="2060" commission-type="OTHER_ITEM" duration="10080" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="79.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="49440" name="Sea Horse: Two-handed Magic Blunt Weapon" type="STAFF" body-part="TWO_HAND" icon="icon.wp_fishing5" magic="true">
+	<!-- 7-day item. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1000" commission-type="OTHER_ITEM" duration="10080" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="77.0"/>
+			<stat type="mAtk" value="69.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49441" name="Lobster: Fist Weapon" type="FIST" body-part="TWO_HAND" icon="icon.wp_fishing6">
+	<!-- 7-day item.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1510" commission-type="OTHER_ITEM" duration="10080" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="96.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49442" name="Giant Crab: Bow" type="BOW" body-part="TWO_HAND" icon="icon.wp_fishing7">
+	<!-- 7-day item.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1820" commission-type="OTHER_ITEM" duration="10080" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="2"/>
+		<stats>
+			<stat type="pAtk" value="179.0"/>
+			<stat type="mAtk" value="51.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="227.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<armor id="49443" name="Turtle: Shield" type="SHIELD" body-part="LEFT_HAND" icon="icon.wp_fishing10">
+	<!-- 7-day item.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1320" duration="10080" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="rEvas" value="-8.0"/>
+			<stat type="rShld" value="20.0"/>
+			<stat type="sDef" value="142.0"/>
+		</stats>
+	</armor>
+
+	<weapon id="49444" name="Blue Mackerel: Dual Sword" type="DUAL" body-part="TWO_HAND" icon="icon.wp_fishing11">
+	<!-- 7-day item.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="2530" commission-type="OTHER_ITEM" duration="10080" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="96.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49445" name="Blue Mackerel: One-handed Blunt Weapon" type="BLUNT" body-part="RIGHT_HAND" icon="icon.wp_fishing1">
+	<!-- 7-day item. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="1720" commission-type="OTHER_ITEM" duration="10080" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="79.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<item id="49446" name="Blue Mackerel Chest: One-handed Sword" type="NONE" icon="icon.etc_raid_d_i00">
+	<!-- Double-click to receive a 7-day Blue Mackerel: One-handed Sword. Once opened, the chest cannot be transferred between characters on the same account. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="49447" name="Trumpetfish Chest: Dagger" type="NONE" icon="icon.etc_raid_d_i00">
+	<!-- Double-click to receive a 7-day Trumpetfish: Dagger. Once opened, the chest cannot be transferred between characters on the same account. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="49448" name="Shark Chest: Two-handed Sword" type="NONE" icon="icon.etc_raid_d_i00">
+	<!-- Double-click to receive a 7-day Shark: Two-handed Sword. Once opened, the chest cannot be transferred between characters on the same account. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="49449" name="Squid Chest: Spear" type="NONE" icon="icon.etc_raid_d_i00">
+	<!-- Double-click to receive a 7-day Squid: Spear. Once opened, the chest cannot be transferred between characters on the same account. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="49450" name="Sea Horse Chest: Two-handed Magic Blunt Weapon" type="NONE" icon="icon.etc_raid_d_i00">
+	<!-- Double-click to receive a 7-day Sea Horse: Two-handed Magic Blunt Weapon. Once opened, the chest cannot be transferred between characters on the same account. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="49451" name="Lobster Chest: Fist Weapon" type="NONE" icon="icon.etc_raid_d_i00">
+	<!-- Double-click to receive a 7-day Lobster: Fist Weapon. Once opened, the chest cannot be transferred between characters on the same account. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="49452" name="Giant Crab Chest: Bow" type="NONE" icon="icon.etc_raid_d_i00">
+	<!-- Double-click to receive a 7-day Giant Crab: Bow. Once opened, the chest cannot be transferred between characters on the same account. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="49453" name="Turtle Chest: Shield" type="NONE" icon="icon.etc_raid_d_i00">
+	<!-- Double-click to receive a 7-day Turtle: Shield. Once opened, the chest cannot be transferred between characters on the same account. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="49454" name="Blue Mackerel Chest: Dualsword" type="NONE" icon="icon.etc_raid_d_i00">
+	<!-- Double-click to receive a 7-day Blue Mackerel: Dualsword. Once opened, the chest cannot be transferred between characters on the same account. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="49455" name="Blue Mackerel Chest: One-handed Blunt Weapon" type="NONE" icon="icon.etc_raid_d_i00">
+	<!-- Double-click to receive a 7-day Blue Mackerel: One-handed Blunt Weapon. Once opened, the chest cannot be transferred between characters on the same account. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="49456" name="Blade's Soul Chest (5 pcs.)" type="NONE" icon="icon.etc_equip_item_box_i02">
+	<!-- Double-click to receive 5 Blade Soul pieces. Once opened, the chest cannot be transferred between characters on the same account. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="49457" name="Letter Collector's Gift" type="SCROLL" icon="icon.shield_bread_i00">
+	<!-- Letter Collector's Gift\\nFor 1 hr., XP/SP + 10%, Max HP/MP/ + 10%, Speed + 5. Change your armor to that of Santa. Will be deleted after the event. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="49458" name="Agathion Bracelet - Pisces" type="NONE" body-part="LEFT_BRACELET" icon="icon.agathion_magmeld_teleport">
+	<!-- Bracelet that can be used to summon Agathion - Pisces. 15-day item. \\n\\n<Active Skill>\\nAgathion Teleport: grants the ability to teleport to Gludio/ Dion/ Giran/ Oren. (Cooldown: 60 minutes) -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" duration="21600" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="17619" level="1"/>  <!-- Release Agathion's Seal - Pisces -->
+			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+			<skill id="39053" level="1"/>  <!-- Agathion Teleport: Gludio -->
+			<skill id="39054" level="1"/>  <!-- Agathion Teleport: Dion -->
+			<skill id="39055" level="1"/>  <!-- Agathion Teleport: Giran -->
+			<skill id="39056" level="1"/>  <!-- Agathion Teleport: Oren -->
+		</skills>
+	</armor>
+
+	<armor id="49459" name="Agathion Bracelet - Cancer" type="NONE" body-part="LEFT_BRACELET" icon="icon.agathion_magmeld_teleport">
+	<!-- Bracelet that can be used to summon Agathion - Cancer. 15-day item. \\n\\n<Active Skill>\\nAgathion Teleport: grants the ability to teleport to Gludio/ Dion/ Giran/ Oren. (Cooldown: 60 minutes) -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" duration="21600" enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="17621" level="1"/>  <!-- Release Agathion's Seal - Cancer -->
+			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+			<skill id="39053" level="1"/>  <!-- Agathion Teleport: Gludio -->
+			<skill id="39054" level="1"/>  <!-- Agathion Teleport: Dion -->
+			<skill id="39055" level="1"/>  <!-- Agathion Teleport: Giran -->
+			<skill id="39056" level="1"/>  <!-- Agathion Teleport: Oren -->
+		</skills>
+	</armor>
+
+	<item id="49460" name="Fish Stew - Might Lv. 1" type="SCROLL" icon="icon.fish_stew_buff">
+	<!-- For 20 min. P. Atk. +8%.  -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" depositable="false"/>
+		<attributes for-npc="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39047" level="1"/>  <!-- Fish Stew - Might -->
+		</skill-reducer>
+	</item>
+
+	<item id="49461" name="Fish Stew - Shield Lv. 1" type="SCROLL" icon="icon.fish_stew_buff">
+	<!-- For 20 min. P. Def. +8%.  -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" depositable="false"/>
+		<attributes for-npc="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39048" level="1"/>  <!-- Fish Stew - Shield -->
+		</skill-reducer>
+	</item>
+
+	<item id="49462" name="Fish Stew - Magic Barrier Lv. 1" type="SCROLL" icon="icon.fish_stew_buff">
+	<!-- For 20 min. M. Def. +23%.  -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" depositable="false"/>
+		<attributes for-npc="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39049" level="1"/>  <!-- Fish Stew - Magic Barrier -->
+		</skill-reducer>
+	</item>
+
+	<item id="49463" name="Fish Stew - Vampiric Rage Lv. 1" type="SCROLL" icon="icon.fish_stew_buff">
+	<!-- For 20 min. recovers as HP 6% of the physical damage inflicted on the enemy with a certain probability.  -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" depositable="false"/>
+		<attributes for-npc="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39050" level="1"/>  <!-- Fish Stew - Vampiric Rage -->
+		</skill-reducer>
+	</item>
+
+	<item id="49464" name="Fish Stew - Empower Lv. 1" type="SCROLL" icon="icon.fish_stew_buff">
+	<!-- For 20 min. M. Atk. +55%.  -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" depositable="false"/>
+		<attributes for-npc="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39051" level="1"/>  <!-- Fish Stew - Empower -->
+		</skill-reducer>
+	</item>
+
+	<weapon id="49465" name="Fishing Rod" type="FISHING_ROD" body-part="TWO_HAND" icon="icon.weapon_fishing_rod_i03">
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false"/>
+		<attributes weight="1000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="1.0"/>
+			<stat type="mAtk" value="1.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="1.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+	</weapon>
+
+	<item id="49466" name="Warrior Experience Amulet" type="RUNE" icon="icon.skill19226">
+	<!-- 30-day item. Increases XP and SP gain by 20%.  -->
+		<restriction freightable="false" olympiad-restricted="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes duration="43200" immediate-effect="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39057" level="1"/>  <!-- Hero's XP Amulet -->
+		</skill-reducer>
+	</item>
+
+	<armor id="49467" name="Fire Dragon Pendant" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_pve">
+	<!-- Pendant holding the sealed power of Fire Dragon. Can be enchanted up to +10 using Pendant Polish/ Shining Pendant Polish. Starting from +4 adds passive skills, when enchanted to +9 grants special skills.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="28.0"/>
+		</stats>
+	</armor>
+
+	<armor id="49468" name="Earth Dragon Pendant" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_pvp">
+	<!-- Pendant holding the sealed power of Earth Dragon. Can be enchanted up to +10 using Pendant Polish/ Shining Pendant Polish. Starting from +4 adds passive skills, when enchanted to +9 grants special skills.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="28.0"/>
+		</stats>
+	</armor>
+
+	<item id="49469" name="Pendant Polish" type="ENCHANT_ARMOR" icon="icon.bm_pendant_varnish">
+	<!-- Polish that enhances characteristics of a Pendant. Maximum Enchant Level is +10. If the enchant fails, pendant disappears. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="49470" name="Shiny Pendant Varnish" type="SOLID_ENCHANT_ARMOR" icon="icon.bm_pendant_varnish_premium">
+	<!-- Shiny varnish to enchant pendants. Can be used on Valaks'/Antharas' Pendants below + 8, and keeps the pendant and the existing enchant level intact even if it fails to enchant. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="49471" name="Valakas' Pendant Box" type="NONE" icon="icon.bm_pendant_pve_box">
+	<!-- Double-click to obtain 1 Valakas' Pendant and 10 Pendant Varnish. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+		<extract >
+			<item id="49467" min-count="1" max-count="1" chance="100000"/>  <!-- Fire Dragon Pendant -->
+			<item id="49469" min-count="10" max-count="10" chance="100000"/>  <!-- Pendant Polish -->
+		</extract>
+	</item>
+
+	<item id="49472" name="Antharas' Pendant Box" type="NONE" icon="icon.bm_pendant_pvp_box">
+	<!-- Double-click to obtain 1 Antharas' Pendant and 10 Pendant Varnish. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="49473" name="Mr. K's Hand of God Gift Basket" type="NONE" icon="icon.mrk_basket_i00">
+	<!-- Gift Basket that contains the spirit of Mr. K's Hand of God. Open it to receive 1 Black Mask, 30 Rice Cakes of Flaming Fighting Spirit, and 50 Rice Cakes of Fighting Spirit (XP).  -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="49474" name="Scroll Part: Enchant Weapon" type="NONE" icon="icon.weapon_enchant_piece">
+	<!-- Unavailable item. Take it to an NPC merchant to obtain some Adena. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes price="2400"/>
+	</item>
+
+	<item id="49475" name="Scroll Part: Enchant Armor" type="NONE" icon="icon.armor_enchant_piece">
+	<!-- Unavailable item. Take it to an NPC merchant to obtain some Adena. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes price="1000"/>
+	</item>
+
+	<item id="49476" name="Refined Scroll Part: Enchant Weapon" type="NONE" icon="icon.high_weapon_enchant_piece">
+	<!-- Unavailable item. Take it to an NPC merchant to obtain some Adena. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes price="20000"/>
+	</item>
+
+	<armor id="49477" name="Queen Ant's Ring Lv. 1" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_queen_ant_i00">
+	<!-- 15-day item. MP +9, Poison Resistance/Poison Attack Rate +10%, P./M. Accuracy +1, P./M. Atk. +4%. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" commission-type="RING" duration="21600" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="32.0"/>
+			<stat type="maxMp" value="9.0"/>
+		</stats>
+		<skills>
+			<skill id="3562" level="1"/>  <!-- Queen Ant's Ring -->
+		</skills>
+	</armor>
+
+	<item id="49478" name="Refined Scroll Part: Enchant Armor" type="NONE" icon="icon.high_armor_enchant_piece">
+	<!-- Unavailable item. Take it to an NPC merchant to obtain some Adena. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes price="6000"/>
+	</item>
+
+	<item id="49479" name="Solid Scroll Part: Enchant Weapon" type="NONE" icon="icon.safe_weapon_enchant_piece">
+	<!-- Unavailable item. Take it to an NPC merchant to obtain some Adena. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes price="10000"/>
+	</item>
+
+	<item id="49480" name="Solid Scroll Part: Enchant Armor" type="NONE" icon="icon.safe_armor_enchant_piece">
+	<!-- Unavailable item. Take it to an NPC merchant to obtain some Adena. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes price="3000"/>
+	</item>
+
+	<item id="49481" name="Stable Armor Enchant Scroll (D grade)" type="SOLID_ENCHANT_ARMOR" icon="icon.giant_scrl_of_ench_am_d">
+	<!-- When enchanted, P. Def. +1 for D-grade armor and accessories. Starting at +4, P. Def. +3. Starting at +4 armor, HP increases depending on the enchant value. Use the scroll to safely enchant the armor. Even if enchantment fails, the item is not crystallized and retains the current enchant value. It cannot be used on armor enchanted to +6 or above. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="49482" name="Stable Weapon Enchant Scroll (D grade)" type="SOLID_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_d">
+	<!-- When enchanted, P. Atk. +4 for D-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles Use the scroll to safely enchant the weapon. Even if enchantment fails, the item is not crystallized and retains the current enchant value. It cannot be used on weapons enchanted to +7 or above. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="49483" name="Stable Armor Enchant Scroll (C grade)" type="SOLID_ENCHANT_ARMOR" icon="icon.giant_scrl_of_ench_am_c">
+	<!-- When enchanted, P. Def. +1 for C-grade armor and accessories. Starting at +4, P. Def. +3. Starting at +4 armor, HP increases depending on the enchant value. Use the scroll to safely enchant the armor. Even if enchantment fails, the item is not crystallized and retains the current enchant value. It cannot be used on armor enchanted to +6 or above. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="49484" name="Stable Weapon Enchant Scroll (C grade)" type="SOLID_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_c">
+	<!-- When enchanted, P. Atk. +4 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. Use the scroll to safely enchant the weapon. Even if enchantment fails, the item is not crystallized and retains the current enchant value. It cannot be used on weapons enchanted to +7 or above. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="49485" name="Stable Armor Enchant Scroll (B grade)" type="SOLID_ENCHANT_ARMOR" icon="icon.giant_scrl_of_ench_am_b">
+	<!-- When enchanted, P. Def. +1 for B-grade armor and accessories. Starting at +4, P. Def. +3. Starting at +4 armor, HP increases depending on the enchant value. Use the scroll to safely enchant the armor. Even if enchantment fails, the item is not crystallized and retains the current enchant value. It cannot be used on armor enchanted to +6 or above. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="49486" name="Stable Weapon Enchant Scroll (B grade)" type="SOLID_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_b">
+	<!-- When enchanted, P. Atk. +4 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. Use the scroll to safely enchant the weapon. Even if enchantment fails, the item is not crystallized and retains the current enchant value. It cannot be used on weapons enchanted to +7 or above. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="49487" name="Soulshot Ticket" type="NONE" icon="icon.etc_exchange_ticket_i03">
+	<!-- Using Dimension Merchant, you can exchange it for a Soulshot, Spiritshot, Blessed Soulshot, Blessed Spiritshot, Beast Spiritshot or Beast Soulshot.  -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="49488" name="Major Warrior Healing Potion" type="POTION" icon="icon.etc_reagent_white_i00">
+	<!-- Magic potion that quickly restores HP. Duration: 15 sec.  -->
+		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="5" reuse-delay="10000" immediate-effect="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39069" level="1"/>  <!-- Major Warrior Healing Potion -->
+		</skill-reducer>
+	</item>
+
+	<item id="49489" name="Parts of Enchantment Scrolls Chest" type="NONE" icon="icon.etc_treasure_box_i08">
+	<!-- Double-click to receive one Part of Enchantment Scrolls. -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="49490" name="Fishing kit" type="NONE" icon="icon.etc_elite_marguene_collection_box_i00">
+	<!-- Double-click to receive 1 Fishing Rod (1-day), Bait (720 pcs), 1 Hero's Dual Swords, 1 Soulshot Ticket. \\n\\n<Note>\\nBe careful before opening the items as their relocation is restricted. -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="49491" name="Weapon Supply Box (D-grade)" type="NONE" icon="icon.etc_raid_e_i01">
+	<!-- Double-click to get the highest quality D-grade weapon.  -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="49492" name="Weapon Supply Box (C-grade)" type="NONE" icon="icon.etc_raid_e_i00">
+	<!-- Double-click to get the highest quality C-grade weapon.  -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="49493" name="Orfen's Earring Lv. 1" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_orfen_i00">
+	<!-- 15-day item. MP +19, Mental Resistance and Atk. Rate +5%, Hold Resistance and Atk. Rate +10%, Healing Power +2%, Skill MP Consumption -2%. The effect doesn't stack if two identical earrings are worn. Cannot be enchanted.  -->
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="150" commission-type="EARRING" duration="21600" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="51.0"/>
+			<stat type="maxMp" value="19.0"/>
+		</stats>
+		<skills>
+			<skill id="3560" level="1"/>  <!-- Orfen's Earring -->
+		</skills>
+	</armor>
+
+	<item id="49494" name="Buff Scrolls Chest" type="NONE" icon="icon.new_user_box">
+	<!-- Double-click to get one per each of the following Stage 1 scrolls: Acumen, Empower, Haste, Death Whisper, and Wind Walk.  -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<weapon id="49495" name="Warrior’s Dualsword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_r_dualsword_i00">
+		<restriction freightable="false" tradable="false" dropable="false"/>
+		<attributes weight="2460" commission-type="OTHER_ITEM" duration="21600" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="107.0"/>
+			<stat type="mAtk" value="51.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<item id="49496" name="Luck Cube" type="COUPON" icon="icon.special_cube_i00">
+	<!-- 7-day item. Available at level 20 or higher. Double-click the Cube to receive Soulshot Ticket, Buff Scrolls Chest, Major HP Potion, Angel Cat's Blessing, Improved Scroll of Escape, Parts of Enchantment Scrolls Chest, Fishing kit chest, My Teleport Package, Weapon Supply Box (D-grade), Weapon Supply Box (C-grade). (Can be used only once per day.)  -->
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes duration="10080"/>
+	</item>
+
+	<item id="49497" name="Hero's Fishing kit" type="NONE" icon="icon.etc_elite_marguene_collection_box_i00">
+	<!-- Double-click to receive 1 Fishing Rod (1-day), Bait (720 pcs), 1 Hero's Dual Swords (1-day), 1 Soulshot Ticket. \\n\\n<Note>\\nBe careful before opening the items as their relocation is restricted. -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="49498" name="My Teleport Scroll Package" type="NONE" icon="icon.etc_pi_gift_box_i01">
+	<!-- Double-click to get 1 My Teleport Book or 30 My Teleport Scrolls.  -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="49499" name="Angel Cat's Energy" type="POTION" icon="icon.skilltransform4">
+	<!-- Increases Max HP/MP by 5% for 30 min and XP and SP gain from hunting by 20%. Not removed on death. -->
+		<restriction freightable="false" olympiad-restricted="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="5" reuse-delay="60000" duration="43200" immediate-effect="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39074" level="1"/>  <!-- Angel Cat's Energy -->
+		</skill-reducer>
+	</item>
+
 </list>

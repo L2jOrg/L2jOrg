@@ -1,502 +1,429 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="701" name="Fungus Juice" icon="icon.item_canuse28">
-        <!-- The juice of a fungus. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="702" name="Wolf Pelt" icon="icon.etc_leather_brown_i00">
-        <!-- Gather forty wolf pelts and take them to Trader Lector of the weapons and armor shop. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="703" name="Giant Spider's Poison Sac" icon="icon.etc_pouch_gray_i00">
-        <!-- Giant Spider's Poison Sacs obtained from the dead giant spider. Take this to Priest Yohanes. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="704" name="Fever Medicine" icon="icon.etc_lesser_potion_purple_i00">
-        <!-- Medicine concocted by Priest Yohanes for the students who are ill with fever. Take this to Elias. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="706" name="Basilisk's Claw" icon="icon.item_normal141">
-        <!-- Basilisk's claw. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="707" name="Spore Sac" icon="icon.etc_pouch_yellow_i00">
-        <!-- Sac obtained from the spore fungus. Gather 10 of these and take them to Trader Vollodos. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="708" name="Sylph Headband" icon="icon.item_system03">
-        <!-- A Sylph Headband -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <armor id="709" name="Leather Shirt" icon="icon.armor_leather_shirt_i00">
-        <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="400"/>
-        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
-        <stats>
-            <stat type="mDef">50</stat>
-            <stat type="pDef">75</stat>
-        </stats>
-    </armor>
-    <armor id="710" name="Durable Leather Shirt" icon="icon.armor_leather_shirt_i00">
-        <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="400"/>
-        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
-        <stats>
-            <stat type="mDef">52</stat>
-            <stat type="pDef">77</stat>
-        </stats>
-    </armor>
-    <armor id="711" name="Piece Bone Breastplate" icon="icon.armor_mithril_banded_mail_i00">
-        <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="800"/>
-        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
-        <stats>
-            <stat type="mDef">54</stat>
-            <stat type="pDef">79</stat>
-        </stats>
-    </armor>
-    <armor id="712" name="Half Plate Armor" icon="icon.armor_dwarven_scale_mail_i00">
-        <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="bodypart" val="chest"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1200"/>
-        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
-        <stats>
-            <stat type="mDef">56</stat>
-            <stat type="pDef">81</stat>
-        </stats>
-    </armor>
-    <armor id="713" name="Leather Pants" icon="icon.armor_squires_pants_i00">
-        <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="250"/>
-        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
-        <stats>
-            <stat type="mDef">30</stat>
-            <stat type="pDef">45</stat>
-        </stats>
-    </armor>
-    <armor id="714" name="Durable Leather Pants" icon="icon.armor_leather_pants_i00">
-        <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="300"/>
-        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
-        <stats>
-            <stat type="mDef">32</stat>
-            <stat type="pDef">47</stat>
-        </stats>
-    </armor>
-    <armor id="715" name="Piece Bone Gaiters" icon="icon.armor_mithril_banded_gaiters_i00">
-        <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="500"/>
-        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
-        <stats>
-            <stat type="mDef">34</stat>
-            <stat type="pDef">49</stat>
-        </stats>
-    </armor>
-    <armor id="716" name="Plate Gaiters" icon="icon.armor_dwarven_scale_mail_i00">
-        <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="bodypart" val="legs"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="800"/>
-        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
-        <stats>
-            <stat type="mDef">36</stat>
-            <stat type="pDef">51</stat>
-        </stats>
-    </armor>
-    <armor id="717" name="Leather Gloves" icon="icon.armor_gauntlet_i00">
-        <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
-        <stats>
-            <stat type="mDef">20</stat>
-            <stat type="pDef">30</stat>
-        </stats>
-    </armor>
-    <armor id="718" name="Durable Leather Gloves" icon="icon.armor_gauntlet_i00">
-        <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
-        <stats>
-            <stat type="mDef">22</stat>
-            <stat type="pDef">32</stat>
-        </stats>
-    </armor>
-    <armor id="719" name="Quality Leather Gloves" icon="icon.armor_gauntlet_i00">
-        <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
-        <stats>
-            <stat type="mDef">24</stat>
-            <stat type="pDef">34</stat>
-        </stats>
-    </armor>
-    <armor id="720" name="Reinforced Gloves" icon="icon.armor_gauntlet_i00">
-        <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="200"/>
-        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
-        <stats>
-            <stat type="mDef">26</stat>
-            <stat type="pDef">36</stat>
-        </stats>
-    </armor>
-    <armor id="721" name="Leather Boots" icon="icon.armor_iron_boots_i00">
-        <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="bodypart" val="feet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
-        <stats>
-            <stat type="mDef">20</stat>
-            <stat type="pDef">30</stat>
-        </stats>
-    </armor>
-    <armor id="722" name="Durable Leather Boots" icon="icon.armor_iron_boots_i00">
-        <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="bodypart" val="feet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="150"/>
-        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
-        <stats>
-            <stat type="mDef">22</stat>
-            <stat type="pDef">32</stat>
-        </stats>
-    </armor>
-    <armor id="723" name="Quality Leather Boots" icon="icon.armor_feet99">
-        <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="bodypart" val="feet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="200"/>
-        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
-        <stats>
-            <stat type="mDef">24</stat>
-            <stat type="pDef">34</stat>
-        </stats>
-    </armor>
-    <armor id="724" name="Reinforced Boots" icon="icon.armor_iron_boots_i00">
-        <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="bodypart" val="feet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="250"/>
-        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
-        <stats>
-            <stat type="mDef">26</stat>
-            <stat type="pDef">36</stat>
-        </stats>
-    </armor>
-    <item id="729" name="Scroll: Enchant Weapon (A-grade)" icon="icon.etc_scroll_of_enchant_weapon_i04">
-        <!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. Safe Enchant: +3. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="etcitem_type" val="ENCHT_WP"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="1800000"/>
-        <set name="handler" val="EnchantScrolls"/>
-        <set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON"/>
-        <restriction stackable="true" olympiad-restricted="true"/>
-        <skills>
-            <skill id="2006" level="1"/> <!-- Scroll: Enchant Weapon (A-grade) -->
-        </skills>
-    </item>
-    <item id="730" name="Scroll: Enchant Armor (A-grade)" icon="icon.etc_scroll_of_enchant_armor_i04">
-        <!-- P. Def. +1 for A-grade armor and accessories. Starting from +4, P. Def. +3. Can be safely enchanted up to +3. For one-piece armor, it can be safely enchanted up to +4. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="etcitem_type" val="ENCHT_AM"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="240000"/>
-        <set name="handler" val="EnchantScrolls"/>
-        <set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR"/>
-        <restriction stackable="true" olympiad-restricted="true"/>
-        <skills>
-            <skill id="2007" level="1"/> <!-- Scroll: Enchant Armor (A-grade) -->
-        </skills>
-    </item>
-    <item id="734" name="Wind Walk Potion" icon="icon.etc_potion_green_i00">
-        <!-- Magical potion that increases movement Speed. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="etcitem_type" val="POTION"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="20"/>
-        <set name="price" val="1200"/>
-        <set name="reuse_delay" val="500"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="POTION"/>
-        <set name="for_npc" val="true"/>
-        <restriction stackable="true" olympiad-restricted="true"/>
-        <cond addName="1" msgId="113">
-            <player flyMounted="false"/>
-        </cond>
-        <skills>
-            <skill id="2011" level="1"/> <!-- Wind Walk Potion -->
-        </skills>
-    </item>
-    <item id="735" name="Haste Potion" icon="icon.etc_reagent_green_i00">
-        <!-- Magical potion that increases Atk. Spd. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="etcitem_type" val="POTION"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="20"/>
-        <set name="price" val="2400"/>
-        <set name="reuse_delay" val="500"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="POTION"/>
-        <set name="for_npc" val="true"/>
-        <restriction stackable="true" olympiad-restricted="true"/>
-        <cond addName="1" msgId="113">
-            <player flyMounted="false"/>
-        </cond>
-        <skills>
-            <skill id="2012" level="1"/> <!-- Haste Potion -->
-        </skills>
-    </item>
-    <item id="736" name="Scroll of Escape" icon="icon.etc_scroll_of_return_i00">
-        <!-- Magical scroll that relocates you to the nearest village. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="etcitem_type" val="SCROLL"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="400"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="SCROLL_OTHER"/>
-        <restriction stackable="true" olympiad-restricted="true"/>
-        <skills>
-            <skill id="2013" level="1"/> <!-- Scroll of Escape -->
-        </skills>
-    </item>
-    <item id="737" name="Scroll of Resurrection" icon="icon.etc_scroll_of_resurrection_i00">
-        <!-- Magical scroll that resurrects a dead character. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="etcitem_type" val="SCROLL"/>
-        <set name="weight" val="120"/>
-        <set name="price" val="2000"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="SCROLL_OTHER"/>
-        <restriction stackable="true" olympiad-restricted="true"/>
-        <skills>
-            <skill id="2014" level="1"/> <!-- Scroll of Resurrection -->
-        </skills>
-    </item>
-    <weapon id="738" name="Sword of Solidarity" icon="icon.weapon_long_sword_i00">
-        <!-- Bronze sword crafted long ago in memory of the union between the Humans and the Elves. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1300"/>
-        <set name="price" val="18500"/>
-        <set name="soulshots" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_SWORD"/>
-        <set name="spiritshots" val="1"/>
-        <stats>
-            <stat type="pAtk">12</stat>
-            <stat type="mAtk">9</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <item id="739" name="Broken Sword Handle" icon="icon.weapon_small_sword_i00">
-        <!-- The handle part of the sword of solidarity. Take this to Blacksmith Altran. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="740" name="Broken Blade Bottom" icon="icon.weapon_great_sword_i00">
-        <!-- Take this, and the upper part of the blade to Blacksmith Altran. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="741" name="Broken Blade Top" icon="icon.etc_sword_body_i00">
-        <!-- Take this, and the lower part of the blade to Blacksmith Altran. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="742" name="Altran's Note" icon="icon.etc_piece_of_paper_white_i00">
-        <!-- Letter requesting the handle of the sword from Roien. Take this to Grand Master Roien of Sedrick's Training Hall. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <weapon id="743" name="Sword of Sentinel" icon="icon.weapon_broad_sword_i00">
-        <!-- Steel blade issued to those fighters that have been acknowledged as protectors of the woods. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1300"/>
-        <set name="price" val="33600"/>
-        <set name="soulshots" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_SWORD"/>
-        <set name="spiritshots" val="1"/>
-        <stats>
-            <stat type="pAtk">14</stat>
-            <stat type="mAtk">11</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="744" name="Staff of Sentinel" icon="icon.weapon_cedar_staff_i00">
-        <!-- Staff issued to those magicians that have been acknowledged as protectors of the woods. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;46;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1800"/>
-        <set name="price" val="33600"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON"/>
-        <set name="is_magic_weapon" val="true"/>
-        <stats>
-            <stat type="pAtk">13</stat>
-            <stat type="mAtk">15</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <item id="745" name="Cobendell's Medicine" icon="icon.item_normal40">
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="746" name="Alberius' List" icon="icon.etc_piece_of_paper_white_i00">
-        <!-- Deliver the medicine to Sentinel Berros, Sentinel Veltress, Sentinel Rayen, and Sentinel Gartrandell. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <weapon id="747" name="Wand of Adept" icon="icon.weapon_apprentices_wand_i00">
-        <!-- The wand presented to those who have finished their studies at the school of magic. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1300"/>
-        <set name="price" val="25500"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON"/>
-        <set name="is_magic_weapon" val="true"/>
-        <stats>
-            <stat type="pAtk">11</stat>
-            <stat type="mAtk">13</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="748" name="Gallint's Oak Wand" icon="icon.weapon_club_i00">
-        <!-- Oak wand enchanted by Gallint's spell. This will capture and seal the spirit of mirrors, if used physically. Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;46;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1350"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false"/>
-        <stats>
-            <stat type="pAtk">10</stat>
-            <stat type="mAtk">11</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <item id="750" name="Kinship Crystal" icon="icon.item_normal45">
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="751" name="Cracked Kinship Crystal" icon="icon.item_canuse07">
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="752" name="Orc Amulet" icon="icon.etc_feather_gold_i00">
-        <!-- Amulet that the Orcs carry for magical purposes. Take this to Captain Gilbert. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <item id="753" name="Silverleaf Brooch" icon="icon.item_normal12">
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
-    <weapon id="754" name="Red Sunset Staff" icon="icon.weapon_cedar_staff_i00">
-        <!-- Staff used by warriors belonging to the Red Sunset clan. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;46;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1700"/>
-        <set name="price" val="25500"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON"/>
-        <set name="is_magic_weapon" val="true"/>
-        <stats>
-            <stat type="pAtk">13</stat>
-            <stat type="mAtk">14</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <item id="796" name="Roien's Letter" icon="icon.etc_scroll_white_i00">
-        <!-- Letter on which Roien summarized the historical information related to the sword of solidarity. Take this to Blacksmith Altran. -->
-        <set name="immediate_effect" val="true"/>
-        <set name="is_questitem" val="true"/>
-        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
-    </item>
+	<item id="701" name="Fungus Juice" type="NONE" icon="icon.item_canuse28">
+	<!-- The juice of a fungus. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="702" name="Wolf Pelt" type="NONE" icon="icon.etc_leather_brown_i00">
+	<!-- Gather forty wolf pelts and take them to Trader Lector of the weapons and armor shop. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="703" name="Giant Spider's Poison Sac" type="NONE" icon="icon.etc_pouch_gray_i00">
+	<!-- Giant Spider's Poison Sacs obtained from the dead giant spider. Take this to Priest Yohanes. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="704" name="Fever Medicine" type="NONE" icon="icon.etc_lesser_potion_purple_i00">
+	<!-- Medicine concocted by Priest Yohanes for the students who are ill with fever. Take this to Elias. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="706" name="Basilisk's Claw" type="NONE" icon="icon.item_normal141">
+	<!-- Basilisk's claw. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="707" name="Spore Sac" type="NONE" icon="icon.etc_pouch_yellow_i00">
+	<!-- Sac obtained from the spore fungus. Gather 10 of these and take them to Trader Vollodos. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="708" name="Sylph Headband" type="NONE" icon="icon.item_system03">
+	<!-- A Sylph Headband -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<armor id="709" name="Leather Shirt" type="NONE" body-part="CHEST" icon="icon.armor_leather_shirt_i00">
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false"/>
+		<attributes weight="400" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="50.0"/>
+			<stat type="pDef" value="75.0"/>
+		</stats>
+	</armor>
+
+	<armor id="710" name="Durable Leather Shirt" type="NONE" body-part="CHEST" icon="icon.armor_leather_shirt_i00">
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false"/>
+		<attributes weight="400" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="52.0"/>
+			<stat type="pDef" value="77.0"/>
+		</stats>
+	</armor>
+
+	<armor id="711" name="Piece Bone Breastplate" type="NONE" body-part="CHEST" icon="icon.armor_mithril_banded_mail_i00">
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false"/>
+		<attributes weight="800" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="54.0"/>
+			<stat type="pDef" value="79.0"/>
+		</stats>
+	</armor>
+
+	<armor id="712" name="Half Plate Armor" type="NONE" body-part="CHEST" icon="icon.armor_dwarven_scale_mail_i00">
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false"/>
+		<attributes weight="1200" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="56.0"/>
+			<stat type="pDef" value="81.0"/>
+		</stats>
+	</armor>
+
+	<armor id="713" name="Leather Pants" type="NONE" body-part="LEGS" icon="icon.armor_squires_pants_i00">
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false"/>
+		<attributes weight="250" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="30.0"/>
+			<stat type="pDef" value="45.0"/>
+		</stats>
+	</armor>
+
+	<armor id="714" name="Durable Leather Pants" type="NONE" body-part="LEGS" icon="icon.armor_leather_pants_i00">
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false"/>
+		<attributes weight="300" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="32.0"/>
+			<stat type="pDef" value="47.0"/>
+		</stats>
+	</armor>
+
+	<armor id="715" name="Piece Bone Gaiters" type="NONE" body-part="LEGS" icon="icon.armor_mithril_banded_gaiters_i00">
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false"/>
+		<attributes weight="500" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="34.0"/>
+			<stat type="pDef" value="49.0"/>
+		</stats>
+	</armor>
+
+	<armor id="716" name="Plate Gaiters" type="NONE" body-part="LEGS" icon="icon.armor_dwarven_scale_mail_i00">
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false"/>
+		<attributes weight="800" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="36.0"/>
+			<stat type="pDef" value="51.0"/>
+		</stats>
+	</armor>
+
+	<armor id="717" name="Leather Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_gauntlet_i00">
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false"/>
+		<attributes weight="100" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="20.0"/>
+			<stat type="pDef" value="30.0"/>
+		</stats>
+	</armor>
+
+	<armor id="718" name="Durable Leather Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_gauntlet_i00">
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="22.0"/>
+			<stat type="pDef" value="32.0"/>
+		</stats>
+	</armor>
+
+	<armor id="719" name="Quality Leather Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_gauntlet_i00">
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="24.0"/>
+			<stat type="pDef" value="34.0"/>
+		</stats>
+	</armor>
+
+	<armor id="720" name="Reinforced Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_gauntlet_i00">
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false"/>
+		<attributes weight="200" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="26.0"/>
+			<stat type="pDef" value="36.0"/>
+		</stats>
+	</armor>
+
+	<armor id="721" name="Leather Boots" type="NONE" body-part="FEET" icon="icon.armor_iron_boots_i00">
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="20.0"/>
+			<stat type="pDef" value="30.0"/>
+		</stats>
+	</armor>
+
+	<armor id="722" name="Durable Leather Boots" type="NONE" body-part="FEET" icon="icon.armor_iron_boots_i00">
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false"/>
+		<attributes weight="150" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="22.0"/>
+			<stat type="pDef" value="32.0"/>
+		</stats>
+	</armor>
+
+	<armor id="723" name="Quality Leather Boots" type="NONE" body-part="FEET" icon="icon.armor_feet99">
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false"/>
+		<attributes weight="200" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="24.0"/>
+			<stat type="pDef" value="34.0"/>
+		</stats>
+	</armor>
+
+	<armor id="724" name="Reinforced Boots" type="NONE" body-part="FEET" icon="icon.armor_iron_boots_i00">
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false"/>
+		<attributes weight="250" enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="mDef" value="26.0"/>
+			<stat type="pDef" value="36.0"/>
+		</stats>
+	</armor>
+
+	<item id="729" name="Scroll: Enchant Weapon (A-grade)" type="ENCHANT_WEAPON" icon="icon.etc_scroll_of_enchant_weapon_i04">
+	<!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<attributes weight="120" price="1800000" commission-type="SCROLL_ENCHANT_WEAPON" immediate-effect="true"/>
+		<action handler="EnchantScrolls"/>
+	</item>
+
+	<item id="730" name="Scroll: Enchant Armor (A-grade)" type="ENCHANT_ARMOR" icon="icon.etc_scroll_of_enchant_armor_i04">
+	<!-- P. Def. +1 for A-grade armor and accessories. Starting from +4, P. Def. +3. Can be safely enchanted up to +3. For one-piece armor, it can be safely enchanted up to +4. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<attributes weight="120" price="240000" commission-type="SCROLL_ENCHANT_ARMOR" immediate-effect="true"/>
+		<action handler="EnchantScrolls"/>
+	</item>
+
+	<item id="734" name="Wind Walk Potion" type="POTION" icon="icon.etc_potion_green_i00">
+	<!-- Magical potion that increases movement Speed. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<condition add-name="true" msg-id="113">
+			<player flying="false"/>
+		</condition>
+		<attributes weight="20" price="1200" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="2011" level="1"/>  <!-- Wind Walk Potion -->
+		</skill-reducer>
+	</item>
+
+	<item id="735" name="Haste Potion" type="POTION" icon="icon.etc_reagent_green_i00">
+	<!-- Magical potion that increases Atk. Spd. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<condition add-name="true" msg-id="113">
+			<player flying="false"/>
+		</condition>
+		<attributes weight="20" price="2400" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="2012" level="1"/>  <!-- Haste Potion -->
+		</skill-reducer>
+	</item>
+
+	<item id="736" name="Scroll of Escape" type="SCROLL" icon="icon.etc_scroll_of_return_i00">
+	<!-- Scroll of enchantment that relocates you to the nearest village. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<attributes weight="120" price="400" commission-type="SCROLL_OTHER"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="2013" level="1"/>  <!-- Scroll of Escape -->
+		</skill-reducer>
+	</item>
+
+	<item id="737" name="Scroll of Resurrection" type="SCROLL" icon="icon.etc_scroll_of_resurrection_i00">
+	<!-- Scroll of enchantment that resuscitates a dead person. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<attributes weight="120" price="2000" commission-type="SCROLL_OTHER"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="2014" level="1"/>  <!-- Scroll of Resurrection -->
+		</skill-reducer>
+	</item>
+
+	<weapon id="738" name="Sword of Solidarity" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_long_sword_i00">
+	<!-- Bronze sword crafted long ago in memory of the union between the Humans and the Elves. -->
+		<restriction freightable="false"/>
+		<attributes weight="1300" price="18500" commission-type="ONE_HAND_SWORD" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="12.0"/>
+			<stat type="mAtk" value="9.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<item id="739" name="Broken Sword Handle" type="NONE" icon="icon.weapon_small_sword_i00">
+	<!-- The handle portion of the sword of solidarity. Take this to Blacksmith Altran. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="740" name="Broken Blade Bottom" type="NONE" icon="icon.weapon_great_sword_i00">
+	<!-- Take this, and the upper portion of the blade to Blacksmith Altran. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="741" name="Broken Blade Top" type="NONE" icon="icon.etc_sword_body_i00">
+	<!-- Take this, and the lower portion of the blade to Blacksmith Altran. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="742" name="Altran's Note" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
+	<!-- Letter requesting the handle of the sword from Roien. Take this to Grand Master Roien of Sedrick's Training Hall. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<weapon id="743" name="Sword of Sentinel" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_broad_sword_i00">
+	<!-- Steel blade issued to those fighters that have been acknowledged as protectors of the woods. -->
+		<restriction freightable="false"/>
+		<attributes weight="1300" price="33600" commission-type="ONE_HAND_SWORD" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="14.0"/>
+			<stat type="mAtk" value="11.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="744" name="Staff of Sentinel" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_cedar_staff_i00" magic="true">
+	<!-- Staff issued to those magicians that have been acknowledged as protectors of the woods. -->
+		<restriction freightable="false"/>
+		<attributes weight="1800" price="33600" commission-type="ONE_HAND_MAGIC_BLUNT_WEAPON" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="46" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="13.0"/>
+			<stat type="mAtk" value="15.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<item id="745" name="Cobendell's Medicine" type="NONE" icon="icon.item_normal40">
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="746" name="Alberius' List" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
+	<!-- Deliver the medicine to Sentinel Berros, Sentinel Veltress, Sentinel Rayen, and Sentinel Gartrandell. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<weapon id="747" name="Wand of Adept" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_apprentices_wand_i00" magic="true">
+	<!-- The wand presented to those who have finished their studies at the school of magic. -->
+		<restriction freightable="false"/>
+		<attributes weight="1300" price="25500" commission-type="ONE_HAND_MAGIC_BLUNT_WEAPON" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="11.0"/>
+			<stat type="mAtk" value="13.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="748" name="Gallint's Oak Wand" type="STAFF" body-part="RIGHT_HAND" icon="icon.weapon_club_i00" magic="true">
+	<!-- Oak wand enchanted by Gallint's spell. This will capture and seal the spirit of mirrors, if used physically.  -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false"/>
+		<attributes weight="1350" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="46" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="10.0"/>
+			<stat type="mAtk" value="11.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<item id="750" name="Kinship Crystal" type="NONE" icon="icon.item_normal45">
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="751" name="Cracked Kinship Crystal" type="NONE" icon="icon.item_canuse07">
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<item id="752" name="Orc Amulet" type="NONE" icon="icon.etc_feather_gold_i00">
+	<!-- Amulet that the Orcs carry for magical purposes. Take this to Captain Gilbert. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
+	<item id="753" name="Silverleaf Brooch" type="NONE" icon="icon.item_normal12">
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true"/>
+	</item>
+
+	<weapon id="754" name="Red Sunset Staff" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_cedar_staff_i00" magic="true">
+	<!-- Staff used by warriors belonging to the Red Sunset clan. -->
+		<restriction freightable="false"/>
+		<attributes weight="1700" price="25500" commission-type="TWO_HAND_MAGIC_BLUNT_WEAPON" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="46" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="13.0"/>
+			<stat type="mAtk" value="14.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<item id="796" name="Roien's Letter" type="NONE" icon="icon.etc_scroll_white_i00">
+	<!-- Letter on which Roien summarized the historical information related to the sword of solidarity. Take this to Blacksmith Altran. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" quest-item="true"/>
+	</item>
+
 </list>

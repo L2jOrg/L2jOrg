@@ -1,15 +1,9 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="9636" name="Mithril Bolt" icon="icon.etc_mithril_bolt_i00">
-        <!-- A steel bolt coated by mithril. For A-grade crossbows. -->
-        <set name="etcitem_type" val="BOLT"/>
-        <set name="bodypart" val="lhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="3"/>
-        <set name="price" val="8"/>
-        <set name="crystal_type" val="A"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="OTHER_ITEM"/>
-        <restriction stackable="true"/>
-    </item>
+	<item id="9636" name="Mithril Bolt" type="BOLT" icon="icon.etc_mithril_bolt_i00">
+	<!-- A steel bolt coated by mithril. For A-grade crossbows. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="3" price="8" immediate-effect="true"/>
+	</item>
+
 </list>

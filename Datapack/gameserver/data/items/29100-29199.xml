@@ -1,1154 +1,1113 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="29100" name="Premium Dye of INT (INT + 2 WIT - 2)" icon="icon.etc_int_hena_i02">
-        <!-- Greater Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
-        <set name="weight" val="30"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="29101" name="Premium Dye of MEN (MEN + 2 INT - 2)" icon="icon.etc_men_hena_i02">
-        <!-- Greater Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
-        <set name="weight" val="30"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="29102" name="Premium Dye of MEN (MEN + 2 WIT - 2)" icon="icon.etc_men_hena_i02">
-        <!-- Greater Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
-        <set name="weight" val="30"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="29103" name="Premium Dye of WIT (WIT + 2 INT - 2)" icon="icon.etc_wit_hena_i02">
-        <!-- Greater Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
-        <set name="weight" val="30"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="29104" name="Premium Dye of WIT (WIT + 2 MEN - 2)" icon="icon.etc_wit_hena_i02">
-        <!-- Greater Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
-        <set name="weight" val="30"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="29105" name="Premium Dye of STR (STR + 3 CON - 3)" icon="icon.etc_str_hena_i02">
-        <!-- Greater Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
-        <set name="weight" val="30"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="29106" name="Premium Dye of STR (STR + 3 DEX - 3)" icon="icon.etc_str_hena_i02">
-        <!-- Greater Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
-        <set name="weight" val="30"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="29107" name="Premium Dye of CON (CON+ 3 STR - 3)" icon="icon.etc_con_hena_i02">
-        <!-- Greater Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
-        <set name="weight" val="30"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="29108" name="Premium Dye of CON (CON + 3 DEX - 3)" icon="icon.etc_con_hena_i02">
-        <!-- Greater Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
-        <set name="weight" val="30"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="29109" name="Premium Dye of DEX (DEX + 3 STR - 3)" icon="icon.etc_dex_hena_i02">
-        <!-- Greater Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
-        <set name="weight" val="30"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="29110" name="Premium Dye of DEX (DEX + 3 CON - 3)" icon="icon.etc_dex_hena_i02">
-        <!-- Greater Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
-        <set name="weight" val="30"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="29111" name="Premium Dye of INT (INT + 3 MEN - 3)" icon="icon.etc_int_hena_i02">
-        <!-- Greater Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
-        <set name="weight" val="30"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="29112" name="Premium Dye of INT (INT+ 3 WIT - 3)" icon="icon.etc_int_hena_i02">
-        <!-- Greater Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
-        <set name="weight" val="30"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="29113" name="Premium Dye of MEN (MEN + 3 INT - 3)" icon="icon.etc_men_hena_i02">
-        <!-- Greater Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
-        <set name="weight" val="30"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="29114" name="Premium Dye of MEN (MEN + 3 WIT - 3)" icon="icon.etc_men_hena_i02">
-        <!-- Greater Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
-        <set name="weight" val="30"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="29115" name="Premium Dye of WIT (WIT + 3 INT - 3)" icon="icon.etc_wit_hena_i02">
-        <!-- Greater Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
-        <set name="weight" val="30"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="29116" name="Premium Dye of WIT (WIT + 3 MEN - 3)" icon="icon.etc_wit_hena_i02">
-        <!-- Greater Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
-        <set name="weight" val="30"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="29117" name="Premium Greater Dye of STR (STR + 4 CON - 3)" icon="icon.etc_str_hena_i02">
-        <!-- Greater Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
-        <set name="weight" val="30"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="29118" name="Premium Greater Dye of STR (STR + 4 DEX - 3)" icon="icon.etc_str_hena_i02">
-        <!-- Greater Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
-        <set name="weight" val="30"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="29119" name="Premium Greater Dye of CON (CON + 4 STR - 3)" icon="icon.etc_con_hena_i02">
-        <!-- Greater Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
-        <set name="weight" val="30"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="29120" name="Premium Greater Dye of CON (CON + 4 DEX - 3)" icon="icon.etc_con_hena_i02">
-        <!-- Greater Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
-        <set name="weight" val="30"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="29121" name="Premium Greater Dye of DEX (DEX + 4 STR - 3)" icon="icon.etc_dex_hena_i02">
-        <!-- Greater Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
-        <set name="weight" val="30"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="29122" name="Premium Greater Dye of DEX (DEX + 4 CON - 3)" icon="icon.etc_dex_hena_i02">
-        <!-- Greater Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
-        <set name="weight" val="30"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="29123" name="Premium Greater Dye of INT (INT + 4 MEN - 3)" icon="icon.etc_int_hena_i02">
-        <!-- Greater Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
-        <set name="weight" val="30"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="29124" name="Premium Greater Dye of INT (INT + 4 WIT - 3)" icon="icon.etc_int_hena_i02">
-        <!-- Greater Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
-        <set name="weight" val="30"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="29125" name="Premium Greater Dye of MEN (MEN + 4 INT - 3)" icon="icon.etc_men_hena_i02">
-        <!-- Greater Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
-        <set name="weight" val="30"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="29126" name="Premium Greater Dye of MEN (MEN + 4 WIT - 3)" icon="icon.etc_men_hena_i02">
-        <!-- Greater Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
-        <set name="weight" val="30"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="29127" name="Premium Greater Dye of WIT (WIT + 4 INT - 3)" icon="icon.etc_wit_hena_i02">
-        <!-- Greater Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
-        <set name="weight" val="30"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="29128" name="Premium Greater Dye of WIT (WIT + 4 MEN - 3)" icon="icon.etc_wit_hena_i02">
-        <!-- Greater Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
-        <set name="weight" val="30"/>
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="29129" name="Newbie Kit" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click the package to receive the present. Available since level 10. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="29130" name="Newbie Kit" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click the package to receive the present. Available since level 15. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="29131" name="Newbie Kit" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click the package to receive the present. Available since level 17. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="29132" name="Newbie Kit" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click the package to receive the present. Available since level 21. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="29133" name="Newbie Kit" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click the package to receive the present. Available since level 23. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="29134" name="Newbie Kit" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click the package to receive the present. Available since level 24. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="29135" name="Traveller's Package" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click the package to receive the present. Available since level 20. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="29136" name="Traveller's Package" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click the package to receive the present. Available since level 23. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="29137" name="Traveller's Package" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click the package to receive the present. Available since level 26. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="29138" name="Traveller's Package" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click the package to receive the present. Available since level 29. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="29139" name="Traveller's Package" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click the package to receive the present. Available since level 10. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="29140" name="Traveller's Package" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click the package to receive the present. Available since level 32. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="29141" name="Master's Package" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click the package to receive the present. Available since level 30. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="29142" name="Master's Package" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click the package to receive the present. Available since level 33. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="29143" name="Master's Package" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click the package to receive the present. Available since level 10. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="29144" name="Master's Package" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click the package to receive the present. Available since level 35. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="29145" name="Master's Package" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click the package to receive the present. Available since level 37. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="29146" name="Master's Package" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click the package to receive the present. Available since level 38. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="29147" name="Master's Package" icon="icon.etc_pi_gift_box_i00">
-        <!-- Double-click the package to receive the present. Available since level 39. -->
-        <set name="default_action" val="PEEL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="100"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
-    </item>
-    <item id="29148" name="Feather of Blessing" icon="icon.blessed_feather_i00">
-        <!-- Dimensional item.  Blessed feather that allows to resurrect right in the place of death. -->
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="29149" name="Teleport: Talking Island Village" icon="icon.etc_scroll_of_return_i04">
-        <!-- Magic scroll that allows you to teleport to Talking Island Village. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="weight" val="5"/>
-        <set name="commissionItemType" val="SCROLL_OTHER"/>
-        <restriction sellable="false" stackable="true" olympiad-restricted="true"/>
-        <cond addName="1" msgId="113">
-            <player flyMounted="false"/>
-        </cond>
-        <skills>
-            <skill id="32031" level="1"/> <!-- Scroll of Escape: Talking Island Village -->
-        </skills>
-    </item>
-    <item id="29150" name="Teleport: Elven Village" icon="icon.etc_scroll_of_return_i04">
-        <!-- Magic scroll that allows you to teleport to Elven Village. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="weight" val="5"/>
-        <set name="commissionItemType" val="SCROLL_OTHER"/>
-        <restriction sellable="false" stackable="true" olympiad-restricted="true"/>
-        <cond addName="1" msgId="113">
-            <player flyMounted="false"/>
-        </cond>
-        <skills>
-            <skill id="32032" level="1"/> <!-- Scroll of Escape: Elven Village -->
-        </skills>
-    </item>
-    <item id="29151" name="Teleport: Dark Elf Village" icon="icon.etc_scroll_of_return_i04">
-        <!-- Magic scroll that allows you to teleport to Dark Elf Village. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="weight" val="5"/>
-        <set name="commissionItemType" val="SCROLL_OTHER"/>
-        <restriction sellable="false" stackable="true" olympiad-restricted="true"/>
-        <cond addName="1" msgId="113">
-            <player flyMounted="false"/>
-        </cond>
-        <skills>
-            <skill id="32033" level="1"/> <!-- Scroll of Escape: Dark Elven Village -->
-        </skills>
-    </item>
-    <item id="29152" name="Teleport: Orc Village" icon="icon.etc_scroll_of_return_i04">
-        <!-- Magic scroll that allows you to teleport to Orc Village. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="weight" val="5"/>
-        <set name="commissionItemType" val="SCROLL_OTHER"/>
-        <restriction sellable="false" stackable="true" olympiad-restricted="true"/>
-        <cond addName="1" msgId="113">
-            <player flyMounted="false"/>
-        </cond>
-        <skills>
-            <skill id="32034" level="1"/> <!-- Scroll of Escape: Orc Village -->
-        </skills>
-    </item>
-    <item id="29153" name="Teleport: Dwarven Village" icon="icon.etc_scroll_of_return_i04">
-        <!-- Magic scroll that allows you to teleport to Dwarven Village. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="weight" val="5"/>
-        <set name="commissionItemType" val="SCROLL_OTHER"/>
-        <restriction sellable="false" stackable="true" olympiad-restricted="true"/>
-        <cond addName="1" msgId="113">
-            <player flyMounted="false"/>
-        </cond>
-        <skills>
-            <skill id="32035" level="1"/> <!-- Scroll of Escape: Dwarven Village -->
-        </skills>
-    </item>
-    <item id="29154" name="Teleport: Gludin" icon="icon.etc_scroll_of_return_i04">
-        <!-- Magic scroll that allows you to teleport to Gludin. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="weight" val="5"/>
-        <set name="commissionItemType" val="SCROLL_OTHER"/>
-        <restriction sellable="false" stackable="true" olympiad-restricted="true"/>
-        <cond addName="1" msgId="113">
-            <player flyMounted="false"/>
-        </cond>
-        <skills>
-            <skill id="32036" level="1"/> <!-- Scroll of Escape: Gludin Village -->
-        </skills>
-    </item>
-    <item id="29155" name="Teleport: Gludio" icon="icon.etc_scroll_of_return_i04">
-        <!-- Magic scroll that allows you to teleport to Gludio. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="weight" val="5"/>
-        <set name="commissionItemType" val="SCROLL_OTHER"/>
-        <restriction sellable="false" stackable="true" olympiad-restricted="true"/>
-        <cond addName="1" msgId="113">
-            <player flyMounted="false"/>
-        </cond>
-        <skills>
-            <skill id="32037" level="1"/> <!-- Scroll of Escape: Gludio Village -->
-        </skills>
-    </item>
-    <weapon id="29156" name="Bone Dagger" icon="icon.weapon_bone_dagger_i00">
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1150"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">7</stat>
-            <stat type="mAtk">6</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29157" name="Knife" icon="icon.weapon_knife_i00">
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1140"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">10</stat>
-            <stat type="mAtk">9</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29158" name="Doom Dagger" icon="icon.weapon_doomed_dagger_i00">
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1130"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">10</stat>
-            <stat type="mAtk">9</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29159" name="Dirk" icon="icon.weapon_dirk_i00">
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1130"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">15</stat>
-            <stat type="mAtk">12</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29160" name="Shining Knife" icon="icon.weapon_shining_knife_i00">
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1120"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">21</stat>
-            <stat type="mAtk">17</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29161" name="Throwing Knife" icon="icon.weapon_throw_knife_i00">
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1120"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">21</stat>
-            <stat type="mAtk">17</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29162" name="Sword Breaker" icon="icon.weapon_sword_breaker_i00">
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1110"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">27</stat>
-            <stat type="mAtk">21</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29163" name="Skeleton Dagger" icon="icon.weapon_dagger_i00">
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1100"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">16</stat>
-            <stat type="mAtk">13</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29164" name="Eldritch Dagger" icon="icon.weapon_knife_i00">
-        <!-- Steel dagger engraved with the runes of Shilen and Gran Kain. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1130"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">11</stat>
-            <stat type="mAtk">10</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29165" name="Dagger of Adept" icon="icon.weapon_doomed_dagger_i00">
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1050"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">11</stat>
-            <stat type="mAtk">10</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29166" name="Red Sunset Dagger" icon="icon.weapon_doomed_dagger_i00">
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1100"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">11</stat>
-            <stat type="mAtk">10</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29167" name="Crafted Dagger" icon="icon.weapon_handiwork_dagger_i00">
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1100"/>
-        <set name="soulshots" val="3"/>
-        <set name="spiritshots" val="3"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">35</stat>
-            <stat type="mAtk">26</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29168" name="Assassin Knife" icon="icon.weapon_assassin_knife_i00">
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1100"/>
-        <set name="soulshots" val="3"/>
-        <set name="spiritshots" val="3"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">35</stat>
-            <stat type="mAtk">26</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29169" name="Poniard Dagger" icon="icon.weapon_dirk_i00">
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1090"/>
-        <set name="soulshots" val="3"/>
-        <set name="spiritshots" val="3"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">45</stat>
-            <stat type="mAtk">32</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29170" name="Kukuri" icon="icon.weapon_kukuri_i00">
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1080"/>
-        <set name="soulshots" val="3"/>
-        <set name="spiritshots" val="3"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">56</stat>
-            <stat type="mAtk">39</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29171" name="Maingauche" icon="icon.weapon_maingauche_i00">
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1070"/>
-        <set name="soulshots" val="5"/>
-        <set name="spiritshots" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">69</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29172" name="Mithril Dagger" icon="icon.weapon_mithril_dagger_i00">
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1060"/>
-        <set name="soulshots" val="5"/>
-        <set name="spiritshots" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">80</stat>
-            <stat type="mAtk">54</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29173" name="Dagger of Mana" icon="icon.weapon_dagger_of_mana_i00">
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="750"/>
-        <set name="soulshots" val="3"/>
-        <set name="spiritshots" val="3"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">45</stat>
-            <stat type="mAtk">52</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29174" name="Mystic Knife" icon="icon.weapon_mystic_knife_i00">
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="760"/>
-        <set name="soulshots" val="3"/>
-        <set name="spiritshots" val="3"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">45</stat>
-            <stat type="mAtk">52</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29175" name="Conjurer's Knife" icon="icon.weapon_conjure_knife_i00">
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="750"/>
-        <set name="soulshots" val="3"/>
-        <set name="spiritshots" val="3"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">45</stat>
-            <stat type="mAtk">52</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29176" name="Shilen Knife" icon="icon.weapon_knife_o'_silenus_i00">
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="750"/>
-        <set name="soulshots" val="3"/>
-        <set name="spiritshots" val="3"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">45</stat>
-            <stat type="mAtk">52</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29177" name="Cursed Maingauche" icon="icon.t00">
-        <!-- Cursed Maingauche. P. Atk. is low, but it can inflict Bleeding after Critical Attack with a certain probability. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1070"/>
-        <set name="soulshots" val="5"/>
-        <set name="spiritshots" val="5"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">62</stat>
-            <stat type="mAtk">42</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29178" name="Short Sword" icon="icon.weapon_small_sword_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1600"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">8</stat>
-            <stat type="mAtk">6</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29179" name="Long Sword" icon="icon.weapon_long_sword_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1560"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">24</stat>
-            <stat type="mAtk">17</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29180" name="Broadsword" icon="icon.weapon_broad_sword_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1590"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">11</stat>
-            <stat type="mAtk">9</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29181" name="Gladius" icon="icon.weapon_gladius_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1570"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">17</stat>
-            <stat type="mAtk">12</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29182" name="Orcish Sword" icon="icon.weapon_orcish_sword_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1570"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">17</stat>
-            <stat type="mAtk">12</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29183" name="Falchion" icon="icon.weapon_falchion_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1530"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">31</stat>
-            <stat type="mAtk">21</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29184" name="Apprentice's Spellbook" icon="icon.weapon_apprentices_spellbook_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="650"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <set name="is_magic_weapon" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">9</stat>
-            <stat type="mAtk">12</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29185" name="Voodoo Doll" icon="icon.weapon_voodoo_doll_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="630"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">25</stat>
-            <stat type="mAtk">28</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29186" name="Sword of Reflection" icon="icon.weapon_sword_of_watershadow_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1550"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">24</stat>
-            <stat type="mAtk">17</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29187" name="Sword of Watershadow" icon="icon.weapon_sword_of_watershadow_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1540"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">24</stat>
-            <stat type="mAtk">17</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29188" name="Handmade Sword" icon="icon.weapon_handmade_sword_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1570"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">17</stat>
-            <stat type="mAtk">12</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29189" name="Buffalo's Horn" icon="icon.weapon_buffalo_horn_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="660"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">6</stat>
-            <stat type="mAtk">8</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29190" name="Tears of Eva" icon="icon.weapon_tears_of_eva_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="630"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">19</stat>
-            <stat type="mAtk">22</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29191" name="Relic of the Saints" icon="icon.weapon_apprentices_spellbook_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="610"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">19</stat>
-            <stat type="mAtk">22</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29192" name="Crucifix of Blessing" icon="icon.weapon_crucifix_of_blessing_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="620"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">25</stat>
-            <stat type="mAtk">28</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29193" name="Sword of Solidarity" icon="icon.weapon_long_sword_i00">
-        <!-- Bronze sword crafted long ago in memory of the union between the Humans and the Elves. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1300"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">12</stat>
-            <stat type="mAtk">9</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29194" name="Sword of Sentinel" icon="icon.weapon_broad_sword_i00">
-        <!-- Steel blade issued to those fighters that have been acknowledged as protectors of the woods. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1300"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">14</stat>
-            <stat type="mAtk">11</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29195" name="Blood Saber" icon="icon.weapon_broad_sword_i00">
-        <!-- An Oriharukon sword crafted in the Abella style of the east. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1450"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">14</stat>
-            <stat type="mAtk">11</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29196" name="Butcher's Sword" icon="icon.weapon_orcish_sword_i00">
-        <!-- Sword granted to young Orc Fighters who distinguished themselves at war. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1450"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">13</stat>
-            <stat type="mAtk">10</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29197" name="Bastard Sword" icon="icon.weapon_bastard_sword_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="1510"/>
-        <set name="soulshots" val="3"/>
-        <set name="spiritshots" val="3"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">51</stat>
-            <stat type="mAtk">32</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29198" name="Sword of Magic" icon="icon.weapon_sword_of_magic_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="970"/>
-        <set name="soulshots" val="3"/>
-        <set name="spiritshots" val="3"/>
-        <set name="is_magic_weapon" val="true"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">43</stat>
-            <stat type="mAtk">45</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="29199" name="Scroll of Wisdom" icon="icon.weapon_scroll_of_wisdom_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="610"/>
-        <set name="soulshots" val="3"/>
-        <set name="spiritshots" val="3"/>
-        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
-        <stats>
-            <stat type="pAtk">32</stat>
-            <stat type="mAtk">35</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
+	<item id="29100" name="Premium INT Dye (INT + 2 WIT - 2)" type="DYE" icon="icon.etc_int_hena_i02">
+	<!-- Ingredient for a Greater INT Dye. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes after 1st Class Transfer. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30"/>
+	</item>
+
+	<item id="29101" name="Premium MEN Dye (MEN + 2 INT - 2)" type="DYE" icon="icon.etc_men_hena_i02">
+	<!-- Ingredient for a Greater MEN Dye. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes after 1st Class Transfer. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30"/>
+	</item>
+
+	<item id="29102" name="Premium MEN Dye (MEN + 2 WIT - 2)" type="DYE" icon="icon.etc_men_hena_i02">
+	<!-- Ingredient for a Greater MEN Dye. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes after 1st Class Transfer. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30"/>
+	</item>
+
+	<item id="29103" name="Premium WIT Dye (WIT + 2 INT - 2)" type="DYE" icon="icon.etc_wit_hena_i02">
+	<!-- Ingredient for a Greater WIT Dye. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes after 1st Class Transfer. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30"/>
+	</item>
+
+	<item id="29104" name="Premium WIT Dye (WIT + 2 MEN - 2)" type="DYE" icon="icon.etc_wit_hena_i02">
+	<!-- Ingredient for a Greater WIT Dye. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes after 1st Class Transfer. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30"/>
+	</item>
+
+	<item id="29105" name="Premium STR Dye(STR + 3 CON - 3)" type="DYE" icon="icon.etc_str_hena_i02">
+	<!-- Ingredient for a Greater STR Dye. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes after 1st Class Transfer. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30"/>
+	</item>
+
+	<item id="29106" name="Premium STR Dye(STR + 3 DEX - 3)" type="DYE" icon="icon.etc_str_hena_i02">
+	<!-- Ingredient for a Greater STR Dye. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes after 1st Class Transfer. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30"/>
+	</item>
+
+	<item id="29107" name="Premium CON Dye (CON + 3 STR - 3)" type="DYE" icon="icon.etc_con_hena_i02">
+	<!-- Ingredient for a Greater CON Dye. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes after 1st Class Transfer. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30"/>
+	</item>
+
+	<item id="29108" name="Premium CON Dye (CON + 3 DEX - 3)" type="DYE" icon="icon.etc_con_hena_i02">
+	<!-- Ingredient for a Greater CON Dye. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes after 1st Class Transfer. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30"/>
+	</item>
+
+	<item id="29109" name="Premium DEX Dye (DEX + 3 STR - 3)" type="DYE" icon="icon.etc_dex_hena_i02">
+	<!-- Ingredient for a Greater DEX Dye. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes after 1st Class Transfer. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30"/>
+	</item>
+
+	<item id="29110" name="Premium DEX Dye (DEX + 3 CON - 3)" type="DYE" icon="icon.etc_dex_hena_i02">
+	<!-- Ingredient for a Greater DEX Dye. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes after 1st Class Transfer. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30"/>
+	</item>
+
+	<item id="29111" name="Premium INT Dye (INT + 3 MEN - 3)" type="DYE" icon="icon.etc_int_hena_i02">
+	<!-- Ingredient for a Greater INT Dye. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes after 1st Class Transfer. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30"/>
+	</item>
+
+	<item id="29112" name="Premium INT Dye (INT + 3 WIT - 3)" type="DYE" icon="icon.etc_int_hena_i02">
+	<!-- Ingredient for a Greater INT Dye. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes after 1st Class Transfer. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30"/>
+	</item>
+
+	<item id="29113" name="Premium MEN Dye (MEN + 3 INT - 3)" type="DYE" icon="icon.etc_men_hena_i02">
+	<!-- Ingredient for a Greater MEN Dye. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes after 1st Class Transfer. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30"/>
+	</item>
+
+	<item id="29114" name="Premium MEN Dye (MEN + 3 WIT - 3)" type="DYE" icon="icon.etc_men_hena_i02">
+	<!-- Ingredient for a Greater MEN Dye. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes after 1st Class Transfer. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30"/>
+	</item>
+
+	<item id="29115" name="Premium WIT Dye (WIT + 3 INT - 3)" type="DYE" icon="icon.etc_wit_hena_i02">
+	<!-- Ingredient for a Greater WIT Dye. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes after 1st Class Transfer. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30"/>
+	</item>
+
+	<item id="29116" name="Premium WIT Dye (WIT + 3 MEN - 3)" type="DYE" icon="icon.etc_wit_hena_i02">
+	<!-- Ingredient for a Greater WIT Dye. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes after 1st Class Transfer. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30"/>
+	</item>
+
+	<item id="29117" name="Premium Greater STR Dye (STR + 4 CON - 3)" type="DYE" icon="icon.etc_str_hena_i02">
+	<!-- Ingredient for a Greater STR Dye. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes after 1st Class Transfer. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30"/>
+	</item>
+
+	<item id="29118" name="Premium Greater STR Dye (STR + 4 DEX - 3)" type="DYE" icon="icon.etc_str_hena_i02">
+	<!-- Ingredient for a Greater STR Dye. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes after 1st Class Transfer. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30"/>
+	</item>
+
+	<item id="29119" name="Premium Greater CON Dye (CON + 4 STR - 3)" type="DYE" icon="icon.etc_con_hena_i02">
+	<!-- Ingredient for a Greater CON Dye. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes after 1st Class Transfer. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30"/>
+	</item>
+
+	<item id="29120" name="Premium Greater CON Dye (CON + 4 DEX - 3)" type="DYE" icon="icon.etc_con_hena_i02">
+	<!-- Ingredient for a Greater CON Dye. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes after 1st Class Transfer. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30"/>
+	</item>
+
+	<item id="29121" name="Premium Greater DEX Dye (DEX + 4 STR - 3)" type="DYE" icon="icon.etc_dex_hena_i02">
+	<!-- Ingredient for a Greater DEX Dye. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes after 1st Class Transfer. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30"/>
+	</item>
+
+	<item id="29122" name="Premium Greater DEX Dye (DEX + 4 CON - 3)" type="DYE" icon="icon.etc_dex_hena_i02">
+	<!-- Ingredient for a Greater DEX Dye. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes after 1st Class Transfer. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30"/>
+	</item>
+
+	<item id="29123" name="Premium Greater INT Dye (INT + 4 MEN - 3)" type="DYE" icon="icon.etc_int_hena_i02">
+	<!-- Ingredient for a Greater INT Dye. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes after 1st Class Transfer. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30"/>
+	</item>
+
+	<item id="29124" name="Premium Greater INT Dye (INT + 4 WIT - 3)" type="DYE" icon="icon.etc_int_hena_i02">
+	<!-- Ingredient for a Greater INT Dye. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes after 1st Class Transfer. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30"/>
+	</item>
+
+	<item id="29125" name="Premium Greater MEN Dye (MEN + 4 INT - 3)" type="DYE" icon="icon.etc_men_hena_i02">
+	<!-- Ingredient for a Greater MEN Dye. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes after 1st Class Transfer. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30"/>
+	</item>
+
+	<item id="29126" name="Premium Greater MEN Dye (MEN + 4 WIT - 3)" type="DYE" icon="icon.etc_men_hena_i02">
+	<!-- Ingredient for a Greater MEN Dye. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes after 1st Class Transfer. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30"/>
+	</item>
+
+	<item id="29127" name="Premium Greater WIT Dye (WIT + 4 INT - 3)" type="DYE" icon="icon.etc_wit_hena_i02">
+	<!-- Ingredient for a Greater WIT Dye. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes after 1st Class Transfer. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30"/>
+	</item>
+
+	<item id="29128" name="Premium Greater WIT Dye (WIT + 4 MEN - 3)" type="DYE" icon="icon.etc_wit_hena_i02">
+	<!-- Ingredient for a Greater WIT Dye. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes after 1st Class Transfer. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30"/>
+	</item>
+
+	<item id="29129" name="Beginner's Package" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to get a gift. Lv. 10 and above. -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="29130" name="Beginner's Package" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to get a gift. Lv. 15 and above. -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="29131" name="Beginner's Package" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to get a gift. Lv. 17 and above. -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="29132" name="Beginner's Package" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to get a gift. Lv. 21and above. -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="29133" name="Beginner's Package" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to get a gift. Lv. 23 and above. -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="29134" name="Beginner's Package" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to get a gift. Lv. 24 and above. -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="29135" name="Adventurer's Package" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to get a gift. Lv. 20 and above. -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="29136" name="Adventurer's Package" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to get a gift. Lv. 23 and above. -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="29137" name="Adventurer's Package" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to get a gift. Lv. 26 and above. -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="29138" name="Adventurer's Package" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to get a gift. Lv. 29 and above. -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="29139" name="Adventurer's Package" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to get a gift. Lv. 32 and above. -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="29140" name="Adventurer's Package" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to get a gift. Lv. 34 and above. -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="29141" name="Expert's Package" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to get a gift. Lv. 30 and above. -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="29142" name="Expert's Package" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to get a gift. Lv. 33 and above. -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="29143" name="Expert's Package" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to get a gift. Lv. 35 and above. -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="29144" name="Expert's Package" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to get a gift. Lv. 36 and above. -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="29145" name="Expert's Package" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to get a gift. Lv. 37 and above. -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="29146" name="Expert's Package" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to get a gift. Lv. 38 and above. -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="29147" name="Expert's Package" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to get a gift. Lv. 39 and above. -->
+		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes weight="100" immediate-effect="true"/>
+	</item>
+
+	<item id="29148" name="Feather of Blessing" type="NONE" icon="icon.blessed_feather_i00">
+	<!-- Can resurrect at the spot if stored in the inventory. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="29149" name="Scroll of Escape: Talking Island Village" type="NONE" icon="icon.etc_scroll_of_return_i04">
+	<!-- Magical scroll that relocates you to Talking Island. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<condition add-name="true" msg-id="113">
+			<player flying="false"/>
+		</condition>
+		<attributes weight="5" commission-type="SCROLL_OTHER"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="32031" level="1"/>  <!-- Teleport Stone: Talking Island Village -->
+		</skill-reducer>
+	</item>
+
+	<item id="29150" name="Scroll of Escape: Elven Village" type="NONE" icon="icon.etc_scroll_of_return_i04">
+	<!-- Magical scroll that relocates you to Elven Village. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<condition add-name="true" msg-id="113">
+			<player flying="false"/>
+		</condition>
+		<attributes weight="5" commission-type="SCROLL_OTHER"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="32032" level="1"/>  <!-- Teleport Stone: Elven Village -->
+		</skill-reducer>
+	</item>
+
+	<item id="29151" name="Scroll of Escape: Dark Elf Village" type="NONE" icon="icon.etc_scroll_of_return_i04">
+	<!-- Magical scroll that relocates you to Dark Elf Village. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<condition add-name="true" msg-id="113">
+			<player flying="false"/>
+		</condition>
+		<attributes weight="5" commission-type="SCROLL_OTHER"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="32033" level="1"/>  <!-- Teleport Stone: Dark Elf Village -->
+		</skill-reducer>
+	</item>
+
+	<item id="29152" name="Scroll of Escape: Orc Village" type="NONE" icon="icon.etc_scroll_of_return_i04">
+	<!-- Magical scroll that relocates you to Orc Village. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<condition add-name="true" msg-id="113">
+			<player flying="false"/>
+		</condition>
+		<attributes weight="5" commission-type="SCROLL_OTHER"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="32034" level="1"/>  <!-- Teleport Stone: Orc Village -->
+		</skill-reducer>
+	</item>
+
+	<item id="29153" name="Scroll of Escape: Dwarven Village" type="NONE" icon="icon.etc_scroll_of_return_i04">
+	<!-- Magical scroll that relocates you to Dwarven Village. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<condition add-name="true" msg-id="113">
+			<player flying="false"/>
+		</condition>
+		<attributes weight="5" commission-type="SCROLL_OTHER"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="32035" level="1"/>  <!-- Teleport Stone: Dwarven Village -->
+		</skill-reducer>
+	</item>
+
+	<item id="29154" name="Scroll of Escape: Gludin Village" type="NONE" icon="icon.etc_scroll_of_return_i04">
+	<!-- Magical scroll that relocates you to Gludin Village. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<condition add-name="true" msg-id="113">
+			<player flying="false"/>
+		</condition>
+		<attributes weight="5" commission-type="SCROLL_OTHER"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="32036" level="1"/>  <!-- Teleport Stone: Gludin Village -->
+		</skill-reducer>
+	</item>
+
+	<item id="29155" name="Scroll of Escape: Town of Gludio" type="NONE" icon="icon.etc_scroll_of_return_i04">
+	<!-- Magical scroll that relocates you to the Town of Gludio. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<condition add-name="true" msg-id="113">
+			<player flying="false"/>
+		</condition>
+		<attributes weight="5" commission-type="SCROLL_OTHER"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="32037" level="1"/>  <!-- Teleport Stone: Town of Gludio -->
+		</skill-reducer>
+	</item>
+
+	<weapon id="29156" name="Bone Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_bone_dagger_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1150" price="768" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="7.0"/>
+			<stat type="mAtk" value="6.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29157" name="Knife" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_knife_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1140" price="12500" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="10.0"/>
+			<stat type="mAtk" value="9.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29158" name="Doom Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_doomed_dagger_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1130" price="12500" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="10.0"/>
+			<stat type="mAtk" value="9.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29159" name="Dirk" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_dirk_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1130" price="54100" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="15.0"/>
+			<stat type="mAtk" value="12.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29160" name="Shining Knife" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_shining_knife_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1120" price="136000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="21.0"/>
+			<stat type="mAtk" value="17.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29161" name="Throwing Knife" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_throw_knife_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1120" price="136000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="21.0"/>
+			<stat type="mAtk" value="17.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29162" name="Sword Breaker" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_sword_breaker_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1110" price="244000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="27.0"/>
+			<stat type="mAtk" value="21.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29163" name="Skeleton Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_dagger_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1100" price="66600" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="16.0"/>
+			<stat type="mAtk" value="13.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29164" name="Eldritch Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_knife_i00">
+	<!-- Steel dagger engraved with the runes of Shilen and Gran Kain. -->
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1130" price="25500" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="11.0"/>
+			<stat type="mAtk" value="10.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29165" name="Dagger of Adept" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_doomed_dagger_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1050" price="25500" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="11.0"/>
+			<stat type="mAtk" value="10.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29166" name="Red Sunset Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_doomed_dagger_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1100" price="25500" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="11.0"/>
+			<stat type="mAtk" value="10.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29167" name="Crafted Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_handiwork_dagger_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1100" price="409000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="35.0"/>
+			<stat type="mAtk" value="26.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29168" name="Assassin Knife" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_assassin_knife_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1100" price="409000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="35.0"/>
+			<stat type="mAtk" value="26.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29169" name="Poniard Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_dirk_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1090" price="644000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="45.0"/>
+			<stat type="mAtk" value="32.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29170" name="Kukuri" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_kukuri_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1080" price="967000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="56.0"/>
+			<stat type="mAtk" value="39.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29171" name="Maingauche" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_maingauche_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1070" price="1400000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="69.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29172" name="Mithril Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_mithril_dagger_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1060" price="1800000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="80.0"/>
+			<stat type="mAtk" value="54.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29173" name="Dagger of Mana" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_dagger_of_mana_i00" magic="true">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="750" price="967000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="45.0"/>
+			<stat type="mAtk" value="52.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29174" name="Mystic Knife" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_mystic_knife_i00" magic="true">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="760" price="967000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="45.0"/>
+			<stat type="mAtk" value="52.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29175" name="Conjurer's Knife" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_conjure_knife_i00" magic="true">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="750" price="967000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="45.0"/>
+			<stat type="mAtk" value="52.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29176" name="Shilen Knife" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_knife_o'_silenus_i00" magic="true">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="750" price="967000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="45.0"/>
+			<stat type="mAtk" value="52.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29177" name="Cursed Maingauche" type="DAGGER" body-part="RIGHT_HAND" icon="icon.t00">
+	<!-- Cursed Maingauche. Although its P. Atk. is weak, it gives Bleeding effect with a certain rate during a Critical Attacks. -->
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1070" price="1400000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="62.0"/>
+			<stat type="mAtk" value="42.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29178" name="Short Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_small_sword_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1600" price="768" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="8.0"/>
+			<stat type="mAtk" value="6.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29179" name="Long Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_long_sword_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1560" price="136000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="24.0"/>
+			<stat type="mAtk" value="17.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29180" name="Broadsword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_broad_sword_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1590" price="12500" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="11.0"/>
+			<stat type="mAtk" value="9.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29181" name="Gladius" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_gladius_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1570" price="54100" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="17.0"/>
+			<stat type="mAtk" value="12.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29182" name="Orcish Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_orcish_sword_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1570" price="54100" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="17.0"/>
+			<stat type="mAtk" value="12.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29183" name="Falchion" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_falchion_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1530" price="244000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="31.0"/>
+			<stat type="mAtk" value="21.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29184" name="Apprentice's Spellbook" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_apprentices_spellbook_i00" magic="true">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="650" price="12500" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="9.0"/>
+			<stat type="mAtk" value="12.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29185" name="Voodoo Doll" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_voodoo_doll_i00" magic="true">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="630" price="244000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="25.0"/>
+			<stat type="mAtk" value="28.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29186" name="Sword of Reflection" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_watershadow_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1550" price="136000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="24.0"/>
+			<stat type="mAtk" value="17.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29187" name="Sword of Watershadow" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_watershadow_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1540" price="136000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="24.0"/>
+			<stat type="mAtk" value="17.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29188" name="Handmade Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_handmade_sword_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1570" price="54100" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="17.0"/>
+			<stat type="mAtk" value="12.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29189" name="Buffalo's Horn" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_buffalo_horn_i00" magic="true">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="660" price="768" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="6.0"/>
+			<stat type="mAtk" value="8.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29190" name="Tears of Eva" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_tears_of_eva_i00" magic="true">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="630" price="136000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="19.0"/>
+			<stat type="mAtk" value="22.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29191" name="Relic of the Saints" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_apprentices_spellbook_i00" magic="true">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="610" price="136000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="19.0"/>
+			<stat type="mAtk" value="22.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29192" name="Crucifix of Blessing" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_crucifix_of_blessing_i00" magic="true">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="620" price="244000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="25.0"/>
+			<stat type="mAtk" value="28.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29193" name="Sword of Solidarity" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_long_sword_i00">
+	<!-- Bronze sword crafted long ago in memory of the union between the Humans and the Elves. -->
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1300" price="18500" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="12.0"/>
+			<stat type="mAtk" value="9.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29194" name="Sword of Sentinel" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_broad_sword_i00">
+	<!-- Steel blade issued to those fighters that have been acknowledged as protectors of the woods. -->
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1300" price="33600" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="14.0"/>
+			<stat type="mAtk" value="11.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29195" name="Blood Saber" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_broad_sword_i00">
+	<!-- An Oriharukon sword crafted in the Abella style of the east. -->
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1450" price="33600" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="14.0"/>
+			<stat type="mAtk" value="11.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29196" name="Butcher's Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_orcish_sword_i00">
+	<!-- Sword granted to young Orc Fighters who distinguished themselves at war. -->
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1450" price="25500" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="13.0"/>
+			<stat type="mAtk" value="10.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29197" name="Bastard Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_bastard_sword_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1510" price="644000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="51.0"/>
+			<stat type="mAtk" value="32.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29198" name="Sword of Magic" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_magic_i00" magic="true">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="970" price="716000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="43.0"/>
+			<stat type="mAtk" value="45.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="29199" name="Scroll of Wisdom" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_scroll_of_wisdom_i00" magic="true">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="610" price="409000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal />
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="32.0"/>
+			<stat type="mAtk" value="35.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
 </list>

@@ -1,805 +1,553 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <weapon id="7810" name="Soulfire Dirk" icon="icon.weapon_dagger_of_magicflame_i01">
-        <!-- <Soul Crystal Enhancement>. M. Atk. + 46. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1148"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="750"/>
-        <set name="price" val="2870000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <set name="commissionItemType" val="DAGGER"/>
-        <skills>
-            <skill id="3014" level="1"/> <!-- Special Ability: Mana Up -->
-        </skills>
-        <stats>
-            <stat type="pAtk">86</stat>
-            <stat type="mAtk">91</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="7811" name="Soulfire Dirk" icon="icon.weapon_dagger_of_magicflame_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1148"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="750"/>
-        <set name="price" val="2870000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <set name="commissionItemType" val="DAGGER"/>
-        <skills>
-            <skill id="1201" level="18" type_chance="10" type="ON_MAGIC_SKILL"/> <!-- Dryad Root -->
-        </skills>
-        <stats>
-            <stat type="pAtk">86</stat>
-            <stat type="mAtk">91</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="7812" name="Soulfire Dirk" icon="icon.weapon_dagger_of_magicflame_i01">
-        <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1148"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="750"/>
-        <set name="price" val="2870000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <set name="commissionItemType" val="DAGGER"/>
-        <skills>
-            <skill id="3074" level="2" type_chance="10" type="ON_MAGIC_SKILL"/> <!-- Special Ability: Magic Silence -->
-        </skills>
-        <stats>
-            <stat type="pAtk">86</stat>
-            <stat type="mAtk">91</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="7813" name="Twilight Knife" icon="icon.weapon_hell_knife_i01">
-        <!-- <Soul Crystal Enhancement>. M. Atk. + 96. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1157"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="740"/>
-        <set name="price" val="8680000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <set name="commissionItemType" val="DAGGER"/>
-        <skills>
-            <skill id="1044" level="3" type_chance="30" type="ON_MAGIC_SKILL"/> <!-- Regeneration -->
-        </skills>
-        <stats>
-            <stat type="pAtk">122</stat>
-            <stat type="mAtk">122</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="7814" name="Twilight Knife" icon="icon.weapon_hell_knife_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1157"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="740"/>
-        <set name="price" val="8680000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <set name="commissionItemType" val="DAGGER"/>
-        <skills>
-            <skill id="1035" level="4" type_chance="50" type="ON_MAGIC_SKILL"/> <!-- Mental Shield -->
-        </skills>
-        <stats>
-            <stat type="pAtk">122</stat>
-            <stat type="mAtk">122</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="7815" name="Twilight Knife" icon="icon.weapon_hell_knife_i01">
-        <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 14%. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1157"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="740"/>
-        <set name="price" val="8680000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <set name="commissionItemType" val="DAGGER"/>
-        <skills>
-            <skill id="1164" level="11" type_chance="7" type="ON_MAGIC_SKILL"/> <!-- Curse Weakness -->
-        </skills>
-        <stats>
-            <stat type="pAtk">122</stat>
-            <stat type="mAtk">122</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <armor id="7850" name="Moon Helmet" icon="icon.armor_helmet_i00">
-        <!-- Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="head"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1157"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="640"/>
-        <set name="price" val="11720"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="HELMET"/>
-        <restriction freightable="true"/>
-        <stats>
-            <stat type="pDef">37</stat>
-        </stats>
-    </armor>
-    <armor id="7851" name="Moon Armor" icon="icon.armor_t1001_ul_i00">
-        <!-- Full Armor. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="armor_type" val="HEAVY"/>
-        <set name="bodypart" val="onepiece"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1157"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="9870"/>
-        <set name="price" val="50780"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="FULL_BODY"/>
-        <restriction freightable="true"/>
-        <stats>
-            <stat type="pDef">158</stat>
-        </stats>
-    </armor>
-    <armor id="7852" name="Moon Gauntlets" icon="icon.armor_t1001_g_i00">
-        <!-- Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1157"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="640"/>
-        <set name="price" val="7820"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="GLOVES"/>
-        <restriction freightable="true"/>
-        <stats>
-            <stat type="pDef">24</stat>
-        </stats>
-    </armor>
-    <armor id="7853" name="Moon Boots" icon="icon.armor_t1001_b_i00">
-        <!-- Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="feet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1157"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1280"/>
-        <set name="price" val="7820"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="FEET"/>
-        <restriction freightable="true"/>
-        <stats>
-            <stat type="pDef">24</stat>
-        </stats>
-    </armor>
-    <armor id="7854" name="Moon Shell" icon="icon.armor_t1002_ul_i00">
-        <!-- Full Armor. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="armor_type" val="LIGHT"/>
-        <set name="bodypart" val="onepiece"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1157"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="5400"/>
-        <set name="price" val="38080"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="FULL_BODY"/>
-        <restriction freightable="true"/>
-        <stats>
-            <stat type="pDef">119</stat>
-        </stats>
-    </armor>
-    <armor id="7855" name="Moon Leather Gloves" icon="icon.armor_t1002_g_i00">
-        <!-- Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1157"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="640"/>
-        <set name="price" val="7820"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="GLOVES"/>
-        <restriction freightable="true"/>
-        <stats>
-            <stat type="pDef">24</stat>
-        </stats>
-    </armor>
-    <armor id="7856" name="Moon Shoes" icon="icon.armor_t1002_b_i00">
-        <!-- Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="feet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1157"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1280"/>
-        <set name="price" val="7820"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="FEET"/>
-        <restriction freightable="true"/>
-        <stats>
-            <stat type="pDef">24</stat>
-        </stats>
-    </armor>
-    <armor id="7857" name="Moon Cape" icon="icon.armor_t1003_ul_i00">
-        <!-- Full Armor. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="armor_type" val="MAGIC"/>
-        <set name="bodypart" val="onepiece"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1157"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2450"/>
-        <set name="price" val="38080"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="FULL_BODY"/>
-        <restriction freightable="true"/>
-        <stats>
-            <stat type="pDef">79</stat>
-            <stat type="maxMp">239</stat>
-        </stats>
-    </armor>
-    <armor id="7858" name="Moon Silk Gloves" icon="icon.armor_t1003_g_i00">
-        <!-- Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="gloves"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1157"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="640"/>
-        <set name="price" val="7820"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="GLOVES"/>
-        <restriction freightable="true"/>
-        <stats>
-            <stat type="pDef">24</stat>
-        </stats>
-    </armor>
-    <armor id="7859" name="Moon Sandals" icon="icon.armor_t1003_b_i00">
-        <!-- Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="bodypart" val="feet"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1157"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1280"/>
-        <set name="price" val="7820"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="FEET"/>
-        <restriction freightable="true"/>
-        <stats>
-            <stat type="pDef">24</stat>
-        </stats>
-    </armor>
-    <weapon id="7880" name="Steel Sword" icon="icon.weapon_iron_sword_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="743"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2100"/>
-        <set name="price" val="409000"/>
-        <set name="change_weaponId" val="9211"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="TWO_HAND_SWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">49</stat>
-            <stat type="mAtk">26</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="7881" name="Lesser Giant's Sword" icon="icon.weapon_giants_sword_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2545"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2020"/>
-        <set name="price" val="1400000"/>
-        <set name="change_weaponId" val="9223"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="TWO_HAND_SWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">96</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="7882" name="Pa'agrian Sword" icon="icon.weapon_sword_of_paagrio_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1720"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1980"/>
-        <set name="price" val="4300000"/>
-        <set name="change_weaponId" val="9284"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="TWO_HAND_SWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">169</stat>
-            <stat type="mAtk">76</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="7883" name="Sword of Sentinel" icon="icon.weapon_guardians_sword_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1746"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="1930"/>
-        <set name="price" val="13100000"/>
-        <set name="change_weaponId" val="9320"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="TWO_HAND_SWORD"/>
-        <stats>
-            <stat type="pAtk">236</stat>
-            <stat type="mAtk">99</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="7884" name="Infernal Master" icon="icon.weapon_inferno_master_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;46;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1128"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1900"/>
-        <set name="price" val="14098000"/>
-        <set name="change_weaponId" val="9332"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="TWO_HAND_SWORD"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">259</stat>
-            <stat type="mAtk">107</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="7885" name="Priest Sword" icon="icon.weapon_sword_of_priest_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="743"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1520"/>
-        <set name="price" val="409000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD"/>
-        <set name="is_magic_weapon" val="true"/>
-        <stats>
-            <stat type="pAtk">32</stat>
-            <stat type="mAtk">35</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="7886" name="Sword of Magic Fog" icon="icon.weapon_sword_of_magic_fog_i00">
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2545"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1450"/>
-        <set name="price" val="1400000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD"/>
-        <set name="is_magic_weapon" val="true"/>
-        <stats>
-            <stat type="pAtk">63</stat>
-            <stat type="mAtk">63</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="7887" name="Mysterious Sword" icon="icon.weapon_mystery_sword_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="916"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1430"/>
-        <set name="price" val="2290000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD"/>
-        <set name="is_magic_weapon" val="true"/>
-        <stats>
-            <stat type="pAtk">85</stat>
-            <stat type="mAtk">81</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="7888" name="Ecliptic Sword" icon="icon.weapon_sword_of_eclipse_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2452"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1380"/>
-        <set name="price" val="6130000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD"/>
-        <stats>
-            <stat type="pAtk">125</stat>
-            <stat type="mAtk">111</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="7889" name="Wizard's Tear" icon="icon.weapon_tears_of_wizard_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1746"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="1350"/>
-        <set name="price" val="13100000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD"/>
-        <stats>
-            <stat type="pAtk">155</stat>
-            <stat type="mAtk">132</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="7890" name="Priest Mace" icon="icon.weapon_mace_of_priest_i00">
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2545"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1720"/>
-        <set name="price" val="1400000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON"/>
-        <set name="is_magic_weapon" val="true"/>
-        <stats>
-            <stat type="pAtk">63</stat>
-            <stat type="mAtk">63</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="7891" name="Ecliptic Axe" icon="icon.weapon_eclipse_axe_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2452"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="1640"/>
-        <set name="price" val="6130000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON"/>
-        <set name="is_magic_weapon" val="true"/>
-        <stats>
-            <stat type="pAtk">125</stat>
-            <stat type="mAtk">111</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="7892" name="Spell Breaker" icon="icon.weapon_spell_breaker_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1157"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="1620"/>
-        <set name="price" val="8680000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON"/>
-        <set name="is_magic_weapon" val="true"/>
-        <stats>
-            <stat type="pAtk">140</stat>
-            <stat type="mAtk">122</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="7893" name="Kaim Vanul's Bones" icon="icon.weapon_bone_of_kaim_vanul_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1746"/>
-        <set name="crystal_type" val="B"/>
-        <set name="weight" val="1570"/>
-        <set name="price" val="13100000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="is_magic_weapon" val="true"/>
-        <set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON"/>
-        <stats>
-            <stat type="pAtk">155</stat>
-            <stat type="mAtk">132</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="7894" name="Spiritual Eye" icon="icon.weapon_eye_of_soul_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1128"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1550"/>
-        <set name="price" val="14098000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON"/>
-        <set name="is_magic_weapon" val="true"/>
-        <stats>
-            <stat type="pAtk">170</stat>
-            <stat type="mAtk">143</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="7895" name="Flaming Dragon Skull" icon="icon.weapon_dragon_flame_head_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="damage_range" val="0;0;40;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1659"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1530"/>
-        <set name="price" val="20741000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON"/>
-        <set name="is_magic_weapon" val="true"/>
-        <stats>
-            <stat type="pAtk">186</stat>
-            <stat type="mAtk">152</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="7896" name="Lesser Giant's Hammer" icon="icon.weapon_giants_hammer_i00">
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2545"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2100"/>
-        <set name="price" val="1400000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">96</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="7897" name="Dwarven Hammer" icon="icon.weapon_dwarven_hammer_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="2452"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2010"/>
-        <set name="price" val="6130000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">190</stat>
-            <stat type="mAtk">83</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="7898" name="Karik Horn" icon="icon.weapon_horn_of_karik_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1720"/>
-        <set name="crystal_type" val="C"/>
-        <set name="weight" val="2020"/>
-        <set name="price" val="4300000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">169</stat>
-            <stat type="mAtk">76</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="7899" name="Destroyer Hammer" icon="icon.weapon_hammer_of_destroyer_i00">
-        <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="damage_range" val="0;0;44;120"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_count" val="1128"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1910"/>
-        <set name="price" val="14098000"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON"/>
-        <stats>
-            <stat type="pAtk">259</stat>
-            <stat type="mAtk">107</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
+	<weapon id="7810" name="Soulfire Dirk" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_dagger_of_magicflame_i01" magic="true">
+	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 46. -->
+		<restriction freightable="false"/>
+		<attributes weight="750" price="2870000" commission-type="DAGGER"/>
+		<crystal type="C" count="1148"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="86.0"/>
+			<stat type="mAtk" value="91.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3014" level="1"/>  <!-- Special Ability: Boost Mana -->
+		</skills>
+	</weapon>
+
+	<weapon id="7811" name="Soulfire Dirk" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_dagger_of_magicflame_i01" magic="true">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 12%. -->
+		<restriction freightable="false"/>
+		<attributes weight="750" price="2870000" commission-type="DAGGER"/>
+		<crystal type="C" count="1148"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="86.0"/>
+			<stat type="mAtk" value="91.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="1201" level="18" type="ON_MAGIC_SKILL" chance="10"/>  <!-- Dryad Root -->
+		</skills>
+	</weapon>
+
+	<weapon id="7812" name="Soulfire Dirk" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_dagger_of_magicflame_i01" magic="true">
+	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 16%. -->
+		<restriction freightable="false"/>
+		<attributes weight="750" price="2870000" commission-type="DAGGER"/>
+		<crystal type="C" count="1148"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="86.0"/>
+			<stat type="mAtk" value="91.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="3074" level="2" type="ON_MAGIC_SKILL" chance="10"/>  <!-- Special Ability: Magic Silence -->
+		</skills>
+	</weapon>
+
+	<weapon id="7813" name="Twilight Knife" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_hell_knife_i01" magic="true">
+	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 96. -->
+		<restriction freightable="false"/>
+		<attributes weight="740" price="8680000" commission-type="DAGGER"/>
+		<crystal type="B" count="1157"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="122.0"/>
+			<stat type="mAtk" value="122.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="1044" level="3" type="ON_MAGIC_SKILL" chance="30"/>  <!-- Regeneration -->
+		</skills>
+	</weapon>
+
+	<weapon id="7814" name="Twilight Knife" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_hell_knife_i01" magic="true">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 12%. -->
+		<restriction freightable="false"/>
+		<attributes weight="740" price="8680000" commission-type="DAGGER"/>
+		<crystal type="B" count="1157"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="122.0"/>
+			<stat type="mAtk" value="122.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="1035" level="4" type="ON_MAGIC_SKILL" chance="50"/>  <!-- Mental Shield -->
+		</skills>
+	</weapon>
+
+	<weapon id="7815" name="Twilight Knife" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_hell_knife_i01" magic="true">
+	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 14%. -->
+		<restriction freightable="false"/>
+		<attributes weight="740" price="8680000" commission-type="DAGGER"/>
+		<crystal type="B" count="1157"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="122.0"/>
+			<stat type="mAtk" value="122.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+		<skills>
+			<skill id="1164" level="11" type="ON_MAGIC_SKILL" chance="7"/>  <!-- Curse Weakness -->
+		</skills>
+	</weapon>
+
+	<armor id="7850" name="Moon Helmet" type="NONE" body-part="HEAD" icon="icon.armor_helmet_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="640" commission-type="HELMET" />
+		<crystal type="D" count="1157"/>
+		<stats>
+			<stat type="pDef" value="37.0"/>
+		</stats>
+	</armor>
+
+	<armor id="7851" name="Moon Armor" type="HEAVY" body-part="FULL_ARMOR" icon="icon.armor_t1001_ul_i00">
+	<!-- Full Armor.  -->
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="9870" commission-type="FULL_BODY" />
+		<crystal type="D" count="1157"/>
+		<stats>
+			<stat type="pDef" value="158.0"/>
+		</stats>
+	</armor>
+
+	<armor id="7852" name="Moon Gauntlets" type="NONE" body-part="GLOVES" icon="icon.armor_t1001_g_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="640" commission-type="GLOVES" />
+		<crystal type="D" count="1157"/>
+		<stats>
+			<stat type="pDef" value="24.0"/>
+		</stats>
+	</armor>
+
+	<armor id="7853" name="Moon Boots" type="NONE" body-part="FEET" icon="icon.armor_t1001_b_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1280" commission-type="FEET" />
+		<crystal type="D" count="1157"/>
+		<stats>
+			<stat type="pDef" value="24.0"/>
+		</stats>
+	</armor>
+
+	<armor id="7854" name="Moon Shell" type="LIGHT" body-part="FULL_ARMOR" icon="icon.armor_t1002_ul_i00">
+	<!-- Full Armor.  -->
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="5400" commission-type="FULL_BODY" />
+		<crystal type="D" count="1157"/>
+		<stats>
+			<stat type="pDef" value="119.0"/>
+		</stats>
+	</armor>
+
+	<armor id="7855" name="Moon Leather Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t1002_g_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="640" commission-type="GLOVES" />
+		<crystal type="D" count="1157"/>
+		<stats>
+			<stat type="pDef" value="24.0"/>
+		</stats>
+	</armor>
+
+	<armor id="7856" name="Moon Shoes" type="NONE" body-part="FEET" icon="icon.armor_t1002_b_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1280" commission-type="FEET" />
+		<crystal type="D" count="1157"/>
+		<stats>
+			<stat type="pDef" value="24.0"/>
+		</stats>
+	</armor>
+
+	<armor id="7857" name="Moon Cape" type="MAGIC" body-part="FULL_ARMOR" icon="icon.armor_t1003_ul_i00">
+	<!-- Full Armor.   -->
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="2450" commission-type="FULL_BODY" />
+		<crystal type="D" count="1157"/>
+		<stats>
+			<stat type="pDef" value="79.0"/>
+			<stat type="maxMp" value="239.0"/>
+		</stats>
+	</armor>
+
+	<armor id="7858" name="Moon Silk Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t1003_g_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="640" commission-type="GLOVES" />
+		<crystal type="D" count="1157"/>
+		<stats>
+			<stat type="pDef" value="24.0"/>
+		</stats>
+	</armor>
+
+	<armor id="7859" name="Moon Sandals" type="NONE" body-part="FEET" icon="icon.armor_t1003_b_i00">
+		<restriction tradable="false" dropable="false"/>
+		<attributes weight="1280" commission-type="FEET" />
+		<crystal type="D" count="1157"/>
+		<stats>
+			<stat type="pDef" value="24.0"/>
+		</stats>
+	</armor>
+
+	<weapon id="7880" name="Steel Sword" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_iron_sword_i00">
+		<restriction freightable="false"/>
+		<attributes weight="2100" price="409000" commission-type="TWO_HAND_SWORD" change-weapon="9211"/>
+		<crystal type="D" count="743"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="49.0"/>
+			<stat type="mAtk" value="26.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="7881" name="Lesser Giant's Sword" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_giants_sword_i00">
+		<restriction freightable="false"/>
+		<attributes weight="2020" price="1400000" commission-type="TWO_HAND_SWORD" change-weapon="9223"/>
+		<crystal type="D" count="2545"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="96.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="7882" name="Pa'agrian Sword" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_sword_of_paagrio_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1980" price="4300000" commission-type="TWO_HAND_SWORD" change-weapon="9284"/>
+		<crystal type="C" count="1720"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="169.0"/>
+			<stat type="mAtk" value="76.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="7883" name="Guardian's Sword" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_guardians_sword_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1930" price="13100000" commission-type="TWO_HAND_SWORD" change-weapon="9320"/>
+		<crystal type="B" count="1746"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="236.0"/>
+			<stat type="mAtk" value="99.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="7884" name="Infernal Master" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_inferno_master_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1900" price="14098000" commission-type="TWO_HAND_SWORD" change-weapon="9332"/>
+		<crystal type="A" count="1128"/>
+		<damage radius="46" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="259.0"/>
+			<stat type="mAtk" value="107.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="7885" name="Priest Sword" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_priest_i00" magic="true">
+		<restriction freightable="false"/>
+		<attributes weight="1520" price="409000" commission-type="ONE_HAND_MAGIC_SWORD"/>
+		<crystal type="D" count="743"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="32.0"/>
+			<stat type="mAtk" value="35.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="7886" name="Sword of Magic Fog" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_magic_fog_i00" magic="true">
+		<restriction freightable="false"/>
+		<attributes weight="1450" price="1400000" commission-type="ONE_HAND_MAGIC_SWORD"/>
+		<crystal type="D" count="2545"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="63.0"/>
+			<stat type="mAtk" value="63.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="7887" name="Mysterious Sword" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_mystery_sword_i00" magic="true">
+		<restriction freightable="false"/>
+		<attributes weight="1430" price="2290000" commission-type="ONE_HAND_MAGIC_SWORD"/>
+		<crystal type="C" count="916"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="85.0"/>
+			<stat type="mAtk" value="81.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="7888" name="Ecliptic Sword" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_eclipse_i00" magic="true">
+		<restriction freightable="false"/>
+		<attributes weight="1380" price="6130000" commission-type="ONE_HAND_MAGIC_SWORD"/>
+		<crystal type="C" count="2452"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="125.0"/>
+			<stat type="mAtk" value="111.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="7889" name="Wizard's Tear" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_tears_of_wizard_i00" magic="true">
+		<restriction freightable="false"/>
+		<attributes weight="1350" price="13100000" commission-type="ONE_HAND_MAGIC_SWORD"/>
+		<crystal type="B" count="1746"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="155.0"/>
+			<stat type="mAtk" value="132.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="7890" name="Priest Mace" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_mace_of_priest_i00" magic="true">
+		<restriction freightable="false"/>
+		<attributes weight="1720" price="1400000" commission-type="ONE_HAND_MAGIC_BLUNT_WEAPON"/>
+		<crystal type="D" count="2545"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="63.0"/>
+			<stat type="mAtk" value="63.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="7891" name="Ecliptic Axe" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_eclipse_axe_i00" magic="true">
+		<restriction freightable="false"/>
+		<attributes weight="1640" price="6130000" commission-type="ONE_HAND_MAGIC_BLUNT_WEAPON"/>
+		<crystal type="C" count="2452"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="125.0"/>
+			<stat type="mAtk" value="111.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="7892" name="Spell Breaker" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_spell_breaker_i00" magic="true">
+		<restriction freightable="false"/>
+		<attributes weight="1620" price="8680000" commission-type="ONE_HAND_MAGIC_BLUNT_WEAPON"/>
+		<crystal type="B" count="1157"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="140.0"/>
+			<stat type="mAtk" value="122.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="7893" name="Kaim Vanul's Bones" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_bone_of_kaim_vanul_i00" magic="true">
+		<restriction freightable="false"/>
+		<attributes weight="1570" price="13100000" commission-type="ONE_HAND_MAGIC_BLUNT_WEAPON"/>
+		<crystal type="B" count="1746"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" spiritshots="2"/>
+		<stats>
+			<stat type="pAtk" value="155.0"/>
+			<stat type="mAtk" value="132.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="7894" name="Spiritual Eye" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_eye_of_soul_i00" magic="true">
+		<restriction freightable="false"/>
+		<attributes weight="1550" price="14098000" commission-type="ONE_HAND_MAGIC_BLUNT_WEAPON"/>
+		<crystal type="A" count="1128"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="170.0"/>
+			<stat type="mAtk" value="143.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="7895" name="Flaming Dragon Skull" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_dragon_flame_head_i00" magic="true">
+		<restriction freightable="false"/>
+		<attributes weight="1530" price="20741000" commission-type="ONE_HAND_MAGIC_BLUNT_WEAPON"/>
+		<crystal type="A" count="1659"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="186.0"/>
+			<stat type="mAtk" value="152.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="7896" name="Lesser Giant's Hammer" type="HAMMER" body-part="TWO_HAND" icon="icon.weapon_giants_hammer_i00">
+		<restriction freightable="false"/>
+		<attributes weight="2100" price="1400000" commission-type="TWO_HAND_BLUNT_WEAPON"/>
+		<crystal type="D" count="2545"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="96.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="7897" name="Dwarven Hammer" type="HAMMER" body-part="TWO_HAND" icon="icon.weapon_dwarven_hammer_i00">
+		<restriction freightable="false"/>
+		<attributes weight="2010" price="6130000" commission-type="TWO_HAND_BLUNT_WEAPON"/>
+		<crystal type="C" count="2452"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="190.0"/>
+			<stat type="mAtk" value="83.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="7898" name="Karik Horn" type="HAMMER" body-part="TWO_HAND" icon="icon.weapon_horn_of_karik_i00">
+		<restriction freightable="false"/>
+		<attributes weight="2020" price="4300000" commission-type="TWO_HAND_BLUNT_WEAPON"/>
+		<crystal type="C" count="1720"/>
+		<damage radius="44" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="169.0"/>
+			<stat type="mAtk" value="76.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="7899" name="Destroyer Hammer" type="HAMMER" body-part="TWO_HAND" icon="icon.weapon_hammer_of_destroyer_i00">
+		<restriction freightable="false"/>
+		<attributes weight="1910" price="14098000" commission-type="TWO_HAND_BLUNT_WEAPON"/>
+		<crystal type="A" count="1128"/>
+		<damage radius="44" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="259.0"/>
+			<stat type="mAtk" value="107.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
 </list>

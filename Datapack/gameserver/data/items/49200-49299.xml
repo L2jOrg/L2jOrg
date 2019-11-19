@@ -1,2086 +1,1865 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <weapon id="49200" name="Skull Breaker" icon="icon.weapon_skull_breaker_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1740"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">79</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49201" name="Skull Breaker" icon="icon.weapon_skull_breaker_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1740"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">79</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49202" name="Skull Breaker" icon="icon.weapon_skull_breaker_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1740"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">79</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49203" name="Heavy Bone Club" icon="icon.weapon_heavy_bone_club_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1730"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">79</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49204" name="Heavy Bone Club" icon="icon.weapon_heavy_bone_club_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1730"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">79</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49205" name="Heavy Bone Club" icon="icon.weapon_heavy_bone_club_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1730"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">79</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">379</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49206" name="Crafted Dagger" icon="icon.weapon_handiwork_dagger_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1100"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">35</stat>
-            <stat type="mAtk">26</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49207" name="Crafted Dagger" icon="icon.weapon_handiwork_dagger_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 5%. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1100"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">35</stat>
-            <stat type="mAtk">26</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49208" name="Crafted Dagger" icon="icon.weapon_handiwork_dagger_i01">
-        <!-- <Soul Crystal Enhancement>\\Increases the chance of success of  performing the skills hitting vulnerable spots on enemy's body. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1100"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">35</stat>
-            <stat type="mAtk">26</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49209" name="Assassin Knife" icon="icon.weapon_assassin_knife_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1100"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">35</stat>
-            <stat type="mAtk">26</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49210" name="Assassin Knife" icon="icon.weapon_assassin_knife_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 5%. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1100"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">35</stat>
-            <stat type="mAtk">26</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49211" name="Assassin Knife" icon="icon.weapon_assassin_knife_i01">
-        <!-- <Soul Crystal Enhancement>\\Increases the chance of success of  performing the skills hitting vulnerable spots on enemy's body. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1100"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">35</stat>
-            <stat type="mAtk">26</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49212" name="Poniard Dagger" icon="icon.weapon_dirk_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1090"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">45</stat>
-            <stat type="mAtk">32</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49213" name="Poniard Dagger" icon="icon.weapon_dirk_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 5%. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1090"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">45</stat>
-            <stat type="mAtk">32</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49214" name="Poniard Dagger" icon="icon.weapon_dirk_i01">
-        <!-- <Soul Crystal Enhancement>\\Increases the chance of success of  performing the skills hitting vulnerable spots on enemy's body. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1090"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">45</stat>
-            <stat type="mAtk">32</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49215" name="Kukuri" icon="icon.weapon_kukuri_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1080"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">56</stat>
-            <stat type="mAtk">39</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49216" name="Kukuri" icon="icon.weapon_kukuri_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 5%. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1080"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">56</stat>
-            <stat type="mAtk">39</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49217" name="Kukuri" icon="icon.weapon_kukuri_i01">
-        <!-- <Soul Crystal Enhancement>\\Increases the chance of success of  performing the skills hitting vulnerable spots on enemy's body. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1080"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">56</stat>
-            <stat type="mAtk">39</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49218" name="Maingauche" icon="icon.weapon_maingauche_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1070"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">69</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49219" name="Maingauche" icon="icon.weapon_maingauche_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 5%. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1070"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">69</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49220" name="Maingauche" icon="icon.weapon_maingauche_i01">
-        <!-- <Soul Crystal Enhancement>\\Increases the chance of success of  performing the skills hitting vulnerable spots on enemy's body. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1070"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">69</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49221" name="Mithril Dagger" icon="icon.weapon_mithril_dagger_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1060"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">80</stat>
-            <stat type="mAtk">54</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49222" name="Mithril Dagger" icon="icon.weapon_mithril_dagger_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 5%. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1060"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">80</stat>
-            <stat type="mAtk">54</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49223" name="Mithril Dagger" icon="icon.weapon_mithril_dagger_i01">
-        <!-- <Soul Crystal Enhancement>\\Increases the chance of success of  performing the skills hitting vulnerable spots on enemy's body. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1060"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">80</stat>
-            <stat type="mAtk">54</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49224" name="Cursed Maingauche" icon="icon.t01">
-        <!-- Can inflict Bleeding after Critical Attack with a certain probability. <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1070"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">62</stat>
-            <stat type="mAtk">42</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49225" name="Cursed Maingauche" icon="icon.t01">
-        <!-- Can inflict Bleeding after Critical Attack with a certain probability. <Soul Crystal Enhancement>. Increases Atk. Spd. by 5%. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1070"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">62</stat>
-            <stat type="mAtk">42</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49226" name="Cursed Maingauche" icon="icon.t01">
-        <!-- Can inflict Bleeding after Critical Attack with a certain probability. <Soul Crystal Enhancement>\\Increases the chance of success of  performing the skills hitting vulnerable spots on enemy's body. -->
-        <set name="weapon_type" val="DAGGER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1070"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">62</stat>
-            <stat type="mAtk">42</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49227" name="Lesser Giant's Hammer" icon="icon.weapon_giants_hammer_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2100"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">96</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49228" name="Lesser Giant's Hammer" icon="icon.weapon_giants_hammer_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2100"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">96</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49229" name="Lesser Giant's Hammer" icon="icon.weapon_giants_hammer_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. + 183 during a Critical Attack. -->
-        <set name="weapon_type" val="BLUNT"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2100"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">96</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">20</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49230" name="Reinforced Bow" icon="icon.weapon_strengthening_bow_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 60. -->
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1870"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="2"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">82</stat>
-            <stat type="mAtk">26</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">293</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="49231" name="Reinforced Bow" icon="icon.weapon_strengthening_bow_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1870"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="2"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">82</stat>
-            <stat type="mAtk">26</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">293</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="49232" name="Reinforced Bow" icon="icon.weapon_strengthening_bow_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. + 80 during a Critical Attack. -->
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1870"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="2"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">82</stat>
-            <stat type="mAtk">26</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">293</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="49233" name="Longbow" icon="icon.weapon_long_bow_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 60. -->
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1830"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="2"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">114</stat>
-            <stat type="mAtk">35</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">227</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="49234" name="Longbow" icon="icon.weapon_long_bow_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1830"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="2"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">114</stat>
-            <stat type="mAtk">35</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">227</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="49235" name="Longbow" icon="icon.weapon_long_bow_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. + 80 during a Critical Attack. -->
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1830"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="2"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">114</stat>
-            <stat type="mAtk">35</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">227</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="49236" name="Elven Bow" icon="icon.weapon_elven_bow_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 60. -->
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1850"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="2"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">105</stat>
-            <stat type="mAtk">32</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">293</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="49237" name="Elven Bow" icon="icon.weapon_elven_bow_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1850"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="2"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">105</stat>
-            <stat type="mAtk">32</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">293</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="49238" name="Elven Bow" icon="icon.weapon_elven_bow_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. + 80 during a Critical Attack. -->
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1850"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="2"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">105</stat>
-            <stat type="mAtk">32</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">293</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="49239" name="Dark Elven Bow" icon="icon.weapon_dark_elven_bow_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 60. -->
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1830"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="2"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">105</stat>
-            <stat type="mAtk">32</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">293</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="49240" name="Dark Elven Bow" icon="icon.weapon_dark_elven_bow_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1830"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="2"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">105</stat>
-            <stat type="mAtk">32</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">293</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="49241" name="Dark Elven Bow" icon="icon.weapon_dark_elven_bow_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. + 80 during a Critical Attack. -->
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1830"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="2"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">105</stat>
-            <stat type="mAtk">32</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">293</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="49242" name="Gastraphetes" icon="icon.weapon_gastraphetes_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 60. -->
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1840"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="2"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">132</stat>
-            <stat type="mAtk">39</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">293</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="49243" name="Gastraphetes" icon="icon.weapon_gastraphetes_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1840"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="2"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">132</stat>
-            <stat type="mAtk">39</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">293</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="49244" name="Gastraphetes" icon="icon.weapon_gastraphetes_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. + 80 during a Critical Attack. -->
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1840"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="2"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">132</stat>
-            <stat type="mAtk">39</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">293</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="49245" name="Reinforced Longbow" icon="icon.weapon_strengthening_long_bow_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 60. -->
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1820"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="2"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">179</stat>
-            <stat type="mAtk">51</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">227</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="49246" name="Reinforced Longbow" icon="icon.weapon_strengthening_long_bow_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1820"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="2"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">179</stat>
-            <stat type="mAtk">51</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">227</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="49247" name="Reinforced Longbow" icon="icon.weapon_strengthening_long_bow_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. + 80 during a Critical Attack. -->
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1820"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="1"/>
-        <set name="mp_consume" val="2"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">179</stat>
-            <stat type="mAtk">51</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">227</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="49248" name="Light Crossbow" icon="icon.weapon_cyclone_bow_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 60. -->
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1810"/>
-        <set name="soulshots" val="3"/>
-        <set name="spiritshots" val="2"/>
-        <set name="mp_consume" val="2"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">191</stat>
-            <stat type="mAtk">54</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">293</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="49249" name="Light Crossbow" icon="icon.weapon_cyclone_bow_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1810"/>
-        <set name="soulshots" val="3"/>
-        <set name="spiritshots" val="2"/>
-        <set name="mp_consume" val="2"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">191</stat>
-            <stat type="mAtk">54</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">293</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="49250" name="Light Crossbow" icon="icon.weapon_cyclone_bow_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. + 80 during a Critical Attack. -->
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1810"/>
-        <set name="soulshots" val="3"/>
-        <set name="spiritshots" val="2"/>
-        <set name="mp_consume" val="2"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">191</stat>
-            <stat type="mAtk">54</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">293</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="49251" name="Bagh-Nakh" icon="icon.weapon_baghnakh_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1540"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">49</stat>
-            <stat type="mAtk">26</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49252" name="Bagh-Nakh" icon="icon.weapon_baghnakh_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1540"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">49</stat>
-            <stat type="mAtk">26</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49253" name="Bagh-Nakh" icon="icon.weapon_baghnakh_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. + 183 during a Critical Attack. -->
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1540"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">49</stat>
-            <stat type="mAtk">26</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49254" name="Single-Edged Jamadhr" icon="icon.weapon_single-edged_jamadhr_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1550"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">62</stat>
-            <stat type="mAtk">32</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49255" name="Single-Edged Jamadhr" icon="icon.weapon_single-edged_jamadhr_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1550"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">62</stat>
-            <stat type="mAtk">32</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49256" name="Single-Edged Jamadhr" icon="icon.weapon_single-edged_jamadhr_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. + 183 during a Critical Attack. -->
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1550"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">62</stat>
-            <stat type="mAtk">32</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49257" name="Triple-Edged Jamadhr" icon="icon.weapon_triple-edged_jamadhr_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1540"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">78</stat>
-            <stat type="mAtk">39</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49258" name="Triple-Edged Jamadhr" icon="icon.weapon_triple-edged_jamadhr_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1540"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">78</stat>
-            <stat type="mAtk">39</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49259" name="Triple-Edged Jamadhr" icon="icon.weapon_triple-edged_jamadhr_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. + 183 during a Critical Attack. -->
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1540"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">78</stat>
-            <stat type="mAtk">39</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49260" name="Bich'Hwa" icon="icon.weapon_bichhwa_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1510"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">96</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49261" name="Bich'Hwa" icon="icon.weapon_bichhwa_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1510"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">96</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49262" name="Bich'Hwa" icon="icon.weapon_bichhwa_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. + 183 during a Critical Attack. -->
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1510"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">96</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49263" name="Scallop Jamadhr" icon="icon.weapon_scallop_jamadhr_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1520"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">112</stat>
-            <stat type="mAtk">54</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49264" name="Scallop Jamadhr" icon="icon.weapon_scallop_jamadhr_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1520"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">112</stat>
-            <stat type="mAtk">54</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49265" name="Scallop Jamadhr" icon="icon.weapon_scallop_jamadhr_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. + 183 during a Critical Attack. -->
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1520"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">112</stat>
-            <stat type="mAtk">54</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49266" name="Winged Spear" icon="icon.weapon_winged_spear_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 75. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2060"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">79</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="49267" name="Winged Spear" icon="icon.weapon_winged_spear_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2060"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">79</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="49268" name="Winged Spear" icon="icon.weapon_winged_spear_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2060"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">79</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="49269" name="Trident" icon="icon.weapon_trident_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 75. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2100"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">40</stat>
-            <stat type="mAtk">26</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="49270" name="Trident" icon="icon.weapon_trident_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2100"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">40</stat>
-            <stat type="mAtk">26</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="49271" name="Trident" icon="icon.weapon_trident_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2100"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">40</stat>
-            <stat type="mAtk">26</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="49272" name="Pike" icon="icon.weapon_pike_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 75. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2090"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">51</stat>
-            <stat type="mAtk">32</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="49273" name="Pike" icon="icon.weapon_pike_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2090"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">51</stat>
-            <stat type="mAtk">32</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="49274" name="Pike" icon="icon.weapon_pike_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2090"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">51</stat>
-            <stat type="mAtk">32</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="49275" name="War Hammer" icon="icon.weapon_war_hammer_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 75. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2080"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">64</stat>
-            <stat type="mAtk">39</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="49276" name="War Hammer" icon="icon.weapon_war_hammer_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2080"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">64</stat>
-            <stat type="mAtk">39</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="49277" name="War Hammer" icon="icon.weapon_war_hammer_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2080"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">64</stat>
-            <stat type="mAtk">39</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="49278" name="War Pick" icon="icon.weapon_hammer_in_flames_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 75. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2050"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">79</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="49279" name="War Pick" icon="icon.weapon_hammer_in_flames_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2050"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">79</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="49280" name="War Pick" icon="icon.weapon_hammer_in_flames_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2050"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">79</stat>
-            <stat type="mAtk">47</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="49281" name="Dwarven Trident" icon="icon.weapon_dwarven_trident_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 75. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2090"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">51</stat>
-            <stat type="mAtk">32</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="49282" name="Dwarven Trident" icon="icon.weapon_dwarven_trident_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2090"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">51</stat>
-            <stat type="mAtk">32</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="49283" name="Dwarven Trident" icon="icon.weapon_dwarven_trident_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2090"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">51</stat>
-            <stat type="mAtk">32</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="49284" name="Dwarven Pike" icon="icon.weapon_dwarven_pike_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 75. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2070"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">64</stat>
-            <stat type="mAtk">39</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="49285" name="Dwarven Pike" icon="icon.weapon_dwarven_pike_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2070"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">64</stat>
-            <stat type="mAtk">39</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="49286" name="Dwarven Pike" icon="icon.weapon_dwarven_pike_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2070"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">64</stat>
-            <stat type="mAtk">39</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="49287" name="Glaive" icon="icon.weapon_glaive_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 75. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2050"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">92</stat>
-            <stat type="mAtk">54</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="49288" name="Glaive" icon="icon.weapon_glaive_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2050"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">92</stat>
-            <stat type="mAtk">54</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="49289" name="Glaive" icon="icon.weapon_glaive_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2050"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">92</stat>
-            <stat type="mAtk">54</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="49290" name="Claymore" icon="icon.weapon_claymore_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 75. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2090"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">112</stat>
-            <stat type="mAtk">54</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49291" name="Claymore" icon="icon.weapon_claymore_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2090"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">112</stat>
-            <stat type="mAtk">54</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49292" name="Claymore" icon="icon.weapon_claymore_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. + 183 during a Critical Attack. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2090"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">112</stat>
-            <stat type="mAtk">54</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49293" name="Two-handed Sword" icon="icon.weapon_two_handed_sword_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 75. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2180"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">78</stat>
-            <stat type="mAtk">39</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49294" name="Two-handed Sword" icon="icon.weapon_two_handed_sword_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2180"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">78</stat>
-            <stat type="mAtk">39</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49295" name="Two-handed Sword" icon="icon.weapon_two_handed_sword_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. + 183 during a Critical Attack. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2180"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">78</stat>
-            <stat type="mAtk">39</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49296" name="Heavy Sword" icon="icon.weapon_heavy_sword_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 75. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1520"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">49</stat>
-            <stat type="mAtk">26</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49297" name="Heavy Sword" icon="icon.weapon_heavy_sword_i01">
-        <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1520"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">49</stat>
-            <stat type="mAtk">26</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49298" name="Heavy Sword" icon="icon.weapon_heavy_sword_i01">
-        <!-- <Soul Crystal Enhancement>. P. Atk. + 183 during a Critical Attack. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="1520"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">49</stat>
-            <stat type="mAtk">26</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="49299" name="Steel Sword" icon="icon.weapon_iron_sword_i01">
-        <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 75. -->
-        <set name="weapon_type" val="SWORD"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="weight" val="2100"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <set name="enchant_enabled" val="1"/>
-        <stats>
-            <stat type="pAtk">49</stat>
-            <stat type="mAtk">26</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
+	<weapon id="49200" name="Skull Breaker" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_skull_breaker_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 73. -->
+		<restriction freightable="false"/>
+		<attributes weight="1740" price="1400000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="79.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49201" name="Skull Breaker" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_skull_breaker_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 8%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1740" price="1400000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="79.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49202" name="Skull Breaker" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_skull_breaker_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 136 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="1740" price="1400000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="79.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49203" name="Heavy Bone Club" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_heavy_bone_club_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 73. -->
+		<restriction freightable="false"/>
+		<attributes weight="1730" price="1400000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="79.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49204" name="Heavy Bone Club" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_heavy_bone_club_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 8%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1730" price="1400000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="79.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49205" name="Heavy Bone Club" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_heavy_bone_club_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 136 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="1730" price="1400000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="79.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="379.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49206" name="Crafted Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_handiwork_dagger_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 73. -->
+		<restriction freightable="false"/>
+		<attributes weight="1100" price="409000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="35.0"/>
+			<stat type="mAtk" value="26.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49207" name="Crafted Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_handiwork_dagger_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 5%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1100" price="409000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="35.0"/>
+			<stat type="mAtk" value="26.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49208" name="Crafted Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_handiwork_dagger_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases success rate of vital spot attacks. -->
+		<restriction freightable="false"/>
+		<attributes weight="1100" price="409000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="35.0"/>
+			<stat type="mAtk" value="26.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49209" name="Assassin Knife" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_assassin_knife_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 73. -->
+		<restriction freightable="false"/>
+		<attributes weight="1100" price="409000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="35.0"/>
+			<stat type="mAtk" value="26.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49210" name="Assassin Knife" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_assassin_knife_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 5%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1100" price="409000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="35.0"/>
+			<stat type="mAtk" value="26.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49211" name="Assassin Knife" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_assassin_knife_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases success rate of vital spot attacks. -->
+		<restriction freightable="false"/>
+		<attributes weight="1100" price="409000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="35.0"/>
+			<stat type="mAtk" value="26.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49212" name="Poniard Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_dirk_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 73. -->
+		<restriction freightable="false"/>
+		<attributes weight="1090" price="644000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="45.0"/>
+			<stat type="mAtk" value="32.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49213" name="Poniard Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_dirk_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 5%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1090" price="644000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="45.0"/>
+			<stat type="mAtk" value="32.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49214" name="Poniard Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_dirk_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases success rate of vital spot attacks. -->
+		<restriction freightable="false"/>
+		<attributes weight="1090" price="644000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="45.0"/>
+			<stat type="mAtk" value="32.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49215" name="Kukuri" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_kukuri_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 73. -->
+		<restriction freightable="false"/>
+		<attributes weight="1080" price="967000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="56.0"/>
+			<stat type="mAtk" value="39.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49216" name="Kukuri" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_kukuri_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 5%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1080" price="967000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="56.0"/>
+			<stat type="mAtk" value="39.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49217" name="Kukuri" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_kukuri_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases success rate of vital spot attacks. -->
+		<restriction freightable="false"/>
+		<attributes weight="1080" price="967000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="56.0"/>
+			<stat type="mAtk" value="39.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49218" name="Maingauche" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_maingauche_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 73. -->
+		<restriction freightable="false"/>
+		<attributes weight="1070" price="1400000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="69.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49219" name="Maingauche" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_maingauche_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 5%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1070" price="1400000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="69.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49220" name="Maingauche" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_maingauche_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases success rate of vital spot attacks. -->
+		<restriction freightable="false"/>
+		<attributes weight="1070" price="1400000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="69.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49221" name="Mithril Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_mithril_dagger_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 73. -->
+		<restriction freightable="false"/>
+		<attributes weight="1060" price="1800000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="80.0"/>
+			<stat type="mAtk" value="54.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49222" name="Mithril Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_mithril_dagger_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 5%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1060" price="1800000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="80.0"/>
+			<stat type="mAtk" value="54.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49223" name="Mithril Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_mithril_dagger_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases success rate of vital spot attacks. -->
+		<restriction freightable="false"/>
+		<attributes weight="1060" price="1800000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="80.0"/>
+			<stat type="mAtk" value="54.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49224" name="Cursed Maingauche" type="DAGGER" body-part="RIGHT_HAND" icon="icon.t01">
+	<!-- It gives Bleeding effect with a certain rate during Critical Attacks.\\n<Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 73. -->
+		<restriction freightable="false"/>
+		<attributes weight="1070" price="1400000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="62.0"/>
+			<stat type="mAtk" value="42.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49225" name="Cursed Maingauche" type="DAGGER" body-part="RIGHT_HAND" icon="icon.t01">
+	<!-- It gives Bleeding effect with a certain rate during Critical Attacks.\\n<Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 5%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1070" price="1400000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="62.0"/>
+			<stat type="mAtk" value="42.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49226" name="Cursed Maingauche" type="DAGGER" body-part="RIGHT_HAND" icon="icon.t01">
+	<!-- It gives Bleeding effect with a certain rate during Critical Attacks.\\n<Soul Crystal Enhancement>\\nIncreases success rate of vital spot attacks. -->
+		<restriction freightable="false"/>
+		<attributes weight="1070" price="1400000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="62.0"/>
+			<stat type="mAtk" value="42.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49227" name="Lesser Giant's Hammer" type="HAMMER" body-part="TWO_HAND" icon="icon.weapon_giants_hammer_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 73. -->
+		<restriction freightable="false"/>
+		<attributes weight="2100" price="1400000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="96.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49228" name="Lesser Giant's Hammer" type="HAMMER" body-part="TWO_HAND" icon="icon.weapon_giants_hammer_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 9%. -->
+		<restriction freightable="false"/>
+		<attributes weight="2100" price="1400000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="96.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49229" name="Lesser Giant's Hammer" type="HAMMER" body-part="TWO_HAND" icon="icon.weapon_giants_hammer_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 183 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="2100" price="1400000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="96.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="20.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49230" name="Reinforced Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_strengthening_bow_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 60. -->
+		<restriction freightable="false"/>
+		<attributes weight="1870" price="409000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="2"/>
+		<stats>
+			<stat type="pAtk" value="82.0"/>
+			<stat type="mAtk" value="26.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="293.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49231" name="Reinforced Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_strengthening_bow_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 9%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1870" price="409000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="2"/>
+		<stats>
+			<stat type="pAtk" value="82.0"/>
+			<stat type="mAtk" value="26.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="293.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49232" name="Reinforced Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_strengthening_bow_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 80 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="1870" price="409000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="2"/>
+		<stats>
+			<stat type="pAtk" value="82.0"/>
+			<stat type="mAtk" value="26.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="293.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49233" name="Longbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_long_bow_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 60. -->
+		<restriction freightable="false"/>
+		<attributes weight="1830" price="644000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="2"/>
+		<stats>
+			<stat type="pAtk" value="114.0"/>
+			<stat type="mAtk" value="35.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="227.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49234" name="Longbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_long_bow_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 9%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1830" price="644000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="2"/>
+		<stats>
+			<stat type="pAtk" value="114.0"/>
+			<stat type="mAtk" value="35.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="227.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49235" name="Longbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_long_bow_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 80 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="1830" price="644000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="2"/>
+		<stats>
+			<stat type="pAtk" value="114.0"/>
+			<stat type="mAtk" value="35.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="227.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49236" name="Elven Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_elven_bow_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 60. -->
+		<restriction freightable="false"/>
+		<attributes weight="1850" price="644000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="2"/>
+		<stats>
+			<stat type="pAtk" value="105.0"/>
+			<stat type="mAtk" value="32.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="293.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49237" name="Elven Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_elven_bow_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 9%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1850" price="644000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="2"/>
+		<stats>
+			<stat type="pAtk" value="105.0"/>
+			<stat type="mAtk" value="32.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="293.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49238" name="Elven Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_elven_bow_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 80 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="1850" price="644000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="2"/>
+		<stats>
+			<stat type="pAtk" value="105.0"/>
+			<stat type="mAtk" value="32.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="293.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49239" name="Dark Elven Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_dark_elven_bow_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 60. -->
+		<restriction freightable="false"/>
+		<attributes weight="1830" price="644000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="2"/>
+		<stats>
+			<stat type="pAtk" value="105.0"/>
+			<stat type="mAtk" value="32.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="293.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49240" name="Dark Elven Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_dark_elven_bow_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 9%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1830" price="644000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="2"/>
+		<stats>
+			<stat type="pAtk" value="105.0"/>
+			<stat type="mAtk" value="32.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="293.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49241" name="Dark Elven Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_dark_elven_bow_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 80 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="1830" price="644000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="2"/>
+		<stats>
+			<stat type="pAtk" value="105.0"/>
+			<stat type="mAtk" value="32.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="293.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49242" name="Gastraphetes" type="BOW" body-part="TWO_HAND" icon="icon.weapon_gastraphetes_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 60. -->
+		<restriction freightable="false"/>
+		<attributes weight="1840" price="967000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="2"/>
+		<stats>
+			<stat type="pAtk" value="132.0"/>
+			<stat type="mAtk" value="39.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="293.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49243" name="Gastraphetes" type="BOW" body-part="TWO_HAND" icon="icon.weapon_gastraphetes_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 9%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1840" price="967000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="2"/>
+		<stats>
+			<stat type="pAtk" value="132.0"/>
+			<stat type="mAtk" value="39.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="293.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49244" name="Gastraphetes" type="BOW" body-part="TWO_HAND" icon="icon.weapon_gastraphetes_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 80 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="1840" price="967000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="2"/>
+		<stats>
+			<stat type="pAtk" value="132.0"/>
+			<stat type="mAtk" value="39.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="293.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49245" name="Reinforced Longbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_strengthening_long_bow_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 60. -->
+		<restriction freightable="false"/>
+		<attributes weight="1820" price="1400000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="2"/>
+		<stats>
+			<stat type="pAtk" value="179.0"/>
+			<stat type="mAtk" value="51.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="227.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49246" name="Reinforced Longbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_strengthening_long_bow_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 9%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1820" price="1400000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="2"/>
+		<stats>
+			<stat type="pAtk" value="179.0"/>
+			<stat type="mAtk" value="51.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="227.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49247" name="Reinforced Longbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_strengthening_long_bow_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 80 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="1820" price="1400000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="2"/>
+		<stats>
+			<stat type="pAtk" value="179.0"/>
+			<stat type="mAtk" value="51.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="227.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49248" name="Light Crossbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_cyclone_bow_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 60. -->
+		<restriction freightable="false"/>
+		<attributes weight="1810" price="1800000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="2"/>
+		<stats>
+			<stat type="pAtk" value="191.0"/>
+			<stat type="mAtk" value="54.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="293.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49249" name="Light Crossbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_cyclone_bow_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 9%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1810" price="1800000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="2"/>
+		<stats>
+			<stat type="pAtk" value="191.0"/>
+			<stat type="mAtk" value="54.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="293.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49250" name="Light Crossbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_cyclone_bow_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 80 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="1810" price="1800000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="2" mana="2"/>
+		<stats>
+			<stat type="pAtk" value="191.0"/>
+			<stat type="mAtk" value="54.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="293.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49251" name="Bagh-Nakh" type="FIST" body-part="TWO_HAND" icon="icon.weapon_baghnakh_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 73. -->
+		<restriction freightable="false"/>
+		<attributes weight="1540" price="409000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="49.0"/>
+			<stat type="mAtk" value="26.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49252" name="Bagh-Nakh" type="FIST" body-part="TWO_HAND" icon="icon.weapon_baghnakh_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 9%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1540" price="409000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="49.0"/>
+			<stat type="mAtk" value="26.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49253" name="Bagh-Nakh" type="FIST" body-part="TWO_HAND" icon="icon.weapon_baghnakh_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 183 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="1540" price="409000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="49.0"/>
+			<stat type="mAtk" value="26.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49254" name="Single-Edged Jamadhr" type="FIST" body-part="TWO_HAND" icon="icon.weapon_single-edged_jamadhr_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 73. -->
+		<restriction freightable="false"/>
+		<attributes weight="1550" price="644000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="62.0"/>
+			<stat type="mAtk" value="32.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49255" name="Single-Edged Jamadhr" type="FIST" body-part="TWO_HAND" icon="icon.weapon_single-edged_jamadhr_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 9%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1550" price="644000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="62.0"/>
+			<stat type="mAtk" value="32.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49256" name="Single-Edged Jamadhr" type="FIST" body-part="TWO_HAND" icon="icon.weapon_single-edged_jamadhr_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 183 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="1550" price="644000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="62.0"/>
+			<stat type="mAtk" value="32.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49257" name="Triple-Edged Jamadhr" type="FIST" body-part="TWO_HAND" icon="icon.weapon_triple-edged_jamadhr_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 73. -->
+		<restriction freightable="false"/>
+		<attributes weight="1540" price="967000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="78.0"/>
+			<stat type="mAtk" value="39.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49258" name="Triple-Edged Jamadhr" type="FIST" body-part="TWO_HAND" icon="icon.weapon_triple-edged_jamadhr_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 9%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1540" price="967000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="78.0"/>
+			<stat type="mAtk" value="39.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49259" name="Triple-Edged Jamadhr" type="FIST" body-part="TWO_HAND" icon="icon.weapon_triple-edged_jamadhr_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 183 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="1540" price="967000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="78.0"/>
+			<stat type="mAtk" value="39.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49260" name="Bich'Hwa" type="FIST" body-part="TWO_HAND" icon="icon.weapon_bichhwa_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 73. -->
+		<restriction freightable="false"/>
+		<attributes weight="1510" price="1400000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="96.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49261" name="Bich'Hwa" type="FIST" body-part="TWO_HAND" icon="icon.weapon_bichhwa_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 9%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1510" price="1400000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="96.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49262" name="Bich'Hwa" type="FIST" body-part="TWO_HAND" icon="icon.weapon_bichhwa_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 183 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="1510" price="1400000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="96.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49263" name="Scallop Jamadhr" type="FIST" body-part="TWO_HAND" icon="icon.weapon_scallop_jamadhr_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 73. -->
+		<restriction freightable="false"/>
+		<attributes weight="1520" price="1800000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="112.0"/>
+			<stat type="mAtk" value="54.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49264" name="Scallop Jamadhr" type="FIST" body-part="TWO_HAND" icon="icon.weapon_scallop_jamadhr_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 9%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1520" price="1800000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="112.0"/>
+			<stat type="mAtk" value="54.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49265" name="Scallop Jamadhr" type="FIST" body-part="TWO_HAND" icon="icon.weapon_scallop_jamadhr_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 183 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="1520" price="1800000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="112.0"/>
+			<stat type="mAtk" value="54.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49266" name="Winged Spear" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_winged_spear_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 75. -->
+		<restriction freightable="false"/>
+		<attributes weight="2060" price="1400000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="79.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="49267" name="Winged Spear" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_winged_spear_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 9%. -->
+		<restriction freightable="false"/>
+		<attributes weight="2060" price="1400000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="79.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="49268" name="Winged Spear" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_winged_spear_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 136 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="2060" price="1400000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="79.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="49269" name="Trident" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_trident_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 75. -->
+		<restriction freightable="false"/>
+		<attributes weight="2100" price="409000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="40.0"/>
+			<stat type="mAtk" value="26.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="49270" name="Trident" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_trident_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 9%. -->
+		<restriction freightable="false"/>
+		<attributes weight="2100" price="409000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="40.0"/>
+			<stat type="mAtk" value="26.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="49271" name="Trident" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_trident_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 136 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="2100" price="409000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="40.0"/>
+			<stat type="mAtk" value="26.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="49272" name="Pike" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_pike_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 75. -->
+		<restriction freightable="false"/>
+		<attributes weight="2090" price="644000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="51.0"/>
+			<stat type="mAtk" value="32.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="49273" name="Pike" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_pike_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 9%. -->
+		<restriction freightable="false"/>
+		<attributes weight="2090" price="644000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="51.0"/>
+			<stat type="mAtk" value="32.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="49274" name="Pike" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_pike_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 136 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="2090" price="644000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="51.0"/>
+			<stat type="mAtk" value="32.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="49275" name="War Hammer" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_war_hammer_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 75. -->
+		<restriction freightable="false"/>
+		<attributes weight="2080" price="967000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="64.0"/>
+			<stat type="mAtk" value="39.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="49276" name="War Hammer" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_war_hammer_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 9%. -->
+		<restriction freightable="false"/>
+		<attributes weight="2080" price="967000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="64.0"/>
+			<stat type="mAtk" value="39.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="49277" name="War Hammer" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_war_hammer_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 136 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="2080" price="967000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="64.0"/>
+			<stat type="mAtk" value="39.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="49278" name="War Pick" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_hammer_in_flames_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 75. -->
+		<restriction freightable="false"/>
+		<attributes weight="2050" price="1400000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="79.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="49279" name="War Pick" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_hammer_in_flames_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 9%. -->
+		<restriction freightable="false"/>
+		<attributes weight="2050" price="1400000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="79.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="49280" name="War Pick" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_hammer_in_flames_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 136 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="2050" price="1400000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="79.0"/>
+			<stat type="mAtk" value="47.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="49281" name="Dwarven Trident" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_dwarven_trident_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 75. -->
+		<restriction freightable="false"/>
+		<attributes weight="2090" price="644000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="51.0"/>
+			<stat type="mAtk" value="32.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="49282" name="Dwarven Trident" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_dwarven_trident_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 9%. -->
+		<restriction freightable="false"/>
+		<attributes weight="2090" price="644000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="51.0"/>
+			<stat type="mAtk" value="32.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="49283" name="Dwarven Trident" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_dwarven_trident_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 136 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="2090" price="644000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="51.0"/>
+			<stat type="mAtk" value="32.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="49284" name="Dwarven Pike" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_dwarven_pike_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 75. -->
+		<restriction freightable="false"/>
+		<attributes weight="2070" price="967000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="64.0"/>
+			<stat type="mAtk" value="39.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="49285" name="Dwarven Pike" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_dwarven_pike_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 9%. -->
+		<restriction freightable="false"/>
+		<attributes weight="2070" price="967000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="64.0"/>
+			<stat type="mAtk" value="39.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="49286" name="Dwarven Pike" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_dwarven_pike_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 136 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="2070" price="967000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="64.0"/>
+			<stat type="mAtk" value="39.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="49287" name="Glaive" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_glaive_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 75. -->
+		<restriction freightable="false"/>
+		<attributes weight="2050" price="1800000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="92.0"/>
+			<stat type="mAtk" value="54.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="49288" name="Glaive" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_glaive_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 9%. -->
+		<restriction freightable="false"/>
+		<attributes weight="2050" price="1800000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="92.0"/>
+			<stat type="mAtk" value="54.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="49289" name="Glaive" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_glaive_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 136 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="2050" price="1800000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="92.0"/>
+			<stat type="mAtk" value="54.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="49290" name="Claymore" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_claymore_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 75. -->
+		<restriction freightable="false"/>
+		<attributes weight="2090" price="1800000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="112.0"/>
+			<stat type="mAtk" value="54.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49291" name="Claymore" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_claymore_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 9%. -->
+		<restriction freightable="false"/>
+		<attributes weight="2090" price="1800000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="112.0"/>
+			<stat type="mAtk" value="54.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49292" name="Claymore" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_claymore_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 183 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="2090" price="1800000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="112.0"/>
+			<stat type="mAtk" value="54.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49293" name="Two-Handed Sword" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_two_handed_sword_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 75. -->
+		<restriction freightable="false"/>
+		<attributes weight="2180" price="967000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="78.0"/>
+			<stat type="mAtk" value="39.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49294" name="Two-Handed Sword" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_two_handed_sword_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 9%. -->
+		<restriction freightable="false"/>
+		<attributes weight="2180" price="967000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="78.0"/>
+			<stat type="mAtk" value="39.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49295" name="Two-Handed Sword" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_two_handed_sword_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 183 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="2180" price="967000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="78.0"/>
+			<stat type="mAtk" value="39.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49296" name="Heavy Sword" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_heavy_sword_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 75. -->
+		<restriction freightable="false"/>
+		<attributes weight="1520" price="409000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="49.0"/>
+			<stat type="mAtk" value="26.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49297" name="Heavy Sword" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_heavy_sword_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 9%. -->
+		<restriction freightable="false"/>
+		<attributes weight="1520" price="409000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="49.0"/>
+			<stat type="mAtk" value="26.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49298" name="Heavy Sword" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_heavy_sword_i01">
+	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 183 during a Critical Attack. -->
+		<restriction freightable="false"/>
+		<attributes weight="1520" price="409000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="49.0"/>
+			<stat type="mAtk" value="26.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="49299" name="Steel Sword" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_iron_sword_i01">
+	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 75. -->
+		<restriction freightable="false"/>
+		<attributes weight="2100" price="409000" commission-type="OTHER_ITEM"/>
+		<crystal type="D"/>
+		<damage radius="40" angle="240"/>
+		<consume />
+		<stats>
+			<stat type="pAtk" value="49.0"/>
+			<stat type="mAtk" value="26.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
 </list>

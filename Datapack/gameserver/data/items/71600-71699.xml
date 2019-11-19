@@ -1,531 +1,635 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="71600" name="Transformation Sealbook: Pirate" icon="icon.bm2018_pirate_i01">
-        <!-- The book allows you to obtain Rare Pirate appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71601" name="Transformation Sealbook: Pirate" icon="icon.bm2018_pirate_i01">
-        <!-- The book allows you to obtain Legendary Pirate appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71602" name="Transformation Sealbook: Pirate" icon="icon.bm2018_pirate_i01">
-        <!-- The book allows you to obtain Mythic Pirate appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71603" name="Transformation Sealbook: Red Noblesse" icon="icon.bm2018_rednoblesse_i01">
-        <!-- The book allows you to obtain Standard Red Noblesse appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71604" name="Transformation Sealbook: Red Noblesse" icon="icon.bm2018_rednoblesse_i01">
-        <!-- The book allows you to obtain High-grade Red Noblesse appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71605" name="Transformation Sealbook: Red Noblesse" icon="icon.bm2018_rednoblesse_i01">
-        <!-- The book allows you to obtain Rare Red Noblesse appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71606" name="Transformation Sealbook: Red Noblesse" icon="icon.bm2018_rednoblesse_i01">
-        <!-- The book allows you to obtain Legendary Red Noblesse appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71607" name="Transformation Sealbook: Red Noblesse" icon="icon.bm2018_rednoblesse_i01">
-        <!-- The book allows you to obtain Mythic Red Noblesse appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71608" name="Transformation Sealbook: Barbarian Wolf" icon="icon.barbarian_chest_change_0">
-        <!-- The book allows you to obtain Standard Barbarian Wolf appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71609" name="Transformation Sealbook: Barbarian Wolf" icon="icon.barbarian_chest_change_0">
-        <!-- The book allows you to obtain High-grade Barbarian Wolf appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71610" name="Transformation Sealbook: Barbarian Wolf" icon="icon.barbarian_chest_change_0">
-        <!-- The book allows you to obtain Rare Barbarian Wolf appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71611" name="Transformation Sealbook: Barbarian Wolf" icon="icon.barbarian_chest_change_0">
-        <!-- The book allows you to obtain Legendary Barbarian Wolf appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71612" name="Transformation Sealbook: Barbarian Wolf" icon="icon.barbarian_chest_change_0">
-        <!-- The book allows you to obtain Mythic Barbarian Wolf appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71613" name="Transformation Sealbook: Valkyrie" icon="icon.valkyrie_chest_change_0">
-        <!-- The book allows you to obtain Standard Valkyrie appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71614" name="Transformation Sealbook: Valkyrie" icon="icon.valkyrie_chest_change_0">
-        <!-- The book allows you to obtain High-grade Valkyrie appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71615" name="Transformation Sealbook: Valkyrie" icon="icon.valkyrie_chest_change_0">
-        <!-- The book allows you to obtain Rare Valkyrie appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71616" name="Transformation Sealbook: Valkyrie" icon="icon.valkyrie_chest_change_0">
-        <!-- The book allows you to obtain Legendary Valkyrie appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71617" name="Transformation Sealbook: Valkyrie" icon="icon.valkyrie_chest_change_0">
-        <!-- The book allows you to obtain Mythic Valkyrie appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71618" name="Transformation Sealbook: Kelbim" icon="BranchIcon.Icon.g_bm_costume_kelbim">
-        <!-- The book allows you to obtain Standard Kelbim appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71619" name="Transformation Sealbook: Kelbim" icon="BranchIcon.Icon.g_bm_costume_kelbim">
-        <!-- The book allows you to obtain High-grade Kelbim appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71620" name="Transformation Sealbook: Kelbim" icon="BranchIcon.Icon.g_bm_costume_kelbim">
-        <!-- The book allows you to obtain Rare Kelbim appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71621" name="Transformation Sealbook: Kelbim" icon="BranchIcon.Icon.g_bm_costume_kelbim">
-        <!-- The book allows you to obtain Legendary Kelbim appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71622" name="Transformation Sealbook: Kelbim" icon="BranchIcon.Icon.g_bm_costume_kelbim">
-        <!-- The book allows you to obtain Mythic Kelbim appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71623" name="Transformation Sealbook: Ninja" icon="icon.bm2018_ninja_i01">
-        <!-- The book allows you to obtain Standard Ninja appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71624" name="Transformation Sealbook: Ninja" icon="icon.bm2018_ninja_i01">
-        <!-- The book allows you to obtain High-grade Ninja appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71625" name="Transformation Sealbook: Ninja" icon="icon.bm2018_ninja_i01">
-        <!-- The book allows you to obtain Rare Ninja appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71626" name="Transformation Sealbook: Ninja" icon="icon.bm2018_ninja_i01">
-        <!-- The book allows you to obtain Legendary Ninja appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71627" name="Transformation Sealbook: Ninja" icon="icon.bm2018_ninja_i01">
-        <!-- The book allows you to obtain Mythic Ninja appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71628" name="Transformation Sealbook: High Priest" icon="icon.bm2018_healer_i01">
-        <!-- The book allows you to obtain Standard High Priest appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71629" name="Transformation Sealbook: High Priest" icon="icon.bm2018_healer_i01">
-        <!-- The book allows you to obtain High-grade High Priest appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71630" name="Transformation Sealbook: High Priest" icon="icon.bm2018_healer_i01">
-        <!-- The book allows you to obtain Rare High Priest appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71631" name="Transformation Sealbook: High Priest" icon="icon.bm2018_healer_i01">
-        <!-- The book allows you to obtain Legendary High Priest appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71632" name="Transformation Sealbook: High Priest" icon="icon.bm2018_healer_i01">
-        <!-- The book allows you to obtain Mythic High Priest appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71633" name="Transformation Sealbook: White Noblesse" icon="icon.bm2018_whitenoblesse_i01">
-        <!-- The book allows you to obtain Standard White Noblesse appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71634" name="Transformation Sealbook: White Noblesse" icon="icon.bm2018_whitenoblesse_i01">
-        <!-- The book allows you to obtain High-grade White Noblesse appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71635" name="Transformation Sealbook: White Noblesse" icon="icon.bm2018_whitenoblesse_i01">
-        <!-- The book allows you to obtain Rare White Noblesse appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71636" name="Transformation Sealbook: White Noblesse" icon="icon.bm2018_whitenoblesse_i01">
-        <!-- The book allows you to obtain Legendary White Noblesse appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71637" name="Transformation Sealbook: White Noblesse" icon="icon.bm2018_whitenoblesse_i01">
-        <!-- The book allows you to obtain Mythic White Noblesse appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71638" name="Transformation Sealbook: Purple Cowboy" icon="icon.bm2018_cowboy_i01">
-        <!-- The book allows you to obtain Standard Purple Cowboy appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71639" name="Transformation Sealbook: Purple Cowboy" icon="icon.bm2018_cowboy_i01">
-        <!-- The book allows you to obtain High-grade Purple Cowboy appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71640" name="Transformation Sealbook: Purple Cowboy" icon="icon.bm2018_cowboy_i01">
-        <!-- The book allows you to obtain Rare Purple Cowboy appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71641" name="Transformation Sealbook: Purple Cowboy" icon="icon.bm2018_cowboy_i01">
-        <!-- The book allows you to obtain Legendary Purple Cowboy appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71642" name="Transformation Sealbook: Purple Cowboy" icon="icon.bm2018_cowboy_i01">
-        <!-- The book allows you to obtain Mythic Purple Cowboy appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71643" name="Transformation Sealbook: Blue Musketeer" icon="icon.bm2018_bluemusketeer_i01">
-        <!-- The book allows you to obtain Standard Blue Musketeer appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71644" name="Transformation Sealbook: Blue Musketeer" icon="icon.bm2018_bluemusketeer_i01">
-        <!-- The book allows you to obtain High-grade Blue Musketeer appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71645" name="Transformation Sealbook: Blue Musketeer" icon="icon.bm2018_bluemusketeer_i01">
-        <!-- The book allows you to obtain Rare Blue Musketeer appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71646" name="Transformation Sealbook: Blue Musketeer" icon="icon.bm2018_bluemusketeer_i01">
-        <!-- The book allows you to obtain Legendary Blue Musketeer appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71647" name="Transformation Sealbook: Blue Musketeer" icon="icon.bm2018_bluemusketeer_i01">
-        <!-- The book allows you to obtain Mythic Blue Musketeer appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71648" name="Transformation Sealbook: Zaken" icon="BranchIcon.Icon.g_bm_costume_zaken">
-        <!-- The book allows you to obtain Standard Zaken appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71649" name="Transformation Sealbook: Zaken" icon="BranchIcon.Icon.g_bm_costume_zaken">
-        <!-- The book allows you to obtain High-grade Zaken appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71650" name="Transformation Sealbook: Zaken" icon="BranchIcon.Icon.g_bm_costume_zaken">
-        <!-- The book allows you to obtain Rare Zaken appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71651" name="Transformation Sealbook: Zaken" icon="BranchIcon.Icon.g_bm_costume_zaken">
-        <!-- The book allows you to obtain Legendary Zaken appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71652" name="Transformation Sealbook: Zaken" icon="BranchIcon.Icon.g_bm_costume_zaken">
-        <!-- The book allows you to obtain Mythic Zaken appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71653" name="Transformation Sealbook: Dragon Berserker" icon="icon.bm2018_dragon_i01">
-        <!-- The book allows you to obtain Standard Dragon Berserker appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71654" name="Transformation Sealbook: Dragon Berserker" icon="icon.bm2018_dragon_i01">
-        <!-- The book allows you to obtain High-grade Dragon Berserker appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71655" name="Transformation Sealbook: Dragon Berserker" icon="icon.bm2018_dragon_i01">
-        <!-- The book allows you to obtain Rare Dragon Berserker appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71656" name="Transformation Sealbook: Dragon Berserker" icon="icon.bm2018_dragon_i01">
-        <!-- The book allows you to obtain Legendary Dragon Berserker appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71657" name="Transformation Sealbook: Dragon Berserker" icon="icon.bm2018_dragon_i01">
-        <!-- The book allows you to obtain Mythic Dragon Berserker appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71658" name="Transformation Sealbook: Anakim" icon="BranchIcon.Icon.g_bm_costume_anakim">
-        <!-- The book allows you to obtain Standard Anakim appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71659" name="Transformation Sealbook: Anakim" icon="BranchIcon.Icon.g_bm_costume_anakim">
-        <!-- The book allows you to obtain High-grade Anakim appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71660" name="Transformation Sealbook: Anakim" icon="BranchIcon.Icon.g_bm_costume_anakim">
-        <!-- The book allows you to obtain Rare Anakim appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71661" name="Transformation Sealbook: Anakim" icon="BranchIcon.Icon.g_bm_costume_anakim">
-        <!-- The book allows you to obtain Legendary Anakim appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71662" name="Transformation Sealbook: Anakim" icon="BranchIcon.Icon.g_bm_costume_anakim">
-        <!-- The book allows you to obtain Mythic Anakim appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71663" name="Transformation Sealbook: Lilith" icon="BranchIcon.Icon.g_bm_costume_lilith">
-        <!-- The book allows you to obtain Standard Lilith appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71664" name="Transformation Sealbook: Lilith" icon="BranchIcon.Icon.g_bm_costume_lilith">
-        <!-- The book allows you to obtain High-grade Lilith appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71665" name="Transformation Sealbook: Lilith" icon="BranchIcon.Icon.g_bm_costume_lilith">
-        <!-- The book allows you to obtain Rare Lilith appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71666" name="Transformation Sealbook: Lilith" icon="BranchIcon.Icon.g_bm_costume_lilith">
-        <!-- The book allows you to obtain Legendary Lilith appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71667" name="Transformation Sealbook: Lilith" icon="BranchIcon.Icon.g_bm_costume_lilith">
-        <!-- The book allows you to obtain Mythic Lilith appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71668" name="Transformation Sealbook: Freya" icon="BranchIcon.Icon.g_bm_costume_freya">
-        <!-- The book allows you to obtain Standard Freya appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71669" name="Transformation Sealbook: Freya" icon="BranchIcon.Icon.g_bm_costume_freya">
-        <!-- The book allows you to obtain High-grade Freya appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71670" name="Transformation Sealbook: Freya" icon="BranchIcon.Icon.g_bm_costume_freya">
-        <!-- The book allows you to obtain Rare Freya appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71671" name="Transformation Sealbook: Freya" icon="BranchIcon.Icon.g_bm_costume_freya">
-        <!-- The book allows you to obtain Legendary Freya appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71672" name="Transformation Sealbook: Freya" icon="BranchIcon.Icon.g_bm_costume_freya">
-        <!-- The book allows you to obtain Mythic Freya appearance. Cannot be dropped or sold in the grocery store. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71673" name="Transformation Sealbook: Random Appearance" icon="BranchIcon.Icon.g_bm_costume_book_i00">
-        <!-- Double-click to obtain one random Standard/ High-grade/ Rare/ Legendary appearance. Cannot be dropped or sold. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71674" name="Transformation Sealbook: Standard/ High-grade Appearance" icon="BranchIcon.Icon.g_bm_costume_book_i00">
-        <!-- Double-click to obtain one random Standard/ High-grade appearance. Cannot be dropped or sold. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71675" name="Transformation Sealbook: Standard/ High-grade/ Rare Appearance" icon="BranchIcon.Icon.g_bm_costume_book_i01">
-        <!-- Double-click to obtain one random Standard/ High-grade/ Rare appearance. Cannot be dropped or sold. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71676" name="Transformation Sealbook: High-grade/ Rare/ Legendary Appearance" icon="BranchIcon.Icon.g_bm_costume_book_i01">
-        <!-- Double-click to obtain one random High-grade/ Rare/ Legendary appearance. Cannot be dropped or sold. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71677" name="Transformation Sealbook: Rare/ Legendary Appearance" icon="BranchIcon.Icon.g_bm_costume_book_i02">
-        <!-- Double-click to obtain one random Rare/ Legendary appearance. Cannot be dropped or sold. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71678" name="Transformation Sealbook: Legendary/ Mythic Appearance" icon="BranchIcon.Icon.g_bm_costume_book_i02">
-        <!-- Double-click to obtain one random Legendary/ Mythic appearance. Cannot be dropped or sold. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71679" name="Transformation Sealbook: Random Standard Appearance" icon="BranchIcon.Icon.g_bm_costume_book_i00">
-        <!-- Double-click to obtain one random Standard appearance. Cannot be dropped or sold. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71680" name="Transformation Sealbook: Random High-grade Appearance" icon="BranchIcon.Icon.g_bm_costume_book_i00">
-        <!-- Double-click to obtain one random High-grade appearance. Cannot be dropped or sold. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71681" name="Transformation Sealbook: Random Rare Appearance" icon="BranchIcon.Icon.g_bm_costume_book_i00">
-        <!-- Double-click to obtain one random Rare appearance. Cannot be dropped or sold. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71682" name="Transformation Sealbook: Random Legendary Appearance" icon="BranchIcon.Icon.g_bm_costume_book_i00">
-        <!-- Double-click to obtain one random Legendary appearance. Cannot be dropped or sold. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction dropable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71683" name="Transformation Sealbook Fragment" icon="BranchIcon.Icon.g_bm_costume_book_piece">
-        <!-- Take several such fragments to Pona to exchange for a Transformation Sealbook. Cannot be exchanged, dropped or sold.  Can be stored in a private warehouse. -->
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71684" name="Magic Powder" icon="BranchIcon.Icon.g_bm_costume_powder">
-        <!-- This powder is necessary for transformation. When in inventory, it will be applied automatically during a transformation. Cannot be dropped or sold. -->
-        <restriction stackable="true"/>
-    </item>
-    <item id="71685" name="Appearance Extraction Scroll" icon="BranchIcon.Icon.g_bm_costume_extract_scroll">
-        <!-- A magic scroll created with the use of book during appearance extraction process. Cannot be dropped or sold. -->
-        <restriction sellable="false" stackable="true"/>
-    </item>
-    <item id="71686" name="Holiday Joy Box" icon="icon.event_high_oriental_park_i00">
-        <!-- Double-click to obtain one of useful items. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71687" name="Transformation Sealbook: Random Appearance" icon="BranchIcon.Icon.g_bm_costume_book_i00_1">
-        <!-- Double-click to obtain one random Standard/ High-grade/ Rare/ Legendary appearance. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71688" name="Transformation Sealbook: Standard/ High-grade" icon="BranchIcon.Icon.g_bm_costume_book_i00_2">
-        <!-- Double-click to obtain one random Standard/ High-grade appearance. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71689" name="Transformation Sealbook: Standard/ High-grade/ Rare Appearance" icon="BranchIcon.Icon.g_bm_costume_book_i01_3">
-        <!-- Double-click to obtain one random Standard/ High-grade/ Rare appearance. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="71690" name="Transformation Sealbook: Part-time Seller" icon="icon.etc_transform_warrior_i00">
-        <!-- Sealbook for learning the skill of transforming yourself into Kat the Cat. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <armor id="71691" name="Dragon Pendant - Attack" icon="icon.bm_pendant_dragon_i00">
-        <!-- A pendant that contains the energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment activates special effects. Head Blacksmith Ferris can upgrade +5 pendant to Lv. 2. Cannot be dropped. Required materials: 12 mln Adena. -->
-        <set name="bodypart" val="underwear"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">20</stat>
-        </stats>
-    </armor>
-    <armor id="71692" name="Dragon Pendant - Attack" icon="icon.bm_pendant_dragon_i00">
-        <!-- A pendant that contains the energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment activates special effects. Head Blacksmith Ferris can upgrade +5 pendant to Lv. 3. Cannot be dropped. Required materials: Dragon Essense (3 pcs.), 16 mln Adena. -->
-        <set name="bodypart" val="underwear"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">35</stat>
-        </stats>
-    </armor>
-    <armor id="71693" name="Dragon Pendant - Attack" icon="icon.bm_pendant_dragon_i00">
-        <!-- A pendant that contains the energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment activates special effects. Head Blacksmith Ferris can upgrade +5 pendant to Lv. 4. Cannot be dropped. Required materials: Dragon Essense (20 pcs.), 50 mln Adena. -->
-        <set name="bodypart" val="underwear"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">57</stat>
-        </stats>
-    </armor>
-    <armor id="71694" name="Dragon Pendant - Attack" icon="icon.bm_pendant_dragon_i00">
-        <!-- A pendant that contains the energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment activates special effects. Cannoit be dropped. -->
-        <set name="bodypart" val="underwear"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">70</stat>
-        </stats>
-    </armor>
-    <armor id="71695" name="Dragon Pendant - Magic Power" icon="BranchIcon.icon.g_bm_pendant_dragon_m">
-        <!-- A pendant that contains the magic energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment activates special effects. Head Blacksmith Ferris can upgrade +5 pendant to Lv. 2. Cannot be dropped. Required materials: 12 mln Adena. -->
-        <set name="bodypart" val="underwear"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">20</stat>
-        </stats>
-    </armor>
-    <armor id="71696" name="Dragon Pendant - Magic Power" icon="BranchIcon.icon.g_bm_pendant_dragon_m">
-        <!-- A pendant that contains the magic energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment activates special effects. Head Blacksmith Ferris can upgrade +5 pendant to Lv. 3. Cannot be dropped. Required materials: Dragon Essense (3 pcs.), 16 mln Adena. -->
-        <set name="bodypart" val="underwear"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">35</stat>
-        </stats>
-    </armor>
-    <armor id="71697" name="Dragon Pendant - Magic Power" icon="BranchIcon.icon.g_bm_pendant_dragon_m">
-        <!-- A pendant that contains the magic  energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment activates special effects. Head Blacksmith Ferris can upgrade +5 pendant to Lv. 4. Cannot be dropped. Required materials: Dragon Essense (20 pcs.), 50 mln Adena. -->
-        <set name="bodypart" val="underwear"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">57</stat>
-        </stats>
-    </armor>
-    <armor id="71698" name="Dragon Pendant - Magic Power" icon="BranchIcon.icon.g_bm_pendant_dragon_m">
-        <!-- A pendant that contains the magic energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment activates special effects. Cannoit be dropped. -->
-        <set name="bodypart" val="underwear"/>
-        <set name="immediate_effect" val="true"/>
-        <restriction dropable="false" sellable="false"/>
-        <stats>
-            <stat type="pDef">70</stat>
-        </stats>
-    </armor>
-    <item id="71699" name="Dragon Essense" icon="icon.bm_soul_of_undead">
-        <!-- Concentrated energy of the dragon soul. Can be used to enchant pendants. Ask Head Blacksmith Ferris in Aden about enchantment. -->
-        <restriction dropable="false" stackable="true"/>
-    </item>
+	<item id="71600" name="Transformation Sealbook: Sailor" type="TRANSFORMATION_BOOK" icon="icon.bm2018_pirate_i01">
+	<!-- Use it to obtain a Rare Sailor Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71601" name="Transformation Sealbook: Sailor" type="TRANSFORMATION_BOOK" icon="icon.bm2018_pirate_i01">
+	<!-- Use it to obtain a Legendary Sailor Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71602" name="Transformation Sealbook: Sailor" type="TRANSFORMATION_BOOK" icon="icon.bm2018_pirate_i01">
+	<!-- Use it to obtain a Mythic Sailor Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71603" name="Transformation Sealbook: Noblesse - Red" type="TRANSFORMATION_BOOK" icon="icon.bm2018_rednoblesse_i01">
+	<!-- Use it to obtain a Standard Noblesse - Red Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71604" name="Transformation Sealbook: Noblesse - Red" type="TRANSFORMATION_BOOK" icon="icon.bm2018_rednoblesse_i01">
+	<!-- Use it to obtain a High-grade Noblesse - Red Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71605" name="Transformation Sealbook: Noblesse - Red" type="TRANSFORMATION_BOOK" icon="icon.bm2018_rednoblesse_i01">
+	<!-- Use it to obtain a Rare Noblesse - Red Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71606" name="Transformation Sealbook: Noblesse - Red" type="TRANSFORMATION_BOOK" icon="icon.bm2018_rednoblesse_i01">
+	<!-- Use it to obtain a Legendary Noblesse - Red Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71607" name="Transformation Sealbook: Noblesse - Red" type="TRANSFORMATION_BOOK" icon="icon.bm2018_rednoblesse_i01">
+	<!-- Use it to obtain a Mythic Noblesse - Red Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71608" name="Transformation Sealbook: Barbarian Wolf" type="TRANSFORMATION_BOOK" icon="icon.barbarian_chest_change_0">
+	<!-- Use it to obtain a Standard Barbarian Wolf Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71609" name="Transformation Sealbook: Barbarian Wolf" type="TRANSFORMATION_BOOK" icon="icon.barbarian_chest_change_0">
+	<!-- Use it to obtain a High-grade Barbarian Wolf Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71610" name="Transformation Sealbook: Barbarian Wolf" type="TRANSFORMATION_BOOK" icon="icon.barbarian_chest_change_0">
+	<!-- Use it to obtain a Rare Barbarian Wolf Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71611" name="Transformation Sealbook: Barbarian Wolf" type="TRANSFORMATION_BOOK" icon="icon.barbarian_chest_change_0">
+	<!-- Use it to obtain a Legendary Barbarian Wolf Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71612" name="Transformation Sealbook: Barbarian Wolf" type="TRANSFORMATION_BOOK" icon="icon.barbarian_chest_change_0">
+	<!-- Use it to obtain a Mythic Barbarian Wolf Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71613" name="Transformation Sealbook: Valkyrie" type="TRANSFORMATION_BOOK" icon="icon.valkyrie_chest_change_0">
+	<!-- Use it to obtain a Standard Valkyrie Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71614" name="Transformation Sealbook: Valkyrie" type="TRANSFORMATION_BOOK" icon="icon.valkyrie_chest_change_0">
+	<!-- Use it to obtain a High-grade Valkyrie Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71615" name="Transformation Sealbook: Valkyrie" type="TRANSFORMATION_BOOK" icon="icon.valkyrie_chest_change_0">
+	<!-- Use it to obtain a Rare Valkyrie Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71616" name="Transformation Sealbook: Valkyrie" type="TRANSFORMATION_BOOK" icon="icon.valkyrie_chest_change_0">
+	<!-- Use it to obtain a Legendary Valkyrie Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71617" name="Transformation Sealbook: Valkyrie" type="TRANSFORMATION_BOOK" icon="icon.valkyrie_chest_change_0">
+	<!-- Use it to obtain a Mythic Valkyrie Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71618" name="Transformation Sealbook: Kelbim" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_kelbim">
+	<!-- Use it to obtain a Standard Kelbim Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71619" name="Transformation Sealbook: Kelbim" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_kelbim">
+	<!-- Use it to obtain a High-grade Kelbim Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71620" name="Transformation Sealbook: Kelbim" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_kelbim">
+	<!-- Use it to obtain a Rare Kelbim Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71621" name="Transformation Sealbook: Kelbim" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_kelbim">
+	<!-- Use it to obtain a Legendary Kelbim Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71622" name="Transformation Sealbook: Kelbim" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_kelbim">
+	<!-- Use it to obtain a Mythic Kelbim Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71623" name="Transformation Sealbook: Ninja" type="TRANSFORMATION_BOOK" icon="icon.bm2018_ninja_i01">
+	<!-- Use it to obtain a Standard Ninja Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71624" name="Transformation Sealbook: Ninja" type="TRANSFORMATION_BOOK" icon="icon.bm2018_ninja_i01">
+	<!-- Use it to obtain a High-grade Ninja Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71625" name="Transformation Sealbook: Ninja" type="TRANSFORMATION_BOOK" icon="icon.bm2018_ninja_i01">
+	<!-- Use it to obtain a Rare Ninja Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71626" name="Transformation Sealbook: Ninja" type="TRANSFORMATION_BOOK" icon="icon.bm2018_ninja_i01">
+	<!-- Use it to obtain a Legendary Ninja Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71627" name="Transformation Sealbook: Ninja" type="TRANSFORMATION_BOOK" icon="icon.bm2018_ninja_i01">
+	<!-- Use it to obtain a Mythic Ninja Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71628" name="Transformation Sealbook: High Priest" type="TRANSFORMATION_BOOK" icon="icon.bm2018_healer_i01">
+	<!-- Use it to obtain a Standard High Priest Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71629" name="Transformation Sealbook: High Priest" type="TRANSFORMATION_BOOK" icon="icon.bm2018_healer_i01">
+	<!-- Use it to obtain a High-grade High Priest Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71630" name="Transformation Sealbook: High Priest" type="TRANSFORMATION_BOOK" icon="icon.bm2018_healer_i01">
+	<!-- Use it to obtain a Rare High Priest Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71631" name="Transformation Sealbook: High Priest" type="TRANSFORMATION_BOOK" icon="icon.bm2018_healer_i01">
+	<!-- Use it to obtain a Legendary High Priest Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71632" name="Transformation Sealbook: High Priest" type="TRANSFORMATION_BOOK" icon="icon.bm2018_healer_i01">
+	<!-- Use it to obtain a Mythic High Priest Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71633" name="Transformation Sealbook: Noblesse - White" type="TRANSFORMATION_BOOK" icon="icon.bm2018_whitenoblesse_i01">
+	<!-- Use it to obtain a Standard Noblesse - White Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71634" name="Transformation Sealbook: Noblesse - White" type="TRANSFORMATION_BOOK" icon="icon.bm2018_whitenoblesse_i01">
+	<!-- Use it to obtain a High-grade Noblesse - White Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71635" name="Transformation Sealbook: Noblesse - White" type="TRANSFORMATION_BOOK" icon="icon.bm2018_whitenoblesse_i01">
+	<!-- Use it to obtain a Rare Noblesse - White Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71636" name="Transformation Sealbook: Noblesse - White" type="TRANSFORMATION_BOOK" icon="icon.bm2018_whitenoblesse_i01">
+	<!-- Use it to obtain a Legendary Noblesse - White Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71637" name="Transformation Sealbook: Noblesse - White" type="TRANSFORMATION_BOOK" icon="icon.bm2018_whitenoblesse_i01">
+	<!-- Use it to obtain a Mythic Noblesse - White Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71638" name="Transformation Sealbook: Cowboy - Purple" type="TRANSFORMATION_BOOK" icon="icon.bm2018_cowboy_i01">
+	<!-- Use it to obtain a Standard Cowboy - Purple Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71639" name="Transformation Sealbook: Cowboy - Purple" type="TRANSFORMATION_BOOK" icon="icon.bm2018_cowboy_i01">
+	<!-- Use it to obtain a High-grade Cowboy - Purple Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71640" name="Transformation Sealbook: Cowboy - Purple" type="TRANSFORMATION_BOOK" icon="icon.bm2018_cowboy_i01">
+	<!-- Use it to obtain a Rare Cowboy - Purple Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71641" name="Transformation Sealbook: Cowboy - Purple" type="TRANSFORMATION_BOOK" icon="icon.bm2018_cowboy_i01">
+	<!-- Use it to obtain a Legendary Cowboy - Purple Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71642" name="Transformation Sealbook: Cowboy - Purple" type="TRANSFORMATION_BOOK" icon="icon.bm2018_cowboy_i01">
+	<!-- Use it to obtain a Mythic Cowboy - Purple Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71643" name="Transformation Sealbook: Musketeer - Blue" type="TRANSFORMATION_BOOK" icon="icon.bm2018_bluemusketeer_i01">
+	<!-- Use it to obtain a Standard Musketeer - Blue Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71644" name="Transformation Sealbook: Musketeer - Blue" type="TRANSFORMATION_BOOK" icon="icon.bm2018_bluemusketeer_i01">
+	<!-- Use it to obtain a High-grade Musketeer - Blue Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71645" name="Transformation Sealbook: Musketeer - Blue" type="TRANSFORMATION_BOOK" icon="icon.bm2018_bluemusketeer_i01">
+	<!-- Use it to obtain a Rare Musketeer - Blue Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71646" name="Transformation Sealbook: Musketeer - Blue" type="TRANSFORMATION_BOOK" icon="icon.bm2018_bluemusketeer_i01">
+	<!-- Use it to obtain a Legendary Musketeer - Blue Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71647" name="Transformation Sealbook: Musketeer - Blue" type="TRANSFORMATION_BOOK" icon="icon.bm2018_bluemusketeer_i01">
+	<!-- Use it to obtain a Mythic Musketeer - Blue Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71648" name="Transformation Sealbook: Zaken" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_zaken">
+	<!-- Use it to obtain a Standard Zaken Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71649" name="Transformation Sealbook: Zaken" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_zaken">
+	<!-- Use it to obtain a High-grade Zaken Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71650" name="Transformation Sealbook: Zaken" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_zaken">
+	<!-- Use it to obtain a Rare Zaken Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71651" name="Transformation Sealbook: Zaken" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_zaken">
+	<!-- Use it to obtain a Legendary Zaken Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71652" name="Transformation Sealbook: Zaken" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_zaken">
+	<!-- Use it to obtain a Mythic Zaken Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71653" name="Transformation Sealbook: Dragon Berserker" type="TRANSFORMATION_BOOK" icon="icon.bm2018_dragon_i01">
+	<!-- Use it to obtain a Standard Dragon Berserker Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71654" name="Transformation Sealbook: Dragon Berserker" type="TRANSFORMATION_BOOK" icon="icon.bm2018_dragon_i01">
+	<!-- Use it to obtain a High-grade Dragon Berserker Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71655" name="Transformation Sealbook: Dragon Berserker" type="TRANSFORMATION_BOOK" icon="icon.bm2018_dragon_i01">
+	<!-- Use it to obtain a Rare Dragon Berserker Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71656" name="Transformation Sealbook: Dragon Berserker" type="TRANSFORMATION_BOOK" icon="icon.bm2018_dragon_i01">
+	<!-- Use it to obtain a Legendary Dragon Berserker Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71657" name="Transformation Sealbook: Dragon Berserker" type="TRANSFORMATION_BOOK" icon="icon.bm2018_dragon_i01">
+	<!-- Use it to obtain a Mythic Dragon Berserker Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71658" name="Transformation Sealbook: Anakim" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_anakim">
+	<!-- Use it to obtain a Standard Anakim Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71659" name="Transformation Sealbook: Anakim" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_anakim">
+	<!-- Use it to obtain a High-grade Anakim Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71660" name="Transformation Sealbook: Anakim" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_anakim">
+	<!-- Use it to obtain a Rare Anakim Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71661" name="Transformation Sealbook: Anakim" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_anakim">
+	<!-- Use it to obtain a Legendary Anakim Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71662" name="Transformation Sealbook: Anakim" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_anakim">
+	<!-- Use it to obtain a Mythic Anakim Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71663" name="Transformation Sealbook: Lilith" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_lilith">
+	<!-- Use it to obtain a Standard Lilith Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71664" name="Transformation Sealbook: Lilith" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_lilith">
+	<!-- Use it to obtain a High-grade Lilith Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71665" name="Transformation Sealbook: Lilith" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_lilith">
+	<!-- Use it to obtain a Rare Lilith Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71666" name="Transformation Sealbook: Lilith" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_lilith">
+	<!-- Use it to obtain a Legendary Lilith Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71667" name="Transformation Sealbook: Lilith" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_lilith">
+	<!-- Use it to obtain a Mythic Lilith Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71668" name="Transformation Sealbook: Freya" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_freya">
+	<!-- Use it to obtain a Standard Freya Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71669" name="Transformation Sealbook: Freya" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_freya">
+	<!-- Use it to obtain a High-grade Freya Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71670" name="Transformation Sealbook: Freya" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_freya">
+	<!-- Use it to obtain a Rare Freya Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71671" name="Transformation Sealbook: Freya" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_freya">
+	<!-- Use it to obtain a Legendary Freya Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71672" name="Transformation Sealbook: Freya" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_freya">
+	<!-- Use it to obtain a Mythic Freya Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71673" name="Transformation Sealbook: Random" type="TRANSFORMATION_BOOK_BOX_RANDOM" icon="BranchIcon.Icon.g_bm_costume_book_i00">
+	<!-- Use it to randomly obtain 1 Standard, High-grade, Rare or Legendary Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71674" name="Transformation Sealbook: Standard/High-grade" type="TRANSFORMATION_BOOK_BOX_RANDOM_RARE" icon="BranchIcon.Icon.g_bm_costume_book_i00">
+	<!-- Use it to randomly obtain 1 Standard or High-grade Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71675" name="Transformation Sealbook: Standard/High-grade/Rare" type="TRANSFORMATION_BOOK_BOX_RANDOM_RARE" icon="BranchIcon.Icon.g_bm_costume_book_i01">
+	<!-- Use it to randomly obtain 1 Standard, High-grade, or Rare Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71676" name="Transformation Sealbook: High-grade/Rare/Legendary" type="TRANSFORMATION_BOOK_BOX_RANDOM_RARE" icon="BranchIcon.Icon.g_bm_costume_book_i01">
+	<!-- Use it to randomly obtain 1 High-grade, Rare, or Legendary Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71677" name="Transformation Sealbook: Rare/Legendary" type="TRANSFORMATION_BOOK_BOX_RANDOM_RARE" icon="BranchIcon.Icon.g_bm_costume_book_i02">
+	<!-- Use it to randomly obtain 1 Rare or Legendary Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71678" name="Transformation Sealbook: Legendary/Mythic" type="TRANSFORMATION_BOOK_BOX_RANDOM_RARE" icon="BranchIcon.Icon.g_bm_costume_book_i02">
+	<!-- Use it to randomly obtain 1 Legendary or Mythic Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71679" name="Transformation Sealbook: Standard Random" type="TRANSFORMATION_BOOK_BOX_STANDARD" icon="BranchIcon.Icon.g_bm_costume_book_i00">
+	<!-- Use it to randomly obtain 1 Standard Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71680" name="Transformation Sealbook: High-grade Random" type="TRANSFORMATION_BOOK_BOX_HIGH_GRADE" icon="BranchIcon.Icon.g_bm_costume_book_i00">
+	<!-- Use it to randomly obtain 1 High-grade Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71681" name="Transformation Sealbook: Rare Random" type="TRANSFORMATION_BOOK_BOX_RARE" icon="BranchIcon.Icon.g_bm_costume_book_i00">
+	<!-- Use it to randomly obtain 1 Rare Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71682" name="Transformation Sealbook: Legendary Random" type="TRANSFORMATION_BOOK_BOX_LEGENDARY" icon="BranchIcon.Icon.g_bm_costume_book_i00">
+	<!-- Use it to randomly obtain 1 Legendary Transformation.  -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71683" name="Transformation Sealbook Fragment" type="MATERIAL" icon="BranchIcon.Icon.g_bm_costume_book_piece">
+	<!-- Fragments of a transformation sealbook. Bring some fragments to Pona to exchange them for a transformation sealbook. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71684" name="Magic Powder" type="MATERIAL" icon="BranchIcon.Icon.g_bm_costume_powder">
+	<!-- Magic powder that is essential for transformation. When stored in the inventory, the powder will be automatically consumed during the transformation process.  -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71685" name="Transformation Extract Scroll" type="MATERIAL" icon="BranchIcon.Icon.g_bm_costume_extract_scroll">
+	<!-- A magic scroll that extracts your transformations and change them into sealbooks.  -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71686" name="Holiday Joy Box" type="NONE" icon="icon.event_high_oriental_park_i00">
+	<!-- Obtain 1 of various reward items.  -->
+		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71687" name="Transformation Sealbook: Random" type="TRANSFORMATION_BOOK_BOX_RANDOM" icon="BranchIcon.Icon.g_bm_costume_book_i00_1">
+	<!-- Use it to randomly obtain 1 Standard, High-grade, Rare or Legendary Transformation.  -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71688" name="Transformation Sealbook: Standard/High-grade" type="TRANSFORMATION_BOOK_BOX_RANDOM_RARE" icon="BranchIcon.Icon.g_bm_costume_book_i00_2">
+	<!-- Use it to randomly obtain 1 Standard or High-grade Transformation. \\n -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71689" name="Transformation Sealbook: Standard/High-grade/Rare" type="TRANSFORMATION_BOOK_BOX_RANDOM_RARE" icon="BranchIcon.Icon.g_bm_costume_book_i01_3">
+	<!-- Use it to randomly obtain 1 Standard, High-grade, or Rare Transformation. \\n -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71690" name="Transformation Sealbook: Sales Part-timer" type="NONE" icon="icon.etc_transform_warrior_i00">
+	<!-- Sealbook for learning the skill of transforming yourself into Kat the Cat.   -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="71691" name="Dragon Pedant - Attack Type Lv. 1" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_dragon_i00">
+	<!-- Pendant imbued with Dragon's power, can be enhanced with Dragon Varnish up to +5. When enhanced each effect is supplemented, at +5 can upgrade to Lv. 2 through Head Blacksmith Ferris in the Town of Aden. \\nUpgrade Materials: 12 million Adena -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="20.0"/>
+		</stats>
+	</armor>
+
+	<armor id="71692" name="Dragon Pedant - Attack Type Lv. 2" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_dragon_i00">
+	<!-- Pendant imbued with Dragon's power, can be enhanced with Dragon Varnish up to +5. When enhanced each effect is supplemented, at +5 can upgrade to Lv. 3 through Head Blacksmith Ferris in the Town of Aden. \\nUpgrade Materials: Dragon Essence x3 and 16 million Adena -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="35.0"/>
+		</stats>
+	</armor>
+
+	<armor id="71693" name="Dragon Pedant - Attack Type Lv. 3" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_dragon_i00">
+	<!-- Pendant imbued with Dragon's power, can be enhanced with Dragon Varnish up to +5. When enhanced each effect is supplemented, at +5 can upgrade to Lv. 4 through Head Blacksmith Ferris in the Town of Aden. \\nUpgrade Materials: Dragon Essence x20 and 50 million Adena -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="57.0"/>
+		</stats>
+	</armor>
+
+	<armor id="71694" name="Dragon Pedant - Attack Type Lv. 4" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_dragon_i00">
+	<!-- Pendant imbued with Dragon's power, can be enhanced with Dragon Varnish up to +5. Various effects are added when enhanced. -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="70.0"/>
+		</stats>
+	</armor>
+
+	<armor id="71695" name="Dragon Pedant - Magic Type Lv. 1" type="NONE" body-part="UNDERWEAR" icon="BranchIcon.icon.g_bm_pendant_dragon_m">
+	<!-- Pendant imbued with Dragon's magic power, can be enhanced with Dragon Varnish up to +5. When enhanced each effect is supplemented, at +5 can upgrade to Lv. 2 through Head Blacksmith Ferris in the Town of Aden. \\nUpgrade Materials: 12 million Adena -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="20.0"/>
+		</stats>
+	</armor>
+
+	<armor id="71696" name="Dragon Pedant - Magic Type Lv. 2" type="NONE" body-part="UNDERWEAR" icon="BranchIcon.icon.g_bm_pendant_dragon_m">
+	<!-- Pendant imbued with Dragon's magic power, can be enhanced with Dragon Varnish up to +5. When enhanced each effect is supplemented, at +5 can upgrade to Lv. 3 through Head Blacksmith Ferris in the Town of Aden.\\nUpgrade Materials: Dragon Essence x3 and 16 million Adena -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="35.0"/>
+		</stats>
+	</armor>
+
+	<armor id="71697" name="Dragon Pedant - Magic Type Lv. 3" type="NONE" body-part="UNDERWEAR" icon="BranchIcon.icon.g_bm_pendant_dragon_m">
+	<!-- Pendant imbued with Dragon's magic power, can be enhanced with Dragon Varnish up to +5. When enhanced each effect is supplemented, at +5 can upgrade to Lv. 4 through Head Blacksmith Ferris in the Town of Aden.\\nUpgrade Materials: Dragon Essence x20 and 50 million Adena -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="57.0"/>
+		</stats>
+	</armor>
+
+	<armor id="71698" name="Dragon Pedant - Magic Type Lv. 4" type="NONE" body-part="UNDERWEAR" icon="BranchIcon.icon.g_bm_pendant_dragon_m">
+	<!-- Pendant imbued with Dragon's magic power, can be enhanced with Dragon Varnish up to +5. Various effects are added when enhanced. -->
+		<restriction freightable="false" dropable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="pDef" value="70.0"/>
+		</stats>
+	</armor>
+
+	<item id="71699" name="Dragon Essence" type="MATERIAL" icon="icon.bm_soul_of_undead">
+	<!-- Essence containing the power of dragons. Use to enhance pendants through Head Blacksmith Ferris in the Town of Aden. -->
+		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
 </list>

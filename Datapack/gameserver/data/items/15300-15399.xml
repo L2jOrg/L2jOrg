@@ -1,167 +1,154 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <weapon id="15300" name="Transparent Dual (NPC)" icon="icon.weapon_dual_sword_i00">
-        <set name="weapon_type" val="DUAL"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="2080"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">282</stat>
-            <stat type="mAtk">114</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="15301" name="Transparent Pole (NPC)" icon="icon.weapon_long_spear_i00">
-        <set name="weapon_type" val="POLE"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1950"/>
-        <set name="soulshots" val="3"/>
-        <set name="spiritshots" val="3"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
-        <skills>
-            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
-        </skills>
-        <stats>
-            <stat type="pAtk">156</stat>
-            <stat type="mAtk">83</stat>
-            <stat type="rCrit">8</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">80</stat>
-        </stats>
-    </weapon>
-    <weapon id="15302" name="Transparent Bow (NPC)" icon="icon.weapon_long_bow_i00">
-        <set name="weapon_type" val="BOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1830"/>
-        <set name="soulshots" val="6"/>
-        <set name="spiritshots" val="2"/>
-        <set name="mp_consume" val="4"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">114</stat>
-            <stat type="mAtk">35</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">227</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">500</stat>
-        </stats>
-    </weapon>
-    <weapon id="15303" name="Transparent Claw (NPC)" icon="icon.weapon_foxs_nail_i00">
-        <set name="weapon_type" val="DUALFIST"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1013"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">376</stat>
-            <stat type="mAtk">119</stat>
-            <stat type="rCrit">6</stat>
-            <stat type="accCombat">8</stat>
-            <stat type="pAtkSpd">325</stat>
-            <stat type="randomDamage">5</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="15304" name="Transparent Crossbow (NPC)" icon="icon.weapon_hunting_gun_i00">
-        <set name="weapon_type" val="CROSSBOW"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1850"/>
-        <set name="soulshots" val="4"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">64</stat>
-            <stat type="mAtk">32</stat>
-            <stat type="rCrit">10</stat>
-            <stat type="accCombat">-1.5</stat>
-            <stat type="pAtkSpd">303</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">400</stat>
-        </stats>
-    </weapon>
-    <weapon id="15305" name="Transparent Rapier (NPC)" icon="icon.weapon_rapier_i00">
-        <set name="weapon_type" val="RAPIER"/>
-        <set name="bodypart" val="rhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="1520"/>
-        <set name="soulshots" val="2"/>
-        <set name="spiritshots" val="2"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">36</stat>
-            <stat type="mAtk">26</stat>
-            <stat type="rCrit">10</stat>
-            <stat type="accCombat">-1.5</stat>
-            <stat type="pAtkSpd">406</stat>
-            <stat type="randomDamage">40</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <weapon id="15306" name="Transparent Dual Dagger (NPC)" icon="icon.dual_dagger_i00">
-        <set name="weapon_type" val="DUALDAGGER"/>
-        <set name="bodypart" val="lrhand"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="crystal_type" val="A"/>
-        <set name="weight" val="2150"/>
-        <set name="soulshots" val="1"/>
-        <set name="spiritshots" val="1"/>
-        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
-        <stats>
-            <stat type="pAtk">304</stat>
-            <stat type="mAtk">157</stat>
-            <stat type="rCrit">12</stat>
-            <stat type="accCombat">-3.75</stat>
-            <stat type="pAtkSpd">433</stat>
-            <stat type="randomDamage">10</stat>
-            <stat type="pAtkRange">40</stat>
-        </stats>
-    </weapon>
-    <item id="15366" name="Watermelon seed" icon="icon.event_honey_watermelon_seed_i00">
-        <!-- Giant Watermelon Event: double-click summons a Young Watermelon. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="commissionItemType" val="OTHER_ITEM"/>
-        <restriction stackable="true" olympiad-restricted="true"/>
-        <skills>
-            <skill id="9029" level="1"/> <!-- Watermelon Seed -->
-        </skills>
-    </item>
-    <item id="15367" name="Honey Watermelon Seed" icon="icon.event_watermelon_seed_i00">
-        <!-- Giant Watermelon Event: double-click summons a Young Honey Watermelon. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="commissionItemType" val="OTHER_ITEM"/>
-        <restriction stackable="true" olympiad-restricted="true"/>
-        <skills>
-            <skill id="9030" level="1"/> <!-- Honey Watermelon Seed -->
-        </skills>
-    </item>
-    <item id="15368" name="Copied Watermelon Seed" icon="icon.event_honey_watermelon_seed_i00">
-        <!-- Giant Watermelon Event: double-click summons a Young Watermelon. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
-    <item id="15369" name="Copied Honey Watermelon Seed" icon="icon.event_watermelon_seed_i00">
-        <!-- Giant Watermelon Event: double-click summons a Young Honey Watermelon. -->
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
-    </item>
+	<weapon id="15300" name="Transparent Dual (NPC)" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false"/>
+		<attributes weight="2080" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal type="A"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="282.0"/>
+			<stat type="mAtk" value="114.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="15301" name="Transparent Pole (NPC)" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_long_spear_i00">
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false"/>
+		<attributes weight="1950" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal type="A"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="156.0"/>
+			<stat type="mAtk" value="83.0"/>
+			<stat type="rCrit" value="8.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="80.0"/>
+		</stats>
+		<skills>
+			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+		</skills>
+	</weapon>
+
+	<weapon id="15302" name="Transparent Bow (NPC)" type="BOW" body-part="TWO_HAND" icon="icon.weapon_long_bow_i00">
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false"/>
+		<attributes weight="1830" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal type="A"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="4" spiritshots="3" mana="4"/>
+		<stats>
+			<stat type="pAtk" value="114.0"/>
+			<stat type="mAtk" value="35.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="227.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="500.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="15303" name="Transparent Claw (NPC)" type="FIST" body-part="TWO_HAND" icon="icon.weapon_foxs_nail_i00">
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false"/>
+		<attributes weight="1013" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal type="A"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="376.0"/>
+			<stat type="mAtk" value="119.0"/>
+			<stat type="rCrit" value="6.0"/>
+			<stat type="accCombat" value="8.0"/>
+			<stat type="pAtkSpd" value="325.0"/>
+			<stat type="randomDamage" value="5.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="15304" name="Transparent Crossbow (NPC)" type="CROSSBOW" body-part="TWO_HAND" icon="icon.weapon_hunting_gun_i00">
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false"/>
+		<attributes weight="1850" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal type="A"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="64.0"/>
+			<stat type="mAtk" value="32.0"/>
+			<stat type="rCrit" value="10.0"/>
+			<stat type="accCombat" value="-1.5"/>
+			<stat type="pAtkSpd" value="303.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="400.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="15305" name="Transparent Rapier (NPC)" type="RAPIER" body-part="RIGHT_HAND" icon="icon.weapon_rapier_i00">
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false"/>
+		<attributes weight="1520" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal type="A"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="36.0"/>
+			<stat type="mAtk" value="26.0"/>
+			<stat type="rCrit" value="10.0"/>
+			<stat type="accCombat" value="-1.5"/>
+			<stat type="pAtkSpd" value="406.0"/>
+			<stat type="randomDamage" value="40.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<weapon id="15306" name="Transparent Dual Dagger (NPC)" type="DUAL_DAGGER" body-part="TWO_HAND" icon="icon.dual_dagger_i00">
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false"/>
+		<attributes weight="2150" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<crystal type="A"/>
+		<damage radius="40" angle="240"/>
+		<consume  soulshots="3" spiritshots="3"/>
+		<stats>
+			<stat type="pAtk" value="304.0"/>
+			<stat type="mAtk" value="157.0"/>
+			<stat type="rCrit" value="12.0"/>
+			<stat type="accCombat" value="-3.75"/>
+			<stat type="pAtkSpd" value="433.0"/>
+			<stat type="randomDamage" value="10.0"/>
+			<stat type="pAtkRange" value="40.0"/>
+		</stats>
+	</weapon>
+
+	<item id="15366" name="Watermelon seed" type="NONE" icon="icon.event_honey_watermelon_seed_i00">
+	<!-- Double-click to make a Growing Watermelon appear. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<attributes/>
+		<skill-reducer type="ItemSkills">
+			<skill id="9029" level="1"/>  <!-- Watermelon Seed -->
+		</skill-reducer>
+	</item>
+
+	<item id="15367" name="Honey Watermelon Seed" type="NONE" icon="icon.event_watermelon_seed_i00">
+	<!-- Double-click to make a Growing Honey Watermelon appear. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<attributes/>
+		<skill-reducer type="ItemSkills">
+			<skill id="9030" level="1"/>  <!-- Honey Watermelon Seed -->
+		</skill-reducer>
+	</item>
+
+	<item id="15368" name="Copied Watermelon Seed" type="NONE" icon="icon.event_honey_watermelon_seed_i00">
+	<!-- Giant Watermelon Event: double-click summons a Young Watermelon. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="15369" name="Copied Honey Watermelon Seed" type="NONE" icon="icon.event_watermelon_seed_i00">
+	<!-- Giant Watermelon Event: double-click summons a Young Honey Watermelon. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
 </list>

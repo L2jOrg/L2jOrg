@@ -1,151 +1,107 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="1785" name="Soulstone" icon="icon.etc_crystal_white_i00">
-        <!-- Material used to make Dwarven items. Can be sold in any shop. -->
-        <set name="etcitem_type" val="MATERIAL"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="price" val="250"/>
-        <set name="commissionItemType" val="OTHER_ITEM"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1786" name="Recipe: Broadsword" icon="icon.etc_recipe_white_i00">
-        <!-- For Dwarves only. Recipe for a Broadsword. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="250"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1787" name="Recipe: Willow Staff" icon="icon.etc_recipe_white_i00">
-        <!-- For Dwarves only. Recipe for a Willow Staff. Requires Create Item - Skill Lv. 1 The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="250"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1788" name="Recipe: Bow" icon="icon.etc_recipe_white_i00">
-        <!-- For Dwarves only. Recipe for a Bow. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="250"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1789" name="Recipe: Cedar Staff" icon="icon.etc_recipe_white_i00">
-        <!-- For Dwarves only. Recipe for a Cedar Staff. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="1082"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1790" name="Recipe: Dirk" icon="icon.etc_recipe_white_i00">
-        <!-- For Dwarves only. Recipe for a Dirk. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="1082"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1791" name="Recipe: Brandish" icon="icon.etc_recipe_white_i00">
-        <!-- For Dwarves only. Recipe for a Brandish. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="1082"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1792" name="Recipe: Short Spear" icon="icon.etc_recipe_white_i00">
-        <!-- For Dwarves only. Recipe for a Short Spear. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="2720"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1793" name="Recipe: Sword of Reflection" icon="icon.etc_recipe_white_i00">
-        <!-- For Dwarves only. Recipe for a Sword of Reflection. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="2720"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1794" name="Recipe: Forest Bow" icon="icon.etc_recipe_white_i00">
-        <!-- For Dwarves only. Recipe for a Forest Bow. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="2720"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1795" name="Recipe: Leather Shoes" icon="icon.etc_recipe_white_i00">
-        <!-- For Dwarves only. Recipe for Leather Shoes. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="53"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1796" name="Recipe: Leather Tunic" icon="icon.etc_recipe_white_i00">
-        <!-- For Dwarves only. Recipe for a Leather Tunic. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="159"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1797" name="Recipe: Leather Stockings" icon="icon.etc_recipe_white_i00">
-        <!-- For Dwarves only. Recipe for Leather Stockings. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="99"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1798" name="Recipe: Leather Helmet" icon="icon.etc_recipe_white_i00">
-        <!-- For Dwarves only. Recipe for a Leather Helmet. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="204"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
-    <item id="1799" name="Recipe: Leather Gloves" icon="icon.etc_recipe_white_i00">
-        <!-- For Dwarves only. Recipe for Leather Gloves. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
-        <set name="default_action" val="RECIPE"/>
-        <set name="etcitem_type" val="RECIPE"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="weight" val="30"/>
-        <set name="price" val="135"/>
-        <set name="handler" val="Recipes"/>
-        <restriction stackable="true"/>
-    </item>
+	<item id="1785" name="Soulstone" type="MATERIAL" icon="icon.etc_crystal_white_i00">
+	<!-- Consumed when using some skills. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes price="250" immediate-effect="true"/>
+	</item>
+
+	<item id="1786" name="Recipe: Broadsword" type="RECIPE" icon="icon.etc_recipe_white_i00">
+	<!-- For Dwarves only. Recipe for a Broadsword. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="250" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="1787" name="Recipe: Broadsword" type="RECIPE" icon="icon.etc_recipe_white_i00">
+	<!-- For Dwarves only. Recipe for a Willow Staff. Requires Create Item - Skill Lv. 1 The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="250" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="1788" name="Recipe: Bow" type="RECIPE" icon="icon.etc_recipe_white_i00">
+	<!-- For Dwarves only. Recipe for a Bow. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="250" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="1789" name="Recipe: Cedar Staff" type="RECIPE" icon="icon.etc_recipe_white_i00">
+	<!-- For Dwarves only. Recipe for a Cedar Staff. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="1082" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="1790" name="Recipe: Dirk" type="RECIPE" icon="icon.etc_recipe_white_i00">
+	<!-- For Dwarves only. Recipe for a Dirk. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="1082" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="1791" name="Recipe: Brandish" type="RECIPE" icon="icon.etc_recipe_white_i00">
+	<!-- For Dwarves only. Recipe for a Brandish. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="1082" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="1792" name="Recipe: Short Spear" type="RECIPE" icon="icon.etc_recipe_white_i00">
+	<!-- For Dwarves only. Recipe for a Short Spear. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="2720" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="1793" name="Recipe: Sword of Reflection" type="RECIPE" icon="icon.etc_recipe_white_i00">
+	<!-- For Dwarves only. Recipe for a Sword of Reflection. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="2720" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="1794" name="Recipe: Forest Bow" type="RECIPE" icon="icon.etc_recipe_white_i00">
+	<!-- For Dwarves only. Recipe for a Forest Bow. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="2720" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="1795" name="Recipe: Leather Shoes" type="RECIPE" icon="icon.etc_recipe_white_i00">
+	<!-- For Dwarves only. Recipe for Leather Shoes. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="53" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="1796" name="Recipe: Leather Tunic" type="RECIPE" icon="icon.etc_recipe_white_i00">
+	<!-- For Dwarves only. Recipe for a Leather Tunic. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="159" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="1797" name="Recipe: Leather Stockings" type="RECIPE" icon="icon.etc_recipe_white_i00">
+	<!-- For Dwarves only. Recipe for Leather Stockings. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="99" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="1798" name="Recipe: Leather Helmet" type="RECIPE" icon="icon.etc_recipe_white_i00">
+	<!-- For Dwarves only. Recipe for a Leather Helmet. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="204" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
+	<item id="1799" name="Recipe: Leather Gloves" type="RECIPE" icon="icon.etc_recipe_white_i00">
+	<!-- For Dwarves only. Recipe for Leather Gloves. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
+		<restriction freightable="false" stackable="true" depositable="false"/>
+		<attributes weight="30" price="135" commission-type="RECIPE" immediate-effect="true"/>
+		<action handler="Recipes"/>
+	</item>
+
 </list>
