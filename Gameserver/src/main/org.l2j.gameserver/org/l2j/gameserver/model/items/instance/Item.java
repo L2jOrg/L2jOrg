@@ -615,16 +615,6 @@ public final class Item extends WorldObject {
     }
 
     /**
-     * @return the characteristics of the Armor.
-     */
-    public Armor getArmorItem() {
-        if (_item instanceof Armor) {
-            return (Armor) _item;
-        }
-        return null;
-    }
-
-    /**
      * @return the quantity of crystals for crystallization.
      */
     public final int getCrystalCount() {

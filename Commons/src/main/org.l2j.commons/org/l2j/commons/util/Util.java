@@ -187,4 +187,9 @@ public class Util {
         return defaultVal;
     }
 
+    public static boolean isBetween(int number, int min, int max) {
+        return  number >= min && number <= max;
+    }
+
+
 }

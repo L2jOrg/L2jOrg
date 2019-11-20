@@ -1,5 +1,7 @@
 package org.l2j.gameserver.model.actor.transform;
 
+import io.github.joealisson.primitive.HashIntSet;
+import io.github.joealisson.primitive.IntSet;
 import org.l2j.gameserver.enums.InventoryBlockType;
 import org.l2j.gameserver.enums.Sex;
 import org.l2j.gameserver.model.StatsSet;
@@ -18,9 +20,6 @@ import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.network.serverpackets.ExBasicActionList;
 import org.l2j.gameserver.network.serverpackets.ExUserInfoEquipSlot;
 import org.l2j.gameserver.network.serverpackets.SkillCoolTime;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import static org.l2j.gameserver.util.GameUtils.isNpc;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
@@ -230,8 +229,8 @@ public final class Transform implements IIdentifiable {
 
                 // Set inventory blocks if needed.
                 if (!template.getAdditionalItems().isEmpty()) {
-                    final List<Integer> allowed = new ArrayList<>();
-                    final List<Integer> notAllowed = new ArrayList<>();
+                    final IntSet allowed = new HashIntSet();
+                    final IntSet notAllowed = new HashIntSet();
                     for (AdditionalItemHolder holder : template.getAdditionalItems()) {
                         if (holder.isAllowedToUse()) {
                             allowed.add(holder.getId());

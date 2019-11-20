@@ -35,7 +35,7 @@ public class PcRefund extends ItemContainer {
         super.addItem(item);
         try {
             if (getSize() > 12) {
-                final Item removedItem = _items.remove(0);
+                final Item removedItem = items.remove(0);
                 if (removedItem != null) {
                     ItemEngine.getInstance().destroyItem("ClearRefund", removedItem, getOwner(), null);
                     removedItem.updateDatabase(true);
@@ -53,14 +53,14 @@ public class PcRefund extends ItemContainer {
     @Override
     public void deleteMe() {
         try {
-            for (Item item : _items.values()) {
+            for (Item item : items.values()) {
                 ItemEngine.getInstance().destroyItem("ClearRefund", item, getOwner(), null);
                 item.updateDatabase(true);
             }
         } catch (Exception e) {
             LOGGER.error("deleteMe()", e);
         }
-        _items.clear();
+        items.clear();
     }
 
     @Override

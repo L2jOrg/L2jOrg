@@ -95,7 +95,7 @@ public final class RequestCrystallizeItem extends ClientPacket {
             return;
         }
 
-        if (!activeChar.getInventory().canManipulateWithItemId(itemToRemove.getId())) {
+        if (!activeChar.getInventory().canManipulate(itemToRemove)) {
             client.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_CRYSTALLIZED);
             return;
         }

@@ -169,7 +169,7 @@ public abstract class Inventory extends ItemContainer {
         }
 
         synchronized (item) {
-            if (!_items.containsKey(item.getObjectId())) {
+            if (!items.containsKey(item.getObjectId())) {
                 return null;
             }
 
@@ -201,7 +201,7 @@ public abstract class Inventory extends ItemContainer {
         }
 
         synchronized (item) {
-            if (!_items.containsKey(item.getObjectId())) {
+            if (!items.containsKey(item.getObjectId())) {
                 return null;
             }
 
@@ -664,7 +664,7 @@ public abstract class Inventory extends ItemContainer {
         } else if (slot == ItemTemplate.SLOT_ARTIFACT) {
             pdollSlot = PAPERDOLL_ARTIFACT1;
         } else {
-            LOGGER.info("Unhandled slot type: " + slot);
+            LOGGER.warn("Unhandled slot type: {}", slot);
             LOGGER.info(CommonUtil.getTraceString(Thread.currentThread().getStackTrace()));
         }
         if (pdollSlot >= 0) {
@@ -836,7 +836,7 @@ public abstract class Inventory extends ItemContainer {
     protected void refreshWeight() {
         long weight = 0;
 
-        for (Item item : _items.values()) {
+        for (Item item : items.values()) {
             if ((item != null) && (item.getTemplate() != null)) {
                 weight += item.getTemplate().getWeight() * item.getCount();
             }

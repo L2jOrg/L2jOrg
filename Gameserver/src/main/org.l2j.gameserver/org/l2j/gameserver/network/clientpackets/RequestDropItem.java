@@ -128,7 +128,7 @@ public final class RequestDropItem extends ClientPacket {
             return;
         }
 
-        if (!activeChar.getInventory().canManipulateWithItemId(item.getId())) {
+        if (!activeChar.getInventory().canManipulate(item)) {
             activeChar.sendMessage("You cannot use this item.");
             return;
         }

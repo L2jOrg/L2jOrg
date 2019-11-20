@@ -1,16 +1,18 @@
 package org.l2j.gameserver.model.itemcontainer;
 
+import io.github.joealisson.primitive.CHashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.enums.ItemLocation;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.world.World;
+import org.l2j.gameserver.world.WorldTimeController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,10 +21,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Collection;
 import java.util.LinkedList;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
+
+import static java.util.Objects.isNull;
 
 /**
  * @author Advi
@@ -30,31 +32,23 @@ import java.util.stream.Collectors;
 public abstract class ItemContainer {
     protected static final Logger LOGGER = LoggerFactory.getLogger(ItemContainer.class);
 
-    protected final Map<Integer, Item> _items = new ConcurrentHashMap<>();
+    protected final IntMap<Item> items = new CHashIntMap<>();
 
     protected ItemContainer() {
-    }
-
-    protected abstract Creature getOwner();
-
-    protected abstract ItemLocation getBaseLocation();
-
-    public String getName() {
-        return "ItemContainer";
     }
 
     /**
      * @return int the owner object Id
      */
     public int getOwnerId() {
-        return getOwner() == null ? 0 : getOwner().getObjectId();
+        return isNull(getOwner()) ? 0 : getOwner().getObjectId();
     }
 
     /**
      * @return the quantity of items in the inventory
      */
     public int getSize() {
-        return _items.size();
+        return items.size();
     }
 
     /**
@@ -67,13 +61,15 @@ public abstract class ItemContainer {
         for (Predicate<Item> additionalFilter : filters) {
             filter = filter.and(additionalFilter);
         }
-        return (int) _items.values().stream().filter(filter).count();
+        return (int) items.values().stream().filter(filter).count();
     }
 
     /**
      * Gets the items in inventory.
      *
      * @return the items in inventory.
+     *
+     * TODO replace with bulk method operation forEach like
      */
     public Collection<Item> getItems() {
         return getItems(i -> true);
@@ -91,7 +87,7 @@ public abstract class ItemContainer {
         for (Predicate<Item> additionalFilter : filters) {
             filter = filter.and(additionalFilter);
         }
-        return _items.values().stream().filter(filter).collect(Collectors.toCollection(LinkedList::new));
+        return items.values().stream().filter(filter).collect(Collectors.toCollection(LinkedList::new));
     }
 
     /**
@@ -99,7 +95,7 @@ public abstract class ItemContainer {
      * @return the item from inventory by itemId
      */
     public Item getItemByItemId(int itemId) {
-        return _items.values().stream().filter(item -> item.getId() == itemId).findFirst().orElse(null);
+        return items.values().stream().filter(item -> item.getId() == itemId).findFirst().orElse(null);
     }
 
     /**
@@ -115,7 +111,7 @@ public abstract class ItemContainer {
      * @return item from inventory by objectId
      */
     public Item getItemByObjectId(int objectId) {
-        return _items.get(objectId);
+        return items.get(objectId);
     }
 
     /**
@@ -140,7 +136,7 @@ public abstract class ItemContainer {
     public long getInventoryItemCount(int itemId, int enchantLevel, boolean includeEquipped) {
         long count = 0;
 
-        for (Item item : _items.values()) {
+        for (Item item : items.values()) {
             if ((item.getId() == itemId) && ((item.getEnchantLevel() == enchantLevel) || (enchantLevel < 0)) && (includeEquipped || !item.isEquipped())) {
                 if (item.isStackable()) {
                     return item.getCount();
@@ -155,7 +151,7 @@ public abstract class ItemContainer {
      * @return true if player got item for self resurrection
      */
     public final boolean haveItemForSelfResurrection() {
-        return _items.values().stream().anyMatch(item -> item.getTemplate().isAllowSelfResurrection());
+        return items.values().stream().anyMatch(item -> item.getTemplate().isAllowSelfResurrection());
     }
 
     /**
@@ -358,7 +354,7 @@ public abstract class ItemContainer {
         }
 
         synchronized (item) {
-            if (!_items.containsKey(item.getObjectId())) {
+            if (!items.containsKey(item.getObjectId())) {
                 return null;
             }
 
@@ -504,7 +500,7 @@ public abstract class ItemContainer {
      * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
      */
     public void destroyAllItems(String process, Player actor, Object reference) {
-        for (Item item : _items.values()) {
+        for (Item item : items.values()) {
             destroyItem(process, item, actor, reference);
         }
     }
@@ -513,7 +509,7 @@ public abstract class ItemContainer {
      * @return warehouse Adena.
      */
     public long getAdena() {
-        for (Item item : _items.values()) {
+        for (Item item : items.values()) {
             if (item.getId() == CommonItem.ADENA) {
                 return item.getCount();
             }
@@ -522,7 +518,7 @@ public abstract class ItemContainer {
     }
 
     public long getBeautyTickets() {
-        for (Item item : _items.values()) {
+        for (Item item : items.values()) {
             if (item.getId() == Inventory.BEAUTY_TICKET_ID) {
                 return item.getCount();
             }
@@ -536,7 +532,7 @@ public abstract class ItemContainer {
      * @param item : Item to be added from inventory
      */
     protected void addItem(Item item) {
-        _items.put(item.getObjectId(), item);
+        items.put(item.getObjectId(), item);
     }
 
     /**
@@ -546,7 +542,7 @@ public abstract class ItemContainer {
      * @return
      */
     protected boolean removeItem(Item item) {
-        return _items.remove(item.getObjectId()) != null;
+        return items.remove(item.getObjectId()) != null;
     }
 
     /**
@@ -560,13 +556,13 @@ public abstract class ItemContainer {
      */
     public void deleteMe() {
         if (getOwner() != null) {
-            for (Item item : _items.values()) {
+            for (Item item : items.values()) {
                 item.updateDatabase(true);
                 item.deleteMe();
                 World.getInstance().removeObject(item);
             }
         }
-        _items.clear();
+        items.clear();
     }
 
     /**
@@ -574,7 +570,7 @@ public abstract class ItemContainer {
      */
     public void updateDatabase() {
         if (getOwner() != null) {
-            for (Item item : _items.values()) {
+            for (Item item : items.values()) {
                 item.updateDatabase(true);
             }
         }
@@ -638,4 +634,12 @@ public abstract class ItemContainer {
         final ItemTemplate template = ItemEngine.getInstance().getTemplate(itemId);
         return (template == null) || validateWeight(template.getWeight() * count);
     }
+
+    public String getName() {
+        return "ItemContainer";
+    }
+
+    protected abstract Creature getOwner();
+
+    protected abstract ItemLocation getBaseLocation();
 }

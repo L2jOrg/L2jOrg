@@ -80,7 +80,7 @@ public class RequestCrystallizeEstimate extends ClientPacket {
             _count = activeChar.getInventory().getItemByObjectId(_objectId).getCount();
         }
 
-        if (!activeChar.getInventory().canManipulateWithItemId(item.getId())) {
+        if (!activeChar.getInventory().canManipulate(item)) {
             activeChar.sendMessage("You cannot use this item.");
             return;
         }

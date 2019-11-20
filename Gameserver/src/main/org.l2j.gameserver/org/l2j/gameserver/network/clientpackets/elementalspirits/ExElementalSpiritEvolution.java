@@ -1,5 +1,7 @@
 package org.l2j.gameserver.network.clientpackets.elementalspirits;
 
+import io.github.joealisson.primitive.IntCollection;
+import org.l2j.commons.util.StreamUtil;
 import org.l2j.gameserver.api.elemental.ElementalSpirit;
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.enums.InventoryBlockType;
@@ -11,8 +13,6 @@ import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.UserInfo;
 import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpiritEvolution;
-
-import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
 import static org.l2j.gameserver.network.SystemMessageId.*;
@@ -65,7 +65,8 @@ public class ExElementalSpiritEvolution extends ClientPacket {
     private boolean consumeEvolveItems(Player player, ElementalSpirit spirit) {
         var inventory = player.getInventory();
         try {
-            inventory.setInventoryBlock(spirit.getItemsToEvolve().stream().map(ItemHolder::getId).collect(Collectors.toList()), InventoryBlockType.BLACKLIST);
+            IntCollection blocked  = StreamUtil.collectToSet(spirit.getItemsToEvolve().stream().mapToInt(ItemHolder::getId));
+            inventory.setInventoryBlock(blocked, InventoryBlockType.BLACKLIST);
             for (ItemHolder itemHolder : spirit.getItemsToEvolve()) {
                 if(inventory.getInventoryItemCount(itemHolder.getId(), -1) < itemHolder.getCount()) {
                     return false;

@@ -60,7 +60,7 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
     private final Crypt crypt;
     private String accountName;
     private SessionKey sessionId;
-    private Player activeChar;
+    private Player player;
     private ClientHardwareInfoHolder hardwareInfo;
     private boolean isAuthedGG;
     private CharSelectInfoPackage[] charSlotMapping = null;
@@ -224,7 +224,7 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
         }
         AuthServerCommunication.getInstance().sendPacket(new PlayerLogout(getAccountName()));
 
-        if ((activeChar == null) || !activeChar.isInOfflineMode()) {
+        if ((player == null) || !player.isInOfflineMode()) {
             Disconnection.of(this).onDisconnection();
         }
     }
@@ -255,11 +255,11 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
     }
 
     public Player getPlayer() {
-        return activeChar;
+        return player;
     }
 
     public void setPlayer(Player activeChar) {
-        this.activeChar = activeChar;
+        this.player = activeChar;
     }
 
     public ReentrantLock getActivePlayerLock() {
@@ -300,12 +300,12 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
     }
 
     public void sendPacket(ServerPacket packet) {
-        if (isDetached || (packet == null)) {
+        if (isDetached || isNull(packet)) {
             return;
         }
 
         writePacket(packet);
-        packet.runImpl(activeChar);
+        packet.runImpl(player);
     }
 
 
@@ -504,8 +504,8 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
         var currentVipTier = VipEngine.getInstance().getVipTier(getVipPoints());
         getAccountData().updateVipPoints(points);
         var newTier = VipEngine.getInstance().getVipTier(getVipPoints());
-        if(newTier != currentVipTier && nonNull(activeChar)) {
-            activeChar.setVipTier(newTier);
+        if(newTier != currentVipTier && nonNull(player)) {
+            player.setVipTier(newTier);
             if(newTier > 0) {
                 getAccountData().setVipTierExpiration(Instant.now().plus(30, ChronoUnit.DAYS).toEpochMilli());
             } else {
@@ -539,7 +539,7 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
             return switch (state) {
                 case CONNECTED, CLOSING, DISCONNECTED  -> "[IP: " + (address == null ? "disconnected" : address) + "]";
                 case AUTHENTICATED -> "[Account: " + accountName + " - IP: " + (address == null ? "disconnected" : address) + "]";
-                case IN_GAME, JOINING_GAME -> "[Character: " + (activeChar == null ? "disconnected" : activeChar.getName() + "[" + activeChar.getObjectId() + "]") + " - Account: " + accountName + " - IP: " + (address == null ? "disconnected" : address) + "]";
+                case IN_GAME, JOINING_GAME -> "[Character: " + (player == null ? "disconnected" : player.getName() + "[" + player.getObjectId() + "]") + " - Account: " + accountName + " - IP: " + (address == null ? "disconnected" : address) + "]";
             };
         } catch (NullPointerException e) {
             return "[Character read failed due to disconnect]";

@@ -165,7 +165,7 @@ public class TradeList {
             return null;
         }
 
-        if (!_owner.getInventory().canManipulateWithItemId(item.getId())) {
+        if (!_owner.getInventory().canManipulate(item)) {
             LOGGER.warn(_owner.getName() + ": Attempt to add an item that can't manipualte!");
             return null;
         }

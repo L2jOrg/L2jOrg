@@ -56,7 +56,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     public static final int TYPE2_QUEST = 3;
     public static final int TYPE2_MONEY = 4;
     public static final int TYPE2_OTHER = 5;
-    public static final int SLOT_NONE = 0x0000;
+
     public static final int SLOT_UNDERWEAR = 0x0001;
     public static final int SLOT_R_EAR = 0x0002;
     public static final int SLOT_L_EAR = 0x0004;
@@ -88,11 +88,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     public static final long SLOT_AGATHION = 0x3000000000L;
     public static final long SLOT_ARTIFACT_BOOK = 0x20000000000L;
     public static final long SLOT_ARTIFACT = 0x40000000000L;
-    public static final int SLOT_WOLF = -100;
-    public static final int SLOT_HATCHLING = -101;
-    public static final int SLOT_STRIDER = -102;
-    public static final int SLOT_BABYPET = -103;
-    public static final int SLOT_GREATWOLF = -104;
+
     public static final int SLOT_MULTI_ALLWEAPON = SLOT_LR_HAND | SLOT_R_HAND;
     protected static final Logger LOGGER = LoggerFactory.getLogger(ItemTemplate.class);
     protected int _type1; // needed for item list (inventory)

@@ -40,7 +40,7 @@ public final class RequestAutoSoulShot extends ClientPacket {
             }
 
             if (_enable) {
-                if (!activeChar.getInventory().canManipulateWithItemId(item.getId())) {
+                if (!activeChar.getInventory().canManipulate(item)) {
                     activeChar.sendMessage("Cannot use this item.");
                     return;
                 }

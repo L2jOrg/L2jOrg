@@ -3,6 +3,8 @@ package org.l2j.gameserver.model.items;
 import io.github.joealisson.primitive.HashLongMap;
 import io.github.joealisson.primitive.LongMap;
 
+import static java.util.Objects.isNull;
+
 /**
  * @author JoeAlisson
  */
@@ -77,5 +79,18 @@ public enum BodyPart {
 
     public static int slotToPaperdool(long slot) {
         return fromSlot(slot).paperdool;
+    }
+
+    public boolean isAnyOf(BodyPart... parts) {
+        if(isNull(parts)) {
+            return false;
+        }
+
+        for (BodyPart bodyPart : parts) {
+            if(bodyPart == this) {
+                return true;
+            }
+        }
+        return false;
     }
 }

@@ -1,9 +1,9 @@
 package org.l2j.gameserver.model.itemcontainer;
 
+import io.github.joealisson.primitive.IntCollection;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.items.ItemEngine;
-import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.enums.InventoryBlockType;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.TradeItem;
@@ -20,13 +20,17 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.EtcItemType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
+import org.l2j.gameserver.world.WorldTimeController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.*;
+import java.util.Collection;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 import static java.util.Objects.nonNull;
@@ -41,9 +45,9 @@ public class PcInventory extends Inventory {
     private Item silverCoin;
     private Item rustyCoin;
 
-    private Collection<Integer> _blockItems = null;
+    private IntCollection blockItems = null;
 
-    private InventoryBlockType _blockMode = InventoryBlockType.NONE;
+    private InventoryBlockType blockMode = InventoryBlockType.NONE;
 
     public PcInventory(Player owner) {
         _owner = owner;
@@ -122,7 +126,7 @@ public class PcInventory extends Inventory {
 
     public Collection<Item> getUniqueItems(boolean allowAdena, boolean allowAncientAdena, boolean onlyAvailable) {
         final Collection<Item> list = new LinkedList<>();
-        for (Item item : _items.values()) {
+        for (Item item : items.values()) {
             if (!allowAdena && (item.getId() == CommonItem.ADENA)) {
                 continue;
             }
@@ -193,7 +197,7 @@ public class PcInventory extends Inventory {
     public Collection<Item> getAvailableItems(boolean allowAdena, boolean allowNonTradeable, boolean feightable) {
         return getItems(i ->
         {
-            if (!i.isAvailable(_owner, allowAdena, allowNonTradeable) || !canManipulateWithItemId(i.getId())) {
+            if (!i.isAvailable(_owner, allowAdena, allowNonTradeable) || !canManipulate(i)) {
                 return false;
             } else if (feightable) {
                 return (i.getItemLocation() == ItemLocation.INVENTORY) && i.isFreightable();
@@ -210,7 +214,7 @@ public class PcInventory extends Inventory {
      */
     public Collection<TradeItem> getAvailableItems(TradeList tradeList) {
         //@formatter:off
-        return _items.values().stream()
+        return items.values().stream()
                 .filter(i -> i.isAvailable(_owner, false, false))
                 .map(tradeList::adjustAvailableItem)
                 .filter(Objects::nonNull)
@@ -739,14 +743,14 @@ public class PcInventory extends Inventory {
 
     /**
      * Set inventory block for specified IDs<br>
-     * array reference is used for {@link PcInventory#_blockItems}
+     * array reference is used for {@link PcInventory#blockItems}
      *
      * @param items array of Ids to block/allow
-     * @param mode  blocking mode {@link PcInventory#_blockMode}
+     * @param mode  blocking mode {@link PcInventory#blockMode}
      */
-    public void setInventoryBlock(Collection<Integer> items, InventoryBlockType mode) {
-        _blockMode = mode;
-        _blockItems = items;
+    public void setInventoryBlock(IntCollection items, InventoryBlockType mode) {
+        blockMode = mode;
+        blockItems = items;
 
         _owner.sendItemList();
     }
@@ -755,8 +759,8 @@ public class PcInventory extends Inventory {
      * Unblock blocked itemIds
      */
     public void unblock() {
-        _blockMode = InventoryBlockType.NONE;
-        _blockItems = null;
+        blockMode = InventoryBlockType.NONE;
+        blockItems = null;
 
         _owner.sendItemList();
     }
@@ -767,23 +771,16 @@ public class PcInventory extends Inventory {
      * @return true if some itemIds blocked
      */
     public boolean hasInventoryBlock() {
-        return ((_blockMode != InventoryBlockType.NONE) && (_blockItems != null) && !_blockItems.isEmpty());
-    }
-
-    /**
-     * Block all items except adena
-     */
-    public void blockAllItems() {
-        setInventoryBlock(Collections.singletonList(CommonItem.ADENA), InventoryBlockType.WHITELIST);
+        return (blockMode != InventoryBlockType.NONE && nonNull(blockItems) && !blockItems.isEmpty());
     }
 
     /**
      * Return block mode
      *
-     * @return int {@link PcInventory#_blockMode}
+     * @return int {@link PcInventory#blockMode}
      */
     public InventoryBlockType getBlockMode() {
-        return _blockMode;
+        return blockMode;
     }
 
     /**
@@ -791,23 +788,22 @@ public class PcInventory extends Inventory {
      *
      * @return Collection<Integer>
      */
-    public Collection<Integer> getBlockItems() {
-        return _blockItems;
+    public IntCollection getBlockItems() {
+        return blockItems;
     }
 
     /**
      * Check if player can use item by itemid
      *
-     * @param itemId int
+     * @param item
      * @return true if can use
      */
-    public boolean canManipulateWithItemId(int itemId) {
-        final Collection<Integer> blockedItems = _blockItems;
-        if (blockedItems != null) {
-            return switch (_blockMode) {
+    public boolean canManipulate(Item item) {
+        if (nonNull(blockItems)) {
+            return switch (blockMode) {
                 case NONE -> true;
-                case WHITELIST -> blockedItems.stream().anyMatch(id -> id == itemId);
-                case BLACKLIST -> blockedItems.stream().noneMatch(id -> id == itemId);
+                case WHITELIST -> blockItems.stream().anyMatch(id -> id == item.getId());
+                case BLACKLIST -> blockItems.stream().noneMatch(id -> id == item.getId());
             };
         }
         return true;
@@ -822,7 +818,7 @@ public class PcInventory extends Inventory {
      * Apply skills of inventory items
      */
     public void applyItemSkills() {
-        for (Item item : _items.values()) {
+        for (Item item : items.values()) {
             item.giveSkillsToOwner();
             item.applyEnchantStats();
             if (item.isEquipped()) {

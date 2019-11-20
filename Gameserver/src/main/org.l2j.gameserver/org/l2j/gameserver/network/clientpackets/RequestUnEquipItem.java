@@ -60,7 +60,7 @@ public class RequestUnEquipItem extends ClientPacket {
             return;
         }
 
-        if (!activeChar.getInventory().canManipulateWithItemId(item.getId())) {
+        if (!activeChar.getInventory().canManipulate(item)) {
             client.sendPacket(SystemMessageId.THAT_ITEM_CANNOT_BE_TAKEN_OFF);
             return;
         }

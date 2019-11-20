@@ -206,11 +206,9 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 
     protected void writeInventoryBlock(PcInventory inventory) {
         if (inventory.hasInventoryBlock()) {
-            writeShort((short) inventory.getBlockItems().size());
-            writeByte((byte) inventory.getBlockMode().getClientId());
-            for (int id : inventory.getBlockItems()) {
-                writeInt(id);
-            }
+            writeShort(inventory.getBlockItems().size());
+            writeByte(inventory.getBlockMode().getClientId());
+            inventory.getBlockItems().forEach(this::writeInt);
         } else {
             writeShort((short) 0x00);
         }

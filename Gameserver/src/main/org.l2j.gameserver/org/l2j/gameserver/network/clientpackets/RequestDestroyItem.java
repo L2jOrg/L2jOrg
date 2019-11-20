@@ -112,7 +112,7 @@ public final class RequestDestroyItem extends ClientPacket {
             return;
         }
 
-        if (!activeChar.getInventory().canManipulateWithItemId(itemToRemove.getId())) {
+        if (!activeChar.getInventory().canManipulate(itemToRemove)) {
             activeChar.sendMessage("You cannot use this item.");
             return;
         }

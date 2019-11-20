@@ -59,7 +59,7 @@ public class Mail extends ItemContainer {
 
     public void setNewMessageId(int messageId) {
         _messageId = messageId;
-        for (Item item : _items.values()) {
+        for (Item item : items.values()) {
             item.setItemLocation(getBaseLocation(), messageId);
         }
 
@@ -67,7 +67,7 @@ public class Mail extends ItemContainer {
     }
 
     public void returnToWh(ItemContainer wh) {
-        for (Item item : _items.values()) {
+        for (Item item : items.values()) {
             if (wh == null) {
                 item.setItemLocation(ItemLocation.WAREHOUSE);
             } else {
@@ -87,7 +87,7 @@ public class Mail extends ItemContainer {
      */
     @Override
     public void updateDatabase() {
-        for (Item item : _items.values()) {
+        for (Item item : items.values()) {
             item.updateDatabase(true);
         }
     }
@@ -119,13 +119,13 @@ public class Mail extends ItemContainer {
 
     @Override
     public void deleteMe() {
-        for (Item item : _items.values()) {
+        for (Item item : items.values()) {
             item.updateDatabase(true);
             item.deleteMe();
             World.getInstance().removeObject(item);
         }
 
-        _items.clear();
+        items.clear();
     }
 
     @Override

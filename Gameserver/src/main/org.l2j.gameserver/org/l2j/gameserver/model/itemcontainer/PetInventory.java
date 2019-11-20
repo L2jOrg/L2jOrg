@@ -67,7 +67,7 @@ public class PetInventory extends Inventory {
 
     @Override
     public boolean validateCapacity(long slots) {
-        return ((_items.size() + slots) <= _owner.getInventoryLimit());
+        return ((items.size() + slots) <= _owner.getInventoryLimit());
     }
 
     public boolean validateWeight(Item item, long count) {
@@ -99,7 +99,7 @@ public class PetInventory extends Inventory {
     public void restore() {
         super.restore();
         // check for equiped items from other pets
-        for (Item item : _items.values()) {
+        for (Item item : items.values()) {
             if (item.isEquipped()) {
                 if (!item.getTemplate().checkCondition(_owner, _owner, false)) {
                     unEquipItemInSlot(item.getLocationSlot());
@@ -109,7 +109,7 @@ public class PetInventory extends Inventory {
     }
 
     public void transferItemsToOwner() {
-        for (Item item : _items.values()) {
+        for (Item item : items.values()) {
             getOwner().transferItem("return", item.getObjectId(), item.getCount(), getOwner().getOwner().getInventory(), getOwner().getOwner(), getOwner());
         }
     }
