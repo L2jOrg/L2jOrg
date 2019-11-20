@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.gameserver.model.itemcontainer.Inventory;
-import org.l2j.gameserver.model.itemcontainer.PcInventory;
+import org.l2j.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2j.gameserver.model.variables.PlayerVariables;
 
 /**
@@ -69,7 +69,7 @@ public class CharSelectInfoPackage {
     public CharSelectInfoPackage(int objectId, String name) {
         setObjectId(objectId);
         _name = name;
-        _paperdoll = PcInventory.restoreVisibleInventory(objectId);
+        _paperdoll = PlayerInventory.restoreVisibleInventory(objectId);
         _vars = new PlayerVariables(_objectId);
     }
 

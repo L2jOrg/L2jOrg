@@ -13,7 +13,7 @@ import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Block;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
-import org.l2j.gameserver.model.itemcontainer.PcInventory;
+import org.l2j.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.world.zone.ZoneType;
@@ -634,8 +634,8 @@ public final class BlockCheckerEngine {
                 player.setTeam(Team.NONE);
                 // Set default arena
                 player.setBlockCheckerArena(DEFAULT_ARENA);
-                // Remove the event items
-                final PcInventory inv = player.getInventory();
+                // Remove the event item
+                final PlayerInventory inv = player.getInventory();
                 if (inv.getItemByItemId(13787) != null) {
                     inv.destroyItemByItemId("Handys Block Checker", 13787, inv.getInventoryItemCount(13787, 0), player, player);
                 }

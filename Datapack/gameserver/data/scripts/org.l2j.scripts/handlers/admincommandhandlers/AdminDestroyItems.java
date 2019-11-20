@@ -2,7 +2,7 @@ package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.itemcontainer.PcInventory;
+import org.l2j.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 
@@ -22,7 +22,7 @@ public class AdminDestroyItems implements IAdminCommandHandler
     @Override
     public boolean useAdminCommand(String command, Player activeChar)
     {
-        final PcInventory inventory = activeChar.getInventory();
+        final PlayerInventory inventory = activeChar.getInventory();
         final InventoryUpdate iu = new InventoryUpdate();
         for (Item item : inventory.getItems())
         {

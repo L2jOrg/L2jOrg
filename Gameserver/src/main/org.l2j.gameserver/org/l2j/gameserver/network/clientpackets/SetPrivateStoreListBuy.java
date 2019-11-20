@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.EnsoulData;
-import org.l2j.gameserver.engine.items.ItemEngine;
+import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.TradeItem;

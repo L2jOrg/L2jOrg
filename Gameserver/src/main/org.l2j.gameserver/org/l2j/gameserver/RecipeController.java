@@ -3,7 +3,7 @@ package org.l2j.gameserver;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.data.xml.impl.RecipeData;
-import org.l2j.gameserver.engine.items.ItemEngine;
+import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.StatType;
 import org.l2j.gameserver.enums.StatusUpdateType;
 import org.l2j.gameserver.model.*;

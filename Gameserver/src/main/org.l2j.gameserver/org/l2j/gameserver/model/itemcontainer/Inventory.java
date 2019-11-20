@@ -3,27 +3,21 @@ package org.l2j.gameserver.model.itemcontainer;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.api.item.InventoryListener;
 import org.l2j.gameserver.data.xml.impl.ArmorSetsData;
-import org.l2j.gameserver.engine.items.ItemEngine;
+import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.ItemLocation;
-import org.l2j.gameserver.enums.ItemSkillType;
-import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.ArmorSet;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.VariationInstance;
-import org.l2j.gameserver.model.items.BodyPart;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.holders.ArmorsetSkillHolder;
-import org.l2j.gameserver.model.holders.ItemSkillHolder;
+import org.l2j.gameserver.model.items.BodyPart;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.EtcItemType;
 import org.l2j.gameserver.model.items.type.WeaponType;
-import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.model.skills.SkillConditionScope;
 import org.l2j.gameserver.network.serverpackets.ExUserInfoEquipSlot;
-import org.l2j.gameserver.network.serverpackets.SkillCoolTime;
+import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,17 +26,23 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+import static java.lang.Math.min;
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
+import static org.l2j.commons.util.Util.falseIfNullOrElse;
+import static org.l2j.commons.util.Util.isBetween;
+import static org.l2j.gameserver.model.items.BodyPart.*;
+import static org.l2j.gameserver.model.items.CommonItem.WEDDING_BOUQUET;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * This class manages inventory
  *
  * @version $Revision: 1.13.2.9.2.12 $ $Date: 2005/03/29 23:15:15 $ rewritten 23.2.2006 by Advi
+ * @author JoeAlisson
  */
 public abstract class Inventory extends ItemContainer {
     // Common Items
@@ -113,34 +113,23 @@ public abstract class Inventory extends ItemContainer {
     // Speed percentage mods
     public static final double MAX_ARMOR_WEIGHT = 12000;
     protected static final Logger LOGGER = LoggerFactory.getLogger(Inventory.class);
-    private final Item[] _paperdoll;
-    private final List<PaperdollListener> _paperdollListeners;
+    private final Item[] paperdoll;
+    private final Set<InventoryListener> listeners;
     // protected to be accessed from child classes only
     protected int _totalWeight;
-    // used to quickly check for using of items of special type
+    // used to quickly check for using of item of special type
     private int _wearedMask;
-    private int _blockedItemSlotsMask;
+    private int blockedItemSlotsMask;
 
     /**
      * Constructor of the inventory
      */
     protected Inventory() {
-        _paperdoll = new Item[PAPERDOLL_TOTALSLOTS];
-        _paperdollListeners = new ArrayList<>();
-
-        if (this instanceof PcInventory) {
-            addPaperdollListener(ArmorSetListener.getInstance());
-            addPaperdollListener(BowCrossRodListener.getInstance());
-            addPaperdollListener(ItemSkillsListener.getInstance());
-            addPaperdollListener(BraceletListener.getInstance());
-            addPaperdollListener(BroochListener.getInstance());
-            addPaperdollListener(AgathionBraceletListener.getInstance());
-            addPaperdollListener(ArtifactBookListener.getInstance());
-        }
+        paperdoll = new Item[PAPERDOLL_TOTALSLOTS];
+        listeners = new HashSet<>();
 
         // common
-        addPaperdollListener(StatsListener.getInstance());
-
+        ServiceLoader.load(InventoryListener.class).forEach(this::addPaperdollListener);
     }
 
     protected abstract ItemLocation getEquipLocation();
@@ -242,8 +231,8 @@ public abstract class Inventory extends ItemContainer {
     @Override
     protected boolean removeItem(Item item) {
         // Unequip item if equiped
-        for (int i = 0; i < _paperdoll.length; i++) {
-            if (_paperdoll[i] == item) {
+        for (int i = 0; i < paperdoll.length; i++) {
+            if (paperdoll[i] == item) {
                 unEquipItemInSlot(i);
             }
         }
@@ -255,7 +244,7 @@ public abstract class Inventory extends ItemContainer {
      * @return the item in the paperdoll slot
      */
     public Item getPaperdollItem(int slot) {
-        return _paperdoll[slot];
+        return paperdoll[slot];
     }
 
     /**
@@ -263,11 +252,11 @@ public abstract class Inventory extends ItemContainer {
      * @return {@code true} if specified paperdoll slot is empty, {@code false} otherwise
      */
     public boolean isPaperdollSlotEmpty(int slot) {
-        return _paperdoll[slot] == null;
+        return paperdoll[slot] == null;
     }
 
     public boolean isPaperdollSlotNotEmpty(int slot) {
-        return _paperdoll[slot] != null;
+        return paperdoll[slot] != null;
     }
 
     /**
@@ -277,10 +266,10 @@ public abstract class Inventory extends ItemContainer {
      * @return Item
      */
     public Item getItemByBodyPart(BodyPart bodyPart) {
-        if(bodyPart.getPaperdool() == -1) {
+        if(bodyPart.paperdool() == -1) {
             return null;
         }
-        return _paperdoll[bodyPart.getPaperdool()];
+        return paperdoll[bodyPart.paperdool()];
     }
 
     /**
@@ -290,7 +279,7 @@ public abstract class Inventory extends ItemContainer {
      * @return int designating the ID of the item
      */
     public int getPaperdollItemId(int slot) {
-        final Item item = _paperdoll[slot];
+        final Item item = paperdoll[slot];
         if (item != null) {
             return item.getId();
         }
@@ -304,12 +293,12 @@ public abstract class Inventory extends ItemContainer {
      * @return int designating the ID of the item
      */
     public int getPaperdollItemDisplayId(int slot) {
-        final Item item = _paperdoll[slot];
+        final Item item = paperdoll[slot];
         return (item != null) ? item.getDisplayId() : 0;
     }
 
     public VariationInstance getPaperdollAugmentation(int slot) {
-        final Item item = _paperdoll[slot];
+        final Item item = paperdoll[slot];
         return (item != null) ? item.getAugmentation() : null;
     }
 
@@ -320,7 +309,7 @@ public abstract class Inventory extends ItemContainer {
      * @return int designating the objectID
      */
     public int getPaperdollObjectId(int slot) {
-        final Item item = _paperdoll[slot];
+        final Item item = paperdoll[slot];
         return (item != null) ? item.getObjectId() : 0;
     }
 
@@ -329,10 +318,8 @@ public abstract class Inventory extends ItemContainer {
      *
      * @param listener the new listener
      */
-    public synchronized void addPaperdollListener(PaperdollListener listener) {
-        if (!_paperdollListeners.contains(listener)) {
-            _paperdollListeners.add(listener);
-        }
+    protected void addPaperdollListener(InventoryListener listener) {
+        listeners.add(listener);
     }
 
     /**
@@ -340,8 +327,8 @@ public abstract class Inventory extends ItemContainer {
      *
      * @param listener the listener to be deleted
      */
-    public synchronized void removePaperdollListener(PaperdollListener listener) {
-        _paperdollListeners.remove(listener);
+    public synchronized void removePaperdollListener(InventoryListener listener) {
+        listeners.remove(listener);
     }
 
     /**
@@ -353,24 +340,24 @@ public abstract class Inventory extends ItemContainer {
      * @return Item designating the item placed in the slot before
      */
     public synchronized Item setPaperdollItem(int slot, Item item) {
-        final Item old = _paperdoll[slot];
+        final Item old = paperdoll[slot];
         if (old != item) {
             if (old != null) {
-                _paperdoll[slot] = null;
+                paperdoll[slot] = null;
                 // Put old item from paperdoll slot to base location
                 old.setItemLocation(getBaseLocation());
                 old.setLastChange(Item.MODIFIED);
                 // Get the mask for paperdoll
                 int mask = 0;
                 for (int i = 0; i < PAPERDOLL_TOTALSLOTS; i++) {
-                    final Item pi = _paperdoll[i];
+                    final Item pi = paperdoll[i];
                     if (pi != null) {
                         mask |= pi.getTemplate().getItemMask();
                     }
                 }
                 _wearedMask = mask;
                 // Notify all paperdoll listener in order to unequip old item in slot
-                for (PaperdollListener listener : _paperdollListeners) {
+                for (InventoryListener listener : listeners) {
                     if (listener == null) {
                         continue;
                     }
@@ -381,11 +368,11 @@ public abstract class Inventory extends ItemContainer {
             }
             // Add new item in slot of paperdoll
             if (item != null) {
-                _paperdoll[slot] = item;
+                paperdoll[slot] = item;
                 item.setItemLocation(getEquipLocation(), slot);
                 item.setLastChange(Item.MODIFIED);
                 _wearedMask |= item.getTemplate().getItemMask();
-                for (PaperdollListener listener : _paperdollListeners) {
+                for (InventoryListener listener : listeners) {
                     if (listener == null) {
                         continue;
                     }
@@ -559,7 +546,7 @@ public abstract class Inventory extends ItemContainer {
      *
      * TODO use bodyPart instead of slot
      */
-    public Item[] unEquipItemInBodySlotAndRecord(long slot) {
+    public Set<Item> unEquipItemInBodySlotAndRecord(long slot) {
         final ChangeRecorder recorder = newRecorder();
 
         try {
@@ -587,7 +574,7 @@ public abstract class Inventory extends ItemContainer {
      * @param slot : int designating the slot
      * @return Item[] : list of items altered
      */
-    public Item[] unEquipItemInSlotAndRecord(int slot) {
+    public Set<Item> unEquipItemInSlotAndRecord(int slot) {
         final ChangeRecorder recorder = newRecorder();
 
         try {
@@ -686,7 +673,7 @@ public abstract class Inventory extends ItemContainer {
      * @param item : Item corresponding to the item
      * @return Item[] : list of alterations
      */
-    public Item[] equipItemAndRecord(Item item) {
+    public Set<Item> equipItemAndRecord(Item item) {
         final ChangeRecorder recorder = newRecorder();
 
         try {
@@ -704,128 +691,214 @@ public abstract class Inventory extends ItemContainer {
      */
     public void equipItem(Item item) {
         if (isPlayer(getOwner())) {
-            if (((Player) getOwner()).getPrivateStoreType() != PrivateStoreType.NONE) {
-                return;
-            }
-
             final Player player = (Player) getOwner();
-
             if (!player.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !player.isHero() && item.isHeroItem()) {
                 return;
             }
         }
 
-        final long targetSlot = item.getTemplate().getBodyPart().getId();
+        var bodyPart = item.getBodyPart();
 
-        // Check if player is using Formal Wear and item isn't Wedding Bouquet.
-        final Item formal = getPaperdollItem(PAPERDOLL_CHEST);
-        if ((item.getId() != 21163) && (formal != null) && (formal.getTemplate().getBodyPart() == BodyPart.ALL_DRESS)) {
-            // only chest target can pass this
-            if ((targetSlot == ItemTemplate.SLOT_LR_HAND) || (targetSlot == ItemTemplate.SLOT_L_HAND) || (targetSlot == ItemTemplate.SLOT_R_HAND) || (targetSlot == ItemTemplate.SLOT_LEGS) || (targetSlot == ItemTemplate.SLOT_FEET) || (targetSlot == ItemTemplate.SLOT_GLOVES) || (targetSlot == ItemTemplate.SLOT_HEAD)) {
+        if(bodyPart.isAnyOf(BodyPart.TWO_HAND, LEFT_HAND, BodyPart.RIGHT_HAND, BodyPart.LEGS, BodyPart.FEET, BodyPart.GLOVES, BodyPart.HEAD)) {
+            var formal = getPaperdollItem(BodyPart.CHEST.paperdool());
+            if(nonNull(formal) && item.getId() != WEDDING_BOUQUET && formal.getBodyPart() == BodyPart.ALL_DRESS) {
                 return;
             }
         }
 
-        // don't care about arrows, listener will unequip them (hopefully)
-        // handle full armor
-        // formal dress
-        if (targetSlot == ItemTemplate.SLOT_LR_HAND) {
-            setPaperdollItem(PAPERDOLL_LHAND, null);
-            setPaperdollItem(PAPERDOLL_RHAND, item);
-        } else if (targetSlot == ItemTemplate.SLOT_L_HAND) {
-            final Item rh = getPaperdollItem(PAPERDOLL_RHAND);
-            if ((rh != null) && (rh.getTemplate().getBodyPart() == BodyPart.TWO_HAND) && !(((rh.getItemType() == WeaponType.BOW) && (item.getItemType() == EtcItemType.ARROW)) || (((rh.getItemType() == WeaponType.CROSSBOW) || (rh.getItemType() == WeaponType.TWO_HAND_CROSSBOW)) && (item.getItemType() == EtcItemType.BOLT)) || ((rh.getItemType() == WeaponType.FISHING_ROD) && (item.getItemType() == EtcItemType.LURE)))) {
-                setPaperdollItem(PAPERDOLL_RHAND, null);
-            }
-            setPaperdollItem(PAPERDOLL_LHAND, item);
-        } else if (targetSlot == ItemTemplate.SLOT_R_HAND) {
-            setPaperdollItem(PAPERDOLL_RHAND, item);
-        } else if ((targetSlot == ItemTemplate.SLOT_L_EAR) || (targetSlot == ItemTemplate.SLOT_R_EAR) || (targetSlot == ItemTemplate.SLOT_LR_EAR)) {
-            if (_paperdoll[PAPERDOLL_LEAR] == null) {
-                setPaperdollItem(PAPERDOLL_LEAR, item);
-            } else if (_paperdoll[PAPERDOLL_REAR] == null) {
-                setPaperdollItem(PAPERDOLL_REAR, item);
-            } else {
-                setPaperdollItem(PAPERDOLL_LEAR, item);
-            }
-        } else if ((targetSlot == ItemTemplate.SLOT_L_FINGER) || (targetSlot == ItemTemplate.SLOT_R_FINGER) || (targetSlot == ItemTemplate.SLOT_LR_FINGER)) {
-            if (_paperdoll[PAPERDOLL_LFINGER] == null) {
-                setPaperdollItem(PAPERDOLL_LFINGER, item);
-            } else if (_paperdoll[PAPERDOLL_RFINGER] == null) {
-                setPaperdollItem(PAPERDOLL_RFINGER, item);
-            } else {
-                setPaperdollItem(PAPERDOLL_LFINGER, item);
-            }
-        } else if (targetSlot == ItemTemplate.SLOT_NECK) {
-            setPaperdollItem(PAPERDOLL_NECK, item);
-        } else if (targetSlot == ItemTemplate.SLOT_FULL_ARMOR) {
-            setPaperdollItem(PAPERDOLL_LEGS, null);
-            setPaperdollItem(PAPERDOLL_CHEST, item);
-        } else if (targetSlot == ItemTemplate.SLOT_CHEST) {
-            setPaperdollItem(PAPERDOLL_CHEST, item);
-        } else if (targetSlot == ItemTemplate.SLOT_LEGS) {
-            final Item chest = getPaperdollItem(PAPERDOLL_CHEST);
-            if ((chest != null) && (chest.getTemplate().getBodyPart() == BodyPart.FULL_ARMOR)) {
-                setPaperdollItem(PAPERDOLL_CHEST, null);
-            }
-            setPaperdollItem(PAPERDOLL_LEGS, item);
-        } else if (targetSlot == ItemTemplate.SLOT_FEET) {
-            setPaperdollItem(PAPERDOLL_FEET, item);
-        } else if (targetSlot == ItemTemplate.SLOT_GLOVES) {
-            setPaperdollItem(PAPERDOLL_GLOVES, item);
-        } else if (targetSlot == ItemTemplate.SLOT_HEAD) {
-            setPaperdollItem(PAPERDOLL_HEAD, item);
-        } else if (targetSlot == ItemTemplate.SLOT_HAIR) {
-            final Item hair = getPaperdollItem(PAPERDOLL_HAIR);
-            if ((hair != null) && (hair.getTemplate().getBodyPart() == BodyPart.HAIR_ALL)) {
-                setPaperdollItem(PAPERDOLL_HAIR2, null);
-            } else {
-                setPaperdollItem(PAPERDOLL_HAIR, null);
-            }
-            setPaperdollItem(PAPERDOLL_HAIR, item);
-        } else if (targetSlot == ItemTemplate.SLOT_HAIR2) {
-            final Item hair2 = getPaperdollItem(PAPERDOLL_HAIR);
-            if ((hair2 != null) && (hair2.getTemplate().getBodyPart() == BodyPart.HAIR_ALL)) {
-                setPaperdollItem(PAPERDOLL_HAIR, null);
-            } else {
-                setPaperdollItem(PAPERDOLL_HAIR2, null);
-            }
-            setPaperdollItem(PAPERDOLL_HAIR2, item);
-        } else if (targetSlot == ItemTemplate.SLOT_HAIRALL) {
-            setPaperdollItem(PAPERDOLL_HAIR2, null);
-            setPaperdollItem(PAPERDOLL_HAIR, item);
-        } else if (targetSlot == ItemTemplate.SLOT_UNDERWEAR) {
-            setPaperdollItem(PAPERDOLL_UNDER, item);
-        } else if (targetSlot == ItemTemplate.SLOT_BACK) {
-            setPaperdollItem(PAPERDOLL_CLOAK, item);
-        } else if (targetSlot == ItemTemplate.SLOT_L_BRACELET) {
-            setPaperdollItem(PAPERDOLL_LBRACELET, item);
-        } else if (targetSlot == ItemTemplate.SLOT_R_BRACELET) {
-            setPaperdollItem(PAPERDOLL_RBRACELET, item);
-        } else if (targetSlot == ItemTemplate.SLOT_TALISMAN) {
-            equipTalisman(item);
-        } else if (targetSlot == ItemTemplate.SLOT_BELT) {
-            setPaperdollItem(PAPERDOLL_BELT, item);
-        } else if (targetSlot == ItemTemplate.SLOT_ALLDRESS) {
-            setPaperdollItem(PAPERDOLL_LEGS, null);
-            setPaperdollItem(PAPERDOLL_LHAND, null);
-            setPaperdollItem(PAPERDOLL_RHAND, null);
-            setPaperdollItem(PAPERDOLL_HEAD, null);
-            setPaperdollItem(PAPERDOLL_FEET, null);
-            setPaperdollItem(PAPERDOLL_GLOVES, null);
-            setPaperdollItem(PAPERDOLL_CHEST, item);
-        } else if (targetSlot == ItemTemplate.SLOT_BROOCH) {
-            setPaperdollItem(PAPERDOLL_BROOCH, item);
-        } else if (targetSlot == ItemTemplate.SLOT_BROOCH_JEWEL) {
-            equipBroochJewel(item);
-        } else if (targetSlot == ItemTemplate.SLOT_AGATHION) {
-            equipAgathion(item);
-        } else if (targetSlot == ItemTemplate.SLOT_ARTIFACT_BOOK) {
-            setPaperdollItem(PAPERDOLL_ARTIFACT_BOOK, item);
-        } else if (targetSlot == ItemTemplate.SLOT_ARTIFACT) {
-            equipArtifact(item);
+        switch (bodyPart) {
+            case TWO_HAND -> equipTwoHand(item);
+            case LEFT_HAND -> equipLeftHand(item);
+            case EAR -> equipEar(item);
+            case FINGER -> equipFinger(item);
+            case FULL_ARMOR -> equipFullArmor(item);
+            case LEGS -> equipLeg(item);
+            case HAIR -> equipHair(item);
+            case HAIR2 -> equipHair2(item);
+            case HAIR_ALL -> equipHairAll(item);
+            case TALISMAN -> equipTalisman(item);
+            case ALL_DRESS -> equipAllDress(item);
+            case BROOCH_JEWEL -> equipBroochJewel(item);
+            case AGATHION -> equipAgathion(item);
+            case ARTIFACT -> equipArtifact(item);
+            case NECK, RIGHT_HAND, CHEST, FEET, GLOVES, HEAD, UNDERWEAR, BACK, LEFT_BRACELET, RIGHT_BRACELET, BELT, BROOCH, ARTIFACT_BOOK -> setPaperdollItem(bodyPart.paperdool(), item);
+            default -> LOGGER.warn("Unknown body slot {} for Item ID: {}", bodyPart, item.getId());
+        }
+    }
+
+    private void equipAllDress(Item item) {
+        setPaperdollItem(LEGS.paperdool(), null);
+        setPaperdollItem(LEFT_HAND.paperdool(), null);
+        setPaperdollItem(RIGHT_HAND.paperdool(), null);
+        setPaperdollItem(HEAD.paperdool(), null);
+        setPaperdollItem(FEET.paperdool(), null);
+        setPaperdollItem(GLOVES.paperdool(), null);
+        setPaperdollItem(CHEST.paperdool(), item);
+    }
+
+    private void equipHairAll(Item item) {
+        setPaperdollItem(HAIR2.paperdool(), null);
+        setPaperdollItem(HAIR.paperdool(), item);
+    }
+
+    private void equipHair2(Item item) {
+        var hair = getPaperdollItem(HAIR_ALL.paperdool());
+        if (nonNull(hair) && (hair.getBodyPart() == BodyPart.HAIR_ALL)) {
+            setPaperdollItem(HAIR.paperdool(), null);
+        }
+        setPaperdollItem(HAIR2.paperdool(), item);
+    }
+
+    private void equipHair(Item item) {
+        var hair = getPaperdollItem(HAIR_ALL.paperdool());
+        if (nonNull(hair) && hair.getBodyPart() == BodyPart.HAIR_ALL) {
+            setPaperdollItem(HAIR2.paperdool(), null);
+        }
+        setPaperdollItem(HAIR.paperdool(), item);
+    }
+
+    private void equipLeg(Item item) {
+        var chest = getPaperdollItem(CHEST.paperdool());
+        if (nonNull(chest) && chest.getBodyPart() == BodyPart.FULL_ARMOR) {
+            setPaperdollItem(CHEST.paperdool(), null);
+        }
+        setPaperdollItem(LEGS.paperdool(), item);
+    }
+
+    private void equipFullArmor(Item item) {
+        setPaperdollItem(LEGS.paperdool(), null);
+        setPaperdollItem(CHEST.paperdool(), item);
+    }
+
+    private void equipFinger(Item item) {
+        if(isNull( getPaperdollItem(LEFT_FINGER.paperdool())) || nonNull(getPaperdollItem(RIGHT_FINGER.paperdool()))) {
+            setPaperdollItem(LEFT_FINGER.paperdool(), item);
         } else {
-            LOGGER.warn("Unknown body slot " + targetSlot + " for Item ID: " + item.getId());
+            setPaperdollItem(RIGHT_FINGER.paperdool(), item);
+        }
+    }
+
+    private void equipEar(Item item) {
+        if(isNull( getPaperdollItem(LEFT_EAR.paperdool())) || nonNull( getPaperdollItem(RIGHT_EAR.paperdool()))) {
+            setPaperdollItem(LEFT_EAR.paperdool(), item);
+        } else {
+            setPaperdollItem(RIGHT_EAR.paperdool(), item);
+        }
+    }
+
+    private void equipLeftHand(Item item) {
+        var rightHand = getPaperdollItem(RIGHT_HAND.paperdool());
+
+        if(nonNull(rightHand) && rightHand.getBodyPart() == TWO_HAND && !(isEquipArrow(rightHand, item) || isEquipBolt(rightHand, item) || isEquipLure(rightHand, item))) {
+            setPaperdollItem(RIGHT_HAND.paperdool(), null);
+        }
+        setPaperdollItem(LEFT_HAND.paperdool(), item);
+    }
+
+    private boolean isEquipLure(Item rightHand, Item item) {
+        return rightHand.getItemType() == WeaponType.FISHING_ROD && item.getItemType() == EtcItemType.LURE;
+    }
+
+    private boolean isEquipBolt(Item rightHand, Item item) {
+        return (rightHand.getItemType() == WeaponType.CROSSBOW || rightHand.getItemType() == WeaponType.TWO_HAND_CROSSBOW) && item.getItemType() == EtcItemType.BOLT;
+    }
+
+    private boolean isEquipArrow(Item rightHand, Item item) {
+        return rightHand.getItemType() == WeaponType.BOW && item.getItemType() == EtcItemType.ARROW;
+    }
+
+    private void equipTwoHand(Item item) {
+        setPaperdollItem(LEFT_HAND.paperdool(), null);
+        setPaperdollItem(RIGHT_HAND.paperdool(), item);
+    }
+
+    private void equipArtifact(Item item) {
+        if (getArtifactSlots() == 0) {
+            return;
+        }
+
+        // FIXME non existent ids
+        // Balance Artifact Equip
+        if(isBetween(item.getId(), 48969, 48985)) {
+            if(checkEquipArtifact(item, BodyPart.balanceArtifact(), 4 * getArtifactSlots())) {
+                return;
+            }
+            setPaperdollItem(BodyPart.balanceArtifact(), item);
+        }
+        // Spirit Artifact Equip
+        else if(isBetween(item.getId(), 48957, 48960)) {
+            if(checkEquipArtifact(item, BodyPart.spiritArtifact(), getArtifactSlots())) {
+                return;
+            }
+            setPaperdollItem(BodyPart.spiritArtifact(), item);
+        }
+        // Protection Artifact Equip
+        else if(isBetween(item.getId(), 48961, 48964)) {
+            if(checkEquipArtifact(item, BodyPart.protectionArtifact(), getArtifactSlots())) {
+                return;
+            }
+            setPaperdollItem(BodyPart.protectionArtifact(), item);
+        }
+        // Support Artifact Equip
+        else if(isBetween(item.getId(), 48965, 48968)) {
+            if(checkEquipArtifact(item, BodyPart.supportArtifact(), getArtifactSlots())) {
+                return;
+            }
+            setPaperdollItem(BodyPart.supportArtifact(), item);
+        }
+    }
+
+    private boolean checkEquipArtifact(Item item, int initialArtifact, int count) {
+        for (int i = initialArtifact; i < initialArtifact + count; i++) {
+            if (isNull(getPaperdollItem(i))) {
+                setPaperdollItem(i, item);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private void equipAgathion(Item item) {
+        if (getAgathionSlots() == 0) {
+            return;
+        }
+        equipOnSameOrEmpty(item, AGATHION.paperdool(), getAgathionSlots());
+    }
+
+    private void equipBroochJewel(Item item) {
+        if (getBroochJewelSlots() == 0) {
+            return;
+        }
+        equipOnSameOrEmpty(item, BROOCH_JEWEL.paperdool(), getBroochJewelSlots());
+    }
+
+    private void equipTalisman(Item item) {
+        if (getTalismanSlots() == 0) {
+            return;
+        }
+        equipOnSameOrEmpty(item, TALISMAN.paperdool(), getTalismanSlots());
+    }
+
+    private void equipOnSameOrEmpty(Item item, int initialPaperdoll, int availableSlots) {
+        int emptyPaperdoll = -1;
+
+        for (int i = initialPaperdoll; i < initialPaperdoll + availableSlots; i++) {
+            var paperdollItem = getPaperdollItem(i);
+            if (nonNull(paperdollItem)) {
+                if(paperdollItem.getId() == item.getId()) {
+                    setPaperdollItem(i, item);
+                    return;
+                }
+            }
+            else if(emptyPaperdoll == -1) {
+                emptyPaperdoll = i;
+            }
+        }
+
+        if(emptyPaperdoll > 0) {
+            setPaperdollItem(emptyPaperdoll, item);
+        } else {
+            setPaperdollItem(initialPaperdoll, item);
         }
     }
 
@@ -841,7 +914,7 @@ public abstract class Inventory extends ItemContainer {
                 weight += item.getTemplate().getWeight() * item.getCount();
             }
         }
-        _totalWeight = (int) Math.min(weight, Integer.MAX_VALUE);
+        _totalWeight = (int) min(weight, Integer.MAX_VALUE);
     }
 
     /**
@@ -936,235 +1009,16 @@ public abstract class Inventory extends ItemContainer {
         return getOwner().getActingPlayer().getStat().getTalismanSlots();
     }
 
-    private void equipTalisman(Item item) {
-        if (getTalismanSlots() == 0) {
-            return;
-        }
-
-        // find same (or incompatible) talisman type
-        for (int i = TALISMAN1; i < (TALISMAN1 + getTalismanSlots()); i++) {
-            if (_paperdoll[i] != null) {
-                if (getPaperdollItemId(i) == item.getId()) {
-                    // overwrite
-                    setPaperdollItem(i, item);
-                    return;
-                }
-            }
-        }
-
-        // no free slot found - put on first free
-        for (int i = TALISMAN1; i < (TALISMAN1 + getTalismanSlots()); i++) {
-            if (_paperdoll[i] == null) {
-                setPaperdollItem(i, item);
-                return;
-            }
-        }
-
-        // no free slots - put on first
-        setPaperdollItem(TALISMAN1, item);
-    }
-
     public int getArtifactSlots() {
-        return getOwner().getActingPlayer().getStat().getArtifactSlots();
-    }
-
-    private void equipArtifact(Item item) {
-        if (getArtifactSlots() == 0) {
-            return;
-        }
-
-        switch (getArtifactSlots()) {
-            case 1: {
-                // 4 Balance Artifact Equip
-                if ((item.getId() >= 48969) && (item.getId() <= 48985)) {
-                    for (int i = PAPERDOLL_ARTIFACT1; i < (PAPERDOLL_ARTIFACT1 + 4); i++) {
-                        if (_paperdoll[i] == null) {
-                            setPaperdollItem(i, item);
-                            return;
-                        }
-                    }
-                }
-
-                // 1 Spirit Artifact Equip
-                if ((item.getId() >= 48957) && (item.getId() <= 48960)) {
-                    for (int i = PAPERDOLL_ARTIFACT13; i < (PAPERDOLL_ARTIFACT13 + 1); i++) {
-                        if (_paperdoll[i] == null) {
-                            setPaperdollItem(i, item);
-                            return;
-                        }
-                    }
-
-                }
-                // 1 Protection Artifact Equip
-                if ((item.getId() >= 48961) && (item.getId() <= 48964)) {
-                    for (int i = PAPERDOLL_ARTIFACT16; i < (PAPERDOLL_ARTIFACT16 + 1); i++) {
-                        if (_paperdoll[i] == null) {
-                            setPaperdollItem(i, item);
-                            return;
-                        }
-                    }
-
-                }
-                // 1 Support Artifact Equip
-                if ((item.getId() >= 48965) && (item.getId() <= 48968)) {
-                    for (int i = PAPERDOLL_ARTIFACT19; i < (PAPERDOLL_ARTIFACT19 + 1); i++) {
-                        if (_paperdoll[i] == null) {
-                            setPaperdollItem(i, item);
-                            return;
-                        }
-                    }
-
-                }
-                break;
-            }
-            case 2: {
-                // 8 Balance Artifact Equip
-                if ((item.getId() >= 48969) && (item.getId() <= 48985)) {
-                    for (int i = PAPERDOLL_ARTIFACT1; i < (PAPERDOLL_ARTIFACT1 + 8); i++) {
-                        if (_paperdoll[i] == null) {
-                            setPaperdollItem(i, item);
-                            return;
-                        }
-                    }
-                }
-
-                // 2 Spirit Artifact Equip
-                if ((item.getId() >= 48957) && (item.getId() <= 48960)) {
-                    for (int i = PAPERDOLL_ARTIFACT13; i < (PAPERDOLL_ARTIFACT13 + 2); i++) {
-                        if (_paperdoll[i] == null) {
-                            setPaperdollItem(i, item);
-                            return;
-                        }
-                    }
-
-                }
-                // 2 Protection Artifact Equip
-                if ((item.getId() >= 48961) && (item.getId() <= 48964)) {
-                    for (int i = PAPERDOLL_ARTIFACT16; i < (PAPERDOLL_ARTIFACT16 + 2); i++) {
-                        if (_paperdoll[i] == null) {
-                            setPaperdollItem(i, item);
-                            return;
-                        }
-                    }
-
-                }
-                // 2 Support Artifact Equip
-                if ((item.getId() >= 48965) && (item.getId() <= 48968)) {
-                    for (int i = PAPERDOLL_ARTIFACT19; i < (PAPERDOLL_ARTIFACT19 + 2); i++) {
-                        if (_paperdoll[i] == null) {
-                            setPaperdollItem(i, item);
-                            return;
-                        }
-                    }
-
-                }
-                break;
-            }
-            case 3: {
-                // 12 Balance Artifact Equip
-                if ((item.getId() >= 48969) && (item.getId() <= 48985)) {
-                    for (int i = PAPERDOLL_ARTIFACT1; i < (PAPERDOLL_ARTIFACT1 + 12); i++) {
-                        if (_paperdoll[i] == null) {
-                            setPaperdollItem(i, item);
-                            return;
-                        }
-                    }
-                }
-
-                // 3 Spirit Artifact Equip
-                if ((item.getId() >= 48957) && (item.getId() <= 48960)) {
-                    for (int i = PAPERDOLL_ARTIFACT13; i < (PAPERDOLL_ARTIFACT13 + 3); i++) {
-                        if (_paperdoll[i] == null) {
-                            setPaperdollItem(i, item);
-                            return;
-                        }
-                    }
-
-                }
-                // 3 Protection Artifact Equip
-                if ((item.getId() >= 48961) && (item.getId() <= 48964)) {
-                    for (int i = PAPERDOLL_ARTIFACT16; i < (PAPERDOLL_ARTIFACT16 + 3); i++) {
-                        if (_paperdoll[i] == null) {
-                            setPaperdollItem(i, item);
-                            return;
-                        }
-                    }
-
-                }
-                // 3 Support Artifact Equip
-                if ((item.getId() >= 48965) && (item.getId() <= 48968)) {
-                    for (int i = PAPERDOLL_ARTIFACT19; i < (PAPERDOLL_ARTIFACT19 + 3); i++) {
-                        if (_paperdoll[i] == null) {
-                            setPaperdollItem(i, item);
-                            return;
-                        }
-                    }
-
-                }
-                break;
-            }
-        }
-
+        return min(getOwner().getActingPlayer().getStat().getArtifactSlots(), 3);
     }
 
     public int getBroochJewelSlots() {
         return getOwner().getActingPlayer().getStat().getBroochJewelSlots();
     }
 
-    private void equipBroochJewel(Item item) {
-        if (getBroochJewelSlots() == 0) {
-            return;
-        }
-
-        // find same (or incompatible) brooch jewel type
-        for (int i = PAPERDOLL_BROOCH_JEWEL1; i < (PAPERDOLL_BROOCH_JEWEL1 + getBroochJewelSlots()); i++) {
-            if ((_paperdoll[i] != null) && (getPaperdollItemId(i) == item.getId())) {
-                // overwrite
-                setPaperdollItem(i, item);
-                return;
-            }
-        }
-
-        // no free slot found - put on first free
-        for (int i = PAPERDOLL_BROOCH_JEWEL1; i < (PAPERDOLL_BROOCH_JEWEL1 + getBroochJewelSlots()); i++) {
-            if (_paperdoll[i] == null) {
-                setPaperdollItem(i, item);
-                return;
-            }
-        }
-
-        // no free slots - put on first
-        setPaperdollItem(PAPERDOLL_BROOCH_JEWEL1, item);
-    }
-
     public int getAgathionSlots() {
         return getOwner().getActingPlayer().getStat().getAgathionSlots();
-    }
-
-    private void equipAgathion(Item item) {
-        if (getAgathionSlots() == 0) {
-            return;
-        }
-
-        // find same (or incompatible) agathion type
-        for (int i = PAPERDOLL_AGATHION1; i < (PAPERDOLL_AGATHION1 + getAgathionSlots()); i++) {
-            if ((_paperdoll[i] != null) && (getPaperdollItemId(i) == item.getId())) {
-                // overwrite
-                setPaperdollItem(i, item);
-                return;
-            }
-        }
-
-        // no free slot found - put on first free
-        for (int i = PAPERDOLL_AGATHION1; i < (PAPERDOLL_AGATHION1 + getAgathionSlots()); i++) {
-            if (_paperdoll[i] == null) {
-                setPaperdollItem(i, item);
-                return;
-            }
-        }
-
-        // no free slots - put on first
-        setPaperdollItem(PAPERDOLL_AGATHION1, item);
     }
 
     public boolean canEquipCloak() {
@@ -1177,14 +1031,14 @@ public abstract class Inventory extends ItemContainer {
     public void reloadEquippedItems() {
         int slot;
 
-        for (Item item : _paperdoll) {
+        for (Item item : paperdoll) {
             if (item == null) {
                 continue;
             }
 
             slot = item.getLocationSlot();
 
-            for (PaperdollListener listener : _paperdollListeners) {
+            for (InventoryListener listener : listeners) {
                 if (listener == null) {
                     continue;
                 }
@@ -1227,7 +1081,7 @@ public abstract class Inventory extends ItemContainer {
      * @param itemSlot mask from ItemTemplate
      */
     public void blockItemSlot(long itemSlot) {
-        _blockedItemSlotsMask |= itemSlot;
+        blockedItemSlotsMask |= itemSlot;
     }
 
     /**
@@ -1236,22 +1090,18 @@ public abstract class Inventory extends ItemContainer {
      * @param itemSlot mask from ItemTemplate
      */
     public void unblockItemSlot(long itemSlot) {
-        _blockedItemSlotsMask &= ~itemSlot;
+        blockedItemSlotsMask &= ~itemSlot;
     }
 
     /**
-     * @param itemSlot mask from ItemTemplate
+     * @param bodyPart item bodyPart
      * @return if the given item slot is blocked or not.
      */
-    public boolean isItemSlotBlocked(long itemSlot) {
-        return (_blockedItemSlotsMask & itemSlot) == itemSlot;
-    }
-
-    /**
-     * @param itemSlotsMask use 0 to unset all blocked item slots.
-     */
-    public void setBlockedItemSlotsMask(int itemSlotsMask) {
-        _blockedItemSlotsMask = itemSlotsMask;
+    public boolean isItemSlotBlocked(BodyPart bodyPart) {
+        return falseIfNullOrElse(bodyPart, part -> {
+           var slot = part.getId();
+           return (blockedItemSlotsMask & slot) == slot;
+        });
     }
 
     /**
@@ -1277,665 +1127,29 @@ public abstract class Inventory extends ItemContainer {
         for (Predicate<Item> additionalFilter : filters) {
             filter = filter.and(additionalFilter);
         }
-        return Arrays.stream(_paperdoll).filter(filter).collect(Collectors.toCollection(LinkedList::new));
+        return Arrays.stream(paperdoll).filter(filter).collect(Collectors.toCollection(LinkedList::new));
     }
 
-    public interface PaperdollListener {
-        void notifyEquiped(int slot, Item inst, Inventory inventory);
 
-        void notifyUnequiped(int slot, Item inst, Inventory inventory);
-    }
+    private static final class ChangeRecorder implements InventoryListener {
+        private final Set<Item> changed = ConcurrentHashMap.newKeySet();
 
-    // Recorder of alterations in inventory
-    private static final class ChangeRecorder implements PaperdollListener {
-        private final Inventory _inventory;
-        private final Set<Item> _changed = ConcurrentHashMap.newKeySet();
-
-        /**
-         * Constructor of the ChangeRecorder
-         *
-         * @param inventory
-         */
-        ChangeRecorder(Inventory inventory) {
-            _inventory = inventory;
-            _inventory.addPaperdollListener(this);
-        }
-
-        /**
-         * Add alteration in inventory when item equipped
-         *
-         * @param slot
-         * @param item
-         * @param inventory
-         */
-        @Override
-        public void notifyEquiped(int slot, Item item, Inventory inventory) {
-            _changed.add(item);
-        }
-
-        /**
-         * Add alteration in inventory when item unequipped
-         *
-         * @param slot
-         * @param item
-         * @param inventory
-         */
-        @Override
-        public void notifyUnequiped(int slot, Item item, Inventory inventory) {
-            _changed.add(item);
-        }
-
-        /**
-         * Returns alterations in inventory
-         *
-         * @return Item[] : array of altered items
-         */
-        public Item[] getChangedItems() {
-            return _changed.toArray(new Item[_changed.size()]);
-        }
-    }
-
-    private static final class BowCrossRodListener implements PaperdollListener {
-        private static BowCrossRodListener instance = new BowCrossRodListener();
-
-        public static BowCrossRodListener getInstance() {
-            return instance;
-        }
-
-        @Override
-        public void notifyUnequiped(int slot, Item item, Inventory inventory) {
-            if (slot != PAPERDOLL_RHAND) {
-                return;
-            }
-
-            if (item.getItemType() == WeaponType.BOW) {
-                final Item arrow = inventory.getPaperdollItem(PAPERDOLL_LHAND);
-                if (arrow != null) {
-                    inventory.setPaperdollItem(PAPERDOLL_LHAND, null);
-                }
-            }
-            else if ((item.getItemType() == WeaponType.CROSSBOW) || (item.getItemType() == WeaponType.TWO_HAND_CROSSBOW)) {
-                final Item bolts = inventory.getPaperdollItem(PAPERDOLL_LHAND);
-                if (bolts != null) {
-                    inventory.setPaperdollItem(PAPERDOLL_LHAND, null);
-                }
-            }else if (item.getItemType() == WeaponType.FISHING_ROD) {
-                final Item lure = inventory.getPaperdollItem(PAPERDOLL_LHAND);
-                if (lure != null) {
-                    inventory.setPaperdollItem(PAPERDOLL_LHAND, null);
-                }
-            }
+        private ChangeRecorder(Inventory inventory) {
+            inventory.addPaperdollListener(this);
         }
 
         @Override
         public void notifyEquiped(int slot, Item item, Inventory inventory) {
-            if (slot != PAPERDOLL_RHAND) {
-                return;
-            }
-
-            if (item.getItemType() == WeaponType.BOW) {
-                final Item arrow = inventory.findArrowForBow(item.getTemplate());
-                if (arrow != null) {
-                    inventory.setPaperdollItem(PAPERDOLL_LHAND, arrow);
-                }
-            } else if ((item.getItemType() == WeaponType.CROSSBOW) || (item.getItemType() == WeaponType.TWO_HAND_CROSSBOW)) {
-                final Item bolts = inventory.findBoltForCrossBow(item.getTemplate());
-                if (bolts != null) {
-                    inventory.setPaperdollItem(PAPERDOLL_LHAND, bolts);
-                }
-            }
-        }
-    }
-
-    private static final class StatsListener implements PaperdollListener {
-        private static StatsListener instance = new StatsListener();
-
-        public static StatsListener getInstance() {
-            return instance;
+            changed.add(item);
         }
 
         @Override
         public void notifyUnequiped(int slot, Item item, Inventory inventory) {
-            var charStat = inventory.getOwner().getStat();
-            item.getTemplate().getFunctionTemplates().forEach(func -> {
-                if(func.getStat().hasDefaultFinalizer()) {
-                    charStat.removeAddAdditionalStat(func.getStat(), func.getValue());
-                }
-            });
-            inventory.getOwner().getStat().recalculateStats(true);
+            changed.add(item);
         }
 
-        @Override
-        public void notifyEquiped(int slot, Item item, Inventory inventory) {
-            var charStat = inventory.getOwner().getStat();
-            item.getTemplate().getFunctionTemplates().forEach(func -> {
-                if(func.getStat().hasDefaultFinalizer()) {
-                    charStat.addAdditionalStat(func.getStat(), func.getValue());
-                }
-            });
-            inventory.getOwner().getStat().recalculateStats(true);
-        }
-    }
-
-    private static final class ItemSkillsListener implements PaperdollListener {
-        private static ItemSkillsListener instance = new ItemSkillsListener();
-
-        public static ItemSkillsListener getInstance() {
-            return instance;
-        }
-
-        @Override
-        public void notifyUnequiped(int slot, Item item, Inventory inventory) {
-            if (!isPlayer(inventory.getOwner())) {
-                return;
-            }
-
-            final Player player = (Player) inventory.getOwner();
-            final ItemTemplate it = item.getTemplate();
-            final AtomicBoolean update = new AtomicBoolean();
-            final AtomicBoolean updateTimestamp = new AtomicBoolean();
-
-            // Remove augmentation bonuses on unequip
-            if (item.isAugmented()) {
-                item.getAugmentation().removeBonus(player);
-            }
-
-            // Recalculate all stats
-            player.getStat().recalculateStats(true);
-
-            it.forEachSkill(ItemSkillType.ON_ENCHANT, holder ->
-            {
-                if(verifySkillActiveIfAddtionalAgathion(slot, holder)) {
-                    return;
-                }
-                // Remove skills bestowed from +4 armor
-                if (item.getEnchantLevel() >= holder.getValue()) {
-                    player.removeSkill(holder.getSkill(), false, holder.getSkill().isPassive());
-                    update.compareAndSet(false, true);
-                }
-            });
-
-            // Clear enchant bonus
-            item.clearEnchantStats();
-
-            // Clear SA Bonus
-            item.clearSpecialAbilities();
-
-            it.forEachSkill(ItemSkillType.NORMAL, holder ->
-            {
-                if(verifySkillActiveIfAddtionalAgathion(slot, holder)) {
-                    return;
-                }
-
-                final Skill Skill = holder.getSkill();
-
-                if (Skill != null) {
-                    player.removeSkill(Skill, false, Skill.isPassive());
-                    update.compareAndSet(false, true);
-                } else {
-                    LOGGER.warn("Inventory.ItemSkillsListener.Weapon: Incorrect skill: " + holder);
-                }
-            });
-
-            if (item.isArmor()) {
-                for (Item itm : inventory.getItems()) {
-                    if (!itm.isEquipped() || (itm.getTemplate().getSkills(ItemSkillType.NORMAL) == null) || itm.equals(item)) {
-                        continue;
-                    }
-
-                    itm.getTemplate().forEachSkill(ItemSkillType.NORMAL, holder ->
-                    {
-
-                        if(verifySkillActiveIfAddtionalAgathion(slot, holder)) {
-                            return;
-                        }
-
-                        if (player.getSkillLevel(holder.getSkillId()) != 0) {
-                            return;
-                        }
-
-                        final Skill skill = holder.getSkill();
-                        if (skill != null) {
-                            player.addSkill(skill, false);
-
-                            if (skill.isActive()) {
-                                if (!player.hasSkillReuse(skill.getReuseHashCode())) {
-                                    final int equipDelay = item.getEquipReuseDelay();
-                                    if (equipDelay > 0) {
-                                        player.addTimeStamp(skill, equipDelay);
-                                        player.disableSkill(skill, equipDelay);
-                                    }
-                                    updateTimestamp.compareAndSet(false, true);
-                                }
-                            }
-                            update.compareAndSet(false, true);
-                        }
-                    });
-                }
-            }
-
-            // Must check all equipped items for enchant conditions.
-            for (Item equipped : inventory.getPaperdollItems())
-            {
-                equipped.getTemplate().forEachSkill(ItemSkillType.ON_ENCHANT, holder ->
-                {
-                    // Add skills bestowed from +4 armor
-                    if (equipped.getEnchantLevel() >= holder.getValue())
-                    {
-                        final Skill skill = holder.getSkill();
-                        // Check passive skill conditions.
-                        if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, player, player))
-                        {
-                            player.removeSkill(holder.getSkill(), false, holder.getSkill().isPassive());
-                            update.compareAndSet(false, true);
-                        }
-                    }
-                });
-            }
-            // Must check for toggle skill item conditions.
-            for (Skill skill : player.getAllSkills())
-            {
-                if (skill.isToggle() && player.isAffectedBySkill(skill.getId()) && !skill.checkConditions(SkillConditionScope.GENERAL, player, player))
-                {
-                    player.stopSkillEffects(true, skill.getId());
-                    update.compareAndSet(false, true);
-                }
-            }
-
-            // Apply skill, if weapon have "skills on unequip"
-            it.forEachSkill(ItemSkillType.ON_UNEQUIP, holder -> {
-
-                if(verifySkillActiveIfAddtionalAgathion(slot, holder)) {
-                    return;
-                }
-                holder.getSkill().activateSkill(player, player);
-            });
-
-            if (update.get()) {
-                player.sendSkillList();
-            }
-            if (updateTimestamp.get()) {
-                player.sendPacket(new SkillCoolTime(player));
-            }
-
-            if (item.isWeapon()) {
-                player.unchargeAllShots();
-            }
-        }
-
-        @Override
-        public void notifyEquiped(int slot, Item item, Inventory inventory) {
-            if (!isPlayer(inventory.getOwner())) {
-                return;
-            }
-
-            final Player player = (Player) inventory.getOwner();
-
-            // Any items equipped that result in expertise penalty do not give any skills at all.
-            if (item.getTemplate().getCrystalType().getId() > player.getExpertiseLevel()) {
-                return;
-            }
-
-            final AtomicBoolean update = new AtomicBoolean();
-            final AtomicBoolean updateTimestamp = new AtomicBoolean();
-
-            // Apply augmentation bonuses on equip
-            if (item.isAugmented()) {
-                item.getAugmentation().applyBonus(player);
-            }
-
-            // Recalculate all stats
-            player.getStat().recalculateStats(true);
-
-            item.getTemplate().forEachSkill(ItemSkillType.ON_ENCHANT, holder -> {
-
-                if(verifySkillActiveIfAddtionalAgathion(slot, holder)) {
-                    return;
-                }
-                // Add skills bestowed from +4 armor
-                if (item.getEnchantLevel() >= holder.getValue()) {
-                    final Skill skill = holder.getSkill();
-                    // Check passive skill conditions.
-                    if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, player, player))
-                    {
-                        return;
-                    }
-                    player.addSkill(skill, false);
-                    update.compareAndSet(false, true);
-                }
-            });
-
-            // Apply enchant stats
-            item.applyEnchantStats();
-
-            // Apply SA skill
-            item.applySpecialAbilities();
-
-            item.getTemplate().forEachSkill(ItemSkillType.NORMAL, holder ->
-            {
-
-                if(verifySkillActiveIfAddtionalAgathion(slot, holder)) {
-                    return;
-                }
-
-                final Skill skill = holder.getSkill();
-                if (skill != null) {
-
-                    if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, player, player))
-                    {
-                        return;
-                    }
-                    player.addSkill(skill, false);
-
-                    if (skill.isActive()) {
-                        if (!player.hasSkillReuse(skill.getReuseHashCode())) {
-                            final int equipDelay = item.getEquipReuseDelay();
-                            if (equipDelay > 0) {
-                                player.addTimeStamp(skill, equipDelay);
-                                player.disableSkill(skill, equipDelay);
-                            }
-                            updateTimestamp.compareAndSet(false, true);
-                        }
-                    }
-                    update.compareAndSet(false, true);
-                } else {
-                    LOGGER.warn("Inventory.ItemSkillsListener.Weapon: Incorrect skill: " + holder);
-                }
-            });
-
-            // Must check all equipped items for enchant conditions.
-            for (Item equipped : inventory.getPaperdollItems())
-            {
-                equipped.getTemplate().forEachSkill(ItemSkillType.ON_ENCHANT, holder ->
-                {
-                    // Add skills bestowed from +4 armor
-                    if (equipped.getEnchantLevel() >= holder.getValue())
-                    {
-                        final Skill skill = holder.getSkill();
-                        // Check passive skill conditions.
-                        if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, player, player))
-                        {
-                            return;
-                        }
-                        player.addSkill(skill, false);
-                        update.compareAndSet(false, true);
-                    }
-                });
-            }
-
-            // Apply skill, if weapon have "skills on equip"
-            item.getTemplate().forEachSkill(ItemSkillType.ON_EQUIP, holder -> {
-
-                if(verifySkillActiveIfAddtionalAgathion(slot, holder)) {
-                    return;
-                }
-
-                holder.getSkill().activateSkill(player, player);
-            });
-
-            if (update.get()) {
-                player.sendSkillList();
-            }
-            if (updateTimestamp.get()) {
-                player.sendPacket(new SkillCoolTime(player));
-            }
-        }
-
-        private boolean verifySkillActiveIfAddtionalAgathion(int slot, ItemSkillHolder holder) {
-            if(slot > PAPERDOLL_AGATHION1 && slot <= PAPERDOLL_AGATHION5) {
-                return holder.getSkill().isActive();
-            }
-            return false;
-        }
-    }
-
-    private static final class ArmorSetListener implements PaperdollListener {
-        private static ArmorSetListener instance = new ArmorSetListener();
-
-        public static ArmorSetListener getInstance() {
-            return instance;
-        }
-
-        private static boolean applySkills(Player player, Item item, ArmorSet armorSet, Function<Item, Integer> idProvider) {
-            final long piecesCount = armorSet.getPiecesCount(player, idProvider);
-            if (piecesCount >= armorSet.getMinimumPieces()) {
-                // Applying all skills that matching the conditions
-                final AtomicBoolean updateTimeStamp = new AtomicBoolean();
-                final AtomicBoolean update = new AtomicBoolean();
-                for (ArmorsetSkillHolder holder : armorSet.getSkills()) {
-                    if (holder.validateConditions(player, armorSet, idProvider)) {
-                        final Skill itemSkill = holder.getSkill();
-
-                        if (itemSkill == null) {
-                            LOGGER.warn("Inventory.ArmorSetListener.addSkills: Incorrect skill: " + holder);
-                            continue;
-                        }
-
-                        if (itemSkill.isPassive() && !itemSkill.checkConditions(SkillConditionScope.PASSIVE, player, player))
-                        {
-                            continue;
-                        }
-
-                        player.addSkill(itemSkill, false);
-                        if (itemSkill.isActive() && (item != null)) {
-                            if (!player.hasSkillReuse(itemSkill.getReuseHashCode())) {
-                                final int equipDelay = item.getEquipReuseDelay();
-                                if (equipDelay > 0) {
-                                    player.addTimeStamp(itemSkill, equipDelay);
-                                    player.disableSkill(itemSkill, equipDelay);
-                                }
-                            }
-                            updateTimeStamp.compareAndSet(false, true);
-                        }
-                        update.compareAndSet(false, true);
-                    }
-                }
-                if (updateTimeStamp.get()) {
-                    player.sendPacket(new SkillCoolTime(player));
-                }
-                return update.get();
-            }
-            return false;
-        }
-
-        private static boolean verifyAndApply(Player player, Item item, Function<Item, Integer> idProvider) {
-            boolean update = false;
-            final List<ArmorSet> armorSets = ArmorSetsData.getInstance().getSets(idProvider.apply(item));
-            for (ArmorSet armorSet : armorSets) {
-                if (applySkills(player, item, armorSet, idProvider)) {
-                    update = true;
-                }
-            }
-            return update;
-        }
-
-        private static boolean verifyAndRemove(Player player, Item item, Function<Item, Integer> idProvider) {
-            boolean update = false;
-            final List<ArmorSet> armorSets = ArmorSetsData.getInstance().getSets(idProvider.apply(item));
-            for (ArmorSet armorSet : armorSets) {
-                // Remove all skills that doesn't matches the conditions
-                for (ArmorsetSkillHolder holder : armorSet.getSkills()) {
-                    if (!holder.validateConditions(player, armorSet, idProvider)) {
-                        final Skill itemSkill = holder.getSkill();
-                        if (itemSkill == null) {
-                            LOGGER.warn("Inventory.ArmorSetListener.removeSkills: Incorrect skill: " + holder);
-                            continue;
-                        }
-
-                        // Update if a skill has been removed.
-                        if (player.removeSkill(itemSkill, false, itemSkill.isPassive()) != null) {
-                            update = true;
-                        }
-                    }
-                }
-
-                // Attempt to apply lower level skills if possible
-                if (applySkills(player, item, armorSet, idProvider)) {
-                    update = true;
-                }
-            }
-
-            return update;
-        }
-
-        @Override
-        public void notifyEquiped(int slot, Item item, Inventory inventory) {
-            if (!isPlayer(inventory.getOwner())) {
-                return;
-            }
-
-            final Player player = (Player) inventory.getOwner();
-            boolean update = false;
-
-            // Verify and apply normal set
-            if (verifyAndApply(player, item, Item::getId)) {
-                update = true;
-            }
-
-            if (update) {
-                player.sendSkillList();
-            }
-
-            if ((item.getTemplate().getBodyPart() == BodyPart.BROOCH_JEWEL) || (item.getTemplate().getBodyPart() == BodyPart.BROOCH)) {
-                player.updateActiveBroochJewel();
-            }
-        }
-
-        @Override
-        public void notifyUnequiped(int slot, Item item, Inventory inventory) {
-            if (!isPlayer(inventory.getOwner())) {
-                return;
-            }
-
-            final Player player = (Player) inventory.getOwner();
-            boolean remove = false;
-
-            // verify and remove normal set bonus
-            if (verifyAndRemove(player, item, Item::getId)) {
-                remove = true;
-            }
-
-            if (remove) {
-                player.checkItemRestriction();
-                player.sendSkillList();
-            }
-
-            if ((item.getTemplate().getBodyPart() == BodyPart.BROOCH_JEWEL) || (item.getTemplate().getBodyPart() == BodyPart.BROOCH)) {
-                player.updateActiveBroochJewel();
-            }
-        }
-    }
-
-    private static final class BraceletListener implements PaperdollListener {
-        private static BraceletListener instance = new BraceletListener();
-
-        public static BraceletListener getInstance() {
-            return instance;
-        }
-
-        @Override
-        public void notifyUnequiped(int slot, Item item, Inventory inventory) {
-            if (item.getTemplate().getBodyPart() == BodyPart.RIGHT_BRACELET) {
-                inventory.unEquipItemInSlot(TALISMAN1);
-                inventory.unEquipItemInSlot(TALISMAN2);
-                inventory.unEquipItemInSlot(TALISMAN3);
-                inventory.unEquipItemInSlot(TALISMAN4);
-                inventory.unEquipItemInSlot(TALISMAN5);
-                inventory.unEquipItemInSlot(TALISMAN6);
-            }
-        }
-
-        // Note (April 3, 2009): Currently on equip, talismans do not display properly, do we need checks here to fix this?
-        @Override
-        public void notifyEquiped(int slot, Item item, Inventory inventory) {
-        }
-    }
-
-    private static final class BroochListener implements PaperdollListener {
-        private static BroochListener instance = new BroochListener();
-
-        public static BroochListener getInstance() {
-            return instance;
-        }
-
-        @Override
-        public void notifyUnequiped(int slot, Item item, Inventory inventory) {
-            if (item.getTemplate().getBodyPart() == BodyPart.BROOCH) {
-                inventory.unEquipItemInSlot(PAPERDOLL_BROOCH_JEWEL1);
-                inventory.unEquipItemInSlot(PAPERDOLL_BROOCH_JEWEL2);
-                inventory.unEquipItemInSlot(PAPERDOLL_BROOCH_JEWEL3);
-                inventory.unEquipItemInSlot(PAPERDOLL_BROOCH_JEWEL4);
-                inventory.unEquipItemInSlot(PAPERDOLL_BROOCH_JEWEL5);
-                inventory.unEquipItemInSlot(PAPERDOLL_BROOCH_JEWEL6);
-            }
-        }
-
-        // Note (April 3, 2009): Currently on equip, talismans do not display properly, do we need checks here to fix this?
-        @Override
-        public void notifyEquiped(int slot, Item item, Inventory inventory) {
-        }
-    }
-
-    private static final class AgathionBraceletListener implements PaperdollListener {
-        private static AgathionBraceletListener instance = new AgathionBraceletListener();
-
-        public static AgathionBraceletListener getInstance() {
-            return instance;
-        }
-
-        @Override
-        public void notifyUnequiped(int slot, Item item, Inventory inventory) {
-            if (item.getTemplate().getBodyPart() == BodyPart.LEFT_BRACELET) {
-                inventory.unEquipItemInSlot(PAPERDOLL_AGATHION1);
-                inventory.unEquipItemInSlot(PAPERDOLL_AGATHION2);
-                inventory.unEquipItemInSlot(PAPERDOLL_AGATHION3);
-                inventory.unEquipItemInSlot(PAPERDOLL_AGATHION4);
-                inventory.unEquipItemInSlot(PAPERDOLL_AGATHION5);
-            }
-        }
-
-        @Override
-        public void notifyEquiped(int slot, Item item, Inventory inventory) {
-        }
-    }
-
-    private static final class ArtifactBookListener implements PaperdollListener {
-        private static ArtifactBookListener instance = new ArtifactBookListener();
-
-        public static ArtifactBookListener getInstance() {
-            return instance;
-        }
-
-        @Override
-        public void notifyUnequiped(int slot, Item item, Inventory inventory) {
-            if (item.getTemplate().getBodyPart() == BodyPart.ARTIFACT_BOOK) {
-                inventory.unEquipItemInSlot(PAPERDOLL_ARTIFACT1);
-                inventory.unEquipItemInSlot(PAPERDOLL_ARTIFACT2);
-                inventory.unEquipItemInSlot(PAPERDOLL_ARTIFACT3);
-                inventory.unEquipItemInSlot(PAPERDOLL_ARTIFACT4);
-                inventory.unEquipItemInSlot(PAPERDOLL_ARTIFACT5);
-                inventory.unEquipItemInSlot(PAPERDOLL_ARTIFACT6);
-                inventory.unEquipItemInSlot(PAPERDOLL_ARTIFACT7);
-                inventory.unEquipItemInSlot(PAPERDOLL_ARTIFACT8);
-                inventory.unEquipItemInSlot(PAPERDOLL_ARTIFACT9);
-                inventory.unEquipItemInSlot(PAPERDOLL_ARTIFACT10);
-                inventory.unEquipItemInSlot(PAPERDOLL_ARTIFACT11);
-                inventory.unEquipItemInSlot(PAPERDOLL_ARTIFACT12);
-                inventory.unEquipItemInSlot(PAPERDOLL_ARTIFACT13);
-                inventory.unEquipItemInSlot(PAPERDOLL_ARTIFACT14);
-                inventory.unEquipItemInSlot(PAPERDOLL_ARTIFACT15);
-                inventory.unEquipItemInSlot(PAPERDOLL_ARTIFACT16);
-                inventory.unEquipItemInSlot(PAPERDOLL_ARTIFACT17);
-                inventory.unEquipItemInSlot(PAPERDOLL_ARTIFACT18);
-                inventory.unEquipItemInSlot(PAPERDOLL_ARTIFACT19);
-                inventory.unEquipItemInSlot(PAPERDOLL_ARTIFACT20);
-                inventory.unEquipItemInSlot(PAPERDOLL_ARTIFACT21);
-
-            }
-        }
-
-        @Override
-        public void notifyEquiped(int slot, Item item, Inventory inventory) {
+        private Set<Item> getChangedItems() {
+            return changed;
         }
     }
 }

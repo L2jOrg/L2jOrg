@@ -30,10 +30,14 @@ import java.util.concurrent.TimeUnit;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.util.Util.falseIfNullOrElse;
 import static org.l2j.commons.util.Util.isBetween;
+import static org.l2j.gameserver.model.items.CommonItem.FORMAL_WEAR;
+import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.util.GameUtils.isItem;
 
+/**
+ * @author JoeAlisson
+ */
 public final class UseItem extends ClientPacket {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(UseItem.class);
@@ -93,7 +97,7 @@ public final class UseItem extends ClientPacket {
 
         // Char cannot use item when dead
         if (player.isDead() || !player.getInventory().canManipulate(item)) {
-            var sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
+            var sm = getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
             sm.addItemName(item);
             player.sendPacket(sm);
             return;
@@ -104,7 +108,7 @@ public final class UseItem extends ClientPacket {
         }
 
         itemId = item.getId();
-        if (player.isFishing() && !isBetween(itemId, 6535, 6540)) {
+        if (player.isFishing() && !isBetween(itemId, 6535, 6540)) { // FIXME non existent ids
             // You cannot do anything else while fishing
             player.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_SCREEN);
             return;
@@ -138,80 +142,7 @@ public final class UseItem extends ClientPacket {
         }
 
         if (item.isEquipable()) {
-            // Don't allow to put formal wear while a cursed weapon is equipped.
-            if (player.isCursedWeaponEquipped() && (itemId == 6408)) {
-                return;
-            }
-
-            // Equip or unEquip
-            if (FortSiegeManager.getInstance().isCombat(itemId)) {
-                return; // no message
-            }
-
-            if (player.isCombatFlagEquipped()) {
-                return;
-            }
-
-            if (player.getInventory().isItemSlotBlocked(item.getTemplate().getBodyPart().getId())) {
-                player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
-                return;
-            }
-            // Prevent players to equip weapon while wearing combat flag
-            // Don't allow weapon/shield equipment if a cursed weapon is equipped.
-            var bodyPart = item.getTemplate().getBodyPart();
-            if (falseIfNullOrElse(bodyPart, part -> part.isAnyOf(BodyPart.TWO_HAND, BodyPart.LEFT_HAND, BodyPart.RIGHT_HAND))) {
-                if ((player.getActiveWeaponItem() != null) && (player.getActiveWeaponItem().getId() == 9819)) {
-                    player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
-                    return;
-                }
-                if (player.isMounted() || player.isDisarmed()) {
-                    player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
-                    return;
-                }
-                if (player.isCursedWeaponEquipped()) {
-                    return;
-                }
-            } else if (bodyPart == BodyPart.TALISMAN) {
-                if (!item.isEquipped() && (player.getInventory().getTalismanSlots() == 0)) {
-                    player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
-                    return;
-                }
-            } else if (bodyPart == BodyPart.BROOCH_JEWEL) {
-                if (!item.isEquipped() && (player.getInventory().getBroochJewelSlots() == 0)) {
-                    final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_EQUIP_S1_WITHOUT_EQUIPPING_A_BROOCH);
-                    sm.addItemName(item);
-                    player.sendPacket(sm);
-                    return;
-                }
-            } else if (bodyPart == BodyPart.AGATHION) {
-                if (!item.isEquipped() && (player.getInventory().getAgathionSlots() == 0)) {
-                    player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
-                    return;
-                }
-            } else if (bodyPart == BodyPart.ARTIFACT) {
-                if (!item.isEquipped() && (player.getInventory().getArtifactSlots() == 0)) {
-                    final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.NO_ARTIFACT_BOOK_EQUIPPED_YOU_CANNOT_EQUIP_S1);
-                    sm.addItemName(item);
-                    player.sendPacket(sm);
-                    return;
-                }
-            }
-            if (player.isCastingNow()) {
-                // Create and Bind the next action to the AI
-                player.getAI().setNextAction(new NextAction(CtrlEvent.EVT_FINISH_CASTING, CtrlIntention.AI_INTENTION_CAST, () -> player.useEquippableItem(item, true)));
-            } else if (player.isAttackingNow()) {
-                ThreadPool.schedule(() -> {
-                    var usedItem = player.getInventory().getItemByObjectId(objectId);
-
-                    if(isNull(usedItem)) {
-                        return;
-                    }
-                    // Equip or unEquip
-                    player.useEquippableItem(usedItem, false);
-                }, player.getAttackEndTime() - TimeUnit.MILLISECONDS.toNanos(System.currentTimeMillis()));
-            } else {
-                player.useEquippableItem(item, true);
-            }
+            handleEquipable(player, item);
         } else {
             final EtcItem etcItem = item.getEtcItem();
             final IItemHandler handler = ItemHandler.getInstance().getHandler(etcItem);
@@ -230,22 +161,100 @@ public final class UseItem extends ClientPacket {
         }
     }
 
+    private void handleEquipable(Player player, Item item) {
+        if (checkCanUse(player, item)) {
+            return;
+        }
+
+        if (player.isCastingNow()) {
+            player.getAI().setNextAction(new NextAction(CtrlEvent.EVT_FINISH_CASTING, CtrlIntention.AI_INTENTION_CAST, () -> player.useEquippableItem(item, true)));
+        } else if (player.isAttackingNow()) {
+            ThreadPool.schedule(() -> {
+                var usedItem = player.getInventory().getItemByObjectId(objectId);
+
+                if(isNull(usedItem)) {
+                    return;
+                }
+                // Equip or unEquip
+                player.useEquippableItem(usedItem, false);
+            }, player.getAttackEndTime() - TimeUnit.MILLISECONDS.toNanos(System.currentTimeMillis()));
+        } else {
+            player.useEquippableItem(item, true);
+        }
+    }
+
+    private boolean checkCanUse(Player player, Item item) {
+        // TODO Remove FortSiege check
+        if ((player.isCursedWeaponEquipped() && itemId == FORMAL_WEAR) || player.isCombatFlagEquipped() || FortSiegeManager.getInstance().isCombat(itemId)) {
+            return false;
+        }
+
+        var bodyPart = item.getBodyPart();
+
+        if (player.getInventory().isItemSlotBlocked(bodyPart)) {
+            player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+            return false;
+        }
+
+        return CheckUnlockedSlot(player, item, bodyPart);
+    }
+
+    private boolean CheckUnlockedSlot(Player player, Item item, BodyPart bodyPart) {
+        switch (bodyPart) {
+            case TWO_HAND, LEFT_HAND, RIGHT_HAND -> {
+                if (player.isMounted() || player.isDisarmed() ||  (nonNull(player.getActiveWeaponItem()) && player.getActiveWeaponItem().getId() == 9819)) {
+                    player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+                    return false;
+                }
+
+                if (player.isCursedWeaponEquipped()) {
+                    return false;
+                }
+            }
+            case TALISMAN -> {
+                if (!item.isEquipped() && (player.getInventory().getTalismanSlots() == 0)) {
+                    player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+                    return false;
+                }
+            }
+            case BROOCH_JEWEL -> {
+                if (!item.isEquipped() && (player.getInventory().getBroochJewelSlots() == 0)) {
+                    player.sendPacket(getSystemMessage(SystemMessageId.YOU_CANNOT_EQUIP_S1_WITHOUT_EQUIPPING_A_BROOCH).addItemName(item));
+                    return false;
+                }
+            }
+            case AGATHION -> {
+                if (!item.isEquipped() && (player.getInventory().getAgathionSlots() == 0)) {
+                    player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+                    return false;
+                }
+            }
+            case ARTIFACT -> {
+                if (!item.isEquipped() && (player.getInventory().getArtifactSlots() == 0)) {
+                    player.sendPacket(getSystemMessage(SystemMessageId.NO_ARTIFACT_BOOK_EQUIPPED_YOU_CANNOT_EQUIP_S1).addItemName(item));
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
     private void reuseData(Player activeChar, Item item, long remainingTime) {
         final int hours = (int) (remainingTime / 3600000);
         final int minutes = (int) (remainingTime % 3600000) / 60000;
         final int seconds = (int) ((remainingTime / 1000) % 60);
         final SystemMessage sm;
         if (hours > 0) {
-            sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_HOUR_S_S3_MINUTE_S_AND_S4_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
+            sm = getSystemMessage(SystemMessageId.THERE_ARE_S2_HOUR_S_S3_MINUTE_S_AND_S4_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
             sm.addItemName(item);
             sm.addInt(hours);
             sm.addInt(minutes);
         } else if (minutes > 0) {
-            sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_MINUTE_S_S3_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
+            sm = getSystemMessage(SystemMessageId.THERE_ARE_S2_MINUTE_S_S3_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
             sm.addItemName(item);
             sm.addInt(minutes);
         } else {
-            sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
+            sm = getSystemMessage(SystemMessageId.THERE_ARE_S2_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
             sm.addItemName(item);
         }
         sm.addInt(seconds);

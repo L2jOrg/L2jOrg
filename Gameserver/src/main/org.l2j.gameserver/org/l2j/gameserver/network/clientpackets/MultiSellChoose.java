@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.data.xml.impl.EnsoulData;
 import org.l2j.gameserver.data.xml.impl.MultisellData;
-import org.l2j.gameserver.engine.items.ItemEngine;
+import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.SpecialItemType;
 import org.l2j.gameserver.model.Clan;
@@ -14,7 +14,7 @@ import org.l2j.gameserver.model.ensoul.EnsoulOption;
 import org.l2j.gameserver.model.holders.ItemChanceHolder;
 import org.l2j.gameserver.model.holders.MultisellEntryHolder;
 import org.l2j.gameserver.model.holders.PreparedMultisellListHolder;
-import org.l2j.gameserver.model.itemcontainer.PcInventory;
+import org.l2j.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.enchant.attribute.AttributeHolder;
@@ -166,7 +166,7 @@ public class MultiSellChoose extends ClientPacket {
         }
 
         final Clan clan = player.getClan();
-        final PcInventory inventory = player.getInventory();
+        final PlayerInventory inventory = player.getInventory();
 
         try {
             int slots = 0;
@@ -481,7 +481,7 @@ public class MultiSellChoose extends ClientPacket {
      * @param totalCount
      * @return {@code false} if ingredient amount is not enough, {@code true} otherwise.
      */
-    private boolean checkIngredients(Player player, PreparedMultisellListHolder list, PcInventory inventory, Clan clan, int ingredientId, long totalCount) {
+    private boolean checkIngredients(Player player, PreparedMultisellListHolder list, PlayerInventory inventory, Clan clan, int ingredientId, long totalCount) {
         final SpecialItemType specialItem = SpecialItemType.getByClientId(ingredientId);
         if (specialItem != null) {
             // Check special item.

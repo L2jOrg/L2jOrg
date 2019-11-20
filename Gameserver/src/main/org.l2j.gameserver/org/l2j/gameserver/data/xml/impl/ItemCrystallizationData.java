@@ -1,6 +1,6 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.gameserver.engine.items.ItemEngine;
+import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.CrystallizationType;
 import org.l2j.gameserver.model.holders.CrystallizationDataHolder;
 import org.l2j.gameserver.model.holders.ItemChanceHolder;

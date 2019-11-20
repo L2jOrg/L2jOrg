@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.holders;
 
-import org.l2j.gameserver.engine.items.ItemEngine;
+import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.model.items.ItemTemplate;
 
 import java.util.Collections;

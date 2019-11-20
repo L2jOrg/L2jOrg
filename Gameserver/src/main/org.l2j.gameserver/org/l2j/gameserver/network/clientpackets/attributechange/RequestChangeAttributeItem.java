@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.clientpackets.attributechange;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.itemcontainer.PcInventory;
+import org.l2j.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2j.gameserver.model.items.enchant.attribute.AttributeHolder;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -36,7 +36,7 @@ public class RequestChangeAttributeItem extends ClientPacket {
             return;
         }
 
-        final PcInventory inventory = activeChar.getInventory();
+        final PlayerInventory inventory = activeChar.getInventory();
         final Item item = inventory.getItemByObjectId(_itemObjId);
 
         // attempting to destroy item

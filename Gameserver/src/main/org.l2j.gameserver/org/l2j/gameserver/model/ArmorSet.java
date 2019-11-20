@@ -3,7 +3,7 @@ package org.l2j.gameserver.model;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ArmorsetSkillHolder;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
-import org.l2j.gameserver.model.itemcontainer.PcInventory;
+import org.l2j.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.stats.BaseStats;
 
@@ -180,7 +180,7 @@ public final class ArmorSet {
             return 0;
         }
 
-        final PcInventory inv = player.getInventory();
+        final PlayerInventory inv = player.getInventory();
         int enchantLevel = Byte.MAX_VALUE;
         for (int armorSlot : ARMORSET_SLOTS) {
             final Item itemPart = inv.getPaperdollItem(armorSlot);
@@ -204,7 +204,7 @@ public final class ArmorSet {
      * @return total paperdoll(busy) count for 1 of 3 artifact book slots
      */
     public int getArtifactSlotMask(Player player, int bookSlot) {
-        final PcInventory inv = player.getInventory();
+        final PlayerInventory inv = player.getInventory();
         int slotMask = 0;
         switch (bookSlot) {
             case 1: {

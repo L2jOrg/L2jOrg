@@ -69,16 +69,8 @@ public enum BodyPart {
         return id;
     }
 
-    public int getPaperdool() {
+    public int paperdool() {
         return paperdool;
-    }
-
-    public static BodyPart fromSlot(long slot) {
-        return mapper.getOrDefault(slot, NONE);
-    }
-
-    public static int slotToPaperdool(long slot) {
-        return fromSlot(slot).paperdool;
     }
 
     public boolean isAnyOf(BodyPart... parts) {
@@ -93,4 +85,29 @@ public enum BodyPart {
         }
         return false;
     }
+
+    public static BodyPart fromSlot(long slot) {
+        return mapper.getOrDefault(slot, NONE);
+    }
+
+    public static int balanceArtifact() {
+        return ARTIFACT.paperdool;
+    }
+
+    public static int spiritArtifact() {
+        return ARTIFACT.paperdool + 12;
+    }
+
+    public static int protectionArtifact() {
+        return ARTIFACT.paperdool + 15;
+    }
+
+    public static int supportArtifact() {
+        return ARTIFACT.paperdool + 18;
+    }
+
+    public static int slotToPaperdool(long slot) {
+        return fromSlot(slot).paperdool;
+    }
+
 }

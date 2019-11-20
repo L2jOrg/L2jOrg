@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.itemcontainer.PcInventory;
+import org.l2j.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -50,7 +50,7 @@ public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot> {
         writeShort((short) InventorySlot.values().length); // 152
         writeBytes(_masks);
 
-        final PcInventory inventory = _activeChar.getInventory();
+        final PlayerInventory inventory = _activeChar.getInventory();
         for (InventorySlot slot : InventorySlot.values()) {
             if (containsMask(slot)) {
                 final VariationInstance augment = inventory.getPaperdollAugmentation(slot.getSlot());

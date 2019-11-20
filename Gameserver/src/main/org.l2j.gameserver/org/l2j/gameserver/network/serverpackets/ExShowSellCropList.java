@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.instancemanager.CastleManorManager;
 import org.l2j.gameserver.model.CropProcure;
 import org.l2j.gameserver.model.Seed;
-import org.l2j.gameserver.model.itemcontainer.PcInventory;
+import org.l2j.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -19,7 +19,7 @@ public final class ExShowSellCropList extends ServerPacket {
     private final Map<Integer, Item> _cropsItems = new HashMap<>();
     private final Map<Integer, CropProcure> _castleCrops = new HashMap<>();
 
-    public ExShowSellCropList(PcInventory inventory, int manorId) {
+    public ExShowSellCropList(PlayerInventory inventory, int manorId) {
         _manorId = manorId;
         for (int cropId : CastleManorManager.getInstance().getCropIds()) {
             final Item item = inventory.getItemByItemId(cropId);

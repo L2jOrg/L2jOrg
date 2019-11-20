@@ -66,7 +66,7 @@ public final class ConvertItem extends AbstractEffect {
 		
 		final int enchantLevel = wpn.getEnchantLevel();
 		final AttributeHolder elementals = wpn.getAttributes() == null ? null : wpn.getAttackAttribute();
-		final Item[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(wpn.getTemplate().getBodyPart().getId());
+		var unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(wpn.getTemplate().getBodyPart().getId());
 		final InventoryUpdate iu = new InventoryUpdate();
 		for (Item unequippedItem : unequiped)
 		{
@@ -74,7 +74,7 @@ public final class ConvertItem extends AbstractEffect {
 		}
 		player.sendInventoryUpdate(iu);
 		
-		if (unequiped.length <= 0)
+		if (unequiped.size() <= 0)
 		{
 			return;
 		}
@@ -102,7 +102,7 @@ public final class ConvertItem extends AbstractEffect {
 			player.sendPacket(sm);
 		}
 		
-		if (count == unequiped.length)
+		if (count == unequiped.size())
 		{
 			return;
 		}

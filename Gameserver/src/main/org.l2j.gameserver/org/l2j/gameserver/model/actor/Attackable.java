@@ -10,7 +10,7 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.impl.ExtendDropData;
 import org.l2j.gameserver.datatables.EventDroplist;
 import org.l2j.gameserver.datatables.EventDroplist.DateDrop;
-import org.l2j.gameserver.engine.items.ItemEngine;
+import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.enums.DropType;

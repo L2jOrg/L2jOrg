@@ -1,22 +1,25 @@
 package org.l2j.gameserver.model.items.instance;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPool;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.EnchantItemOptionsData;
 import org.l2j.gameserver.data.xml.impl.EnsoulData;
 import org.l2j.gameserver.data.xml.impl.OptionData;
-import org.l2j.gameserver.engine.items.ItemEngine;
+import org.l2j.gameserver.engine.geo.GeoEngine;
+import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.ItemSkillType;
-import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2j.gameserver.instancemanager.SiegeGuardManager;
-import org.l2j.gameserver.model.*;
+import org.l2j.gameserver.model.DropProtection;
+import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.model.VariationInstance;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -83,7 +86,7 @@ public final class Item extends WorldObject {
     /**
      * Object ItemTemplate associated to the item
      */
-    private final ItemTemplate _item;
+    private final ItemTemplate template;
     private final ReentrantLock _dbLock = new ReentrantLock();
     private final DropProtection _dropProtection = new DropProtection();
     private final List<Options> _enchantOptions = new ArrayList<>();
@@ -116,7 +119,7 @@ public final class Item extends WorldObject {
     /**
      * Location of the item : Inventory, PaperDoll, WareHouse
      */
-    private ItemLocation _loc;
+    private ItemLocation loc;
     /**
      * Slot where item is stored : Paperdoll slot, inventory order ...
      */
@@ -160,16 +163,16 @@ public final class Item extends WorldObject {
         super(objectId);
         setInstanceType(InstanceType.L2ItemInstance);
         _itemId = itemId;
-        _item = ItemEngine.getInstance().getTemplate(itemId);
-        if ((_itemId == 0) || (_item == null)) {
+        template = ItemEngine.getInstance().getTemplate(itemId);
+        if ((_itemId == 0) || (template == null)) {
             throw new IllegalArgumentException();
         }
-        super.setName(_item.getName());
-        _loc = ItemLocation.VOID;
+        super.setName(template.getName());
+        loc = ItemLocation.VOID;
         _type1 = 0;
         _type2 = 0;
         _dropTime = 0;
-        _time = _item.getTime() == -1 ? -1 : System.currentTimeMillis() + (_item.getTime() * 60 * 1000);
+        _time = template.getTime() == -1 ? -1 : System.currentTimeMillis() + (template.getTime() * 60 * 1000);
         scheduleLifeTimeTask();
     }
 
@@ -183,13 +186,13 @@ public final class Item extends WorldObject {
         super(objectId);
         setInstanceType(InstanceType.L2ItemInstance);
         _itemId = item.getId();
-        _item = item;
+        template = item;
         if (_itemId == 0) {
             throw new IllegalArgumentException();
         }
-        super.setName(_item.getName());
-        _loc = ItemLocation.VOID;
-        _time = _item.getTime() == -1 ? -1 : System.currentTimeMillis() + (_item.getTime() * 60 * 1000);
+        super.setName(template.getName());
+        loc = ItemLocation.VOID;
+        _time = template.getTime() == -1 ? -1 : System.currentTimeMillis() + (template.getTime() * 60 * 1000);
         scheduleLifeTimeTask();
     }
 
@@ -201,7 +204,7 @@ public final class Item extends WorldObject {
         this(rs.getInt("object_id"), ItemEngine.getInstance().getTemplate(rs.getInt("item_id")));
         _count = rs.getLong("count");
         _ownerId = rs.getInt("owner_id");
-        _loc = ItemLocation.valueOf(rs.getString("loc"));
+        loc = ItemLocation.valueOf(rs.getString("loc"));
         _locData = rs.getInt("loc_data");
         _enchantLevel = rs.getInt("enchant_level");
         _type1 = rs.getInt("custom_type1");
@@ -282,19 +285,19 @@ public final class Item extends WorldObject {
         setOwnerId(owner_id);
 
         if (Config.LOG_ITEMS) {
-            if (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (_item.isEquipable() || (_item.getId() == CommonItem.ADENA)))) {
+            if (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (template.isEquipable() || (template.getId() == CommonItem.ADENA)))) {
                 if (_enchantLevel > 0) {
                     LOG_ITEMS.info("SETOWNER:" + String.valueOf(process) // in case of null
                             + ", item " + getObjectId() //
                             + ":+" + _enchantLevel //
-                            + " " + _item.getName() //
+                            + " " + template.getName() //
                             + "(" + _count + "), " //
                             + String.valueOf(creator) + ", " // in case of null
                             + String.valueOf(reference)); // in case of null
                 } else {
                     LOG_ITEMS.info("SETOWNER:" + String.valueOf(process) // in case of null
                             + ", item " + getObjectId() //
-                            + ":" + _item.getName() //
+                            + ":" + template.getName() //
                             + "(" + _count + "), " //
                             + String.valueOf(creator) + ", " // in case of null
                             + String.valueOf(reference)); // in case of null
@@ -355,14 +358,14 @@ public final class Item extends WorldObject {
      * @param loc_data : int designating the slot where the item is stored or the village for freights
      */
     public void setItemLocation(ItemLocation loc, int loc_data) {
-        if ((loc == _loc) && (loc_data == _locData)) {
+        if ((loc == this.loc) && (loc_data == _locData)) {
             return;
         }
 
         // Remove any inventory skills from the old owner.
         removeSkillsFromOwner();
 
-        _loc = loc;
+        this.loc = loc;
         _locData = loc_data;
         _storedInDb = false;
 
@@ -372,7 +375,7 @@ public final class Item extends WorldObject {
     }
 
     public ItemLocation getItemLocation() {
-        return _loc;
+        return loc;
     }
 
     /**
@@ -436,12 +439,12 @@ public final class Item extends WorldObject {
         _storedInDb = false;
 
         if (Config.LOG_ITEMS && (process != null)) {
-            if (!Config.LOG_ITEMS_SMALL_LOG || _item.isEquipable() || _item.getId() == CommonItem.ADENA) {
+            if (!Config.LOG_ITEMS_SMALL_LOG || template.isEquipable() || template.getId() == CommonItem.ADENA) {
                 if (_enchantLevel > 0) {
                     LOG_ITEMS.info("CHANGE:" + String.valueOf(process) // in case of null
                             + ", item " + getObjectId() //
                             + ":+" + _enchantLevel //
-                            + " " + _item.getName() //
+                            + " " + template.getName() //
                             + "(" + _count + "), PrevCount(" //
                             + String.valueOf(old) + "), " // in case of null
                             + String.valueOf(creator) + ", " // in case of null
@@ -449,7 +452,7 @@ public final class Item extends WorldObject {
                 } else {
                     LOG_ITEMS.info("CHANGE:" + String.valueOf(process) // in case of null
                             + ", item " + getObjectId() //
-                            + ":" + _item.getName() //
+                            + ":" + template.getName() //
                             + "(" + _count + "), PrevCount(" //
                             + String.valueOf(old) + "), " // in case of null
                             + String.valueOf(creator) + ", " // in case of null
@@ -483,8 +486,8 @@ public final class Item extends WorldObject {
      * @return boolean
      */
     public boolean isEnchantable() {
-        if ((_loc == ItemLocation.INVENTORY) || (_loc == ItemLocation.PAPERDOLL)) {
-            return _item.isEnchantable();
+        if ((loc == ItemLocation.INVENTORY) || (loc == ItemLocation.PAPERDOLL)) {
+            return template.isEnchantable();
         }
         return false;
     }
@@ -495,7 +498,7 @@ public final class Item extends WorldObject {
      * @return boolean
      */
     public boolean isEquipable() {
-        return _item.getBodyPart() != BodyPart.NONE;
+        return template instanceof EquipableItem;
     }
 
     /**
@@ -504,7 +507,7 @@ public final class Item extends WorldObject {
      * @return boolean
      */
     public boolean isEquipped() {
-        return (_loc == ItemLocation.PAPERDOLL) || (_loc == ItemLocation.PET_EQUIP);
+        return (loc == ItemLocation.PAPERDOLL) || (loc == ItemLocation.PET_EQUIP);
     }
 
     /**
@@ -520,9 +523,10 @@ public final class Item extends WorldObject {
      * Returns the characteristics of the item
      *
      * @return ItemTemplate
+     * @Deprecated
      */
     public ItemTemplate getTemplate() {
-        return _item;
+        return template;
     }
 
     public int getCustomType1() {
@@ -553,7 +557,7 @@ public final class Item extends WorldObject {
      * @return the type of item.
      */
     public ItemType getItemType() {
-        return _item.getItemType();
+        return template.getItemType();
     }
 
     /**
@@ -570,36 +574,36 @@ public final class Item extends WorldObject {
      * @return the display Id of the item.
      */
     public int getDisplayId() {
-        return _item.getDisplayId();
+        return template.getDisplayId();
     }
 
     /**
      * @return {@code true} if item is an EtcItem, {@code false} otherwise.
      */
     public boolean isEtcItem() {
-        return (_item instanceof EtcItem);
+        return (template instanceof EtcItem);
     }
 
     /**
      * @return {@code true} if item is a Weapon/Shield, {@code false} otherwise.
      */
     public boolean isWeapon() {
-        return (_item instanceof Weapon);
+        return (template instanceof Weapon);
     }
 
     /**
      * @return {@code true} if item is an Armor, {@code false} otherwise.
      */
     public boolean isArmor() {
-        return (_item instanceof Armor);
+        return (template instanceof Armor);
     }
 
     /**
      * @return the characteristics of the EtcItem, {@code false} otherwise.
      */
     public EtcItem getEtcItem() {
-        if (_item instanceof EtcItem) {
-            return (EtcItem) _item;
+        if (template instanceof EtcItem) {
+            return (EtcItem) template;
         }
         return null;
     }
@@ -608,8 +612,8 @@ public final class Item extends WorldObject {
      * @return the characteristics of the Weapon.
      */
     public Weapon getWeaponItem() {
-        if (_item instanceof Weapon) {
-            return (Weapon) _item;
+        if (template instanceof Weapon) {
+            return (Weapon) template;
         }
         return null;
     }
@@ -618,35 +622,35 @@ public final class Item extends WorldObject {
      * @return the quantity of crystals for crystallization.
      */
     public final int getCrystalCount() {
-        return _item.getCrystalCount(_enchantLevel);
+        return template.getCrystalCount(_enchantLevel);
     }
 
     /**
      * @return the reference price of the item.
      */
     public long getReferencePrice() {
-        return _item.getReferencePrice();
+        return template.getReferencePrice();
     }
 
     /**
      * @return the name of the item.
      */
     public String getItemName() {
-        return _item.getName();
+        return template.getName();
     }
 
     /**
      * @return the reuse delay of this item.
      */
     public int getReuseDelay() {
-        return _item.getReuseDelay();
+        return template.getReuseDelay();
     }
 
     /**
      * @return the shared reuse item group.
      */
     public int getSharedReuseGroup() {
-        return _item.getSharedReuseGroup();
+        return template.getSharedReuseGroup();
     }
 
     /**
@@ -671,7 +675,7 @@ public final class Item extends WorldObject {
      * @return boolean
      */
     public boolean isStackable() {
-        return _item.isStackable();
+        return template.isStackable();
     }
 
     /**
@@ -680,7 +684,7 @@ public final class Item extends WorldObject {
      * @return boolean
      */
     public boolean isDropable() {
-        return !isAugmented() && _item.isDropable();
+        return !isAugmented() && template.isDropable();
     }
 
     /**
@@ -689,7 +693,7 @@ public final class Item extends WorldObject {
      * @return boolean
      */
     public boolean isDestroyable() {
-        return _item.isDestroyable();
+        return template.isDestroyable();
     }
 
     /**
@@ -698,7 +702,7 @@ public final class Item extends WorldObject {
      * @return boolean
      */
     public boolean isTradeable() {
-        return !isAugmented() && _item.isTradeable();
+        return !isAugmented() && template.isTradeable();
     }
 
     /**
@@ -707,7 +711,7 @@ public final class Item extends WorldObject {
      * @return boolean
      */
     public boolean isSellable() {
-        return !isAugmented() && _item.isSellable();
+        return !isAugmented() && template.isSellable();
     }
 
     /**
@@ -715,8 +719,8 @@ public final class Item extends WorldObject {
      * @return if item can be deposited in warehouse or freight
      */
     public boolean isDepositable(boolean isPrivateWareHouse) {
-        // equipped, hero and quest items
-        if (isEquipped() || !_item.isDepositable()) {
+        // equipped, hero and quest item
+        if (isEquipped() || !template.isDepositable()) {
             return false;
         }
         if (!isPrivateWareHouse) {
@@ -728,23 +732,23 @@ public final class Item extends WorldObject {
     }
 
     public boolean isPotion() {
-        return _item.isPotion();
+        return template.isPotion();
     }
 
     public boolean isElixir() {
-        return _item.isElixir();
+        return template.isElixir();
     }
 
     public boolean isScroll() {
-        return _item.isScroll();
+        return template.isScroll();
     }
 
     public boolean isHeroItem() {
-        return _item.isHeroItem();
+        return template.isHeroItem();
     }
 
     public boolean isCommonItem() {
-        return _item.isCommon();
+        return template.isCommon();
     }
 
     /**
@@ -753,11 +757,11 @@ public final class Item extends WorldObject {
      * @return boolean
      */
     public boolean isPvp() {
-        return _item.isPvpItem();
+        return template.isPvpItem();
     }
 
     public boolean isOlyRestrictedItem() {
-        return _item.isOlyRestrictedItem();
+        return template.isOlyRestrictedItem();
     }
 
     /**
@@ -770,12 +774,12 @@ public final class Item extends WorldObject {
         final Summon pet = player.getPet();
 
         return ((!isEquipped()) // Not equipped
-                && (_item.getType2() != ItemTemplate.TYPE2_QUEST) // Not Quest Item
-                && ((_item.getType2() != ItemTemplate.TYPE2_MONEY) || (_item.getType1() != ItemTemplate.TYPE1_SHIELD_ARMOR)) // not money, not shield
+                && (template.getType2() != ItemTemplate.TYPE2_QUEST) // Not Quest Item
+                && ((template.getType2() != ItemTemplate.TYPE2_MONEY) || (template.getType1() != ItemTemplate.TYPE1_SHIELD_ARMOR)) // not money, not shield
                 && ((pet == null) || (getObjectId() != pet.getControlObjectId())) // Not Control item of currently summoned pet
                 && !(player.isProcessingItem(getObjectId())) // Not momentarily used enchant scroll
                 && (allowAdena || (_itemId != CommonItem.ADENA)) // Not Adena
-                && (!player.isCastingNow(s -> s.getSkill().getItemConsumeId() != _itemId)) && (allowNonTradeable || (isTradeable() && (!((_item.getItemType() == EtcItemType.PET_COLLAR) && player.havePetInvItems())))));
+                && (!player.isCastingNow(s -> s.getSkill().getItemConsumeId() != _itemId)) && (allowNonTradeable || (isTradeable() && (!((template.getItemType() == EtcItemType.PET_COLLAR) && player.havePetInvItems())))));
     }
 
     /**
@@ -969,8 +973,8 @@ public final class Item extends WorldObject {
 
     public AttributeHolder getAttackAttribute() {
         if (isWeapon()) {
-            if (_item.getAttributes() != null) {
-                return _item.getAttributes().stream().findFirst().orElse(null);
+            if (template.getAttributes() != null) {
+                return template.getAttributes().stream().findFirst().orElse(null);
             } else if (_elementals != null) {
                 return _elementals.values().stream().findFirst().orElse(null);
             }
@@ -990,8 +994,8 @@ public final class Item extends WorldObject {
 
     public int getDefenceAttribute(AttributeType element) {
         if (isArmor()) {
-            if (_item.getAttributes() != null) {
-                final AttributeHolder attribute = _item.getAttribute(element);
+            if (template.getAttributes() != null) {
+                final AttributeHolder attribute = template.getAttribute(element);
                 if (attribute != null) {
                     return attribute.getValue();
                 }
@@ -1101,13 +1105,13 @@ public final class Item extends WorldObject {
 
         try {
             if (_existsInDb) {
-                if ((_ownerId == 0) || (_loc == ItemLocation.VOID) || (_loc == ItemLocation.REFUND) || ((_count == 0) && (_loc != ItemLocation.LEASE))) {
+                if ((_ownerId == 0) || (loc == ItemLocation.VOID) || (loc == ItemLocation.REFUND) || ((_count == 0) && (loc != ItemLocation.LEASE))) {
                     removeFromDb();
                 } else if (!Config.LAZY_ITEMS_UPDATE || force) {
                     updateInDb();
                 }
             } else {
-                if ((_ownerId == 0) || (_loc == ItemLocation.VOID) || (_loc == ItemLocation.REFUND) || ((_count == 0) && (_loc != ItemLocation.LEASE))) {
+                if ((_ownerId == 0) || (loc == ItemLocation.VOID) || (loc == ItemLocation.REFUND) || ((_count == 0) && (loc != ItemLocation.LEASE))) {
                     return;
                 }
                 insertIntoDb();
@@ -1137,7 +1141,7 @@ public final class Item extends WorldObject {
              PreparedStatement ps = con.prepareStatement("UPDATE items SET owner_id=?,count=?,loc=?,loc_data=?,enchant_level=?,custom_type1=?,custom_type2=?,time=? WHERE object_id = ?")) {
             ps.setInt(1, _ownerId);
             ps.setLong(2, _count);
-            ps.setString(3, _loc.name());
+            ps.setString(3, loc.name());
             ps.setInt(4, _locData);
             ps.setInt(5, _enchantLevel);
             ps.setInt(6, _type1);
@@ -1175,7 +1179,7 @@ public final class Item extends WorldObject {
             ps.setInt(1, _ownerId);
             ps.setInt(2, _itemId);
             ps.setLong(3, _count);
-            ps.setString(4, _loc.name());
+            ps.setString(4, loc.name());
             ps.setInt(5, _locData);
             ps.setInt(6, _enchantLevel);
             ps.setInt(7, getObjectId());
@@ -1249,7 +1253,7 @@ public final class Item extends WorldObject {
      */
     @Override
     public String toString() {
-        return _item + "[" + getObjectId() + "]";
+        return template + "[" + getObjectId() + "]";
     }
 
     public void resetOwnerTimer() {
@@ -1276,16 +1280,16 @@ public final class Item extends WorldObject {
     }
 
     public boolean isAvailable() {
-        if (!_item.isConditionAttached()) {
+        if (!template.isConditionAttached()) {
             return true;
         }
-        if ((_loc == ItemLocation.PET) || (_loc == ItemLocation.PET_EQUIP))
+        if ((loc == ItemLocation.PET) || (loc == ItemLocation.PET_EQUIP))
         {
             return true;
         }
         Creature owner = getActingPlayer();
         if (owner != null) {
-            for (Condition condition : _item.getConditions()) {
+            for (Condition condition : template.getConditions()) {
                 if (condition == null) {
                     continue;
                 }
@@ -1345,7 +1349,7 @@ public final class Item extends WorldObject {
         final Player player = getActingPlayer();
         if (player != null) {
             if (isEquipped()) {
-                final Item[] unequiped = player.getInventory().unEquipItemInSlotAndRecord(getLocationSlot());
+                var unequiped = player.getInventory().unEquipItemInSlotAndRecord(getLocationSlot());
                 final InventoryUpdate iu = new InventoryUpdate();
                 for (Item item : unequiped) {
                     iu.addModifiedItem(item);
@@ -1353,7 +1357,7 @@ public final class Item extends WorldObject {
                 player.sendInventoryUpdate(iu);
             }
 
-            if (_loc != ItemLocation.WAREHOUSE) {
+            if (loc != ItemLocation.WAREHOUSE) {
                 // destroy
                 player.getInventory().destroyItem("Item", this, player, null);
 
@@ -1416,11 +1420,11 @@ public final class Item extends WorldObject {
     }
 
     public boolean isQuestItem() {
-        return _item.isQuestItem();
+        return template.isQuestItem();
     }
 
     public boolean isFreightable() {
-        return _item.isFreightable();
+        return template.isFreightable();
     }
 
     public int getOlyEnchantLevel() {
@@ -1439,7 +1443,7 @@ public final class Item extends WorldObject {
     }
 
     public boolean hasPassiveSkills() {
-        return (_item.getItemType() == EtcItemType.ENCHT_ATTR_RUNE) && (_loc == ItemLocation.INVENTORY) && (_ownerId > 0) && (_item.getSkills(ItemSkillType.NORMAL) != null);
+        return (template.getItemType() == EtcItemType.ENCHT_ATTR_RUNE) && (loc == ItemLocation.INVENTORY) && (_ownerId > 0) && (template.getSkills(ItemSkillType.NORMAL) != null);
     }
 
     public void giveSkillsToOwner() {
@@ -1449,7 +1453,7 @@ public final class Item extends WorldObject {
 
         final Player player = getActingPlayer();
         if (player != null) {
-            _item.forEachSkill(ItemSkillType.NORMAL, holder ->
+            template.forEachSkill(ItemSkillType.NORMAL, holder ->
             {
                 final Skill skill = holder.getSkill();
                 if (skill.isPassive()) {
@@ -1466,7 +1470,7 @@ public final class Item extends WorldObject {
 
         final Player player = getActingPlayer();
         if (player != null) {
-            _item.forEachSkill(ItemSkillType.NORMAL, holder ->
+            template.forEachSkill(ItemSkillType.NORMAL, holder ->
             {
                 final Skill skill = holder.getSkill();
                 if (skill.isPassive()) {
@@ -1482,7 +1486,7 @@ public final class Item extends WorldObject {
     }
 
     public int getEquipReuseDelay() {
-        return _item.getEquipReuseDelay();
+        return template.getEquipReuseDelay();
     }
 
     /**
@@ -1739,6 +1743,10 @@ public final class Item extends WorldObject {
             _lifeTimeTask.cancel(false);
             _lifeTimeTask = null;
         }
+    }
+
+    public BodyPart getBodyPart() {
+        return template instanceof EquipableItem ? template.getBodyPart() : BodyPart.NONE;
     }
 
     static class ScheduleLifeTimeTask implements Runnable {

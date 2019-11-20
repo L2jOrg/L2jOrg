@@ -2,7 +2,7 @@ package handlers.itemhandlers;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.engine.items.ItemEngine;
+import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.model.ExtractableProduct;
 import org.l2j.gameserver.model.actor.Playable;

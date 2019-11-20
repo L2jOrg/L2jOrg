@@ -79,7 +79,7 @@ public final class RequestRefine extends AbstractRefinePacket {
         // unequip item
         final InventoryUpdate iu = new InventoryUpdate();
         if (targetItem.isEquipped()) {
-            Item[] unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(targetItem.getLocationSlot());
+            var unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(targetItem.getLocationSlot());
             for (Item itm : unequiped) {
                 iu.addModifiedItem(itm);
             }

@@ -43,31 +43,28 @@ public final class Disarmor extends AbstractEffect {
 		}
 		
 		final Player player = effected.getActingPlayer();
-		final Item[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(bodyPart.getId());
+		var modified = player.getInventory().unEquipItemInBodySlotAndRecord(bodyPart.getId());
 
-		if (unequiped.length > 0) {
+		if (modified.size() > 0) {
 			final InventoryUpdate iu = new InventoryUpdate();
-			for (Item itm : unequiped) {
+			for (Item itm : modified) {
 				iu.addModifiedItem(itm);
 			}
 			player.sendInventoryUpdate(iu);
 			player.broadcastUserInfo();
-			
+
+			var unequipped = modified.iterator().next();
+
 			SystemMessage sm;
-			if (unequiped[0].getEnchantLevel() > 0)
-			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
-				sm.addInt(unequiped[0].getEnchantLevel());
-				sm.addItemName(unequiped[0]);
-			}
-			else
-			{
+			if (unequipped.getEnchantLevel() > 0) {
+				sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED).addInt(unequipped.getEnchantLevel());
+			} else {
 				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
-				sm.addItemName(unequiped[0]);
 			}
+			sm.addItemName(unequipped);
 			player.sendPacket(sm);
 			effected.getInventory().blockItemSlot(bodyPart.getId());
-			unequippedItems.put(effected.getObjectId(), unequiped[0].getObjectId());
+			unequippedItems.put(effected.getObjectId(), unequipped.getObjectId());
 		}
 	}
 	

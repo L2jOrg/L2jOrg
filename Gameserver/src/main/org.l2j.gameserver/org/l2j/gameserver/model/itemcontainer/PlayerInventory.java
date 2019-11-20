@@ -3,7 +3,8 @@ package org.l2j.gameserver.model.itemcontainer;
 import io.github.joealisson.primitive.IntCollection;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.engine.items.ItemEngine;
+import org.l2j.gameserver.api.item.PlayerInventoryListener;
+import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.InventoryBlockType;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.TradeItem;
@@ -27,18 +28,18 @@ import org.slf4j.LoggerFactory;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.Collection;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static java.util.Objects.nonNull;
 
-public class PcInventory extends Inventory {
-    private static final Logger LOGGER = LoggerFactory.getLogger(PcInventory.class);
+/**
+ * @author JoeAlisson
+ */
+public class PlayerInventory extends Inventory {
+    private static final Logger LOGGER = LoggerFactory.getLogger(PlayerInventory.class);
 
-    private final Player _owner;
+    private final Player owner;
     private Item _adena;
     private Item _ancientAdena;
     private Item _beautyTickets;
@@ -49,8 +50,9 @@ public class PcInventory extends Inventory {
 
     private InventoryBlockType blockMode = InventoryBlockType.NONE;
 
-    public PcInventory(Player owner) {
-        _owner = owner;
+    public PlayerInventory(Player owner) {
+        this.owner = owner;
+        ServiceLoader.load(PlayerInventoryListener.class).forEach(this::addPaperdollListener);
     }
 
     public static int[][] restoreVisibleInventory(int objectId) {
@@ -74,7 +76,7 @@ public class PcInventory extends Inventory {
 
     @Override
     public Player getOwner() {
-        return _owner;
+        return owner;
     }
 
     @Override
@@ -140,7 +142,7 @@ public class PcInventory extends Inventory {
                     break;
                 }
             }
-            if (!isDuplicate && (!onlyAvailable || (item.isSellable() && item.isAvailable(_owner, false, false)))) {
+            if (!isDuplicate && (!onlyAvailable || (item.isSellable() && item.isAvailable(owner, false, false)))) {
                 list.add(item);
             }
         }
@@ -197,7 +199,7 @@ public class PcInventory extends Inventory {
     public Collection<Item> getAvailableItems(boolean allowAdena, boolean allowNonTradeable, boolean feightable) {
         return getItems(i ->
         {
-            if (!i.isAvailable(_owner, allowAdena, allowNonTradeable) || !canManipulate(i)) {
+            if (!i.isAvailable(owner, allowAdena, allowNonTradeable) || !canManipulate(i)) {
                 return false;
             } else if (feightable) {
                 return (i.getItemLocation() == ItemLocation.INVENTORY) && i.isFreightable();
@@ -210,12 +212,12 @@ public class PcInventory extends Inventory {
      * Returns the list of items in inventory available for transaction adjusted by tradeList
      *
      * @param tradeList
-     * @return Item : items in inventory
+     * @return Item : item in inventory
      */
     public Collection<TradeItem> getAvailableItems(TradeList tradeList) {
         //@formatter:off
         return items.values().stream()
-                .filter(i -> i.isAvailable(_owner, false, false))
+                .filter(i -> i.isAvailable(owner, false, false))
                 .map(tradeList::adjustAvailableItem)
                 .filter(Objects::nonNull)
                 .collect(Collectors.toCollection(LinkedList::new));
@@ -255,7 +257,7 @@ public class PcInventory extends Inventory {
     }
 
     /**
-     * Adds adena to PcInventory
+     * Adds adena to PlayerInventory
      *
      * @param process   : String Identifier of process triggering this action
      * @param count     : int Quantity of adena to be added
@@ -269,7 +271,7 @@ public class PcInventory extends Inventory {
     }
 
     /**
-     * Adds Beauty Tickets to PcInventory
+     * Adds Beauty Tickets to PlayerInventory
      *
      * @param process   : String Identifier of process triggering this action
      * @param count     : int Quantity of Beauty Tickets to be added
@@ -283,7 +285,7 @@ public class PcInventory extends Inventory {
     }
 
     /**
-     * Removes adena to PcInventory
+     * Removes adena to PlayerInventory
      *
      * @param process   : String Identifier of process triggering this action
      * @param count     : int Quantity of adena to be removed
@@ -299,7 +301,7 @@ public class PcInventory extends Inventory {
     }
 
     /**
-     * Removes Beauty Tickets to PcInventory
+     * Removes Beauty Tickets to PlayerInventory
      *
      * @param process   : String Identifier of process triggering this action
      * @param count     : int Quantity of Beauty Tickets to be removed
@@ -627,11 +629,11 @@ public class PcInventory extends Inventory {
     @Override
     protected boolean removeItem(Item item) {
         // Removes any reference to the item from Shortcut bar
-        _owner.removeItemFromShortCut(item.getObjectId());
+        owner.removeItemFromShortCut(item.getObjectId());
 
         // Removes active Enchant Scroll
-        if (_owner.isProcessingItem(item.getObjectId())) {
-            _owner.removeRequestsThatProcessesItem(item.getObjectId());
+        if (owner.isProcessingItem(item.getObjectId())) {
+            owner.removeRequestsThatProcessesItem(item.getObjectId());
         }
 
         if (item.getId() == CommonItem.ADENA) {
@@ -651,7 +653,7 @@ public class PcInventory extends Inventory {
     @Override
     public void refreshWeight() {
         super.refreshWeight();
-        _owner.refreshOverloaded(true);
+        owner.refreshOverloaded(true);
     }
 
     /**
@@ -686,9 +688,9 @@ public class PcInventory extends Inventory {
 
         final boolean inventoryStatusOK = validateCapacity(requiredSlots) && validateWeight(lootWeight);
         if (!inventoryStatusOK && sendMessage) {
-            _owner.sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
+            owner.sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
             if (sendSkillMessage) {
-                _owner.sendPacket(SystemMessageId.WEIGHT_AND_VOLUME_LIMIT_HAVE_BEEN_EXCEEDED_THAT_SKILL_IS_CURRENTLY_UNAVAILABLE);
+                owner.sendPacket(SystemMessageId.WEIGHT_AND_VOLUME_LIMIT_HAVE_BEEN_EXCEEDED_THAT_SKILL_IS_CURRENTLY_UNAVAILABLE);
             }
         }
         return inventoryStatusOK;
@@ -729,30 +731,30 @@ public class PcInventory extends Inventory {
     }
 
     public boolean validateCapacity(long slots, boolean questItem) {
-        return ((slots == 0) && !Config.AUTO_LOOT_SLOT_LIMIT) || questItem ? (getSize(item -> item.isQuestItem()) + slots) <= _owner.getQuestInventoryLimit() : (getSize(item -> !item.isQuestItem()) + slots) <= _owner.getInventoryLimit();
+        return ((slots == 0) && !Config.AUTO_LOOT_SLOT_LIMIT) || questItem ? (getSize(item -> item.isQuestItem()) + slots) <= owner.getQuestInventoryLimit() : (getSize(item -> !item.isQuestItem()) + slots) <= owner.getInventoryLimit();
     }
 
     @Override
     public boolean validateWeight(long weight) {
         // Disable weight check for GMs.
-        if (_owner.isGM() && _owner.getDietMode() && _owner.getAccessLevel().allowTransaction()) {
+        if (owner.isGM() && owner.getDietMode() && owner.getAccessLevel().allowTransaction()) {
             return true;
         }
-        return ((_totalWeight + weight) <= _owner.getMaxLoad());
+        return ((_totalWeight + weight) <= owner.getMaxLoad());
     }
 
     /**
      * Set inventory block for specified IDs<br>
-     * array reference is used for {@link PcInventory#blockItems}
+     * array reference is used for {@link PlayerInventory#blockItems}
      *
      * @param items array of Ids to block/allow
-     * @param mode  blocking mode {@link PcInventory#blockMode}
+     * @param mode  blocking mode {@link PlayerInventory#blockMode}
      */
     public void setInventoryBlock(IntCollection items, InventoryBlockType mode) {
         blockMode = mode;
         blockItems = items;
 
-        _owner.sendItemList();
+        owner.sendItemList();
     }
 
     /**
@@ -762,7 +764,7 @@ public class PcInventory extends Inventory {
         blockMode = InventoryBlockType.NONE;
         blockItems = null;
 
-        _owner.sendItemList();
+        owner.sendItemList();
     }
 
     /**
@@ -777,7 +779,7 @@ public class PcInventory extends Inventory {
     /**
      * Return block mode
      *
-     * @return int {@link PcInventory#blockMode}
+     * @return int {@link PlayerInventory#blockMode}
      */
     public InventoryBlockType getBlockMode() {
         return blockMode;
@@ -811,7 +813,7 @@ public class PcInventory extends Inventory {
 
     @Override
     public String toString() {
-        return getClass().getSimpleName() + "[" + _owner + "]";
+        return getClass().getSimpleName() + "[" + owner + "]";
     }
 
     /**
@@ -851,9 +853,9 @@ public class PcInventory extends Inventory {
         }
 
         if ((WorldTimeController.getInstance().getGameTicks() % 10) == 0) {
-            updateItemCount(null, arrows, -1, _owner, null);
+            updateItemCount(null, arrows, -1, owner, null);
         } else {
-            updateItemCountNoDbUpdate(null, arrows, -1, _owner, null);
+            updateItemCountNoDbUpdate(null, arrows, -1, owner, null);
         }
     }
 
@@ -885,16 +887,16 @@ public class PcInventory extends Inventory {
                 }
             } else if (left == 0) {
                 iu.addRemovedItem(item);
-                destroyItem(process, item, _owner, null);
+                destroyItem(process, item, owner, null);
                 return true;
             } else {
                 return false;
             }
         } finally {
             if (Config.FORCE_INVENTORY_UPDATE) {
-                _owner.sendItemList();
+                owner.sendItemList();
             } else {
-                _owner.sendInventoryUpdate(iu);
+                owner.sendInventoryUpdate(iu);
             }
         }
     }

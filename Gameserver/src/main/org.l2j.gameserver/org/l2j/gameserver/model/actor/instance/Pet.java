@@ -11,7 +11,7 @@ import org.l2j.gameserver.data.sql.impl.SummonEffectsTable.SummonEffect;
 import org.l2j.gameserver.data.xml.impl.ExperienceData;
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
 import org.l2j.gameserver.data.xml.impl.SkillData;
-import org.l2j.gameserver.engine.items.ItemEngine;
+import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.PartyDistributionType;
@@ -323,7 +323,7 @@ public class Pet extends Summon {
      *
      * @param process     : String Identifier of process triggering this action
      * @param itemId      : int Item identifier of the item to be destroyed
-     * @param count       : int Quantity of items to be destroyed
+     * @param count       : int Quantity of item to be destroyed
      * @param reference   : WorldObject Object referencing current action like NPC selling item or previous item in transformation
      * @param sendMessage : boolean Specifies whether to send message to Client about this action
      * @return boolean informing if the action was successfull

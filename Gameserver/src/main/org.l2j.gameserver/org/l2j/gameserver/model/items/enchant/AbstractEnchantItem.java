@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.items.enchant;
 
 import org.l2j.commons.util.CommonUtil;
-import org.l2j.gameserver.engine.items.ItemEngine;
+import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;

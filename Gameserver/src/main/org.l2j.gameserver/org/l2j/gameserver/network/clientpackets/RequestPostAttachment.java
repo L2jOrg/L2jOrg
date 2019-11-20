@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.engine.items.ItemEngine;
+import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.instancemanager.MailManager;
@@ -146,7 +146,7 @@ public final class RequestPostAttachment extends ClientPacket {
             }
 
             if (item.getOwnerId() != msg.getSenderId()) {
-                GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to get items with owner != sender !", Config.DEFAULT_PUNISH);
+                GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to get item with owner != sender !", Config.DEFAULT_PUNISH);
                 return;
             }
 

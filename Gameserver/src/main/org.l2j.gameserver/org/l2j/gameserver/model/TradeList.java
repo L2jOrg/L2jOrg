@@ -1,10 +1,10 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.engine.items.ItemEngine;
+import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
-import org.l2j.gameserver.model.itemcontainer.PcInventory;
+import org.l2j.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -94,7 +94,7 @@ public class TradeList {
      * @param inventory
      * @return Item : items in inventory
      */
-    public Collection<TradeItem> getAvailableItems(PcInventory inventory) {
+    public Collection<TradeItem> getAvailableItems(PlayerInventory inventory) {
         final List<TradeItem> list = new LinkedList<>();
         for (TradeItem item : _items) {
             item = new TradeItem(item, item.getCount(), item.getPrice());
@@ -439,7 +439,7 @@ public class TradeList {
 
     /**
      * @param partner
-     * @return items slots count
+     * @return item slots count
      */
     private int countItemsSlots(Player partner) {
         int slots = 0;
@@ -550,8 +550,8 @@ public class TradeList {
         int weight = 0;
         long totalPrice = 0;
 
-        final PcInventory ownerInventory = _owner.getInventory();
-        final PcInventory playerInventory = player.getInventory();
+        final PlayerInventory ownerInventory = _owner.getInventory();
+        final PlayerInventory playerInventory = player.getInventory();
 
         for (ItemRequest item : items) {
             boolean found = false;
@@ -726,8 +726,8 @@ public class TradeList {
 
         boolean ok = false;
 
-        final PcInventory ownerInventory = _owner.getInventory();
-        final PcInventory playerInventory = player.getInventory();
+        final PlayerInventory ownerInventory = _owner.getInventory();
+        final PlayerInventory playerInventory = player.getInventory();
 
         // Prepare inventory update packet
         final InventoryUpdate ownerIU = new InventoryUpdate();

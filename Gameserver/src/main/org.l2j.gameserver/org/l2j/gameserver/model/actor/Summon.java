@@ -7,7 +7,7 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.SummonAI;
 import org.l2j.gameserver.data.sql.impl.CharSummonTable;
 import org.l2j.gameserver.data.xml.impl.ExperienceData;
-import org.l2j.gameserver.engine.items.ItemEngine;
+import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.NpcInfoType;
 import org.l2j.gameserver.enums.Race;

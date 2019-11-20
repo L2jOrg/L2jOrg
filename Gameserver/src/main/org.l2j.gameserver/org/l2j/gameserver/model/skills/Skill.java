@@ -638,7 +638,7 @@ public final class Skill implements IIdentifiable {
     }
 
     /**
-     * @return Returns the how much items will be consumed.
+     * @return Returns the how much item will be consumed.
      */
     public int getItemConsumeCount() {
         return _itemConsumeCount;

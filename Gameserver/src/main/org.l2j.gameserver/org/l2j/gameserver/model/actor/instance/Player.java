@@ -20,7 +20,7 @@ import org.l2j.gameserver.data.database.dao.CharacterDAO;
 import org.l2j.gameserver.data.database.dao.ElementalSpiritDAO;
 import org.l2j.gameserver.data.database.data.CharacterData;
 import org.l2j.gameserver.data.database.data.ElementalSpiritData;
-import org.l2j.gameserver.engine.items.ItemEngine;
+import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.api.elemental.ElementalSpirit;
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.data.sql.impl.CharSummonTable;
@@ -114,6 +114,8 @@ import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.zeroIfNullOrElse;
+import static org.l2j.gameserver.model.items.BodyPart.RIGHT_HAND;
+import static org.l2j.gameserver.model.items.BodyPart.TWO_HAND;
 import static org.l2j.gameserver.network.SystemMessageId.S1_HAS_INFLICTED_S3_S4_ATTRIBUTE_DAMGE_DAMAGE_TO_S2;
 import static org.l2j.gameserver.network.SystemMessageId.YOU_CANNOT_MOVE_WHILE_CASTING;
 
@@ -292,11 +294,11 @@ public final class Player extends Playable {
     }
 
     public long getRustyCoin() {
-        return _inventory.getRustyCoin();
+        return inventory.getRustyCoin();
     }
 
     public long getSilverCoin() {
-        return _inventory.getSilverCoin();
+        return inventory.getSilverCoin();
     }
 
     public long getVipTierExpiration() {
@@ -389,7 +391,7 @@ public final class Player extends Playable {
      * Stored from last ValidatePosition
      **/
     private final Location _lastServerPosition = new Location(0, 0, 0);
-    private final PcInventory _inventory = new PcInventory(this);
+    private final PlayerInventory inventory = new PlayerInventory(this);
     private final PcFreight _freight = new PcFreight(this);
     /**
      * The table containing all Quests began by the Player
@@ -688,8 +690,8 @@ public final class Player extends Playable {
      * Skills queued because a skill is already in progress
      */
     private SkillUseHolder _queuedSkill;
-    private int _cursedWeaponEquippedId = 0;
-    private boolean _combatFlagEquippedId = false;
+    private int cursedWeaponEquippedId = 0;
+    private boolean combatFlagEquipped = false;
     private boolean _canRevive = true;
     private int _reviveRequested = 0;
     private double _revivePower = 0;
@@ -1988,45 +1990,39 @@ public final class Player extends Playable {
     }
 
     public void useEquippableItem(Item item, boolean abortAttack) {
-        // Equip or unEquip
-        Item[] items = null;
+        Set<Item> modifiedItems;
         final boolean isEquiped = item.isEquipped();
         final int oldInvLimit = getInventoryLimit();
-        SystemMessage sm = null;
+        SystemMessage sm;
 
         if (isEquiped) {
             if (item.getEnchantLevel() > 0) {
-                sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
-                sm.addInt(item.getEnchantLevel());
-                sm.addItemName(item);
+                sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED).addInt(item.getEnchantLevel()).addItemName(item);
             } else {
-                sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
-                sm.addItemName(item);
+                sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED).addItemName(item);
             }
             sendPacket(sm);
 
-            final long slot = _inventory.getSlotFromItem(item);
+            final long slot = inventory.getSlotFromItem(item);
             // we can't unequip talisman by body slot
             if ((slot == ItemTemplate.SLOT_TALISMAN) || (slot == ItemTemplate.SLOT_BROOCH_JEWEL) || (slot == ItemTemplate.SLOT_AGATHION) || (slot == ItemTemplate.SLOT_ARTIFACT)) {
-                items = _inventory.unEquipItemInSlotAndRecord(item.getLocationSlot());
+                modifiedItems = inventory.unEquipItemInSlotAndRecord(item.getLocationSlot());
             } else {
-                items = _inventory.unEquipItemInBodySlotAndRecord(slot);
+                modifiedItems = inventory.unEquipItemInBodySlotAndRecord(slot);
             }
         } else {
-            items = _inventory.equipItemAndRecord(item);
+            modifiedItems = inventory.equipItemAndRecord(item);
 
             if (item.isEquipped()) {
                 if (item.getEnchantLevel() > 0) {
-                    sm = SystemMessage.getSystemMessage(SystemMessageId.EQUIPPED_S1_S2);
-                    sm.addInt(item.getEnchantLevel());
-                    sm.addItemName(item);
+                    sm = SystemMessage.getSystemMessage(SystemMessageId.EQUIPPED_S1_S2).addInt(item.getEnchantLevel());
                 } else {
                     sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_YOUR_S1);
-                    sm.addItemName(item);
                 }
+                sm.addItemName(item);
                 sendPacket(sm);
 
-                if ((item.getTemplate().getBodyPart().getId() & ItemTemplate.SLOT_MULTI_ALLWEAPON) != 0) {
+                if ((item.getBodyPart().isAnyOf(RIGHT_HAND, TWO_HAND))) {
                     rechargeShots(true, true, false);
                 }
             } else {
@@ -2035,11 +2031,9 @@ public final class Player extends Playable {
         }
 
         refreshExpertisePenalty();
-
         broadcastUserInfo();
 
-        final InventoryUpdate iu = new InventoryUpdate();
-        iu.addItems(Arrays.asList(items));
+        final InventoryUpdate iu = new InventoryUpdate(modifiedItems);
         sendInventoryUpdate(iu);
 
         if (abortAttack) {
@@ -2140,7 +2134,7 @@ public final class Player extends Playable {
                 sendPacket(SystemMessageId.CONGRATULATIONS_YOU_WILL_NOW_GRADUATE_FROM_THE_CLAN_ACADEMY_AND_LEAVE_YOUR_CURRENT_CLAN_YOU_CAN_NOW_JOIN_A_CLAN_WITHOUT_BEING_SUBJECT_TO_ANY_PENALTIES);
 
                 // receive graduation gift
-                _inventory.addItem("Gift", 8181, 1, this, null); // give academy circlet
+                inventory.addItem("Gift", 8181, 1, this, null); // give academy circlet
             }
             if (isSubClassActive()) {
                 getSubClasses().get(_classIndex).setClassId(Id);
@@ -2322,7 +2316,7 @@ public final class Player extends Playable {
         }
 
         // Reload passive skills from armors / jewels / weapons
-        _inventory.reloadEquippedItems();
+        inventory.reloadEquippedItems();
     }
 
     /**
@@ -2500,11 +2494,11 @@ public final class Player extends Playable {
     }
 
     /**
-     * Return the PcInventory Inventory of the Player contained in _inventory.
+     * Return the PlayerInventory Inventory of the Player contained in _inventory.
      */
     @Override
-    public PcInventory getInventory() {
-        return _inventory;
+    public PlayerInventory getInventory() {
+        return inventory;
     }
 
     public void removeItemFromShortCut(int objectId) {
@@ -2630,21 +2624,21 @@ public final class Player extends Playable {
      * @return the Adena amount of the Player.
      */
     public long getAdena() {
-        return _inventory.getAdena();
+        return inventory.getAdena();
     }
 
     /**
      * @return the Ancient Adena amount of the Player.
      */
     public long getAncientAdena() {
-        return _inventory.getAncientAdena();
+        return inventory.getAncientAdena();
     }
 
     /**
      * @return the Beauty Tickets of the Player.
      */
     public long getBeautyTickets() {
-        return _inventory.getBeautyTickets();
+        return inventory.getBeautyTickets();
     }
 
     /**
@@ -2663,12 +2657,12 @@ public final class Player extends Playable {
         }
 
         if (count > 0) {
-            _inventory.addAdena(process, count, this, reference);
+            inventory.addAdena(process, count, this, reference);
 
             // Send update packet
             if (!Config.FORCE_INVENTORY_UPDATE) {
                 final InventoryUpdate iu = new InventoryUpdate();
-                iu.addItem(_inventory.getAdenaInstance());
+                iu.addItem(inventory.getAdenaInstance());
                 sendInventoryUpdate(iu);
             } else {
                 sendItemList();
@@ -2686,7 +2680,7 @@ public final class Player extends Playable {
      * @return boolean informing if the action was successful
      */
     public boolean reduceAdena(String process, long count, WorldObject reference, boolean sendMessage) {
-        if (count > _inventory.getAdena()) {
+        if (count > inventory.getAdena()) {
             if (sendMessage) {
                 sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_POPUP);
             }
@@ -2694,8 +2688,8 @@ public final class Player extends Playable {
         }
 
         if (count > 0) {
-            final Item adenaItem = _inventory.getAdenaInstance();
-            if (!_inventory.reduceAdena(process, count, this, reference)) {
+            final Item adenaItem = inventory.getAdenaInstance();
+            if (!inventory.reduceAdena(process, count, this, reference)) {
                 return false;
             }
 
@@ -2728,7 +2722,7 @@ public final class Player extends Playable {
      * @return boolean informing if the action was successful
      */
     public boolean reduceBeautyTickets(String process, long count, WorldObject reference, boolean sendMessage) {
-        if (count > _inventory.getBeautyTickets()) {
+        if (count > inventory.getBeautyTickets()) {
             if (sendMessage) {
                 sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT);
             }
@@ -2736,8 +2730,8 @@ public final class Player extends Playable {
         }
 
         if (count > 0) {
-            final Item beautyTickets = _inventory.getBeautyTicketsInstance();
-            if (!_inventory.reduceBeautyTickets(process, count, this, reference)) {
+            final Item beautyTickets = inventory.getBeautyTicketsInstance();
+            if (!inventory.reduceBeautyTickets(process, count, this, reference)) {
                 return false;
             }
 
@@ -2784,11 +2778,11 @@ public final class Player extends Playable {
         }
 
         if (count > 0) {
-            _inventory.addAncientAdena(process, count, this, reference);
+            inventory.addAncientAdena(process, count, this, reference);
 
             if (!Config.FORCE_INVENTORY_UPDATE) {
                 final InventoryUpdate iu = new InventoryUpdate();
-                iu.addItem(_inventory.getAncientAdenaInstance());
+                iu.addItem(inventory.getAncientAdenaInstance());
                 sendInventoryUpdate(iu);
             } else {
                 sendItemList();
@@ -2806,7 +2800,7 @@ public final class Player extends Playable {
      * @return boolean informing if the action was successful
      */
     public boolean reduceAncientAdena(String process, long count, WorldObject reference, boolean sendMessage) {
-        if (count > _inventory.getAncientAdena()) {
+        if (count > inventory.getAncientAdena()) {
             if (sendMessage) {
                 sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_POPUP);
             }
@@ -2815,8 +2809,8 @@ public final class Player extends Playable {
         }
 
         if (count > 0) {
-            final Item ancientAdenaItem = _inventory.getAncientAdenaInstance();
-            if (!_inventory.reduceAncientAdena(process, count, this, reference)) {
+            final Item ancientAdenaItem = inventory.getAncientAdenaInstance();
+            if (!inventory.reduceAncientAdena(process, count, this, reference)) {
                 return false;
             }
 
@@ -2875,10 +2869,10 @@ public final class Player extends Playable {
             }
 
             // Add the item to inventory
-            final Item newitem = _inventory.addItem(process, item, this, reference);
+            final Item newitem = inventory.addItem(process, item, this, reference);
 
             // If over capacity, drop the item
-            if (!canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !_inventory.validateCapacity(0, item.isQuestItem()) && newitem.isDropable() && (!newitem.isStackable() || (newitem.getLastChange() != Item.MODIFIED))) {
+            if (!canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !inventory.validateCapacity(0, item.isQuestItem()) && newitem.isDropable() && (!newitem.isStackable() || (newitem.getLastChange() != Item.MODIFIED))) {
                 dropItem("InvDrop", newitem, null, true, true);
             } else if (CursedWeaponsManager.getInstance().isCursed(newitem.getId())) {
                 CursedWeaponsManager.getInstance().activate(this, newitem);
@@ -2948,10 +2942,10 @@ public final class Player extends Playable {
                 }
             } else {
                 // Add the item to inventory
-                final Item createdItem = _inventory.addItem(process, itemId, count, this, reference);
+                final Item createdItem = inventory.addItem(process, itemId, count, this, reference);
 
                 // If over capacity, drop the item
-                if (!canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !_inventory.validateCapacity(0, item.isQuestItem()) && createdItem.isDropable() && (!createdItem.isStackable() || (createdItem.getLastChange() != Item.MODIFIED))) {
+                if (!canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !inventory.validateCapacity(0, item.isQuestItem()) && createdItem.isDropable() && (!createdItem.isStackable() || (createdItem.getLastChange() != Item.MODIFIED))) {
                     dropItem("InvDrop", createdItem, null, true);
                 } else if (CursedWeaponsManager.getInstance().isCursed(createdItem.getId())) {
                     CursedWeaponsManager.getInstance().activate(this, createdItem);
@@ -2996,7 +2990,7 @@ public final class Player extends Playable {
      * @return boolean informing if the action was successful
      */
     public boolean destroyItem(String process, Item item, long count, WorldObject reference, boolean sendMessage) {
-        item = _inventory.destroyItem(process, item, count, this, reference);
+        item = inventory.destroyItem(process, item, count, this, reference);
 
         if (item == null) {
             if (sendMessage) {
@@ -3043,7 +3037,7 @@ public final class Player extends Playable {
      */
     @Override
     public boolean destroyItem(String process, int objectId, long count, WorldObject reference, boolean sendMessage) {
-        final Item item = _inventory.getItemByObjectId(objectId);
+        final Item item = inventory.getItemByObjectId(objectId);
 
         if (item == null) {
             if (sendMessage) {
@@ -3066,7 +3060,7 @@ public final class Player extends Playable {
      * @return boolean informing if the action was successful
      */
     public boolean destroyItemWithoutTrace(String process, int objectId, long count, WorldObject reference, boolean sendMessage) {
-        final Item item = _inventory.getItemByObjectId(objectId);
+        final Item item = inventory.getItemByObjectId(objectId);
 
         if ((item == null) || (item.getCount() < count)) {
             if (sendMessage) {
@@ -3095,9 +3089,9 @@ public final class Player extends Playable {
             return reduceAdena(process, count, reference, sendMessage);
         }
 
-        final Item item = _inventory.getItemByItemId(itemId);
+        final Item item = inventory.getItemByItemId(itemId);
 
-        if ((item == null) || (item.getCount() < count) || (_inventory.destroyItemByItemId(process, itemId, count, this, reference) == null)) {
+        if ((item == null) || (item.getCount() < count) || (inventory.destroyItemByItemId(process, itemId, count, this, reference) == null)) {
             if (sendMessage) {
                 sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT);
             }
@@ -3146,7 +3140,7 @@ public final class Player extends Playable {
         if (oldItem == null) {
             return null;
         }
-        final Item newItem = _inventory.transferItem(process, objectId, count, target, this, reference);
+        final Item newItem = inventory.transferItem(process, objectId, count, target, this, reference);
         if (newItem == null) {
             return null;
         }
@@ -3167,8 +3161,8 @@ public final class Player extends Playable {
         }
 
         // Send target update packet
-        if (target instanceof PcInventory) {
-            final Player targetPlayer = ((PcInventory) target).getOwner();
+        if (target instanceof PlayerInventory) {
+            final Player targetPlayer = ((PlayerInventory) target).getOwner();
 
             if (!Config.FORCE_INVENTORY_UPDATE) {
                 final InventoryUpdate playerIU = new InventoryUpdate();
@@ -3201,7 +3195,7 @@ public final class Player extends Playable {
      * @return {@code true} if the player successfully exchanged the items, {@code false} otherwise
      */
     public boolean exchangeItemsById(String process, WorldObject reference, int coinId, long cost, int rewardId, long count, boolean sendMessage) {
-        final PcInventory inv = _inventory;
+        final PlayerInventory inv = inventory;
         if (!inv.validateCapacityByItemId(rewardId, count)) {
             if (sendMessage) {
                 sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
@@ -3234,7 +3228,7 @@ public final class Player extends Playable {
      * @return boolean informing if the action was successful
      */
     public boolean dropItem(String process, Item item, WorldObject reference, boolean sendMessage, boolean protectItem) {
-        item = _inventory.dropItem(process, item, this, reference);
+        item = inventory.dropItem(process, item, this, reference);
 
         if (item == null) {
             if (sendMessage) {
@@ -3306,8 +3300,8 @@ public final class Player extends Playable {
      * @return Item corresponding to the new item or the updated item in inventory
      */
     public Item dropItem(String process, int objectId, long count, int x, int y, int z, WorldObject reference, boolean sendMessage, boolean protectItem) {
-        final Item invitem = _inventory.getItemByObjectId(objectId);
-        final Item item = _inventory.dropItem(process, objectId, count, this, reference);
+        final Item invitem = inventory.getItemByObjectId(objectId);
+        final Item item = inventory.dropItem(process, objectId, count, this, reference);
 
         if (item == null) {
             if (sendMessage) {
@@ -3365,7 +3359,7 @@ public final class Player extends Playable {
             return null;
         }
 
-        final Item item = _inventory.getItemByObjectId(objectId);
+        final Item item = inventory.getItemByObjectId(objectId);
 
         if ((item == null) || (item.getOwnerId() != getObjectId())) {
             LOGGER.debug(getObjectId() + ": player tried to " + action + " item he is not owner of");
@@ -3835,7 +3829,7 @@ public final class Player extends Playable {
                 return;
             }
 
-            if (((isInParty() && (_party.getDistributionType() == PartyDistributionType.FINDERS_KEEPERS)) || !isInParty()) && !_inventory.validateCapacity(target)) {
+            if (((isInParty() && (_party.getDistributionType() == PartyDistributionType.FINDERS_KEEPERS)) || !isInParty()) && !inventory.validateCapacity(target)) {
                 sendPacket(ActionFailed.STATIC_PACKET);
                 sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
                 return;
@@ -3919,13 +3913,13 @@ public final class Player extends Playable {
             // Check if a Party is in progress
             if (isInParty()) {
                 _party.distributeItem(this, target);
-            } else if ((target.getId() == CommonItem.ADENA) && (_inventory.getAdenaInstance() != null)) {
+            } else if ((target.getId() == CommonItem.ADENA) && (inventory.getAdenaInstance() != null)) {
                 addAdena("Pickup", target.getCount(), null, true);
                 ItemEngine.getInstance().destroyItem("Pickup", target, this, null);
             } else {
                 addItem("Pickup", target, null, true);
                 // Auto-Equip arrows/bolts if player has a bow/crossbow and player picks up arrows/bolts.
-                final Item weapon = _inventory.getPaperdollItem(Inventory.PAPERDOLL_RHAND);
+                final Item weapon = inventory.getPaperdollItem(Inventory.PAPERDOLL_RHAND);
                 if (weapon != null) {
                     final EtcItem etcItem = target.getEtcItem();
                     if (etcItem != null) {
@@ -4074,7 +4068,7 @@ public final class Player extends Playable {
      */
     @Override
     public Item getActiveWeaponInstance() {
-        return _inventory.getPaperdollItem(Inventory.PAPERDOLL_RHAND);
+        return inventory.getPaperdollItem(Inventory.PAPERDOLL_RHAND);
     }
 
     /**
@@ -4091,11 +4085,11 @@ public final class Player extends Playable {
     }
 
     public Item getChestArmorInstance() {
-        return _inventory.getPaperdollItem(Inventory.PAPERDOLL_CHEST);
+        return inventory.getPaperdollItem(Inventory.PAPERDOLL_CHEST);
     }
 
     public Item getLegsArmorInstance() {
-        return _inventory.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
+        return inventory.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
     }
 
     public Armor getActiveChestArmorItem() {
@@ -4128,7 +4122,7 @@ public final class Player extends Playable {
             }
         }
         if (armor != null) {
-            if (((_inventory.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getTemplate().getBodyPart() == BodyPart.FULL_ARMOR) && (armor.getItemType() == ArmorType.HEAVY))) {
+            if (((inventory.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getTemplate().getBodyPart() == BodyPart.FULL_ARMOR) && (armor.getItemType() == ArmorType.HEAVY))) {
                 return true;
             }
         }
@@ -4145,7 +4139,7 @@ public final class Player extends Playable {
             }
         }
         if (armor != null) {
-            if (((_inventory.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getTemplate().getBodyPart() == BodyPart.FULL_ARMOR) && (armor.getItemType() == ArmorType.LIGHT))) {
+            if (((inventory.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getTemplate().getBodyPart() == BodyPart.FULL_ARMOR) && (armor.getItemType() == ArmorType.LIGHT))) {
                 return true;
             }
         }
@@ -4162,7 +4156,7 @@ public final class Player extends Playable {
             }
         }
         if (armor != null) {
-            if (((_inventory.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getTemplate().getBodyPart() == BodyPart.FULL_ARMOR) && (armor.getItemType() == ArmorType.MAGIC))) {
+            if (((inventory.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getTemplate().getBodyPart() == BodyPart.FULL_ARMOR) && (armor.getItemType() == ArmorType.MAGIC))) {
                 return true;
             }
         }
@@ -4174,7 +4168,7 @@ public final class Player extends Playable {
      */
     @Override
     public Item getSecondaryWeaponInstance() {
-        return _inventory.getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+        return inventory.getPaperdollItem(Inventory.PAPERDOLL_LHAND);
     }
 
     /**
@@ -4183,7 +4177,7 @@ public final class Player extends Playable {
      */
     @Override
     public ItemTemplate getSecondaryWeaponItem() {
-        final Item item = _inventory.getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+        final Item item = inventory.getPaperdollItem(Inventory.PAPERDOLL_LHAND);
         if (item != null) {
             return item.getTemplate();
         }
@@ -4260,15 +4254,15 @@ public final class Player extends Playable {
 
             // Issues drop of Cursed Weapon.
             if (isCursedWeaponEquipped()) {
-                CursedWeaponsManager.getInstance().drop(_cursedWeaponEquippedId, killer);
-            } else if (_combatFlagEquippedId) {
+                CursedWeaponsManager.getInstance().drop(cursedWeaponEquippedId, killer);
+            } else if (combatFlagEquipped) {
                 final Fort fort = FortDataManager.getInstance().getFort(this);
                 if (fort != null) {
                     FortSiegeManager.getInstance().dropCombatFlag(this, fort.getResidenceId());
                 } else {
-                    final long slot = _inventory.getSlotFromItem(_inventory.getItemByItemId(9819));
-                    _inventory.unEquipItemInBodySlot(slot);
-                    destroyItem("CombatFlag", _inventory.getItemByItemId(9819), null, true);
+                    final long slot = inventory.getSlotFromItem(inventory.getItemByItemId(9819));
+                    inventory.unEquipItemInBodySlot(slot);
+                    destroyItem("CombatFlag", inventory.getItemByItemId(9819), null, true);
                 }
             } else {
                 final boolean insidePvpZone = isInsideZone(ZoneType.PVP) || isInsideZone(ZoneType.SIEGE);
@@ -4370,7 +4364,7 @@ public final class Player extends Playable {
                 int dropCount = 0;
                 int itemDropPercent = 0;
 
-                for (Item itemDrop : _inventory.getItems()) {
+                for (Item itemDrop : inventory.getItems()) {
                     // Don't drop
                     if (itemDrop.isTimeLimitedItem() || // Dont drop Time Limited Items
                             !itemDrop.isDropable() || (itemDrop.getId() == CommonItem.ADENA) || // Adena
@@ -4385,7 +4379,7 @@ public final class Player extends Playable {
                     if (itemDrop.isEquipped()) {
                         // Set proper chance according to Item type of equipped Item
                         itemDropPercent = itemDrop.getTemplate().getType2() == ItemTemplate.TYPE2_WEAPON ? dropEquipWeapon : dropEquip;
-                        _inventory.unEquipItemInSlot(itemDrop.getLocationSlot());
+                        inventory.unEquipItemInSlot(itemDrop.getLocationSlot());
                     } else {
                         itemDropPercent = dropItem; // Item in inventory
                     }
@@ -5017,17 +5011,17 @@ public final class Player extends Playable {
      */
     @Override
     protected boolean checkAndEquipAmmunition(EtcItemType type) {
-        Item arrows = _inventory.getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+        Item arrows = inventory.getPaperdollItem(Inventory.PAPERDOLL_LHAND);
         if (arrows == null) {
             final Weapon weapon = getActiveWeaponItem();
             if (type == EtcItemType.ARROW) {
-                arrows = _inventory.findArrowForBow(weapon);
+                arrows = inventory.findArrowForBow(weapon);
             } else if (type == EtcItemType.BOLT) {
-                arrows = _inventory.findBoltForCrossBow(weapon);
+                arrows = inventory.findBoltForCrossBow(weapon);
             }
             if (arrows != null) {
                 // Equip arrows needed in left hand
-                _inventory.setPaperdollItem(Inventory.PAPERDOLL_LHAND, arrows);
+                inventory.setPaperdollItem(Inventory.PAPERDOLL_LHAND, arrows);
                 sendItemList();
                 return true;
             }
@@ -5044,7 +5038,7 @@ public final class Player extends Playable {
      */
     public boolean disarmWeapons() {
         // If there is no weapon to disarm then return true.
-        final Item wpn = _inventory.getPaperdollItem(Inventory.PAPERDOLL_RHAND);
+        final Item wpn = inventory.getPaperdollItem(Inventory.PAPERDOLL_RHAND);
         if (wpn == null) {
             return true;
         }
@@ -5055,13 +5049,13 @@ public final class Player extends Playable {
         }
 
         // Don't allow disarming a Combat Flag or Territory Ward.
-        if (_combatFlagEquippedId) {
+        if (combatFlagEquipped) {
             return false;
         }
 
-        final Item[] unequiped = _inventory.unEquipItemInBodySlotAndRecord(wpn.getTemplate().getBodyPart().getId());
+        var modified = inventory.unEquipItemInBodySlotAndRecord(wpn.getTemplate().getBodyPart().getId());
         final InventoryUpdate iu = new InventoryUpdate();
-        for (Item itm : unequiped) {
+        for (Item itm : modified) {
             iu.addModifiedItem(itm);
         }
 
@@ -5069,17 +5063,15 @@ public final class Player extends Playable {
         abortAttack();
         broadcastUserInfo();
 
-        // This can be 0 if the user pressed the right mousebutton twice very fast.
-        if (unequiped.length > 0) {
+        if (modified.size() > 0) {
+            var unequipped =  modified.iterator().next();
             final SystemMessage sm;
-            if (unequiped[0].getEnchantLevel() > 0) {
-                sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
-                sm.addInt(unequiped[0].getEnchantLevel());
-                sm.addItemName(unequiped[0]);
+            if (unequipped.getEnchantLevel() > 0) {
+                sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED).addInt(unequipped.getEnchantLevel());
             } else {
                 sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
-                sm.addItemName(unequiped[0]);
             }
+            sm.addItemName(unequipped);
             sendPacket(sm);
         }
         return true;
@@ -5091,11 +5083,11 @@ public final class Player extends Playable {
      * @return {@code true}.
      */
     public boolean disarmShield() {
-        final Item sld = _inventory.getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+        final Item sld = inventory.getPaperdollItem(Inventory.PAPERDOLL_LHAND);
         if (sld != null) {
-            final Item[] unequiped = _inventory.unEquipItemInBodySlotAndRecord(sld.getTemplate().getBodyPart().getId());
+            var modified = inventory.unEquipItemInBodySlotAndRecord(sld.getTemplate().getBodyPart().getId());
             final InventoryUpdate iu = new InventoryUpdate();
-            for (Item itm : unequiped) {
+            for (Item itm : modified) {
                 iu.addModifiedItem(itm);
             }
             sendInventoryUpdate(iu);
@@ -5103,17 +5095,16 @@ public final class Player extends Playable {
             abortAttack();
             broadcastUserInfo();
 
-            // this can be 0 if the user pressed the right mousebutton twice very fast
-            if (unequiped.length > 0) {
-                SystemMessage sm = null;
-                if (unequiped[0].getEnchantLevel() > 0) {
-                    sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
-                    sm.addInt(unequiped[0].getEnchantLevel());
-                    sm.addItemName(unequiped[0]);
+            var iterator = modified.iterator();
+            if (iterator.hasNext()) {
+                var unequipped = iterator.next();
+                SystemMessage sm;
+                if (unequipped.getEnchantLevel() > 0) {
+                    sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED).addInt(unequipped.getEnchantLevel());
                 } else {
                     sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
-                    sm.addItemName(unequiped[0]);
                 }
+                sm.addItemName(unequipped);
                 sendPacket(sm);
             }
         }
@@ -5199,7 +5190,7 @@ public final class Player extends Playable {
                 // no message needed, player while transformed doesn't have mount action
                 sendPacket(ActionFailed.STATIC_PACKET);
                 return false;
-            } else if (_inventory.getItemByItemId(9819) != null) {
+            } else if (inventory.getItemByItemId(9819) != null) {
                 sendPacket(ActionFailed.STATIC_PACKET);
                 // FIXME: Wrong Message
                 sendMessage("You cannot mount a steed while holding a flag.");
@@ -6286,7 +6277,7 @@ public final class Player extends Playable {
                     isInInventory = true;
 
                     // Using item Id
-                    Item item = _inventory.getItemByItemId(itemId);
+                    Item item = inventory.getItemByItemId(itemId);
                     if (item == null) {
                         item = getWarehouse().getItemByItemId(itemId);
                         isInInventory = false;
@@ -6452,7 +6443,7 @@ public final class Player extends Playable {
                 reduceAdena("Henna", henna.getCancelFee(), this, false);
             }
             if (henna.getCancelCount() > 0) {
-                _inventory.addItem("Henna", henna.getDyeItemId(), henna.getCancelCount(), this, null);
+                inventory.addItem("Henna", henna.getDyeItemId(), henna.getCancelCount(), this, null);
                 final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
                 sm.addItemName(henna.getDyeItemId());
                 sm.addLong(henna.getCancelCount());
@@ -6621,7 +6612,7 @@ public final class Player extends Playable {
         storeRecommendations();
 
         if (Config.UPDATE_ITEMS_ON_CHAR_STORE) {
-            _inventory.updateDatabase();
+            inventory.updateDatabase();
             getWarehouse().updateDatabase();
         }
     }
@@ -7187,7 +7178,7 @@ public final class Player extends Playable {
     @Override
     public void rechargeShots(boolean physical, boolean magic, boolean fish) {
         for (int itemId : _activeSoulShots) {
-            final Item item = _inventory.getItemByItemId(itemId);
+            final Item item = inventory.getItemByItemId(itemId);
             if (item == null) {
                 removeAutoSoulShot(itemId);
                 continue;
@@ -7268,29 +7259,29 @@ public final class Player extends Playable {
 
     public void updateActiveBroochJewel() {
         // Update active Ruby jewel.
-        if ((_inventory.getItemByItemId(BroochJewel.RUBY_LV5.getItemId()) != null) && (_inventory.getItemByItemId(BroochJewel.RUBY_LV5.getItemId()).isEquipped())) {
+        if ((inventory.getItemByItemId(BroochJewel.RUBY_LV5.getItemId()) != null) && (inventory.getItemByItemId(BroochJewel.RUBY_LV5.getItemId()).isEquipped())) {
             setActiveRubyJewel(BroochJewel.RUBY_LV5);
-        } else if ((_inventory.getItemByItemId(BroochJewel.RUBY_LV4.getItemId()) != null) && (_inventory.getItemByItemId(BroochJewel.RUBY_LV4.getItemId()).isEquipped())) {
+        } else if ((inventory.getItemByItemId(BroochJewel.RUBY_LV4.getItemId()) != null) && (inventory.getItemByItemId(BroochJewel.RUBY_LV4.getItemId()).isEquipped())) {
             setActiveRubyJewel(BroochJewel.RUBY_LV4);
-        } else if ((_inventory.getItemByItemId(BroochJewel.RUBY_LV3.getItemId()) != null) && (_inventory.getItemByItemId(BroochJewel.RUBY_LV3.getItemId()).isEquipped())) {
+        } else if ((inventory.getItemByItemId(BroochJewel.RUBY_LV3.getItemId()) != null) && (inventory.getItemByItemId(BroochJewel.RUBY_LV3.getItemId()).isEquipped())) {
             setActiveRubyJewel(BroochJewel.RUBY_LV3);
-        } else if ((_inventory.getItemByItemId(BroochJewel.RUBY_LV2.getItemId()) != null) && (_inventory.getItemByItemId(BroochJewel.RUBY_LV2.getItemId()).isEquipped())) {
+        } else if ((inventory.getItemByItemId(BroochJewel.RUBY_LV2.getItemId()) != null) && (inventory.getItemByItemId(BroochJewel.RUBY_LV2.getItemId()).isEquipped())) {
             setActiveRubyJewel(BroochJewel.RUBY_LV2);
-        } else if ((_inventory.getItemByItemId(BroochJewel.RUBY_LV1.getItemId()) != null) && (_inventory.getItemByItemId(BroochJewel.RUBY_LV1.getItemId()).isEquipped())) {
+        } else if ((inventory.getItemByItemId(BroochJewel.RUBY_LV1.getItemId()) != null) && (inventory.getItemByItemId(BroochJewel.RUBY_LV1.getItemId()).isEquipped())) {
             setActiveRubyJewel(BroochJewel.RUBY_LV1);
         } else {
             setActiveRubyJewel(null);
         }
         // Update active Sapphire jewel.
-        if ((_inventory.getItemByItemId(BroochJewel.SHAPPHIRE_LV5.getItemId()) != null) && (_inventory.getItemByItemId(BroochJewel.SHAPPHIRE_LV5.getItemId()).isEquipped())) {
+        if ((inventory.getItemByItemId(BroochJewel.SHAPPHIRE_LV5.getItemId()) != null) && (inventory.getItemByItemId(BroochJewel.SHAPPHIRE_LV5.getItemId()).isEquipped())) {
             setActiveShappireJewel(BroochJewel.SHAPPHIRE_LV5);
-        } else if ((_inventory.getItemByItemId(BroochJewel.SHAPPHIRE_LV4.getItemId()) != null) && (_inventory.getItemByItemId(BroochJewel.SHAPPHIRE_LV4.getItemId()).isEquipped())) {
+        } else if ((inventory.getItemByItemId(BroochJewel.SHAPPHIRE_LV4.getItemId()) != null) && (inventory.getItemByItemId(BroochJewel.SHAPPHIRE_LV4.getItemId()).isEquipped())) {
             setActiveShappireJewel(BroochJewel.SHAPPHIRE_LV4);
-        } else if ((_inventory.getItemByItemId(BroochJewel.SHAPPHIRE_LV3.getItemId()) != null) && (_inventory.getItemByItemId(BroochJewel.SHAPPHIRE_LV3.getItemId()).isEquipped())) {
+        } else if ((inventory.getItemByItemId(BroochJewel.SHAPPHIRE_LV3.getItemId()) != null) && (inventory.getItemByItemId(BroochJewel.SHAPPHIRE_LV3.getItemId()).isEquipped())) {
             setActiveShappireJewel(BroochJewel.SHAPPHIRE_LV3);
-        } else if ((_inventory.getItemByItemId(BroochJewel.SHAPPHIRE_LV2.getItemId()) != null) && (_inventory.getItemByItemId(BroochJewel.SHAPPHIRE_LV2.getItemId()).isEquipped())) {
+        } else if ((inventory.getItemByItemId(BroochJewel.SHAPPHIRE_LV2.getItemId()) != null) && (inventory.getItemByItemId(BroochJewel.SHAPPHIRE_LV2.getItemId()).isEquipped())) {
             setActiveShappireJewel(BroochJewel.SHAPPHIRE_LV2);
-        } else if ((_inventory.getItemByItemId(BroochJewel.SHAPPHIRE_LV1.getItemId()) != null) && (_inventory.getItemByItemId(BroochJewel.SHAPPHIRE_LV1.getItemId()).isEquipped())) {
+        } else if ((inventory.getItemByItemId(BroochJewel.SHAPPHIRE_LV1.getItemId()) != null) && (inventory.getItemByItemId(BroochJewel.SHAPPHIRE_LV1.getItemId()).isEquipped())) {
             setActiveShappireJewel(BroochJewel.SHAPPHIRE_LV1);
         } else {
             setActiveShappireJewel(null);
@@ -8056,7 +8047,7 @@ public final class Player extends Playable {
             // Remove active item skills before saving char to database
             // because next time when choosing this class, weared items can
             // be different
-            for (Item item : _inventory.getPaperdollItems(Item::isAugmented)) {
+            for (Item item : inventory.getPaperdollItems(Item::isAugmented)) {
                 if ((item != null) && item.isEquipped()) {
                     item.getAugmentation().removeBonus(this);
                 }
@@ -8671,7 +8662,7 @@ public final class Player extends Playable {
      * @return
      */
     public boolean validateItemManipulation(int objectId, String action) {
-        final Item item = _inventory.getItemByObjectId(objectId);
+        final Item item = inventory.getItemByObjectId(objectId);
 
         if ((item == null) || (item.getOwnerId() != getObjectId())) {
             LOGGER.debug(getObjectId() + ": player tried to " + action + " item he is not owner of");
@@ -8825,14 +8816,14 @@ public final class Player extends Playable {
 
         // remove combat flag
         try {
-            if (_inventory.getItemByItemId(9819) != null) {
+            if (inventory.getItemByItemId(9819) != null) {
                 final Fort fort = FortDataManager.getInstance().getFort(this);
                 if (fort != null) {
                     FortSiegeManager.getInstance().dropCombatFlag(this, fort.getResidenceId());
                 } else {
-                    final long slot = _inventory.getSlotFromItem(_inventory.getItemByItemId(9819));
-                    _inventory.unEquipItemInBodySlot(slot);
-                    destroyItem("CombatFlag", _inventory.getItemByItemId(9819), null, true);
+                    final long slot = inventory.getSlotFromItem(inventory.getItemByItemId(9819));
+                    inventory.unEquipItemInBodySlot(slot);
+                    destroyItem("CombatFlag", inventory.getItemByItemId(9819), null, true);
                 }
             }
         } catch (Exception e) {
@@ -9002,7 +8993,7 @@ public final class Player extends Playable {
 
         // Update database with items in its inventory and remove them from the world
         try {
-            _inventory.deleteMe();
+            inventory.deleteMe();
         } catch (Exception e) {
             LOGGER.error("deleteMe()", e);
         }
@@ -9031,7 +9022,7 @@ public final class Player extends Playable {
 
         if (isCursedWeaponEquipped()) {
             try {
-                CursedWeaponsManager.getInstance().getCursedWeapon(_cursedWeaponEquippedId).setPlayer(null);
+                CursedWeaponsManager.getInstance().getCursedWeapon(cursedWeaponEquippedId).setPlayer(null);
             } catch (Exception e) {
                 LOGGER.error("deleteMe()", e);
             }
@@ -9081,17 +9072,13 @@ public final class Player extends Playable {
     }
 
     public int getInventoryLimit() {
-        int ivlim;
+        int ivlim = Config.INVENTORY_MAXIMUM_NO_DWARF;
         if (isGM()) {
             ivlim = Config.INVENTORY_MAXIMUM_GM;
         } else if (getRace() == Race.DWARF) {
             ivlim = Config.INVENTORY_MAXIMUM_DWARF;
-        } else {
-            ivlim = Config.INVENTORY_MAXIMUM_NO_DWARF;
         }
-        ivlim += (int) getStat().getValue(Stats.INVENTORY_NORMAL, 0);
-
-        return ivlim;
+        return ivlim + (int) getStat().getValue(Stats.INVENTORY_NORMAL, 0);
     }
 
     public int getWareHouseLimit() {
@@ -9227,23 +9214,23 @@ public final class Player extends Playable {
     }
 
     public boolean isCursedWeaponEquipped() {
-        return _cursedWeaponEquippedId != 0;
+        return cursedWeaponEquippedId != 0;
     }
 
     public int getCursedWeaponEquippedId() {
-        return _cursedWeaponEquippedId;
+        return cursedWeaponEquippedId;
     }
 
     public void setCursedWeaponEquippedId(int value) {
-        _cursedWeaponEquippedId = value;
+        cursedWeaponEquippedId = value;
     }
 
     public boolean isCombatFlagEquipped() {
-        return _combatFlagEquippedId;
+        return combatFlagEquipped;
     }
 
     public void setCombatFlagEquipped(boolean value) {
-        _combatFlagEquippedId = value;
+        combatFlagEquipped = value;
     }
 
     /**
@@ -9423,9 +9410,9 @@ public final class Player extends Playable {
 
     public void checkItemRestriction() {
         for (int i = 0; i < Inventory.PAPERDOLL_TOTALSLOTS; i++) {
-            final Item equippedItem = _inventory.getPaperdollItem(i);
+            final Item equippedItem = inventory.getPaperdollItem(i);
             if ((equippedItem != null) && !equippedItem.getTemplate().checkCondition(this, this, false)) {
-                _inventory.unEquipItemInSlot(i);
+                inventory.unEquipItemInSlot(i);
 
                 final InventoryUpdate iu = new InventoryUpdate();
                 iu.addModifiedItem(equippedItem);
@@ -9774,7 +9761,7 @@ public final class Player extends Playable {
         if (!teleportBookmarkCondition(0)) {
             return;
         }
-        if (_inventory.getInventoryItemCount(13016, 0) == 0) {
+        if (inventory.getInventoryItemCount(13016, 0) == 0) {
             sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_BECAUSE_YOU_DO_NOT_HAVE_A_TELEPORT_ITEM);
             return;
         }
@@ -9784,7 +9771,7 @@ public final class Player extends Playable {
 
         final TeleportBookmark bookmark = _tpbookmarks.get(id);
         if (bookmark != null) {
-            destroyItem("Consume", _inventory.getItemByItemId(13016).getObjectId(), 1, null, false);
+            destroyItem("Consume", inventory.getItemByItemId(13016).getObjectId(), 1, null, false);
             teleToLocation(bookmark, false);
         }
         sendPacket(new ExGetBookMarkInfoPacket(this));
@@ -9844,7 +9831,7 @@ public final class Player extends Playable {
             return;
         }
 
-        if (_inventory.getInventoryItemCount(20033, 0) == 0) {
+        if (inventory.getInventoryItemCount(20033, 0) == 0) {
             sendPacket(SystemMessageId.YOU_CANNOT_BOOKMARK_THIS_LOCATION_BECAUSE_YOU_DO_NOT_HAVE_A_MY_TELEPORT_FLAG);
             return;
         }
@@ -9857,7 +9844,7 @@ public final class Player extends Playable {
         }
         _tpbookmarks.put(id, new TeleportBookmark(id, x, y, z, icon, tag, name));
 
-        destroyItem("Consume", _inventory.getItemByItemId(20033).getObjectId(), 1, null, false);
+        destroyItem("Consume", inventory.getItemByItemId(20033).getObjectId(), 1, null, false);
 
         final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
         sm.addItemName(20033);
@@ -10440,7 +10427,7 @@ public final class Player extends Playable {
      * @return
      */
     public boolean isInventoryUnder90(boolean includeQuestInv) {
-        return (_inventory.getSize(item -> !item.isQuestItem() || includeQuestInv) <= (getInventoryLimit() * 0.9));
+        return (inventory.getSize(item -> !item.isQuestItem() || includeQuestInv) <= (getInventoryLimit() * 0.9));
     }
 
     /**
@@ -10450,7 +10437,7 @@ public final class Player extends Playable {
      * @return
      */
     public boolean isInventoryUnder80(boolean includeQuestInv) {
-        return (_inventory.getSize(item -> !item.isQuestItem() || includeQuestInv) <= (getInventoryLimit() * 0.8));
+        return (inventory.getSize(item -> !item.isQuestItem() || includeQuestInv) <= (getInventoryLimit() * 0.8));
     }
 
     public boolean havePetInvItems() {

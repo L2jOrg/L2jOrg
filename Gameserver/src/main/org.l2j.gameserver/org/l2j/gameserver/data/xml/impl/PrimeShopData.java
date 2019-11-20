@@ -3,7 +3,7 @@ package org.l2j.gameserver.data.xml.impl;
 import io.github.joealisson.primitive.IntMap;
 import io.github.joealisson.primitive.HashIntMap;
 import org.l2j.gameserver.data.database.dao.PrimeShopDAO;
-import org.l2j.gameserver.engine.items.ItemEngine;
+import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.primeshop.PrimeShopItem;

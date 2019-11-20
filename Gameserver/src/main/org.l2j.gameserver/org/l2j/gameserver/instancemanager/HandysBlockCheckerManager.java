@@ -22,7 +22,7 @@ import org.l2j.gameserver.enums.Team;
 import org.l2j.gameserver.instancemanager.tasks.PenaltyRemoveTask;
 import org.l2j.gameserver.model.ArenaParticipantsHolder;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.itemcontainer.PcInventory;
+import org.l2j.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2j.gameserver.model.olympiad.OlympiadManager;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -306,7 +306,7 @@ public final class HandysBlockCheckerManager {
             player.setTeam(Team.NONE);
 
             // Remove the event items
-            final PcInventory inv = player.getInventory();
+            final PlayerInventory inv = player.getInventory();
 
             if (inv.getItemByItemId(13787) != null) {
                 final long count = inv.getInventoryItemCount(13787, 0);

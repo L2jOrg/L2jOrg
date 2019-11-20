@@ -1,7 +1,7 @@
 package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.engine.items.ItemEngine;
+import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.settings.ServerSettings;

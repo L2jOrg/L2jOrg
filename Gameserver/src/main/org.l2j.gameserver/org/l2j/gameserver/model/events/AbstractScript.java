@@ -6,7 +6,7 @@ import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.impl.NpcData;
-import org.l2j.gameserver.engine.items.ItemEngine;
+import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.Movie;
 import org.l2j.gameserver.enums.QuestSound;
@@ -49,7 +49,7 @@ import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.instancezone.InstanceTemplate;
 import org.l2j.gameserver.model.interfaces.IPositionable;
-import org.l2j.gameserver.model.itemcontainer.PcInventory;
+import org.l2j.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.items.EtcItem;
 import org.l2j.gameserver.model.items.ItemTemplate;
@@ -485,7 +485,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         if ((itemIds == null) || (itemIds.length == 0)) {
             return false;
         }
-        final PcInventory inv = player.getInventory();
+        final PlayerInventory inv = player.getInventory();
         for (int itemId : itemIds) {
             if (inv.getItemByItemId(itemId) == null) {
                 return false;
@@ -860,7 +860,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
         // Destroy the quantity of items wanted
         if (item.isEquipped()) {
-            final Item[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(item.getTemplate().getBodyPart().getId());
+            var unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(item.getTemplate().getBodyPart().getId());
             final InventoryUpdate iu = new InventoryUpdate();
             for (Item itm : unequiped) {
                 iu.addModifiedItem(itm);
@@ -2733,7 +2733,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @return {@code true} if at least one items exist in player's inventory, {@code false} otherwise
      */
     public boolean hasAtLeastOneQuestItem(Player player, int... itemIds) {
-        final PcInventory inv = player.getInventory();
+        final PlayerInventory inv = player.getInventory();
         for (int itemId : itemIds) {
             if (inv.getItemByItemId(itemId) != null) {
                 return true;

@@ -5,6 +5,7 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -19,6 +20,10 @@ public class InventoryUpdate extends AbstractInventoryUpdate {
     }
 
     public InventoryUpdate(List<ItemInfo> items) {
+        super(items);
+    }
+
+    public InventoryUpdate(Collection<Item> items) {
         super(items);
     }
 

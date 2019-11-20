@@ -1,4 +1,4 @@
-package org.l2j.gameserver.engine.items;
+package org.l2j.gameserver.engine.item;
 
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;

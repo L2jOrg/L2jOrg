@@ -15,7 +15,7 @@ import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
 import org.l2j.gameserver.engine.elemental.ElementalSpiritEngine;
-import org.l2j.gameserver.engine.items.ItemEngine;
+import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.mission.MissionEngine;
 import org.l2j.gameserver.engine.scripting.ScriptEngineManager;
 import org.l2j.gameserver.engine.vip.VipEngine;
@@ -193,7 +193,7 @@ public class GameServer {
         printSection("Siege");
         SiegeManager.getInstance().getSieges();
         CastleManager.getInstance().activateInstances();
-        // No fortresses
+        // No fortresses TODO remove: at some point these instances will be loaded
         // FortDataManager.getInstance().loadInstances();
         // FortDataManager.getInstance().activateInstances();
         // FortSiegeManager.getInstance();

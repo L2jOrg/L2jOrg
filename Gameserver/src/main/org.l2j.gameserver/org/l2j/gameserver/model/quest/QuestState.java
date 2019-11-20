@@ -614,7 +614,7 @@ public final class QuestState {
     }
 
     /**
-     * Finishes the quest and removes all quest items associated with this quest from the player's inventory.<br>
+     * Finishes the quest and removes all quest item associated with this quest from the player's inventory.<br>
      * If {@code type} is {@code QuestType.ONE_TIME}, also removes all other quest data associated with this quest.
      *
      * @param type          the {@link QuestType} of the quest

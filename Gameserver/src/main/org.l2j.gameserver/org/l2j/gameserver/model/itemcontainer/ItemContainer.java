@@ -4,7 +4,7 @@ import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.engine.items.ItemEngine;
+import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -210,7 +210,7 @@ public abstract class ItemContainer {
      *
      * @param process   : String Identifier of process triggering this action
      * @param itemId    : int Item Identifier of the item to be added
-     * @param count     : long Quantity of items to be added
+     * @param count     : long Quantity of item to be added
      * @param actor     : Player Player requesting the item add
      * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
      * @return Item corresponding to the new item or the updated item in inventory
@@ -342,7 +342,7 @@ public abstract class ItemContainer {
      *
      * @param process     string Identifier of process triggering this action
      * @param item        the item instance to be detached
-     * @param count       the count of items to be detached
+     * @param count       the count of item to be detached
      * @param newLocation the new item location
      * @param actor       Player requesting the item detach
      * @param reference   Object Object referencing current action like NPC selling item or previous item in transformation
@@ -429,7 +429,7 @@ public abstract class ItemContainer {
                 item.changeCount(process, -count, actor, reference);
                 item.setLastChange(Item.MODIFIED);
 
-                // don't update often for untraced items
+                // don't update often for untraced item
                 if ((process != null) || ((WorldTimeController.getInstance().getGameTicks() % 10) == 0)) {
                     item.updateDatabase();
                 }
@@ -639,7 +639,7 @@ public abstract class ItemContainer {
         return "ItemContainer";
     }
 
-    protected abstract Creature getOwner();
+    public abstract Creature getOwner();
 
     protected abstract ItemLocation getBaseLocation();
 }

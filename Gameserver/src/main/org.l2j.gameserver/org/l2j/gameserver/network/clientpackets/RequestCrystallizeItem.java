@@ -7,7 +7,7 @@ import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemChanceHolder;
-import org.l2j.gameserver.model.itemcontainer.PcInventory;
+import org.l2j.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.CrystalType;
 import org.l2j.gameserver.model.skills.CommonSkill;
@@ -72,7 +72,7 @@ public final class RequestCrystallizeItem extends ClientPacket {
             return;
         }
 
-        final PcInventory inventory = activeChar.getInventory();
+        final PlayerInventory inventory = activeChar.getInventory();
         if (inventory != null) {
             final Item item = inventory.getItemByObjectId(_objectId);
             if ((item == null) || item.isHeroItem()) {
@@ -153,7 +153,7 @@ public final class RequestCrystallizeItem extends ClientPacket {
         // unequip if needed
         SystemMessage sm;
         if (itemToRemove.isEquipped()) {
-            final Item[] unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getLocationSlot());
+            var unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getLocationSlot());
             final InventoryUpdate iu = new InventoryUpdate();
             for (Item item : unequiped) {
                 iu.addModifiedItem(item);

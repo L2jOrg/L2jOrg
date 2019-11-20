@@ -1,6 +1,6 @@
 package org.l2j.gameserver.data.xml;
 
-import org.l2j.gameserver.engine.items.ItemEngine;
+import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.items.combination.CombinationItem;
 import org.l2j.gameserver.model.items.combination.CombinationItemReward;

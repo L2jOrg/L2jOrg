@@ -89,7 +89,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     public static final long SLOT_ARTIFACT_BOOK = 0x20000000000L;
     public static final long SLOT_ARTIFACT = 0x40000000000L;
 
-    public static final int SLOT_MULTI_ALLWEAPON = SLOT_LR_HAND | SLOT_R_HAND;
     protected static final Logger LOGGER = LoggerFactory.getLogger(ItemTemplate.class);
     protected int _type1; // needed for item list (inventory)
     protected int _type2; // different lists for armor, weapon, etc

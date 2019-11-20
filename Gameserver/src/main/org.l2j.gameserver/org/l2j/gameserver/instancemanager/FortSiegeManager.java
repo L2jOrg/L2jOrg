@@ -214,7 +214,7 @@ public final class FortSiegeManager {
     }
 
     public boolean isCombat(int itemId) {
-        return (itemId == 9819);
+        return (itemId == 9819); // FIXME this id doesn't exists
     }
 
     public boolean activateCombatFlag(Player player, Item item) {

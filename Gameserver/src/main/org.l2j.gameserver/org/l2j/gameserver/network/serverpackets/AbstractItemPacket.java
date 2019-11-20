@@ -6,7 +6,7 @@ import org.l2j.gameserver.model.ItemInfo;
 import org.l2j.gameserver.model.TradeItem;
 import org.l2j.gameserver.model.buylist.Product;
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
-import org.l2j.gameserver.model.itemcontainer.PcInventory;
+import org.l2j.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2j.gameserver.model.items.WarehouseItem;
 import org.l2j.gameserver.model.items.instance.Item;
 
@@ -204,7 +204,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
         }
     }
 
-    protected void writeInventoryBlock(PcInventory inventory) {
+    protected void writeInventoryBlock(PlayerInventory inventory) {
         if (inventory.hasInventoryBlock()) {
             writeShort(inventory.getBlockItems().size());
             writeByte(inventory.getBlockMode().getClientId());

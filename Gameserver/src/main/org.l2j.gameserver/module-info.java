@@ -106,10 +106,26 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.data.xml.model;
     exports org.l2j.gameserver.engine.mission;
     exports org.l2j.gameserver.model.events.impl.character;
-    exports org.l2j.gameserver.engine.items;
+    exports org.l2j.gameserver.engine.item;
     exports org.l2j.gameserver.api.elemental;
 
     uses org.l2j.gameserver.engine.scripting.IScriptingEngine;
     provides org.l2j.gameserver.engine.scripting.IScriptingEngine
         with org.l2j.gameserver.engine.scripting.java.JavaScriptingEngine;
+
+    uses org.l2j.gameserver.api.item.PlayerInventoryListener;
+    provides org.l2j.gameserver.api.item.PlayerInventoryListener
+        with org.l2j.gameserver.engine.item.container.listener.ItemSkillsListener,
+            org.l2j.gameserver.engine.item.container.listener.ArmorSetListener,
+            org.l2j.gameserver.engine.item.container.listener.AgathionBraceletListener,
+            org.l2j.gameserver.engine.item.container.listener.ArtifactBookListener,
+            org.l2j.gameserver.engine.item.container.listener.BowCrossRodListener,
+            org.l2j.gameserver.engine.item.container.listener.BraceletListener,
+            org.l2j.gameserver.engine.item.container.listener.BroochListener;
+
+    uses org.l2j.gameserver.api.item.InventoryListener;
+    provides org.l2j.gameserver.api.item.InventoryListener
+        with org.l2j.gameserver.engine.item.container.listener.StatsListener;
+
+
 }

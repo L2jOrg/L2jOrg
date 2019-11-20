@@ -5,7 +5,7 @@ import org.l2j.commons.util.CommonUtil;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
-import org.l2j.gameserver.engine.items.ItemEngine;
+import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.QuestType;
 import org.l2j.gameserver.enums.Race;

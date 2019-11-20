@@ -151,7 +151,7 @@ public final class RequestDestroyItem extends ClientPacket {
                 client.sendPacket(sm);
             }
 
-            final Item[] unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getLocationSlot());
+            var unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getLocationSlot());
 
             final InventoryUpdate iu = new InventoryUpdate();
             for (Item itm : unequiped) {

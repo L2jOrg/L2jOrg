@@ -238,7 +238,7 @@ public final class RequestEnchantItem extends ClientPacket {
                                 client.sendPacket(sm);
                             }
 
-                            final Item[] unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(item.getLocationSlot());
+                            var unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(item.getLocationSlot());
                             for (Item itm : unequiped) {
                                 iu.addModifiedItem(itm);
                             }

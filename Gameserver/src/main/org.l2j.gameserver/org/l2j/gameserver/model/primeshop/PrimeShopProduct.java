@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.primeshop;
 
-import org.l2j.gameserver.engine.items.ItemEngine;
+import org.l2j.gameserver.engine.item.ItemEngine;
 
 import java.util.List;
 
