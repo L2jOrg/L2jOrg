@@ -36,8 +36,8 @@ public class MaxHpFinalizer implements IStatsFunction {
                 for (Item item : player.getInventory().getPaperdollItems(Item::isEnchanted)) {
                     if (item.isArmor())
                     {
-                        var bodyPart = item.getTemplate().getBodyPart();
-                        if ((bodyPart != BodyPart.NECK) && (bodyPart != BodyPart.EAR) && (bodyPart != BodyPart.FINGER))
+                        var bodyPart = item.getBodyPart();
+                        if (!bodyPart.isAnyOf(BodyPart.NECK, BodyPart.EAR, BodyPart.FINGER))
                         {
                             baseValue += EnchantItemHPBonusData.getInstance().getHPBonus(item);
                         }

@@ -11,6 +11,7 @@ import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.interfaces.INamable;
+import org.l2j.gameserver.model.items.BodyPart;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.CommonSkill;
@@ -77,7 +78,7 @@ public class CursedWeapon implements INamable {
                 removeSkill();
 
                 // Remove
-                _player.getInventory().unEquipItemInBodySlot(ItemTemplate.SLOT_LR_HAND);
+                _player.getInventory().unEquipItemInBodySlot(BodyPart.TWO_HAND);
                 _player.storeMe();
 
                 // Destroy

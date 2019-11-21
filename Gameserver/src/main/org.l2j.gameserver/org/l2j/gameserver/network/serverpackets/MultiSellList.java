@@ -61,7 +61,7 @@ public final class MultiSellList extends AbstractItemPacket {
 
             for (ItemChanceHolder product : entry.getProducts()) {
                 final ItemTemplate template = ItemEngine.getInstance().getTemplate(product.getId());
-                final ItemInfo displayItemEnchantment = (_list.isMaintainEnchantment() && (itemEnchantment != null) && (template != null) && template.getClass().equals(itemEnchantment.getItem().getClass())) ? itemEnchantment : null;
+                final ItemInfo displayItemEnchantment = (_list.isMaintainEnchantment() && (itemEnchantment != null) && (template != null) && template.getClass().equals(itemEnchantment.getTemplate().getClass())) ? itemEnchantment : null;
 
                 writeInt(product.getId());
                 if (template != null) {
@@ -81,7 +81,7 @@ public final class MultiSellList extends AbstractItemPacket {
 
             for (ItemChanceHolder ingredient : entry.getIngredients()) {
                 final ItemTemplate template = ItemEngine.getInstance().getTemplate(ingredient.getId());
-                final ItemInfo displayItemEnchantment = ((itemEnchantment != null) && (itemEnchantment.getItem().getId() == ingredient.getId())) ? itemEnchantment : null;
+                final ItemInfo displayItemEnchantment = ((itemEnchantment != null) && (itemEnchantment.getId() == ingredient.getId())) ? itemEnchantment : null;
 
                 writeInt(ingredient.getId());
                 writeShort((short)(template != null ? template.getType2() : 65535));

@@ -241,7 +241,7 @@ public class Pet extends Summon {
     @Override
     public Item getActiveWeaponInstance() {
         if (_inventory != null) {
-            return _inventory.getItems(item -> (item.getItemLocation() == ItemLocation.PET_EQUIP) && (item.getTemplate().getBodyPart() == BodyPart.RIGHT_HAND)).stream().findAny().orElse(null);
+            return _inventory.getItems(item -> (item.getItemLocation() == ItemLocation.PET_EQUIP) && (item.getBodyPart() == BodyPart.RIGHT_HAND)).stream().findAny().orElse(null);
         }
         return null;
     }

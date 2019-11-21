@@ -125,7 +125,7 @@ public final class CommissionManager {
     public void showAuctions(Player player, Predicate<ItemTemplate> filter) {
         //@formatter:off
         final List<CommissionItem> commissionItems = _commissionItems.values().stream()
-                .filter(c -> filter.test(c.getItemInfo().getItem()))
+                .filter(c -> filter.test(c.getItemInfo().getTemplate()))
                 .limit(ITEMS_LIMIT_PER_REQUEST)
                 .collect(Collectors.toList());
         //@formatter:on

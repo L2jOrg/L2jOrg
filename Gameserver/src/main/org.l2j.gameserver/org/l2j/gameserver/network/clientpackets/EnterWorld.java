@@ -19,6 +19,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.*;
 import org.l2j.gameserver.model.holders.AttendanceInfoHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
+import org.l2j.gameserver.model.items.BodyPart;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
@@ -327,8 +328,8 @@ public class EnterWorld extends ClientPacket {
             if (fort != null) {
                 FortSiegeManager.getInstance().dropCombatFlag(player, fort.getResidenceId());
             } else {
-                final long slot = player.getInventory().getSlotFromItem(player.getInventory().getItemByItemId(9819));
-                player.getInventory().unEquipItemInBodySlot(slot);
+                var bodyPart = BodyPart.fromEquippedPaperdoll(player.getInventory().getItemByItemId(9819));
+                player.getInventory().unEquipItemInBodySlot(bodyPart);
                 player.destroyItem("CombatFlag", player.getInventory().getItemByItemId(9819), null, true);
             }
         }

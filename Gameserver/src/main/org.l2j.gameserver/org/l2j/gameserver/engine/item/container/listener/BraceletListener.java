@@ -16,7 +16,7 @@ public final class BraceletListener implements PlayerInventoryListener {
 
     @Override
     public void notifyUnequiped(int slot, Item item, Inventory inventory) {
-        if (item.getTemplate().getBodyPart() == BodyPart.RIGHT_BRACELET) {
+        if (item.getBodyPart() == BodyPart.RIGHT_BRACELET) {
             inventory.unEquipItemInSlot(Inventory.TALISMAN1);
             inventory.unEquipItemInSlot(Inventory.TALISMAN2);
             inventory.unEquipItemInSlot(Inventory.TALISMAN3);

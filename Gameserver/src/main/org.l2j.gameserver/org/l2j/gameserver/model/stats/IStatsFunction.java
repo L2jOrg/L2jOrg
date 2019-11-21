@@ -67,7 +67,7 @@ public interface IStatsFunction {
     static double calcEnchantedPAtkBonus(Item item, double blessedBonus, int enchant) {
         switch (item.getTemplate().getCrystalType()) {
             case S: {
-                if (item.getWeaponItem().getBodyPart() == BodyPart.TWO_HAND && (item.getWeaponItem().getItemType() != WeaponType.SPEAR)) {
+                if (item.getBodyPart() == BodyPart.TWO_HAND && (item.getWeaponItem().getItemType() != WeaponType.SPEAR)) {
                     if (item.getWeaponItem().getItemType().isRanged()) {
                         // P. Atk. increases by 10 for bows.
                         // Starting at +4, P. Atk. bonus double.
@@ -82,7 +82,7 @@ public interface IStatsFunction {
                 return (5 * enchant) + (10 * Math.max(0, enchant - 3));
             }
             case A: {
-                if (item.getWeaponItem().getBodyPart() == BodyPart.TWO_HAND && (item.getWeaponItem().getItemType() != WeaponType.SPEAR)) {
+                if (item.getBodyPart() == BodyPart.TWO_HAND && (item.getWeaponItem().getItemType() != WeaponType.SPEAR)) {
                     if (item.getWeaponItem().getItemType().isRanged()) {
                         // P. Atk. increases by 8 for bows.
                         // Starting at +4, P. Atk. bonus double.
@@ -98,7 +98,7 @@ public interface IStatsFunction {
             }
             case B:
             case C: {
-                if (item.getWeaponItem().getBodyPart() == BodyPart.TWO_HAND && (item.getWeaponItem().getItemType() != WeaponType.SPEAR)) {
+                if (item.getBodyPart() == BodyPart.TWO_HAND && (item.getWeaponItem().getItemType() != WeaponType.SPEAR)) {
                     if (item.getWeaponItem().getItemType().isRanged()) {
                         // P. Atk. increases by 6 for bows.
                         // Starting at +4, P. Atk. bonus double.

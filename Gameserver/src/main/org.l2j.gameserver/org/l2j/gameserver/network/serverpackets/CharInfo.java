@@ -97,7 +97,7 @@ public class CharInfo extends ServerPacket {
         writeId(ServerPacketId.CHAR_INFO);
         final CeremonyOfChaosEvent event = _activeChar.getEvent(CeremonyOfChaosEvent.class);
         final CeremonyOfChaosMember cocPlayer = event != null ? event.getMember(_activeChar.getObjectId()) : null;
-        writeByte((byte) 0x00); // Grand Crusade
+        writeByte(0x00); // Grand Crusade
         writeInt(_x); // Confirmed
         writeInt(_y); // Confirmed
         writeInt(_z); // Confirmed

@@ -23,14 +23,14 @@ public final class ItemList extends AbstractItemPacket {
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.ITEM_LIST);
         if (_sendType == 2) {
-            writeByte((byte) _sendType);
+            writeByte(_sendType);
             writeInt(_items.size());
             writeInt(_items.size());
             for (Item item : _items) {
                 writeItem(item);
             }
         } else {
-            writeByte((byte) 0x01); // _showWindow ? 0x01 : 0x00
+            writeByte(0x01); // _showWindow ? 0x01 : 0x00
             writeInt(0x00);
             writeInt(_items.size());
         }

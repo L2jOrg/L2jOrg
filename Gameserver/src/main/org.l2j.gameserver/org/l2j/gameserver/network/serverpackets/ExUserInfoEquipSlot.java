@@ -11,9 +11,9 @@ import org.l2j.gameserver.network.ServerPacketId;
  * @author Sdw
  */
 public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot> {
-    private final Player _activeChar;
+    private final Player player;
 
-    private final byte[] _masks = new byte[]
+    private final byte[] masks = new byte[]
             {
                     (byte) 0x00,
                     (byte) 0x00,
@@ -30,7 +30,7 @@ public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot> {
     }
 
     public ExUserInfoEquipSlot(Player cha, boolean addAll) {
-        _activeChar = cha;
+        player = cha;
 
         if (addAll) {
             addComponentType(InventorySlot.values());
@@ -39,22 +39,22 @@ public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot> {
 
     @Override
     protected byte[] getMasks() {
-        return _masks;
+        return masks;
     }
 
     @Override
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.EX_USER_INFO_EQUIP_SLOT);
 
-        writeInt(_activeChar.getObjectId());
-        writeShort((short) InventorySlot.values().length); // 152
-        writeBytes(_masks);
+        writeInt(player.getObjectId());
+        writeShort(InventorySlot.values().length); // 152
+        writeBytes(masks);
 
-        final PlayerInventory inventory = _activeChar.getInventory();
+        final PlayerInventory inventory = player.getInventory();
         for (InventorySlot slot : InventorySlot.values()) {
             if (containsMask(slot)) {
                 final VariationInstance augment = inventory.getPaperdollAugmentation(slot.getSlot());
-                writeShort((short) 22); // 10 + 4 * 3
+                writeShort(22); // 10 + 4 * 3
                 writeInt(inventory.getPaperdollObjectId(slot.getSlot()));
                 writeInt(inventory.getPaperdollItemId(slot.getSlot()));
                 writeInt(augment != null ? augment.getOption1Id() : 0);

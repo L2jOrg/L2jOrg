@@ -88,11 +88,10 @@ public final class ItemEngine extends GameXmlReader {
 
     private void parseWeapon(Node weaponNode) {
         var attrs = weaponNode.getAttributes();
-        var weapon = new Weapon(parseInt(attrs, "id"), parseString(attrs, "name"), parseEnum(attrs, WeaponType.class, "type"));
+        var weapon = new Weapon(parseInt(attrs, "id"), parseString(attrs, "name"), parseEnum(attrs, WeaponType.class, "type"), parseEnum(attrs, BodyPart.class, "body-part"));
 
-        weapon.setBodyPart(parseEnum(attrs, BodyPart.class, "body-part"));
         weapon.setIcon(parseString(attrs, "icon"));
-        weapon.setDisplayId(parseInt(attrs, "display-id"));
+        weapon.setDisplayId(parseInt(attrs, "display-id", weapon.getId()));
         weapon.setMagic(parseBoolean(attrs, "magic"));
 
         forEach(weaponNode,node ->{
@@ -243,11 +242,10 @@ public final class ItemEngine extends GameXmlReader {
 
     private void parseArmor(Node armorNode) {
         var attrs = armorNode.getAttributes();
-        var armor = new Armor(parseInt(attrs, "id"), parseString(attrs, "name"), parseEnum(attrs, ArmorType.class, "type"));
+        var armor = new Armor(parseInt(attrs, "id"), parseString(attrs, "name"), parseEnum(attrs, ArmorType.class, "type"), parseEnum(attrs, BodyPart.class, "body-part"));
 
-        armor.setBodyPart(parseEnum(attrs, BodyPart.class, "body-part"));
         armor.setIcon(parseString(attrs, "icon"));
-        armor.setDisplayId(parseInt(attrs, "display-id"));
+        armor.setDisplayId(parseInt(attrs, "display-id", armor.getId()));
 
         forEach(armorNode,node ->{
             switch (node.getNodeName()) {
@@ -274,6 +272,7 @@ public final class ItemEngine extends GameXmlReader {
         var attrs = itemNode.getAttributes();
         var item = new EtcItem(parseInt(attrs, "id"), parseString(attrs, "name"), parseEnum(attrs, EtcItemType.class, "type", EtcItemType.NONE));
         item.setIcon(parseString(attrs, "icon"));
+        item.setDisplayId(parseInt(attrs, "display-id", item.getId()));
 
         forEach(itemNode, node ->{
             switch (node.getNodeName()) {
@@ -285,7 +284,7 @@ public final class ItemEngine extends GameXmlReader {
                 case "conditions" -> parseItemCondition(item, node);
             }
         } );
-
+        item.fillType2();
         items.put(item.getId(), item);
     }
 

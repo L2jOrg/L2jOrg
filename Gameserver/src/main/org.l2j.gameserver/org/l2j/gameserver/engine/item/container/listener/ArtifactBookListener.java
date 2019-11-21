@@ -13,7 +13,7 @@ public final class ArtifactBookListener implements PlayerInventoryListener {
 
     @Override
     public void notifyUnequiped(int slot, Item item, Inventory inventory) {
-        if (item.getTemplate().getBodyPart() == BodyPart.ARTIFACT_BOOK) {
+        if (item.getBodyPart() == BodyPart.ARTIFACT_BOOK) {
             inventory.unEquipItemInSlot(Inventory.PAPERDOLL_ARTIFACT1);
             inventory.unEquipItemInSlot(Inventory.PAPERDOLL_ARTIFACT2);
             inventory.unEquipItemInSlot(Inventory.PAPERDOLL_ARTIFACT3);

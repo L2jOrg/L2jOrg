@@ -2,6 +2,7 @@ package org.l2j.gameserver.model.items;
 
 import io.github.joealisson.primitive.HashLongMap;
 import io.github.joealisson.primitive.LongMap;
+import org.l2j.gameserver.model.items.instance.Item;
 
 import static java.util.Objects.isNull;
 
@@ -56,13 +57,12 @@ public enum BodyPart {
         }
     }
 
-
     private final long id;
-    private final int paperdool;
+    private final int paperdoll;
 
-    BodyPart(long id, int paperdool) {
+    BodyPart(long id, int paperdoll) {
         this.id = id;
-        this.paperdool = paperdool;
+        this.paperdoll = paperdoll;
     }
 
     public long getId() {
@@ -70,7 +70,7 @@ public enum BodyPart {
     }
 
     public int paperdool() {
-        return paperdool;
+        return paperdoll;
     }
 
     public boolean isAnyOf(BodyPart... parts) {
@@ -91,23 +91,33 @@ public enum BodyPart {
     }
 
     public static int balanceArtifact() {
-        return ARTIFACT.paperdool;
+        return ARTIFACT.paperdoll;
     }
 
     public static int spiritArtifact() {
-        return ARTIFACT.paperdool + 12;
+        return ARTIFACT.paperdoll + 12;
     }
 
     public static int protectionArtifact() {
-        return ARTIFACT.paperdool + 15;
+        return ARTIFACT.paperdoll + 15;
     }
 
     public static int supportArtifact() {
-        return ARTIFACT.paperdool + 18;
+        return ARTIFACT.paperdoll + 18;
     }
 
-    public static int slotToPaperdool(long slot) {
-        return fromSlot(slot).paperdool;
+    public static BodyPart fromEquippedPaperdoll(Item item) {
+        int paperdoll;
+        if(!item.isEquipped() || (paperdoll = item.getLocationSlot()) <= 0) {
+            return NONE;
+        }
+
+        return switch (item.getBodyPart()) {
+            case EAR ->  paperdoll == LEFT_EAR.paperdoll ? LEFT_EAR : RIGHT_EAR;
+            case FINGER -> paperdoll == LEFT_FINGER.paperdoll ? LEFT_FINGER : RIGHT_FINGER;
+            default -> item.getBodyPart();
+        };
     }
+
 
 }

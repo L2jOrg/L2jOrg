@@ -1,44 +1,29 @@
 package org.l2j.gameserver.model.items;
 
-import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.items.type.ArmorType;
 import org.l2j.gameserver.model.items.type.CrystalType;
 
+import static org.l2j.gameserver.model.items.BodyPart.*;
+
 /**
  * This class is dedicated to the management of armors.
+ *
+ * @author JoeAlisson
  */
 public final class Armor extends ItemTemplate implements EquipableItem {
     private ArmorType type;
 
-    /**
-     * Constructor for Armor.
-     *
-     * @param set the StatsSet designating the set of couples (key,value) characterizing the armor.
-     */
-    public Armor(StatsSet set) {
-        super(set);
-    }
-
-    public Armor(int id, String name, ArmorType type) {
+    public Armor(int id, String name, ArmorType type, BodyPart bodyPart) {
         super(id, name);
         this.type = type;
-    }
+        this.bodyPart = bodyPart;
 
-    @Override
-    public void set(StatsSet set) {
-        super.set(set);
-        type = set.getEnum("armor_type", ArmorType.class, ArmorType.NONE);
-
-        final long _bodyPart = getBodyPart().getId();
-        if ((_bodyPart == SLOT_NECK) || ((_bodyPart & SLOT_L_EAR) != 0) || ((_bodyPart & SLOT_L_FINGER) != 0) || ((_bodyPart & SLOT_R_BRACELET) != 0) || ((_bodyPart & SLOT_L_BRACELET) != 0) || ((_bodyPart & SLOT_ARTIFACT_BOOK) != 0)) {
-            _type1 = TYPE1_WEAPON_RING_EARRING_NECKLACE;
-            _type2 = TYPE2_ACCESSORY;
+        if(bodyPart.isAnyOf(NECK, EAR, FINGER, RIGHT_BRACELET, LEFT_BRACELET, ARTIFACT_BOOK)) {
+            type1 = TYPE1_WEAPON_RING_EARRING_NECKLACE;
+            type2 = TYPE2_ACCESSORY;
         } else {
-            if ((type == ArmorType.NONE) && (getBodyPart() == BodyPart.LEFT_HAND)) {
-                type = ArmorType.SHIELD;
-            }
-            _type1 = TYPE1_SHIELD_ARMOR;
-            _type2 = TYPE2_SHIELD_ARMOR;
+            type1 = TYPE1_SHIELD_ARMOR;
+            type2 = TYPE2_SHIELD_ARMOR;
         }
     }
 
@@ -56,10 +41,6 @@ public final class Armor extends ItemTemplate implements EquipableItem {
     @Override
     public final int getItemMask() {
         return type.mask();
-    }
-
-    public void setBodyPart(BodyPart bodyPart) {
-        this.bodyPart = bodyPart;
     }
 
     @Override

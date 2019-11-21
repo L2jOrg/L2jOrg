@@ -26,7 +26,7 @@ public class ExResponseCommissionBuyItem extends ServerPacket {
         if (_commissionItem != null) {
             final ItemInfo itemInfo = _commissionItem.getItemInfo();
             writeInt(itemInfo.getEnchantLevel());
-            writeInt(itemInfo.getItem().getId());
+            writeInt(itemInfo.getId());
             writeLong(itemInfo.getCount());
         }
     }

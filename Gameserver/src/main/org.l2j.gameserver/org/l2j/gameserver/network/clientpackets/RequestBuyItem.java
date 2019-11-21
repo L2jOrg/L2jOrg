@@ -119,7 +119,7 @@ public final class RequestBuyItem extends ClientPacket {
                 return;
             }
 
-            if (!product.getItem().isStackable() && (i.getCount() > 1)) {
+            if (!product.isStackable() && (i.getCount() > 1)) {
                 GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase invalid quantity of items at the same time.", Config.DEFAULT_PUNISH);
                 client.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
                 return;
@@ -158,7 +158,7 @@ public final class RequestBuyItem extends ClientPacket {
                 return;
             }
 
-            weight += i.getCount() * product.getItem().getWeight();
+            weight += i.getCount() * product.getWeight();
             if (player.getInventory().getItemByItemId(product.getItemId()) == null) {
                 slots++;
             }

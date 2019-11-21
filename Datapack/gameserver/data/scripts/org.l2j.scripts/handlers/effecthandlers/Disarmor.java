@@ -43,7 +43,7 @@ public final class Disarmor extends AbstractEffect {
 		}
 		
 		final Player player = effected.getActingPlayer();
-		var modified = player.getInventory().unEquipItemInBodySlotAndRecord(bodyPart.getId());
+		var modified = player.getInventory().unEquipItemInBodySlotAndRecord(bodyPart);
 
 		if (modified.size() > 0) {
 			final InventoryUpdate iu = new InventoryUpdate();

@@ -6,7 +6,6 @@ import org.l2j.gameserver.enums.ItemGrade;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.model.ExtractableProduct;
 import org.l2j.gameserver.model.PcCondOverride;
-import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
@@ -35,6 +34,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import static java.util.Objects.nonNull;
+import static java.util.Objects.requireNonNullElse;
 import static org.l2j.gameserver.util.GameUtils.*;
 
 /**
@@ -57,41 +57,9 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     public static final int TYPE2_MONEY = 4;
     public static final int TYPE2_OTHER = 5;
 
-    public static final int SLOT_UNDERWEAR = 0x0001;
-    public static final int SLOT_R_EAR = 0x0002;
-    public static final int SLOT_L_EAR = 0x0004;
-    public static final int SLOT_LR_EAR = 0x00006;
-    public static final int SLOT_NECK = 0x0008;
-    public static final int SLOT_R_FINGER = 0x0010;
-    public static final int SLOT_L_FINGER = 0x0020;
-    public static final int SLOT_LR_FINGER = 0x0030;
-    public static final int SLOT_HEAD = 0x0040;
-    public static final int SLOT_R_HAND = 0x0080;
-    public static final int SLOT_L_HAND = 0x0100;
-    public static final int SLOT_GLOVES = 0x0200;
-    public static final int SLOT_CHEST = 0x0400;
-    public static final int SLOT_LEGS = 0x0800;
-    public static final int SLOT_FEET = 0x1000;
-    public static final int SLOT_BACK = 0x2000;
-    public static final int SLOT_LR_HAND = 0x4000;
-    public static final int SLOT_FULL_ARMOR = 0x8000;
-    public static final int SLOT_HAIR = 0x010000;
-    public static final int SLOT_ALLDRESS = 0x020000;
-    public static final int SLOT_HAIR2 = 0x040000;
-    public static final int SLOT_HAIRALL = 0x080000;
-    public static final int SLOT_R_BRACELET = 0x100000;
-    public static final int SLOT_L_BRACELET = 0x200000;
-    public static final int SLOT_TALISMAN = 0x400000;
-    public static final int SLOT_BELT = 0x10000000;
-    public static final int SLOT_BROOCH = 0x20000000;
-    public static final int SLOT_BROOCH_JEWEL = 0x40000000;
-    public static final long SLOT_AGATHION = 0x3000000000L;
-    public static final long SLOT_ARTIFACT_BOOK = 0x20000000000L;
-    public static final long SLOT_ARTIFACT = 0x40000000000L;
-
     protected static final Logger LOGGER = LoggerFactory.getLogger(ItemTemplate.class);
-    protected int _type1; // needed for item list (inventory)
-    protected int _type2; // different lists for armor, weapon, etc
+    protected int type1; // needed for item list (inventory)
+    protected int type2; // different lists for armor, weapon, etc
     protected List<FuncTemplate> _funcTemplates;
     protected List<Condition> _preConditions;
     private int id;
@@ -103,7 +71,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     protected CrystalType crystalType;
     protected int equipReuseDelay;
     private long time;
-    private int _autoDestroyTime;
+    private int _autoDestroyTime = -1;
     private int price;
     protected int crystalCount;
     private boolean sellable;
@@ -135,56 +103,11 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
 
     protected BodyPart bodyPart; // TODO should be on Weapon and Armor
 
-    /**
-     * Constructor of the ItemTemplate that fill class variables.<BR>
-     * <BR>
-     *
-     * @param set : StatsSet corresponding to a set of couples (key,value) for description of the item
-     */
-    protected ItemTemplate(StatsSet set) {
-        set(set);
-    }
 
     public ItemTemplate(int id, String name) {
         this.id = id;
         this.name = name;
-    }
 
-    public void set(StatsSet set) {
-        id = set.getInt("item_id");
-        displayId = set.getInt("displayId", id);
-        name = set.getString("name");
-        icon = set.getString("icon", null);
-        weight = set.getInt("weight", 0);
-        equipReuseDelay = set.getInt("equip_reuse_delay", 0) * 1000;
-
-        time = set.getInt("time", -1);
-        _autoDestroyTime = set.getInt("auto_destroy_time", -1) * 1000;
-        bodyPart = set.getEnum("bodypart", BodyPart.class, BodyPart.NONE);
-        price = set.getInt("price", 0);
-        crystalType = set.getEnum("crystal_type", CrystalType.class, CrystalType.NONE);
-        crystalCount = set.getInt("crystal_count", 0);
-        stackable = set.getBoolean("is_stackable", false);
-        sellable = set.getBoolean("is_sellable", true);
-        dropable = set.getBoolean("is_dropable", true);
-        destroyable = set.getBoolean("is_destroyable", true);
-        tradable = set.getBoolean("is_tradable", true);
-        _depositable = set.getBoolean("is_depositable", true);
-        enchantable = set.getBoolean("enchant_enabled", false);
-        questItem = set.getBoolean("is_questitem", false);
-        freightable = set.getBoolean("is_freightable", false);
-        allowSelfResurrection = set.getBoolean("allow_self_resurrection", false);
-        olympiadRestricted = set.getBoolean("is_oly_restricted", false);
-        cocRestricted = set.getBoolean("is_coc_restricted", false);
-        forNpc = set.getBoolean("for_npc", false);
-        _isBlessed = set.getBoolean("blessed", false);
-
-        immediateEffect = set.getBoolean("immediate_effect", false);
-        exImmediateEffect = set.getBoolean("ex_immediate_effect", false);
-        _defaultAction = set.getEnum("default_action", ActionType.class, ActionType.NONE);
-        reuseDelay = set.getInt("reuse_delay", 0);
-        reuseGroup = set.getInt("shared_reuse_group", 0);
-        commissionType = set.getEnum("commissionItemType", CommissionItemType.class, CommissionItemType.OTHER_ITEM);
         _common = ((id >= 11605) && (id <= 12361));
         _heroItem = ((id >= 6611) && (id <= 6621)) || ((id >= 9388) && (id <= 9390)) || (id == 6842);
         _pvpItem = ((id >= 10667) && (id <= 10835)) || ((id >= 12852) && (id <= 12977)) || ((id >= 14363) && (id <= 14525)) || (id == 14528) || (id == 14529) || (id == 14558) || ((id >= 15913) && (id <= 16024)) || ((id >= 16134) && (id <= 16147)) || (id == 16149) || (id == 16151) || (id == 16153) || (id == 16155) || (id == 16157) || (id == 16159) || ((id >= 16168) && (id <= 16176)) || ((id >= 16179) && (id <= 16220));
@@ -258,7 +181,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      * @return int
      */
     public final int getType2() {
-        return _type2;
+        return type2;
     }
 
     /**
@@ -317,7 +240,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      */
     public final int getCrystalCount(int enchantLevel) {
         if (enchantLevel > 3) {
-            switch (_type2) {
+            switch (type2) {
                 case TYPE2_SHIELD_ARMOR:
                 case TYPE2_ACCESSORY: {
                     return crystalCount + (crystalType.getCrystalEnchantBonusArmor() * ((3 * enchantLevel) - 6));
@@ -330,7 +253,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
                 }
             }
         } else if (enchantLevel > 0) {
-            switch (_type2) {
+            switch (type2) {
                 case TYPE2_SHIELD_ARMOR:
                 case TYPE2_ACCESSORY: {
                     return crystalCount + (crystalType.getCrystalEnchantBonusArmor() * enchantLevel);
@@ -386,14 +309,14 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      * @return the part of the body used with the item.
      */
     public final BodyPart getBodyPart() {
-        return bodyPart;
+        return requireNonNullElse(bodyPart, BodyPart.NONE);
     }
 
     /**
      * @return the type 1 of the item.
      */
     public final int getType1() {
-        return _type1;
+        return type1;
     }
 
     /**

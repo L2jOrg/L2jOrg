@@ -3,6 +3,7 @@ package org.l2j.gameserver.model;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.model.buylist.Product;
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
+import org.l2j.gameserver.model.items.BodyPart;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.WarehouseItem;
 import org.l2j.gameserver.model.items.instance.Item;
@@ -31,7 +32,7 @@ public class ItemInfo {
     /**
      * The ItemTemplate template of the Item
      */
-    private ItemTemplate _item;
+    private ItemTemplate template;
     /**
      * The level of enchant on the Item
      */
@@ -83,7 +84,7 @@ public class ItemInfo {
         _objectId = item.getObjectId();
 
         // Get the ItemTemplate of the Item
-        _item = item.getTemplate();
+        template = item.getTemplate();
 
         // Get the enchant level of the Item
         _enchantLevel = item.getEnchantLevel();
@@ -145,7 +146,7 @@ public class ItemInfo {
         _objectId = item.getObjectId();
 
         // Get the ItemTemplate of the Item
-        _item = item.getItem();
+        template = item.getItem();
 
         // Get the enchant level of the Item
         _enchantLevel = item.getEnchant();
@@ -192,7 +193,7 @@ public class ItemInfo {
         _objectId = 0;
 
         // Get the ItemTemplate of the Item
-        _item = item.getItem();
+        template = item.getTemplate();
 
         // Get the enchant level of the Item
         _enchantLevel = 0;
@@ -204,8 +205,8 @@ public class ItemInfo {
         _count = item.getCount();
 
         // Get custom item types (used loto, race tickets)
-        _type1 = item.getItem().getType1();
-        _type2 = item.getItem().getType2();
+        _type1 = template.getType1();
+        _type2 = template.getType2();
 
         // Verify if the Item is equipped
         _equipped = 0;
@@ -230,7 +231,7 @@ public class ItemInfo {
         _objectId = item.getObjectId();
 
         // Get the ItemTemplate of the Item
-        _item = item.getItem();
+        template = item.getItem();
 
         // Get the enchant level of the Item
         _enchantLevel = item.getEnchantLevel();
@@ -264,8 +265,8 @@ public class ItemInfo {
         return _objectId;
     }
 
-    public ItemTemplate getItem() {
-        return _item;
+    public ItemTemplate getTemplate() {
+        return template;
     }
 
     public int getEnchantLevel() {
@@ -336,8 +337,28 @@ public class ItemInfo {
         return _soulCrystalSpecialOptions != null ? _soulCrystalSpecialOptions : Collections.emptyList();
     }
 
+    public int getId() {
+        return template.getId();
+    }
+
     @Override
     public String toString() {
-        return _item + "[objId: " + _objectId + ", count: " + _count + "]";
+        return template + "[objId: " + _objectId + ", count: " + _count + "]";
+    }
+
+    public BodyPart getBodyPart() {
+        return template.getBodyPart();
+    }
+
+    public int getType2() {
+        return template.getType2();
+    }
+
+    public int getDisplayId() {
+        return template.getDisplayId();
+    }
+
+    public boolean isQuestItem() {
+        return template.isQuestItem();
     }
 }

@@ -7,8 +7,6 @@ import org.l2j.gameserver.model.items.type.CrystalType;
  */
 public interface EquipableItem {
 
-    void setBodyPart(BodyPart bodyPart);
-
     BodyPart getBodyPart();
 
     void setCrystalType(CrystalType type);

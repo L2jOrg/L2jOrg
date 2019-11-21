@@ -10,9 +10,9 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author NosBit
  */
 public class ConditionUsingSlotType extends Condition {
-    private final int _mask;
+    private final long _mask;
 
-    public ConditionUsingSlotType(int mask) {
+    public ConditionUsingSlotType(long mask) {
         _mask = mask;
     }
 

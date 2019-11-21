@@ -305,7 +305,15 @@ public abstract class XmlReader
      * @return -1 if node is null or the node name not exists.
      */
     protected int parseInt(NamedNodeMap node, String name) {
-        return nonNull(node) ? parseInt(node.getNamedItem(name), -1) : -1;
+        return parseInt(node, name, -1);
+    }
+
+    /**
+     * parse the node value as int.
+     *
+     */
+    protected int parseInt(NamedNodeMap node, String name, int defaultValue) {
+        return nonNull(node) ? parseInt(node.getNamedItem(name), defaultValue) : defaultValue;
     }
 
     /**

@@ -114,8 +114,7 @@ import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.zeroIfNullOrElse;
-import static org.l2j.gameserver.model.items.BodyPart.RIGHT_HAND;
-import static org.l2j.gameserver.model.items.BodyPart.TWO_HAND;
+import static org.l2j.gameserver.model.items.BodyPart.*;
 import static org.l2j.gameserver.network.SystemMessageId.S1_HAS_INFLICTED_S3_S4_ATTRIBUTE_DAMGE_DAMAGE_TO_S2;
 import static org.l2j.gameserver.network.SystemMessageId.YOU_CANNOT_MOVE_WHILE_CASTING;
 
@@ -1996,20 +1995,20 @@ public final class Player extends Playable {
         SystemMessage sm;
 
         if (isEquiped) {
+            var bodyPart = BodyPart.fromEquippedPaperdoll(item);
+            // we can't unequip talisman by body slot
+            if (bodyPart.isAnyOf(TALISMAN, BROOCH_JEWEL, AGATHION, ARTIFACT)) {
+                modifiedItems = inventory.unEquipItemInSlotAndRecord(item.getLocationSlot());
+            } else {
+                modifiedItems = inventory.unEquipItemInBodySlotAndRecord(bodyPart);
+            }
+
             if (item.getEnchantLevel() > 0) {
                 sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED).addInt(item.getEnchantLevel()).addItemName(item);
             } else {
                 sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED).addItemName(item);
             }
             sendPacket(sm);
-
-            final long slot = inventory.getSlotFromItem(item);
-            // we can't unequip talisman by body slot
-            if ((slot == ItemTemplate.SLOT_TALISMAN) || (slot == ItemTemplate.SLOT_BROOCH_JEWEL) || (slot == ItemTemplate.SLOT_AGATHION) || (slot == ItemTemplate.SLOT_ARTIFACT)) {
-                modifiedItems = inventory.unEquipItemInSlotAndRecord(item.getLocationSlot());
-            } else {
-                modifiedItems = inventory.unEquipItemInBodySlotAndRecord(slot);
-            }
         } else {
             modifiedItems = inventory.equipItemAndRecord(item);
 
@@ -4122,7 +4121,7 @@ public final class Player extends Playable {
             }
         }
         if (armor != null) {
-            if (((inventory.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getTemplate().getBodyPart() == BodyPart.FULL_ARMOR) && (armor.getItemType() == ArmorType.HEAVY))) {
+            if (((inventory.getPaperdollItem(CHEST.paperdool()).getBodyPart() == BodyPart.FULL_ARMOR) && (armor.getItemType() == ArmorType.HEAVY))) {
                 return true;
             }
         }
@@ -4139,7 +4138,7 @@ public final class Player extends Playable {
             }
         }
         if (armor != null) {
-            if (((inventory.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getTemplate().getBodyPart() == BodyPart.FULL_ARMOR) && (armor.getItemType() == ArmorType.LIGHT))) {
+            if (((inventory.getPaperdollItem(CHEST.paperdool()).getBodyPart() == BodyPart.FULL_ARMOR) && (armor.getItemType() == ArmorType.LIGHT))) {
                 return true;
             }
         }
@@ -4156,7 +4155,7 @@ public final class Player extends Playable {
             }
         }
         if (armor != null) {
-            if (((inventory.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getTemplate().getBodyPart() == BodyPart.FULL_ARMOR) && (armor.getItemType() == ArmorType.MAGIC))) {
+            if (((inventory.getPaperdollItem(BodyPart.CHEST.paperdool()).getBodyPart() == BodyPart.FULL_ARMOR) && (armor.getItemType() == ArmorType.MAGIC))) {
                 return true;
             }
         }
@@ -4260,8 +4259,8 @@ public final class Player extends Playable {
                 if (fort != null) {
                     FortSiegeManager.getInstance().dropCombatFlag(this, fort.getResidenceId());
                 } else {
-                    final long slot = inventory.getSlotFromItem(inventory.getItemByItemId(9819));
-                    inventory.unEquipItemInBodySlot(slot);
+                    var bodyPart = BodyPart.fromEquippedPaperdoll(inventory.getItemByItemId(9819));
+                    inventory.unEquipItemInBodySlot(bodyPart);
                     destroyItem("CombatFlag", inventory.getItemByItemId(9819), null, true);
                 }
             } else {
@@ -5053,7 +5052,7 @@ public final class Player extends Playable {
             return false;
         }
 
-        var modified = inventory.unEquipItemInBodySlotAndRecord(wpn.getTemplate().getBodyPart().getId());
+        var modified = inventory.unEquipItemInBodySlotAndRecord(wpn.getBodyPart());
         final InventoryUpdate iu = new InventoryUpdate();
         for (Item itm : modified) {
             iu.addModifiedItem(itm);
@@ -5085,7 +5084,7 @@ public final class Player extends Playable {
     public boolean disarmShield() {
         final Item sld = inventory.getPaperdollItem(Inventory.PAPERDOLL_LHAND);
         if (sld != null) {
-            var modified = inventory.unEquipItemInBodySlotAndRecord(sld.getTemplate().getBodyPart().getId());
+            var modified = inventory.unEquipItemInBodySlotAndRecord(sld.getBodyPart());
             final InventoryUpdate iu = new InventoryUpdate();
             for (Item itm : modified) {
                 iu.addModifiedItem(itm);
@@ -8821,8 +8820,8 @@ public final class Player extends Playable {
                 if (fort != null) {
                     FortSiegeManager.getInstance().dropCombatFlag(this, fort.getResidenceId());
                 } else {
-                    final long slot = inventory.getSlotFromItem(inventory.getItemByItemId(9819));
-                    inventory.unEquipItemInBodySlot(slot);
+                    var bodyPart = BodyPart.fromEquippedPaperdoll(inventory.getItemByItemId(9819));
+                    inventory.unEquipItemInBodySlot(bodyPart);
                     destroyItem("CombatFlag", inventory.getItemByItemId(9819), null, true);
                 }
             }
@@ -9418,8 +9417,8 @@ public final class Player extends Playable {
                 iu.addModifiedItem(equippedItem);
                 sendInventoryUpdate(iu);
 
-                SystemMessage sm = null;
-                if (equippedItem.getTemplate().getBodyPart() == BodyPart.BACK) {
+                SystemMessage sm;
+                if (equippedItem.getBodyPart() == BodyPart.BACK) {
                     sendPacket(SystemMessageId.YOUR_CLOAK_HAS_BEEN_UNEQUIPPED_BECAUSE_YOUR_ARMOR_SET_IS_NO_LONGER_COMPLETE);
                     return;
                 }

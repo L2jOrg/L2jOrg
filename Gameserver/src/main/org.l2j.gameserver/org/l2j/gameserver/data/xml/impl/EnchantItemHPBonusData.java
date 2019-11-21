@@ -80,7 +80,7 @@ public class EnchantItemHPBonusData extends GameXmlReader {
         }
 
         final int bonus = values.get(Math.min(item.getOlyEnchantLevel(), values.size()) - 1);
-        if (item.getTemplate().getBodyPart() == BodyPart.FULL_ARMOR) {
+        if (item.getBodyPart() == BodyPart.FULL_ARMOR) {
             return (int) (bonus * FULL_ARMOR_MODIFIER);
         }
         return bonus;

@@ -59,7 +59,7 @@ public class EquipArmorSkillCondition implements ISkillCondition
 		
 		// So from here, chest armor matches conditions
 		
-		var chestBodyPart = chest.getTemplate().getBodyPart();
+		var chestBodyPart = chest.getBodyPart();
 		// return True if chest armor is a Full Armor
 		if (chestBodyPart == BodyPart.FULL_ARMOR)
 		{

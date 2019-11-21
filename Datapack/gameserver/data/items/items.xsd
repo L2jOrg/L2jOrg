@@ -116,7 +116,7 @@
         <xs:attribute name="id" use="required" type="xs:positiveInteger"/>
         <xs:attribute name="name" type="xs:normalizedString" use="required"/>
         <xs:attribute name="icon" type="xs:token"/>
-        <xs:attribute name="display-id" type="xs:int" default="0"/>
+        <xs:attribute name="display-id" type="xs:int"/>
     </xs:complexType>
 
     <xs:complexType name="Restriction">

@@ -162,7 +162,7 @@ public final class UseItem extends ClientPacket {
     }
 
     private void handleEquipable(Player player, Item item) {
-        if (checkCanUse(player, item)) {
+        if (!checkCanUse(player, item)) {
             return;
         }
 

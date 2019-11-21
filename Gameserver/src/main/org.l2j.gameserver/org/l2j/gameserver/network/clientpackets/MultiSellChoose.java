@@ -221,7 +221,7 @@ public class MultiSellChoose extends ClientPacket {
             // Check for enchanted item if its present in the inventory.
             if ((itemEnchantment != null) && (inventory.getItemByObjectId(itemEnchantment.getObjectId()) == null)) {
                 SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_NEED_A_N_S1);
-                sm.addItemName(itemEnchantment.getItem().getId());
+                sm.addItemName(itemEnchantment.getId());
                 player.sendPacket(sm);
                 return;
             }
@@ -305,7 +305,7 @@ public class MultiSellChoose extends ClientPacket {
                         player.sendPacket(sm);
                         return;
                     }
-                } else if (!itemEnchantmentProcessed && (itemEnchantment != null) && (itemEnchantment.getItem().getId() == ingredient.getId())) {
+                } else if (!itemEnchantmentProcessed && (itemEnchantment != null) && (itemEnchantment.getId() == ingredient.getId())) {
                     // Take the enchanted item.
                     final Item destroyedItem = inventory.destroyItem("Multisell", itemEnchantment.getObjectId(), totalCount, player, npc);
                     if (destroyedItem != null) {
@@ -372,7 +372,7 @@ public class MultiSellChoose extends ClientPacket {
                     final Item addedItem = inventory.addItem("Multisell", product.getId(), totalCount, player, npc, false);
 
                     // Check if the newly given item should be enchanted.
-                    if (itemEnchantmentProcessed && list.isMaintainEnchantment() && (itemEnchantment != null) && addedItem.isEquipable() && addedItem.getTemplate().getClass().equals(itemEnchantment.getItem().getClass())) {
+                    if (itemEnchantmentProcessed && list.isMaintainEnchantment() && (itemEnchantment != null) && addedItem.isEquipable() && addedItem.getTemplate().getClass().equals(itemEnchantment.getTemplate().getClass())) {
                         addedItem.setEnchantLevel(itemEnchantment.getEnchantLevel());
                         addedItem.setAugmentation(itemEnchantment.getAugmentation(), false);
                         if (addedItem.isWeapon())

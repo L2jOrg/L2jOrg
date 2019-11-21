@@ -3,7 +3,6 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.BodyPart;
 import org.l2j.gameserver.model.items.EtcItem;
-import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -31,7 +30,9 @@ public class RequestUnEquipItem extends ClientPacket {
             return;
         }
 
-        final Item item = player.getInventory().getItemByBodyPart(BodyPart.fromSlot(slot));
+        var bodyPart = BodyPart.fromSlot(slot);
+
+        final Item item = player.getInventory().getItemByBodyPart(bodyPart);
         // Wear-item are not to be unequipped.
         if (item == null) {
             return;
@@ -44,12 +45,12 @@ public class RequestUnEquipItem extends ClientPacket {
         }
 
         // Arrows and bolts.
-        if ((slot == ItemTemplate.SLOT_L_HAND) && (item.getTemplate() instanceof EtcItem)) {
+        if ((bodyPart == BodyPart.LEFT_HAND) && (item.getTemplate() instanceof EtcItem)) {
             return;
         }
 
         // Prevent of unequipping a cursed weapon.
-        if ((slot == ItemTemplate.SLOT_LR_HAND) && (player.isCursedWeaponEquipped() || player.isCombatFlagEquipped())) {
+        if ((bodyPart == BodyPart.TWO_HAND) && (player.isCursedWeaponEquipped() || player.isCombatFlagEquipped())) {
             return;
         }
 
@@ -63,7 +64,7 @@ public class RequestUnEquipItem extends ClientPacket {
             return;
         }
 
-        var  modified = player.getInventory().unEquipItemInBodySlotAndRecord(slot);
+        var  modified = player.getInventory().unEquipItemInBodySlotAndRecord(bodyPart);
         player.broadcastUserInfo();
 
         var iterator = modified.iterator();

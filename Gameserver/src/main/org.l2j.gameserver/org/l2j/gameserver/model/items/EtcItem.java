@@ -1,7 +1,6 @@
 package org.l2j.gameserver.model.items;
 
 import org.l2j.gameserver.model.ExtractableProduct;
-import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.items.type.EtcItemType;
 
 import java.util.ArrayList;
@@ -9,6 +8,8 @@ import java.util.List;
 
 /**
  * This class is dedicated to the management of EtcItem.
+ *
+ * @author JoeAlisson
  */
 public final class EtcItem extends ItemTemplate {
     private String handler;
@@ -18,44 +19,21 @@ public final class EtcItem extends ItemTemplate {
     private int _extractableCountMax;
     private boolean isInfinite;
 
-    /**
-     * Constructor for EtcItem.
-     *
-     * @param set StatsSet designating the set of couples (key,value) for description of the Etc
-     */
-    public EtcItem(StatsSet set) {
-        super(set);
-    }
-
     public EtcItem(int id, String name, EtcItemType type) {
         super(id, name);
         this.type = type;
+        type1 = ItemTemplate.TYPE1_ITEM_QUESTITEM_ADENA;
     }
 
-    @Override
-    public void set(StatsSet set) {
-        super.set(set);
-        type = set.getEnum("etcitem_type", EtcItemType.class, EtcItemType.NONE);
-        _type1 = ItemTemplate.TYPE1_ITEM_QUESTITEM_ADENA;
-
+    public void fillType2() {
         if (isQuestItem()) {
-            _type2 = ItemTemplate.TYPE2_QUEST;
+            type2 = ItemTemplate.TYPE2_QUEST;
         } else {
-            _type2 = switch (getId()) {
+            type2 = switch (getId()) {
                 case CommonItem.ADENA, CommonItem.ANCIENT_ADENA, CommonItem.RUSTY_COIN, CommonItem.SILVER_COIN -> ItemTemplate.TYPE2_MONEY;
                 default -> ItemTemplate.TYPE2_OTHER;
             };
         }
-
-        handler = set.getString("handler", null); // ! null !
-
-        _extractableCountMin = set.getInt("extractableCountMin", 0);
-        _extractableCountMax = set.getInt("extractableCountMax", 0);
-        if (_extractableCountMin > _extractableCountMax) {
-            LOGGER.warn("Item " + this + " extractableCountMin is bigger than extractableCountMax!");
-        }
-
-        isInfinite = set.getBoolean("is_infinite", false);
     }
 
     /**

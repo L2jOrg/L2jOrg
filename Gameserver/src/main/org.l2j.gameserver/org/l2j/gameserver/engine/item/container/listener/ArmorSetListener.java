@@ -128,7 +128,7 @@ public final class ArmorSetListener implements PlayerInventoryListener {
             player.sendSkillList();
         }
 
-        if ((item.getTemplate().getBodyPart() == BodyPart.BROOCH_JEWEL) || (item.getTemplate().getBodyPart() == BodyPart.BROOCH)) {
+        if ((item.getBodyPart().isAnyOf(BodyPart.BROOCH_JEWEL, BodyPart.BROOCH))) {
             player.updateActiveBroochJewel();
         }
     }
@@ -152,7 +152,7 @@ public final class ArmorSetListener implements PlayerInventoryListener {
             player.sendSkillList();
         }
 
-        if ((item.getTemplate().getBodyPart() == BodyPart.BROOCH_JEWEL) || (item.getTemplate().getBodyPart() == BodyPart.BROOCH)) {
+        if ((item.getBodyPart().isAnyOf(BodyPart.BROOCH_JEWEL, BodyPart.BROOCH))) {
             player.updateActiveBroochJewel();
         }
     }

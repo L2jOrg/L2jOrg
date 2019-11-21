@@ -1,25 +1,25 @@
 package org.l2j.gameserver.model.items;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.commons.util.Util;
 import org.l2j.gameserver.enums.ItemSkillType;
-import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.items.type.CrystalType;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcSkillSee;
+import org.l2j.gameserver.model.items.type.CrystalType;
 import org.l2j.gameserver.model.items.type.WeaponType;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.world.World;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * This class is dedicated to the management of weapons.
+ *
+ * @author JoeAlisson
  */
 public final class Weapon extends ItemTemplate implements EquipableItem {
     private WeaponType type;
@@ -40,50 +40,12 @@ public final class Weapon extends ItemTemplate implements EquipableItem {
     private boolean isAttackWeapon;
     private boolean useWeaponSkillsOnly;
 
-    /**
-     * Constructor for Weapon.
-     *
-     * @param set the StatsSet designating the set of couples (key,value) characterizing the weapon.
-     */
-    public Weapon(StatsSet set) {
-        super(set);
-    }
-
-    public Weapon(int id, String name, WeaponType type) {
+    public Weapon(int id, String name, WeaponType type, BodyPart bodyPart) {
         super(id, name);
         this.type = type;
-    }
-
-    @Override
-    public void set(StatsSet set) {
-        super.set(set);
-        type = WeaponType.valueOf(set.getString("weapon_type", "none").toUpperCase());
-        _type1 = ItemTemplate.TYPE1_WEAPON_RING_EARRING_NECKLACE;
-        _type2 = ItemTemplate.TYPE2_WEAPON;
-        magic = set.getBoolean("is_magic_weapon", false);
-        soulShot = set.getInt("soulshots", 0);
-        spiritShot = set.getInt("spiritshots", 0);
-        manaConsume = set.getInt("mp_consume", 0);
-        final String[] damageRange = set.getString("damage_range", "").split(";"); // 0?;0?;fan sector;base attack angle
-        if ((damageRange.length > 1) && Util.isInteger(damageRange[2]) && Util.isInteger(damageRange[3])) {
-            damageRadius = Integer.parseInt(damageRange[2]);
-            attackangle = 360 - Integer.parseInt(damageRange[3]);
-        } else {
-            damageRadius = 40;
-            attackangle = 240; // 360 - 120
-        }
-
-        final String[] reduced_soulshots = set.getString("reduced_soulshot", "").split(",");
-        _reducedSoulshotChance = (reduced_soulshots.length == 2) ? Integer.parseInt(reduced_soulshots[0]) : 0;
-        _reducedSoulshot = (reduced_soulshots.length == 2) ? Integer.parseInt(reduced_soulshots[1]) : 0;
-
-        final String[] reduced_mpconsume = set.getString("reduced_mp_consume", "").split(",");
-        _reducedMpConsumeChance = (reduced_mpconsume.length == 2) ? Integer.parseInt(reduced_mpconsume[0]) : 0;
-        _reducedMpConsume = (reduced_mpconsume.length == 2) ? Integer.parseInt(reduced_mpconsume[1]) : 0;
-
-        changeWeapon = set.getInt("change_weaponId", 0);
-        isAttackWeapon = set.getBoolean("isAttackWeapon", true);
-        useWeaponSkillsOnly = set.getBoolean("useWeaponSkillsOnly", false);
+        this.bodyPart = bodyPart;
+        type1 = ItemTemplate.TYPE1_WEAPON_RING_EARRING_NECKLACE;
+        type2 = ItemTemplate.TYPE2_WEAPON;
     }
 
     /**
@@ -243,10 +205,6 @@ public final class Weapon extends ItemTemplate implements EquipableItem {
                 }
             }
         });
-    }
-
-    public void setBodyPart(BodyPart bodyPart) {
-        this.bodyPart = bodyPart;
     }
 
     public void setMagic(boolean magic) {

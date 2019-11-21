@@ -371,7 +371,7 @@ public class CharSelectionInfo extends ServerPacket {
             writeInt(charInfoPackage.getClassId());
             writeInt(i == _activeId ? 1 : 0);
 
-            writeByte((byte)(charInfoPackage.getEnchantEffect() > 127 ? 127 : charInfoPackage.getEnchantEffect()));
+            writeByte(Math.min(charInfoPackage.getEnchantEffect(), 127));
             writeInt(charInfoPackage.getAugmentation() != null ? charInfoPackage.getAugmentation().getOption1Id() : 0);
             writeInt(charInfoPackage.getAugmentation() != null ? charInfoPackage.getAugmentation().getOption2Id() : 0);
 
