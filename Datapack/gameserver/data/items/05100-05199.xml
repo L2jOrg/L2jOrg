@@ -128,7 +128,7 @@
 	<item id="5134" name="Soulshot Compressed Package (No-grade)" type="NONE" icon="icon.etc_pouch_yellow_i00">
 	<!-- 300 compressed soulshots. No-grade. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="600" price="2300" commission-type="SOULSHOT" immediate-effect="true"/>
+		<attributes weight="600" price="2300" commission-type="SOULSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2078" level="1"/>  <!-- Soulshot Compressed Package (No-grade) -->
 		</skill-reducer>
@@ -137,7 +137,7 @@
 	<item id="5135" name="Soulshot Compressed Package (D-grade)" type="NONE" icon="icon.etc_pouch_yellow_i00">
 	<!-- 300 compressed soulshots. D-grade. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="450" price="3300" commission-type="SOULSHOT" immediate-effect="true"/>
+		<attributes weight="450" price="3300" commission-type="SOULSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2079" level="1"/>  <!-- Soulshot Compressed Package (D-grade) -->
 		</skill-reducer>
@@ -146,7 +146,7 @@
 	<item id="5136" name="Soulshot Compressed Package (C-grade)" type="NONE" icon="icon.etc_pouch_yellow_i00">
 	<!-- 300 compressed soulshots. C-grade. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="450" price="4950" commission-type="SOULSHOT" immediate-effect="true"/>
+		<attributes weight="450" price="4950" commission-type="SOULSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2080" level="1"/>  <!-- Soulshot Compressed Package (C-grade) -->
 		</skill-reducer>
@@ -155,7 +155,7 @@
 	<item id="5137" name="Soulshot Compressed Package (B-grade)" type="NONE" icon="icon.etc_pouch_yellow_i00">
 	<!-- 300 compressed soulshots. B-grade. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="200" price="16500" commission-type="SOULSHOT" immediate-effect="true"/>
+		<attributes weight="200" price="16500" commission-type="SOULSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2081" level="1"/>  <!-- Soulshot Compressed Package (B-grade) -->
 		</skill-reducer>
@@ -164,7 +164,7 @@
 	<item id="5138" name="Soulshot Compressed Package (A-grade)" type="NONE" icon="icon.etc_pouch_yellow_i00">
 	<!-- 300 compressed Soulshots. A-grade. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="200" price="26400" commission-type="SOULSHOT" immediate-effect="true"/>
+		<attributes weight="200" price="26400" commission-type="SOULSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2082" level="1"/>  <!-- Soulshot Compressed Package (A-grade) -->
 		</skill-reducer>
@@ -173,7 +173,7 @@
 	<item id="5140" name="Spiritshot Compressed Package (No-grade)" type="NONE" icon="icon.etc_pouch_yellow_i00">
 	<!-- 300 compressed spiritshots. No-grade. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="750" price="4950" commission-type="SPIRITSHOT" immediate-effect="true"/>
+		<attributes weight="750" price="4950" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2084" level="1"/>  <!-- Spiritshot Compressed Package (No-grade) -->
 		</skill-reducer>
@@ -182,7 +182,7 @@
 	<item id="5141" name="Spiritshot Compressed Package (D-grade)" type="NONE" icon="icon.etc_pouch_yellow_i00">
 	<!-- 300 compressed spiritshots. D-grade. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="750" price="5940" commission-type="SPIRITSHOT" immediate-effect="true"/>
+		<attributes weight="750" price="5940" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2085" level="1"/>  <!-- Spiritshot Compressed Package (D-grade) -->
 		</skill-reducer>
@@ -191,7 +191,7 @@
 	<item id="5142" name="Spiritshot Compressed Package (C-grade)" type="NONE" icon="icon.etc_pouch_yellow_i00">
 	<!-- 300 compressed spiritshots. C-grade. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="450" price="11550" commission-type="SPIRITSHOT" immediate-effect="true"/>
+		<attributes weight="450" price="11550" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2086" level="1"/>  <!-- Spiritshot Compressed Package (C-grade) -->
 		</skill-reducer>
@@ -200,7 +200,7 @@
 	<item id="5143" name="Spiritshot Compressed Package (B-grade)" type="NONE" icon="icon.etc_pouch_yellow_i00">
 	<!-- 300 compressed spiritshots. B-grade. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="450" price="33000" commission-type="SPIRITSHOT" immediate-effect="true"/>
+		<attributes weight="450" price="33000" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2087" level="1"/>  <!-- Spiritshot Compressed Package (B-grade) -->
 		</skill-reducer>
@@ -209,7 +209,7 @@
 	<item id="5144" name="Spiritshot Compressed Package (A-grade)" type="NONE" icon="icon.etc_pouch_yellow_i00">
 	<!-- 300 compressed spiritshots. A-grade. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="200" price="39600" commission-type="SPIRITSHOT" immediate-effect="true"/>
+		<attributes weight="200" price="39600" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2088" level="1"/>  <!-- Spiritshot Compressed Package (A-grade) -->
 		</skill-reducer>
@@ -218,7 +218,7 @@
 	<item id="5146" name="Blessed Spiritshot Compressed Package (No-grade)" type="NONE" icon="icon.etc_pouch_yellow_i00">
 	<!-- 300 compressed blessed spiritshots. No-grade. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="750" price="11550" commission-type="SPIRITSHOT" immediate-effect="true"/>
+		<attributes weight="750" price="11550" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2090" level="1"/>  <!-- Blessed Spiritshot Compressed Package (No-grade) -->
 		</skill-reducer>
@@ -227,7 +227,7 @@
 	<item id="5147" name="Blessed Spiritshot Compressed Package (D-grade)" type="NONE" icon="icon.etc_pouch_yellow_i00">
 	<!-- 300 compressed blessed spiritshots. D-grade. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="750" price="14850" commission-type="SPIRITSHOT" immediate-effect="true"/>
+		<attributes weight="750" price="14850" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2091" level="1"/>  <!-- Blessed Spiritshot Compressed Package (D-grade) -->
 		</skill-reducer>
@@ -236,7 +236,7 @@
 	<item id="5148" name="Blessed Spiritshot Compressed Package (C-grade)" type="NONE" icon="icon.etc_pouch_yellow_i00">
 	<!-- 300 compressed blessed spiritshots. C-grade. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="450" price="29700" commission-type="SPIRITSHOT" immediate-effect="true"/>
+		<attributes weight="450" price="29700" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2092" level="1"/>  <!-- Blessed Spiritshot Compressed Package (C-grade) -->
 		</skill-reducer>
@@ -245,7 +245,7 @@
 	<item id="5149" name="Blessed Spiritshot Compressed Package (B-grade)" type="NONE" icon="icon.etc_pouch_yellow_i00">
 	<!-- 300 compressed blessed spiritshots. B-grade. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="450" price="80850" commission-type="SPIRITSHOT" immediate-effect="true"/>
+		<attributes weight="450" price="80850" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2093" level="1"/>  <!-- Blessed Spiritshot Compressed Package (B-grade) -->
 		</skill-reducer>
@@ -254,7 +254,7 @@
 	<item id="5150" name="Blessed Spiritshot Compressed Package (A-grade)" type="NONE" icon="icon.etc_pouch_yellow_i00">
 	<!-- 300 compressed blessed spiritshots. A-grade. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="200" price="95700" commission-type="SPIRITSHOT" immediate-effect="true"/>
+		<attributes weight="200" price="95700" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2094" level="1"/>  <!-- Blessed Spiritshot Compressed Package (A-grade) -->
 		</skill-reducer>
@@ -269,84 +269,84 @@
 	<item id="5153" name="Recipe: Soulshot Compressed Package (D-grade)" type="MATERIAL" icon="icon.etc_recipe_blue_i00">
 	<!-- For Dwarves only. Recipe for the Soulshot Compressed Package (D-grade) . Requires Create Item - Skill Lv. 2. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="5000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="5000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5154" name="Recipe: Soulshot Compressed Package (C-grade)" type="MATERIAL" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for the Soulshot Compressed Package (C-grade) . Requires Create Item - Skill Lv. 4. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="60000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="60000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5155" name="Recipe: Soulshot Compressed Package (B-grade)" type="MATERIAL" icon="icon.etc_recipe_red_i00">
 	<!-- For Dwarves only. Recipe for the Soulshot Compressed Package (B-grade). Requires Create Item - Skill Lv. 6. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="100000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="100000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5156" name="Recipe: Soulshot Compressed Package (A-grade)" type="MATERIAL" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Soulshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="150000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="150000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5158" name="Recipe: Spiritshot Compressed Package (D-grade)" type="MATERIAL" icon="icon.etc_recipe_blue_i00">
 	<!-- For Dwarves only. Recipe for the Spiritshot Compressed Package (D-grade) . Requires Create Item - Skill Lv. 2. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="5000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="5000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5159" name="Recipe: Spiritshot Compressed Package (C-grade)" type="MATERIAL" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for the Spiritshot Compressed Package (C-grade) . Requires Create Item - Skill Lv. 4. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="60000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="60000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5160" name="Recipe: Spiritshot Compressed Package (B-grade)" type="MATERIAL" icon="icon.etc_recipe_red_i00">
 	<!-- For Dwarves only. Recipe for the Spiritshot Compressed Package (B-grade). Requires Create Item - Skill Lv. 6. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="100000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="100000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5161" name="Recipe: Spiritshot Compressed Package (A-grade)" type="MATERIAL" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Spiritshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="150000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="150000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5163" name="Recipe: Blessed Spiritshot Compressed Package (D-grade)" type="MATERIAL" icon="icon.etc_recipe_blue_i00">
 	<!-- For Dwarves only. Recipe for the Blessed Spiritshot Compressed Package (D-grade) . Requires Create Item - Skill Lv. 2. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="5000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="5000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5164" name="Recipe: Blessed Spiritshot Compressed Package (C-grade)" type="MATERIAL" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for the Blessed Spiritshot Compressed Package (C-grade) . Requires Create Item - Skill Lv. 4. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="60000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="60000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5165" name="Recipe: Blessed Spiritshot Compressed Package (B-grade)" type="MATERIAL" icon="icon.etc_recipe_red_i00">
 	<!-- For Dwarves only. Recipe for the Blessed Spiritshot Compressed Package (B-grade). Requires Create Item - Skill Lv. 6. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="100000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="100000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5166" name="Recipe: Blessed Spiritshot Compressed Package (A-grade)" type="MATERIAL" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Blessed Spiritshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="150000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="150000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
@@ -377,7 +377,7 @@
 	<item id="5197" name="Chest Key - Grade 8" type="NONE" icon="icon.etc_key_i00">
 	<!-- Opens a level 1 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="10" price="70"/>
+		<attributes weight="10" price="70" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2065" level="1"/>  <!-- Box Key -->
 		</skill-reducer>
@@ -386,7 +386,7 @@
 	<item id="5198" name="Chest Key - Grade 7" type="NONE" icon="icon.etc_key_i00">
 	<!-- Opens a level 10 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="10" price="760"/>
+		<attributes weight="10" price="760" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2065" level="2"/>  <!-- Box Key -->
 		</skill-reducer>
@@ -395,7 +395,7 @@
 	<item id="5199" name="Chest Key - Grade 6" type="NONE" icon="icon.etc_key_i00">
 	<!-- Opens a level 20 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="10" price="1200"/>
+		<attributes weight="10" price="1200" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2065" level="3"/>  <!-- Box Key -->
 		</skill-reducer>

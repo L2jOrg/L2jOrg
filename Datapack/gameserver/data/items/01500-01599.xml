@@ -270,7 +270,7 @@
 	<item id="1538" name="Blessed Scroll of Escape" type="SCROLL" icon="icon.etc_scroll_of_return_i01">
 	<!-- Magical scroll that relocates you to the nearest village -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="120" price="150000" commission-type="SCROLL_OTHER"/>
+		<attributes weight="120" price="150000" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2036" level="1"/>  <!-- Blessed Scroll of Escape -->
 		</skill-reducer>
@@ -282,7 +282,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="5" price="900" commission-type="POTION" reuse-delay="10000" for-npc="true" immediate-effect="true"/>
+		<attributes weight="5" price="900" commission-type="POTION" reuse-delay="10000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2037" level="1"/>  <!-- Major Healing Potion -->
 		</skill-reducer>
@@ -294,7 +294,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="1" price="10000" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true"/>
+		<attributes weight="1" price="10000" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2038" level="1"/>  <!-- Quick Healing Potion -->
 		</skill-reducer>

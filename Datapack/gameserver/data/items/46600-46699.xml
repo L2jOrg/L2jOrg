@@ -9,25 +9,25 @@
 	<item id="46644" name="Red Libra Supplies Lv. 1" type="NONE" icon="icon.event_mahum_coinbox">
 	<!-- Red Libra-only Item\\nA reward item received for helping Bodyguard Blue. Double-click to obtain one random item.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="46645" name="Red Libra Supplies Lv. 2" type="NONE" icon="icon.event_mahum_coinbox">
 	<!-- Red Libra-only Item\\nA reward item received for helping Bodyguard Blue. Double-click to obtain one random item.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="46646" name="Red Libra Supplies Lv. 3" type="NONE" icon="icon.event_mahum_coinbox">
 	<!-- Red Libra-only Item\\nA reward item received for helping Bodyguard Blue. Double-click to obtain one random item.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="46647" name="Red Libra Supplies Lv. 4" type="NONE" icon="icon.event_mahum_coinbox">
 	<!-- Red Libra-only Item\\nA reward item received for helping Bodyguard Blue. Double-click to obtain one random item.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 </list>

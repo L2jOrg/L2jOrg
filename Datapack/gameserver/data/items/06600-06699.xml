@@ -250,22 +250,28 @@
 	<item id="6645" name="Beast Soulshot" type="SOULSHOT" icon="icon.etc_beast_soul_shot_i00">
 	<!-- u,The power of a Soulshot is bestowed upon a servitor, increasing their physical attack. The number of Soulshots required is given in the servitor’s info window. (Used from the master’s inventory.)  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes price="20" commission-type="PET_SUPPLIES" for-npc="true" immediate-effect="true"/>
-		<action handler="BeastSoulShot"/>
+		<attributes price="20" commission-type="PET_SUPPLIES" for-npc="true" immediate-effect="true" action="SUMMON_SOULSHOT"/>
+		<skill-reducer type="BeastSoulShot">
+			<skill id="2033" level="1"/>  <!-- Item - Beast Soulshot -->
+		</skill-reducer>
 	</item>
 
 	<item id="6646" name="Beast Spiritshot" type="SOULSHOT" icon="icon.etc_beast_spirit_shot_i00">
 	<!-- u,The power of a Spiritshot is bestowed upon a servitor, increasing their magical attack. The number of Spiritshots required is given in the servitor’s info window. (Used from the master’s inventory.)  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes price="50" commission-type="PET_SUPPLIES" for-npc="true" immediate-effect="true"/>
-		<action handler="BeastSpiritShot"/>
+		<attributes price="50" commission-type="PET_SUPPLIES" for-npc="true" immediate-effect="true" action="SUMMON_SPIRITSHOT"/>
+		<skill-reducer type="BeastSpiritShot">
+			<skill id="2008" level="1"/>  <!-- Item - Beast Spiritshot -->
+		</skill-reducer>
 	</item>
 
 	<item id="6647" name="Blessed Beast Spiritshot" type="SOULSHOT" icon="icon.etc_blessed_beast_spirit_shot_i00">
 	<!-- u,The power of a Blessed Spiritshot is bestowed upon a servitor, increasing their magical attack. The number of Spiritshots required is given in the servitor’s info window. (Used from the master’s inventory.)  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes price="100" commission-type="PET_SUPPLIES" for-npc="true" immediate-effect="true"/>
-		<action handler="BeastSpiritShot"/>
+		<attributes price="100" commission-type="PET_SUPPLIES" for-npc="true" immediate-effect="true" action="SUMMON_SPIRITSHOT"/>
+		<skill-reducer type="BeastSpiritShot">
+			<skill id="2009" level="1"/>  <!-- Item - Blessed Beast Spiritshot -->
+		</skill-reducer>
 	</item>
 
 	<armor id="6660" name="Queen Ant's Ring Lv. 1" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_queen_ant_i00">

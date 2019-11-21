@@ -180,76 +180,76 @@
 	<item id="5332" name="Recipe: Sealed Dark Crystal Leather Armor (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Dark Crystal Leather Armor. Requires Create Item - Skill Lv. 7. The success rate is 60%.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="69400" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="69400" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5333" name="Recipe: Sealed Dark Crystal Leather Armor (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Dark Crystal Leather Armor. Requires Create Item - Skill Lv. 7. The success rate is 100%.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="69400" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="69400" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5334" name="Recipe: Sealed Tallum Leather Armor (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Tallum Leather Armor. Requires Create Item - Skill Lv. 7. The success rate is 60%.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="101600" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="101600" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5335" name="Recipe: Sealed Tallum Leather Armor (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Tallum Leather Armor. Requires Create Item - Skill Lv. 7. The success rate is 100%.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="101600" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="101600" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5336" name="Recipe: Sealed Leather Armor of Nightmare (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Leather Armor of Nightmare. Requires Create Item - Skill Lv. 8. The success rate is 60%.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="154600" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="154600" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5337" name="Recipe: Sealed Leather Armor of Nightmare (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Leather Armor of Nightmare. Requires Create Item - Skill Lv. 8. The success rate is 100%.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="154600" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="154600" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5338" name="Recipe: Sealed Majestic Leather Armor (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Majestic Leather Armor. Requires Create Item - Skill Lv. 8. The success rate is 60%.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="154600" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="154600" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5339" name="Recipe: Sealed Majestic Leather Armor (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Majestic Leather Armor. Requires Create Item - Skill Lv. 8. The success rate is 100%.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="154600" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="154600" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5340" name="Recipe: Sealed Dark Crystal Leggings (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Dark Crystal Leggings. Requires Create Item - Skill Lv. 7. The success rate is 60%.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="43400" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="43400" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5341" name="Recipe: Sealed Dark Crystal Leggings (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Dark Crystal Leggings. Requires Create Item - Skill Lv. 7. The success rate is 100%.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="43400" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="43400" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5342" name="Echo Crystal - Sad Song" type="NONE" icon="icon.etc_echo_crystal_i03">
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="10" price="1" reuse-delay="44000" immediate-effect="true"/>
+		<attributes weight="10" price="1" reuse-delay="44000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2584" level="1"/>  <!-- Item - Special Sound Crystal -->
 		</skill-reducer>
@@ -257,7 +257,7 @@
 
 	<item id="5343" name="Echo Crystal - Holy Song" type="NONE" icon="icon.etc_echo_crystal_i04">
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="10" price="1" reuse-delay="44000" immediate-effect="true"/>
+		<attributes weight="10" price="1" reuse-delay="44000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2585" level="1"/>  <!-- Item - Special Sound Crystal -->
 		</skill-reducer>
@@ -266,182 +266,182 @@
 	<item id="5346" name="Recipe: Sealed Tallum Tunic (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- Recipe: Sealed Tallum Tunic (60%) -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="69400" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="69400" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5347" name="Recipe: Sealed Tallum Tunic (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- Recipe: Sealed Tallum Tunic (100%) -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="69400" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="69400" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5348" name="Recipe: Sealed Dark Crystal Robe (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- Recipe: Sealed Dark Crystal Robe (60%) -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="101600" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="101600" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5349" name="Recipe: Sealed Dark Crystal Robe (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- Recipe: Sealed Dark Crystal Robe (100%) -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="101600" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="101600" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5350" name="Recipe: Sealed Robe of Nightmare (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- Recipe: Sealed Robe of Nightmare (60%) -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="154600" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="154600" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5351" name="Recipe: Sealed Robe of Nightmare (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- Recipe: Sealed Robe of Nightmare (100%) -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="154600" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="154600" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5352" name="Recipe: Sealed Majestic Robe (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- Recipe: Sealed Majestic Robe (60%) -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="154600" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="154600" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5353" name="Recipe: Sealed Majestic Robe (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- Recipe: Sealed Majestic Robe (100%) -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="154600" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="154600" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5354" name="Recipe: Sealed Tallum Stockings (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- Recipe: Sealed Tallum Stockings (60%) -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="43400" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="43400" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5355" name="Recipe: Sealed Tallum Stockings (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- Recipe: Sealed Tallum Stockings (100%) -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="43400" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="43400" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5364" name="Recipe: Sealed Dark Crystal Shield (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Dark Crystal Shield. Requires Create Item - Skill Lv. 7. The success rate is 60%.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="24400" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="24400" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5365" name="Recipe: Sealed Dark Crystal Shield (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Dark Crystal Shield. Requires Create Item - Skill Lv. 7. The success rate is 100%.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="24400" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="24400" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5366" name="Recipe: Sealed Shield of Nightmare (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Shield of Nightmare. Requires Create Item - Skill Lv. 8. The success rate is 60%.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="37000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="37000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5367" name="Recipe: Sealed Shield of Nightmare (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Shield of Nightmare. Requires Create Item - Skill Lv. 8. The success rate is 100%.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="37000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="37000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5368" name="Recipe: Sealed Dark Crystal Boots (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Dark Crystal Boots. Requires Create Item - Skill Lv. 7. The success rate is 60%.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="23200" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="23200" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5369" name="Recipe: Sealed Dark Crystal Boots (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Dark Crystal Boots. Requires Create Item - Skill Lv. 7. The success rate is 100%.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="23200" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="23200" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5370" name="Recipe: Sealed Tallum Boots (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Tallum Boots. Requires Create Item - Skill Lv. 7. The success rate is 60%.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="23200" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="23200" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5371" name="Recipe: Sealed Tallum Boots (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Tallum Boots. Requires Create Item - Skill Lv. 7. The success rate is 100%.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="23200" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="23200" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5380" name="Recipe: Sealed Boots of Nightmare (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Boots of Nightmare. Requires Create Item - Skill Lv. 8. The success rate is 60%.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="35200" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="35200" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5381" name="Recipe: Sealed Boots of Nightmare (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Boots of Nightmare. Requires Create Item - Skill Lv. 8. The success rate is 100%.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="35200" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="35200" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5382" name="Recipe: Sealed Majestic Boots (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Majestic Boots. Requires Create Item - Skill Lv. 8. The success rate is 60%.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="35200" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="35200" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5383" name="Recipe: Sealed Majestic Boots (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Majestic Boots. Requires Create Item - Skill Lv. 8. The success rate is 100%.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="35200" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="35200" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5392" name="Recipe: Sealed Dark Crystal Gloves (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Dark Crystal Gloves. Requires Create Item - Skill Lv. 7. The success rate is 60%.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="23200" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="23200" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5393" name="Recipe: Sealed Dark Crystal Gloves (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Dark Crystal Gloves. Requires Create Item - Skill Lv. 7. The success rate is 100%.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="23200" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="23200" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5394" name="Recipe: Sealed Tallum Gloves (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Tallum Gloves. Requires Create Item - Skill Lv. 7. The success rate is 60%.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="23200" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="23200" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5395" name="Recipe: Sealed Tallum Gloves (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Tallum Gloves. Requires Create Item - Skill Lv. 7. The success rate is 100%.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="23200" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="23200" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 

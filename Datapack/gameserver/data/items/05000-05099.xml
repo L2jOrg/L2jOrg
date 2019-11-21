@@ -3,63 +3,63 @@
 	<item id="5000" name="Recipe: Damascus Sword (60%)" type="RECIPE" icon="icon.etc_recipe_red_i00">
 	<!-- For Dwarves only. Recipe for a Damascus Sword. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="262000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="262000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5001" name="Recipe: Lance (60%)" type="RECIPE" icon="icon.etc_recipe_red_i00">
 	<!-- For Dwarves only. Recipe for a Lance. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="262000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="262000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5002" name="Recipe: Deadman's Glory (60%)" type="RECIPE" icon="icon.etc_recipe_red_i00">
 	<!-- For Dwarves only. Recipe for the Deadman's Glory. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="262000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="262000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5003" name="Recipe: Art of Battle Axe (60%)" type="RECIPE" icon="icon.etc_recipe_red_i00">
 	<!-- For Dwarves only. Recipe for the Art of Battle Axe. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="262000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="262000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5004" name="Recipe: Staff of Evil Spirits (60%)" type="RECIPE" icon="icon.etc_recipe_red_i00">
 	<!-- For Dwarves only. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="262000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="262000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5005" name="Recipe: Demon's Dagger (60%)" type="RECIPE" icon="icon.etc_recipe_red_i00">
 	<!-- For Dwarves only. Recipe for the Demon's Dagger. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="262000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="262000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5006" name="Recipe: Bellion Cestus (60%)" type="RECIPE" icon="icon.etc_recipe_red_i00">
 	<!-- For Dwarves only. Recipe for the Bellion Cestus. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="262000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="262000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5007" name="Recipe: Bow of Peril (60%)" type="RECIPE" icon="icon.etc_recipe_red_i00">
 	<!-- For Dwarves only. Recipe for a Bow of Peril. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="262000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="262000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5008" name="Recipe: Pata (60%)" type="RECIPE" icon="icon.etc_recipe_red_i00">
 	<!-- For Dwarves only. Recipe for a Pata. Requires Create Item - Skill Lv. 6. The success rate is 60%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="156600" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="156600" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
@@ -72,7 +72,7 @@
 	<item id="5010" name="Echo Crystal - Theme of Victory" type="NONE" icon="icon.etc_echo_crystal_i02">
 	<!-- Echo crystal that plays the theme music of victory. Will work once and then disappear. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="10" price="100" reuse-delay="3000" immediate-effect="true"/>
+		<attributes weight="10" price="100" reuse-delay="3000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2066" level="1"/>  <!-- Item - Theme Sound Crystal -->
 		</skill-reducer>

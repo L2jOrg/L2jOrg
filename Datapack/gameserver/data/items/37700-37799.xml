@@ -71,7 +71,7 @@
 	<item id="37705" name="Gold Fishing Shot" type="SOULSHOT" icon="icon.etc_spirit_bullet_fish_i05">
 	<!-- Fishing consumables. Fishing success +100%. Cannot be sold in the grocery store. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="3" price="56" immediate-effect="true"/>
+		<attributes weight="3" price="56" immediate-effect="true" action="FISHINGSHOT"/>
 	</item>
 
 	<armor id="37725" name="NC Dinos Uniform" type="HEAVY" body-part="ALL_DRESS" icon="icon.london_olympic_bikini">

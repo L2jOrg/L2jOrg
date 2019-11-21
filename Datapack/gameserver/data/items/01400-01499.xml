@@ -357,36 +357,46 @@
 	<item id="1463" name="Soulshot (D-grade)" type="NONE" icon="icon.etc_spirit_bullet_blue_i00">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a D-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="2" price="10" commission-type="SOULSHOT" immediate-effect="true"/>
-		<action handler="SoulShots"/>
+		<attributes weight="2" price="10" commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
+		<skill-reducer type="SoulShots">
+			<skill id="2150" level="1"/>  <!-- Soulshot (D-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="1464" name="Soulshot (C-grade)" type="NONE" icon="icon.etc_spirit_bullet_green_i00">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a C-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="2" price="15" commission-type="SOULSHOT" immediate-effect="true"/>
-		<action handler="SoulShots"/>
+		<attributes weight="2" price="15" commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
+		<skill-reducer type="SoulShots">
+			<skill id="2151" level="1"/>  <!-- Soulshot (C-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="1465" name="Soulshot (B-grade)" type="NONE" icon="icon.etc_spirit_bullet_red_i00">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a B-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="1" price="50" commission-type="SOULSHOT" immediate-effect="true"/>
-		<action handler="SoulShots"/>
+		<attributes weight="1" price="50" commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
+		<skill-reducer type="SoulShots">
+			<skill id="2152" level="1"/>  <!-- Soulshot (B-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="1466" name="Soulshot (A-grade)" type="NONE" icon="icon.etc_spirit_bullet_silver_i00">
 	<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. Used with A-grade weapons. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="1" price="80" commission-type="SOULSHOT" immediate-effect="true"/>
-		<action handler="SoulShots"/>
+		<attributes weight="1" price="80" commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
+		<skill-reducer type="SoulShots">
+			<skill id="2153" level="1"/>  <!-- Soulshot (A-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="1467" name="Soulshot (S-grade)" type="NONE" icon="icon.etc_spirit_bullet_gold_i00">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon, spontaneously increasing power of attack. Used with an S-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="1" price="100" commission-type="SOULSHOT" immediate-effect="true"/>
-		<action handler="SoulShots"/>
+		<attributes weight="1" price="100" commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
+		<skill-reducer type="SoulShots">
+			<skill id="2154" level="1"/>  <!-- Soulshot (S-grade) -->
+		</skill-reducer>
 	</item>
 
 	<weapon id="1471" name="Silenos Blowgun" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_monster_i00">

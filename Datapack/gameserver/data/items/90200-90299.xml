@@ -27,7 +27,7 @@
 	<item id="90204" name="Inventory Book" type="NONE" icon="icon.etc_paper_blue_i00">
 	<!-- List of materials requested by Harry.\\nWooden pole, wooden door panels, Stone Powder -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" quest-item="true"/>
+		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Bypass"/>
 	</item>
 
@@ -52,7 +52,7 @@
 	<item id="90208" name="Lector's Notes" type="NONE" icon="icon.etc_paper_white_i00">
 	<!-- List of materials requested by Lector.\\nEssence of Water, Spider's Silk. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" quest-item="true"/>
+		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Bypass"/>
 	</item>
 
@@ -71,7 +71,7 @@
 	<item id="90211" name="Lector's Notes" type="NONE" icon="icon.etc_paper_white_i00">
 	<!-- List of materials requested by Lector.\\nEssence of Water, Spider's Silk. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" quest-item="true"/>
+		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Bypass"/>
 	</item>
 
@@ -90,7 +90,7 @@
 	<item id="90214" name="Lector's Note" type="NONE" icon="icon.etc_paper_white_i00">
 	<!-- List of materials requested by Lector.\\nEssence of Water, Spider's Silk. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" quest-item="true"/>
+		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Bypass"/>
 	</item>
 
@@ -109,7 +109,7 @@
 	<item id="90217" name="Mark of Security" type="NONE" icon="icon.etc_paper_red_i00">
 	<!-- Document of Sentinel Kendell listing tasks that need to be done to restore forest's balance. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" quest-item="true"/>
+		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Bypass"/>
 	</item>
 
@@ -140,7 +140,7 @@
 	<item id="90222" name="Note about Required Ingredients" type="NONE" icon="icon.etc_paper_blue_i00">
 	<!-- Note that states the item needed for the entrance to the underground fortress.  -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" quest-item="true"/>
+		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Bypass"/>
 	</item>
 
@@ -179,7 +179,7 @@
 	<item id="90228" name="Medications Research" type="NONE" icon="icon.etc_paper_white_i00">
 	<!-- Herbiel's research of a method of instant suppression of bleeding.\\nThese notes list necessary ingredients and various information, but the handwriting is really unreadable. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" quest-item="true"/>
+		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Bypass"/>
 	</item>
 
@@ -198,7 +198,7 @@
 	<item id="90231" name="Medications Research" type="NONE" icon="icon.etc_paper_white_i00">
 	<!-- Herbiel's research of a method of instant suppression of bleeding.\\nThese notes list necessary ingredients and various information, but the handwriting is really unreadable. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" quest-item="true"/>
+		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Bypass"/>
 	</item>
 
@@ -217,7 +217,7 @@
 	<item id="90234" name="Medications Research" type="NONE" icon="icon.etc_paper_white_i00">
 	<!-- Herbiel's research of a method of instant suppression of bleeding.\\nThese notes list necessary ingredients and various information, but the handwriting is really unreadable. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" quest-item="true"/>
+		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Bypass"/>
 	</item>
 
@@ -236,7 +236,7 @@
 	<item id="90237" name="Hunting Plan" type="NONE" icon="icon.etc_paper_red_i00">
 	<!-- List of Hierarch Talos that specifies materials needed for organizing a Hunting Festival. The event is called Shilen's Hunt and is intended to be festive, rather than formal. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" quest-item="true"/>
+		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Bypass"/>
 	</item>
 
@@ -273,7 +273,7 @@
 	<item id="90243" name="Armor Design" type="NONE" icon="icon.etc_paper_blue_i00">
 	<!-- Payne's documents that contain designs of a new armor and lists of required materials.\\nThat armor is absolutely new, and nobody knows what kind of look it's going to have. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" quest-item="true"/>
+		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Bypass"/>
 	</item>
 
@@ -311,7 +311,7 @@
 	<item id="90249" name="Supplies Certificate" type="NONE" icon="icon.etc_paper_white_i00">
 	<!-- List of materials needed for the shield that Vollodos wants to make. An urgent order. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" quest-item="true"/>
+		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Bypass"/>
 	</item>
 
@@ -336,7 +336,7 @@
 	<item id="90253" name="Supplies Certificate" type="NONE" icon="icon.etc_paper_white_i00">
 	<!-- List of materials needed for the shield that Vollodos wants to make. An urgent order. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" quest-item="true"/>
+		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Bypass"/>
 	</item>
 
@@ -361,7 +361,7 @@
 	<item id="90257" name="Supplies Certificate" type="NONE" icon="icon.etc_paper_white_i00">
 	<!-- List of materials needed for the shield that Vollodos wants to make. An urgent order. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" quest-item="true"/>
+		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Bypass"/>
 	</item>
 
@@ -386,7 +386,7 @@
 	<item id="90261" name="Tribal Chronicle" type="NONE" icon="icon.etc_paper_red_i00">
 	<!-- Tiku's list that has all important tasks for his tribe. Not easily readable because of his bad handwriting. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" quest-item="true"/>
+		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Bypass"/>
 	</item>
 
@@ -429,7 +429,7 @@
 	<item id="90268" name="Required Materials" type="NONE" icon="icon.etc_paper_blue_i00">
 	<!-- Sumari's list specifying materials that gear requires. Looks like it was written by someone other than Sumari. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" quest-item="true"/>
+		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Bypass"/>
 	</item>
 
@@ -460,13 +460,13 @@
 	<item id="90273" name="Magical Potion of Leaping" type="SCROLL" icon="icon.etc_earth_potion_i00">
 	<!-- Provides 37,000,000 XP/1,110,000 SP. Intended for level 45 and higher.   -->
 		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90274" name="List of materials" type="NONE" icon="icon.etc_paper_white_i00">
 	<!-- Document listing materials needed for making a drill and an Exquisite Hammer. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" quest-item="true"/>
+		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Bypass"/>
 	</item>
 
@@ -485,7 +485,7 @@
 	<item id="90277" name="List of materials" type="NONE" icon="icon.etc_paper_white_i00">
 	<!-- Document listing materials needed for making a drill and an Exquisite Hammer. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" quest-item="true"/>
+		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Bypass"/>
 	</item>
 
@@ -504,7 +504,7 @@
 	<item id="90280" name="Necklace Materials Ticket" type="NONE" icon="icon.etc_paper_white_i00">
 	<!-- Note listing necessary materials, as well as Uska's belongings that were stolen by Imps.  -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" quest-item="true"/>
+		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Bypass"/>
 	</item>
 
@@ -523,7 +523,7 @@
 	<item id="90283" name="Bounty Poster" type="NONE" icon="icon.etc_paper_red_i00">
 	<!-- Bounty Poster with a reward for catching monsters who stole items from the shipping that was delivered by Weapon Merchant Reep. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" quest-item="true"/>
+		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Bypass"/>
 	</item>
 
@@ -566,7 +566,7 @@
 	<item id="90290" name="Temple Reconstruction Request" type="NONE" icon="icon.etc_paper_blue_i00">
 	<!-- List of things for repairs of an inner room of Maphr's Temple -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" quest-item="true"/>
+		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Bypass"/>
 	</item>
 
@@ -597,7 +597,7 @@
 	<item id="90296" name="Maintenance Request" type="NONE" icon="icon.etc_paper_white_i00">
 	<!-- Materials required for the restoration of the broken Maphr's statue. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" quest-item="true"/>
+		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Bypass"/>
 	</item>
 
@@ -616,7 +616,7 @@
 	<item id="90299" name="Maintenance Request" type="NONE" icon="icon.etc_paper_white_i00">
 	<!-- Completed order for materials required for the restoration of the broken Maphr's statue. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" quest-item="true"/>
+		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Bypass"/>
 	</item>
 

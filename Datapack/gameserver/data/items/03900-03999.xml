@@ -6,7 +6,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true"/>
+		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2050" level="1"/>  <!-- Scroll: Guidance -->
 		</skill-reducer>
@@ -18,7 +18,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true"/>
+		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2051" level="1"/>  <!-- Scroll: Death Whisper -->
 		</skill-reducer>
@@ -30,7 +30,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true"/>
+		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2052" level="1"/>  <!-- Scroll: Focus -->
 		</skill-reducer>
@@ -42,7 +42,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true"/>
+		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2053" level="1"/>  <!-- Scroll: Acumen -->
 		</skill-reducer>
@@ -54,7 +54,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true"/>
+		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2054" level="1"/>  <!-- Scroll: Haste -->
 		</skill-reducer>
@@ -66,7 +66,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true"/>
+		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2055" level="1"/>  <!-- Scroll: Agility -->
 		</skill-reducer>
@@ -78,7 +78,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true"/>
+		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2056" level="1"/>  <!-- Scroll: Empower -->
 		</skill-reducer>
@@ -90,7 +90,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true"/>
+		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2057" level="1"/>  <!-- Scroll: Might -->
 		</skill-reducer>
@@ -102,7 +102,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true"/>
+		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2058" level="1"/>  <!-- Scroll: Wind Walk -->
 		</skill-reducer>
@@ -114,7 +114,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true"/>
+		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2059" level="1"/>  <!-- Scroll: Shield -->
 		</skill-reducer>
@@ -123,7 +123,7 @@
 	<item id="3936" name="Blessed Scroll of Resurrection" type="SCROLL" icon="icon.etc_scroll_of_resurrection_i01">
 	<!-- Magic scroll that resurrects a dead character and restores his or her XP completely. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="120" price="400000" commission-type="SCROLL_OTHER"/>
+		<attributes weight="120" price="400000" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2049" level="1"/>  <!-- Blessed Scroll of Resurrection -->
 		</skill-reducer>
@@ -222,84 +222,96 @@
 	<item id="3947" name="Blessed Spiritshot (No-grade)" type="NONE" icon="icon.etc_spell_shot_white_i01">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with No-grade weapons. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="4" price="35" commission-type="SPIRITSHOT" immediate-effect="true"/>
-		<action handler="BlessedSpiritShot"/>
+		<attributes weight="4" price="35" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
+		<skill-reducer type="BlessedSpiritShot">
+			<skill id="2061" level="1"/>  <!-- Blessed Spiritshot (No-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="3948" name="Blessed Spiritshot (D-grade)" type="NONE" icon="icon.etc_spell_shot_blue_i01">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with D-grade weapons. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="4" price="45" commission-type="SPIRITSHOT" immediate-effect="true"/>
-		<action handler="BlessedSpiritShot"/>
+		<attributes weight="4" price="45" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
+		<skill-reducer type="BlessedSpiritShot">
+			<skill id="2160" level="1"/>  <!-- Blessed Spiritshot (D-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="3949" name="Blessed Spiritshot (C-grade)" type="NONE" icon="icon.etc_spell_shot_green_i01">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with C-grade weapons. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="2" price="90" commission-type="SPIRITSHOT" immediate-effect="true"/>
-		<action handler="BlessedSpiritShot"/>
+		<attributes weight="2" price="90" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
+		<skill-reducer type="BlessedSpiritShot">
+			<skill id="2161" level="1"/>  <!-- Blessed Spiritshot (C-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="3950" name="Blessed Spiritshot (B-grade)" type="NONE" icon="icon.etc_spell_shot_red_i01">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with B-grade weapons. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="2" price="245" commission-type="SPIRITSHOT" immediate-effect="true"/>
-		<action handler="BlessedSpiritShot"/>
+		<attributes weight="2" price="245" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
+		<skill-reducer type="BlessedSpiritShot">
+			<skill id="2162" level="1"/>  <!-- Blessed Spiritshot (B-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="3951" name="Blessed Spiritshot (A-grade)" type="NONE" icon="icon.etc_spell_shot_silver_i01">
 	<!-- The power of a Spiritshot is bestowed upon a weapon, temporarily increasing its magical power. Used with A-grade weapons. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="1" price="290" commission-type="SPIRITSHOT" immediate-effect="true"/>
-		<action handler="BlessedSpiritShot"/>
+		<attributes weight="1" price="290" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
+		<skill-reducer type="BlessedSpiritShot">
+			<skill id="2163" level="1"/>  <!-- Blessed Spiritshot (A-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="3952" name="Blessed Spiritshot (S-grade)" type="NONE" icon="icon.etc_spell_shot_gold_i01">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon, spontaneously increasing its M. Atk. significantly. Used with an S-grade weapon. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="1" price="350" commission-type="SPIRITSHOT" immediate-effect="true"/>
-		<action handler="BlessedSpiritShot"/>
+		<attributes weight="1" price="350" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
+		<skill-reducer type="BlessedSpiritShot">
+			<skill id="2164" level="1"/>  <!-- Blessed Spiritshot (S-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="3953" name="Recipe: Blessed Spiritshot (D-grade)" type="MATERIAL" icon="icon.etc_recipe_blue_i00">
 	<!-- For Dwarves only. Recipe for the Blessed Spiritshot (D-grade) . Requires Create Item - Skill Lv. 2. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="5000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="5000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3954" name="Recipe: Blessed Spiritshot (C-grade)" type="MATERIAL" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for the Blessed Spiritshot (C-grade) . Requires Create Item - Skill Lv. 4. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="60000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="60000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3955" name="Recipe: Blessed Spiritshot (B-grade)" type="MATERIAL" icon="icon.etc_recipe_red_i00">
 	<!-- For Dwarves only. Recipe for the Blessed Spiritshot (B-grade). Requires Create Item - Skill Lv. 6. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="100000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="100000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3956" name="Recipe: Blessed Spiritshot (A-grade)" type="MATERIAL" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for the Blessed Spiritshot (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%.  Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="150000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="150000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3957" name="Recipe: Blessed Spiritshot (S-grade)" type="MATERIAL" icon="icon.etc_recipe_black_i00">
 	<!-- For Dwarves only. Recipe for a Blessed Spiritshot (S-grade). Create Item skill must be level 8. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="450000" immediate-effect="true"/>
+		<attributes weight="30" price="450000" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3958" name="Blessed Scroll of Escape" type="SCROLL" icon="icon.etc_scroll_of_return_i01">
 	<!-- Magical scroll that relocates user to the nearest village -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="120" commission-type="SCROLL_OTHER"/>
+		<attributes weight="120" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2036" level="2"/>  <!-- Blessed Scroll of Escape -->
 		</skill-reducer>
@@ -308,7 +320,7 @@
 	<item id="3959" name="Blessed Scroll of Resurrection" type="SCROLL" icon="icon.etc_scroll_of_resurrection_i01">
 	<!-- Magic scroll that resurrects a dead character and restores his or her XP completely. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="120" commission-type="SCROLL_OTHER"/>
+		<attributes weight="120" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2062" level="1"/>  <!-- Blessed Scroll of Resurrection -->
 		</skill-reducer>

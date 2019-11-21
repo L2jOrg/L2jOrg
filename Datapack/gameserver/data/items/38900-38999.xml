@@ -3,7 +3,7 @@
 	<item id="38923" name="Squash Seed" type="NONE" icon="icon.etc_gourd_i00">
 	<!-- Squash Seed for solo play. Double-click and a High Quality Squash or Defective Squash (Solo) will appear. Will be deleted during maintenance on Wednesday, February 28th, 2018. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="17111" level="1"/>  <!-- Snowy Squash Seed -->
 		</skill-reducer>
@@ -12,7 +12,7 @@
 	<item id="38924" name="Large Squash Seed" type="NONE" icon="icon.etc_gourd_i01">
 	<!-- A Large Squash Seed for parties. Double-click and a High Quality Large Squash or Defective Large Squash (Party) will appear. Will be deleted during maintenance on Wednesday, February 28th, 2018. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="17112" level="1"/>  <!-- Large Snowy Squash Seed -->
 		</skill-reducer>

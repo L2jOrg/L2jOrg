@@ -243,7 +243,7 @@
 	<item id="5562" name="Echo Crystal - 1st Carol" type="NONE" icon="icon.etc_echo_crystal_i00">
 	<!-- Echo crystal that plays the 1st carol. It disappears after one use. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="10" reuse-delay="44000" immediate-effect="true"/>
+		<attributes weight="10" reuse-delay="44000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2140" level="1"/>  <!-- Item - Carol Sound Crystal -->
 		</skill-reducer>
@@ -252,7 +252,7 @@
 	<item id="5563" name="Echo Crystal - 2nd Carol" type="NONE" icon="icon.etc_echo_crystal_i01">
 	<!-- Echo crystal that plays the 2nd carol. It disappears after one use. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="10" reuse-delay="32000" immediate-effect="true"/>
+		<attributes weight="10" reuse-delay="32000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2141" level="1"/>  <!-- Item - Carol Sound Crystal -->
 		</skill-reducer>
@@ -261,7 +261,7 @@
 	<item id="5564" name="Echo Crystal - 3rd Carol" type="NONE" icon="icon.etc_echo_crystal_i02">
 	<!-- Echo crystal that plays the 3rd carol. It disappears after one use. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="10" reuse-delay="30000" immediate-effect="true"/>
+		<attributes weight="10" reuse-delay="30000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2142" level="1"/>  <!-- Item - Carol Sound Crystal -->
 		</skill-reducer>
@@ -270,7 +270,7 @@
 	<item id="5565" name="Echo Crystal - 4th Carol" type="NONE" icon="icon.etc_echo_crystal_i03">
 	<!-- Echo crystal that plays the 4th carol. It disappears after one use. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="10" reuse-delay="29000" immediate-effect="true"/>
+		<attributes weight="10" reuse-delay="29000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2143" level="1"/>  <!-- Item - Carol Sound Crystal -->
 		</skill-reducer>
@@ -279,7 +279,7 @@
 	<item id="5566" name="Echo Crystal - 5th Carol" type="NONE" icon="icon.etc_echo_crystal_i04">
 	<!-- Echo crystal that plays the 5th carol. It disappears after one use. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="10" reuse-delay="26000" immediate-effect="true"/>
+		<attributes weight="10" reuse-delay="26000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2144" level="1"/>  <!-- Item - Carol Sound Crystal -->
 		</skill-reducer>
@@ -342,7 +342,7 @@
 	<item id="5583" name="Echo Crystal - 6th Carol" type="NONE" icon="icon.etc_echo_crystal_i00">
 	<!-- Echo crystal that plays the 6th carol. It disappears after one use. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="10" reuse-delay="20000" immediate-effect="true"/>
+		<attributes weight="10" reuse-delay="20000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2145" level="1"/>  <!-- Item - Carol Sound Crystal -->
 		</skill-reducer>
@@ -351,7 +351,7 @@
 	<item id="5584" name="Echo Crystal - 7th Carol" type="NONE" icon="icon.etc_echo_crystal_i01">
 	<!-- Echo crystal that plays the 7th carol. It disappears after one use. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="10" reuse-delay="17000" immediate-effect="true"/>
+		<attributes weight="10" reuse-delay="17000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2146" level="1"/>  <!-- Item - Carol Sound Crystal -->
 		</skill-reducer>
@@ -360,7 +360,7 @@
 	<item id="5585" name="Echo Crystal - 8th Carol" type="NONE" icon="icon.etc_echo_crystal_i02">
 	<!-- Echo crystal that plays the 8th carol. It disappears after one use. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="10" reuse-delay="15000" immediate-effect="true"/>
+		<attributes weight="10" reuse-delay="15000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2147" level="1"/>  <!-- Item - Carol Sound Crystal -->
 		</skill-reducer>
@@ -369,7 +369,7 @@
 	<item id="5586" name="Echo Crystal - 9th Carol" type="NONE" icon="icon.etc_echo_crystal_i03">
 	<!-- Echo crystal that plays the 9th carol. It disappears after one use. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="10" reuse-delay="9000" immediate-effect="true"/>
+		<attributes weight="10" reuse-delay="9000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2148" level="1"/>  <!-- Item - Carol Sound Crystal -->
 		</skill-reducer>
@@ -378,7 +378,7 @@
 	<item id="5587" name="Echo Crystal - 10th Carol" type="NONE" icon="icon.etc_echo_crystal_i04">
 	<!-- Echo crystal that plays the 10th carol. It disappears after one use. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="10" reuse-delay="31000" immediate-effect="true"/>
+		<attributes weight="10" reuse-delay="31000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2149" level="1"/>  <!-- Item - Carol Sound Crystal -->
 		</skill-reducer>
@@ -387,14 +387,14 @@
 	<item id="5588" name="Tutorial Guide" type="NONE" icon="icon.etc_spellbook_gray_i00">
 	<!-- Booklet containing general information for the new player.  -->
 		<restriction freightable="false" dropable="false" depositable="false"/>
-		<attributes weight="10" price="1" immediate-effect="true"/>
+		<attributes weight="10" price="1" immediate-effect="true" action="SHOW_HTML"/>
 		<action handler="Book"/>
 	</item>
 
 	<item id="5589" name="Momentum Stone" type="POTION" icon="icon.etc_energy_stone_i00">
 	<!-- Recharges the Momentum of a Gladiator or a Tyrant 1 level at a time. Can be used to charge up to 2 levels. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="10" price="100" immediate-effect="true"/>
+		<attributes weight="10" price="100" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2165" level="1"/>  <!-- Momentum Stone -->
 		</skill-reducer>
@@ -410,7 +410,7 @@
 	<item id="5591" name="CP Potion" type="POTION" icon="icon.etc_cp_potion_i00">
 	<!-- Restores CP by 50. -->
 		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="25" price="200" commission-type="POTION" reuse-delay="500" immediate-effect="true"/>
+		<attributes weight="25" price="200" commission-type="POTION" reuse-delay="500" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2166" level="1"/>  <!-- CP Potion -->
 		</skill-reducer>
@@ -419,7 +419,7 @@
 	<item id="5592" name="Greater CP Potion" type="POTION" icon="icon.etc_cp_potion_i01">
 	<!-- Restores CP by 200. -->
 		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="100" price="500" commission-type="POTION" reuse-delay="500" immediate-effect="true"/>
+		<attributes weight="100" price="500" commission-type="POTION" reuse-delay="500" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2166" level="2"/>  <!-- CP Potion -->
 		</skill-reducer>
@@ -428,7 +428,7 @@
 	<item id="5593" name="SP Scroll (Low-grade)" type="SCROLL" icon="icon.etc_sp_scroll1_i00">
 	<!-- Recharges SP by 2,000. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="30" price="50000" commission-type="SCROLL_OTHER"/>
+		<attributes weight="30" price="50000" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2167" level="1"/>  <!-- SP Scroll -->
 		</skill-reducer>
@@ -437,7 +437,7 @@
 	<item id="5594" name="SP Scroll (Mid-grade)" type="SCROLL" icon="icon.etc_sp_scroll2_i00">
 	<!-- Recharges SP by 10,000. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="30" price="300000" commission-type="SCROLL_OTHER"/>
+		<attributes weight="30" price="300000" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2167" level="2"/>  <!-- SP Scroll -->
 		</skill-reducer>
@@ -446,7 +446,7 @@
 	<item id="5595" name="SP Scroll (High-grade)" type="SCROLL" icon="icon.etc_sp_scroll3_i00">
 	<!-- Recharges SP by 100,000. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="30" price="1200000" commission-type="SCROLL_OTHER"/>
+		<attributes weight="30" price="1200000" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2167" level="3"/>  <!-- SP Scroll -->
 		</skill-reducer>

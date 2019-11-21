@@ -3,25 +3,25 @@
 	<item id="46444" name="Kain's Soul Crystal - Stage 1" type="SIGEL_RUNE" icon="icon.ensoul_big_p">
 	<!-- u,A crystal filled with a monster’s soul. Adds special properties to a weapon. You can enhance the level of a crystal by combining. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="20"/>
+		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="46459" name="Mermoden's Soul Crystal - Stage 1" type="SIGEL_RUNE" icon="icon.ensoul_big_m">
 	<!-- u,A crystal filled with a monster’s soul. Adds special properties to a weapon. You can enhance the level of a crystal by combining. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="20"/>
+		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="46474" name="Leona's Soul Crystal - Stage 1" type="SIGEL_RUNE" icon="icon.ensoul_big_pp">
 	<!-- u,A crystal filled with a monster’s soul. Adds special properties to a weapon. You can enhance the level of a crystal by combining. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="20"/>
+		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="46489" name="Pantheon's Soul Crystal - Stage 1" type="SIGEL_RUNE" icon="icon.ensoul_big_mm">
 	<!-- u,A crystal filled with a monster’s soul. Adds special properties to a weapon. You can enhance the level of a crystal by combining. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="20"/>
+		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
 </list>

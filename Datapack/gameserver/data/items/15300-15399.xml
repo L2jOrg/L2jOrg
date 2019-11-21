@@ -124,7 +124,7 @@
 	<item id="15366" name="Watermelon seed" type="NONE" icon="icon.event_honey_watermelon_seed_i00">
 	<!-- Double-click to make a Growing Watermelon appear. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="9029" level="1"/>  <!-- Watermelon Seed -->
 		</skill-reducer>
@@ -133,7 +133,7 @@
 	<item id="15367" name="Honey Watermelon Seed" type="NONE" icon="icon.event_watermelon_seed_i00">
 	<!-- Double-click to make a Growing Honey Watermelon appear. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="9030" level="1"/>  <!-- Honey Watermelon Seed -->
 		</skill-reducer>
@@ -142,13 +142,13 @@
 	<item id="15368" name="Copied Watermelon Seed" type="NONE" icon="icon.event_honey_watermelon_seed_i00">
 	<!-- Giant Watermelon Event: double-click summons a Young Watermelon. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="15369" name="Copied Honey Watermelon Seed" type="NONE" icon="icon.event_watermelon_seed_i00">
 	<!-- Giant Watermelon Event: double-click summons a Young Honey Watermelon. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 </list>

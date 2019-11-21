@@ -3,7 +3,7 @@
 	<item id="13307" name="Color Title (Event)" type="COLOR_CHANGE" icon="icon.color_name_i00">
 	<!-- u,A dimensional item\\nAn item which can be used to change the color of a character’s title. Upon leaving a clan, the color title disappears, just as the regular one does (for everyone except Noblesse); however, upon joining a clan and obtaining a new title, the color reappears. After changing the title color, enter '/ resetname’ command in order to bring back the initial color. -->
 		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true"/>
+		<attributes weight="5" immediate-effect="true" action="NICK_COLOR"/>
 		<action handler="NicknameColor"/>
 	</item>
 
@@ -22,9 +22,9 @@
 	<item id="13369" name="Love Agathion Pack (Event)" type="NONE" icon="icon.etc_pi_gift_box_i02">
 	<!-- Wrapped Pack containing Love Agathion Bracelet (7-day).  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="13340" min-count="1" max-count="1" chance="100000"/>  <!-- Agathion - Love (Event) -->
+			<item id="13340" chance="100000"/>  <!-- Agathion - Love (Event) -->
 		</extract>
 	</item>
 

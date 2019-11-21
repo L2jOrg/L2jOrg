@@ -153,35 +153,35 @@
 	<item id="4625" name="Dice (Heart)" type="NONE" icon="icon.etc_dice_a_i00">
 	<!-- Simple game of chance! Roll 'em!  -->
 		<restriction freightable="false" dropable="false" depositable="false"/>
-		<attributes price="500" reuse-delay="5000" immediate-effect="true"/>
+		<attributes price="500" reuse-delay="5000" immediate-effect="true" action="DICE"/>
 		<action handler="RollingDice"/>
 	</item>
 
 	<item id="4626" name="Dice (Spade)" type="NONE" icon="icon.etc_dice_b_i00">
 	<!-- Simple game of chance! Roll 'em!  -->
 		<restriction freightable="false" dropable="false" depositable="false"/>
-		<attributes price="500" reuse-delay="5000" immediate-effect="true"/>
+		<attributes price="500" reuse-delay="5000" immediate-effect="true" action="DICE"/>
 		<action handler="RollingDice"/>
 	</item>
 
 	<item id="4627" name="Dice (Clover)" type="NONE" icon="icon.etc_dice_c_i00">
 	<!-- Simple game of chance! Roll 'em!  -->
 		<restriction freightable="false" dropable="false" depositable="false"/>
-		<attributes price="500" reuse-delay="5000" immediate-effect="true"/>
+		<attributes price="500" reuse-delay="5000" immediate-effect="true" action="DICE"/>
 		<action handler="RollingDice"/>
 	</item>
 
 	<item id="4628" name="Dice (Diamond)" type="NONE" icon="icon.etc_dice_d_i00">
 	<!-- Simple game of chance! Roll 'em!  -->
 		<restriction freightable="false" dropable="false" depositable="false"/>
-		<attributes price="500" reuse-delay="5000" immediate-effect="true"/>
+		<attributes price="500" reuse-delay="5000" immediate-effect="true" action="DICE"/>
 		<action handler="RollingDice"/>
 	</item>
 
 	<item id="4630" name="Red Soul Crystal - Stage 1" type="SCROLL" icon="icon.etc_soul_stone_i00">
 	<!-- Red crystal containing the light of absorbed souls. Stage 1. Bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" commission-type="SOUL_CRYSTAL"/>
+		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2096" level="1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
@@ -190,7 +190,7 @@
 	<item id="4631" name="Red Soul Crystal - Stage 2" type="SCROLL" icon="icon.etc_soul_stone_i00">
 	<!-- Red crystal containing the light of absorbed souls. Stage 2. Bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" commission-type="SOUL_CRYSTAL"/>
+		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2096" level="1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
@@ -199,7 +199,7 @@
 	<item id="4632" name="Red Soul Crystal - Stage 3" type="SCROLL" icon="icon.etc_soul_stone_i00">
 	<!-- Red crystal containing the light of absorbed souls. Stage 3. Bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" commission-type="SOUL_CRYSTAL"/>
+		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2096" level="1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
@@ -208,7 +208,7 @@
 	<item id="4633" name="Red Soul Crystal - Stage 4" type="SCROLL" icon="icon.etc_soul_stone_i00">
 	<!-- Red crystal containing the light of absorbed souls. stage 4. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" commission-type="SOUL_CRYSTAL"/>
+		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2096" level="1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
@@ -217,7 +217,7 @@
 	<item id="4634" name="Red Soul Crystal - Stage 5" type="SCROLL" icon="icon.etc_soul_stone_i00">
 	<!-- Red crystal containing the light of absorbed souls. stage 5. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" commission-type="SOUL_CRYSTAL"/>
+		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2096" level="1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
@@ -226,7 +226,7 @@
 	<item id="4635" name="Red Soul Crystal - Stage 6" type="SCROLL" icon="icon.etc_soul_stone_i00">
 	<!-- Red crystal containing the light of absorbed souls. stage 6. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" commission-type="SOUL_CRYSTAL"/>
+		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2096" level="1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
@@ -235,7 +235,7 @@
 	<item id="4636" name="Red Soul Crystal - Stage 7" type="SCROLL" icon="icon.etc_soul_stone_i00">
 	<!-- Red crystal containing the light of absorbed souls. stage 7. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" commission-type="SOUL_CRYSTAL"/>
+		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2096" level="1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
@@ -244,7 +244,7 @@
 	<item id="4637" name="Red Soul Crystal - Stage 8" type="SCROLL" icon="icon.etc_soul_stone_i00">
 	<!-- Red crystal containing the light of absorbed souls. stage 8. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" commission-type="SOUL_CRYSTAL"/>
+		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2096" level="1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
@@ -253,7 +253,7 @@
 	<item id="4638" name="Red Soul Crystal - Stage 9" type="SCROLL" icon="icon.etc_soul_stone_i00">
 	<!-- Red crystal containing the light of absorbed souls. stage 9. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" commission-type="SOUL_CRYSTAL"/>
+		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2096" level="1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
@@ -262,7 +262,7 @@
 	<item id="4639" name="Red Soul Crystal - Stage 10" type="SCROLL" icon="icon.etc_soul_stone_i00">
 	<!-- Red crystal containing the light of absorbed souls. stage 10. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" commission-type="SOUL_CRYSTAL"/>
+		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2096" level="1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
@@ -271,7 +271,7 @@
 	<item id="4641" name="Green Soul Crystal - Stage 1" type="SCROLL" icon="icon.etc_soul_stone_i02">
 	<!-- Green crystal containing the light of absorbed souls. Stage 1. Bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" commission-type="SOUL_CRYSTAL"/>
+		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2096" level="1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
@@ -280,7 +280,7 @@
 	<item id="4642" name="Green Soul Crystal - Stage 2" type="SCROLL" icon="icon.etc_soul_stone_i02">
 	<!-- Green crystal containing the light of absorbed souls. Stage 2. Bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" commission-type="SOUL_CRYSTAL"/>
+		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2096" level="1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
@@ -289,7 +289,7 @@
 	<item id="4643" name="Green Soul Crystal - Stage 3" type="SCROLL" icon="icon.etc_soul_stone_i02">
 	<!-- Green crystal containing the light of absorbed souls. Stage 3. Bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" commission-type="SOUL_CRYSTAL"/>
+		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2096" level="1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
@@ -298,7 +298,7 @@
 	<item id="4644" name="Green Soul Crystal - Stage 4" type="SCROLL" icon="icon.etc_soul_stone_i02">
 	<!-- Green crystal containing the light of absorbed souls. stage 4. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" commission-type="SOUL_CRYSTAL"/>
+		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2096" level="1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
@@ -307,7 +307,7 @@
 	<item id="4645" name="Green Soul Crystal - Stage 5" type="SCROLL" icon="icon.etc_soul_stone_i02">
 	<!-- Green crystal containing the light of absorbed souls. stage 5. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" commission-type="SOUL_CRYSTAL"/>
+		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2096" level="1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
@@ -316,7 +316,7 @@
 	<item id="4646" name="Green Soul Crystal - Stage 6" type="SCROLL" icon="icon.etc_soul_stone_i02">
 	<!-- Green crystal containing the light of absorbed souls. stage 6. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" commission-type="SOUL_CRYSTAL"/>
+		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2096" level="1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
@@ -325,7 +325,7 @@
 	<item id="4647" name="Green Soul Crystal - Stage 7" type="SCROLL" icon="icon.etc_soul_stone_i02">
 	<!-- Green crystal containing the light of absorbed souls. stage 7. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" commission-type="SOUL_CRYSTAL"/>
+		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2096" level="1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
@@ -334,7 +334,7 @@
 	<item id="4648" name="Green Soul Crystal - Stage 8" type="SCROLL" icon="icon.etc_soul_stone_i02">
 	<!-- Green crystal containing the light of absorbed souls. stage 8. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" commission-type="SOUL_CRYSTAL"/>
+		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2096" level="1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
@@ -343,7 +343,7 @@
 	<item id="4649" name="Green Soul Crystal - Stage 9" type="SCROLL" icon="icon.etc_soul_stone_i02">
 	<!-- Green crystal containing the light of absorbed souls. stage 9. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" commission-type="SOUL_CRYSTAL"/>
+		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2096" level="1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
@@ -352,7 +352,7 @@
 	<item id="4650" name="Green Soul Crystal - Stage 10" type="SCROLL" icon="icon.etc_soul_stone_i02">
 	<!-- Green crystal containing the light of absorbed souls. stage 10. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" commission-type="SOUL_CRYSTAL"/>
+		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2096" level="1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
@@ -361,7 +361,7 @@
 	<item id="4652" name="Blue Soul Crystal - Stage 1" type="SCROLL" icon="icon.etc_soul_stone_i01">
 	<!-- Blue crystal containing the light of absorbed souls. Stage 1. Bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" commission-type="SOUL_CRYSTAL"/>
+		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2096" level="1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
@@ -370,7 +370,7 @@
 	<item id="4653" name="Blue Soul Crystal - Stage 2" type="SCROLL" icon="icon.etc_soul_stone_i01">
 	<!-- Blue crystal containing the light of absorbed souls. Stage 2. Bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" commission-type="SOUL_CRYSTAL"/>
+		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2096" level="1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
@@ -379,7 +379,7 @@
 	<item id="4654" name="Blue Soul Crystal - Stage 3" type="SCROLL" icon="icon.etc_soul_stone_i01">
 	<!-- Blue crystal containing the light of absorbed souls. Stage 3. Bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" commission-type="SOUL_CRYSTAL"/>
+		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2096" level="1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
@@ -388,7 +388,7 @@
 	<item id="4655" name="Blue Soul Crystal - Stage 4" type="SCROLL" icon="icon.etc_soul_stone_i01">
 	<!-- Blue crystal containing the light of absorbed souls. stage 4. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" commission-type="SOUL_CRYSTAL"/>
+		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2096" level="1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
@@ -397,7 +397,7 @@
 	<item id="4656" name="Blue Soul Crystal - Stage 5" type="SCROLL" icon="icon.etc_soul_stone_i01">
 	<!-- Blue crystal containing the light of absorbed souls. stage 5. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" commission-type="SOUL_CRYSTAL"/>
+		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2096" level="1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
@@ -406,7 +406,7 @@
 	<item id="4657" name="Blue Soul Crystal - Stage 6" type="SCROLL" icon="icon.etc_soul_stone_i01">
 	<!-- Blue crystal containing the light of absorbed souls. stage 6. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" commission-type="SOUL_CRYSTAL"/>
+		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2096" level="1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
@@ -415,7 +415,7 @@
 	<item id="4658" name="Blue Soul Crystal - Stage 7" type="SCROLL" icon="icon.etc_soul_stone_i01">
 	<!-- Blue crystal containing the light of absorbed souls. stage 7. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" commission-type="SOUL_CRYSTAL"/>
+		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2096" level="1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
@@ -424,7 +424,7 @@
 	<item id="4659" name="Blue Soul Crystal - Stage 8" type="SCROLL" icon="icon.etc_soul_stone_i01">
 	<!-- Blue crystal containing the light of absorbed souls. stage 8. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" commission-type="SOUL_CRYSTAL"/>
+		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2096" level="1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
@@ -433,7 +433,7 @@
 	<item id="4660" name="Blue Soul Crystal - Stage 9" type="SCROLL" icon="icon.etc_soul_stone_i01">
 	<!-- Blue crystal containing the light of absorbed souls. stage 9. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" commission-type="SOUL_CRYSTAL"/>
+		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2096" level="1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
@@ -442,7 +442,7 @@
 	<item id="4661" name="Blue Soul Crystal - Stage 10" type="SCROLL" icon="icon.etc_soul_stone_i01">
 	<!-- Blue crystal containing the light of absorbed souls. stage 10. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" commission-type="SOUL_CRYSTAL"/>
+		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2096" level="1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
@@ -469,7 +469,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="120" price="120" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true"/>
+		<attributes weight="120" price="120" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2074" level="1"/>  <!-- Potion of Critical Escape -->
 		</skill-reducer>
@@ -481,7 +481,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="180" price="5000" commission-type="SCROLL_OTHER" reuse-delay="10000" for-npc="true" immediate-effect="true"/>
+		<attributes weight="180" price="5000" commission-type="SCROLL_OTHER" reuse-delay="10000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2075" level="1"/>  <!-- Scroll: Decrease Hate -->
 		</skill-reducer>
@@ -493,7 +493,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="180" price="500" commission-type="SCROLL_OTHER" reuse-delay="500" for-npc="true" immediate-effect="true"/>
+		<attributes weight="180" price="500" commission-type="SCROLL_OTHER" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2076" level="1"/>  <!-- Blessing of Eva -->
 		</skill-reducer>
@@ -505,7 +505,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="180" price="150" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true"/>
+		<attributes weight="180" price="150" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2077" level="1"/>  <!-- Potion of Revenge -->
 		</skill-reducer>

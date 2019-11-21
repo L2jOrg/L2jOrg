@@ -25,7 +25,7 @@
 	<item id="71102" name="XP/SP Rune - 50% (1-hour) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain XP/SP Rune - 50% (1 hour).\\nIntended for Lv. 1 - 75 characters. -->
 		<restriction stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71103" name="XP/SP Rune - 50%" type="RUNE" icon="icon.skill19226">
@@ -37,7 +37,7 @@
 	<item id="71104" name="XP/SP Rune - 50% (5-hour) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain XP/SP Rune - 50% (5 hours).\\nIntended for Lv. 1 - 75 characters. -->
 		<restriction stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71105" name="XP/SP Rune - 50%" type="RUNE" icon="icon.skill19226">
@@ -49,31 +49,31 @@
 	<item id="71106" name="XP/SP Rune - 50% (7-day) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain XP/SP Rune - 50% (7 days).\\nIntended for Lv. 1 - 75 characters. -->
 		<restriction stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71107" name="Irene' Hourglass - 1 Hour" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\\nIntended for Lv. 1~19.  -->
 		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="71108" name="Package: Irene' Hourglass (1 hour)" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain Irene' Hourglass - 1 Hour.\\nIntended for Lv. 1 - 75 characters.  -->
 		<restriction stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71109" name="Golden Mermaid's Fishing Rod Pack (7-day)" type="NONE" icon="icon.etc_pi_gift_box_i04">
 	<!-- Double-click to obtain Golden Mermaid's Fishing Rod (7 days). -->
 		<restriction stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71110" name="Golden Mermaid's Fishing Rod Pack (30-day)" type="NONE" icon="icon.etc_pi_gift_box_i04">
 	<!-- Double-click to obtain Golden Mermaid's Fishing Rod (30 days). -->
 		<restriction stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<armor id="71111" name="Ruthless Tribe Mask" type="NONE" body-part="HAIR" icon="BranchSys.icon.br_mask_i00">
@@ -223,13 +223,13 @@
 	<item id="71131" name="High-grade Life Stone Pack - Legendary" type="SCROLL" icon="icon.bm_freya_2016_gift_box">
 	<!-- Double-click to obtain 1 High-grade Life Stone - Ancient Kingdom/Elmoreden/Aden/Elmore/Ferios randomly. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71132" name="High-grade Life Stone Pack - Cloak" type="SCROLL" icon="icon.bm_freya_2016_gift_box">
 	<!-- Double-click to obtain 1 High-grade Life Stone - Ancient Kingdom/Elmoreden/Aden/Elmore/Ferios randomly. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<armor id="71133" name="Mermaid Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_base">
@@ -248,7 +248,7 @@
 	<item id="71135" name="Mermaid Agathion Enchant Scroll" type="AGATHION_ENCHANT" icon="icon.star_scrl_of_ench_ag">
 	<!-- An enchant scroll for mermaid Agathion. Increases the Agathion's magic resistance and also adds a special ability from +4 enchantment. Can enchant a mermaid Agathion safely to +3 and up to a max of +10. Increases unique abilities gradually from +1. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="71136" name="Mermaid's Trace" type="NONE" icon="icon.etc_oren_fish_scale_i00">
@@ -260,31 +260,31 @@
 	<item id="71137" name="Master's Fishing Potion" type="SCROLL" icon="BranchIcon.etc_sign_agathion_feed_blue_i00">
 	<!-- Increases XP/SP gain for successful fishing by 50% for 1 hour when used.\\nApplies to all bait.\\nCan be used together with the Fishing Guild's Support Certificate. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="71139" name="Fishing XP Box" type="SCROLL" icon="icon.bm_special_pendant_abradant_box">
 	<!-- Contains a Scroll: Fishing XP. A chance to get a Shining Fishing Box additionally. -->
 		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71140" name="Shining Fishing Box" type="SCROLL" icon="icon.bm_sheep_agathion_30d_box">
 	<!-- Shining Fishing Box. Use it to obtain an item. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71141" name="Scroll: Fishing XP" type="SCROLL" icon="icon.exp_bottle_scroll">
 	<!-- A fishing XP scroll rewarded for hard fishing. Cannot be used on chaotic characters. -->
 		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="71142" name="Full Load Support Pack" type="NONE" icon="icon.etc_treasure_box_i07">
 	<!-- Double-click to get one of the items in the Full Load Support Pack Box. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<armor id="71143" name="Cloak of Light of the Chosen" type="NONE" body-part="BACK" icon="icon.amor_goodness_cloak">
@@ -304,19 +304,19 @@
 	<item id="71145" name="Greater Blessing of Castle Scroll - Party" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Gives the Blessing of Castle effect to all party members. Buffs and debuffs do not disappear upon death, but Noblesse Blessing and Lucky Charm disappear. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="71146" name="Castle Enchant Buff Scroll - Party" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Bestows all party members with the effects of Might Lv. 2, Empower Lv. 2, Acumen Lv. 1, and Haste Lv. 1. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="71147" name="Castle Wind Walk Scroll - Party" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Increases Speed of all party members by 33. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<armor id="71148" name="Enchanted Castle Ring - 10-day" type="NONE" body-part="FINGER" icon="icon.ev_11th_rare_acc_ring">
@@ -375,25 +375,25 @@
 	<item id="71153" name="+7 Elmoreden Cloak Box" type="NONE" icon="BranchIcon.icon.etc_g_bm_godspirit_box">
 	<!-- Double-click to obtain a +7 Elmoreden Cloak. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71154" name="+7 Aden Cloak Box" type="NONE" icon="BranchIcon.icon.etc_g_bm_godspirit_box">
 	<!-- Double-click to obtain a +7 Aden Cloak. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71155" name="+7 Elmore Cloak Box" type="NONE" icon="BranchIcon.icon.etc_g_bm_godspirit_box">
 	<!-- Double-click to obtain a +7 Elmore Cloak. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71156" name="+7 Ferios Cloak Box" type="NONE" icon="BranchIcon.icon.etc_g_bm_godspirit_box">
 	<!-- Double-click to obtain a +7 Ferios Cloak. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<armor id="71157" name="Agathion Charm - Ball Trapping Gnosian" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys2.icon.br_aga_kball_male_i00">
@@ -420,7 +420,7 @@
 	<item id="71160" name="Seven Signs Miracle Box" type="NONE" icon="icon.bm_sayha_gold_present">
 	<!-- Double-click to obtain a random item. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71161" name="Legendary Card: Antharas" type="CARD" icon="icon.card_dragon_anta">
@@ -506,43 +506,43 @@
 	<item id="71177" name="Daily Gift - VIP 1" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i00">
 	<!-- Double-click to obtain the following: 1 Scroll of Escape, 3 Healing Potions. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="10" immediate-effect="true"/>
+		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71178" name="Daily Gift - VIP 2" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i01">
 	<!-- Double-click to obtain the following: 1 Scroll of Resurrection, 3 Healing Potions. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="10" immediate-effect="true"/>
+		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71179" name="Daily Gift - VIP 3" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i02">
 	<!-- Double-click to obtain the following: 1 Scroll of Escape, 1 Scroll of Resurrection, 5 Healing Potions. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="10" immediate-effect="true"/>
+		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71180" name="Daily Gift - VIP 4" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i03">
 	<!-- Double-click to obtain the following: 1 Scroll of Escape, 1 Scroll of Resurrection, 3 Greater Healing Potions. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="10" immediate-effect="true"/>
+		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71181" name="Daily Gift - VIP 5" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i04">
 	<!-- Double-click to obtain the following: 1 Blessed Scroll of Escape, 3 High-grade Healing Potions, and 40 VIP Coins. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="10" immediate-effect="true"/>
+		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71182" name="Daily Gift - VIP 6" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i05">
 	<!-- Double-click to obtain the following: 1 Blessed Scroll of Resurrection, 3 High-grade Healing Potions, and 100 VIP Coins. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="10" immediate-effect="true"/>
+		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71183" name="Daily Gift - VIP 7" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i06">
 	<!-- Double-click to obtain the following: 1 Blessed Scroll of Escape, 1 Blessed Scroll of Resurrection, 3 High-grade Healing Potions, and 150 VIP Coins. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="10" immediate-effect="true"/>
+		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<armor id="71184" name="Meliodas Agathion Lv. 1" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp">

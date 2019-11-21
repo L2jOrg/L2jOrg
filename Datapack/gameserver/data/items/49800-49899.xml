@@ -3,7 +3,7 @@
 	<item id="49800" name="Sibi's Coin Box" type="NONE" icon="icon.event_orc_coinbox">
 	<!-- Double-click to receive 200 Sibi's Coins.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<armor id="49801" name="Dandy Pendant" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_pve">
@@ -276,46 +276,46 @@
 	<item id="49844" name="Sayha's Blessing Chest" type="NONE" icon="icon.bm_sayha_blessed_box">
 	<!-- Double-click the chest to get one of the following items: Sayha's Silver Light Blessing/ Sayha's Golden Light Blessing.  -->
 		<restriction stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="49845" name="Sayha's Blessing" type="POTION" icon="icon.etc_wind_potion_i00">
 	<!-- Sayha Grace points +35,000 (1 slot). -->
 		<restriction stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="49846" name="Sayha's Silver Light Blessing" type="POTION" icon="icon.bm_sayha_silver_blessed">
 	<!-- Sayha Grace points +70,000 (2 slots). -->
 		<restriction stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="49847" name="Sayha's Golden Light Blessing" type="POTION" icon="icon.bm_sayha_gold_blessed">
 	<!-- Sayha Grace points +105,000 (3 slots). -->
 		<restriction stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="49848" name="Fire Dragon Pendant Chest +10" type="NONE" icon="icon.bm_pendant_pve_box">
 	<!-- Double-click to get Fire Dragon Pendant +10.  -->
 		<restriction stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 		<extract >
-			<item id="49467" min-count="1" max-count="1" chance="100000" min-enchant="10" max-enchant="10"/>  <!-- Fire Dragon Pendant -->
+			<item id="49467" chance="100000" min-enchant="10" max-enchant="10"/>  <!-- Fire Dragon Pendant -->
 		</extract>
 	</item>
 
 	<item id="49849" name="Earth Dragon Pendant +10" type="NONE" icon="icon.bm_pendant_pvp_box">
 	<!-- Double-click to get Earth Dragon Pendant +10.  -->
 		<restriction stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49850" name="Ornament Supply Box (A-grade)" type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Double-click to get an A-grade Ornament.  -->
 		<restriction stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39187" level="1"/>  <!-- Ornament Supply Box (A-grade) -->
 		</skill-reducer>
@@ -324,7 +324,7 @@
 	<item id="49851" name="Sayha's Gust" type="NONE" icon="icon.bm_sayha_storm">
 	<!-- u,Sayha Grace points +100%, XP/SP gain +100%. This effect remains even after character's death. Duration: 10 minutes. Cooldown: 10 minutes. Available when more than one slot of the bar of Sayha’s Grace points is filled. Cannot be dropped or sold in the grocery store. -->
 		<restriction stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49852" name="Secret Book of Beggins’ Enchantments - IV" type="NONE" icon="icon.mercenary_certification_i02">
@@ -342,7 +342,7 @@
 	<item id="49854" name="Maliss's MP Recovery Potion" type="POTION" icon="icon.freya_potion">
 	<!-- Instantly recovers MP.  -->
 		<restriction stackable="true" dropable="false" depositable="false"/>
-		<attributes commission-type="POTION" immediate-effect="true"/>
+		<attributes commission-type="POTION" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39198" level="1"/>  <!-- Melissa's MP Recovery Potion -->
 		</skill-reducer>
@@ -351,25 +351,25 @@
 	<item id="49855" name="Sayha's Golden Gift" type="NONE" icon="icon.bm_sayha_gold_present">
 	<!-- Double-click to randomly receive one rare accessory or one rare item.  -->
 		<restriction stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="49856" name="Sayha's Silver Gift" type="NONE" icon="icon.bm_sayha_silver_present">
 	<!-- Double-click to randomly receive a A-/B-/C-grade Item Box, Enchant Scroll, or a Sayha's Golden Blessing.  -->
 		<restriction stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="49857" name="Sayha's Gift" type="NONE" icon="icon.bm_sayha_present">
 	<!-- Double-click to randomly receive a Talisman of Insolence, an enchantment item, or a consumable.  -->
 		<restriction stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="49858" name="Wind Token" type="NONE" icon="icon.bm_sayha_token">
 	<!-- Double-click to receive 1 Sayha's Blessing Box and 1 Sayha's Gust. If you're lucky, you can also get one of the following items: Sayha's Golden, Silver, or Average Gift.  -->
 		<restriction stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49859" name="Weapon Exchange Coupon" type="NONE" icon="icon.etc_exchange_ticket_i01">
@@ -381,7 +381,7 @@
 	<item id="49860" name="Hero's Wondrous Cubic" type="COUPON" icon="icon.etc_pink_crystal_cube_pc_i00">
 	<!-- A 1-day item. Available at level 20 or higher. Double-click the Cube to receive one of the following items: Ticket for Soulshot, Scroll of Mood Melody, Warrior's Major HP Potion, Warrior's Quick HP Potion, Angel Cat's Blessing, Greater Scroll of Resurrection, Parts of Enchantment Scrolls Chest, Fishing Kit Box, Box of Scroll of Escape to the Base, Blade Spirit, or Weapon Exchange Coupon (can be used only once a day).  -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" depositable="false"/>
-		<attributes duration="10080"/>
+		<attributes duration="10080" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49861" name="Life Stone - Tester" type="NONE" icon="icon.etc_mineral_general_i00">
@@ -393,7 +393,7 @@
 	<item id="49862" name="Bracelet of Fate Chest" type="NONE" icon="icon.etc_readybox_bronze">
 	<!-- Double-click the chest to get Bracelet of Fate.  -->
 		<restriction stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49863" name="Superior Dye of STR (STR +1 CON -3)" type="DYE" icon="icon.lv1_1_dye_str">

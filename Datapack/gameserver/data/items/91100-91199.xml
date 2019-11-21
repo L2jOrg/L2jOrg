@@ -13,19 +13,19 @@
 	<item id="91101" name="Golden Fishery Fishing Supply Items" type="NONE" icon="icon.bm_freya_snowman_box">
 	<!-- Double-click to obtain 60 Golden Bait. If you're lucky, you can also get 1 Gold Big Catch Box, Silver Big Catch Box or Einhasad's Protection.   -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91102" name="Gold Big Catch Box" type="NONE" icon="icon.bm_gold_lure_box">
 	<!-- Double-click to randomly obtain 1 Top-grade item or material (A-grade), Sealed Rune, or Luxury Lucky Enchant Stone: Armor.   -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91103" name="Silver Big Catch Box" type="NONE" icon="icon.bm_silver_lure_box">
 	<!-- Double-click to randomly obtain 1 Rare Accessory or Sayha's Golden Blessing.   -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91104" name="Luxury Flanchard Enhancement Stone - A-grade" type="GIANT_ENCHANT" icon="icon.giant_ench_armor_stone_r_i02">
@@ -43,13 +43,13 @@
 	<item id="91106" name="Abundance Wind Cube" type="COUPON" icon="icon.sa_cube">
 	<!-- 30-day item. Double-click to get Dandy's Home Run Ball, Morale Bean Cake (Event), Saviour's Weapon Enchant Scroll. (Can be used 1 time in 1 day.)   -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" depositable="false"/>
-		<attributes duration="43200"/>
+		<attributes duration="43200" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91107" name="Abundance Wind Cube" type="COUPON" icon="icon.sa_cube">
 	<!-- 90-day item. Double-click to get Dandy's Home Run Ball, Morale Bean Cake (Event), Saviour's Weapon Enchant Scroll. (Can be used 1 time in 1 day.)   -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" depositable="false"/>
-		<attributes duration="129600"/>
+		<attributes duration="129600" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91108" name="Wind Amulet" type="RUNE" icon="icon.bm_sayha_rune">
@@ -61,13 +61,13 @@
 	<item id="91109" name="Blue Dynasty Scroll" type="POTION" icon="icon.scroll_of_verification_i01">
 	<!-- Transforms you into Blue Dynasty for 15 min. Effect remains after death. \\n Blue Dynasty's Power: Max HP/MP +20%. When Sayha's Grace applies, XP/ SP gain +20%. Effect remains after death. \\n<Warning>\\n If used when Teddy Bear/Cat the Cat/Cat/Panda Buff is applied, existing buff will be replaced. Cooldown 1 min. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91110" name="Cat the Cat Scroll" type="POTION" icon="icon.scroll_of_verification_i03">
 	<!-- Transforms you into Kat the Cat for 15 minutes. Effect remains even after death. Cannot be dropped or sold at an NCP's store. \\nKat the Cat's Energy: Max HP/MP +20%. XP/SP gain +20% during Sayha's Grace. Effect remains even after death. \\n<Warning>\\nIf used during Teddy Bear/Blue Dynasty/Cat/Panda Buff, the existing buff will be replaced. Cooldown is 1 minute. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<armor id="91111" name="Pisces Agathion" type="NONE" body-part="AGATHION" icon="icon.pis_agathion_i00">
@@ -226,7 +226,7 @@
 	<item id="91124" name="Brilliant Spirit Varnish" type="SOLID_ENCHANT_ARMOR" icon="icon.etc_ev_draco_karma_down">
 	<!-- Varnish that enhances Spirits accessories. Can only be used up to Enchant +9. If Enhance fails, item does not disappear and conserves existing Enchant level. By type from +1 various special options apply. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91125" name="Breath of Ignis" type="MATERIAL" icon="icon.fire_agathion_breath">
@@ -304,31 +304,31 @@
 	<item id="91133" name="High-grade Angler's Blessing (2-hours)" type="MATERIAL" icon="icon.fishing_zone_ticket">
 	<!-- For 2 hours increases Fishing XP/SP +200%. Effect remains after death.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes weight="5"/>
+		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91134" name="High-grade Angler's Blessing (4-hours)" type="MATERIAL" icon="icon.fishing_zone_ticket">
 	<!-- For 4 hours increases Fishing XP/SP +200%. Effect remains after death.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes weight="5"/>
+		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91135" name="High-grade Angler's Blessing (8-hours)" type="MATERIAL" icon="icon.fishing_zone_ticket">
 	<!-- For 8 hours increases Fishing XP/SP +200%. Effect remains after death.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes weight="5"/>
+		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91136" name="Dandy's Golden Ball" type="SCROLL" icon="BranchIcon.icon.g_ev_goldenball">
 	<!-- Golden Ball gifted by Dandy that crossed dimensions. Double-click to increase 1-hour XP and SP 100% and recharge Sayha's Grace max. Flanchard changes to appearance of NC Dinos Uniform. -->
 		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91137" name="Windstorm Box" type="NONE" icon="icon.bm_circlet_upgrade_box">
 	<!-- Double-click to receive various Rewards.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<armor id="91138" name="Antharas' Earring Lv. 2" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_antaras_i01">
@@ -420,37 +420,37 @@
 	<item id="91148" name="Jewel Box Lv. 5" type="NONE" icon="icon.bm_special_jewelbox_lv5">
 	<!-- Double-click to obtain one Jewelry Box Lv. 5 containing a Vital Stone, Diamond, Pearl, Aquamarine, Sapphire, Ruby, Jade, Garnet, Topaz or Cat's Eye. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91149" name="+5 Agathion Box" type="NONE" icon="icon.star_agathion_cube">
 	<!-- Double-click to get 1 of +5 Virgo, Capricorn, Libr Taurus, Leo, Gemini, Scorpio, Aquarius, Sagittarius Agathion.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91150" name="+10 Agathion Box" type="NONE" icon="icon.star_agathion_cube">
 	<!-- Double-click to get 1 of +10 Virgo, Capricorn, Libr Taurus, Leo, Gemini, Scorpio, Aquarius, Sagittarius Agathion.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91151" name="Attribute Necklace Box" type="NONE" icon="icon.etc_treasure_box_i11">
 	<!-- Double-click to obtain one of Ignis, Nebul Procell or Petram Necklace.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91152" name="Blessed Pendant Box" type="NONE" icon="icon.etc_treasure_box_i09">
 	<!-- Double-click to get 1 Blessed Fire Dragon or Earth Dragon Pendant.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91153" name="+15 A-grade Top-grade Weapon Pack" type="NONE" icon="icon.bm_ensoulbox_PvP">
 	<!-- Double-click to get 1 of +15 Sirra's Blade, Sword of Ipos, Barakiel's Axe, Behemoth' Tuning Fork, Naga Storm, Tiphon's Spear, Shyeed's Bow, Sobekk's Hurricane, Themis' Tongue, Cabrio's Hand, Daimon Crystal, Tallum Blade, Tallum Blade*Damascus.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<weapon id="91154" name="Sibis' Black Samurai Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -473,25 +473,25 @@
 	<item id="91155" name="Sibis Weapon Enchant Scroll" type="ENCHANT_WEAPON" icon="icon.yogi_scroll_of_enchant_weapon_grade_i00">
 	<!-- Weapon Enchant Scroll that can be used with Sibis' Black Samurai Long Sword. Up to level +3 Weapon Attack Power +5/Magic Power +3. From level +4 Attack/Magic Power +200%. Can only be used up to level +23. Item will be deleted during inspection on November 29 (Wed), 2017. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91156" name="Fisher's Blessing (24-hour)" type="MATERIAL" icon="icon.fishing_zone_ticket_1">
 	<!-- For 24-hours increases Fishing XP +50% and changes appearance to Hanbok. Cannot be used with Angler's Blessing.  Item will be deleted during inspection on October 18 (Wed), 2017. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes weight="5"/>
+		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91157" name="Maphr Potion" type="POTION" icon="icon.etc_instant_lucky_potion_i00">
 	<!-- Double-click to increase Enchant Chance with Maphr's Blessing for 10 seconds. \\n\\n<Warning>\\n Cannot be applied to Pendant, Agathion, Hair Accessory, Damaged Rare Accessory, Attribute Necklace.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91158" name="Maphr Potion" type="POTION" icon="icon.etc_instant_lucky_potion_i00">
 	<!-- Double-click to increase Enchant Chance with Maphr's Blessing for 10 seconds. Cannot be applied to partial enchantment.  \\n\\n<Warning>\\n Cannot be applied to Pendant, Agathion, Hair Accessory, Damaged Rare Accessory, Attribute Necklace. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91159" name="Agathion Exchange Ticket" type="MATERIAL" icon="icon.bm_challenger_wp_trade_ticket">
@@ -503,7 +503,7 @@
 	<item id="91160" name="Agathion Enchant Scroll Pack" type="NONE" icon="icon.npoint_antaras_30day_box">
 	<!-- Double-click to get 1 of Agathion Enchant Scroll/Quality Agathion Enchant Scroll/Stable Agathion Enchant Scroll/Agathion's Horn/Blessed Agathion's Horn.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<armor id="91161" name="Agathion Bracelet Lv. 5" type="NONE" body-part="LEFT_BRACELET" icon="icon.pi_high_agathion_bracelet_i00">
@@ -658,13 +658,13 @@
 	<item id="91183" name="Wind Treasure Chest" type="NONE" icon="icon.sayha2017_box_i01">
 	<!-- Double-click to obtain 1 Blessing of Wind Box and Sayha's Gust. If you're lucky, you can also get 1 Wind Gold/Silver Box or Panda/Cat Transformation Scroll.  Will be deleted during maintenance on Wednesday, June 27th, 2018. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91184" name="Quick MP Recovery Potion" type="POTION" icon="icon.etc_lesser_potion_blue_i00">
 	<!-- Quick MP Recovery.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes weight="5" commission-type="POTION" immediate-effect="true"/>
+		<attributes weight="5" commission-type="POTION" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="51125" level="1"/>  <!-- MP Replenishing Potion -->
 		</skill-reducer>
@@ -673,7 +673,7 @@
 	<item id="91185" name="Intermediate Spirit's Blessing" type="NONE" icon="icon.elemental_bless_scrl_i00">
 	<!-- Activates a buff when the item is used. Attribute XP gain +30% for 20 minutes when hunting attribute monsters.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="51126" level="1"/>  <!-- Intermediate Spirit's Blessing -->
 		</skill-reducer>
@@ -682,7 +682,7 @@
 	<item id="91186" name="High-grade Spirit's Blessing" type="NONE" icon="icon.elemental_bless_scrl_i00">
 	<!-- Activates a buff when the item is used. Attribute XP gain +50% for 20 minutes when hunting attribute monsters.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="51127" level="1"/>  <!-- Advanced Spirit's Blessing -->
 		</skill-reducer>
@@ -691,19 +691,19 @@
 	<item id="91187" name="Spirit Varnish" type="ENCHANT_ARMOR" icon="icon.etc_ev_draco_karma_down">
 	<!-- Varnish that enhances Spirits accessory's power. By type various special options apply from level +1. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91188" name="Blessed Spirit Varnish" type="BLESSED_ENCHANT_ARMOR" icon="icon.etc_ev_draco_karma_down">
 	<!-- Varnish that enhances Spirits accessory's power. If Enchant fails or item does not crystallize base Enchant becomes 0. Applied by type of various special options from level +1.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91189" name="Fire Attack Potion" type="POTION" icon="icon.etc_fire_potion_i00">
 	<!-- Increases Fire Attack +50 for 20 min.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true"/>
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="51130" level="1"/>  <!-- Fire Attack Potion -->
 		</skill-reducer>
@@ -712,7 +712,7 @@
 	<item id="91190" name="Water Attack Potion" type="POTION" icon="icon.etc_water_potion_i00">
 	<!-- Increases Water Attack +50 for 20 min.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true"/>
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="51131" level="1"/>  <!-- Water Attack Potion -->
 		</skill-reducer>
@@ -721,7 +721,7 @@
 	<item id="91191" name="Wind Attack Potion" type="POTION" icon="icon.etc_wind_potion_i00">
 	<!-- Increases Wind Attack +50 for 20 min.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true"/>
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="51132" level="1"/>  <!-- Wind Attack Potion -->
 		</skill-reducer>
@@ -730,7 +730,7 @@
 	<item id="91192" name="Earth Attack Potion" type="POTION" icon="icon.etc_earth_potion_i00">
 	<!-- Increases Earth Attack +50 for 20 min.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true"/>
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="51133" level="1"/>  <!-- Earth Attack Potion -->
 		</skill-reducer>
@@ -766,19 +766,19 @@
 	<item id="91197" name="Scroll of Escape: Forge of the Gods" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- Move to the Forge of the Gods with Magic Scroll.  \\n\\nNote: Can Move to the Forge of the Gods through Gatekeeper Tatiana in the Goddard Castle. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="30"/>
+		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91198" name="Scroll of Escape: Garden of Eva" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- Move to the Garden of Eva with Magic Scroll.  \\n\\nNote: Can Move to the Garden of Eva through Gatekeeper Clarissa in the Town of Giran. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="30"/>
+		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91199" name="Escape - Wind Plateau" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- Move to the Wind Plateau with Magic Scroll.  \\n\\nNote: Can Move to the Wind Plateau through Gatekeeper Clarissa in the Town of Giran. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="30"/>
+		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 </list>

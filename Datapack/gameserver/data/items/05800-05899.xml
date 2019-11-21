@@ -54,7 +54,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="10" price="330" reuse-delay="10000"/>
+		<attributes weight="10" price="330" reuse-delay="10000" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2168" level="2"/>  <!-- Lucky Charm -->
 		</skill-reducer>
@@ -66,7 +66,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="10" price="660" reuse-delay="10000"/>
+		<attributes weight="10" price="660" reuse-delay="10000" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2168" level="3"/>  <!-- Lucky Charm -->
 		</skill-reducer>
@@ -78,7 +78,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="10" price="1300" reuse-delay="10000"/>
+		<attributes weight="10" price="1300" reuse-delay="10000" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2168" level="4"/>  <!-- Lucky Charm -->
 		</skill-reducer>
@@ -166,7 +166,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="120" price="100000" commission-type="SCROLL_OTHER"/>
+		<attributes weight="120" price="100000" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2177" level="1"/>  <!-- Blessed Scroll of Escape: Clan Hall -->
 		</skill-reducer>
@@ -178,7 +178,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="120" price="80000" commission-type="SCROLL_OTHER"/>
+		<attributes weight="120" price="80000" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2178" level="1"/>  <!-- Blessed Scroll of Escape: Castle -->
 		</skill-reducer>

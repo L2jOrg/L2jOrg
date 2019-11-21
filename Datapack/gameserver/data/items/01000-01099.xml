@@ -327,7 +327,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="5" price="90" commission-type="POTION" reuse-delay="10000" for-npc="true" immediate-effect="true"/>
+		<attributes weight="5" price="90" commission-type="POTION" reuse-delay="10000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2031" level="1"/>  <!-- Healing Potion -->
 		</skill-reducer>
@@ -339,7 +339,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="5" price="330" commission-type="POTION" reuse-delay="10000" for-npc="true" immediate-effect="true"/>
+		<attributes weight="5" price="330" commission-type="POTION" reuse-delay="10000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2032" level="1"/>  <!-- Greater Healing Potion -->
 		</skill-reducer>
@@ -384,7 +384,7 @@
 	<item id="1073" name="HP Potion (Novice)" type="POTION" icon="icon.etc_reagent_white_i00">
 	<!-- Magical potion that slowly restores HP. Short-lasting.  -->
 		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="5" commission-type="POTION" reuse-delay="10000" for-npc="true" immediate-effect="true"/>
+		<attributes weight="5" commission-type="POTION" reuse-delay="10000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2031" level="1"/>  <!-- Healing Potion -->
 		</skill-reducer>

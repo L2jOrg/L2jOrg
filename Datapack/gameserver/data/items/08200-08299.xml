@@ -45,14 +45,14 @@
 	<item id="8294" name="Recipe: Steel Sword" type="RECIPE" icon="icon.etc_recipe_blue_i00">
 	<!-- This formula for manufacturing a Steel Sword can only be used by Dwarves and Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="8180" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="8180" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="8299" name="Recipe: Infernal Master (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- This formula for manufacturing an Infernal Master can only be used by Dwarves and Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="73200" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="73200" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 

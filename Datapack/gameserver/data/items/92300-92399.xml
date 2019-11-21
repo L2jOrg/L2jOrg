@@ -133,25 +133,25 @@
 	<item id="92313" name="Giran’s Treasure Chest" type="NONE" icon="icon.bm_circlet_upgrade_box">
 	<!-- Double-click to obtain one of the rare items at random: Ignis Necklace, Procella Necklace, Petram Necklace, or Brooch Lv. 3. Will be deleted when the event ends. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes price="10000" immediate-effect="true"/>
+		<attributes price="10000" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="92314" name="Seal of Giran" type="NONE" icon="icon.etc_royal_seal_of_lord_i04">
 	<!-- Increases XP/SP by 20% for 20 min on use and can be exchanged for other Items through the Dimensional Merchant. Will be deleted when the event ends. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="92315" name="Luxury Augmentation Box" type="NONE" icon="icon.bm_circlet_upgrade_box">
 	<!-- u,Double-click to obtain one of the rare items at random, such as Lilith Rune Lv. 10, Anakim Rune Lv. 10, or +10 Dragon’s Belt. Will be deleted when the event ends. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="92316" name="+10 Dragon’s Belt Box" type="NONE" icon="icon.etc_readybox_bronze">
 	<!-- u,Double-click to obtain +10 Enchanted Dragon’s Belt. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<armor id="92318" name="Kamael Dark Wings Texture" type="NONE" body-part="BACK" icon="icon.sayha2017_back_i01">

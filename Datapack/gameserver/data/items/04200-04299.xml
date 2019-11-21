@@ -122,7 +122,7 @@
 	<item id="4218" name="L2 Day - Scroll: Mana Regeneration" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Increases MP Recovery Rate. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true"/>
+		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2064" level="1"/>  <!-- Scroll: Mana Regeneration -->
 		</skill-reducer>
@@ -275,7 +275,7 @@
 	<item id="4232" name="Dice" type="NONE" icon="icon.etc_dice_a_i00">
 	<!-- Simple game of chance! Roll 'em!! -->
 		<restriction freightable="false" destroyable="false" depositable="false"/>
-		<attributes reuse-delay="5000" immediate-effect="true"/>
+		<attributes reuse-delay="5000" immediate-effect="true" action="DICE"/>
 		<action handler="RollingDice"/>
 	</item>
 

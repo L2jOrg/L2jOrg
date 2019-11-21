@@ -3,67 +3,67 @@
 	<item id="32249" name="Infinite Wooden Quiver" type="ARROW" icon="br_cashtex.item.br_cash_quiver_of_bone_arrows_i00">
 	<!-- Quiver containing arrows made of wood. Used with a No-grade bow. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes price="1580" immediate-effect="true" infinite="true"/>
+		<attributes price="1580" immediate-effect="true" infinite="true" action="EQUIP"/>
 	</item>
 
 	<item id="32250" name="Infinite Bone Quiver" type="ARROW" icon="br_cashtex.item.br_cash_quiver_of_bone_arrows_i00">
 	<!-- Quiver containing arrows made of sharply ground bone. Used with a D-grade bow. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes price="7320" immediate-effect="true" infinite="true"/>
+		<attributes price="7320" immediate-effect="true" infinite="true" action="EQUIP"/>
 	</item>
 
 	<item id="32251" name="Infinite Steel Quiver" type="ARROW" icon="br_cashtex.item.br_cash_quiver_of_fine_steel_arrows_i00">
 	<!-- Quiver containing arrows made of steel. Used with a C-grade bow. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes price="11490" immediate-effect="true" infinite="true"/>
+		<attributes price="11490" immediate-effect="true" infinite="true" action="EQUIP"/>
 	</item>
 
 	<item id="32252" name="Infinite Silver Quiver" type="ARROW" icon="br_cashtex.item.br_cash_quiver_of_silver_arrows_i00">
 	<!-- Quiver containing steel arrows plated in silver. Used with a B-grade bow. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes price="34630" immediate-effect="true" infinite="true"/>
+		<attributes price="34630" immediate-effect="true" infinite="true" action="EQUIP"/>
 	</item>
 
 	<item id="32253" name="Infinite Mithril Quiver" type="ARROW" icon="br_cashtex.item.br_cash_quiver_of_mithril_arrows_i00">
 	<!-- A quiver of arrows coated by mithril. For A-grade bows. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes price="364800" immediate-effect="true" infinite="true"/>
+		<attributes price="364800" immediate-effect="true" infinite="true" action="EQUIP"/>
 	</item>
 
 	<item id="32254" name="Infinite Quiver of Light" type="ARROW" icon="br_cashtex.item.br_cash_quiver_of_shining_arrows_i00">
 	<!-- This quiver contains arrows made of unknown material. Used with an S-grade bow. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes price="1716000" immediate-effect="true" infinite="true"/>
+		<attributes price="1716000" immediate-effect="true" infinite="true" action="EQUIP"/>
 	</item>
 
 	<item id="32256" name="Infinite Wooden Bolt Container" type="BOLT" icon="br_cashtex.item.br_cash_quiver_of_bone_bolts_i00">
 	<!-- Container with bolts made of wood. Used with a No-grade Crossbow. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes price="1580" immediate-effect="true" infinite="true"/>
+		<attributes price="1580" immediate-effect="true" infinite="true" action="EQUIP"/>
 	</item>
 
 	<item id="32257" name="Infinite Bone Bolt Container" type="BOLT" icon="br_cashtex.item.br_cash_quiver_of_bone_bolts_i00">
 	<!-- Container with bolts made of sharply ground bone. Used with a D-grade Crossbow. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes price="7320" immediate-effect="true" infinite="true"/>
+		<attributes price="7320" immediate-effect="true" infinite="true" action="EQUIP"/>
 	</item>
 
 	<item id="32258" name="Infinite Steel Bolt Container" type="BOLT" icon="br_cashtex.item.br_cash_quiver_of_fine_steel_bolts_i00">
 	<!-- Container with bolts made of steel. Used with a C-grade Crossbow. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes price="11490" immediate-effect="true" infinite="true"/>
+		<attributes price="11490" immediate-effect="true" infinite="true" action="EQUIP"/>
 	</item>
 
 	<item id="32259" name="Infinite Silver Bolt Container" type="BOLT" icon="br_cashtex.item.br_cash_quiver_of_silver_bolts_i00">
 	<!-- Container with steel bolts plated in silver. Used with a B-grade Crossbow. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes price="34630" immediate-effect="true" infinite="true"/>
+		<attributes price="34630" immediate-effect="true" infinite="true" action="EQUIP"/>
 	</item>
 
 	<item id="32260" name="Infinite Mithril Bolt Container" type="BOLT" icon="br_cashtex.item.br_cash_quiver_of_mithril_bolts_i00">
 	<!-- A container of bolts coated by mithril. For A-grade bows. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes price="364800" immediate-effect="true" infinite="true"/>
+		<attributes price="364800" immediate-effect="true" infinite="true" action="EQUIP"/>
 	</item>
 
 </list>

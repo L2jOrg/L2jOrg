@@ -36,19 +36,19 @@
 	<item id="90904" name="Agathion - Aries Pack" type="NONE" icon="icon.bm_sheep_agathion_30d_box">
 	<!-- Double-click to obtain 1 Agathion Bracelet Lv. 3 (60 days) and 1 Aries Agathion (60 days).\\n\\n<Note>\\nThe items obtained from the box cannot be moved freely. Keep this in mind before opening the box. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes duration="86400" immediate-effect="true"/>
+		<attributes duration="86400" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90905" name="Singer and Dancer Pack" type="NONE" icon="icon.etc_pi_gift_box_i04">
 	<!-- Double-click to obtain Agathion Bracelet - Singer & Dancer (30 days).  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes duration="43200" immediate-effect="true"/>
+		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90906" name="Singer and Dancer Pack" type="NONE" icon="icon.etc_pi_gift_box_i04">
 	<!-- Double-click to obtain Agathion Bracelet - Singer & Dancer (90 days).  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes duration="129600" immediate-effect="true"/>
+		<attributes duration="129600" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90907" name="Soulshot Ticket" type="NONE" icon="icon.etc_exchange_ticket_i03">
@@ -60,7 +60,7 @@
 	<item id="90908" name="Agathion Box: Rudolph" type="NONE" icon="icon.etc_pi_gift_box_i04">
 	<!-- Double-click to obtain 1 Rudolph Agathion (2 hours).\\n\\n<Note>\\nThe items obtained from the box cannot be moved freely. Keep this in mind before opening the box.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes duration="120" immediate-effect="true"/>
+		<attributes duration="120" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<armor id="90909" name="Agathion Rudolph" type="NONE" body-part="AGATHION" icon="BranchSys2.icon.event_lbracelet_rudolph">
@@ -79,31 +79,31 @@
 	<item id="90911" name="Battle Box Lv. 1" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Reward for clan members. Double-click to obtain various items.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90912" name="Battle Box Lv. 2" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Reward for clan members. Double-click to obtain various items.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90913" name="Battle Box Lv. 3" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Reward for clan members. Double-click to obtain various items.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90914" name="Battle Box Lv. 4" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Reward for clan members. Double-click to obtain various items.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90915" name="Valor Box" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- Reward for valor warriors. Double-click to obtain various items.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90916" name="Rice-cake Soup" type="NONE" icon="BranchSys.icon.br_taiwan_newyear_food_d_i00">
@@ -115,7 +115,7 @@
 	<item id="90917" name="XP Scroll: 10,000,000" type="SCROLL" icon="icon.exp_bottle_scroll">
 	<!-- XP +10,000,000. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="51043" level="1"/>  <!-- XP Scroll: 10,000,000 -->
 		</skill-reducer>
@@ -124,7 +124,7 @@
 	<item id="90918" name="XP Scroll: 50,000,000" type="SCROLL" icon="icon.exp_bottle_scroll">
 	<!-- XP +50,000,000. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="51044" level="1"/>  <!-- XP Scroll: 50,000,000 -->
 		</skill-reducer>
@@ -133,7 +133,7 @@
 	<item id="90919" name="XP Scroll: 100,000,000" type="SCROLL" icon="icon.exp_bottle_scroll">
 	<!-- XP +100,000,000. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="51045" level="1"/>  <!-- XP Scroll: 100,000,000 -->
 		</skill-reducer>
@@ -156,7 +156,7 @@
 	<item id="90922" name="Shining Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_main_i01">
 	<!-- Double-click to obtain a Lv. 1 chest with one of these items: Vital Stone, Pearl, Diamond, Ruby, Sapphire, Jade, Garnet, Topaz, Aquamarine, Cat's Eye.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90923" name="Shining Ore" type="NONE" icon="icon.bm_piece_of_ensoul_stone">
@@ -245,55 +245,55 @@
 	<item id="90935" name="Greater Jewel Box Lv. 4" type="NONE" icon="icon.bm_special_jewelbox_lv4">
 	<!-- Double-click to obtain one Jewelry Box Lv. 4 containing a Vital Stone, Diamond, Pearl, Aquamarine, Sapphire, Ruby, Jade, Garnet, Topaz or Cat's Eye. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90936" name="Aquamarine Chest" type="NONE" icon="icon.etc_bm_jewelbox_aquamarine_i00">
 	<!-- Double-click to obtain Aquamarine Lv. 1.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90937" name="Aquamarine Box Lv. 3" type="NONE" icon="icon.etc_bm_jewelbox_aquamarine_i00">
 	<!-- Double-click to obtain Aquamarine Lv. 3.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90938" name="Aquamarine Box Lv. 4" type="NONE" icon="icon.etc_bm_jewelbox_aquamarine_i00">
 	<!-- Double-click to obtain Aquamarine Lv. 4.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90939" name="Aquamarine Box Lv. 5" type="NONE" icon="icon.etc_bm_jewelbox_aquamarine_i00">
 	<!-- Double-click to obtain Aquamarine Lv. 5.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90940" name="Cat's Eye Chest" type="NONE" icon="icon.bm_jewelbox_red_catseye_lavianrose">
 	<!-- Double-click to obtain a Lv. 1 Cat's Eye.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90941" name="Lv. 3 Cat's Eye Jewelry Box" type="NONE" icon="icon.bm_jewelbox_red_catseye_lavianrose">
 	<!-- Double-click to obtain a Lv. 3 Cat's Eye.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90942" name="Lv. 4 Cat's Eye Jewelry Box" type="NONE" icon="icon.bm_jewelbox_red_catseye_lavianrose">
 	<!-- Double-click to obtain a Lv. 4 Cat's Eye.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90943" name="Lv. 5 Cat's Eye Jewelry Box" type="NONE" icon="icon.bm_jewelbox_red_catseye_lavianrose">
 	<!-- Double-click to obtain a Lv. 5 Cat's Eye.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90944" name="Shining Brooch Fragment" type="NONE" icon="icon.etc_bm_brooch_lavianrose_piece">
@@ -329,7 +329,7 @@
 	<item id="90949" name="Transformation Scroll: White Knight" type="POTION" icon="icon.etc_charm_of_courage_i00">
 	<!-- Transforms you into a White Knight for 20 minutes. Effect remains even after death. \\nDuring White Knight Transformation: Max HP/MP +10%, PvE P. Atk. +5%, PvE P. Def +5%, Stun/Paralysis/MEN Attack Resistance +5%.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<armor id="90950" name="Baium's Ring Lv. 3" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_baium_i03">
@@ -345,37 +345,37 @@
 	<item id="90951" name="Angler's Fishing Box" type="NONE" icon="icon.etc_readybox_bronze">
 	<!-- Double-click to obtain 30 Shining Golden Bait. If you're lucky, you can also get an Angler's Gold Box or Angler's Silver Box.   -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90952" name="Angler's Gold Box" type="NONE" icon="icon.etc_readybox_gold">
 	<!-- Double-click to obtain 1 rare item.   -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90953" name="Angler's Silver Box" type="NONE" icon="icon.etc_readybox_silver">
 	<!-- Double-click to randomly obtain 1 Rare Accessory, Enchant Scroll, Item Box A-/B-grade, Fishing Enchant Scroll, or Angler's Blessing.   -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90954" name="Angler's Blessing (2 hours)" type="MATERIAL" icon="icon.fishing_zone_ticket">
 	<!-- For 2 h. during fishing XP and SP gain +100%. Effect remains after death.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes weight="5"/>
+		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90955" name="Angler's Blessing (4 hours)" type="MATERIAL" icon="icon.fishing_zone_ticket">
 	<!-- For 4 h. during fishing XP and SP gain +100%. Effect remains after death.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes weight="5"/>
+		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90956" name="Angler's Blessing (8 hours)" type="MATERIAL" icon="icon.fishing_zone_ticket">
 	<!-- For 8 h. during fishing XP and SP gain +100%. Effect remains after death.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes weight="5"/>
+		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<weapon id="90957" name="Blue Mackerel Chest: Dual Sword (Event)" type="DUAL" body-part="TWO_HAND" icon="icon.wp_fishing11">
@@ -398,25 +398,25 @@
 	<item id="90958" name="Scroll: Enchant Fishing Weapon" type="ENCHANT_WEAPON" icon="icon.etc_pvppoint_scroll1">
 	<!-- Scroll for enchanting Event weapon Blue Mackerel: Dual Sword, than can be obtainned through the Fishermen's Guild. The item will be removed after the event is over. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90959" name="Improved Scroll: Enchant Fishing Weapon" type="IMPROVED_ENCHANT_WEAPON" icon="icon.etc_pvppoint_scroll10">
 	<!-- For Event weapon Blue Mackerel: Dual Sword. Enchants the weapon randomly from +1 to +3. Unable to enchant more than +17. Blue Mackerel: Dual Sword can be obtainned through the Fishermen's Guild. The item will be removed after the event is over. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90960" name="Transformation Scroll: Teddy Bear" type="POTION" icon="icon.gomdori_chest_change">
 	<!-- Transforms you into Teddy Bear for 15 min. Effect remains after death. \\n Teddy Bear Transform: Max HP/MP +20%. Sayha's Grace Hunting XP/SP +20%. Effect remains after death. \\n<Warning>\\n If used when Blue Dynasty/Cat the Cat/Cat/Panda Buff is applied, existing buff will be replaced. Cooldown 1 min. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90961" name="Weapon Supply Box +15 (A-grade)" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Double-click to receive an A-grade Weapon +15. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39368" level="1"/>  <!-- Weapon Supply Box +15 (A-grade) -->
 		</skill-reducer>
@@ -445,13 +445,13 @@
 	<item id="90963" name="Solid Scroll: Enchant Agathion" type="SEVEN_SINS_AGATHION_ENCHANT" icon="icon.star_scrl_of_ench_ag">
 	<!-- Only for Zodiac Agathion. Increases M. Def. when the Agathion grows. Can be safely strengthened up to +3 and can be enhanced up to +10. Starting from +1 enchanting special abilities increases step by step. If enchanting fails, the enchanl level is maintained. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90964" name="Sealed Doll of Border Box" type="NONE" icon="icon.event_oriental_park_i00">
 	<!-- You can obtain one of the 30-days items: Sealed Doll of Border - Baium, Sealed Doll of Border - Orfen, Doll of Border - Queen Ant.\\n -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90965" name="Raid Lucky Charm" type="RUNE" icon="icon.etc_cross_of_einhasad_i00">
@@ -463,7 +463,7 @@
 	<item id="90966" name="Raid Lucky Charm Box" type="NONE" icon="icon.event_six_party_box_i00">
 	<!-- You can obtain Raid Lucky Charm (7 days).  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90967" name="Test_Count Item" type="NONE" icon="icon.etc_ore_cube_event_i00">
@@ -475,7 +475,7 @@
 	<item id="90968" name="GM Repi Gift Box" type="NONE" icon="icon.event_six_party_box_i00">
 	<!-- Double-click to randomly obtain a Dandy's Home Run Ball, 3 Morale Bean Cakes (Event), 3 White Assassin Transformation Scrolls (Event), or 5 Sayha's Storm (Event).   -->
 		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<armor id="90969" name="Blessed Fire Dragon Pendant" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_pve">
@@ -501,13 +501,13 @@
 	<item id="90971" name="High-grade Shining Pendant Polish Box" type="NONE" icon="icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to randomly obtain 1 Matte Pendant Varnish, Shiny Pendant Varnish Box, or Brilliant Pendant Varnish.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90972" name="Weapon Supply Box +8 (A-grade)" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Double-click to receive an A-grade Weapon +8 exept high-level weapons. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="51057" level="1"/>  <!-- +8 Weapon Pack (A-grade) -->
 		</skill-reducer>
@@ -523,19 +523,19 @@
 	<item id="90974" name="Sealed Doll of Border - Baium" type="NONE" icon="icon.bm_baium_doll_30d">
 	<!-- Double-click to obtain Doll of Border - Baium (7-day).  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes duration="10080" immediate-effect="true"/>
+		<attributes duration="10080" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90975" name="Sealed Doll of Border - Queen Ant" type="NONE" icon="icon.bm_queen_ant_doll_30d">
 	<!-- Double-click to obtain Doll of Border - Queen Ant (7-day).  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes duration="10080" immediate-effect="true"/>
+		<attributes duration="10080" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90976" name="Sealed Doll of Border - Orfen" type="NONE" icon="icon.bm_orfen_doll_30d">
 	<!-- Double-click to obtain Doll of Border - Orfen (7-day).  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes duration="10080" immediate-effect="true"/>
+		<attributes duration="10080" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90977" name="Doll of Border - Baium" type="RUNE" icon="icon.bm_baium_doll_30d">
@@ -604,7 +604,7 @@
 	<item id="90986" name="Lucky Cube of Growth" type="COUPON" icon="icon.etc_11th_event_group">
 	<!-- A 30-day item. Double-click to obtain 900 Silver Bait and Savior's Scroll of Growth (can be used only once a day). Intended for level 20 or higher.   -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" depositable="false"/>
-		<attributes duration="43200"/>
+		<attributes duration="43200" action="SKILL_REDUCE"/>
 	</item>
 
 	<armor id="90987" name="Savior's Earring" type="NONE" body-part="EAR" icon="icon.r2_earring_i00">
@@ -630,13 +630,13 @@
 	<item id="90989" name="Savior's Earring Box" type="NONE" icon="icon.bm_pirate_battle_box">
 	<!-- Double-click to obtain Shining Savior's Earring with a low probability or Savior's Earring +3 with a high probability.    -->
 		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90990" name="Scroll: Enchant Savior's Earring" type="SOLID_ENCHANT_ARMOR" icon="icon.etc_penalty_recovery_i00">
 	<!-- Only for Savior's Earring. Increases M. Def. Can be safely strengthened up to +3 and can be enhanced up to +7. If enchanting fails, the enchant level is maintained.   -->
 		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<armor id="90991" name="Lucky Hat" type="NONE" body-part="HAIR_ALL" icon="icon.Accessary_middle_ages_i00">
@@ -682,31 +682,31 @@
 	<item id="90995" name="Balthus Knights Varnish" type="ENCHANT_ARMOR" icon="icon.etc_lucky_pocket_i00">
 	<!-- Enhances characteristics of damaged rare accessories. The maximum level of enchantment is +10, from +3 level chance of enchantig is 100%. Depending on the item type, activates special options from level +4 and higher. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90996" name="Balthus Knights Matte Varnish" type="SOLID_ENCHANT_ARMOR" icon="icon.etc_lucky_pocket_i00">
 	<!-- Enhances characteristics of damaged rare accessories. Can be used on a item enchanted up to +6. If an enchantment is failed, the item doesn't disappear and keep the previous level of enchantment. Depending on the item type, activates special options from level +4 and higher. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90997" name="Balthus Knights Shining Varnish" type="SOLID_ENCHANT_ARMOR" icon="icon.etc_lucky_pocket_i00">
 	<!-- Enhances characteristics of damaged rare accessories. Can be used on a item enchanted up to +8. If an enchantment is failed, the item doesn't disappear and keep the previous level of enchantment. Depending on the item type, activates special options from level +4 and higher. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90998" name="Balthus Knights Glittering Varnish" type="SOLID_ENCHANT_ARMOR" icon="icon.etc_lucky_pocket_i00">
 	<!-- Enhances characteristics of damaged rare accessories. Can be used on a item enchanted up to +9. If an enchantment is failed, the item doesn't disappear and keep the previous level of enchantment. Depending on the item type, activates special options from level +4 and higher. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90999" name="Rush's Supplies - Antharas" type="NONE" icon="icon.bm_special_pendant_abradant_box">
 	<!-- Reward for defeating Antharas. Contains Damaged Antharas' Earring. Additionally can be obtained 1 random item: Portal Stone, Balthus Knights Varnish, Balthus Knights Shining Varnish, Balthus Knights Glittering Varnish.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 </list>

@@ -3,13 +3,13 @@
 	<item id="90500" name="Dragon's Treasure Chest" type="NONE" icon="icon.bm_dragon_present">
 	<!-- Double-click to randomly receive a rare item such as one of Enchant Scroll.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90501" name="Dragon's Shining Treasure Chest" type="NONE" icon="icon.bm_dragon_shinning_present">
 	<!-- Double-click to randomly receive one of the following items: Rare Belt, Lv. 5 Gem, Armor Enchant Stone, any other rare item. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90502" name="Lucky Enchant Stone: Armor (D-grade)" type="LUCKY_ENCHANT" icon="icon.bless_ench_amr_stone_i00">
@@ -39,7 +39,7 @@
 	<item id="90506" name="Valuable Mark of Balthus Knights" type="SCROLL" icon="icon.ev_balthus_token">
 	<!-- XP/SP Gain +20% and a chance to get Special Supplies for 2 hour. Intended for Lv. 20 and higher.   -->
 		<restriction stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39272" level="1"/>  <!-- Officer of Balthus Knights -->
 		</skill-reducer>
@@ -48,13 +48,13 @@
 	<item id="90507" name="Dragon's Balthus Chest" type="NONE" icon="icon.bm_dragon_present">
 	<!-- Double-click to receive 30 Dragon's Treasure Chests that can contain random rare accessories or various Enchant Scrolls.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90508" name="Golden Fruit Buff" type="SCROLL" icon="icon.bm_dragon_fruit">
 	<!-- For 20 minutes, P./M. Atk. +12%, P./M. Def. +15%, Max. HP/CP/MP +25%, P./M. Critical Rate +10, P./M. Critical Damage +5%, HP/MP Recovery +30%. At a certain chance absorbs 5% of the damage inflicted on target as HP. XP and SP gained through hunting +10%. Cooldown is 1 minute. Buff remains after death. Can be stored in private warehouse. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90509" name="Dragon's Gold Key" type="NONE" icon="icon.bm_dragon_key">
@@ -66,103 +66,103 @@
 	<item id="90510" name="Talisman of Fate Pack +5" type="NONE" icon="icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtain Talisman of Fate - Lv. 5. \\n\\nNote: cannot be returned once opened.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90511" name="Talisman of Fate Pack +6" type="NONE" icon="icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtain Talisman of Fate - Lv. 6. \\n\\nNote: cannot be returned once opened. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90512" name="Talisman of Fate Pack +7" type="NONE" icon="icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtain Talisman of Fate - Lv. 7. \\n\\nNote: cannot be returned once opened. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90513" name="Talisman of Fate Pack Lv. 8" type="NONE" icon="icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtain Talisman of Fate - Lv. 8. \\n\\nNote: cannot be returned once opened. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90514" name="Talisman of Fate Pack Lv. 9" type="NONE" icon="icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtain Talisman of Fate - Lv. 9. \\n\\nNote: cannot be returned once opened. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90515" name="Talisman of Fate Pack Lv. 10" type="NONE" icon="icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtain Talisman of Fate - Lv. 10. \\n\\nNote: cannot be returned once opened. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90516" name="Lesser GM's Blessing Chest" type="NONE" icon="icon.event_six_party_box_i00">
 	<!-- Double-click to receive one of the following items: Dandy's Home Run Ball, Angel Cat's Blessing, Sayha's Holy Water, Soulshot Ticket, Warrior's Major HP Potion.  -->
 		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90517" name="Greater GM's Blessing Chest" type="NONE" icon="icon.event_six_party_box_i00">
 	<!-- Double-click to receive one of the following items: Spellbook Box - 3rd Class Transfer, Magic Tablet, Spellbook Box, Common Life Stone, Scroll of Mood Melody.  -->
 		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90518" name="Greatest GM's Blessing Chest" type="NONE" icon="icon.event_six_party_box_i00">
 	<!-- Double-click to receive one of the following items: Refined Rare Accessory Pack (30-day), Rare Accessory Pack (15-day), Unidentified Stone, Dandy's Shining Pendant (7-day), Dandy's Shining Pendant (1-day), Dandy's Pendant (7-day), Dandy's Pendant (1-day).  -->
 		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90519" name="Shining Scroll of Mood Melody" type="SCROLL" icon="icon.bm_magmeld">
 	<!-- For 20 minutes activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Purity, Wild Magic, Concentration. Cannot be used together with Scroll of Mood Melody. This effect will not be removed after death.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90520" name="Fire Dragon's Blessing Scroll" type="SCROLL" icon="icon.bm_blessing_dragon">
 	<!-- For 20 minutes.\\n\\nBlessing Of Fire Dragon: Buff/ debuff effects remain after death, but Blessing of Fire Dragon is consumed. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90521" name="Golden Fishing Rod Pouch" type="NONE" icon="Icon.bm_gold_fishing_poket">
 	<!-- Double-click to obtain 180 Golden Bait, 180 Fishing Shots.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90522" name="Golden Treasure Chest" type="NONE" icon="icon.bm_gold_relic_box">
 	<!-- Double-click on the Golden Treasure Chest to obtain one of its treasures.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90523" name="Shining Fishing kit Lv. 1" type="NONE" icon="icon.bm_freya_gift_box">
 	<!-- Double-click to obtain 2 Golden Mermaid's Fishing Rod Packs (30-day), 25920 Silver Bait, 20 Einhasad's Protections, 1 Talisman of Baium Pack (30-day), and 1 Shining Jewel Box (30-day).  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90524" name="Lucky Enchant Stone Chest - A-grade" type="NONE" icon="icon.etc_pi_gift_box_i03">
 	<!-- Double-click to randomly receive one of the following items: Lucky Enchant Stone: Armor (A-grade), Lucky Enchant Stone: Save Armor (A-grade), Lucky Enchant Stone: Protect Armor (A-grade).  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90525" name="Lucky Enchant Stone Chest - B-grade" type="NONE" icon="icon.etc_pi_gift_box_i02">
 	<!-- Double-click to randomly receive one of the following items: Lucky Enchant Stone: Armor (B-grade), Lucky Enchant Stone: Save Armor (B-grade), Lucky Enchant Stone: Protect Armor (B-grade).  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90526" name="Talisman of Baium Box" type="NONE" icon="icon.npoint_tauti_30day_box">
 	<!-- Double-click to obtain a Talisman of Baium Pack (30-day).  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<armor id="90527" name="Talisman of Baium" type="NONE" body-part="TALISMAN" icon="icon.tallisman_baium">
@@ -175,7 +175,7 @@
 	<item id="90528" name="Shining Jewel Box" type="NONE" icon="icon.etc_pi_box_wish_pack">
 	<!-- Double-click to obtain 1 Jade Lv. 5 (30-day), 1 Vital Stone Lv. 5 (30-day), and 1 Garnet Lv. 5 (30-day).  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<armor id="90529" name="Jade Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_jade_i00">
@@ -202,13 +202,13 @@
 	<item id="90532" name="Rare Accessory Lv. 3 Box" type="NONE" icon="icon.npoint_earthworm_30day_box">
 	<!-- Double-click to randomly obtain one of the following items: Queen Ant's Ring Lv. 3, Orfen's Earring Lv. 3, Ring of Core Lv. 3, Baium's Ring Lv. 3. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90533" name="Rare Accessory Lv. 1 Box" type="NONE" icon="icon.npoint_valakas_30day_box">
 	<!-- Double-click to randomly receive one of the following items: Queen Ant's Ring Lv. 1, Orfen's Earring Lv. 1, Ring of Core Lv. 1, Baium's Ring Lv. 1. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90534" name="Sigel’s Rune - Stage 1" type="SIGEL_RUNE" icon="BranchIcon.Icon.g_rune_sigel_lv00">

@@ -3,84 +3,84 @@
 	<item id="8700" name="Recipe: Tiphon's Spear (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Tiphon's Spear. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="8701" name="Recipe: Tiphon's Spear (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Tiphon's Spear. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="8702" name="Recipe: Shyeed's Bow (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Shyeed's Bow. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="8703" name="Recipe: Shyeed's Bow (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Shyeed's Bow. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="8704" name="Recipe: Sobekk's Hurricane (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sobekk's Hurricane. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="8705" name="Recipe: Sobekk's Hurricane (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sobekk's Hurricane. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="8706" name="Recipe: Themis' Tongue (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Themis' Tongue. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="8707" name="Recipe: Themis' Tongue (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Themis' Tongue. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="8708" name="Recipe: Cabrio's Hand (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Cabrio's Hand. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="8709" name="Recipe: Cabrio's Hand (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Cabrio's Hand. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="8710" name="Recipe: Daimon Crystal (60%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Daimon Crystal. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="8711" name="Recipe: Daimon Crystal (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Daimon Crystal. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="706000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 

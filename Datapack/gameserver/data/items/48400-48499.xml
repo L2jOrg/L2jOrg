@@ -15,7 +15,7 @@
 	<item id="48411" name="Item Unseal Scroll (15-min) Box" type="NONE" icon="BranchSys3.g_ev_invite_fantasy_box">
 	<!-- Double-click to obtain 10 Item Unseal Scrolls (15-min). -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
-		<attributes weight="10" immediate-effect="true"/>
+		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 	</item>
 
 </list>

@@ -15,7 +15,7 @@
 	<item id="90302" name="New Cleaning Tool's Supply List" type="NONE" icon="icon.etc_paper_white_i00">
 	<!-- Priest Gerald tries to make tools for decorating the inner parts of the Temple that is currently under repairs. This is the list of materials that he needs. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" quest-item="true"/>
+		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 	</item>
 
 	<item id="90303" name="Bat Bristle" type="NONE" icon="icon.etc_mane_i00">
@@ -77,7 +77,7 @@
 	<item id="90310" name="MP Recovery Potion (Novice)" type="POTION" icon="icon.etc_lesser_potion_blue_i00">
 	<!-- Magical MP-recovering potion.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="5" commission-type="POTION" immediate-effect="true"/>
+		<attributes weight="5" commission-type="POTION" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39257" level="1"/>  <!-- Newbie MP Recovery Potion -->
 		</skill-reducer>
@@ -394,247 +394,247 @@
 	<item id="90359" name="Fortune Brooch" type="NONE" icon="icon.etc_bm_jewelbox_shhadai">
 	<!-- Double-click to obtain Fortune Jewelry Chest.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90360" name="Fortune Topaz Chest" type="NONE" icon="icon.etc_bm_jewelbox_topaz_i00">
 	<!-- Double-click to obtain Lv. 1-5 Topaz.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90361" name="Fortune Garnet Chest" type="NONE" icon="icon.etc_bm_jewelbox_garnet_i01">
 	<!-- Double-click to obtain Lv. 1-5 Garnet.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90362" name="Fortune Jade Chest" type="NONE" icon="icon.etc_bm_jewelbox_jade_i00">
 	<!-- Double-click to obtain  Lv. 1-5 Jade.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90363" name="Fortune Ruby Chest" type="NONE" icon="icon.etc_bm_jewelbox_ruby_i00">
 	<!-- Double-click to obtain Lv. 1-5 Ruby.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90364" name="Fortune Sapphire Chest" type="NONE" icon="icon.etc_bm_jewelbox_sapphire_i00">
 	<!-- Double-click to obtain Lv. 1-5 Sapphire.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90365" name="Fortune Diamond Chest" type="NONE" icon="icon.etc_bm_jewelbox_diamond_i00">
 	<!-- Double-click to obtain Lv. 1-5 Diamond.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90366" name="Fortune Pearl Chest" type="NONE" icon="icon.etc_bm_jewelbox_pearl_i00">
 	<!-- Double-click to obtain Lv. 1-5 Pearl.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90367" name="Fortune Vital Stone Chest" type="NONE" icon="icon.etc_bm_jewelbox_vital_i00">
 	<!-- Double-click to obtain Lv. 1-5 Vital Stone.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90368" name="Shiny Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_main_i00">
 	<!-- Double-click to obtain Shiny Jewelry Box.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90369" name="Topaz Chest" type="NONE" icon="icon.etc_bm_jewelbox_topaz_i00">
 	<!-- Double-click to obtain Lv. 1 Topaz.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90370" name="Garnet Chest" type="NONE" icon="icon.etc_bm_jewelbox_garnet_i01">
 	<!-- Double-click to obtain Lv. 1 Garnet.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90371" name="Jade Chest" type="NONE" icon="icon.etc_bm_jewelbox_jade_i00">
 	<!-- Double-click to obtain Lv. 1 Jade.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90372" name="Ruby Chest" type="NONE" icon="icon.etc_bm_jewelbox_ruby_i00">
 	<!-- Double-click to obtain Lv. 1 Ruby.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90373" name="Sapphire Chest" type="NONE" icon="icon.etc_bm_jewelbox_sapphire_i00">
 	<!-- Double-click to obtain Lv. 1 Sapphire.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90374" name="Diamond Chest" type="NONE" icon="icon.etc_bm_jewelbox_diamond_i00">
 	<!-- Double-click to obtain Lv. 1 Diamond.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90375" name="Pearl Chest" type="NONE" icon="icon.etc_bm_jewelbox_pearl_i00">
 	<!-- Double-click to obtain Lv. 1 Pearl.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90376" name="Vital Stone Chest" type="NONE" icon="icon.etc_bm_jewelbox_vital_i00">
 	<!-- Double-click to obtain Lv. 1 Vital Stone.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90377" name="Lv. 3 Topaz Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_topaz_i00">
 	<!-- Double-click to obtain Lv. 3 Topaz.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90378" name="Lv. 4 Topaz Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_topaz_i00">
 	<!-- Double-click to obtain Lv. 4 Topaz.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90379" name="Lv. 5 Topaz Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_topaz_i00">
 	<!-- Double-click to obtain Lv. 5 Topaz.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90380" name="Lv. 3 Garnet Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_garnet_i01">
 	<!-- Double-click to obtain Lv. 3 Garnet.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90381" name="Lv. 4 Garnet Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_garnet_i01">
 	<!-- Double-click to obtain Lv. 4 Garnet.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90382" name="Lv. 5 Garnet Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_garnet_i01">
 	<!-- Double-click to obtain Lv. 5 Garnet.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90383" name="Lv. 3 Jade Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_jade_i00">
 	<!-- Double-click to obtain Lv. 3 Jade.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90384" name="Lv. 4 Jade Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_jade_i00">
 	<!-- Double-click to obtain Lv. 4 Jade.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90385" name="Lv. 4 Jade Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_jade_i00">
 	<!-- Double-click to obtain Lv. 5 Jade.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90386" name="Lv. 3 Ruby Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_ruby_i00">
 	<!-- Double-click to obtain Lv. 3 Ruby.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90387" name="Lv. 4 Ruby Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_ruby_i00">
 	<!-- Double-click to obtain Lv. 4 Ruby.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90388" name="Lv. 5 Ruby Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_ruby_i00">
 	<!-- Double-click to obtain Lv. 5 Ruby.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90389" name="Lv. 3 Sapphire Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_sapphire_i00">
 	<!-- Double-click to obtain Lv. 3 Sapphire.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90390" name="Lv. 4 Sapphire Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_sapphire_i00">
 	<!-- Double-click to obtain Lv. 4 Sapphire.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90391" name="Lv. 5 Sapphire Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_sapphire_i00">
 	<!-- Double-click to obtain Lv. 5 Sapphire.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90392" name="Lv. 3 Diamond Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_diamond_i00">
 	<!-- Double-click to obtain Lv. 3 Diamond.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90393" name="Lv. 4 Diamond Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_diamond_i00">
 	<!-- Double-click to obtain Lv. 4 Diamond.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90394" name="Lv. 5 Diamond Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_diamond_i00">
 	<!-- Double-click to obtain Lv. 5 Diamond.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90395" name="Lv. 3 Pearl Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_pearl_i00">
 	<!-- Double-click to obtain Lv. 3 Pearl.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90396" name="Lv. 4 Pearl Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_pearl_i00">
 	<!-- Double-click to obtain Lv. 4 Pearl.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90397" name="Lv. 5 Pearl Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_pearl_i00">
 	<!-- Double-click to obtain Lv. 5 Pearl.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90398" name="Lv. 3 Vital Stone Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_vital_i00">
 	<!-- Double-click to obtain Lv. 3 Vital Stone.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90399" name="Lv. 4 Vital Stone Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_vital_i00">
 	<!-- Double-click to obtain Lv. 4 Vital Stone.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 </list>

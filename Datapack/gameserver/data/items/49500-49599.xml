@@ -3,13 +3,13 @@
 	<item id="49500" name="Advanced Return Scroll" type="SCROLL" icon="icon.etc_scroll_of_return_i01">
 	<!-- Magical scroll that quickly teleports you to the closest town. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49501" name="Fish Stew - Guildsman's Gratitude Lv. 1" type="SCROLL" icon="icon.ev_invasion_buff_box">
 	<!-- Increases XP and SP obtained from hunting by 10% for 20 min.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39076" level="1"/>  <!-- Fish Stew - Guild's Gratitude -->
 		</skill-reducer>
@@ -21,7 +21,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="30"/>
+		<attributes weight="30" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39078" level="1"/>  <!-- Teleport: Giran Harbor -->
 		</skill-reducer>
@@ -33,7 +33,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="30"/>
+		<attributes weight="30" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39077" level="1"/>  <!-- Teleport: Gludin Harbor -->
 		</skill-reducer>
@@ -71,16 +71,16 @@
 	<item id="49507" name="Fishing Rod Chest (10-day)" type="NONE" icon="icon.etc_box_of_adventure_1_i00">
 	<!-- You can obtain a Fishing Rod for 10 days.   -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="49506" min-count="1" max-count="1" chance="100000"/>  <!-- Fishing Rod -->
+			<item id="49506" chance="100000"/>  <!-- Fishing Rod -->
 		</extract>
 	</item>
 
 	<item id="49508" name="Normal Bait" type="LURE" icon="icon.etc_huge_lure">
 	<!-- Fishing bait enables to fish.   -->
 		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="EQUIP"/>
 	</item>
 
 	<armor id="49509" name="Ring of Core Lv. 1" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_core_i00">
@@ -106,7 +106,7 @@
 	<item id="49511" name="Sheep Gift" type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- You can obtain Spellbook Box, Rare Accessory Pack (15-day), Fishing kit, High Rank Scroll of Escape (Event), Quick HP Potion, Warrior's Major HP Potion.   -->
 		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49512" name="MOPP Friend or Foe Charm" type="RUNE" icon="BranchSys3.lcon.g_rune_itemdrop_up">
@@ -121,7 +121,7 @@
 	<item id="49513" name="Shiny Pendant Varnish Box" type="NONE" icon="icon.bm_special_pendant_abradant_box">
 	<!-- u,Double-click to obtain 1 Shiny Varnish that strengthens a pendant’s ability.\\n\\n<Note>\\nThe items obtained from the box cannot be moved freely. Keep this in mind before opening the box. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<armor id="49514" name="Agathion Bracelet - Aries" type="NONE" body-part="LEFT_BRACELET" icon="icon.agathion_magmeld_teleport">
@@ -148,13 +148,13 @@
 	<item id="49517" name="Pirate’s Island Treasure Chest" type="NONE" icon="icon.bm_pirate_battle_box">
 	<!-- u,Double-click to obtain 2 Special Fruit Buffs. If you’re lucky, you can obtain 1 Pirate King’s Treasure Chest. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49518" name="Pirate's Special Fruit" type="SCROLL" icon="icon.etc_codran_i09">
 	<!-- For 20 min., P./M. Atk. + 7%, P./M. Def. + 10%, Max HP/CP/MP + 15%, HP/MP Recovery + 20%. Has a chance of recovering 3% of physical damage dealt to enemy as HP. Increase XP/SP gain by 5% when hunting. Cooldown is 1 minute. Effect remains even after death. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes reuse-delay="60000" immediate-effect="true"/>
+		<attributes reuse-delay="60000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39144" level="1"/>  <!-- Special Pirate Fruit -->
 		</skill-reducer>
@@ -163,13 +163,13 @@
 	<item id="49519" name="Pirate King's Reward Box" type="NONE" icon="icon.bm_pirate_treasure_box">
 	<!-- Double-click to obtain one of the treasures that the pirates stole. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="49520" name="Aries Agathion Box" type="NONE" icon="icon.bm_sheep_agathion_30d_box">
 	<!-- Double-click to obtain 1 Aries Agathion (60-day).\\n\\n<Note>\\nThe items obtained from the box cannot be moved freely. Keep this in mind before opening the box. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes duration="86400" immediate-effect="true"/>
+		<attributes duration="86400" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<armor id="49521" name="Refined Romantic Chapeau (Str+1 Int+1)" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_archer_hat2_i00">
@@ -196,13 +196,13 @@
 	<item id="49524" name="Pirate King Hat Box" type="NONE" icon="icon.bm_pirate_king_box">
 	<!-- Double-click to obtain one of the following: Refined Romantic Chapeau, Pirate King Hat, and Demon's Circlet. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="49525" name="Rare Accessory Lv. 1 Box" type="NONE" icon="icon.ev_10th_present2">
 	<!-- Double-click to receive one of the following items: Queen Ant's Ring Lv. 1 (15-day), Orfen's Earring Lv. 1(15-day), Ring of Core Lv. 1(15-day). -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55089" level="1"/>  <!-- Rare Accessory Pack -->
 		</skill-reducer>
@@ -211,19 +211,19 @@
 	<item id="49526" name="Advanced Scroll of Resurrection" type="SCROLL" icon="icon.etc_scroll_of_resurrection_i01">
 	<!-- Magic scroll that resurrects a dead character and restores their XP by 50%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49527" name="My Teleport Box" type="NONE" icon="icon.etc_pi_gift_box_i01">
 	<!-- Double-click to obtain 1 My Teleport Book and 10 Scrolls of Escape. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49528" name="Pirate's HP Potion" type="POTION" icon="icon.etc_potion_red_i00">
 	<!-- After instant 600 HP Recovery, CP Recovery with remaining points. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="1"/>
+		<attributes weight="1" action="SKILL_REDUCE"/>
 	</item>
 
 	<armor id="49529" name="Blue Dynasty- Heavy Armor" type="HEAVY" body-part="ALL_DRESS" icon="icon.armor_t2000_ul_i00">
@@ -257,55 +257,55 @@
 	<item id="49533" name="Hero’s HP Potion" type="POTION" icon="icon.etc_lesser_potion_red_i00">
 	<!-- After instant 500 HP Recovery, CP Recovery with remaining points. -->
 		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="1"/>
+		<attributes weight="1" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49534" name="Hero Cube" type="COUPON" icon="icon.special_cube_i00">
 	<!-- 7-day item. Available at level 20 or higher. Double-click the Cube to receive Soulshot Ticket, Buff Scrolls Chest, Major HP Potion, Warrior's Quick HP Potion, Warrior's Quick HP Potion, Angel Cat's Blessing, Improved Scroll of Resurrection, Parts of Enchantment Scrolls Chest, Fishing kit chest, My Teleport to the Base Package, Blade Spirit, Spellbook Box. (Can be used only once per day.)  -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" depositable="false"/>
-		<attributes duration="10080"/>
+		<attributes duration="10080" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49535" name="Fishing kit of the Hero Who Came Back" type="NONE" icon="icon.etc_elite_marguene_collection_box_i00">
 	<!-- Double-click to receive Fishing Rod (10-day), Bait (2160 pcs, Event), Hero's Dual Swords (15-day), 3 Soulshot Tickets. \\n\\n<Note>\\nBe careful before opening the items as their relocation is restricted. -->
 		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49536" name="Box of Scroll of Escape to the Base" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Double-click to get 1 Scroll of Escape to Dragon Valley Bridge, to Antharas' Lair, to the Entrance of Cruma Tower, to the Entrance of Orc Barracks, to the Entrance of Magic Valley.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49537" name="Return: Dragon Valley Bridge" type="SCROLL" icon="icon.etc_scroll_of_return_i05">
 	<!-- Magic scroll that teleports you to the Dragon Valley Bridge. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30"/>
+		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49538" name="Return: Inside Antharas' Lair" type="SCROLL" icon="icon.etc_scroll_of_return_i05">
 	<!-- Magic scroll that teleports you into Antharas' Lair. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30"/>
+		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49539" name="Return: Cruma Tower Entrance" type="SCROLL" icon="icon.etc_scroll_of_return_i05">
 	<!-- Magic scroll that teleports you to the entrance of Cruma Tower. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30"/>
+		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49540" name="Return: Turek Orc Campsite Entrance" type="SCROLL" icon="icon.etc_scroll_of_return_i05">
 	<!-- Magic scroll that teleports you to the entrance of Turek Orc Campsite. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30"/>
+		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49541" name="Spellbook Chest" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- Double-click the chest to receive one of the Spellbooks, used after the 2nd Class Transfer.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39059" level="1"/>  <!-- Spellbok Box -->
 		</skill-reducer>
@@ -314,7 +314,7 @@
 	<item id="49542" name="Greater Scroll of Resurrection" type="SCROLL" icon="icon.etc_scroll_of_resurrection_i01">
 	<!-- Magic scroll, restoring 50% of XP and resurrecting the character.  -->
 		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="120" commission-type="SCROLL_OTHER"/>
+		<attributes weight="120" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39109" level="1"/>  <!-- Improved Scroll of Resurrection -->
 		</skill-reducer>
@@ -371,7 +371,7 @@
 	<item id="49550" name="Return: Enchanted Valley Entrance" type="SCROLL" icon="icon.etc_scroll_of_return_i05">
 	<!-- Magic scroll that teleports you to the entrance of Enchanted Valley. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30"/>
+		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<armor id="49551" name="Blue Dynasty- Light Armor" type="LIGHT" body-part="ALL_DRESS" icon="icon.armor_t2000_ul_i00">
@@ -465,13 +465,13 @@
 	<item id="49565" name="Misfety's Gift" type="NONE" icon="icon.etc_pi_box_joy_pack">
 	<!-- Miss Patch's Gift. Double-click the chest to receive Successor's Ring, Sheep Hat (14-day) and The Rune of Hero's Experience (30-day). \\n\\n<Note>\\nBe careful before opening the items as their relocation is restricted. -->
 		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49566" name="Roa's Gift" type="NONE" icon="icon.etc_ev_draco_gift_box">
 	<!-- Roa's Gift. This is the gift she put her soul into. Double-click the chest to receive 1 Soulshot Ticket, Buff Scrolls Chest, Base Scroll of Escape Pack, Fishing Kit, Feather of Blessing, or Spellbook Box. \\n\\n<Note>\\nThe items obtained from the box cannot be moved freely. Keep this in mind before opening the box. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="49567" name="Something Roa lost" type="NONE" icon="icon.event_july_seven_park_i00">
@@ -651,7 +651,7 @@
 	<item id="49583" name="Golden Mermaid's Fishing Box" type="NONE" icon="icon.etc_treasure_box_i08">
 	<!-- Double-click to obtain 180 Golden Bait, 180 Normal Fishing Shots, and 5 each of Giran and Gludin Harbor Scrolls of Escape.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="49589" min-count="180" max-count="180" chance="100000"/>  <!-- Golden Bait -->
 			<item id="38154" min-count="180" max-count="180" chance="100000"/>  <!-- Fishing Shot -->
@@ -663,16 +663,16 @@
 	<item id="49584" name="Golden Boots" type="NONE" icon="icon.bm_gold_shose">
 	<!-- Double-click on the Golden Boot to get one of its treasures.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<extract >
-			<item id="45488" min-count="1" max-count="1" chance="100000"/>  <!-- Golden Treasure Chest -->
+			<item id="45488" chance="100000"/>  <!-- Golden Treasure Chest -->
 		</extract>
 	</item>
 
 	<item id="49585" name="Golden Mermaid's Tears" type="SCROLL" icon="icon.general_fuel_i00">
 	<!-- 7-day item. Increases XP/SP gain by 50% for 1 hours. Effect remains after death.  -->
 		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
-		<attributes duration="10080"/>
+		<attributes duration="10080" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39113" level="1"/>  <!-- Golden Mermaid's Tears -->
 		</skill-reducer>
@@ -715,19 +715,19 @@
 	<item id="49588" name="Golden Mermaid's Fishing Rod Box" type="NONE" icon="icon.etc_bm_lure_box_i00">
 	<!-- Use to obtain a 30-day Golden Mermaid's Fishing Rod. \\n\\n<Note>\\nThe item in the box has movement limitations, so keep that in mind when opening the box. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes weight="100" duration="43200" immediate-effect="true"/>
+		<attributes weight="100" duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49589" name="Golden Bait" type="LURE" icon="icon.bm_gold_lure">
 	<!-- Fishing Bait. Can be used for fishing Whales.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="EQUIP"/>
 	</item>
 
 	<item id="49590" name="Rare Accessory Lv. 3 Box" type="NONE" icon="icon.etc_box_of_adventure_3_i00">
 	<!-- Double-click to obtain the following: Enhanced Queen Ant's Ring Lv. 3 (30-day), Enhanced Orfen's Earring Lv. 3 (30-day), Enhanced Ring of Core Lv. 3 (30-day). -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes duration="43200" immediate-effect="true"/>
+		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<armor id="49591" name="Queen Ant's Ring Lv. 3" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_queen_ant_i03">
@@ -776,25 +776,25 @@
 	<item id="49594" name="Whale" type="SCROLL" icon="icon.fish_huge_i15">
 	<!-- Double-Click to obtain a Fishing Coin or, at a certain chance, Golden Boots.   -->
 		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49595" name="Scroll: 2,000 SP" type="SCROLL" icon="icon.etc_sp_scroll1_i00">
 	<!-- Scroll that replenishes 2,000 SP.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49596" name="Scroll: 10,000 SP" type="SCROLL" icon="icon.etc_sp_scroll2_i00">
 	<!-- Scroll that replenishes 10,000 SP.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49597" name="Golden Boot" type="NONE" icon="icon.bm_gold_shose">
 	<!-- Double-click on the Golden Boot to get one of its treasures.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<armor id="49598" name="Blue Talisman - Physical Critical" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i01">

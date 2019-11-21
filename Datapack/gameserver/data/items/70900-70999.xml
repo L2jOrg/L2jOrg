@@ -51,7 +51,7 @@
 	<item id="70907" name="Ancient Cloak (Legendary) Scroll Pack" type="SCROLL" icon="icon.bm_freya_gift_box">
 	<!-- Double-click to obtain 1 Scroll: Enchant Cloak - Legendary or 1 Stable Cloak Enchantment Scroll - Legendary. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70908" name="Ancient Kingdom's Coin" type="NONE" icon="icon.bm_nebit_coin">
@@ -63,25 +63,25 @@
 	<item id="70909" name="+10 Elmoreden Cloak - Legendary Box" type="NONE" icon="BranchIcon.icon.etc_g_bm_godspirit_box">
 	<!-- Double-click to obtain a +10 Elmoreden Cloak - Legendary. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70910" name="+10 Aden Cloak - Legendary Box" type="NONE" icon="BranchIcon.icon.etc_g_bm_godspirit_box">
 	<!-- Double-click to obtain a +10 Aden Cloak - Legendary. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70911" name="+10 Elmore Cloak - Legendary Box" type="NONE" icon="BranchIcon.icon.etc_g_bm_godspirit_box">
 	<!-- Double-click to obtain a +10 Elmore Cloak - Legendary. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70912" name="+10 Ferios Cloak - Legendary Box" type="NONE" icon="BranchIcon.icon.etc_g_bm_godspirit_box">
 	<!-- Double-click to obtain a +10 Ferios Cloak - Legendary. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<armor id="70913" name="Fire Dragon Pendant - Lv. 5" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pve">
@@ -107,19 +107,19 @@
 	<item id="70915" name="Fire Dragon Pendant - Lv. 5 Chest +5" type="NONE" icon="icon.bm_freya_gift_box">
 	<!-- Double-click to obtain one +5 Fire Dragon Pendant - Lv. 5 (7-day).  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes duration="10080" immediate-effect="true"/>
+		<attributes duration="10080" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70916" name="Water Dragon Pendant - Lv. 5 Chest +5" type="NONE" icon="icon.bm_freya_gift_box">
 	<!-- Double-click to obtain one +5 Water Dragon Pendant - Lv. 5 (7-day).  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes duration="10080" immediate-effect="true"/>
+		<attributes duration="10080" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70917" name="Battle Box Lv. 1" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Reward for clan members. Double-click to obtain various items.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="51038" level="1"/>  <!-- Battle Box Lv. 1 -->
 		</skill-reducer>
@@ -128,7 +128,7 @@
 	<item id="70918" name="Battle Box Lv. 2" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Reward for clan members. Double-click to obtain various items.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="51039" level="1"/>  <!-- Battle Box Lv. 2 -->
 		</skill-reducer>
@@ -137,7 +137,7 @@
 	<item id="70919" name="Battle Box Lv. 3" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Reward for clan members. Double-click to obtain various items.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="51040" level="1"/>  <!-- Battle Box Lv. 3 -->
 		</skill-reducer>
@@ -146,7 +146,7 @@
 	<item id="70920" name="Battle Box Lv. 4" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Reward for clan members. Double-click to obtain various items.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="51041" level="1"/>  <!-- Battle Box Lv. 4 -->
 		</skill-reducer>
@@ -155,7 +155,7 @@
 	<item id="70921" name="Valor Box" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- Reward for valor warriors. Double-click to obtain various items.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<armor id="70922" name="Bracelet of Duty Lv. 6" type="NONE" body-part="UNDERWEAR" icon="BranchIcon.Icon.g_pledge_bracelet_05">
@@ -576,7 +576,7 @@
 	<item id="70999" name="Agathion - Love (7-day) Pack - Event" type="NONE" icon="icon.etc_pi_gift_box_i02">
 	<!-- Double-click to obtain Agathion - Love (7-day) - Event.\\n -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 </list>

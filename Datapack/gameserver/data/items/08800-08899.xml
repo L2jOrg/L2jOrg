@@ -427,7 +427,7 @@
 		<condition msg-id="113">
 			<player level-min="20"/>
 		</condition>
-		<attributes weight="20" price="10000" immediate-effect="true"/>
+		<attributes weight="20" price="10000" immediate-effect="true" action="CREATE_MPCC"/>
 	</item>
 
 	<item id="8872" name="Flash Gunpowder" type="NONE" icon="icon.etc_powder_gray_i00">

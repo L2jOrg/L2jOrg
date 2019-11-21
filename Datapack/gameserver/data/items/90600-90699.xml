@@ -567,37 +567,37 @@
 	<item id="90694" name="Sealed Rune - Stage 1" type="NONE" icon="BranchIcon.Icon.g_green_sealed_rune">
 	<!-- Double-click to receive one Stage 1 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90695" name="Sealed Rune - Stage 2" type="NONE" icon="BranchIcon.Icon.g_green_sealed_rune">
 	<!-- Double-click to receive one Stage 2 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90696" name="Sealed Rune - Stage 3" type="NONE" icon="BranchIcon.Icon.g_green_sealed_rune">
 	<!-- Double-click to receive one Stage 3 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90697" name="Sealed Rune - Stage 4" type="NONE" icon="BranchIcon.Icon.g_green_sealed_rune">
 	<!-- Double-click to receive one Stage 4 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90698" name="Sealed Rune - Stage 5" type="NONE" icon="BranchIcon.Icon.g_green_sealed_rune">
 	<!-- Double-click to receive one Stage 5 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90699" name="Sealed Rune - Stage 6" type="NONE" icon="BranchIcon.Icon.g_blue_sealed_rune">
 	<!-- Double-click to receive one Stage 6 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 </list>

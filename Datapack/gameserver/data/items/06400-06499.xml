@@ -21,7 +21,7 @@
 	<item id="6403" name="Star Shard" type="NONE" icon="icon.etc_fairy_fire_i00">
 	<!-- Starlight Festival Event - Gift from the sky. When it is thrown, it creates a small explosion. Can be used as an ingredient to make other types of fireworks. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2023" level="1"/>  <!-- Star Shard -->
 		</skill-reducer>
@@ -42,7 +42,7 @@
 	<item id="6406" name="Firecracker" type="NONE" icon="icon.etc_small_ultra_bomb_i00">
 	<!-- Explosive device that brilliantly lights up the sky. -->
 		<restriction freightable="false" coc-restricted="true" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2024" level="1"/>  <!-- Fireworks -->
 		</skill-reducer>
@@ -51,7 +51,7 @@
 	<item id="6407" name="Large Firecracker" type="NONE" icon="icon.etc_ultra_bomb_i00">
 	<!-- Large explosive device that ignites to light up the sky. -->
 		<restriction freightable="false" coc-restricted="true" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2025" level="1"/>  <!-- Thunder Bolt -->
 		</skill-reducer>

@@ -3,19 +3,19 @@
 	<item id="33778" name="Soulshot (A-grade)" type="NONE" icon="icon.etc_spirit_bullet_silver_i00">
 	<!-- Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="SOULSHOT"/>
 	</item>
 
 	<item id="33785" name="Spiritshot (A-grade)" type="NONE" icon="icon.etc_spell_shot_silver_i00">
 	<!-- Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="SPIRITSHOT"/>
 	</item>
 
 	<item id="33792" name="Blessed Spiritshot (A-grade)" type="NONE" icon="icon.etc_spell_shot_silver_i01">
 	<!-- Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="SPIRITSHOT"/>
 	</item>
 
 </list>

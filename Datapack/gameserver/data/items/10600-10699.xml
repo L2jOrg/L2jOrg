@@ -14,7 +14,7 @@
 	<item id="10650" name="Scroll of Escape (Novice)" type="SCROLL" icon="icon.etc_scroll_of_return_i00">
 	<!-- Magic scroll that moves you to the nearest village. Item for beginner adventurers.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2531" level="1"/>  <!-- Newbie Scroll of Escape -->
 		</skill-reducer>

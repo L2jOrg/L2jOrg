@@ -3,84 +3,84 @@
 	<item id="1800" name="Recipe: Piece Bone Breastplate" type="RECIPE" icon="icon.etc_recipe_white_i00">
 	<!-- For Dwarves only. Recipe for a Piece Bone Breastplate. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="636" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="636" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="1801" name="Recipe: Piece Bone Gaiters" type="RECIPE" icon="icon.etc_recipe_white_i00">
 	<!-- For Dwarves only. Recipe for Piece Bone Gaiters. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="397" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="397" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="1802" name="Recipe: Necklace of Anguish" type="RECIPE" icon="icon.etc_recipe_white_i00">
 	<!-- For Dwarves only. Recipe for a Necklace of Anguish. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="93" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="93" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="1803" name="Recipe: Necklace of Wisdom" type="RECIPE" icon="icon.etc_recipe_white_i00">
 	<!-- For Dwarves only. Recipe for a Necklace of Wisdom. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="238" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="238" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="1804" name="Recipe: Soulshot (D-grade)" type="MATERIAL" icon="icon.etc_recipe_blue_i00">
 	<!-- For Dwarves only. Recipe for a soulshot-D-grade . Requires Create Item - Skill Lv. 2. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="5000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="5000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="1805" name="Recipe: Soulshot (C-grade)" type="MATERIAL" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a soulshot-C-grade . Requires Create Item - Skill Lv. 4. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="60000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="60000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="1806" name="Recipe: Soulshot (B-grade)" type="MATERIAL" icon="icon.etc_recipe_red_i00">
 	<!-- For Dwarves only. Recipe for a soulshot-B-grade. Requires Create Item - Skill Lv. 6. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="100000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="100000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="1807" name="Recipe: Soulshot (A-grade)" type="MATERIAL" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for a soulshot-A-grade . Requires Create Item - Skill Lv. 7. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="150000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="150000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="1808" name="Recipe: Soulshot (S-grade)" type="MATERIAL" icon="icon.etc_recipe_black_i00">
 	<!-- For Dwarves only. Recipe for a Soulshot (S-grade). Create Item skill must be level 8. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="450000" immediate-effect="true"/>
+		<attributes weight="30" price="450000" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="1814" name="Recipe: Leather" type="RECIPE" icon="icon.etc_recipe_white_i00">
 	<!-- For Dwarves only. Recipe for Leather. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="380" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="380" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="1817" name="Recipe: Cord" type="RECIPE" icon="icon.etc_recipe_white_i00">
 	<!-- For Dwarves only. Recipe for Cord. Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="1000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="1000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="1825" name="Recipe: Oriharukon" type="RECIPE" icon="icon.etc_recipe_blue_i00">
 	<!-- For Dwarves only. Recipe for Oriharukon. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="2800" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="2800" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
@@ -90,7 +90,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="120" price="500" commission-type="SCROLL_OTHER"/>
+		<attributes weight="120" price="500" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2040" level="1"/>  <!-- Scroll of Escape: Clan Hall -->
 		</skill-reducer>
@@ -102,7 +102,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="120" price="500" commission-type="SCROLL_OTHER"/>
+		<attributes weight="120" price="500" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2041" level="1"/>  <!-- Scroll of Escape: Castle -->
 		</skill-reducer>
@@ -111,7 +111,7 @@
 	<item id="1831" name="Antidote" type="POTION" icon="icon.etc_herb_green_i00">
 	<!-- Reagent that neutralizes Poison . -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" price="75" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true"/>
+		<attributes weight="20" price="75" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2042" level="1"/>  <!-- Antidote -->
 		</skill-reducer>
@@ -120,7 +120,7 @@
 	<item id="1832" name="Greater Antidote" type="POTION" icon="icon.etc_reagent_green_i00">
 	<!-- High-quality reagent that neutralizes powerful Poison . -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" price="180" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true"/>
+		<attributes weight="20" price="180" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2043" level="1"/>  <!-- Greater Antidote -->
 		</skill-reducer>
@@ -129,7 +129,7 @@
 	<item id="1833" name="Bandage" type="POTION" icon="icon.etc_piece_of_cloth_white_i00">
 	<!-- Medical bandage that stops Bleeding when injured. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" price="75" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true"/>
+		<attributes weight="20" price="75" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2044" level="1"/>  <!-- Bandage -->
 		</skill-reducer>
@@ -138,7 +138,7 @@
 	<item id="1834" name="Emergency Dressing" type="POTION" icon="icon.etc_piece_of_cloth_white_i00">
 	<!-- Medical bandage that stops Bleeding fast when severely injured. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" price="180" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true"/>
+		<attributes weight="20" price="180" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2045" level="1"/>  <!-- Emergency Dressing -->
 		</skill-reducer>
@@ -147,8 +147,10 @@
 	<item id="1835" name="Soulshot (No-grade)" type="NONE" icon="icon.etc_spirit_bullet_white_i00">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a No-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="3" price="7" commission-type="SOULSHOT" for-npc="true" immediate-effect="true"/>
-		<action handler="SoulShots"/>
+		<attributes weight="3" price="7" commission-type="SOULSHOT" for-npc="true" immediate-effect="true" action="SOULSHOT"/>
+		<skill-reducer type="SoulShots">
+			<skill id="2039" level="1"/>  <!-- Soulshot (No-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="1836" name="Kendell's 1st Order" type="NONE" icon="icon.etc_recipe_blue_i00">

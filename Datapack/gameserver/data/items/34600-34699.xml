@@ -3,71 +3,91 @@
 	<item id="34603" name="Mysterious No-grade Soulshot" type="NONE" icon="icon.etc_spirit_bullet_white_i00">
 	<!-- Soulshot containing the light of Spirits. Instantly inflicts a powerful attack on the enemy. Use on no-grade weapons. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes commission-type="SOULSHOT" immediate-effect="true"/>
-		<action handler="SoulShots"/>
+		<attributes commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
+		<skill-reducer type="SoulShots">
+			<skill id="9293" level="1"/>  <!-- Mysterious No-grade Soulshot -->
+		</skill-reducer>
 	</item>
 
 	<item id="34604" name="Mysterious Soulshot (D-grade)" type="NONE" icon="icon.etc_spirit_bullet_blue_i00">
 	<!-- Soulshot containing the light of Spirits. Instantly inflicts a powerful attack on the enemy. Use on D-grade weapons. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes commission-type="SOULSHOT" immediate-effect="true"/>
-		<action handler="SoulShots"/>
+		<attributes commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
+		<skill-reducer type="SoulShots">
+			<skill id="9294" level="1"/>  <!-- Mysterious Soulshot (D-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="34605" name="Mysterious Soulshot (C-grade)" type="NONE" icon="icon.etc_spirit_bullet_green_i00">
 	<!-- Soulshot containing the light of Spirits. Instantly inflicts a powerful attack on the enemy. Use on C-grade weapons. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes commission-type="SOULSHOT" immediate-effect="true"/>
-		<action handler="SoulShots"/>
+		<attributes commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
+		<skill-reducer type="SoulShots">
+			<skill id="9295" level="1"/>  <!-- Mysterious Soulshot (C-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="34606" name="Mysterious Soulshot (B-grade)" type="NONE" icon="icon.etc_spirit_bullet_red_i00">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a B-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes commission-type="SOULSHOT" immediate-effect="true"/>
-		<action handler="SoulShots"/>
+		<attributes commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
+		<skill-reducer type="SoulShots">
+			<skill id="9296" level="1"/>  <!-- Mysterious Soulshot (B-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="34607" name="Mysterious Soulshot (A-grade)" type="NONE" icon="icon.etc_spirit_bullet_silver_i00">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a B-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes commission-type="SOULSHOT" immediate-effect="true"/>
-		<action handler="SoulShots"/>
+		<attributes commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
+		<skill-reducer type="SoulShots">
+			<skill id="9297" level="1"/>  <!-- Mysterious Soulshot (A-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="34610" name="Mysterious Blessed No-grade Spiritshot" type="NONE" icon="icon.etc_spell_shot_white_i01">
 	<!-- Spiritshot bestowed upon a weapon increases its magic power. Used with No-grade weapons. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes commission-type="SPIRITSHOT" immediate-effect="true"/>
-		<action handler="BlessedSpiritShot"/>
+		<attributes commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
+		<skill-reducer type="BlessedSpiritShot">
+			<skill id="8910" level="1"/>  <!-- Mysterious Blessed Soulshot (No-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="34611" name="Mysterious Blessed Spiritshot (D-grade)" type="NONE" icon="icon.etc_spell_shot_blue_i01">
 	<!-- Spiritshot containing the light of Spirits. Instantly and greatly increases the power of magic. Use on D-grade weapons. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes commission-type="SPIRITSHOT" immediate-effect="true"/>
-		<action handler="BlessedSpiritShot"/>
+		<attributes commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
+		<skill-reducer type="BlessedSpiritShot">
+			<skill id="8911" level="1"/>  <!-- Mysterious Blessed Soulshot (D-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="34612" name="Mysterious Blessed Spiritshot (C-grade)" type="NONE" icon="icon.etc_spell_shot_green_i01">
 	<!-- Spiritshot containing the light of Spirits. Instantly and greatly increases the power of magic. Use on C-grade weapons. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes commission-type="SPIRITSHOT" immediate-effect="true"/>
-		<action handler="BlessedSpiritShot"/>
+		<attributes commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
+		<skill-reducer type="BlessedSpiritShot">
+			<skill id="8912" level="1"/>  <!-- Mysterious Blessed Soulshot (C-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="34613" name="Mysterious Blessed Spiritshot (B-grade)" type="NONE" icon="icon.etc_spell_shot_red_i01">
 	<!-- The power of a Spiritshot is bestowed upon a weapon, temporarily increasing its magical power. Used with B-grade weapons. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes commission-type="SPIRITSHOT" immediate-effect="true"/>
-		<action handler="BlessedSpiritShot"/>
+		<attributes commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
+		<skill-reducer type="BlessedSpiritShot">
+			<skill id="8913" level="1"/>  <!-- Mysterious Blessed Soulshot (B-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="34614" name="Mysterious Blessed Spiritshot (A-grade)" type="NONE" icon="icon.etc_spell_shot_silver_i01">
 	<!-- The power of a Spiritshot is bestowed upon a weapon, temporarily increasing its magical power. Used with A-grade weapons. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes commission-type="SPIRITSHOT" immediate-effect="true"/>
-		<action handler="BlessedSpiritShot"/>
+		<attributes commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
+		<skill-reducer type="BlessedSpiritShot">
+			<skill id="8907" level="1"/>  <!-- Mysterious Blessed Spiritshot (A-grade) -->
+		</skill-reducer>
 	</item>
 
 </list>

@@ -18,9 +18,9 @@
 	<item id="49001" name="Agathion - Singer and Dancer Pack (30-day)" type="NONE" icon="icon.etc_pi_gift_box_i04">
 	<!-- Double-click to obtain a Singer & Dancer Agathion (30-day).  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="49000" min-count="1" max-count="1" chance="100000"/>  <!-- Agathion - Singer and Dancer -->
+			<item id="49000" chance="100000"/>  <!-- Agathion - Singer and Dancer -->
 		</extract>
 	</item>
 
@@ -42,9 +42,9 @@
 	<item id="49003" name="Agathion - Singer and Dancer Pack (90-day)" type="NONE" icon="icon.etc_pi_gift_box_i04">
 	<!-- Double-click to obtain a Singer & Dancer Agathion (90-day).  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
-		<extract>
-			<item id="49002" min-count="1" max-count="1" chance="100000"/>  <!-- Agathion - Singer and Dancer -->
+		<attributes immediate-effect="true" action="PEEL"/>
+		<extract >
+			<item id="49002" chance="100000"/>  <!-- Agathion - Singer and Dancer -->
 		</extract>
 	</item>
 
@@ -63,121 +63,121 @@
 	<item id="49006" name="Ol Mahum Adena Bank" type="COUPON" icon="icon.event_mahum_coinbox">
 	<!-- Shake and pour. Sometimes you get items, and sometimes you get money! Once a day only. 15-day.  -->
 		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
-		<attributes duration="21600"/>
+		<attributes duration="21600" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49007" name="Turek Orc Adena Bank" type="COUPON" icon="icon.event_orc_coinbox">
 	<!-- Shake and pour. Sometimes you get items, but rumor has it that the Gracian army's funds, which amounts to 100 million Aden are sealed in this. Once a day only. 30-day.  -->
 		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
-		<attributes duration="43200"/>
+		<attributes duration="43200" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49008" name="Soulshot (No-grade)" type="NONE" icon="icon.etc_soulshot_none_for_rookie_i00">
 	<!-- The power of a spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a No-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="1" immediate-effect="true"/>
+		<attributes weight="1" immediate-effect="true" action="SOULSHOT"/>
 	</item>
 
 	<item id="49009" name="Spiritshot (No-grade)" type="NONE" icon="icon.etc_spiritshot_none_for_rookie_i00">
 	<!-- The power of a spirit is bestowed upon a weapon, temporarily increasing power of magic. Used with a No-grade weapon. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="1" immediate-effect="true"/>
+		<attributes weight="1" immediate-effect="true" action="SPIRITSHOT"/>
 	</item>
 
 	<item id="49010" name="Soulshot (D-grade)" type="NONE" icon="icon.etc_spirit_bullet_blue_i00">
 	<!-- The power of a spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a D-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="2" immediate-effect="true"/>
+		<attributes weight="2" immediate-effect="true" action="SOULSHOT"/>
 	</item>
 
 	<item id="49011" name="Spiritshot (D-grade)" type="NONE" icon="icon.etc_spell_shot_blue_i00">
 	<!-- The power of a spirit is bestowed upon a weapon, temporarily increasing power of magic. Used with a D-grade weapon. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="4" immediate-effect="true"/>
+		<attributes weight="4" immediate-effect="true" action="SPIRITSHOT"/>
 	</item>
 
 	<item id="49012" name="HP Potion" type="POTION" icon="icon.etc_reagent_white_i00">
 	<!-- Magical potion that slowly restores HP. Lasts 15 sec. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="5"/>
+		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49013" name="Major HP Potion" type="POTION" icon="icon.etc_reagent_white_i00">
 	<!-- Magical potion that slowly restores HP. Lasts 15 sec. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="5"/>
+		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49014" name="Facelifting Potion - A" type="POTION" icon="icon.etc_lesser_potion_purple_i00">
 	<!-- Beauty potion that changes one's facial appearance to Type A. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="50"/>
+		<attributes weight="50" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49015" name="Facelifting Potion - B" type="POTION" icon="icon.etc_lesser_potion_purple_i00">
 	<!-- Beauty potion that changes one's facial appearance to Type B. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="50"/>
+		<attributes weight="50" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49016" name="Facelifting Potion - C" type="POTION" icon="icon.etc_lesser_potion_purple_i00">
 	<!-- Beauty potion that changes one's facial appearance to Type C. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="50"/>
+		<attributes weight="50" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49017" name="Dye Potion - A" type="POTION" icon="icon.etc_lesser_potion_scarlet_i00">
 	<!-- Beauty potion that changes one's hair color to Type A. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="50"/>
+		<attributes weight="50" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49018" name="Dye Potion - B" type="POTION" icon="icon.etc_lesser_potion_scarlet_i00">
 	<!-- Beauty potion that changes one's hair color to Type B. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="50"/>
+		<attributes weight="50" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49019" name="Dye Potion - C" type="POTION" icon="icon.etc_lesser_potion_scarlet_i00">
 	<!-- Beauty potion that changes one's hair color to Type C. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="50"/>
+		<attributes weight="50" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49020" name="Dye Potion - D" type="POTION" icon="icon.etc_lesser_potion_scarlet_i00">
 	<!-- Beauty potion that changes one's hair color to Type D. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="50"/>
+		<attributes weight="50" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49021" name="Facelifting Potion Pack" type="NONE" icon="icon.event_high_oriental_park_i00">
 	<!-- Wrapped Pack containing either Facelifting Potion  B, or C. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="49022" name="Dye Potion Pack" type="NONE" icon="icon.event_high_oriental_park_i00">
 	<!-- Wrapped Pack containing either Dye Potion  B, C, or D. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="49023" name="Scroll: Empower" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Double click for a buff that increases your magic. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49024" name="Scroll: Might" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Double click for a buff that increases your P. Atk. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49025" name="Scroll: Shield" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Double click for a buff that increases your defenses. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49026" name="Scroll: PK (No-grade)" type="SCROLL" icon="icon.etc_ev_draco_pk_count_down">
@@ -186,7 +186,7 @@
 		<condition add-name="true" msg-id="113">
 			<player level-min="21" level-max="85" chaotic="false"/>
 		</condition>
-		<attributes weight="10" price="500" commission-type="SCROLL_OTHER"/>
+		<attributes weight="10" price="500" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39020" level="1"/>  <!-- Scroll: PK (No-grade) -->
 		</skill-reducer>
@@ -198,7 +198,7 @@
 		<condition add-name="true" msg-id="113">
 			<player level-min="20" level-max="39" chaotic="false"/>
 		</condition>
-		<attributes weight="10" price="3000" commission-type="SCROLL_OTHER"/>
+		<attributes weight="10" price="3000" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39021" level="1"/>  <!-- Scroll: PK (D-grade) -->
 		</skill-reducer>
@@ -210,7 +210,7 @@
 		<condition add-name="true" msg-id="113">
 			<player level-min="40" level-max="51" chaotic="false"/>
 		</condition>
-		<attributes weight="10" price="9000" commission-type="SCROLL_OTHER"/>
+		<attributes weight="10" price="9000" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39022" level="1"/>  <!-- Scroll: PK (C-grade) -->
 		</skill-reducer>
@@ -222,7 +222,7 @@
 		<condition add-name="true" msg-id="113">
 			<player level-min="52" level-max="60" chaotic="false"/>
 		</condition>
-		<attributes weight="10" price="54000" commission-type="SCROLL_OTHER"/>
+		<attributes weight="10" price="54000" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39023" level="1"/>  <!-- Scroll: PK (B-grade) -->
 		</skill-reducer>
@@ -234,7 +234,7 @@
 		<condition add-name="true" msg-id="113">
 			<player level-min="61" level-max="75" chaotic="false"/>
 		</condition>
-		<attributes weight="10" price="540000" commission-type="SCROLL_OTHER"/>
+		<attributes weight="10" price="540000" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39024" level="1"/>  <!-- Scroll: PK (A-grade) -->
 		</skill-reducer>
@@ -266,19 +266,19 @@
 	<item id="49033" name="Classic Gift Box" type="NONE" icon="icon.etc_pi_box_love_pack">
 	<!-- Celebrate the launch of the classic server! Double-click to obtain an Eva's Mark (30-day).  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49034" name="Ol Mahum Adena Bank" type="COUPON" icon="icon.event_mahum_coinbox">
 	<!-- Shake and pour. Sometimes you get items, and sometimes you get money! One use only.  -->
 		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49035" name="Turek Orc Adena Bank" type="COUPON" icon="icon.event_orc_coinbox">
 	<!-- Shake and pour. Sometimes you get items, but rumor has it that the Gracian army's funds, which amounts to 100 million Aden are sealed in this. One-time use.  -->
 		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49036" name="Adventurer's Wind Walk Potion" type="POTION" icon="icon.etc_potion_green_i00">
@@ -287,7 +287,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="20" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true"/>
+		<attributes weight="20" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39028" level="1"/>  <!-- Newbie Wind Walk Potion -->
 		</skill-reducer>
@@ -553,154 +553,160 @@
 	<item id="49056" name="Lucky Soul Pack (No-grade)" type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Pack randomly containing 100 to 10,000 Mysterious Soulshots (No-grade).  Temporary event item. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="10" immediate-effect="true"/>
+		<attributes weight="10" immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="49057" name="Lucky Soul Pack (D-grade)" type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- Pack randomly containing 100 to 10,000 Mysterious Soulshots (D-grade).  Temporary event item. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="10" immediate-effect="true"/>
+		<attributes weight="10" immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="49058" name="Lucky Soul Pack (C-grade)" type="NONE" icon="icon.etc_treasure_box_i07">
 	<!-- Pack randomly containing 50 to 5,000 Mysterious Soulshots (C-grade).  Temporary event item. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="10" immediate-effect="true"/>
+		<attributes weight="10" immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="49059" name="Lucky Spirit Pack (No-grade)" type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Pack randomly containing 50 to 1,000 Mysterious Spiritshots (No-grade).  Temporary event item. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="10" immediate-effect="true"/>
+		<attributes weight="10" immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="49060" name="Lucky Spirit Pack (D-grade)" type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- Pack randomly containing 80 to 3,000 Mysterious Spiritshots (D-grade).  Temporary event item. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="10" immediate-effect="true"/>
+		<attributes weight="10" immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="49061" name="Lucky Spirit Pack (C-grade)" type="NONE" icon="icon.etc_treasure_box_i07">
 	<!-- Pack randomly containing 30 to 1,000 Mysterious Spiritshots (C-grade).  Temporary event item. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="10" immediate-effect="true"/>
+		<attributes weight="10" immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="49062" name="Mysterious Spiritshot (No-grade)" type="NONE" icon="icon.etc_spell_shot_white_i00">
 	<!-- Soulshot containing the light of Spirits. Instantly inflicts a powerful attack on the enemy. Use on no-grade weapons. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
-		<action handler="SpiritShot"/>
+		<attributes immediate-effect="true" action="SPIRITSHOT"/>
+		<skill-reducer type="SpiritShot">
+			<skill id="39029" level="1"/>  <!-- Mysterious Spiritshot (No-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="49063" name="Mysterious Spiritshot (D-grade)" type="NONE" icon="icon.etc_spell_shot_blue_i00">
 	<!-- Soulshot containing the light of Spirits. Instantly inflicts a powerful attack on the enemy. Use on D-grade weapons. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
-		<action handler="SpiritShot"/>
+		<attributes immediate-effect="true" action="SPIRITSHOT"/>
+		<skill-reducer type="SpiritShot">
+			<skill id="39030" level="1"/>  <!-- Mysterious Spiritshot (D-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="49064" name="Mysterious Spiritshot (C-grade)" type="NONE" icon="icon.etc_spell_shot_green_i00">
 	<!-- Soulshot containing the light of Spirits. Instantly inflicts a powerful attack on the enemy. Use on C-grade weapons. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
-		<action handler="SpiritShot"/>
+		<attributes immediate-effect="true" action="SPIRITSHOT"/>
+		<skill-reducer type="SpiritShot">
+			<skill id="39031" level="1"/>  <!-- Mysterious Spiritshot (C-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="49065" name="Blessed Lucky Spirit Pack (No-grade)" type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Pack randomly containing 20 to 1,000 Mysterious Blessed Spiritshots (No-grade).  Temporary event item. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="10" immediate-effect="true"/>
+		<attributes weight="10" immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="49066" name="Blessed Lucky Spirit Pack (D-grade)" type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- Pack randomly containing 20 to 1,000 Mysterious Blessed Spiritshots (D-grade).  Temporary event item. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="10" immediate-effect="true"/>
+		<attributes weight="10" immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="49067" name="Blessed Lucky Spirit Pack (C-grade)" type="NONE" icon="icon.etc_treasure_box_i07">
 	<!-- Pack randomly containing 10 to 1,000 Mysterious Blessed Spiritshots (C-grade).  Temporary event item. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="10" immediate-effect="true"/>
+		<attributes weight="10" immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="49068" name="Quick Stone" type="NONE" icon="icon.stone_8_i00">
 	<!-- For 20 min., XP and SP + 10%, and Speed + 20. Cooldown is 10 min. Does not disappear upon death.  Temporary event item. \\n<Note> When the Quick Step buff is applied, the effects of Wind Walk or potions that increase speed will not stack. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49069" name="Spirit Boom's Soulshot Pack (No-grade)" type="NONE" icon="icon.etc_pi_gift_box_i04">
 	<!-- Soulshot Pack augmented with a Boom Boom Shot. Contains 600 Mysterious Soulshots and a Lucky Soul Pack (No-grade).  Temporary event item. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49070" name="Spirit Boom's Soulshot Pack (D-grade)" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Soulshot Pack augmented with a Boom Boom Shot. Contains 1,350 Mysterious Soulshots and a Lucky Soul Pack (D-grade).  Temporary event item. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49071" name="Spirit Boom's Soulshot Pack (C-grade)" type="NONE" icon="icon.etc_pi_gift_box_i01">
 	<!-- Soulshot Pack augmented with a Boom Boom Shot. Contains 900 Mysterious Soulshots and a Lucky Soul Pack (C-grade).  Temporary event item. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49072" name="Spirit Boom's Spiritshot Pack (No-grade)" type="NONE" icon="icon.etc_pi_gift_box_i04">
 	<!-- Spiritshot Pack augmented with a Boom Boom Shot. Contains 270 Spiritshots and a Lucky Spirit Pack (No-grade).  Temporary event item. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49073" name="Spirit Boom's Spiritshot Pack (D-grade)" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Spiritshot Pack augmented with a Boom Boom Shot. Contains 750 Spiritshots and a Lucky Spirit Pack (D-grade).  Temporary event item. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49074" name="Spirit Boom's Spiritshot Pack (C-grade)" type="NONE" icon="icon.etc_pi_gift_box_i01">
 	<!-- Spiritshot Pack augmented with a Boom Boom Shot. Contains 390 Spiritshots and a Lucky Spirit Pack (C-grade).  Temporary event item. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49075" name="Spirit Boom's Blessed Spiritshot Pack (No-grade)" type="NONE" icon="icon.etc_pi_gift_box_i04">
 	<!-- Blessed Spiritshot Pack augmented with a Boom Boom Shot. Contains 120 Blessed Spiritshots and a Lucky Spirit Pack (No-grade).  Temporary event item. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49076" name="Spirit Boom's Blessed Spiritshot Pack (D-grade)" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Blessed Spiritshot Pack augmented with a Boom Boom Shot. Contains 300 Blessed Spiritshots and a Lucky Spirit Pack (D-grade).  Temporary event item. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49077" name="Spirit Boom's Blessed Spiritshot Pack (C-grade)" type="NONE" icon="icon.etc_pi_gift_box_i01">
 	<!-- Blessed Spiritshot Pack augmented with a Boom Boom Shot. Contains 150 Blessed Spiritshots and a Lucky Spirit Pack (C-grade).  Temporary event item. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49078" name="Chapeau 100-day Pack" type="NONE" icon="icon.etc_pi_gift_box_i02">
 	<!-- Pack containing a Refined Romantic Chapeau: Gold (100-day).  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49079" name="Chapeau 33-day Pack" type="NONE" icon="icon.etc_pi_gift_box_i03">
 	<!-- Pack containing a Refined Romantic Chapeau: Yellow (33-day).  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49080" name="Rice Cake of Fighting Spirit" type="NONE" icon="icon.bm_rice_cake_i00">
 	<!-- Increases XP and SP gain by 20% for 20 minutes. The effect remains after character's death. Cooldown is 1 minute. \\n\\n<Note> The effect changes to the effect of Rice Cake of Flaming Fighting Spirit, if it is used when Rice Cake of Fighting Spirit is in effect. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="32000" level="1"/>  <!-- Rice Cake of Fighting Spirit -->
 		</skill-reducer>
@@ -709,7 +715,7 @@
 	<item id="49081" name="Rice Cake of Flaming Fighting Spirit" type="NONE" icon="icon.bm_rice_cake_i01">
 	<!-- Increases XP and SP gain by 30% for 20 minutes. The effect remains after character's death. Cooldown is 1 minute. \\n\\n<Note> The effect does not change if Rice Cake of Fighting Spirit is when Rice Cake of Flaming Fighting Spirit is in effect. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="32002" level="1"/>  <!-- Rice Cake of Flaming Fighting Spirit -->
 		</skill-reducer>
@@ -718,7 +724,7 @@
 	<item id="49082" name="Get-Rich-Quick Supply Chest" type="NONE" icon="icon.event_high_oriental_park_i00">
 	<!-- Double-click to get one of the following: Scroll: Enchant Weapon/Armor (D/C-grade), Magic Haste Potion, Greater Magic Haste Potion, Haste Potion, Greater Haste Potion, Greater Scroll of Resurrection, Scroll of Escape. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<weapon id="49083" name="Commander's Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_shining_knife_i00">
@@ -742,25 +748,25 @@
 	<item id="49084" name="Greater Scroll of Resurrection" type="SCROLL" icon="icon.etc_scroll_of_resurrection_i01">
 	<!-- Magic scroll used to resurrect a dead character, restoring 50% of XP. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="100000"/>
+		<attributes weight="120" price="100000" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49085" name="Battle Support Chest" type="NONE" icon="icon.etc_marguene_collection_box_i00">
 	<!-- Double-click to get 2 Rice Cakes of Fighting Spirit. Has a low chance to get a Get-Rich-Quick Supply Chest. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49086" name="Rice Cake of Fighting Spirit" type="NONE" icon="icon.bm_rice_cake_i00">
 	<!-- Increases XP and SP gain by 20% for 20 minutes. The effect remains after character's death. Cooldown is 10 minutes. \\n\\n<Note> The effect changes to the effect of Rice Cake of Flaming Fighting Spirit, if it is used when Rice Cake of Fighting Spirit is in effect. (inc. the one for XP). -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49087" name="Greater Scroll of Escape" type="SCROLL" icon="icon.etc_scroll_of_return_i01">
 	<!-- Magic scroll used to quickly teleport the character to the nearest town. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="20000" commission-type="SCROLL_OTHER"/>
+		<attributes weight="120" price="20000" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39075" level="1"/>  <!-- Improved Scroll of Escape -->
 		</skill-reducer>
@@ -778,7 +784,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="30" commission-type="SCROLL_OTHER"/>
+		<attributes weight="30" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="32044" level="1"/>  <!-- Teleport: Entrance to Cruma Tower -->
 		</skill-reducer>
@@ -790,7 +796,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="30" commission-type="SCROLL_OTHER"/>
+		<attributes weight="30" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="32045" level="1"/>  <!-- Teleport: Entrance to Dragon Valley -->
 		</skill-reducer>
@@ -802,7 +808,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="30" commission-type="SCROLL_OTHER"/>
+		<attributes weight="30" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="32046" level="1"/>  <!-- Teleport: Dragon Valley Bridge -->
 		</skill-reducer>
@@ -814,7 +820,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="120" commission-type="SCROLL_OTHER"/>
+		<attributes weight="120" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="32031" level="1"/>  <!-- Teleport Stone: Talking Island Village -->
 		</skill-reducer>
@@ -826,7 +832,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="120" commission-type="SCROLL_OTHER"/>
+		<attributes weight="120" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="32032" level="1"/>  <!-- Teleport Stone: Elven Village -->
 		</skill-reducer>
@@ -838,7 +844,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="120" commission-type="SCROLL_OTHER"/>
+		<attributes weight="120" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="32033" level="1"/>  <!-- Teleport Stone: Dark Elf Village -->
 		</skill-reducer>
@@ -850,7 +856,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="120" commission-type="SCROLL_OTHER"/>
+		<attributes weight="120" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="32034" level="1"/>  <!-- Teleport Stone: Orc Village -->
 		</skill-reducer>
@@ -862,7 +868,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="120" commission-type="SCROLL_OTHER"/>
+		<attributes weight="120" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="32035" level="1"/>  <!-- Teleport Stone: Dwarven Village -->
 		</skill-reducer>
@@ -874,7 +880,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="120" commission-type="SCROLL_OTHER"/>
+		<attributes weight="120" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="32036" level="1"/>  <!-- Teleport Stone: Gludin Village -->
 		</skill-reducer>
@@ -886,7 +892,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="120" commission-type="SCROLL_OTHER"/>
+		<attributes weight="120" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="32037" level="1"/>  <!-- Teleport Stone: Town of Gludio -->
 		</skill-reducer>
@@ -898,7 +904,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="120" commission-type="SCROLL_OTHER"/>
+		<attributes weight="120" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="32038" level="1"/>  <!-- Teleport Stone: Town of Dion -->
 		</skill-reducer>

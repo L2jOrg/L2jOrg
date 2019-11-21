@@ -183,7 +183,7 @@
 	<item id="6317" name="Mixing Manual" type="NONE" icon="icon.etc_spellbook_red_i00">
 	<!-- Manual received from Magic Trader Wesley, with instructions for using the material mixing urn located in the basement of the Ivory Tower.  -->
 		<restriction freightable="false" dropable="false" depositable="false"/>
-		<attributes weight="20" price="1" immediate-effect="true"/>
+		<attributes weight="20" price="1" immediate-effect="true" action="SHOW_HTML"/>
 		<action handler="Book"/>
 	</item>
 
@@ -280,84 +280,84 @@
 	<item id="6329" name="Recipe: Sealed Phoenix Necklace (70%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Phoenix Necklace. Requires Create Item - Skill Lv. 7. The success rate is 70%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="34800" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="34800" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="6330" name="Recipe: Sealed Phoenix Necklace (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Phoenix Necklace. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="34800" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="34800" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="6331" name="Recipe: Sealed Phoenix Earring (70%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Phoenix Earring. Requires Create Item - Skill Lv. 7. The success rate is 70%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="26200" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="26200" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="6332" name="Recipe: Sealed Phoenix Earring (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Phoenix Earring. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="26200" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="26200" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="6333" name="Recipe: Sealed Phoenix Ring (70%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Phoenix Ring. Requires Create Item - Skill Lv. 7. The success rate is 70%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="17420" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="17420" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="6334" name="Recipe: Sealed Phoenix Ring (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Phoenix Ring. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="17420" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="17420" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="6335" name="Recipe: Sealed Majestic Necklace (70%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Majestic Necklace. Requires Create Item - Skill Lv. 8. The success rate is 70%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="52000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="52000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="6336" name="Recipe: Sealed Majestic Necklace (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Majestic Necklace. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="52000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="52000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="6337" name="Recipe: Sealed Majestic Earring (70%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Majestic Earring. Requires Create Item - Skill Lv. 8. The success rate is 70%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="39000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="39000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="6338" name="Recipe: Sealed Majestic Earring (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Majestic Earring. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="39000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="39000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="6339" name="Recipe: Sealed Majestic Ring (70%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Majestic Ring. Requires Create Item - Skill Lv. 8. The success rate is 70%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="26000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="26000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="6340" name="Recipe: Sealed Majestic Ring (100%)" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Sealed Majestic Ring. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="26000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="26000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
@@ -851,7 +851,7 @@
 	<item id="6389" name="Squash Seed" type="NONE" icon="icon.etc_gourd_i00">
 	<!-- Double-click to make a Young Squash appear. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2003" level="1"/>  <!-- Cloned Squash Seed -->
 		</skill-reducer>
@@ -860,7 +860,7 @@
 	<item id="6390" name="Large Squash Seed" type="NONE" icon="icon.etc_gourd_i01">
 	<!-- Double-click to make a Large Young Squash appear. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2004" level="1"/>  <!-- Cloned Large Squash Seed -->
 		</skill-reducer>
@@ -869,7 +869,7 @@
 	<item id="6391" name="Nectar" type="NONE" icon="icon.etc_nectar_i00">
 	<!-- Used to exchange with Puss the Cat for squash seeds or for growing squashes. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2005" level="1"/>  <!-- Nectar -->
 		</skill-reducer>

@@ -3,13 +3,13 @@
 	<item id="29700" name="A Little Blessed Scroll of Resurrection" type="SCROLL" icon="icon.etc_scroll_of_resurrection_i01">
 	<!-- Magical scroll that restores a little XP and resurrects you. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="5"/>
+		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29701" name="Rare Accessory Lv. 1 Box" type="NONE" icon="icon.ev_10th_present2">
 	<!-- Double-click to receive one of the following items: Queen Ant's Ring Lv. 1 (30-day), Orfen's Earring Lv. 1 (30-day), Ring of Core Lv. 1 (30-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55043" level="1"/>  <!-- Rare Accessory Pack -->
 		</skill-reducer>
@@ -18,13 +18,13 @@
 	<item id="29702" name="Chant of Vampire Amulet Box" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain 1 Amulet-Chant of Vampire. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29703" name="Body of Avatar Spellbook Box" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain 1 Amulet-Body of Avatar -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<armor id="29704" name="Fire Dragon Pendant Lv. 1" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pve">
@@ -470,9 +470,9 @@
 	<item id="29724" name="Fire Dragon's Pendant Box" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtain 1 Fire Dragon's Pendant Lv. 1 and 10 Pendant Varnish. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29704" min-count="1" max-count="1" chance="100000"/>  <!-- Fire Dragon Pendant Lv. 1 -->
+			<item id="29704" chance="100000"/>  <!-- Fire Dragon Pendant Lv. 1 -->
 			<item id="49469" min-count="10" max-count="10" chance="100000"/>  <!-- Pendant Polish -->
 		</extract>
 	</item>
@@ -480,25 +480,25 @@
 	<item id="29725" name="Water Dragon's Pendant Box" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtain 1 Water Dragon's Pendant Lv. 1 and 10 Pendant Varnish. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29726" name="Wind Dragon's Pendant Box" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtain 1 Wind Dragon's Pendant Lv. 1 and 10 Pendant Varnish. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29727" name="Earth Dragon's Pendant Box" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtain 1 Earth Dragon's Pendant Lv. 1 and 10 Pendant Varnish. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29728" name="Fire Dragon's Pendant Special Box" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtrain 10 Fire Dragon's Pendant Boxes. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29724" min-count="10" max-count="10" chance="100000"/>  <!-- Fire Dragon's Pendant Box -->
 		</extract>
@@ -507,47 +507,47 @@
 	<item id="29729" name="Water Dragon's Pendant Special Box" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtrain 10 Water Dragon's Pendant Boxes. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29730" name="Wind Dragon's Pendant Special Box" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtrain 10 Wind Dragon's Pendant Boxes. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29731" name="Earth Dragon's Pendant Special Box" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtrain 10 Earth Dragon's Pendant Boxes. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29732" name="Fire Dragon's Shining Pendant Varnish Package" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtain 30 Fire Dragon's Pendant Boxes and 1 Shining Pendant Varnish. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29724" min-count="30" max-count="30" chance="100000"/>  <!-- Fire Dragon's Pendant Box -->
-			<item id="90138" min-count="1" max-count="1" chance="100000"/>  <!-- Pendant Glittering Varnish -->
+			<item id="90138" chance="100000"/>  <!-- Pendant Glittering Varnish -->
 		</extract>
 	</item>
 
 	<item id="29733" name="Water Dragon's Shining Pendant Varnish Package" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtain 30 Water Dragon's Pendant Boxes and 1 Shining Pendant Varnish. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29734" name="Wind Dragon's Shining Pendant Varnish Package" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtain 30 Wind Dragon's Pendant Boxes and 1 Shining Pendant Varnish. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29735" name="Earth Dragon's Shining Pendant Varnish Package" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtain 30 Earth Dragon's Pendant Boxes and 1 Shining Pendant Varnish. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29736" name="Diana's Earring" type="NONE" icon="icon.accessary_mage_earing_i00">
@@ -577,31 +577,31 @@
 	<item id="29740" name="Scroll: Enchant Weapon (B-grade)" type="ENCHANT_WEAPON" icon="br_cashtex.item.br_cash_scrl_of_ench_wp_b_i00">
 	<!-- When enchanted, P. Atk. +4 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29741" name="Scroll: Enchant Armor (B-grade)" type="ENCHANT_ARMOR" icon="br_cashtex.item.br_cash_scrl_of_ench_am_b_i00">
 	<!-- P. Def. + 1 for B-grade armor and accessories. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29742" name="Blessed Scroll: Enchant Weapon (B-grade)" type="BLESSED_ENCHANT_WEAPON" icon="icon.etc_blessed_scrl_of_ench_wp_b_i03">
 	<!-- When enchanted, P. Atk. +4 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. The item will not be crystallized even if enchantment fails, but the enchant value will be reset to 0. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29743" name="Blessed Scroll: Enchant Armor (B-grade)" type="BLESSED_ENCHANT_ARMOR" icon="icon.etc_blessed_scrl_of_ench_am_b_i03">
 	<!-- P. Def. + 1 for B-grade armor and accessories. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29744" name="Earth Dragon Antharas' Treasure Pouch" type="NONE" icon="BranchIcon.Icon.g_bm_antaras_pocket_i00">
 	<!-- Double-click to obtain one of Earth Dragon Antharas' treasures. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="29745" name="Premium Coin" type="NONE" icon="BranchIcon.Icon.g_bm_premium_coin_i00">
@@ -613,21 +613,25 @@
 	<item id="29746" name="Mysterious Soulshot (B-grade)" type="NONE" icon="icon.bm_spirit_bullet_red">
 	<!-- Soulshot containing the light of Spirits; instantly inflicts a powerful attack on the enemy. Used with B-grade weapons. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
-		<action handler="SoulShots"/>
+		<attributes immediate-effect="true" action="SOULSHOT"/>
+		<skill-reducer type="SoulShots">
+			<skill id="55139" level="1"/>  <!-- TODO Skill not found -->
+		</skill-reducer>
 	</item>
 
 	<item id="29747" name="Mysterious Blessed Spiritshot (B-grade)" type="NONE" icon="icon.bm_spell_shot_red">
 	<!-- Spiritshot containing the light of Spirits; it instantly and greatly increases the power of magic. Used with B-grade weapons. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
-		<action handler="BlessedSpiritShot"/>
+		<attributes immediate-effect="true" action="SPIRITSHOT"/>
+		<skill-reducer type="BlessedSpiritShot">
+			<skill id="55140" level="1"/>  <!-- TODO Skill not found -->
+		</skill-reducer>
 	</item>
 
 	<item id="29748" name="Soulshot 300-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_soulshot_b_i00">
 	<!-- Double-click to obtain 300 Soulshots. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29746" min-count="100" max-count="100" chance="100000"/>  <!-- Mysterious Soulshot (B-grade) -->
 		</extract>
@@ -636,7 +640,7 @@
 	<item id="29749" name="Blessed Spiritshot 300-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_b_i00">
 	<!-- Double-click to obtain 300 Blessed Spiritshots. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29747" min-count="100" max-count="100" chance="100000"/>  <!-- Mysterious Blessed Spiritshot (B-grade) -->
 		</extract>
@@ -645,7 +649,7 @@
 	<item id="29750" name="Fighter Hunter Pack Lv. 4" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain 9000 Soulshots, XP/SP Boost Scrolls (30%) x12, and 2nd Class Transfer Buff Scrolls x12. -->
 		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29746" min-count="3000" max-count="3000" chance="100000"/>  <!-- Mysterious Soulshot (B-grade) -->
 			<item id="29648" min-count="12" max-count="12" chance="100000"/>  <!-- Scroll: Regular XP/SP Boost -->
@@ -656,7 +660,7 @@
 	<item id="29751" name="Wizard Hunter Pack Lv. 4" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain 3000 Blessed Spiritshots, XP/SP Boost Scrolls (30%) x12, and 2nd Class Transfer Buff Scrolls x12. -->
 		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29747" min-count="1000" max-count="1000" chance="100000"/>  <!-- Mysterious Blessed Spiritshot (B-grade) -->
 			<item id="29648" min-count="12" max-count="12" chance="100000"/>  <!-- Scroll: Regular XP/SP Boost -->
@@ -994,135 +998,135 @@
 	<item id="29785" name="Blue Talisman Box - P. Crit." type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- By double-clicking it, you will get Blue Talisman - P. Crit. (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes duration="60" immediate-effect="true"/>
+		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29753" min-count="1" max-count="1" chance="100000"/>  <!-- Blue Talisman - P. Crit. -->
+			<item id="29753" chance="100000"/>  <!-- Blue Talisman - P. Crit. -->
 		</extract>
 	</item>
 
 	<item id="29786" name="Blue Talisman Box - P. Atk." type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- By double-clicking it, you will get Blue Talisman - P. Atk. (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes duration="60" immediate-effect="true"/>
+		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29754" min-count="1" max-count="1" chance="100000"/>  <!-- Blue Talisman - P. Atk. -->
+			<item id="29754" chance="100000"/>  <!-- Blue Talisman - P. Atk. -->
 		</extract>
 	</item>
 
 	<item id="29787" name="Blue Talisman Box - P. Def." type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- By double-clicking it, you will get Blue Talisman - P. Def. (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes duration="60" immediate-effect="true"/>
+		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29755" min-count="1" max-count="1" chance="100000"/>  <!-- Blue Talisman - P. Def. -->
+			<item id="29755" chance="100000"/>  <!-- Blue Talisman - P. Def. -->
 		</extract>
 	</item>
 
 	<item id="29788" name="Blue Talisman Box - P. Skills Evasion" type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- By double-clicking it, you will get Blue Talisman - P. Skills Evasion (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes duration="60" immediate-effect="true"/>
+		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29756" min-count="1" max-count="1" chance="100000"/>  <!-- Blue Talisman - P. Skills Evasion -->
+			<item id="29756" chance="100000"/>  <!-- Blue Talisman - P. Skills Evasion -->
 		</extract>
 	</item>
 
 	<item id="29789" name="Blue Talisman Box - M. Crit." type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- By double-clicking it, you will get Blue Talisman - M. Crit. (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes duration="60" immediate-effect="true"/>
+		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29757" min-count="1" max-count="1" chance="100000"/>  <!-- Blue Talisman - M. Crit. -->
+			<item id="29757" chance="100000"/>  <!-- Blue Talisman - M. Crit. -->
 		</extract>
 	</item>
 
 	<item id="29790" name="Blue Talisman Box - M. Atk." type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- By double-clicking it, you will get Blue Talisman - M. Atk. (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes duration="60" immediate-effect="true"/>
+		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29758" min-count="1" max-count="1" chance="100000"/>  <!-- Blue Talisman - M. Atk. -->
+			<item id="29758" chance="100000"/>  <!-- Blue Talisman - M. Atk. -->
 		</extract>
 	</item>
 
 	<item id="29791" name="Blue Talisman Box - M. Def." type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- By double-clicking it, you will get Blue Talisman - M. Def. (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes duration="60" immediate-effect="true"/>
+		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29759" min-count="1" max-count="1" chance="100000"/>  <!-- Blue Talisman - M. Def. -->
+			<item id="29759" chance="100000"/>  <!-- Blue Talisman - M. Def. -->
 		</extract>
 	</item>
 
 	<item id="29792" name="Blue Talisman Box - M. Skills Evasion" type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- By double-clicking it, you will get Blue Talisman - M. Skills Evasion (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes duration="60" immediate-effect="true"/>
+		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29760" min-count="1" max-count="1" chance="100000"/>  <!-- Blue Talisman - M. Skills Evasion -->
+			<item id="29760" chance="100000"/>  <!-- Blue Talisman - M. Skills Evasion -->
 		</extract>
 	</item>
 
 	<item id="29793" name="Blue Talisman Box - Max. HP" type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- By double-clicking it, you will get Blue Talisman - Max. HP (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes duration="60" immediate-effect="true"/>
+		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29761" min-count="1" max-count="1" chance="100000"/>  <!-- Blue Talisman - Max. HP -->
+			<item id="29761" chance="100000"/>  <!-- Blue Talisman - Max. HP -->
 		</extract>
 	</item>
 
 	<item id="29794" name="Blue Talisman Box - Max. MP" type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- By double-clicking it, you will get Blue Talisman - Max. MP (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes duration="60" immediate-effect="true"/>
+		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29762" min-count="1" max-count="1" chance="100000"/>  <!-- Blue Talisman - Max. MP -->
+			<item id="29762" chance="100000"/>  <!-- Blue Talisman - Max. MP -->
 		</extract>
 	</item>
 
 	<item id="29795" name="Grey Talisman Box - Guard" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- By double-clicking it, you will get Grey Talisman - Guard (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes duration="60" immediate-effect="true"/>
+		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29763" min-count="1" max-count="1" chance="100000"/>  <!-- Grey Talisman - Guard -->
+			<item id="29763" chance="100000"/>  <!-- Grey Talisman - Guard -->
 		</extract>
 	</item>
 
 	<item id="29796" name="Grey Talisman Box - Denial" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- By double-clicking it, you will get Grey Talisman - Denial (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes duration="60" immediate-effect="true"/>
+		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29764" min-count="1" max-count="1" chance="100000"/>  <!-- Grey Talisman - Denial -->
+			<item id="29764" chance="100000"/>  <!-- Grey Talisman - Denial -->
 		</extract>
 	</item>
 
 	<item id="29797" name="Grey Talisman Box - Benefaction" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- By double-clicking it, you will get Grey Talisman - Benefaction (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes duration="60" immediate-effect="true"/>
+		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29765" min-count="1" max-count="1" chance="100000"/>  <!-- Grey Talisman - Benefaction -->
+			<item id="29765" chance="100000"/>  <!-- Grey Talisman - Benefaction -->
 		</extract>
 	</item>
 
 	<item id="29798" name="Grey Talisman Box - Blocking" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- By double-clicking it, you will get Grey Talisman - Blocking (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes duration="60" immediate-effect="true"/>
+		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29766" min-count="1" max-count="1" chance="100000"/>  <!-- Grey Talisman - Blocking -->
+			<item id="29766" chance="100000"/>  <!-- Grey Talisman - Blocking -->
 		</extract>
 	</item>
 
 	<item id="29799" name="Grey Talisman Box - Gravity" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- By double-clicking it, you will get Grey Talisman - Gravity (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes duration="60" immediate-effect="true"/>
+		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29767" min-count="1" max-count="1" chance="100000"/>  <!-- Grey Talisman - Gravity -->
+			<item id="29767" chance="100000"/>  <!-- Grey Talisman - Gravity -->
 		</extract>
 	</item>
 

@@ -21,7 +21,7 @@
 	<item id="92003" name="Special Recharge Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Contains 10 Sayha's Blessing (Event/Lv. 75 or below), 30 Soulshot Tickets (Event), and 500 Spirit Ores. Can be bought once a day per account. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="92004" name="Inventory Expansion Ticket Lv. 1" type="NONE" icon="icon.etc_ticket_i00">
@@ -57,55 +57,55 @@
 	<item id="92009" name="Shining Suspicious Stone" type="NONE" icon="icon.destiny_stone">
 	<!-- Double-click to obtain one A-grade armor or Suspicious Stone at random. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes price="10000" immediate-effect="true"/>
+		<attributes price="10000" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="92010" name="Majestic Robe Set" type="NONE" icon="icon.armor_t85_ul_i00">
 	<!-- Double-click to obtain Majestic Robe, Majestic Circlet (Robe), Majestic Gauntlets (Robe), and Majestic Boots (Robe), one of each. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes price="10000" immediate-effect="true"/>
+		<attributes price="10000" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="92011" name="Majestic Light Armor Set" type="NONE" icon="icon.armor_t84_ul_i00">
 	<!-- Double-click to obtain Majestic Leather Armor, Majestic Circlet (Light Armor), Majestic Gauntlets (Light Armor), and Majestic Boots (Light Armor), one for each. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes price="10000" immediate-effect="true"/>
+		<attributes price="10000" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="92012" name="Dark Crystal Robe Set" type="NONE" icon="icon.armor_t76_ul_i00">
 	<!-- Double-click to obtain Dark Crystal Robe, Dark Crystal Helmet (Robe), Dark Crystal Gloves (Robe), and Dark Crystal Boots (Robe), one for each. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes price="10000" immediate-effect="true"/>
+		<attributes price="10000" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="92013" name="Dark Crystal Light Armor Set" type="NONE" icon="icon.armor_t75_u_i00">
 	<!-- Double-click to obtain Dark Crystal Leather Armor, Dark Crystal Leggings, Dark Crystal Helmet (Light Armor), Dark Crystal Gloves (Light Armor), and Dark Crystal Boots (Light Armor), one for each. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes price="10000" immediate-effect="true"/>
+		<attributes price="10000" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="92014" name="Nightmare Heavy Armor Set" type="NONE" icon="icon.armor_t80_ul_i00">
 	<!-- Double-click to obtain Armor of Nightmare, Helm of Nightmare (Heavy Armor), Gauntlets of Nightmare (Heavy Armor), and Boots of Nightmare (Heavy Armor), one of each. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes price="10000" immediate-effect="true"/>
+		<attributes price="10000" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="92015" name="Tallum Heavy Armor Set" type="NONE" icon="icon.armor_t77_ul_i00">
 	<!-- Double-click to obtain Tallum Plate Armor, Tallum Headgear (Heavy Armor), Tallum Gloves (Heavy Armor) and Tallum Boots (Heavy Armor), one of each. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes price="10000" immediate-effect="true"/>
+		<attributes price="10000" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="92016" name="Sayha's Blessing Pack" type="NONE" icon="icon.etc_wind_potion_i00">
 	<!-- Double-click to obtain 2 Sayha's Blessing. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="92017" name="Enchant Scroll: Eva's Talisman" type="ENCHANT_ARMOR" icon="icon.bless_scroll_r99_armor">
 	<!-- A scroll used to enchant Eva's Talisman -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<armor id="92018" name="Eva's Talisman" type="NONE" body-part="TALISMAN" icon="icon.giant_item_equip">
@@ -118,13 +118,13 @@
 	<item id="92019" name="Castle Siege Support Box" type="NONE" icon="icon.bm_gold_relic_box">
 	<!-- Double-click to obtain one of the following rare items at random: Talisman of Baium, Dragon Pendant Lv. 4, Dragon Pendant Lv. 3, A-grade Armor Set, Majestic Necklace, Majestic Earring, and Majestic Ring. Will be deleted when the event ends. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes price="10000" immediate-effect="true"/>
+		<attributes price="10000" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="92020" name="Eva’s Talisman Enchant Package" type="NONE" icon="icon.bm_pirate_treasure_box">
 	<!-- A package used to upgrade Eva's Talisman. Double-click to obtain 1 Eva's Talisman and 10 Enchant Scroll: Eva's Talisman -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="92021" name="Letter - D" type="NONE" icon="icon.etc_alphabet_d_i00">
@@ -142,49 +142,49 @@
 	<item id="92023" name="+9 Ring of Insolence Box" type="NONE" icon="icon.ring_of_oman">
 	<!-- Double-click to obtain one +9 Ring of Insolence. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="92024" name="+9 Earring of Dragon World Box" type="NONE" icon="icon.accessary_catseye_earing_i00">
 	<!-- Double-click to obtain one +9 Earring of Dragon World. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="92025" name="Event Rune Box" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- Double-click to obtain a Warrior's XP Amulet (7-day) and a Blessing of Abundance - 100% (Event). -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes price="10000" immediate-effect="true"/>
+		<attributes price="10000" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="92026" name="Majestic Heavy Armor Set" type="NONE" icon="icon.armor_t83_ul_i00">
 	<!-- Double-click to get 1 of each of the following: Majestic Plate Armor / Majestic Circlet (Heavy Armor) / Majestic Gauntlet (Heavy Armor). -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes price="10000" immediate-effect="true"/>
+		<attributes price="10000" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="92027" name="Dark Crystal Heavy Armor Set" type="NONE" icon="icon.armor_t74_u_i00">
 	<!-- Double-click to get 1 of each of the following: Dark Crystal Breastplate / Dark Crystal Gaiters / Dark Crystal Helmet (Heavy Armor) / Dark Crystal Gloves (Heavy Armor) / Dark Crystal Boots (Heavy Armor). -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes price="10000" immediate-effect="true"/>
+		<attributes price="10000" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="92028" name="Tallum Light Armor Set" type="NONE" icon="icon.armor_t78_ul_i00">
 	<!-- Double-click to get 1 each of the following: Tallum Leather Armor / Tallum Helmet (Light Armor) / Tallum Gloves (Light Armor) / Tallum Boots (Light Armor). -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes price="10000" immediate-effect="true"/>
+		<attributes price="10000" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="92029" name="Tallum Robe Set" type="NONE" icon="icon.armor_t79_u_i00">
 	<!-- Double-click to get 1 each of the following: Tallum Tunic / Tallum Stockings / Tallum Helmet (Robe) / Tallum Gloves (Robe) / Tallum Boots (Robe). -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes price="10000" immediate-effect="true"/>
+		<attributes price="10000" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="92030" name="Warrior's XP Amulet Pack" type="NONE" icon="icon.skill19226">
 	<!-- Double-click to obtain 1 Warrior's XP Amulet (7-day). -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<armor id="92031" name="Talisman Bracelet Lv 5" type="NONE" body-part="RIGHT_BRACELET" icon="icon.dimension_bracelet_i04">
@@ -204,19 +204,19 @@
 	<item id="92033" name="Magic Flame" type="NONE" icon="icon.bm_soul_of_shilen">
 	<!-- Only for Lv. 75 or lower level characters. 100% Magic Lamp gauge recharge for 1 hour when used. Cooldown 1 minute. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="92034" name="Strong Jewelry Box" type="NONE" icon="icon.bm_2018_jewelbox_random">
 	<!-- Double-click to obtain one of the Amber, Opal, Coral, Onyx, Spinel, Zircon, and Moonstone Lv. 1 Jewelry Boxes. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="92035" name="Shiny Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_main_i00">
 	<!-- Double-click to obtain one of the Amber, Opal, Coral, Onyx, Spinel, Zircon, and Moonstone Lv. 1 Gems. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<armor id="92036" name="Amber" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_amber_i00">

@@ -3,25 +3,25 @@
 	<item id="70300" name="Enchant Scroll of Forbidden Limit" type="SOLID_ENCHANT_ARMOR" icon="icon.etc_aidcharm_cancel_deathfire_i00">
 	<!-- An Enchant Scroll enhancing the properties of Talisman of Fate. Can be applied to Talisman enchanted up to +8. In case of a failed enchantment, the item does not disappear and the enchantment level is not reset. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70301" name="Forbidden Limit Chest" type="NONE" icon="icon.bm_special_pendant_abradant_box">
 	<!-- A Chest containing the power of Forbidden Limit. Double-click to receive 1 Talisman of Fate - Lv. 1 and 10 Enchant Scrolls. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70302" name="Blessed Enchant Scroll of Fate" type="BLESSED_ENCHANT_ARMOR" icon="icon.etc_doom_capture">
 	<!-- An Enchant Scroll enhancing the properties of Talisman of Fate. The maximum level of enchantment is +10. In case of a failed enchantment, the item does not disappear and the enchantment level is reset. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70303" name="Monkey Bait" type="LURE" icon="icon.etc_gludio_fish_lure_i00">
 	<!-- Fishing Time: 20 seconds\\nFishing Standby Time: 10 seconds\\n\\nFish bait bought from Chef Monkey. Fish using this bait to catch Tuna.  -->
 		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="EQUIP"/>
 	</item>
 
 	<item id="70304" name="Tuna" type="NONE" icon="icon.fish_huge_i12">
@@ -33,48 +33,58 @@
 	<item id="70305" name="Chef Monkey’s Gift" type="NONE" icon="icon.bm_sayha_gold_present">
 	<!-- A special gift for VIP players from Chef Monkey. Double-click to get Monkey Bait (60 pcs.) and Tuna (10 pcs.).   -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="10" immediate-effect="true"/>
+		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70306" name="Mysterious Blessed Soulshot (No-grade)" type="SOULSHOT" icon="icon.etc_bless_spirit_bullet_white_i00">
 	<!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Deals 15% more damage than regular Soulshots. Used with a No-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes commission-type="SOULSHOT" immediate-effect="true"/>
-		<action handler="BlessedSoulShots"/>
+		<attributes commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
+		<skill-reducer type="BlessedSoulShots">
+			<skill id="55384" level="1"/>  <!-- Mysterious Blessed Soulshot (No-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="70307" name="Mysterious Blessed Soulshot (D-grade)" type="SOULSHOT" icon="icon.etc_bless_spirit_bullet_blue_i00">
 	<!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Deals 15% more damage than regular Soulshots. Used with a D-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes commission-type="SOULSHOT" immediate-effect="true"/>
-		<action handler="BlessedSoulShots"/>
+		<attributes commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
+		<skill-reducer type="BlessedSoulShots">
+			<skill id="55385" level="1"/>  <!-- Mysterious Blessed Soulshot (D-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="70308" name="Mysterious Blessed Soulshot (C-grade)" type="SOULSHOT" icon="icon.etc_bless_spirit_bullet_green_i00">
 	<!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Deals 15% more damage than regular Soulshots. Used with a C-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes commission-type="SOULSHOT" immediate-effect="true"/>
-		<action handler="BlessedSoulShots"/>
+		<attributes commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
+		<skill-reducer type="BlessedSoulShots">
+			<skill id="55386" level="1"/>  <!-- Mysterious Blessed Soulshot (C-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="70309" name="Mysterious Blessed Soulshot (B-grade)" type="SOULSHOT" icon="icon.etc_bless_spirit_bullet_red_i00">
 	<!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Deals 15% more damage than regular Soulshots. Used with a B-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes commission-type="SOULSHOT" immediate-effect="true"/>
-		<action handler="BlessedSoulShots"/>
+		<attributes commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
+		<skill-reducer type="BlessedSoulShots">
+			<skill id="55387" level="1"/>  <!-- Mysterious Blessed Soulshot (B-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="70310" name="Mysterious Blessed Soulshot (A-grade)" type="SOULSHOT" icon="icon.etc_bless_spirit_bullet_silver_i00">
 	<!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Deals 15% more damage than regular Soulshots. Used with an A-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes commission-type="SOULSHOT" immediate-effect="true"/>
-		<action handler="BlessedSoulShots"/>
+		<attributes commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
+		<skill-reducer type="BlessedSoulShots">
+			<skill id="55388" level="1"/>  <!-- Mysterious Blessed Soulshot (A-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="70311" name="Forbidden Limit Scroll Box" type="NONE" icon="icon.bm_pirate_king_box">
 	<!-- Double-click to receive 300 Enchant Scrolls of Fate and 1 Scroll of Forbidden Limit. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70312" name="Tryout Event Coin" type="MATERIAL" icon="icon.etc_ev_kalie_token">
@@ -86,79 +96,79 @@
 	<item id="70313" name="Olympiad Warrior's Potion - STR" type="POTION" icon="icon.etc_lesser_potion_red_i00">
 	<!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, STR +4. Cannot be stacked with other potions or with Roast Blue Mackerel.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70314" name="Olympiad Warrior's Potion - INT" type="POTION" icon="icon.etc_lesser_potion_scarlet_i00">
 	<!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, INT +4. Cannot be stacked with other potions or with Roast Blue Mackerel.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70315" name="Olympiad Warrior's Potion - CON" type="POTION" icon="icon.etc_lesser_potion_yellow_i00">
 	<!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, CON +4. Cannot be stacked with other potions or with Roast Blue Mackerel.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70316" name="Olympiad Warrior's Potion - DEX" type="POTION" icon="icon.etc_lesser_potion_green_i00">
 	<!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, DEX +4. Cannot be stacked with other potions or with Roast Blue Mackerel.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70317" name="Olympiad Warrior's Potion - MEN" type="POTION" icon="icon.etc_lesser_potion_blue_i00">
 	<!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, MEN +4. Cannot be stacked with other potions or with Roast Blue Mackerel.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70318" name="Olympiad Warrior's Potion - WIT" type="POTION" icon="icon.etc_lesser_potion_purple_i00">
 	<!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, WIT +4. Cannot be stacked with other potions or with Roast Blue Mackerel.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70319" name="Enhanced Olympiad Warrior's Potion - STR" type="POTION" icon="icon.etc_fruit_juice_glass_bottle_i10">
 	<!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, STR +7. Cannot be stacked with other potions or with Roast Blue Mackerel.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70320" name="Enhanced Olympiad Warrior's Potion - INT" type="POTION" icon="icon.etc_fruit_juice_glass_bottle_i11">
 	<!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, INT +7. Cannot be stacked with other potions or with Roast Blue Mackerel.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70321" name="Enhanced Olympiad Warrior's Potion - CON" type="POTION" icon="icon.etc_fruit_juice_glass_bottle_i07">
 	<!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, CON +7. Cannot be stacked with other potions or with Roast Blue Mackerel.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70322" name="Enhanced Olympiad Warrior's Potion - DEX" type="POTION" icon="icon.etc_fruit_juice_glass_bottle_i03">
 	<!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, DEX +7. Cannot be stacked with other potions or with Roast Blue Mackerel.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70323" name="Enhanced Olympiad Warrior's Potion - MEN" type="POTION" icon="icon.etc_fruit_juice_glass_bottle_i05">
 	<!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, MEN +7. Cannot be stacked with other potions or with Roast Blue Mackerel.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70324" name="Enhanced Olympiad Warrior's Potion - WIT" type="POTION" icon="icon.etc_fruit_juice_glass_bottle_i04">
 	<!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, WIT +7. Cannot be stacked with other potions or with Roast Blue Mackerel.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70325" name="Commemorative Olympiad XP/SP Scroll" type="SCROLL" icon="icon.exp_bottle_scroll">
 	<!-- For 20 minutes., obtained XP/SP +50%. Cannot be stacked with other XP/SP Scroll.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true"/>
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55397" level="3"/>  <!-- Olympiad Commemorative Amulet - 100% -->
 		</skill-reducer>
@@ -167,7 +177,7 @@
 	<item id="70326" name="Olympiad Warrior's Special Fruit" type="POTION" icon="icon.etc_cobol_i04">
 	<!-- For 20 minutes., obtained XP/SP ++10%, P./ M. Atk. +10%, P./ M. Def. +5%, Max. HP/MP/CP ++15%, HP/ MP Recovery +20%, PvE damage ++10%. With a certain chance, converts 3% of damage dealt into HP. Can be used with Special Fruit Buff.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70327" name="Olympiad Commemorative Amulet - 100%" type="RUNE" icon="icon.skill19226">
@@ -179,7 +189,7 @@
 	<item id="70328" name="Olympiad Warrior's SP Scroll" type="SCROLL" icon="icon.etc_sp_scroll3_i00">
 	<!-- Restores 500,000 SP.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<armor id="70329" name="Tryout Glorious Cloak" type="NONE" body-part="BACK" icon="icon.vesper_cloack_i00">
@@ -229,55 +239,55 @@
 	<item id="70334" name="Cadmus Transformation Bracelet Pack (1 day)" type="NONE" icon="icon.etc_pi_box_love_pack">
 	<!-- Double-click to receive Cadmus Transformation Bracelet Pack - Prophet (1 day).  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70335" name="Cadmus Transformation Bracelet Pack (1 day)" type="NONE" icon="icon.etc_pi_box_wish_pack">
 	<!-- Double-click to receive Cadmus Transformation Bracelet Pack - Shillien Elder (1 day).  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70336" name="Cadmus Transformation Bracelet Pack (1 day)" type="NONE" icon="icon.ev_10th_present2">
 	<!-- Double-click to receive Cadmus Transformation Bracelet Pack - Elven Elder (1 day).  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70337" name="Cadmus Transformation Bracelet Pack (7 days)" type="NONE" icon="icon.etc_pi_box_love_pack">
 	<!-- Double-click to receive Cadmus Transformation Bracelet Pack - Prophet (7 days).  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70338" name="Cadmus Transformation Bracelet Pack (7 days)" type="NONE" icon="icon.etc_pi_box_wish_pack">
 	<!-- Double-click to receive Cadmus Transformation Bracelet Pack - Shillien Elder (7 days).  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70339" name="Cadmus Transformation Bracelet Pack (7 days)" type="NONE" icon="icon.ev_10th_present2">
 	<!-- Double-click to receive Cadmus Transformation Bracelet Pack - Elven Elder (7 days).  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70340" name="Cadmus Transformation Bracelet Pack (30 days)" type="NONE" icon="icon.etc_pi_box_love_pack">
 	<!-- Double-click to receive Cadmus Transformation Bracelet Pack - Prophet (30 days).  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70341" name="Cadmus Transformation Bracelet Pack (30 days)" type="NONE" icon="icon.etc_pi_box_wish_pack">
 	<!-- Double-click to receive Cadmus Transformation Bracelet Pack - Shillien Elder (30 days).  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70342" name="Cadmus Transformation Bracelet Pack (30 days)" type="NONE" icon="icon.ev_10th_present2">
 	<!-- Double-click to receive Cadmus Transformation Bracelet Pack - Elven Elder (30 days).  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70343" name="Expertise Rune (A-grade)" type="RUNE" icon="br_cashtex.item.br_cash_rune_of_feather_i00">
@@ -289,7 +299,7 @@
 	<item id="70344" name="Expertise Rune Pack" type="NONE" icon="icon.etc_equip_item_box_i00">
 	<!-- Wrapped Pack containing Expertise Rune (A-grade) (1-day). -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="10" duration="1440" immediate-effect="true"/>
+		<attributes weight="10" duration="1440" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70345" name="Expertise Rune (A-grade)" type="RUNE" icon="br_cashtex.item.br_cash_rune_of_feather_i00">
@@ -301,7 +311,7 @@
 	<item id="70346" name="Expertise Rune Pack" type="NONE" icon="icon.etc_equip_item_box_i00">
 	<!-- Wrapped Pack containing Expertise Rune (A-grade) (3-day). -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="10" duration="4320" immediate-effect="true"/>
+		<attributes weight="10" duration="4320" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70347" name="Expertise Rune (A-grade)" type="RUNE" icon="br_cashtex.item.br_cash_rune_of_feather_i00">
@@ -313,25 +323,25 @@
 	<item id="70348" name="Expertise Rune Pack" type="NONE" icon="icon.etc_equip_item_box_i00">
 	<!-- Wrapped Pack containing Expertise Rune (A-grade) (10-day). -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="10" duration="14400" immediate-effect="true"/>
+		<attributes weight="10" duration="14400" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70349" name="Kusto's Support Box: Enhance Weapon" type="NONE" icon="icon.etc_bm_jewelbox_main_i00">
 	<!-- Double-click to get one of the following: Enchant/ Improved/ Solid/ Blessed Scroll: Enchant Weapon (A-grade). -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70350" name="Kusto's Support Box: Enhance Weapon" type="NONE" icon="icon.etc_bm_jewelbox_main_i00">
 	<!-- Double-click to get one of the following: Enchant/ Improved/ Solid/ Blessed Scroll: Enchant Weapon (B-grade). -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70351" name="Kusto's Support Box: Enhance Weapon" type="NONE" icon="icon.etc_bm_jewelbox_main_i00">
 	<!-- Double-click to get one of the following: Enchant/ Improved/ Solid/ Blessed Scroll: Enchant Weapon (C-grade). -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70352" name="Kusto's Special Alloy" type="MATERIAL" icon="icon.etc_adamantium_i00">
@@ -343,25 +353,25 @@
 	<item id="70353" name="Transformation Scroll: Pirate" type="POTION" icon="icon.etc_charm_of_courage_i03">
 	<!-- Transforms you into Pirate for 30 min. Effect remains after death. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70354" name="Transformation Scroll: Dark Assassin" type="POTION" icon="icon.etc_charm_of_courage_i05">
 	<!-- Transforms you into Dark Assassin for 30 min. Effect remains after death. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70355" name="Transformation Scroll: White Assassin" type="POTION" icon="icon.etc_charm_of_courage_i00">
 	<!-- Transforms you into White Assassin for 30 min. Effect remains after death. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70356" name="Scroll: Enchant Armor (A-grade)" type="ENCHANT_ARMOR" icon="icon.etc_scroll_of_enchant_armor_i04">
 	<!-- P. Def. +1 for A-grade armor and accessories. Starting from +4, P. Def. +3. Enchanting is safe up to +3, but full-body armor can be safely enchanted up to +4. Starting at +4 armor, HP increases depending on the enchant value. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<armor id="70357" name="Straw Hat" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_straw_hat_i00">

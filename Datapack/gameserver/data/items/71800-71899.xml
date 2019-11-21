@@ -3,85 +3,85 @@
 	<item id="71800" name="Sealed Admiral's Estoc Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i04">
 	<!-- Double-click to obtain +7 Enchanted Sealed Admiral's Estoc. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71801" name="Sealed Saber Tooth Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i04">
 	<!-- Double-click to obtain +7 Enchanted Sealed Saber Tooth. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71802" name="Sealed Samurai Long Sword Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i06">
 	<!-- Double-click to obtain +10 Enchanted Sealed Samurai Long Sword. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71803" name="Sealed Mace of Underworld Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i06">
 	<!-- Double-click to obtain +10 Enchanted Sealed Mace of Underworld. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71804" name="Sealed Demon's Staff Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i06">
 	<!-- Double-click to obtain +10 Enchanted Sealed Demon's Staff. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71805" name="Sealed Crystal Dagger Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i06">
 	<!-- Double-click to obtain +10 Enchanted Sealed Crystal Dagger. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71806" name="Sealed Eminence Bow Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i06">
 	<!-- Double-click to obtain +10 Enchanted Sealed Eminence Bow. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71807" name="Sealed Orcish Poleaxe Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i06">
 	<!-- Double-click to obtain +10 Enchanted Sealed Orcish Poleaxe. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71808" name="Sealed Katana*Katana Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i06">
 	<!-- Double-click to obtain +10 Enchanted Sealed Katana*Katana. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71809" name="Sealed Yaksa Mace Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i06">
 	<!-- Double-click to obtain +10 Enchanted Sealed Yaksa Mace. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71810" name="Sealed Berserker Blade Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i06">
 	<!-- Double-click to obtain +10 Enchanted Sealed Berserker Blade. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71811" name="Sealed Great Pata Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i06">
 	<!-- Double-click to obtain +10 Enchanted Sealed Great Pata. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71812" name="Sealed Admiral's Estoc Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i06">
 	<!-- Double-click to obtain +10 Enchanted Sealed Admiral's Estoc. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71813" name="Sealed Saber Tooth Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i06">
 	<!-- Double-click to obtain +10 Enchanted Sealed Saber Tooth. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71814" name="Chronicle Cube" type="NONE" icon="icon.ev_15th_cube">
@@ -93,19 +93,19 @@
 	<item id="71815" name="Chronicle Cube’s Gift" type="NONE" icon="icon.etc_treasure_box_i11">
 	<!-- Double-click to obtain 1 Dandy's Home Run Ball and 1 Chronicle Box. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71816" name="Chronicle Box" type="NONE" icon="icon.new_user_box">
 	<!-- Double-click to obtain one consumable or refined rare accessory (30-day). -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71817" name="15th Anniversary Gift Box" type="NONE" icon="icon.event_six_party_box_i00">
 	<!-- Double-click to obtain one Codex Box, Dragon's Dye Box, Transformation Scroll (Song Dance), or Morale Bean Cake at random. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<armor id="71818" name="Talisman of Fate +1" type="NONE" body-part="TALISMAN" icon="icon.bm_magic_square_talisman">
@@ -118,97 +118,97 @@
 	<item id="71819" name="Forbidden Fate Special Pack" type="NONE" icon="icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtain 30 Talisman of Fate Boxes and 1 Scroll of Forbidden Fate. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71820" name="Bracelet of Fate Chest" type="NONE" icon="icon.etc_readybox_bronze">
 	<!-- Double-click to get a Bracelet of Fate (30-day). -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71821" name="XP Scroll - Lv. 1" type="SCROLL" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- XP +20,000. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="71822" name="XP Scroll - Lv. 2" type="SCROLL" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- XP +4,000,000. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="71823" name="XP Scroll - Lv. 3" type="SCROLL" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- XP +100,000,000. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="71824" name="XP Scroll - Lv. 4" type="SCROLL" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- XP +200,000,000. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="71825" name="XP Scroll - Lv. 5" type="SCROLL" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- XP +250,000,000. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="71826" name="XP Scroll - Lv. 6" type="SCROLL" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- XP +400,000,000. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="71828" name="Scroll: Summon Storm" type="NONE" icon="icon.scrl_of_storm">
 	<!-- Fills you with Storm Energy, granting +50% XP and SP gain bonus for 2 hours. Cooldown: 2 hours. Storm Energy does not disappear after character's death.  Available for levels 1-60. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="71829" name="XP/SP Rune - 50% (1-hour) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain XP/SP Rune - 50% (1-hour). -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71830" name="XP/SP Rune - 50% (5-hour) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain XP/SP Rune - 50% (5 hours). -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71831" name="XP/SP Rune - 50% (7-day) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain XP/SP Rune - 50% (7 days). -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71832" name="Package: Irene's Hourglass (1 hour)" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain Irene' Hourglass - 1 Hour. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71833" name="Starter Package (Lv. 1-39)" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain a useful item. \\nFor Lv. 1 - 39 characters. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71834" name="Starter Package (Lv. 40-51)" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain a useful item. \\nFor Lv. 40-51 characters. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71835" name="Starter Package (Lv. 52-61)" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain a useful item. \\nFor Lv. 52-61 characters. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<weapon id="71836" name="Épée" type="RAPIER" body-part="RIGHT_HAND" icon="icon.weapon_rapier_i00">
@@ -317,13 +317,13 @@
 	<item id="71842" name="+10 Colichemarde Pack" type="NONE" icon="icon.etc_jewel_box_i00">
 	<!-- Double-click to obtain 1 +10 Colichemarde (15-day). -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71843" name="+10 Dismantler Pack" type="NONE" icon="icon.etc_jewel_box_i00">
 	<!-- Double-click to obtain 1 +10 Dismantler (15-day). -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 </list>

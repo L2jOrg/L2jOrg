@@ -3,7 +3,7 @@
 	<item id="70000" name="Sealed Rune - Stage 1" type="NONE" icon="BranchIcon.Icon.g_green_sealed_rune">
 	<!-- Double-click to receive one Stage 1 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55193" level="1"/>  <!-- Sealed Rune Lv. 1 -->
 		</skill-reducer>
@@ -12,7 +12,7 @@
 	<item id="70001" name="Sealed Rune - Stage 2" type="NONE" icon="BranchIcon.Icon.g_green_sealed_rune">
 	<!-- Double-click to receive one Stage 2 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55194" level="1"/>  <!-- Sealed Rune Lv. 2 -->
 		</skill-reducer>
@@ -21,7 +21,7 @@
 	<item id="70002" name="Sealed Rune - Stage 3" type="NONE" icon="BranchIcon.Icon.g_green_sealed_rune">
 	<!-- Double-click to receive one Stage 3 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55195" level="1"/>  <!-- Sealed Rune Lv. 3 -->
 		</skill-reducer>
@@ -30,7 +30,7 @@
 	<item id="70003" name="Sealed Rune - Stage 4" type="NONE" icon="BranchIcon.Icon.g_green_sealed_rune">
 	<!-- Double-click to receive one Stage 4 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55196" level="1"/>  <!-- Sealed Rune Lv. 4 -->
 		</skill-reducer>
@@ -39,7 +39,7 @@
 	<item id="70004" name="Sealed Rune - Stage 5" type="NONE" icon="BranchIcon.Icon.g_green_sealed_rune">
 	<!-- Double-click to receive one Stage 5 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55197" level="1"/>  <!-- Sealed Rune Lv. 5 -->
 		</skill-reducer>
@@ -48,7 +48,7 @@
 	<item id="70005" name="Sealed Rune - Stage 6" type="NONE" icon="BranchIcon.Icon.g_blue_sealed_rune">
 	<!-- Double-click to receive one Stage 6 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55198" level="1"/>  <!-- Sealed Rune Lv. 6 -->
 		</skill-reducer>
@@ -57,7 +57,7 @@
 	<item id="70006" name="Sealed Rune - Stage 7" type="NONE" icon="BranchIcon.Icon.g_blue_sealed_rune">
 	<!-- Double-click to receive one Stage 7 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55199" level="1"/>  <!-- Sealed Rune Lv. 7 -->
 		</skill-reducer>
@@ -66,7 +66,7 @@
 	<item id="70007" name="Sealed Rune - Stage 8" type="NONE" icon="BranchIcon.Icon.g_blue_sealed_rune">
 	<!-- Double-click to receive one Stage 8 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55200" level="1"/>  <!-- Sealed Rune Lvl 8 -->
 		</skill-reducer>
@@ -75,7 +75,7 @@
 	<item id="70008" name="Sealed Rune - Stage 9" type="NONE" icon="BranchIcon.Icon.g_blue_sealed_rune">
 	<!-- Double-click to receive one Stage 9 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55201" level="1"/>  <!-- Sealed Rune Lv. 9 -->
 		</skill-reducer>
@@ -84,7 +84,7 @@
 	<item id="70009" name="Sealed Rune - Stage 10" type="NONE" icon="BranchIcon.Icon.g_blue_sealed_rune">
 	<!-- Double-click to receive one Stage 10 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55202" level="1"/>  <!-- Sealed Rune Lv. 10 -->
 		</skill-reducer>
@@ -93,7 +93,7 @@
 	<item id="70010" name="Sealed Rune - Stage 11" type="NONE" icon="BranchIcon.Icon.g_red_sealed_rune_01">
 	<!-- Double-click to receive one Stage 11 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55203" level="1"/>  <!-- Sealed Rune Lv. 11 -->
 		</skill-reducer>
@@ -102,7 +102,7 @@
 	<item id="70011" name="Sealed Rune - Stage 12" type="NONE" icon="BranchIcon.Icon.g_red_sealed_rune_01">
 	<!-- Double-click to receive one Stage 12 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55204" level="1"/>  <!-- Sealed Rune Lv. 12 -->
 		</skill-reducer>
@@ -111,7 +111,7 @@
 	<item id="70012" name="Sealed Rune - Stage 13" type="NONE" icon="BranchIcon.Icon.g_red_sealed_rune_01">
 	<!-- Double-click to receive one Stage 13 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55205" level="1"/>  <!-- Sealed Rune Lv. 13 -->
 		</skill-reducer>
@@ -120,82 +120,82 @@
 	<item id="70013" name="Sealed Rune - Stage 14" type="NONE" icon="icon.bm_pirate_king_box">
 	<!-- Double-click to receive one Stage 14 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70014" name="Sealed Rune - Stage 15" type="NONE" icon="icon.bm_pirate_king_box">
 	<!-- Double-click to receive one Stage 15 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70015" name="Sealed Rune - Stage 16" type="NONE" icon="icon.bm_pirate_king_box">
 	<!-- Double-click to receive one Stage 16 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70016" name="Sealed Rune - Stage 17" type="NONE" icon="icon.bm_pirate_king_box">
 	<!-- Double-click to receive one Stage 17 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70017" name="Sealed Rune - Stage 18" type="NONE" icon="icon.bm_pirate_king_box">
 	<!-- Double-click to receive one Stage 18 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70018" name="Sealed Rune - Stage 19" type="NONE" icon="icon.bm_pirate_king_box">
 	<!-- Double-click to receive one Stage 19 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70019" name="Sealed Rune - Stage 20" type="NONE" icon="icon.bm_pirate_king_box">
 	<!-- Double-click to receive one Stage 20 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70020" name="Clan's Supplies Lv. 1" type="NONE" icon="icon.etc_box_of_adventure_2_i00">
 	<!-- u,A box with the reward for clan members for hunting monsters. It may contain a Daily Coin or Clan’s Special Supplies Lv. 1 (Low-grade). -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="10" immediate-effect="true"/>
+		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="70024" min-count="1" max-count="1" chance="100000"/>  <!-- Clan Coin -->
-			<item id="70025" min-count="1" max-count="1" chance="100000"/>  <!-- Clan's Special Supplies Lv. 1 -->
+			<item id="70024" chance="100000"/>  <!-- Clan Coin -->
+			<item id="70025" chance="100000"/>  <!-- Clan's Special Supplies Lv. 1 -->
 		</extract>
 	</item>
 
 	<item id="70021" name="Clan's Supplies Lv. 2" type="NONE" icon="icon.etc_box_of_adventure_3_i00">
 	<!-- u,A box with the reward for clan members for hunting monsters. It may contain a Daily Coin or Clan’s Special Supplies Lv. 2 (Medium-grade). -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="10" immediate-effect="true"/>
+		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="70024" min-count="2" max-count="4" chance="100000"/>  <!-- Clan Coin -->
-			<item id="70026" min-count="1" max-count="1" chance="100000"/>  <!-- Clan's Special Supplies Lv. 2 -->
+			<item id="70026" chance="100000"/>  <!-- Clan's Special Supplies Lv. 2 -->
 		</extract>
 	</item>
 
 	<item id="70022" name="Clan's Supplies Lv. 3" type="NONE" icon="icon.etc_box_of_adventure_4_i00">
 	<!-- u,A box with the reward for clan members for hunting monsters. It may contain a Daily Coin or Clan’s Special Supplies Lv. 3 (High-grade). -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="10" immediate-effect="true"/>
+		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="70024" min-count="4" max-count="6" chance="100000"/>  <!-- Clan Coin -->
-			<item id="70027" min-count="1" max-count="1" chance="100000"/>  <!-- Clan's Special Supplies Lv. 3 -->
+			<item id="70027" chance="100000"/>  <!-- Clan's Special Supplies Lv. 3 -->
 		</extract>
 	</item>
 
 	<item id="70023" name="Clan's Supplies Lv. 4" type="NONE" icon="icon.etc_box_of_adventure_5_i00">
 	<!-- u,A box with the reward for clan members for hunting monsters. It may contain a Daily Coin or Clan’s Special Supplies Lv. 4 (Highest-grade). -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="10" immediate-effect="true"/>
+		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="70024" min-count="6" max-count="8" chance="100000"/>  <!-- Clan Coin -->
-			<item id="70028" min-count="1" max-count="1" chance="100000"/>  <!-- Clan's Special Supplies Lv. 4 -->
+			<item id="70028" chance="100000"/>  <!-- Clan's Special Supplies Lv. 4 -->
 		</extract>
 	</item>
 
@@ -208,7 +208,7 @@
 	<item id="70025" name="Clan's Special Supplies Lv. 1" type="NONE" icon="icon.etc_box_of_adventure_2_i00">
 	<!-- Double-click to obtain one of several various clan rewards. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="10"/>
+		<attributes weight="10" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55172" level="1"/>  <!-- Clan's Special Supplies -->
 		</skill-reducer>
@@ -217,7 +217,7 @@
 	<item id="70026" name="Clan's Special Supplies Lv. 2" type="NONE" icon="icon.etc_box_of_adventure_3_i00">
 	<!-- Double-click to obtain one of several various clan rewards. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="10"/>
+		<attributes weight="10" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55173" level="1"/>  <!-- Clan's Special Supplies -->
 		</skill-reducer>
@@ -226,7 +226,7 @@
 	<item id="70027" name="Clan's Special Supplies Lv. 3" type="NONE" icon="icon.etc_box_of_adventure_4_i00">
 	<!-- Double-click to obtain one of several various clan rewards. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="10"/>
+		<attributes weight="10" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55174" level="1"/>  <!-- Clan's Special Supplies -->
 		</skill-reducer>
@@ -235,7 +235,7 @@
 	<item id="70028" name="Clan's Special Supplies Lv. 4" type="NONE" icon="icon.etc_box_of_adventure_5_i00">
 	<!-- Double-click to obtain one of several various clan rewards. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="10"/>
+		<attributes weight="10" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55175" level="1"/>  <!-- Clan's Special Supplies -->
 		</skill-reducer>
@@ -354,7 +354,7 @@
 	<item id="70040" name="Roast Blue Mackerel - STR" type="SCROLL" icon="BranchIcon.Icon.roasted_mackerel_buff">
 	<!-- For 20 min. STR +1.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55187" level="1"/>  <!-- Roast Blue Mackerel - STR -->
 		</skill-reducer>
@@ -363,7 +363,7 @@
 	<item id="70041" name="Roast Blue Mackerel - INT" type="SCROLL" icon="BranchIcon.Icon.roasted_mackerel_buff">
 	<!-- For 20 min. INT +1.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55188" level="1"/>  <!-- Roast Blue Mackerel - INT -->
 		</skill-reducer>
@@ -372,7 +372,7 @@
 	<item id="70042" name="Roast Blue Mackerel - CON" type="SCROLL" icon="BranchIcon.Icon.roasted_mackerel_buff">
 	<!-- For 20 min. CON +1.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55189" level="1"/>  <!-- Roast Blue Mackerel - CON -->
 		</skill-reducer>
@@ -381,7 +381,7 @@
 	<item id="70043" name="Roast Blue Mackerel - DEX" type="SCROLL" icon="BranchIcon.Icon.roasted_mackerel_buff">
 	<!-- For 20 min. DEX +1.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55190" level="1"/>  <!-- Roast Blue Mackerel - DEX -->
 		</skill-reducer>
@@ -390,7 +390,7 @@
 	<item id="70044" name="Roast Blue Mackerel - MEN" type="SCROLL" icon="BranchIcon.Icon.roasted_mackerel_buff">
 	<!-- For 20 min. MEN +1.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55191" level="1"/>  <!-- Roast Blue Mackerel - MEN -->
 		</skill-reducer>
@@ -399,7 +399,7 @@
 	<item id="70045" name="Roast Blue Mackerel - WIT" type="SCROLL" icon="BranchIcon.Icon.roasted_mackerel_buff">
 	<!-- For 20 min. WIT +1.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55192" level="1"/>  <!-- Roast Blue Mackerel - WIT -->
 		</skill-reducer>
@@ -408,139 +408,139 @@
 	<item id="70046" name="High Quality Bait" type="LURE" icon="icon.etc_bait_i02">
 	<!-- Intended for VIP, used in fishing. Increases the chance to get Golden Treasure Chest. Cannot be sold to NPC. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes price="7" immediate-effect="true"/>
+		<attributes price="7" immediate-effect="true" action="EQUIP"/>
 	</item>
 
 	<item id="70047" name="Instant Acceleration Potion" type="POTION" icon="icon.etc_potion_green_i00">
 	<!-- Greatly increases Speed for a short period of time. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="20" price="1200"/>
+		<attributes weight="20" price="1200" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70048" name="Scroll of Escape: Mithril Mines" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magical scroll that relocates you to the northern entrance to Mithril Mines.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="30"/>
+		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70049" name="Scroll of Escape: School of Dark Arts" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magical scroll that relocates you to the entrance to School of Dark Arts.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="30"/>
+		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70050" name="Scroll of Escape: Orc Barracks" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magical scroll that relocates you to Orc Barracks.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="30"/>
+		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70051" name="Scroll of Escape: Ruins of Agony" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magical scroll that relocates you to the Ruins of Agony.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="30"/>
+		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70052" name="Scroll of Escape: Ruins of Despair" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magical scroll that relocates you to the Ruins of Despair.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="30"/>
+		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70053" name="Scroll of Escape: Abandoned Camp" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magical scroll that relocates you to the Abandoned Camp.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="30"/>
+		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70054" name="Scroll of Escape: Ant Nest" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magical scroll that relocates you to the western entrance to Ant Nest.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="30"/>
+		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70055" name="Scroll of Escape: Cruma Tower" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magical scroll that relocates you to the Cruma Tower.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="30"/>
+		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70056" name="Scroll of Escape: Death Pass" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magical scroll that relocates you to the northern part of Death Valley.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="30"/>
+		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70057" name="Scroll of Escape: Dragon Valley" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magical scroll that relocates you to the crossroads at Dragon Valley.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="30"/>
+		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70058" name="Scroll of Escape: Antharas' Lair" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magical scroll that relocates you to the entrance to Antharas' Lair.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="30"/>
+		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70059" name="Scroll of Escape: Outlaw Forest" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magical scroll that relocates you to the Outlaw Forest.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="30"/>
+		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70060" name="Scroll of Escape: Alligator Island" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magical scroll that relocates you to the northern part of Alligator Island.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="30"/>
+		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70061" name="Scroll of Escape: Forgotten Temple" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magical scroll that relocates you to the entrance to Forgotten Temple.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="30"/>
+		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70062" name="Scroll of Escape: Hunting Zone 15" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magical scroll that relocates you to the Hunting Zone.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="30"/>
+		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70063" name="Scroll of Escape: Hunting Zone 16" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magical scroll that relocates you to the Hunting Zone.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="30"/>
+		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70064" name="Scroll of Escape: Hunting Zone 17" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magical scroll that relocates you to the Hunting Zone.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="30"/>
+		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70065" name="Scroll of Escape: Hunting Zone 18" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magical scroll that relocates you to the Hunting Zone.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="30"/>
+		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70066" name="Scroll of Escape: Hunting Zone 19" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magical scroll that relocates you to the Hunting Zone.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="30"/>
+		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70067" name="Scroll of Escape: Hunting Zone 20" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magical scroll that relocates you to the Hunting Zone.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="30"/>
+		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70068" name="Scroll of Invisibility" type="NONE" icon="icon.etc_aidcharm_cancel_valbreath_i00">
 	<!-- Makes you invisible to monsters for 1 minute, decreasing your Speed by -40%. Monsters do not attack first.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="30"/>
+		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70069" name="Scroll: Intensity Slash Lv. 1" type="SCROLL" icon="icon.etc_scroll_white_i00">
@@ -549,7 +549,7 @@
 		<condition msg-id="113">
 			<player level-min="20"/>
 		</condition>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="14826" level="1"/>  <!-- Intense Slash -->
 		</skill-reducer>
@@ -561,7 +561,7 @@
 		<condition msg-id="113">
 			<player level-min="20"/>
 		</condition>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="14826" level="2"/>  <!-- Intense Slash -->
 		</skill-reducer>
@@ -573,7 +573,7 @@
 		<condition msg-id="113">
 			<player level-min="20"/>
 		</condition>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="14826" level="3"/>  <!-- Intense Slash -->
 		</skill-reducer>
@@ -585,7 +585,7 @@
 		<condition msg-id="113">
 			<player level-min="20"/>
 		</condition>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="14826" level="4"/>  <!-- Intense Slash -->
 		</skill-reducer>
@@ -597,7 +597,7 @@
 		<condition msg-id="113">
 			<player level-min="20"/>
 		</condition>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="14826" level="5"/>  <!-- Intense Slash -->
 		</skill-reducer>
@@ -609,7 +609,7 @@
 		<condition msg-id="113">
 			<player level-min="20"/>
 		</condition>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="14826" level="6"/>  <!-- Intense Slash -->
 		</skill-reducer>
@@ -621,7 +621,7 @@
 		<condition msg-id="113">
 			<player level-min="20"/>
 		</condition>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="14828" level="1"/>  <!-- Purity Blast -->
 		</skill-reducer>
@@ -633,7 +633,7 @@
 		<condition msg-id="113">
 			<player level-min="20"/>
 		</condition>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="14828" level="2"/>  <!-- Purity Blast -->
 		</skill-reducer>
@@ -645,7 +645,7 @@
 		<condition msg-id="113">
 			<player level-min="20"/>
 		</condition>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="14828" level="3"/>  <!-- Purity Blast -->
 		</skill-reducer>
@@ -657,7 +657,7 @@
 		<condition msg-id="113">
 			<player level-min="20"/>
 		</condition>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="14828" level="4"/>  <!-- Purity Blast -->
 		</skill-reducer>
@@ -669,7 +669,7 @@
 		<condition msg-id="113">
 			<player level-min="20"/>
 		</condition>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="14828" level="5"/>  <!-- Purity Blast -->
 		</skill-reducer>
@@ -681,7 +681,7 @@
 		<condition msg-id="113">
 			<player level-min="20"/>
 		</condition>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="14828" level="6"/>  <!-- Purity Blast -->
 		</skill-reducer>
@@ -693,7 +693,7 @@
 		<condition msg-id="113">
 			<player level-min="20"/>
 		</condition>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="14830" level="1"/>  <!-- Grey Explosion -->
 		</skill-reducer>
@@ -705,7 +705,7 @@
 		<condition msg-id="113">
 			<player level-min="20"/>
 		</condition>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="14830" level="2"/>  <!-- Grey Explosion -->
 		</skill-reducer>
@@ -717,7 +717,7 @@
 		<condition msg-id="113">
 			<player level-min="20"/>
 		</condition>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="14830" level="3"/>  <!-- Grey Explosion -->
 		</skill-reducer>
@@ -729,7 +729,7 @@
 		<condition msg-id="113">
 			<player level-min="20"/>
 		</condition>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="14830" level="4"/>  <!-- Grey Explosion -->
 		</skill-reducer>
@@ -741,7 +741,7 @@
 		<condition msg-id="113">
 			<player level-min="20"/>
 		</condition>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="14830" level="5"/>  <!-- Grey Explosion -->
 		</skill-reducer>
@@ -753,7 +753,7 @@
 		<condition msg-id="113">
 			<player level-min="20"/>
 		</condition>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="14830" level="6"/>  <!-- Grey Explosion -->
 		</skill-reducer>
@@ -765,7 +765,7 @@
 		<condition msg-id="113">
 			<player level-min="20"/>
 		</condition>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="14832" level="1"/>  <!-- Platonic Tempest -->
 		</skill-reducer>
@@ -777,7 +777,7 @@
 		<condition msg-id="113">
 			<player level-min="20"/>
 		</condition>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="14832" level="2"/>  <!-- Platonic Tempest -->
 		</skill-reducer>
@@ -789,7 +789,7 @@
 		<condition msg-id="113">
 			<player level-min="20"/>
 		</condition>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="14832" level="3"/>  <!-- Platonic Tempest -->
 		</skill-reducer>
@@ -801,7 +801,7 @@
 		<condition msg-id="113">
 			<player level-min="20"/>
 		</condition>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="14832" level="4"/>  <!-- Platonic Tempest -->
 		</skill-reducer>
@@ -813,7 +813,7 @@
 		<condition msg-id="113">
 			<player level-min="20"/>
 		</condition>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="14832" level="5"/>  <!-- Platonic Tempest -->
 		</skill-reducer>
@@ -825,7 +825,7 @@
 		<condition msg-id="113">
 			<player level-min="20"/>
 		</condition>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="14832" level="6"/>  <!-- Platonic Tempest -->
 		</skill-reducer>
@@ -834,7 +834,7 @@
 	<item id="70093" name="Highest Quality Bait" type="LURE" icon="icon.etc_bait_i02">
 	<!-- Intended for VIP and used in fishing. In comparison with High Quality Bait, provides more XP in case of a catch. Cannot be sold to NPC. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes price="7" immediate-effect="true"/>
+		<attributes price="7" immediate-effect="true" action="EQUIP"/>
 	</item>
 
 	<item id="70094" name="XP Rune - 100%" type="RUNE" icon="icon.skill19226">

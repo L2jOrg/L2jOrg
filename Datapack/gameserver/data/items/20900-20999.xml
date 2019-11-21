@@ -10,10 +10,10 @@
 	<item id="20901" name="Santa Hat Set" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- The Santa Hat and Rudolph's Nose are packaged together. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="20900" min-count="1" max-count="1" chance="100000"/>  <!-- Santa Hat -->
-			<item id="14611" min-count="1" max-count="1" chance="100000"/>  <!-- Rudolph's Nose -->
+			<item id="20900" chance="100000"/>  <!-- Santa Hat -->
+			<item id="14611" chance="100000"/>  <!-- Rudolph's Nose -->
 		</extract>
 	</item>
 

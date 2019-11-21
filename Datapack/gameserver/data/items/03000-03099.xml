@@ -3,182 +3,182 @@
 	<item id="3000" name="Recipe: Dwarven Chain Shield" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Dwarven Chain Shield. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="3120" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="3120" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3001" name="Recipe: Rind Leather Boots" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for the Rind Leather Boots. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="3220" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="3220" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3002" name="Recipe: Dwarven Chain Gloves" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for Dwarven Chain Gloves. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="3220" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="3220" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3003" name="Recipe: Gloves of Seal" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for Gloves of Seal. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="3220" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="3220" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3004" name="Recipe: Rind Leather Gloves" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for the Rind Leather Gloves. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="3220" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="3220" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3005" name="Recipe: Demon's Boots" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for Demon's Boots. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="4900" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="4900" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3006" name="Recipe: Demon's Gloves" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for Demon's Gloves. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="4900" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="4900" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3007" name="Recipe: Theca Leather Boots" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for the Theca Leather Boots. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="5500" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="5500" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3008" name="Recipe: Theca Leather Gloves" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for the Theca Leather Gloves. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="5500" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="5500" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3009" name="Recipe: Compound Boots" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for Compound Boots. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="4900" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="4900" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3010" name="Recipe: Compound Helmet" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Compound Helmet. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="7360" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="7360" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3011" name="Recipe: Divine Boots" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for Divine Boots. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="7160" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="7160" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3012" name="Recipe: Full Plate Helmet" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Full Plate Helmet. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="10720" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="10720" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3013" name="Recipe: Drake Leather Boots" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for Drake Leather Boots. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="7160" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="7160" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3014" name="Recipe: Full Plate Boots" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for Full Plate Boots. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="7160" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="7160" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3015" name="Recipe: Drake Leather Gloves" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for Drake Leather Gloves. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="7160" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="7160" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3016" name="Recipe: Full Plate Gauntlets" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for Full Plate Gauntlets. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="7160" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="7160" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3017" name="Recipe: Divine Gloves" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for Blessed Gloves. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="7160" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="7160" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3018" name="Recipe: Blessed Gloves" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for Divine Gloves. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="7160" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="7160" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3019" name="Recipe: Full Plate Shield" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Full Plate Shield. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="7500" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="7500" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3020" name="Recipe: Elven Long Sword" type="RECIPE" icon="icon.etc_recipe_blue_i00">
 	<!-- For Dwarves only. Recipe for an Elven Long Sword. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="36000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="36000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3021" name="Recipe: Dwarven War Hammer" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Dwarven War Hammer. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="57400" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="57400" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3022" name="Recipe: Yaksa Mace" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for the Yaksa Mace. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="122600" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="122600" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3023" name="Recipe: Lesser Giant's Key" type="RECIPE" icon="icon.etc_recipe_blue_i00">
 	<!-- For Dwarves only. Recipe for Quest. Required to make a Lesser Giant's Key. Requires Create Item - Skill Lv. 1. The success rate is 100%.  -->
 		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
-		<attributes weight="30" immediate-effect="true" quest-item="true"/>
+		<attributes weight="30" immediate-effect="true" quest-item="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3024" name="Recipe: Journeyman Ring" type="RECIPE" icon="icon.etc_recipe_blue_i00">
 	<!-- For Dwarves only. Recipe for Quest. Required to make a Journeyman Ring. Requires Create Item - Skill Lv. 1. The success rate is 100%.  -->
 		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
-		<attributes weight="30" immediate-effect="true" quest-item="true"/>
+		<attributes weight="30" immediate-effect="true" quest-item="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3025" name="Recipe: Amber Bead" type="RECIPE" icon="icon.etc_recipe_blue_i00">
 	<!-- For Dwarves only. Recipe for Quest. Required to make an Amber Bead. Requires Create Item - Skill Lv. 2. The success rate is 100%.  -->
 		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
-		<attributes weight="30" immediate-effect="true" quest-item="true"/>
+		<attributes weight="30" immediate-effect="true" quest-item="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
@@ -270,35 +270,35 @@
 	<item id="3032" name="Recipe: Spiritshot (D-grade)" type="MATERIAL" icon="icon.etc_recipe_blue_i00">
 	<!-- For Dwarves only. Recipe for the Spiritshot D-grade . Requires Create Item - Skill Lv. 2. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="5000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="5000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3033" name="Recipe: Spiritshot (C-grade)" type="MATERIAL" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for the Spiritshot C-grade . Requires Create Item - Skill Lv. 4. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="60000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="60000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3034" name="Recipe: Spiritshot (B-grade)" type="MATERIAL" icon="icon.etc_recipe_red_i00">
 	<!-- For Dwarves only. Recipe for the Spiritshot B-grade. Requires Create Item - Skill Lv. 6. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="100000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="100000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3035" name="Recipe: Spiritshot (A-grade)" type="MATERIAL" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for the Spiritshot (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%.  Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="150000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="150000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3036" name="Recipe: Spiritshot (S-grade)" type="MATERIAL" icon="icon.etc_recipe_black_i00">
 	<!-- For Dwarves only. Recipe for a Spiritshot (S-grade). Create Item skill must be level 8. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="450000" immediate-effect="true"/>
+		<attributes weight="30" price="450000" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 

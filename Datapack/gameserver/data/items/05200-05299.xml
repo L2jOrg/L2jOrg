@@ -3,7 +3,7 @@
 	<item id="5200" name="Chest Key - Grade 5" type="NONE" icon="icon.etc_key_i00">
 	<!-- Opens a level 30 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="10" price="1900"/>
+		<attributes weight="10" price="1900" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2065" level="4"/>  <!-- Box Key -->
 		</skill-reducer>
@@ -12,7 +12,7 @@
 	<item id="5201" name="Chest Key - Grade 4" type="NONE" icon="icon.etc_key_i00">
 	<!-- Opens a level 40 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="10" price="3200"/>
+		<attributes weight="10" price="3200" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2065" level="5"/>  <!-- Box Key -->
 		</skill-reducer>
@@ -21,7 +21,7 @@
 	<item id="5202" name="Chest Key - Grade 3" type="NONE" icon="icon.etc_key_i00">
 	<!-- Opens a level 50 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="10" price="5100"/>
+		<attributes weight="10" price="5100" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2065" level="6"/>  <!-- Box Key -->
 		</skill-reducer>
@@ -30,7 +30,7 @@
 	<item id="5203" name="Chest Key - Grade 2" type="NONE" icon="icon.etc_key_i00">
 	<!-- Opens a level 60 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="10" price="7400"/>
+		<attributes weight="10" price="7400" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2065" level="7"/>  <!-- Box Key -->
 		</skill-reducer>
@@ -39,7 +39,7 @@
 	<item id="5204" name="Chest Key - Grade 1" type="NONE" icon="icon.etc_key_i00">
 	<!-- Opens a level 70 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="10" price="10000"/>
+		<attributes weight="10" price="10000" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2065" level="8"/>  <!-- Box Key -->
 		</skill-reducer>
@@ -145,14 +145,14 @@
 	<item id="5230" name="Recipe: Mithril Arrow" type="RECIPE" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Mithril Arrows. Requires Create Item - Skill Lv. 4. The success rate is 100%.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="150000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="150000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5231" name="Recipe: Metal Hardener" type="RECIPE" icon="icon.etc_recipe_blue_i00">
 	<!-- For Dwarves only. Recipe for a Metal Hardener. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="2800" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="2800" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
@@ -188,7 +188,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="50" price="10000" commission-type="SCROLL_OTHER" reuse-delay="500" immediate-effect="true"/>
+		<attributes weight="50" price="10000" commission-type="SCROLL_OTHER" reuse-delay="500" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2103" level="1"/>  <!-- Mysterious Potion -->
 		</skill-reducer>
@@ -200,7 +200,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500"/>
+		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2122" level="1"/>  <!-- Facelifting Potion -->
 		</skill-reducer>
@@ -212,7 +212,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500"/>
+		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2123" level="1"/>  <!-- Facelifting Potion -->
 		</skill-reducer>
@@ -224,7 +224,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500"/>
+		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2124" level="1"/>  <!-- Facelifting Potion -->
 		</skill-reducer>
@@ -236,7 +236,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500"/>
+		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2125" level="1"/>  <!-- Dye Potion -->
 		</skill-reducer>
@@ -248,7 +248,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500"/>
+		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2126" level="1"/>  <!-- Dye Potion -->
 		</skill-reducer>
@@ -260,7 +260,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500"/>
+		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2127" level="1"/>  <!-- Dye Potion -->
 		</skill-reducer>
@@ -272,7 +272,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500"/>
+		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2128" level="1"/>  <!-- Dye Potion -->
 		</skill-reducer>
@@ -284,7 +284,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500"/>
+		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2129" level="1"/>  <!-- Hair Style Change Potion -->
 		</skill-reducer>
@@ -296,7 +296,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500"/>
+		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2130" level="1"/>  <!-- Hair Style Change Potion -->
 		</skill-reducer>
@@ -308,7 +308,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500"/>
+		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2131" level="1"/>  <!-- Hair Style Change Potion -->
 		</skill-reducer>
@@ -320,7 +320,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500"/>
+		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2132" level="1"/>  <!-- Hair Style Change Potion -->
 		</skill-reducer>
@@ -332,7 +332,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500"/>
+		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2133" level="1"/>  <!-- Hair Style Change Potion -->
 		</skill-reducer>
@@ -344,7 +344,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500"/>
+		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2134" level="1"/>  <!-- Hair Style Change Potion -->
 		</skill-reducer>
@@ -356,7 +356,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500"/>
+		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2135" level="1"/>  <!-- Hair Style Change Potion -->
 		</skill-reducer>
@@ -365,7 +365,7 @@
 	<item id="5250" name="Greater Soulshot Compressed Package (No-grade)" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Small package of compressed soulshots. Upon use, changes into a 1,000 No-grade soulshots. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="600" price="7700" commission-type="SOULSHOT" immediate-effect="true"/>
+		<attributes weight="600" price="7700" commission-type="SOULSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2104" level="1"/>  <!-- Greater Soulshot Compressed Package (No-grade) -->
 		</skill-reducer>
@@ -374,7 +374,7 @@
 	<item id="5251" name="Greater Soulshot Compressed Package (D-grade)" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Small package of compressed soulshots. Upon use, changes into a 1,000 D-grade soulshots. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="450" price="11000" commission-type="SOULSHOT" immediate-effect="true"/>
+		<attributes weight="450" price="11000" commission-type="SOULSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2105" level="1"/>  <!-- Greater Soulshot Compressed Package (D-grade) -->
 		</skill-reducer>
@@ -383,7 +383,7 @@
 	<item id="5252" name="Greater Soulshot Compressed Package (C-grade)" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Small package of compressed soulshots. Upon use, changes into a 1,000 C-grade soulshots. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="450" price="16500" commission-type="SOULSHOT" immediate-effect="true"/>
+		<attributes weight="450" price="16500" commission-type="SOULSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2106" level="1"/>  <!-- Greater Soulshot Compressed Package (C-grade) -->
 		</skill-reducer>
@@ -392,7 +392,7 @@
 	<item id="5253" name="Greater Soulshot Compressed Package (B-grade)" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Small package of compressed soulshots. Upon use, changes into a 1,000 B-grade soulshots. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="300" price="55000" commission-type="SOULSHOT" immediate-effect="true"/>
+		<attributes weight="300" price="55000" commission-type="SOULSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2107" level="1"/>  <!-- Greater Soulshot Compressed Package (B-grade) -->
 		</skill-reducer>
@@ -401,7 +401,7 @@
 	<item id="5254" name="Greater Soulshot Compressed Package (A-grade)" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Small package of compressed Soulshots. Upon use, changes into a 1,000 A-grade Soulshots. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="300" price="88000" commission-type="SOULSHOT" immediate-effect="true"/>
+		<attributes weight="300" price="88000" commission-type="SOULSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2108" level="1"/>  <!-- Greater Soulshot Compressed Package (A-grade) -->
 		</skill-reducer>
@@ -410,7 +410,7 @@
 	<item id="5256" name="Greater Spiritshot Compressed Package (No-grade)" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Small package of compressed spiritshots. Upon use, changes into a 1,000 No-grade spiritshots. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="750" price="16500" commission-type="SPIRITSHOT" immediate-effect="true"/>
+		<attributes weight="750" price="16500" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2110" level="1"/>  <!-- Greater Spiritshot Compressed Package (No-grade) -->
 		</skill-reducer>
@@ -419,7 +419,7 @@
 	<item id="5257" name="Greater Spiritshot Compressed Package (D-grade)" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Small package of compressed spiritshots. Upon use, changes into a 1,000 D-grade spiritshots. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="750" price="19800" commission-type="SPIRITSHOT" immediate-effect="true"/>
+		<attributes weight="750" price="19800" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2111" level="1"/>  <!-- Greater Spiritshot Compressed Package (D-grade) -->
 		</skill-reducer>
@@ -428,7 +428,7 @@
 	<item id="5258" name="Greater Spiritshot Compressed Package (C-grade)" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Small package of compressed spiritshots. Upon use, changes into a 1,000 C-grade spiritshots. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="450" price="38500" commission-type="SPIRITSHOT" immediate-effect="true"/>
+		<attributes weight="450" price="38500" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2112" level="1"/>  <!-- Greater Spiritshot Compressed Package (C-grade) -->
 		</skill-reducer>
@@ -437,7 +437,7 @@
 	<item id="5259" name="Greater Spiritshot Compressed Package (B-grade)" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Small package of compressed spiritshots. Upon use, changes into a 1,000 B-grade spiritshots. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="450" price="110000" commission-type="SPIRITSHOT" immediate-effect="true"/>
+		<attributes weight="450" price="110000" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2113" level="1"/>  <!-- Greater Spiritshot Compressed Package (B-grade) -->
 		</skill-reducer>
@@ -446,7 +446,7 @@
 	<item id="5260" name="Greater Spiritshot Compressed Package (A-grade)" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Small package of compressed spiritshots. Upon use, changes into a 1,000 A-grade spiritshots. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="300" price="132000" commission-type="SPIRITSHOT" immediate-effect="true"/>
+		<attributes weight="300" price="132000" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2114" level="1"/>  <!-- Greater Spiritshot Compressed Package (A-grade) -->
 		</skill-reducer>
@@ -455,7 +455,7 @@
 	<item id="5262" name="Greater Blessed Spiritshot Compressed Package (No-grade)" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Small package of compressed blessed spiritshots. Upon use, changes into a 1,000 No-grade blessed spiritshots. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="750" price="38500" commission-type="SPIRITSHOT" immediate-effect="true"/>
+		<attributes weight="750" price="38500" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2116" level="1"/>  <!-- Greater Blessed Spiritshot Compressed Package (No-grade) -->
 		</skill-reducer>
@@ -464,7 +464,7 @@
 	<item id="5263" name="Greater Blessed Spiritshot Compressed Package (D-grade)" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Small package of compressed blessed spiritshots. Upon use, changes into a 1,000 D-grade blessed spiritshots. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="750" price="49500" commission-type="SPIRITSHOT" immediate-effect="true"/>
+		<attributes weight="750" price="49500" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2117" level="1"/>  <!-- Big Blessed Spiritshot Compressed Package (D-grade) -->
 		</skill-reducer>
@@ -473,7 +473,7 @@
 	<item id="5264" name="Greater Blessed Spiritshot Compressed Package (C-grade)" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Small package of compressed blessed spiritshots. Upon use, changes into a 1,000 C-grade blessed spiritshots. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="450" price="99000" commission-type="SPIRITSHOT" immediate-effect="true"/>
+		<attributes weight="450" price="99000" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2118" level="1"/>  <!-- Big Blessed Spiritshot Compressed Package (C-grade) -->
 		</skill-reducer>
@@ -482,7 +482,7 @@
 	<item id="5265" name="Greater Blessed Spiritshot Compressed Package (B-grade)" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Small package of compressed blessed spiritshots. Upon use, changes into a 1,000 B-grade blessed spiritshots. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="450" price="269500" commission-type="SPIRITSHOT" immediate-effect="true"/>
+		<attributes weight="450" price="269500" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2119" level="1"/>  <!-- Big Blessed Spiritshot Compressed Package (B-grade) -->
 		</skill-reducer>
@@ -491,7 +491,7 @@
 	<item id="5266" name="Greater Blessed Spiritshot Compressed Package (A-grade)" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Small package of compressed blessed spiritshots. Upon use, changes into a 1,000 A-grade blessed spiritshots. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="300" price="319000" commission-type="SPIRITSHOT" immediate-effect="true"/>
+		<attributes weight="300" price="319000" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2120" level="1"/>  <!-- Big Blessed Spiritshot Compressed Package (A-grade) -->
 		</skill-reducer>
@@ -500,91 +500,91 @@
 	<item id="5268" name="Recipe: Greater Soulshot Compressed Package (D-grade)" type="MATERIAL" icon="icon.etc_recipe_blue_i00">
 	<!-- For Dwarves only. Recipe for the Greater Soulshot Compressed Package (D-grade) . Requires Create Item - Skill Lv. 2. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="5000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="5000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5269" name="Recipe: Greater Soulshot Compressed Package (C-grade)" type="MATERIAL" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for the Greater Soulshot Compressed Package (C-grade) . Requires Create Item - Skill Lv. 4. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="60000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="60000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5270" name="Recipe: Greater Soulshot Compressed Package (B-grade)" type="MATERIAL" icon="icon.etc_recipe_red_i00">
 	<!-- For Dwarves only. Recipe for the Greater Soulshot Compressed Package (B-grade). Requires Create Item - Skill Lv. 6. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="100000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="100000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5271" name="Recipe: Greater Soulshot Compressed Package (A-grade)" type="MATERIAL" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Greater Soulshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="150000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="150000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5273" name="Recipe: Greater Spiritshot Compressed Package (D-grade)" type="MATERIAL" icon="icon.etc_recipe_blue_i00">
 	<!-- For Dwarves only. Recipe for the Greater Spiritshot Compressed Package (D-grade) . Requires Create Item - Skill Lv. 2. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="5000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="5000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5274" name="Recipe: Greater Spiritshot Compressed Package (C-grade)" type="MATERIAL" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for the Greater Spiritshot Compressed Package (C-grade) . Requires Create Item - Skill Lv. 4. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="60000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="60000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5275" name="Recipe: Greater Spiritshot Compressed Package (B-grade)" type="MATERIAL" icon="icon.etc_recipe_red_i00">
 	<!-- For Dwarves only. Recipe for the Greater Spiritshot Compressed Package (B-grade). Requires Create Item - Skill Lv. 6. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="100000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="100000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5276" name="Recipe: Greater Spiritshot Compressed Package (A-grade)" type="MATERIAL" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Greater Spiritshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="150000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="150000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5278" name="Recipe: Greater Blessed Spiritshot Compressed Package (D-grade)" type="MATERIAL" icon="icon.etc_recipe_blue_i00">
 	<!-- For Dwarves only. Recipe for the Greater Blessed Spiritshot Compressed Package (D-grade) . Requires Create Item - Skill Lv. 2. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="5000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="5000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5279" name="Recipe: Greater Blessed Spiritshot Compressed Package (C-grade)" type="MATERIAL" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for the Greater Blessed Spiritshot Compressed Package (C-grade) . Requires Create Item - Skill Lv. 4. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="60000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="60000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5280" name="Recipe: Greater Blessed Spiritshot Compressed Package (B-grade)" type="MATERIAL" icon="icon.etc_recipe_red_i00">
 	<!-- For Dwarves only. Recipe for the Greater Blessed Spiritshot Compressed Package (B-grade). Requires Create Item - Skill Lv. 6. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="100000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="100000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5281" name="Recipe: Greater Blessed Spiritshot Compressed Package (A-grade)" type="MATERIAL" icon="icon.etc_recipe_violet_i00">
 	<!-- For Dwarves only. Recipe for Blessed Spiritshot Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="150000" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="150000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="5283" name="Rice Cake" type="POTION" icon="icon.etc_mochi_i00">
 	<!-- Rice cake that restores one's HP and MP. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2136" level="1"/>  <!-- Rice Cake -->
 		</skill-reducer>

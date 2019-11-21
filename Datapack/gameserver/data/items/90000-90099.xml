@@ -105,7 +105,7 @@
 	<item id="90017" name="Weapons Ingredient Box (A-grade)" type="NONE" icon="icon.etc_box_of_adventure_1_i00">
 	<!-- Double-click to receive one of A-grade Weapon Ingredients. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90018" name="Elite Symbol of Monster Arena" type="NONE" icon="icon.etc_residence_token_royalguard">
@@ -123,7 +123,7 @@
 	<item id="90020" name="Box of Superior Dye" type="NONE" icon="icon.etc_box_of_adventure_4_i00">
 	<!-- Double-click to receive one of the following Dyes for 3rd Class Transfer: Superior Dye of STR, Superior Dye of CON, Superior Dye of DEX, Superior Dye of INT, Superior Dye of WIT, or Superior Dye of MEN.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<armor id="90021" name="Warrior’s Talisman - Attack" type="NONE" body-part="TALISMAN" icon="icon.r90_sp_talisman_dr_mp_active">
@@ -232,25 +232,25 @@
 	<item id="90032" name="Elixir of Life" type="COUPON" icon="icon.etc_super_hp_potion_i00">
 	<!-- Restores a large amount of HP. Cooldown: 3 minutes. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="5"/>
+		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90033" name="Elixir of Mind" type="COUPON" icon="icon.etc_super_mp_potion_i00">
 	<!-- Restores a large amount of MP. Cooldown: 3 minutes. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="5"/>
+		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90034" name="Spellbook Box - 3rd Class Transfer" type="NONE" icon="icon.etc_readybox_silver">
 	<!-- Double-click to receive one of the Spellbooks for 3rd Class Transfer. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90035" name="Life Stone Pack" type="NONE" icon="icon.event_hero_treasure_box_i00">
 	<!-- Double-click to receive one of the following items: High/Medium/Average Quality Life Stone. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39203" level="1"/>  <!-- Life Stone Pack -->
 		</skill-reducer>
@@ -309,7 +309,7 @@
 	<item id="90043" name="Dark Assassin Transformation Potion" type="POTION" icon="icon.empty_bottle">
 	<!-- For 15 minutes transforms you into Dark Assassin. \\nTransformation into Dark Assassin: Max HP/MP +5%, P./M. Accuracy +1, P./M. Atk. +2%, P./M. Def. +2%, Atk. Spd. +3%, M. Critical Rate +1, Speed +4. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="5"/>
+		<attributes weight="5" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39205" level="1"/>  <!-- Dark Assassin Transformation Potion -->
 		</skill-reducer>
@@ -318,7 +318,7 @@
 	<item id="90044" name="Dimensional Blessing" type="SCROLL" icon="icon.etc_blessed_kalie_i00">
 	<!-- Provides 37 million XP and 1.11 million SP.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes commission-type="SCROLL_OTHER"/>
+		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39204" level="1"/>  <!-- Dimensional Blessing -->
 		</skill-reducer>

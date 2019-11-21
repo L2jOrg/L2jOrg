@@ -3,7 +3,7 @@
 	<item id="35741" name="Amended Scroll" type="SCROLL" icon="icon.etc_ev_draco_pk_count_down">
 	<!-- Double-click to lower PK value by 1. It can only be used when PK is 1 or higher and Inclination is 0. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="10" commission-type="SCROLL_OTHER"/>
+		<attributes weight="10" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="9504" level="1"/>  <!-- Scroll: PK -->
 		</skill-reducer>
@@ -12,7 +12,7 @@
 	<item id="35752" name="Scroll: PK (Mid-grade)" type="SCROLL" icon="icon.etc_ev_draco_pk_count_down">
 	<!-- Double-click to lower PK value by 3. Must be in Floran Village to use. It can only be used when the PK value is greater than or equal to 1. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="10" commission-type="SCROLL_OTHER"/>
+		<attributes weight="10" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="9505" level="1"/>  <!-- Scroll: PK (Mid-grade) -->
 		</skill-reducer>
@@ -21,7 +21,7 @@
 	<item id="35753" name="Scroll: PK (High-grade)" type="SCROLL" icon="icon.etc_ev_draco_pk_count_down">
 	<!-- Double-click to lower PK value by 5. Must be in Floran Village to use. It can only be used when the PK value is greater than or equal to 1. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="10" commission-type="SCROLL_OTHER"/>
+		<attributes weight="10" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="9506" level="1"/>  <!-- Scroll: PK (High-grade) -->
 		</skill-reducer>
@@ -30,7 +30,7 @@
 	<item id="35754" name="Scroll: PK (Top-grade)" type="SCROLL" icon="icon.etc_ev_draco_pk_count_down">
 	<!-- Double-click to lower PK value by 10. Must be in Floran Village to use. It can only be used when the PK value is greater than or equal to 1. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="10" commission-type="SCROLL_OTHER"/>
+		<attributes weight="10" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="9507" level="1"/>  <!-- Scroll: PK (Top-grade) -->
 		</skill-reducer>

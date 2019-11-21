@@ -45,7 +45,7 @@
 	<item id="4411" name="Echo Crystal - Theme of Journey" type="NONE" icon="icon.etc_echo_crystal_i00">
 	<!-- Echo crystal that plays the theme music of a journey. May only be used once. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="10" reuse-delay="20000" immediate-effect="true"/>
+		<attributes weight="10" reuse-delay="20000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2069" level="1"/>  <!-- Item - Race Sound Crystal -->
 		</skill-reducer>
@@ -54,7 +54,7 @@
 	<item id="4412" name="Echo Crystal - Theme of Battle" type="NONE" icon="icon.etc_echo_crystal_i01">
 	<!-- Echo crystal that plays the theme music of a battle. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="10" reuse-delay="24000" immediate-effect="true"/>
+		<attributes weight="10" reuse-delay="24000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2068" level="1"/>  <!-- Item - Race Sound Crystal -->
 		</skill-reducer>
@@ -63,7 +63,7 @@
 	<item id="4413" name="Echo Crystal - Theme of Love" type="NONE" icon="icon.etc_echo_crystal_i02">
 	<!-- Echo crystal that plays the theme music of love. May only be used once. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="10" reuse-delay="24000" immediate-effect="true"/>
+		<attributes weight="10" reuse-delay="24000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2070" level="1"/>  <!-- Item - Race Sound Crystal -->
 		</skill-reducer>
@@ -72,7 +72,7 @@
 	<item id="4414" name="Echo Crystal - Theme of Solitude" type="NONE" icon="icon.etc_echo_crystal_i03">
 	<!-- Echo crystal that plays the theme music of solitude. May only be used once. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="10" reuse-delay="20000" immediate-effect="true"/>
+		<attributes weight="10" reuse-delay="20000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2072" level="1"/>  <!-- Item - Race Sound Crystal -->
 		</skill-reducer>
@@ -81,7 +81,7 @@
 	<item id="4415" name="Echo Crystal - Theme of Festival" type="NONE" icon="icon.etc_echo_crystal_i04">
 	<!-- Echo crystal that plays the theme music of a feast. May only be used once. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="10" reuse-delay="3000" immediate-effect="true"/>
+		<attributes weight="10" reuse-delay="3000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2071" level="1"/>  <!-- Item - Race Sound Crystal -->
 		</skill-reducer>
@@ -90,7 +90,7 @@
 	<item id="4416" name="Echo Crystal - Theme of Celebration" type="NONE" icon="icon.etc_echo_crystal_i00">
 	<!-- Echo crystal that plays the theme music of a celebration. May only be used once. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="10" reuse-delay="3000" immediate-effect="true"/>
+		<attributes weight="10" reuse-delay="3000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2073" level="1"/>  <!-- Item - Theme Sound Crystal -->
 		</skill-reducer>
@@ -99,7 +99,7 @@
 	<item id="4417" name="Echo Crystal - Theme of Comedy" type="NONE" icon="icon.etc_echo_crystal_i01">
 	<!-- Echo crystal that plays the theme music of a comedy. May only be used once. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="10" reuse-delay="3000" immediate-effect="true"/>
+		<attributes weight="10" reuse-delay="3000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2067" level="1"/>  <!-- Item - Theme Sound Crystal -->
 		</skill-reducer>
@@ -174,14 +174,14 @@
 	<item id="4440" name="Recipe: Knuckle Duster" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for a Knuckle Duster. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="57400" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="57400" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="4441" name="Recipe: Avadon Shield" type="RECIPE" icon="icon.etc_recipe_red_i00">
 	<!-- For Dwarves only. Recipe for an Avadon Shield. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="10900" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="10900" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 

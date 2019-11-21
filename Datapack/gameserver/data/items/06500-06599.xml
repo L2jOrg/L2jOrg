@@ -3,70 +3,70 @@
 	<item id="6569" name="Blessed Scroll: Enchant Weapon (A-grade)" type="BLESSED_ENCHANT_WEAPON" icon="icon.etc_blessed_scrl_of_ench_wp_a_i04">
 	<!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. The item will not be crystallized even if enchantment fails, but the enchant value will be reset to 0. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="120" commission-type="SCROLL_ENCHANT_WEAPON" immediate-effect="true"/>
+		<attributes weight="120" commission-type="SCROLL_ENCHANT_WEAPON" immediate-effect="true" action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="6570" name="Blessed Scroll: Enchant Armor (A-grade)" type="BLESSED_ENCHANT_ARMOR" icon="icon.etc_blessed_scrl_of_ench_am_a_i04">
 	<!-- P. Def. +1 for A-grade armor and accessories. Starting at +4, P. Def. +3. Enchanting is safe up to +3, but full-body armor can be safely enchanted up to +4. The item will not be crystallized even if enchantment fails, but the enchant value will be reset to 0. Starting at +4 armor, HP increases depending on the enchant value. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="120" commission-type="SCROLL_ENCHANT_ARMOR" immediate-effect="true"/>
+		<attributes weight="120" commission-type="SCROLL_ENCHANT_ARMOR" immediate-effect="true" action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="6571" name="Blessed Scroll: Enchant Weapon (B-grade)" type="BLESSED_ENCHANT_WEAPON" icon="icon.etc_blessed_scrl_of_ench_wp_b_i03">
 	<!-- When enchanted, P. Atk. +4 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. The item will not be crystallized even if enchantment fails, but the enchant value will be reset to 0. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="120" commission-type="SCROLL_ENCHANT_WEAPON" immediate-effect="true"/>
+		<attributes weight="120" commission-type="SCROLL_ENCHANT_WEAPON" immediate-effect="true" action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="6572" name="Blessed Scroll: Enchant Armor (B-grade)" type="BLESSED_ENCHANT_ARMOR" icon="icon.etc_blessed_scrl_of_ench_am_b_i03">
 	<!-- P. Def. +1 for B-grade armor and accessories. Starting from +4, P. Def. +3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="120" commission-type="SCROLL_ENCHANT_ARMOR" immediate-effect="true"/>
+		<attributes weight="120" commission-type="SCROLL_ENCHANT_ARMOR" immediate-effect="true" action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="6573" name="Blessed Scroll: Enchant Weapon (C-grade)" type="BLESSED_ENCHANT_WEAPON" icon="icon.etc_blessed_scrl_of_ench_wp_c_i02">
 	<!-- When enchanted, P. Atk. +4 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. The item will not be crystallized even if enchantment fails,, but the enchant value will be reset to 0. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="120" commission-type="SCROLL_ENCHANT_WEAPON" immediate-effect="true"/>
+		<attributes weight="120" commission-type="SCROLL_ENCHANT_WEAPON" immediate-effect="true" action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="6574" name="Blessed Scroll: Enchant Armor (C-grade)" type="BLESSED_ENCHANT_ARMOR" icon="icon.etc_blessed_scrl_of_ench_am_c_i02">
 	<!-- P. Def. +1 for C-grade armor and accessories. Starting at +4, P. Def. +3. Enchanting is safe up to +3, but full-body armor can be safely enchanted up to +4. The item will not be crystallized even if enchantment fails, but the enchant value will be reset to 0. Starting at +4 armor, HP increases depending on the enchant value. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="120" commission-type="SCROLL_ENCHANT_ARMOR" immediate-effect="true"/>
+		<attributes weight="120" commission-type="SCROLL_ENCHANT_ARMOR" immediate-effect="true" action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="6575" name="Blessed Scroll: Enchant Weapon (D-grade)" type="BLESSED_ENCHANT_WEAPON" icon="icon.etc_blessed_scrl_of_ench_wp_d_i01">
 	<!-- When enchanted, P. Atk. +4 for D-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. The item will not be crystallized even if enchantment fails,, but the enchant value will be reset to 0. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="120" commission-type="SCROLL_ENCHANT_WEAPON" immediate-effect="true"/>
+		<attributes weight="120" commission-type="SCROLL_ENCHANT_WEAPON" immediate-effect="true" action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="6576" name="Blessed Scroll: Enchant Armor (D-grade)" type="BLESSED_ENCHANT_ARMOR" icon="icon.etc_blessed_scrl_of_ench_am_d_i01">
 	<!-- P. Def. +1 for D-grade armor and accessories. Starting at +4, P. Def. +3. Enchanting is safe up to +3, but full-body armor can be safely enchanted up to +4. The item will not be crystallized even if enchantment fails, but the enchant value will be reset to 0. Starting at +4 armor, HP increases depending on the enchant value. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="120" commission-type="SCROLL_ENCHANT_ARMOR" immediate-effect="true"/>
+		<attributes weight="120" commission-type="SCROLL_ENCHANT_ARMOR" immediate-effect="true" action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="6577" name="Blessed Scroll: Enchant Weapon (S-grade)" type="BLESSED_ENCHANT_WEAPON" icon="icon.etc_blessed_scrl_of_ench_wp_s_i05">
 	<!-- When enchanted, P. Atk. +5 for S-grade one-handed swords/blunts, daggers, spears, and other weapons. P. Atk. +6 for two-handed swords/blunts, dualswords, and two-handed fist weapons. P. Atk. +10 for bows. M. Atk. +4 for all weapons. Starting at +4, P. Atk./M. Atk. bonus quadruples. The item will not be crystallized even if enchantment fails, but the enchant value will be reset to 0. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="120" price="30000000" commission-type="SCROLL_ENCHANT_WEAPON" immediate-effect="true"/>
+		<attributes weight="120" price="30000000" commission-type="SCROLL_ENCHANT_WEAPON" immediate-effect="true" action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="6578" name="Blessed Scroll: Enchant Armor (S-grade)" type="BLESSED_ENCHANT_ARMOR" icon="icon.etc_blessed_scrl_of_ench_am_s_i05">
 	<!-- When enchanted, P. Def. +2 for S-grade armor and accessories. Starting at +4, P. Def. +8. Enchanting is safe up to +3, but full-body armor can be safely enchanted up to +4. The item will not be crystallized even if enchantment fails, but the enchant value will be reset to 0. Starting at +4 armor, HP increases depending on the enchant value. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="120" price="4500000" commission-type="SCROLL_ENCHANT_ARMOR" immediate-effect="true"/>
+		<attributes weight="120" price="4500000" commission-type="SCROLL_ENCHANT_ARMOR" immediate-effect="true" action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 

@@ -3,7 +3,7 @@
 	<item id="5703" name="Lucky Charm (No-grade)" type="SCROLL" icon="icon.etc_charm_of_luck_i00">
 	<!-- estows blessing on its owner such that when the owner dies during a boss/raid war, their abilities will not be diminished. This item can only be used on self by a character level 19 or below. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="10" price="100" reuse-delay="10000"/>
+		<attributes weight="10" price="100" reuse-delay="10000" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2168" level="1"/>  <!-- Lucky Charm -->
 		</skill-reducer>
@@ -52,7 +52,7 @@
 	<item id="5707" name="Record of Seven Signs" type="NONE" icon="icon.etc_ssq_scroll_i00">
 	<!-- Item used for studying the current situation of the Seven Signs system. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes price="500" immediate-effect="true"/>
+		<attributes price="500" immediate-effect="true" action="SHOW_SSQ_STATUS"/>
 	</item>
 
 	<item id="5708" name="Lord's Certificate of Approval" type="TICKET_OF_LORD" icon="icon.etc_permit_card_i00">
@@ -496,15 +496,19 @@
 	<item id="5789" name="Soulshot (No-grade) (Novice)" type="NONE" icon="icon.etc_soulshot_none_for_rookie_i00">
 	<!-- A Soulshot (No-grade) for use by newbies. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="1" immediate-effect="true"/>
-		<action handler="SoulShots"/>
+		<attributes weight="1" immediate-effect="true" action="SOULSHOT"/>
+		<skill-reducer type="SoulShots">
+			<skill id="2039" level="1"/>  <!-- Soulshot (No-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="5790" name="Spiritshot (No-grade) (Novice)" type="NONE" icon="icon.etc_spiritshot_none_for_rookie_i00">
 	<!-- A Spiritshot (No-grade) for use by newbies.  Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="1" immediate-effect="true"/>
-		<action handler="SpiritShot"/>
+		<attributes weight="1" immediate-effect="true" action="SPIRITSHOT"/>
+		<skill-reducer type="SpiritShot">
+			<skill id="2047" level="1"/>  <!-- Spiritshot (No-grade) -->
+		</skill-reducer>
 	</item>
 
 	<weapon id="5791" name="Tomb Guard A" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_monster_i00">

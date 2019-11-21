@@ -429,7 +429,7 @@
 	<item id="4393" name="Calculator" type="NONE" icon="icon.etc_calculator_i00">
 	<!-- Allows one to perform a simple calculation. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="20" price="100" immediate-effect="true"/>
+		<attributes weight="20" price="100" immediate-effect="true" action="CALC"/>
 		<action handler="Calculator"/>
 	</item>
 

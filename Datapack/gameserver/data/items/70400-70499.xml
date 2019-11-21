@@ -305,40 +305,40 @@
 	<item id="70426" name="Energy of Protection" type="POTION" icon="icon.general_energy_condense_i01">
 	<!-- For 20 min. Max HP/ MP +5%, XP/ SP +30%. Provides Mental Attack/Paralysis Resistance.\\n<Attention> Cannot be stacked with Life Control Tower's and  Angel Cat's Blessing. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30"/>
+		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70427" name="Talisman of Fate Lv. 4 Pack" type="NONE" icon="icon.bm_ensoulbox_PvE">
 	<!-- Double-click to get Talisman of Fate Pack Lv. 4. Cannot be exchanged or dropped. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="70297" min-count="1" max-count="1" chance="100000"/>  <!-- Talisman of Fate Lv. 4 -->
+			<item id="70297" chance="100000"/>  <!-- Talisman of Fate Lv. 4 -->
 		</extract>
 	</item>
 
 	<item id="70428" name="Talisman of Fate Lv. 5 Pack" type="NONE" icon="icon.bm_ensoulbox_PvP">
 	<!-- Double-click to get Talisman of Fate Pack Lv. 5. Cannot be exchanged or dropped. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="70298" min-count="1" max-count="1" chance="100000"/>  <!-- Talisman of Fate Lv. 5 -->
+			<item id="70298" chance="100000"/>  <!-- Talisman of Fate Lv. 5 -->
 		</extract>
 	</item>
 
 	<item id="70429" name="Agathion - Singer and Dancer Pack (7-day)" type="NONE" icon="icon.bm_ensoulbox_soul_of_undead">
 	<!-- Double-click to get Agathion - Singer & Dancer (7-day).   -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="70114" min-count="1" max-count="1" chance="100000"/>  <!-- Agathion - Singer and Dancer -->
+			<item id="70114" chance="100000"/>  <!-- Agathion - Singer and Dancer -->
 		</extract>
 	</item>
 
 	<item id="70430" name="Antharas Treasure Pouch" type="NONE" icon="BranchIcon.Icon.g_bm_antaras_pocket_i00">
 	<!-- Double-click to get one of Antharas treasures. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<armor id="70431" name="Lv. 1 Brooch" type="NONE" body-part="UNDERWEAR" icon="icon.etc_bm_brooch_lavianrose_i00">

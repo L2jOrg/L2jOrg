@@ -27,7 +27,7 @@
 	<item id="5916" name="Spellbook Page" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- Torn piece of paper that seems to have been ripped out of a spellbook. If you Double-click it, you can examine it closely. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes price="80" immediate-effect="true" quest-item="true"/>
+		<attributes price="80" immediate-effect="true" quest-item="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2171" level="1"/>  <!-- Spellbook Paper -->
 		</skill-reducer>
@@ -198,7 +198,7 @@
 	<item id="5944" name="Ancient Parchment" type="NONE" icon="icon.etc_roll_of_paper_black_i00">
 	<!-- Piece of parchment from the Lesser Giant era. If you Double-click it, you can read the contents. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true" quest-item="true"/>
+		<attributes immediate-effect="true" quest-item="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2172" level="1"/>  <!-- Scroll of Giants -->
 		</skill-reducer>
@@ -267,7 +267,7 @@
 	<item id="5955" name="Ancient Lesser Giant Book" type="NONE" icon="icon.etc_spell_books_black_i00">
 	<!-- Book from the Lesser Giant era. If you Double-click it, you can examine its contents. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true" quest-item="true"/>
+		<attributes immediate-effect="true" quest-item="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2173" level="1"/>  <!-- Book of Giants -->
 		</skill-reducer>

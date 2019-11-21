@@ -3,7 +3,7 @@
 	<item id="46504" name="Lionel's Soul Crystal - Stage 1" type="SIGEL_RUNE" icon="icon.ensoul_big_pm">
 	<!-- u,A crystal filled with a monster’s soul. Adds special properties to a weapon. You can enhance the level of a crystal by combining. -->
 		<restriction freightable="false" depositable="false"/>
-		<attributes weight="20"/>
+		<attributes weight="20" action="SKILL_REDUCE"/>
 	</item>
 
 </list>

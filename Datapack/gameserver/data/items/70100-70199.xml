@@ -29,7 +29,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="5" commission-type="POTION" for-npc="true" immediate-effect="true"/>
+		<attributes weight="5" commission-type="POTION" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55235" level="1"/>  <!-- Adventurer's Potion - Atk. Spd. -->
 		</skill-reducer>
@@ -41,7 +41,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="5" commission-type="POTION" for-npc="true" immediate-effect="true"/>
+		<attributes weight="5" commission-type="POTION" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55236" level="1"/>  <!-- Adventurer's Potion - Casting Spd. -->
 		</skill-reducer>
@@ -50,7 +50,7 @@
 	<item id="70104" name="Scroll: Vampiric Rage" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Recovers 6% HP from the received physical damage for 20 minutes.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="5" commission-type="SCROLL_OTHER"/>
+		<attributes weight="5" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55237" level="1"/>  <!-- Scroll: Vampiric Rage -->
 		</skill-reducer>
@@ -59,7 +59,7 @@
 	<item id="70105" name="Scroll of Mana" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Increases MP Recovery Rate for 20 minutes.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="5" commission-type="SCROLL_OTHER"/>
+		<attributes weight="5" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55241" level="1"/>  <!-- Scroll: Mana Regeneration -->
 		</skill-reducer>
@@ -77,7 +77,7 @@
 	<item id="70107" name="Scroll: Berserker Spirit" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- When used, P. Def. -5%, M. Def. -10%, Evasion -2; P. Atk. +5%, M. Atk. +10%, Atk. Spd. +5%, Casting Spd. +5%, Speed +5. Duration: 20 minutes.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="5" commission-type="SCROLL_OTHER"/>
+		<attributes weight="5" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55242" level="1"/>  <!-- Scroll: Berserker Spirit -->
 		</skill-reducer>
@@ -112,7 +112,7 @@
 	<item id="70110" name="Scroll: Dance of the Warrior" type="SCROLL" icon="BranchIcon.Icon.etc_g_bm_dance_scroll_i00">
 	<!-- Provides Dance of the Warrior effect for 10 minutes.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="5" commission-type="SCROLL_OTHER" immediate-effect="true"/>
+		<attributes weight="5" commission-type="SCROLL_OTHER" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="271" level="1"/>  <!-- Dance of the Warrior -->
 		</skill-reducer>
@@ -121,7 +121,7 @@
 	<item id="70111" name="Scroll: Dance of the Mystic" type="SCROLL" icon="BranchIcon.Icon.etc_g_bm_dance_scroll_i00">
 	<!-- Provides Dance of the Mystic effect for 10 minutes.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="5" commission-type="SCROLL_OTHER" immediate-effect="true"/>
+		<attributes weight="5" commission-type="SCROLL_OTHER" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="273" level="1"/>  <!-- Dance of the Mystic -->
 		</skill-reducer>
@@ -146,7 +146,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="30" commission-type="SCROLL_OTHER"/>
+		<attributes weight="30" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2213" level="12"/>  <!-- Scroll of Escape -->
 		</skill-reducer>
@@ -261,229 +261,229 @@
 	<item id="70121" name="Full Plate Armor Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Full Plate Armor. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70122" name="Full Plate Helmet Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Full Plate Helmet. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70123" name="Full Plate Shield Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Full Plate Shield. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70124" name="Drake Leather Armor Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Drake Leather Armor. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70125" name="Drake Leather Boots Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Drake Leather Boots. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70126" name="Divine Tunic Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Divine Tunic. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70127" name="Divine Stockings Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Divine Stockings. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70128" name="Divine Gloves Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Divine Gloves. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70129" name="Doom Shield Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Doom Shield. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70130" name="Doom Plate Armor Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Doom Plate Armor. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70131" name="Doom Helmet Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Doom Helmet. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70132" name="Doom Gloves Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Doom Gloves. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70133" name="Doom Boots Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Doom Boots. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70134" name="Blue Wolf Breastplate Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Blue Wolf Breastplate. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70135" name="Blue Wolf Gaiters Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Blue Wolf Gaiters. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70136" name="Blue Wolf Helmet Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Blue Wolf Helmet. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70137" name="Blue Wolf Gloves Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Blue Wolf Gloves. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70138" name="Blue Wolf Boots Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Blue Wolf Boots. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70139" name="Doom Leather Armor Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Doom Leather Armor. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70140" name="Avadon Robe Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Avadon Robe. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70141" name="Avadon Circlet Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Avadon Circlet. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70142" name="Avadon Gloves Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Full Plate Armor. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70143" name="Avadon Boots Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Avadon Boots. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70144" name="Blue Wolf Tunic Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Blue Wolf Tunic. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70145" name="Blue Wolf Stockings Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Blue Wolf Stockings. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70146" name="Black Ore Necklace Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Black Ore Necklace. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70147" name="Black Ore Ring Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Black Ore Ring. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70148" name="Black Ore Earring Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Black Ore Earring. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70149" name="Brigandine Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Brigandine. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70150" name="Brigandine Gaiters Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Brigandine Gaiters. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70151" name="Brigandine Helmet Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Brigandine Helmet. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70152" name="Brigandine Shield Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Brigandine Shield. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70153" name="Manticore Skin Shirt Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Manticore Skin Shirt. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70154" name="Manticore Skin Gaiters Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Manticore Skin Gaiters. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70155" name="Manticore Skin Boots Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Manticore Skin Boots. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70156" name="Mithril Tunic Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Mithril Tunic. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70157" name="Mithril Stockings Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Mithril Stockings. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70158" name="Elven Mithril Gloves Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain all the ingredients necessary for making Elven Mithril Gloves. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="100" immediate-effect="true"/>
+		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70159" name="Mana Recovery Potion" type="POTION" icon="icon.etc_potion_blue_i00">
@@ -492,7 +492,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="5" price="10000" commission-type="POTION" immediate-effect="true"/>
+		<attributes weight="5" price="10000" commission-type="POTION" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="26030" level="1"/>  <!-- Mana Potion -->
 		</skill-reducer>
@@ -507,13 +507,13 @@
 	<item id="70161" name="My Teleport Pack" type="NONE" icon="icon.etc_pi_gift_box_i01">
 	<!-- Double-click to get 1 My Teleport Book, 3 My Teleport Flags, and 10 Scrolls of Escape. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70162" name="Valakas Treasure Chest" type="NONE" icon="icon.bm_sheep_agathion_30d_box">
 	<!-- Double-click the chest to get one of the treasures, gathered by Fire Dragon Valakas. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70163" name="Energy of Development" type="NONE" icon="BranchIcon.Icon.etc_g_bonus_herb_i00">
@@ -630,31 +630,31 @@
 	<item id="70177" name="Box of Tears" type="NONE" icon="icon.bm_sheep_agathion_30d_box">
 	<!-- A box saturated with grief. You can find it in the Ruins of Agony once in a while. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70178" name="Decayed Box" type="NONE" icon="icon.bm_sheep_agathion_30d_box">
 	<!-- A box which decayed over time. You can find it in the Ruins of Despair once in a while. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70179" name="Shabby Box" type="NONE" icon="icon.bm_sheep_agathion_30d_box">
 	<!-- A box from the Abandoned Camp, shabby and very old. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70180" name="Crude Box" type="NONE" icon="icon.bm_sheep_agathion_30d_box">
 	<!-- This box was hastily crafted by an amateurish Orc. You can find it in Orc Barracks once in a while. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70181" name="Old Box" type="NONE" icon="icon.bm_sheep_agathion_30d_box">
 	<!-- A very old box. Someone dropped it Cruma Tower long ago. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<armor id="70182" name="Devi’s Ring (15-day)" type="NONE" body-part="FINGER" icon="icon.ev_11th_rare_acc_ring">

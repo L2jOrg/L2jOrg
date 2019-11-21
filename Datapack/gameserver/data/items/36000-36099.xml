@@ -15,7 +15,7 @@
 	<item id="36081" name="Yummy Gift Box" type="NONE" icon="icon.etc_candy_basket_i04_1">
 	<!-- You can get one box per account. Double-click to receive two Yum Yum Candies or two Nom Nom Candies. (The item will be removed after the event is over.) -->
 		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="9620" level="1"/>  <!-- Yummy Gift Box -->
 		</skill-reducer>

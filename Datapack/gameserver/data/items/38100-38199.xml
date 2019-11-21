@@ -3,8 +3,10 @@
 	<item id="38154" name="Fishing Shot" type="SOULSHOT" icon="icon.etc_spirit_bullet_fish_i05">
 	<!-- Soulshot for fishing rods. Doubles the fishing success rate. Cannot be sold to an NPC. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes price="28" immediate-effect="true"/>
-		<action handler="FishShots"/>
+		<attributes price="28" immediate-effect="true" action="FISHINGSHOT"/>
+		<skill-reducer type="FishShots">
+			<skill id="17386" level="1"/>  <!-- Normal Fishing Shot -->
+		</skill-reducer>
 	</item>
 
 </list>

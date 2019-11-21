@@ -3,9 +3,9 @@
 	<item id="29001" name="Daily Gift - VIP 1" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i00">
 	<!-- Double-click to obtain the following: 1 Scroll of Escape, 3 Healing Potions, and 5 VIP Coins. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="10" immediate-effect="true"/>
+		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="736" min-count="1" max-count="1" chance="100000"/>  <!-- Scroll of Escape -->
+			<item id="736" chance="100000"/>  <!-- Scroll of Escape -->
 			<item id="29651" min-count="3" max-count="3" chance="100000"/>  <!-- Healing Potion -->
 			<item id="29520" min-count="5" max-count="5" chance="100000"/>  <!-- VIP Coin -->
 		</extract>
@@ -14,9 +14,9 @@
 	<item id="29002" name="Daily Gift - VIP 2" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i01">
 	<!-- Double-click to obtain the following: 1 Scroll of Resurrection, 3 Healing Potions, and 10 VIP Coins. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="10" immediate-effect="true"/>
+		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="737" min-count="1" max-count="1" chance="100000"/>  <!-- Scroll of Resurrection -->
+			<item id="737" chance="100000"/>  <!-- Scroll of Resurrection -->
 			<item id="29651" min-count="3" max-count="3" chance="100000"/>  <!-- Healing Potion -->
 			<item id="29520" min-count="10" max-count="10" chance="100000"/>  <!-- VIP Coin -->
 		</extract>
@@ -25,10 +25,10 @@
 	<item id="29003" name="Daily Gift - VIP 3" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i02">
 	<!-- Double-click to obtain the following: 1 Scroll of Escape, 1 Scroll of Resurrection, 5 Healing Potions, and 15 VIP Coins. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="10" immediate-effect="true"/>
+		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="736" min-count="1" max-count="1" chance="100000"/>  <!-- Scroll of Escape -->
-			<item id="737" min-count="1" max-count="1" chance="100000"/>  <!-- Scroll of Resurrection -->
+			<item id="736" chance="100000"/>  <!-- Scroll of Escape -->
+			<item id="737" chance="100000"/>  <!-- Scroll of Resurrection -->
 			<item id="29651" min-count="5" max-count="5" chance="100000"/>  <!-- Healing Potion -->
 			<item id="29520" min-count="15" max-count="15" chance="100000"/>  <!-- VIP Coin -->
 		</extract>
@@ -37,10 +37,10 @@
 	<item id="29004" name="Daily Gift - VIP 4" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i03">
 	<!-- Double-click to obtain the following: 1 Scroll of Escape, 1 Scroll of Resurrection, 3 High-grade Healing Potions, and 25 VIP Coins. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="10" immediate-effect="true"/>
+		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="736" min-count="1" max-count="1" chance="100000"/>  <!-- Scroll of Escape -->
-			<item id="737" min-count="1" max-count="1" chance="100000"/>  <!-- Scroll of Resurrection -->
+			<item id="736" chance="100000"/>  <!-- Scroll of Escape -->
+			<item id="737" chance="100000"/>  <!-- Scroll of Resurrection -->
 			<item id="29652" min-count="3" max-count="3" chance="100000"/>  <!-- Major Healing Potion -->
 			<item id="29520" min-count="25" max-count="25" chance="100000"/>  <!-- VIP Coin -->
 		</extract>
@@ -49,9 +49,9 @@
 	<item id="29005" name="Daily Gift - VIP 5" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i04">
 	<!-- Double-click to obtain the following: 1 Blessed Scroll of Escape, 3 High-grade Healing Potions, and 40 VIP Coins. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="10" immediate-effect="true"/>
+		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="1538" min-count="1" max-count="1" chance="100000"/>  <!-- Blessed Scroll of Escape -->
+			<item id="1538" chance="100000"/>  <!-- Blessed Scroll of Escape -->
 			<item id="29652" min-count="3" max-count="3" chance="100000"/>  <!-- Major Healing Potion -->
 			<item id="29520" min-count="40" max-count="40" chance="100000"/>  <!-- VIP Coin -->
 		</extract>
@@ -60,9 +60,9 @@
 	<item id="29006" name="Daily Gift - VIP 6" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i05">
 	<!-- Double-click to obtain the following: 1 Blessed Scroll of Resurrection, 3 High-grade Healing Potions, and 100 VIP Coins. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="10" immediate-effect="true"/>
+		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="3936" min-count="1" max-count="1" chance="100000"/>  <!-- Blessed Scroll of Resurrection -->
+			<item id="3936" chance="100000"/>  <!-- Blessed Scroll of Resurrection -->
 			<item id="29652" min-count="3" max-count="3" chance="100000"/>  <!-- Major Healing Potion -->
 			<item id="29520" min-count="100" max-count="100" chance="100000"/>  <!-- VIP Coin -->
 		</extract>
@@ -71,10 +71,10 @@
 	<item id="29007" name="Daily Gift - VIP 7" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i06">
 	<!-- Double-click to obtain the following: 1 Blessed Scroll of Escape, 1 Blessed Scroll of Resurrection, 3 High-grade Healing Potions, and 150 VIP Coins. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="10" immediate-effect="true"/>
+		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="1538" min-count="1" max-count="1" chance="100000"/>  <!-- Blessed Scroll of Escape -->
-			<item id="3936" min-count="1" max-count="1" chance="100000"/>  <!-- Blessed Scroll of Resurrection -->
+			<item id="1538" chance="100000"/>  <!-- Blessed Scroll of Escape -->
+			<item id="3936" chance="100000"/>  <!-- Blessed Scroll of Resurrection -->
 			<item id="29652" min-count="3" max-count="3" chance="100000"/>  <!-- Major Healing Potion -->
 			<item id="29520" min-count="150" max-count="150" chance="100000"/>  <!-- VIP Coin -->
 		</extract>
@@ -83,7 +83,7 @@
 	<item id="29008" name="Scroll: Low-grade XP/SP Boost" type="POTION" icon="icon.etc_recall_exp_scroll">
 	<!-- For 20 min., XP/SP gain + 30% when hunting. Effect remains even after death. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true"/>
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55000" level="1"/>  <!-- XP/SP Scroll -->
 		</skill-reducer>
@@ -92,7 +92,7 @@
 	<item id="29009" name="Scroll: Regular XP/SP Boost" type="POTION" icon="icon.etc_recall_exp_scroll">
 	<!-- For 20 min., XP/SP gain + 30% when hunting. Effect remains even after death. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="5" immediate-effect="true"/>
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55000" level="3"/>  <!-- XP/SP Scroll -->
 		</skill-reducer>
@@ -101,7 +101,7 @@
 	<item id="29010" name="Scroll: High-grade XP/SP Boost" type="POTION" icon="icon.etc_recall_exp_scroll">
 	<!-- For 20 min., XP/SP gain + 100% when hunting. Effect remains even after death. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="5" immediate-effect="true"/>
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55000" level="4"/>  <!-- XP/SP Scroll -->
 		</skill-reducer>
@@ -110,7 +110,7 @@
 	<item id="29011" name="1st Class Transfer Buff Scroll" type="SCROLL" icon="BranchIcon.Icon.etc_g_bm_buff_scroll_i00">
 	<!-- Bestows the following effects for 20 min.: Shield Lv. 2, Might Lv. 2, Concentration Lv. 2, Acumen Lv. 1, Wind Walk Lv. 1, Focus Lv. 1, Agility Lv. 1, Empower Lv. 1. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true"/>
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55003" level="1"/>  <!-- 1st Class Buff Scroll -->
 		</skill-reducer>
@@ -119,7 +119,7 @@
 	<item id="29012" name="2nd Class Transfer Buff Scroll" type="SCROLL" icon="BranchIcon.Icon.etc_g_bm_buff_scroll_i01">
 	<!-- Bestows the following effects for 20 min.: Shield Lv. 3, Might Lv. 3, Acumen Lv. 2, Wind Walk Lv. 2, Focus Lv. 2, Regeneration Lv. 1, Guidance Lv. 1, Death Whisper Lv. 1, Magic Barrier Lv. 1, Blessed Body Lv. 1, Blessed Soul Lv. 1, Haste Lv. 1, Agility Lv. 2, Empower Lv. 2. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true"/>
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55004" level="2"/>  <!-- 2nd Class Buff Scroll -->
 		</skill-reducer>
@@ -128,121 +128,133 @@
 	<item id="29013" name="Scroll: Hunter's Song" type="SCROLL" icon="BranchIcon.Icon.etc_g_bm_song_scroll_i00">
 	<!-- Grants the effect of the Hunter's Song for 10 minutes. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="5"/>
+		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29014" name="Scroll: Dance of Fire" type="SCROLL" icon="BranchIcon.Icon.etc_g_bm_dance_scroll_i00">
 	<!-- Grants the effect of the Dance of Fire for 10 minutes. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="5"/>
+		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29015" name="Scroll: Enchant Weapon (D-grade)" type="ENCHANT_WEAPON" icon="br_cashtex.item.br_cash_scrl_of_ench_wp_d_i00">
 	<!-- When enchanted, P. Atk. +4 for D-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29016" name="Scroll: Enchant Armor (D-grade)" type="ENCHANT_ARMOR" icon="br_cashtex.item.br_cash_scrl_of_ench_am_d_i00">
 	<!-- P. Def. + 1 for D-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29017" name="Scroll: Enchant Weapon (C-grade)" type="ENCHANT_WEAPON" icon="br_cashtex.item.br_cash_scrl_of_ench_wp_c_i00">
 	<!-- When enchanted, P. Atk. +4 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29018" name="Scroll: Enchant Armor (C-grade)" type="ENCHANT_ARMOR" icon="br_cashtex.item.br_cash_scrl_of_ench_am_c_i00">
 	<!-- P. Def. + 1 for C-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29019" name="Blessed Scroll: Enchant Weapon (D-grade)" type="BLESSED_ENCHANT_WEAPON" icon="icon.etc_blessed_scrl_of_ench_wp_d_i01">
 	<!-- When enchanted, P. Atk. +4 for D-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. The item will not be crystallized even if enchantment fails, but the enchant value will be reset to 0. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29020" name="Blessed Scroll: Enchant Armor (D-grade)" type="BLESSED_ENCHANT_ARMOR" icon="icon.etc_blessed_scrl_of_ench_am_d_i01">
 	<!-- P. Def. +1 for D-grade armor and accessories. Starting at +4, P. Def. +3. Enchanting is safe up to +3, but full-body armor can be safely enchanted up to +4. The item will not be crystallized even if enchantment fails, but the enchant value will be reset to 0. Starting at +4 armor, HP increases depending on the enchant value. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29021" name="Blessed Scroll: Enchant Weapon (C-grade)" type="BLESSED_ENCHANT_WEAPON" icon="icon.etc_blessed_scrl_of_ench_wp_c_i02">
 	<!-- When enchanted, P. Atk. +4 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. The item will not be crystallized even if enchantment fails, but the enchant value will be reset to 0. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29022" name="Blessed Scroll: Enchant Armor (C-grade)" type="BLESSED_ENCHANT_ARMOR" icon="icon.etc_blessed_scrl_of_ench_am_c_i02">
 	<!-- P. Def. +1 for C-grade armor and accessories. Starting at +4, P. Def. +3. Enchanting is safe up to +3, but full-body armor can be safely enchanted up to +4. The item will not be crystallized even if enchantment fails, but the enchant value will be reset to 0. Starting at +4 armor, HP increases depending on the enchant value. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29023" name="Mysterious No-grade Soulshot" type="NONE" icon="BranchIcon.Icon.g_etc_soulshot_i01">
 	<!-- Soulshot containing the light of Spirits; instantly inflicts a powerful attack on the enemy. Used with No-grade weapons. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
-		<action handler="SoulShots"/>
+		<attributes immediate-effect="true" action="SOULSHOT"/>
+		<skill-reducer type="SoulShots">
+			<skill id="9293" level="1"/>  <!-- Mysterious No-grade Soulshot -->
+		</skill-reducer>
 	</item>
 
 	<item id="29024" name="Mysterious Blessed No-grade Spiritshot" type="NONE" icon="BranchIcon.Icon.g_etc_spiritshot_i01">
 	<!-- Spiritshot containing the light of Spirits; it instantly and greatly increases the power of magic. Used with No-grade weapons. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
-		<action handler="BlessedSpiritShot"/>
+		<attributes immediate-effect="true" action="SPIRITSHOT"/>
+		<skill-reducer type="BlessedSpiritShot">
+			<skill id="9300" level="1"/>  <!-- Mysterious Blessed No-grade Spiritshot -->
+		</skill-reducer>
 	</item>
 
 	<item id="29025" name="Mysterious Soulshot (D-grade)" type="NONE" icon="br_cashtex.item.br_cash_soulshot_d_i00">
 	<!-- Soulshot containing the light of Spirits; instantly inflicts a powerful attack on the enemy. Used with a D-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
-		<action handler="SoulShots"/>
+		<attributes immediate-effect="true" action="SOULSHOT"/>
+		<skill-reducer type="SoulShots">
+			<skill id="9294" level="1"/>  <!-- Mysterious Soulshot (D-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="29026" name="Mysterious Blessed Spiritshot (D-grade)" type="NONE" icon="br_cashtex.item.br_cash_spiritshot_d_i00">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with D-grade weapons. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
-		<action handler="BlessedSpiritShot"/>
+		<attributes immediate-effect="true" action="SPIRITSHOT"/>
+		<skill-reducer type="BlessedSpiritShot">
+			<skill id="9301" level="1"/>  <!-- Mysterious Blessed Spiritshot (D-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="29027" name="Mysterious Soulshot (C-grade)" type="NONE" icon="br_cashtex.item.br_cash_soulshot_c_i00">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a C-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
-		<action handler="SoulShots"/>
+		<attributes immediate-effect="true" action="SOULSHOT"/>
+		<skill-reducer type="SoulShots">
+			<skill id="9295" level="1"/>  <!-- Mysterious Soulshot (C-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="29028" name="Mysterious Blessed Spiritshot (C-grade)" type="NONE" icon="br_cashtex.item.br_cash_spiritshot_c_i00">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with C-grade weapons. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true"/>
-		<action handler="BlessedSpiritShot"/>
+		<attributes immediate-effect="true" action="SPIRITSHOT"/>
+		<skill-reducer type="BlessedSpiritShot">
+			<skill id="9302" level="1"/>  <!-- Mysterious Blessed Spiritshot (C-grade) -->
+		</skill-reducer>
 	</item>
 
 	<item id="29029" name="Blessed Scroll of Escape" type="SCROLL" icon="icon.etc_scroll_of_return_i01">
 	<!-- Magic scroll that moves you to the nearest village. Weight is 0. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="5"/>
+		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29030" name="Blessed Scroll of Resurrection" type="SCROLL" icon="icon.etc_scroll_of_resurrection_i01">
 	<!-- Magic scroll that resurrects a dead player and completely restores XP. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="5"/>
+		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29031" name="Quick Healing Potion" type="POTION" icon="icon.etc_potion_gold_i00">
 	<!-- Magic potion that instantly restores HP. Instant effect with no duration. Cannot be used when HP is full. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="5"/>
+		<attributes weight="5" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55015" level="1"/>  <!-- Quick Healing Potion -->
 		</skill-reducer>
@@ -251,7 +263,7 @@
 	<item id="29032" name="Greater Quick Healing Potion" type="POTION" icon="icon.etc_potion_gold_i00">
 	<!-- Magic potion that instantly restores HP. Instant effect with no duration. Cannot be used when HP is full.  -->
 		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="5"/>
+		<attributes weight="5" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55016" level="1"/>  <!-- Major Quick Healing Potion -->
 		</skill-reducer>

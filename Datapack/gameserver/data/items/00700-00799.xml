@@ -205,14 +205,14 @@
 	<item id="729" name="Scroll: Enchant Weapon (A-grade)" type="ENCHANT_WEAPON" icon="icon.etc_scroll_of_enchant_weapon_i04">
 	<!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="120" price="1800000" commission-type="SCROLL_ENCHANT_WEAPON" immediate-effect="true"/>
+		<attributes weight="120" price="1800000" commission-type="SCROLL_ENCHANT_WEAPON" immediate-effect="true" action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="730" name="Scroll: Enchant Armor (A-grade)" type="ENCHANT_ARMOR" icon="icon.etc_scroll_of_enchant_armor_i04">
 	<!-- P. Def. +1 for A-grade armor and accessories. Starting from +4, P. Def. +3. Can be safely enchanted up to +3. For one-piece armor, it can be safely enchanted up to +4. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="120" price="240000" commission-type="SCROLL_ENCHANT_ARMOR" immediate-effect="true"/>
+		<attributes weight="120" price="240000" commission-type="SCROLL_ENCHANT_ARMOR" immediate-effect="true" action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
@@ -222,7 +222,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="20" price="1200" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true"/>
+		<attributes weight="20" price="1200" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2011" level="1"/>  <!-- Wind Walk Potion -->
 		</skill-reducer>
@@ -234,7 +234,7 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="20" price="2400" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true"/>
+		<attributes weight="20" price="2400" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2012" level="1"/>  <!-- Haste Potion -->
 		</skill-reducer>
@@ -243,7 +243,7 @@
 	<item id="736" name="Scroll of Escape" type="SCROLL" icon="icon.etc_scroll_of_return_i00">
 	<!-- Scroll of enchantment that relocates you to the nearest village. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="120" price="400" commission-type="SCROLL_OTHER"/>
+		<attributes weight="120" price="400" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2013" level="1"/>  <!-- Scroll of Escape -->
 		</skill-reducer>
@@ -252,7 +252,7 @@
 	<item id="737" name="Scroll of Resurrection" type="SCROLL" icon="icon.etc_scroll_of_resurrection_i00">
 	<!-- Scroll of enchantment that resuscitates a dead person. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="120" price="2000" commission-type="SCROLL_OTHER"/>
+		<attributes weight="120" price="2000" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2014" level="1"/>  <!-- Scroll of Resurrection -->
 		</skill-reducer>

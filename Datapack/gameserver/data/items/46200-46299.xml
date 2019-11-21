@@ -3,7 +3,7 @@
 	<item id="46254" name="Dandy's Home Run Ball" type="SCROLL" icon="BranchIcon.icon.g_ev_homerunball">
 	<!-- Golden Ball received from Dandy. For 1 hr., acquired XP/SP +100%. Cannot be stacked with Fish Stew - The Guild's Gratitude. Changes the appearance of your armor into that of a Lineage II Uniform. Buff remains after death.\\n\\n -->
 		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<armor id="46261" name="Ninja Assassin Outfit" type="HEAVY" body-part="ALL_DRESS" icon="icon.bm2018_ninja_i01">

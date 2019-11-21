@@ -230,7 +230,7 @@
 	<item id="7580" name="Recipe: Draconic Bow (30%)" type="RECIPE" icon="icon.etc_recipe_black_i00">
 	<!-- For Dwarves only. Recipe for a Draconic Bow. Create Item skill must be level 9. The success rate is 30%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="976000" immediate-effect="true"/>
+		<attributes weight="30" price="976000" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 

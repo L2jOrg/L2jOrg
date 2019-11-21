@@ -396,7 +396,7 @@
 	<item id="1666" name="Recipe: Wooden Arrow" type="RECIPE" icon="icon.etc_recipe_white_i00">
 	<!-- For Dwarves only. Recipe for a Wooden Arrow. Requires Create Item Lv. 1. The success rate is 100%.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="600" commission-type="RECIPE" immediate-effect="true"/>
+		<attributes weight="30" price="600" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 

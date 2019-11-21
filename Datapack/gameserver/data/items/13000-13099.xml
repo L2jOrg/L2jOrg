@@ -8,7 +8,7 @@
 	<item id="13015" name="My Teleport Book" type="NONE" icon="icon.bookmark_book_i00">
 	<!-- Dimensional Item\\nAdds 3 slots to My Teleport, which can save specific locations. My Teleport can be expanded to up to 48 slots. -->
 		<restriction stackable="true" depositable="false"/>
-		<attributes weight="5"/>
+		<attributes weight="5" action="CALL_SKILL"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2587" level="1"/>  <!-- Additional My Teleport slots -->
 		</skill-reducer>
@@ -23,7 +23,7 @@
 	<item id="13021" name="Color Title" type="COLOR_CHANGE" icon="icon.color_name_i00">
 	<!-- u,A dimensional item\\nAn item which can be used to change the color of a character’s title. Upon leaving a clan, the color title disappears, just as the regular one does. However, upon joining a clan and obtaining a new title, the color reappears. After changing the title color, enter '/ resetname’ command in order to bring back the initial color. -->
 		<restriction stackable="true" depositable="false"/>
-		<attributes weight="5" immediate-effect="true"/>
+		<attributes weight="5" immediate-effect="true" action="NICK_COLOR"/>
 		<action handler="NicknameColor"/>
 	</item>
 

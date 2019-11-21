@@ -3,85 +3,85 @@
 	<item id="90700" name="Sealed Rune - Stage 7" type="NONE" icon="BranchIcon.Icon.g_blue_sealed_rune">
 	<!-- Double-click to receive one Stage 7 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90701" name="Sealed Rune - Stage 8" type="NONE" icon="BranchIcon.Icon.g_blue_sealed_rune">
 	<!-- Double-click to receive one Stage 8 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90702" name="Sealed Rune - Stage 9" type="NONE" icon="BranchIcon.Icon.g_blue_sealed_rune">
 	<!-- Double-click to receive one Stage 9 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90703" name="Sealed Rune - Stage 10" type="NONE" icon="BranchIcon.Icon.g_blue_sealed_rune">
 	<!-- Double-click to receive one Stage 10 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90704" name="Sealed Rune - Stage 11" type="NONE" icon="BranchIcon.Icon.g_red_sealed_rune_01">
 	<!-- Double-click to receive one Stage 11 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90705" name="Sealed Rune - Stage 12" type="NONE" icon="BranchIcon.Icon.g_red_sealed_rune_01">
 	<!-- Double-click to receive one Stage 12 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90706" name="Sealed Rune - Stage 13" type="NONE" icon="BranchIcon.Icon.g_red_sealed_rune_01">
 	<!-- Double-click to receive one Stage 13 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90707" name="Sealed Rune - Stage 14" type="NONE" icon="BranchIcon.Icon.g_red_sealed_rune_01">
 	<!-- Double-click to receive one Stage 14 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90708" name="Sealed Rune - Stage 15" type="NONE" icon="BranchIcon.Icon.g_red_sealed_rune_01">
 	<!-- Double-click to receive one Stage 15 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90709" name="Sealed Rune - Stage 16" type="NONE" icon="icon.bm_pirate_king_box">
 	<!-- Double-click to receive one Stage 16 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90710" name="Sealed Rune - Stage 17" type="NONE" icon="icon.bm_pirate_king_box">
 	<!-- Double-click to receive one Stage 17 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90711" name="Sealed Rune - Stage 18" type="NONE" icon="icon.bm_pirate_king_box">
 	<!-- Double-click to receive one Stage 18 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90712" name="Sealed Rune - Stage 19" type="NONE" icon="icon.bm_pirate_king_box">
 	<!-- Double-click to receive one Stage 19 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90713" name="Sealed Rune - Stage 20" type="NONE" icon="icon.bm_pirate_king_box">
 	<!-- Double-click to receive one Stage 20 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90714" name="Rune Exchange Ticket Lv. 1" type="NONE" icon="icon.etc_exchange_ticket_i04">
@@ -171,19 +171,19 @@
 	<item id="90728" name="Fresh Monkey Bait" type="LURE" icon="icon.etc_gludio_fish_lure_i00">
 	<!-- Fish using this bait to catch Tun with an additional small chance to get Flower Sweets and Pumpkin Sweets.   -->
 		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="EQUIP"/>
 	</item>
 
 	<item id="90729" name="Flower Sweets" type="SCROLL" icon="icon.flower_songpyeon">
 	<!-- For 20 minutes Max HP/MP +5%, XP and SP gained through hunting +20%.  \\n<Note>When used simultaneously with Life Control Tower's Scroll of Blessing, effects do not stack. If Angel Cat's Blessing is used at the same time, only Flower Sweets will produce an effect.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90730" name="Pumpkin Sweets" type="SCROLL" icon="icon.pumpkin_songpyeon">
 	<!-- Recharges Sayha's Grace Points by 35,000 and for 20 minutes, P./M. Atk. +12%, P./M. Def. +15%, Max. HP/CP/MP +25%, P./M. Crit. Rate +10, P./M. Critical Damage +5%, HP/MP Recovery Bonus +30%. At a certain chance absorbs 5% of the damage inflicted on target as HP. \\n<Note>When used simultaneously with Special Fruit Buff or Special Dragon's Fruit, effects do not stack.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<armor id="90731" name="Hanbok" type="HEAVY" body-part="ALL_DRESS" icon="icon.ev_kr_traditional_dress">
@@ -333,13 +333,13 @@
 	<item id="90755" name="Pirate's Treasure Map Piece" type="NONE" icon="icon.etc_piece_of_paper_black_i00">
 	<!-- A piece of map obtained from killed pirates of the Devil's Isle. It's quite possible that pieces like this form a whole map. Collect 25 of such pieces and take them to Agent of the Devil's Isle Garom to get a complete Pirate Map. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="SHOW_HTML"/>
 	</item>
 
 	<item id="90756" name="Pirate's Treasure Map" type="NONE" icon="icon.etc_plan_i00">
 	<!-- A Treasure Map that leads into the depths of the Devil's Isle. Double-click to view. -->
 		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true" quest-item="true"/>
+		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 	</item>
 
 	<item id="90757" name="Map with a Mark" type="NONE" icon="icon.etc_plan_i00">
@@ -375,7 +375,7 @@
 	<item id="90762" name="Pirate's Treasure Chest" type="NONE" icon="icon.etc_treasure_box_i02">
 	<!-- Pirate's Treasure Chest received as a reward for helping Zaken's Subordinates who you met on the Devil's Isle. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<armor id="90763" name="Zaken's Earring Lv. 1" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_zaken_i00">
@@ -423,7 +423,7 @@
 	<item id="90766" name="Scroll of Escape: Entrance to the Devil's Isle" type="NONE" icon="icon.etc_scroll_of_return_i05">
 	<!-- A scroll that relocates you to the entrance to the Devil's Isle.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes weight="30"/>
+		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<armor id="90767" name="Zaken's Earring Lv. 1" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_zaken_i00">
@@ -635,7 +635,7 @@
 	<item id="90793" name="Chef's Fish Stew Box" type="NONE" icon="icon.bm_freya_gift_box">
 	<!-- Double-click to receive one of each of the following items: Chef's Fish Stew - Victory/Fire/Wind/Water.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55715" level="1"/>  <!-- Chef's Fish Stew Box -->
 		</skill-reducer>
@@ -644,37 +644,37 @@
 	<item id="90794" name="Shining Scroll of Mood Melody" type="SCROLL" icon="icon.bm_magmeld">
 	<!-- For 20 minutes activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Purity, Wild Magic, Concentration. Cannot be used together with Scroll of Mood Melody.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90795" name="Zaken's Earring Lv. 1 Box" type="NONE" icon="icon.bm_freya_gift_box">
 	<!-- Double-click to receive one Zaken's Earring Lv. 1 (7-day). -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes duration="10080" immediate-effect="true"/>
+		<attributes duration="10080" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90796" name="Fire Dragon Pendant Chest +3" type="NONE" icon="icon.bm_freya_gift_box">
 	<!-- Double-click to receive one Fire Dragon Pendant +3 (7-day).  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes duration="10080" immediate-effect="true"/>
+		<attributes duration="10080" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90797" name="Talisman of Fate Pack +3" type="NONE" icon="icon.bm_freya_gift_box">
 	<!-- Double-click to receive one Talisman of Fate - Lv. 3 (7-day).  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes duration="10080" immediate-effect="true"/>
+		<attributes duration="10080" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90798" name="Fire Dragon Pendant Chest +4" type="NONE" icon="icon.bm_freya_gift_box">
 	<!-- Double-click to receive one Fire Dragon Pendant +4 (7-day).  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes duration="10080" immediate-effect="true"/>
+		<attributes duration="10080" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90799" name="Talisman of Fate Pack +4" type="NONE" icon="icon.bm_freya_gift_box">
 	<!-- Double-click to receive one Talisman of Fate - Lv. 4 (7-day).  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes duration="10080" immediate-effect="true"/>
+		<attributes duration="10080" immediate-effect="true" action="PEEL"/>
 	</item>
 
 </list>

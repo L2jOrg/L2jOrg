@@ -3,37 +3,37 @@
 	<item id="91400" name="Codex - Armor Breaker" type="NONE" icon="icon.high_skill_book_i00">
 	<!-- A book containing a secret skill. Double-click to learn Armor Breaker. Available for all classes (must be at least level 80). -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91401" name="Codex - Disarm" type="NONE" icon="icon.high_skill_book_i00">
 	<!-- A book containing a secret skill. Double-click to learn Disarm. Available for all classes (must be at least level 80). -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91402" name="Codex - Spell Break" type="NONE" icon="icon.high_skill_book_i00">
 	<!-- A book containing a secret skill. Double-click to learn Spell Break. Available for all classes (must be at least level 80). -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91403" name="Codex - Flash" type="NONE" icon="icon.high_skill_book_i00">
 	<!-- A book containing a secret skill. Double-click to learn Flash. Available for all classes (must be at least level 80). -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91404" name="Codex - Warp" type="NONE" icon="icon.high_skill_book_i00">
 	<!-- A book containing a secret skill. Double-click to learn Warp. Available for all classes (must be at least level 80). -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91405" name="Codex - Berserker Mode" type="NONE" icon="icon.high_skill_book_i00">
 	<!-- A book containing a secret skill. Double-click to learn Berserker Mode. Available for all classes (must be at least level 80). -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91406" name="Entrance Pass to the Sepulcher" type="NONE" icon="icon.etc_memopad_i00">
@@ -45,7 +45,7 @@
 	<item id="91407" name="Elmoreden Treasure Chest" type="NONE" icon="icon.bm_elmoaden_box">
 	<!-- Double-click to obtain 1 Elmoreden Coin. If you're lucky, you can also get 1 Elmoreden Golden Box or Elmoreden Silver Box.   -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91408" name="Elmoreden Coin" type="NONE" icon="icon.bm_elmoaden_token">
@@ -57,31 +57,31 @@
 	<item id="91409" name="Elmoreden Relic Pouch" type="NONE" icon="icon.card_event_luck_pocket">
 	<!-- Double-click to randomly obtain 1 Refined Rare Accessory, Enchant Scroll or Enchant Stone.   -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91410" name="Elmoreden Golden Box" type="NONE" icon="icon.bm_elmoaden_gold_box">
 	<!-- Double-click to randomly obtain 1 High-grade Enchant Weapon Pack ( B, C), Brilliant Talisman of Power Lv. 5, or Blessed Dragon Pendant.   -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91411" name="Elmoreden Silver Box" type="NONE" icon="icon.bm_elmoaden_silver_box">
 	<!-- Double-click to randomly obtain 1 consumable item such as an Attribute Necklace or Sayha's Blessing.   -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91412" name="Scroll: Elmoreden XP" type="SCROLL" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- Recharges 500,000 XP. Give 8 Scrolls: Elmoreden XP and 2 Elmoreden Coins to the Dimensional Merchant to exchange them for 1 High-grade Scroll: Elmoreden XP.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91413" name="High-grade Scroll: Elmoreden XP" type="SCROLL" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- Recharges 20 million XP.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<armor id="91414" name="+5 Dragon Pendant Lv. 2" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_dragon_i00">
@@ -258,115 +258,115 @@
 	<item id="91438" name="Shining Golden Bait Box" type="NONE" icon="icon.bm_gold_lure_special_box">
 	<!-- Double-click to obtain 1080 Shining Golden Bait.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91439" name="Greater Vital Stone Lv. 5 Box" type="NONE" icon="icon.etc_bm_jewelbox_vital_i00">
 	<!-- Double-click to obtain 1 Greater Vital Stone Lv. 5 (30-day).  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes duration="43200" immediate-effect="true"/>
+		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91440" name="Greater Aquamarine Lv. 5 Box" type="NONE" icon="icon.etc_bm_jewelbox_aquamarine_i00">
 	<!-- Double-click to obtain 1 Greater Aquamarine Lv. 5 (30-day).  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes duration="43200" immediate-effect="true"/>
+		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91441" name="Greater Diamond Lv. 5 Box" type="NONE" icon="icon.etc_bm_jewelbox_diamond_i00">
 	<!-- Double-click to obtain 1 Greater Diamond Lv. 5 (30-day).  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes duration="43200" immediate-effect="true"/>
+		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91442" name="Greater Pearl Lv. 5 Box" type="NONE" icon="icon.etc_bm_jewelbox_pearl_i00">
 	<!-- Double-click to obtain 1 Greater Pearl Lv. 5 (30-day).  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes duration="43200" immediate-effect="true"/>
+		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91443" name="Greater Topaz Lv. 5 Box" type="NONE" icon="icon.etc_bm_jewelbox_topaz_i00">
 	<!-- Double-click to obtain 1 Greater Topaz Lv. 5 (30-day).  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes duration="43200" immediate-effect="true"/>
+		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91444" name="Greater Garnet Lv. 5 Box" type="NONE" icon="icon.etc_bm_jewelbox_garnet_i01">
 	<!-- Double-click to obtain 1 Greater Garnet Lv. 5 (30-day).  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes duration="43200" immediate-effect="true"/>
+		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91445" name="Greater Ruby Lv. 5 Box" type="NONE" icon="icon.etc_bm_jewelbox_ruby_i00">
 	<!-- Double-click to obtain 1 Greater Ruby Lv. 5 (30-day).  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes duration="43200" immediate-effect="true"/>
+		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91446" name="Greater Sapphire Lv. 5 Box" type="NONE" icon="icon.etc_bm_jewelbox_sapphire_i00">
 	<!-- Double-click to obtain 1 Greater Sapphire Lv. 5 (30-day).  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes duration="43200" immediate-effect="true"/>
+		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91447" name="Greater Jade Lv. 5 Box" type="NONE" icon="icon.etc_bm_jewelbox_jade_i00">
 	<!-- Double-click to obtain 1 Greater Jade Lv. 5 (30-day).  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes duration="43200" immediate-effect="true"/>
+		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91448" name="Greater Cat's Eye Lv. 5 Box" type="NONE" icon="icon.bm_jewelbox_red_catseye_lavianrose">
 	<!-- Double-click to obtain 1 Greater Cat's Eye Lv. 5 (30-day).  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes duration="43200" immediate-effect="true"/>
+		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91449" name="Greater Emerald Lv. 5 Box" type="NONE" icon="icon.etc_bm_jewelbox_emerald_i00">
 	<!-- Double-click to obtain 1 Greater Emerald Lv. 5 (30-day).  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes duration="43200" immediate-effect="true"/>
+		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91450" name="Zaken's Earring Lv. 3 Box" type="NONE" icon="icon.npoint_earthworm_30day_box">
 	<!-- Double-click to obtain 1 Zaken's Earring Lv. 3 (30-day). -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes duration="43200" immediate-effect="true"/>
+		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91451" name="Baium's Ring Lv. 3 Box" type="NONE" icon="icon.npoint_tauti_30day_box">
 	<!-- Double-click to obtain 1 Baium's Ring Lv. 3 (30-day). -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes duration="43200" immediate-effect="true"/>
+		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91452" name="Blessed Dragon Pendant Box" type="NONE" icon="icon.etc_pi_box_belief_pack">
 	<!-- Double-click to obtain 1 Blessed Dragon Pendant (30-day).  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes duration="43200" immediate-effect="true"/>
+		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91453" name="+10 Sayha's Cloak Box" type="NONE" icon="icon.npoint_earring_of_lind_30day_box">
 	<!-- Double-click to obtain 1 +10 Sayha's Cloak - White (30-day).  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes duration="43200" immediate-effect="true"/>
+		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91454" name="+10 Sayha's Cloak Box - White" type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Double-click to obtain 1 +10 Sayha's Cloak - White.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91455" name="+10 Sayha's Cloak Box - Black" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- Double-click to obtain 1 +10 Sayha's Cloak - Black.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91456" name="+10 Sayha's Cloak Box - Red" type="NONE" icon="icon.etc_treasure_box_i03">
 	<!-- Double-click to obtain 1 +10 Sayha's Cloak - Red.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91457" name="Soccer Ball Herb of Victory" type="NONE" icon="BranchSys2.icon.br_soccer_ball_i00">
@@ -430,103 +430,103 @@
 	<item id="91464" name="Advanced Stable Scroll: Enchant Weapon (D-grade)" type="SOLID_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_d">
 	<!-- When enchanted, P. Atk. +4 for D-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles Use the scroll to safely enchant the weapon. Even if enchantment fails, the item is not crystallized and retains the current enchant value. Can only be used on items enchanted to +7 to +15. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91465" name="Advanced Stable Scroll: Enchant Armor (D-grade)" type="SOLID_ENCHANT_ARMOR" icon="icon.giant_scrl_of_ench_am_d">
 	<!-- When enchanted, P. Def. +1 for D-grade armor and accessories. Starting at +4, P. Def. +3. Starting at +4 armor, HP increases depending on the enchant value. Use the scroll to safely enchant the armor. Even if enchantment fails, the item is not crystallized and retains the current enchant value. Can only be used on items enchanted to +6 to +9. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91466" name="Advanced Stable Scroll: Enchant Weapon (C-grade)" type="SOLID_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_c">
 	<!-- When enchanted, P. Atk. +4 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles Use the scroll to safely enchant the weapon. Even if enchantment fails, the item is not crystallized and retains the current enchant value. Can only be used on items enchanted to +7 to +15. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91467" name="Advanced Stable Scroll: Enchant Armor (C-grade)" type="SOLID_ENCHANT_ARMOR" icon="icon.giant_scrl_of_ench_am_c">
 	<!-- When enchanted, P. Def. +1 for C-grade armor and accessories. Starting at +4, P. Def. +3. Starting at +4 armor, HP increases depending on the enchant value. Use the scroll to safely enchant the armor. Even if enchantment fails, the item is not crystallized and retains the current enchant value. Can only be used on items enchanted to +6 to +9. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91468" name="Advanced Stable Scroll: Enchant Weapon (B-grade)" type="SOLID_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_b">
 	<!-- When enchanted, P. Atk. +4 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles Use the scroll to safely enchant the weapon. Even if enchantment fails, the item is not crystallized and retains the current enchant value. Can only be used on items enchanted to +7 to +15. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91469" name="Advanced Stable Scroll: Enchant Armor (B-grade)" type="SOLID_ENCHANT_ARMOR" icon="icon.giant_scrl_of_ench_am_b">
 	<!-- When enchanted, P. Def. +1 for B-grade armor and accessories. Starting at +4, P. Def. +3. Starting at +4 armor, HP increases depending on the enchant value. Use the scroll to safely enchant the armor. Even if enchantment fails, the item is not crystallized and retains the current enchant value. Can only be used on items enchanted to +6 to +9. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91470" name="Advanced Stable Scroll: Enchant Weapon (A-grade)" type="SOLID_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_a">
 	<!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles Use the scroll to safely enchant the weapon. Even if enchantment fails, the item is not crystallized and retains the current enchant value. Can only be used on items enchanted to +7 to +15. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91471" name="Advanced Stable Scroll: Enchant Armor (A-grade)" type="SOLID_ENCHANT_ARMOR" icon="icon.giant_scrl_of_ench_am_a">
 	<!-- When enchanted, P. Def. +1 for A-grade armor and accessories. Starting at +4, P. Def. +3. Starting at +4 armor, HP increases depending on the enchant value. Use the scroll to safely enchant the armor. Even if enchantment fails, the item is not crystallized and retains the current enchant value. Can only be used on items enchanted to +6 to +9. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91472" name="+5 Sealed Agathion - Virgo" type="NONE" icon="icon.agathion_virgo_star_1">
 	<!-- Double-click to obtain +5 Enchanted Virgo Agathion.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91473" name="+5 Sealed Agathion - Capricorn" type="NONE" icon="icon.agathion_capr_star_1">
 	<!-- Double-click to obtain +5 Enchanted Capricorn Agathion.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91474" name="+5 Sealed Agathion - Libra" type="NONE" icon="icon.agathion_lib_star_1">
 	<!-- Double-click to obtain +5 Enchanted Libra Agathion.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91475" name="+5 Sealed Agathion - Taurus" type="NONE" icon="icon.agathion_tau_star_1">
 	<!-- Double-click to obtain +5 Enchanted Taurus Agathion.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91476" name="+5 Sealed Agathion - Leo" type="NONE" icon="icon.agathion_leo_star_1">
 	<!-- Double-click to obtain +5 Enchanted Leo Agathion.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91477" name="+5 Sealed Agathion - Gemini" type="NONE" icon="icon.agathion_gem_star_1">
 	<!-- Double-click to obtain +5 Enchanted Gemini Agathion.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91478" name="+5 Sealed Agathion - Scorpio" type="NONE" icon="icon.agathion_sco_star_1">
 	<!-- Double-click to obtain +5 Enchanted Scorpio Agathion.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91479" name="+5 Sealed Agathion - Aquarius" type="NONE" icon="icon.agathion_aqu_star_1">
 	<!-- Double-click to obtain +5 Enchanted Aquarius Agathion.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91480" name="+5 Sealed Agathion - Sagittarius" type="NONE" icon="icon.agathion_sag_star_1">
 	<!-- Double-click to obtain +5 Enchanted Sagittarius Agathion.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91481" name="Crystal of Soul" type="NONE" icon="icon.bm_dragon_shirt_upgrade_1">
@@ -580,14 +580,14 @@
 	<item id="91489" name="Recipe: Blessed Soulshot (S-grade)" type="MATERIAL" icon="icon.etc_recipe_black_i00">
 	<!-- For Dwarves only. Recipe for a Blessed Soulshot (S-grade). Create Item skill must be level 8. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="30" price="450000" immediate-effect="true"/>
+		<attributes weight="30" price="450000" immediate-effect="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="91490" name="Mysterious Soulshot (S-grade)" type="NONE" icon="icon.etc_spirit_bullet_gold_i00">
 	<!-- Bestows the high-grade Spirit Light on the weapon to spontaneously inflict a powerful attack on the enemy. Used with an S-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="SOULSHOT"/>
 	</item>
 
 	<item id="91491" name="Mysterious Blessed Soulshot (S-grade)" type="NONE" icon="icon.etc_bless_spirit_bullet_gold_i00">
@@ -599,13 +599,13 @@
 	<item id="91492" name="Mysterious Spiritshot (S-grade)" type="NONE" icon="icon.etc_spell_shot_gold_i00">
 	<!-- Bestows the high-grade Spirit Light on the weapon to spontaneously increase M. Atk. Used with an S-grade weapon. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="SPIRITSHOT"/>
 	</item>
 
 	<item id="91493" name="Mysterious Blessed Spiritshot (S-grade)" type="NONE" icon="icon.etc_spell_shot_gold_i01">
 	<!-- Bestows the high-grade Spirit Light on the weapon to spontaneously increase M. Atk significantly. Used with an S-grade weapon. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="SPIRITSHOT"/>
 	</item>
 
 	<item id="91494" name="Codex - Create Critical" type="NONE" icon="icon.etc_magic_book_red_i00">
@@ -635,13 +635,13 @@
 	<item id="91498" name="Tallum Blade + Dark Legion's Edge Box" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- Double-click to obtain 1 +0 Tallum Blade and +0 Dark Legion's Edge.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91499" name="Crafting Pack - Forgotten Blade" type="NONE" icon="icon.event_hero_treasure_box_i00">
 	<!-- Double-click to obtain 1 Recipe: Forgotten Blade (30%) and 25 Forgotten Blade Edges.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 </list>

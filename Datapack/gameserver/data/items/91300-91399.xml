@@ -3,19 +3,19 @@
 	<item id="91300" name="Spring Energy Lv. 3" type="NONE" icon="icon.etc_leaf_green_i00">
 	<!-- Max HP/MP +15%, P. Atk. +15%, M. Atk. +23%, Atk. Spd./Casting Spd. +15%, P. Def/M. Def +15%, XP/SP gain +15%, Sayha's Grace Consumption Rate -15% for 20 minutes when used.  \\n\\n<Note>\\nIf two Spring Energies of different levels are used, only the effects of the higher level will be applied.\\n\\n -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91301" name="Sayha's Spring Breeze" type="NONE" icon="icon.ev_magic_flame_game_wind1">
 	<!-- An item containing a fresh spring breeze. Sayha's Grace Consumption +100% and XP/SP gain +150% when hunting monsters. Remains active after death. Duration is 20 minutes. Cooldown is 20 minutes. Available only when there is at least 1 slot left for Sayha's Grace. \\n\\n<Note>\\nCannot be used with Sayha's Storm or Sayha's Gust.\\n\\n -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91302" name="Spring's Blessing Box" type="NONE" icon="icon.npoint_antaras_30day_box">
 	<!-- A blessed box that Primavera prepared with great care. Double-click to obtain 1 item at random among Fire Dragon Belt, Earth Dragon Belt, Enchant Scroll Enchant Scroll by grade, and various supply items. \\n\\n -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<armor id="91303" name="Brooch Lv. 4" type="NONE" body-part="UNDERWEAR" icon="icon.etc_bm_brooch_lavianrose_i05">
@@ -385,7 +385,7 @@
 	<item id="91355" name="Brilliant Jewelry Box" type="NONE" icon="icon.bm_2018_jewelbox_random">
 	<!-- Double-click to obtain 1 Vital Stone, Pearl, Diamond, Ruby, Sapphire, Jade, Garnet, Topaz, Aquamarine, Cat's Eye, or Emerald (Lv. 1) Box.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91356" name="Gem Energy" type="NONE" icon="icon.bm_blessed_jewel">
@@ -467,25 +467,25 @@
 	<item id="91367" name="Emerald Box" type="NONE" icon="icon.etc_bm_jewelbox_emerald_i00">
 	<!-- Double-click to obtain an Emerald Lv. 1.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91368" name="Emerald Lv. 3 Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_emerald_i00">
 	<!-- Double-click to obtain an Emerald Lv. 3.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91369" name="Emerald Lv. 4 Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_emerald_i00">
 	<!-- Double-click to obtain an Emerald Lv. 4.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91370" name="Emerald Lv. 5 Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_emerald_i00">
 	<!-- Double-click to obtain an Emerald Lv. 5.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91371" name="Brilliant Brooch Fragment" type="NONE" icon="icon.bm_2018_brooch_piece">
@@ -497,13 +497,13 @@
 	<item id="91372" name="Bait of Grace" type="LURE" icon="icon.fishing_cube_lure">
 	<!-- Event fishing bait. Use it to obtain Blue Mackerels, Whales, or Coins of Grace.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="EQUIP"/>
 	</item>
 
 	<item id="91373" name="Fishing Kit of Grace" type="NONE" icon="icon.etc_pi_box_love_pack">
 	<!-- Double-click to obtain a box containing 85,000 Bait of Grace, 85,000 Normal Fishing Shots, and 1 Golden Mermaid's Fishing Rod (30-day) Pack.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91374" name="Coin of Grace" type="NONE" icon="icon.etc_magic_coin_blue_i00">
@@ -642,7 +642,7 @@
 	<item id="91391" name="Fish Stew - Guildsman's Gratitude Lv. 2" type="SCROLL" icon="icon.ev_invasion_buff_box">
 	<!-- XP/SP gain +30% while hunting for 20 minutes when used.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91392" name="Night Goblin Liquor" type="NONE" icon="icon.bm_goblin_buff_herong">

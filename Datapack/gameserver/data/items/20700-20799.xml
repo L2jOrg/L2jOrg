@@ -3,7 +3,7 @@
 	<item id="20728" name="Summon Scroll: Lucky Lamp" type="NONE" icon="BranchSys.icon.br_lamp_orange_i00">
 	<!-- Summons Sky Lantern to offer to sky with a wish. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
-		<attributes/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<armor id="20792" name="Flavorful Cheese Hat" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_bigrat_cap_i00">
