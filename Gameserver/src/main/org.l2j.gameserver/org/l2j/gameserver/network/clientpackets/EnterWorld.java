@@ -51,6 +51,7 @@ import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMe
  * <p>
  * packet format rev87 bddddbdcccccccccccccccccccc
  * <p>
+ * @author JoeAlisson
  */
 public class EnterWorld extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(EnterWorld.class);
@@ -75,7 +76,7 @@ public class EnterWorld extends ClientPacket {
     public void runImpl() {
         final Player player = client.getPlayer();
         if (player == null) {
-            LOGGER.warn("EnterWorld failed! activeChar returned 'null'.");
+            LOGGER.warn("EnterWorld failed! player returned 'null'.");
             Disconnection.of(client).defaultSequence(false);
             return;
         }
@@ -105,17 +106,14 @@ public class EnterWorld extends ClientPacket {
 
         player.updatePvpTitleAndColor(false);
 
-        // Apply special GM properties to the GM when entering
         if (player.isGM()) {
             onGameMasterEnter(player);
         }
 
-        // Chat banned icon.
         if (player.isChatBanned()) {
             player.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.NO_CHAT);
         }
 
-        // Set dead status if applies
         if (player.getCurrentHp() < 0.5) {
             player.setIsDead(true);
         }
@@ -125,39 +123,21 @@ public class EnterWorld extends ClientPacket {
         }
 
         client.sendPacket(new ExEnterWorld());
-
-        // Send Macro List
         player.getMacros().sendAllMacros();
-
-        // Send Teleport Bookmark List
         client.sendPacket(new ExGetBookMarkInfoPacket(player));
 
-        // Send Item List
         client.sendPacket(new ItemList(1, player));
         client.sendPacket(new ItemList(2, player));
-
-        // Send Quest Item List
         client.sendPacket(new ExQuestItemList(1, player));
         client.sendPacket(new ExQuestItemList(2, player));
-
-        // Send Action list
         player.sendPacket(ExBasicActionList.STATIC_PACKET);
 
-        // Send blank skill list
-        player.sendPacket(new SkillList());
-
-        // Send castle state.
         for (Castle castle : CastleManager.getInstance().getCastles()) {
             player.sendPacket(new ExCastleState(castle));
         }
 
-        // Send Dye Information
         player.sendPacket(new HennaInfo(player));
-
-        // Send Skill list
         player.sendSkillList();
-
-        // Send EtcStatusUpdate
         player.sendPacket(new EtcStatusUpdate(player));
 
         boolean showClanNotice = false;
@@ -222,7 +202,6 @@ public class EnterWorld extends ClientPacket {
             player.sendPacket(ExPledgeWaitingListAlarm.STATIC_PACKET);
         }
 
-        // Send SubClass Info
         client.sendPacket(new ExSubjobInfo(player, SubclassInfoType.NO_CHANGES));
         client.sendPacket(new ExUserInfoInvenWeight(player));
         client.sendPacket(new ExAdenaInvenCount(player));
@@ -231,7 +210,6 @@ public class EnterWorld extends ClientPacket {
         client.sendPacket(new ExDressRoomUiOpen());
         client.sendPacket(new ExSendCostumeList());
 
-        // Send Unread Mail Count
         if (MailManager.getInstance().hasUnreadPost(player)) {
             player.sendPacket(new ExUnReadMailCount(player));
         }
@@ -261,10 +239,7 @@ public class EnterWorld extends ClientPacket {
             }
         }
 
-        // Expand Skill
         player.sendPacket(new ExStorageMaxCount(player));
-
-        // Friend list
         client.sendPacket(new FriendListPacket(player));
 
         SystemMessage sm = getSystemMessage(SystemMessageId.YOUR_FRIEND_S1_JUST_LOGGED_IN).addString(player.getName());
@@ -385,7 +360,6 @@ public class EnterWorld extends ClientPacket {
         }
 
         player.broadcastUserInfo();
-        // Send Equipped Items
         player.sendPacket(new ExUserInfoEquipSlot(player));
 
         if (Config.ENABLE_WORLD_CHAT) {
@@ -393,7 +367,6 @@ public class EnterWorld extends ClientPacket {
         }
         player.sendPacket(new ExConnectedTimeAndGettableReward(player));
 
-        // Handle soulshots, disable all on EnterWorld
         player.sendPacket(new ExAutoSoulShot(0, true, 0));
         player.sendPacket(new ExAutoSoulShot(0, true, 1));
         player.sendPacket(new ExAutoSoulShot(0, true, 2));

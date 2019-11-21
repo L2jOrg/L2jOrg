@@ -11,153 +11,145 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExAutoSoulShot;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
+import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
+
 /**
  * @author Unknown, UnAfraid
+ * @author JoeAlisson
  */
 public final class RequestAutoSoulShot extends ClientPacket {
-    private int _itemId;
-    private boolean _enable;
-    private int _type;
+    private int itemId;
+    private boolean enable;
+    private int type;
 
     @Override
     public void readImpl() {
-        _itemId = readInt();
-        _enable = readInt() == 1;
-        _type = readInt();
+        itemId = readInt();
+        enable = readInt() == 1;
+        type = readInt();
     }
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getPlayer();
-        if (activeChar == null) {
+        final Player player = client.getPlayer();
+        if (isNull(player) || player.isDead() || nonNull(player.getActiveRequester()) || player.getPrivateStoreType() != PrivateStoreType.NONE) {
             return;
         }
 
-        if ((activeChar.getPrivateStoreType() == PrivateStoreType.NONE) && (activeChar.getActiveRequester() == null) && !activeChar.isDead()) {
-            final Item item = activeChar.getInventory().getItemByItemId(_itemId);
-            if (item == null) {
+        var item = player.getInventory().getItemByItemId(itemId);
+        if (isNull(item)) {
+            return;
+        }
+
+        if (enable) {
+            if (!player.getInventory().canManipulate(item)) {
+                player.sendPacket(getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(itemId));
                 return;
             }
 
-            if (_enable) {
-                if (!activeChar.getInventory().canManipulate(item)) {
-                    activeChar.sendMessage("Cannot use this item.");
-                    return;
+            if (isSummonShot(item.getTemplate())) {
+                if (player.hasSummon()) {
+                    rechargeSummonShots(player, item);
+                } else {
+                    client.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_SERVITOR_AND_THEREFORE_CANNOT_USE_THE_AUTOMATIC_USE_FUNCTION);
                 }
+            } else if (isPlayerShot(item.getTemplate())) {
+                final boolean isSoulshot = item.getEtcItem().getDefaultAction() == ActionType.SOULSHOT;
+                final boolean isSpiritshot = item.getEtcItem().getDefaultAction() == ActionType.SPIRITSHOT;
+                final boolean isFishingshot = item.getEtcItem().getDefaultAction() == ActionType.FISHINGSHOT;
 
-                if (isSummonShot(item.getTemplate())) {
-                    if (activeChar.hasSummon()) {
-                        final boolean isSoulshot = item.getEtcItem().getDefaultAction() == ActionType.SUMMON_SOULSHOT;
-                        final boolean isSpiritshot = item.getEtcItem().getDefaultAction() == ActionType.SUMMON_SPIRITSHOT;
-                        if (isSoulshot) {
-                            int soulshotCount = 0;
-                            final Summon pet = activeChar.getPet();
-                            if (pet != null) {
-                                soulshotCount += pet.getSoulShotsPerHit();
-                            }
-                            for (Summon servitor : activeChar.getServitors().values()) {
-                                soulshotCount += servitor.getSoulShotsPerHit();
-                            }
-                            if (soulshotCount > item.getCount()) {
-                                client.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_SERVITOR);
-                                return;
-                            }
-                        } else if (isSpiritshot) {
-                            int spiritshotCount = 0;
-                            final Summon pet = activeChar.getPet();
-                            if (pet != null) {
-                                spiritshotCount += pet.getSpiritShotsPerHit();
-                            }
-                            for (Summon servitor : activeChar.getServitors().values()) {
-                                spiritshotCount += servitor.getSpiritShotsPerHit();
-                            }
-                            if (spiritshotCount > item.getCount()) {
-                                client.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_SERVITOR);
-                                return;
-                            }
-                        }
-
-                        // Activate shots
-                        activeChar.addAutoSoulShot(_itemId);
-                        client.sendPacket(new ExAutoSoulShot(_itemId, _enable, _type));
-
-                        // Recharge summon's shots
-                        final Summon pet = activeChar.getPet();
-                        if (pet != null) {
-                            // Send message
-                            if (!pet.isChargedShot(item.getTemplate().getDefaultAction() == ActionType.SUMMON_SOULSHOT ? ShotType.SOULSHOTS : ((item.getId() == 6647) || (item.getId() == 20334)) ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS)) {
-                                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
-                                sm.addItemName(item);
-                                client.sendPacket(sm);
-                            }
-                            // Charge
-                            pet.rechargeShots(isSoulshot, isSpiritshot, false);
-                        }
-                        for (Summon summon : activeChar.getServitors().values()) {
-                            // Send message
-                            if (!summon.isChargedShot(item.getTemplate().getDefaultAction() == ActionType.SUMMON_SOULSHOT ? ShotType.SOULSHOTS : ((item.getId() == 6647) || (item.getId() == 20334)) ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS)) {
-                                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
-                                sm.addItemName(item);
-                                client.sendPacket(sm);
-                            }
-                            // Charge
-                            summon.rechargeShots(isSoulshot, isSpiritshot, false);
-                        }
-                    } else {
-                        client.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_SERVITOR_AND_THEREFORE_CANNOT_USE_THE_AUTOMATIC_USE_FUNCTION);
-                    }
-                } else if (isPlayerShot(item.getTemplate())) {
-                    final boolean isSoulshot = item.getEtcItem().getDefaultAction() == ActionType.SOULSHOT;
-                    final boolean isSpiritshot = item.getEtcItem().getDefaultAction() == ActionType.SPIRITSHOT;
-                    final boolean isFishingshot = item.getEtcItem().getDefaultAction() == ActionType.FISHINGSHOT;
-
-                    // Activate shots
-                    activeChar.addAutoSoulShot(_itemId);
-                    client.sendPacket(new ExAutoSoulShot(_itemId, _enable, _type));
-
-                    // Send message
-                    final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
-                    sm.addItemName(item);
-                    client.sendPacket(sm);
-
-                    // Recharge player's shots
-                    activeChar.rechargeShots(isSoulshot, isSpiritshot, isFishingshot);
-                }
-            } else {
-                // Cancel auto shots
-                activeChar.removeAutoSoulShot(_itemId);
-                client.sendPacket(new ExAutoSoulShot(_itemId, _enable, _type));
+                // Activate shots
+                player.addAutoSoulShot(itemId);
+                client.sendPacket(new ExAutoSoulShot(itemId, enable, type));
 
                 // Send message
-                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED);
+                final SystemMessage sm = getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
+                sm.addItemName(item);
+                client.sendPacket(sm);
+
+                // Recharge player's shots
+                player.rechargeShots(isSoulshot, isSpiritshot, isFishingshot);
+            }
+        } else {
+            player.removeAutoSoulShot(itemId);
+            client.sendPacket(new ExAutoSoulShot(itemId, enable, type));
+            client.sendPacket(getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED).addItemName(item));
+        }
+
+    }
+
+    private void rechargeSummonShots(Player player, Item item) {
+        final boolean isSoulshot = item.getEtcItem().getDefaultAction() == ActionType.SUMMON_SOULSHOT;
+        final boolean isSpiritshot = item.getEtcItem().getDefaultAction() == ActionType.SUMMON_SPIRITSHOT;
+        if (isSoulshot) {
+            int soulshotCount = 0;
+            final Summon pet = player.getPet();
+            if (pet != null) {
+                soulshotCount += pet.getSoulShotsPerHit();
+            }
+            for (Summon servitor : player.getServitors().values()) {
+                soulshotCount += servitor.getSoulShotsPerHit();
+            }
+            if (soulshotCount > item.getCount()) {
+                client.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_SERVITOR);
+                return;
+            }
+        } else if (isSpiritshot) {
+            int spiritshotCount = 0;
+            final Summon pet = player.getPet();
+            if (pet != null) {
+                spiritshotCount += pet.getSpiritShotsPerHit();
+            }
+            for (Summon servitor : player.getServitors().values()) {
+                spiritshotCount += servitor.getSpiritShotsPerHit();
+            }
+            if (spiritshotCount > item.getCount()) {
+                client.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SPIRITSHOTS_NEEDED_FOR_A_SERVITOR);
+                return;
+            }
+        }
+
+        // Activate shots
+        player.addAutoSoulShot(itemId);
+        client.sendPacket(new ExAutoSoulShot(itemId, enable, type));
+
+        // Recharge summon's shots
+        final Summon pet = player.getPet();
+        if (pet != null) {
+            // Send message
+            if (!pet.isChargedShot(item.getTemplate().getDefaultAction() == ActionType.SUMMON_SOULSHOT ? ShotType.SOULSHOTS : ((item.getId() == 6647) || (item.getId() == 20334)) ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS)) {
+                final SystemMessage sm = getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
                 sm.addItemName(item);
                 client.sendPacket(sm);
             }
+            // Charge
+            pet.rechargeShots(isSoulshot, isSpiritshot, false);
+        }
+        for (Summon summon : player.getServitors().values()) {
+            // Send message
+            if (!summon.isChargedShot(item.getTemplate().getDefaultAction() == ActionType.SUMMON_SOULSHOT ? ShotType.SOULSHOTS : ((item.getId() == 6647) || (item.getId() == 20334)) ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS)) {
+                final SystemMessage sm = getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
+                sm.addItemName(item);
+                client.sendPacket(sm);
+            }
+            // Charge
+            summon.rechargeShots(isSoulshot, isSpiritshot, false);
         }
     }
 
     private static boolean isPlayerShot(ItemTemplate item) {
-        switch (item.getDefaultAction()) {
-            case SPIRITSHOT:
-            case SOULSHOT:
-            case FISHINGSHOT: {
-                return true;
-            }
-            default: {
-                return false;
-            }
-        }
+        return switch (item.getDefaultAction()) {
+            case SPIRITSHOT, SOULSHOT, FISHINGSHOT -> true;
+            default -> false;
+        };
     }
 
     private static boolean isSummonShot(ItemTemplate item) {
-        switch (item.getDefaultAction()) {
-            case SUMMON_SPIRITSHOT:
-            case SUMMON_SOULSHOT: {
-                return true;
-            }
-            default: {
-                return false;
-            }
-        }
+        return switch (item.getDefaultAction()) {
+            case SUMMON_SPIRITSHOT, SUMMON_SOULSHOT -> true;
+            default -> false;
+        };
     }
 }

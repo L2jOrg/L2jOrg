@@ -104,6 +104,7 @@
                 <xs:attribute name="self-resurrection" type="xs:boolean" default="false"/>
                 <xs:attribute name="infinite" type="xs:boolean" default="false"/>
                 <xs:attribute name="commission-type" type="CommissionType" default="OTHER_ITEM"/>
+                <xs:attribute name="action" type="ActionType" default="NONE"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
@@ -361,4 +362,37 @@
     <xs:element name="armor" type="Armor" substitutionGroup="itemGroup"/>
     <xs:element name="item" type="Item" substitutionGroup="itemGroup"/>
 
+    <xs:simpleType name="ActionType">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="CALC"/>
+            <xs:enumeration value="CALL_SKILL"/>
+            <xs:enumeration value="CAPSULE"/>
+            <xs:enumeration value="CREATE_MPCC"/>
+            <xs:enumeration value="DICE"/>
+            <xs:enumeration value="EQUIP"/>
+            <xs:enumeration value="FISHINGSHOT"/>
+            <xs:enumeration value="HARVEST"/>
+            <xs:enumeration value="HIDE_NAME"/>
+            <xs:enumeration value="KEEP_EXP"/>
+            <xs:enumeration value="NICK_COLOR"/>
+            <xs:enumeration value="NONE"/>
+            <xs:enumeration value="PEEL"/>
+            <xs:enumeration value="RECIPE"/>
+            <xs:enumeration value="SEED"/>
+            <xs:enumeration value="SHOW_ADVENTURER_GUIDE_BOOK"/>
+            <xs:enumeration value="SHOW_HTML"/>
+            <xs:enumeration value="SHOW_SSQ_STATUS"/>
+            <xs:enumeration value="SKILL_MAINTAIN"/>
+            <xs:enumeration value="SKILL_REDUCE"/>
+            <xs:enumeration value="SOULSHOT"/>
+            <xs:enumeration value="SPIRITSHOT"/>
+            <xs:enumeration value="START_QUEST"/>
+            <xs:enumeration value="SUMMON_SOULSHOT"/>
+            <xs:enumeration value="SUMMON_SPIRITSHOT"/>
+            <xs:enumeration value="XMAS_OPEN"/>
+            <xs:enumeration value="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+            <xs:enumeration value="SHOW_TUTORIAL"/>
+        </xs:restriction>
+
+    </xs:simpleType>
 </xs:schema>

@@ -91,7 +91,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     private boolean _pvpItem;
     protected boolean immediateEffect;
     protected boolean exImmediateEffect;
-    private ActionType _defaultAction;
+    protected ActionType _defaultAction = ActionType.NONE;
     private Map<AttributeType, AttributeHolder> _elementals = null;
     private List<ItemSkillHolder> _skills;
 

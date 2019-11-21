@@ -23,10 +23,7 @@ import org.l2j.gameserver.model.events.impl.item.OnItemCreate;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.items.*;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.model.items.type.ArmorType;
-import org.l2j.gameserver.model.items.type.CrystalType;
-import org.l2j.gameserver.model.items.type.EtcItemType;
-import org.l2j.gameserver.model.items.type.WeaponType;
+import org.l2j.gameserver.model.items.type.*;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.model.stats.functions.FuncTemplate;
 import org.l2j.gameserver.settings.GeneralSettings;
@@ -317,6 +314,7 @@ public final class ItemEngine extends GameXmlReader {
         item.setQuestItem(parseBoolean(attr,"quest-item"));
         item.setInfinite(parseBoolean(attr, "infinite"));
         item.setSelfResurrection(parseBoolean(attr, "self-resurrection"));
+        item.setAction(parseEnum(attr, ActionType.class, "action"));
     }
 
     private void parseCommonAttributes(ItemTemplate item, Node node) {
