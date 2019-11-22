@@ -8,10 +8,7 @@ import org.l2j.gameserver.data.xml.impl.EnsoulData;
 import org.l2j.gameserver.data.xml.impl.OptionData;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.item.ItemEngine;
-import org.l2j.gameserver.enums.AttributeType;
-import org.l2j.gameserver.enums.InstanceType;
-import org.l2j.gameserver.enums.ItemLocation;
-import org.l2j.gameserver.enums.ItemSkillType;
+import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.ItemsOnGroundManager;
@@ -32,6 +29,7 @@ import org.l2j.gameserver.model.events.impl.character.player.OnPlayerItemDrop;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerItemPickup;
 import org.l2j.gameserver.model.events.impl.item.OnItemBypassEvent;
 import org.l2j.gameserver.model.events.impl.item.OnItemTalk;
+import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.*;
@@ -41,6 +39,7 @@ import org.l2j.gameserver.model.items.type.ItemType;
 import org.l2j.gameserver.model.options.EnchantOptions;
 import org.l2j.gameserver.model.options.Options;
 import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.settings.GeneralSettings;
@@ -59,6 +58,7 @@ import java.util.*;
 import java.util.Map.Entry;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.locks.ReentrantLock;
+import java.util.function.Consumer;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
@@ -1349,7 +1349,7 @@ public final class Item extends WorldObject {
         final Player player = getActingPlayer();
         if (player != null) {
             if (isEquipped()) {
-                var unequiped = player.getInventory().unEquipItemInSlotAndRecord(getLocationSlot());
+                var unequiped = player.getInventory().unEquipItemInSlotAndRecord(InventorySlot.fromId(getLocationSlot()));
                 final InventoryUpdate iu = new InventoryUpdate();
                 for (Item item : unequiped) {
                     iu.addModifiedItem(item);
@@ -1747,6 +1747,22 @@ public final class Item extends WorldObject {
 
     public BodyPart getBodyPart() {
         return template instanceof EquipableItem ? template.getBodyPart() : BodyPart.NONE;
+    }
+
+    public int getItemMask() {
+        return template.getItemMask();
+    }
+
+    public void forEachSkill(ItemSkillType type, Consumer<ItemSkillHolder> action) {
+        template.forEachSkill(type, action);
+    }
+
+    public double getStats(Stats stat, int defaultValue) {
+        return template.getStats(stat, defaultValue);
+    }
+
+    public boolean isBlessed() {
+        return template.isBlessed();
     }
 
     static class ScheduleLifeTimeTask implements Runnable {

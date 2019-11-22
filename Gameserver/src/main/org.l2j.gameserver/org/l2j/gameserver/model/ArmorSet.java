@@ -1,95 +1,60 @@
 package org.l2j.gameserver.model;
 
+import io.github.joealisson.primitive.IntSet;
+import io.github.joealisson.primitive.LinkedHashIntSet;
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ArmorsetSkillHolder;
-import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.stats.BaseStats;
 
 import java.util.*;
-import java.util.function.Function;
+import java.util.function.ToIntFunction;
+
+import static java.util.Objects.nonNull;
+import static org.l2j.gameserver.enums.InventorySlot.*;
 
 /**
  * @author UnAfraid
+ * @author JoeAlisson
  */
 public final class ArmorSet {
-    private static final int[] ARMORSET_SLOTS = new int[]
-            {
-                    Inventory.PAPERDOLL_CHEST,
-                    Inventory.PAPERDOLL_LEGS,
-                    Inventory.PAPERDOLL_HEAD,
-                    Inventory.PAPERDOLL_GLOVES,
-                    Inventory.PAPERDOLL_FEET
-            };
-    private static final int[] ARTIFACT_1_SLOTS = new int[]
-            {
-                    Inventory.PAPERDOLL_ARTIFACT1,
-                    Inventory.PAPERDOLL_ARTIFACT2,
-                    Inventory.PAPERDOLL_ARTIFACT3,
-                    Inventory.PAPERDOLL_ARTIFACT4,
-                    Inventory.PAPERDOLL_ARTIFACT13,
-                    Inventory.PAPERDOLL_ARTIFACT16,
-                    Inventory.PAPERDOLL_ARTIFACT19,
 
-            };
-    private static final int[] ARTIFACT_2_SLOTS = new int[]
-            {
-                    Inventory.PAPERDOLL_ARTIFACT5,
-                    Inventory.PAPERDOLL_ARTIFACT6,
-                    Inventory.PAPERDOLL_ARTIFACT7,
-                    Inventory.PAPERDOLL_ARTIFACT8,
-                    Inventory.PAPERDOLL_ARTIFACT14,
-                    Inventory.PAPERDOLL_ARTIFACT17,
-                    Inventory.PAPERDOLL_ARTIFACT20,
+    private static final EnumSet<InventorySlot> ARTIFACT_1_SLOTS = EnumSet.of(ARTIFACT1, ARTIFACT2, ARTIFACT3, ARTIFACT4, ARTIFACT13, ARTIFACT16, ARTIFACT19);
+    private static final EnumSet<InventorySlot> ARTIFACT_2_SLOTS = EnumSet.of(ARTIFACT5, ARTIFACT6, ARTIFACT7, ARTIFACT8, ARTIFACT14, ARTIFACT17, ARTIFACT20);
+    private static final EnumSet<InventorySlot> ARTIFACT_3_SLOTS = EnumSet.of(ARTIFACT9, ARTIFACT10, ARTIFACT11, ARTIFACT12, ARTIFACT15, ARTIFACT18, ARTIFACT21);
 
-            };
-    private static final int[] ARTIFACT_3_SLOTS = new int[]
-            {
-                    Inventory.PAPERDOLL_ARTIFACT9,
-                    Inventory.PAPERDOLL_ARTIFACT10,
-                    Inventory.PAPERDOLL_ARTIFACT11,
-                    Inventory.PAPERDOLL_ARTIFACT12,
-                    Inventory.PAPERDOLL_ARTIFACT15,
-                    Inventory.PAPERDOLL_ARTIFACT18,
-                    Inventory.PAPERDOLL_ARTIFACT21,
-
-            };
-    private final int _id;
-    private final int _minimumPieces;
-    private final boolean _isVisual;
-    private final Set<Integer> _requiredItems = new LinkedHashSet<>();
-    private final Set<Integer> _optionalItems = new LinkedHashSet<>();
-    private final List<ArmorsetSkillHolder> _skills = new ArrayList<>();
+    private final int id;
+    private final int minimumPieces;
+    private final boolean isVisual;
+    private final IntSet requiredItems = new LinkedHashIntSet();
+    private final IntSet optionalItems = new LinkedHashIntSet();
+    private final List<ArmorsetSkillHolder> skills = new ArrayList<>();
     private final Map<BaseStats, Double> _stats = new LinkedHashMap<>();
 
-    /**
-     * @param id
-     * @param minimumPieces
-     * @param isVisual
-     */
     public ArmorSet(int id, int minimumPieces, boolean isVisual) {
-        _id = id;
-        _minimumPieces = minimumPieces;
-        _isVisual = isVisual;
+        this.id = id;
+        this.minimumPieces = minimumPieces;
+        this.isVisual = isVisual;
     }
 
     public int getId() {
-        return _id;
+        return id;
     }
 
     /**
      * @return the minimum amount of pieces equipped to form a set
      */
     public int getMinimumPieces() {
-        return _minimumPieces;
+        return minimumPieces;
     }
 
     /**
      * @return {@code true} if the set is visual only, {@code} otherwise
      */
     public boolean isVisual() {
-        return _isVisual;
+        return isVisual;
     }
 
     /**
@@ -98,15 +63,15 @@ public final class ArmorSet {
      * @param item
      * @return {@code true} if item was successfully added, {@code false} in case it already exists
      */
-    public boolean addRequiredItem(Integer item) {
-        return _requiredItems.add(item);
+    public boolean addRequiredItem(int item) {
+        return requiredItems.add(item);
     }
 
     /**
      * @return the set of items that can form a set
      */
-    public Set<Integer> getRequiredItems() {
-        return _requiredItems;
+    public IntSet getRequiredItems() {
+        return requiredItems;
     }
 
     /**
@@ -115,15 +80,15 @@ public final class ArmorSet {
      * @param item
      * @return {@code true} if shield was successfully added, {@code false} in case it already exists
      */
-    public boolean addOptionalItem(Integer item) {
-        return _optionalItems.add(item);
+    public boolean addOptionalItem(int item) {
+        return optionalItems.add(item);
     }
 
     /**
      * @return the set of shields
      */
-    public Set<Integer> getOptionalItems() {
-        return _optionalItems;
+    public IntSet getOptionalItems() {
+        return optionalItems;
     }
 
     /**
@@ -132,7 +97,7 @@ public final class ArmorSet {
      * @param holder
      */
     public void addSkill(ArmorsetSkillHolder holder) {
-        _skills.add(holder);
+        skills.add(holder);
     }
 
     /**
@@ -141,7 +106,7 @@ public final class ArmorSet {
      * @return
      */
     public List<ArmorsetSkillHolder> getSkills() {
-        return _skills;
+        return skills;
     }
 
     /**
@@ -163,28 +128,19 @@ public final class ArmorSet {
     }
 
     /**
-     * @param shield_id
-     * @return {@code true} if player has the shield of this set equipped, {@code false} in case set doesn't have a shield or player doesn't
-     */
-    public boolean containOptionalItem(int shield_id) {
-        return _optionalItems.contains(shield_id);
-    }
-
-    /**
      * @param player
      * @return true if all parts of set are enchanted to +6 or more
      */
     public int getLowestSetEnchant(Player player) {
-        // Player don't have full set
-        if (getPiecesCount(player, Item::getId) < _minimumPieces) {
+        if (getPiecesCount(player, Item::getId) < minimumPieces) {
             return 0;
         }
 
         final PlayerInventory inv = player.getInventory();
         int enchantLevel = Byte.MAX_VALUE;
-        for (int armorSlot : ARMORSET_SLOTS) {
+        for (var armorSlot : InventorySlot.armorset()) {
             final Item itemPart = inv.getPaperdollItem(armorSlot);
-            if ((itemPart != null) && _requiredItems.contains(itemPart.getId())) {
+            if ((itemPart != null) && requiredItems.contains(itemPart.getId())) {
                 if (enchantLevel > itemPart.getEnchantLevel()) {
                     enchantLevel = itemPart.getEnchantLevel();
                 }
@@ -204,43 +160,27 @@ public final class ArmorSet {
      * @return total paperdoll(busy) count for 1 of 3 artifact book slots
      */
     public int getArtifactSlotMask(Player player, int bookSlot) {
-        final PlayerInventory inv = player.getInventory();
         int slotMask = 0;
-        switch (bookSlot) {
-            case 1: {
+        var slots = switch (bookSlot) {
+            case 1 -> ARTIFACT_1_SLOTS;
+            case 2 -> ARTIFACT_2_SLOTS;
+            case 3 -> ARTIFACT_3_SLOTS;
+            default -> null;
+        };
 
-                for (int artifactSlot : ARTIFACT_1_SLOTS) {
-                    final Item itemPart = inv.getPaperdollItem(artifactSlot);
-                    if ((itemPart != null) && _requiredItems.contains(itemPart.getId())) {
-                        slotMask += artifactSlot;
-                    }
+        if(nonNull(slots)) {
+            final PlayerInventory inv = player.getInventory();
+            for (var slot : slots) {
+                if(!inv.isPaperdollSlotEmpty(slot) && requiredItems.contains(inv.getPaperdollItemId(slot))) {
+                    slotMask += slot.getMask();
                 }
-                break;
-            }
-            case 2: {
-                for (int artifactSlot : ARTIFACT_2_SLOTS) {
-                    final Item itemPart = inv.getPaperdollItem(artifactSlot);
-                    if ((itemPart != null) && _requiredItems.contains(itemPart.getId())) {
-                        slotMask += artifactSlot;
-                    }
-                }
-                break;
-            }
-            case 3: {
-                for (int artifactSlot : ARTIFACT_3_SLOTS) {
-                    final Item itemPart = inv.getPaperdollItem(artifactSlot);
-                    if ((itemPart != null) && _requiredItems.contains(itemPart.getId())) {
-                        slotMask += artifactSlot;
-                    }
-                }
-                break;
             }
         }
         return slotMask;
     }
 
-    public boolean hasOptionalEquipped(Player player, Function<Item, Integer> idProvider) {
-        return player.getInventory().getPaperdollItems().stream().anyMatch(item -> _optionalItems.contains(idProvider.apply(item)));
+    public boolean hasOptionalEquipped(Player player, ToIntFunction<Item> idProvider) {
+        return player.getInventory().existsEquippedItem(item -> optionalItems.contains(idProvider.applyAsInt(item)));
     }
 
     /**
@@ -248,7 +188,7 @@ public final class ArmorSet {
      * @param idProvider
      * @return the amount of set visual items that player has equipped
      */
-    public long getPiecesCount(Player player, Function<Item, Integer> idProvider) {
-        return player.getInventory().getPaperdollItems(item -> _requiredItems.contains(idProvider.apply(item))).size();
+    public int getPiecesCount(Player player, ToIntFunction<Item> idProvider) {
+        return  player.getInventory().countEquippedItems(item -> requiredItems.contains(idProvider.applyAsInt(item)));
     }
 }

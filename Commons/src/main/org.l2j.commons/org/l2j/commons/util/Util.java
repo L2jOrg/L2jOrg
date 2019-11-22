@@ -36,12 +36,16 @@ public class Util {
         return isNull(data) || data.length == 0;
     }
 
-    public static <T> int zeroIfNullOrElse(T obj, ToIntFunction<T> action) {
-        return isNull(obj) ? 0 : action.applyAsInt(obj);
+    public static <T> int zeroIfNullOrElse(T obj, ToIntFunction<T> function) {
+        return isNull(obj) ? 0 : function.applyAsInt(obj);
     }
 
     public static <T> boolean falseIfNullOrElse(T obj, Predicate<T> predicate) {
         return nonNull(obj) && predicate.test(obj);
+    }
+
+    public static <T, R> R computeIfNonNull(T obj, Function<T, R> function) {
+        return isNull(obj) ? null : function.apply(obj);
     }
 
     public static boolean contains(int[] array, int obj) {

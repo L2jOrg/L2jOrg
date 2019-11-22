@@ -118,7 +118,7 @@ public final class RequestPreviewItem extends ClientPacket {
                 return;
             }
 
-            final int slot = product.getBodyPart().paperdool();
+            final int slot = product.getBodyPart().slot();
             if (slot < 0) {
                 continue;
             }

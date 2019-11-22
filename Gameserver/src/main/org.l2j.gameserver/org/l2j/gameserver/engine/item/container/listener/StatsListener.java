@@ -1,6 +1,7 @@
 package org.l2j.gameserver.engine.item.container.listener;
 
 import org.l2j.gameserver.api.item.InventoryListener;
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.instance.Item;
 
@@ -13,7 +14,7 @@ public final class StatsListener implements InventoryListener {
     }
 
     @Override
-    public void notifyUnequiped(int slot, Item item, Inventory inventory) {
+    public void notifyUnequiped(InventorySlot slot, Item item, Inventory inventory) {
         var charStat = inventory.getOwner().getStat();
         item.getTemplate().getFunctionTemplates().forEach(func -> {
             if(func.getStat().hasDefaultFinalizer()) {
@@ -24,7 +25,7 @@ public final class StatsListener implements InventoryListener {
     }
 
     @Override
-    public void notifyEquiped(int slot, Item item, Inventory inventory) {
+    public void notifyEquiped(InventorySlot slot, Item item, Inventory inventory) {
         var charStat = inventory.getOwner().getStat();
         item.getTemplate().getFunctionTemplates().forEach(func -> {
             if(func.getStat().hasDefaultFinalizer()) {

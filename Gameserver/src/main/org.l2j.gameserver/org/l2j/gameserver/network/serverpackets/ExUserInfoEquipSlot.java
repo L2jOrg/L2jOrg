@@ -53,10 +53,10 @@ public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot> {
         final PlayerInventory inventory = player.getInventory();
         for (InventorySlot slot : InventorySlot.values()) {
             if (containsMask(slot)) {
-                final VariationInstance augment = inventory.getPaperdollAugmentation(slot.getSlot());
+                final VariationInstance augment = inventory.getPaperdollAugmentation(slot.getId());
                 writeShort(22); // 10 + 4 * 3
-                writeInt(inventory.getPaperdollObjectId(slot.getSlot()));
-                writeInt(inventory.getPaperdollItemId(slot.getSlot()));
+                writeInt(inventory.getPaperdollObjectId(slot.getId()));
+                writeInt(inventory.getPaperdollItemId(slot.getId()));
                 writeInt(augment != null ? augment.getOption1Id() : 0);
                 writeInt(augment != null ? augment.getOption2Id() : 0);
                 writeInt(0x00); // Visual ID not used on classic

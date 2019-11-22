@@ -1,22 +1,7 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.model.stats.finalizers;
 
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -28,24 +13,17 @@ import org.l2j.gameserver.model.stats.Stats;
 
 import java.util.Optional;
 
+import static org.l2j.gameserver.enums.InventorySlot.CHEST;
+import static org.l2j.gameserver.enums.InventorySlot.LEGS;
 import static org.l2j.gameserver.util.GameUtils.isPet;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * @author UnAfraid
+ * @author JoeAlisson
  */
 public class PDefenseFinalizer implements IStatsFunction {
-    private static final int[] SLOTS =
-            {
-                    Inventory.PAPERDOLL_CHEST,
-                    Inventory.PAPERDOLL_LEGS,
-                    Inventory.PAPERDOLL_HEAD,
-                    Inventory.PAPERDOLL_FEET,
-                    Inventory.PAPERDOLL_GLOVES,
-                    Inventory.PAPERDOLL_UNDER,
-                    Inventory.PAPERDOLL_CLOAK,
-                    Inventory.PAPERDOLL_HAIR
-            };
+
 
     @Override
     public double calc(Creature creature, Optional<Double> base, Stats stat) {
@@ -65,9 +43,9 @@ public class PDefenseFinalizer implements IStatsFunction {
 
             if (isPlayer(creature)) {
                 final Player player = creature.getActingPlayer();
-                for (int slot : SLOTS) {
+                for (var slot : InventorySlot.armors()) {
                     if (!inv.isPaperdollSlotEmpty(slot) || //
-                            ((slot == Inventory.PAPERDOLL_LEGS) && !inv.isPaperdollSlotEmpty(Inventory.PAPERDOLL_CHEST) && (inv.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getTemplate().getBodyPart() == BodyPart.FULL_ARMOR))) {
+                            ((slot == LEGS) && !inv.isPaperdollSlotEmpty(CHEST) && (inv.getPaperdollItem(CHEST).getTemplate().getBodyPart() == BodyPart.FULL_ARMOR))) {
                         final int defaultStatValue = player.getTemplate().getBaseDefBySlot(slot);
                         baseValue -= creature.getTransformation().map(transform -> transform.getBaseDefBySlot(player, slot)).orElse(defaultStatValue);
                     }

@@ -1,6 +1,7 @@
 package org.l2j.gameserver.model.stats.finalizers;
 
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -17,16 +18,9 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * @author UnAfraid
+ * @author JoeAlisson
  */
 public class MDefenseFinalizer implements IStatsFunction {
-    private static final int[] SLOTS =
-            {
-                    Inventory.PAPERDOLL_LFINGER,
-                    Inventory.PAPERDOLL_RFINGER,
-                    Inventory.PAPERDOLL_LEAR,
-                    Inventory.PAPERDOLL_REAR,
-                    Inventory.PAPERDOLL_NECK
-            };
 
     @Override
     public double calc(Creature creature, Optional<Double> base, Stats stat) {
@@ -47,7 +41,7 @@ public class MDefenseFinalizer implements IStatsFunction {
 
         if (isPlayer(creature)) {
             final Player player = creature.getActingPlayer();
-            for (int slot : SLOTS) {
+            for (var slot : InventorySlot.accessories()) {
                 if (!player.getInventory().isPaperdollSlotEmpty(slot)) {
                     final int defaultStatValue = player.getTemplate().getBaseDefBySlot(slot);
                     baseValue -= creature.getTransformation().map(transform -> transform.getBaseDefBySlot(player, slot)).orElse(defaultStatValue);

@@ -40,7 +40,7 @@ public class CreatureTemplate extends ListenersContainer {
     }
 
     public void set(StatsSet set) {
-        // Base stats
+
         _baseValues.put(Stats.STAT_STR, set.getDouble("baseSTR", 0));
         _baseValues.put(Stats.STAT_CON, set.getDouble("baseCON", 0));
         _baseValues.put(Stats.STAT_DEX, set.getDouble("baseDEX", 0));
@@ -48,7 +48,6 @@ public class CreatureTemplate extends ListenersContainer {
         _baseValues.put(Stats.STAT_WIT, set.getDouble("baseWIT", 0));
         _baseValues.put(Stats.STAT_MEN, set.getDouble("baseMEN", 0));
 
-        // Max HP/MP/CP
         _baseValues.put(Stats.MAX_HP, set.getDouble("baseHpMax", 0));
         _baseValues.put(Stats.MAX_MP, set.getDouble("baseMpMax", 0));
         _baseValues.put(Stats.MAX_CP, set.getDouble("baseCpMax", 0));

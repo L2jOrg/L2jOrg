@@ -1,6 +1,7 @@
 package org.l2j.gameserver.engine.item.container.listener;
 
 import org.l2j.gameserver.api.item.PlayerInventoryListener;
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.BodyPart;
 import org.l2j.gameserver.model.items.instance.Item;
@@ -15,7 +16,7 @@ public final class BraceletListener implements PlayerInventoryListener {
     }
 
     @Override
-    public void notifyUnequiped(int slot, Item item, Inventory inventory) {
+    public void notifyUnequiped(InventorySlot slot, Item item, Inventory inventory) {
         if (item.getBodyPart() == BodyPart.RIGHT_BRACELET) {
             inventory.unEquipItemInSlot(Inventory.TALISMAN1);
             inventory.unEquipItemInSlot(Inventory.TALISMAN2);
@@ -28,7 +29,7 @@ public final class BraceletListener implements PlayerInventoryListener {
 
     // Note (April 3, 2009): Currently on equip, talismans do not display properly, do we need checks here to fix this?
     @Override
-    public void notifyEquiped(int slot, Item item, Inventory inventory) {
+    public void notifyEquiped(InventorySlot slot, Item item, Inventory inventory) {
     }
 
     public static BraceletListener provider() {

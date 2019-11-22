@@ -1,99 +1,86 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.model.actor.templates;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.data.xml.impl.ExperienceData;
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.base.ClassId;
-import org.l2j.gameserver.model.itemcontainer.Inventory;
 
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.List;
-import java.util.Map;
+
+import static org.l2j.gameserver.enums.InventorySlot.*;
 
 /**
  * @author mkizub, Zoey76
+ * @author JoeAlisson
  */
 public class PlayerTemplate extends CreatureTemplate {
-    private final ClassId _classId;
+    private final ClassId classId;
 
-    private final float[] _baseHp;
-    private final float[] _baseMp;
-    private final float[] _baseCp;
+    private final float[] baseHp;
+    private final float[] baseMp;
+    private final float[] baseCp;
 
-    private final double[] _baseHpReg;
-    private final double[] _baseMpReg;
-    private final double[] _baseCpReg;
+    private final double[] baseHpReg;
+    private final double[] baseMpReg;
+    private final double[] baseCpReg;
 
-    private final double _fCollisionHeightFemale;
-    private final double _fCollisionRadiusFemale;
+    private final double fCollisionHeightFemale;
+    private final double fCollisionRadiusFemale;
 
-    private final int _baseSafeFallHeight;
+    private final int baseSafeFallHeight;
 
-    private final List<Location> _creationPoints;
-    private final Map<Integer, Integer> _baseSlotDef;
+    private final List<Location> creationPoints;
+    private final EnumMap<InventorySlot, Integer> baseSlotDef;
 
     public PlayerTemplate(StatsSet set, List<Location> creationPoints) {
         super(set);
-        _classId = ClassId.getClassId(set.getInt("classId"));
-        setRace(_classId.getRace());
-        _baseHp = new float[ExperienceData.getInstance().getMaxLevel()];
-        _baseMp = new float[ExperienceData.getInstance().getMaxLevel()];
-        _baseCp = new float[ExperienceData.getInstance().getMaxLevel()];
-        _baseHpReg = new double[ExperienceData.getInstance().getMaxLevel()];
-        _baseMpReg = new double[ExperienceData.getInstance().getMaxLevel()];
-        _baseCpReg = new double[ExperienceData.getInstance().getMaxLevel()];
+        classId = ClassId.getClassId(set.getInt("classId"));
+        setRace(classId.getRace());
+        baseHp = new float[ExperienceData.getInstance().getMaxLevel()];
+        baseMp = new float[ExperienceData.getInstance().getMaxLevel()];
+        baseCp = new float[ExperienceData.getInstance().getMaxLevel()];
+        baseHpReg = new double[ExperienceData.getInstance().getMaxLevel()];
+        baseMpReg = new double[ExperienceData.getInstance().getMaxLevel()];
+        baseCpReg = new double[ExperienceData.getInstance().getMaxLevel()];
 
-        _baseSlotDef = new HashMap<>(13);
-        _baseSlotDef.put(Inventory.PAPERDOLL_CHEST, set.getInt("basePDefchest", 0));
-        _baseSlotDef.put(Inventory.PAPERDOLL_LEGS, set.getInt("basePDeflegs", 0));
-        _baseSlotDef.put(Inventory.PAPERDOLL_HEAD, set.getInt("basePDefhead", 0));
-        _baseSlotDef.put(Inventory.PAPERDOLL_FEET, set.getInt("basePDeffeet", 0));
-        _baseSlotDef.put(Inventory.PAPERDOLL_GLOVES, set.getInt("basePDefgloves", 0));
-        _baseSlotDef.put(Inventory.PAPERDOLL_UNDER, set.getInt("basePDefunderwear", 0));
-        _baseSlotDef.put(Inventory.PAPERDOLL_CLOAK, set.getInt("basePDefcloak", 0));
-        _baseSlotDef.put(Inventory.PAPERDOLL_REAR, set.getInt("baseMDefrear", 0));
-        _baseSlotDef.put(Inventory.PAPERDOLL_LEAR, set.getInt("baseMDeflear", 0));
-        _baseSlotDef.put(Inventory.PAPERDOLL_RFINGER, set.getInt("baseMDefrfinger", 0));
-        _baseSlotDef.put(Inventory.PAPERDOLL_LFINGER, set.getInt("baseMDefrfinger", 0));
-        _baseSlotDef.put(Inventory.PAPERDOLL_NECK, set.getInt("baseMDefneck", 0));
-        _baseSlotDef.put(Inventory.PAPERDOLL_HAIR, set.getInt("basePDefhair", 0));
 
-        _fCollisionRadiusFemale = set.getDouble("collisionFemaleradius");
-        _fCollisionHeightFemale = set.getDouble("collisionFemaleheight");
+        baseSlotDef = new EnumMap<>(InventorySlot.class);
+        baseSlotDef.put(CHEST, set.getInt("basePDefchest", 0));
+        baseSlotDef.put(LEGS, set.getInt("basePDeflegs", 0));
+        baseSlotDef.put(HEAD, set.getInt("basePDefhead", 0));
+        baseSlotDef.put(FEET, set.getInt("basePDeffeet", 0));
+        baseSlotDef.put(GLOVES, set.getInt("basePDefgloves", 0));
+        baseSlotDef.put(UNDERWEAR, set.getInt("basePDefunderwear", 0));
+        baseSlotDef.put(BACK, set.getInt("basePDefcloak", 0));
+        baseSlotDef.put(RIGHT_EAR, set.getInt("baseMDefrear", 0));
+        baseSlotDef.put(LEFT_EAR, set.getInt("baseMDeflear", 0));
+        baseSlotDef.put(RIGHT_FINGER, set.getInt("baseMDefrfinger", 0));
+        baseSlotDef.put(LEFT_FINGER, set.getInt("baseMDefrfinger", 0));
+        baseSlotDef.put(NECK, set.getInt("baseMDefneck", 0));
+        baseSlotDef.put(HAIR, set.getInt("basePDefhair", 0));
 
-        _baseSafeFallHeight = set.getInt("baseSafeFall", 333);
-        _creationPoints = creationPoints;
+        fCollisionRadiusFemale = set.getDouble("collisionFemaleradius");
+        fCollisionHeightFemale = set.getDouble("collisionFemaleheight");
+
+        baseSafeFallHeight = set.getInt("baseSafeFall", 333);
+        this.creationPoints = creationPoints;
     }
 
     /**
      * @return the template class Id.
      */
     public ClassId getClassId() {
-        return _classId;
+        return classId;
     }
 
     /**
      * @return random Location of created character spawn.
      */
     public Location getCreationPoint() {
-        return _creationPoints.get(Rnd.get(_creationPoints.size()));
+        return creationPoints.get(Rnd.get(creationPoints.size()));
     }
 
     /**
@@ -105,30 +92,12 @@ public class PlayerTemplate extends CreatureTemplate {
      */
     public void setUpgainValue(String paramName, int level, double val) {
         switch (paramName) {
-            case "hp": {
-                _baseHp[level] = (float) val;
-                break;
-            }
-            case "mp": {
-                _baseMp[level] = (float) val;
-                break;
-            }
-            case "cp": {
-                _baseCp[level] = (float) val;
-                break;
-            }
-            case "hpRegen": {
-                _baseHpReg[level] = val;
-                break;
-            }
-            case "mpRegen": {
-                _baseMpReg[level] = val;
-                break;
-            }
-            case "cpRegen": {
-                _baseCpReg[level] = val;
-                break;
-            }
+            case "hp" -> baseHp[level] = (float) val;
+            case "mp" -> baseMp[level] = (float) val;
+            case "cp"-> baseCp[level] = (float) val;
+            case "hpRegen" -> baseHpReg[level] = val;
+            case "mpRegen" -> baseMpReg[level] = val;
+            case "cpRegen" -> baseCpReg[level] = val;
         }
     }
 
@@ -137,7 +106,7 @@ public class PlayerTemplate extends CreatureTemplate {
      * @return the baseHpMax for given character level
      */
     public float getBaseHpMax(int level) {
-        return _baseHp[level];
+        return baseHp[level];
     }
 
     /**
@@ -145,7 +114,7 @@ public class PlayerTemplate extends CreatureTemplate {
      * @return the baseMpMax for given character level
      */
     public float getBaseMpMax(int level) {
-        return _baseMp[level];
+        return baseMp[level];
     }
 
     /**
@@ -153,7 +122,7 @@ public class PlayerTemplate extends CreatureTemplate {
      * @return the baseCpMax for given character level
      */
     public float getBaseCpMax(int level) {
-        return _baseCp[level];
+        return baseCp[level];
     }
 
     /**
@@ -161,7 +130,7 @@ public class PlayerTemplate extends CreatureTemplate {
      * @return the base HP Regeneration for given character level
      */
     public double getBaseHpRegen(int level) {
-        return _baseHpReg[level];
+        return baseHpReg[level];
     }
 
     /**
@@ -169,7 +138,7 @@ public class PlayerTemplate extends CreatureTemplate {
      * @return the base MP Regeneration for given character level
      */
     public double getBaseMpRegen(int level) {
-        return _baseMpReg[level];
+        return baseMpReg[level];
     }
 
     /**
@@ -177,35 +146,35 @@ public class PlayerTemplate extends CreatureTemplate {
      * @return the base HP Regeneration for given character level
      */
     public double getBaseCpRegen(int level) {
-        return _baseCpReg[level];
+        return baseCpReg[level];
     }
 
     /**
-     * @param slotId id of inventory slot to return value
+     * @param slot inventory slot to return value
      * @return defense value of character for EMPTY given slot
      */
-    public int getBaseDefBySlot(int slotId) {
-        return _baseSlotDef.containsKey(slotId) ? _baseSlotDef.get(slotId) : 0;
+    public int getBaseDefBySlot(InventorySlot slot) {
+        return baseSlotDef.getOrDefault(slot, 0);
     }
 
     /**
      * @return the template collision height for female characters.
      */
     public double getFCollisionHeightFemale() {
-        return _fCollisionHeightFemale;
+        return fCollisionHeightFemale;
     }
 
     /**
      * @return the template collision radius for female characters.
      */
     public double getFCollisionRadiusFemale() {
-        return _fCollisionRadiusFemale;
+        return fCollisionRadiusFemale;
     }
 
     /**
      * @return the safe fall height.
      */
     public int getSafeFallHeight() {
-        return _baseSafeFallHeight;
+        return baseSafeFallHeight;
     }
 }

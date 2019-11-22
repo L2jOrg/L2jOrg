@@ -1998,7 +1998,7 @@ public final class Player extends Playable {
             var bodyPart = BodyPart.fromEquippedPaperdoll(item);
             // we can't unequip talisman by body slot
             if (bodyPart.isAnyOf(TALISMAN, BROOCH_JEWEL, AGATHION, ARTIFACT)) {
-                modifiedItems = inventory.unEquipItemInSlotAndRecord(item.getLocationSlot());
+                modifiedItems = inventory.unEquipItemInSlotAndRecord(InventorySlot.fromId(item.getLocationSlot()));
             } else {
                 modifiedItems = inventory.unEquipItemInBodySlotAndRecord(bodyPart);
             }
@@ -3918,7 +3918,7 @@ public final class Player extends Playable {
             } else {
                 addItem("Pickup", target, null, true);
                 // Auto-Equip arrows/bolts if player has a bow/crossbow and player picks up arrows/bolts.
-                final Item weapon = inventory.getPaperdollItem(Inventory.PAPERDOLL_RHAND);
+                final Item weapon = inventory.getPaperdollItem(InventorySlot.RIGHT_HAND);
                 if (weapon != null) {
                     final EtcItem etcItem = target.getEtcItem();
                     if (etcItem != null) {
@@ -4067,7 +4067,7 @@ public final class Player extends Playable {
      */
     @Override
     public Item getActiveWeaponInstance() {
-        return inventory.getPaperdollItem(Inventory.PAPERDOLL_RHAND);
+        return inventory.getPaperdollItem(InventorySlot.RIGHT_HAND);
     }
 
     /**
@@ -4084,11 +4084,11 @@ public final class Player extends Playable {
     }
 
     public Item getChestArmorInstance() {
-        return inventory.getPaperdollItem(Inventory.PAPERDOLL_CHEST);
+        return inventory.getPaperdollItem(InventorySlot.CHEST);
     }
 
     public Item getLegsArmorInstance() {
-        return inventory.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
+        return inventory.getPaperdollItem(InventorySlot.LEGS);
     }
 
     public Armor getActiveChestArmorItem() {
@@ -4121,7 +4121,7 @@ public final class Player extends Playable {
             }
         }
         if (armor != null) {
-            if (((inventory.getPaperdollItem(CHEST.paperdool()).getBodyPart() == BodyPart.FULL_ARMOR) && (armor.getItemType() == ArmorType.HEAVY))) {
+            if (((inventory.getPaperdollItem(CHEST.slot()).getBodyPart() == BodyPart.FULL_ARMOR) && (armor.getItemType() == ArmorType.HEAVY))) {
                 return true;
             }
         }
@@ -4138,7 +4138,7 @@ public final class Player extends Playable {
             }
         }
         if (armor != null) {
-            if (((inventory.getPaperdollItem(CHEST.paperdool()).getBodyPart() == BodyPart.FULL_ARMOR) && (armor.getItemType() == ArmorType.LIGHT))) {
+            if (((inventory.getPaperdollItem(CHEST.slot()).getBodyPart() == BodyPart.FULL_ARMOR) && (armor.getItemType() == ArmorType.LIGHT))) {
                 return true;
             }
         }
@@ -4155,7 +4155,7 @@ public final class Player extends Playable {
             }
         }
         if (armor != null) {
-            if (((inventory.getPaperdollItem(BodyPart.CHEST.paperdool()).getBodyPart() == BodyPart.FULL_ARMOR) && (armor.getItemType() == ArmorType.MAGIC))) {
+            if (((inventory.getPaperdollItem(BodyPart.CHEST.slot()).getBodyPart() == BodyPart.FULL_ARMOR) && (armor.getItemType() == ArmorType.MAGIC))) {
                 return true;
             }
         }
@@ -4167,7 +4167,7 @@ public final class Player extends Playable {
      */
     @Override
     public Item getSecondaryWeaponInstance() {
-        return inventory.getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+        return inventory.getPaperdollItem(InventorySlot.LEFT_HAND);
     }
 
     /**
@@ -4176,7 +4176,7 @@ public final class Player extends Playable {
      */
     @Override
     public ItemTemplate getSecondaryWeaponItem() {
-        final Item item = inventory.getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+        final Item item = inventory.getPaperdollItem(InventorySlot.LEFT_HAND);
         if (item != null) {
             return item.getTemplate();
         }
@@ -8046,11 +8046,7 @@ public final class Player extends Playable {
             // Remove active item skills before saving char to database
             // because next time when choosing this class, weared items can
             // be different
-            for (Item item : inventory.getPaperdollItems(Item::isAugmented)) {
-                if ((item != null) && item.isEquipped()) {
-                    item.getAugmentation().removeBonus(this);
-                }
-            }
+            inventory.forEachEquippedItem(item -> item.getAugmentation().removeBonus(this), Item::isAugmented);
 
             // abort any kind of cast.
             abortCast();

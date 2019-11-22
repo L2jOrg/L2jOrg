@@ -1,6 +1,7 @@
 package org.l2j.gameserver.engine.item.container.listener;
 
 import org.l2j.gameserver.api.item.PlayerInventoryListener;
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
@@ -25,11 +26,10 @@ public final class ItemSkillsListener implements PlayerInventoryListener {
     private static final Logger LOGGER = LoggerFactory.getLogger(ItemSkillsListener.class);
 
     private ItemSkillsListener() {
-
     }
 
     @Override
-    public void notifyUnequiped(int slot, Item item, Inventory inventory) {
+    public void notifyUnequiped(InventorySlot slot, Item item, Inventory inventory) {
         if (!isPlayer(inventory.getOwner())) {
             return;
         }
@@ -39,34 +39,27 @@ public final class ItemSkillsListener implements PlayerInventoryListener {
         final AtomicBoolean update = new AtomicBoolean();
         final AtomicBoolean updateTimestamp = new AtomicBoolean();
 
-        // Remove augmentation bonuses on unequip
         if (item.isAugmented()) {
             item.getAugmentation().removeBonus(player);
         }
 
-        // Recalculate all stats
         player.getStat().recalculateStats(true);
 
-        it.forEachSkill(ItemSkillType.ON_ENCHANT, holder ->
-        {
+        it.forEachSkill(ItemSkillType.ON_ENCHANT, holder -> {
             if(verifySkillActiveIfAddtionalAgathion(slot, holder)) {
                 return;
             }
-            // Remove skills bestowed from +4 armor
+
             if (item.getEnchantLevel() >= holder.getValue()) {
                 player.removeSkill(holder.getSkill(), false, holder.getSkill().isPassive());
                 update.compareAndSet(false, true);
             }
         });
 
-        // Clear enchant bonus
         item.clearEnchantStats();
-
-        // Clear SA Bonus
         item.clearSpecialAbilities();
 
-        it.forEachSkill(ItemSkillType.NORMAL, holder ->
-        {
+        it.forEachSkill(ItemSkillType.NORMAL, holder -> {
             if(verifySkillActiveIfAddtionalAgathion(slot, holder)) {
                 return;
             }
@@ -77,7 +70,7 @@ public final class ItemSkillsListener implements PlayerInventoryListener {
                 player.removeSkill(Skill, false, Skill.isPassive());
                 update.compareAndSet(false, true);
             } else {
-                LOGGER.warn("Inventory.ItemSkillsListener.Weapon: Incorrect skill: " + holder);
+                LOGGER.warn("Incorrect skill: {}", holder);
             }
         });
 
@@ -100,42 +93,24 @@ public final class ItemSkillsListener implements PlayerInventoryListener {
 
                     final Skill skill = holder.getSkill();
                     if (skill != null) {
-                        player.addSkill(skill, false);
-
-                        if (skill.isActive()) {
-                            if (!player.hasSkillReuse(skill.getReuseHashCode())) {
-                                final int equipDelay = item.getEquipReuseDelay();
-                                if (equipDelay > 0) {
-                                    player.addTimeStamp(skill, equipDelay);
-                                    player.disableSkill(skill, equipDelay);
-                                }
-                                updateTimestamp.compareAndSet(false, true);
-                            }
-                        }
-                        update.compareAndSet(false, true);
+                        applySkillOnPlayer(item, skill, player, update, updateTimestamp);
                     }
                 });
             }
         }
 
-        // Must check all equipped item for enchant conditions.
-        for (Item equipped : inventory.getPaperdollItems())
-        {
-            equipped.getTemplate().forEachSkill(ItemSkillType.ON_ENCHANT, holder ->
-            {
-                // Add skills bestowed from +4 armor
-                if (equipped.getEnchantLevel() >= holder.getValue())
-                {
-                    final Skill skill = holder.getSkill();
-                    // Check passive skill conditions.
-                    if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, player, player))
-                    {
-                        player.removeSkill(holder.getSkill(), false, holder.getSkill().isPassive());
-                        update.compareAndSet(false, true);
-                    }
+
+        inventory.forEachEquippedItem(equipped -> equipped.forEachSkill(ItemSkillType.ON_ENCHANT, holder -> {
+            if (equipped.getEnchantLevel() >= holder.getValue()) {
+                final Skill skill = holder.getSkill();
+
+                if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, player, player)) {
+                    player.removeSkill(holder.getSkill(), false, holder.getSkill().isPassive());
+                    update.compareAndSet(false, true);
                 }
-            });
-        }
+            }
+        }));
+
         // Must check for toggle skill item conditions.
         for (Skill skill : player.getAllSkills())
         {
@@ -167,8 +142,24 @@ public final class ItemSkillsListener implements PlayerInventoryListener {
         }
     }
 
+    private void applySkillOnPlayer(Item item, Skill skill, Player player, AtomicBoolean update, AtomicBoolean updateTimestamp) {
+        player.addSkill(skill, false);
+
+        if (skill.isActive()) {
+            if (!player.hasSkillReuse(skill.getReuseHashCode())) {
+                final int equipDelay = item.getEquipReuseDelay();
+                if (equipDelay > 0) {
+                    player.addTimeStamp(skill, equipDelay);
+                    player.disableSkill(skill, equipDelay);
+                }
+                updateTimestamp.compareAndSet(false, true);
+            }
+        }
+        update.compareAndSet(false, true);
+    }
+
     @Override
-    public void notifyEquiped(int slot, Item item, Inventory inventory) {
+    public void notifyEquiped(InventorySlot slot, Item item, Inventory inventory) {
         if (!isPlayer(inventory.getOwner())) {
             return;
         }
@@ -197,16 +188,7 @@ public final class ItemSkillsListener implements PlayerInventoryListener {
                 return;
             }
             // Add skills bestowed from +4 armor
-            if (item.getEnchantLevel() >= holder.getValue()) {
-                final Skill skill = holder.getSkill();
-                // Check passive skill conditions.
-                if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, player, player))
-                {
-                    return;
-                }
-                player.addSkill(skill, false);
-                update.compareAndSet(false, true);
-            }
+            applyEnchantSkill(item, player, holder, update);
         });
 
         // Apply enchant stats
@@ -229,43 +211,13 @@ public final class ItemSkillsListener implements PlayerInventoryListener {
                 {
                     return;
                 }
-                player.addSkill(skill, false);
-
-                if (skill.isActive()) {
-                    if (!player.hasSkillReuse(skill.getReuseHashCode())) {
-                        final int equipDelay = item.getEquipReuseDelay();
-                        if (equipDelay > 0) {
-                            player.addTimeStamp(skill, equipDelay);
-                            player.disableSkill(skill, equipDelay);
-                        }
-                        updateTimestamp.compareAndSet(false, true);
-                    }
-                }
-                update.compareAndSet(false, true);
+                applySkillOnPlayer(item, skill, player, update, updateTimestamp);
             } else {
                 LOGGER.warn("Inventory.ItemSkillsListener.Weapon: Incorrect skill: " + holder);
             }
         });
 
-        // Must check all equipped item for enchant conditions.
-        for (Item equipped : inventory.getPaperdollItems())
-        {
-            equipped.getTemplate().forEachSkill(ItemSkillType.ON_ENCHANT, holder ->
-            {
-                // Add skills bestowed from +4 armor
-                if (equipped.getEnchantLevel() >= holder.getValue())
-                {
-                    final Skill skill = holder.getSkill();
-                    // Check passive skill conditions.
-                    if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, player, player))
-                    {
-                        return;
-                    }
-                    player.addSkill(skill, false);
-                    update.compareAndSet(false, true);
-                }
-            });
-        }
+        inventory.forEachEquippedItem(equipped -> equipped.forEachSkill(ItemSkillType.ON_ENCHANT, holder -> applyEnchantSkill(equipped, player, holder, update)));
 
         // Apply skill, if weapon have "skills on equip"
         item.getTemplate().forEachSkill(ItemSkillType.ON_EQUIP, holder -> {
@@ -285,8 +237,20 @@ public final class ItemSkillsListener implements PlayerInventoryListener {
         }
     }
 
-    private boolean verifySkillActiveIfAddtionalAgathion(int slot, ItemSkillHolder holder) {
-        if(slot > Inventory.PAPERDOLL_AGATHION1 && slot <= Inventory.PAPERDOLL_AGATHION5) {
+    private void applyEnchantSkill(Item item, Player player, ItemSkillHolder holder, AtomicBoolean update) {
+        if (item.getEnchantLevel() >= holder.getValue()) {
+            final Skill skill = holder.getSkill();
+            // Check passive skill conditions.
+            if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, player, player)) {
+                return;
+            }
+            player.addSkill(skill, false);
+            update.compareAndSet(false, true);
+        }
+    }
+
+    private boolean verifySkillActiveIfAddtionalAgathion(InventorySlot slot, ItemSkillHolder holder) {
+        if(slot != InventorySlot.AGATHION1 &&  InventorySlot.agathions().contains(slot)) {
             return holder.getSkill().isActive();
         }
         return false;

@@ -5,6 +5,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.api.item.InventoryListener;
 import org.l2j.gameserver.data.xml.impl.ArmorSetsData;
 import org.l2j.gameserver.engine.item.ItemEngine;
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.ArmorSet;
 import org.l2j.gameserver.model.PcCondOverride;
@@ -25,14 +26,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.function.Predicate;
-import java.util.stream.Collectors;
+import java.util.function.*;
 
 import static java.lang.Math.min;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.util.Util.falseIfNullOrElse;
-import static org.l2j.commons.util.Util.isBetween;
+import static org.l2j.commons.util.Util.*;
 import static org.l2j.gameserver.model.items.BodyPart.*;
 import static org.l2j.gameserver.model.items.CommonItem.WEDDING_BOUQUET;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
@@ -110,9 +109,9 @@ public abstract class Inventory extends ItemContainer {
     public static final int PAPERDOLL_ARTIFACT21 = 58; // Artifact Support
     public static final int PAPERDOLL_TOTALSLOTS = 59;
     // Speed percentage mods
-    public static final double MAX_ARMOR_WEIGHT = 12000;
     protected static final Logger LOGGER = LoggerFactory.getLogger(Inventory.class);
-    private final Item[] paperdoll;
+
+    private final EnumMap<InventorySlot, Item> paperdoll;
     private final Set<InventoryListener> listeners;
     // protected to be accessed from child classes only
     protected int _totalWeight;
@@ -124,7 +123,7 @@ public abstract class Inventory extends ItemContainer {
      * Constructor of the inventory
      */
     protected Inventory() {
-        paperdoll = new Item[PAPERDOLL_TOTALSLOTS];
+        paperdoll = new EnumMap<>(InventorySlot.class);
         listeners = new HashSet<>();
 
         // common
@@ -230,9 +229,12 @@ public abstract class Inventory extends ItemContainer {
     @Override
     protected boolean removeItem(Item item) {
         // Unequip item if equiped
-        for (int i = 0; i < paperdoll.length; i++) {
-            if (paperdoll[i] == item) {
-                unEquipItemInSlot(i);
+        if(item.isEquipped()) {
+            for (var entry : paperdoll.entrySet()) {
+                if(entry.getValue().equals(item)) {
+                    unEquipItemInSlot(entry.getKey());
+                    break;
+                }
             }
         }
         return super.removeItem(item);
@@ -242,16 +244,16 @@ public abstract class Inventory extends ItemContainer {
      * @param slot the slot.
      * @return the item in the paperdoll slot
      */
-    public Item getPaperdollItem(int slot) {
-        return paperdoll[slot];
+    public Item getPaperdollItem(InventorySlot slot) {
+        return paperdoll.get(slot);
     }
 
     /**
      * @param slot the slot.
      * @return {@code true} if specified paperdoll slot is empty, {@code false} otherwise
      */
-    public boolean isPaperdollSlotEmpty(int slot) {
-        return paperdoll[slot] == null;
+    public boolean isPaperdollSlotEmpty(InventorySlot slot) {
+        return !paperdoll.containsKey(slot);
     }
 
     /**
@@ -261,10 +263,10 @@ public abstract class Inventory extends ItemContainer {
      * @return Item
      */
     public Item getItemByBodyPart(BodyPart bodyPart) {
-        if(bodyPart.paperdool() == -1) {
+        if(bodyPart.slot() == InventorySlot.NONE) {
             return null;
         }
-        return paperdoll[bodyPart.paperdool()];
+        return paperdoll.get(bodyPart.slot());
     }
 
     /**
@@ -273,12 +275,8 @@ public abstract class Inventory extends ItemContainer {
      * @param slot : int designating the slot
      * @return int designating the ID of the item
      */
-    public int getPaperdollItemId(int slot) {
-        final Item item = paperdoll[slot];
-        if (item != null) {
-            return item.getId();
-        }
-        return 0;
+    public int getPaperdollItemId(InventorySlot slot) {
+        return zeroIfNullOrElse(paperdoll.get(slot), Item::getId);
     }
 
     /**
@@ -287,14 +285,12 @@ public abstract class Inventory extends ItemContainer {
      * @param slot : int designating the slot
      * @return int designating the ID of the item
      */
-    public int getPaperdollItemDisplayId(int slot) {
-        final Item item = paperdoll[slot];
-        return (item != null) ? item.getDisplayId() : 0;
+    public int getPaperdollItemDisplayId(InventorySlot slot) {
+        return zeroIfNullOrElse(paperdoll.get(slot), Item::getDisplayId);
     }
 
-    public VariationInstance getPaperdollAugmentation(int slot) {
-        final Item item = paperdoll[slot];
-        return (item != null) ? item.getAugmentation() : null;
+    public VariationInstance getPaperdollAugmentation(InventorySlot slot) {
+        return computeIfNonNull(paperdoll.get(slot), Item::getAugmentation);
     }
 
     /**
@@ -303,9 +299,8 @@ public abstract class Inventory extends ItemContainer {
      * @param slot : int pointing out the slot
      * @return int designating the objectID
      */
-    public int getPaperdollObjectId(int slot) {
-        final Item item = paperdoll[slot];
-        return (item != null) ? item.getObjectId() : 0;
+    public int getPaperdollObjectId(InventorySlot slot) {
+        return zeroIfNullOrElse(paperdoll.get(slot), Item::getObjectId);
     }
 
     /**
@@ -334,37 +329,23 @@ public abstract class Inventory extends ItemContainer {
      * @param item : Item pointing out the item to add in slot
      * @return Item designating the item placed in the slot before
      */
-    public synchronized Item setPaperdollItem(int slot, Item item) {
-        final Item old = paperdoll[slot];
+    public synchronized Item setPaperdollItem(InventorySlot slot, Item item) {
+        var old = paperdoll.get(slot);
         if (old != item) {
-            if (old != null) {
-                paperdoll[slot] = null;
-                // Put old item from paperdoll slot to base location
+            if (nonNull(old)) {
+                paperdoll.remove(slot);
+
                 old.setItemLocation(getBaseLocation());
                 old.setLastChange(Item.MODIFIED);
-                // Get the mask for paperdoll
-                int mask = 0;
-                for (int i = 0; i < PAPERDOLL_TOTALSLOTS; i++) {
-                    final Item pi = paperdoll[i];
-                    if (pi != null) {
-                        mask |= pi.getTemplate().getItemMask();
-                    }
-                }
-                _wearedMask = mask;
-                // Notify all paperdoll listener in order to unequip old item in slot
-                for (InventoryListener listener : listeners) {
-                    if (listener == null) {
-                        continue;
-                    }
 
-                    listener.notifyUnequiped(slot, old, this);
-                }
+                _wearedMask = paperdoll.values().stream().mapToInt(Item::getItemMask).reduce(0, (l, r) -> l | r);
+                listeners.forEach(l -> l.notifyUnequiped(slot, old, this));
                 old.updateDatabase();
             }
-            // Add new item in slot of paperdoll
-            if (item != null) {
-                paperdoll[slot] = item;
-                item.setItemLocation(getEquipLocation(), slot);
+
+            if (nonNull(item)) {
+                paperdoll.put(slot, item);
+                item.setItemLocation(getEquipLocation(), slot.getId());
                 item.setLastChange(Item.MODIFIED);
                 _wearedMask |= item.getTemplate().getItemMask();
                 for (InventoryListener listener : listeners) {
@@ -417,18 +398,18 @@ public abstract class Inventory extends ItemContainer {
      * @param pdollSlot : int designating the slot
      * @return Item designating the item in slot before change
      */
-    public Item unEquipItemInSlot(int pdollSlot) {
+    public Item unEquipItemInSlot(InventorySlot pdollSlot) {
         return setPaperdollItem(pdollSlot, null);
     }
 
     /**
      * Unequips item in slot and returns alterations<BR>
-     * <B>If you dont need return value use {@link Inventory#unEquipItemInSlot(int)} instead</B>
+     * <B>If you dont need return value use {@link Inventory#unEquipItemInSlot(InventorySlot)} instead</B>
      *
      * @param slot : int designating the slot
      * @return Item[] : list of items altered
      */
-    public Set<Item> unEquipItemInSlotAndRecord(int slot) {
+    public Set<Item> unEquipItemInSlotAndRecord(InventorySlot slot) {
         final ChangeRecorder recorder = newRecorder();
 
         try {
@@ -449,17 +430,17 @@ public abstract class Inventory extends ItemContainer {
      * @return {@link Item} designating the item placed in the slot
      */
     public Item unEquipItemInBodySlot(BodyPart slot) {
-        int pdollSlot = switch (slot) {
+        InventorySlot pdollSlot = switch (slot) {
             case HAIR_ALL -> {
-                setPaperdollItem(HAIR.paperdool(), null);
-                yield HAIR.paperdool();
+                setPaperdollItem(HAIR.slot(), null);
+                yield HAIR.slot();
             }
-            case TWO_HAND -> RIGHT_HAND.paperdool();
-            case ALL_DRESS, FULL_ARMOR -> CHEST.paperdool();
-            default -> slot.paperdool();
+            case TWO_HAND -> RIGHT_HAND.slot();
+            case ALL_DRESS, FULL_ARMOR -> CHEST.slot();
+            default -> slot.slot();
         };
 
-        if (pdollSlot >= 0) {
+        if (pdollSlot != InventorySlot.NONE) {
             final Item old = setPaperdollItem(pdollSlot, null);
             if (old != null) {
                 if (isPlayer(getOwner())) {
@@ -505,7 +486,7 @@ public abstract class Inventory extends ItemContainer {
         var bodyPart = item.getBodyPart();
 
         if(bodyPart.isAnyOf(BodyPart.TWO_HAND, LEFT_HAND, BodyPart.RIGHT_HAND, BodyPart.LEGS, BodyPart.FEET, BodyPart.GLOVES, BodyPart.HEAD)) {
-            var formal = getPaperdollItem(BodyPart.CHEST.paperdool());
+            var formal = getPaperdollItem(InventorySlot.CHEST);
             if(nonNull(formal) && item.getId() != WEDDING_BOUQUET && formal.getBodyPart() == BodyPart.ALL_DRESS) {
                 return;
             }
@@ -526,78 +507,78 @@ public abstract class Inventory extends ItemContainer {
             case BROOCH_JEWEL -> equipBroochJewel(item);
             case AGATHION -> equipAgathion(item);
             case ARTIFACT -> equipArtifact(item);
-            case NECK, RIGHT_HAND, CHEST, FEET, GLOVES, HEAD, UNDERWEAR, BACK, LEFT_BRACELET, RIGHT_BRACELET, BELT, BROOCH, ARTIFACT_BOOK -> setPaperdollItem(bodyPart.paperdool(), item);
+            case NECK, RIGHT_HAND, CHEST, FEET, GLOVES, HEAD, UNDERWEAR, BACK, LEFT_BRACELET, RIGHT_BRACELET, BELT, BROOCH, ARTIFACT_BOOK -> setPaperdollItem(bodyPart.slot(), item);
             default -> LOGGER.warn("Unknown body slot {} for Item ID: {}", bodyPart, item.getId());
         }
     }
 
     private void equipAllDress(Item item) {
-        setPaperdollItem(LEGS.paperdool(), null);
-        setPaperdollItem(LEFT_HAND.paperdool(), null);
-        setPaperdollItem(RIGHT_HAND.paperdool(), null);
-        setPaperdollItem(HEAD.paperdool(), null);
-        setPaperdollItem(FEET.paperdool(), null);
-        setPaperdollItem(GLOVES.paperdool(), null);
-        setPaperdollItem(CHEST.paperdool(), item);
+        setPaperdollItem(LEGS.slot(), null);
+        setPaperdollItem(LEFT_HAND.slot(), null);
+        setPaperdollItem(RIGHT_HAND.slot(), null);
+        setPaperdollItem(HEAD.slot(), null);
+        setPaperdollItem(FEET.slot(), null);
+        setPaperdollItem(GLOVES.slot(), null);
+        setPaperdollItem(CHEST.slot(), item);
     }
 
     private void equipHairAll(Item item) {
-        setPaperdollItem(HAIR2.paperdool(), null);
-        setPaperdollItem(HAIR.paperdool(), item);
+        setPaperdollItem(HAIR2.slot(), null);
+        setPaperdollItem(HAIR.slot(), item);
     }
 
     private void equipHair2(Item item) {
-        var hair = getPaperdollItem(HAIR_ALL.paperdool());
+        var hair = getPaperdollItem(HAIR_ALL.slot());
         if (nonNull(hair) && (hair.getBodyPart() == BodyPart.HAIR_ALL)) {
-            setPaperdollItem(HAIR.paperdool(), null);
+            setPaperdollItem(HAIR.slot(), null);
         }
-        setPaperdollItem(HAIR2.paperdool(), item);
+        setPaperdollItem(HAIR2.slot(), item);
     }
 
     private void equipHair(Item item) {
-        var hair = getPaperdollItem(HAIR_ALL.paperdool());
+        var hair = getPaperdollItem(HAIR_ALL.slot());
         if (nonNull(hair) && hair.getBodyPart() == BodyPart.HAIR_ALL) {
-            setPaperdollItem(HAIR2.paperdool(), null);
+            setPaperdollItem(HAIR2.slot(), null);
         }
-        setPaperdollItem(HAIR.paperdool(), item);
+        setPaperdollItem(HAIR.slot(), item);
     }
 
     private void equipLeg(Item item) {
-        var chest = getPaperdollItem(CHEST.paperdool());
+        var chest = getPaperdollItem(CHEST.slot());
         if (nonNull(chest) && chest.getBodyPart() == BodyPart.FULL_ARMOR) {
-            setPaperdollItem(CHEST.paperdool(), null);
+            setPaperdollItem(CHEST.slot(), null);
         }
-        setPaperdollItem(LEGS.paperdool(), item);
+        setPaperdollItem(LEGS.slot(), item);
     }
 
     private void equipFullArmor(Item item) {
-        setPaperdollItem(LEGS.paperdool(), null);
-        setPaperdollItem(CHEST.paperdool(), item);
+        setPaperdollItem(LEGS.slot(), null);
+        setPaperdollItem(CHEST.slot(), item);
     }
 
     private void equipFinger(Item item) {
-        if(isNull( getPaperdollItem(LEFT_FINGER.paperdool())) || nonNull(getPaperdollItem(RIGHT_FINGER.paperdool()))) {
-            setPaperdollItem(LEFT_FINGER.paperdool(), item);
+        if(isNull( getPaperdollItem(LEFT_FINGER.slot())) || nonNull(getPaperdollItem(RIGHT_FINGER.slot()))) {
+            setPaperdollItem(LEFT_FINGER.slot(), item);
         } else {
-            setPaperdollItem(RIGHT_FINGER.paperdool(), item);
+            setPaperdollItem(RIGHT_FINGER.slot(), item);
         }
     }
 
     private void equipEar(Item item) {
-        if(isNull( getPaperdollItem(LEFT_EAR.paperdool())) || nonNull( getPaperdollItem(RIGHT_EAR.paperdool()))) {
-            setPaperdollItem(LEFT_EAR.paperdool(), item);
+        if(isNull( getPaperdollItem(LEFT_EAR.slot())) || nonNull( getPaperdollItem(RIGHT_EAR.slot()))) {
+            setPaperdollItem(LEFT_EAR.slot(), item);
         } else {
-            setPaperdollItem(RIGHT_EAR.paperdool(), item);
+            setPaperdollItem(RIGHT_EAR.slot(), item);
         }
     }
 
     private void equipLeftHand(Item item) {
-        var rightHand = getPaperdollItem(RIGHT_HAND.paperdool());
+        var rightHand = getPaperdollItem(RIGHT_HAND.slot());
 
         if(nonNull(rightHand) && rightHand.getBodyPart() == TWO_HAND && !(isEquipArrow(rightHand, item) || isEquipBolt(rightHand, item) || isEquipLure(rightHand, item))) {
-            setPaperdollItem(RIGHT_HAND.paperdool(), null);
+            setPaperdollItem(RIGHT_HAND.slot(), null);
         }
-        setPaperdollItem(LEFT_HAND.paperdool(), item);
+        setPaperdollItem(LEFT_HAND.slot(), item);
     }
 
     private boolean isEquipLure(Item rightHand, Item item) {
@@ -613,8 +594,8 @@ public abstract class Inventory extends ItemContainer {
     }
 
     private void equipTwoHand(Item item) {
-        setPaperdollItem(LEFT_HAND.paperdool(), null);
-        setPaperdollItem(RIGHT_HAND.paperdool(), item);
+        setPaperdollItem(LEFT_HAND.slot(), null);
+        setPaperdollItem(RIGHT_HAND.slot(), item);
     }
 
     private void equipArtifact(Item item) {
@@ -625,38 +606,38 @@ public abstract class Inventory extends ItemContainer {
         // FIXME non existent ids
         // Balance Artifact Equip
         if(isBetween(item.getId(), 48969, 48985)) {
-            if(checkEquipArtifact(item, BodyPart.balanceArtifact(), 4 * getArtifactSlots())) {
+            if(checkEquipArtifact(item, InventorySlot.balanceArtifacts())) {
                 return;
             }
-            setPaperdollItem(BodyPart.balanceArtifact(), item);
+            setPaperdollItem(InventorySlot.ARTIFACT1, item);
         }
         // Spirit Artifact Equip
         else if(isBetween(item.getId(), 48957, 48960)) {
-            if(checkEquipArtifact(item, BodyPart.spiritArtifact(), getArtifactSlots())) {
+            if(checkEquipArtifact(item, InventorySlot.spiritArtifacts())) {
                 return;
             }
-            setPaperdollItem(BodyPart.spiritArtifact(), item);
+            setPaperdollItem(InventorySlot.ARTIFACT13, item);
         }
         // Protection Artifact Equip
         else if(isBetween(item.getId(), 48961, 48964)) {
-            if(checkEquipArtifact(item, BodyPart.protectionArtifact(), getArtifactSlots())) {
+            if(checkEquipArtifact(item, InventorySlot.protectionArtifacts())) {
                 return;
             }
-            setPaperdollItem(BodyPart.protectionArtifact(), item);
+            setPaperdollItem(InventorySlot.ARTIFACT16, item);
         }
         // Support Artifact Equip
         else if(isBetween(item.getId(), 48965, 48968)) {
-            if(checkEquipArtifact(item, BodyPart.supportArtifact(), getArtifactSlots())) {
+            if(checkEquipArtifact(item, InventorySlot.supportArtifact())) {
                 return;
             }
-            setPaperdollItem(BodyPart.supportArtifact(), item);
+            setPaperdollItem(InventorySlot.ARTIFACT19, item);
         }
     }
 
-    private boolean checkEquipArtifact(Item item, int initialArtifact, int count) {
-        for (int i = initialArtifact; i < initialArtifact + count; i++) {
-            if (isNull(getPaperdollItem(i))) {
-                setPaperdollItem(i, item);
+    private boolean checkEquipArtifact(Item item, EnumSet<InventorySlot> slots) {
+        for (InventorySlot slot : slots) {
+            if(isPaperdollSlotEmpty(slot)) {
+                setPaperdollItem(slot, item);
                 return true;
             }
         }
@@ -667,43 +648,46 @@ public abstract class Inventory extends ItemContainer {
         if (getAgathionSlots() == 0) {
             return;
         }
-        equipOnSameOrEmpty(item, AGATHION.paperdool(), getAgathionSlots());
+        equipOnSameOrEmpty(item, InventorySlot.agathions(), getAgathionSlots());
     }
 
     private void equipBroochJewel(Item item) {
         if (getBroochJewelSlots() == 0) {
             return;
         }
-        equipOnSameOrEmpty(item, BROOCH_JEWEL.paperdool(), getBroochJewelSlots());
+        equipOnSameOrEmpty(item, InventorySlot.brochesJewel(), getBroochJewelSlots());
     }
 
     private void equipTalisman(Item item) {
         if (getTalismanSlots() == 0) {
             return;
         }
-        equipOnSameOrEmpty(item, TALISMAN.paperdool(), getTalismanSlots());
+        equipOnSameOrEmpty(item, InventorySlot.talismans(), getTalismanSlots());
     }
 
-    private void equipOnSameOrEmpty(Item item, int initialPaperdoll, int availableSlots) {
-        int emptyPaperdoll = -1;
+    private void equipOnSameOrEmpty(Item item, EnumSet<InventorySlot> slots, int availableSlots) {
+        if(availableSlots < 1 || slots.isEmpty()) {
+            return;
+        }
 
-        for (int i = initialPaperdoll; i < initialPaperdoll + availableSlots; i++) {
-            var paperdollItem = getPaperdollItem(i);
-            if (nonNull(paperdollItem)) {
-                if(paperdollItem.getId() == item.getId()) {
-                    setPaperdollItem(i, item);
-                    return;
-                }
+        InventorySlot emptySlot = null;
+        int i = 0;
+        for (InventorySlot slot : slots) {
+            if(i++ >= availableSlots) {
+                break;
             }
-            else if(emptyPaperdoll == -1) {
-                emptyPaperdoll = i;
+            if(!isPaperdollSlotEmpty(slot) && item.getId() == getPaperdollItemId(slot)) {
+                setPaperdollItem(slot, item);
+                return;
+            } else if(isNull(emptySlot)) {
+                emptySlot = slot;
             }
         }
 
-        if(emptyPaperdoll > 0) {
-            setPaperdollItem(emptyPaperdoll, item);
+        if(nonNull(emptySlot)) {
+            setPaperdollItem(emptySlot, item);
         } else {
-            setPaperdollItem(initialPaperdoll, item);
+            setPaperdollItem(slots.iterator().next(), item);
         }
     }
 
@@ -834,24 +818,10 @@ public abstract class Inventory extends ItemContainer {
      * Re-notify to paperdoll listeners every equipped item
      */
     public void reloadEquippedItems() {
-        int slot;
-
-        for (Item item : paperdoll) {
-            if (item == null) {
-                continue;
-            }
-
-            slot = item.getLocationSlot();
-
-            for (InventoryListener listener : listeners) {
-                if (listener == null) {
-                    continue;
-                }
-
-                listener.notifyUnequiped(slot, item, this);
-                listener.notifyEquiped(slot, item, this);
-            }
-        }
+        paperdoll.forEach((slot, item) -> listeners.forEach(l -> {
+            l.notifyUnequiped(slot, item, this);
+            l.notifyEquiped(slot, item, this);
+        }));
         if (isPlayer(getOwner())) {
             getOwner().sendPacket(new ExUserInfoEquipSlot(getOwner().getActingPlayer()));
         }
@@ -864,7 +834,7 @@ public abstract class Inventory extends ItemContainer {
 
         final Player player = getOwner().getActingPlayer();
         int maxSetEnchant = 0;
-        for (Item item : getPaperdollItems()) {
+        for (Item item : paperdoll.values()) {
             for (ArmorSet set : ArmorSetsData.getInstance().getSets(item.getId())) {
                 final int enchantEffect = set.getLowestSetEnchant(player);
                 if (enchantEffect > maxSetEnchant) {
@@ -876,7 +846,7 @@ public abstract class Inventory extends ItemContainer {
     }
 
     public int getWeaponEnchant() {
-        final Item item = getPaperdollItem(PAPERDOLL_RHAND);
+        final Item item = getPaperdollItem(InventorySlot.RIGHT_HAND);
         return item != null ? item.getEnchantLevel() : 0;
     }
 
@@ -932,9 +902,28 @@ public abstract class Inventory extends ItemContainer {
         for (Predicate<Item> additionalFilter : filters) {
             filter = filter.and(additionalFilter);
         }
-        return Arrays.stream(paperdoll).filter(filter).collect(Collectors.toCollection(LinkedList::new));
+        return new LinkedList<>(paperdoll.values());
     }
 
+    public double calcForEachEquippedItem(ToDoubleFunction<Item> function, double identity, DoubleBinaryOperator accumulator) {
+        return paperdoll.values().stream().mapToDouble(function).reduce(identity, accumulator);
+    }
+
+    public void forEachEquippedItem(Consumer<Item> action) {
+        paperdoll.values().forEach(action);
+    }
+
+    public void forEachEquippedItem(Consumer<Item> action, Predicate<Item> predicate) {
+        paperdoll.values().stream().filter(predicate).forEach(action);
+    }
+
+    public int countEquippedItems(Predicate<Item> predicate) {
+        return (int) paperdoll.values().stream().filter(predicate).count();
+    }
+
+    public boolean existsEquippedItem(Predicate<Item> predicate) {
+        return paperdoll.values().stream().anyMatch(predicate);
+    }
 
     private static final class ChangeRecorder implements InventoryListener {
         private final Set<Item> changed = ConcurrentHashMap.newKeySet();
@@ -944,12 +933,12 @@ public abstract class Inventory extends ItemContainer {
         }
 
         @Override
-        public void notifyEquiped(int slot, Item item, Inventory inventory) {
+        public void notifyEquiped(InventorySlot slot, Item item, Inventory inventory) {
             changed.add(item);
         }
 
         @Override
-        public void notifyUnequiped(int slot, Item item, Inventory inventory) {
+        public void notifyUnequiped(InventorySlot slot, Item item, Inventory inventory) {
             changed.add(item);
         }
 

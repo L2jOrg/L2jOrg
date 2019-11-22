@@ -1,6 +1,7 @@
 package org.l2j.gameserver.engine.item.container.listener;
 
 import org.l2j.gameserver.api.item.PlayerInventoryListener;
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.WeaponType;
@@ -15,7 +16,7 @@ public final class BowCrossRodListener implements PlayerInventoryListener {
     }
 
     @Override
-    public void notifyUnequiped(int slot, Item item, Inventory inventory) {
+    public void notifyUnequiped(InventorySlot slot, Item item, Inventory inventory) {
         if (slot != Inventory.PAPERDOLL_RHAND) {
             return;
         }
@@ -40,7 +41,7 @@ public final class BowCrossRodListener implements PlayerInventoryListener {
     }
 
     @Override
-    public void notifyEquiped(int slot, Item item, Inventory inventory) {
+    public void notifyEquiped(InventorySlot slot, Item item, Inventory inventory) {
         if (slot != Inventory.PAPERDOLL_RHAND) {
             return;
         }

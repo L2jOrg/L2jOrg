@@ -3,6 +3,7 @@ package org.l2j.gameserver.model.actor.transform;
 import io.github.joealisson.primitive.HashIntSet;
 import io.github.joealisson.primitive.IntSet;
 import org.l2j.gameserver.enums.InventoryBlockType;
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.Sex;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -365,7 +366,7 @@ public final class Transform implements IIdentifiable {
         return val;
     }
 
-    public int getBaseDefBySlot(Player player, int slot) {
+    public int getBaseDefBySlot(Player player, InventorySlot slot) {
         final int defaultValue = player.getTemplate().getBaseDefBySlot(slot);
         final TransformTemplate template = getTemplate(player);
 

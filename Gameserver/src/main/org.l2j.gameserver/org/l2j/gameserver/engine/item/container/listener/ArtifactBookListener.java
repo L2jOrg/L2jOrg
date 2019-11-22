@@ -1,6 +1,7 @@
 package org.l2j.gameserver.engine.item.container.listener;
 
 import org.l2j.gameserver.api.item.PlayerInventoryListener;
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.BodyPart;
 import org.l2j.gameserver.model.items.instance.Item;
@@ -12,7 +13,7 @@ public final class ArtifactBookListener implements PlayerInventoryListener {
     }
 
     @Override
-    public void notifyUnequiped(int slot, Item item, Inventory inventory) {
+    public void notifyUnequiped(InventorySlot slot, Item item, Inventory inventory) {
         if (item.getBodyPart() == BodyPart.ARTIFACT_BOOK) {
             inventory.unEquipItemInSlot(Inventory.PAPERDOLL_ARTIFACT1);
             inventory.unEquipItemInSlot(Inventory.PAPERDOLL_ARTIFACT2);
@@ -40,7 +41,7 @@ public final class ArtifactBookListener implements PlayerInventoryListener {
     }
 
     @Override
-    public void notifyEquiped(int slot, Item item, Inventory inventory) {
+    public void notifyEquiped(InventorySlot slot, Item item, Inventory inventory) {
     }
 
 

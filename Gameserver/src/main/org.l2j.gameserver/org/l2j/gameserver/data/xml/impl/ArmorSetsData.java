@@ -16,7 +16,7 @@ import org.w3c.dom.Node;
 import java.io.File;
 import java.nio.file.Path;
 import java.util.*;
-import java.util.stream.Stream;
+import java.util.stream.IntStream;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
@@ -116,7 +116,7 @@ public final class ArmorSetsData extends GameXmlReader {
                             }
                         }
 
-                        Stream.concat(set.getRequiredItems().stream(), set.getOptionalItems().stream()).forEach(itemHolder -> _armorSetItems.computeIfAbsent(itemHolder, key -> new ArrayList<>()).add(set));
+                        IntStream.concat(set.getRequiredItems().stream(), set.getOptionalItems().stream()).forEach(itemHolder -> _armorSetItems.computeIfAbsent(itemHolder, key -> new ArrayList<>()).add(set));
                     }
                 }
             }

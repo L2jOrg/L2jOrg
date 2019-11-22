@@ -1,6 +1,7 @@
 package org.l2j.gameserver.engine.item.container.listener;
 
 import org.l2j.gameserver.api.item.PlayerInventoryListener;
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.BodyPart;
 import org.l2j.gameserver.model.items.instance.Item;
@@ -17,16 +18,16 @@ public final class AgathionBraceletListener implements PlayerInventoryListener {
     }
 
     @Override
-    public void notifyUnequiped(int slot, Item item, Inventory inventory) {
+    public void notifyUnequiped(InventorySlot slot, Item item, Inventory inventory) {
         if (item.getBodyPart() == BodyPart.LEFT_BRACELET) {
-            for (int paperdoll = AGATHION.paperdool(); paperdoll < AGATHION.paperdool() + 5; paperdoll++) {
+            for (int paperdoll = AGATHION.slot(); paperdoll < AGATHION.slot() + 5; paperdoll++) {
                 inventory.unEquipItemInSlot(paperdoll);
             }
         }
     }
 
     @Override
-    public void notifyEquiped(int slot, Item item, Inventory inventory) {
+    public void notifyEquiped(InventorySlot slot, Item item, Inventory inventory) {
     }
 
 

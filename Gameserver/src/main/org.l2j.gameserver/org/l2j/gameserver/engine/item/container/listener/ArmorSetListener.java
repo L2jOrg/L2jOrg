@@ -2,6 +2,7 @@ package org.l2j.gameserver.engine.item.container.listener;
 
 import org.l2j.gameserver.api.item.PlayerInventoryListener;
 import org.l2j.gameserver.data.xml.impl.ArmorSetsData;
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.ArmorSet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ArmorsetSkillHolder;
@@ -17,6 +18,8 @@ import org.slf4j.LoggerFactory;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.function.Function;
+import java.util.function.IntFunction;
+import java.util.function.ToIntFunction;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
@@ -28,7 +31,7 @@ public final class ArmorSetListener implements PlayerInventoryListener {
 
     }
 
-    private static boolean applySkills(Player player, Item item, ArmorSet armorSet, Function<Item, Integer> idProvider) {
+    private static boolean applySkills(Player player, Item item, ArmorSet armorSet, ToIntFunction<Item> idProvider) {
         final long piecesCount = armorSet.getPiecesCount(player, idProvider);
         if (piecesCount >= armorSet.getMinimumPieces()) {
             // Applying all skills that matching the conditions
@@ -70,9 +73,9 @@ public final class ArmorSetListener implements PlayerInventoryListener {
         return false;
     }
 
-    private static boolean verifyAndApply(Player player, Item item, Function<Item, Integer> idProvider) {
+    private static boolean verifyAndApply(Player player, Item item, ToIntFunction<Item> idProvider) {
         boolean update = false;
-        final List<ArmorSet> armorSets = ArmorSetsData.getInstance().getSets(idProvider.apply(item));
+        final List<ArmorSet> armorSets = ArmorSetsData.getInstance().getSets(idProvider.applyAsInt(item));
         for (ArmorSet armorSet : armorSets) {
             if (applySkills(player, item, armorSet, idProvider)) {
                 update = true;
@@ -81,9 +84,9 @@ public final class ArmorSetListener implements PlayerInventoryListener {
         return update;
     }
 
-    private static boolean verifyAndRemove(Player player, Item item, Function<Item, Integer> idProvider) {
+    private static boolean verifyAndRemove(Player player, Item item, ToIntFunction<Item> idProvider) {
         boolean update = false;
-        final List<ArmorSet> armorSets = ArmorSetsData.getInstance().getSets(idProvider.apply(item));
+        final List<ArmorSet> armorSets = ArmorSetsData.getInstance().getSets(idProvider.applyAsInt(item));
         for (ArmorSet armorSet : armorSets) {
             // Remove all skills that doesn't matches the conditions
             for (ArmorsetSkillHolder holder : armorSet.getSkills()) {
@@ -111,7 +114,7 @@ public final class ArmorSetListener implements PlayerInventoryListener {
     }
 
     @Override
-    public void notifyEquiped(int slot, Item item, Inventory inventory) {
+    public void notifyEquiped(InventorySlot slot, Item item, Inventory inventory) {
         if (!isPlayer(inventory.getOwner())) {
             return;
         }
@@ -134,7 +137,7 @@ public final class ArmorSetListener implements PlayerInventoryListener {
     }
 
     @Override
-    public void notifyUnequiped(int slot, Item item, Inventory inventory) {
+    public void notifyUnequiped(InventorySlot slot, Item item, Inventory inventory) {
         if (!isPlayer(inventory.getOwner())) {
             return;
         }
