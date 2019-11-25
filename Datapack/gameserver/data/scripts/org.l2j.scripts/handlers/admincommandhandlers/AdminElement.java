@@ -1,32 +1,18 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.enums.AttributeType;
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.enchant.attribute.AttributeHolder;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.util.BuilderUtil;
 
+import static java.util.Objects.nonNull;
+import static org.l2j.gameserver.enums.InventorySlot.*;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -47,41 +33,39 @@ public class AdminElement implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, Player activeChar)
-	{
-		int armorType = -1;
+	public boolean useAdminCommand(String command, Player activeChar) {
+		InventorySlot armorType = null;
 		
 		if (command.startsWith("admin_setlh"))
 		{
-			armorType = Inventory.PAPERDOLL_HEAD;
+			armorType = HEAD;
 		}
 		else if (command.startsWith("admin_setlc"))
 		{
-			armorType = Inventory.PAPERDOLL_CHEST;
+			armorType = CHEST;
 		}
 		else if (command.startsWith("admin_setlg"))
 		{
-			armorType = Inventory.PAPERDOLL_GLOVES;
+			armorType = GLOVES;
 		}
 		else if (command.startsWith("admin_setlb"))
 		{
-			armorType = Inventory.PAPERDOLL_FEET;
+			armorType = FEET;
 		}
 		else if (command.startsWith("admin_setll"))
 		{
-			armorType = Inventory.PAPERDOLL_LEGS;
+			armorType = LEGS;
 		}
 		else if (command.startsWith("admin_setlw"))
 		{
-			armorType = Inventory.PAPERDOLL_RHAND;
+			armorType = RIGHT_HAND;
 		}
 		else if (command.startsWith("admin_setls"))
 		{
-			armorType = Inventory.PAPERDOLL_LHAND;
+			armorType = LEFT_HAND;
 		}
 		
-		if (armorType != -1)
-		{
+		if (nonNull(armorType )) {
 			try
 			{
 				final String[] args = command.split(" ");
@@ -112,7 +96,7 @@ public class AdminElement implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void setElement(Player activeChar, AttributeType type, int value, int armorType)
+	private void setElement(Player activeChar, AttributeType type, int value, InventorySlot armorType)
 	{
 		// get the target
 		WorldObject target = activeChar.getTarget();
@@ -135,7 +119,7 @@ public class AdminElement implements IAdminCommandHandler
 		
 		// only attempt to enchant if there is a weapon equipped
 		final Item parmorInstance = player.getInventory().getPaperdollItem(armorType);
-		if ((parmorInstance != null) && (parmorInstance.getLocationSlot() == armorType))
+		if ((parmorInstance != null) && (parmorInstance.getLocationSlot() == armorType.getId()))
 		{
 			itemInstance = parmorInstance;
 		}

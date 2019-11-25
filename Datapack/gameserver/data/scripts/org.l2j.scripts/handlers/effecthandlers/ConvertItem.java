@@ -1,10 +1,10 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
-import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.model.items.enchant.attribute.AttributeHolder;
 import org.l2j.gameserver.model.items.instance.Item;
@@ -50,9 +50,9 @@ public final class ConvertItem extends AbstractEffect {
 			return;
 		}
 		
-		Item wpn = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
+		Item wpn = player.getInventory().getPaperdollItem(InventorySlot.RIGHT_HAND);
 		if (isNull(wpn)) {
-			wpn = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+			wpn = player.getInventory().getPaperdollItem(InventorySlot.LEFT_HAND);
 		}
 		
 		if (!GameUtils.isWeapon(wpn) || wpn.isAugmented() || weaponItem.getChangeWeaponId() == 0) {

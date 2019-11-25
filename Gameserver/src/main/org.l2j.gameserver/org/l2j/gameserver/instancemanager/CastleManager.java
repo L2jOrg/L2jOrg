@@ -2,6 +2,7 @@ package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.InstanceListManager;
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.WorldObject;
@@ -139,7 +140,7 @@ public final class CastleManager implements InstanceListManager {
                     final Item circlet = player.getInventory().getItemByItemId(circletId);
                     if (circlet != null) {
                         if (circlet.isEquipped()) {
-                            player.getInventory().unEquipItemInSlot(circlet.getLocationSlot());
+                            player.getInventory().unEquipItemInSlot(InventorySlot.fromId(circlet.getLocationSlot()));
                         }
                         player.destroyItemByItemId("CastleCircletRemoval", circletId, 1, player, true);
                     }

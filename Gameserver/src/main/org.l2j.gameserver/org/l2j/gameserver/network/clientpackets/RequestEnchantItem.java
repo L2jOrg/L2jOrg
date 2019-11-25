@@ -3,6 +3,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.EnchantItemData;
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.world.World;
@@ -238,7 +239,7 @@ public final class RequestEnchantItem extends ClientPacket {
                                 client.sendPacket(sm);
                             }
 
-                            var unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(item.getLocationSlot());
+                            var unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(InventorySlot.fromId(item.getLocationSlot()));
                             for (Item itm : unequiped) {
                                 iu.addModifiedItem(itm);
                             }

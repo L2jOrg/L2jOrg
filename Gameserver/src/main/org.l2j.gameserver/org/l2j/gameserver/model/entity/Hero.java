@@ -23,6 +23,7 @@ import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.ClassListData;
 import org.l2j.gameserver.data.xml.impl.NpcData;
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
@@ -44,6 +45,8 @@ import java.util.Date;
 import java.util.*;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
+
+import static java.util.Objects.nonNull;
 
 
 /**
@@ -511,10 +514,10 @@ public class Hero {
 
             player.setHero(false);
 
-            for (int i = 0; i < Inventory.PAPERDOLL_TOTALSLOTS; i++) {
-                final Item equippedItem = player.getInventory().getPaperdollItem(i);
-                if ((equippedItem != null) && equippedItem.isHeroItem()) {
-                    player.getInventory().unEquipItemInSlot(i);
+            for (InventorySlot slot : InventorySlot.values()) {
+                var item = player.getInventory().getPaperdollItem(slot);
+                if(nonNull(item) && item.isHeroItem()) {
+                    player.getInventory().unEquipItemInSlot(slot);
                 }
             }
 

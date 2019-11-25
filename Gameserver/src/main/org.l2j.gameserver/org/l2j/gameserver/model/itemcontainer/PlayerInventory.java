@@ -6,6 +6,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.api.item.PlayerInventoryListener;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.InventoryBlockType;
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.TradeItem;
 import org.l2j.gameserver.model.TradeList;
@@ -841,7 +842,7 @@ public class PlayerInventory extends Inventory {
             return;
         }
 
-        final Item arrows = getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+        final Item arrows = getPaperdollItem(InventorySlot.LEFT_HAND);
 
         if ((arrows == null) || (arrows.getItemType() != type)) {
             return;

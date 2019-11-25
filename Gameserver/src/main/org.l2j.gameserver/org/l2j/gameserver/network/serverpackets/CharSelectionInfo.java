@@ -26,69 +26,6 @@ import java.util.List;
 
 
 public class CharSelectionInfo extends ServerPacket {
-    private static final int[] PAPERDOLL_ORDER = new int[]
-            {
-                    Inventory.PAPERDOLL_UNDER,
-                    Inventory.PAPERDOLL_REAR,
-                    Inventory.PAPERDOLL_LEAR,
-                    Inventory.PAPERDOLL_NECK,
-                    Inventory.PAPERDOLL_RFINGER,
-                    Inventory.PAPERDOLL_LFINGER,
-                    Inventory.PAPERDOLL_HEAD,
-                    Inventory.PAPERDOLL_RHAND,
-                    Inventory.PAPERDOLL_LHAND,
-                    Inventory.PAPERDOLL_GLOVES,
-                    Inventory.PAPERDOLL_CHEST,
-                    Inventory.PAPERDOLL_LEGS,
-                    Inventory.PAPERDOLL_FEET,
-                    Inventory.PAPERDOLL_CLOAK,
-                    Inventory.PAPERDOLL_RHAND,
-                    Inventory.PAPERDOLL_HAIR,
-                    Inventory.PAPERDOLL_HAIR2,
-                    Inventory.PAPERDOLL_RBRACELET,
-                    Inventory.PAPERDOLL_LBRACELET,
-                    Inventory.PAPERDOLL_AGATHION1, // 152
-                    Inventory.PAPERDOLL_AGATHION2, // 152
-                    Inventory.PAPERDOLL_AGATHION3, // 152
-                    Inventory.PAPERDOLL_AGATHION4, // 152
-                    Inventory.PAPERDOLL_AGATHION5, // 152
-                    Inventory.TALISMAN1,
-                    Inventory.TALISMAN2,
-                    Inventory.TALISMAN3,
-                    Inventory.TALISMAN4,
-                    Inventory.TALISMAN5,
-                    Inventory.TALISMAN6,
-                    Inventory.PAPERDOLL_BELT,
-                    Inventory.PAPERDOLL_BROOCH,
-                    Inventory.PAPERDOLL_BROOCH_JEWEL1,
-                    Inventory.PAPERDOLL_BROOCH_JEWEL2,
-                    Inventory.PAPERDOLL_BROOCH_JEWEL3,
-                    Inventory.PAPERDOLL_BROOCH_JEWEL4,
-                    Inventory.PAPERDOLL_BROOCH_JEWEL5,
-                    Inventory.PAPERDOLL_BROOCH_JEWEL6,
-                    Inventory.PAPERDOLL_ARTIFACT_BOOK, // 152
-                    Inventory.PAPERDOLL_ARTIFACT1, // 152
-                    Inventory.PAPERDOLL_ARTIFACT2, // 152
-                    Inventory.PAPERDOLL_ARTIFACT3, // 152
-                    Inventory.PAPERDOLL_ARTIFACT4, // 152
-                    Inventory.PAPERDOLL_ARTIFACT5, // 152
-                    Inventory.PAPERDOLL_ARTIFACT6, // 152
-                    Inventory.PAPERDOLL_ARTIFACT7, // 152
-                    Inventory.PAPERDOLL_ARTIFACT8, // 152
-                    Inventory.PAPERDOLL_ARTIFACT9, // 152
-                    Inventory.PAPERDOLL_ARTIFACT10, // 152
-                    Inventory.PAPERDOLL_ARTIFACT11, // 152
-                    Inventory.PAPERDOLL_ARTIFACT12, // 152
-                    Inventory.PAPERDOLL_ARTIFACT13, // 152
-                    Inventory.PAPERDOLL_ARTIFACT14, // 152
-                    Inventory.PAPERDOLL_ARTIFACT15, // 152
-                    Inventory.PAPERDOLL_ARTIFACT16, // 152
-                    Inventory.PAPERDOLL_ARTIFACT17, // 152
-                    Inventory.PAPERDOLL_ARTIFACT18, // 152
-                    Inventory.PAPERDOLL_ARTIFACT19, // 152
-                    Inventory.PAPERDOLL_ARTIFACT20, // 152
-                    Inventory.PAPERDOLL_ARTIFACT21 // 152
-            };
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CharSelectionInfo.class);
     private final String _loginName;
@@ -339,8 +276,8 @@ public class CharSelectionInfo extends ServerPacket {
             writeInt(0x00); // Ertheia
             writeInt(0x00); // Ertheia
 
-            for (int slot : getPaperdollOrder()) {
-                writeInt(charInfoPackage.getPaperdollItemId(slot));
+            for (var slot : getPaperdollOrder()) {
+                writeInt(charInfoPackage.getPaperdollItemId(slot.getId()));
             }
 
             writeInt(0x00); // RHAND Visual ID not Used on Classic
@@ -393,12 +330,5 @@ public class CharSelectionInfo extends ServerPacket {
             writeByte((byte)(Hero.getInstance().isHero(charInfoPackage.getObjectId()) ? 0x01 : 0x00)); // Hero glow
             writeByte((byte)( charInfoPackage.isHairAccessoryEnabled() ? 0x01 : 0x00)); // Show hair accessory if enabled
         }
-    }
-
-
-
-    @Override
-    public int[] getPaperdollOrder() {
-        return PAPERDOLL_ORDER;
     }
 }

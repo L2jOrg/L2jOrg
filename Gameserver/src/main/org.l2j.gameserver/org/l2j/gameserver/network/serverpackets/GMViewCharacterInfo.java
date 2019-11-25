@@ -61,24 +61,24 @@ public class GMViewCharacterInfo extends ServerPacket {
         writeInt(_activeChar.getMaxLoad());
         writeInt(_activeChar.getPkKills());
 
-        for (int slot : getPaperdollOrder()) {
+        for (var slot : getPaperdollOrder()) {
             writeInt(_activeChar.getInventory().getPaperdollObjectId(slot));
         }
 
-        for (int slot : getPaperdollOrder()) {
+        for (var slot : getPaperdollOrder()) {
             writeInt(_activeChar.getInventory().getPaperdollItemDisplayId(slot));
         }
 
-        for (int slot : getPaperdollOrder()) {
+        for (var slot : getPaperdollOrder()) {
             final VariationInstance augment = _activeChar.getInventory().getPaperdollAugmentation(slot);
             writeInt(augment != null ? augment.getOption1Id() : 0); // Confirmed
             writeInt(augment != null ? augment.getOption2Id() : 0); // Confirmed
         }
 
-        writeByte((byte) _activeChar.getInventory().getTalismanSlots()); // CT2.3
-        writeByte((byte)(_activeChar.getInventory().canEquipCloak() ? 1 : 0)); // CT2.3
+        writeByte( _activeChar.getInventory().getTalismanSlots()); // CT2.3
+        writeByte(_activeChar.getInventory().canEquipCloak()); // CT2.3
         writeInt(0x00);
-        writeShort((short) 0x00);
+        writeShort(0x00);
         writeInt(_activeChar.getPAtk());
         writeInt(_activeChar.getPAtkSpd());
         writeInt(_activeChar.getPDef());

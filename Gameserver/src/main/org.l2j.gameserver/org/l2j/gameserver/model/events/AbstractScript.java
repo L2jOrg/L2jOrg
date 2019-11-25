@@ -3,6 +3,7 @@ package org.l2j.gameserver.model.events;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.DoorDataManager;
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.impl.NpcData;
@@ -1049,7 +1050,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @param slot   the location in the player's inventory to check
      * @return the ID of the item equipped in the specified inventory slot or 0 if the slot is empty or item is {@code null}.
      */
-    public static int getItemEquipped(Player player, int slot) {
+    public static int getItemEquipped(Player player, InventorySlot slot) {
         return player.getInventory().getPaperdollItemId(slot);
     }
 

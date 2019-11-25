@@ -3,6 +3,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.ItemCrystallizationData;
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -153,7 +154,7 @@ public final class RequestCrystallizeItem extends ClientPacket {
         // unequip if needed
         SystemMessage sm;
         if (itemToRemove.isEquipped()) {
-            var unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getLocationSlot());
+            var unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(InventorySlot.fromId(itemToRemove.getLocationSlot()));
             final InventoryUpdate iu = new InventoryUpdate();
             for (Item item : unequiped) {
                 iu.addModifiedItem(item);

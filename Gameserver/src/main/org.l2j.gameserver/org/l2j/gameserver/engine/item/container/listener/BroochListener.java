@@ -18,12 +18,7 @@ public final class BroochListener implements PlayerInventoryListener {
     @Override
     public void notifyUnequiped(InventorySlot slot, Item item, Inventory inventory) {
         if (item.getBodyPart() == BodyPart.BROOCH) {
-            inventory.unEquipItemInSlot(Inventory.PAPERDOLL_BROOCH_JEWEL1);
-            inventory.unEquipItemInSlot(Inventory.PAPERDOLL_BROOCH_JEWEL2);
-            inventory.unEquipItemInSlot(Inventory.PAPERDOLL_BROOCH_JEWEL3);
-            inventory.unEquipItemInSlot(Inventory.PAPERDOLL_BROOCH_JEWEL4);
-            inventory.unEquipItemInSlot(Inventory.PAPERDOLL_BROOCH_JEWEL5);
-            inventory.unEquipItemInSlot(Inventory.PAPERDOLL_BROOCH_JEWEL6);
+            InventorySlot.brochesJewel().forEach(inventory::unEquipItemInSlot);
         }
     }
 

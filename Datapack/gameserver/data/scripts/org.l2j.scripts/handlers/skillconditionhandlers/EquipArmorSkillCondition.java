@@ -1,5 +1,6 @@
 package handlers.skillconditionhandlers;
 
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
@@ -44,7 +45,7 @@ public class EquipArmorSkillCondition implements ISkillCondition
 		final Inventory inv = caster.getInventory();
 		
 		// Get the itemMask of the weared chest (if exists)
-		final Item chest = inv.getPaperdollItem(Inventory.PAPERDOLL_CHEST);
+		final Item chest = inv.getPaperdollItem(InventorySlot.CHEST);
 		if (chest == null)
 		{
 			return false;
@@ -66,7 +67,7 @@ public class EquipArmorSkillCondition implements ISkillCondition
 			return true;
 		}
 		// check legs armor
-		final Item legs = inv.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
+		final Item legs = inv.getPaperdollItem(InventorySlot.LEGS);
 		if (legs == null)
 		{
 			return false;

@@ -2,6 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.handler.AdminCommandHandler;
 import org.l2j.gameserver.instancemanager.CursedWeaponsManager;
@@ -151,7 +152,7 @@ public final class RequestDestroyItem extends ClientPacket {
                 client.sendPacket(sm);
             }
 
-            var unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getLocationSlot());
+            var unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(InventorySlot.fromId(itemToRemove.getLocationSlot()));
 
             final InventoryUpdate iu = new InventoryUpdate();
             for (Item itm : unequiped) {

@@ -92,7 +92,7 @@ public class AdminEnchant implements IAdminCommandHandler {
 		Item itemInstance = null;
 		
 		// only attempt to enchant if there is a weapon equipped
-		final Item item = target.getInventory().getPaperdollItem(itemSlot.getId());
+		final Item item = target.getInventory().getPaperdollItem(itemSlot);
 		if (nonNull(item ) && (item.getLocationSlot() == itemSlot.getId())) {
 			itemInstance = item;
 		}
@@ -100,7 +100,7 @@ public class AdminEnchant implements IAdminCommandHandler {
 		if (nonNull(itemInstance)) {
 			final int curEnchant = itemInstance.getEnchantLevel();
 			
-			target.getInventory().unEquipItemInSlot(itemSlot.getId());
+			target.getInventory().unEquipItemInSlot(itemSlot);
 			itemInstance.setEnchantLevel(ench);
 			target.getInventory().equipItem(itemInstance);
 			

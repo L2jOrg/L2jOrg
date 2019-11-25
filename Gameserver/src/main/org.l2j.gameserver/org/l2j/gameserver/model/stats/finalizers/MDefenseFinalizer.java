@@ -47,7 +47,7 @@ public class MDefenseFinalizer implements IStatsFunction {
                     baseValue -= creature.getTransformation().map(transform -> transform.getBaseDefBySlot(player, slot)).orElse(defaultStatValue);
                 }
             }
-        } else if (isPet(creature) && (creature.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_NECK) != 0)) {
+        } else if (isPet(creature) && (creature.getInventory().getPaperdollObjectId(InventorySlot.NECK) != 0)) {
             baseValue -= 13;
         }
         if (creature.isRaid()) {

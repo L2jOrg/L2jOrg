@@ -1,6 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.data.xml.impl.VariationData;
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.Item;
@@ -79,7 +80,7 @@ public final class RequestRefine extends AbstractRefinePacket {
         // unequip item
         final InventoryUpdate iu = new InventoryUpdate();
         if (targetItem.isEquipped()) {
-            var unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(targetItem.getLocationSlot());
+            var unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(InventorySlot.fromId(targetItem.getLocationSlot()));
             for (Item itm : unequiped) {
                 iu.addModifiedItem(itm);
             }

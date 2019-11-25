@@ -4,6 +4,7 @@ import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.FishingData;
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.world.zone.ZoneManager;
@@ -98,7 +99,7 @@ public class Fishing {
     }
 
     private FishingBaitData getCurrentBaitData() {
-        final Item bait = _player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+        final Item bait = _player.getInventory().getPaperdollItem(InventorySlot.LEFT_HAND);
         return bait != null ? FishingData.getInstance().getBaitData(bait.getId()) : null;
     }
 
@@ -225,7 +226,7 @@ public class Fishing {
         final FishingBaitData baitData = getCurrentBaitData();
         if (baitData == null) {
             reelIn(FishingEndReason.LOSE, false);
-            LOGGER.warn("Player " + _player + " is fishing with unhandled bait: " + _player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND));
+            LOGGER.warn("Player {} is fishing with unhandled bait: {}", _player,  _player.getInventory().getPaperdollItem(InventorySlot.LEFT_HAND));
             return;
         }
 
@@ -249,7 +250,7 @@ public class Fishing {
         cancelTasks();
 
         try {
-            final Item bait = _player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+            final Item bait = _player.getInventory().getPaperdollItem(InventorySlot.LEFT_HAND);
             if (consumeBait) {
                 if ((bait == null) || !_player.getInventory().updateItemCount(null, bait, -1, _player, null)) {
                     reason = FishingEndReason.LOSE; // no bait - no reward

@@ -2,6 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.AdminData;
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -133,7 +134,7 @@ public final class RequestDropItem extends ClientPacket {
         }
 
         if (item.isEquipped()) {
-            player.getInventory().unEquipItemInSlot(item.getLocationSlot());
+            player.getInventory().unEquipItemInSlot(InventorySlot.fromId(item.getLocationSlot()));
             player.broadcastUserInfo();
             player.sendItemList();
         }

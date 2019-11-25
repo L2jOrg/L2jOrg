@@ -13,6 +13,7 @@ import org.l2j.gameserver.data.xml.impl.PetDataTable;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.InstanceType;
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.PartyDistributionType;
 import org.l2j.gameserver.handler.IItemHandler;
@@ -1023,7 +1024,7 @@ public class Pet extends Summon {
 
     @Override
     public final int getWeapon() {
-        final Item weapon = _inventory.getPaperdollItem(Inventory.PAPERDOLL_RHAND);
+        final Item weapon = _inventory.getPaperdollItem(InventorySlot.RIGHT_HAND);
         if (weapon != null) {
             return weapon.getId();
         }
@@ -1032,7 +1033,7 @@ public class Pet extends Summon {
 
     @Override
     public final int getArmor() {
-        final Item weapon = _inventory.getPaperdollItem(Inventory.PAPERDOLL_CHEST);
+        final Item weapon = _inventory.getPaperdollItem(InventorySlot.CHEST);
         if (weapon != null) {
             return weapon.getId();
         }
@@ -1040,7 +1041,7 @@ public class Pet extends Summon {
     }
 
     public final int getJewel() {
-        final Item weapon = _inventory.getPaperdollItem(Inventory.PAPERDOLL_NECK);
+        final Item weapon = _inventory.getPaperdollItem(InventorySlot.NECK);
         if (weapon != null) {
             return weapon.getId();
         }

@@ -16,6 +16,7 @@
  */
 package org.l2j.gameserver.model.conditions;
 
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.BodyPart;
@@ -55,7 +56,7 @@ public final class ConditionUsingItemType extends Condition {
         // If ConditionUsingItemType is one between Light, Heavy or Magic
         if (_armor) {
             // Get the itemMask of the weared chest (if exists)
-            final Item chest = inv.getPaperdollItem(Inventory.PAPERDOLL_CHEST);
+            final Item chest = inv.getPaperdollItem(InventorySlot.CHEST);
             if (chest == null) {
                 return (ArmorType.NONE.mask() & _mask) == ArmorType.NONE.mask();
             }
@@ -73,7 +74,7 @@ public final class ConditionUsingItemType extends Condition {
                 return true;
             }
             // check legs armor
-            final Item legs = inv.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
+            final Item legs = inv.getPaperdollItem(InventorySlot.LEGS);
             if (legs == null) {
                 return (ArmorType.NONE.mask() & _mask) == ArmorType.NONE.mask();
             }

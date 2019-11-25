@@ -4378,7 +4378,7 @@ public final class Player extends Playable {
                     if (itemDrop.isEquipped()) {
                         // Set proper chance according to Item type of equipped Item
                         itemDropPercent = itemDrop.getTemplate().getType2() == ItemTemplate.TYPE2_WEAPON ? dropEquipWeapon : dropEquip;
-                        inventory.unEquipItemInSlot(itemDrop.getLocationSlot());
+                        inventory.unEquipItemInSlot(InventorySlot.fromId(itemDrop.getLocationSlot()));
                     } else {
                         itemDropPercent = dropItem; // Item in inventory
                     }
@@ -5010,7 +5010,7 @@ public final class Player extends Playable {
      */
     @Override
     protected boolean checkAndEquipAmmunition(EtcItemType type) {
-        Item arrows = inventory.getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+        Item arrows = inventory.getPaperdollItem(InventorySlot.LEFT_HAND);
         if (arrows == null) {
             final Weapon weapon = getActiveWeaponItem();
             if (type == EtcItemType.ARROW) {
@@ -5020,7 +5020,7 @@ public final class Player extends Playable {
             }
             if (arrows != null) {
                 // Equip arrows needed in left hand
-                inventory.setPaperdollItem(Inventory.PAPERDOLL_LHAND, arrows);
+                inventory.setPaperdollItem(InventorySlot.LEFT_HAND, arrows);
                 sendItemList();
                 return true;
             }
@@ -5037,7 +5037,7 @@ public final class Player extends Playable {
      */
     public boolean disarmWeapons() {
         // If there is no weapon to disarm then return true.
-        final Item wpn = inventory.getPaperdollItem(Inventory.PAPERDOLL_RHAND);
+        final Item wpn = inventory.getPaperdollItem(InventorySlot.RIGHT_HAND);
         if (wpn == null) {
             return true;
         }
@@ -5082,7 +5082,7 @@ public final class Player extends Playable {
      * @return {@code true}.
      */
     public boolean disarmShield() {
-        final Item sld = inventory.getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+        final Item sld = inventory.getPaperdollItem(InventorySlot.LEFT_HAND);
         if (sld != null) {
             var modified = inventory.unEquipItemInBodySlotAndRecord(sld.getBodyPart());
             final InventoryUpdate iu = new InventoryUpdate();
@@ -9404,28 +9404,25 @@ public final class Player extends Playable {
     }
 
     public void checkItemRestriction() {
-        for (int i = 0; i < Inventory.PAPERDOLL_TOTALSLOTS; i++) {
-            final Item equippedItem = inventory.getPaperdollItem(i);
-            if ((equippedItem != null) && !equippedItem.getTemplate().checkCondition(this, this, false)) {
-                inventory.unEquipItemInSlot(i);
+        for (InventorySlot slot : InventorySlot.values()) {
+            var item = inventory.getPaperdollItem(slot);
+            if(nonNull(item) && !item.getTemplate().checkCondition(this, this, false)) {
+                inventory.unEquipItemInSlot(slot);
 
                 final InventoryUpdate iu = new InventoryUpdate();
-                iu.addModifiedItem(equippedItem);
+                iu.addModifiedItem(item);
                 sendInventoryUpdate(iu);
 
                 SystemMessage sm;
-                if (equippedItem.getBodyPart() == BodyPart.BACK) {
+                if (item.getBodyPart() == BodyPart.BACK) {
                     sendPacket(SystemMessageId.YOUR_CLOAK_HAS_BEEN_UNEQUIPPED_BECAUSE_YOUR_ARMOR_SET_IS_NO_LONGER_COMPLETE);
                     return;
                 }
 
-                if (equippedItem.getEnchantLevel() > 0) {
-                    sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
-                    sm.addInt(equippedItem.getEnchantLevel());
-                    sm.addItemName(equippedItem);
+                if (item.getEnchantLevel() > 0) {
+                    sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED).addInt(item.getEnchantLevel()).addItemName(item);
                 } else {
-                    sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
-                    sm.addItemName(equippedItem);
+                    sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED).addItemName(item);
                 }
                 sendPacket(sm);
             }

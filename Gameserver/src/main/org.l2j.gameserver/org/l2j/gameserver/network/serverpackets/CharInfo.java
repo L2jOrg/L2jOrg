@@ -1,6 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.actor.instance.Decoy;
@@ -8,7 +9,6 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosMember;
 import org.l2j.gameserver.model.interfaces.ILocational;
-import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.GameClient;
@@ -16,23 +16,12 @@ import org.l2j.gameserver.network.ServerPacketId;
 
 import java.util.Set;
 
+import static org.l2j.gameserver.enums.InventorySlot.*;
+
 public class CharInfo extends ServerPacket {
 
-    private static final int[] PAPERDOLL_ORDER = new int[]
-            {
-                    Inventory.PAPERDOLL_UNDER,
-                    Inventory.PAPERDOLL_HEAD,
-                    Inventory.PAPERDOLL_RHAND,
-                    Inventory.PAPERDOLL_LHAND,
-                    Inventory.PAPERDOLL_GLOVES,
-                    Inventory.PAPERDOLL_CHEST,
-                    Inventory.PAPERDOLL_LEGS,
-                    Inventory.PAPERDOLL_FEET,
-                    Inventory.PAPERDOLL_CLOAK,
-                    Inventory.PAPERDOLL_RHAND,
-                    Inventory.PAPERDOLL_HAIR,
-                    Inventory.PAPERDOLL_HAIR2
-            };
+    private static final InventorySlot[] PAPERDOLL_ORDER = new InventorySlot[] {UNDERWEAR, HEAD, RIGHT_HAND, LEFT_HAND, GLOVES, CHEST, LEGS, FEET, BACK, RIGHT_HAND, HAIR, HAIR2};
+
     private final Player _activeChar;
     private final int _mAtkSpd;
     private final int _pAtkSpd;
@@ -50,8 +39,8 @@ public class CharInfo extends ServerPacket {
     private int _y;
     private int _z;
     private int _heading;
-    private int _enchantLevel = 0;
-    private int _armorEnchant = 0;
+    private int _enchantLevel;
+    private int _armorEnchant;
     private int _vehicleId = 0;
 
     public CharInfo(Player cha, boolean gmSeeInvis) {
@@ -109,11 +98,11 @@ public class CharInfo extends ServerPacket {
         writeByte((byte) (_activeChar.getAppearance().isFemale() ? 0x01 : 0x00)); // Confirmed
         writeInt(_activeChar.getBaseClass()); // Confirmed
 
-        for (int slot : getPaperdollOrder()) {
+        for (var slot : getPaperdollOrder()) {
             writeInt(_activeChar.getInventory().getPaperdollItemDisplayId(slot)); // Confirmed
         }
 
-        for (int slot : getPaperdollOrderAugument()) {
+        for (var slot : getPaperdollOrderAugument()) {
             final VariationInstance augment = _activeChar.getInventory().getPaperdollAugmentation(slot);
             writeInt(augment != null ? augment.getOption1Id() : 0); // Confirmed
             writeInt(augment != null ? augment.getOption2Id() : 0); // Confirmed
@@ -137,14 +126,14 @@ public class CharInfo extends ServerPacket {
         writeInt(_mAtkSpd);
         writeInt(_pAtkSpd);
 
-        writeShort((short) _runSpd);
-        writeShort((short) _walkSpd);
-        writeShort((short) _swimRunSpd);
-        writeShort((short) _swimWalkSpd);
-        writeShort((short) _flyRunSpd);
-        writeShort((short) _flyWalkSpd);
-        writeShort((short) _flyRunSpd);
-        writeShort((short) _flyWalkSpd);
+        writeShort(_runSpd);
+        writeShort( _walkSpd);
+        writeShort( _swimRunSpd);
+        writeShort( _swimWalkSpd);
+        writeShort( _flyRunSpd);
+        writeShort( _flyWalkSpd);
+        writeShort( _flyRunSpd);
+        writeShort( _flyWalkSpd);
         writeDouble(_moveMultiplier);
         writeDouble(_attackSpeedMultiplier);
 
@@ -239,7 +228,7 @@ public class CharInfo extends ServerPacket {
 
 
     @Override
-    public int[] getPaperdollOrder() {
+    public InventorySlot[] getPaperdollOrder() {
         return PAPERDOLL_ORDER;
     }
 }

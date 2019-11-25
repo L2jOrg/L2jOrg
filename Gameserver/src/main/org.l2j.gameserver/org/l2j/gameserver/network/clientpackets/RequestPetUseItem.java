@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.model.actor.instance.Pet;
@@ -78,7 +79,7 @@ public final class RequestPetUseItem extends ClientPacket {
             }
 
             if (item.isEquipped()) {
-                pet.getInventory().unEquipItemInSlot(item.getLocationSlot());
+                pet.getInventory().unEquipItemInSlot(InventorySlot.fromId(item.getLocationSlot()));
             } else {
                 pet.getInventory().equipItem(item);
             }
