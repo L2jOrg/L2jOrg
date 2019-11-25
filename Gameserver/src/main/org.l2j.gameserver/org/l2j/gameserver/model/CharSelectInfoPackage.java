@@ -16,9 +16,11 @@
  */
 package org.l2j.gameserver.model;
 
-import org.l2j.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2j.gameserver.model.variables.PlayerVariables;
+
+import static org.l2j.gameserver.enums.InventorySlot.RIGHT_HAND;
 
 /**
  * Used to Store data sent to Client for Character.<br>
@@ -186,8 +188,8 @@ public class CharSelectInfoPackage {
         _hairStyle = hairStyle;
     }
 
-    public int getPaperdollObjectId(int slot) {
-        return _paperdoll[slot][0];
+    public int getPaperdollObjectId(InventorySlot slot) {
+        return _paperdoll[slot.getId()][0];
     }
 
     public int getPaperdollItemId(int slot) {
@@ -251,7 +253,7 @@ public class CharSelectInfoPackage {
     }
 
     public int getEnchantEffect() {
-        return _paperdoll[Inventory.PAPERDOLL_RHAND][2];
+        return _paperdoll[RIGHT_HAND.getId()][2];
     }
 
     public int getReputation() {

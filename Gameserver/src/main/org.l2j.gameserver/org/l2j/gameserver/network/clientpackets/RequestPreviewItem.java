@@ -3,6 +3,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.BuyListData;
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Merchant;
@@ -19,8 +20,7 @@ import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.EnumMap;
 
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
 
@@ -107,7 +107,7 @@ public final class RequestPreviewItem extends ClientPacket {
         }
 
         long totalPrice = 0;
-        final Map<Integer, Integer> itemList = new HashMap<>();
+        final EnumMap<InventorySlot, Integer> items = new EnumMap<>(InventorySlot.class);
 
         for (int i = 0; i < _count; i++) {
             final int itemId = _items[i];
@@ -118,17 +118,17 @@ public final class RequestPreviewItem extends ClientPacket {
                 return;
             }
 
-            final int slot = product.getBodyPart().slot().getId();
-            if (slot < 0) {
+            var slot = product.getBodyPart().slot();
+            if (slot == InventorySlot.NONE) {
                 continue;
             }
 
-            if (itemList.containsKey(slot)) {
+            if (items.containsKey(slot)) {
                 activeChar.sendPacket(SystemMessageId.YOU_CAN_NOT_TRY_THOSE_ITEMS_ON_AT_THE_SAME_TIME);
                 return;
             }
 
-            itemList.put(slot, itemId);
+            items.put(slot, itemId);
             totalPrice += Config.WEAR_PRICE;
             if (totalPrice > Inventory.MAX_ADENA) {
                 GameUtils.handleIllegalPlayerAction(activeChar, "Warning!! Character " + activeChar.getName() + " of account " + activeChar.getAccountName() + " tried to purchase over " + Inventory.MAX_ADENA + " adena worth of goods.", Config.DEFAULT_PUNISH);
@@ -142,8 +142,8 @@ public final class RequestPreviewItem extends ClientPacket {
             return;
         }
 
-        if (!itemList.isEmpty()) {
-            activeChar.sendPacket(new ShopPreviewInfo(itemList));
+        if (!items.isEmpty()) {
+            activeChar.sendPacket(new ShopPreviewInfo(items));
             // Schedule task
             ThreadPool.schedule(new RemoveWearItemsTask(activeChar), Config.WEAR_DELAY * 1000);
         }

@@ -81,6 +81,7 @@ public enum InventorySlot implements IUpdateTypeComponent {
     private static final EnumSet<InventorySlot> broochesJewel = EnumSet.range(BROOCH_JEWEL1, BROOCH_JEWEL6);
     private static final EnumSet<InventorySlot> talismans = EnumSet.range(TALISMAN1, TALISMAN6);
     private static final EnumSet<InventorySlot> armorset = EnumSet.of(CHEST, LEGS, HEAD, GLOVES, FEET);
+    public static final int TOTAL_SLOTS = 59;
 
     public int getId() {
         return ordinal();

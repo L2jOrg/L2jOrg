@@ -43,72 +43,10 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author JoeAlisson
  */
 public abstract class Inventory extends ItemContainer {
-    // Common Items
-    public static final int BEAUTY_TICKET_ID = 36308;
 
+    public static final int BEAUTY_TICKET_ID = 36308;
     public static final long MAX_ADENA = Config.MAX_ADENA;
 
-    public static final int PAPERDOLL_UNDER = 0;
-    public static final int PAPERDOLL_HEAD = 1;
-    public static final int PAPERDOLL_HAIR = 2;
-    public static final int PAPERDOLL_HAIR2 = 3;
-    public static final int PAPERDOLL_NECK = 4;
-    public static final int PAPERDOLL_RHAND = 5;
-    public static final int PAPERDOLL_CHEST = 6;
-    public static final int PAPERDOLL_LHAND = 7;
-    public static final int PAPERDOLL_REAR = 8;
-    public static final int PAPERDOLL_LEAR = 9;
-    public static final int PAPERDOLL_GLOVES = 10;
-    public static final int PAPERDOLL_LEGS = 11;
-    public static final int PAPERDOLL_FEET = 12;
-    public static final int PAPERDOLL_RFINGER = 13;
-    public static final int PAPERDOLL_LFINGER = 14;
-    public static final int PAPERDOLL_LBRACELET = 15;
-    public static final int PAPERDOLL_RBRACELET = 16;
-    public static final int PAPERDOLL_AGATHION1 = 17;
-    public static final int PAPERDOLL_AGATHION2 = 18;
-    public static final int PAPERDOLL_AGATHION3 = 19;
-    public static final int PAPERDOLL_AGATHION4 = 20;
-    public static final int PAPERDOLL_AGATHION5 = 21;
-    public static final int TALISMAN1 = 22;
-    public static final int TALISMAN2 = 23;
-    public static final int TALISMAN3 = 24;
-    public static final int TALISMAN4 = 25;
-    public static final int TALISMAN5 = 26;
-    public static final int TALISMAN6 = 27;
-    public static final int PAPERDOLL_CLOAK = 28;
-    public static final int PAPERDOLL_BELT = 29;
-    public static final int PAPERDOLL_BROOCH = 30;
-    public static final int PAPERDOLL_BROOCH_JEWEL1 = 31;
-    public static final int PAPERDOLL_BROOCH_JEWEL2 = 32;
-    public static final int PAPERDOLL_BROOCH_JEWEL3 = 33;
-    public static final int PAPERDOLL_BROOCH_JEWEL4 = 34;
-    public static final int PAPERDOLL_BROOCH_JEWEL5 = 35;
-    public static final int PAPERDOLL_BROOCH_JEWEL6 = 36;
-    public static final int PAPERDOLL_ARTIFACT_BOOK = 37;
-    public static final int PAPERDOLL_ARTIFACT1 = 38; // Artifact Balance
-    public static final int PAPERDOLL_ARTIFACT2 = 39; // Artifact Balance
-    public static final int PAPERDOLL_ARTIFACT3 = 40; // Artifact Balance
-    public static final int PAPERDOLL_ARTIFACT4 = 41; // Artifact Balance
-    public static final int PAPERDOLL_ARTIFACT5 = 42; // Artifact Balance
-    public static final int PAPERDOLL_ARTIFACT6 = 43; // Artifact Balance
-    public static final int PAPERDOLL_ARTIFACT7 = 44; // Artifact Balance
-    public static final int PAPERDOLL_ARTIFACT8 = 45; // Artifact Balance
-    public static final int PAPERDOLL_ARTIFACT9 = 46; // Artifact Balance
-    public static final int PAPERDOLL_ARTIFACT10 = 47; // Artifact Balance
-    public static final int PAPERDOLL_ARTIFACT11 = 48; // Artifact Balance
-    public static final int PAPERDOLL_ARTIFACT12 = 49; // Artifact Balance
-    public static final int PAPERDOLL_ARTIFACT13 = 50; // Artifact Spirit
-    public static final int PAPERDOLL_ARTIFACT14 = 51; // Artifact Spirit
-    public static final int PAPERDOLL_ARTIFACT15 = 52; // Artifact Spirit
-    public static final int PAPERDOLL_ARTIFACT16 = 53; // Artifact Protection
-    public static final int PAPERDOLL_ARTIFACT17 = 54; // Artifact Protection
-    public static final int PAPERDOLL_ARTIFACT18 = 55; // Artifact Protection
-    public static final int PAPERDOLL_ARTIFACT19 = 56; // Artifact Support
-    public static final int PAPERDOLL_ARTIFACT20 = 57; // Artifact Support
-    public static final int PAPERDOLL_ARTIFACT21 = 58; // Artifact Support
-    public static final int PAPERDOLL_TOTALSLOTS = 59;
-    // Speed percentage mods
     protected static final Logger LOGGER = LoggerFactory.getLogger(Inventory.class);
 
     private final EnumMap<InventorySlot, Item> paperdoll;

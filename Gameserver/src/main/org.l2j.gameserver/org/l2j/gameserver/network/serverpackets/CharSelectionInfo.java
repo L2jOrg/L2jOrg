@@ -7,14 +7,13 @@ import org.l2j.gameserver.data.xml.impl.ExperienceData;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.model.CharSelectInfoPackage;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Hero;
-import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,6 +22,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.LinkedList;
 import java.util.List;
+
+import static org.l2j.gameserver.enums.InventorySlot.RIGHT_HAND;
 
 
 public class CharSelectionInfo extends ServerPacket {
@@ -164,9 +165,9 @@ public class CharSelectionInfo extends ServerPacket {
         charInfopackage.setClassId(activeClassId);
 
         // Get the augmentation id for equipped weapon
-        int weaponObjId = charInfopackage.getPaperdollObjectId(Inventory.PAPERDOLL_RHAND);
+        int weaponObjId = charInfopackage.getPaperdollObjectId(RIGHT_HAND);
         if (weaponObjId < 1) {
-            weaponObjId = charInfopackage.getPaperdollObjectId(Inventory.PAPERDOLL_RHAND);
+            weaponObjId = charInfopackage.getPaperdollObjectId(RIGHT_HAND);
         }
 
         if (weaponObjId > 0) {
