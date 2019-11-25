@@ -2,7 +2,6 @@ package org.l2j.gameserver.model.items.enchant;
 
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.engine.item.ItemEngine;
-import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.CrystalType;
@@ -42,18 +41,6 @@ public abstract class AbstractEnchantItem {
     private final CrystalType grade;
     private final int maxEnchant;
     private final double bonusRate;
-
-    public AbstractEnchantItem(StatsSet set) {
-        id = set.getInt("id");
-        if (getItem() == null) {
-            throw new NullPointerException();
-        } else if (!CommonUtil.contains(ENCHANT_TYPES, getItem().getItemType())) {
-            throw new IllegalAccessError();
-        }
-        grade = set.getEnum("targetGrade", CrystalType.class, CrystalType.NONE);
-        maxEnchant = set.getInt("maxEnchant", 127);
-        bonusRate = set.getDouble("bonusRate", 0);
-    }
 
     public AbstractEnchantItem(int id, CrystalType grade, int maxEnchant) {
         this.id = id;

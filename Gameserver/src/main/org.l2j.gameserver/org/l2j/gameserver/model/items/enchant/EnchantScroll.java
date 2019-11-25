@@ -2,7 +2,6 @@ package org.l2j.gameserver.model.items.enchant;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.engine.item.EnchantItemGroupsData;
-import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.CrystalType;
@@ -24,17 +23,6 @@ public final class EnchantScroll extends AbstractEnchantItem {
     private final boolean isGiant;
     private final int group;
     private Set<Integer> _items;
-
-    public EnchantScroll(StatsSet set) {
-        super(set);
-        group = set.getInt("scrollGroupId", 0);
-
-        final ItemType type = getItem().getItemType();
-        isWeapon = (type == EtcItemType.ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP) || (type == EtcItemType.BLESS_ENCHT_WP) || (type == EtcItemType.ENCHANT_WEAPON) || (type == EtcItemType.BLESSED_ENCHANT_WEAPON);
-        isBlessed = (type == EtcItemType.BLESS_ENCHT_AM) || (type == EtcItemType.BLESS_ENCHT_WP);
-        isSafe = (type == EtcItemType.ENCHT_ATTR_CRYSTAL_ENCHANT_AM) || (type == EtcItemType.ENCHT_ATTR_CRYSTAL_ENCHANT_WP);
-        isGiant = (type == EtcItemType.BLESSED_ENCHANT_ARMOR) || (type == EtcItemType.BLESSED_ENCHANT_WEAPON);
-    }
 
     public EnchantScroll(int id, CrystalType grade, int maxEnchant, int group) {
         super(id, grade, maxEnchant);

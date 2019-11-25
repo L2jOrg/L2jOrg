@@ -69,7 +69,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  * @version $Revision: 1.4.2.1.2.11 $ $Date: 2005/03/31 16:07:50 $
  */
 public final class Item extends WorldObject {
-    public static final int UNCHANGED = 0;
+
     public static final int ADDED = 1;
     public static final int REMOVED = 3;
     public static final int MODIFIED = 2;
@@ -77,7 +77,6 @@ public final class Item extends WorldObject {
     public static final int[] DEFAULT_ENCHANT_OPTIONS = new int[]{0, 0, 0};
     private static final Logger LOGGER = LoggerFactory.getLogger(Item.class);
     private static final Logger LOG_ITEMS = LoggerFactory.getLogger("item");
-    private static final int MANA_CONSUMPTION_RATE = 60000;
     /**
      * ID of the item
      */

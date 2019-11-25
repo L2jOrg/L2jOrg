@@ -1,6 +1,7 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.commons.util.Util;
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.options.EnchantOptions;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -8,27 +9,24 @@ import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
-import org.w3c.dom.Node;
 
 import java.io.File;
 import java.nio.file.Path;
-import java.util.HashMap;
-import java.util.Map;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
-import static org.l2j.commons.util.Util.isInteger;
+import static org.l2j.commons.util.Util.computeIfNonNull;
 
 /**
  * @author UnAfraid
+ * @author JoeAlisson
  */
 public class EnchantItemOptionsData extends GameXmlReader {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(EnchantItemOptionsData.class);
 
-    private final Map<Integer, Map<Integer, EnchantOptions>> _data = new HashMap<>();
+    private final IntMap<IntMap<EnchantOptions>> data = new HashIntMap<>();
 
     private EnchantItemOptionsData() {
-        load();
     }
 
     @Override
@@ -38,40 +36,22 @@ public class EnchantItemOptionsData extends GameXmlReader {
 
     @Override
     public synchronized void load() {
-        _data.clear();
+        data.clear();
         parseDatapackFile("data/EnchantItemOptions.xml");
     }
 
     @Override
     public void parseDocument(Document doc, File f) {
-        int counter = 0;
-        for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling()) {
-            if ("list".equalsIgnoreCase(n.getNodeName())) {
-                for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
-                    if ("item".equalsIgnoreCase(d.getNodeName())) {
-                        final int itemId = parseInteger(d.getAttributes(), "id");
-                        if (!_data.containsKey(itemId)) {
-                            _data.put(itemId, new HashMap<>());
-                        }
-                        for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling()) {
-                            if ("options".equalsIgnoreCase(cd.getNodeName())) {
-                                final EnchantOptions op = new EnchantOptions(parseInteger(cd.getAttributes(), "level"));
-                                _data.get(itemId).put(op.getLevel(), op);
-
-                                for (byte i = 0; i < 3; i++) {
-                                    final Node att = cd.getAttributes().getNamedItem("option" + (i + 1));
-                                    if ((att != null) && isInteger(att.getNodeValue())) {
-                                        op.setOption(i, parseInteger(att));
-                                    }
-                                }
-                                counter++;
-                            }
-                        }
-                    }
+        forEach(doc, "list", list -> forEach(list, "item", itemNode -> forEach(itemNode, "options", optionsNode -> {
+                var attr = optionsNode.getAttributes();
+                var option = new EnchantOptions(parseInt(attr, "level"));
+                for (byte i = 0; i < 3 ; i++) {
+                    option.setOption(i, parseInt(attr, "option" + i+1));
                 }
-            }
-        }
-        LOGGER.info("Loaded: {} Items and {} Options.", _data.size(), counter);
+                data.computeIfAbsent(parseInt(itemNode.getAttributes(), "id"), id -> new HashIntMap<>()).put(option.getLevel(), option);
+            })
+        ));
+        LOGGER.info("Loaded {} Option Items.", data.size());
     }
 
     /**
@@ -80,10 +60,10 @@ public class EnchantItemOptionsData extends GameXmlReader {
      * @return enchant effects information.
      */
     public EnchantOptions getOptions(int itemId, int enchantLevel) {
-        if (!_data.containsKey(itemId) || !_data.get(itemId).containsKey(enchantLevel)) {
+        if (!data.containsKey(itemId) || !data.get(itemId).containsKey(enchantLevel)) {
             return null;
         }
-        return _data.get(itemId).get(enchantLevel);
+        return data.get(itemId).get(enchantLevel);
     }
 
     /**
@@ -91,9 +71,12 @@ public class EnchantItemOptionsData extends GameXmlReader {
      * @return enchant effects information.
      */
     public EnchantOptions getOptions(Item item) {
-        return item != null ? getOptions(item.getId(), item.getEnchantLevel()) : null;
+        return computeIfNonNull(item, i -> getOptions(i.getId(), i.getEnchantLevel()));
     }
 
+    public static void init() {
+        getInstance().load();
+    }
 
     public static EnchantItemOptionsData getInstance() {
         return Singleton.INSTANCE;

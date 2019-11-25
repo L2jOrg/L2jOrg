@@ -97,7 +97,6 @@ public class GameServer {
 
         printSection("Items");
         ItemEngine.init();
-        EnchantItemOptionsData.getInstance();
         ItemCrystallizationData.getInstance();
         OptionData.getInstance();
         VariationData.getInstance();

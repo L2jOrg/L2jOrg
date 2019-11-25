@@ -48,7 +48,7 @@ public class RequestExTryToPutEnchantTargetItem extends ClientPacket {
             activeChar.removeRequest(request.getClass());
             client.sendPacket(new ExPutEnchantTargetItemResult(0));
             if (scrollTemplate == null) {
-                LOGGER.warn(getClass().getSimpleName() + ": Undefined scroll have been used id: " + scroll.getId());
+                LOGGER.warn("Undefined scroll have been used id: {}", scroll.getId());
             }
             return;
         }
