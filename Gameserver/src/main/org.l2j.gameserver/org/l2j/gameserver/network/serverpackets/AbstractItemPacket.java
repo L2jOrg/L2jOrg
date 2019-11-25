@@ -75,7 +75,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
         writeByte(mask);
         writeInt(item.getObjectId()); // ObjectId
         writeInt(item.getDisplayId()); // ItemId
-        writeByte(item.isQuestItem() || (item.getEquipped() == 1) ? 0xFF : item.getLocation()); // T1
+        writeByte(item.isQuestItem() || (item.getEquipped() == 1) ? 0xFF : item.getLocationSlot()); // T1
         writeLong(item.getCount()); // Quantity
         writeByte(item.getType2()); // Item Type 2 : 00-weapon, 01-shield/armor, 02-ring/earring/necklace, 03-questitem, 04-adena, 05-item
         writeByte(item.getCustomType1()); // Filler (always 0)
@@ -108,7 +108,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
         writeByte((byte) mask);
         writeInt(item.getObjectId()); // ObjectId
         writeInt(item.getDisplayId()); // ItemId
-        writeByte((item.isQuestItem() || (item.getEquipped() == 1) ? 0xFF : item.getLocation())); // T1
+        writeByte((item.isQuestItem() || (item.getEquipped() == 1) ? 0xFF : item.getLocationSlot())); // T1
         writeLong(count); // Quantity
         writeByte(item.getType2()); // Item Type 2 : 00-weapon, 01-shield/armor, 02-ring/earring/necklace, 03-questitem, 04-adena, 05-item
         writeByte((byte) item.getCustomType1()); // Filler (always 0)

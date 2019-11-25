@@ -10,51 +10,47 @@ import java.util.Collections;
 import java.util.Objects;
 
 public class TradeItem {
-    private final ItemTemplate _item;
-    private final int _location;
-    private final int _type1;
-    private final int _type2;
-    private final int[] _elemDefAttr =
-            {
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-            };
-    private final int[] _enchantOptions;
-    private int _objectId;
-    private int _enchant;
-    private long _count;
-    private long _storeCount;
+    private final int[] attributeDefense = {0, 0, 0, 0, 0, 0};
+    private final ItemTemplate template;
+    private int objectId;
+    private long count;
+    private int enchant;
+    private VariationInstance augmentation;
+    private final int locationSlot;
+    private final int type1;
+    private final int type2;
+    private Collection<EnsoulOption> soulCrystalOptions;
+    private Collection<EnsoulOption> soulCrystalSpecialOptions;
+    private final int[] enchantOptions;
+    private byte elemAtkType;
+    private int elemAtkPower;
+
     private long _price;
-    private byte _elemAtkType;
-    private int _elemAtkPower;
-    private Collection<EnsoulOption> _soulCrystalOptions;
-    private Collection<EnsoulOption> _soulCrystalSpecialOptions;
+
+    private long _storeCount;
     private int _augmentationOption1 = -1;
     private int _augmentationOption2 = -1;
 
     public TradeItem(Item item, long count, long price) {
         Objects.requireNonNull(item);
-        _objectId = item.getObjectId();
-        _item = item.getTemplate();
-        _location = item.getLocationSlot();
-        _enchant = item.getEnchantLevel();
-        _type1 = item.getCustomType1();
-        _type2 = item.getCustomType2();
-        _count = count;
+        objectId = item.getObjectId();
+        template = item.getTemplate();
+        locationSlot = item.getLocationSlot();
+        enchant = item.getEnchantLevel();
+        type1 = item.getCustomType1();
+        type2 = item.getCustomType2();
+        this.count = count;
         _price = price;
-        _elemAtkType = item.getAttackAttributeType().getClientId();
-        _elemAtkPower = item.getAttackAttributePower();
+        elemAtkType = item.getAttackAttributeType().getClientId();
+        elemAtkPower = item.getAttackAttributePower();
         for (AttributeType type : AttributeType.ATTRIBUTE_TYPES) {
-            _elemDefAttr[type.getClientId()] = item.getDefenceAttribute(type);
+            attributeDefense[type.getClientId()] = item.getDefenceAttribute(type);
         }
-        _enchantOptions = item.getEnchantOptions();
-        _soulCrystalOptions = item.getSpecialAbilities();
-        _soulCrystalSpecialOptions = item.getAdditionalSpecialAbilities();
+        enchantOptions = item.getEnchantOptions();
+        soulCrystalOptions = item.getSpecialAbilities();
+        soulCrystalSpecialOptions = item.getAdditionalSpecialAbilities();
 
+        augmentation = item.getAugmentation();
         if (item.getAugmentation() != null) {
             _augmentationOption1 = item.getAugmentation().getOption1Id();
             _augmentationOption1 = item.getAugmentation().getOption2Id();
@@ -63,81 +59,81 @@ public class TradeItem {
 
     public TradeItem(ItemTemplate item, long count, long price) {
         Objects.requireNonNull(item);
-        _objectId = 0;
-        _item = item;
-        _location = 0;
-        _enchant = 0;
-        _type1 = 0;
-        _type2 = 0;
-        _count = count;
+        objectId = 0;
+        template = item;
+        locationSlot = 0;
+        enchant = 0;
+        type1 = 0;
+        type2 = 0;
+        this.count = count;
         _storeCount = count;
         _price = price;
-        _elemAtkType = AttributeType.NONE.getClientId();
-        _elemAtkPower = 0;
-        _enchantOptions = Item.DEFAULT_ENCHANT_OPTIONS;
-        _soulCrystalOptions = Collections.emptyList();
-        _soulCrystalSpecialOptions = Collections.emptyList();
+        elemAtkType = AttributeType.NONE.getClientId();
+        elemAtkPower = 0;
+        enchantOptions = Item.DEFAULT_ENCHANT_OPTIONS;
+        soulCrystalOptions = Collections.emptyList();
+        soulCrystalSpecialOptions = Collections.emptyList();
     }
 
     public TradeItem(TradeItem item, long count, long price) {
         Objects.requireNonNull(item);
-        _objectId = item.getObjectId();
-        _item = item.getItem();
-        _location = item.getLocationSlot();
-        _enchant = item.getEnchant();
-        _type1 = item.getCustomType1();
-        _type2 = item.getCustomType2();
-        _count = count;
+        objectId = item.getObjectId();
+        template = item.getItem();
+        locationSlot = item.getLocationSlot();
+        enchant = item.getEnchant();
+        type1 = item.getCustomType1();
+        type2 = item.getCustomType2();
+        this.count = count;
         _storeCount = count;
         _price = price;
-        _elemAtkType = item.getAttackElementType();
-        _elemAtkPower = item.getAttackElementPower();
+        elemAtkType = item.getAttackElementType();
+        elemAtkPower = item.getAttackElementPower();
         for (byte i = 0; i < 6; i++) {
-            _elemDefAttr[i] = item.getElementDefAttr(i);
+            attributeDefense[i] = item.getElementDefAttr(i);
         }
-        _enchantOptions = item.getEnchantOptions();
-        _soulCrystalOptions = item.getSoulCrystalOptions();
-        _soulCrystalSpecialOptions = item.getSoulCrystalSpecialOptions();
+        enchantOptions = item.getEnchantOptions();
+        soulCrystalOptions = item.getSoulCrystalOptions();
+        soulCrystalSpecialOptions = item.getSoulCrystalSpecialOptions();
     }
 
     public int getObjectId() {
-        return _objectId;
+        return objectId;
     }
 
     public void setObjectId(int objectId) {
-        _objectId = objectId;
+        this.objectId = objectId;
     }
 
     public ItemTemplate getItem() {
-        return _item;
+        return template;
     }
 
     public int getLocationSlot() {
-        return _location;
+        return locationSlot;
     }
 
     public int getEnchant() {
-        return _enchant;
+        return enchant;
     }
 
     public void setEnchant(int enchant) {
-        _enchant = enchant;
+        this.enchant = enchant;
     }
 
     public int getCustomType1() {
-        return _type1;
+        return type1;
     }
 
     public int getCustomType2() {
-        return _type2;
+        return type2;
     }
 
     public long getCount() {
-        return _count;
+        return count;
     }
 
     public void setCount(long count) {
-        _count = count;
+        this.count = count;
     }
 
     public long getStoreCount() {
@@ -153,47 +149,47 @@ public class TradeItem {
     }
 
     public byte getAttackElementType() {
-        return _elemAtkType;
+        return elemAtkType;
     }
 
     public void setAttackElementType(AttributeType attackElement) {
-        _elemAtkType = attackElement.getClientId();
+        elemAtkType = attackElement.getClientId();
     }
 
     public int getAttackElementPower() {
-        return _elemAtkPower;
+        return elemAtkPower;
     }
 
     public void setAttackElementPower(int attackElementPower) {
-        _elemAtkPower = attackElementPower;
+        elemAtkPower = attackElementPower;
     }
 
     public void setElementDefAttr(AttributeType element, int value) {
-        _elemDefAttr[element.getClientId()] = value;
+        attributeDefense[element.getClientId()] = value;
     }
 
     public int getElementDefAttr(byte i) {
-        return _elemDefAttr[i];
+        return attributeDefense[i];
     }
 
     public int[] getEnchantOptions() {
-        return _enchantOptions;
+        return enchantOptions;
     }
 
     public Collection<EnsoulOption> getSoulCrystalOptions() {
-        return _soulCrystalOptions == null ? Collections.emptyList() : _soulCrystalOptions;
+        return soulCrystalOptions == null ? Collections.emptyList() : soulCrystalOptions;
     }
 
     public void setSoulCrystalOptions(Collection<EnsoulOption> soulCrystalOptions) {
-        _soulCrystalOptions = soulCrystalOptions;
+        this.soulCrystalOptions = soulCrystalOptions;
     }
 
     public Collection<EnsoulOption> getSoulCrystalSpecialOptions() {
-        return _soulCrystalSpecialOptions == null ? Collections.emptyList() : _soulCrystalSpecialOptions;
+        return soulCrystalSpecialOptions == null ? Collections.emptyList() : soulCrystalSpecialOptions;
     }
 
     public void setSoulCrystalSpecialOptions(Collection<EnsoulOption> soulCrystalSpecialOptions) {
-        _soulCrystalSpecialOptions = soulCrystalSpecialOptions;
+        this.soulCrystalSpecialOptions = soulCrystalSpecialOptions;
     }
 
     public void setAugmentation(int option1, int option2) {

@@ -16,61 +16,31 @@ import java.util.Objects;
  * Get all information from Item to generate ItemInfo.
  */
 public class ItemInfo {
-    private final int[] _attributeDefence =
-            {
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-            };
-    /**
-     * Identifier of the Item
-     */
-    private int _objectId;
-    /**
-     * The ItemTemplate template of the Item
-     */
+    private final int[] attributeDefense = { 0, 0, 0, 0, 0, 0 };
     private ItemTemplate template;
-    /**
-     * The level of enchant on the Item
-     */
-    private int _enchantLevel;
-    /**
-     * The augmentation of the item
-     */
-    private VariationInstance _augmentation;
-    /**
-     * The quantity of Item
-     */
-    private long _count;
-    /**
-     * The price of the Item
-     */
-    private int _price;
-    /**
-     * The custom Item types (used loto, race tickets)
-     */
-    private int _type1;
-    private int _type2;
-    /**
-     * If True the Item is equipped
-     */
-    private int _equipped;
+    private int objectId;
+    private long count;
+    private int enchant;
+    private VariationInstance augmentation;
+    private int locationSlot;
+    private int type1;
+    private int type2;
+    private Collection<EnsoulOption> soulCrystalOptions;
+    private Collection<EnsoulOption> soulCrystalSpecialOptions;
+    private int[] enchantOption;
+    private byte elemAtkType = -2;
+    private int elemAtkPower = 0;
+
+    private int time;
+
+    private int price;
+
     /**
      * The action to do clientside (1=ADD, 2=MODIFY, 3=REMOVE)
      */
     private int _change;
-
-    private int _time;
     private boolean _available = true;
-    private int _location;
-    private byte _elemAtkType = -2;
-    private int _elemAtkPower = 0;
-    private int[] _option;
-    private Collection<EnsoulOption> _soulCrystalOptions;
-    private Collection<EnsoulOption> _soulCrystalSpecialOptions;
+    private int _equipped;
 
     /**
      * Get all information from Item to generate ItemInfo.
@@ -81,23 +51,23 @@ public class ItemInfo {
         Objects.requireNonNull(item);
 
         // Get the Identifier of the Item
-        _objectId = item.getObjectId();
+        objectId = item.getObjectId();
 
         // Get the ItemTemplate of the Item
         template = item.getTemplate();
 
         // Get the enchant level of the Item
-        _enchantLevel = item.getEnchantLevel();
+        enchant = item.getEnchantLevel();
 
         // Get the augmentation bonus
-        _augmentation = item.getAugmentation();
+        augmentation = item.getAugmentation();
 
         // Get the quantity of the Item
-        _count = item.getCount();
+        count = item.getCount();
 
         // Get custom item types (used loto, race tickets)
-        _type1 = item.getCustomType1();
-        _type2 = item.getCustomType2();
+        type1 = item.getCustomType1();
+        type2 = item.getCustomType2();
 
         // Verify if the Item is equipped
         _equipped = item.isEquipped() ? 1 : 0;
@@ -118,18 +88,18 @@ public class ItemInfo {
             }
         }
 
-        _time = item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -9999;
+        time = item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -9999;
         _available = item.isAvailable();
-        _location = item.getLocationSlot();
+        locationSlot = item.getLocationSlot();
 
-        _elemAtkType = item.getAttackAttributeType().getClientId();
-        _elemAtkPower = item.getAttackAttributePower();
+        elemAtkType = item.getAttackAttributeType().getClientId();
+        elemAtkPower = item.getAttackAttributePower();
         for (AttributeType type : AttributeType.ATTRIBUTE_TYPES) {
-            _attributeDefence[type.getClientId()] = item.getDefenceAttribute(type);
+            attributeDefense[type.getClientId()] = item.getDefenceAttribute(type);
         }
-        _option = item.getEnchantOptions();
-        _soulCrystalOptions = item.getSpecialAbilities();
-        _soulCrystalSpecialOptions = item.getAdditionalSpecialAbilities();
+        enchantOption = item.getEnchantOptions();
+        soulCrystalOptions = item.getSpecialAbilities();
+        soulCrystalSpecialOptions = item.getAdditionalSpecialAbilities();
     }
 
     public ItemInfo(Item item, int change) {
@@ -143,25 +113,25 @@ public class ItemInfo {
         }
 
         // Get the Identifier of the Item
-        _objectId = item.getObjectId();
+        objectId = item.getObjectId();
 
         // Get the ItemTemplate of the Item
         template = item.getItem();
 
         // Get the enchant level of the Item
-        _enchantLevel = item.getEnchant();
+        enchant = item.getEnchant();
 
         // Get the augmentation bonus
         if ((item.getAugmentationOption1() >= 0) && (item.getAugmentationOption2() >= 0)) {
-            _augmentation = new VariationInstance(0, item.getAugmentationOption1(), item.getAugmentationOption2());
+            augmentation = new VariationInstance(0, item.getAugmentationOption1(), item.getAugmentationOption2());
         }
 
         // Get the quantity of the Item
-        _count = item.getCount();
+        count = item.getCount();
 
         // Get custom item types (used loto, race tickets)
-        _type1 = item.getCustomType1();
-        _type2 = item.getCustomType2();
+        type1 = item.getCustomType1();
+        type2 = item.getCustomType2();
 
         // Verify if the Item is equipped
         _equipped = 0;
@@ -169,19 +139,19 @@ public class ItemInfo {
         // Get the action to do clientside
         _change = 0;
 
-        _time = -9999;
+        time = -9999;
 
-        _location = item.getLocationSlot();
+        locationSlot = item.getLocationSlot();
 
-        _elemAtkType = item.getAttackElementType();
-        _elemAtkPower = item.getAttackElementPower();
+        elemAtkType = item.getAttackElementType();
+        elemAtkPower = item.getAttackElementPower();
         for (byte i = 0; i < 6; i++) {
-            _attributeDefence[i] = item.getElementDefAttr(i);
+            attributeDefense[i] = item.getElementDefAttr(i);
         }
 
-        _option = item.getEnchantOptions();
-        _soulCrystalOptions = item.getSoulCrystalOptions();
-        _soulCrystalSpecialOptions = item.getSoulCrystalSpecialOptions();
+        enchantOption = item.getEnchantOptions();
+        soulCrystalOptions = item.getSoulCrystalOptions();
+        soulCrystalSpecialOptions = item.getSoulCrystalSpecialOptions();
     }
 
     public ItemInfo(Product item) {
@@ -190,23 +160,23 @@ public class ItemInfo {
         }
 
         // Get the Identifier of the Item
-        _objectId = 0;
+        objectId = 0;
 
         // Get the ItemTemplate of the Item
         template = item.getTemplate();
 
         // Get the enchant level of the Item
-        _enchantLevel = 0;
+        enchant = 0;
 
         // Get the augmentation bonus
-        _augmentation = null;
+        augmentation = null;
 
         // Get the quantity of the Item
-        _count = item.getCount();
+        count = item.getCount();
 
         // Get custom item types (used loto, race tickets)
-        _type1 = template.getType1();
-        _type2 = template.getType2();
+        type1 = template.getType1();
+        type2 = template.getType2();
 
         // Verify if the Item is equipped
         _equipped = 0;
@@ -214,12 +184,12 @@ public class ItemInfo {
         // Get the action to do clientside
         _change = 0;
 
-        _time = -9999;
+        time = -9999;
 
-        _location = 0;
+        locationSlot = 0;
 
-        _soulCrystalOptions = Collections.emptyList();
-        _soulCrystalSpecialOptions = Collections.emptyList();
+        soulCrystalOptions = Collections.emptyList();
+        soulCrystalSpecialOptions = Collections.emptyList();
     }
 
     public ItemInfo(WarehouseItem item) {
@@ -228,41 +198,41 @@ public class ItemInfo {
         }
 
         // Get the Identifier of the Item
-        _objectId = item.getObjectId();
+        objectId = item.getObjectId();
 
         // Get the ItemTemplate of the Item
         template = item.getItem();
 
         // Get the enchant level of the Item
-        _enchantLevel = item.getEnchantLevel();
+        enchant = item.getEnchantLevel();
 
         // Get the augmentation bonus
-        _augmentation = item.getAugmentation();
+        augmentation = item.getAugmentation();
 
         // Get the quantity of the Item
-        _count = item.getCount();
+        count = item.getCount();
 
         // Get custom item types (used loto, race tickets)
-        _type1 = item.getCustomType1();
-        _type2 = item.getCustomType2();
+        type1 = item.getCustomType1();
+        type2 = item.getCustomType2();
 
         // Verify if the Item is equipped
         _equipped = 0;
-        _time = item.getTime();
-        _location = item.getLocationSlot();
+        time = item.getTime();
+        locationSlot = item.getLocationSlot();
 
-        _elemAtkType = item.getAttackElementType();
-        _elemAtkPower = item.getAttackElementPower();
+        elemAtkType = item.getAttackElementType();
+        elemAtkPower = item.getAttackElementPower();
         for (byte i = 0; i < 6; i++) {
-            _attributeDefence[i] = item.getElementDefAttr(i);
+            attributeDefense[i] = item.getElementDefAttr(i);
         }
-        _option = item.getEnchantOptions();
-        _soulCrystalOptions = item.getSoulCrystalOptions();
-        _soulCrystalSpecialOptions = item.getSoulCrystalSpecialOptions();
+        enchantOption = item.getEnchantOptions();
+        soulCrystalOptions = item.getSoulCrystalOptions();
+        soulCrystalSpecialOptions = item.getSoulCrystalSpecialOptions();
     }
 
     public int getObjectId() {
-        return _objectId;
+        return objectId;
     }
 
     public ItemTemplate getTemplate() {
@@ -270,27 +240,23 @@ public class ItemInfo {
     }
 
     public int getEnchantLevel() {
-        return _enchantLevel;
+        return enchant;
     }
 
     public VariationInstance getAugmentation() {
-        return _augmentation;
+        return augmentation;
     }
 
     public long getCount() {
-        return _count;
+        return count;
     }
 
     public int getPrice() {
-        return _price;
+        return price;
     }
 
     public int getCustomType1() {
-        return _type1;
-    }
-
-    public int getCustomType2() {
-        return _type2;
+        return type1;
     }
 
     public int getEquipped() {
@@ -302,39 +268,39 @@ public class ItemInfo {
     }
 
     public int getTime() {
-        return _time > 0 ? _time : -9999;
+        return time > 0 ? time : -9999;
     }
 
     public boolean isAvailable() {
         return _available;
     }
 
-    public int getLocation() {
-        return _location;
+    public int getLocationSlot() {
+        return locationSlot;
     }
 
     public int getAttackElementType() {
-        return _elemAtkType;
+        return elemAtkType;
     }
 
     public int getAttackElementPower() {
-        return _elemAtkPower;
+        return elemAtkPower;
     }
 
     public int getAttributeDefence(AttributeType attribute) {
-        return _attributeDefence[attribute.getClientId()];
+        return attributeDefense[attribute.getClientId()];
     }
 
     public int[] getEnchantOptions() {
-        return _option;
+        return enchantOption;
     }
 
     public Collection<EnsoulOption> getSoulCrystalOptions() {
-        return _soulCrystalOptions != null ? _soulCrystalOptions : Collections.emptyList();
+        return soulCrystalOptions != null ? soulCrystalOptions : Collections.emptyList();
     }
 
     public Collection<EnsoulOption> getSoulCrystalSpecialOptions() {
-        return _soulCrystalSpecialOptions != null ? _soulCrystalSpecialOptions : Collections.emptyList();
+        return soulCrystalSpecialOptions != null ? soulCrystalSpecialOptions : Collections.emptyList();
     }
 
     public int getId() {
@@ -343,7 +309,7 @@ public class ItemInfo {
 
     @Override
     public String toString() {
-        return template + "[objId: " + _objectId + ", count: " + _count + "]";
+        return template + "[objId: " + objectId + ", count: " + count + "]";
     }
 
     public BodyPart getBodyPart() {

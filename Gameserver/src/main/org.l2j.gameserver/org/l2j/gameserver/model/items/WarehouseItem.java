@@ -22,69 +22,62 @@ import java.util.Objects;
  * @version $Revision: 1.7.2.2.2.5 $ $Date: 2005/04/06 18:25:18 $
  */
 public class WarehouseItem {
-    private final ItemTemplate _item;
-    private final int _object;
-    private final long _count;
-    private final int _owner;
-    private final int _locationSlot;
-    private final int _enchant;
-    private final CrystalType _grade;
-    private final VariationInstance _augmentation;
-    private final int _customType1;
-    private final int _customType2;
+    private final int[] attributeDefense = { 0, 0, 0, 0, 0, 0 };
+    private final ItemTemplate template;
+    private final int objectId;
+    private final long count;
+    private final int enchant;
+    private final VariationInstance augmentation;
+    private final int locationSlot;
+    private final int type1;
+    private final int type2;
+    private final Collection<EnsoulOption> soulCrystalOptions;
+    private final Collection<EnsoulOption> soulCrystalSpecialOptions;
+    private final int[] enchantOptions;
+    private byte elemAtkType;
+    private int elemAtkPower;
 
-    private final int[] _elemDefAttr =
-            {
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-            };
-    private final int[] _enchantOptions;
-    private final Collection<EnsoulOption> _soulCrystalOptions;
-    private final Collection<EnsoulOption> _soulCrystalSpecialOptions;
-    private final int _time;
-    private byte _elemAtkType = -2;
-    private int _elemAtkPower = 0;
+    private final int time;
+
+    private final int _owner;
+    private final CrystalType _grade;
 
     public WarehouseItem(Item item) {
         Objects.requireNonNull(item);
-        _item = item.getTemplate();
-        _object = item.getObjectId();
-        _count = item.getCount();
+        template = item.getTemplate();
+        objectId = item.getObjectId();
+        count = item.getCount();
         _owner = item.getOwnerId();
-        _locationSlot = item.getLocationSlot();
-        _enchant = item.getEnchantLevel();
-        _customType1 = item.getCustomType1();
-        _customType2 = item.getCustomType2();
+        locationSlot = item.getLocationSlot();
+        enchant = item.getEnchantLevel();
+        type1 = item.getCustomType1();
+        type2 = item.getCustomType2();
         _grade = item.getTemplate().getCrystalType();
-        _augmentation = item.getAugmentation();
-        _time = item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -1;
+        augmentation = item.getAugmentation();
+        time = item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -1;
 
-        _elemAtkType = item.getAttackAttributeType().getClientId();
-        _elemAtkPower = item.getAttackAttributePower();
+        elemAtkType = item.getAttackAttributeType().getClientId();
+        elemAtkPower = item.getAttackAttributePower();
         for (AttributeType type : AttributeType.ATTRIBUTE_TYPES) {
-            _elemDefAttr[type.getClientId()] = item.getDefenceAttribute(type);
+            attributeDefense[type.getClientId()] = item.getDefenceAttribute(type);
         }
-        _enchantOptions = item.getEnchantOptions();
-        _soulCrystalOptions = item.getSpecialAbilities();
-        _soulCrystalSpecialOptions = item.getAdditionalSpecialAbilities();
+        enchantOptions = item.getEnchantOptions();
+        soulCrystalOptions = item.getSpecialAbilities();
+        soulCrystalSpecialOptions = item.getAdditionalSpecialAbilities();
     }
 
     /**
      * @return the item.
      */
     public ItemTemplate getItem() {
-        return _item;
+        return template;
     }
 
     /**
      * @return the unique objectId.
      */
     public final int getObjectId() {
-        return _object;
+        return objectId;
     }
 
     /**
@@ -98,134 +91,106 @@ public class WarehouseItem {
      * @return the location slot.
      */
     public final int getLocationSlot() {
-        return _locationSlot;
+        return locationSlot;
     }
 
     /**
      * @return the count.
      */
     public final long getCount() {
-        return _count;
-    }
-
-    /**
-     * @return the first type.
-     */
-    public final int getType1() {
-        return _item.getType1();
+        return count;
     }
 
     /**
      * @return the second type.
      */
     public final int getType2() {
-        return _item.getType2();
+        return template.getType2();
     }
 
     /**
      * @return the second type.
      */
     public final ItemType getItemType() {
-        return _item.getItemType();
+        return template.getItemType();
     }
 
     /**
      * @return the ItemId.
      */
     public final int getItemId() {
-        return _item.getId();
+        return template.getId();
     }
 
     /**
      * @return the enchant level.
      */
     public final int getEnchantLevel() {
-        return _enchant;
-    }
-
-    /**
-     * @return the item grade
-     */
-    public final CrystalType getItemGrade() {
-        return _grade;
+        return enchant;
     }
 
     /**
      * @return {@code true} if the item is a weapon, {@code false} otherwise.
      */
     public final boolean isWeapon() {
-        return (_item instanceof Weapon);
+        return (template instanceof Weapon);
     }
 
     /**
      * @return {@code true} if the item is an armor, {@code false} otherwise.
      */
     public final boolean isArmor() {
-        return (_item instanceof Armor);
-    }
-
-    /**
-     * @return {@code true} if the item is an etc item, {@code false} otherwise.
-     */
-    public final boolean isEtcItem() {
-        return (_item instanceof EtcItem);
-    }
-
-    /**
-     * @return the name of the item
-     */
-    public String getItemName() {
-        return _item.getName();
+        return (template instanceof Armor);
     }
 
     /**
      * @return the augmentation If.
      */
     public VariationInstance getAugmentation() {
-        return _augmentation;
+        return augmentation;
     }
 
     /**
      * @return the name of the item
      */
     public String getName() {
-        return _item.getName();
+        return template.getName();
     }
 
     public final int getCustomType1() {
-        return _customType1;
+        return type1;
     }
 
     public final int getCustomType2() {
-        return _customType2;
+        return type2;
     }
 
     public byte getAttackElementType() {
-        return _elemAtkType;
+        return elemAtkType;
     }
 
     public int getAttackElementPower() {
-        return _elemAtkPower;
+        return elemAtkPower;
     }
 
     public int getElementDefAttr(byte i) {
-        return _elemDefAttr[i];
+        return attributeDefense[i];
     }
 
     public int[] getEnchantOptions() {
-        return _enchantOptions;
+        return enchantOptions;
     }
 
     public Collection<EnsoulOption> getSoulCrystalOptions() {
-        return _soulCrystalOptions;
+        return soulCrystalOptions;
     }
 
     public Collection<EnsoulOption> getSoulCrystalSpecialOptions() {
-        return _soulCrystalSpecialOptions;
+        return soulCrystalSpecialOptions;
     }
 
     public int getTime() {
-        return _time;
+        return time;
     }
 
     /**
@@ -233,6 +198,6 @@ public class WarehouseItem {
      */
     @Override
     public String toString() {
-        return _item.toString();
+        return template.toString();
     }
 }
