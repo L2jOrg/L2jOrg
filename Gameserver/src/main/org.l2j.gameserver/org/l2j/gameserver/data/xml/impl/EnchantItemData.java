@@ -1,21 +1,18 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.gameserver.model.StatsSet;
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.model.items.enchant.EnchantScroll;
-import org.l2j.gameserver.model.items.enchant.EnchantSupportItem;
 import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.items.type.CrystalType;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
 
 import java.io.File;
 import java.nio.file.Path;
-import java.util.HashMap;
-import java.util.Map;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
@@ -23,15 +20,14 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  * Loads item enchant data.
  *
  * @author UnAfraid
+ * @author JoeAlisson
  */
 public class EnchantItemData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(EnchantItemData.class);
 
-    private final Map<Integer, EnchantScroll> _scrolls = new HashMap<>();
-    private final Map<Integer, EnchantSupportItem> _supports = new HashMap<>();
+    private final IntMap<EnchantScroll> scrolls = new HashIntMap<>();
 
     private EnchantItemData() {
-        load();
     }
 
     @Override
@@ -41,62 +37,28 @@ public class EnchantItemData extends GameXmlReader {
 
     @Override
     public synchronized void load() {
-        _scrolls.clear();
-        _supports.clear();
+        scrolls.clear();
         parseDatapackFile("data/EnchantItemData.xml");
-        LOGGER.info("Loaded {} Enchant Scrolls.", _scrolls.size());
-        LOGGER.info("Loaded {} Support Items.", _supports.size() );
+        LOGGER.info("Loaded {} Enchant Scrolls.", scrolls.size());
     }
 
     @Override
     public void parseDocument(Document doc, File f) {
-        StatsSet set;
-        Node att;
-        NamedNodeMap attrs;
-        for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling()) {
-            if ("list".equalsIgnoreCase(n.getNodeName())) {
-                for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
-                    if ("enchant".equalsIgnoreCase(d.getNodeName())) {
-                        attrs = d.getAttributes();
-                        set = new StatsSet();
-                        for (int i = 0; i < attrs.getLength(); i++) {
-                            att = attrs.item(i);
-                            set.set(att.getNodeName(), att.getNodeValue());
-                        }
-
-                        try {
-                            final EnchantScroll item = new EnchantScroll(set);
-                            for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling()) {
-                                if ("item".equalsIgnoreCase(cd.getNodeName())) {
-                                    item.addItem(parseInteger(cd.getAttributes(), "id"));
-                                }
-                            }
-                            _scrolls.put(item.getId(), item);
-                        } catch (NullPointerException e) {
-                            LOGGER.warn("Unexistent enchant scroll: {} defined in enchant data!", set.getString("id") );
-                        } catch (IllegalAccessError e) {
-                            LOGGER.warn("Wrong enchant scroll item type: {}  defined in enchant data!", set.getString("id"));
-                        }
-                    } else if ("support".equalsIgnoreCase(d.getNodeName())) {
-                        attrs = d.getAttributes();
-                        set = new StatsSet();
-                        for (int i = 0; i < attrs.getLength(); i++) {
-                            att = attrs.item(i);
-                            set.set(att.getNodeName(), att.getNodeValue());
-                        }
-
-                        try {
-                            final EnchantSupportItem item = new EnchantSupportItem(set);
-                            _supports.put(item.getId(), item);
-                        } catch (NullPointerException e) {
-                            LOGGER.warn(": Unexistent enchant support item: " + set.getString("id") + " defined in enchant data!");
-                        } catch (IllegalAccessError e) {
-                            LOGGER.warn(": Wrong enchant support item type: " + set.getString("id") + " defined in enchant data!");
-                        }
-                    }
-                }
+        forEach(doc, "list", listNode -> forEach(listNode, "scroll", enchant -> {
+            var attr = enchant.getAttributes();
+            var id = parseInt(attr, "id");
+            var grade = parseEnum(attr, CrystalType.class, "grade");
+            var maxEnchant = parseInt(attr, "max-enchant");
+            var group = parseInt(attr, "group");
+            try {
+                var scroll = new EnchantScroll(id, grade, maxEnchant, group);
+                scrolls.put(id, scroll);
+            } catch (NullPointerException e) {
+                LOGGER.warn("Unexistent enchant scroll:{} defined in enchant data!", id);
+            } catch (IllegalArgumentException e) {
+                LOGGER.warn("Wrong enchant scroll item type: {} defined in enchant data!", id);
             }
-        }
+        }));
     }
 
     /**
@@ -106,17 +68,11 @@ public class EnchantItemData extends GameXmlReader {
      * @return enchant template for scroll
      */
     public final EnchantScroll getEnchantScroll(Item scroll) {
-        return _scrolls.get(scroll.getId());
+        return scrolls.get(scroll.getId());
     }
 
-    /**
-     * Gets the support item.
-     *
-     * @param item the item
-     * @return enchant template for support item
-     */
-    public final EnchantSupportItem getSupportItem(Item item) {
-        return _supports.get(item.getId());
+    public static void init() {
+        getInstance().load();
     }
 
     public static EnchantItemData getInstance() {

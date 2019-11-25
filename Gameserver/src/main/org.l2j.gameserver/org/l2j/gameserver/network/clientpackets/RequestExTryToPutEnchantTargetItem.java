@@ -43,7 +43,7 @@ public class RequestExTryToPutEnchantTargetItem extends ClientPacket {
         }
 
         final EnchantScroll scrollTemplate = EnchantItemData.getInstance().getEnchantScroll(scroll);
-        if ((scrollTemplate == null) || !scrollTemplate.isValid(item, null)) {
+        if ((scrollTemplate == null) || !scrollTemplate.isValid(item)) {
             client.sendPacket(SystemMessageId.DOES_NOT_FIT_STRENGTHENING_CONDITIONS_OF_THE_SCROLL);
             activeChar.removeRequest(request.getClass());
             client.sendPacket(new ExPutEnchantTargetItemResult(0));

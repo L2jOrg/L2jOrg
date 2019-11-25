@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/EnchantItemData.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org xsd/EnchantItemData.xsd">
 	<!-- Scrolls: Enchant Weapon -->
-	<enchant id="959" targetGrade="S" maxEnchant="16" />
-	<enchant id="729" targetGrade="A" maxEnchant="16" />
-	<enchant id="947" targetGrade="B" maxEnchant="16" />
-	<enchant id="951" targetGrade="C" maxEnchant="16" />
-	<enchant id="955" targetGrade="D" maxEnchant="16" />
+	<scroll id="959" grade="S" max-enchant="16" />
+	<scroll id="729" grade="A" max-enchant="16" />
+	<scroll id="947" grade="B" max-enchant="16" />
+	<scroll id="951" grade="C" max-enchant="16" />
+	<scroll id="955" grade="D" max-enchant="16" />
 
 	<!-- Scrolls: Enchant Armor -->
-	<enchant id="960" targetGrade="S" maxEnchant="16" />
-	<enchant id="730" targetGrade="A" maxEnchant="16" />
-	<enchant id="948" targetGrade="B" maxEnchant="16" />
-	<enchant id="952" targetGrade="C" maxEnchant="16" />
-	<enchant id="956" targetGrade="D" maxEnchant="16" scrollGroupId="0" /> <!-- Default scroll groups binding. -->
+	<scroll id="960" grade="S" max-enchant="16" />
+	<scroll id="730" grade="A" max-enchant="16" />
+	<scroll id="948" grade="B" max-enchant="16" />
+	<scroll id="952" grade="C" max-enchant="16" />
+	<scroll id="956" grade="D" max-enchant="16"/> <!-- Default scroll groups binding. -->
 
 	<!-- Blessed Scrolls: Enchant Weapon -->
-	<enchant id="6577" targetGrade="S" maxEnchant="16" />
-	<enchant id="6569" targetGrade="A" maxEnchant="16" />
-	<enchant id="6571" targetGrade="B" maxEnchant="16" />
-	<enchant id="6573" targetGrade="C" maxEnchant="16" />
-	<enchant id="6575" targetGrade="D" maxEnchant="16" />
+	<scroll id="6577" grade="S" max-enchant="16" />
+	<scroll id="6569" grade="A" max-enchant="16" />
+	<scroll id="6571" grade="B" max-enchant="16" />
+	<scroll id="6573" grade="C" max-enchant="16" />
+	<scroll id="6575" grade="D" max-enchant="16" />
 
 	<!-- Blessed Scrolls: Enchant Armor -->
-	<enchant id="6578" targetGrade="S" maxEnchant="16" />
-	<enchant id="6570" targetGrade="A" maxEnchant="16" />
-	<enchant id="6572" targetGrade="B" maxEnchant="16" />
-	<enchant id="6574" targetGrade="C" maxEnchant="16" />
-	<enchant id="6576" targetGrade="D" maxEnchant="16" />
+	<scroll id="6578" grade="S" max-enchant="16" />
+	<scroll id="6570" grade="A" max-enchant="16" />
+	<scroll id="6572" grade="B" max-enchant="16" />
+	<scroll id="6574" grade="C" max-enchant="16" />
+	<scroll id="6576" grade="D" max-enchant="16" />
 </list>

@@ -5,6 +5,7 @@ import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.xml.impl.EnchantItemData;
 import org.l2j.gameserver.data.xml.impl.EnchantItemHPBonusData;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.ItemSkillType;
@@ -485,6 +486,7 @@ public final class ItemEngine extends GameXmlReader {
         ConditionHandler.getInstance().executeScript();
         getInstance().load();
         EnchantItemGroupsData.init();
+        EnchantItemData.getInstance();
     }
 
     public static ItemEngine getInstance() {
