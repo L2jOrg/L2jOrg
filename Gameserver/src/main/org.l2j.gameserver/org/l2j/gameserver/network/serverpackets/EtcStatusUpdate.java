@@ -14,7 +14,7 @@ public class EtcStatusUpdate extends ServerPacket {
 
     public EtcStatusUpdate(Player activeChar) {
         _activeChar = activeChar;
-        _mask = _activeChar.getMessageRefusal() || _activeChar.isChatBanned() || _activeChar.isSilenceMode() ? 1 : 0;
+        _mask = _activeChar.isMessageRefusing() || _activeChar.isChatBanned() || _activeChar.isSilenceMode() ? 1 : 0;
         _mask |= _activeChar.isInsideZone(ZoneType.DANGER_AREA) ? 2 : 0;
         _mask |= _activeChar.hasCharmOfCourage() ? 4 : 0;
     }

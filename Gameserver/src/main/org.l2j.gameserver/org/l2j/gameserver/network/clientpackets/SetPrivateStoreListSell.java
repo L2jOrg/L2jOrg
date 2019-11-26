@@ -28,7 +28,7 @@ public class SetPrivateStoreListSell extends ClientPacket {
 
     @Override
     public void readImpl() throws InvalidDataPacketException {
-        _packageSale = (readInt() == 1);
+        _packageSale = readIntAsBoolean();
         final int count = readInt();
         if ((count < 1) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != available())) {
             throw new InvalidDataPacketException();

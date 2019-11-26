@@ -1,71 +1,99 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.instancemanager.MentorManager;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.GameClient;
+import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.ServerPacketId;
 
 import java.util.Collection;
 
+import static java.util.Objects.nonNull;
+
+/**
+ * @author JoeAlisson
+ */
 public final class TradeStart extends AbstractItemPacket {
-    private final int _sendType;
-    private final Player _activeChar;
-    private final Player _partner;
-    private final Collection<Item> _itemList;
-    private int _mask = 0;
 
-    public TradeStart(int sendType, Player player) {
-        _sendType = sendType;
-        _activeChar = player;
-        _partner = player.getActiveTradeList().getPartner();
-        _itemList = _activeChar.getInventory().getAvailableItems(true, (_activeChar.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && Config.GM_TRADE_RESTRICTED_ITEMS), false);
+    private static final byte PARTNER_INFO = 1;
+    private static final byte ITEMS_INFO = 2;
 
-        if (_partner != null) {
-            if (player.getFriendList().contains(_partner.getObjectId())) {
-                _mask |= 0x01;
-            }
-            if ((player.getClanId() > 0) && (_partner.getClanId() == _partner.getClanId())) {
-                _mask |= 0x02;
-            }
-            if ((MentorManager.getInstance().getMentee(player.getObjectId(), _partner.getObjectId()) != null) || (MentorManager.getInstance().getMentee(_partner.getObjectId(), player.getObjectId()) != null)) {
-                _mask |= 0x04;
-            }
-            if ((player.getAllyId() > 0) && (player.getAllyId() == _partner.getAllyId())) {
-                _mask |= 0x08;
+    private Player partner;
+    private Collection<Item> items;
+    private final int type;
+    private int mask = 0;
+
+    private TradeStart(int type, Player player, Player partner) {
+        this.type = type;
+        this.partner = partner;
+
+        if (nonNull(partner)) {
+            if(player.isFriend(partner)) {
+                mask |= 0x01;
             }
 
+            if(player.isInSameClan(partner)) {
+                mask |= 0x02;
+            }
+
+            if(player.hasMentorRelationship(partner)) {
+                mask |= 0x04;
+            }
+
+            if(player.isInSameAlly(partner)) {
+                mask |= 0x08;
+
+            }
             // Does not shows level
-            if (_partner.isGM()) {
-                _mask |= 0x10;
+            if (partner.isGM()) {
+                mask |= 0x10;
             }
         }
+    }
+
+    private TradeStart(byte type, Player player) {
+        this.type = type;
+        items = player.getInventory().getAvailableItems(true, player.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && Config.GM_TRADE_RESTRICTED_ITEMS, false);
     }
 
     @Override
     public void writeImpl(GameClient client) throws InvalidDataPacketException {
-        if ((_activeChar.getActiveTradeList() == null) || (_partner == null)) {
+        if ((client.getPlayer().getActiveTradeList() == null)) {
             throw new InvalidDataPacketException();
         }
 
         writeId(ServerPacketId.TRADE_START);
-        writeByte((byte) _sendType);
-        if (_sendType == 2) {
-            writeInt(_itemList.size());
-            writeInt(_itemList.size());
-            for (Item item : _itemList) {
-                writeItem(item);
-            }
+        writeByte(type);
+        if (type == ITEMS_INFO) {
+            writeItems();
         } else {
-            writeInt(_partner.getObjectId());
-            writeByte((byte) _mask); // some kind of mask
-            if ((_mask & 0x10) == 0) {
-                writeByte((byte) _partner.getLevel());
-            }
+            writePatner();
         }
     }
 
+    private void writePatner() {
+        writeInt(partner.getObjectId());
+        writeByte(mask);
+        if ((mask & 0x10) == 0) {
+            writeByte(partner.getLevel());
+        }
+    }
+
+    private void writeItems() {
+        writeInt(items.size());
+        writeInt(items.size());
+        for (Item item : items) {
+            writeItem(item);
+        }
+    }
+
+    public static TradeStart partnerInfo(Player player, Player partner) {
+        return new TradeStart(PARTNER_INFO, player, partner);
+    }
+
+    public static TradeStart itemsInfo(Player player) {
+        return new TradeStart(ITEMS_INFO, player);
+    }
 }

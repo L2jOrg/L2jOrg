@@ -1,12 +1,14 @@
 package org.l2j.gameserver.instancemanager;
 
+import io.github.joealisson.primitive.CHashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.model.Mentee;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.variables.PlayerVariables;
+import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,11 +18,6 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Objects;
-import java.util.concurrent.ConcurrentHashMap;
-
 
 /**
  * @author UnAfraid
@@ -28,8 +25,8 @@ import java.util.concurrent.ConcurrentHashMap;
 public class MentorManager {
     private static final Logger LOGGER = LoggerFactory.getLogger(MentorManager.class);
 
-    private final Map<Integer, Map<Integer, Mentee>> _menteeData = new ConcurrentHashMap<>();
-    private final Map<Integer, Mentee> _mentors = new ConcurrentHashMap<>();
+    private final IntMap<IntMap<Mentee>> _menteeData = new CHashIntMap<>();
+    private final IntMap<Mentee> _mentors = new CHashIntMap<>();
 
     private MentorManager() {
         load();
@@ -89,10 +86,6 @@ public class MentorManager {
         return _menteeData.values().stream().anyMatch(map -> map.containsKey(objectId));
     }
 
-    public Map<Integer, Map<Integer, Mentee>> getMentorData() {
-        return _menteeData;
-    }
-
     public void cancelAllMentoringBuffs(Player player) {
         if (player == null) {
             return;
@@ -124,7 +117,7 @@ public class MentorManager {
      * @param menteeId
      */
     public void addMentor(int mentorId, int menteeId) {
-        final Map<Integer, Mentee> mentees = _menteeData.computeIfAbsent(mentorId, map -> new ConcurrentHashMap<>());
+        var mentees = _menteeData.computeIfAbsent(mentorId, map -> new CHashIntMap<>());
         if (mentees.containsKey(menteeId)) {
             mentees.get(menteeId).load(); // Just reloading data if is already there
         } else {
@@ -151,7 +144,7 @@ public class MentorManager {
      * @return
      */
     public Mentee getMentor(int menteeId) {
-        for (Entry<Integer, Map<Integer, Mentee>> map : _menteeData.entrySet()) {
+        for (var map : _menteeData.entrySet()) {
             if (map.getValue().containsKey(menteeId)) {
                 if (!_mentors.containsKey(map.getKey())) {
                     _mentors.put(map.getKey(), new Mentee(map.getKey()));
@@ -193,11 +186,6 @@ public class MentorManager {
         }
         return isAllMenteesOffline;
     }
-
-    public boolean hasOnlineMentees(int menteorId) {
-        return getMentees(menteorId).stream().filter(Objects::nonNull).filter(Mentee::isOnline).count() > 0;
-    }
-
     public static MentorManager getInstance() {
         return Singleton.INSTANCE;
     }

@@ -117,6 +117,7 @@ import static org.l2j.commons.util.Util.zeroIfNullOrElse;
 import static org.l2j.gameserver.model.items.BodyPart.*;
 import static org.l2j.gameserver.network.SystemMessageId.S1_HAS_INFLICTED_S3_S4_ATTRIBUTE_DAMGE_DAMAGE_TO_S2;
 import static org.l2j.gameserver.network.SystemMessageId.YOU_CANNOT_MOVE_WHILE_CASTING;
+import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 
 /**
  * This class represents all player characters in the world.<br>
@@ -538,7 +539,7 @@ public final class Player extends Playable {
     /**
      * Store object used to summon the strider you are mounting
      **/
-    private int _mountObjectID = 0;
+    private int mountObjectID = 0;
     private AdminTeleportType _teleportType = AdminTeleportType.NORMAL;
     private boolean _inCrystallize;
     private boolean _isCrafting;
@@ -568,7 +569,7 @@ public final class Player extends Playable {
     private PcWarehouse _warehouse;
     private PcRefund _refund;
     private PrivateStoreType _privateStoreType = PrivateStoreType.NONE;
-    private TradeList _activeTradeList;
+    private TradeList activeTradeList;
     private ItemContainer _activeWarehouse;
     private volatile Map<Integer, ManufactureItem> _manufactureItems;
 
@@ -598,7 +599,7 @@ public final class Player extends Playable {
     /**
      * The Pet of the Player
      */
-    private Pet _pet = null;
+    private Pet pet = null;
     /**
      * Servitors of the Player
      */
@@ -615,7 +616,7 @@ public final class Player extends Playable {
     /**
      * The Clan Identifier of the Player
      */
-    private int _clanId;
+    private int clanId;
     /**
      * The Clan object of the Player
      */
@@ -636,17 +637,17 @@ public final class Player extends Playable {
     private AccessLevel _accessLevel;
 
     // private byte _updateKnownCounter = 0;
-    private boolean _messageRefusal = false; // message refusal mode
+    private boolean messageRefusing = false; // message refusal mode
     private boolean _silenceMode = false; // silence mode
     private List<Integer> _silenceModeExcluded; // silence mode
     private boolean _dietMode = false; // ignore weight penalty
-    private boolean _tradeRefusal = false; // Trade refusal
-    private boolean _exchangeRefusal = false; // Exchange refusal
+    private boolean tradeRefusing = false; // Trade refusal
+
     private Party _party;
     // this is needed to find the inviting player for Party response
     // there can only be one active party request at once
-    private Player _activeRequester;
-    private long _requestExpireTime = 0;
+    private Player activeRequester;
+    private long requestExpireTime = 0;
     // Used for protection after teleport
     private long _spawnProtectEndTime = 0;
     private long _teleportProtectEndTime = 0;
@@ -663,7 +664,7 @@ public final class Player extends Playable {
     private int _expertiseArmorPenalty = 0;
     private int _expertiseWeaponPenalty = 0;
     private int _expertisePenaltyBonus = 0;
-    private volatile Map<Class<? extends AbstractRequest>, AbstractRequest> _requests;
+    private volatile Map<Class<? extends AbstractRequest>, AbstractRequest> requests;
     /**
      * Active Brooch Jewels
      **/
@@ -1632,7 +1633,7 @@ public final class Player extends Playable {
         // If this player has a pet update the pets pvp flag as well
         if (hasSummon()) {
             final RelationChanged rc = new RelationChanged();
-            final Summon pet = _pet;
+            final Summon pet = this.pet;
             if (pet != null) {
                 rc.addRelation(pet, getRelation(this), false);
             }
@@ -1654,7 +1655,7 @@ public final class Player extends Playable {
                 final RelationChanged rc = new RelationChanged();
                 rc.addRelation(this, relation, isAutoAttackable(player));
                 if (hasSummon()) {
-                    final Summon pet = _pet;
+                    final Summon pet = this.pet;
                     if (pet != null) {
                         rc.addRelation(pet, relation, isAutoAttackable(player));
                     }
@@ -1862,7 +1863,7 @@ public final class Player extends Playable {
 
         super.setReputation(reputation);
 
-        sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_REPUTATION_HAS_BEEN_CHANGED_TO_S1).addInt(getReputation()));
+        sendPacket(getSystemMessage(SystemMessageId.YOUR_REPUTATION_HAS_BEEN_CHANGED_TO_S1).addInt(getReputation()));
         broadcastReputation();
     }
 
@@ -2004,9 +2005,9 @@ public final class Player extends Playable {
             }
 
             if (item.getEnchantLevel() > 0) {
-                sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED).addInt(item.getEnchantLevel()).addItemName(item);
+                sm = getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED).addInt(item.getEnchantLevel()).addItemName(item);
             } else {
-                sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED).addItemName(item);
+                sm = getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED).addItemName(item);
             }
             sendPacket(sm);
         } else {
@@ -2014,9 +2015,9 @@ public final class Player extends Playable {
 
             if (item.isEquipped()) {
                 if (item.getEnchantLevel() > 0) {
-                    sm = SystemMessage.getSystemMessage(SystemMessageId.EQUIPPED_S1_S2).addInt(item.getEnchantLevel());
+                    sm = getSystemMessage(SystemMessageId.EQUIPPED_S1_S2).addInt(item.getEnchantLevel());
                 } else {
-                    sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_YOUR_S1);
+                    sm = getSystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_YOUR_S1);
                 }
                 sm.addItemName(item);
                 sendPacket(sm);
@@ -2125,7 +2126,7 @@ public final class Player extends Playable {
                 }
                 setLvlJoinedAcademy(0);
                 // oust pledge member from the academy, cuz he has finished his 2nd class transfer
-                final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.CLAN_MEMBER_S1_HAS_BEEN_EXPELLED);
+                final SystemMessage msg = getSystemMessage(SystemMessageId.CLAN_MEMBER_S1_HAS_BEEN_EXPELLED);
                 msg.addPcName(this);
                 _clan.broadcastToOnlineMembers(msg);
                 _clan.broadcastToOnlineMembers(new PledgeShowMemberListDelete(getName()));
@@ -2447,7 +2448,7 @@ public final class Player extends Playable {
      */
     @Override
     public int getClanId() {
-        return _clanId;
+        return clanId;
     }
 
     /**
@@ -2650,7 +2651,7 @@ public final class Player extends Playable {
      */
     public void addAdena(String process, long count, WorldObject reference, boolean sendMessage) {
         if (sendMessage) {
-            final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_ADENA);
+            final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_ADENA);
             sm.addLong(count);
             sendPacket(sm);
         }
@@ -2702,7 +2703,7 @@ public final class Player extends Playable {
             }
 
             if (sendMessage) {
-                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_ADENA_DISAPPEARED);
+                final SystemMessage sm = getSystemMessage(SystemMessageId.S1_ADENA_DISAPPEARED);
                 sm.addLong(count);
                 sendPacket(sm);
             }
@@ -2745,12 +2746,12 @@ public final class Player extends Playable {
 
             if (sendMessage) {
                 if (count > 1) {
-                    final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
+                    final SystemMessage sm = getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
                     sm.addItemName(Inventory.BEAUTY_TICKET_ID);
                     sm.addLong(count);
                     sendPacket(sm);
                 } else {
-                    final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
+                    final SystemMessage sm = getSystemMessage(SystemMessageId.S1_DISAPPEARED);
                     sm.addItemName(Inventory.BEAUTY_TICKET_ID);
                     sendPacket(sm);
                 }
@@ -2770,7 +2771,7 @@ public final class Player extends Playable {
      */
     public void addAncientAdena(String process, long count, WorldObject reference, boolean sendMessage) {
         if (sendMessage) {
-            final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
+            final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
             sm.addItemName(CommonItem.ANCIENT_ADENA);
             sm.addLong(count);
             sendPacket(sm);
@@ -2823,12 +2824,12 @@ public final class Player extends Playable {
 
             if (sendMessage) {
                 if (count > 1) {
-                    final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
+                    final SystemMessage sm = getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
                     sm.addItemName(CommonItem.ANCIENT_ADENA);
                     sm.addLong(count);
                     sendPacket(sm);
                 } else {
-                    final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
+                    final SystemMessage sm = getSystemMessage(SystemMessageId.S1_DISAPPEARED);
                     sm.addItemName(CommonItem.ANCIENT_ADENA);
                     sendPacket(sm);
                 }
@@ -2851,17 +2852,17 @@ public final class Player extends Playable {
             // Sends message to client if requested
             if (sendMessage) {
                 if (item.getCount() > 1) {
-                    final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
+                    final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
                     sm.addItemName(item);
                     sm.addLong(item.getCount());
                     sendPacket(sm);
                 } else if (item.getEnchantLevel() > 0) {
-                    final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_A_S1_S2);
+                    final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_A_S1_S2);
                     sm.addInt(item.getEnchantLevel());
                     sm.addItemName(item);
                     sendPacket(sm);
                 } else {
-                    final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1);
+                    final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1);
                     sm.addItemName(item);
                     sendPacket(sm);
                 }
@@ -2881,7 +2882,7 @@ public final class Player extends Playable {
             else if (FortSiegeManager.getInstance().isCombat(item.getId())) {
                 if (FortSiegeManager.getInstance().activateCombatFlag(this, item)) {
                     final Fort fort = FortDataManager.getInstance().getFort(this);
-                    fort.getSiege().announceToPlayer(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_ACQUIRED_THE_FLAG), getName());
+                    fort.getSiege().announceToPlayer(getSystemMessage(SystemMessageId.C1_HAS_ACQUIRED_THE_FLAG), getName());
                 }
             }
         }
@@ -2910,22 +2911,22 @@ public final class Player extends Playable {
             if (sendMessage && ((!isCastingNow() && item.hasExImmediateEffect()) || !item.hasExImmediateEffect())) {
                 if (count > 1) {
                     if (process.equalsIgnoreCase("Sweeper") || process.equalsIgnoreCase("Quest")) {
-                        final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
+                        final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
                         sm.addItemName(itemId);
                         sm.addLong(count);
                         sendPacket(sm);
                     } else {
-                        final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
+                        final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
                         sm.addItemName(itemId);
                         sm.addLong(count);
                         sendPacket(sm);
                     }
                 } else if (process.equalsIgnoreCase("Sweeper") || process.equalsIgnoreCase("Quest")) {
-                    final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
+                    final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
                     sm.addItemName(itemId);
                     sendPacket(sm);
                 } else {
-                    final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1);
+                    final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1);
                     sm.addItemName(itemId);
                     sendPacket(sm);
                 }
@@ -3010,12 +3011,12 @@ public final class Player extends Playable {
         // Sends message to client if requested
         if (sendMessage) {
             if (count > 1) {
-                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
+                final SystemMessage sm = getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
                 sm.addItemName(item);
                 sm.addLong(count);
                 sendPacket(sm);
             } else {
-                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
+                final SystemMessage sm = getSystemMessage(SystemMessageId.S1_DISAPPEARED);
                 sm.addItemName(item);
                 sendPacket(sm);
             }
@@ -3110,12 +3111,12 @@ public final class Player extends Playable {
         // Sends message to client if requested
         if (sendMessage) {
             if (count > 1) {
-                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
+                final SystemMessage sm = getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
                 sm.addItemName(itemId);
                 sm.addLong(count);
                 sendPacket(sm);
             } else {
-                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
+                final SystemMessage sm = getSystemMessage(SystemMessageId.S1_DISAPPEARED);
                 sm.addItemName(itemId);
                 sendPacket(sm);
             }
@@ -3272,7 +3273,7 @@ public final class Player extends Playable {
 
         // Sends message to client if requested
         if (sendMessage) {
-            final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_DROPPED_S1);
+            final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_DROPPED_S1);
             sm.addItemName(item);
             sendPacket(sm);
         }
@@ -3343,7 +3344,7 @@ public final class Player extends Playable {
 
         // Sends message to client if requested
         if (sendMessage) {
-            final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_DROPPED_S1);
+            final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_DROPPED_S1);
             sm.addItemName(item);
             sendPacket(sm);
         }
@@ -3376,7 +3377,7 @@ public final class Player extends Playable {
         }
 
         // Pet is summoned and not the item that summoned the pet AND not the buggle from strider you're mounting
-        if (((_pet != null) && (_pet.getControlObjectId() == objectId)) || (_mountObjectID == objectId)) {
+        if (((pet != null) && (pet.getControlObjectId() == objectId)) || (mountObjectID == objectId)) {
             return null;
         }
 
@@ -3676,14 +3677,11 @@ public final class Player extends Playable {
      */
     @Override
     public int getAllyId() {
-        if (_clan == null) {
-            return 0;
-        }
-        return _clan.getAllyId();
+        return zeroIfNullOrElse(_clan, Clan::getAllyId);
     }
 
     public int getAllyCrestId() {
-        if ((_clanId == 0) || (_clan == null) || (_clan.getAllyId() == 0)) {
+        if ((clanId == 0) || (_clan == null) || (_clan.getAllyId() == 0)) {
             return 0;
         }
         return _clan.getAllyCrestId();
@@ -3708,7 +3706,7 @@ public final class Player extends Playable {
      */
     @Override
     public void sendPacket(SystemMessageId id) {
-        sendPacket(SystemMessage.getSystemMessage(id));
+        sendPacket(getSystemMessage(id));
     }
 
     /**
@@ -3822,7 +3820,7 @@ public final class Player extends Playable {
 
             if (!target.getDropProtection().tryPickUp(this)) {
                 sendPacket(ActionFailed.STATIC_PACKET);
-                smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
+                smsg = getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
                 smsg.addItemName(target);
                 sendPacket(smsg);
                 return;
@@ -3836,7 +3834,7 @@ public final class Player extends Playable {
 
             if (isInvul() && !canOverrideCond(PcCondOverride.ITEM_CONDITIONS)) {
                 sendPacket(ActionFailed.STATIC_PACKET);
-                smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
+                smsg = getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
                 smsg.addItemName(target);
                 sendPacket(smsg);
                 return;
@@ -3844,14 +3842,14 @@ public final class Player extends Playable {
 
             if ((target.getOwnerId() != 0) && (target.getOwnerId() != getObjectId()) && !isInLooterParty(target.getOwnerId())) {
                 if (target.getId() == CommonItem.ADENA) {
-                    smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1_ADENA);
+                    smsg = getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1_ADENA);
                     smsg.addLong(target.getCount());
                 } else if (target.getCount() > 1) {
-                    smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S2_S1_S);
+                    smsg = getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S2_S1_S);
                     smsg.addItemName(target);
                     smsg.addLong(target.getCount());
                 } else {
-                    smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
+                    smsg = getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
                     smsg.addItemName(target);
                 }
                 sendPacket(ActionFailed.STATIC_PACKET);
@@ -3896,13 +3894,13 @@ public final class Player extends Playable {
             // if item is instance of L2ArmorType or L2WeaponType broadcast an "Attention" system message
             if ((target.getItemType() instanceof ArmorType) || (target.getItemType() instanceof WeaponType)) {
                 if (target.getEnchantLevel() > 0) {
-                    smsg = SystemMessage.getSystemMessage(SystemMessageId.ATTENTION_C1_HAS_PICKED_UP_S2_S3);
+                    smsg = getSystemMessage(SystemMessageId.ATTENTION_C1_HAS_PICKED_UP_S2_S3);
                     smsg.addPcName(this);
                     smsg.addInt(target.getEnchantLevel());
                     smsg.addItemName(target.getId());
                     broadcastPacket(smsg, 1400);
                 } else {
-                    smsg = SystemMessage.getSystemMessage(SystemMessageId.ATTENTION_C1_HAS_PICKED_UP_S2);
+                    smsg = getSystemMessage(SystemMessageId.ATTENTION_C1_HAS_PICKED_UP_S2);
                     smsg.addPcName(this);
                     smsg.addItemName(target.getId());
                     broadcastPacket(smsg, 1400);
@@ -4223,7 +4221,7 @@ public final class Player extends Playable {
                     if (_pvpFlag == 0) {
                         msg = Config.ANNOUNCE_PK_MSG.replace("$killer", killer.getName()).replace("$target", getName());
                         if (Config.ANNOUNCE_PK_PVP_NORMAL_MESSAGE) {
-                            final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1);
+                            final SystemMessage sm = getSystemMessage(SystemMessageId.S1);
                             sm.addString(msg);
                             Broadcast.toAllOnlinePlayers(sm);
                         } else {
@@ -4232,7 +4230,7 @@ public final class Player extends Playable {
                     } else if (_pvpFlag != 0) {
                         msg = Config.ANNOUNCE_PVP_MSG.replace("$killer", killer.getName()).replace("$target", getName());
                         if (Config.ANNOUNCE_PK_PVP_NORMAL_MESSAGE) {
-                            final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1);
+                            final SystemMessage sm = getSystemMessage(SystemMessageId.S1);
                             sm.addString(msg);
                             Broadcast.toAllOnlinePlayers(sm);
                         } else {
@@ -4328,7 +4326,7 @@ public final class Player extends Playable {
         }
 
         final Player pk = killer.getActingPlayer();
-        if ((getReputation() >= 0) && (pk != null) && (pk.getClan() != null) && (getClan() != null) && (pk.getClan().isAtWarWith(_clanId)
+        if ((getReputation() >= 0) && (pk != null) && (pk.getClan() != null) && (getClan() != null) && (pk.getClan().isAtWarWith(clanId)
                 // || _clan.isAtWarWith(((Player)killer).getClanId())
         )) {
             return;
@@ -4368,7 +4366,7 @@ public final class Player extends Playable {
                     if (itemDrop.isTimeLimitedItem() || // Dont drop Time Limited Items
                             !itemDrop.isDropable() || (itemDrop.getId() == CommonItem.ADENA) || // Adena
                             (itemDrop.getTemplate().getType2() == ItemTemplate.TYPE2_QUEST) || // Quest Items
-                            ((_pet != null) && (_pet.getControlObjectId() == itemDrop.getId())) || // Control Item of active pet
+                            ((pet != null) && (pet.getControlObjectId() == itemDrop.getId())) || // Control Item of active pet
                             (Arrays.binarySearch(Config.KARMA_LIST_NONDROPPABLE_ITEMS, itemDrop.getId()) >= 0) || // Item listed in the non droppable item list
                             (Arrays.binarySearch(Config.KARMA_LIST_NONDROPPABLE_PET_ITEMS, itemDrop.getId()) >= 0 // Item listed in the non droppable pet item list
                             )) {
@@ -4618,7 +4616,7 @@ public final class Player extends Playable {
 
     @Override
     public Pet getPet() {
-        return _pet;
+        return pet;
     }
 
     /**
@@ -4627,7 +4625,7 @@ public final class Player extends Playable {
      * @param pet
      */
     public void setPet(Pet pet) {
-        _pet = pet;
+        this.pet = pet;
     }
 
     @Override
@@ -4652,8 +4650,8 @@ public final class Player extends Playable {
         final List<Summon> summons = new ArrayList<>();
         summons.addAll(getServitors().values());
 
-        if (_pet != null) {
-            summons.add(_pet);
+        if (pet != null) {
+            summons.add(pet);
         }
 
         return summons;
@@ -4711,13 +4709,13 @@ public final class Player extends Playable {
      * @return the Player requester of a transaction (ex : FriendInvite, JoinAlly, JoinParty...).
      */
     public Player getActiveRequester() {
-        final Player requester = _activeRequester;
-        if (requester != null) {
-            if (requester.isRequestExpired() && (_activeTradeList == null)) {
-                _activeRequester = null;
+        var requester = activeRequester;
+        if (nonNull(requester)) {
+            if (requester.isRequestExpired() && isNull(activeTradeList)) {
+                activeRequester = null;
             }
         }
-        return _activeRequester;
+        return activeRequester;
     }
 
     /**
@@ -4726,25 +4724,21 @@ public final class Player extends Playable {
      * @param requester
      */
     public void setActiveRequester(Player requester) {
-        _activeRequester = requester;
+        activeRequester = requester;
     }
 
     /**
      * @return True if a transaction is in progress.
      */
     public boolean isProcessingRequest() {
-        return (getActiveRequester() != null) || (_requestExpireTime > WorldTimeController.getInstance().getGameTicks());
+        return nonNull(getActiveRequester()) || requestExpireTime > WorldTimeController.getInstance().getGameTicks();
     }
 
     /**
      * @return True if a transaction is in progress.
      */
     public boolean isProcessingTransaction() {
-        return (getActiveRequester() != null) || (_activeTradeList != null) || (_requestExpireTime > WorldTimeController.getInstance().getGameTicks());
-    }
-
-    public void blockRequest() {
-        _requestExpireTime = WorldTimeController.getInstance().getGameTicks() + (REQUEST_TIMEOUT * WorldTimeController.TICKS_PER_SECOND);
+        return nonNull(getActiveRequester()) || nonNull(activeTradeList) || requestExpireTime > WorldTimeController.getInstance().getGameTicks();
     }
 
     /**
@@ -4753,7 +4747,7 @@ public final class Player extends Playable {
      * @param partner
      */
     public void onTransactionRequest(Player partner) {
-        _requestExpireTime = WorldTimeController.getInstance().getGameTicks() + (REQUEST_TIMEOUT * WorldTimeController.TICKS_PER_SECOND);
+        requestExpireTime = WorldTimeController.getInstance().getGameTicks() + (REQUEST_TIMEOUT * WorldTimeController.TICKS_PER_SECOND);
         partner.setActiveRequester(this);
     }
 
@@ -4763,14 +4757,14 @@ public final class Player extends Playable {
      * @return
      */
     public boolean isRequestExpired() {
-        return !(_requestExpireTime > WorldTimeController.getInstance().getGameTicks());
+        return requestExpireTime <= WorldTimeController.getInstance().getGameTicks();
     }
 
     /**
      * Select the Warehouse to be used in next activity.
      */
     public void onTransactionResponse() {
-        _requestExpireTime = 0;
+        requestExpireTime = 0;
     }
 
     /**
@@ -4793,53 +4787,36 @@ public final class Player extends Playable {
      * @return active TradeList.
      */
     public TradeList getActiveTradeList() {
-        return _activeTradeList;
+        return activeTradeList;
     }
 
-    /**
-     * Select the TradeList to be used in next activity.
-     *
-     * @param tradeList
-     */
-    public void setActiveTradeList(TradeList tradeList) {
-        _activeTradeList = tradeList;
-    }
-
-    public void onTradeStart(Player partner) {
-        _activeTradeList = new TradeList(this);
-        _activeTradeList.setPartner(partner);
-
-        final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_BEGIN_TRADING_WITH_C1);
-        msg.addPcName(partner);
-        sendPacket(msg);
-        sendPacket(new TradeStart(1, this));
-        sendPacket(new TradeStart(2, this));
+    private void onTradeStart(Player partner) {
+        activeTradeList = new TradeList(this, partner);
+        sendPacket(TradeStart.partnerInfo(this, partner));
+        sendPacket(TradeStart.itemsInfo(this));
+        sendPacket(getSystemMessage(SystemMessageId.YOU_BEGIN_TRADING_WITH_C1).addPcName(partner));
     }
 
     public void onTradeConfirm(Player partner) {
-        final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_CONFIRMED_THE_TRADE);
-        msg.addPcName(partner);
-        sendPacket(msg);
         sendPacket(TradeOtherDone.STATIC_PACKET);
+        sendPacket(getSystemMessage(SystemMessageId.C1_HAS_CONFIRMED_THE_TRADE).addPcName(partner));
     }
 
-    public void onTradeCancel(Player partner) {
-        if (_activeTradeList == null) {
+    private void onTradeCancel(Player partner) {
+        if (isNull(activeTradeList)) {
             return;
         }
 
-        _activeTradeList.lock();
-        _activeTradeList = null;
+        activeTradeList.lock();
+        activeTradeList = null;
 
-        sendPacket(new TradeDone(0));
-        final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_CANCELLED_THE_TRADE);
-        msg.addPcName(partner);
-        sendPacket(msg);
+        sendPacket(TradeDone.CANCELLED);
+        sendPacket(getSystemMessage(SystemMessageId.C1_HAS_CANCELLED_THE_TRADE).addPcName(partner));
     }
 
     public void onTradeFinish(boolean successfull) {
-        _activeTradeList = null;
-        sendPacket(new TradeDone(1));
+        activeTradeList = null;
+        sendPacket(TradeDone.COMPLETED);
         if (successfull) {
             sendPacket(SystemMessageId.YOUR_TRADE_WAS_SUCCESSFUL);
         }
@@ -4851,12 +4828,12 @@ public final class Player extends Playable {
     }
 
     public void cancelActiveTrade() {
-        if (_activeTradeList == null) {
+        if (isNull(activeTradeList)) {
             return;
         }
 
-        final Player partner = _activeTradeList.getPartner();
-        if (partner != null) {
+        var partner = activeTradeList.getPartner();
+        if (nonNull(partner)) {
             partner.onTradeCancel(this);
         }
         onTradeCancel(this);
@@ -4973,7 +4950,7 @@ public final class Player extends Playable {
 
         if (clan == null) {
             setTitle("");
-            _clanId = 0;
+            clanId = 0;
             _clanPrivileges = new EnumIntBitmask<>(ClanPrivilege.class, false);
             setPledgeType(0);
             setPowerGrade(0);
@@ -4990,7 +4967,7 @@ public final class Player extends Playable {
             return;
         }
 
-        _clanId = clan.getId();
+        clanId = clan.getId();
     }
 
     /**
@@ -5066,9 +5043,9 @@ public final class Player extends Playable {
             var unequipped =  modified.iterator().next();
             final SystemMessage sm;
             if (unequipped.getEnchantLevel() > 0) {
-                sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED).addInt(unequipped.getEnchantLevel());
+                sm = getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED).addInt(unequipped.getEnchantLevel());
             } else {
-                sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
+                sm = getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
             }
             sm.addItemName(unequipped);
             sendPacket(sm);
@@ -5099,9 +5076,9 @@ public final class Player extends Playable {
                 var unequipped = iterator.next();
                 SystemMessage sm;
                 if (unequipped.getEnchantLevel() > 0) {
-                    sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED).addInt(unequipped.getEnchantLevel());
+                    sm = getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED).addInt(unequipped.getEnchantLevel());
                 } else {
-                    sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
+                    sm = getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
                 }
                 sm.addItemName(unequipped);
                 sendPacket(sm);
@@ -5446,8 +5423,8 @@ public final class Player extends Playable {
                 final RelationChanged rc = new RelationChanged();
                 rc.addRelation(this, relation, !isInsideZone(ZoneType.PEACE));
                 if (hasSummon()) {
-                    if (_pet != null) {
-                        rc.addRelation(_pet, relation, !isInsideZone(ZoneType.PEACE));
+                    if (pet != null) {
+                        rc.addRelation(pet, relation, !isInsideZone(ZoneType.PEACE));
                     }
                     if (hasServitors()) {
                         getServitors().values().forEach(s -> rc.addRelation(s, relation, !isInsideZone(ZoneType.PEACE)));
@@ -5520,7 +5497,7 @@ public final class Player extends Playable {
             statement.setInt(19, getRaidbossPoints());
             statement.setInt(20, _pvpKills);
             statement.setInt(21, _pkKills);
-            statement.setInt(22, _clanId);
+            statement.setInt(22, clanId);
             statement.setInt(23, getRace().ordinal());
             statement.setInt(24, getClassId().getId());
             statement.setInt(25, hasDwarvenCraft() ? 1 : 0);
@@ -5794,7 +5771,7 @@ public final class Player extends Playable {
             statement.setInt(21, getRaidbossPoints());
             statement.setInt(22, _pvpKills);
             statement.setInt(23, _pkKills);
-            statement.setInt(24, _clanId);
+            statement.setInt(24, clanId);
             statement.setInt(25, getRace().ordinal());
             statement.setInt(26, getClassId().getId());
             statement.setString(27, getTitle());
@@ -6443,7 +6420,7 @@ public final class Player extends Playable {
             }
             if (henna.getCancelCount() > 0) {
                 inventory.addItem("Henna", henna.getDyeItemId(), henna.getCancelCount(), this, null);
-                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
+                final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
                 sm.addItemName(henna.getDyeItemId());
                 sm.addLong(henna.getCancelCount());
                 sendPacket(sm);
@@ -6652,7 +6629,7 @@ public final class Player extends Playable {
         }
 
         // Check if the attacker isn't the Player Pet
-        if ((attacker == this) || (attacker == _pet) || attacker.hasServitor(attacker.getObjectId())) {
+        if ((attacker == this) || (attacker == pet) || attacker.hasServitor(attacker.getObjectId())) {
             return false;
         }
 
@@ -6847,22 +6824,22 @@ public final class Player extends Playable {
                 final int minutes = (remainingTime % 3600) / 60;
                 final int seconds = (remainingTime % 60);
                 if (hours > 0) {
-                    sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_HOUR_S_S3_MINUTE_S_AND_S4_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
+                    sm = getSystemMessage(SystemMessageId.THERE_ARE_S2_HOUR_S_S3_MINUTE_S_AND_S4_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
                     sm.addSkillName(skill);
                     sm.addInt(hours);
                     sm.addInt(minutes);
                 } else if (minutes > 0) {
-                    sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_MINUTE_S_S3_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
+                    sm = getSystemMessage(SystemMessageId.THERE_ARE_S2_MINUTE_S_S3_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
                     sm.addSkillName(skill);
                     sm.addInt(minutes);
                 } else {
-                    sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
+                    sm = getSystemMessage(SystemMessageId.THERE_ARE_S2_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
                     sm.addSkillName(skill);
                 }
 
                 sm.addInt(seconds);
             } else {
-                sm = SystemMessage.getSystemMessage(SystemMessageId.S1_IS_NOT_AVAILABLE_AT_THIS_TIME_BEING_PREPARED_FOR_REUSE);
+                sm = getSystemMessage(SystemMessageId.S1_IS_NOT_AVAILABLE_AT_THIS_TIME_BEING_PREPARED_FOR_REUSE);
                 sm.addSkillName(skill);
             }
 
@@ -7219,7 +7196,7 @@ public final class Player extends Playable {
             removeAutoSoulShot(itemId);
             sendPacket(new ExAutoSoulShot(itemId, false, 0));
 
-            final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED);
+            final SystemMessage sm = getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED);
             sm.addItemName(itemId);
             sendPacket(sm);
             return true;
@@ -7233,7 +7210,7 @@ public final class Player extends Playable {
     public void disableAutoShotsAll() {
         for (int itemId : _activeSoulShots) {
             sendPacket(new ExAutoSoulShot(itemId, false, 0));
-            final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED);
+            final SystemMessage sm = getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED);
             sm.addItemName(itemId);
             sendPacket(sm);
         }
@@ -7382,8 +7359,8 @@ public final class Player extends Playable {
     }
 
     public void enterOlympiadObserverMode(Location loc, int id) {
-        if (_pet != null) {
-            _pet.unSummon(this);
+        if (pet != null) {
+            pet.unSummon(this);
         }
 
         if (hasServitors()) {
@@ -7497,20 +7474,16 @@ public final class Player extends Playable {
         _teleportType = type;
     }
 
-    public void setRace(int i, int val) {
-        _race[i] = val;
-    }
-
     public int getRace(int i) {
         return _race[i];
     }
 
-    public boolean getMessageRefusal() {
-        return _messageRefusal;
+    public boolean isMessageRefusing() {
+        return messageRefusing;
     }
 
-    public void setMessageRefusal(boolean mode) {
-        _messageRefusal = mode;
+    public void setMessageRefusing(boolean mode) {
+        messageRefusing = mode;
         sendPacket(new EtcStatusUpdate(this));
     }
 
@@ -7522,40 +7495,16 @@ public final class Player extends Playable {
         _dietMode = mode;
     }
 
-    public boolean getTradeRefusal() {
-        return _tradeRefusal;
+    public boolean isTradeRefusing() {
+        return tradeRefusing;
     }
 
-    public void setTradeRefusal(boolean mode) {
-        _tradeRefusal = mode;
-    }
-
-    public boolean getExchangeRefusal() {
-        return _exchangeRefusal;
-    }
-
-    public void setExchangeRefusal(boolean mode) {
-        _exchangeRefusal = mode;
+    public void setTradeRefusing(boolean mode) {
+        tradeRefusing = mode;
     }
 
     public BlockList getBlockList() {
         return _blockList;
-    }
-
-    /**
-     * @param player
-     * @return returns {@code true} if player is current player cannot accepting messages from the target player, {@code false} otherwise
-     */
-    public boolean isBlocking(Player player) {
-        return _blockList.isBlockAll() || _blockList.isInBlockList(player);
-    }
-
-    /**
-     * @param player
-     * @return returns {@code true} if player is current player can accepting messages from the target player, {@code false} otherwise
-     */
-    public boolean isNotBlocking(Player player) {
-        return !_blockList.isBlockAll() && !_blockList.isInBlockList(player);
     }
 
     /**
@@ -7657,7 +7606,7 @@ public final class Player extends Playable {
      * @return S1_CANNOT_DUEL... message
      */
     public SystemMessage getNoDuelReason() {
-        final SystemMessage sm = SystemMessage.getSystemMessage(_noDuelReason);
+        final SystemMessage sm = getSystemMessage(_noDuelReason);
         sm.addPcName(this);
         _noDuelReason = SystemMessageId.THERE_IS_NO_OPPONENT_TO_RECEIVE_YOUR_CHALLENGE_FOR_A_DUEL;
         return sm;
@@ -7745,8 +7694,8 @@ public final class Player extends Playable {
     public void setTeam(Team team) {
         super.setTeam(team);
         broadcastUserInfo();
-        if (_pet != null) {
-            _pet.broadcastStatusUpdate();
+        if (pet != null) {
+            pet.broadcastStatusUpdate();
         }
         if (hasServitors()) {
             getServitors().values().forEach(Summon::broadcastStatusUpdate);
@@ -8335,7 +8284,7 @@ public final class Player extends Playable {
             }
             return;
         }
-        if ((isPet && (_pet != null) && _pet.isDead()) || (!isPet && isDead())) {
+        if ((isPet && (pet != null) && pet.isDead()) || (!isPet && isDead())) {
             _reviveRequested = 1;
             _revivePower = Formulas.calculateSkillResurrectRestorePercent(power, reviver);
             _revivePet = isPet;
@@ -8357,7 +8306,7 @@ public final class Player extends Playable {
     }
 
     public void reviveAnswer(int answer) {
-        if ((_reviveRequested != 1) || (!isDead() && !_revivePet) || (_revivePet && (_pet != null) && !_pet.isDead())) {
+        if ((_reviveRequested != 1) || (!isDead() && !_revivePet) || (_revivePet && (pet != null) && !pet.isDead())) {
             return;
         }
 
@@ -8368,11 +8317,11 @@ public final class Player extends Playable {
                 } else {
                     doRevive();
                 }
-            } else if (_pet != null) {
+            } else if (pet != null) {
                 if (_revivePower != 0) {
-                    _pet.doRevive(_revivePower);
+                    pet.doRevive(_revivePower);
                 } else {
-                    _pet.doRevive();
+                    pet.doRevive();
                 }
             }
         }
@@ -8468,13 +8417,13 @@ public final class Player extends Playable {
         }
 
         // Modify the position of the pet if necessary
-        if (_pet != null) {
-            _pet.setFollowStatus(false);
-            _pet.teleToLocation(getLocation(), false);
-            ((SummonAI) _pet.getAI()).setStartFollowController(true);
-            _pet.setFollowStatus(true);
-            _pet.setInstance(getInstanceWorld());
-            _pet.updateAndBroadcastStatus(0);
+        if (pet != null) {
+            pet.setFollowStatus(false);
+            pet.teleToLocation(getLocation(), false);
+            ((SummonAI) pet.getAI()).setStartFollowController(true);
+            pet.setFollowStatus(true);
+            pet.setInstance(getInstanceWorld());
+            pet.updateAndBroadcastStatus(0);
         }
 
         getServitors().values().forEach(s ->
@@ -8653,19 +8602,19 @@ public final class Player extends Playable {
      * </ul>
      *
      * @param objectId item object id
-     * @param action   just for login porpouse
+     * @param action   just for login purpose
      * @return
      */
     public boolean validateItemManipulation(int objectId, String action) {
         final Item item = inventory.getItemByObjectId(objectId);
 
-        if ((item == null) || (item.getOwnerId() != getObjectId())) {
-            LOGGER.debug(getObjectId() + ": player tried to " + action + " item he is not owner of");
+        if (isNull(item) || item.getOwnerId() != getObjectId()) {
+            LOGGER.debug("player {} tried to {} item he is not owner of", this, action);
             return false;
         }
 
         // Pet is summoned and not the item that summoned the pet AND not the buggle from strider you're mounting
-        if (((_pet != null) && (_pet.getControlObjectId() == objectId)) || (_mountObjectID == objectId)) {
+        if (( nonNull(pet) && pet.getControlObjectId() == objectId) || mountObjectID == objectId) {
             return false;
         }
 
@@ -8673,12 +8622,8 @@ public final class Player extends Playable {
             return false;
         }
 
-        if (CursedWeaponsManager.getInstance().isCursed(item.getId())) {
-            // can not trade a cursed weapon
-            return false;
-        }
-
-        return true;
+        // can not trade a cursed weapon
+        return !CursedWeaponsManager.getInstance().isCursed(item.getId());
     }
 
     /**
@@ -8908,12 +8853,12 @@ public final class Player extends Playable {
         // If the Player has Pet, unsummon it
         if (hasSummon()) {
             try {
-                Summon pet = _pet;
+                Summon pet = this.pet;
                 if (pet != null) {
                     pet.setRestoreSummon(true);
                     pet.unSummon(this);
                     // Dead pet wasn't unsummoned, broadcast npcinfo changes (pet will be without owner name - means owner offline)
-                    pet = _pet;
+                    pet = this.pet;
                     if (pet != null) {
                         pet.broadcastNpcInfo(0);
                     }
@@ -9023,7 +8968,7 @@ public final class Player extends Playable {
             }
         }
 
-        if (_clanId > 0) {
+        if (clanId > 0) {
             _clan.broadcastToOtherOnlineMembers(new PledgeShowMemberListUpdate(this), this);
             _clan.broadcastToOnlineMembers(new ExPledgeCount(_clan));
             // ClanTable.getInstance().getClan(getClanId()).broadcastToOnlineMembers(new PledgeShowMemberListAdd(this));
@@ -9143,11 +9088,11 @@ public final class Player extends Playable {
     }
 
     public int getMountObjectID() {
-        return _mountObjectID;
+        return mountObjectID;
     }
 
     public void setMountObjectID(int newID) {
-        _mountObjectID = newID;
+        mountObjectID = newID;
     }
 
     public SkillUseHolder getQueuedSkill() {
@@ -9244,7 +9189,7 @@ public final class Player extends Playable {
      */
     public void increaseSouls(int count) {
         _souls += count;
-        final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_SOUL_COUNT_HAS_INCREASED_BY_S1_IT_IS_NOW_AT_S2);
+        final SystemMessage sm = getSystemMessage(SystemMessageId.YOUR_SOUL_COUNT_HAS_INCREASED_BY_S1_IT_IS_NOW_AT_S2);
         sm.addInt(count);
         sm.addInt(_souls);
         sendPacket(sm);
@@ -9318,12 +9263,12 @@ public final class Player extends Playable {
         if (miss) {
             if (skill == null) {
                 if (GameUtils.isPlayer(target)) {
-                    final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_EVADED_C2_S_ATTACK);
+                    final SystemMessage sm = getSystemMessage(SystemMessageId.C1_HAS_EVADED_C2_S_ATTACK);
                     sm.addPcName(target.getActingPlayer());
                     sm.addString(getName());
                     target.sendPacket(sm);
                 }
-                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_ATTACK_WENT_ASTRAY);
+                final SystemMessage sm = getSystemMessage(SystemMessageId.C1_S_ATTACK_WENT_ASTRAY);
                 sm.addPcName(this);
                 sendPacket(sm);
             } else {
@@ -9335,7 +9280,7 @@ public final class Player extends Playable {
         // Check if hit is critical
         if (crit) {
             if ((skill == null) || !skill.isMagic()) {
-                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_LANDED_A_CRITICAL_HIT);
+                final SystemMessage sm = getSystemMessage(SystemMessageId.C1_LANDED_A_CRITICAL_HIT);
                 sm.addPcName(this);
                 sendPacket(sm);
             } else {
@@ -9354,15 +9299,15 @@ public final class Player extends Playable {
         SystemMessage sm = null;
 
         if ((target.isHpBlocked() && !GameUtils.isNpc(target)) || (GameUtils.isPlayer(target) && target.isAffected(EffectFlag.DUELIST_FURY) && !isAffected(EffectFlag.FACEOFF))) {
-            sm = SystemMessage.getSystemMessage(SystemMessageId.THE_ATTACK_HAS_BEEN_BLOCKED);
+            sm = getSystemMessage(SystemMessageId.THE_ATTACK_HAS_BEEN_BLOCKED);
         } else if (GameUtils.isDoor(target) || target instanceof ControlTower) {
-            sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HIT_FOR_S1_DAMAGE);
+            sm = getSystemMessage(SystemMessageId.YOU_HIT_FOR_S1_DAMAGE);
             sm.addInt(damage);
         } else if (this != target){
             if(elementalDamage != 0) {
-                sm = SystemMessage.getSystemMessage(S1_HAS_INFLICTED_S3_S4_ATTRIBUTE_DAMGE_DAMAGE_TO_S2);
+                sm = getSystemMessage(S1_HAS_INFLICTED_S3_S4_ATTRIBUTE_DAMGE_DAMAGE_TO_S2);
             } else {
-                sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2);
+                sm = getSystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2);
             }
             sm.addPcName(this);
             sm.addString(target.getName());
@@ -9420,9 +9365,9 @@ public final class Player extends Playable {
                 }
 
                 if (item.getEnchantLevel() > 0) {
-                    sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED).addInt(item.getEnchantLevel()).addItemName(item);
+                    sm = getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED).addInt(item.getEnchantLevel()).addItemName(item);
                 } else {
-                    sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED).addItemName(item);
+                    sm = getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED).addItemName(item);
                 }
                 sendPacket(sm);
             }
@@ -9526,8 +9471,8 @@ public final class Player extends Playable {
             return;
         }
         if (hasPet()) {
-            setCurrentFeed(_pet.getCurrentFed());
-            _controlItemId = _pet.getControlObjectId();
+            setCurrentFeed(pet.getCurrentFed());
+            _controlItemId = pet.getControlObjectId();
             sendPacket(new SetupGauge(3, (_curFeed * 10000) / getFeedConsume(), (getMaxFeed() * 10000) / getFeedConsume()));
             if (!isDead()) {
                 _mountFeedTask = ThreadPool.scheduleAtFixedRate(new PetFeedTask(this), 10000, 10000);
@@ -9757,7 +9702,7 @@ public final class Player extends Playable {
             sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_BECAUSE_YOU_DO_NOT_HAVE_A_TELEPORT_ITEM);
             return;
         }
-        final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
+        final SystemMessage sm = getSystemMessage(SystemMessageId.S1_DISAPPEARED);
         sm.addItemName(13016);
         sendPacket(sm);
 
@@ -9838,7 +9783,7 @@ public final class Player extends Playable {
 
         destroyItem("Consume", inventory.getItemByItemId(20033).getObjectId(), 1, null, false);
 
-        final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
+        final SystemMessage sm = getSystemMessage(SystemMessageId.S1_DISAPPEARED);
         sm.addItemName(20033);
         sendPacket(sm);
 
@@ -9892,8 +9837,8 @@ public final class Player extends Playable {
         final RelationChanged rc1 = new RelationChanged();
         rc1.addRelation(this, relation1, !isInsideZone(ZoneType.PEACE));
         if (hasSummon()) {
-            if (_pet != null) {
-                rc1.addRelation(_pet, relation1, !isInsideZone(ZoneType.PEACE));
+            if (pet != null) {
+                rc1.addRelation(pet, relation1, !isInsideZone(ZoneType.PEACE));
             }
             if (hasServitors()) {
                 getServitors().values().forEach(s -> rc1.addRelation(s, relation1, !isInsideZone(ZoneType.PEACE)));
@@ -9905,8 +9850,8 @@ public final class Player extends Playable {
         final RelationChanged rc2 = new RelationChanged();
         rc2.addRelation(player, relation2, !player.isInsideZone(ZoneType.PEACE));
         if (player.hasSummon()) {
-            if (_pet != null) {
-                rc2.addRelation(_pet, relation2, !player.isInsideZone(ZoneType.PEACE));
+            if (pet != null) {
+                rc2.addRelation(pet, relation2, !player.isInsideZone(ZoneType.PEACE));
             }
             if (hasServitors()) {
                 getServitors().values().forEach(s -> rc2.addRelation(s, relation2, !player.isInsideZone(ZoneType.PEACE)));
@@ -10210,7 +10155,7 @@ public final class Player extends Playable {
         {
             if ((_fallingDamage > 0) && !isInvul()) {
                 reduceCurrentHp(min(_fallingDamage, getCurrentHp() - 1), this, null, false, true, false, false);
-                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_RECEIVED_S1_FALLING_DAMAGE);
+                final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_RECEIVED_S1_FALLING_DAMAGE);
                 sm.addInt(_fallingDamage);
                 sendPacket(sm);
             }
@@ -10859,36 +10804,10 @@ public final class Player extends Playable {
     }
 
     /**
-     * @return the amount of ability points player can spend on learning skills.
-     */
-    public int getAbilityPoints() {
-        return getVariables().getInt(isDualClassActive() ? PlayerVariables.ABILITY_POINTS_DUAL_CLASS : PlayerVariables.ABILITY_POINTS_MAIN_CLASS, 0);
-    }
-
-    /**
-     * Sets the amount of ability points player can spend on learning skills.
-     *
-     * @param points
-     */
-    public void setAbilityPoints(int points) {
-        getVariables().set(isDualClassActive() ? PlayerVariables.ABILITY_POINTS_DUAL_CLASS : PlayerVariables.ABILITY_POINTS_MAIN_CLASS, points);
-    }
-
-    /**
      * @return how much ability points player has spend on learning skills.
      */
     public int getAbilityPointsUsed() {
         return getVariables().getInt(isDualClassActive() ? PlayerVariables.ABILITY_POINTS_USED_DUAL_CLASS : PlayerVariables.ABILITY_POINTS_USED_MAIN_CLASS, 0);
-    }
-
-    /**
-     * Sets how much ability points player has spend on learning skills.
-     *
-     * @param points
-     */
-    public void setAbilityPointsUsed(int points) {
-        EventDispatcher.getInstance().notifyEventAsync(new OnPlayerAbilityPointsChanged(this, getAbilityPointsUsed(), points), this);
-        getVariables().set(isDualClassActive() ? PlayerVariables.ABILITY_POINTS_USED_DUAL_CLASS : PlayerVariables.ABILITY_POINTS_USED_MAIN_CLASS, points);
     }
 
     /**
@@ -10969,18 +10888,18 @@ public final class Player extends Playable {
      * @return {@code true} if the request was registered successfully, {@code false} otherwise.
      */
     public boolean addRequest(AbstractRequest request) {
-        if (_requests == null) {
+        if (requests == null) {
             synchronized (this) {
-                if (_requests == null) {
-                    _requests = new ConcurrentHashMap<>();
+                if (requests == null) {
+                    requests = new ConcurrentHashMap<>();
                 }
             }
         }
-        return canRequest(request) && (_requests.putIfAbsent(request.getClass(), request) == null);
+        return canRequest(request) && (requests.putIfAbsent(request.getClass(), request) == null);
     }
 
     public boolean canRequest(AbstractRequest request) {
-        return (_requests != null) && _requests.values().stream().allMatch(request::canWorkWith);
+        return (requests != null) && requests.values().stream().allMatch(request::canWorkWith);
     }
 
     /**
@@ -10988,7 +10907,7 @@ public final class Player extends Playable {
      * @return {@code true} if request was successfully removed, {@code false} in case processing set is not created or not containing the request.
      */
     public boolean removeRequest(Class<? extends AbstractRequest> clazz) {
-        return (_requests != null) && (_requests.remove(clazz) != null);
+        return (requests != null) && (requests.remove(clazz) != null);
     }
 
     /**
@@ -10997,18 +10916,18 @@ public final class Player extends Playable {
      * @return object that is instance of {@code requestClass} param, {@code null} if not instance or not set.
      */
     public <T extends AbstractRequest> T getRequest(Class<T> requestClass) {
-        return _requests != null ? requestClass.cast(_requests.get(requestClass)) : null;
+        return requests != null ? requestClass.cast(requests.get(requestClass)) : null;
     }
 
     /**
      * @return {@code true} if player has any processing request set, {@code false} otherwise.
      */
     public boolean hasRequests() {
-        return (_requests != null) && !_requests.isEmpty();
+        return (requests != null) && !requests.isEmpty();
     }
 
     public boolean hasItemRequest() {
-        return (_requests != null) && _requests.values().stream().anyMatch(AbstractRequest::isItemRequest);
+        return (requests != null) && requests.values().stream().anyMatch(AbstractRequest::isItemRequest);
     }
 
     /**
@@ -11018,13 +10937,13 @@ public final class Player extends Playable {
      */
     @SafeVarargs
     public final boolean hasRequest(Class<? extends AbstractRequest> requestClass, Class<? extends AbstractRequest>... classes) {
-        if (_requests != null) {
+        if (requests != null) {
             for (Class<? extends AbstractRequest> clazz : classes) {
-                if (_requests.containsKey(clazz)) {
+                if (requests.containsKey(clazz)) {
                     return true;
                 }
             }
-            return _requests.containsKey(requestClass);
+            return requests.containsKey(requestClass);
         }
         return false;
     }
@@ -11034,7 +10953,7 @@ public final class Player extends Playable {
      * @return {@code true} if item object id is currently in use by some request, {@code false} otherwise.
      */
     public boolean isProcessingItem(int objectId) {
-        return (_requests != null) && _requests.values().stream().anyMatch(req -> req.isUsing(objectId));
+        return nonNull(requests) && requests.values().stream().anyMatch(req -> req.isUsing(objectId));
     }
 
     /**
@@ -11043,8 +10962,8 @@ public final class Player extends Playable {
      * @param objectId
      */
     public void removeRequestsThatProcessesItem(int objectId) {
-        if (_requests != null) {
-            _requests.values().removeIf(req -> req.isUsing(objectId));
+        if (requests != null) {
+            requests.values().removeIf(req -> req.isUsing(objectId));
         }
     }
 
@@ -11340,5 +11259,22 @@ public final class Player extends Playable {
             getVariables().set(ATTENDANCE_DATE_VAR, nextReward.getTimeInMillis());
             getVariables().set(ATTENDANCE_INDEX_VAR, rewardIndex);
         }
+    }
+
+    public boolean isFriend(Player player) {
+        return friends.contains(player.getObjectId());
+    }
+
+    public boolean isInSameClan(Player player) {
+        return clanId > 0 && clanId == player.getClanId();
+    }
+
+    public boolean isInSameAlly(Player player) {
+        var ally = getAllyId();
+        return ally > 0 && player.getAllyId() == ally;
+    }
+
+    public boolean hasMentorRelationship(Player player) {
+        return nonNull(MentorManager.getInstance().getMentee(objectId, player.getObjectId())) || nonNull(MentorManager.getInstance().getMentee(player.getObjectId(), objectId));
     }
 }

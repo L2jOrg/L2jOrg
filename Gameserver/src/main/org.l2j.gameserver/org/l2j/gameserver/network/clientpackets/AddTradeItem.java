@@ -6,48 +6,46 @@ import org.l2j.gameserver.model.TradeList;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.TradeOtherAdd;
-import org.l2j.gameserver.network.serverpackets.TradeOwnAdd;
+import org.l2j.gameserver.network.serverpackets.trade.TradeOtherAdd;
+import org.l2j.gameserver.network.serverpackets.trade.TradeOwnAdd;
 import org.l2j.gameserver.network.serverpackets.TradeUpdate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * This class ...
- *
- * @version $Revision: 1.5.2.2.2.5 $ $Date: 2005/03/27 15:29:29 $
- */
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
+
 public final class AddTradeItem extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(AddTradeItem.class);
-    private int _tradeId;
-    private int _objectId;
-    private long _count;
+    private int tradeId;
+    private int objectId;
+    private long count;
 
     @Override
     public void readImpl() {
-        _tradeId = readInt();
-        _objectId = readInt();
-        _count = readLong();
+        tradeId = readInt();
+        objectId = readInt();
+        count = readLong();
     }
 
     @Override
     public void runImpl() {
         final Player player = client.getPlayer();
-        if (player == null) {
+        if (isNull(player)) {
             return;
         }
 
         final TradeList trade = player.getActiveTradeList();
-        if (trade == null) {
-            LOGGER.warn("Character: " + player.getName() + " requested item:" + _objectId + " add without active tradelist:" + _tradeId);
+        if (isNull(trade)) {
+            LOGGER.warn("Character: {} requested item: {}  add without active trade: {}", player, objectId, tradeId);
             return;
         }
 
         final Player partner = trade.getPartner();
-        if ((partner == null) || (World.getInstance().findPlayer(partner.getObjectId()) == null) || (partner.getActiveTradeList() == null)) {
+        if (isNull(partner) || isNull(World.getInstance().findPlayer(partner.getObjectId())) || isNull(partner.getActiveTradeList())) {
             // Trade partner not found, cancel trade
-            if (partner != null) {
-                LOGGER.warn("Character:" + player.getName() + " requested invalid trade object: " + _objectId);
+            if (nonNull(partner)) {
+                LOGGER.warn("Character: {} requested invalid trade object: {}", player,  objectId);
             }
             player.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
             player.cancelActiveTrade();
@@ -65,13 +63,13 @@ public final class AddTradeItem extends ClientPacket {
             return;
         }
 
-        if (!player.validateItemManipulation(_objectId, "trade")) {
+        if (!player.validateItemManipulation(objectId, "trade")) {
             player.sendPacket(SystemMessageId.NOTHING_HAPPENED);
             return;
         }
 
-        final Item item1 = player.getInventory().getItemByObjectId(_objectId);
-        final TradeItem item2 = trade.addItem(_objectId, _count);
+        final Item item1 = player.getInventory().getItemByObjectId(objectId);
+        final TradeItem item2 = trade.addItem(objectId, count);
         if (item2 != null) {
             player.sendPacket(new TradeOwnAdd(1, item2));
             player.sendPacket(new TradeOwnAdd(2, item2));

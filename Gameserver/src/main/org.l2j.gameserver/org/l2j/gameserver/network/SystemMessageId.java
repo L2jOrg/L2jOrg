@@ -3926,9 +3926,6 @@ public final class SystemMessageId {
     @ClientString(id = 2039, message = "Some Lineage II features have been limited for free trials. Trial accounts aren't allowed to trade items and/or Adena.  To unlock all of the features of Lineage II, purchase the full version today.")
     public static SystemMessageId SOME_LINEAGE_II_FEATURES_HAVE_BEEN_LIMITED_FOR_FREE_TRIALS_TRIAL_ACCOUNTS_AREN_T_ALLOWED_TO_TRADE_ITEMS_AND_OR_ADENA_TO_UNLOCK_ALL_OF_THE_FEATURES_OF_LINEAGE_II_PURCHASE_THE_FULL_VERSION_TODAY;
 
-    @ClientString(id = 2040, message = "Cannot trade items with the targeted user.")
-    public static SystemMessageId CANNOT_TRADE_ITEMS_WITH_THE_TARGETED_USER;
-
     @ClientString(id = 2041, message = "Some Lineage II features have been limited for free trials. Trial accounts aren't allowed to setup private stores. To unlock all of the features of Lineage II, purchase the full version today.")
     public static SystemMessageId SOME_LINEAGE_II_FEATURES_HAVE_BEEN_LIMITED_FOR_FREE_TRIALS_TRIAL_ACCOUNTS_AREN_T_ALLOWED_TO_SETUP_PRIVATE_STORES_TO_UNLOCK_ALL_OF_THE_FEATURES_OF_LINEAGE_II_PURCHASE_THE_FULL_VERSION_TODAY;
 
@@ -13086,9 +13083,6 @@ public final class SystemMessageId {
     @ClientString(id = 7237, message = "The new password is identical to the old password. Enter another password.")
     public static SystemMessageId THE_NEW_PASSWORD_IS_IDENTICAL_TO_THE_OLD_PASSWORD_ENTER_ANOTHER_PASSWORD;
 
-    @ClientString(id = 7238, message = "You are too far way to trade.")
-    public static SystemMessageId YOU_ARE_TOO_FAR_WAY_TO_TRADE;
-
     @ClientString(id = 7239, message = "A registered clan cannot be registered again.")
     public static SystemMessageId A_REGISTERED_CLAN_CANNOT_BE_REGISTERED_AGAIN;
 
@@ -16324,6 +16318,9 @@ public final class SystemMessageId {
     @ClientString(id = 2033, message = "A subclass cannot be created or changed because you have exceeded your inventory limit.")
     public static SystemMessageId A_SUBCLASS_CANNOT_BE_CREATED_OR_CHANGED_BECAUSE_YOU_HAVE_EXCEEDED_YOUR_INVENTORY_LIMIT;
 
+    @ClientString(id = 2040, message = "Cannot trade items with the targeted user.")
+    public static SystemMessageId CANNOT_TRADE_ITEMS_WITH_THE_TARGETED_USER;
+
     @ClientString(id = 2050, message = "$s1 clan is trying to display a flag.")
     public static SystemMessageId S1_CLAN_IS_TRYING_TO_DISPLAY_A_FLAG;
 
@@ -17721,10 +17718,11 @@ public final class SystemMessageId {
     @ClientString(id = 6827, message = "Your clan has achieved hunting bonus Lv. $s1.")
     public static SystemMessageId YOUR_CLAN_HAS_ACHIEVED_HUNTING_BONUS_LV_S1;
 
+    @ClientString(id = 7238, message = "You are too far way to trade.")
+    public static SystemMessageId YOU_ARE_TOO_FAR_WAY_TO_TRADE;
+
     @ClientString(id = 7323, message = "Learned $s1 Lv. $s2.")
     public static SystemMessageId LEARNED_S1_LV_S2;
-
-
 
     private static Map<Integer, SystemMessageId> VALUES = new HashMap<>();
 

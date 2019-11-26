@@ -10,14 +10,14 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.BlockListPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.world.World;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
+/**
+ * @author JoeAlisson
+ */
 public class BlockList {
     private static final IntMap<IntSet> OFFLINE_LIST = new CHashIntMap<>();
-    private static final Logger LOGGER = LoggerFactory.getLogger(BlockList.class);
     private final Player owner;
     private IntSet list;
 
@@ -27,6 +27,48 @@ public class BlockList {
         if (list == null) {
             list = loadList(this.owner.getObjectId());
         }
+    }
+
+    private void addToBlockList(int target) {
+        list.add(target);
+        updateInDB(target, true);
+    }
+
+    private void removeFromBlockList(int target) {
+        list.remove(target);
+        updateInDB(target, false);
+    }
+
+    public void playerLogout() {
+        OFFLINE_LIST.put(owner.getObjectId(), list);
+    }
+
+    private void updateInDB(int targetId, boolean add) {
+        if (add) {
+            getDAO(CharacterDAO.class).saveBlockedPlayer(owner.getObjectId(), targetId);
+        } else {
+            getDAO(CharacterDAO.class).deleteBlockedPlayer(owner.getObjectId(), targetId);
+        }
+    }
+
+    public boolean isInBlockList(Player target) {
+        return list.contains(target.getObjectId());
+    }
+
+    public boolean isInBlockList(int targetId) {
+        return list.contains(targetId);
+    }
+
+    public boolean isBlockAll() {
+        return owner.isMessageRefusing();
+    }
+
+    private void setBlockAll(boolean state) {
+        owner.setMessageRefusing(state);
+    }
+
+    private IntSet getBlockList() {
+        return list;
     }
 
     private static IntSet loadList(int objId) {
@@ -121,45 +163,4 @@ public class BlockList {
         return OFFLINE_LIST.get(ownerId).contains(targetId);
     }
 
-    private void addToBlockList(int target) {
-        list.add(target);
-        updateInDB(target, true);
-    }
-
-    private void removeFromBlockList(int target) {
-        list.remove(target);
-        updateInDB(target, false);
-    }
-
-    public void playerLogout() {
-        OFFLINE_LIST.put(owner.getObjectId(), list);
-    }
-
-    private void updateInDB(int targetId, boolean add) {
-        if (add) {
-            getDAO(CharacterDAO.class).saveBlockedPlayer(owner.getObjectId(), targetId);
-        } else {
-            getDAO(CharacterDAO.class).deleteBlockedPlayer(owner.getObjectId(), targetId);
-        }
-    }
-
-    public boolean isInBlockList(Player target) {
-        return list.contains(target.getObjectId());
-    }
-
-    public boolean isInBlockList(int targetId) {
-        return list.contains(targetId);
-    }
-
-    public boolean isBlockAll() {
-        return owner.getMessageRefusal();
-    }
-
-    private void setBlockAll(boolean state) {
-        owner.setMessageRefusal(state);
-    }
-
-    private IntSet getBlockList() {
-        return list;
-    }
 }

@@ -73,18 +73,9 @@ public class ItemInfo {
 
         // Get the action to do clientside
         switch (item.getLastChange()) {
-            case Item.ADDED: {
-                _change = 1;
-                break;
-            }
-            case Item.MODIFIED: {
-                _change = 2;
-                break;
-            }
-            case Item.REMOVED: {
-                _change = 3;
-                break;
-            }
+            case Item.ADDED -> _change = 1;
+            case Item.MODIFIED -> _change = 2;
+            case Item.REMOVED -> _change = 3;
         }
 
         time = item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -9999;
