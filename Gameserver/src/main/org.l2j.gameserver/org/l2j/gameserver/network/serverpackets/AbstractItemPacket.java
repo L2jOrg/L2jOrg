@@ -7,7 +7,6 @@ import org.l2j.gameserver.model.TradeItem;
 import org.l2j.gameserver.model.buylist.Product;
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
 import org.l2j.gameserver.model.itemcontainer.PlayerInventory;
-import org.l2j.gameserver.model.items.WarehouseItem;
 import org.l2j.gameserver.model.items.instance.Item;
 
 import java.nio.ByteBuffer;
@@ -54,10 +53,6 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
     }
 
     protected void writeItem(TradeItem item) {
-        writeItem(new ItemInfo(item));
-    }
-
-    protected void writeItem(WarehouseItem item) {
         writeItem(new ItemInfo(item));
     }
 

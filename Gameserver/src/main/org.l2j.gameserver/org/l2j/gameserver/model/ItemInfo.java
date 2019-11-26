@@ -5,7 +5,6 @@ import org.l2j.gameserver.model.buylist.Product;
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
 import org.l2j.gameserver.model.items.BodyPart;
 import org.l2j.gameserver.model.items.ItemTemplate;
-import org.l2j.gameserver.model.items.WarehouseItem;
 import org.l2j.gameserver.model.items.instance.Item;
 
 import java.util.Collection;
@@ -190,45 +189,6 @@ public class ItemInfo {
 
         soulCrystalOptions = Collections.emptyList();
         soulCrystalSpecialOptions = Collections.emptyList();
-    }
-
-    public ItemInfo(WarehouseItem item) {
-        if (item == null) {
-            return;
-        }
-
-        // Get the Identifier of the Item
-        objectId = item.getObjectId();
-
-        // Get the ItemTemplate of the Item
-        template = item.getItem();
-
-        // Get the enchant level of the Item
-        enchant = item.getEnchantLevel();
-
-        // Get the augmentation bonus
-        augmentation = item.getAugmentation();
-
-        // Get the quantity of the Item
-        count = item.getCount();
-
-        // Get custom item types (used loto, race tickets)
-        type1 = item.getCustomType1();
-        type2 = item.getCustomType2();
-
-        // Verify if the Item is equipped
-        _equipped = 0;
-        time = item.getTime();
-        locationSlot = item.getLocationSlot();
-
-        elemAtkType = item.getAttackElementType();
-        elemAtkPower = item.getAttackElementPower();
-        for (byte i = 0; i < 6; i++) {
-            attributeDefense[i] = item.getElementDefAttr(i);
-        }
-        enchantOption = item.getEnchantOptions();
-        soulCrystalOptions = item.getSoulCrystalOptions();
-        soulCrystalSpecialOptions = item.getSoulCrystalSpecialOptions();
     }
 
     public int getObjectId() {
