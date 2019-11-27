@@ -1,11 +1,10 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.data.xml.ActionManager;
+import org.l2j.gameserver.data.xml.model.ActionData;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.handler.IPlayerActionHandler;
 import org.l2j.gameserver.handler.PlayerActionHandler;
-import org.l2j.gameserver.data.xml.model.ActionData;
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.BuffInfo;
@@ -17,6 +16,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Arrays;
+
+import static java.util.Objects.isNull;
 
 /**
  * This class manages the action use request packet.
@@ -39,32 +40,32 @@ public final class RequestActionUse extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getPlayer();
-        if (activeChar == null) {
+        var player = client.getPlayer();
+        if (isNull(player)) {
             return;
         }
 
         // Don't do anything if player is dead or confused
-        if ((activeChar.isFakeDeath() && (_actionId != 0)) || activeChar.isDead() || activeChar.isControlBlocked()) {
+        if ((player.isFakeDeath() && (_actionId != 0)) || player.isDead() || player.isControlBlocked()) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
 
-        final BuffInfo info = activeChar.getEffectList().getFirstBuffInfoByAbnormalType(AbnormalType.BOT_PENALTY);
+        final BuffInfo info = player.getEffectList().getFirstBuffInfoByAbnormalType(AbnormalType.BOT_PENALTY);
         if (info != null) {
             for (AbstractEffect effect : info.getEffects()) {
                 if (!effect.checkCondition(_actionId)) {
-                    activeChar.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_SO_YOUR_ACTIONS_HAVE_BEEN_RESTRICTED);
-                    activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+                    player.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_SO_YOUR_ACTIONS_HAVE_BEEN_RESTRICTED);
+                    player.sendPacket(ActionFailed.STATIC_PACKET);
                     return;
                 }
             }
         }
 
-        final int[] allowedActions = activeChar.isTransformed() ? ExBasicActionList.ACTIONS_ON_TRANSFORM : ExBasicActionList.DEFAULT_ACTION_LIST;
+        final int[] allowedActions = player.isTransformed() ? ExBasicActionList.ACTIONS_ON_TRANSFORM : ExBasicActionList.DEFAULT_ACTION_LIST;
         if (!(Arrays.binarySearch(allowedActions, _actionId) >= 0)) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
-            LOGGER.warn("Player " + activeChar + " used action which he does not have! Id = " + _actionId + " transform: " + activeChar.getTransformation().orElse(null));
+            LOGGER.warn("Player " + player + " used action which he does not have! Id = " + _actionId + " transform: " + player.getTransformation().orElse(null));
             return;
         }
 
@@ -72,7 +73,7 @@ public final class RequestActionUse extends ClientPacket {
         if (actionHolder != null) {
             final IPlayerActionHandler actionHandler = PlayerActionHandler.getInstance().getHandler(actionHolder.getHandler());
             if (actionHandler != null) {
-                actionHandler.useAction(activeChar, actionHolder, _ctrlPressed, _shiftPressed);
+                actionHandler.useAction(player, actionHolder, _ctrlPressed, _shiftPressed);
                 return;
             }
             LOGGER.warn("Couldnt find handler with name: " + actionHolder.getHandler());
@@ -83,29 +84,29 @@ public final class RequestActionUse extends ClientPacket {
             case 51: // General Manufacture
             {
                 // Player shouldn't be able to set stores if he/she is alike dead (dead or fake death)
-                if (activeChar.isAlikeDead()) {
+                if (player.isAlikeDead()) {
                     client.sendPacket(ActionFailed.STATIC_PACKET);
                     return;
                 }
 
-                if (activeChar.isSellingBuffs()) {
+                if (player.isSellingBuffs()) {
                     client.sendPacket(ActionFailed.STATIC_PACKET);
                     return;
                 }
 
-                if (activeChar.getPrivateStoreType() != PrivateStoreType.NONE) {
-                    activeChar.setPrivateStoreType(PrivateStoreType.NONE);
-                    activeChar.broadcastUserInfo();
+                if (player.getPrivateStoreType() != PrivateStoreType.NONE) {
+                    player.setPrivateStoreType(PrivateStoreType.NONE);
+                    player.broadcastUserInfo();
                 }
-                if (activeChar.isSitting()) {
-                    activeChar.standUp();
+                if (player.isSitting()) {
+                    player.standUp();
                 }
 
-                client.sendPacket(new RecipeShopManageList(activeChar, false));
+                client.sendPacket(new RecipeShopManageList(player, false));
                 break;
             }
             default: {
-                LOGGER.warn(activeChar.getName() + ": unhandled action type " + _actionId);
+                LOGGER.warn(player.getName() + ": unhandled action type " + _actionId);
                 break;
             }
         }

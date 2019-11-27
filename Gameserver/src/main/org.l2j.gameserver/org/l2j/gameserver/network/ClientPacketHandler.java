@@ -27,10 +27,10 @@ public class ClientPacketHandler implements PacketHandler<GameClient> {
 
         PacketFactory packetFactory = getPacketFactory(opcode, buffer);
 
-        return MakePacketWithFactory(buffer, client, opcode, packetFactory);
+        return makePacketWithFactory(buffer, client, opcode, packetFactory);
     }
 
-    private ReadablePacket<GameClient> MakePacketWithFactory(PacketBuffer buffer, GameClient client, int opcode, PacketFactory packetFactory) {
+    private ReadablePacket<GameClient> makePacketWithFactory(PacketBuffer buffer, GameClient client, int opcode, PacketFactory packetFactory) {
         ReadablePacket<GameClient> packet;
 
         if (isNull(packetFactory) || isNull((packet = packetFactory.newIncomingPacket()))) {

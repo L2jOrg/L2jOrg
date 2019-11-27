@@ -80,7 +80,7 @@ public final class Item extends WorldObject {
     /**
      * ID of the item
      */
-    private final int _itemId;
+    private final int itemId;
 
     /**
      * Object ItemTemplate associated to the item
@@ -161,9 +161,9 @@ public final class Item extends WorldObject {
     public Item(int objectId, int itemId) {
         super(objectId);
         setInstanceType(InstanceType.L2ItemInstance);
-        _itemId = itemId;
+        this.itemId = itemId;
         template = ItemEngine.getInstance().getTemplate(itemId);
-        if ((_itemId == 0) || (template == null)) {
+        if ((this.itemId == 0) || (template == null)) {
             throw new IllegalArgumentException();
         }
         super.setName(template.getName());
@@ -179,19 +179,19 @@ public final class Item extends WorldObject {
      * Constructor of the Item from the objetId and the description of the item given by the ItemTemplate.
      *
      * @param objectId : int designating the ID of the object in the world
-     * @param item     : ItemTemplate containing informations of the item
+     * @param template     : ItemTemplate containing informations of the item
      */
-    public Item(int objectId, ItemTemplate item) {
+    public Item(int objectId, ItemTemplate template) {
         super(objectId);
         setInstanceType(InstanceType.L2ItemInstance);
-        _itemId = item.getId();
-        template = item;
-        if (_itemId == 0) {
+        itemId = template.getId();
+        this.template = template;
+        if (itemId == 0) {
             throw new IllegalArgumentException();
         }
-        super.setName(template.getName());
+        super.setName(this.template.getName());
         loc = ItemLocation.VOID;
-        _time = template.getTime() == -1 ? -1 : System.currentTimeMillis() + (template.getTime() * 60 * 1000);
+        _time = this.template.getTime() == -1 ? -1 : System.currentTimeMillis() + (this.template.getTime() * 60 * 1000);
         scheduleLifeTimeTask();
     }
 
@@ -313,7 +313,7 @@ public final class Item extends WorldObject {
             }
             final String targetName = (creator.getTarget() != null ? creator.getTarget().getName() : "no-target");
             if (getSettings(GeneralSettings.class).auditGM()) {
-                GMAudit.auditGMAction(creator.getName() + " [" + creator.getObjectId() + "]", process + "(id: " + _itemId + " name: " + getName() + ")", targetName, "WorldObject referencing this action is: " + referenceName);
+                GMAudit.auditGMAction(creator.getName() + " [" + creator.getObjectId() + "]", process + "(id: " + itemId + " name: " + getName() + ")", targetName, "WorldObject referencing this action is: " + referenceName);
             }
         }
     }
@@ -423,7 +423,7 @@ public final class Item extends WorldObject {
             return;
         }
         final long old = _count;
-        final long max = _itemId == CommonItem.ADENA ? Inventory.MAX_ADENA : Integer.MAX_VALUE;
+        final long max = itemId == CommonItem.ADENA ? Inventory.MAX_ADENA : Integer.MAX_VALUE;
 
         if ((count > 0) && (_count > (max - count))) {
             setCount(max);
@@ -469,7 +469,7 @@ public final class Item extends WorldObject {
             }
             final String targetName = (creator.getTarget() != null ? creator.getTarget().getName() : "no-target");
             if (getSettings(GeneralSettings.class).auditGM()) {
-                GMAudit.auditGMAction(creator.getName() + " [" + creator.getObjectId() + "]", process + "(id: " + _itemId + " objId: " + getObjectId() + " name: " + getName() + " count: " + count + ")", targetName, "WorldObject referencing this action is: " + referenceName);
+                GMAudit.auditGMAction(creator.getName() + " [" + creator.getObjectId() + "]", process + "(id: " + itemId + " objId: " + getObjectId() + " name: " + getName() + " count: " + count + ")", targetName, "WorldObject referencing this action is: " + referenceName);
             }
         }
     }
@@ -566,7 +566,7 @@ public final class Item extends WorldObject {
      */
     @Override
     public int getId() {
-        return _itemId;
+        return itemId;
     }
 
     /**
@@ -759,10 +759,6 @@ public final class Item extends WorldObject {
         return template.isPvpItem();
     }
 
-    public boolean isOlyRestrictedItem() {
-        return template.isOlyRestrictedItem();
-    }
-
     /**
      * @param player
      * @param allowAdena
@@ -772,13 +768,13 @@ public final class Item extends WorldObject {
     public boolean isAvailable(Player player, boolean allowAdena, boolean allowNonTradeable) {
         final Summon pet = player.getPet();
 
-        return ((!isEquipped()) // Not equipped
-                && (template.getType2() != ItemTemplate.TYPE2_QUEST) // Not Quest Item
+        return !isEquipped() && !isQuestItem()
                 && ((template.getType2() != ItemTemplate.TYPE2_MONEY) || (template.getType1() != ItemTemplate.TYPE1_SHIELD_ARMOR)) // not money, not shield
                 && ((pet == null) || (getObjectId() != pet.getControlObjectId())) // Not Control item of currently summoned pet
-                && !(player.isProcessingItem(getObjectId())) // Not momentarily used enchant scroll
-                && (allowAdena || (_itemId != CommonItem.ADENA)) // Not Adena
-                && (!player.isCastingNow(s -> s.getSkill().getItemConsumeId() != _itemId)) && (allowNonTradeable || (isTradeable() && (!((template.getItemType() == EtcItemType.PET_COLLAR) && player.havePetInvItems())))));
+                && !player.isProcessingItem(getObjectId()) // Not momentarily used enchant scroll
+                && (allowAdena || (itemId != CommonItem.ADENA)) // Not Adena
+                && (!player.isCastingNow(s -> s.getSkill().getItemConsumeId() != itemId))
+                && (allowNonTradeable || (isTradeable() && (!((template.getItemType() == EtcItemType.PET_COLLAR) && player.havePetInvItems()))));
     }
 
     /**
@@ -1176,7 +1172,7 @@ public final class Item extends WorldObject {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement("INSERT INTO items (owner_id,item_id,count,loc,loc_data,enchant_level,object_id,custom_type1,custom_type2,time) VALUES (?,?,?,?,?,?,?,?,?,?)")) {
             ps.setInt(1, _ownerId);
-            ps.setInt(2, _itemId);
+            ps.setInt(2, itemId);
             ps.setLong(3, _count);
             ps.setString(4, loc.name());
             ps.setInt(5, _locData);
@@ -1367,7 +1363,7 @@ public final class Item extends WorldObject {
             } else {
                 player.getWarehouse().destroyItem("Item", this, player, null);
             }
-            player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_EXPIRED).addItemName(_itemId));
+            player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_EXPIRED).addItemName(itemId));
         }
     }
 

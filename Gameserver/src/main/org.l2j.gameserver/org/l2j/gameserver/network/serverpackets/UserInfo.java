@@ -99,7 +99,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
 
         writeInt(activeChar.getObjectId());
         writeInt(_initSize);
-        writeShort((short) 25);
+        writeShort(25);
         writeBytes(_masks);
 
         if (containsMask(UserInfoType.RELATION)) {

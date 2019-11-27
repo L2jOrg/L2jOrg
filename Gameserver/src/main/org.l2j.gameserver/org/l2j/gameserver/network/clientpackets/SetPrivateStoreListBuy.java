@@ -22,7 +22,6 @@ import org.l2j.gameserver.util.GameUtils;
 
 import java.util.Arrays;
 
-
 public final class SetPrivateStoreListBuy extends ClientPacket {
     private TradeItem[] _items = null;
 

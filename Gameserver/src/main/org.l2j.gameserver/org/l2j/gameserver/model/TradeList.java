@@ -211,13 +211,13 @@ public class TradeList {
      */
     public synchronized TradeItem addItemByItemId(int itemId, long count, long price) {
         if (locked) {
-            LOGGER.warn(owner.getName() + ": Attempt to modify locked TradeList!");
+            LOGGER.warn("{} Attempt to modify locked TradeList!", owner);
             return null;
         }
 
         final ItemTemplate item = ItemEngine.getInstance().getTemplate(itemId);
         if (item == null) {
-            LOGGER.warn(owner.getName() + ": Attempt to add invalid item to TradeList!");
+            LOGGER.warn("{} Attempt to add invalid item to TradeList!", owner);
             return null;
         }
 
@@ -226,12 +226,12 @@ public class TradeList {
         }
 
         if (!item.isStackable() && (count > 1)) {
-            LOGGER.warn(owner.getName() + ": Attempt to add non-stackable item to TradeList with count > 1!");
+            LOGGER.warn("{} Attempt to add non-stackable item to TradeList with count > 1!", owner);
             return null;
         }
 
         if ((Inventory.MAX_ADENA / count) < price) {
-            LOGGER.warn(owner.getName() + ": Attempt to overflow adena !");
+            LOGGER.warn("{} Attempt to overflow adena !", owner);
             return null;
         }
 

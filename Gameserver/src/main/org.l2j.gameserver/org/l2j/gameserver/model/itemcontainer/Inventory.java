@@ -286,13 +286,7 @@ public abstract class Inventory extends ItemContainer {
                 item.setItemLocation(getEquipLocation(), slot.getId());
                 item.setLastChange(Item.MODIFIED);
                 _wearedMask |= item.getTemplate().getItemMask();
-                for (InventoryListener listener : listeners) {
-                    if (listener == null) {
-                        continue;
-                    }
-
-                    listener.notifyEquiped(slot, item, this);
-                }
+                listeners.forEach(l -> l.notifyEquiped(slot, item, this));
                 item.updateDatabase();
             }
 

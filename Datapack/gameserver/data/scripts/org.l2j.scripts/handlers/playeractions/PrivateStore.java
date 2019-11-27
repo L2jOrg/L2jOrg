@@ -30,6 +30,8 @@ import org.l2j.gameserver.network.serverpackets.RecipeShopManageList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static java.util.Objects.isNull;
+
 /**
  * Open/Close private store player action handler.
  * @author Nik
@@ -39,24 +41,24 @@ public final class PrivateStore implements IPlayerActionHandler
 	private static final Logger LOGGER = LoggerFactory.getLogger(PrivateStore.class);
 	
 	@Override
-	public void useAction(Player activeChar, ActionData data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(Player player, ActionData data, boolean ctrlPressed, boolean shiftPressed)
 	{
 		final PrivateStoreType type = PrivateStoreType.findById(data.getOptionId());
-		if (type == null)
+		if (isNull(type))
 		{
-			LOGGER.warn("Incorrect private store type: " + data.getOptionId());
+			LOGGER.warn("Incorrect private store type: {}", data.getOptionId());
 			return;
 		}
 		
 		// Player shouldn't be able to set stores if he/she is alike dead (dead or fake death)
-		if (!activeChar.canOpenPrivateStore())
+		if (!player.canOpenPrivateStore())
 		{
-			if (activeChar.isInsideZone(ZoneType.NO_STORE))
+			if (player.isInsideZone(ZoneType.NO_STORE))
 			{
-				activeChar.sendPacket(SystemMessageId.YOU_CANNOT_OPEN_A_PRIVATE_STORE_HERE);
+				player.sendPacket(SystemMessageId.YOU_CANNOT_OPEN_A_PRIVATE_STORE_HERE);
 			}
 			
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -66,33 +68,33 @@ public final class PrivateStore implements IPlayerActionHandler
 			case SELL_MANAGE:
 			case PACKAGE_SELL:
 			{
-				if ((activeChar.getPrivateStoreType() == PrivateStoreType.SELL) || (activeChar.getPrivateStoreType() == PrivateStoreType.SELL_MANAGE) || (activeChar.getPrivateStoreType() == PrivateStoreType.PACKAGE_SELL))
+				if ((player.getPrivateStoreType() == PrivateStoreType.SELL) || (player.getPrivateStoreType() == PrivateStoreType.SELL_MANAGE) || (player.getPrivateStoreType() == PrivateStoreType.PACKAGE_SELL))
 				{
-					activeChar.setPrivateStoreType(PrivateStoreType.NONE);
+					player.setPrivateStoreType(PrivateStoreType.NONE);
 				}
 				break;
 			}
 			case BUY:
 			case BUY_MANAGE:
 			{
-				if ((activeChar.getPrivateStoreType() == PrivateStoreType.BUY) || (activeChar.getPrivateStoreType() == PrivateStoreType.BUY_MANAGE))
+				if ((player.getPrivateStoreType() == PrivateStoreType.BUY) || (player.getPrivateStoreType() == PrivateStoreType.BUY_MANAGE))
 				{
-					activeChar.setPrivateStoreType(PrivateStoreType.NONE);
+					player.setPrivateStoreType(PrivateStoreType.NONE);
 				}
 				break;
 			}
 			case MANUFACTURE:
 			{
-				activeChar.setPrivateStoreType(PrivateStoreType.NONE);
-				activeChar.broadcastUserInfo();
+				player.setPrivateStoreType(PrivateStoreType.NONE);
+				player.broadcastUserInfo();
 			}
 		}
 		
-		if (activeChar.getPrivateStoreType() == PrivateStoreType.NONE)
+		if (player.getPrivateStoreType() == PrivateStoreType.NONE)
 		{
-			if (activeChar.isSitting())
+			if (player.isSitting())
 			{
-				activeChar.standUp();
+				player.standUp();
 			}
 			
 			switch (type)
@@ -101,22 +103,22 @@ public final class PrivateStore implements IPlayerActionHandler
 				case SELL_MANAGE:
 				case PACKAGE_SELL:
 				{
-					activeChar.setPrivateStoreType(PrivateStoreType.SELL_MANAGE);
-					activeChar.sendPacket(new PrivateStoreManageListSell(1, activeChar, type == PrivateStoreType.PACKAGE_SELL));
-					activeChar.sendPacket(new PrivateStoreManageListSell(2, activeChar, type == PrivateStoreType.PACKAGE_SELL));
+					player.setPrivateStoreType(PrivateStoreType.SELL_MANAGE);
+					player.sendPacket(new PrivateStoreManageListSell(1, player, type == PrivateStoreType.PACKAGE_SELL));
+					player.sendPacket(new PrivateStoreManageListSell(2, player, type == PrivateStoreType.PACKAGE_SELL));
 					break;
 				}
 				case BUY:
 				case BUY_MANAGE:
 				{
-					activeChar.setPrivateStoreType(PrivateStoreType.BUY_MANAGE);
-					activeChar.sendPacket(new PrivateStoreManageListBuy(1, activeChar));
-					activeChar.sendPacket(new PrivateStoreManageListBuy(2, activeChar));
+					player.setPrivateStoreType(PrivateStoreType.BUY_MANAGE);
+					player.sendPacket(new PrivateStoreManageListBuy(1, player));
+					player.sendPacket(new PrivateStoreManageListBuy(2, player));
 					break;
 				}
 				case MANUFACTURE:
 				{
-					activeChar.sendPacket(new RecipeShopManageList(activeChar, true));
+					player.sendPacket(new RecipeShopManageList(player, true));
 				}
 			}
 		}

@@ -39,7 +39,7 @@ public final class WorldTimeController extends Thread {
     private volatile boolean shutdown = false;
 
     private WorldTimeController() {
-        super("GameTimeController");
+        super("World Time Controller");
         setDaemon(true);
         setPriority(MAX_PRIORITY);
 

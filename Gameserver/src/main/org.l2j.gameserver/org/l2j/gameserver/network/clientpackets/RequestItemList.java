@@ -1,5 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
+import static java.util.Objects.nonNull;
+
 /**
  * This class ...
  *
@@ -13,8 +15,9 @@ public final class RequestItemList extends ClientPacket {
 
     @Override
     public void runImpl() {
-        if ((client != null) && (client.getPlayer() != null) && !client.getPlayer().isInventoryDisabled()) {
-            client.getPlayer().sendItemList();
+        var player = client.getPlayer();
+        if (nonNull(player)  && !player.isInventoryDisabled()) {
+            player.sendItemList();
         }
     }
 }

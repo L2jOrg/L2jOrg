@@ -15,6 +15,8 @@ import org.l2j.gameserver.network.serverpackets.PrivateStoreMsgSell;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2j.gameserver.util.GameUtils;
 
+import static java.util.Objects.isNull;
+
 /**
  * This class ...
  *
@@ -51,7 +53,7 @@ public class SetPrivateStoreListSell extends ClientPacket {
     @Override
     public void runImpl() {
         final Player player = client.getPlayer();
-        if (player == null) {
+        if (isNull(player)) {
             return;
         }
 

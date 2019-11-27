@@ -568,7 +568,7 @@ public final class Player extends Playable {
     private ScheduledFuture<?> _onlineTimeUpdateTask;
     private PcWarehouse _warehouse;
     private PcRefund _refund;
-    private PrivateStoreType _privateStoreType = PrivateStoreType.NONE;
+    private PrivateStoreType privateStoreType = PrivateStoreType.NONE;
     private TradeList activeTradeList;
     private ItemContainer _activeWarehouse;
     private volatile Map<Integer, ManufactureItem> _manufactureItems;
@@ -1247,7 +1247,7 @@ public final class Player extends Playable {
     }
 
     public boolean isInStoreMode() {
-        return _privateStoreType != PrivateStoreType.NONE;
+        return privateStoreType != PrivateStoreType.NONE;
     }
 
     public boolean isCrafting() {
@@ -3949,10 +3949,10 @@ public final class Player extends Playable {
     public void tryOpenPrivateBuyStore() {
         // Player shouldn't be able to set stores if he/she is alike dead (dead or fake death)
         if (canOpenPrivateStore()) {
-            if ((_privateStoreType == PrivateStoreType.BUY) || (_privateStoreType == PrivateStoreType.BUY_MANAGE)) {
+            if ((privateStoreType == PrivateStoreType.BUY) || (privateStoreType == PrivateStoreType.BUY_MANAGE)) {
                 setPrivateStoreType(PrivateStoreType.NONE);
             }
-            if (_privateStoreType == PrivateStoreType.NONE) {
+            if (privateStoreType == PrivateStoreType.NONE) {
                 if (_waitTypeSitting) {
                     standUp();
                 }
@@ -4909,7 +4909,7 @@ public final class Player extends Playable {
      * @return the Private Store type of the Player.
      */
     public PrivateStoreType getPrivateStoreType() {
-        return _privateStoreType;
+        return privateStoreType;
     }
 
     /**
@@ -4924,10 +4924,10 @@ public final class Player extends Playable {
      * @param privateStoreType
      */
     public void setPrivateStoreType(PrivateStoreType privateStoreType) {
-        _privateStoreType = privateStoreType;
+        this.privateStoreType = privateStoreType;
 
         if (Config.OFFLINE_DISCONNECT_FINISHED && (privateStoreType == PrivateStoreType.NONE) && ((_client == null) || _client.isDetached())) {
-            IdFactory.getInstance().releaseId(getObjectId());
+            IdFactory.getInstance().releaseId(getObjectId());    // WTF
             Disconnection.of(this).storeMe().deleteMe();
         }
     }
@@ -7644,7 +7644,7 @@ public final class Player extends Playable {
             _noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_IN_A_CHAOTIC_OR_PURPLE_STATE;
             return false;
         }
-        if (_privateStoreType != PrivateStoreType.NONE) {
+        if (privateStoreType != PrivateStoreType.NONE) {
             _noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_ENGAGED_IN_A_PRIVATE_STORE_OR_MANUFACTURE;
             return false;
         }
@@ -9859,7 +9859,7 @@ public final class Player extends Playable {
         }
         sendPacket(rc2);
 
-        switch (_privateStoreType) {
+        switch (privateStoreType) {
             case SELL: {
                 player.sendPacket(new PrivateStoreMsgSell(this));
                 break;
@@ -10291,7 +10291,7 @@ public final class Player extends Playable {
     }
 
     public boolean canMakeSocialAction() {
-        return ((_privateStoreType == PrivateStoreType.NONE) && (getActiveRequester() == null) && !isAlikeDead() && !isAllSkillsDisabled() && !isCastingNow() && (getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE));
+        return ((privateStoreType == PrivateStoreType.NONE) && (getActiveRequester() == null) && !isAlikeDead() && !isAllSkillsDisabled() && !isCastingNow() && (getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE));
     }
 
     public void setMultiSocialAction(int id, int targetId) {

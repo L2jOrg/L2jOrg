@@ -5,6 +5,9 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.PrivateStoreMsgSell;
 import org.l2j.gameserver.util.GameUtils;
 
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
+
 /**
  * This class ...
  *
@@ -23,12 +26,12 @@ public class SetPrivateStoreMsgSell extends ClientPacket {
     @Override
     public void runImpl() {
         final Player player = client.getPlayer();
-        if ((player == null) || (player.getSellList() == null)) {
+        if (isNull(player) || isNull(player.getSellList())) {
             return;
         }
 
-        if ((_storeMsg != null) && (_storeMsg.length() > MAX_MSG_LENGTH)) {
-            GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to overflow private store sell message", Config.DEFAULT_PUNISH);
+        if (nonNull(_storeMsg) && (_storeMsg.length() > MAX_MSG_LENGTH)) {
+            GameUtils.handleIllegalPlayerAction(player, "Player " + player + " tried to overflow private store sell message", Config.DEFAULT_PUNISH);
             return;
         }
 

@@ -235,10 +235,10 @@ public class PlayerInventory extends Inventory {
         for (Item adjItem : getItemsByItemId(item.getItem().getId())) {
             if (adjItem.isEquipable()) {
                 if (!adjItem.isEquipped()) {
-                    notAllEquipped |= true;
+                    notAllEquipped = true;
                 }
             } else {
-                notAllEquipped |= true;
+                notAllEquipped = true;
                 break;
             }
         }
