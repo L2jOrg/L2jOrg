@@ -550,8 +550,8 @@ public abstract class Inventory extends ItemContainer {
     private void equipTwoHand(Item item) {
         checkEquippedDress();
         setPaperdollItem(InventorySlot.LEFT_HAND, null);
-        setPaperdollItem(InventorySlot.RIGHT_HAND, item);
         setPaperdollItem(InventorySlot.TWO_HAND, item);
+        setPaperdollItem(InventorySlot.RIGHT_HAND, item);
     }
 
     private void equipArtifact(Item item) {

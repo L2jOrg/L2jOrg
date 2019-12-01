@@ -15,11 +15,12 @@ import static java.util.Objects.nonNull;
 
 /**
  * @author Sdw, UnAfraid
+ * @author JoeAlisson
  */
 public class UserInfo extends AbstractMaskPacket<UserInfoType> {
-    private final Player activeChar;
+    private final Player player;
 
-    private final int _relation;
+    private final int relation;
     private final int runSpd;
     private final int walkSpd;
     private final int swimRunSpd;
@@ -31,9 +32,9 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
     private final double _moveMultiplier;
     private final int enchantLevel;
     private final int armorEnchant;
-    private final byte[] _masks = new byte[] { 0x00, 0x00, 0x00, 0x00 };
+    private final byte[] mask = new byte[] { 0x00, 0x00, 0x00, 0x00 };
     private String title;
-    private int _initSize = 5;
+    private int initSize = 5;
 
     public UserInfo(Player cha) {
         this(cha, true);
@@ -49,9 +50,9 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
     }
 
     public UserInfo(Player cha, boolean addAll) {
-        activeChar = cha;
+        player = cha;
 
-        _relation = calculateRelation(cha);
+        relation = calculateRelation(cha);
         _moveMultiplier = cha.getMovementSpeedMultiplier();
         runSpd = (int) Math.round(cha.getRunSpeed() / _moveMultiplier);
         walkSpd = (int) Math.round(cha.getWalkSpeed() / _moveMultiplier);
@@ -74,7 +75,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
 
     @Override
     protected byte[] getMasks() {
-        return _masks;
+        return mask;
     }
 
     @Override
@@ -85,11 +86,11 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
     private void calcBlockSize(UserInfoType type) {
         switch (type) {
             case BASIC_INFO:
-                _initSize += type.getBlockLength() + (activeChar.getAppearance().getVisibleName().length() * 2);
+                initSize += type.getBlockLength() + (player.getAppearance().getVisibleName().length() * 2);
             case CLAN:
-                _initSize += type.getBlockLength() + (title.length() * 2);
+                initSize += type.getBlockLength() + (title.length() * 2);
             default:
-                _initSize += type.getBlockLength();
+                initSize += type.getBlockLength();
         }
     }
 
@@ -97,53 +98,53 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.USER_INFO);
 
-        writeInt(activeChar.getObjectId());
-        writeInt(_initSize);
-        writeShort(25);
-        writeBytes(_masks);
+        writeInt(player.getObjectId());
+        writeInt(initSize);
+        writeShort(0x1B);
+        writeBytes(mask);
 
         if (containsMask(UserInfoType.RELATION)) {
-            writeInt(_relation);
+            writeInt(relation);
         }
 
         if (containsMask(UserInfoType.BASIC_INFO)) {
-            writeShort(UserInfoType.BASIC_INFO.getBlockLength() + activeChar.getAppearance().getVisibleName().length() * 2);
-            writeSizedString(activeChar.getName());
-            writeByte(activeChar.isGM());
-            writeByte(activeChar.getRace().ordinal());
-            writeByte(activeChar.getAppearance().isFemale());
-            writeInt(activeChar.getBaseTemplate().getClassId().getRootClassId().getId());
-            writeInt(activeChar.getClassId().getId());
-            writeByte(activeChar.getLevel());
+            writeShort(UserInfoType.BASIC_INFO.getBlockLength() + player.getAppearance().getVisibleName().length() * 2);
+            writeSizedString(player.getName());
+            writeByte(player.isGM());
+            writeByte(player.getRace().ordinal());
+            writeByte(player.getAppearance().isFemale());
+            writeInt(player.getBaseTemplate().getClassId().getRootClassId().getId());
+            writeInt(player.getClassId().getId());
+            writeByte(player.getLevel());
         }
 
         if (containsMask(UserInfoType.BASE_STATS)) {
             writeShort(UserInfoType.BASE_STATS.getBlockLength());
-            writeShort(activeChar.getSTR());
-            writeShort(activeChar.getDEX());
-            writeShort(activeChar.getCON());
-            writeShort(activeChar.getINT());
-            writeShort(activeChar.getWIT());
-            writeShort(activeChar.getMEN());
+            writeShort(player.getSTR());
+            writeShort(player.getDEX());
+            writeShort(player.getCON());
+            writeShort(player.getINT());
+            writeShort(player.getWIT());
+            writeShort(player.getMEN());
             writeShort(0x01); // LUC
             writeShort(0x01); // CHA
         }
 
         if (containsMask(UserInfoType.MAX_HPCPMP)) {
             writeShort(UserInfoType.MAX_HPCPMP.getBlockLength());
-            writeInt(activeChar.getMaxHp());
-            writeInt(activeChar.getMaxMp());
-            writeInt(activeChar.getMaxCp());
+            writeInt(player.getMaxHp());
+            writeInt(player.getMaxMp());
+            writeInt(player.getMaxCp());
         }
 
         if (containsMask(UserInfoType.CURRENT_HPMPCP_EXP_SP)) {
             writeShort(UserInfoType.CURRENT_HPMPCP_EXP_SP.getBlockLength());
-            writeInt((int) Math.round(activeChar.getCurrentHp()));
-            writeInt((int) Math.round(activeChar.getCurrentMp()));
-            writeInt((int) Math.round(activeChar.getCurrentCp()));
-            writeLong(activeChar.getSp());
-            writeLong(activeChar.getExp());
-            writeDouble((float) (activeChar.getExp() - ExperienceData.getInstance().getExpForLevel(activeChar.getLevel())) / (ExperienceData.getInstance().getExpForLevel(activeChar.getLevel() + 1) - ExperienceData.getInstance().getExpForLevel(activeChar.getLevel())));
+            writeInt((int) Math.round(player.getCurrentHp()));
+            writeInt((int) Math.round(player.getCurrentMp()));
+            writeInt((int) Math.round(player.getCurrentCp()));
+            writeLong(player.getSp());
+            writeLong(player.getExp());
+            writeDouble((float) (player.getExp() - ExperienceData.getInstance().getExpForLevel(player.getLevel())) / (ExperienceData.getInstance().getExpForLevel(player.getLevel() + 1) - ExperienceData.getInstance().getExpForLevel(player.getLevel())));
         }
 
         if (containsMask(UserInfoType.ENCHANTLEVEL)) {
@@ -154,36 +155,36 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
 
         if (containsMask(UserInfoType.APPAREANCE)) {
             writeShort(UserInfoType.APPAREANCE.getBlockLength());
-            writeInt(activeChar.getVisualHair());
-            writeInt(activeChar.getVisualHairColor());
-            writeInt(activeChar.getVisualFace());
-            writeByte(activeChar.isHairAccessoryEnabled());
+            writeInt(player.getVisualHair());
+            writeInt(player.getVisualHairColor());
+            writeInt(player.getVisualFace());
+            writeByte(player.isHairAccessoryEnabled());
         }
 
         if (containsMask(UserInfoType.STATUS)) {
             writeShort(UserInfoType.STATUS.getBlockLength());
-            writeByte(activeChar.getMountType().ordinal());
-            writeByte(activeChar.getPrivateStoreType().getId());
-            writeByte(activeChar.hasDwarvenCraft() || activeChar.getSkillLevel(248) > 0);
+            writeByte(player.getMountType().ordinal());
+            writeByte(player.getPrivateStoreType().getId());
+            writeByte(player.hasDwarvenCraft() || player.getSkillLevel(248) > 0);
             writeByte(0x00); // Ability Points
         }
 
         if (containsMask(UserInfoType.STATS)) {
             writeShort(UserInfoType.STATS.getBlockLength());
-            writeShort(activeChar.getActiveWeaponItem() != null ? 40 : 20);
-            writeInt(activeChar.getPAtk());
-            writeInt(activeChar.getPAtkSpd());
-            writeInt(activeChar.getPDef());
-            writeInt(activeChar.getEvasionRate());
-            writeInt(activeChar.getAccuracy());
-            writeInt(activeChar.getCriticalHit());
-            writeInt(activeChar.getMAtk());
-            writeInt(activeChar.getMAtkSpd());
-            writeInt(activeChar.getPAtkSpd()); // Seems like atk speed - 1
-            writeInt(activeChar.getMagicEvasionRate());
-            writeInt(activeChar.getMDef());
-            writeInt(activeChar.getMagicAccuracy());
-            writeInt(activeChar.getMCriticalHit());
+            writeShort(player.getActiveWeaponItem() != null ? 40 : 20);
+            writeInt(player.getPAtk());
+            writeInt(player.getPAtkSpd());
+            writeInt(player.getPDef());
+            writeInt(player.getEvasionRate());
+            writeInt(player.getAccuracy());
+            writeInt(player.getCriticalHit());
+            writeInt(player.getMAtk());
+            writeInt(player.getMAtkSpd());
+            writeInt(player.getPAtkSpd()); // Seems like atk speed - 1
+            writeInt(player.getMagicEvasionRate());
+            writeInt(player.getMDef());
+            writeInt(player.getMagicAccuracy());
+            writeInt(player.getMCriticalHit());
         }
 
         if (containsMask(UserInfoType.ELEMENTALS)) {
@@ -198,10 +199,10 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
 
         if (containsMask(UserInfoType.POSITION)) {
             writeShort(UserInfoType.POSITION.getBlockLength());
-            writeInt(activeChar.getX());
-            writeInt(activeChar.getY());
-            writeInt(activeChar.getZ());
-            writeInt(activeChar.isInVehicle() ? activeChar.getVehicle().getObjectId() : 0);
+            writeInt(player.getX());
+            writeInt(player.getY());
+            writeInt(player.getZ());
+            writeInt(player.isInVehicle() ? player.getVehicle().getObjectId() : 0);
         }
 
         if (containsMask(UserInfoType.SPEED)) {
@@ -219,13 +220,13 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
         if (containsMask(UserInfoType.MULTIPLIER)) {
             writeShort(UserInfoType.MULTIPLIER.getBlockLength());
             writeDouble(_moveMultiplier);
-            writeDouble(activeChar.getAttackSpeedMultiplier());
+            writeDouble(player.getAttackSpeedMultiplier());
         }
 
         if (containsMask(UserInfoType.COL_RADIUS_HEIGHT)) {
             writeShort(UserInfoType.COL_RADIUS_HEIGHT.getBlockLength());
-            writeDouble(activeChar.getCollisionRadius());
-            writeDouble(activeChar.getCollisionHeight());
+            writeDouble(player.getCollisionRadius());
+            writeDouble(player.getCollisionHeight());
         }
 
         if (containsMask(UserInfoType.ATK_ELEMENTAL)) {
@@ -237,75 +238,75 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
         if (containsMask(UserInfoType.CLAN)) {
             writeShort(UserInfoType.CLAN.getBlockLength() + (title.length() * 2));
             writeSizedString(title);
-            writeShort(activeChar.getPledgeType());
-            writeInt(activeChar.getClanId());
-            writeInt(activeChar.getClanCrestLargeId());
-            writeInt(activeChar.getClanCrestId());
-            writeInt(activeChar.getClanPrivileges().getBitmask());
-            writeByte(activeChar.isClanLeader());
-            writeInt(activeChar.getAllyId());
-            writeInt(activeChar.getAllyCrestId());
-            writeByte(activeChar.isInMatchingRoom());
+            writeShort(player.getPledgeType());
+            writeInt(player.getClanId());
+            writeInt(player.getClanCrestLargeId());
+            writeInt(player.getClanCrestId());
+            writeInt(player.getClanPrivileges().getBitmask());
+            writeByte(player.isClanLeader());
+            writeInt(player.getAllyId());
+            writeInt(player.getAllyCrestId());
+            writeByte(player.isInMatchingRoom());
         }
 
         if (containsMask(UserInfoType.SOCIAL)) {
             writeShort(UserInfoType.SOCIAL.getBlockLength());
-            writeByte(activeChar.getPvpFlag());
-            writeInt(activeChar.getReputation()); // Reputation
-            writeByte(activeChar.isNoble());
-            writeByte(activeChar.isHero() || (activeChar.isGM() && Config.GM_HERO_AURA) ? 2 : 0); // 152 - Value for enabled changed to 2?
-            writeByte(activeChar.getPledgeClass());
-            writeInt(activeChar.getPkKills());
-            writeInt(activeChar.getPvpKills());
-            writeShort(activeChar.getRecomLeft());
-            writeShort(activeChar.getRecomHave());
+            writeByte(player.getPvpFlag());
+            writeInt(player.getReputation()); // Reputation
+            writeByte(player.isNoble());
+            writeByte(player.isHero() || (player.isGM() && Config.GM_HERO_AURA) ? 2 : 0); // 152 - Value for enabled changed to 2?
+            writeByte(player.getPledgeClass());
+            writeInt(player.getPkKills());
+            writeInt(player.getPvpKills());
+            writeShort(player.getRecomLeft());
+            writeShort(player.getRecomHave());
             writeInt(0x00); // unk 196
-            writeInt(0x00);
+            writeInt(0x00); // dislike
         }
 
         if (containsMask(UserInfoType.VITA_FAME)) {
             writeShort(UserInfoType.VITA_FAME.getBlockLength()); // 196
-            writeInt(activeChar.getVitalityPoints());
+            writeInt(player.getVitalityPoints());
             writeByte(0x00); // Vita Bonus
-            writeInt(activeChar.getFame());
-            writeInt(activeChar.getRaidbossPoints());
+            writeInt(player.getFame());
+            writeInt(player.getRaidbossPoints());
             writeInt(0x00); // unk 196
         }
 
         if (containsMask(UserInfoType.SLOTS)) {
             writeShort(UserInfoType.SLOTS.getBlockLength()); // 152
-            writeByte(activeChar.getInventory().getTalismanSlots());
-            writeByte(activeChar.getInventory().getBroochJewelSlots());
-            writeByte(activeChar.getTeam().getId());
+            writeByte(player.getInventory().getTalismanSlots());
+            writeByte(player.getInventory().getBroochJewelSlots());
+            writeByte(player.getTeam().getId());
             writeInt(0x00);
 
-            if (activeChar.getInventory().getAgathionSlots() > 0) {
+            if (player.getInventory().getAgathionSlots() > 0) {
                 writeByte(0x01);
-                writeByte(activeChar.getInventory().getAgathionSlots() - 1);
+                writeByte(player.getInventory().getAgathionSlots() - 1);
             } else {
                 writeByte(0x00);
                 writeByte(0x00);
             }
-            writeByte(activeChar.getInventory().getArtifactSlots()); // Artifact set slots // 152
+            writeByte(player.getInventory().getArtifactSlots()); // Artifact set slots // 152
         }
 
         if (containsMask(UserInfoType.MOVEMENTS)) {
             writeShort(UserInfoType.MOVEMENTS.getBlockLength());
-            writeByte(activeChar.isInsideZone(ZoneType.WATER) ? 1 : activeChar.isFlyingMounted() ? 2 : 0);
-            writeByte(activeChar.isRunning());
+            writeByte(player.isInsideZone(ZoneType.WATER) ? 1 : player.isFlyingMounted() ? 2 : 0);
+            writeByte(player.isRunning());
         }
 
         if (containsMask(UserInfoType.COLOR)) {
             writeShort(UserInfoType.COLOR.getBlockLength());
-            writeInt(activeChar.getAppearance().getNameColor());
-            writeInt(activeChar.getAppearance().getTitleColor());
+            writeInt(player.getAppearance().getNameColor());
+            writeInt(player.getAppearance().getTitleColor());
         }
 
         if (containsMask(UserInfoType.INVENTORY_LIMIT)) {
             writeShort(UserInfoType.INVENTORY_LIMIT.getBlockLength());
             writeInt(0x00); // mount ??
-            writeShort(activeChar.getInventoryLimit());
-            writeByte((activeChar.isCursedWeaponEquipped() ? CursedWeaponsManager.getInstance().getLevel(activeChar.getCursedWeaponEquippedId()) : 0));
+            writeShort(player.getInventoryLimit());
+            writeByte((player.isCursedWeaponEquipped() ? CursedWeaponsManager.getInstance().getLevel(player.getCursedWeaponEquippedId()) : 0));
             writeInt(0x00); // unk 196
         }
 
@@ -314,22 +315,45 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             writeByte(0x01);
             writeInt(0x00);
             writeByte(0x00);
-            writeByte(activeChar.isTrueHero() ? 100 : 0x00);
+            writeByte(player.isTrueHero() ? 100 : 0x00);
         }
 
         if (containsMask(UserInfoType.SPIRITS)) {
             writeShort(UserInfoType.SPIRITS.getBlockLength());
-            writeInt((int) activeChar.getActiveElementalSpiritAttack());
-            writeInt((int) activeChar.getFireSpiritDefense());
-            writeInt((int) activeChar.getWaterSpiritDefense());
-            writeInt((int) activeChar.getWindSpiritDefense());
-            writeInt((int) activeChar.getEarthSpiritDefense());
-            writeInt(activeChar.getActiveElementalSpiritType());
+            writeInt((int) player.getActiveElementalSpiritAttack());
+            writeInt((int) player.getFireSpiritDefense());
+            writeInt((int) player.getWaterSpiritDefense());
+            writeInt((int) player.getWindSpiritDefense());
+            writeInt((int) player.getEarthSpiritDefense());
+            writeInt(player.getActiveElementalSpiritType());
         }
 
         if (containsMask(UserInfoType.UNK)) {
-            writeShort(6); // 196
+            writeShort(UserInfoType.UNK.getBlockLength()); // 196
             writeInt(0x00); // 196
+        }
+
+        if(containsMask(UserInfoType.STATS_POINTS)) {
+            writeShort(UserInfoType.STATS_POINTS.getBlockLength());
+            writeShort(0x00); // usable points
+            writeShort(0x00); // STR points
+            writeShort(0x00); // DEX points
+            writeShort(0x00); // CON points
+            writeShort(0x00); // INT points
+            writeShort(0x00); // WIT points
+            writeShort(0x00); // MEN points
+        }
+
+        if(containsMask(UserInfoType.STATS_ABILITIES)) {
+            writeShort(UserInfoType.STATS_ABILITIES.getBlockLength());
+            writeShort(0x00); // STR additional abilities
+            writeShort(0x00); // DEX additional abilities
+            writeShort(0x00); // CON additional abilities
+            writeShort(0x00); // INT additional abilities
+            writeShort(0x00); // WIT additional abilities
+            writeShort(0x00); // MEN additional abilities
+            writeShort(0x01);
+            writeShort(0x01);
         }
     }
 
@@ -337,10 +361,9 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
         int relation = 0;
         final Party party = activeChar.getParty();
         final Clan clan = activeChar.getClan();
-
         if (party != null) {
             relation |= 0x08; // Party member
-            if (party.getLeader() == this.activeChar) {
+            if (party.getLeader() == this.player) {
                 relation |= 0x10; // Party leader
             }
         }

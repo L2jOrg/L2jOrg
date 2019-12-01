@@ -33,7 +33,9 @@ public enum UserInfoType implements IUpdateTypeComponent {
     TRUE_HERO(0x16, 9),
 
     SPIRITS(0x17, 26),
-    UNK(0x18, 6);
+    UNK(0x18, 6),
+    STATS_POINTS(0x19, 16),
+    STATS_ABILITIES(0x1A, 18);
 
 
     /**

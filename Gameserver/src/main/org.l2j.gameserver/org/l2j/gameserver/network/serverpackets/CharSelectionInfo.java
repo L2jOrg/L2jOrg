@@ -13,6 +13,7 @@ import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,6 +24,7 @@ import java.sql.ResultSet;
 import java.util.LinkedList;
 import java.util.List;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.enums.InventorySlot.RIGHT_HAND;
 import static org.l2j.gameserver.enums.InventorySlot.TWO_HAND;
 
@@ -224,7 +226,7 @@ public class CharSelectionInfo extends ServerPacket {
             }
         }
         for (int i = 0; i < size; i++) {
-            final CharSelectInfoPackage charInfoPackage = _characterPackages[i];
+            var charInfoPackage = _characterPackages[i];
 
             writeString(charInfoPackage.getName()); // Character name
             writeInt(charInfoPackage.getObjectId()); // Character ID
@@ -235,14 +237,9 @@ public class CharSelectionInfo extends ServerPacket {
 
             writeInt(charInfoPackage.getSex()); // Sex
             writeInt(charInfoPackage.getRace()); // Race
+            writeInt(charInfoPackage.getClassId());
 
-            if (charInfoPackage.getClassId() == charInfoPackage.getBaseClassId()) {
-                writeInt(charInfoPackage.getClassId());
-            } else {
-                writeInt(charInfoPackage.getBaseClassId());
-            }
-
-            writeInt(0x01); // GameServerName
+            writeInt(getSettings(ServerSettings.class).serverId());
 
             writeInt(charInfoPackage.getX());
             writeInt(charInfoPackage.getY());
@@ -253,7 +250,7 @@ public class CharSelectionInfo extends ServerPacket {
             writeLong(charInfoPackage.getSp());
             writeLong(charInfoPackage.getExp());
             writeDouble((float) (charInfoPackage.getExp() - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel())) / (ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel() + 1) - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel()))); // High
-            // Five
+
             writeInt(charInfoPackage.getLevel());
 
             writeInt(charInfoPackage.getReputation());
@@ -301,7 +298,7 @@ public class CharSelectionInfo extends ServerPacket {
 
             writeInt(charInfoPackage.getDeleteTimer() > 0 ? (int) ((charInfoPackage.getDeleteTimer() - System.currentTimeMillis()) / 1000) : 0);
             writeInt(charInfoPackage.getClassId());
-            writeInt(i == _activeId ? 1 : 0);
+            writeInt(i == _activeId);
 
             writeByte(Math.min(charInfoPackage.getEnchantEffect(), 127));
             writeInt(charInfoPackage.getAugmentation() != null ? charInfoPackage.getAugmentation().getOption1Id() : 0);
