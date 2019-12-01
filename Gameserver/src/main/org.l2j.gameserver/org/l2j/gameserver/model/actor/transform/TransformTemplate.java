@@ -116,10 +116,10 @@ public final class TransformTemplate {
             addDefense(GLOVES, set.getInt("gloves", 0));
         }
         if (set.contains("underwear")) {
-            addDefense(UNDERWEAR, set.getInt("underwear", 0));
+            addDefense(PENDANT, set.getInt("underwear", 0));
         }
         if (set.contains("cloak")) {
-            addDefense(BACK, set.getInt("cloak", 0));
+            addDefense(CLOAK, set.getInt("cloak", 0));
         }
         if (set.contains("rear")) {
             addDefense(RIGHT_EAR, set.getInt("rear", 0));

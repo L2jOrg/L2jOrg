@@ -20,7 +20,7 @@ import static org.l2j.gameserver.enums.InventorySlot.*;
 
 public class CharInfo extends ServerPacket {
 
-    private static final InventorySlot[] PAPERDOLL_ORDER = new InventorySlot[] {UNDERWEAR, HEAD, RIGHT_HAND, LEFT_HAND, GLOVES, CHEST, LEGS, FEET, BACK, RIGHT_HAND, HAIR, HAIR2};
+    private static final InventorySlot[] PAPERDOLL_ORDER = new InventorySlot[] {PENDANT, HEAD, RIGHT_HAND, LEFT_HAND, GLOVES, CHEST, LEGS, FEET, CLOAK, TWO_HAND, HAIR, HAIR2};
 
     private final Player _activeChar;
     private final int _mAtkSpd;

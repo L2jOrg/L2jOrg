@@ -53,8 +53,8 @@ public class PlayerTemplate extends CreatureTemplate {
         baseSlotDef.put(HEAD, set.getInt("basePDefhead", 0));
         baseSlotDef.put(FEET, set.getInt("basePDeffeet", 0));
         baseSlotDef.put(GLOVES, set.getInt("basePDefgloves", 0));
-        baseSlotDef.put(UNDERWEAR, set.getInt("basePDefunderwear", 0));
-        baseSlotDef.put(BACK, set.getInt("basePDefcloak", 0));
+        baseSlotDef.put(PENDANT, set.getInt("basePDefunderwear", 0));
+        baseSlotDef.put(CLOAK, set.getInt("basePDefcloak", 0));
         baseSlotDef.put(RIGHT_EAR, set.getInt("baseMDefrear", 0));
         baseSlotDef.put(LEFT_EAR, set.getInt("baseMDeflear", 0));
         baseSlotDef.put(RIGHT_FINGER, set.getInt("baseMDefrfinger", 0));

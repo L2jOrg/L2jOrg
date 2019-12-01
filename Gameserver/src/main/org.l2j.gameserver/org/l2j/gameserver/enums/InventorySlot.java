@@ -9,23 +9,25 @@ import java.util.EnumSet;
  * @author JoeAlisson
  */
 public enum InventorySlot implements IUpdateTypeComponent {
-    UNDERWEAR,
-    HEAD,
-    HAIR,
-    HAIR2,
-    NECK,
-    RIGHT_HAND,
-    CHEST,
-    LEFT_HAND,
+    PENDANT,
     RIGHT_EAR,
     LEFT_EAR,
-    GLOVES,
-    LEGS,
-    FEET,
+    NECK,
     RIGHT_FINGER,
     LEFT_FINGER,
-    LEFT_BRACELET,
+    HEAD,
+    RIGHT_HAND,
+    LEFT_HAND,
+    GLOVES,
+    CHEST,
+    LEGS,
+    FEET,
+    CLOAK,
+    TWO_HAND,
+    HAIR,
+    HAIR2,
     RIGHT_BRACELET,
+    LEFT_BRACELET,
     AGATHION1,
     AGATHION2,
     AGATHION3,
@@ -37,7 +39,6 @@ public enum InventorySlot implements IUpdateTypeComponent {
     TALISMAN4,
     TALISMAN5,
     TALISMAN6,
-    BACK,
     BELT,
     BROOCH,
     BROOCH_JEWEL1,
@@ -67,11 +68,10 @@ public enum InventorySlot implements IUpdateTypeComponent {
     ARTIFACT18,
     ARTIFACT19,
     ARTIFACT20,
-    ARTIFACT21,
-    NONE;
+    ARTIFACT21;
 
     private static final EnumSet<InventorySlot> accessories = EnumSet.of(LEFT_FINGER, RIGHT_FINGER, LEFT_EAR, RIGHT_EAR, NECK);
-    private static final EnumSet<InventorySlot> armors = EnumSet.of(CHEST, LEGS, HEAD, FEET, GLOVES, UNDERWEAR, BACK, HAIR);
+    private static final EnumSet<InventorySlot> armors = EnumSet.of(CHEST, LEGS, HEAD, FEET, GLOVES, PENDANT, CLOAK, HAIR);
     private static final EnumSet<InventorySlot> balanceArtifacts = EnumSet.range(ARTIFACT1, ARTIFACT12);
     private static final EnumSet<InventorySlot> spiritArtifacts = EnumSet.range(ARTIFACT13, ARTIFACT15);
     private static final EnumSet<InventorySlot> protectionArtifacts = EnumSet.range(ARTIFACT16, ARTIFACT18);
@@ -80,7 +80,10 @@ public enum InventorySlot implements IUpdateTypeComponent {
     private static final EnumSet<InventorySlot> broochesJewel = EnumSet.range(BROOCH_JEWEL1, BROOCH_JEWEL6);
     private static final EnumSet<InventorySlot> talismans = EnumSet.range(TALISMAN1, TALISMAN6);
     private static final EnumSet<InventorySlot> armorset = EnumSet.of(CHEST, LEGS, HEAD, GLOVES, FEET);
-    public static final int TOTAL_SLOTS = 59;
+    public static final int TOTAL_SLOTS = 60;
+
+    InventorySlot() {
+    }
 
     public int getId() {
         return ordinal();
@@ -93,7 +96,7 @@ public enum InventorySlot implements IUpdateTypeComponent {
 
     public static InventorySlot fromId(int id) {
         if(id < 0 || id > ARTIFACT21.ordinal()) {
-            return NONE;
+            return null;
         }
         return values()[id];
     }

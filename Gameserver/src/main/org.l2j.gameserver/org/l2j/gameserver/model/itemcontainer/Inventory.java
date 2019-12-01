@@ -201,7 +201,7 @@ public abstract class Inventory extends ItemContainer {
      * @return Item
      */
     public Item getItemByBodyPart(BodyPart bodyPart) {
-        if(bodyPart.slot() == InventorySlot.NONE) {
+        if(isNull(bodyPart.slot())) {
             return null;
         }
         return paperdoll.get(bodyPart.slot());
@@ -358,21 +358,17 @@ public abstract class Inventory extends ItemContainer {
     /**
      * Unequips item in slot (i.e. equips with default value)
      *
-     * @param slot : int designating the slot
+     * @param bodyPart : int designating the slot
      * @return {@link Item} designating the item placed in the slot
      */
-    public Item unEquipItemInBodySlot(BodyPart slot) {
-        InventorySlot pdollSlot = switch (slot) {
-            case HAIR_ALL -> {
-                setPaperdollItem(HAIR.slot(), null);
-                yield HAIR.slot();
-            }
-            case TWO_HAND -> RIGHT_HAND.slot();
-            case ALL_DRESS, FULL_ARMOR -> CHEST.slot();
-            default -> slot.slot();
+    public Item unEquipItemInBodySlot(BodyPart bodyPart) {
+        InventorySlot pdollSlot = switch (bodyPart) {
+            case HAIR_ALL -> InventorySlot.HAIR;
+            case ALL_DRESS, FULL_ARMOR -> InventorySlot.CHEST;
+            default -> bodyPart.slot();
         };
 
-        if (pdollSlot != InventorySlot.NONE) {
+        if (nonNull(pdollSlot)) {
             final Item old = setPaperdollItem(pdollSlot, null);
             if (old != null) {
                 if (isPlayer(getOwner())) {
@@ -417,7 +413,7 @@ public abstract class Inventory extends ItemContainer {
 
         var bodyPart = item.getBodyPart();
 
-        if(bodyPart.isAnyOf(BodyPart.TWO_HAND, LEFT_HAND, BodyPart.RIGHT_HAND, BodyPart.LEGS, BodyPart.FEET, BodyPart.GLOVES, BodyPart.HEAD)) {
+        if(bodyPart.isAnyOf(TWO_HAND, LEFT_HAND, RIGHT_HAND, LEGS, FEET, GLOVES, HEAD)) {
             var formal = getPaperdollItem(InventorySlot.CHEST);
             if(nonNull(formal) && item.getId() != WEDDING_BOUQUET && formal.getBodyPart() == BodyPart.ALL_DRESS) {
                 return;
@@ -427,6 +423,8 @@ public abstract class Inventory extends ItemContainer {
         switch (bodyPart) {
             case TWO_HAND -> equipTwoHand(item);
             case LEFT_HAND -> equipLeftHand(item);
+            case RIGHT_HAND -> equipRightHand(item);
+            case FEET, HEAD, GLOVES -> equipCheckingDress(bodyPart, item);
             case EAR -> equipEar(item);
             case FINGER -> equipFinger(item);
             case FULL_ARMOR -> equipFullArmor(item);
@@ -439,78 +437,102 @@ public abstract class Inventory extends ItemContainer {
             case BROOCH_JEWEL -> equipBroochJewel(item);
             case AGATHION -> equipAgathion(item);
             case ARTIFACT -> equipArtifact(item);
-            case NECK, RIGHT_HAND, CHEST, FEET, GLOVES, HEAD, UNDERWEAR, BACK, LEFT_BRACELET, RIGHT_BRACELET, BELT, BROOCH, ARTIFACT_BOOK -> setPaperdollItem(bodyPart.slot(), item);
+            case NECK, CHEST, UNDERWEAR, BACK, LEFT_BRACELET, RIGHT_BRACELET, BELT, BROOCH, ARTIFACT_BOOK -> setPaperdollItem(bodyPart.slot(), item);
             default -> LOGGER.warn("Unknown body slot {} for Item ID: {}", bodyPart, item.getId());
         }
     }
 
+    private void equipCheckingDress(BodyPart bodyPart, Item item) {
+        checkEquippedDress();
+        setPaperdollItem(bodyPart.slot(), item);
+    }
+
+    private void equipRightHand(Item item) {
+        checkEquippedDress();
+
+        if(!isPaperdollSlotEmpty(InventorySlot.TWO_HAND)) {
+            setPaperdollItem(InventorySlot.TWO_HAND, null);
+        }
+        setPaperdollItem(InventorySlot.RIGHT_HAND, item);
+    }
+
     private void equipAllDress(Item item) {
-        setPaperdollItem(LEGS.slot(), null);
-        setPaperdollItem(LEFT_HAND.slot(), null);
-        setPaperdollItem(RIGHT_HAND.slot(), null);
-        setPaperdollItem(HEAD.slot(), null);
-        setPaperdollItem(FEET.slot(), null);
-        setPaperdollItem(GLOVES.slot(), null);
-        setPaperdollItem(CHEST.slot(), item);
+        setPaperdollItem(InventorySlot.LEGS, null);
+        setPaperdollItem(InventorySlot.LEFT_HAND, null);
+        setPaperdollItem(InventorySlot.RIGHT_HAND, null);
+        setPaperdollItem(InventorySlot.HEAD, null);
+        setPaperdollItem(InventorySlot.FEET, null);
+        setPaperdollItem(InventorySlot.GLOVES, null);
+        setPaperdollItem(InventorySlot.TWO_HAND, null);
+        setPaperdollItem(InventorySlot.CHEST, item);
     }
 
     private void equipHairAll(Item item) {
-        setPaperdollItem(HAIR2.slot(), null);
-        setPaperdollItem(HAIR.slot(), item);
+        setPaperdollItem(InventorySlot.HAIR2, null);
+        setPaperdollItem(InventorySlot.HAIR, item);
     }
 
     private void equipHair2(Item item) {
-        var hair = getPaperdollItem(HAIR_ALL.slot());
-        if (nonNull(hair) && (hair.getBodyPart() == BodyPart.HAIR_ALL)) {
-            setPaperdollItem(HAIR.slot(), null);
+        var hair = getPaperdollItem(InventorySlot.HAIR);
+        if (nonNull(hair) && (hair.getBodyPart() == HAIR_ALL)) {
+            setPaperdollItem(InventorySlot.HAIR, null);
         }
-        setPaperdollItem(HAIR2.slot(), item);
+        setPaperdollItem(InventorySlot.HAIR2, item);
     }
 
     private void equipHair(Item item) {
-        var hair = getPaperdollItem(HAIR_ALL.slot());
-        if (nonNull(hair) && hair.getBodyPart() == BodyPart.HAIR_ALL) {
-            setPaperdollItem(HAIR2.slot(), null);
+        var hair = getPaperdollItem(InventorySlot.HAIR);
+        if (nonNull(hair) && hair.getBodyPart() == HAIR_ALL) {
+            setPaperdollItem(InventorySlot.HAIR2, null);
         }
-        setPaperdollItem(HAIR.slot(), item);
+        setPaperdollItem(InventorySlot.HAIR, item);
     }
 
     private void equipLeg(Item item) {
-        var chest = getPaperdollItem(CHEST.slot());
-        if (nonNull(chest) && chest.getBodyPart() == BodyPart.FULL_ARMOR) {
-            setPaperdollItem(CHEST.slot(), null);
+        var chest = getPaperdollItem(InventorySlot.CHEST);
+        if (nonNull(chest) && chest.getBodyPart().isAnyOf(FULL_ARMOR, ALL_DRESS)) {
+            setPaperdollItem(InventorySlot.CHEST, null);
         }
-        setPaperdollItem(LEGS.slot(), item);
+        setPaperdollItem(InventorySlot.LEGS, item);
     }
 
     private void equipFullArmor(Item item) {
-        setPaperdollItem(LEGS.slot(), null);
-        setPaperdollItem(CHEST.slot(), item);
+        setPaperdollItem(InventorySlot.LEGS, null);
+        setPaperdollItem(InventorySlot.CHEST, item);
     }
 
     private void equipFinger(Item item) {
-        if(isNull( getPaperdollItem(LEFT_FINGER.slot())) || nonNull(getPaperdollItem(RIGHT_FINGER.slot()))) {
-            setPaperdollItem(LEFT_FINGER.slot(), item);
+        if(  isPaperdollSlotEmpty(InventorySlot.LEFT_FINGER) || !isPaperdollSlotEmpty(InventorySlot.RIGHT_FINGER)) {
+            setPaperdollItem(InventorySlot.LEFT_FINGER, item);
         } else {
-            setPaperdollItem(RIGHT_FINGER.slot(), item);
+            setPaperdollItem(InventorySlot.RIGHT_FINGER, item);
         }
     }
 
     private void equipEar(Item item) {
-        if(isNull( getPaperdollItem(LEFT_EAR.slot())) || nonNull( getPaperdollItem(RIGHT_EAR.slot()))) {
-            setPaperdollItem(LEFT_EAR.slot(), item);
+        if( isPaperdollSlotEmpty(InventorySlot.LEFT_EAR) || !isPaperdollSlotEmpty(InventorySlot.RIGHT_EAR)) {
+            setPaperdollItem(InventorySlot.LEFT_EAR, item);
         } else {
-            setPaperdollItem(RIGHT_EAR.slot(), item);
+            setPaperdollItem(InventorySlot.RIGHT_EAR, item);
         }
     }
 
     private void equipLeftHand(Item item) {
-        var rightHand = getPaperdollItem(RIGHT_HAND.slot());
-
-        if(nonNull(rightHand) && rightHand.getBodyPart() == TWO_HAND && !(isEquipArrow(rightHand, item) || isEquipBolt(rightHand, item) || isEquipLure(rightHand, item))) {
-            setPaperdollItem(RIGHT_HAND.slot(), null);
+        var weapon = getPaperdollItem(InventorySlot.TWO_HAND);
+        if(nonNull(weapon) && !(isEquipArrow(weapon, item) || isEquipBolt(weapon, item) || isEquipLure(weapon, item))) {
+            setPaperdollItem(InventorySlot.TWO_HAND, null);
+            setPaperdollItem(InventorySlot.RIGHT_HAND, null);
         }
-        setPaperdollItem(LEFT_HAND.slot(), item);
+
+        checkEquippedDress();
+        setPaperdollItem(InventorySlot.LEFT_HAND, item);
+    }
+
+    private void checkEquippedDress() {
+        var dress = getPaperdollItem(InventorySlot.CHEST);
+        if(nonNull(dress) && dress.getBodyPart() == ALL_DRESS) {
+            setPaperdollItem(InventorySlot.CHEST, null);
+        }
     }
 
     private boolean isEquipLure(Item rightHand, Item item) {
@@ -526,8 +548,10 @@ public abstract class Inventory extends ItemContainer {
     }
 
     private void equipTwoHand(Item item) {
-        setPaperdollItem(LEFT_HAND.slot(), null);
-        setPaperdollItem(RIGHT_HAND.slot(), item);
+        checkEquippedDress();
+        setPaperdollItem(InventorySlot.LEFT_HAND, null);
+        setPaperdollItem(InventorySlot.RIGHT_HAND, item);
+        setPaperdollItem(InventorySlot.TWO_HAND, item);
     }
 
     private void equipArtifact(Item item) {
@@ -577,23 +601,14 @@ public abstract class Inventory extends ItemContainer {
     }
 
     private void equipAgathion(Item item) {
-        if (getAgathionSlots() == 0) {
-            return;
-        }
         equipOnSameOrEmpty(item, InventorySlot.agathions(), getAgathionSlots());
     }
 
     private void equipBroochJewel(Item item) {
-        if (getBroochJewelSlots() == 0) {
-            return;
-        }
         equipOnSameOrEmpty(item, InventorySlot.brochesJewel(), getBroochJewelSlots());
     }
 
     private void equipTalisman(Item item) {
-        if (getTalismanSlots() == 0) {
-            return;
-        }
         equipOnSameOrEmpty(item, InventorySlot.talismans(), getTalismanSlots());
     }
 

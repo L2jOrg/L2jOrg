@@ -11,13 +11,13 @@ import static java.util.Objects.isNull;
  * @author JoeAlisson
  */
 public enum BodyPart {
-    GREAT_WOLF(-0x68, InventorySlot.NONE),
-    BABY_PET(-0x67, InventorySlot.NONE),
-    STRIDER(-0x66, InventorySlot.NONE),
-    HATCHLING(-0x65, InventorySlot.NONE),
-    WOLF(-0x64, InventorySlot.NONE),
-    NONE(0x00, InventorySlot.NONE),
-    UNDERWEAR(0x01, InventorySlot.UNDERWEAR),
+    GREAT_WOLF(-0x68, null),
+    BABY_PET(-0x67, null),
+    STRIDER(-0x66, null),
+    HATCHLING(-0x65, null),
+    WOLF(-0x64, null),
+    NONE(0x00, null),
+    UNDERWEAR(0x01, InventorySlot.PENDANT),
     RIGHT_EAR(0x02, InventorySlot.RIGHT_EAR),
     LEFT_EAR(0x04, InventorySlot.LEFT_EAR),
     EAR(RIGHT_EAR.id | LEFT_EAR.id, InventorySlot.LEFT_EAR),
@@ -32,8 +32,8 @@ public enum BodyPart {
     CHEST(0x400, InventorySlot.CHEST),
     LEGS(0x800, InventorySlot.LEGS),
     FEET(0x1000, InventorySlot.FEET),
-    BACK(0x2000, InventorySlot.BACK),
-    TWO_HAND(0x4000, InventorySlot.RIGHT_HAND),
+    BACK(0x2000, InventorySlot.CLOAK),
+    TWO_HAND(0x4000, InventorySlot.TWO_HAND),
     FULL_ARMOR(0x8000, InventorySlot.CHEST),
     HAIR(0x10000,InventorySlot.HAIR),
     ALL_DRESS(0x20000, InventorySlot.CHEST),
@@ -94,7 +94,7 @@ public enum BodyPart {
     public static BodyPart fromEquippedPaperdoll(Item item) {
         InventorySlot slot;
 
-        if(!item.isEquipped() || (slot = InventorySlot.fromId(item.getLocationSlot())) == InventorySlot.NONE) {
+        if(!item.isEquipped() || isNull(slot = InventorySlot.fromId(item.getLocationSlot()))) {
             return NONE;
         }
 
@@ -104,6 +104,4 @@ public enum BodyPart {
             default -> item.getBodyPart();
         };
     }
-
-
 }

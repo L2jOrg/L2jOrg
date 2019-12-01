@@ -7,23 +7,25 @@ import org.l2j.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
+import static org.l2j.commons.util.Util.zeroIfNullOrElse;
+
 /**
  * @author Sdw
+ * @author JoeAlisson
  */
 public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot> {
     private final Player player;
 
-    private final byte[] masks = new byte[]
-            {
-                    (byte) 0x00,
-                    (byte) 0x00,
-                    (byte) 0x00,
-                    (byte) 0x00,
-                    (byte) 0x00,
-                    (byte) 0x00, // 152
-                    (byte) 0x00, // 152
-                    (byte) 0x00, // 152
-            };
+    private final byte[] masks = new byte[] {
+        0x00,
+        0x00,
+        0x00,
+        0x00,
+        0x00,
+        0x00, // 152
+        0x00, // 152
+        0x00, // 152
+    };
 
     public ExUserInfoEquipSlot(Player cha) {
         this(cha, true);
@@ -51,14 +53,14 @@ public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot> {
         writeBytes(masks);
 
         final PlayerInventory inventory = player.getInventory();
-        for (InventorySlot slot : InventorySlot.values()) {
+        for (var slot : getPaperdollOrder()) {
             if (containsMask(slot)) {
                 final VariationInstance augment = inventory.getPaperdollAugmentation(slot);
                 writeShort(22); // 10 + 4 * 3
                 writeInt(inventory.getPaperdollObjectId(slot));
                 writeInt(inventory.getPaperdollItemId(slot));
-                writeInt(augment != null ? augment.getOption1Id() : 0);
-                writeInt(augment != null ? augment.getOption2Id() : 0);
+                writeInt(zeroIfNullOrElse(augment, VariationInstance::getOption1Id));
+                writeInt(zeroIfNullOrElse(augment, VariationInstance::getOption2Id));
                 writeInt(0x00); // Visual ID not used on classic
             }
         }

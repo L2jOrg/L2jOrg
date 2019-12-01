@@ -58,8 +58,8 @@ public class AdminEnchant implements IAdminCommandHandler {
 				case "admin_setlf" -> LEFT_FINGER;
 				case "admin_setrf" -> RIGHT_FINGER;
 				case "admin_seten" -> NECK;
-				case "admin_setun" -> UNDERWEAR;
-				case "admin_setba" -> BACK;
+				case "admin_setun" -> PENDANT;
+				case "admin_setba" -> CLOAK;
 				case "admin_setbe" -> BELT;
 				default -> null;
 			};

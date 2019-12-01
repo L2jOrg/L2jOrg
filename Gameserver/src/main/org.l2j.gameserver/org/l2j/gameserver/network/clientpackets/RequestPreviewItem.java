@@ -22,6 +22,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.EnumMap;
 
+import static java.util.Objects.isNull;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
 
 /**
@@ -119,7 +120,7 @@ public final class RequestPreviewItem extends ClientPacket {
             }
 
             var slot = product.getBodyPart().slot();
-            if (slot == InventorySlot.NONE) {
+            if (isNull(slot)) {
                 continue;
             }
 

@@ -24,8 +24,11 @@ import java.util.LinkedList;
 import java.util.List;
 
 import static org.l2j.gameserver.enums.InventorySlot.RIGHT_HAND;
+import static org.l2j.gameserver.enums.InventorySlot.TWO_HAND;
 
-
+/**
+ * @author JoeAlisson
+ */
 public class CharSelectionInfo extends ServerPacket {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CharSelectionInfo.class);
@@ -34,17 +37,8 @@ public class CharSelectionInfo extends ServerPacket {
     private final CharSelectInfoPackage[] _characterPackages;
     private int _activeId;
 
-    /**
-     * Constructor for CharSelectionInfo.
-     *
-     * @param loginName
-     * @param sessionId
-     */
     public CharSelectionInfo(String loginName, int sessionId) {
-        _sessionId = sessionId;
-        _loginName = loginName;
-        _characterPackages = loadCharacterSelectInfo(_loginName);
-        _activeId = -1;
+        this(loginName, sessionId, -1);
     }
 
     public CharSelectionInfo(String loginName, int sessionId, int activeId) {
@@ -56,7 +50,7 @@ public class CharSelectionInfo extends ServerPacket {
 
     private static CharSelectInfoPackage[] loadCharacterSelectInfo(String loginName) {
         CharSelectInfoPackage charInfopackage;
-        final List<CharSelectInfoPackage> characterList = new LinkedList<>();
+        var characterList = new LinkedList<CharSelectInfoPackage>();
 
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement statement = con.prepareStatement("SELECT * FROM characters WHERE account_name=? ORDER BY createDate")) {
@@ -76,7 +70,7 @@ public class CharSelectionInfo extends ServerPacket {
                     }
                 }
             }
-            return characterList.toArray(new CharSelectInfoPackage[characterList.size()]);
+            return characterList.toArray(CharSelectInfoPackage[]::new);
         } catch (Exception e) {
             LOGGER.warn("Could not restore char info: " + e.getMessage(), e);
         }
@@ -167,7 +161,7 @@ public class CharSelectionInfo extends ServerPacket {
         // Get the augmentation id for equipped weapon
         int weaponObjId = charInfopackage.getPaperdollObjectId(RIGHT_HAND);
         if (weaponObjId < 1) {
-            weaponObjId = charInfopackage.getPaperdollObjectId(RIGHT_HAND);
+            weaponObjId = charInfopackage.getPaperdollObjectId(TWO_HAND);
         }
 
         if (weaponObjId > 0) {
@@ -214,11 +208,11 @@ public class CharSelectionInfo extends ServerPacket {
         writeInt(size); // Created character count
 
         writeInt(Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT); // Can prevent players from creating new characters (if 0); (if 1, the client will ask if chars may be created (0x13) Response: (0x0D) )
-        writeByte((byte)(size == Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT ? 0x01 : 0x00)); // if 1 can't create new char
-        writeByte((byte) 0x01); // 0=can't play, 1=can play free until level 85, 2=100% free play
+        writeByte(size == Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT); // if 1 can't create new char
+        writeByte(0x01); // 0=can't play, 1=can play free until level 85, 2=100% free play
         writeInt(0x02); // if 1, Korean client
-        writeByte((byte) 0x00); // Gift message for inactive accounts // 152
-        writeByte((byte) 0x00); // Balthus Knights, if 1 suggests premium account
+        writeByte(0x00); // Gift message for inactive accounts // 152
+        writeByte(0x00); // Balthus Knights, if 1 suggests premium account
 
         long lastAccess = 0;
         if (_activeId == -1) {
@@ -292,11 +286,11 @@ public class CharSelectionInfo extends ServerPacket {
             writeInt(0x00); // HAIR2 Visual ID not Used on Classic
 
 
-            writeShort((short) 0x00); // Upper Body enchant level
-            writeShort((short) 0x00); // Lower Body enchant level
-            writeShort((short) 0x00); // Headgear enchant level
-            writeShort((short) 0x00); // Gloves enchant level
-            writeShort((short) 0x00); // Boots enchant level
+            writeShort( 0x00); // Upper Body enchant level
+            writeShort( 0x00); // Lower Body enchant level
+            writeShort( 0x00); // Headgear enchant level
+            writeShort( 0x00); // Gloves enchant level
+            writeShort( 0x00); // Boots enchant level
 
             writeInt(charInfoPackage.getHairStyle());
             writeInt(charInfoPackage.getHairColor());
@@ -324,12 +318,12 @@ public class CharSelectionInfo extends ServerPacket {
             writeDouble(0x00); // Current pet MP
 
             writeInt(charInfoPackage.getVitalityPoints()); // Vitality
-            writeInt((int) Config.RATE_VITALITY_EXP_MULTIPLIER * 100); // Vitality Percent
+            writeInt((int) (Config.RATE_VITALITY_EXP_MULTIPLIER * 100)); // Vitality Percent
             writeInt(charInfoPackage.getVitalityItemsUsed()); // Remaining vitality item uses
             writeInt(charInfoPackage.getAccessLevel() == -100 ? 0x00 : 0x01); // Char is active or not
-            writeByte((byte) (charInfoPackage.isNoble() ? 0x01 : 0x00));
-            writeByte((byte)(Hero.getInstance().isHero(charInfoPackage.getObjectId()) ? 0x01 : 0x00)); // Hero glow
-            writeByte((byte)( charInfoPackage.isHairAccessoryEnabled() ? 0x01 : 0x00)); // Show hair accessory if enabled
+            writeByte(charInfoPackage.isNoble());
+            writeByte(Hero.getInstance().isHero(charInfoPackage.getObjectId())); // Hero glow
+            writeByte(charInfoPackage.isHairAccessoryEnabled()); // Show hair accessory if enabled
         }
     }
 }
