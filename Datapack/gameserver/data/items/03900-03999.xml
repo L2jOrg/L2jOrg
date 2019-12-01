@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="3926" name="Scroll: Guidance" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Accuracy + 2 for 20 minutes. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
@@ -14,7 +14,7 @@
 
 	<item id="3927" name="Scroll: Death Whisper" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- P. Critical Damage + 25% for 20 minutes. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
@@ -26,7 +26,7 @@
 
 	<item id="3928" name="Scroll: Focus" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- P. Critical Rate + 20% for 20 minutes. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
@@ -50,7 +50,7 @@
 
 	<item id="3930" name="Scroll: Haste" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Atk. Spd. + 15% for 20 minutes. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
@@ -74,7 +74,7 @@
 
 	<item id="3932" name="Scroll: Mystic Empower" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- M. Atk. + 55% for 20 minutes. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
@@ -191,7 +191,7 @@
 
 	<item id="3940" name="Blueprint: Summon Siege Golem" type="NONE" icon="icon.etc_plan_i00">
 	<!-- Blueprint needed to learn the Summon Siege Golem technique.\\nRequired level: 49 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
@@ -203,7 +203,7 @@
 
 	<item id="3942" name="Spellbook: Party Return" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Party Return. Used by Elven Elders.\\nRequired level: 48 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
@@ -215,7 +215,7 @@
 
 	<item id="3944" name="Spellbook: Decrease Weight" type="NONE" icon="icon.etc_spell_books_blue_i00">
 	<!-- Spellbook needed to learn Decrease Weight. Used by Elven Oracles.\\nRequired level: 35 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="43681" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
@@ -355,7 +355,7 @@
 	</item>
 
 	<item id="3964" name="Mercenary Posting Ticket (Wizard/Stationary)" type="CASTLE_GUARD" icon="icon.mticket_wizard_fix_i00">
-	<!-- u,Cannot be used. Can be sold at an NPC’s store. -->
+	<!-- Cannot be used. Can be sold at an NPC’s store. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
@@ -390,7 +390,7 @@
 	</item>
 
 	<item id="3969" name="Mercenary Posting Ticket (Wizard/Mobile)" type="CASTLE_GUARD" icon="icon.mticket_wizard_move_i00">
-	<!-- u,Cannot be used. Can be sold at an NPC’s store. -->
+	<!-- Cannot be used. Can be sold at an NPC’s store. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>

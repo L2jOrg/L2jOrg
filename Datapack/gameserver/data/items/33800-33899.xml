@@ -2,61 +2,61 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="33806" name="Improved Scroll: Enchant Weapon (D-grade)" type="IMPROVED_ENCHANT_WEAPON" icon="icon.etc_blessed_scrl_of_ench_wp_d_i01">
 	<!-- When enchanted, P. Atk. +4 for D-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. Randomly enchanted from +1 to +3. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="100" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="33807" name="Improved Scroll: Enchant Weapon (C-grade)" type="IMPROVED_ENCHANT_WEAPON" icon="icon.etc_blessed_scrl_of_ench_wp_c_i02">
 	<!-- When enchanted, P. Atk. +4 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. Randomly enchanted from +1 to +3. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="100" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="33808" name="Improved Scroll: Enchant Weapon (B-grade)" type="IMPROVED_ENCHANT_WEAPON" icon="icon.etc_blessed_scrl_of_ench_wp_b_i03">
 	<!-- When enchanted, P. Atk. +4 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. Randomly enchanted from +1 to +3. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="100" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="33809" name="Improved Scroll: Enchant Weapon (A-grade)" type="IMPROVED_ENCHANT_WEAPON" icon="icon.etc_blessed_scrl_of_ench_wp_a_i04">
 	<!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. Randomly enchanted from +1 to +3. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="100" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="33810" name="Improved Scroll: Enchant Weapon (S-grade)" type="IMPROVED_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_s">
 	<!-- When enchanted, P. Atk. +5 for S-grade one-handed swords/blunts, daggers, spears, and other weapons. P. Atk. +6 for two-handed swords/blunts, dualswords, and two-handed fist weapons. P. Atk. +10 for bows. M. Atk. +4 for all weapons. Starting at +4, P. Atk./M. Atk. bonus quadruples. Randomly enchanted from +1 to +3. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="100" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="33812" name="Improved Scroll: Enchant Armor (D-grade)" type="IMPROVED_ENCHANT_ARMOR" icon="icon.etc_blessed_scrl_of_ench_am_d_i01">
 	<!-- P. Def. +1 for D-grade armor and accessories. Increases by 3 starting from +4. It can be safely enchanted up to +3. For one-piece armor, it can be safely enchanted up to +4. Random enchantment from +1 to +3. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="100" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="33813" name="Improved Scroll: Enchant Armor (C-grade)" type="IMPROVED_ENCHANT_ARMOR" icon="icon.etc_blessed_scrl_of_ench_am_c_i02">
 	<!-- P. Def. +1 for C-grade armor and accessories. Increases by 3 starting from +4. It can be safely enchanted up to +3. For one-piece armor, it can be safely enchanted up to +4. Random enchantment from +1 to +3. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="100" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="33814" name="Improved Scroll: Enchant Armor (B-grade)" type="IMPROVED_ENCHANT_ARMOR" icon="icon.etc_blessed_scrl_of_ench_am_b_i03">
 	<!-- P. Def. +1 for B-grade armor and accessories. Increases by 3 starting from +4. It can be safely enchanted up to +3. For one-piece armor, it can be safely enchanted up to +4. Random enchantment from +1 to +3. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="100" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="33815" name="Improved Scroll: Enchant Armor (A-grade)" type="IMPROVED_ENCHANT_ARMOR" icon="icon.etc_blessed_scrl_of_ench_am_a_i04">
 	<!-- P. Def. for A-grade armor and accessories increases by 1, and by 3 starting from +4. Armor and accessories can be safely enchanted up to +3. One-piece armor can be safely enchanted up to +4. When armor is enchanted to +4 or above, HP also increases according to the enchant value. Armor and accessories are randomly enchanted between +1 and +3. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="100" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="33816" name="Improved Scroll: Enchant Armor (S-grade)" type="IMPROVED_ENCHANT_ARMOR" icon="icon.giant_scrl_of_ench_am_s">
 	<!-- P. Def. +2 for S-grade armor and accessories. Staring at +4, P. Def. +8. Enchanting is safe up to +3, but full-body armor can be safely enchanted up to +4. Starting at +4 armor, HP increases depending on the enchant value. Randomly enchanted from +1 to +3. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="100" action="SKILL_REDUCE"/>
 	</item>
 

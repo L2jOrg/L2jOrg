@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<weapon id="15280" name="Transparent 1HS (NPC)" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_long_sword_i00">
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1560" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="A"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="3" spiritshots="3"/>
+		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="pAtk" value="24.0"/>
 			<stat type="mAtk" value="17.0"/>
@@ -17,11 +17,11 @@
 	</weapon>
 
 	<weapon id="15281" name="Transparent 2HS (NPC)" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_two_handed_sword_i00">
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="2180" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="A"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="3" spiritshots="3"/>
+		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="pAtk" value="78.0"/>
 			<stat type="mAtk" value="39.0"/>

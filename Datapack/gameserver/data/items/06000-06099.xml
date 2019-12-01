@@ -89,7 +89,7 @@
 	</item>
 
 	<item id="6042" name="Greater Mercenary Posting Ticket (Wizard/Stationary)" type="CASTLE_GUARD" icon="icon.mticket_wizard_fix_i00">
-	<!-- u,Cannot be used. Can be sold at an NPC’s store. -->
+	<!-- Cannot be used. Can be sold at an NPC’s store. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes price="200000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
@@ -124,7 +124,7 @@
 	</item>
 
 	<item id="6047" name="Greater Mercenary Posting Ticket (Wizard/Mobile)" type="CASTLE_GUARD" icon="icon.mticket_wizard_move_i00">
-	<!-- u,Cannot be used. Can be sold at an NPC’s store. -->
+	<!-- Cannot be used. Can be sold at an NPC’s store. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes price="200000" immediate-effect="true"/>
 		<action handler="MercTicket"/>

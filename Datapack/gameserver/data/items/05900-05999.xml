@@ -2,25 +2,25 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="5900" name="Coin Collecting Album" type="NONE" icon="icon.etc_magic_book_black_i00">
 	<!-- High-quality coin collecting album made of leather.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes price="10000" immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="5901" name="Blood Offering" type="NONE" icon="icon.etc_dragon_blood_i00">
 	<!-- Blood that can be obtained by killing a Monster of Offering. The number of this item will determine your score. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="5902" name="Scroll of Ancient Magic" type="NONE" icon="icon.etc_scroll_of_enchant_weapon_i01">
 	<!-- Scroll that contains ancient magic. Take it to Gatekeeper Ziggurat. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="5903" name="Ancient Ash Urn" type="NONE" icon="icon.etc_oil_pot_black_i00">
 	<!-- Ancient urn that was found in the Tower of Insolence. Take it to Seer Reva of Town of Aden. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
@@ -93,92 +93,92 @@
 		<attributes immediate-effect="true"/>
 	</item>
 
-	<item id="5927" name="Book: Basics of Giants Magic, Chapter 1" type="NONE" icon="icon.etc_paper_blue_i00">
-	<!-- Book on the magic of the giants from the Lesser Giant er 1st chapter. -->
+	<item id="5927" name="Book: Basics of Giants Magic, Chapter 1,," type="NONE" icon="icon.etc_paper_blue_i00">
+	<!-- Book on the magic of the giants from the Lesser Giant era, 1st chapter. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
-	<item id="5928" name="Book: Basics of Giants Magic, Chapter 2" type="NONE" icon="icon.etc_paper_blue_i00">
-	<!-- Book on the magic of the giants from the Lesser Giant er 2nd chapter. -->
+	<item id="5928" name="Book: Basics of Giants Magic, Chapter 2,," type="NONE" icon="icon.etc_paper_blue_i00">
+	<!-- Book on the magic of the giants from the Lesser Giant era, 2nd chapter. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
-	<item id="5929" name="Book: Basics of Giants Magic, Chapter 3" type="NONE" icon="icon.etc_paper_blue_i00">
-	<!-- Book on the magic of the giants from the Lesser Giant er 3rd chapter. -->
+	<item id="5929" name="Book: Basics of Giants Magic, Chapter 3,," type="NONE" icon="icon.etc_paper_blue_i00">
+	<!-- Book on the magic of the giants from the Lesser Giant era, 3rd chapter. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
-	<item id="5930" name="Book: Basics of Giants Magic, Chapter 4" type="NONE" icon="icon.etc_paper_blue_i00">
-	<!-- Book on the magic of the giants from the Lesser Giant er 4th chapter. -->
+	<item id="5930" name="Book: Basics of Giants Magic, Chapter 4,," type="NONE" icon="icon.etc_paper_blue_i00">
+	<!-- Book on the magic of the giants from the Lesser Giant era, 4th chapter. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
-	<item id="5931" name="Book: Basics of Giants Magic, Chapter 5" type="NONE" icon="icon.etc_paper_blue_i00">
-	<!-- Book on the magic of the giants from the Lesser Giant er 5th chapter. -->
+	<item id="5931" name="Book: Basics of Giants Magic, Chapter 5,," type="NONE" icon="icon.etc_paper_blue_i00">
+	<!-- Book on the magic of the giants from the Lesser Giant era, 5th chapter. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
-	<item id="5932" name="Handbook: Giants Architecture, Chapter 1" type="NONE" icon="icon.etc_paper_red_i00">
-	<!-- Architectural handbook of the giants from the Lesser Giant er 1st chapter. -->
+	<item id="5932" name="Handbook: Giants Architecture, Chapter 1,," type="NONE" icon="icon.etc_paper_red_i00">
+	<!-- Architectural handbook of the giants from the Lesser Giant era, 1st chapter. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
-	<item id="5933" name="Handbook: Giants Architecture, Chapter 2" type="NONE" icon="icon.etc_paper_red_i00">
-	<!-- Architectural handbook of the giants from the Lesser Giant er 2nd chapter. -->
+	<item id="5933" name="Handbook: Giants Architecture, Chapter 2,," type="NONE" icon="icon.etc_paper_red_i00">
+	<!-- Architectural handbook of the giants from the Lesser Giant era, 2nd chapter. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
-	<item id="5934" name="Handbook: Giants Architecture, Chapter 3" type="NONE" icon="icon.etc_paper_red_i00">
-	<!-- Architectural handbook of the giants from the Lesser Giant er 3rd chapter. -->
+	<item id="5934" name="Handbook: Giants Architecture, Chapter 3,," type="NONE" icon="icon.etc_paper_red_i00">
+	<!-- Architectural handbook of the giants from the Lesser Giant era, 3rd chapter. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
-	<item id="5935" name="Handbook: Giants Architecture, Chapter 4" type="NONE" icon="icon.etc_paper_red_i00">
-	<!-- Architectural handbook of the giants from the Lesser Giant er 4th chapter. -->
+	<item id="5935" name="Handbook: Giants Architecture, Chapter 4,," type="NONE" icon="icon.etc_paper_red_i00">
+	<!-- Architectural handbook of the giants from the Lesser Giant era, 4th chapter. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
-	<item id="5936" name="Handbook: Giants Architecture, Chapter 5" type="NONE" icon="icon.etc_paper_red_i00">
-	<!-- Architectural handbook of the giants from the Lesser Giant er 5th chapter. -->
+	<item id="5936" name="Handbook: Giants Architecture, Chapter 5,," type="NONE" icon="icon.etc_paper_red_i00">
+	<!-- Architectural handbook of the giants from the Lesser Giant era, 5th chapter. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
-	<item id="5937" name="Book: Giants Medical Science, Chapter 1" type="NONE" icon="icon.etc_paper_white_i00">
-	<!-- Medical book of the giants from the Lesser Giant er 1st chapter. -->
+	<item id="5937" name="Book: Giants Medical Science, Chapter 1,," type="NONE" icon="icon.etc_paper_white_i00">
+	<!-- Medical book of the giants from the Lesser Giant era, 1st chapter. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
-	<item id="5938" name="Book: Giants Medical Science, Chapter 2" type="NONE" icon="icon.etc_paper_white_i00">
-	<!-- Medical book of the giants from the Lesser Giant er 2nd chapter. -->
+	<item id="5938" name="Book: Giants Medical Science, Chapter 2,," type="NONE" icon="icon.etc_paper_white_i00">
+	<!-- Medical book of the giants from the Lesser Giant era, 2nd chapter. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
-	<item id="5939" name="Book: Giants Medical Science, Chapter 3" type="NONE" icon="icon.etc_paper_white_i00">
-	<!-- Medical book of the giants from the Lesser Giant er 3rd chapter. -->
+	<item id="5939" name="Book: Giants Medical Science, Chapter 3,," type="NONE" icon="icon.etc_paper_white_i00">
+	<!-- Medical book of the giants from the Lesser Giant era, 3rd chapter. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
-	<item id="5940" name="Book: Giants Medical Science, Chapter 4" type="NONE" icon="icon.etc_paper_white_i00">
-	<!-- Medical book of the giants from the Lesser Giant er 4th chapter. -->
+	<item id="5940" name="Book: Giants Medical Science, Chapter 4,," type="NONE" icon="icon.etc_paper_white_i00">
+	<!-- Medical book of the giants from the Lesser Giant era, 4th chapter. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
-	<item id="5941" name="Book: Giants Medical Science, Chapter 5" type="NONE" icon="icon.etc_paper_white_i00">
-	<!-- Medical book of the giants from the Lesser Giant er 5th chapter. -->
+	<item id="5941" name="Book: Giants Medical Science, Chapter 5,," type="NONE" icon="icon.etc_paper_white_i00">
+	<!-- Medical book of the giants from the Lesser Giant era, 5th chapter. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
@@ -204,61 +204,61 @@
 		</skill-reducer>
 	</item>
 
-	<item id="5945" name="Book: Giants Science and Technology, Chapter 1" type="NONE" icon="icon.etc_spell_books_white_i00">
+	<item id="5945" name="Book: Giants Science and Technology, Chapter 1,," type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Part of the theory book that describes the science and technology of the Lesser Giant era. The 1st of five chapters. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
-	<item id="5946" name="Book: Giants Science and Technology, Chapter 2" type="NONE" icon="icon.etc_spell_books_white_i00">
+	<item id="5946" name="Book: Giants Science and Technology, Chapter 2,," type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Part of the theory book that describes the science and technology of the Lesser Giant era. The 2nd of five chapters. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
-	<item id="5947" name="Book: Giants Science and Technology, Chapter 3" type="NONE" icon="icon.etc_spell_books_white_i00">
+	<item id="5947" name="Book: Giants Science and Technology, Chapter 3,," type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Part of the theory book that describes the science and technology of the Lesser Giant era. The 3rd of five chapters. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
-	<item id="5948" name="Book: Giants Science and Technology, Chapter 4" type="NONE" icon="icon.etc_spell_books_white_i00">
+	<item id="5948" name="Book: Giants Science and Technology, Chapter 4,," type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Part of the theory book that describes the science and technology of the Lesser Giant era. The 4th of five chapters. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
-	<item id="5949" name="Book: Giants Science and Technology, Chapter 5" type="NONE" icon="icon.etc_spell_books_white_i00">
+	<item id="5949" name="Book: Giants Science and Technology, Chapter 5,," type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Part of the theory book that describes the science and technology of the Lesser Giant era. The 5th of five chapters. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
-	<item id="5950" name="Almanac: Lesser Giant Culture, Chapter 1" type="NONE" icon="icon.etc_spell_books_summon_i00">
+	<item id="5950" name="Almanac: Lesser Giant Culture, Chapter 1,," type="NONE" icon="icon.etc_spell_books_summon_i00">
 	<!-- Part of the almanac that contains information about the culture of the Lesser Giant era. The 1st of five chapters. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
-	<item id="5951" name="Almanac: Lesser Giant Culture, Chapter 2" type="NONE" icon="icon.etc_spell_books_summon_i00">
+	<item id="5951" name="Almanac: Lesser Giant Culture, Chapter 2,," type="NONE" icon="icon.etc_spell_books_summon_i00">
 	<!-- Part of the almanac that contains information about the culture of the Lesser Giant era. The 2nd of five chapters. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
-	<item id="5952" name="Almanac: Lesser Giant Culture, Chapter 3" type="NONE" icon="icon.etc_spell_books_summon_i00">
+	<item id="5952" name="Almanac: Lesser Giant Culture, Chapter 3,," type="NONE" icon="icon.etc_spell_books_summon_i00">
 	<!-- Part of the almanac that contains information about the culture of the Lesser Giant era. The 3rd of five chapters. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
-	<item id="5953" name="Almanac: Lesser Giant Culture, Chapter 4" type="NONE" icon="icon.etc_spell_books_summon_i00">
+	<item id="5953" name="Almanac: Lesser Giant Culture, Chapter 4,," type="NONE" icon="icon.etc_spell_books_summon_i00">
 	<!-- Part of the almanac that contains information about the culture of the Lesser Giant era. The 4th of five chapters. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
-	<item id="5954" name="Almanac: Lesser Giant Culture, Chapter 5" type="NONE" icon="icon.etc_spell_books_summon_i00">
+	<item id="5954" name="Almanac: Lesser Giant Culture, Chapter 5,," type="NONE" icon="icon.etc_spell_books_summon_i00">
 	<!-- Part of the almanac that contains information about the culture of the Lesser Giant era. The 5th of five chapters. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true"/>
@@ -375,31 +375,31 @@
 		<attributes price="400" immediate-effect="true"/>
 	</item>
 
-	<item id="5979" name="Ancient Epic, Chapter 1" type="NONE" icon="icon.etc_piece_of_paper_gray_i00">
+	<item id="5979" name="Ancient Epic, Chapter 1,," type="NONE" icon="icon.etc_piece_of_paper_gray_i00">
 	<!-- Story of heroes written by ancient troubadours. The first of five chapters. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes price="400" immediate-effect="true"/>
 	</item>
 
-	<item id="5980" name="Ancient Epic, Chapter 2" type="NONE" icon="icon.etc_piece_of_paper_gray_i00">
+	<item id="5980" name="Ancient Epic, Chapter 2,," type="NONE" icon="icon.etc_piece_of_paper_gray_i00">
 	<!-- Story of heroes written by ancient troubadours. The second of five chapters. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes price="400" immediate-effect="true"/>
 	</item>
 
-	<item id="5981" name="Ancient Epic, Chapter 3" type="NONE" icon="icon.etc_piece_of_paper_gray_i00">
+	<item id="5981" name="Ancient Epic, Chapter 3,," type="NONE" icon="icon.etc_piece_of_paper_gray_i00">
 	<!-- Story of heroes written by ancient troubadours. The third of five chapters. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes price="400" immediate-effect="true"/>
 	</item>
 
-	<item id="5982" name="Ancient Epic, Chapter 4" type="NONE" icon="icon.etc_piece_of_paper_gray_i00">
+	<item id="5982" name="Ancient Epic, Chapter 4,," type="NONE" icon="icon.etc_piece_of_paper_gray_i00">
 	<!-- Story of heroes written by ancient troubadours. The fourth of five chapters. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes price="400" immediate-effect="true"/>
 	</item>
 
-	<item id="5983" name="Ancient Epic, Chapter 5" type="NONE" icon="icon.etc_piece_of_paper_gray_i00">
+	<item id="5983" name="Ancient Epic, Chapter 5,," type="NONE" icon="icon.etc_piece_of_paper_gray_i00">
 	<!-- Story of heroes written by ancient troubadours. The fifth of five chapters. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes price="400" immediate-effect="true"/>

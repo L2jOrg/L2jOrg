@@ -154,7 +154,7 @@
 		<action handler="Recipes"/>
 	</item>
 
-	<item id="2222" name="Recipe: Compound Armor" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
+	<item id="2222" name="Recipe: Compound Armor (100%)" type="RECIPE" icon="icon.etc_recipe_yellow_i00">
 	<!-- For Dwarves only. Recipe for Compound Armor. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="30" price="32000" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>

@@ -2,42 +2,42 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="90300" name="Hunter Tarantula's Venom" type="NONE" icon="icon.etc_fruit_juice_glass_bottle_i02">
 	<!-- Though lethal, Hunter Tarantula's Venom is used as glue thanks to its ability to harden instantly. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes quest-item="true"/>
 	</item>
 
 	<item id="90301" name="Plunder Tarantula's Kidney Stone" type="NONE" icon="icon.r_soul_stone_piece_i04">
 	<!-- A transparent stone that can be found in a body of Plunder Tarantula. Very smooth and shiny, used as an adornment. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes quest-item="true"/>
 	</item>
 
 	<item id="90302" name="New Cleaning Tool's Supply List" type="NONE" icon="icon.etc_paper_white_i00">
 	<!-- Priest Gerald tries to make tools for decorating the inner parts of the Temple that is currently under repairs. This is the list of materials that he needs. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 	</item>
 
 	<item id="90303" name="Bat Bristle" type="NONE" icon="icon.etc_mane_i00">
 	<!-- Bristles from the neck of a Barbed Bat. Very soft, used for making brushes. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes quest-item="true"/>
 	</item>
 
 	<item id="90304" name="Trimden Web" type="NONE" icon="icon.etc_cobweb_i00">
 	<!-- Trimden Web. When its sticky enzyme is removed, it becomes very smooth and gleaming. Used as a fiber for making expensive fabric. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes quest-item="true"/>
 	</item>
 
 	<item id="90305" name="Kerope Werewolf's Twig Charm" type="NONE" icon="icon.etc_royal_seal_of_lord_i04">
 	<!-- Kerope Werewolf Charm. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes quest-item="true"/>
 	</item>
 
 	<armor id="90306" name="Warrior's Armor" type="LIGHT" body-part="CHEST" icon="icon.armor_t33_u_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="8970" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -46,7 +46,7 @@
 	</armor>
 
 	<armor id="90307" name="Warrior's Gaiters" type="LIGHT" body-part="LEGS" icon="icon.armor_t33_l_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="4020" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -55,7 +55,7 @@
 	</armor>
 
 	<armor id="90308" name="Medium's Tunic" type="MAGIC" body-part="CHEST" icon="icon.armor_t58_u_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="2080" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -65,7 +65,7 @@
 	</armor>
 
 	<armor id="90309" name="Medium's Stockings" type="MAGIC" body-part="LEGS" icon="icon.armor_t58_l_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1030" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -76,7 +76,7 @@
 
 	<item id="90310" name="MP Recovery Potion (Novice)" type="POTION" icon="icon.etc_lesser_potion_blue_i00">
 	<!-- Magical MP-recovering potion.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" commission-type="POTION" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39257" level="1"/>  <!-- Newbie MP Recovery Potion -->
@@ -84,8 +84,8 @@
 	</item>
 
 	<armor id="90311" name="Brooch Lv. 1" type="NONE" body-part="UNDERWEAR" icon="icon.etc_bm_brooch_lavianrose_i00">
-	<!-- Activates 2 jewel slots when equipped. Inventory Slot +5. -->
-		<restriction freightable="false" dropable="false"/>
+	<!-- Activates 2 jewel slots when equipped. Inventory Slot +5. Can combine 2 Brooches of the same level. -->
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -95,8 +95,8 @@
 	</armor>
 
 	<armor id="90312" name="Brooch Lv. 2" type="NONE" body-part="UNDERWEAR" icon="icon.etc_bm_brooch_lavianrose_i01">
-	<!-- Activates 3 jewel slots when equipped. Inventory Slot +9. -->
-		<restriction freightable="false" dropable="false"/>
+	<!-- Activates 3 jewel slots when equipped. Inventory Slot +9. Can combine 2 Brooches of the same level. -->
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -107,533 +107,533 @@
 
 	<armor id="90313" name="Topaz Lv. 1" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_topaz_i00">
 	<!-- Disrupts the target's skill casting when used. Inflicts 475 damage in PvP. Effect does not stack with additional jewels of the same type.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90314" name="Topaz Lv. 2" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_topaz_i00">
 	<!-- Disrupts the target's skill casting when used. Inflicts 633 damage in PvP. Effect does not stack with additional jewels of the same type.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90315" name="Topaz Lv. 3" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_topaz_i00">
 	<!-- Disrupts the target's skill casting when used. Inflicts fixed damage of 950 Power in PvP. If identical Gems are equipped, only the effect of the highest level Gem is applied.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90316" name="Topaz Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_topaz_i00">
 	<!-- Disrupts the target's skill casting when used. Inflicts fixed damage of 1357 Power in PvP. If identical Gems are equipped, only the effect of the highest level Gem is applied.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90317" name="Topaz Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_topaz_i00">
 	<!-- Disrupts the target's skill casting when used. Inflicts fixed damage of 2375 Power in PvP. If identical Gems are equipped, only the effect of the highest level Gem is applied. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a Greater Gem when combined with Gem Energy. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90318" name="Garnet Lv. 1" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_garnet">
 	<!-- Stun/Pull/Silence/Paralysis/Fear Resistance +3% when equipped. If identical Gems are equipped, only the effect of the highest level Gem is applied.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90319" name="Garnet Lv. 2" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_garnet">
 	<!-- Stun/Pull/Silence/Paralysis/Fear Resistance +5% when equipped. If identical Gems are equipped, only the effect of the highest level Gem is applied.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90320" name="Garnet Lv. 3" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_garnet">
 	<!-- Stun/Pull/Silence/Paralysis/Fear Resistance +8% when equipped. If identical Gems are equipped, only the effect of the highest level Gem is applied.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90321" name="Garnet Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_garnet">
 	<!-- Stun/Pull/Silence/Paralysis/Fear Resistance +11% when equipped. Becomes invincible against debuffs for 5 seconds upon using the skill. If identical Gems are equipped, only the effect of the highest level Gem is applied.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90322" name="Garnet Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_garnet">
 	<!-- Stun/Pull/Silence/Paralysis/Fear Resistance +20% when equipped. Invincible against debuffs for 15 sec when skill is used. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a Greater Gem when combined with Gem Energy. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90323" name="Jade Lv. 1" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_jade_i00">
 	<!-- Atk. Spd./Casting Spd. +1% when equipped. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90324" name="Jade Lv. 2" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_jade_i00">
 	<!-- Atk. Spd./Casting Spd. +2% when equipped. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90325" name="Jade Lv. 3" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_jade_i00">
 	<!-- Atk. Spd./Casting Spd. +4% when equipped. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90326" name="Jade Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_jade_i00">
 	<!-- Atk. Spd./Casting Spd. +7% when equipped. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90327" name="Jade Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_jade_i00">
 	<!-- Atk. Spd./Casting Spd. +14% when equipped. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a Greater Gem when combined with the Gem Energy. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90328" name="Ruby Lv. 1" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_ruby_i00">
 	<!-- When equipped increases Soulshot, Blessed Soulshot and Beast Soulshot damage 2%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90329" name="Ruby Lv. 2" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_ruby_i00">
 	<!-- When equipped, increases Soulshot, Blessed Soulshot and Beast Soulshot damage +3%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90330" name="Ruby Lv. 3" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_ruby_i00">
 	<!-- Soulshot, Blessed Soulshot, and Beast Soulshot damage +5% when equipped If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90331" name="Ruby Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_ruby_i00">
 	<!-- Soulshot, Blessed Soulshot, and Beast Soulshot damage +8% when equipped If identical Gems are equipped, only the effect of the highest level Gem is applied.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90332" name="Ruby Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_ruby_i00">
 	<!-- Soulshot, Blessed Soulshot, and Beast Soulshot damage +16% when equipped. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a Greater Gem when combined with Gem Energy. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90333" name="Sapphire Lv. 1" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_sapphire_i00">
 	<!-- When equipped increases Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +2%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90334" name="Sapphire Lv. 2" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_sapphire_i00">
 	<!-- Spiritshot, Blessed Spiritshot, and Beast Spiritshot +3% when equipped. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90335" name="Sapphire Lv. 3" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_sapphire_i00">
 	<!-- When equipped increases Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +5%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90336" name="Sapphire Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_sapphire_i00">
 	<!-- When equipped, increases Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +8%. Effect does not stack with additional jewels of the same type.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90337" name="Sapphire Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_sapphire_i00">
 	<!-- Spiritshot, Blessed Spiritshot, and Beast Spiritshot damage +16% when equipped. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a Greater Gem when combined with Gem Energy. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90338" name="Diamond Lv. 1" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_diamond_i00">
 	<!-- P. Def. +11 when equipped. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90339" name="Diamond Lv. 2" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_diamond_i00">
 	<!-- P. Def. +25 when equipped. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90340" name="Diamond Lv. 3" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_diamond_i00">
 	<!-- P. Def. +50 when equipped. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90341" name="Diamond Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_diamond_i00">
 	<!-- P. Def. +81 and P. Critical Damage Received -4% when equipped. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90342" name="Diamond Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_diamond_i00">
 	<!-- P. Def +130 and P. Critical Damage Received -10% when equipped. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a Greater Gem when combined with Gem Energy. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90343" name="Pearl Lv. 1" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_pearl_i00">
 	<!-- M. Def. +7 when equipped. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90344" name="Pearl Lv. 2" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_pearl_i00">
 	<!-- M. Def. +14 when equipped. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90345" name="Pearl Lv. 3" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_pearl_i00">
 	<!-- M. Def. +28 when equipped. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90346" name="Pearl Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_pearl_i00">
 	<!-- M. Def. +46, M. Critical Damage Received -4% when equipped. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90347" name="Pearl Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_pearl_i00">
 	<!-- M. Def +74 and M. Critical Damage Received -10% when equipped. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a Greater Gem when combined with Gem Energy. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90353" name="Vital Stone Lv. 1" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_vital">
 	<!-- XP/SP gain +3% while hunting during Sayha's Grace effect. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90354" name="Vital Stone Lv. 2" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_vital">
 	<!-- XP/SP gain +4% while hunting during Sayha's Grace effect. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90355" name="Vital Stone Lv. 3" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_vital">
 	<!-- XP/SP gain +6% while hunting during Sayha's Grace effect. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90356" name="Vital Stone Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_vital">
 	<!-- XP/SP gain +8% while hunting during Sayha's Grace effect and Sayha's Grace Consumption Rate -10%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90357" name="Vital Stone Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_vital">
 	<!-- XP/SP gain +15% while hunting during Sayha's Grace effect and Sayha's Grace Consumption Rate -30%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a Greater Gem when combined with Gem Energy. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<item id="90358" name="Shine Ore" type="NONE" icon="icon.etc_bm_jewel_piece">
 	<!-- You can exchange some amount of Ore for Lv. 1 Brooch, Lv. 3-5 jewels or Jewelry Box through Dimensional Merchant.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="90359" name="Fortune Brooch" type="NONE" icon="icon.etc_bm_jewelbox_shhadai">
 	<!-- Double-click to obtain Fortune Jewelry Chest.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90360" name="Fortune Topaz Chest" type="NONE" icon="icon.etc_bm_jewelbox_topaz_i00">
 	<!-- Double-click to obtain Lv. 1-5 Topaz.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90361" name="Fortune Garnet Chest" type="NONE" icon="icon.etc_bm_jewelbox_garnet_i01">
 	<!-- Double-click to obtain Lv. 1-5 Garnet.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90362" name="Fortune Jade Chest" type="NONE" icon="icon.etc_bm_jewelbox_jade_i00">
 	<!-- Double-click to obtain  Lv. 1-5 Jade.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90363" name="Fortune Ruby Chest" type="NONE" icon="icon.etc_bm_jewelbox_ruby_i00">
 	<!-- Double-click to obtain Lv. 1-5 Ruby.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90364" name="Fortune Sapphire Chest" type="NONE" icon="icon.etc_bm_jewelbox_sapphire_i00">
 	<!-- Double-click to obtain Lv. 1-5 Sapphire.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90365" name="Fortune Diamond Chest" type="NONE" icon="icon.etc_bm_jewelbox_diamond_i00">
 	<!-- Double-click to obtain Lv. 1-5 Diamond.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90366" name="Fortune Pearl Chest" type="NONE" icon="icon.etc_bm_jewelbox_pearl_i00">
 	<!-- Double-click to obtain Lv. 1-5 Pearl.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90367" name="Fortune Vital Stone Chest" type="NONE" icon="icon.etc_bm_jewelbox_vital_i00">
 	<!-- Double-click to obtain Lv. 1-5 Vital Stone.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90368" name="Shiny Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_main_i00">
 	<!-- Double-click to obtain Shiny Jewelry Box.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90369" name="Topaz Chest" type="NONE" icon="icon.etc_bm_jewelbox_topaz_i00">
 	<!-- Double-click to obtain Lv. 1 Topaz.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90370" name="Garnet Chest" type="NONE" icon="icon.etc_bm_jewelbox_garnet_i01">
 	<!-- Double-click to obtain Lv. 1 Garnet.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90371" name="Jade Chest" type="NONE" icon="icon.etc_bm_jewelbox_jade_i00">
 	<!-- Double-click to obtain Lv. 1 Jade.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90372" name="Ruby Chest" type="NONE" icon="icon.etc_bm_jewelbox_ruby_i00">
 	<!-- Double-click to obtain Lv. 1 Ruby.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90373" name="Sapphire Chest" type="NONE" icon="icon.etc_bm_jewelbox_sapphire_i00">
 	<!-- Double-click to obtain Lv. 1 Sapphire.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90374" name="Diamond Chest" type="NONE" icon="icon.etc_bm_jewelbox_diamond_i00">
 	<!-- Double-click to obtain Lv. 1 Diamond.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90375" name="Pearl Chest" type="NONE" icon="icon.etc_bm_jewelbox_pearl_i00">
 	<!-- Double-click to obtain Lv. 1 Pearl.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90376" name="Vital Stone Chest" type="NONE" icon="icon.etc_bm_jewelbox_vital_i00">
 	<!-- Double-click to obtain Lv. 1 Vital Stone.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90377" name="Lv. 3 Topaz Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_topaz_i00">
 	<!-- Double-click to obtain Lv. 3 Topaz.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90378" name="Lv. 4 Topaz Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_topaz_i00">
 	<!-- Double-click to obtain Lv. 4 Topaz.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90379" name="Lv. 5 Topaz Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_topaz_i00">
 	<!-- Double-click to obtain Lv. 5 Topaz.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90380" name="Lv. 3 Garnet Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_garnet_i01">
 	<!-- Double-click to obtain Lv. 3 Garnet.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90381" name="Lv. 4 Garnet Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_garnet_i01">
 	<!-- Double-click to obtain Lv. 4 Garnet.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90382" name="Lv. 5 Garnet Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_garnet_i01">
 	<!-- Double-click to obtain Lv. 5 Garnet.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90383" name="Lv. 3 Jade Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_jade_i00">
 	<!-- Double-click to obtain Lv. 3 Jade.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90384" name="Lv. 4 Jade Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_jade_i00">
 	<!-- Double-click to obtain Lv. 4 Jade.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90385" name="Lv. 4 Jade Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_jade_i00">
 	<!-- Double-click to obtain Lv. 5 Jade.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90386" name="Lv. 3 Ruby Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_ruby_i00">
 	<!-- Double-click to obtain Lv. 3 Ruby.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90387" name="Lv. 4 Ruby Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_ruby_i00">
 	<!-- Double-click to obtain Lv. 4 Ruby.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90388" name="Lv. 5 Ruby Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_ruby_i00">
 	<!-- Double-click to obtain Lv. 5 Ruby.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90389" name="Lv. 3 Sapphire Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_sapphire_i00">
 	<!-- Double-click to obtain Lv. 3 Sapphire.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90390" name="Lv. 4 Sapphire Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_sapphire_i00">
 	<!-- Double-click to obtain Lv. 4 Sapphire.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90391" name="Lv. 5 Sapphire Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_sapphire_i00">
 	<!-- Double-click to obtain Lv. 5 Sapphire.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90392" name="Lv. 3 Diamond Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_diamond_i00">
 	<!-- Double-click to obtain Lv. 3 Diamond.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90393" name="Lv. 4 Diamond Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_diamond_i00">
 	<!-- Double-click to obtain Lv. 4 Diamond.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90394" name="Lv. 5 Diamond Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_diamond_i00">
 	<!-- Double-click to obtain Lv. 5 Diamond.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90395" name="Lv. 3 Pearl Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_pearl_i00">
 	<!-- Double-click to obtain Lv. 3 Pearl.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90396" name="Lv. 4 Pearl Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_pearl_i00">
 	<!-- Double-click to obtain Lv. 4 Pearl.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90397" name="Lv. 5 Pearl Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_pearl_i00">
 	<!-- Double-click to obtain Lv. 5 Pearl.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90398" name="Lv. 3 Vital Stone Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_vital_i00">
 	<!-- Double-click to obtain Lv. 3 Vital Stone.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90399" name="Lv. 4 Vital Stone Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_vital_i00">
 	<!-- Double-click to obtain Lv. 4 Vital Stone.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 

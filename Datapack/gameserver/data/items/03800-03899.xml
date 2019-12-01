@@ -2,193 +2,193 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="3800" name="Vanor Silenos Mane" type="NONE" icon="icon.etc_mane_i00">
 	<!-- Mane of vanor silenos soldiers, scouts or warriors. Collect 30 and take them to Guild Member Tor. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3801" name="Tarlk Bugbear Totem" type="NONE" icon="icon.etc_totem_red_i00">
 	<!-- Small statue that Tarlk Bugbear warriors carry around on their bodies. Collect 30 and take them to Guild Member Tor. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3802" name="Okun's Head" type="NONE" icon="icon.etc_skull_black_i00">
 	<!-- Certificate of having killed timak overlord okun. Take it to Guild Member Tor. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3803" name="Kakran's Head" type="NONE" icon="icon.etc_skull_red_i00">
 	<!-- Certificate of having killed taik overlord kakran. Take it to Guild Member Tor. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3804" name="Narcissus' Soulstone" type="NONE" icon="icon.etc_crystal_ball_blue_i00">
 	<!-- Fragment of destroyed mirror. Collect 40 and take them to Guild Member Tor. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3805" name="Deprive Eye" type="NONE" icon="icon.etc_eyeball_i00">
 	<!-- Eye obtained from deprive corpse. Collect 20 and take them to Guild Member Tor. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3806" name="Unicorn's Horn" type="NONE" icon="icon.etc_unicorn_horn_i00">
 	<!-- Horn obtained from killing unicorn or unicorn elder. Collect 20 and take them to Guild Member Tor. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3807" name="Kerunos' Gold Mane" type="NONE" icon="icon.etc_mane_i00">
 	<!-- Mane removed after killing vanor chief kerunos. Take it to Guild Member Tor. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3808" name="Skull of Executed" type="NONE" icon="icon.etc_skull_white_i00">
 	<!-- Skull obtained from killing grave wanderer. Collect 20 and take them to Guild Member Tor. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3809" name="Bust of Travis" type="NONE" icon="icon.etc_holy_statue_silver_i00">
 	<!-- Bust of King Travis recovered from hatar chieftain kubel. Take it to Guild Member Tor. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3810" name="Sword of Cadmus" type="NONE" icon="icon.weapon_sword_of_watershadow_i00">
 	<!-- Sword of bodyguard of King Cadmus recovered from judge of marsh. Collect 10 and take them to Guild Member Tor. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3811" name="Coin Diagram" type="NONE" icon="icon.etc_spell_books_blue_i00">
 	<!-- Illustration of the coin that Warehouse Keeper Sorint wants you to retrieve. Meet with Hunter Guild President Bernard who will instruct you on what to do next. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3812" name="Kaldis Gold Dragon" type="NONE" icon="icon.etc_magic_coin_gold_i00">
 	<!-- Coin that is the same as that which Hunter Guild President Bernard Has. Take this to Warehouse Keeper Sorint. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3813" name="Coin Collector Membership 1" type="NONE" icon="icon.etc_letter_blue_i00">
 	<!-- Lv. 1 coin collector club membership card. You must have this to exchange coins with members of other places. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3814" name="Coin Collector Membership 2" type="NONE" icon="icon.etc_letter_red_i00">
 	<!-- Lv. 2 coin collector club membership card. You must have this to exchange coins with level 2 or level 3 members of other places. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3815" name="Coin Collector Membership 3" type="NONE" icon="icon.etc_letter_white_i00">
 	<!-- Lv. 3 coin collector club membership card. You must have this to exchange coins with level 3 members of other places. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3816" name="Fairy Stone" type="NONE" icon="icon.etc_gem_red_i00">
 	<!-- Jewel required to meet and talk with fairy Mimyu. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3817" name="Deluxe Fairy Stone" type="NONE" icon="icon.etc_gem_clear_i00">
 	<!-- Jewel required to meet and talk with fairy Mimyu. Be careful because creatures living in Enchanted Valley disappear when killed. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3818" name="Fairy Stone List" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- 4 Accessory Gems (Low-grade), 2 Armor Fragments (Low-grade), 1 Gemstone (D-grade), 10 pieces of Toad Lord Back Skin and 1 Cokes -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3819" name="Deluxe Fairy Stone List" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- 5 Accessory Gems (Low-grade), 2 Armor Fragments (Low-grade), 1 Gemstone (C-grade), 10 pieces of Toad Lord Back Skin and 1 Cokes -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3820" name="Toad Lord Back Skin" type="NONE" icon="icon.etc_leather_gray_i00">
 	<!-- Haggard backskin of a toad lord. Ingredient used for removing impurities from fairy stone. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3821" name="Juice of Monkshood" type="NONE" icon="icon.etc_potion_green_i00">
 	<!-- Medicine needed to talk with drakes or Wyrms. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3822" name="Scale of Drake Exarion" type="NONE" icon="icon.etc_scale_of_medusa_blue_i00">
 	<!-- Scale of drake exarion. Take this and recover 20 eggs from leto lizardman warriors near Oren Castle. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3823" name="Egg of Drake Exarion" type="NONE" icon="icon.etc_dragon_egg_i02">
 	<!-- Egg of drake exarion recovered from leto lizardman warriors. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3824" name="Scale of Drake Zwov" type="NONE" icon="icon.etc_scale_of_medusa_green_i00">
 	<!-- Scale of drake zwov. Take this and recover 20 eggs from marsh spiders of Cruma Marshlands. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3825" name="Egg of Drake Zwov" type="NONE" icon="icon.etc_dragon_egg_i04">
 	<!-- Egg of drake zwov recovered from marsh spiders. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3826" name="Scale of Drake Kalibran" type="NONE" icon="icon.etc_scale_of_medusa_red_i00">
 	<!-- Scale of Drake Kalibran. Take this and recover 20 Eggs from Road Scavengers near Death Pass. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3827" name="Egg of Drake Kalibran" type="NONE" icon="icon.etc_dragon_egg_i01">
 	<!-- Drake Kalibran Egg recovered from Road Scavengers. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3828" name="Scale of Wyvern Suzet" type="NONE" icon="icon.etc_seed_yellow_i00">
 	<!-- Scale of Wyvern Suzet. Take this and recover 20 eggs from Breka Orc Overlords in northern Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3829" name="Egg of Wyvern Suzet" type="NONE" icon="icon.etc_dragon_egg_i03">
 	<!-- Egg of Wyvern Suzet recovered from Breka Orc Overlords. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3830" name="Scale of Wyvern Shamhai" type="NONE" icon="icon.etc_seed_red_i00">
 	<!-- Scale of wyvern shamhai. Take this and recover 20 eggs from deadseekers of the Execution Grounds. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3831" name="Egg of Wyvern Shamhai" type="NONE" icon="icon.etc_dragon_egg_i00">
 	<!-- Egg of wyvern shamhai recovered from deadseekers. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
@@ -217,7 +217,7 @@
 	</item>
 
 	<item id="3836" name="Ritasha's Coin" type="NONE" icon="icon.etc_coins_gold_i00">
-	<!-- If you collect three Ritasha's coins and take them to Sorceress Ritash you will be able to obtain Blood of Eva.  -->
+	<!-- If you collect three Ritasha's coins and take them to Sorceress Ritasha, you will be able to obtain Blood of Eva.  -->
 		<restriction freightable="false" dropable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
@@ -291,103 +291,103 @@
 
 	<item id="3848" name="Undead Ash" type="NONE" icon="icon.etc_powder_gray_i00">
 	<!-- Ash dust remaining after an undead of the Execution Grounds is destroyed. Collect this and take it to Mercenary Sophya. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3849" name="Bloody Axe Insignia" type="NONE" icon="icon.etc_badge_black_i00">
 	<!-- Insignia obtained from killing Ol Mahums in the Fortress of Resistance. Collect these and take them to Mercenary Sophya. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="3850" name="Delu Lizardman Fang" type="NONE" icon="icon.etc_fang_ivory_i00">
 	<!-- Tooth removed after killing a Delu Lizardman. Collect these and take them to Mercenary Sophya. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3851" name="Stakato Talon" type="NONE" icon="icon.etc_claw_i00">
 	<!-- Claw cut off after killing Marsh Stakatos of the Cruma Marshlands. Collect this and take it to Mercenary Sophya. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3852" name="Gabrielle's Feather" type="NONE" icon="icon.etc_feather_gold_i00">
 	<!-- Mark given by Seal Guardian Gabrielle. Receive recognition for your abilities after taking this and meeting the other guardians. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3853" name="Marsh Stalker Horn" type="NONE" icon="icon.etc_horn_i00">
-	<!-- The horn that was cut off of a marsh stalker after it was killed. Take it to Magister Kaien the Watchman of the Seal. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+	<!-- The horn that was cut off of a marsh stalker after it was killed. Take it to Magister Kaiena, the Watchman of the Seal. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3854" name="Marsh Drake Talons" type="NONE" icon="icon.etc_claw_i00">
-	<!-- The talons that were removed from a marsh drake after it was killed. Take them to Magister Kaien the Watchman of the Seal. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+	<!-- The talons that were removed from a marsh drake after it was killed. Take them to Magister Kaiena, the Watchman of the Seal. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3855" name="Kranrot Skin" type="NONE" icon="icon.etc_leather_brown_i00">
 	<!-- The skin that was removed from a Kranrot after it was killed. Take it to Prefect Chakiris, the Watchman of the Seal. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3856" name="Hamrut Leg" type="NONE" icon="icon.etc_insect_leg_i00">
 	<!-- The leg that was removed from a Hamrut and skinned after it was killed. Take it to Prefect Chakiris, the Watchman of the Seal. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3857" name="Remains of Sacrifice" type="NONE" icon="icon.etc_skull_red_i00">
 	<!-- The remains of a sacrificed soul. Take them to High Priest Orven, the Watchman of the Seal. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3858" name="Totem of Earth Dragon" type="NONE" icon="icon.etc_parasite_i00">
 	<!-- The totem created by Harit lizardmen who worship Antharas. Take it to Master Kendra the Watchman of the Seal. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3859" name="1st Fragment of Abyssal Jewel" type="NONE" icon="icon.etc_broken_crystal_blue_i00">
 	<!-- Fragment obtained by destroying an Abyssal Jewel in Gludio. Take it to Warehouse Chief Moke, the Watchman of the Seal. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="3860" name="2nd Fragment of Abyssal Jewel" type="NONE" icon="icon.etc_broken_crystal_red_i00">
 	<!-- Fragment obtained by destroying an Abyssal Jewel in Oren. Take it to Blacksmith Helton, the Watchman of the Seal. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="3861" name="3rd Fragment of Abyssal Jewel" type="NONE" icon="icon.etc_broken_crystal_gold_i00">
 	<!-- Fragment obtained from destroying Abyssal Jewel. Take this to Antharas Watchman Theodric at the entrance to Antharas' Lair. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="3862" name="Mara Fang" type="NONE" icon="icon.etc_fang_ivory_i00">
 	<!-- The proof obtained after killing jewel guardian Mara. Take it to Warehouse Chief Moke, the Watchman of the Seal. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3863" name="Musfel Fang" type="NONE" icon="icon.etc_fang_red_i00">
 	<!-- The proof obtained after killing jewel guardian Musfel. Take it to Blacksmith Helton, the Watchman of the Seal. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3864" name="Guardian's Mark" type="NONE" icon="icon.etc_eyeball_i00">
 	<!-- Certificate of having been recognized by seal guardian. Return to Gabrielle after receiving certificates from guardians of each region. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
@@ -399,139 +399,139 @@
 
 	<item id="3866" name="Gustav's 1st Letter" type="NONE" icon="icon.etc_scroll_gray_i00">
 	<!-- Secret letter sent by Sir Gustav Athebaldt to his aides. Get a hold of it and take it to Martien of the Town of Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3867" name="Gustav's 2nd Letter" type="NONE" icon="icon.etc_scroll_gray_i00">
 	<!-- Letter sent by Sir Gustav Athebaldt to those supporting him. Take it to Balthazar of Hunter Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3868" name="Gustav's 3rd Letter" type="NONE" icon="icon.etc_scroll_gray_i00">
 	<!-- Letter sent by Sir Gustav Athebaldt to those supporting him. Take it to Sir Eric Rodemai of the Town of Aden. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3869" name="Scepter of Judgment" type="NONE" icon="icon.etc_royal_seal_of_lord_i04">
 	<!-- Scepter bestowed on Founding Emperor Shunaiman of the ancient Elmoreden Empire by the god of light. Certificate representing the emperor's authority. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3870" name="Proof of Aspiration" type="NONE" icon="icon.etc_paper_blue_i00">
 	<!-- Item needed for a clan leader to raise the clan to level 5. -->
-		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3871" name="Black Anvil Coin" type="NONE" icon="icon.etc_coins_blue_i00">
 	<!-- Commemorative coin given as an expression of gratitude by the Black Anvil Guild. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3872" name="Antidote Ingredients List" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- Herb of Vanor, Herb of Oel Mahum, Herb of Harit and Blood of Eva. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3873" name="Voucher of Faith" type="NONE" icon="icon.etc_letter_red_i00">
 	<!-- If you take this document to Sir Kristof Rodemai, you will receive the Proof of Alliance. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3874" name="Proof of Alliance" type="NONE" icon="icon.etc_paper_white_i00">
 	<!-- Item needed for a clan leader to raise the clan to level 4. -->
-		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3875" name="Letter - A" type="NONE" icon="icon.etc_alphabet_a_i00">
 	<!-- Combine with other letters to receive a great gift! -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="3876" name="Letter - C" type="NONE" icon="icon.etc_alphabet_c_i00">
 	<!-- Combine with other letters to receive a great gift! -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="3877" name="Letter - E" type="NONE" icon="icon.etc_alphabet_e_i00">
 	<!-- Combine with other letters to receive a great gift! -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="3878" name="Letter - F" type="NONE" icon="icon.etc_alphabet_f_i00">
 	<!-- Combine with other letters to receive a great gift! -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="3879" name="Letter - G" type="NONE" icon="icon.etc_alphabet_g_i00">
 	<!-- Combine with other letters to receive a great gift! -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="3880" name="Letter - H" type="NONE" icon="icon.etc_alphabet_h_i00">
 	<!-- Combine with other letters to receive a great gift! -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="3881" name="Letter - I" type="NONE" icon="icon.etc_alphabet_i_i00">
 	<!-- Combine with other letters to receive a great gift! -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="3882" name="Letter - L" type="NONE" icon="icon.etc_alphabet_l_i00">
 	<!-- Combine with other letters to receive a great gift! -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="3883" name="Letter - N" type="NONE" icon="icon.etc_alphabet_n_i00">
 	<!-- Combine with other letters to receive a great gift! -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="3884" name="Letter - O" type="NONE" icon="icon.etc_alphabet_o_i00">
 	<!-- Combine with other letters to receive a great gift! -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="3885" name="Letter - R" type="NONE" icon="icon.etc_alphabet_r_i00">
 	<!-- Combine with other letters to receive a great gift! -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="3886" name="Letter - S" type="NONE" icon="icon.etc_alphabet_s_i00">
 	<!-- Combine with other letters to receive a great gift! -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="3887" name="Letter - T" type="NONE" icon="icon.etc_alphabet_t_i00">
 	<!-- Combine with other letters to receive a great gift! -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="3888" name="Letter - II" type="NONE" icon="icon.etc_alphabet_ii_i00">
 	<!-- Combine with other letters to receive a great gift! -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
@@ -546,7 +546,7 @@
 
 	<item id="3890" name="Badge of Slayer" type="NONE" icon="icon.etc_badge_silver_i00">
 	<!-- Certificate showing eligibility to participate in the group to conquer Antharas. Take this and go meet Antharas Watchman Gilmore. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 

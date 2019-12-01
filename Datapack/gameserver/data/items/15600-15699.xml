@@ -12,67 +12,67 @@
 
 	<item id="15623" name="XP" type="NONE" icon="icon.etc_exp_point_i00">
 	<!-- You acquire XP as a reward. -->
-		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="15624" name="SP" type="NONE" icon="icon.etc_sp_point_i00">
 	<!-- You acquire SP as a reward. -->
-		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="15625" name="Unknown Reward" type="NONE" icon="icon.etc_question_mark_i00">
 	<!-- Reward given if you fulfill certain conditions. -->
-		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="15626" name="Vitality" type="NONE" icon="icon.etc_vitality_point_i00">
 	<!-- You acquire Vitality points as a reward. -->
-		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="15627" name="Clan Point" type="NONE" icon="icon.etc_bloodpledge_point_i00">
 	<!-- You acquire clan points as a reward. -->
-		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="15628" name="Gamble Reward" type="NONE" icon="icon.etc_quest_game_reward_i00">
 	<!-- Reward based on a game of chance. -->
-		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="15629" name="Random Reward" type="NONE" icon="icon.etc_quest_random_reward_i00">
 	<!-- Random reward given to player. -->
-		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="15630" name="Flexible Reward" type="NONE" icon="icon.etc_quest_account_reward_i00">
 	<!-- Reward is chosen based on your performance. -->
-		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="15631" name="Bonus Reward" type="NONE" icon="icon.etc_quest_add_reward_i00">
 	<!-- Little extra in addition to the current reward. -->
-		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="15632" name="Subclass Reward" type="NONE" icon="icon.etc_quest_subclass_reward_i00">
 	<!-- Subclass authority was obtained. -->
-		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="15633" name="PK Reduction" type="NONE" icon="icon.etc_quest_pkcount_reward_i00">
 	<!-- The PK Count is decreased. -->
-		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 

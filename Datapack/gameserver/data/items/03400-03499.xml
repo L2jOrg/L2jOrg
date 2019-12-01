@@ -2,109 +2,109 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="3400" name="Huge Orc Fang" type="NONE" icon="icon.etc_horn_i00">
 	<!-- The totem of the Atuba tribe. Gather the totems of the 5 tribes and take them to Pa'agrio Lord Kakai. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3401" name="Sumari's Letter" type="NONE" icon="icon.etc_piece_of_paper_gray_i00">
 	<!-- Letter from Blacksmith Sumari to Seer Somak in the Town of Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3402" name="Urutu Blade" type="NONE" icon="icon.etc_sword_body_i00">
 	<!-- Blade crafted by Blacksmith Sumari. Take this to Urutu Chief Hatos. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3403" name="Timak Orc Skull" type="NONE" icon="icon.etc_skull_red_i00">
 	<!-- The skull of a slain Timak Orc. Gather 10 of these and take them to Urutu chief Hatos. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3404" name="Sword Into Skull" type="NONE" icon="icon.etc_skull_black_i00">
 	<!-- The totem of the Urutu tribe. Gather the totems of the 5 tribes and take them to Pa'agrio Lord Kakai at the House of the King in Orc Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3405" name="Neruga Axe Blade" type="NONE" icon="icon.weapon_heavy_bone_club_i00">
 	<!-- The blade portion of a ceremonial axe. Take this to Neruga Chief Tantus. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3406" name="Ceremonial Axe" type="NONE" icon="icon.weapon_battle_axe_i00">
 	<!-- The totem of the Neruga tribe. Gather the totems of the 5 tribes and take them to Pa'agrio Lord Kakai. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3407" name="Marsh Spider's Feeler" type="NONE" icon="icon.etc_ginseng_gray_i00">
 	<!-- Key ingredient in making the Duda-Mara tribe totem. Gather 10 of these and take them to Duda-Mara Chief Takuna. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3408" name="Marsh Spider's Feet" type="NONE" icon="icon.etc_insect_leg_i00">
 	<!-- Key ingredient in making the Duda-Mara tribe totem. Gather 10 of these and take them to Duda-Mara Chief Takuna. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3409" name="Handiwork Spider Brooch" type="NONE" icon="icon.shield_doom_shield_i01">
 	<!-- The totem of the Duda-Mara tribe. Gather the totems of the 5 tribes and take them to Pa'agrio Lord Kakai. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3410" name="Reinforced Monster Cornea" type="NONE" icon="icon.etc_crystal_ball_blue_i00">
 	<!-- Key ingredient in making the Gandi tribe totem. Gather 20 of these and take them to Gandi Chief Chianta in Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3411" name="Monster Eye Woodcarving" type="NONE" icon="icon.etc_parasite_i00">
 	<!-- The totem of the Gandi tribe. Gather the totems of the 5 tribes and take them to Pa'agrio Lord Kakai at the House of the King in Orc Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3412" name="Bear Fang Necklace" type="NONE" icon="icon.accessary_necklace_of_binding_i00">
 	<!-- The totem of the Hestui tribe. Take this and go to the Ancestor Martankus in the Cave of Trials. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3413" name="Martankus' Charm" type="NONE" icon="icon.accessary_inferno_necklace_i00">
 	<!-- The talisman of the Ancestor Martankus. Go back to him after completing this task. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3414" name="Ragna Orc Head" type="NONE" icon="icon.etc_skull_white_i00">
 	<!-- The head of a slain Ragna Orc. Take this to the Ancestor Martankus in the Cave of Trials. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3415" name="Ragna Chief Notice" type="NONE" icon="icon.etc_letter_red_i00">
 	<!-- He who destroys the Lord of Flame shall be appointed Chief. Take this to Ancestor Martankus in the Cave of Trials. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3416" name="Immortal Flame" type="NONE" icon="icon.etc_jewel_red_i00">
 	<!-- The mark received after passing the Ancestor Martankus' test. Take this to Pa'agrio Lord Kakai at the House of the King in Orc Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3428" name="Crystal Brooch" type="NONE" icon="icon.accessary_elven_necklace_i00">
 	<!-- Brooch received from Warehouse Keeper Wilford. Present this to Lilith of the temple at the Village of Talking Island. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
@@ -133,22 +133,22 @@
 	</item>
 
 	<item id="3433" name="Elf Figure" type="NONE" icon="icon.etc_figure_FElf_i00">
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="3434" name="Coke" type="NONE" icon="icon.etc_coke_i00">
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="3435" name="Nvidia" type="NONE" icon="icon.etc_nvidia_i00">
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="3436" name="Mouse" type="NONE" icon="icon.etc_mouse_i00">
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
@@ -350,7 +350,7 @@
 
 	<weapon id="3471" name="Cybellin's Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_doomed_dagger_i00">
 	<!-- Dagger used in ceremony to raise the purity of blood crystal.  -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="400" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>

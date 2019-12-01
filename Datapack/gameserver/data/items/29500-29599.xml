@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<armor id="29500" name="Ring of Magic" type="NONE" body-part="FINGER" icon="icon.accessary_enchanted_ring_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="28400" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -10,7 +10,7 @@
 	</armor>
 
 	<armor id="29501" name="Black Pearl Ring" type="NONE" body-part="FINGER" icon="icon.accessary_black_pearl_ring_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="42800" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -19,7 +19,7 @@
 	</armor>
 
 	<armor id="29502" name="Elven Ring" type="NONE" body-part="FINGER" icon="icon.accessary_elven_ring_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="62300" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -28,7 +28,7 @@
 	</armor>
 
 	<armor id="29503" name="Mithril Ring" type="NONE" body-part="FINGER" icon="icon.accessary_mithril_ring_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="80800" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -37,7 +37,7 @@
 	</armor>
 
 	<armor id="29504" name="Ring of Devotion" type="NONE" body-part="FINGER" icon="icon.accessary_ring_of_devotion_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="18000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -47,44 +47,44 @@
 
 	<item id="29505" name="Normal VIP Gain Scroll" type="SCROLL" icon="BranchIcon.Icon.g_bm_vip_potion_i00">
 	<!-- Allows to regain 1 VIP Point when used. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29506" name="Medium VIP Gain Scroll" type="SCROLL" icon="BranchIcon.Icon.g_bm_vip_potion_i00">
 	<!-- Allows to regain 10 VIP Points when used. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29507" name="Good VIP Gain Scroll" type="SCROLL" icon="BranchIcon.Icon.g_bm_vip_potion_i00">
 	<!-- Allows to regain 100 VIP Points when used. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29508" name="Perfect VIP Gain Scroll" type="SCROLL" icon="BranchIcon.Icon.g_bm_vip_potion_i00">
 	<!-- Allows to regain 280 VIP Points when used. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29509" name="Feather of Blessing-For NPC Temp" type="NONE" icon="icon.blessed_feather_i00">
 	<!-- Can resurrect at the spot if stored in the inventory. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="29510" name="Beginner's Package - Stage 1" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1667 Soulshots, 335 Blessed Spiritshot, 30 XP/SP Boost Scrolls (30%), Eva's Mark, Agathion - Singer & Dancer Pack (30-day), 50 Healing Potions, 30 Scrolls of Escape, 30 Wind Walk Potions, 30 Haste Potions, and a Beginner's Package - Stage 2. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="34603" min-count="5000" max-count="5000" chance="100000"/>  <!-- Mysterious No-grade Soulshot -->
 			<item id="34610" min-count="1000" max-count="1000" chance="100000"/>  <!-- Mysterious Blessed No-grade Spiritshot -->
 			<item id="29648" min-count="30" max-count="30" chance="100000"/>  <!-- Scroll: Regular XP/SP Boost -->
 			<item id="49032" chance="100000"/>  <!-- Eva's Mark -->
-			<item id="49000" chance="100000"/>  <!-- Agathion - Singer and Dancer -->
+			<item id="49000" chance="100000"/>  <!-- Agathion - Singer and Dancer  -->
 			<item id="29651" min-count="50" max-count="50" chance="100000"/>  <!-- Healing Potion -->
 			<item id="10650" min-count="30" max-count="30" chance="100000"/>  <!-- Scroll of Escape (Novice) -->
 			<item id="49036" min-count="30" max-count="30" chance="100000"/>  <!-- Adventurer's Wind Walk Potion -->
@@ -95,7 +95,7 @@
 
 	<item id="29511" name="Beginner's Pack - Stage 2" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 30 Full Buff Scrolls and a Beginner's Pack - Stage 3. Lv. 10 or above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<condition msg-id="113">
 			<player level-min="10"/>
 		</condition>
@@ -108,7 +108,7 @@
 
 	<item id="29512" name="Beginner's Pack - Stage 3" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Saber*Elven Sword (30-day), 4500 Soulshots, 1000 Blessed Spiritshots, and a Beginner's Pack - Stage 4. Lv. 20 or above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<condition msg-id="113">
 			<player level-min="20"/>
 		</condition>
@@ -123,7 +123,7 @@
 
 	<item id="29513" name="Beginner's Pack - Stage 4" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Magic Necklace Crafting Pack, 4500 Soulshots, 1000 Blessed Spiritshots, and a Beginner's Pack - Stage 5. Lv. 25 or above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<condition msg-id="113">
 			<player level-min="25"/>
 		</condition>
@@ -138,7 +138,7 @@
 
 	<item id="29514" name="Beginner's Pack - Stage 5" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Elven Ring Crafting Pack, 4500 Soulshots, 1000 Blessed Spiritshots, and a Beginner's Pack - Stage 6. Lv. 30 or above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<condition msg-id="113">
 			<player level-min="30"/>
 		</condition>
@@ -153,7 +153,7 @@
 
 	<item id="29515" name="Beginner's Pack - Stage 6" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 20 XP/SP Boost Scrolls (40%), 4500 Soulshots, 1000 Blessed Spiritshots, and a Beginner's Pack - Stage 7. Lv. 35 or above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<condition msg-id="113">
 			<player level-min="35"/>
 		</condition>
@@ -168,7 +168,7 @@
 
 	<item id="29516" name="Beginner's Pack - Stage 7" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Get a Black Samurai Long Sword (30-day). Lv. 40 or above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<condition msg-id="113">
 			<player level-min="40"/>
 		</condition>
@@ -180,19 +180,19 @@
 
 	<item id="29517" name="Blessed Scroll of Escape" type="SCROLL" icon="icon.etc_scroll_of_return_i01">
 	<!-- Magical scroll that relocates user to the nearest village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" price="800" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29518" name="Blessed Scroll of Resurrection" type="SCROLL" icon="icon.etc_scroll_of_resurrection_i01">
 	<!-- Magic scroll that resurrects a dead character and restores his or her XP completely. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" price="4000" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29519" name="XP/SP Boost Scroll (Mid-grade)" type="POTION" icon="icon.etc_recall_exp_scroll">
 	<!-- XP/SP Gain + 40% for 20 minutes. Effect remains even after death. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55000" level="2"/>  <!-- XP/SP Scroll -->
@@ -201,13 +201,13 @@
 
 	<item id="29520" name="VIP Coin" type="MATERIAL" icon="BranchIcon.Icon.etc_vip_coin_i00">
 	<!-- Use the coin to exchange for various items through the Dimensional Merchant.  -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="29521" name="Soulshot 335-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_soulshot_a_i00">
 	<!-- Double-click to obtain 335 Soulshots. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29023" min-count="1000" max-count="1000" chance="100000"/>  <!-- Mysterious No-grade Soulshot -->
@@ -216,7 +216,7 @@
 
 	<item id="29522" name="Blessed Spiritshot 335-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_spiritshot_a_i00">
 	<!-- Double-click to obtain 335 Blessed Spiritshots. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29024" min-count="1000" max-count="1000" chance="100000"/>  <!-- Mysterious Blessed No-grade Spiritshot -->
@@ -225,7 +225,7 @@
 
 	<item id="29523" name="Soulshot 500-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_soulshot_d_i00">
 	<!-- Double-click to obtain 500 Soulshots. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29025" min-count="1000" max-count="1000" chance="100000"/>  <!-- Mysterious Soulshot (D-grade) -->
@@ -234,7 +234,7 @@
 
 	<item id="29524" name="Blessed Spiritshot 500-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_spiritshot_d_i00">
 	<!-- Double-click to obtain 500 Blessed Spiritshots. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29026" min-count="1000" max-count="1000" chance="100000"/>  <!-- Mysterious Blessed Spiritshot (D-grade) -->
@@ -243,7 +243,7 @@
 
 	<item id="29525" name="Soulshot 1000-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_soulshot_c_i00">
 	<!-- Double-click to obtain 1000 Soulshots. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29027" min-count="1000" max-count="1000" chance="100000"/>  <!-- Mysterious Soulshot (C-grade) -->
@@ -252,7 +252,7 @@
 
 	<item id="29526" name="Blessed Spiritshot 1000-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_spiritshot_c_i00">
 	<!-- Double-click to obtain 1000 Blessed Spiritshots. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29028" min-count="1000" max-count="1000" chance="100000"/>  <!-- Mysterious Blessed Spiritshot (C-grade) -->
@@ -261,7 +261,7 @@
 
 	<weapon id="29527" name="Saber*Elven Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
 	<!-- 30-day item. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="2510" commission-type="OTHER_ITEM" duration="43200" enchant-enabled="false"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
@@ -278,13 +278,13 @@
 
 	<item id="29528" name="Elven Ring Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain materials needed to craft an Elven Ring. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29529" name="Magic Necklace Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain materials needed to craft a Magic Necklace. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="1900" min-count="5" max-count="5" chance="100000"/>  <!-- Necklace Chain of Magic -->
@@ -298,7 +298,7 @@
 
 	<item id="29530" name="Tiger's Eye Crafting Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain materials needed to craft a Tiger's Eye. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="1901" min-count="6" max-count="6" chance="100000"/>  <!-- Tiger's Eye Stone -->
@@ -312,7 +312,7 @@
 
 	<item id="29531" name="Fighter Hunter Pack Lv. 1" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1667 Soulshots, 15 XP/SP Boost Scrolls (30%), 15 1st Class Transfer Buff Scrolls. -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29023" min-count="5000" max-count="5000" chance="100000"/>  <!-- Mysterious No-grade Soulshot -->
@@ -323,7 +323,7 @@
 
 	<item id="29532" name="Wizard Hunter Pack Lv. 1" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 335 Blessed Spiritshots, 15 XP/SP Boost Scrolls (30%), 15 1st Class Transfer Buff Scrolls. -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29024" min-count="1000" max-count="1000" chance="100000"/>  <!-- Mysterious Blessed No-grade Spiritshot -->
@@ -334,7 +334,7 @@
 
 	<item id="29533" name="Fighter Hunter Pack Lv. 2" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 2500 Soulshots, 15 XP/SP Boost Scrolls (30%), 15 1st Class Transfer Buff Scrolls. -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29025" min-count="5000" max-count="5000" chance="100000"/>  <!-- Mysterious Soulshot (D-grade) -->
@@ -345,7 +345,7 @@
 
 	<item id="29534" name="Wizard Hunter Pack Lv. 2" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 500 Blessed Spiritshots, 15 XP/SP Boost Scrolls (30%), 15 1st Class Transfer Buff Scrolls. -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29026" min-count="1000" max-count="1000" chance="100000"/>  <!-- Mysterious Blessed Spiritshot (D-grade) -->
@@ -356,7 +356,7 @@
 
 	<item id="29535" name="Fighter Hunter Pack Lv. 3" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 5000 Soulshots, 15 XP/SP Boost Scrolls (30%), 15 1st Class Transfer Buff Scrolls. -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29027" min-count="5000" max-count="5000" chance="100000"/>  <!-- Mysterious Soulshot (C-grade) -->
@@ -367,7 +367,7 @@
 
 	<item id="29536" name="Wizard Hunter Pack Lv. 3" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1000 Blessed Spiritshots, 15 XP/SP Boost Scrolls (30%), 15 1st Class Transfer Buff Scrolls. -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29028" min-count="1000" max-count="1000" chance="100000"/>  <!-- Mysterious Blessed Spiritshot (C-grade) -->
@@ -378,49 +378,49 @@
 
 	<item id="29537" name="Life Stone: Hair Accessory" type="MATERIAL" icon="icon.etc_crystal_ball_silver_i00">
 	<!-- Bestow a special ability through a blacksmith. (not realized) -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="29538" name="Soulshot (No-grade)" type="NONE" icon="BranchIcon.Icon.g_etc_soulshot_i01">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a No-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="3" immediate-effect="true" action="SOULSHOT"/>
 	</item>
 
 	<item id="29539" name="Blessed Spiritshot (No-grade)" type="NONE" icon="BranchIcon.Icon.g_etc_spiritshot_i01">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with No-grade weapons. Exchange for a new Soulshot through the Dimensional Merchant. -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="4" immediate-effect="true" action="SPIRITSHOT"/>
 	</item>
 
 	<item id="29540" name="Soulshot (D-grade)" type="NONE" icon="br_cashtex.item.br_cash_soulshot_d_i00">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its P. Atk. significantly. Can be used with a D-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="2" immediate-effect="true" action="SOULSHOT"/>
 	</item>
 
 	<item id="29541" name="Blessed Spiritshot (D-grade)" type="NONE" icon="br_cashtex.item.br_cash_spiritshot_d_i00">
 	<!-- Spiritshot containing the light of Spirits; it instantly and greatly increases the power of magic. Used with D-grade weapons. Exchange for a new Soulshot through the Dimensional Merchant. -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="4" immediate-effect="true" action="SPIRITSHOT"/>
 	</item>
 
 	<item id="29542" name="Soulshot (C-grade)" type="NONE" icon="br_cashtex.item.br_cash_soulshot_c_i00">
 	<!-- The power of a spirit is bestowed upon a weapon, momentarily increasing its P. Atk. significantly. Can be used with a C-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="2" immediate-effect="true" action="SOULSHOT"/>
 	</item>
 
 	<item id="29543" name="Blessed Spiritshot (C-grade)" type="NONE" icon="br_cashtex.item.br_cash_spiritshot_c_i00">
 	<!-- The power of a higher-level spirit is bestowed upon a weapon, momentarily increasing its M. Atk. significantly. Can be used with a C-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="2" immediate-effect="true" action="SPIRITSHOT"/>
 	</item>
 
 	<armor id="29544" name="Chronicles Heir's Great Ring" type="NONE" body-part="FINGER" icon="icon.event_classic_ring">
 	<!-- Increase Atk./Casting Spd., HP + 10%, HP Recovery + 10%, Accuracy + 1, M. Accuracy + 1, weight limit + 5000. Only one effect is applied even when two identical rings are worn. Cannot be exchanged, dropped, destroyed, or sold in the private store or NPC shop. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -430,49 +430,49 @@
 
 	<item id="29545" name="Blessed Scroll of Escape" type="SCROLL" icon="icon.etc_scroll_of_return_i01">
 	<!-- Mysterious scroll that relocates user to the nearest village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29546" name="Blessed Scroll of Resurrection" type="SCROLL" icon="icon.etc_scroll_of_resurrection_i01">
 	<!-- Magic scroll that resurrects a dead character and restores his or her XP completely. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29547" name="Scroll: Enchant Weapon (D-grade)" type="ENCHANT_WEAPON" icon="br_cashtex.item.br_cash_scrl_of_ench_wp_d_i00">
 	<!-- When enchanted, P. Atk. +4 for D-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29548" name="Scroll: Enchant Armor (D-grade)" type="ENCHANT_ARMOR" icon="br_cashtex.item.br_cash_scrl_of_ench_am_d_i00">
 	<!-- P. Def. + 1 for D-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29549" name="Scroll: Enchant Weapon (C-grade)" type="ENCHANT_WEAPON" icon="br_cashtex.item.br_cash_scrl_of_ench_wp_c_i00">
 	<!-- When enchanted, P. Atk. +4 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29550" name="Scroll: Enchant Armor (C-grade)" type="ENCHANT_ARMOR" icon="br_cashtex.item.br_cash_scrl_of_ench_am_c_i00">
 	<!-- P. Def. + 1 for C-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29551" name="Chronicles Heir's Ring Fragment" type="MATERIAL" icon="icon.event_classic_ring">
 	<!-- Ingredient to upgrade a Chronicles Heir's Ring through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="29552" name="1st Class Transfer Buff Scroll" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- For 20 min., Shield Lv. 2, Might Lv. 2, Concentration Lv. 2, Acumen Lv. 1, Wind Walk Lv. 1, Focus Lv. 1, Agility Lv. 1, Empower Lv. 1. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55035" level="1"/>  <!-- 1st Class Buff Scroll -->
@@ -481,7 +481,7 @@
 
 	<item id="29553" name="2nd Class Transfer Buff Scroll" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- For 20 min., Shield Lv. 3, Might Lv. 3, Acumen Lv. 2, Wind Walk Lv. 2, Focus Lv. 2, Regeneration Lv. 1, Guidance Lv. 1, Death Whisper Lv. 1, Magic Barrier Lv. 1, Blessed Body Lv. 1, Blessed Soul Lv. 1, Haste Lv. 1, Agility Lv. 2, Empower Lv. 2. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55036" level="2"/>  <!-- 2nd Class Buff Scroll -->
@@ -490,7 +490,7 @@
 
 	<item id="29554" name="Quick Healing Potion" type="POTION" icon="icon.etc_potion_gold_i00">
 	<!-- Magic potion that instantly restores HP. Instant effect with no duration. Cannot be used when HP is full. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55037" level="1"/>  <!-- Quick Healing Potion -->
@@ -499,7 +499,7 @@
 
 	<item id="29555" name="Top-grade Quick Healing Potion" type="POTION" icon="icon.etc_potion_gold_i00">
 	<!-- Magic potion that instantly restores HP. Instant effect with no duration. Cannot be used when HP is full. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55038" level="1"/>  <!-- Major Quick Healing Potion -->
@@ -508,61 +508,61 @@
 
 	<item id="29556" name="Chronicle Box" type="NONE" icon="icon.new_user_box">
 	<!-- Double-click to get one of the following: Queen Ant's Ring Lv. 1 (15-day), Orfen's Earring Lv. 1 (15-day), Ring of Core Lv. 1 (15-day), Blessed Scroll of Escape, Blessed Scroll of Resurrection, D/C-grade Enchant Scroll, Full Buff Scroll, Quick Healing Potion, High-grade Quick Healing Potion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29557" name="Soulshot 33-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_soulshot_a_i00">
 	<!-- Double-click to obtain 33 Soulshots. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29558" name="Blessed Spiritshot 33-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_spiritshot_a_i00">
 	<!-- Double-click to obtain 33 Blessed Spiritshots. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29559" name="Soulshot 50-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_soulshot_d_i00">
 	<!-- Double-click to obtain 50 Soulshots. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29560" name="Blessed Spiritshot 50-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_spiritshot_d_i00">
 	<!-- Double-click to obtain 50 Blessed Spiritshots. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29561" name="Soulshot 100-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_soulshot_c_i00">
 	<!-- Double-click to obtain 100 Soulshots. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29562" name="Blessed Spiritshot 100-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_spiritshot_c_i00">
 	<!-- Double-click to obtain 100 Blessed Spiritshots. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29563" name="Lucky Coin" type="NONE" icon="BranchIcon.Icon.etc_premium_coin_i00">
 	<!-- Coin needed to play the Premium Lucky Game. You need a lot of these to play. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="29564" name="Attendance Coin" type="NONE" icon="BranchIcon.Icon.etc_att_coin_i00">
 	<!-- Coin received as a reward for checking attendance. You can exchange them for various rewards through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="29565" name="XP/SP Boost Scroll" type="POTION" icon="icon.etc_recall_exp_scroll">
 	<!-- Increases XP/SP from hunting by 20% for 60 minutes. Effect remains even after death. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55041" level="1"/>  <!-- XP/SP Scroll -->
@@ -571,7 +571,7 @@
 
 	<item id="29566" name="Attendance Reward XP Rune" type="RUNE" icon="br_cashtex.item.br_cash_rune_of_exp_i00">
 	<!-- If stored in the inventory, acquired XP/ SP + 10%. 7-day. -->
-		<restriction freightable="false" olympiad-restricted="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080" immediate-effect="true"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55042" level="1"/>  <!-- Attendance XP Rune -->
@@ -580,55 +580,55 @@
 
 	<item id="29567" name="6th day Attendance Gift" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Blessed Scroll of Escape, 1 XP/SP Boost Scroll (20%),  2 Quick Healing Potions. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29568" name="7th day Attendance Gift" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Blessed Scroll of Resurrection, 1 XP/SP Boost Scroll (20%). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29569" name="13th day Attendance Gift" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Blessed Scroll of Escape, 1 XP/SP Boost Scroll (20%),  2 Quick Healing Potions. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29570" name="14th day Attendance Gift" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Blessed Scroll of Resurrection, 1 XP/SP Boost Scroll (20%), 1 Chronicles Box. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29571" name="20th day Attendance Gift" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Blessed Scroll of Escape, 1 XP/SP Boost Scroll (20%),  3 Quick Healing Potions. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29572" name="21st day Attendance Gift" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Blessed Scroll of Resurrection, 1 XP/SP Boost Scroll (20%). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29573" name="27th day Attendance Gift" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Blessed Scroll of Escape, 1 XP/SP Boost Scroll (20%),  3 Quick Healing Potions. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29574" name="28th day Attendance Gift" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the one each of the following: Blessed Scroll of Resurrection, XP/SP Boost Scroll (20%), Rare Accessory Box Lv. 1 (30-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<armor id="29575" name="Queen Ant's Ring Lv. 1" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_queen_ant_i00">
 	<!-- 30-day item. When equipped, grants MP +9, Poison Resistance/Poison Attack Rate +10%, P./M. Accuracy +1, P./M. Attack +20. The effect does not stack if two identical rings are equipped. Cannot be enchanted. Cannot be exchanged, dropped, or sold. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" commission-type="RING" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -642,7 +642,7 @@
 
 	<armor id="29576" name="Orfen's Earring Lv. 1" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_orfen_i00">
 	<!-- 30-day item. When equipped, MP +19, MEN Atk./Hold Atk. and Resistance +10%, Heal Received +2%, Skill MP Consumption -2%. The effect does not stack if two identical earrings are equipped. Cannot be enchanted. Cannot be enchanted. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" commission-type="EARRING" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -656,7 +656,7 @@
 
 	<armor id="29577" name="Ring of Core Lv. 1" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_core_i00">
 	<!-- 30-day item. MP +9, MEN Atk. and Resistance +10%, P./M. Evasion +1, Received Damage -2%. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" commission-type="RING" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -670,7 +670,7 @@
 
 	<item id="29578" name="Rare Accessory Lv. 1 Box" type="NONE" icon="icon.ev_10th_present2">
 	<!-- Double-click to receive one of the following items: Queen Ant's Ring Lv. 1 (30-day), Orfen's Earring Lv. 1 (30-day), Ring of Core Lv. 1 (30-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39058" level="1"/>  <!-- Rare Accessory Box -->
@@ -679,7 +679,7 @@
 
 	<armor id="29579" name="Soaring Bird" type="NONE" body-part="HAIR" icon="icon.bm_soaring_bird">
 	<!-- Item to commemorate the opening fo Lineage 2 Classic Server. Equip the Soaring Bird and use the skill that appears to teleport to the closest village. Cooldown 60 min. Cannot be exchanged, dropped or sold in a private store or to an NPC. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -689,13 +689,13 @@
 
 	<item id="29580" name="dreamin7 Coupon" type="MATERIAL" icon="icon.etc_lottery_card_i00">
 	<!-- A coupon that lets you exchange a + 7 enchanted Saber*Elven Sword (30-day) for a permanent weapon. Deleted after event. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="29581" name="LineageII Box" type="NONE" icon="icon.ev_10th_present2">
 	<!-- Reward box for collecting all the Lineage II letters. You can get weapon recipes and ingredients. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55044" level="1"/>  <!-- Lineage II Chest -->
@@ -704,7 +704,7 @@
 
 	<item id="29582" name="Chronicle Box" type="NONE" icon="icon.ev_10th_present2">
 	<!-- Reward box for collecting all the Chronicle letters. You can get no-grade weapons and ingredients. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55045" level="1"/>  <!-- Chronicle Chest -->
@@ -713,7 +713,7 @@
 
 	<item id="29583" name="Memories Box" type="NONE" icon="icon.ev_10th_present2">
 	<!-- Reward box for collecting all the Memories letters. You can get no-grade armor and ingredients. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55046" level="1"/>  <!-- Memories Chest -->
@@ -722,7 +722,7 @@
 
 	<item id="29584" name="Angel Cat's Blessing Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain an Angel Cat's Blessing (1-hour). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="35669" chance="100000"/>  <!-- Angel Cat's Blessing -->
@@ -731,7 +731,7 @@
 
 	<armor id="29585" name="Refined Romantic Chapeau" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_archer_hat2_i00">
 	<!-- 30-day Refined Romantic Chapeau. Can use Refined Blessing and Refined Wind skills. Uses 2 hair accessory slots. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -742,13 +742,13 @@
 
 	<item id="29586" name="Refined Romantic Chapeau (30-day) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain a Refined Romantic Chapeau (30-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<armor id="29587" name="Agathion - Singer and Dancer" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
 	<!-- Can summon Agathion - Singer & Dancer that gleefully sings and dances when equipped. Cannot be exchanged, dropped or sold in a private store or to an NPC. -->
-		<restriction freightable="false" olympiad-restricted="true" tradable="false" dropable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -763,19 +763,19 @@
 
 	<item id="29588" name="Samurai Black Long Sword Box" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click on the item to get Black Samurai Long Sword (30-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. You cannot exchange, drop or sell Black Samurai Long Sword. -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29589" name="Black Samurai Long Sword 30-day Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain a Black Samurai Long Sword (30-day). The Black Samurai Long Sword cannot be exchanged, dropped, or sold.  -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<weapon id="29590" name="Samurai Black Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
 	<!-- Cannot be enchanted or endued with special characteristics. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="2340" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
@@ -792,7 +792,7 @@
 
 	<weapon id="29591" name="Black Samurai Long Sword 30-day Pack" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
 	<!-- Can be enchanted and can bestow special abilities. -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes weight="2340" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
@@ -809,19 +809,19 @@
 
 	<item id="29592" name="Floating Bird Box" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click on the item to get Eva's Mark (30-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. You cannot exchange, drop or sell the Eva's Mark. -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29593" name="Soaring Bird 30-day Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain a Soaring Bird (30-day). The Soaring Bird cannot be exchanged, dropped, or sold. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<armor id="29594" name="Chronicles Heir's Great Ring" type="NONE" body-part="FINGER" icon="icon.event_classic_ring">
 	<!-- HP + 10%, HP Recovery + 10%, increases Atk./Casting Spd., P./M. Accuracy + 1, Weight Limit + 5000. Only one effect is applied even when two identical rings are worn. Cannot be exchanged, dropped or sold in a private store or to an NPC. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -831,7 +831,7 @@
 
 	<armor id="29595" name="Chronicles Heir's Great Ring" type="NONE" body-part="FINGER" icon="icon.event_classic_ring">
 	<!-- HP + 10%, HP Recovery + 10%, increases Atk./Casting Spd., P./M. Accuracy + 1, Weight Limit + 5000. Only one effect is applied even when two identical rings are worn. Cannot be exchanged, dropped or sold in a private store or to an NPC. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" duration="10080" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -841,7 +841,7 @@
 
 	<armor id="29596" name="Chronicles Heir's Great Ring" type="NONE" body-part="FINGER" icon="icon.event_classic_ring">
 	<!-- HP + 10%, HP Recovery + 10%, increases Atk./Casting Spd., P./M. Accuracy + 1, Weight Limit + 5000. Only one effect is applied even when two identical rings are worn. Cannot be exchanged, dropped or sold in a private store or to an NPC. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" duration="21600" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -851,7 +851,7 @@
 
 	<armor id="29597" name="Chronicles Heir's Great Ring" type="NONE" body-part="FINGER" icon="icon.event_classic_ring">
 	<!-- HP + 10%, HP Recovery + 10%, increases Atk./Casting Spd., P./M. Accuracy + 1, Weight Limit + 5000. Only one effect is applied even when two identical rings are worn. Cannot be exchanged, dropped or sold in a private store or to an NPC. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -861,13 +861,13 @@
 
 	<item id="29598" name="Chronic Noble Successor Box" type="NONE" icon="icon.ev_10th_present2">
 	<!-- Double-click to get the armor of the Noble Successor of Chronicle (for 3, 7, 15, 30 days or unlimited). -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29599" name="Chronicles Heir's Great Equipment Pack" type="NONE" icon="icon.ev_10th_present2">
 	<!-- Double-click to obtain a Chronicles Heir's Great equipment (3-day, 7-day, 15-day, or permanent). -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 

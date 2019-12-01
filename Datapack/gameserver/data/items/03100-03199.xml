@@ -8,7 +8,7 @@
 
 	<item id="3101" name="Spellbook: Death Whisper" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Death Whisper. Used by Prophets and Shillien Elders.\\nRequired level: 40 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
@@ -56,7 +56,7 @@
 
 	<item id="3109" name="Amulet: Seal of Silence" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Seal of Silence spell. Used by Overlords.\\nRequired level: 48 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
@@ -68,7 +68,7 @@
 
 	<item id="3111" name="Amulet: Seal of Suspension" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Seal of Suspension spell. Used by Overlords.\\nRequired level: 48 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
@@ -98,7 +98,7 @@
 
 	<item id="3116" name="Amulet: Chant of Fury" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Chant of Fury spell. Used by Warcryers.\\nRequired level: 48 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
@@ -110,493 +110,493 @@
 
 	<item id="3118" name="Amulet: Chant of Rage" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Chant of Rage spell. Used by Warcryers.\\nRequired level: 44 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3119" name="Mark of Guildsman" type="NONE" icon="icon.etc_badge_gold_i00">
 	<!-- Mark given to those who have passed the Trial of the Guildsman. Occupation change related item. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3120" name="Valkon's Recommendation" type="NONE" icon="icon.etc_letter_white_i00">
 	<!-- Recommendation letter written by Warehouse Keeper Valkon from Giran. Take this and go to Blacksmith Altran of the Talking Island Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3121" name="Mandragora Berry" type="NONE" icon="icon.etc_fruit_red_i00">
 	<!-- The fruit of mandragoras, known for their uses in treating ailments. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3122" name="Altran's Instructions" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- Blacksmith Altran's instructions. The instructions are to gather materials and create 7 journeyman's rings. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3123" name="Altran's 1st Recommendation" type="NONE" icon="icon.etc_scroll_gray_i00">
 	<!-- Recommendation letter written by Blacksmith Altran. Take this and go to Warehouse Keeper Norman of the Village of Gludin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3124" name="Altran's 2nd Recommendation" type="NONE" icon="icon.etc_scroll_white_i00">
 	<!-- Recommendation letter written by Blacksmith Altran. Take this and go to Blacksmith Pinter of the Town of Gludio. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3125" name="Norman's Instructions" type="NONE" icon="icon.etc_piece_of_paper_black_i00">
 	<!-- Instructions of Warehouse Keeper Norman from the Village of Gludin. The instructions are to go to Blacksmith Duning of Hunters Village and bring back the key. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3126" name="Norman's Receipt" type="NONE" icon="icon.etc_letter_blue_i00">
 	<!-- Receipt of Warehouse Keeper Norman from the Village of Gludin. Take this and go to Blacksmith Duning of the Hunters Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3127" name="Duning's Instructions" type="NONE" icon="icon.etc_scroll_gray_i00">
 	<!-- Blacksmith Duning's instructions. It gives an order to recover 30 keys from Breka orcs. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3128" name="Duning's Key" type="NONE" icon="icon.etc_key_i00">
 	<!-- Mithril key recovered from Breka orcs. Collect 30 and take them to Blacksmith Duning. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3129" name="Norman's List" type="NONE" icon="icon.etc_piece_of_paper_gray_i00">
 	<!-- List of Warehouse Keeper Norman from the Village of Gludin. Procure Grey Bone Powder by slaying a Lesser Ghoul or a Lesser Strain on the Execution Grounds; procure Granite Whetstones by slaying a Lesser Granite Golem on the Execution Grounds; procure Red Pigment by slaying a Lesser Corpse Tracker on the Execution Grounds; procure Braided Yarn by slaying a Silenos on the Plains of Dion. Collect 70 units of each above mentioned ingredient. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3130" name="Grey Bone Powder" type="NONE" icon="icon.etc_powder_gray_i00">
 	<!-- The powder collected from the bones of Lesser Ghoul and Lesser Strain dwelling on the Execution Grounds. Gather 70 of these and take them to Warehouse Keeper Norman in the Village of Gludin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3131" name="Granite Whetstone" type="NONE" icon="icon.etc_plate_black_i00">
 	<!-- Whetstone made from the fragments of Lesser Granite Golem dwelling on the Execution Grounds. Gather 70 of these and take them to Warehouse Keeper Norman in the Village of Gludin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3132" name="Red Pigment" type="NONE" icon="icon.etc_lesser_potion_scarlet_i00">
 	<!-- Red Pigment obtained by slaying the Lesser Corpse Tracker dwelling on the Execution Grounds. Gather 70 of these and take them to Warehouse Keeper Norman in the Village of Gludin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3133" name="Braided Yarn" type="NONE" icon="icon.etc_skein_gray_i00">
 	<!-- Braided Yarn obtained by slaying Silenos on the Plains of Dion. Gather 70 of these and take them to Warehouse Keeper Norman in the Village of Gludin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3134" name="Journeyman Gem" type="NONE" icon="icon.etc_jewel_red_i00">
 	<!-- Material used to make the journeyman's ring. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3135" name="Pinter's Instructions" type="NONE" icon="icon.etc_scroll_white_i00">
 	<!-- Instructions of Blacksmith Pinter: Gather 70 amber beads. You can get them by slaying a Wastelands Lizardman and an Ant from the Ant Nest, but there is another way too. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3136" name="Amber Bead" type="NONE" icon="icon.etc_crystal_ball_red_i00">
 	<!-- Bead-shaped piece of amber. Collect 70 of these and take them to Blacksmith Pinter in Gludio. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3137" name="Amber Lump" type="NONE" icon="icon.etc_crystal_red_i00">
 	<!-- Unrefined lump of amber. The material used in creating the Amber Bead. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3138" name="Journeyman Deco Beads" type="NONE" icon="BranchSys2.icon.etc_Journeyman_deco_beads_i00">
 	<!-- Ingredient item used to make a journeyman's ring. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3139" name="Journeyman Ring" type="NONE" icon="icon.accessary_ring_of_blessing_i00">
 	<!-- To pass the Trial of the Guildsman, you must create 7 of these rings. Take the completed rings to Warehouse Keeper Valkon in Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3140" name="Mark of Life" type="NONE" icon="icon.etc_herb_green_i00">
 	<!-- Mark given to those who have passed the Testimony of Life. Occupation change related item. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3141" name="Cardien's Letter" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- Letter by Master Cardien. Take this and go to Hierarch Asterios of the Elven Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3142" name="Camomile Charm" type="NONE" icon="icon.accessary_near_forest_necklace_i00">
 	<!-- A charm given by Hierarch Asterios of the Elven Village. Take it to Master Cardien in the Town of Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3143" name="Hierarch's Letter" type="NONE" icon="icon.etc_scroll_white_i00">
-	<!-- Letter given by Hierarch Asterios of the Elven Village. Take this and go to Thali who lives on the eastern shores of Iris Lake. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+	<!-- Letter given by Hierarch Asterios of the Elven Village. Take this and go to Thalia, who lives on the eastern shores of Iris Lake. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3144" name="Moonflower Charm" type="NONE" icon="icon.accessary_paradia_ring_i00">
 	<!-- A charm given by Hierarch Asterios of the Elven Village. Keep it while searching for the Water of Life. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3145" name="Grail Diagram" type="NONE" icon="icon.etc_spellbook_red_i00">
 	<!-- Diagram of the grail, given by Thalia. Take this and go to Blacksmith Pushkin of Town of Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3146" name="Thalia's 1st Letter" type="NONE" icon="icon.etc_piece_of_paper_gray_i00">
-	<!-- Thalia's letter. Take this and go to Arkeni who is at the Altar of Rites. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+	<!-- Thalia's letter. Take this and go to Arkenia, who is at the Altar of Rites. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3147" name="Thalia's 2nd Letter" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- Thalia's letter. Take this and go to Isael Silvershadow of the Hunter's Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3148" name="Thalia's Instructions" type="NONE" icon="icon.etc_scroll_gray_i00">
 	<!-- Letter containing Thalia's instructions. The instructions are to come back after reaching level 38. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3149" name="Pushkin's List" type="NONE" icon="icon.etc_piece_of_paper_black_i00">
 	<!-- List given by Blacksmith Pushkin from Giran. He needs 10 pieces of Pure Mithril Ore obtained by slaying a Guardian Basilisk in Death Pass, 20 units of Ant Soldier Acid obtained by slaying Ant Soldiers in the Ant Nest, 20 Wyrm's Fangs obtained by slaying Wyrms in the Gorgon Flower Garden. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3150" name="Pure Mithril Cup" type="NONE" icon="icon.etc_oil_pot_black_i00">
 	<!-- Cup crafted by Blacksmith Pushkin of Giran that is made of pure mithril. Take this back to Thalia who can be found on an eastern shore of Iris Lake. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3151" name="Arkenia's Contract" type="NONE" icon="icon.etc_letter_red_i00">
 	<!-- Contract written by Arkenia. The contract states that she will give stardust in return for Andariel's book from the Village of Gludin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3152" name="Arkenia's Instructions" type="NONE" icon="icon.etc_scroll_gray_i00">
 	<!-- Arkenia's instructions. The instructions are to bring back Andariel's book from the Temple of Einhasad in the Village of Gludin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3153" name="Adonius' list" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- List given by Priest Adonius of the Village of Gludin. 20 sample of Spider Ichor from a Marsh Spider dwelling in Cruma Marshlands, 20 Harpy's Feathers from a Harpy nesting in the Gorgon Flower Garden. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3154" name="Andariel's Scriptures Copy" type="NONE" icon="icon.etc_spell_books_blue_i00">
 	<!-- Andariel's Scriptures Copy given by Priest Adonius of the Village of Gludin. Take it to Witch Arkenia at the Altar of Rites in the Dark Elven Forest. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3155" name="Stardust" type="NONE" icon="icon.etc_powder_orange_i00">
 	<!-- The silver dust received from Witch Arkenia at the Altar of Rites. Take it to Thalia at the eastern shore or Iris Lake. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3156" name="Isael's Instructions" type="NONE" icon="icon.etc_piece_of_paper_gray_i00">
 	<!-- Orders of Isael Silvershadow from Hunters Village. Collect 6 pieces of Talin's Spear from Leto Lizardman Shamans and Leto Lizardman Chiefs on the Plains of the Lizardmen. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3157" name="Isael's Letter" type="NONE" icon="icon.etc_letter_blue_i00">
 	<!-- Letter given by Isael Silvershadow from Hunters Village. Take this, along with Talin's Spear, back to Thalia at the eastern shore or Iris Lake. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3158" name="Grail of Purity" type="NONE" icon="icon.etc_oil_pot_white_i00">
 	<!-- A cup of Pure Mithril. Gather Tears of Unicorn in the Cup and take it back to Thalia at the eastern shore or Iris Lake. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3159" name="Tears of Unicorn" type="NONE" icon="icon.etc_crystal_ball_blue_i00">
 	<!-- The tears shed by Eva's unicorn when it was killed with Talin's Spear. Take this back to Thalia at the eastern shore or Iris Lake. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3160" name="Water of Life" type="NONE" icon="icon.etc_potion_blue_i00">
 	<!-- Water of Life. It has the power to rejuvenate the Tree of Life. Take it to Hierarch Asterios in Elven Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3161" name="Pure Mithril Ore" type="NONE" icon="icon.etc_stone_gray_i00">
 	<!-- The ore of pure mithril. Gather 10 of these, along with the rest of the ingredients, and take them back to Blacksmith Pushkin in Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3162" name="Ant Soldier Acid" type="NONE" icon="icon.etc_reagent_silver_i00">
 	<!-- The acid collected from ant soldiers at the Ant Nest after slaying them. Gather 20 bottles of this, along with the rest of the ingredients, and take them back to Blacksmith Pushkin in Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3163" name="Wyrm's Talon" type="NONE" icon="icon.etc_horn_i00">
 	<!-- The talon of a Wyrm from the Gorgon Flower Garden obtained after slaying it. Gather 20 of these, along with the rest of the ingredients, and take them back to Blacksmith Pushkin in Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3164" name="Spider Ichor" type="NONE" icon="icon.etc_reagent_green_i00">
 	<!-- The ichor of a marsh spider. Gather 20 units of this and take them back to Priest Adonius in the Village of Gludin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3165" name="Harpy's Down" type="NONE" icon="icon.etc_feather_white_i00">
 	<!-- The down feathers obtained after slaying a harpy. Gather 20 of these and take them back to Priest Adonius in the Village of Gludin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3166" name="Talin's Spear Blade" type="NONE" icon="icon.etc_sword_body_i00">
 	<!-- The blade portion of Talin's Spear. Take this, along with the remaining portions of the spear, back to Isael Silvershadow in Hunters Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3167" name="Talin's Spear Shaft" type="NONE" icon="icon.weapon_club_i00">
 	<!-- The shaft portion of Talin's Spear. Take this, along with the remaining portions of the spear, back to Isael Silvershadow in Hunters Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3168" name="Talin's Ruby" type="NONE" icon="icon.etc_gem_red_i00">
 	<!-- Decorative jewel that adorned Talin's Spear. Take this, along with the remaining portions of the spear, back to Isael Silvershadow in Hunters Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3169" name="Talin's Aquamarine" type="NONE" icon="icon.etc_gem_blue_i00">
 	<!-- Decorative jewel that adorned Talin's Spear. Take this, along with the remaining portions of the spear, back to Isael Silvershadow in Hunters Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3170" name="Talin's Amethyst" type="NONE" icon="icon.etc_gem_clear_i00">
 	<!-- Decorative jewel that adorned Talin's Spear. Take this, along with the remaining portions of the spear, back to Isael Silvershadow in Hunters Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3171" name="Talin's Peridot" type="NONE" icon="icon.etc_gem_green_i00">
 	<!-- Decorative jewel that adorned Talin's Spear. Take this, along with the remaining portions of the spear, back to Isael Silvershadow in Hunters Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3172" name="Mark of Fate" type="NONE" icon="icon.etc_jewel_blue_i00">
 	<!-- Mark given to those who have passed the Testimony of Fate. Item for occupational change. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3173" name="Kaira's Letter" type="NONE" icon="icon.etc_scroll_gray_i00">
 	<!-- Letter sent by Magister Kaira to Brother Metheus from the Temple of Einhasad of Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3174" name="Metheus' Funeral Jar" type="NONE" icon="icon.etc_oil_pot_white_i00">
 	<!-- Jar for storing the remains of the dead. Take this to the Execution Grounds and search for the remains of Metheus' sister. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3175" name="Kassandra's Remains" type="NONE" icon="icon.etc_ashes_white_i00">
-	<!-- The remains of Kassandr Metheus' sister. Take this back to Brother Metheus of the Temple of Einhasad of Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+	<!-- The remains of Kassandra, Metheus' sister. Take this back to Brother Metheus of the Temple of Einhasad of Giran. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3176" name="Herbalism Textbook" type="NONE" icon="icon.etc_spellbook_gray_i00">
 	<!-- Textbook of various herbs and their usages. It also contains information about the deadly Poison belladonna. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3177" name="Ixia's List" type="NONE" icon="icon.etc_piece_of_paper_black_i00">
 	<!-- Obtain 10 units of each of the following items: Medusa's Blood from slaying Medusa in the Gorgon Flower Garden, Marsh Spider Fluids from slaying a Marsh Spider in Cruma Marshlands, Corpse Tracker Dung from slaying a Corpse Tracker on the Execution Grounds, Tyrant's Blood from slaying Tyrant in the Wastelands, and Nightshade Root from slaying a Marsh Stakato in Cruma Marshlands. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3178" name="Medusa's Blood" type="NONE" icon="icon.etc_reagent_blue_i00">
 	<!-- The bottled blood of a medusa. Collect 10 of these and take them back to Master Ixia in Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3179" name="Marsh Spider Fluids" type="NONE" icon="icon.etc_lesser_potion_scarlet_i00">
 	<!-- The bottled fluids of a marsh spider. Collect 10 of these and take them back to Master Ixia in Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3180" name="Corpse Tracker Dung" type="NONE" icon="icon.etc_powder_black_i00">
 	<!-- The dung of Corpse Tracker bats. Collect 10 of these and take them back to Master Ixia in Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3181" name="Tyrant's Blood" type="NONE" icon="icon.etc_potion_scarlet_i00">
 	<!-- The bottled blood of Tyrant. Collect 10 of these and take them back to Master Ixia in Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3182" name="Nightshade Root" type="NONE" icon="icon.etc_ginseng_gray_i00">
 	<!-- The roots of the rare nightshade herb. Collect 10 of these and take them back to Master Ixia in Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3183" name="Belladonna" type="NONE" icon="icon.etc_lesser_potion_purple_i00">
 	<!-- Legendary Poison that can kill a bull with a single drop. Take this to Brother Metheus of the Temple of Einhasad in Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3184" name="Alders' Skull" type="NONE" icon="icon.etc_skull_white_i00">
 	<!-- The skull of Alders, who drafted the copy of Kaysha's Revelations. Take this to Magister Kaira in Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3185" name="Alders' Skull" type="NONE" icon="icon.etc_skull_white_i00">
-	<!-- Skull of Priest Alders. Take it to Magister Ro a distant descendant of the priest. Magister Roa can be found in the Mystic Guild of Giran.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+	<!-- Skull of Priest Alders. Take it to Magister Roa, a distant descendant of the priest. Magister Roa can be found in the Mystic Guild of Giran.  -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3186" name="Alders' Receipt" type="NONE" icon="icon.etc_ticket_red_i00">
 	<!-- The receipt for the item that Alder entrusted to the warehouse. Take this and go to the warehouse in the Village of Gludin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3187" name="Revelations Manuscript" type="NONE" icon="icon.etc_spellbook_red_i00">
 	<!-- Copy of Kaysha's Revelations. Take this to Magister Kaira in Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3188" name="Kaira's Instructions" type="NONE" icon="icon.etc_scroll_gray_i00">
 	<!-- Note where the instructions of Magister Kaira of Giran are written. The instructions are to come back after reaching level 38. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3189" name="Kaira's Recommendation" type="NONE" icon="icon.etc_letter_blue_i00">
 	<!-- Recommendation letter written by Magister Kaira of Giran. Take it to Hierarch Thifiell of the Dark Elf Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3190" name="Palus Charm" type="NONE" icon="icon.accessary_onyxbeastseye_earing_i00">
 	<!-- Charm given by Tetrarch Thifiell to keep in possession until the Initiation Ceremony of the Shillien Circle is complete. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3191" name="Thifiell's Letter" type="NONE" icon="icon.etc_piece_of_paper_black_i00">
 	<!-- Letter from Tetrarch Thifiell to Arkenia. Arkenia is at the Dark Elven Initiation Altar. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3192" name="Arkenia's Note" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- Arkenia's Note stating that she needs Red Fairy Dust and Blight Treant Sap. You can obtain them by killing a Bloody Pixy and Blight Treant at the east of Dark Elf Village near Shilen Temple. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3193" name="Pixy Garnet" type="NONE" icon="icon.etc_gem_red_i00">
 	<!-- Garnet given by the Bloody Pixy as a token of promise. Bring one skull each of four different races. For this, you need to slay Grandis in Death Pass, Karul Bugbear in Hunters Village, Breka Orc Prefect in Breka's Stronghold and Leto Lizardman Overlord on the Plains of the Lizardmen.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3194" name="Grandis' Skull" type="NONE" icon="icon.etc_ashes_red_i00">
 	<!-- The skull of Grandis. Bring this to the Bloody Pixy who can be found at the east of Dark Elf Village near Shilen Temple. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3195" name="Karul Bugbear Skull" type="NONE" icon="icon.etc_skull_black_i00">
 	<!-- The skull of Karul Bugbear. Bring this to the Bloody Pixy who can be found at the east of Dark Elf Village near Shilen Temple. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3196" name="Breka Overlord Skull" type="NONE" icon="icon.etc_skull_white_i00">
 	<!-- The skull of Breka Overload. Bring this to the Bloody Pixy who can be found at the east of Dark Elf Village near Shilen Temple. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3197" name="Leto Overlord Skull" type="NONE" icon="icon.etc_skull_red_i00">
 	<!-- The skull of Leto Lizardman Overlord. Bring this to the Bloody Pixy who can be found at the east of Dark Elf Village near Shilen Temple. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3198" name="Red Fairy Dust" type="NONE" icon="icon.etc_powder_red_i00">
 	<!-- Red fairy dust given by the Bloody Pixy. Take this to Arkenia at the Altar of Rites. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3199" name="Blight Treant Seed" type="NONE" icon="icon.etc_fruit_yellow_i00">
 	<!-- Seed given by a Blight Treant as a mark of promise. Slay the Black Willow Lurker and bring back its leaf. Black Willow Lurker can be found in a Swampland at the south of Dark Elf Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 

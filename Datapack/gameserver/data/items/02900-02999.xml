@@ -2,97 +2,97 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="2900" name="Hermodt's Thigh Bone" type="NONE" icon="icon.etc_piece_bone_red_i00">
 	<!-- The thigh bones of Hermodt, an ancient Orc hero. Take this, along with the additional remains, to Priest Manakia of the Orc Guild in Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2901" name="Hermodt's Remains" type="NONE" icon="icon.etc_ashes_red_i00">
 	<!-- The remains of Hermodt, an ancient Orc hero. Take this, along with the other three heroes' remains, to Seer Somak in Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2902" name="Racoy's Totem" type="NONE" icon="icon.etc_totem_red_i00">
 	<!-- Totem given by Seer Racoy of the Orc Guild in Gludio. Take this and go to the Temple of Einhasad in the Town of Gludio to ask about Kiruna. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2903" name="Vivyan's Letter" type="NONE" icon="icon.etc_letter_white_i00">
 	<!-- Letter from Priestess Vivyan. Take this to Trader Sarien of the Southern Wastelands. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2904" name="Insect Diagram Book" type="NONE" icon="icon.etc_spellbook_gray_i00">
 	<!-- Insect encyclopedia that Trader Sarien Has given as aid. Take this and hunt noble ants to recover Kiruna's remains. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2905" name="Kiruna's Skull" type="NONE" icon="icon.etc_skull_white_i00">
-	<!-- The skull of Kirun an ancient Orc hero. Take this, along with the additional remains, to Seer Racoy of the Orc Guild in Gludio. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+	<!-- The skull of Kiruna, an ancient Orc hero. Take this, along with the additional remains, to Seer Racoy of the Orc Guild in Gludio. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2906" name="Kiruna's Rib Bone" type="NONE" icon="icon.etc_rib_white_i00">
-	<!-- The rib bones of Kirun an ancient Orc hero. Take this, along with the additional remains, to Seer Racoy of the Orc Guild in Gludio. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+	<!-- The rib bones of Kiruna, an ancient Orc hero. Take this, along with the additional remains, to Seer Racoy of the Orc Guild in Gludio. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2907" name="Kiruna's Spine" type="NONE" icon="icon.etc_ginseng_yellow_i00">
-	<!-- The spine of Kirun an ancient Orc hero. Take this, along with the additional remains, to Seer Racoy of the Orc Guild in Gludio. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+	<!-- The spine of Kiruna, an ancient Orc hero. Take this, along with the additional remains, to Seer Racoy of the Orc Guild in Gludio. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2908" name="Kiruna's Arm Bone" type="NONE" icon="icon.etc_piece_bone_white_i00">
-	<!-- The arm bones of Kirun an ancient Orc hero. Take this, along with the additional remains, to Seer Racoy of the Orc Guild in Gludio. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+	<!-- The arm bones of Kiruna, an ancient Orc hero. Take this, along with the additional remains, to Seer Racoy of the Orc Guild in Gludio. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2909" name="Kiruna's Thigh Bone" type="NONE" icon="icon.etc_piece_bone_white_i00">
-	<!-- The thigh bones of Kirun an ancient Orc hero. Take this, along with the additional remains, to Seer Racoy of the Orc Guild in Gludio. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+	<!-- The thigh bones of Kiruna, an ancient Orc hero. Take this, along with the additional remains, to Seer Racoy of the Orc Guild in Gludio. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2910" name="Kiruna's Remains" type="NONE" icon="icon.etc_ashes_white_i00">
-	<!-- The remains of Kirun an ancient Orc hero. Take this, along with the other 3 heroes' remains, to Seer Somak in Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+	<!-- The remains of Kiruna, an ancient Orc hero. Take this, along with the other 3 heroes' remains, to Seer Somak in Dion. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2911" name="Braki's Remains" type="NONE" icon="icon.etc_oil_pot_black_i00">
 	<!-- The remains of the hero, Braki, encased in an urn. Take this to the Ancestor Martankus in the Cave of Trials. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2912" name="Tonar's Remains" type="NONE" icon="icon.etc_oil_pot_black_i00">
 	<!-- The remains of the hero, Tonar, encased in an urn. Take this to the Ancestor Martankus in the Cave of Trials. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2913" name="Hermodt's Remains" type="NONE" icon="icon.etc_oil_pot_white_i00">
 	<!-- The remains of the hero, Hermodt, encased in an urn. Take this to the Ancestor Martankus in the Cave of Trials. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2914" name="Kiruna's Remains" type="NONE" icon="icon.etc_oil_pot_white_i00">
-	<!-- The remains of the hero, Kirun encased in an urn. Take this to the Ancestor Martankus in the Cave of Trials. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+	<!-- The remains of the hero, Kiruna, encased in an urn. Take this to the Ancestor Martankus in the Cave of Trials. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2916" name="Broken Teleport Device" type="NONE" icon="icon.etc_plate_silver_i00">
 	<!-- The teleport device given by Master Toma. Take this back to Master Toma. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 

@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<armor id="70700" name="Gatekeeper Hat (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_gatekeeper_of_hat_i00">
 	<!-- Gatekeeper Hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -12,7 +12,7 @@
 
 	<armor id="70701" name="Gatekeeper Hat (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_gatekeeper_of_hat_i00">
 	<!-- Gatekeeper Hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -22,7 +22,7 @@
 
 	<armor id="70702" name="Wedding Veil (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon.br_wedding_vail_i00">
 	<!-- Pure white wedding veil. STR+1, INT+1. May be used only by female characters. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -32,7 +32,7 @@
 
 	<armor id="70703" name="Wedding Veil (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon.br_wedding_vail_i00">
 	<!-- Pure white wedding veil. DEX+1, WIT+1. May be used only by female characters. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -42,7 +42,7 @@
 
 	<armor id="70704" name="Wedding Veil (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon.br_wedding_vail_i00">
 	<!-- Pure white wedding veil. CON+1, MEN+1. May be used only by female characters. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -52,7 +52,7 @@
 
 	<armor id="70705" name="Maid Hair Accessory (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys3.icon1.g_co_cutie_maid_hair">
 	<!-- Maid Hair Accessory. STR+1, INT+1. May be used only by female characters. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -62,7 +62,7 @@
 
 	<armor id="70706" name="Maid Hair Accessory (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys3.icon1.g_co_cutie_maid_hair">
 	<!-- Maid Hair Accessory. DEX+1, WIT+1. May be used only by female characters. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -72,7 +72,7 @@
 
 	<armor id="70707" name="Maid Hair Accessory (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys3.icon1.g_co_cutie_maid_hair">
 	<!-- Maid Hair Accessory. CON+1, MEN+1. May be used only by female characters. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -82,7 +82,7 @@
 
 	<armor id="70708" name="Refined Romantic Chapeau: Red (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="icon.bm_romantic_chaperon_red">
 	<!-- Refined Romantic Chapeau: Red. STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -92,7 +92,7 @@
 
 	<armor id="70709" name="Refined Romantic Chapeau: Red (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="icon.bm_romantic_chaperon_red">
 	<!-- Refined Romantic Chapeau: Red. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -102,7 +102,7 @@
 
 	<armor id="70710" name="Refined Romantic Chapeau: Red (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="icon.bm_romantic_chaperon_red">
 	<!-- Refined Romantic Chapeau: Red. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -112,7 +112,7 @@
 
 	<armor id="70711" name="Refined Angel Ring (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_angel_ring_i00">
 	<!-- Refined Angel Ring. STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -122,7 +122,7 @@
 
 	<armor id="70712" name="Refined Angel Ring (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_angel_ring_i00">
 	<!-- Refined Angel Ring. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -132,7 +132,7 @@
 
 	<armor id="70713" name="Refined Angel Ring (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_angel_ring_i00">
 	<!-- Refined Angel Ring. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -142,7 +142,7 @@
 
 	<armor id="70714" name="Refined Wizard Hat (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_magician_cap2_i00">
 	<!-- Refined Wizard Hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -152,7 +152,7 @@
 
 	<armor id="70715" name="Refined Wizard Hat (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_magician_cap2_i00">
 	<!-- Refined Wizard Hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -162,7 +162,7 @@
 
 	<armor id="70716" name="Refined Wizard Hat (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_magician_cap2_i00">
 	<!-- Refined Wizard Hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -172,7 +172,7 @@
 
 	<armor id="70717" name="Laborer Hat (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_people_cap_i00">
 	<!-- Laborer Hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -182,7 +182,7 @@
 
 	<armor id="70718" name="Laborer Hat (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_people_cap_i00">
 	<!-- Laborer Hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -192,7 +192,7 @@
 
 	<armor id="70719" name="Laborer Hat (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_people_cap_i00">
 	<!-- Laborer Hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -202,7 +202,7 @@
 
 	<armor id="70720" name="Top Hat (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_magicial_cap_i00">
 	<!-- Magical-looking hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -212,7 +212,7 @@
 
 	<armor id="70721" name="Top Hat (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_magicial_cap_i00">
 	<!-- Magical-looking hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -222,7 +222,7 @@
 
 	<armor id="70722" name="Top Hat (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_magicial_cap_i00">
 	<!-- Magical-looking hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -232,7 +232,7 @@
 
 	<armor id="70723" name="Vigilante Hat (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="icon.zorocap">
 	<!-- Vigilante Hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -242,7 +242,7 @@
 
 	<armor id="70724" name="Vigilante Hat (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="icon.zorocap">
 	<!-- Vigilante Hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -252,7 +252,7 @@
 
 	<armor id="70725" name="Vigilante Hat (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="icon.zorocap">
 	<!-- Vigilante Hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -262,7 +262,7 @@
 
 	<armor id="70726" name="White Uniform Hat (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon2.pi_navy_cap">
 	<!-- White uniform hat that makes you feel the energy of a man of the sea. STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -272,7 +272,7 @@
 
 	<armor id="70727" name="White Uniform Hat (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon2.pi_navy_cap">
 	<!-- White uniform hat that makes you feel the energy of a man of the sea. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -282,7 +282,7 @@
 
 	<armor id="70728" name="White Uniform Hat (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon2.pi_navy_cap">
 	<!-- White uniform hat that makes you feel the energy of a man of the sea. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -292,7 +292,7 @@
 
 	<armor id="70729" name="Warrior's Helmet (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon.br_close_helmet_i00">
 	<!-- Helmet of a brave ancient warrior. STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -302,7 +302,7 @@
 
 	<armor id="70730" name="Warrior's Helmet (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon.br_close_helmet_i00">
 	<!-- Helmet of a brave ancient warrior. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -312,7 +312,7 @@
 
 	<armor id="70731" name="Warrior's Helmet (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon.br_close_helmet_i00">
 	<!-- Helmet of a brave ancient warrior. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -322,7 +322,7 @@
 
 	<armor id="70732" name="First Mate Hat (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="icon.Accessary_middle_ages_i01">
 	<!-- First Mate Hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -332,7 +332,7 @@
 
 	<armor id="70733" name="First Mate Hat (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="icon.Accessary_middle_ages_i01">
 	<!-- First Mate Hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -342,7 +342,7 @@
 
 	<armor id="70734" name="First Mate Hat (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="icon.Accessary_middle_ages_i01">
 	<!-- First Mate Hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -352,7 +352,7 @@
 
 	<armor id="70735" name="Refined Romantic Chapeau: Blue (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="icon.bm_romantic_chaperon_blue">
 	<!-- Refined Romantic Chapeau: Blue. STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -362,7 +362,7 @@
 
 	<armor id="70736" name="Refined Romantic Chapeau: Blue (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="icon.bm_romantic_chaperon_blue">
 	<!-- Refined Romantic Chapeau: Blue. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -372,7 +372,7 @@
 
 	<armor id="70737" name="Refined Romantic Chapeau: Blue (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="icon.bm_romantic_chaperon_blue">
 	<!-- Refined Romantic Chapeau: Blue. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -382,7 +382,7 @@
 
 	<armor id="70738" name="Gold-rimmed Glasses (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon.br_gold_eyeglass_i00">
 	<!-- Expensive-looking gold-rimmed glasses. STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -392,7 +392,7 @@
 
 	<armor id="70739" name="Gold-rimmed Glasses (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon.br_gold_eyeglass_i00">
 	<!-- Expensive-looking gold-rimmed glasses. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -402,7 +402,7 @@
 
 	<armor id="70740" name="Gold-rimmed Glasses (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon.br_gold_eyeglass_i00">
 	<!-- Expensive-looking gold-rimmed glasses. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -412,7 +412,7 @@
 
 	<armor id="70741" name="Horn-rimmed Glasses (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_Eye_Glasses_i00">
 	<!-- Magic Horn-rimmed Glasses. STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -422,7 +422,7 @@
 
 	<armor id="70742" name="Horn-rimmed Glasses (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_Eye_Glasses_i00">
 	<!-- Magic Horn-rimmed Glasses. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -432,7 +432,7 @@
 
 	<armor id="70743" name="Horn-rimmed Glasses (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_Eye_Glasses_i00">
 	<!-- Magic Horn-rimmed Glasses. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -442,7 +442,7 @@
 
 	<armor id="70744" name="Stylish Straw Hat (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys3.icon.g_straw_hat">
 	<!-- Straw Hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -452,7 +452,7 @@
 
 	<armor id="70745" name="Stylish Straw Hat (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys3.icon.g_straw_hat">
 	<!-- Straw Hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -462,7 +462,7 @@
 
 	<armor id="70746" name="Stylish Straw Hat (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys3.icon.g_straw_hat">
 	<!-- Straw Hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -472,7 +472,7 @@
 
 	<armor id="70747" name="Chic Silver Chapeau (Str+1 Int+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon2.pi_silverchaperon">
 	<!-- Chic Silver Chapeau. STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -482,7 +482,7 @@
 
 	<armor id="70748" name="Chic Silver Chapeau (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon2.pi_silverchaperon">
 	<!-- Chic Silver Chapeau. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -492,7 +492,7 @@
 
 	<armor id="70749" name="Chic Silver Chapeau (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon2.pi_silverchaperon">
 	<!-- Chic Silver Chapeau. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -502,7 +502,7 @@
 
 	<armor id="70750" name="Afro Hair (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_Afro_hair_i00">
 	<!-- Afro style hair. STR+1, INT+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -512,7 +512,7 @@
 
 	<armor id="70751" name="Afro Hair (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_Afro_hair_i00">
 	<!-- Afro style hair. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -522,7 +522,7 @@
 
 	<armor id="70752" name="Afro Hair (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_Afro_hair_i00">
 	<!-- Afro style hair. CON+1, MEN+1. Occupies 2 Hair Accessory slots. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -532,37 +532,37 @@
 
 	<item id="70753" name="Eva's Scroll: Enchant Hair Accessory" type="ENCHANT_ARMOR" icon="icon.scroll_of_unidentify_am_d">
 	<!-- Hair Accessory M./ P. Def. +2. Starting from +5, additional special effects are activated and HP/MP/CP are increased. Can be safely enchanted up to +3.   -->
-		<restriction stackable="true" dropable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70754" name="Stabilized Eva's Scroll: Enchant Hair Accessory" type="SOLID_ENCHANT_ARMOR" icon="icon.scroll_of_unidentify_am_d">
-	<!-- Hair Accessory M./ P. Def. +2. Starting from +5, additional special effects are activated and HP/MP/CP are increased. Can be safely enchanted up to +3.  From +6, enchantment level stays the same in case of failed enchantment.  -->
-		<restriction stackable="true" dropable="false" depositable="false"/>
+	<!-- Hair Accessory M./P. Def. +2. Starting from +5, additional special effects are activated and HP/MP/CP are increased. From +6, enchantment level stays the same in case of a failed enchantment. Can only be used on a +6 accessory or higher. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70755" name="Eva's Life Stone - Hair Accessory" type="NONE" icon="Branchsys2.icon.g_ancient_jewel_piece_mid">
 	<!-- Bring it to Augmenting Blacksmiths Jeris and Jeros in Giran/Aden, to use it for augmentation.\\n\\nAugmentation requires C-grade Gemstones.  -->
-		<restriction stackable="true" dropable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70756" name="Shiny Eva's Life Stone - Hair Accessory" type="NONE" icon="Branchsys2.icon.g_ancient_jewel_piece_high">
 	<!-- Bring it to Augmenting Blacksmiths Jeris and Jeros in Giran/Aden, to use it for augmentation.\\n\\nAugmentation requires B-grade Gemstones.  -->
-		<restriction stackable="true" dropable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70757" name="Eva's Enhancement Pack - Hair Accessory" type="NONE" icon="icon.etc_pi_gift_box_i03">
 	<!-- Double-click to acquire one of the following items: 2 Eva's Scrolls, 1 Stabilized Eva's Scroll, 1 Eva's Life Stone, 1 Shiny Eva's Life Stone.  -->
-		<restriction stackable="true" dropable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70758" name="Eva's Hair Accessory Pack" type="NONE" icon="BranchSys.icon.br_silver_box_i00">
 	<!-- Double-click to acquire one of the Hair Accessories.  -->
-		<restriction stackable="true" dropable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55674" level="1"/>  <!-- Eva's Hair Accessory Pack -->
@@ -571,82 +571,82 @@
 
 	<item id="70759" name="Eva's Life Stone - Hair Accessory" type="NONE" icon="Branchsys2.icon.g_ancient_jewel_piece_mid">
 	<!-- Bring it to Augmenting Blacksmiths Jeris and Jeros in Giran/Aden, to use it for augmentation.\\n\\nAugmentation requires C-grade Gemstones.  -->
-		<restriction stackable="true" dropable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70760" name="Shiny Eva's Life Stone - Hair Accessory" type="NONE" icon="Branchsys2.icon.g_ancient_jewel_piece_high">
 	<!-- Bring it to Augmenting Blacksmiths Jeris and Jeros in Giran/Aden, to use it for augmentation.\\n\\nAugmentation requires B-grade Gemstones.  -->
-		<restriction stackable="true" dropable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70761" name="Eva's Enhancement Pack - Hair Accessory" type="NONE" icon="icon.etc_pi_gift_box_i03">
 	<!-- Double-click to acquire one of the following items: 2 Eva's Scrolls, 1 Stabilized Eva's Scroll, 1 Eva's Life Stone, 1 Shiny Eva's Life Stone.  -->
-		<restriction stackable="true" dropable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70762" name="Package: Eva's Hair Accessory" type="NONE" icon="BranchSys.icon.br_bright_gold_box_i00">
 	<!-- Double-click to acquire 8 Eva's Hair Accessories and 30 Eva's Scrolls: Enchant Hair Accessory.  -->
-		<restriction stackable="true" dropable="false" depositable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70763" name="Hero Experience Rune Pack (30-day)" type="NONE" icon="icon.etc_pi_gift_box_i04">
 	<!-- Double click to receive 1 Hero Experience Rune(30-day).  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70764" name="Scroll: Enchant Weapon (A-grade)" type="ENCHANT_WEAPON" icon="icon.etc_scroll_of_enchant_weapon_i04">
 	<!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus double. Enchanting is safe up to +3. \\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="70765" name="Shining Pendant Polish" type="SOLID_ENCHANT_ARMOR" icon="icon.bm_pendant_varnish_premium">
-	<!-- Shiny Polish, enhancing pendants characteristics. Can be used on a pendant enchanted up to +8. If an enchantment is failed, the pendent doesn't disappear and has the previous level of enchantment.\\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+	<item id="70765" name="Shining Pendant Varnish" type="SOLID_ENCHANT_ARMOR" icon="icon.bm_pendant_varnish_premium">
+	<!-- Shining varnish to enchant pendants. Can be used on Dragon Pendants up to +8, and keeps the pendant upgrade level and the existing enchant level intact even if the enchant fails. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70766" name="Improved Scroll: Enchant Weapon (A-grade)" type="IMPROVED_ENCHANT_WEAPON" icon="icon.etc_blessed_scrl_of_ench_wp_a_i04">
 	<!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus double. Enchanting is safe up to +3.\\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="100" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70767" name="Golden Fruit Buff" type="SCROLL" icon="icon.bm_dragon_fruit">
 	<!-- For 20 minutes, P./M. Atk. +12%, P./M. Def. +15%, Max. HP/CP/MP +25%, HP/MP Recovery Bonus +30%. P./M. Critical Rate +10, P./M. Critical Damage +5%.Vampiric Rage Effect +5%. XP and SP gained through hunting +10%. Cooldown is 1 minute. Buff remains after death.  -->
-		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="180" action="SKILL_REDUCE"/>
 	</item>
 
 	<armor id="70768" name="Vital Stone Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_vital">
 	<!-- XP/SP +8%, and allows to use Lv. 2 Vital Wind skill while hunting. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="10080" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70769" name="Ruby Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_ruby_i00">
 	<!-- Soulshot, Blessed Soulshot, and Beast Soulshot damage +8% when equipped If identical Gems are equipped, only the effect of the highest level Gem is applied.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="10080" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70770" name="Sapphire Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_sapphire_i00">
 	<!-- When equipped, increases Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +8%. Effect does not stack with additional jewels of the same type.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="10080" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70771" name="Fire Dragon Pendant Lv. 5" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pve">
 	<!-- A Pendant that carries sealed energy of a Fire Dragon. Its effect is the same as from the enchanted to +10 Fire Dragon Pendant - Lv. 5. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="10080" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -656,7 +656,7 @@
 
 	<armor id="70772" name="Water Dragon Pendant Lv. 5" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pvp_blue">
 	<!-- A Pendant that carries sealed energy of a Water Dragon. Its effect is the same as from the enchanted to +10 Water Dragon Pendant - Lv. 5. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="10080" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -666,7 +666,7 @@
 
 	<armor id="70773" name="Zaken's Earring Lv. 3" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_zaken_i03">
 	<!-- MP +34, Bleed Resistance and Bleed Atk. Rate +20%, Stun Resistance and Stun Atk. Rate +15%, MEN Resistance and Atk. Rate +15% Healing Effects +10%, HP Recovery Bonus +20%, Vampiric Rage Effect +8%, Skill MP Cost Rate -4%. When two identical earrings are equipped, the effect of only one earring will be applied. \\nCannot be enchanted. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" duration="21600" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -680,7 +680,7 @@
 
 	<armor id="70774" name="Baium's Ring Lv. 3" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_baium_i03">
 	<!-- MP +27, Stun Resistance and Stun Atk. Rate +20%, Bleed Resistance and Bleed Atk. Rate +15%, P. Atk./M. Accuracy. +4, Atk. Spd./Casting Spd. +5%, P./M/ Skill Power +10%, P. Critical Damage +15%, M. Critical Damage +10%. The effect does not stack if two identical rings are equipped. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" duration="21600" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -694,7 +694,7 @@
 
 	<armor id="70775" name="Queen Ant's Ring Lv. 3" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_queen_ant_i03">
 	<!-- MP +21, Poison Atk. and Resistance +20%, P./M. Accuracy +3, P./M. Atk. +7%, P. Critical Damage +10%, M. Critical Damage +5%. The effect does not stack if two identical rings are equipped.\\nCannot be enchanted. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" duration="21600" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -708,7 +708,7 @@
 
 	<armor id="70776" name="Ring of Core Lv. 3" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_core_i03">
 	<!-- When equipped, grants MP ++21, MEN Atk. Resistance/Chance +20%, P./ M. Evasion +3, decreases received damage by -6%. Enables debuff removal skills. The effect does not stack if two identical rings are equipped.\\nCannot be enchanted. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" duration="21600" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -723,7 +723,7 @@
 
 	<armor id="70777" name="Orfen's Earring Lv. 3" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_orfen_i03">
 	<!-- MP +31, MEN Attack Resistance/Chance +15%, Hold Atk. and Resistance +20%, Heal Received +6%, Skill MP Consumption -5%. MP Drain Effect. The effect does not stack if two identical earrings are equipped.\\nCannot be enchanted. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" duration="21600" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -736,135 +736,135 @@
 	</armor>
 
 	<item id="70778" name="Royal Tears" type="NONE" icon="BranchSys2.icon.g_illumination_skyblue">
-	<!-- u,The essence of Frintezza’s feelings. Gives a positive effect and modifies appearance of weapons for Valentine’s Day. -->
-		<restriction freightable="false" sellable="false" depositable="false"/>
+	<!-- The essence of Frintezza’s feelings. Gives a positive effect and modifies appearance of weapons for Valentine’s Day. -->
+		<restriction freightable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70779" name="Frintezza’s Amulet" type="MATERIAL" icon="icon.love_potion_party">
 	<!-- An amulet created by Frintezza to seal a part of his feelings. Carry it with you, and something good will definitely happen. Having the amulet in your inventory enables getting charming magic of confidence from Frintezza once a day. -->
-		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70780" name="Red Candy of the Royal Family" type="RUNE" icon="icon.etc_whiteday_candy_i05">
-	<!-- u,The candy created with secret methods of Frintezza’s dynasty specially for Valentine’s Day. Acquired XP/ SP +25%. Stacks with the Blue Candy. Temporary event item. -->
-		<restriction dropable="false" depositable="false"/>
+	<!-- The candy created with secret methods of Frintezza’s dynasty specially for Valentine’s Day. Acquired XP/ SP +25%. Stacks with the Blue Candy. Temporary event item. -->
+		<restriction dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70781" name="Blue Candy of the Royal Family" type="RUNE" icon="icon.etc_whiteday_candy_i06">
-	<!-- u,The candy created with secret methods of Frintezza’s dynasty specially for Valentine’s Day. Acquired XP/ SP +25%. Stacks with the Red Candy. Temporary event item. -->
-		<restriction dropable="false" depositable="false"/>
+	<!-- The candy created with secret methods of Frintezza’s dynasty specially for Valentine’s Day. Acquired XP/ SP +25%. Stacks with the Red Candy. Temporary event item. -->
+		<restriction dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70782" name="The Royal Confectionary Box" type="NONE" icon="icon.etc_candy_basket_i04_1">
-	<!-- u,You can get one box per account. Double-click to receive Frintezza’s Amulet and additionally two Red or two Blue Candies of the Royal Family. The item will be removed after the event is over. -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+	<!-- You can get one box per account. Double-click to receive Frintezza’s Amulet and additionally two Red or two Blue Candies of the Royal Family. The item will be removed after the event is over. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="70783" name="Pirates Treasure Chest" type="NONE" icon="icon.bm_pirate_treasure_box">
-	<!-- u,Double-click to get one of Pirates Treasures случайное сокровище пиратов. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+	<!-- Double-click to get one of Pirates Treasures случайное сокровище пиратов. -->
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="70784" name="Zaken's Earring Lv. 3 (7-day) Box" type="NONE" icon="icon.bm_freya_gift_box">
 	<!-- Double-click to receive a Zaken's Earring Lv. 3 (7-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70785" name="Newbie Gift - Heavy Armor" type="NONE" icon="BranchSys.icon.br_gold_box_i00">
 	<!-- Double-click to acquire Hero's Shining Heavy Armor Set (30-day)/ Hero's Shining Weapon Set (30-day), Newbie Gift - Lv. 10, Transformation Support Cube (7-day).\\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70786" name="Newbie Gift - Light Armor" type="NONE" icon="BranchSys.icon.br_gold_box_i00">
 	<!-- Double-click to acquire Hero's Shining Light Armor Set (30-day)/ Hero's Shining Weapon Set (30-day), Newbie Gift - Lv. 10, Transformation Support Cube (7-day).\\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70787" name="Newbie Gift - Magic Armor" type="NONE" icon="BranchSys.icon.br_gold_box_i00">
 	<!-- Double-click to acquire Hero's Shining Magic Armor Set (30-day)/ Hero's Shining Weapon Set (30-day), Newbie Gift - Lv. 10, Transformation Support Cube (7-day).\\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70788" name="Newbie Gift - Lv. 10" type="NONE" icon="icon.etc_pi_box_belief_pack">
 	<!-- Double-click to acquire the following items: Newbie Amulet (5-day), Newbie Gift - Lv. 20, Soulshot Support Cube (7-day), Spiritshot Support Cube (7-day). Can be used by characters of lvl 10 and above.\\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70789" name="Newbie Gift - Lv. 20" type="NONE" icon="icon.npoint_valakas_30day_box">
 	<!-- Double-click to acquire the following items: Cadmus Transformation Bracelet - Prophet (30-day), Newbie Gift - Lv. 30, Buff Support Cube (7-day). Can be used by characters of Lv. 20 and above.\\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70790" name="Newbie Gift Lv. 30" type="NONE" icon="icon.npoint_earring_of_lind_30day_box">
-	<!-- u,Double-click to acquire the following items: Rare Core/Orfen/Queen Ant’s Accessory Lv. 1 (15-day), Newbie Gift - Lv. 40, Potion Support Cube - Lv. 1 (7-day). Only for characters of level 30 and above. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+	<!-- Double-click to acquire the following items: Rare Core/Orfen/Queen Ant’s Accessory Lv. 1 (15-day), Newbie Gift - Lv. 40, Potion Support Cube - Lv. 1 (7-day). Only for characters of level 30 and above. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70791" name="Newbie Gift - Lv. 40" type="NONE" icon="icon.npoint_antaras_30day_box">
 	<!-- Double-click to acquire the following items: Growth Amulet (3-day), Newbie Gift - Lv. 50, Party Support Cube - Lv. 1 (7-day). Can be used by characters of lvl 40 and above.\\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70792" name="Newbie Gift - Lv. 50" type="NONE" icon="icon.npoint_tauti_30day_box">
 	<!-- Double-click to acquire the following items: 3 Golden Mermaid's Tears (7-day), 10 Rice Cake of Flaming Fighting Spirit (Event), Newbie Gift - Lv. 54, Blessed Support Cube (7-day). Can be used by characters of lvl 50 and above.\\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70793" name="Newbie Gift - Lv. 54" type="NONE" icon="icon.npoint_earthworm_30day_box">
 	<!-- Double-click to acquire the following items: Refined Rare Queen Ant's Ring/ Orfen/ Core (7-day), Newbie Gift - Lv. 56, Party Support Cube - Lv. 2 (7-day). Can be used by characters of lvl 54 and above.\\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70794" name="Newbie Gift - Lv. 56" type="NONE" icon="icon.etc_pi_box_love_pack">
 	<!-- Double-click to acquire the following items: Growth Amulet (3-day), Newbie Gift - Lv. 56, Fishing Support Cube (7-day). Can be used by characters of lvl 56 and above.\\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70795" name="Newbie Gift - Lv. 58" type="NONE" icon="icon.etc_pi_box_wish_pack">
 	<!-- Double-click to acquire the following items: Cadmus Transformation Bracelet - Prophet (30-day), Newbie Gift - Lv. 60, Potion Support Cube - Lv. 2 (7-day). Can be used by characters of lvl 58 and above.\\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70796" name="Newbie Gift - Lv. 60" type="NONE" icon="icon.etc_pi_box_joy_pack">
 	<!-- Double-click to acquire the following items: Agathion - Cheerleader Mae (30-day), Hero's Bracelet (30-day), Newbie Talisman (30-day), Progression Support Cube (7-day). Can be used by characters of lvl 60 and above.\\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<armor id="70797" name="Newbie Talisman" type="NONE" body-part="TALISMAN" icon="icon.npoint_talisman_stat">
 	<!-- P. Def. +18, M. Def. +9, P./ M. Evasion +1, Max HP/MP/CP +50, Atk./ Casting Speed +6, Speed +4.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<item id="70798" name="Transformation Scroll: Pirate" type="POTION" icon="icon.etc_charm_of_courage_i03">
 	<!-- Makes you armor look like Pirate one. P./ M. Atk. +2%, P./ M. Def. +2%, Atk. Spd. +2%, Max. HP/MP +3%, Speed +3, P./ M. Accuracy +1, M. Critical Rate +10. Duration: 60 minutes. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70799" name="Transformation Scroll: Dark Assassin" type="POTION" icon="icon.etc_charm_of_courage_i05">
 	<!-- Transforms you into Dark Assassin for 30 minutes. P./ M. Atk. +2%, P./ M. Def. +2%, Atk. Spd. +3%, Max. HP/MP +5%, Speed +4, P./ M. Accuracy +1, M. Critical Rate +10. The effect persists through death. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 

@@ -158,7 +158,7 @@
 
 	<item id="5232" name="White Cloth" type="NONE" icon="icon.etc_piece_of_cloth_white_i00">
 	<!-- Large piece of white cloth given by Magister Hanellin. Kill Guardian Angels and Seal Angels and soak the cloth with their blood. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
@@ -168,7 +168,7 @@
 		<attributes weight="2080" price="14098000" commission-type="DUALSWORD"/>
 		<crystal type="A" count="1128"/>
 		<damage radius="44" angle="240"/>
-		<consume  soulshots="3" spiritshots="3"/>
+		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="pAtk" value="259.0"/>
 			<stat type="mAtk" value="107.0"/>

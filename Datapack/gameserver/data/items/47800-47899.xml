@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<armor id="47826" name="Hanbok" type="HEAVY" body-part="ALL_DRESS" icon="icon.ev_kr_traditional_dress">
 	<!-- Items to make a Hanbok Outfit. -->
-		<restriction destroyable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>

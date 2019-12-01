@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="45584" name="Mark of Battle" type="NONE" icon="icon.bel_mark_clear">
 	<!-- A reward for the success in the Olympiad. Can be traded for a special gift with Olympiad Manager in any village.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 

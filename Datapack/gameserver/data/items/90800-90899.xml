@@ -2,115 +2,115 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="90800" name="Fire Dragon Pendant Chest +5" type="NONE" icon="icon.bm_freya_gift_box">
 	<!-- Double-click to receive one Fire Dragon Pendant +5 (7-day).  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90801" name="Talisman of Fate Pack +5" type="NONE" icon="icon.bm_freya_gift_box">
 	<!-- Double-click to receive one Talisman of Fate - Lv. 5 (7-day).  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90802" name="Fire Dragon Pendant Chest +6" type="NONE" icon="icon.bm_freya_gift_box">
 	<!-- Double-click to receive one Fire Dragon Pendant +6 (7-day).  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90803" name="Talisman of Fate Pack +6" type="NONE" icon="icon.bm_freya_gift_box">
 	<!-- Double-click to receive one Talisman of Fate - Lv. 6 (7-day).  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90804" name="Fire Dragon Pendant Chest +7" type="NONE" icon="icon.bm_freya_gift_box">
 	<!-- Double-click to receive one Fire Dragon Pendant +7 (7-day).  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90805" name="Talisman of Fate Pack +7" type="NONE" icon="icon.bm_freya_gift_box">
 	<!-- Double-click to receive one Talisman of Fate - Lv. 7 (7-day).  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90806" name="Lv. 4 Vital Stone Chest" type="NONE" icon="icon.bm_freya_gift_box">
 	<!-- Double-click to receive one Vital Stone - Lv. 4 (15-day).  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="21600" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90807" name="Lv. 4 Diamond Chest" type="NONE" icon="icon.bm_freya_gift_box">
 	<!-- Double-click to receive one Diamond - Lv. 4 (15-day).  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="21600" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90808" name="Lv. 4 Pearl Box" type="NONE" icon="icon.bm_freya_gift_box">
 	<!-- Double-click to receive one Pearl - Lv. 4 (15-day).  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="21600" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90809" name="Lv. 4 Jade Chest" type="NONE" icon="icon.bm_freya_gift_box">
 	<!-- Double-click to receive one Jade - Lv. 4 (15-day).  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="21600" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90810" name="Fire Dragon Belt Chest" type="NONE" icon="icon.bm_freya_gift_box">
 	<!-- Double-click to receive one Fire Dragon Belt (7-day).  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90811" name="Lv. 4 Garnet Box" type="NONE" icon="icon.bm_freya_gift_box">
 	<!-- Double-click to receive one Garnet - Lv. 4 (15-day).  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="21600" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90812" name="Fire Dragon Pendant Chest +8" type="NONE" icon="icon.bm_freya_gift_box">
 	<!-- Double-click to receive one Fire Dragon Pendant +8 (7-day).  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90813" name="Talisman of Fate Pack Lv. 8" type="NONE" icon="icon.bm_freya_gift_box">
 	<!-- Double-click to receive one Talisman of Fate - Lv. 8 (7-day).  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90814" name="Lv. 4 Topaz Chest" type="NONE" icon="icon.bm_freya_gift_box">
 	<!-- Double-click to receive one Topaz - Lv. 4 (15-day).  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="21600" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90815" name="Pirate's Treasure Chest Key" type="NONE" icon="icon.etc_key_i00">
 	<!-- A Key that can open Pirate's Treasure Chest. Covered in a thick layer of rust, might break at any moment. -->
-		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes quest-item="true"/>
 	</item>
 
 	<item id="90816" name="Cube of Forgotten Island" type="COUPON" icon="icon.etc_violet_crystal_cube_pc_i00">
 	<!-- A 15-day item. Double-click to get Grace Rice Cake (available only once a day).   -->
-		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="21600" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90817" name="Grace Rice Cake" type="NONE" icon="icon.event_steamed_rice_cake_i00">
 	<!-- Sayha Grace points +105000. Cooldown - 10 min.   -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<armor id="90818" name="Zaken's Earring Lv. 3" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_zaken_i03">
 	<!-- A 7-day item. MP +34, Bleed Attack and Resistance +20%, Stun/MEN Attack and Resistance +15%, Heal Received +10%, HP Recovery +20%, Vampiric Rage +8%, Skill MP Consumption -4%. When two identical earrings are equipped, the effect of only one earring will be applied. Cannot be enchanted. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" duration="10080" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -121,7 +121,7 @@
 
 	<armor id="90819" name="Zaken's Earring Lv. 3" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_zaken_i03">
 	<!-- A 15-day item. MP +34, Bleed Attack and Resistance +20%, Stun/MEN Attack and Resistance +15%, Heal Received +10%, HP Recovery +20%. Vampiric Rage Effect +8%, Skill MP Consumption -4%. When two identical earrings are equipped, the effect of only one earring will be applied. Cannot be enchanted. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" duration="21600" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -135,7 +135,7 @@
 
 	<armor id="90820" name="Zaken's Earring Lv. 3" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_zaken_i03">
 	<!-- A 30-day item. MP +34, Bleed Attack and Resistance +20%, Stun/MEN Attack and Resistance +15%, Heal Received +10%, HP Recovery +20%, Vampiric Rage +8%, Skill MP Consumption -4%. When two identical earrings are equipped, the effect of only one earring will be applied. Cannot be enchanted. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -146,98 +146,98 @@
 
 	<item id="90821" name="My Teleport Book - 1 slot" type="NONE" icon="icon.bookmark_book_i00">
 	<!-- A dimensional item\\n Increases the number of return points to save by 1. The maximum number is 48. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="5" action="CALL_SKILL"/>
 	</item>
 
 	<item id="90822" name="Sealed Doll of Border - Baium" type="NONE" icon="icon.bm_baium_doll_30d">
 	<!-- Double-click to obtain Doll of Border - Baium (30-day). Can be upgraded to Lv. 1 or 2 through Veruti in the Town of Giran.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90823" name="Sealed Doll of Border - Queen Ant" type="NONE" icon="icon.bm_queen_ant_doll_30d">
 	<!-- Double-click to obtain Doll of Border - Queen Ant (30-day). Can be upgraded to Lv. 1 or 2 through Veruti in the Town of Giran.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90824" name="Sealed Doll of Border - Orfen" type="NONE" icon="icon.bm_orfen_doll_30d">
 	<!-- Double-click to obtain Doll of Border - Orfen (30-day). Can be upgraded to Lv. 1 or 2 through Veruti in the Town of Giran.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90825" name="Doll of Border - Baium" type="RUNE" icon="icon.bm_baium_doll_30d">
 	<!-- A 30-day item. Boosts abilities with the Baium Doll's Spell if stored in the inventory. \\n\\n<Baium Doll's Spell>\\nMEN Resistance +40%, Paralysis/Knock Down/Pull Resistance +20%, P./M. Def. +12%, Skill Cooldown -3% -->
-		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="90826" name="Sealed Doll of Border - Queen Ant" type="RUNE" icon="icon.bm_queen_ant_doll_30d">
 	<!-- A 30-day item. Boosts abilities with Queen Ant Doll's Spell if stored in the inventory. \\n\\n<Queen Ant Doll's Spell>\\nP. Atk./P. Critical Damage +8%, Max HP +12%. -->
-		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="90827" name="Doll of Border - Orfen" type="RUNE" icon="icon.bm_orfen_doll_30d">
 	<!-- A 30-day item. Boosts abilities with Orfen Doll's Spell if stored in the inventory. \\n\\n<Orfen Doll's Spell>\\nM. Atk./M. Critical Damage +8%, Max MP +12%. -->
-		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="90828" name="Transformation Scroll: Dark Knight Lv. 3" type="POTION" icon="icon.etc_charm_of_courage_i05">
 	<!-- Transforms into a Dark Knight for 15 minutes. Will not be deleted upon death. \\nTransformation into a Dark Knight: Max HP/MP +10%, P. Atk. in PvP +10%, P. Def. in PvP +10%, Stun/Paralysis/Mental Resistance +10%.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90829" name="Transformation Scroll: Dark Knight Lv. 2" type="POTION" icon="icon.etc_charm_of_courage_i05">
 	<!-- Transforms into a Dark Knight for 15 minutes. Will not be deleted upon death. \\nTransformation into a Dark Knight: Max HP/MP  +10%, P. Atk. in PvP +7%, P. Def. in PvP +7%, Stun/Paralysis/Mental Resistance +7%.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90830" name="Transformation Scroll: Dark Knight Lv. 1" type="POTION" icon="icon.etc_charm_of_courage_i05">
 	<!-- Transforms into a Dark Knight for 15 minutes. Will not be deleted upon death. \\nTransformation into a Dark Knight: Max HP/MP +10%, P. Atk. in PvP +5%, P. Def. in PvP +5%, Stun/Paralysis/Mental Resistance +5%.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90831" name="Transformation Scroll: White Assassin" type="POTION" icon="icon.scroll_of_verification_i06">
 	<!-- For 15 minutes transforms you into White Assassin. Will not be deleted upon death. \\nTransformation into White Assassin: Max HP/MP +7%, P./M. Accuracy +2, P./M. Atk. +3%, P./M. Def. +3%, Atk. Spd. +5%, M. Critical Rate +20, Speed +5.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90832" name="Glorious Amulet" type="RUNE" icon="BranchSys3.lcon.g_rune_itemdrop_up">
 	<!-- A 7-day item. When in inventory, you get STR +1, DEX +1, CON ++1, INT +1, WIT +1, MEN +1.  -->
-		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080"/>
 	</item>
 
 	<armor id="90833" name="Agathion Bracelet - Joy" type="NONE" body-part="LEFT_BRACELET" icon="icon.etc_rbracelet_aga_agit_i00">
 	<!-- A 7-day item. Enables to summon Agathion of Joy when equipped.\\n\\n<Skill used>\\n1. Agathion's Escape: Allows to relocate to Giran, Gludio, Dion, Oren, Hunters Village. (Cooldown: 1 min)\\n\\n<Item Skill>\\n1. Search for Evidence: Speed +66 for 15 sec. \\n\\n<Item Skill>\\n2. Hidden Search: monsters don't attack first.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="30" duration="10080" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<item id="90834" name="Warrior Experience Amulet" type="RUNE" icon="icon.skill_exp_sp_up">
 	<!-- 7-day item. Increases XP and SP gain by +50%.  -->
-		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080"/>
 	</item>
 
 	<item id="90835" name="Life Control Tower's Scroll of Blessing" type="SCROLL" icon="icon.etc_aidcharm_cancel_valbreath_i00">
 	<!-- Max HP/MP +5%, Hunting XP/SP Gain +30%, and grants MEN Attack/Paralysis Resistance for 60 minutes. Cooldown is 30 minutes.\\n<Note> The effect does not stack with Angel Cat's Blessing.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90836" name="Warrior Experience Amulet" type="RUNE" icon="icon.skill19226">
 	<!-- 7-day item. Increases XP and SP gain by +20%.  -->
-		<restriction freightable="false" olympiad-restricted="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080" immediate-effect="true"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39057" level="1"/>  <!-- Hero's XP Amulet -->
@@ -246,126 +246,126 @@
 
 	<armor id="90837" name="White Uniform Hat (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon.br_navy_cap_i00">
 	<!-- White uniform hat that makes you feel the energy of a man of the sea. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90838" name="White Uniform Hat (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon.br_navy_cap_i00">
 	<!-- White uniform hat that makes you feel the energy of a man of the sea. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90839" name="White Uniform Hat (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon.br_navy_cap_i00">
 	<!-- White uniform hat that makes you feel the energy of a man of the sea. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90840" name="Napoleon Hat (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_napoleonic_cap_i00">
 	<!-- A Napoleon Hat bursting with enough energy to conquer the world. STR+1, INT+1. Cannot be dropped or sold in a store. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90841" name="Napoleon Hat (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_napoleonic_cap_i00">
 	<!-- A Napoleon Hat bursting with enough energy to conquer the world. DEX+1, WIT+1. Cannot be dropped or sold in a store. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90842" name="Napoleon Hat (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_napoleonic_cap_i00">
 	<!-- A Napoleon Hat bursting with enough energy to conquer the world. CON+1, MEN+1. Cannot be dropped or sold in a store. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90843" name="Ninja Hair Accessory (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys3.icon1.g_co_ninja_hair">
 	<!-- Ninja Hair Accessory. Mask form. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90844" name="Ninja Hair Accessory (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys3.icon1.g_co_ninja_hair">
 	<!-- Ninja Hair Accessory. Mask form. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90845" name="Ninja Hair Accessory (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys3.icon1.g_co_ninja_hair">
 	<!-- Ninja Hair Accessory. Mask form. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90846" name="Warrior's Helmet (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon.br_close_helmet_i00">
 	<!-- Helmet of a brave ancient warrior. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90847" name="Warrior's Helmet (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon.br_close_helmet_i00">
 	<!-- Helmet of a brave ancient warrior. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90848" name="Warrior's Helmet (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon.br_close_helmet_i00">
 	<!-- Helmet of a brave ancient warrior. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90849" name="First Mate Hat (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="icon.Accessary_middle_ages_i01">
 	<!-- First Mate Hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90850" name="First Mate Hat (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="icon.Accessary_middle_ages_i01">
 	<!-- First Mate Hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90851" name="First Mate Hat (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="icon.Accessary_middle_ages_i01">
 	<!-- First Mate Hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90852" name="Artisan's Goggles (STR+1 INT+1)" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_dwarf_goggle_i00">
 	<!-- Large goggles that protect the eyes. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90853" name="Artisan's Goggles (DEX+1 WIT+1)" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_dwarf_goggle_i00">
 	<!-- Large goggles that protect the eyes. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90854" name="Artisan's Goggles (CON+1 MEN+1)" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_dwarf_goggle_i00">
 	<!-- Large goggles that protect the eyes. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 	</armor>
@@ -402,14 +402,14 @@
 
 	<armor id="90860" name="Lucky Hat" type="NONE" body-part="HAIR_ALL" icon="icon.Accessary_middle_ages_i00">
 	<!-- A 30-day item. Leather hat. Allows to use Blessing of Luck skill. Occupies 2 Hair Accessory slots.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="10" duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90861" name="Fire Dragon's Belt" type="LIGHT" body-part="BELT" icon="icon.bm_vallakas_belt">
 	<!-- 30-day item. STR +1, INT +1, HP Recovery Bonus +2.31, MP Recovery Bonus +1.54, CP Recovery Bonus +3.07, Max HP/MP/CP +10%, Inventory Slots 6, Weight Gauge +7,000, P/M. Critical Damage +4%, HP Potions Effect +100. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="43200" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -419,41 +419,41 @@
 
 	<armor id="90862" name="Brooch Lv. 2" type="NONE" body-part="UNDERWEAR" icon="icon.etc_bm_brooch_lavianrose_i01">
 	<!-- A 30-day item. Occupies 3 Hair Accessory slots.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90863" name="Diamond Lv. 3" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_diamond_i00">
-	<!-- u,A 30-day item. Физ. Защ. +50. Effect does not stack with additional jewels of the same type.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+	<!-- A 30-day item. Физ. Защ. +50. Effect does not stack with additional jewels of the same type.  -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90864" name="Pearl Lv. 3" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_pearl_i00">
-	<!-- u,A 30-day item. Маг. Защ. +28. Effect does not stack with additional jewels of the same type.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+	<!-- A 30-day item. Маг. Защ. +28. Effect does not stack with additional jewels of the same type.  -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90865" name="Jade Lv. 3" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_jade_i00">
 	<!-- A 30-day item. Casting Spd./ Atk. Spd. +4%. Effect does not stack with additional jewels of the same type.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<item id="90866" name="Master's Skill Book" type="NONE" icon="icon.q10338_book_of_hades">
 	<!-- Take it to the Excalibur Expeditionary Force Leader to learn all skills for your level and class. Only for level 76 to level 80 characters.   -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<weapon id="90867" name="Savior’s Dual Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
 	<!-- A 120-day item.\\n<Soul Crystal Enhancement>\\nAtk. Spd. +5%.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="2340" commission-type="OTHER_ITEM"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
@@ -470,7 +470,7 @@
 
 	<weapon id="90868" name="Savior’s Staff" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_crystal_staff_i00" magic="true">
 	<!-- A 120-day item.\\n<Soul Crystal Enhancement>\\nCasting Spd. +12%.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1010" commission-type="OTHER_ITEM"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
@@ -488,7 +488,7 @@
 
 	<weapon id="90869" name="Savior’s Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_crystallized_ice_bow_i00">
 	<!-- A 120-day item.\\n<Soul Crystal Enhancement>\\nP. Critical Damage +52.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1740" commission-type="OTHER_ITEM"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
@@ -506,7 +506,7 @@
 
 	<weapon id="90870" name="Savior’s Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_dark_screamer_i00">
 	<!-- A 120-day item.\\n<Soul Crystal Enhancement>\\nP. Critical Damage +66.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1010" commission-type="OTHER_ITEM"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
@@ -523,7 +523,7 @@
 
 	<weapon id="90871" name="Savior's Spear" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_scorpion_i00">
 	<!-- A 120-day item.\\n<Soul Crystal Enhancement>\\nHas about a 25% chance to stun the target during a Critical Attack.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="2010" commission-type="OTHER_ITEM"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
@@ -543,7 +543,7 @@
 	</weapon>
 
 	<item id="90872" name="Piece of Wood" type="MATERIAL" icon="icon.etc_squares_wood_i00">
-	<!-- Give it to Bliss to receive a woodpile. Will be deleted during maintenance on Wednesday, December 7th, 2016. -->
+	<!-- Give it to Bliss to receive a woodpile.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes/>
 	</item>
@@ -555,76 +555,76 @@
 	</item>
 
 	<item id="90874" name="Sayha's Storm Lv. 2" type="NONE" icon="icon.bm_sayha_storm">
-	<!-- u,Sayha's Grace Consumption +100%, XP/SP gain +150% while hunting monsters. Remains active after death. Duration and Cooldown are both 10 minutes. Available when more than one slot of the Sayha’s Grace gauge is filled. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+	<!-- Sayha's Grace Consumption +100%, XP/SP gain +150% while hunting monsters. Remains active after death. Duration and Cooldown are both 10 minutes. Available when more than one slot of the Sayha’s Grace gauge is filled. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90875" name="Sayha's Storm Lv. 2" type="NONE" icon="icon.bm_sayha_storm">
-	<!-- u,For 10 min. Sayha Grace points +100%, XP/SP gain +150%. Cooldown: 10 minutes. This effect remains even after character's death. Available when more than one slot of the bar of Sayha’s Grace points is filled. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+	<!-- For 10 min. Sayha Grace points +100%, XP/SP gain +150%. Cooldown: 10 minutes. This effect remains even after character's death. Available when more than one slot of the bar of Sayha’s Grace points is filled. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90876" name="Sayha Grace Box" type="NONE" icon="icon.bm_nebit_box">
 	<!-- Double-click to obtain 1 Sayha's Blessing Box and 1 Sayha's Storm Lv. 1. If you're lucky, you can also get a Sayha's Golden Treasure or a Sayha's Silver Treasure.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90877" name="Sayha's Golden Treasure" type="NONE" icon="icon.bm_sayha_gold_present">
 	<!-- Double-click to obtain 1 rare item.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90878" name="Sayha's Silver Treasure" type="NONE" icon="icon.bm_sayha_silver_present">
 	<!-- Double-click to randomly obtain 1 of the following: Rare Accessory, Enchant Scroll, A/B-grade Item Box or Sayha's Golden/Silver Blessing.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90879" name="Sayha Grace Maintaining Potion" type="POTION" icon="icon.bm_freya_potion">
 	<!-- For 10 min. activates Sayha Grace effect. Cooldown: 10 min.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90880" name="Sayha's XP Amulet Box" type="NONE" icon="icon.etc_box_of_adventure_2_i00">
 	<!-- Double-click to obtain Sayha's XP Amulet (10 days).  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90881" name="Sayha's XP Amulet" type="RUNE" icon="icon.bm_sayha_rune">
 	<!-- A 10-day item. When in inventory, XP/SP gain +20%, Sayha Grace points -10%.  -->
-		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="90882" name="Stable Eva's Enhancement Scroll: Hair Accessories (Low Grade)" type="SOLID_ENCHANT_ARMOR" icon="icon.scroll_of_unidentify_am_s">
 	<!-- Increases M. Def of hair accessory by 2. Upon enchantment, additional effect and HP/MP/CP increases starting from +5. Can be safely enchanted up to +5.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<armor id="90883" name="Talisman of Fate - Lv. 10" type="NONE" body-part="TALISMAN" icon="icon.bm_magic_square_talisman">
-	<!-- A 7-day item. P./M. Def. +43, P./M. Evasion +2, HP/MP/CP +280, Movement Speed +8, P./M. Atk. Spd. +20, XP and SP gain +5%, Damage Reflection +6% when equipped. Applies Power of Fate - Lv. 3 (has a chance to increase attack abilities) and enables Border Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). When two or more Talismans of identical effects are equipped, the effect of only one Talisman will be applied.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+	<!-- A 7-day item. P./M. Def. +43, P./M. Evasion +2, HP/MP/CP +280, Movement Speed +8, P./M. Atk. Spd. +20, XP and SP gain +5%, Damage Reflection +6% when equipped. Applies Power of Fate - Lv. 3 (has a chance to increase attack abilities) and enables Fate Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). When two or more Talismans of identical effects are equipped, the effect of only one Talisman will be applied.  -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="10080" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90884" name="Talisman of Fate - Lv. 10" type="NONE" body-part="TALISMAN" icon="icon.bm_magic_square_talisman">
-	<!-- A 1-day item. P./M. Def. +43, P./M. Evasion +2, HP/MP/CP +280, Movement Speed +8, P./M. Atk. Spd. +20, XP and SP gain +5%, Damage Reflection +6% when equipped. Applies Power of Fate - Lv. 3 (has a chance to increase attack abilities) and enables Border Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). When two or more Talismans of identical effects are equipped, the effect of only one Talisman will be applied.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+	<!-- A 1-day item. P./M. Def. +43, P./M. Evasion +2, HP/MP/CP +280, Movement Speed +8, P./M. Atk. Spd. +20, XP and SP gain +5%, Damage Reflection +6% when equipped. Applies Power of Fate - Lv. 3 (has a chance to increase attack abilities) and enables Fate Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). When two or more Talismans of identical effects are equipped, the effect of only one Talisman will be applied.  -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="1440" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90885" name="Agathion Bracelet - Singer and Dancer" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
 	<!-- A 30-day item. When worn, 2 Agathion slots are activated. \\n<Active Skill>\\n1. Dance of Fury: Atk. Spd. +5% for 20 minutes.\\n\\n2. Dance of Concentration: Casting Spd. +5% for 20 minutes.\\n\\n3. Song of Wind: Speed +20 for 5 minutes. Cooldown: 10 min.\\n\\n<Note>\\nDance of Fury, Dance of Concentration, and Song of Wind do not stack. Duration: 30 days.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -640,7 +640,7 @@
 
 	<armor id="90886" name="Agathion Bracelet - Singer and Dancer" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
 	<!-- A 90-day item. When worn, 2 Agathion slots are activated. \\n<Active Skill>\\n1. Dance of Fury: Atk. Spd. +5% for 20 minutes.\\n\\n2. Dance of Concentration: Casting Spd. +5% for 20 minutes.\\n\\n3. Song of Wind: Speed +20 for 5 minutes. Cooldown: 10 min.\\n\\n<Note>\\nDance of Fury, Dance of Concentration, and Song of Wind do not stack. Duration: 30 days.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" duration="129600" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -656,7 +656,7 @@
 
 	<armor id="90887" name="Agathion Bracelet Lv. 3" type="NONE" body-part="LEFT_BRACELET" icon="icon.high_agathion_bracelet_i00">
 	<!-- A 60-day item. When worn, 3 Agathion slots are activated., STR/ INT/ CON/ MEN +1. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" duration="86400" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -667,7 +667,7 @@
 
 	<armor id="90888" name="Agathion Bracelet Lv. 1" type="NONE" body-part="LEFT_BRACELET" icon="icon.agathion_magmeld_teleport">
 	<!-- When worn, 2 Agathion slots are activated. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -677,7 +677,7 @@
 
 	<armor id="90889" name="Agathion Bracelet Lv. 2" type="NONE" body-part="LEFT_BRACELET" icon="icon.bracelet_tersi_agathion">
 	<!-- When worn, 3 Agathion slots are activated. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -687,7 +687,7 @@
 
 	<armor id="90890" name="Agathion Bracelet Lv. 3" type="NONE" body-part="LEFT_BRACELET" icon="icon.high_agathion_bracelet_i00">
 	<!-- When worn, 3 Agathion slots are activated. STR/ INT/ CON/ MEN +1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -698,7 +698,7 @@
 
 	<armor id="90891" name="Agathion Bracelet Lv. 4" type="NONE" body-part="LEFT_BRACELET" icon="icon.high_agathion_bracelet_i01">
 	<!-- When equipped, opens up 4 Agathion slots, STR/INT/CON/MEN +1, MEN/Stun/Sleep/Paralysis Resistance +5%. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -710,7 +710,7 @@
 
 	<armor id="90892" name="Agathion Bracelet - Joy" type="NONE" body-part="LEFT_BRACELET" icon="icon.pi_high_agathion_bracelet_i00">
 	<!-- When worn, 2 Agathion slots are activated. \\n\\n<Item Skill>\\n1. Evidence Chase: for 15 min. Speed +66.\\n<Item Skill>\\n2. Hidden Search: monsters don't attack first.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -722,7 +722,7 @@
 
 	<armor id="90893" name="Agathion Bracelet - Joy" type="NONE" body-part="LEFT_BRACELET" icon="icon.pi_high_agathion_bracelet_i00">
 	<!-- A 7-day item. When worn, 2 Agathion slots are activated. \\n\\n<Item Skill>\\n1. Evidence Chase: for 15 min. Speed +66.\\n<Item Skill>\\n2. Hidden Search: monsters don't attack first.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" duration="10080" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -734,28 +734,28 @@
 
 	<armor id="90894" name="Agathion Aries" type="NONE" body-part="AGATHION" icon="icon.sheep_agathion_i00">
 	<!-- A 60-day item. Equipping it in the main slot summons the Agathion Aries and activates the Special Ability option.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="50" duration="86400" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90895" name="Agathion Aries" type="NONE" body-part="AGATHION" icon="icon.sheep_agathion_i00">
 	<!-- Equipping it in the Bracelet's main slot summons the Agathion Aries and activates the Special Ability option. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="50" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90896" name="Agathion Joy" type="NONE" body-part="AGATHION" icon="icon.pleasure_agathion_i00">
 	<!-- Equipping it in the Bracelet's main slot summons the Agathion Joy and activates the Special Ability option.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="50" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="90897" name="Agathion Joy" type="NONE" body-part="AGATHION" icon="icon.pleasure_agathion_i00">
 	<!-- A 7-day item. Equipping it in the Bracelet's main slot summons the Agathion Joy and activates the Special Ability option.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="50" duration="10080" enchant-enabled="false" />
 		<crystal />
 	</armor>

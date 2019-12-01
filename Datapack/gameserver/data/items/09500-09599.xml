@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-	<armor id="9589" name="Iron Bracelet" type="NONE" body-part="RIGHT_BRACELET" icon="icon.etc_rbracelet_c_i00">
-	<!-- When equipped, opens up 1 Talisman slot. -->
-		<restriction freightable="false"/>
+	<armor id="9589" name="Talisman Bracelet Lv. 1" type="NONE" body-part="RIGHT_BRACELET" icon="icon.dimension_bracelet_i00">
+	<!-- When equipped, opens up 1 Talisman slot. Two Talisman Bracelets of the same level can be combined -->
+		<restriction freightable="false" sellable="false"/>
 		<attributes weight="150" price="1080000" commission-type="BRACELET" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -10,9 +10,9 @@
 		</skills>
 	</armor>
 
-	<armor id="9590" name="Bronze Bracelet" type="NONE" body-part="RIGHT_BRACELET" icon="icon.etc_rbracelet_b_i01">
-	<!-- When equipped, opens up 2 Talisman slots. -->
-		<restriction freightable="false"/>
+	<armor id="9590" name="Talisman Bracelet Lv. 2" type="NONE" body-part="RIGHT_BRACELET" icon="icon.dimension_bracelet_i01">
+	<!-- When equipped, opens up 2 Talisman slots. Two Talisman Bracelets of the same level can be combined -->
+		<restriction freightable="false" sellable="false"/>
 		<attributes weight="150" price="5400000" commission-type="BRACELET" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -20,9 +20,9 @@
 		</skills>
 	</armor>
 
-	<armor id="9591" name="Steel Bracelet" type="NONE" body-part="RIGHT_BRACELET" icon="icon.etc_rbracelet_a_i02">
-	<!-- When equipped, opens up 3 Talisman slots.  -->
-		<restriction freightable="false"/>
+	<armor id="9591" name="Talisman Bracelet Lv. 3" type="NONE" body-part="RIGHT_BRACELET" icon="icon.dimension_bracelet_i02">
+	<!-- When equipped, opens up 3 Talisman slots. Two Talisman Bracelets of the same level can be combined -->
+		<restriction freightable="false" sellable="false"/>
 		<attributes weight="150" price="27000000" commission-type="BRACELET" enchant-enabled="false" />
 		<crystal />
 		<skills>

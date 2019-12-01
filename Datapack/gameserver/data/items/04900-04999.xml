@@ -101,7 +101,7 @@
 
 	<item id="4912" name="Spellbook: Benediction" type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Spellbook needed to learn Benediction. Used by Bishops.\\nRequired level: 66 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="200000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
@@ -119,7 +119,7 @@
 
 	<item id="4915" name="Blueprint: Summon Wild Hog Cannon" type="NONE" icon="icon.etc_plan_i00">
 	<!-- Blueprint needed to learn the Summon Wild Hog Cannon technique. Used by Warsmiths.\\nRequired level: 58 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
@@ -161,19 +161,19 @@
 
 	<item id="4922" name="Spellbook: Summon Binding Cubic" type="NONE" icon="icon.etc_spell_books_summon_i00">
 	<!-- Spellbook needed to learn Summon Binding Cubic. Used by Warlocks.\\nRequired level: 40 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="4923" name="Spellbook: Summon Aqua Cubic" type="NONE" icon="icon.etc_spell_books_summon_i00">
 	<!-- Spellbook needed to learn Summon Aqua Cubic. Used by Elemental Summoners.\\nRequired level: 40 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="4924" name="Spellbook: Summon Spark Cubic" type="NONE" icon="icon.etc_spell_books_summon_i00">
 	<!-- Spellbook needed to learn Summon Spark Cubic. Used by Phantom Summoners.\\nRequired level: 40 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 

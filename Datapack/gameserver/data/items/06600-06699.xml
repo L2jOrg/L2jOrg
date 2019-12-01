@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<weapon id="6611" name="Infinity Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_the_sword_of_hero_i00">
 	<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server.\\n\\nSpecial Ability: Infinity Sword. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, Atk. Speed +5%, when equipped.\\nInfinity Power - Reflect: for 5 min. damage received +8%. -->
-		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<condition msg-id="1518">
 			<player hero="true"/>
 		</condition>
@@ -26,7 +26,7 @@
 
 	<weapon id="6612" name="Infinity Slasher" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_the_two_handed_sword_of_hero_i00">
 	<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server.\\n\\nSpecial Ability: Infinity Slasher. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, P. Critical Damage +10%, when equipped.\\nInfinity Power - Protection: for 2 min. makes you immune to debuffs 5 times. -->
-		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<condition msg-id="1518">
 			<player hero="true"/>
 		</condition>
@@ -49,8 +49,8 @@
 	</weapon>
 
 	<weapon id="6613" name="Infinity Axe" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_the_axe_of_hero_i00">
-	<!-- u,Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server.\\n\\nSpecial Ability: Infinity Axe. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, Atk. Speed +5%, when equipped.\\nInfinity Power - Tenacity: for 2 min. returns 10% of the received damage back to the enemy. Recovers НР. -->
-		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false"/>
+	<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server.\\n\\nSpecial Ability: Infinity Axe. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, Atk. Speed +5%, when equipped.\\nInfinity Power - Tenacity: for 2 min. returns 10% of the received damage back to the enemy. Recovers НР. -->
+		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<condition msg-id="1518">
 			<player hero="true"/>
 		</condition>
@@ -75,7 +75,7 @@
 
 	<weapon id="6614" name="Infinity Rod" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_the_mace_of_hero_i00" magic="true">
 	<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server.\\n\\nSpecial Ability: Infinity Rod. Max HP +10%, Max MP +25%, Max CP +30%, M. Critical Rate +20, Casting Spd. +5%, when equipped.\\nInfinity Power - Mana Limit: for 30 sec. magic skills don't consume MP. -->
-		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<condition msg-id="1518">
 			<player hero="true"/>
 		</condition>
@@ -99,8 +99,8 @@
 	</weapon>
 
 	<weapon id="6616" name="Infinity Scepter" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_the_staff_of_hero_i00" magic="true">
-	<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server.\\n\\nSpecial Ability: Infinity Scepter. Max HP +10%, Max MP +25%, Max CP +30%, M. Atk. +10%, P. Critical Damage +10%, when equipped.\\nInfinity Power - Vampiric Mana: for 5 min. recovers MP, equal to the certain percent of inflicted damage with a certain probability. -->
-		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false"/>
+	<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server.\\n\\nSpecial Ability: Infinity Scepter. Max HP +10%, Max MP +25%, Max CP +30%, M. Atk. +10%, M. Critical Damage +10%, when equipped.\\nInfinity Power - Vampiric Mana: for 5 min. recovers MP, equal to the certain percent of inflicted damage with a certain probability. -->
+		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<condition msg-id="1518">
 			<player hero="true"/>
 		</condition>
@@ -125,7 +125,7 @@
 
 	<weapon id="6617" name="Infinity Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_the_dagger_of_hero_i00">
 	<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server.\\n\\nSpecial Ability: Infinity Dagger. Max HP +15%, Max MP +25%, Max CP +30%, M. Critical Rate +20, P. Critical Damage +20%, when equipped.\\nInfinity Power - Immortal: for 5 min. increases the chance of deadly attack. -->
-		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<condition msg-id="1518">
 			<player hero="true"/>
 		</condition>
@@ -150,7 +150,7 @@
 
 	<weapon id="6618" name="Infinity Fighter" type="FIST" body-part="TWO_HAND" icon="icon.weapon_the_fist_of_hero_i00">
 	<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server.\\n\\nSpecial Ability: Infinity Fighter. Max HP +20%, Max MP +15%, Max CP +30%, P. Critical Rate +20, Atk. Spd. +5%, when equipped.\\nInfinity Power - Protection: for 2 min. makes you immune to debuffs 5 times. -->
-		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<condition msg-id="1518">
 			<player hero="true"/>
 		</condition>
@@ -175,7 +175,7 @@
 
 	<weapon id="6619" name="Infinity Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_the_bow_of_hero_i00">
 	<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server.\\n\\nSpecial Ability: Infinity Bow. Max HP +15%, Max MP +25%, Max CP +30%, MP Consumption -5%, Atk. Spd. +10%, when equipped.\\nInfinity Power - Archery: for 5 min. increases Speed and the bow's range. -->
-		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<condition msg-id="1518">
 			<player hero="true"/>
 		</condition>
@@ -200,7 +200,7 @@
 
 	<weapon id="6620" name="Infinity Dual Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_the_dualsword_of_hero_i00">
 	<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server.\\n\\nSpecial Ability: Infinity Dual Sword. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +5%, P. Critical Damage +5%, Atk. Spd. +5%, when equipped.\\nInfinity Power - Refresh: for 5 min. decreases cooldown by 10%. -->
-		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<condition msg-id="1518">
 			<player hero="true"/>
 		</condition>
@@ -223,8 +223,8 @@
 	</weapon>
 
 	<weapon id="6621" name="Infinity Spear" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_the_pole_of_hero_i00">
-	<!-- u,Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server.\\n\\nSpecial Ability: Infinity Spear. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, P. Critical Damage +10%, when equipped.\\nInfinity Power - Tenacity: for 2 min. returns 10% of the received damage back to the enemy. Recovers НР. -->
-		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false"/>
+	<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server.\\n\\nSpecial Ability: Infinity Spear. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, P. Critical Damage +10%, when equipped.\\nInfinity Power - Tenacity: for 2 min. returns 10% of the received damage back to the enemy. Recovers НР. -->
+		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<condition msg-id="1518">
 			<player hero="true"/>
 		</condition>
@@ -248,8 +248,8 @@
 	</weapon>
 
 	<item id="6645" name="Beast Soulshot" type="SOULSHOT" icon="icon.etc_beast_soul_shot_i00">
-	<!-- u,The power of a Soulshot is bestowed upon a servitor, increasing their physical attack. The number of Soulshots required is given in the servitor’s info window. (Used from the master’s inventory.)  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+	<!-- The power of a Soulshot is bestowed upon a servitor, increasing their physical attack. The number of Soulshots required is given in the servitor’s info window. (Used from the master’s inventory.)  -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes price="20" commission-type="PET_SUPPLIES" for-npc="true" immediate-effect="true" action="SUMMON_SOULSHOT"/>
 		<skill-reducer type="BeastSoulShot">
 			<skill id="2033" level="1"/>  <!-- Item - Beast Soulshot -->
@@ -257,8 +257,8 @@
 	</item>
 
 	<item id="6646" name="Beast Spiritshot" type="SOULSHOT" icon="icon.etc_beast_spirit_shot_i00">
-	<!-- u,The power of a Spiritshot is bestowed upon a servitor, increasing their magical attack. The number of Spiritshots required is given in the servitor’s info window. (Used from the master’s inventory.)  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+	<!-- The power of a Spiritshot is bestowed upon a servitor, increasing their magical attack. The number of Spiritshots required is given in the servitor’s info window. (Used from the master’s inventory.)  -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes price="50" commission-type="PET_SUPPLIES" for-npc="true" immediate-effect="true" action="SUMMON_SPIRITSHOT"/>
 		<skill-reducer type="BeastSpiritShot">
 			<skill id="2008" level="1"/>  <!-- Item - Beast Spiritshot -->
@@ -266,8 +266,8 @@
 	</item>
 
 	<item id="6647" name="Blessed Beast Spiritshot" type="SOULSHOT" icon="icon.etc_blessed_beast_spirit_shot_i00">
-	<!-- u,The power of a Blessed Spiritshot is bestowed upon a servitor, increasing their magical attack. The number of Spiritshots required is given in the servitor’s info window. (Used from the master’s inventory.)  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+	<!-- The power of a Blessed Spiritshot is bestowed upon a servitor, increasing their magical attack. The number of Spiritshots required is given in the servitor’s info window. (Used from the master’s inventory.)  -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes price="100" commission-type="PET_SUPPLIES" for-npc="true" immediate-effect="true" action="SUMMON_SPIRITSHOT"/>
 		<skill-reducer type="BeastSpiritShot">
 			<skill id="2009" level="1"/>  <!-- Item - Blessed Beast Spiritshot -->

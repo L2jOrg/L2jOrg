@@ -2,415 +2,415 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<armor id="49600" name="Blue Talisman - P. Def." type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i01">
 	<!-- Short-term (1-hour). P. Def. +3%, when equipped. Effect does not stack with additional jewels of the same type.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49601" name="Blue Talisman - Physical Skill Evasion" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i01">
 	<!-- Short-term (1-hour). Physical Skill Evasion +10%. Effect does not stack with additional jewels of the same type.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49602" name="Blue Talisman - Magic Critical" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i01">
 	<!-- Short-term (1-hour). Magic Critical +10 when equipped. Effect does not stack with additional jewels of the same type.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49603" name="Blue Talisman - M. Atk." type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i01">
 	<!-- Short-term (1-hour). M. Atk. +3%, when equipped. Effect does not stack with additional jewels of the same type.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49604" name="Blue Talisman - M. Def." type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i01">
 	<!-- Short-term (1-hour). M. Resistance +3%, when equipped. Effect does not stack with additional jewels of the same type.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49605" name="Blue Talisman - Magic Skill Evasion" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i01">
 	<!-- Short-term (1-hour). Magic Skill Evasion +10% when equipped. Effect does not stack with additional jewels of the same type.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49606" name="Blue Talisman - Increase HP" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i01">
 	<!-- Short-term (1-hour). Max HP +3% when equipped. Effect does not stack with additional jewels of the same type.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49607" name="Blue Talisman - Increase MP" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i01">
 	<!-- Short-term (1-hour). Max MP +3% when equipped. Effect does not stack with additional jewels of the same type.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49608" name="Grey Talisman - Protection" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i07">
 	<!-- Short-term (1-hour). Resists Debuff 5 times for 10 sec. when used. Cooldown 5 min.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49609" name="Grey Talisman - Disarm" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i07">
 	<!-- Short-term (1-hour). Clears Debuff when used. Cooldown 5 min.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49610" name="Grey Talisman - Divine Protection" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i07">
 	<!-- Short-term (1-hour). Increases Defense 1800, Magic Defense 1620, Debuff Resistance +80% for 10 sec when used. Cooldown15 min.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49611" name="Grey Talisman - Block" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i07">
 	<!-- Short-term (1-hour). Limits target's HP Recovery to 70% for 15 sec. when used. Cooldown 3 min.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49612" name="Grey Talisman - Torpor" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i07">
 	<!-- Short-term (1-hour). Decreases target's Attack & Magic Rate 20% for 15 sec. when used. Cooldown 3 min.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49613" name="Grey Talisman - Shackles" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i07">
 	<!-- Short-term (1-hour). Decreases target's Speed 30% for 15 sec. when used. Cooldown 3 min.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49614" name="White Talisman - Physical Critical" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i00">
 	<!-- Short-term (1-hour). Critical +20 when equipped. Effect does not stack with additional jewels of the same type.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49615" name="White Talisman - P. Atk." type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i00">
 	<!-- Short-term (1-hour). P. Atk. +4% when equipped. Effect does not stack with additional jewels of the same type.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49616" name="White Talisman - P. Def." type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i00">
 	<!-- Short-term (1-hour). P. Def. +5%, when equipped. Effect does not stack with additional jewels of the same type.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49617" name="White Talisman - Physical Skill Evasion" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i00">
 	<!-- Short-term (1-hour). Physical Skill Evasion +15%. Effect does not stack with additional jewels of the same type.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49618" name="White Talisman - Magic Critical" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i00">
 	<!-- Short-term (1-hour). Magic Critical +20 when equipped. Effect does not stack with additional jewels of the same type.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49619" name="White Talisman - M. Atk." type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i00">
 	<!-- Short-term (1-hour). M. Atk. +4% when equipped. Effect does not stack with additional jewels of the same type.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49620" name="White Talisman - M. Def." type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i00">
 	<!-- Short-term (1-hour). M. Resistance +5% when equipped. Effect does not stack with additional jewels of the same type.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49621" name="White Talisman - Magic Skill Evasion" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i00">
 	<!-- Short-term (1-hour). Magic Skill Evasion +15% when equipped. Effect does not stack with additional jewels of the same type.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49622" name="White Talisman - Increase HP" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i00">
 	<!-- Short-term (1-hour). Max HP +5% when equipped. Effect does not stack with additional jewels of the same type.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49623" name="White Talisman - Increase MP" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i00">
 	<!-- Short-term (1-hour). Max MP +5% when equipped. Effect does not stack with additional talismans of the same type.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49624" name="Yellow Talisman - Protection" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i02">
 	<!-- Short-term (1-hour). Resists Debuff 5 times for 10 sec. when used. Cooldown 4 min.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49625" name="Yellow Talisman - Disarm" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i02">
 	<!-- Short-term (1-hour). Clears Debuff when used. Cooldown 4 min.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49626" name="Yellow Talisman - Divine Protection" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i02">
 	<!-- Short-term (1-hour). Increases Defense 3600, Magic Defense 3240, Debuff Resistance +80% for 10 sec when used. Cooldown 15 min.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49627" name="Yellow Talisman - Block" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i02">
 	<!-- Short-term (1-hour). Limits target's HP Recovery to 70% for 15 sec. when used. Cooldown 2 min.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49628" name="Yellow Talisman - Torpor" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i02">
 	<!-- Short-term (1-hour). Decreases target's Attack & Magic Rate 20% for 15 sec. when used. Cooldown 2 min.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49629" name="Yellow Talisman - Shackles" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i02">
 	<!-- Short-term (1-hour). Decreases target's Speed 30% for 15 sec. when used. Cooldown 2 min.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<item id="49630" name="Blue Talisman Box - Physical Critical" type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- Double-click box to get 1 Blue Talisman - Physical Critical (Short-term, 1-hour).\\n\\n<Warning>\\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49631" name="Blue Talisman Box - P. Atk." type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- Double-click box to get 1 Blue Talisman - P. Atk. (Short-term, 1-hour).\\n\\n<Warning>\\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49632" name="Blue Talisman Box - P. Def." type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- Double-click box to get 1 Blue Talisman - P. Def. (Short-term, 1-hour).\\n\\n<Warning>\\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49633" name="Blue Talisman Box - Physical Skill Evasion" type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- Double-click box to get 1 Blue Talisman - Physical Skill Evasion (Short-term, 1-hour).\\n\\n<Warning>\\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49634" name="Blue Talisman Box - Magic Critical" type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- Double-click box to get 1 Blue Talisman - Magic Critical (Short-term, 1-hour). \\n\\n<Warning>\\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49635" name="Blue Talisman Box - Magic Power" type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- Double-click box to get 1 Blue Talisman - Magic Power (Short-term, 1-hour). \\n\\n<Warning>\\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49636" name="Blue Talisman Box - M. Def." type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- Double-click box to get 1 Blue Talisman - Magic Resistance (Short-term, 1-hour). \\n\\n<Warning>\\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49637" name="Blue Talisman Box - Magic Skill Evasion" type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- Double-click box to get 1 Blue Talisman - Magic Skill Evasion (Short-term, 1-hour).\\n\\n<Warning>\\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49638" name="Blue Talisman Box - Increase HP" type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- Double-click box to get 1 Blue Talisman - Increase HP (Short-term, 1-hour).\\n\\n<Warning>\\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49639" name="Blue Talisman Box - Increase MP" type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- Double-click box to get 1 Blue Talisman - Increase MP (Short-term, 1-hour). \\n\\n<Warning>\\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49640" name="Grey Talisman Box - Protection" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- Double-click box to get 1 Grey Talisman - Guardian (Short-term, 1-hour).\\n\\n<Warning>\\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49641" name="Grey Talisman Box - Debuff Clear" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- Double-click box to get 1 Grey Talisman - Removal (Short-term, 1-hour).\\n\\n<Warning>\\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49642" name="Grey Talisman Box - Blessing of Protection" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- Double-click box to get 1 Grey Talisman - Protection (Short-term, 1-hour).\\n\\n<Warning>\\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49643" name="Grey Talisman Box - Block" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- Double-click box to get 1 Grey Talisman - Block (Short-term, 1-hour).\\n\\n <Warning>\\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49644" name="Grey Talisman Box - Torpor" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- Double-click box to get 1 Grey Talisman - Torpor (Short-term, 1-hour).\\n\\n<Warning>\\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49645" name="Grey Talisman Box - Shackles" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- Double-click box to get 1 Grey Talisman - Shackles (Short-term, 1-hour).\\n\\n<Warning>\\n Item obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49646" name="White Talisman Box - Physical Critical" type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Double-click box to get 1 White Talisman - Physical Critical (Short-term, 1-hour). \\n\\n<Warning>\\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49647" name="White Talisman Box - P. Atk." type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Double-click box to get 1 White Talisman - P. Atk. (Short-term, 1-hour).\\n\\n<Warning>\\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49648" name="White Talisman Box - P. Def." type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Double-click box to get 1 White Talisman - P. Def. (Short-term, 1-hour).\\n\\n<Warning>\\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49649" name="White Talisman Box - Physical Skill Evasion" type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Double-click box to get 1 White Talisman - Physical Skill Evasion (Short-term, 1-hour).\\n\\n<Warning>\\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49650" name="White Talisman Box - Magic Critical" type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Double-click box to get 1 White Talisman - Magic Critical (Short-term, 1-hour). \\n\\n<Warning>\\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49651" name="White Talisman Box - Magic Power" type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Double-click box to get 1 White Talisman - Magic Power (Short-term, 1-hour). \\n\\n<Warning>\\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49652" name="White Talisman Box - M. Def." type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Double-click box to get 1 White Talisman - Magic Resistance (Short-term, 1-hour). \\n\\n<Warning>\\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49653" name="White Talisman Box - Magic Skill Evasion" type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Double-click box to get 1 White Talisman - Magic Skill Evasion (Short-term, 1-hour).\\n\\n<Warning>\\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49654" name="White Talisman Box - Increase HP" type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Double-click box to get 1 White Talisman - Increase MP (Short-term, 1-hour). \\n\\n<Warning>\\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49655" name="White Talisman Box - Increase MP" type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Double-click box to get 1 White Talisman - Increase MP (Short-term, 1-hour). \\n\\n<Warning>\\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49656" name="Yellow Talisman Box - Protection" type="NONE" icon="icon.etc_treasure_box_i02">
 	<!-- Double-click box to get 1 Yellow Talisman - Guardian (Short-term, 1-hour).\\n\\n<Warning>\\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49657" name="Yellow Talisman Box - Debuff Clear" type="NONE" icon="icon.etc_treasure_box_i02">
 	<!-- Double-click box to get 1 Yellow Talisman - Removal (Short-term, 1-hour).\\n\\n<Warning>\\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49658" name="Yellow Talisman Box - Blessing of Protection" type="NONE" icon="icon.etc_treasure_box_i02">
 	<!-- Double-click box to get 1 Yellow Talisman - Protection (Short-term, 1-hour).\\n\\n<Warning>\\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49659" name="Yellow Talisman Box - Block" type="NONE" icon="icon.etc_treasure_box_i02">
 	<!-- Double-click box to get 1 Yellow Talisman - Block (Short-term, 1-hour).\\n\\n<Warning>\\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49660" name="Yellow Talisman Box - Torpor" type="NONE" icon="icon.etc_treasure_box_i02">
 	<!-- Double-click box to get 1 Yellow Talisman - Torpor (Short-term, 1-hour).\\n\\n<Warning>\\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49661" name="Yellow Talisman Box - Shackles" type="NONE" icon="icon.etc_treasure_box_i02">
 	<!-- Double-click box to get 1 Yellow Talisman - Shackles (Short-term, 1-hour).\\n\\n<Warning>\\nItem obtained from box has restriction on being moved, so open with caution. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49662" name="Stylish Color Title" type="COLOR_TITLE_CHANGE" icon="icon.color_name_i00">
-	<!-- u,A dimensional item\\nAn item which can be used to change the color of a character’s title. Upon leaving a clan, the color title disappears, just as the regular one does (for everyone except Noblesse); however, upon joining a clan and obtaining a new title, the color reappears. After changing the title color, enter '/ resetname’ command in order to bring back the initial color. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+	<!-- A dimensional item\\nAn item which can be used to change the color of a character’s title. Upon leaving a clan, the color title disappears, just as the regular one does (for everyone except Noblesse); however, upon joining a clan and obtaining a new title, the color reappears. After changing the title color, enter '/ resetname’ command in order to bring back the initial color. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" immediate-effect="true"/>
 	</item>
 
 	<item id="49663" name="Maliss's HP Potion" type="POTION" icon="BranchSys.icon.br_vitality_potion_i01">
 	<!-- After instant 500 HP Recovery, CP Recovery with remaining points. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
@@ -494,19 +494,19 @@
 
 	<item id="49674" name="Rice Cake of Flaming Fighting Spirit" type="NONE" icon="icon.bm_rice_cake_i01">
 	<!-- Increases XP/ SP gain by +30% for 20 minutes. The effect remains after character's death. Cooldown: 1 minute. \\n\\n<Note> The effect does not change if Rice Cake of Fighting Spirit is used throughout the duration time of Rice Cake of Flaming Fighting Spirit. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49675" name="Hero Cube Box" type="NONE" icon="icon.etc_pi_gift_box_i03">
 	<!-- Double-click to receive Hero Cube (7-day).  Can be stored in a private warehouse or transferred to another character on the same account using Dimensional Merchant.\\n\\n<Note>\\nEven if you have several of these Cubes, you can only use one. -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<armor id="49676" name="Talisman of Insolence Lv. 1" type="NONE" body-part="TALISMAN" icon="icon.tallisman_oman_i02">
+	<armor id="49676" name="Talisman of Insolence Lv. 1" type="NONE" body-part="TALISMAN" icon="icon.oman_tallisman_new_i02">
 	<!-- P. Atk. +14, M. Atk. +22. Blacksmith Beggins in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -514,9 +514,9 @@
 		</skills>
 	</armor>
 
-	<armor id="49677" name="Talisman of Insolence Lv. 2" type="NONE" body-part="TALISMAN" icon="icon.tallisman_oman_i02">
+	<armor id="49677" name="Talisman of Insolence Lv. 2" type="NONE" body-part="TALISMAN" icon="icon.oman_tallisman_new_i02">
 	<!-- P. Atk. +27, M. Atk. +44, Magic Attack Resistance +2%. Blacksmith Beggins in the Town of Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -524,9 +524,9 @@
 		</skills>
 	</armor>
 
-	<armor id="49678" name="Talisman of Insolence Lv. 3" type="NONE" body-part="TALISMAN" icon="icon.tallisman_oman_i02">
+	<armor id="49678" name="Talisman of Insolence Lv. 3" type="NONE" body-part="TALISMAN" icon="icon.oman_tallisman_new_i02">
 	<!-- P. Atk. +41, M. Atk. +66, Magic Attack Resistance +4%, Skill Power +1%, all kinds of Weapon Resistance +1%. Blacksmith Beggins in the Town of Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -534,9 +534,9 @@
 		</skills>
 	</armor>
 
-	<armor id="49679" name="Talisman of Insolence Lv. 4" type="NONE" body-part="TALISMAN" icon="icon.tallisman_oman_i02">
+	<armor id="49679" name="Talisman of Insolence Lv. 4" type="NONE" body-part="TALISMAN" icon="icon.oman_tallisman_new_i02">
 	<!-- P. Atk. +68, M. Atk. +109, Magic Attack Resistance +6%, Skill Power +2%, all kinds of Weapon Resistance +2%, CON +1, MEN +1. Blacksmith Beggins in the Town of Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -544,9 +544,9 @@
 		</skills>
 	</armor>
 
-	<armor id="49680" name="Talisman of Insolence Lv. 5" type="NONE" body-part="TALISMAN" icon="icon.tallisman_oman_i02">
+	<armor id="49680" name="Talisman of Insolence Lv. 5" type="NONE" body-part="TALISMAN" icon="icon.oman_tallisman_new_i02">
 	<!-- P. Atk. +170, M. Atk. +235, Magic Attack Resistance +7%, Skill Power +2%, all kinds of Weapon Resistance +2%, CON +1, MEN +1, STR +1, INT +1. MP Consumption for skill use -2%. Blacksmith Beggins in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -554,9 +554,9 @@
 		</skills>
 	</armor>
 
-	<armor id="49681" name="Talisman of Insolence Lv. 6" type="NONE" body-part="TALISMAN" icon="icon.tallisman_oman_i01">
-	<!-- u,P. Atk. +200, M. Atk. +275, Magic Attack Resistance +8%, Skill Power +3%, all kinds of Weapon Resistance +3%, CON +1, MEN +1, STR +1, INT +1. P./ M. Critical Rate +10. MP Consumption for skill use -4%. Available only for Lv. 60 and higher. Blacksmith Beggins in Giran can help exchange this Lv. 6 Talisman and Baium’s Soul for Talisman of Baium. Effects from two such Talismans do not stack. -->
-		<restriction freightable="false"/>
+	<armor id="49681" name="Talisman of Insolence Lv. 6" type="NONE" body-part="TALISMAN" icon="icon.oman_tallisman_new_i01">
+	<!-- P. Atk. +200, M. Atk. +275, Magic Attack Resistance +8%, Skill Power +3%, all kinds of Weapon Resistance +3%, CON +1, MEN +1, STR +1, INT +1. P./ M. Critical Rate +10. MP Consumption for skill use -4%. Available only for Lv. 60 and higher. Blacksmith Beggins in Giran can help exchange this Lv. 6 Talisman and Baium’s Soul for Talisman of Baium. Effects from two such Talismans do not stack. -->
+		<restriction freightable="false" sellable="false"/>
 		<condition msg-id="113">
 			<player level-min="60"/>
 		</condition>
@@ -570,14 +570,14 @@
 	</armor>
 
 	<item id="49682" name="Baium’s Soul" type="NONE" icon="icon.high_energy_condense_i00">
-	<!-- u,Blacksmith Beggins in Giran will trade Baium’s Soul and Talisman of Insolence Lv. 6 for Talisman of Baium. -->
+	<!-- Blacksmith Beggins in Giran will trade Baium’s Soul and Talisman of Insolence Lv. 6 for Talisman of Baium. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<armor id="49683" name="Talisman of Baium" type="NONE" body-part="TALISMAN" icon="icon.tallisman_baium">
+	<armor id="49683" name="Talisman of Baium" type="NONE" body-part="TALISMAN" icon="icon.baium_talisman_new">
 	<!-- P. Atk. +284, M. Atk. +392, Magic Attack Resistance +10%, Skill Power +5%, All Weapon Resistance +5%, CON +1, MEN +1, STR +1, INT +1, DEX +1, WIT +1. P./M. Critical Rate +20. MP Consumption for skill use -5%. Skill Cooldown -3%. Available only for level 60 and higher. When two or more Talismans of identical effects are equipped, the effect of only one Talisman will be applied. -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<condition msg-id="113">
 			<player level-min="60"/>
 		</condition>
@@ -592,7 +592,7 @@
 
 	<item id="49684" name="Talisman Crystal" type="NONE" icon="icon.low_energy_condense_i03">
 	<!-- Required to create the Talisman of Insolence. If you take the Crystal along with an Elemental Stone/ Energy of Insolence to Baggins in Giran, you will receive the Talisman of Insolence. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes price="200000"/>
 	</item>
 
@@ -604,45 +604,45 @@
 
 	<armor id="49686" name="Chic Silver Chapeau (Str+1 Int+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon2.pi_silverchaperon">
 	<!-- 30-day item. STR +1, INT +1, allows using the Refined Silver Chapeau skill: Teleport (Cooldown: 2 hours). Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49687" name="Chic Silver Chapeau (Str+1 Int+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon2.pi_silverchaperon">
 	<!-- STR +1, INT +1, allows using the Refined Silver Chapeau skill: Teleport (Cooldown: 2 hours). Occupies 2 Hair Accessory slots. -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<item id="49688" name="Refined Silver Chapeau Box" type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Double-click to get Refined Silver Chapeau (30-day). -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49689" name="Chapeau Box" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- Double-click the box to get one of the following items: Refined Silver Chapeau (30-day)/ Refined Silver Chapeau/ Refined Romantic Chapeau. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="49690" name="Blue Dynasty Transformation Potion" type="POTION" icon="icon.general_stone_i01">
 	<!-- Makes you armor look like it is of Blue Dynasty for one hour.   -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49691" name="Red Zubei Transformation Potion" type="POTION" icon="icon.general_stone_i00">
 	<!-- Makes you armor look like it is of Red Zubei for one hour.   -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<weapon id="49692" name="Samurai Black Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
 	<!-- 15-day item. Cannot be enchanted or endued with special characteristics.   -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="2340" commission-type="OTHER_ITEM" duration="21600" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -659,31 +659,31 @@
 
 	<item id="49693" name="Magical Potion of Leaping" type="SCROLL" icon="icon.etc_holy_potion_i00">
 	<!-- Provides 1,200,000 XP/40,000 SP. Intended for level 20 and higher.   -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49694" name="Magical Potion of Leaping" type="SCROLL" icon="icon.etc_wind_potion_i00">
 	<!-- Provides 7,800,000 XP/240,000 SP. Intended for level 30 and higher.   -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49695" name="Magical Potion of Leaping" type="SCROLL" icon="icon.etc_water_potion_i00">
 	<!-- Provides 34,200,000 XP/1,040,000 SP. Intended for level 40 and higher.   -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49696" name="Gift from a Returned Friend" type="SCROLL" icon="BranchSys.icon.br_lucky_bag_i00">
 	<!-- Provides 37 million XP/ 1.11 million SP. Intended for Lv. 45 and higher.   -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49697" name="Special Fruit Buff" type="SCROLL" icon="icon.etc_codran_i09">
 	<!-- For 20 minutes, P./M. Atk. +7%, P./M. Def. +10%, Max. HP/CP/MP +15%, HP/MP Regeneration +20%. At a certain chance absorbs 3% of the damage inflicted on target as HP. Increases XP/SP gain by +5%. Cooldown is 1 minute. Buff remains after death.  -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes reuse-delay="60000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55160" level="1"/>  <!-- Special Pirate Fruit -->
@@ -692,13 +692,13 @@
 
 	<item id="49698" name="Class Transfer Coupon" type="NONE" icon="icon.return_user_item">
 	<!-- Take it to the Excalibur Expeditionary Force Leader for instant 2nd class transfer. Only for characters of at least level 40.   -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="49699" name="Master's Book Skill" type="NONE" icon="icon.q10338_book_of_hades">
 	<!-- Take it to the Excalibur Expeditionary Force Leader to learn all the skills for your level and class. Only for level 45 to level 60 characters.   -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 

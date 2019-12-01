@@ -2,28 +2,28 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<armor id="37533" name="NC Messenger's Hat" type="NONE" body-part="HAIR_ALL" icon="icon.nc_hair_acc">
 	<!-- NC Messenger's Hat. Occupies 2 Hair Accessory slots. STR +1, DEX +1, INT +1, WIT +1. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="37534" name="Santa Suit" type="HEAVY" body-part="ALL_DRESS" icon="icon.armor_ev_santas_clothes">
 	<!-- Santa Suit. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="37535" name="Santa Hat" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_santas_cap_i00">
 	<!-- Santa Hat. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<item id="37543" name="Snowy Squash Nectar" type="NONE" icon="icon.etc_nectar_i01">
 	<!-- Go to Santa to trade in for Snowy Squash Seed or Large Snowy Squash Seed. You can also use it to grow Snowy Squash and Large Snowy Squash. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="17110" level="1"/>  <!-- Snowy Squash Nectar -->
@@ -31,14 +31,14 @@
 	</item>
 
 	<item id="37544" name="Snowball" type="NONE" icon="BranchSys2.icon.g_illumination_white">
-	<!-- Obtained from Squash. They say it brings good luck. Can be sold in any store or given to Aden Reconstruction Society. Will be deleted after event. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+	<!-- Obtained from Squash. They say it brings good luck. Can be sold in any store or given to Aden Reconstruction Society.  -->
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="37545" name="Large Snowball" type="NONE" icon="BranchSys2.icon.g_illumination_white">
-	<!-- Obtained from Large Squash. They say it brings good luck. Can be sold in any store or given to Aden Reconstruction Society. Will be deleted after event. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+	<!-- Obtained from Large Squash. They say it brings good luck. Can be sold in any store or given to Aden Reconstruction Society.  -->
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
@@ -67,14 +67,14 @@
 	</item>
 
 	<item id="37550" name="Snowman's Buff" type="SCROLL" icon="icon.weapon_snowman_stick_i00">
-	<!-- When in a peaceful zone, restores energy for 3 hours. Will be deleted after event. -->
+	<!-- When in a peaceful zone, restores energy for 3 hours.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="37551" name="Christmas Present" type="NONE" icon="icon.etc_pi_gift_box_i04">
-	<!-- Double-click to obtain one of the following presents: Bottle of Orfen's Soul, Bottle of Frintezza's Soul, Bottle of Queen Ant's Soul, Bottle of Baium's Soul. Will be deleted after the event is over. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+	<!-- Double-click to obtain one of the following presents: Bottle of Orfen's Soul, Bottle of Frintezza's Soul, Bottle of Queen Ant's Soul, Bottle of Baium's Soul.  -->
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="CAPSULE"/>
 	</item>
 

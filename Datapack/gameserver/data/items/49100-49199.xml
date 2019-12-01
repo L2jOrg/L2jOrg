@@ -2,49 +2,49 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="49100" name="Scroll of Escape: Floran" type="SCROLL" icon="icon.etc_capture_stone_i00">
 	<!-- Magic stone, used to teleport the character to Floran Village. Cooldown: 60 minutes.  -->
-		<restriction tradable="false" dropable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49101" name="Scroll of Escape: Giran" type="SCROLL" icon="icon.etc_capture_stone_i00">
 	<!-- Magic stone, used to teleport the character to Town of Giran. Cooldown: 60 minutes.  -->
-		<restriction tradable="false" dropable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49102" name="Scroll of Escape: Oren" type="SCROLL" icon="icon.etc_capture_stone_i00">
 	<!-- Magic stone, used to teleport the character to Town of Oren. Cooldown: 60 minutes.  -->
-		<restriction tradable="false" dropable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49103" name="Scroll of Escape: Ivory Tower" type="SCROLL" icon="icon.etc_capture_stone_i00">
 	<!-- Magic stone, used to teleport the character to Ivory Tower. Cooldown: 60 minutes.  -->
-		<restriction tradable="false" dropable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49104" name="Scroll of Escape: Hunter's Village" type="SCROLL" icon="icon.etc_capture_stone_i00">
 	<!-- Magic stone, used to teleport the character to Hunter's Village. Cooldown: 60 minutes.  -->
-		<restriction tradable="false" dropable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49105" name="Teleport: Entrance to Cruma Tower" type="SCROLL" icon="icon.etc_capture_stone_i00">
 	<!-- Magic stone, used to teleport the character to the Entrance to Cruma Tower. Cooldown: 60 minutes.  -->
-		<restriction tradable="false" dropable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49106" name="Scroll of Escape: Entrance to Dragon Valley" type="SCROLL" icon="icon.etc_capture_stone_i00">
 	<!-- Magic stone, used to teleport the character to the Entrance to Dragon Valley. Cooldown: 60 minutes.  -->
-		<restriction tradable="false" dropable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49107" name="Teleport: Dragon Valley Bridge" type="SCROLL" icon="icon.etc_capture_stone_i00">
 	<!-- Magic stone, used to teleport the character to Dragon Valley Bridge. Cooldown: 60 minutes.  -->
-		<restriction tradable="false" dropable="false" depositable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
@@ -122,7 +122,7 @@
 
 	<armor id="49119" name="Halloween Outfit (15-day)" type="HEAVY" body-part="ALL_DRESS" icon="icon.ev_wp_halloween">
 	<!-- A 15-day item. When equipped, armor is unequipped and cannot be used. Weapons and magic armor remain equipped. Hair accessories also remain but the appearance won't be displayed.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1000" enchant-enabled="false" />
 		<crystal />
 	</armor>
@@ -136,14 +136,14 @@
 
 	<armor id="49121" name="Party Mask (15-day)" type="NONE" body-part="HAIR" icon="icon.etc_party_mask_i00">
 	<!-- Fashion item used to display a unique appearance.  15-day. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49122" name="Ring of Macken (15-day)" type="NONE" body-part="FINGER" icon="icon.ev_11th_rare_acc_ring">
 	<!-- When equipped, increases HP by 20, M. Atk. by 3, P. Atk. by 5. When equipped with two identical earrings, the effect of only one earring will be applied.  15-day. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -163,7 +163,7 @@
 
 	<armor id="49124" name="Earring of Macken (15-day)" type="NONE" body-part="EAR" icon="icon.ev_11th_rare_acc_earing">
 	<!-- When equipped, increases MP recovery rate by 0.2, and received Heal Amount by 2%. When equipped with two identical earrings, the effect of only one earring will be applied.  15-day. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -185,7 +185,7 @@
 
 	<armor id="49126" name="Necklace of Macken (15-day)" type="NONE" body-part="NECK" icon="icon.ev_11th_rare_acc_necklace">
 	<!-- 15-Day Item. When equipped, MP +20, M. Def. +3, P. Def. +5. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -207,43 +207,43 @@
 
 	<item id="49128" name="Souvenir Box" type="NONE" icon="icon.new_user_box">
 	<!-- Reward for participating in the event. Double-click to receive one of the following: High-grade Dye Chest, Dye Chest, Beauty Chest, Buff Scrolls Chest, Greater HP  Potion.   -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49129" name="1st Anniversary Coin" type="NONE" icon="icon.etc_11th_token">
 	<!-- Coin used to purchase special items during the Holiday Fair.  Can be shared within account.   -->
-		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="49130" name="Scroll: Summon Piero" type="NONE" icon="icon.etc_11th_event_solo">
 	<!-- Double-click the item to summon Piero. Summoned Piero names a random number from 1 to 6. If your number is bigger than Piero's, you can receive the Adena.   -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49131" name="Magic Number Cube" type="NONE" icon="icon.etc_11th_event_group">
 	<!-- A Magic Number Cube that will allow you to participate in the gift giveaway. Use it on Captive Tulio, which is summoned at 9 AM and 9 PM in the Elven Village and Dark Elf Village to participate in the gift giveaway.   -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<item id="49132" name="Membership Card" type="NONE" icon="icon.ev_buff_11th">
+	<item id="49132" name="Membership Card " type="NONE" icon="icon.ev_buff_11th">
 	<!-- Membership Card given to VIP members of the 11th Sale. When in inventory, you can receive the 11th Anniversary buffs and coins from the 11th NPC.   -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="49133" name="Venetian Fleece - Low Level" type="RUNE" icon="icon.skill19226">
 	<!-- A 15-day item. When in inventory, your XP and SP gain is increased by 22%. Can be used only by characters whose level is less than 40. This item will be removed after the event is over. -->
-		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="21600"/>
 	</item>
 
 	<weapon id="49134" name="Dual Candle Sword (15-day)" type="DUAL" body-part="TWO_HAND" icon="icon.ev_11th_candle">
 	<!-- 15-day item.  -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="2530" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -277,25 +277,25 @@
 
 	<item id="49136" name="Venetian Fleece - High Level" type="RUNE" icon="icon.skill19226">
 	<!-- 15-day item. When in inventory, your XP and SP gain is increased by 11%.   -->
-		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="21600"/>
 	</item>
 
 	<item id="49137" name="Venetian Fleece Chest (Low Level)" type="NONE" icon="icon.etc_pi_box_belief_pack">
 	<!-- Double-click the chest to receive 1 15-day Venetian Fleece (Low Level). The Fleece can be used only by characters whose level is less than 40.   This item will be removed after the event is over. -->
-		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49138" name="Venetian Fleece Chest (High Level)" type="NONE" icon="icon.etc_pi_box_love_pack">
 	<!-- Double-click the chest to receive 15-day Venetian Fleece Chest (High Level, 1 pc.).    -->
-		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49139" name="Dual Sword Gift Chest" type="NONE" icon="icon.etc_pi_box_joy_pack">
 	<!-- Double-click the chest to receive 15-day Dual Candle Sword.     -->
-		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 

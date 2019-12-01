@@ -15,7 +15,7 @@
 		<attributes weight="2080" price="18567400" commission-type="DUALSWORD"/>
 		<crystal type="A" count="1485"/>
 		<damage radius="44" angle="240"/>
-		<consume  soulshots="3" spiritshots="3"/>
+		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="pAtk" value="275.0"/>
 			<stat type="mAtk" value="112.0"/>
@@ -35,7 +35,7 @@
 		<attributes weight="2080" price="20741000" commission-type="DUALSWORD"/>
 		<crystal type="A" count="1659"/>
 		<damage radius="44" angle="240"/>
-		<consume  soulshots="3" spiritshots="3"/>
+		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="pAtk" value="282.0"/>
 			<stat type="mAtk" value="114.0"/>
@@ -495,7 +495,7 @@
 
 	<item id="5789" name="Soulshot (No-grade) (Novice)" type="NONE" icon="icon.etc_soulshot_none_for_rookie_i00">
 	<!-- A Soulshot (No-grade) for use by newbies. Exchange for a new Soulshot through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="1" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="SoulShots">
 			<skill id="2039" level="1"/>  <!-- Soulshot (No-grade) -->
@@ -504,7 +504,7 @@
 
 	<item id="5790" name="Spiritshot (No-grade) (Novice)" type="NONE" icon="icon.etc_spiritshot_none_for_rookie_i00">
 	<!-- A Spiritshot (No-grade) for use by newbies.  Exchange for a new Spiritshot through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="1" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="SpiritShot">
 			<skill id="2047" level="1"/>  <!-- Spiritshot (No-grade) -->

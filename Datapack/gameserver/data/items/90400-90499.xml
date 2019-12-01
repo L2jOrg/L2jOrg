@@ -2,19 +2,19 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="90400" name="Lv. 5 Vital Stone Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_vital_i00">
 	<!-- Double-click to obtain Lv. 5 Vital Stone.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90401" name="Melodys Luck Cube" type="COUPON" icon="icon.etc_dkbrown_crystal_cube_pc_i00">
 	<!-- 30-day item. Double-click to receive various rewards at random. (Can be used only once per day.)  For characters of level 20 or higher. -->
-		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<armor id="90402" name="Fire Dragon Pendant +6" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_pve">
 	<!-- M. Def. +16, XP/SP gain +10%, P./M. Atk. +20. Duration: 15 days.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="21600" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -24,31 +24,31 @@
 
 	<item id="90403" name="Melodys Teleport Pouch" type="NONE" icon="icon.bookmark_scroll_i00">
 	<!-- Double-click to get 1 My Teleport Book or 10 My Teleport Scrolls.  -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90404" name="My Teleport Book" type="NONE" icon="icon.bookmark_book_i00">
 	<!-- Adds 1 slot to My Teleport, which can save specific locations. My Teleport can be expanded to up to 48 slots. -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" action="CALL_SKILL"/>
 	</item>
 
 	<item id="90405" name="My Teleport Scroll" type="TELEPORT_BOOKMARK" icon="icon.bookmark_scroll_i00">
 	<!-- Item that is consumed when moving to the remembered location. -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5"/>
 	</item>
 
 	<item id="90406" name="Melodys Fish Stew Pouch" type="NONE" icon="icon.fish_stew_residence_cha">
 	<!-- Double-click to receive the following items: Chef's Fish Stew (Victory/Fire/Water/Wind), 2 Special Fruit Buffs, 2 Scrolls of Mood Melody.  -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90407" name="Chef's Fish Stew - Victory" type="SCROLL" icon="icon.fish_stew_residence_cha">
-	<!-- For 10 min. activates Chant of Victory Lv. 1. \\n<Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
-		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" depositable="false"/>
+	<!-- For 20 min. activates Chant of Victory Lv. 1. \\n<Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39228" level="1"/>  <!-- Chef's Fish Stew - Victory -->
@@ -56,8 +56,8 @@
 	</item>
 
 	<item id="90408" name="Chef's Fish Stew - Fire" type="SCROLL" icon="icon.fish_stew_residence_cha">
-	<!-- For 10 min. activates Prophecy of Fire Lv. 1.  \\n<Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
-		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" depositable="false"/>
+	<!-- For 20 min. activates Prophecy of Fire Lv. 1.  \\n<Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39229" level="1"/>  <!-- Chef's Fish Stew - Fire -->
@@ -65,8 +65,8 @@
 	</item>
 
 	<item id="90409" name="Chef's Fish Stew - Water" type="SCROLL" icon="icon.fish_stew_residence_cha">
-	<!-- For 10 min. activates Prophecy of Water Lv. 1.  \\n<Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
-		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" depositable="false"/>
+	<!-- For 20 min. activates Prophecy of Water Lv. 1.  \\n<Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39230" level="1"/>  <!-- Chef's Fish Stew - Water -->
@@ -74,8 +74,8 @@
 	</item>
 
 	<item id="90410" name="Chef's Fish Stew - Wind" type="SCROLL" icon="icon.fish_stew_residence_cha">
-	<!-- For 10 min. activates Prophecy of Wind Lv. 1.  \\n<Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
-		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" depositable="false"/>
+	<!-- For 20 min. activates Prophecy of Wind Lv. 1.  \\n<Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39231" level="1"/>  <!-- Chef's Fish Stew - Wind -->
@@ -84,31 +84,31 @@
 
 	<item id="90411" name="Melodys Scroll Pouch" type="NONE" icon="icon.etc_scroll_of_resurrection_i01">
 	<!-- Double-click to receive 3 Improved Scrolls of Escape, Improved Scroll of Resurrection, 2 Scrolls of Mood Melody.  -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90412" name="Melodys Enhance Pouch" type="NONE" icon="icon.etc_mineral_general_i01">
 	<!-- Double-click to receive 2 Blade Spirits, Common Life Stone, 2 Scrolls of Mood Melody.  -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90413" name="Melodys Rice Cake Pouch" type="NONE" icon="icon.bm_rice_cake_i00">
 	<!-- Double-click to receive 2 Rice Cakes of Fighting Spirit, Angel Cat's Blessing, 2 Scrolls of Mood Melody.  -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90414" name="Melodys Potion Pouch" type="NONE" icon="icon.five_vairy_potion">
 	<!-- Double-click to receive 30 Major Warrior HP Potions, 30 Warrior MP Recovery Potion, 2 Scrolls of Mood Melody.  -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90415" name="Warrior MP Recovery Potion" type="POTION" icon="icon.etc_lesser_potion_blue_i00">
 	<!-- Magical MP-recovering potion.  -->
-		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" commission-type="POTION" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39258" level="1"/>  <!-- Warrior MP Recovery Potion -->
@@ -117,25 +117,25 @@
 
 	<item id="90416" name="Melodys Growth Pouch" type="NONE" icon="icon.ev_charge_box">
 	<!-- Double-click to receive Hero's Dual Swords (15-day) Fishing Rod (10-day), 2160 Normal Baits, 2160 Fishing Shots, 3 Teleports: Giran Harbor, 20 Soulshot Tickets.  -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90417" name="Melodys Fishing Pouch" type="NONE" icon="icon.fishing_zone_ticket">
 	<!-- Double-click to receive 2160 Silver Baits, Golden Mermaid's Tears (7-day), Savior's Experience Box.  -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90418" name="Savior's Experience Box" type="NONE" icon="icon.etc_ev_kalie_treasure_box">
 	<!-- Double-click to receive one of the following items: Low-grade/Mid-grade/High-grade/Top-grade XP Scroll.  -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<weapon id="90419" name="Hero's Shining Dual Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
 	<!-- 30-day item. Atk. Spd. +5%.  Enchantment, soul storing and augmenting are impossible. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="2330" commission-type="OTHER_ITEM"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
@@ -152,7 +152,7 @@
 
 	<weapon id="90420" name="Hero's Shining Staff" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_sages_staff_i01" magic="true">
 	<!-- 30-day item. Casting Spd. +12%.  Enchantment, soul storing and augmenting are impossible. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1000" commission-type="OTHER_ITEM"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
@@ -170,7 +170,7 @@
 
 	<weapon id="90421" name="Hero's Shining Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_akat_long_bow_i01">
 	<!-- 30-day item. P. Critical +52.  Enchantment, soul storing and augmenting are impossible. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1740" commission-type="OTHER_ITEM"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
@@ -188,7 +188,7 @@
 
 	<weapon id="90422" name="Hero's Shining Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_grace_dagger_i01">
 	<!-- 30-day item. P. Critical +66.  Enchantment, soul storing and augmenting are impossible. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1020" commission-type="OTHER_ITEM"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
@@ -206,7 +206,7 @@
 
 	<weapon id="90423" name="Hero's Shining Spear" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_poleaxe_i01">
 	<!-- 30-day item. Stun Attack Success Rate +25%.  Enchantment, soul storing and augmenting are impossible. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="2010" commission-type="OTHER_ITEM"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
@@ -227,7 +227,7 @@
 
 	<armor id="90424" name="Hero's Shining Helmet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
 	<!-- 30-day item. Heavy.  Cannot be enchanted. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="600" />
 		<crystal type="C"/>
 		<stats>
@@ -237,7 +237,7 @@
 
 	<armor id="90425" name="Hero's Shining Armor" type="HEAVY" body-part="FULL_ARMOR" icon="icon.armor_t62_ul_i00">
 	<!-- 30-day item. Heavy.  Cannot be enchanted. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10480" />
 		<crystal type="C"/>
 		<stats>
@@ -247,7 +247,7 @@
 
 	<armor id="90426" name="Hero's Shining Gauntlets" type="NONE" body-part="GLOVES" icon="icon.armor_t62_g_i00">
 	<!-- 30-day item. Heavy.  Cannot be enchanted. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="600" />
 		<crystal type="C"/>
 		<stats>
@@ -257,7 +257,7 @@
 
 	<armor id="90427" name="Hero's Shining Boots" type="NONE" body-part="FEET" icon="icon.armor_t62_b_i00">
 	<!-- 30-day item. Heavy.  Cannot be enchanted. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1200" />
 		<crystal type="C"/>
 		<stats>
@@ -267,7 +267,7 @@
 
 	<armor id="90428" name="Hero's Shining Helmet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
 	<!-- 30-day item. Light.  Cannot be enchanted. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="620" />
 		<crystal type="C"/>
 		<stats>
@@ -277,7 +277,7 @@
 
 	<armor id="90429" name="Hero's Shining Rags" type="LIGHT" body-part="FULL_ARMOR" icon="icon.armor_t45_ul_i00">
 	<!-- 30-day item. Light.  Cannot be enchanted. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5800" />
 		<crystal type="C"/>
 		<stats>
@@ -287,7 +287,7 @@
 
 	<armor id="90430" name="Hero's Shining Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t45_g_i00">
 	<!-- 30-day item. Light.  Cannot be enchanted. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="600" />
 		<crystal type="C"/>
 		<stats>
@@ -297,7 +297,7 @@
 
 	<armor id="90431" name="Hero's Shining Shoes" type="NONE" body-part="FEET" icon="icon.armor_t45_b_i00">
 	<!-- 30-day item. Light.  Cannot be enchanted. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1210" />
 		<crystal type="C"/>
 		<stats>
@@ -307,7 +307,7 @@
 
 	<armor id="90432" name="Hero's Shining Circlet" type="NONE" body-part="HEAD" icon="icon.armor_circlet_i00">
 	<!-- 30-day item. Magical.  Cannot be enchanted. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="600" />
 		<crystal type="C"/>
 		<stats>
@@ -317,7 +317,7 @@
 
 	<armor id="90433" name="Hero's Shining Tunic" type="MAGIC" body-part="CHEST" icon="icon.armor_t57_u_i00">
 	<!-- 30-day item. Magical.  Cannot be enchanted. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1980" />
 		<crystal type="C"/>
 		<stats>
@@ -328,7 +328,7 @@
 
 	<armor id="90434" name="Hero's Shining Stockings" type="MAGIC" body-part="LEGS" icon="icon.armor_t57_l_i00">
 	<!-- 30-day item. Magical.  Cannot be enchanted. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="960" />
 		<crystal type="C"/>
 		<stats>
@@ -339,7 +339,7 @@
 
 	<armor id="90435" name="Hero's Shining Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t57_g_i00">
 	<!-- 30-day item. Magical.  Cannot be enchanted. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="610" />
 		<crystal type="C"/>
 		<stats>
@@ -349,7 +349,7 @@
 
 	<armor id="90436" name="Hero's Shining Shoes" type="NONE" body-part="FEET" icon="icon.armor_t57_b_i00">
 	<!-- 30-day item. Magical.  Cannot be enchanted. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1210" />
 		<crystal type="C"/>
 		<stats>
@@ -359,110 +359,110 @@
 
 	<armor id="90437" name="Aden Warrior Hat" type="NONE" body-part="HAIR_ALL" icon="icon.bm_romantic_chaperon_yellow">
 	<!-- Hat for a returned hero. A 60-day item. When equipped, increases P. Atk. and M. Atk. Occupies 2 Hair Accessory slots.  -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" duration="86400" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<item id="90438" name="Fish Stew - Might Lv. 2" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. P. Atk. +12%.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90439" name="Fish Stew - Might Lv. 3" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. P. Atk. +15%.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90440" name="Fish Stew - Shield Lv. 2" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. P. Def. +12%.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90441" name="Fish Stew - Shield Lv. 3" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. P. Def. +15%.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90442" name="Fish Stew - Empower Lv. 2" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. M. Atk. +65%.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90443" name="Fish Stew - Empower Lv. 3" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. M. Atk. +75%.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90444" name="Fish Stew - Magic Barrier Lv. 2" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. M. Def. +30%.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90445" name="Fish Stew - Vampiric Rage Lv. 2" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. recovers as HP 7% of the physical damage inflicted on the enemy with a certain probability.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90446" name="Fish Stew - Vampiric Rage Lv. 3" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. recovers as HP 8% of the physical damage inflicted on the enemy with a certain probability.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90447" name="Fish Stew - Greater Might Lv. 1" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. P. Atk. +4%.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90448" name="Fish Stew - Greater Shield Lv. 1" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. P. Def. +5%.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90449" name="Fish Stew - Wild Magic Lv. 1" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. M. Critical Rate +10. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90450" name="Fish Stew - Berserker Spirit Lv. 1" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. P. Def. -5%, M. Def. -10%, P. Evasion -2; P. Atk. +5%, M. Atk. +10%, Atk. Spd. +5%, Casting Spd. +5%, Speed +5.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="90451" name="Fish Stew - Berserker Spirit Lv. 2" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. P. Def. -8%, M. Def. -16%, P. Evasion -4; P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, Speed +8.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="90452" name="Fish Stew - Decrease Weight Lv. 1" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. Weight limit +3000.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90453" name="Fish Stew - Decrease Weight Lv. 2" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. Weight limit +6000.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90454" name="Fish Stew - Decrease Weight Lv. 3" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. Weight limit +9000.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
@@ -684,109 +684,109 @@
 
 	<item id="90479" name="Shiny Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_main_i00">
 	<!-- Double-click to obtain 1 Jewel (Lv.1). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90480" name="Lucky Enchant Stone: Save Armor (D-grade)" type="LUCKY_ENCHANT" icon="icon.ench_am_stone_i03">
 	<!-- Enchant success rate +10% for standard armor (D-grade) when using an Enchant Scroll. Only for items enchanted between +3 and +8. For full-body armor, enchant must be between +4 and +8. The item will not be crystallized even if enchantment fails, but the enchant value will be reset to 0.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="90481" name="Lucky Enchant Stone: Save Armor (C-grade)" type="LUCKY_ENCHANT" icon="icon.ench_am_stone_i03">
 	<!-- Enchant success rate +10% for standard armor (C-grade) when using an Enchant Scroll. Only for items enchanted between +3 and +8. For full-body armor, enchant must be between +4 and +8. The item will not be crystallized even if enchantment fails, but the enchant value will be reset to 0.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="90482" name="Lucky Enchant Stone: Save Armor (B-grade)" type="LUCKY_ENCHANT" icon="icon.ench_am_stone_i03">
 	<!-- Enchant success rate +10% for standard armor (B-grade) when using an Enchant Scroll. Only for items enchanted between +3 and +8. For full-body armor, enchant must be between +4 and +8. The item will not be crystallized even if enchantment fails, but the enchant value will be reset to 0.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="90483" name="Lucky Enchant Stone: Save Armor (A-grade)" type="LUCKY_ENCHANT" icon="icon.ench_am_stone_i03">
 	<!-- Enchant success rate +10% for standard armor (A-grade) when using an Enchant Scroll. Only for items enchanted between +3 and +8. For full-body armor, enchant must be between +4 and +8. The item will not be crystallized even if enchantment fails, but the enchant value will be reset to 0.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="90484" name="Lucky Enchant Stone: Protect Armor (D-grade)" type="LUCKY_ENCHANT" icon="icon.ench_am_stone_i01">
 	<!-- Enchant success rate +10% for standard armor (D-grade) when using an Enchant Scroll. Only for items enchanted between +3 and +8. For full-body armor, enchant must be between +4 and +8. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 1.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="90485" name="Lucky Enchant Stone: Protect Armor (C-grade)" type="LUCKY_ENCHANT" icon="icon.ench_am_stone_i01">
 	<!-- Enchant success rate +10% for standard armor (C-grade) when using an Enchant Scroll. Only for items enchanted between +3 and +8. For full-body armor, enchant must be between +4 and +8. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 1.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="90486" name="Lucky Enchant Stone: Protect Armor (B-grade)" type="LUCKY_ENCHANT" icon="icon.ench_am_stone_i01">
 	<!-- Enchant success rate +10% for standard armor (B-grade) when using an Enchant Scroll. Only for items enchanted between +3 and +8. For full-body armor, enchant must be between +4 and +8. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 1.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="90487" name="Lucky Enchant Stone: Protect Armor (A-grade)" type="LUCKY_ENCHANT" icon="icon.ench_am_stone_i01">
 	<!-- Enchant success rate +10% for standard armor (A-grade) when using an Enchant Scroll. Only for items enchanted between +3 and +8. For full-body armor, enchant must be between +4 and +8. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 1.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="90488" name="Lucky Enchant Stone: Armor (D-grade)" type="LUCKY_ENCHANT" icon="icon.ench_am_stone_i00">
 	<!-- Enchant success rate +10% for standard armor (D-grade) when using an Enchant Scroll. Only for items enchanted between +3 and +8. For full-body armor, enchant must be between +4 and +8.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="90489" name="Lucky Enchant Stone: Armor (C-grade)" type="LUCKY_ENCHANT" icon="icon.ench_am_stone_i00">
 	<!-- Enchant success rate +10% for standard armor (C-grade) when using an Enchant Scroll. Only for items enchanted between +3 and +8. For full-body armor, enchant must be between +4 and +8.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="90490" name="Lucky Enchant Stone: Armor (B-grade)" type="LUCKY_ENCHANT" icon="icon.ench_am_stone_i00">
 	<!-- Enchant success rate +10% for standard armor (B-grade) when using an Enchant Scroll. Only for items enchanted between +3 and +8. For full-body armor, enchant must be between +4 and +8.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="90491" name="Lucky Enchant Stone: Armor (A-grade)" type="LUCKY_ENCHANT" icon="icon.ench_am_stone_i00">
 	<!-- Enchant success rate +10% for standard armor (A-grade) when using an Enchant Scroll. Only for items enchanted between +3 and +8. For full-body armor, enchant must be between +4 and +8.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="90492" name="Giant's Lucky Enchant Stone (A-grade)" type="GIANT_ENCHANT" icon="icon.giant_ench_armor_stone_r_i02">
 	<!-- Improved Scroll: Enchant Armor chance +10% when enchanting A-grade armor. Only for items enchanted between +3 and +8. For full-body armor, enchant must be between +4 and +8.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="90493" name="Blessed Lucky Enchant Stone (A-grade)" type="BLESSED_LUCKY_ENCHANT" icon="icon.giant_ench_armor_stone_r_i02">
 	<!-- Enchant success rate +10% for armor (A-grade) when using a blessed scroll. Only for items enchanted between +3 and +8. For full-body armor, enchant must be between +4 and +8.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="90494" name="Eva's Scroll: Enchant Hair Accessory" type="ENCHANT_ARMOR" icon="icon.scroll_of_unidentify_am_d">
 	<!-- Hair Accessory M. Def. +2. Starting from +5, an additional effect is activated and HP/MP/CP are increased. Can be safely enchanted up to +3.   -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90495" name="Scroll of Mood Melody" type="SCROLL" icon="icon.bm_magmeld">
 	<!-- For 20 minutes, grants the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk, Death Whisper, and Vampiric Rage. Will not be deleted upon death.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<armor id="90496" name="Earth Dragon Belt" type="LIGHT" body-part="BELT" icon="icon.bm_antaras_belt">
 	<!-- When belt is equipped: CON +1, MEN +1, HP Recovery Bonus +2.31, Max MP Recovery Bonus +1.54, CP Recovery Bonus +3.07, Max HP/MP/CP +15%, Inventory Slots +6, Weight Gauge +7,000, HP Potions Effect +100, Incoming Damage -6%. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -799,7 +799,7 @@
 
 	<armor id="90497" name="Fire Dragon's Belt" type="LIGHT" body-part="BELT" icon="icon.bm_vallakas_belt">
 	<!-- When belt is equipped: STR +1, INT +1, HP Recovery Bonus +2.31, Max MP Recovery Bonus +1.54, CP Recovery Bonus +3.07, Max HP/MP/CP +10%, Inventory Slots +6, Weight Gauge +7,000, P./M. Critical Damage +4%, HP Potions Effect +100. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -812,13 +812,13 @@
 
 	<item id="90498" name="Mysterious Jewelry Box" type="NONE" icon="icon.bm_special_jewelbox_lv5">
 	<!-- Double-click to obtain Shiny Jewelry Box level 5.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<item id="90499" name="Golden Fruit Buff" type="SCROLL" icon="icon.bm_dragon_fruit">
-	<!-- For 20 minutes, P./M. Atk. +12%, P./M. Def. +12%, Max. HP/CP/MP +15%, HP/MP Recovery Bonus +25%, P./M. Critical Rate +10, P./M. Critical Damage +5%, HP/MP Recovery +30%. At a certain chance absorbs 5% of the damage inflicted on target as HP. XP and SP gained through hunting +10%. Cooldown is 1 minute. Buff remains after death.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+	<item id="90499" name="Golden Fruit Buff Lv. 1" type="SCROLL" icon="icon.bm_dragon_fruit">
+	<!-- For 20 minutes, P./M. Atk. +12%, P./M. Def. +15%, Max. HP/CP/MP +25%, P./M. Critical Rate +10, P./M. Critical Damage +5%, HP/MP Recovery Bonus +30%. At a certain chance absorbs 5% of the damage inflicted on target as HP. XP and SP gained through hunting +10%. Cooldown is 1 minute. Buff remains after death. -->
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 

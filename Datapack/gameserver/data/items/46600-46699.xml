@@ -2,31 +2,31 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="46642" name="Proof of Red" type="NONE" icon="icon.event_mahum_memo">
 	<!-- Red Libra-only Item\\nA reward certificate received for completing the Red Libra merchants' task. It is used to upgrade a weapon through Elder Black or exchange a weapon pack through Wealthy Merchant Red.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="46644" name="Red Libra Supplies Lv. 1" type="NONE" icon="icon.event_mahum_coinbox">
 	<!-- Red Libra-only Item\\nA reward item received for helping Bodyguard Blue. Double-click to obtain one random item.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="46645" name="Red Libra Supplies Lv. 2" type="NONE" icon="icon.event_mahum_coinbox">
 	<!-- Red Libra-only Item\\nA reward item received for helping Bodyguard Blue. Double-click to obtain one random item.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="46646" name="Red Libra Supplies Lv. 3" type="NONE" icon="icon.event_mahum_coinbox">
 	<!-- Red Libra-only Item\\nA reward item received for helping Bodyguard Blue. Double-click to obtain one random item.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="46647" name="Red Libra Supplies Lv. 4" type="NONE" icon="icon.event_mahum_coinbox">
 	<!-- Red Libra-only Item\\nA reward item received for helping Bodyguard Blue. Double-click to obtain one random item.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 

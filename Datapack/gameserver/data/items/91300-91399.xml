@@ -2,531 +2,531 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="91300" name="Spring Energy Lv. 3" type="NONE" icon="icon.etc_leaf_green_i00">
 	<!-- Max HP/MP +15%, P. Atk. +15%, M. Atk. +23%, Atk. Spd./Casting Spd. +15%, P. Def/M. Def +15%, XP/SP gain +15%, Sayha's Grace Consumption Rate -15% for 20 minutes when used.  \\n\\n<Note>\\nIf two Spring Energies of different levels are used, only the effects of the higher level will be applied.\\n\\n -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91301" name="Sayha's Spring Breeze" type="NONE" icon="icon.ev_magic_flame_game_wind1">
 	<!-- An item containing a fresh spring breeze. Sayha's Grace Consumption +100% and XP/SP gain +150% when hunting monsters. Remains active after death. Duration is 20 minutes. Cooldown is 20 minutes. Available only when there is at least 1 slot left for Sayha's Grace. \\n\\n<Note>\\nCannot be used with Sayha's Storm or Sayha's Gust.\\n\\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91302" name="Spring's Blessing Box" type="NONE" icon="icon.npoint_antaras_30day_box">
 	<!-- A blessed box that Primavera prepared with great care. Double-click to obtain 1 item at random among Fire Dragon Belt, Earth Dragon Belt, Enchant Scroll Enchant Scroll by grade, and various supply items. \\n\\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<armor id="91303" name="Brooch Lv. 4" type="NONE" body-part="UNDERWEAR" icon="icon.etc_bm_brooch_lavianrose_i05">
-	<!-- Activates 5 jewel slots when equipped. Inventory Slot +12. -->
-		<restriction freightable="false" dropable="false"/>
+	<!-- Activates 5 jewel slots when equipped. Inventory Slot +12. Can combine 2 Brooches of the same level. -->
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91304" name="Brooch Lv. 5" type="NONE" body-part="UNDERWEAR" icon="icon.etc_bm_brooch_lavianrose_i06">
 	<!-- Activates 6 jewel slots when equipped. Inventory Slot +15. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91305" name="Greater Topaz Lv. 1" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_absdmg_high_lv1_lavianrose">
 	<!-- Disrupts the target's skill casting when used. Inflicts fixed damage of 2500 Power in PvP. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91306" name="Greater Topaz Lv. 2" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_absdmg_high_lv1_lavianrose">
 	<!-- Disrupts the target's skill casting when used. Inflicts fixed damage of 2800 Power in PvP. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91307" name="Greater Topaz Lv. 3" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_absdmg_high_lv1_lavianrose">
 	<!-- Disrupts the target's skill casting when used. Inflicts fixed damage of 3400 Power in PvP. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91308" name="Greater Topaz Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_absdmg_high_lv1_lavianrose">
 	<!-- Disrupts the target's skill casting when used. Inflicts fixed damage of 4300 Power in PvP. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91309" name="Greater Topaz Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_absdmg_high_lv1_lavianrose">
 	<!-- Disrupts the target's skill casting when used. Inflicts fixed damage of 6000 Power in PvP. Removes up to 3 buffs from the enemy when a Special Ability is used. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91310" name="Greater Garnet Lv. 1" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_garnet_high_lv1_lavianrose">
 	<!-- When equipped, Stun/Pull/Silence/Paralysis/Fear Resistance +22%. Makes you invincible to debuffs for 16 seconds upon using a skill. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91311" name="Greater Garnet Lv. 2" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_garnet_high_lv1_lavianrose">
 	<!-- When equipped, Stun/Pull/Silence/Paralysis/Fear Resistance +24%. Makes you invincible to debuffs for 17 seconds upon using a skill. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91312" name="Greater Garnet Lv. 3" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_garnet_high_lv1_lavianrose">
 	<!-- When equipped, Stun/Pull/Silence/Paralysis/Fear Resistance +26%. Makes you invincible to debuffs for 18 seconds upon using a skill. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91313" name="Greater Garnet Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_garnet_high_lv1_lavianrose">
 	<!-- When equipped, Stun/Pull/Silence/Paralysis/Fear Resistance +30%. Makes you invincible to debuffs for 20 seconds upon using a skill. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91314" name="Greater Garnet Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_garnet_high_lv1_lavianrose">
 	<!-- When equipped, Stun/Pull/Silence/Paralysis/Fear Resistance +40%, Sleep/Poison Resistance +10%. Makes you invincible to debuffs for 25 seconds upon using a skill. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91315" name="Greater Jade Lv. 1" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_speedup_lv1_high">
 	<!-- When equipped, Atk. Spd./Casting Spd. +15%, Movement Speed +1%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91316" name="Greater Jade Lv. 2" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_speedup_lv1_high">
 	<!-- When equipped, Atk. Spd./Casting Spd. +16%, Movement Speed +2%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91317" name="Greater Jade Lv. 3" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_speedup_lv1_high">
 	<!-- When equipped, Atk. Spd./Casting Spd. +17%, Movement Speed +3%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91318" name="Greater Jade Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_speedup_lv1_high">
 	<!-- When equipped, Atk. Spd./Casting Spd. +18%, Movement Speed +5%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91319" name="Greater Jade Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_speedup_lv1_high">
 	<!-- When equipped, Atk. Spd./Casting Spd. +20%, Movement Speed +7%, Resistance to Melee Weapon Attack +10%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91320" name="Greater Ruby Lv. 1" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_ssdmg_high_lv1_lavianrose">
 	<!-- When equipped, Soulshot, Blessed Soulshot, and Beast Soulshot damage +17% and P. Atk. +1%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91321" name="Greater Ruby Lv. 2" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_ssdmg_high_lv1_lavianrose">
 	<!-- When equipped, Soulshot, Blessed Soulshot, and Beast Soulshot damage +18% and P. Atk. +2%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91322" name="Greater Ruby Lv. 3" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_ssdmg_high_lv1_lavianrose">
 	<!-- When equipped, increases Soulshot, Blessed Soulshot and Beast Soulshot Damage by 19% and P. Atk. by 3%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91323" name="Greater Ruby Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_ssdmg_high_lv1_lavianrose">
 	<!-- When equipped, Soulshot, Blessed Soulshot, and Beast Soulshot damage +20% and P. Atk. +5%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91324" name="Greater Ruby Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_ssdmg_high_lv1_lavianrose">
 	<!-- When equipped, increases Soulshot, Blessed Soulshot and Beast Soulshot Damage by 20%, P. Atk. by 7%, and P. Critical Rate by 5%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91325" name="Greater Sapphire Lv. 1" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_spsdmg_high_lv1_lavianrose">
 	<!-- When equipped, Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +17% and M. Atk. +2%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91326" name="Greater Sapphire Lv. 2" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_spsdmg_high_lv1_lavianrose">
 	<!-- When equipped, Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +18% and M. Atk. +4%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91327" name="Greater Sapphire Lv. 3" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_spsdmg_high_lv1_lavianrose">
 	<!-- When equipped, Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +19% and M. Atk. +6%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91328" name="Greater Sapphire Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_spsdmg_high_lv1_lavianrose">
 	<!-- When equipped, Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +20% and M. Atk. +10%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91329" name="Greater Sapphire Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_spsdmg_high_lv1_lavianrose">
 	<!-- When equipped, Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +20%, M. Atk. +14%, and M. Critical Rate +10%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91330" name="Greater Diamond Lv. 1" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_phydef_high_lv1_lavianrose">
 	<!-- When equipped, P. Def +150 and P. Critical Damage Received -11%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91331" name="Greater Diamond Lv. 2" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_phydef_high_lv1_lavianrose">
 	<!-- When equipped, P. Def +180 and P. Critical Damage Received -12%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91332" name="Greater Diamond Lv. 3" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_phydef_high_lv1_lavianrose">
 	<!-- When equipped, P. Def +220 and P. Critical Damage Received -14%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91333" name="Greater Diamond Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_phydef_high_lv1_lavianrose">
 	<!-- When equipped, P. Def +280 and P. Critical Damage Received -16%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91334" name="Greater Diamond Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_phydef_high_lv1_lavianrose">
 	<!-- When equipped, P. Def +400, P. Critical Damage Received -20%, and P. Critical Attack Receival Rate -10%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91335" name="Greater Pearl Lv. 1" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_magdef_high_lv1_lavianrose">
 	<!-- When equipped, M. Def +85 and M. Critical Damage Received -11%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91336" name="Greater Pearl Lv. 2" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_magdef_high_lv1_lavianrose">
 	<!-- When equipped, M. Def +100 and M. Critical Damage Received -12%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91337" name="Greater Pearl Lv. 3" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_magdef_high_lv1_lavianrose">
 	<!-- When equipped, M. Def +125 and M. Critical Damage Received -14%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91338" name="Greater Pearl Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_magdef_high_lv1_lavianrose">
 	<!-- When equipped, M. Def +160 and M. Critical Damage Received -16%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91339" name="Greater Pearl Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_magdef_high_lv1_lavianrose">
 	<!-- When equipped, M. Def +250, M. Critical Damage Received -20%, and M. Critical Attack Receival Rate -10%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91340" name="Greater Vital Stone Lv. 1" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_vital_high_lv1_lavianrose">
 	<!-- XP/SP gain +17% and Sayha's Grace Consumption Rate -30% while hunting during Sayha's Grace effect. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91341" name="Greater Vital Stone Lv. 2" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_vital_high_lv1_lavianrose">
 	<!-- XP/SP gain +19% and Sayha's Grace Consumption Rate -32% while hunting during Sayha's Grace effect. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91342" name="Greater Vital Stone Lv. 3" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_vital_high_lv1_lavianrose">
 	<!-- XP/SP gain +21% and Sayha's Grace Consumption Rate -32% while hunting during Sayha's Grace effect. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91343" name="Greater Vital Stone Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_vital_high_lv1_lavianrose">
 	<!-- XP/SP gain +23% and Sayha's Grace Consumption Rate -32% while hunting during Sayha's Grace effect. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91344" name="Greater Vital Stone Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_vital_high_lv1_lavianrose">
 	<!-- XP/SP gain +30% and Attribute XP +50% for hunting attribute NPCs while hunting during Sayha's Grace effect. Sayha's Grace Consumption Rate -35%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91345" name="Greater Aquamarine Lv. 1" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_castmpup_high_lv1_lavianrose">
 	<!-- When equipped, Max MP +2% and has a chance to recover 60 MP upon using a skill. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91346" name="Greater Aquamarine Lv. 2" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_castmpup_high_lv1_lavianrose">
 	<!-- When equipped, Max MP +5% and has a chance to recover 80 MP upon using a skill. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91347" name="Greater Aquamarine Lv. 3" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_castmpup_high_lv1_lavianrose">
 	<!-- When equipped, Max MP +8% and has a chance to recover 100 MP upon using a skill. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91348" name="Greater Aquamarine Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_castmpup_high_lv1_lavianrose">
 	<!-- When equipped, Max MP +12% and has a chance to recover 130 MP upon using a skill. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91349" name="Greater Aquamarine Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_castmpup_high_lv1_lavianrose">
 	<!-- When equipped, Max MP +20% and has a chance to recover 200 MP upon using a skill. Instantly recovers 10% MP when a Special Ability is used. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91350" name="Greater Cat's Eye Lv. 1" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_red_catseye_high_lv1_lavianrose">
 	<!-- When equipped, P./M. Critical Damage +16% and P./M. Skill Power +1%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91351" name="Greater Cat's Eye Lv. 2" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_red_catseye_high_lv1_lavianrose">
 	<!-- When equipped, P./M. Critical Damage +17% and P./M. Skill Power +2%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91352" name="Greater Cat's Eye Lv. 3" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_red_catseye_high_lv1_lavianrose">
 	<!-- When equipped, P./M. Critical Damage +18% and P./M. Skill Power +3%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91353" name="Greater Cat's Eye Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_red_catseye_high_lv1_lavianrose">
 	<!-- When equipped, P./M. Critical Damage +19% and P./M. Skill Power +5%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91354" name="Greater Cat's Eye Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_red_catseye_high_lv1_lavianrose">
 	<!-- When equipped, P./M. Critical Damage +20%, P./M. Skill Power +7%, and Buff-canceling Resistance +40%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<item id="91355" name="Brilliant Jewelry Box" type="NONE" icon="icon.bm_2018_jewelbox_random">
 	<!-- Double-click to obtain 1 Vital Stone, Pearl, Diamond, Ruby, Sapphire, Jade, Garnet, Topaz, Aquamarine, Cat's Eye, or Emerald (Lv. 1) Box.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91356" name="Gem Energy" type="NONE" icon="icon.bm_blessed_jewel">
 	<!-- Returns a higher-grade Gem when combined with a Greater Gem. Can be exchanged for a Glittering Rough Jewel through the Dimensional Merchant.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<armor id="91357" name="Emerald Lv. 1" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_emerald_i00">
 	<!-- CON +1 when equipped. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91358" name="Emerald Lv. 2" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_emerald_i00">
 	<!-- CON and MEN +1 when equipped. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91359" name="Emerald Lv. 3" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_emerald_i00">
 	<!-- CON, MEN, DEX +1 when equipped. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91360" name="Emerald Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_emerald_i00">
 	<!-- CON, MEN, DEX, WIT +1 when equipped. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91361" name="Emerald Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_emerald_i00">
 	<!-- When equipped, CON, MEN, DEX, WIT, STR, INT +1. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a Greater Gem when combined with the Gem Energy. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91362" name="Greater Emerald Lv. 1" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_allstat_high_lv1_lavianrose">
 	<!-- When equipped, CON +2, MEN, DEX, WIT, STR, INT+1. Damage Reflect Resistance +2%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91363" name="Greater Emerald Lv. 2" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_allstat_high_lv1_lavianrose">
 	<!-- When equipped, CON, MEN +2, DEX, WIT, STR, INT+1. Damage Reflect Resistance +4%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91364" name="Greater Emerald Lv. 3" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_allstat_high_lv1_lavianrose">
 	<!-- When equipped, CON, MEN, DEX +2, WIT, STR, INT+1. Damage Reflect Resistance +6%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91365" name="Greater Emerald Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_allstat_high_lv1_lavianrose">
 	<!-- When equipped, CON, MEN, DEX, WIT+2, STR, INT+1. Damage Reflect Resistance +10%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91366" name="Greater Emerald Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_allstat_high_lv1_lavianrose">
 	<!-- When equipped, CON, MEN, DEX, WIT, STR, INT +2. Damage Reflect Resistance +20%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<item id="91367" name="Emerald Box" type="NONE" icon="icon.etc_bm_jewelbox_emerald_i00">
 	<!-- Double-click to obtain an Emerald Lv. 1.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91368" name="Emerald Lv. 3 Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_emerald_i00">
 	<!-- Double-click to obtain an Emerald Lv. 3.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91369" name="Emerald Lv. 4 Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_emerald_i00">
 	<!-- Double-click to obtain an Emerald Lv. 4.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91370" name="Emerald Lv. 5 Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_emerald_i00">
 	<!-- Double-click to obtain an Emerald Lv. 5.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91371" name="Brilliant Brooch Fragment" type="NONE" icon="icon.bm_2018_brooch_piece">
 	<!-- Take 1 Brooch Lv. 4 and 1 Brilliant Brooch Fragment to the Dimensional Merchant to exchange them for a Brooch Lv. 5.  Will be deleted during maintenance on Wednesday, May 30th, 2018. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91372" name="Bait of Grace" type="LURE" icon="icon.fishing_cube_lure">
 	<!-- Event fishing bait. Use it to obtain Blue Mackerels, Whales, or Coins of Grace.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="EQUIP"/>
 	</item>
 
 	<item id="91373" name="Fishing Kit of Grace" type="NONE" icon="icon.etc_pi_box_love_pack">
 	<!-- Double-click to obtain a box containing 85,000 Bait of Grace, 85,000 Normal Fishing Shots, and 1 Golden Mermaid's Fishing Rod (30-day) Pack.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91374" name="Coin of Grace" type="NONE" icon="icon.etc_magic_coin_blue_i00">
 	<!-- Coins that Cavalia saved to buy a present. Gather the coins that have been dropped in the water and take them to Cavalia at the Gludin Harbor or Giran Harbor to exchange them for useful items.   -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91375" name="Angler's Rune - Veteran" type="RUNE" icon="icon.fishing_zone_ticket_1">
 	<!-- A 7-day item. Only for characters level 76 and below. When stored in the inventory, Fishing XP and SP bonus +300%.  -->
-		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080"/>
 	</item>
 
 	<item id="91376" name="Angler's Rune - Master" type="RUNE" icon="icon.fishing_zone_ticket_1">
 	<!-- A 7-day item. Only for characters level 77 to 80. When stored in the inventory, Fishing XP and SP bonus +300%.  -->
-		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080"/>
 	</item>
 
 	<item id="91377" name="Angler's Rune - Supreme" type="RUNE" icon="icon.fishing_zone_ticket_1">
 	<!-- A 7-day item. Only for characters level 81 and above. When stored in the inventory, Fishing XP and SP bonus +300%.  -->
-		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080"/>
 	</item>
 
@@ -634,20 +634,20 @@
 
 	<armor id="91390" name="Topaz Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_topaz_i00">
 	<!-- A 15-day item. Disrupts the target's skill casting when used. Inflicts fixed damage of 2375 Power in PvP. If identical Gems are equipped, only the effect of the highest level Gem is applied.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="21600" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<item id="91391" name="Fish Stew - Guildsman's Gratitude Lv. 2" type="SCROLL" icon="icon.ev_invasion_buff_box">
 	<!-- XP/SP gain +30% while hunting for 20 minutes when used.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91392" name="Night Goblin Liquor" type="NONE" icon="icon.bm_goblin_buff_herong">
 	<!-- P. Atk. +15%, M. Atk. +23%, P./M. Def. +15%, Atk. Spd./Casting Spd. +15%, HP/MP Recovery Bonus +30% for 5 minutes. -->
-		<restriction freightable="false" destroyable="false" tradable="false" depositable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 

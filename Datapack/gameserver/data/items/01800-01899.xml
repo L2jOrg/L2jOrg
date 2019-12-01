@@ -155,73 +155,73 @@
 
 	<item id="1836" name="Kendell's 1st Order" type="NONE" icon="icon.etc_recipe_blue_i00">
 	<!-- Punish Kaboo Chief Uoph. He should be somewhere around the ruins over the hill, west of the Elven Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1837" name="Kendell's 2nd Order" type="NONE" icon="icon.etc_recipe_blue_i00">
 	<!-- Punish Kaboo Chief Kracha. He should be somewhere around the Nine obelisk, southwest of the Elven Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1838" name="Kendell's 3rd Order" type="NONE" icon="icon.etc_recipe_blue_i00">
 	<!-- Punish Kaboo Chief Batoh. He should be somewhere around the entrance of the underground fortress of the Elves. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1839" name="Kendell's 4th Order" type="NONE" icon="icon.etc_recipe_blue_i00">
 	<!-- Punish Kaboo Chief Tanukia. He should be somewhere around the open-air theatre ruins, southwest of the Elven Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1840" name="Kendell's 5th Order" type="NONE" icon="icon.etc_recipe_red_i00">
 	<!-- Punish Kaboo Chief Turel. He should be somewhere around the seashore ruins, northwest of Lake Iris. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1841" name="Kendell's 6th Order" type="NONE" icon="icon.etc_recipe_red_i00">
 	<!-- Punish Kaboo Chief Roko. He should be somewhere around the seashore ruins, west of Lake Iris. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1842" name="Kendell's 7th Order" type="NONE" icon="icon.etc_recipe_red_i00">
 	<!-- Punish Kaboo Chief Kamut. He should be somewhere around the seashore ruins, south of Lake Iris. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1843" name="Kendell's 8th Order" type="NONE" icon="icon.etc_recipe_red_i00">
 	<!-- Punish Kaboo Chief Murtika. He should be somewhere around the seashore ruins, east of Lake Iris. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1844" name="Kaboo Chief's 1st Torque" type="NONE" icon="icon.accessary_necklace_of_black_ore_i00">
 	<!-- Necklace taken by killing the chief of Kaboo orcs. Take this to Sentinel Kendell. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="1845" name="Kaboo Chief's 2nd Torque" type="NONE" icon="icon.accessary_necklace_of_black_ore_i00">
 	<!-- Necklace taken by killing the chief of Kaboo orcs. Take this to Sentinel Kendell. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="1846" name="Turek Dog Tag" type="NONE" icon="icon.etc_totem_necklace_black_i00">
 	<!-- Military identification necklace of Turek orc fighters. Collect these and take them to Piotur for a reward. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1847" name="Turek Medallion" type="NONE" icon="icon.etc_totem_necklace_green_i00">
 	<!-- Military identification necklace of Turek orc officers. Collect these and take them to Piotur for a reward. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
@@ -281,37 +281,37 @@
 
 	<item id="1857" name="Keltir Fang" type="NONE" icon="icon.etc_claw_i00">
 	<!-- Fang taken by killing keltirs. Collect 4 and take them to any of the Masters. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="1858" name="Keltir Fang" type="NONE" icon="icon.etc_claw_i00">
 	<!-- Fang taken by killing keltirs. Collect 4 and take them to any of the Magisters. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="1859" name="Keltir Fang" type="NONE" icon="icon.etc_claw_i00">
 	<!-- Fang taken by killing keltirs. Collect 4 and take them to any Mother Tree Guardian. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="1860" name="Keltir Fang" type="NONE" icon="icon.etc_claw_i00">
 	<!-- Fang taken by killing keltirs. Collect 4 and take them to any Abyssal Celebrant. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="1861" name="Keltir Fang" type="NONE" icon="icon.etc_claw_i00">
 	<!-- Fang taken by killing keltirs. Collect 4 and take them to the Priest of fire. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="1862" name="Keltir Fang" type="NONE" icon="icon.etc_claw_i00">
 	<!-- Fang taken by killing keltirs. Collect 4 and take them to the Miner. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 

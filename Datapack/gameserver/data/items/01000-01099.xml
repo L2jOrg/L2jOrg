@@ -11,235 +11,235 @@
 
 	<item id="1008" name="Harrys' 1st Receipt" type="NONE" icon="icon.etc_letter_white_i00">
 	<!-- The receipt that Harrys received after ordering tools. Take this and go to Blacksmith Altran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1009" name="Harrys' 2nd Receipt" type="NONE" icon="icon.etc_letter_white_i00">
 	<!-- The receipt that Harrys has received after placing an order for his tools. Go and gather golem shards needed for creating the tool. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1010" name="Golem Shard" type="NONE" icon="icon.etc_lump_black_i00">
 	<!-- Shards of rock that have fallen from the Golem's body. Gather 5 and take them to Blacksmith Altran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1011" name="Tool Box" type="NONE" icon="icon.etc_jewel_box_i00">
 	<!-- Toolbox containing the tools that Blacksmith Altran forged. Take this to Magister Harrys at the temple. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1012" name="Delivery List" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- Take the heavy wooden box to Trader Jackson. The bolts of cloth to Trader Silvia. Take the clay pot to the warehouse keeper Rant. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1013" name="Heavy Wood Box" type="NONE" icon="icon.etc_jewel_box_i00">
 	<!-- The wooden box to be delivered to Trader Jackson of the weapons shop. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1014" name="Cloth Bundle" type="NONE" icon="icon.etc_piece_of_cloth_blue_i00">
 	<!-- Bolts of cloth that need to be delivered to Trader Silvia of the grocery store. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1015" name="Clay Pot" type="NONE" icon="icon.etc_oil_pot_white_i00">
 	<!-- The clay pot that must be delivered to the warehouse keeper Rant. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1016" name="Jackson's Receipt" type="NONE" icon="icon.etc_letter_red_i00">
 	<!-- The receipt that Jackson Has issued upon receiving his wooden box. Take this to Guard Arnold. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1017" name="Silvia's Receipt" type="NONE" icon="icon.etc_letter_blue_i00">
 	<!-- The receipt that Silvia Has issued upon receiving her bolts of cloth. Take this to Guard Arnold. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1018" name="Rant's Receipt" type="NONE" icon="icon.etc_letter_white_i00">
 	<!-- The receipt issued by Rant upon his receiving of the clay pot. Take this to Guard Arnold. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1019" name="Official Letter" type="NONE" icon="icon.etc_letter_red_i00">
 	<!-- Official letter that the Lord of Gludio Has sent to Sir Colin Windawood, calling a meeting. Deliver this to Sir Windawood. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1020" name="Flame Shard" type="NONE" icon="icon.etc_crystal_red_i00">
 	<!-- Fragment of Soulstone of fire. Can be taken from the fire spirit salamander. Give it to Trader Katerina. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1021" name="Ice Shard" type="NONE" icon="icon.etc_crystal_blue_i00">
 	<!-- Fragment of Elemental stone of water. Can be taken from the water spirit undine. Give to Trader Katerina. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1022" name="Lilith's Letter" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- Letter written by Lilith in longing for her lover, separated a thousand years ago. Find out news about her lover for her. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1023" name="Teon's Diary" type="NONE" icon="icon.etc_spell_books_blue_i00">
 	<!-- Diary written by Teon in longing for his lover, separated a thousand years ago. Take this to Lilith. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1024" name="Adamantite Ore" type="NONE" icon="icon.etc_plate_blue_i00">
 	<!-- Adamantite ore. All of it is imported from Gracia. Gather 20 of these and take them to Warehouse Keeper Wilford. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1025" name="Clay Tablet" type="NONE" icon="icon.etc_plate_glay_i00">
 	<!-- Tablet praising Beleth that the devil Nerkas possessed. Deliver this to High Priest Biotin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1026" name="Silvery Spidersilk" type="NONE" icon="icon.etc_skein_white_i00">
 	<!-- The spider silk of the silver spider. Take this to Trader Unoren of the weapons shop. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1027" name="Unoren's Receipt" type="NONE" icon="icon.etc_letter_white_i00">
 	<!-- The receipt issued by the magic shop. Take this and go to Trader Creamees. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1028" name="Creamees' Ticket" type="NONE" icon="icon.etc_ticket_blue_i00">
 	<!-- Ticket issued by the warehouse. Take this and go to Warehouse Keeper Julia. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1029" name="Nightshade Leaf" type="NONE" icon="icon.etc_herb_blue_i00">
 	<!-- The leaf of the nightshade plant. Take this to Nerupa. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1030" name="Cracked Skull" type="NONE" icon="icon.etc_skull_black_i00">
 	<!-- The cracked skull of the Dark Horror. Take this to Magister Vlasty. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1031" name="Perfect Skull" type="NONE" icon="icon.etc_skull_white_i00">
 	<!-- Skull of the dark horror. Take this to Magister Vlasty. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1032" name="Fox Fur" type="NONE" icon="icon.etc_mane_i00">
 	<!-- Mane of Keltirs. It is soft and luxurious, and used to spin thread and yarn. Take this to Cristel. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1033" name="Fox Fur Yarn" type="NONE" icon="icon.etc_skein_gray_i00">
 	<!-- Yarn spun out of the fur of keltirs. Take this to the former tailor Warehouse Keeper Rolfe, and he will make it into a the doll's hair. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1034" name="Maiden Doll" type="NONE" icon="icon.etc_totem_red_i00">
 	<!-- Doll resembling a Human maiden. Take this to Lighthouse Keeper Rockswell. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1035" name="Plague Dust" type="NONE" icon="icon.etc_powder_red_i00">
 	<!-- Powder obtained from the plague zombie. Take this to Hierarch Asterios. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1036" name="Andellia's Letter" type="NONE" icon="icon.etc_scroll_gray_i00">
 	<!-- Letter from Andellia asking her sister Thalia to send her the fruit of the Mother Tree. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1037" name="Fruit of the Mother Tree" type="NONE" icon="icon.etc_fruit_green_i00">
 	<!-- Fruit that the Mother Tree bears once every few years. Take this to Andellia. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1038" name="Rumiel’s First Poem" type="NONE" icon="icon.etc_piece_of_paper_black_i00">
 	<!-- The scroll containing Rumiel Moonshine's first poem. Gather all four and take them to Sentinel Starden. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1039" name="Rumiel’s Third Poem" type="NONE" icon="icon.etc_piece_of_paper_black_i00">
 	<!-- The scroll containing Rumiel Moonshine's third poem. Gather all four and take them to Sentinel Starden. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1040" name="Rumiel’s Fourth Poem" type="NONE" icon="icon.etc_piece_of_paper_black_i00">
 	<!-- The scroll containing Rumiel Moonshine's fourth poem. Gather all four and take them to Sentinel Starden. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1041" name="Rumiel’s Fifth Poem" type="NONE" icon="icon.etc_piece_of_paper_black_i00">
 	<!-- The scroll containing Rumiel Moonshine's fifth poem. Gather all four and take them to Sentinel Starden. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1042" name="Wererat's Fang" type="NONE" icon="icon.etc_claw_i00">
 	<!-- The fang of a dead ratman. Collect these to take to Master Ellenia. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1043" name="Varool Foulclaw's Fang" type="NONE" icon="icon.etc_horn_i00">
 	<!-- The fang of Varool Foulclaw, leader of the ratmen. Take this to Master Ellenia. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1044" name="Kirunak Skull" type="NONE" icon="icon.etc_skull_red_i00">
 	<!-- Kirunak's skull obtained after killing Kirunak, the leader of the Dre Vanuls. Take this to Trader Creamees. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1045" name="Zombie's Skin" type="NONE" icon="icon.etc_bark_gold_i00">
 	<!-- Skin obtained from marshland zombies. Collect five and go to Trader Minaless. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1046" name="Nightmare Crystal" type="NONE" icon="icon.etc_totem_black_i00">
 	<!-- Crystal used by the Succubus Merkenis to cast nightmares. Take this to Tetrarch Vellior. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
@@ -335,7 +335,7 @@
 
 	<item id="1061" name="Major HP Potion" type="POTION" icon="icon.etc_reagent_white_i00">
 	<!-- Magical potion that slowly restores HP. Lasts 15 sec. -->
-		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" sellable="false" depositable="false"/>
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
@@ -347,43 +347,43 @@
 
 	<item id="1067" name="Recommendation" type="NONE" icon="icon.etc_letter_white_i00">
 	<!-- Take the recommendation to Grand Master Roien. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1068" name="Recommendation" type="NONE" icon="icon.etc_letter_white_i00">
 	<!-- Take the recommendation to Grand Magister Gallint. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1069" name="Leaf of the Mother Tree" type="NONE" icon="icon.etc_leaf_green_i00">
 	<!-- Take the leaf of the Mother Tree to Nerupa. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1070" name="Blood of Mitraell" type="NONE" icon="icon.etc_spirit_bullet_red_i00">
 	<!-- Take the blood of Mitraell to Hierarch Mitraell. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1071" name="Hyacinth Charm" type="NONE" icon="icon.etc_jewel_green_i00">
 	<!-- Charm given by Hierarch Asterios. Go to the water source to seek those who pollute the waters of the Elven village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1072" name="Hyacinth Charm" type="NONE" icon="icon.etc_jewel_green_i00">
 	<!-- Charm given by Hierarch Asterios. Go to the water source and obtain five handfuls of plague dust from the zombies. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1073" name="HP Potion (Novice)" type="POTION" icon="icon.etc_reagent_white_i00">
 	<!-- Magical potion that slowly restores HP. Short-lasting.  -->
-		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" commission-type="POTION" reuse-delay="10000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2031" level="1"/>  <!-- Healing Potion -->
@@ -392,115 +392,115 @@
 
 	<item id="1076" name="Carlon's Letter" type="NONE" icon="icon.etc_scroll_white_i00">
 	<!-- First half year financial summary of the Iron Gate Guild: balance sheet and profit and loss statement of the Dark Elf Village guild. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1077" name="Venom Sac" type="NONE" icon="icon.etc_pouch_brown_i00">
 	<!-- A Giant Spider's Poison Sac of poisonous spider. Gather ten of these and take to Astaron. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1078" name="Wind Crystal" type="NONE" icon="icon.etc_crystal_white_i00">
 	<!-- Fragment of the Elemental stone of wind. You can get them from Lirein, the wind spirits. Collect these to take to Rizraell. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1079" name="Darin's Receipt" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- Receipt for a magical potion Darin received after paying Baulro. This must be handed to Baulro. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1080" name="Baulro's Potion" type="NONE" icon="icon.etc_lesser_potion_blue_i00">
 	<!-- Potion of courage that Baulro Has created for the shy Darin, but its effects are unknown. This must be delivered to Darin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1081" name="Onyx Beast's Eye" type="NONE" icon="icon.etc_eyeball_i00">
 	<!-- The first of three materials Tetrarch Talos asked you to collect. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1082" name="Taint Stone" type="NONE" icon="icon.etc_totem_black_i00">
 	<!-- The second of three materials Tetrarch Talos asked you to collect. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1083" name="Succubus Blood" type="NONE" icon="icon.etc_lesser_potion_red_i00">
 	<!-- The third of three materials Tetrarch Talos asked you to collect. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1084" name="Gludio Lord's Badge" type="NONE" icon="icon.etc_jewel_gold_i00">
 	<!-- A badge indicating that the bearer is carrying out the orders of the lord. Keep this in your possession and hunt Orcs or werewolves. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1085" name="Orc's Necklace" type="NONE" icon="icon.accessary_necklace_of_anguish_i00">
 	<!-- Bone necklace that Orc fighters possess on their bodies for magic purposes. Take this to Captain Gilbert. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1086" name="Werewolf's Fang" type="NONE" icon="icon.etc_claw_i00">
 	<!-- Fangs from a dead werewolf. Take this to Captain Gilbert. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1087" name="Giant Spider's Leg" type="NONE" icon="icon.etc_horn_i00">
 	<!-- The legs cut off from a giant spider. Collect 8 of these and take them to Alshupes. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1088" name="Undrias' Letter" type="NONE" icon="icon.etc_scroll_gray_i00">
-	<!-- Abyssal Celebrant Undrias' letter. Take this letter to Trader Iri Warehouse Keeper Dorankus, and Master Trudy. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+	<!-- Abyssal Celebrant Undrias' letter. Take this letter to Trader Iria, Warehouse Keeper Dorankus, and Master Trudy. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1089" name="Ceremonial Dagger" type="NONE" icon="icon.weapon_mystic_knife_i00">
 	<!-- Ceremonial dagger used during the mass of darkness. Take this to Abyssal Celebrant Undrias. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1090" name="Dreviant Wine" type="NONE" icon="icon.etc_lesser_potion_purple_i00">
 	<!-- Holy wine used in the mass of darkness. Take this to Abyssal Celebrant Undrias. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1091" name="Garmiel's Scripture" type="NONE" icon="icon.etc_spell_books_red_i00">
 	<!-- The scripture used during the mass of darkness. Take this to Abyssal Celebrant Undrias. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1092" name="Arujien's Letter" type="NONE" icon="icon.etc_scroll_gray_i00">
 	<!-- The letter that Arujien Has written in longing for Greenis. Show this to Gatekeeper Mirabel. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1093" name="Arujien's Letter" type="NONE" icon="icon.etc_scroll_gray_i00">
 	<!-- The letter that Arujien Has written in longing for Greenis. Show this to Trader Herbiel. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1094" name="Arujien's Letter" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- Arujien's love letter. Since you have shown this to Mirabel and Herbiel, you must go back to Arujien. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
@@ -518,7 +518,7 @@
 
 	<item id="1097" name="Spellbook: Drain Energy" type="NONE" icon="icon.etc_spell_books_defighter_i00">
 	<!-- Spellbook needed to learn Drain Energy. Used by Human Knights and Dark Fighters.\\nRequired level: Human Knight - 20, Dark Fighter - 13 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="7461" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 

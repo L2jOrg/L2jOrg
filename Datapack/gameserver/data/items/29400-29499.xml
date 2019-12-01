@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<armor id="29400" name="Elven Stockings" type="MAGIC" body-part="LEGS" icon="icon.armor_t11_l_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1010" price="62500" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -11,7 +11,7 @@
 	</armor>
 
 	<armor id="29401" name="Dark Stockings" type="MAGIC" body-part="LEGS" icon="icon.armor_t16_l_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1000" price="62500" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -21,7 +21,7 @@
 	</armor>
 
 	<armor id="29402" name="Wizard Stockings" type="MAGIC" body-part="LEGS" icon="icon.armor_t17_l_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="990" price="62500" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -31,7 +31,7 @@
 	</armor>
 
 	<armor id="29403" name="Stockings of Knowledge" type="MAGIC" body-part="LEGS" icon="icon.armor_t41_l_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1000" price="95200" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -41,7 +41,7 @@
 	</armor>
 
 	<armor id="29404" name="Mithril Stockings" type="MAGIC" body-part="LEGS" icon="icon.armor_t51_l_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="980" price="140000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -52,7 +52,7 @@
 
 	<armor id="29405" name="Sage's Rags" type="MAGIC" body-part="FULL_ARMOR" icon="icon.armor_t44_ul_i00">
 	<!-- One-piece upper and lower body armor. Additional lower body armor cannot be worn while wearing this. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="2580" price="429000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -62,7 +62,7 @@
 	</armor>
 
 	<armor id="29406" name="Short Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t02_g_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="660" price="37" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -71,7 +71,7 @@
 	</armor>
 
 	<armor id="29407" name="Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t06_g_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="660" price="2650" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -80,7 +80,7 @@
 	</armor>
 
 	<armor id="29408" name="Leather Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t32_g_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="650" price="6770" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -89,7 +89,7 @@
 	</armor>
 
 	<armor id="29409" name="Bracer" type="NONE" body-part="GLOVES" icon="icon.armor_t30_g_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="650" price="12300" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -98,7 +98,7 @@
 	</armor>
 
 	<armor id="29410" name="Short Leather Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t04_g_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="660" price="607" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -107,7 +107,7 @@
 	</armor>
 
 	<armor id="29411" name="Sage's Worn Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t44_g_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="630" price="97800" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -116,7 +116,7 @@
 	</armor>
 
 	<armor id="29412" name="Ogre Power Gauntlets" type="NONE" body-part="GLOVES" icon="icon.armor_t45_g_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="620" price="97800" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -125,7 +125,7 @@
 	</armor>
 
 	<armor id="29413" name="Mithril Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t46_g_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="630" price="97800" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -134,7 +134,7 @@
 	</armor>
 
 	<armor id="29414" name="Elven Mithril Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t51_g_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="640" price="74700" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -143,7 +143,7 @@
 	</armor>
 
 	<armor id="29415" name="Brigandine Gauntlets" type="NONE" body-part="GLOVES" icon="icon.armor_t43_g_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="630" price="74700" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -152,7 +152,7 @@
 	</armor>
 
 	<armor id="29416" name="Manticore Skin Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t42_g_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="630" price="74700" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -160,8 +160,8 @@
 		</stats>
 	</armor>
 
-	<armor id="29417" name="Rip Gauntlets" type="NONE" body-part="GLOVES" icon="icon.armor_t40_g_i00">
-		<restriction tradable="false" dropable="false"/>
+	<armor id="29417" name="Rip Gauntlets " type="NONE" body-part="GLOVES" icon="icon.armor_t40_g_i00">
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="630" price="74700" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -170,7 +170,7 @@
 	</armor>
 
 	<armor id="29418" name="Reinforced Leather Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t13_g_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="640" price="50800" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -179,7 +179,7 @@
 	</armor>
 
 	<armor id="29419" name="Gloves of Knowledge" type="NONE" body-part="GLOVES" icon="icon.armor_t41_g_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="640" price="50800" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -188,7 +188,7 @@
 	</armor>
 
 	<armor id="29420" name="Gauntlets" type="NONE" body-part="GLOVES" icon="icon.armor_t10_g_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="640" price="50800" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -197,7 +197,7 @@
 	</armor>
 
 	<armor id="29421" name="Leather Gauntlets" type="NONE" body-part="GLOVES" icon="icon.armor_t18_g_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="640" price="33300" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -206,7 +206,7 @@
 	</armor>
 
 	<armor id="29422" name="Quality Leather Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t09_g_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="650" price="20900" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -215,7 +215,7 @@
 	</armor>
 
 	<armor id="29423" name="Leather Sandals" type="NONE" body-part="FEET" icon="icon.armor_t03_b_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1320" price="37" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -224,7 +224,7 @@
 	</armor>
 
 	<armor id="29424" name="Leather Shoes" type="NONE" body-part="FEET" icon="icon.armor_t05_b_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1320" price="2650" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -233,7 +233,7 @@
 	</armor>
 
 	<armor id="29425" name="Low Boots" type="NONE" body-part="FEET" icon="icon.armor_t32_b_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1320" price="6770" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -242,7 +242,7 @@
 	</armor>
 
 	<armor id="29426" name="Boots" type="NONE" body-part="FEET" icon="icon.armor_t30_b_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1310" price="12300" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -251,7 +251,7 @@
 	</armor>
 
 	<armor id="29427" name="Crude Leather Shoes" type="NONE" body-part="FEET" icon="icon.armor_t04_b_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1320" price="607" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -260,7 +260,7 @@
 	</armor>
 
 	<armor id="29428" name="Cotton Shoes" type="NONE" body-part="FEET" icon="icon.armor_t50_b_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1320" price="607" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -269,7 +269,7 @@
 	</armor>
 
 	<armor id="29429" name="Cloth Shoes" type="NONE" body-part="FEET" icon="icon.armor_t02_b_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1320" price="37" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -278,7 +278,7 @@
 	</armor>
 
 	<armor id="29430" name="Apprentice's Shoes" type="NONE" body-part="FEET" icon="icon.armor_t01_b_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1320" price="7" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -287,7 +287,7 @@
 	</armor>
 
 	<armor id="29431" name="Salamander Skin Boots" type="NONE" body-part="FEET" icon="icon.armor_t45_b_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1230" price="97800" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -296,7 +296,7 @@
 	</armor>
 
 	<armor id="29432" name="Plate Boots" type="NONE" body-part="FEET" icon="icon.armor_t46_b_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1240" price="97800" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -305,7 +305,7 @@
 	</armor>
 
 	<armor id="29433" name="Assault Boots" type="NONE" body-part="FEET" icon="icon.armor_t44_b_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1240" price="97800" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -314,7 +314,7 @@
 	</armor>
 
 	<armor id="29434" name="Manticore Skin Boots" type="NONE" body-part="FEET" icon="icon.armor_t42_b_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1260" price="74700" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -323,7 +323,7 @@
 	</armor>
 
 	<armor id="29435" name="Brigandine Boots" type="NONE" body-part="FEET" icon="icon.armor_t43_b_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1250" price="74700" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -332,7 +332,7 @@
 	</armor>
 
 	<armor id="29436" name="Elven Mithril Boots" type="NONE" body-part="FEET" icon="icon.armor_t51_b_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1250" price="74700" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -341,7 +341,7 @@
 	</armor>
 
 	<armor id="29437" name="Boots of Strength" type="NONE" body-part="FEET" icon="icon.armor_t40_b_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1250" price="74700" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -350,7 +350,7 @@
 	</armor>
 
 	<armor id="29438" name="Boots of Knowledge" type="NONE" body-part="FEET" icon="icon.armor_t41_b_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1270" price="50800" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -359,7 +359,7 @@
 	</armor>
 
 	<armor id="29439" name="Reinforced Leather Boots" type="NONE" body-part="FEET" icon="icon.armor_t13_b_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1280" price="50800" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -368,7 +368,7 @@
 	</armor>
 
 	<armor id="29440" name="Iron Boots" type="NONE" body-part="FEET" icon="icon.armor_t10_b_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1280" price="50800" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -377,7 +377,7 @@
 	</armor>
 
 	<armor id="29441" name="Blue Buckskin Boots" type="NONE" body-part="FEET" icon="icon.armor_t18_b_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1300" price="33300" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -386,7 +386,7 @@
 	</armor>
 
 	<armor id="29442" name="Leather Boots" type="NONE" body-part="FEET" icon="icon.armor_t09_b_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1300" price="20900" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -395,7 +395,7 @@
 	</armor>
 
 	<armor id="29443" name="Durable Leather Helmet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="640" price="18400" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -404,7 +404,7 @@
 	</armor>
 
 	<armor id="29444" name="Cloth Cap" type="NONE" body-part="HEAD" icon="icon.armor_cloth_helmet_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="660" price="55" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -413,7 +413,7 @@
 	</armor>
 
 	<armor id="29445" name="Leather Cap" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="660" price="911" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -422,7 +422,7 @@
 	</armor>
 
 	<armor id="29446" name="Wooden Helmet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="660" price="3980" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -431,7 +431,7 @@
 	</armor>
 
 	<armor id="29447" name="Leather Helmet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="650" price="10200" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -440,7 +440,7 @@
 	</armor>
 
 	<armor id="29448" name="Plate Helmet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="630" price="147000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -449,7 +449,7 @@
 	</armor>
 
 	<armor id="29449" name="Brigandine Helmet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="630" price="112000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -458,7 +458,7 @@
 	</armor>
 
 	<armor id="29450" name="Helmet" type="NONE" body-part="HEAD" icon="icon.armor_helmet_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="640" price="76200" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -467,7 +467,7 @@
 	</armor>
 
 	<armor id="29451" name="Bone Helmet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="640" price="31300" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -476,7 +476,7 @@
 	</armor>
 
 	<armor id="29452" name="Bronze Helmet" type="NONE" body-part="HEAD" icon="icon.armor_helmet_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="630" price="50000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -485,7 +485,7 @@
 	</armor>
 
 	<armor id="29453" name="Bone Shield" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_bone_shield_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1380" price="12900" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -496,7 +496,7 @@
 	</armor>
 
 	<armor id="29454" name="Round Shield" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_round_shield_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1390" price="7110" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -508,7 +508,7 @@
 
 	<armor id="29455" name="Skeleton Buckler" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_skeleton_buckler_i00">
 	<!-- Small wooden shield that perpetrators of mages use. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1400" price="3440" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -520,7 +520,7 @@
 
 	<armor id="29456" name="Shield (Novice)" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_small_shield_i00">
 	<!-- Novice Shield. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1410" price="270" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -531,7 +531,7 @@
 	</armor>
 
 	<armor id="29457" name="Buckler" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_buckler_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1410" price="2780" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -542,7 +542,7 @@
 	</armor>
 
 	<armor id="29458" name="Leather Shield" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_leather_shield_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1430" price="39" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -553,7 +553,7 @@
 	</armor>
 
 	<armor id="29459" name="Small Shield" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_small_shield_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1420" price="638" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -564,7 +564,7 @@
 	</armor>
 
 	<armor id="29460" name="Plate Shield" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_plate_shield_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1310" price="103000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -575,7 +575,7 @@
 	</armor>
 
 	<armor id="29461" name="Square Shield" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_square_shield_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1310" price="103000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -586,7 +586,7 @@
 	</armor>
 
 	<armor id="29462" name="Brigandine Shield" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_brigandine_shield_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1320" price="78400" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -597,7 +597,7 @@
 	</armor>
 
 	<armor id="29463" name="Kite Shield" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_kite_shield_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1320" price="78400" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -608,7 +608,7 @@
 	</armor>
 
 	<armor id="29464" name="Bronze Shield" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_bronze_shield_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1370" price="21900" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -619,7 +619,7 @@
 	</armor>
 
 	<armor id="29465" name="Aspis" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_aspis_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1350" price="35000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -630,7 +630,7 @@
 	</armor>
 
 	<armor id="29466" name="Hoplon" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_hoplon_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1340" price="53300" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -641,7 +641,7 @@
 	</armor>
 
 	<armor id="29467" name="Blue Diamond Necklace" type="NONE" body-part="NECK" icon="icon.accessary_blue_diamond_necklace_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="21300" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -650,7 +650,7 @@
 	</armor>
 
 	<armor id="29468" name="Necklace of Wisdom" type="NONE" body-part="NECK" icon="icon.accessary_necklace_of_wisdom_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="11900" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -660,7 +660,7 @@
 
 	<armor id="29469" name="Necklace of Valor" type="NONE" body-part="NECK" icon="icon.accessary_necklace_of_valor_i00">
 	<!-- Necklace that is given to young Orcs who have proven their valor. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="4680" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -670,7 +670,7 @@
 
 	<armor id="29470" name="Necklace of Anguish" type="NONE" body-part="NECK" icon="icon.accessary_necklace_of_anguish_i00">
 	<!-- Silver necklace engraved with rune characters of anguish. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="4680" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -680,7 +680,7 @@
 
 	<armor id="29471" name="Necklace (Novice)" type="NONE" body-part="NECK" icon="icon.accessary_necklace_of_knowledge_i00">
 	<!-- Novice Necklace. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="50" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -690,7 +690,7 @@
 
 	<armor id="29472" name="Necklace of Knowledge" type="NONE" body-part="NECK" icon="icon.accessary_necklace_of_knowledge_i00">
 	<!-- Silver necklace engraved with rune characters of knowledge. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="1080" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -700,7 +700,7 @@
 
 	<armor id="29473" name="Necklace of Courage" type="NONE" body-part="NECK" icon="icon.accessary_necklace_of_courage_i00">
 	<!-- Necklace that is given to young Orcs who have proven their courage. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="66" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -709,7 +709,7 @@
 	</armor>
 
 	<armor id="29474" name="Magic Necklace" type="NONE" body-part="NECK" icon="icon.accessary_necklace_of_magic_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="66" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -718,7 +718,7 @@
 	</armor>
 
 	<armor id="29475" name="Dark Necklace" type="NONE" body-part="NECK" icon="icon.accessary_necklace_of_darkness_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="162000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -727,7 +727,7 @@
 	</armor>
 
 	<armor id="29476" name="Necklace of Devotion" type="NONE" body-part="NECK" icon="icon.accessary_necklace_of_devotion_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="35900" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -736,7 +736,7 @@
 	</armor>
 
 	<armor id="29477" name="Magic Necklace" type="NONE" body-part="NECK" icon="icon.accessary_enchanted_necklace_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="56800" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -745,7 +745,7 @@
 	</armor>
 
 	<armor id="29478" name="Near Forest Necklace" type="NONE" body-part="NECK" icon="icon.accessary_near_forest_necklace_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="85700" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -754,7 +754,7 @@
 	</armor>
 
 	<armor id="29479" name="Elven Necklace" type="NONE" body-part="NECK" icon="icon.accessary_elven_necklace_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="125000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -763,7 +763,7 @@
 	</armor>
 
 	<armor id="29480" name="Cat's Eye" type="NONE" body-part="EAR" icon="icon.accessary_catseye_earing_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="8890" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -772,7 +772,7 @@
 	</armor>
 
 	<armor id="29481" name="Coral Earring" type="NONE" body-part="EAR" icon="icon.accessary_coral_earing_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="16000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -781,7 +781,7 @@
 	</armor>
 
 	<armor id="29482" name="Apprentice's Earring" type="NONE" body-part="EAR" icon="icon.accessary_apprentices_earing_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="49" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -790,7 +790,7 @@
 	</armor>
 
 	<armor id="29483" name="Mage Earring" type="NONE" body-part="EAR" icon="icon.accessary_mage_earing_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="811" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -799,7 +799,7 @@
 	</armor>
 
 	<armor id="29484" name="Earring of Strength" type="NONE" body-part="EAR" icon="icon.accessary_earing_of_strength_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="3510" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -808,7 +808,7 @@
 	</armor>
 
 	<armor id="29485" name="Earring of Wisdom" type="NONE" body-part="EAR" icon="icon.accessary_earing_of_wisdom_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="3510" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -818,7 +818,7 @@
 
 	<armor id="29486" name="Earring (Novice)" type="NONE" body-part="EAR" icon="icon.accessary_mage_earing_i00">
 	<!-- Novice Earring. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="40" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -827,7 +827,7 @@
 	</armor>
 
 	<armor id="29487" name="Onyx Beast's Eye Earring" type="NONE" body-part="EAR" icon="icon.accessary_onyxbeastseye_earing_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="121000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -836,7 +836,7 @@
 	</armor>
 
 	<armor id="29488" name="Red Crescent" type="NONE" body-part="EAR" icon="icon.accessary_red_cresent_earing_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="26900" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -845,7 +845,7 @@
 	</armor>
 
 	<armor id="29489" name="Earring of Magic" type="NONE" body-part="EAR" icon="icon.accessary_enchanted_earing_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="42600" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -854,7 +854,7 @@
 	</armor>
 
 	<armor id="29490" name="Tiger's Eye" type="NONE" body-part="EAR" icon="icon.accessary_tigerseye_earing_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="64300" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -863,7 +863,7 @@
 	</armor>
 
 	<armor id="29491" name="Elven Earring" type="NONE" body-part="EAR" icon="icon.accessary_elven_earing_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="93400" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -872,7 +872,7 @@
 	</armor>
 
 	<armor id="29492" name="Ring of Wisdom" type="NONE" body-part="FINGER" icon="icon.accessary_ring_of_wisdom_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="5920" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -881,7 +881,7 @@
 	</armor>
 
 	<armor id="29493" name="Blue Coral Ring" type="NONE" body-part="FINGER" icon="icon.accessary_blue_coral_ring_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="10700" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -891,7 +891,7 @@
 
 	<armor id="29494" name="Ring of Raccoon" type="NONE" body-part="FINGER" icon="icon.accessary_ring_of_raccoon_i00">
 	<!-- Ring given to apprentices of the Bronze Key Guild. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="2340" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -901,7 +901,7 @@
 
 	<armor id="29495" name="Ring of Firefly" type="NONE" body-part="FINGER" icon="icon.accessary_ring_of_firefly_i00">
 	<!-- Ring given to apprentices of the Black Anvil Guild. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="2340" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -911,7 +911,7 @@
 
 	<armor id="29496" name="Ring of Anguish" type="NONE" body-part="FINGER" icon="icon.accessary_ring_of_anguish_i00">
 	<!-- Gold ring with engraved rune characters of anguish. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="2340" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -921,7 +921,7 @@
 
 	<armor id="29497" name="Ring (Novice)" type="NONE" body-part="FINGER" icon="icon.accessary_ring_of_knowledge_i00">
 	<!-- Novice Ring. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="10" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -931,7 +931,7 @@
 
 	<armor id="29498" name="Ring of Knowledge" type="NONE" body-part="FINGER" icon="icon.accessary_ring_of_knowledge_i00">
 	<!-- Gold ring with delicately engraved rune characters of knowledge. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="540" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -940,7 +940,7 @@
 	</armor>
 
 	<armor id="29499" name="Magic Ring" type="NONE" body-part="FINGER" icon="icon.accessary_magic_ring_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="150" price="33" enchant-enabled="false" />
 		<crystal />
 		<stats>

@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<armor id="6835" name="Circlet of Dion" type="NONE" body-part="HAIR" icon="icon.accessory_pledge_cap1_i02">
 	<!-- Torchlight Circlet. Can be worn by the lord of Dion Castle and clan members but not by allies. Allows use of Residential Skills when equipped.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<condition msg-id="1518">
 			<player castle="2" pledge-class="2"/>
 		</condition>
@@ -15,7 +15,7 @@
 
 	<armor id="6837" name="Circlet of Oren" type="NONE" body-part="HAIR" icon="icon.accessory_pledge_cap1_i04">
 	<!-- Tower Circlet. Can be worn by the lord of Oren Castle and clan members but not by allies. Allows use of Residential Skills when equipped.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<condition msg-id="1518">
 			<player castle="4" pledge-class="2"/>
 		</condition>
@@ -28,7 +28,7 @@
 
 	<armor id="6838" name="Circlet of Gludio" type="NONE" body-part="HAIR" icon="icon.accessory_pledge_cap1_i05">
 	<!-- Three-Swords Circlet. Can be worn by the lord of Gludio Castle and clan members but not by allies. Allows use of Residential Skills when equipped.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<condition msg-id="1518">
 			<player castle="1" pledge-class="2"/>
 		</condition>
@@ -41,7 +41,7 @@
 
 	<armor id="6839" name="Circlet of Giran" type="NONE" body-part="HAIR" icon="icon.accessory_pledge_cap1_i06">
 	<!-- Cross Circlet. Can be worn by the Lord of Giran Castle and clan members but not by allies. Allows use of Residential Skills when equipped. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<condition msg-id="1518">
 			<player castle="3" pledge-class="2"/>
 		</condition>
@@ -54,7 +54,7 @@
 
 	<armor id="6840" name="Circlet of Aden" type="NONE" body-part="HAIR" icon="icon.accessory_pledge_cap2_i07">
 	<!-- Lion Circlet. Can be worn by the lord of Aden Castle and clan members but not by allies. Allows use of Residential Skills when equipped.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<condition msg-id="1518">
 			<player castle="5" pledge-class="2"/>
 		</condition>
@@ -67,7 +67,7 @@
 
 	<armor id="6841" name="Lord's Crown" type="NONE" body-part="HAIR" icon="icon.accessory_crown_i00">
 	<!-- Lord's Crown.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<condition msg-id="1518">
 			<player castle="-1" pledge-class="-1"/>
 		</condition>
@@ -80,7 +80,7 @@
 
 	<armor id="6842" name="Wings of Destiny Circlet" type="NONE" body-part="HAIR" icon="icon.accessory_hero_cap_i00">
 	<!-- Hair Accessory, only for Heroes.  -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<condition msg-id="1518">
 			<player hero="true"/>
 		</condition>
@@ -90,14 +90,14 @@
 
 	<armor id="6843" name="Cat Ears" type="NONE" body-part="HAIR2" icon="icon.accessory_cat_ear_i00">
 	<!-- Cat-ear shaped hair accessory. Occupies 1 Hair Accessory slot.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="10" commission-type="HAIR_ACCESSORY" />
 		<crystal />
 	</armor>
 
 	<armor id="6845" name="Pirate's Eyepatch" type="NONE" body-part="HAIR" icon="icon.accessory_eye_bandage_i00">
 	<!-- Eyepatch accessory. Can teleport to the Entrance to the Devil's Isle. Cooldown: 2 hours.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 	</armor>

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="10648" name="Inventory2" type="NONE" icon="icon.etc_potion_gold_i00">
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" ex-immediate-effect="true"/>
 	</item>
 
 	<item id="10649" name="Blessed Feather" type="NONE" icon="icon.blessed_feather_i00">
 	<!-- Dimensional Item\\nIf you have the Blessed Feather, you can resurrect immediately at the spot where you were killed. -->
-		<restriction stackable="true" depositable="false"/>
+		<restriction stackable="true" sellable="false" depositable="false"/>
 		<attributes self-resurrection="true"/>
 	</item>
 
 	<item id="10650" name="Scroll of Escape (Novice)" type="SCROLL" icon="icon.etc_scroll_of_return_i00">
 	<!-- Magic scroll that moves you to the nearest village. Item for beginner adventurers.  -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2531" level="1"/>  <!-- Newbie Scroll of Escape -->

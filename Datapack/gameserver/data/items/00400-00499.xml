@@ -101,7 +101,7 @@
 	</armor>
 
 	<armor id="425" name="Apprentice's Tunic" type="MAGIC" body-part="CHEST" icon="icon.armor_t01_u_i00">
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="2150" price="26" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -264,7 +264,7 @@
 	</armor>
 
 	<armor id="461" name="Apprentice's Stockings" type="MAGIC" body-part="LEGS" icon="icon.armor_t01_l_i00">
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1100" price="6" enchant-enabled="false" />
 		<crystal />
 		<stats>

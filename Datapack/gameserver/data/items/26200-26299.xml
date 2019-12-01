@@ -2,14 +2,14 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<armor id="26254" name="Halloween Outfit" type="NONE" body-part="ALL_DRESS" icon="icon.ev_wp_halloween">
 	<!-- Halloween outfit. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<weapon id="26256" name="Halloween Shaper" type="DAGGER" body-part="RIGHT_HAND" icon="icon.ev_wp_halloween">
 	<!-- Halloween weapon. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -26,7 +26,7 @@
 
 	<weapon id="26257" name="Halloween Cutter" type="SWORD" body-part="RIGHT_HAND" icon="icon.ev_wp_halloween">
 	<!-- Halloween weapon. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -43,7 +43,7 @@
 
 	<weapon id="26258" name="Halloween Slasher" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.ev_wp_halloween">
 	<!-- Halloween weapon. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -60,7 +60,7 @@
 
 	<weapon id="26259" name="Halloween Avenger" type="BLUNT" body-part="RIGHT_HAND" icon="icon.ev_wp_halloween">
 	<!-- Halloween weapon. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -78,7 +78,7 @@
 
 	<weapon id="26260" name="Halloween Fighter" type="FIST" body-part="TWO_HAND" icon="icon.ev_wp_halloween">
 	<!-- Halloween weapon. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -96,7 +96,7 @@
 
 	<weapon id="26261" name="Halloween Stormer" type="SPEAR" body-part="TWO_HAND" icon="icon.ev_wp_halloween">
 	<!-- Halloween weapon. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -117,7 +117,7 @@
 
 	<weapon id="26262" name="Halloween Thrower" type="BOW" body-part="TWO_HAND" icon="icon.ev_wp_halloween">
 	<!-- Halloween weapon. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -135,7 +135,7 @@
 
 	<weapon id="26263" name="Halloween Shooter" type="TWO_HAND_CROSSBOW" body-part="TWO_HAND" icon="icon.ev_wp_halloween">
 	<!-- Halloween weapon. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -153,7 +153,7 @@
 
 	<weapon id="26264" name="Halloween Buster" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.ev_wp_halloween" magic="true">
 	<!-- Halloween weapon. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -170,7 +170,7 @@
 
 	<weapon id="26265" name="Halloween Caster" type="ROD" body-part="RIGHT_HAND" icon="icon.ev_wp_halloween" magic="true">
 	<!-- Halloween weapon. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -188,7 +188,7 @@
 
 	<weapon id="26266" name="Halloween Retributer" type="STAFF" body-part="TWO_HAND" icon="icon.ev_wp_halloween" magic="true">
 	<!-- Halloween weapon. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -206,7 +206,7 @@
 
 	<weapon id="26267" name="Halloween Dual sword" type="DUAL" body-part="TWO_HAND" icon="icon.ev_wp_halloween">
 	<!-- Halloween weapon. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -223,7 +223,7 @@
 
 	<weapon id="26268" name="Halloween Dual Dagger" type="DUAL_DAGGER" body-part="TWO_HAND" icon="icon.ev_wp_halloween">
 	<!-- Halloween weapon. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -241,7 +241,7 @@
 
 	<weapon id="26269" name="Halloween Dual Blunt Weapon" type="DUAL_BLUNT" body-part="TWO_HAND" icon="icon.ev_wp_halloween">
 	<!-- Halloween weapon. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -259,7 +259,7 @@
 
 	<armor id="26270" name="Halloween Shield" type="SHIELD" body-part="LEFT_HAND" icon="icon.ev_wp_halloween">
 	<!-- Halloween shield. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -271,7 +271,7 @@
 
 	<armor id="26271" name="Halloween Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.ev_wp_halloween">
 	<!-- Halloween sigil. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 		<stats>

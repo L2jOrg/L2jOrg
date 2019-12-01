@@ -8,7 +8,7 @@
 	</item>
 
 	<weapon id="6917" name="Monster Only (Poisonous Dart)" type="SHIELD" body-part="RIGHT_HAND" icon="icon.weapon_monster_i00">
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="6" price="2" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -16,7 +16,7 @@
 	</weapon>
 
 	<armor id="6918" name="Monster Only (Silence Shield)" type="SHIELD" body-part="LEFT_HAND" icon="icon.weapon_monster_i00">
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1380" price="2580" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -27,7 +27,7 @@
 	</armor>
 
 	<armor id="6919" name="Monster Only (Ketra Orc Shield)" type="SHIELD" body-part="LEFT_HAND" icon="icon.weapon_monster_i00">
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1320" price="15680" enchant-enabled="false" />
 		<crystal />
 		<stats>

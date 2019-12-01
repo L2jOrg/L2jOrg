@@ -2,13 +2,13 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="49500" name="Advanced Return Scroll" type="SCROLL" icon="icon.etc_scroll_of_return_i01">
 	<!-- Magical scroll that quickly teleports you to the closest town. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49501" name="Fish Stew - Guildsman's Gratitude Lv. 1" type="SCROLL" icon="icon.ev_invasion_buff_box">
 	<!-- Increases XP and SP obtained from hunting by 10% for 20 min.  -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39076" level="1"/>  <!-- Fish Stew - Guild's Gratitude -->
@@ -17,7 +17,7 @@
 
 	<item id="49502" name="Return: Giran Harbor" type="NONE" icon="icon.etc_scroll_of_return_i05">
 	<!-- Magic scroll that teleports you to Giran Harbor. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
@@ -29,7 +29,7 @@
 
 	<item id="49503" name="Return: Gludin Harbor" type="NONE" icon="icon.etc_scroll_of_return_i05">
 	<!-- Magic scroll that teleports you to Gludin Harbor. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
@@ -41,19 +41,19 @@
 
 	<item id="49504" name="Fish Report" type="NONE" icon="icon.mercenary_certification_i00">
 	<!-- An investigation report of fish species in the area. Deliver it to Hydrologist Baikal. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes quest-item="true"/>
 	</item>
 
 	<item id="49505" name="Sealed Glass Bottle" type="NONE" icon="icon.etc_hot_spring_glass_bottle_i00">
 	<!-- A bottle containing the water pollutant. Deliver it to Fishing Manager Pierre. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes quest-item="true"/>
 	</item>
 
 	<weapon id="49506" name="Fishing Rod" type="FISHING_ROD" body-part="TWO_HAND" icon="icon.weapon_fishing_rod_i03">
 	<!-- A Fishing Rod for 10 days.  Consumes 1 Fishing Shot. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1000" commission-type="OTHER_ITEM" duration="14400" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -70,7 +70,7 @@
 
 	<item id="49507" name="Fishing Rod Chest (10-day)" type="NONE" icon="icon.etc_box_of_adventure_1_i00">
 	<!-- You can obtain a Fishing Rod for 10 days.   -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="49506" chance="100000"/>  <!-- Fishing Rod -->
@@ -79,13 +79,13 @@
 
 	<item id="49508" name="Normal Bait" type="LURE" icon="icon.etc_huge_lure">
 	<!-- Fishing bait enables to fish.   -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="EQUIP"/>
 	</item>
 
 	<armor id="49509" name="Ring of Core Lv. 1" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_core_i00">
 	<!-- 15-day item. MP +9, Mental Resistance and Atk. Rate +10%, P./M. Evasion +1, Received Damage -2%. The effect doesn't stack if two identical rings are worn. Cannot be enchanted.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" commission-type="RING" duration="21600" />
 		<crystal />
 		<stats>
@@ -99,61 +99,61 @@
 
 	<item id="49510" name="Pierre's Letter" type="NONE" icon="icon.etc_letter_envelope_i00">
 	<!-- An urgent letter from Fishing Manager Pierre. Deliver it to Ferma. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes quest-item="true"/>
 	</item>
 
 	<item id="49511" name="Sheep Gift" type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- You can obtain Spellbook Box, Rare Accessory Pack (15-day), Fishing kit, High Rank Scroll of Escape (Event), Quick HP Potion, Warrior's Major HP Potion.   -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49512" name="MOPP Friend or Foe Charm" type="RUNE" icon="BranchSys3.lcon.g_rune_itemdrop_up">
 	<!-- A 14-day item. When in inventory, you get STR +1, DEX +1, CON +1, INT +1, WIT +1, MEN +1.  -->
-		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="20160" immediate-effect="true"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39082" level="1"/>  <!-- Amulet: Prosperity -->
 		</skill-reducer>
 	</item>
 
-	<item id="49513" name="Shiny Pendant Varnish Box" type="NONE" icon="icon.bm_special_pendant_abradant_box">
-	<!-- u,Double-click to obtain 1 Shiny Varnish that strengthens a pendant’s ability.\\n\\n<Note>\\nThe items obtained from the box cannot be moved freely. Keep this in mind before opening the box. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+	<item id="49513" name="Shining Pendant Varnish Box" type="NONE" icon="icon.bm_special_pendant_abradant_box">
+	<!-- Double-click to obtain 1 Shiny Varnish that strengthens a pendant’s ability.\\n\\n<Note>\\nThe items obtained from the box cannot be moved freely. Keep this in mind before opening the box. -->
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<armor id="49514" name="Agathion Bracelet - Aries" type="NONE" body-part="LEFT_BRACELET" icon="icon.agathion_magmeld_teleport">
 	<!-- 60-day item. Bracelet that can be used to summon Agathion - Aries. \\n\\n<Active Skill>\\nAgathion Teleport: grants the ability to teleport to Gludio/ Dion/ Giran/ Oren. (Cooldown: 30 minutes)\\n\\n<Item Skill>\\n1. Aries Power: increases STR/ INT/ CON/ MEN by 1.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="86400" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49515" name="Agathion Bracelet - Aries" type="NONE" body-part="LEFT_BRACELET" icon="icon.agathion_magmeld_teleport">
 	<!-- Bracelet that can be used to summon Agathion - Aries.\\n\\n<Active Skill>\\nAgathion Teleport: grants the ability to teleport to Gludio/ Dion/ Giran/ Oren. (Cooldown: 30 minutes)\\n\\n<Item Skill>\\n1. Aries Power: increases STR/ INT/ CON/ MEN by 1.  -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49516" name="Blessed Agathion Bracelet - Aries" type="NONE" body-part="LEFT_BRACELET" icon="icon.agathion_magmeld_teleport">
 	<!-- Bracelet that can be used to summon Agathion - Aries.\\n\\n<Active Skill>\\n1. Agathion Teleport: Grants the ability to teleport to Town of Giran/Town of Gludio/Town of Dion/Town of Oren. (Cooldown: 30 minutes)\\n\\n<Item Skill>\\n1. Aries' Power: STR/INT/CON/MEN +1.\\n2. Aries' Blessing: MEN/Stun/Sleep/Paralysis Resistance +5%. -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<item id="49517" name="Pirate’s Island Treasure Chest" type="NONE" icon="icon.bm_pirate_battle_box">
-	<!-- u,Double-click to obtain 2 Special Fruit Buffs. If you’re lucky, you can obtain 1 Pirate King’s Treasure Chest. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+	<!-- Double-click to obtain 2 Special Fruit Buffs. If you’re lucky, you can obtain 1 Pirate King’s Treasure Chest. -->
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49518" name="Pirate's Special Fruit" type="SCROLL" icon="icon.etc_codran_i09">
 	<!-- For 20 min., P./M. Atk. + 7%, P./M. Def. + 10%, Max HP/CP/MP + 15%, HP/MP Recovery + 20%. Has a chance of recovering 3% of physical damage dealt to enemy as HP. Increase XP/SP gain by 5% when hunting. Cooldown is 1 minute. Effect remains even after death. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes reuse-delay="60000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39144" level="1"/>  <!-- Special Pirate Fruit -->
@@ -162,46 +162,46 @@
 
 	<item id="49519" name="Pirate King's Reward Box" type="NONE" icon="icon.bm_pirate_treasure_box">
 	<!-- Double-click to obtain one of the treasures that the pirates stole. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="49520" name="Aries Agathion Box" type="NONE" icon="icon.bm_sheep_agathion_30d_box">
 	<!-- Double-click to obtain 1 Aries Agathion (60-day).\\n\\n<Note>\\nThe items obtained from the box cannot be moved freely. Keep this in mind before opening the box. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes duration="86400" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<armor id="49521" name="Refined Romantic Chapeau (Str+1 Int+1)" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_archer_hat2_i00">
 	<!-- Refined Romantic Chapeau Grants STR +1, INT +1 when equipped. Enables to use Refined Romantic Chapeau Skill: Teleport (Cooldown: 2 hours). Occupies 2 Hair Accessory slots.  -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49522" name="Pirate King Hat (Str+1 Int+1)" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon.zaken_hair_accessary">
 	<!-- Pirate Captain Hat. Grants STR +1, INT +1 when equipped. Enables to use Pirate Captain Hat Skill: Teleport (Cooldown: 2 hours). Occupies 2 Hair Accessory slots.  -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49523" name="Demon's Circlet (Str+1 Int+1)" type="NONE" body-part="HAIR_ALL" icon="icon.Accessary_demon_circlet_i00">
 	<!-- Circlet of Devil. When equipped: STR +1, INT +1. Enables to use Circlet of Devil Skill: Teleport (Cooldown: 2 hours). Occupies 2 Hair Accessory slots.  -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<item id="49524" name="Pirate King Hat Box" type="NONE" icon="icon.bm_pirate_king_box">
 	<!-- Double-click to obtain one of the following: Refined Romantic Chapeau, Pirate King Hat, and Demon's Circlet. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="49525" name="Rare Accessory Lv. 1 Box" type="NONE" icon="icon.ev_10th_present2">
 	<!-- Double-click to receive one of the following items: Queen Ant's Ring Lv. 1 (15-day), Orfen's Earring Lv. 1(15-day), Ring of Core Lv. 1(15-day). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55089" level="1"/>  <!-- Rare Accessory Pack -->
@@ -210,101 +210,101 @@
 
 	<item id="49526" name="Advanced Scroll of Resurrection" type="SCROLL" icon="icon.etc_scroll_of_resurrection_i01">
 	<!-- Magic scroll that resurrects a dead character and restores their XP by 50%. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49527" name="My Teleport Box" type="NONE" icon="icon.etc_pi_gift_box_i01">
 	<!-- Double-click to obtain 1 My Teleport Book and 10 Scrolls of Escape. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49528" name="Pirate's HP Potion" type="POTION" icon="icon.etc_potion_red_i00">
 	<!-- After instant 600 HP Recovery, CP Recovery with remaining points. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="1" action="SKILL_REDUCE"/>
 	</item>
 
 	<armor id="49529" name="Blue Dynasty- Heavy Armor" type="HEAVY" body-part="ALL_DRESS" icon="icon.armor_t2000_ul_i00">
 	<!-- An item exclusive for the L2 Assist App. A formal Blue Dynasty Heavy Armor. Any class can wear it. For some races and classes, the Blue Dynasty Heavy Armor, Light Armor, and Robe may have the same appearance. Equipping this armor removes the existing armor. Hair accessories, weapon, and magic armor are not removed. -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49530" name="Blue Dynasty Circlet" type="NONE" body-part="HAIR_ALL" icon="icon.Accessary_angel_circlet_i00">
 	<!-- An item exclusive for the L2 Assist App. This Blue Dynasty Circlet occupies 2 Hair Accessory slots. -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49531" name="Red Zubei- Heavy Armor" type="HEAVY" body-part="ALL_DRESS" icon="icon.armor_t2000_ul_i00">
 	<!-- An item exclusive for the L2 Assist App. A formal Red Zubei Heavy Armor. Any class can wear it. For some races and classes, the Red Zubei Heavy Armor, Light Armor, and Robe may have the same appearance. Equipping this armor removes the existing armor. Hair accessories, weapon, and magic armor are not removed. -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49532" name="White Assassin Suit" type="HEAVY" body-part="ALL_DRESS" icon="icon.dark_assassin">
 	<!-- An item exclusive for the L2 Assist App. A formal White Assassin Suit. Wearing this suit removes the existing armor. Hair accessories, weapon, and magic armor are not removed. -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<item id="49533" name="Hero’s HP Potion" type="POTION" icon="icon.etc_lesser_potion_red_i00">
 	<!-- After instant 500 HP Recovery, CP Recovery with remaining points. -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="1" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49534" name="Hero Cube" type="COUPON" icon="icon.special_cube_i00">
 	<!-- 7-day item. Available at level 20 or higher. Double-click the Cube to receive Soulshot Ticket, Buff Scrolls Chest, Major HP Potion, Warrior's Quick HP Potion, Warrior's Quick HP Potion, Angel Cat's Blessing, Improved Scroll of Resurrection, Parts of Enchantment Scrolls Chest, Fishing kit chest, My Teleport to the Base Package, Blade Spirit, Spellbook Box. (Can be used only once per day.)  -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49535" name="Fishing kit of the Hero Who Came Back" type="NONE" icon="icon.etc_elite_marguene_collection_box_i00">
 	<!-- Double-click to receive Fishing Rod (10-day), Bait (2160 pcs, Event), Hero's Dual Swords (15-day), 3 Soulshot Tickets. \\n\\n<Note>\\nBe careful before opening the items as their relocation is restricted. -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49536" name="Box of Scroll of Escape to the Base" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Double-click to get 1 Scroll of Escape to Dragon Valley Bridge, to Antharas' Lair, to the Entrance of Cruma Tower, to the Entrance of Orc Barracks, to the Entrance of Magic Valley.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49537" name="Return: Dragon Valley Bridge" type="SCROLL" icon="icon.etc_scroll_of_return_i05">
 	<!-- Magic scroll that teleports you to the Dragon Valley Bridge. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49538" name="Return: Inside Antharas' Lair" type="SCROLL" icon="icon.etc_scroll_of_return_i05">
 	<!-- Magic scroll that teleports you into Antharas' Lair. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49539" name="Return: Cruma Tower Entrance" type="SCROLL" icon="icon.etc_scroll_of_return_i05">
 	<!-- Magic scroll that teleports you to the entrance of Cruma Tower. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49540" name="Return: Turek Orc Campsite Entrance" type="SCROLL" icon="icon.etc_scroll_of_return_i05">
 	<!-- Magic scroll that teleports you to the entrance of Turek Orc Campsite. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49541" name="Spellbook Chest" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- Double-click the chest to receive one of the Spellbooks, used after the 2nd Class Transfer.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39059" level="1"/>  <!-- Spellbok Box -->
@@ -313,7 +313,7 @@
 
 	<item id="49542" name="Greater Scroll of Resurrection" type="SCROLL" icon="icon.etc_scroll_of_resurrection_i01">
 	<!-- Magic scroll, restoring 50% of XP and resurrecting the character.  -->
-		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39109" level="1"/>  <!-- Improved Scroll of Resurrection -->
@@ -328,185 +328,185 @@
 
 	<armor id="49544" name="Warrior 1" type="HEAVY" body-part="ALL_DRESS" icon="BranchSys3.iconArmor.g_co_captain_i00">
 	<!-- Warrior Appearance Modification- Level 45 -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49545" name="Warrior 2" type="HEAVY" body-part="ALL_DRESS" icon="icon.dark_assassin">
 	<!-- Warrior Appearance Modification- Level 55 -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49546" name="Warrior 3" type="HEAVY" body-part="ALL_DRESS" icon="icon.dark_kninght">
 	<!-- Warrior Appearance Modification- Level 65 -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49547" name="Wizard 1" type="MAGIC" body-part="ALL_DRESS" icon="icon.dark_assassin">
 	<!-- Wizard Appearance Modification- Level 45 -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49548" name="Wizard 2" type="MAGIC" body-part="ALL_DRESS" icon="icon.dark_assassin">
 	<!-- Wizard Appearance Modification- Level 55 -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49549" name="Wizard 3" type="MAGIC" body-part="ALL_DRESS" icon="icon.ev_wp_halloween">
 	<!-- Wizard Appearance Modification- Level 65 -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<item id="49550" name="Return: Enchanted Valley Entrance" type="SCROLL" icon="icon.etc_scroll_of_return_i05">
 	<!-- Magic scroll that teleports you to the entrance of Enchanted Valley. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<armor id="49551" name="Blue Dynasty- Light Armor" type="LIGHT" body-part="ALL_DRESS" icon="icon.armor_t2000_ul_i00">
 	<!-- An item exclusive for the L2 Assist App. A formal Blue Dynasty Light Armor. Any class can wear it. For some races and classes, the Blue Dynasty Heavy Armor, Light Armor, and Robe may have the same appearance. Equipping this armor removes the existing armor. Hair accessories, weapon, and magic armor are not removed. -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49552" name="Blue Dynasty- Robe" type="MAGIC" body-part="ALL_DRESS" icon="icon.armor_t2000_ul_i00">
 	<!-- An item exclusive for the L2 Assist App. A formal Blue Dynasty Robe. Any class can wear it. For some races and classes, Blue Dynasty Heavy Armor, Light Armor, and Robe may have the same appearance. Equipping this robe removes the existing armor. Hair accessories, weapon, and magic armor are not removed. -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49553" name="Red Zubei- Light Armor" type="LIGHT" body-part="ALL_DRESS" icon="icon.armor_t2000_ul_i00">
 	<!-- An item exclusive for the L2 Assist App. A formal Red Zubei Light Armor. Any class can wear it. For some races and classes, Red Zubei Heavy Armor, Light Armor, and Robe may have the same appearance. Equipping this armor removes the existing armor. Hair accessories, weapon, and magic armor are not removed. -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49554" name="Red Zubei- Robe" type="MAGIC" body-part="ALL_DRESS" icon="icon.armor_t2000_ul_i00">
 	<!-- An item exclusive for the L2 Assist App. A formal Red Zubei Robe. Any class can wear it. For some races and classes, Red Zubei Heavy Armor, Light Armor, and Robe may have the same appearance. Equipping this robe removes the existing armor. Hair accessories, weapon, and magic armor are not removed. -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<item id="49555" name="Mold Design" type="NONE" icon="icon.etc_mold_i00">
 	<!-- Trade items that Merchant Damion should send to the Gludio Castle. Deliver them to Amore near Fellmere Lake. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes quest-item="true"/>
 	</item>
 
 	<item id="49556" name="Amore’s Certificate" type="NONE" icon="icon.etc_piece_of_paper_gray_i00">
 	<!-- A certificate issued by Amore. Take it to Merchant Damion in Gludin Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes quest-item="true"/>
 	</item>
 
 	<item id="49557" name="Armor Trade Contract" type="NONE" icon="icon.etc_paper_black_i00">
 	<!-- A contract that was carried by a Turek Orc Commander. The Dwarf Mark is stamped on it. Take the certificate to Moonlight Knight Johnson. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes quest-item="true"/>
 	</item>
 
 	<item id="49558" name="Operation Order" type="NONE" icon="icon.etc_roll_of_paper_black_i00">
 	<!-- An Operation Order that a Turek Orc Commander was holding. Take it to Moonlight Knight Johnson. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes quest-item="true"/>
 	</item>
 
 	<item id="49559" name="Rolento's Bag" type="NONE" icon="icon.pouch_i01">
 	<!-- A bag containing the supplies that Dwarf Merchant Rolento needs to send to Ol Mahum Elder Gus. Deliver it to Elder Gus. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes quest-item="true"/>
 	</item>
 
 	<item id="49560" name="Iron Scale Certificate" type="NONE" icon="icon.etc_letter_white_i00">
 	<!-- A certificate that confirms one's membership to the Iron Scale Guild. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes quest-item="true"/>
 	</item>
 
 	<item id="49561" name="Turek Orc Invader’s Head" type="NONE" icon="icon.etc_skull_black_i00">
 	<!-- Severed head of a Turek Orc Invader. Collect 10 heads and take them to Ol Mahum Elder Gus. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes quest-item="true"/>
 	</item>
 
 	<item id="49562" name="Spellbook: Spirit Sharing" type="NONE" icon="icon.etc_spell_books_summon_i00">
 	<!-- Spellbook needed to learn Spirit Sharing. Used by Warlocks, Elemental Summoners, and Phantom Summoners.\\nLevel: 44 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="50000"/>
 	</item>
 
-	<item id="49563" name="1,000,000,000 Adena" type="NONE" icon="icon.fairy_adena_joke">
+	<item id="49563" name="1,0,0,000 Adena" type="NONE" icon="icon.fairy_adena_joke">
 	<!-- Aden look like adens, but they are rare and more valuable. The one who takes them to Misfety receives a gift and Buffs. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="49564" name="10,000,000,000 Adena" type="NONE" icon="icon.fairy_adena_joke">
+	<item id="49564" name="10,0,0,000 Adena" type="NONE" icon="icon.fairy_adena_joke">
 	<!-- Aden look like adens, but they are rare and more valuable. The one who takes them to Misfety receives a gift and Buffs. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="49565" name="Misfety's Gift" type="NONE" icon="icon.etc_pi_box_joy_pack">
 	<!-- Miss Patch's Gift. Double-click the chest to receive Successor's Ring, Sheep Hat (14-day) and The Rune of Hero's Experience (30-day). \\n\\n<Note>\\nBe careful before opening the items as their relocation is restricted. -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49566" name="Roa's Gift" type="NONE" icon="icon.etc_ev_draco_gift_box">
 	<!-- Roa's Gift. This is the gift she put her soul into. Double-click the chest to receive 1 Soulshot Ticket, Buff Scrolls Chest, Base Scroll of Escape Pack, Fishing Kit, Feather of Blessing, or Spellbook Box. \\n\\n<Note>\\nThe items obtained from the box cannot be moved freely. Keep this in mind before opening the box. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="49567" name="Something Roa lost" type="NONE" icon="icon.event_july_seven_park_i00">
 	<!-- Something Roa's Helper lost. Can be exchanged for a Roa's Gift through Roa NPC that appears at times. Exchange is available once a day.    -->
-		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="49568" name="Spellbook: Sonic Move" type="NONE" icon="icon.etc_spell_books_blue_i00">
 	<!-- Spellbook needed to learn Sonic Move. Used by Gladiators.\\nLevel: 56 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000"/>
 	</item>
 
 	<item id="49569" name="Spellbook: Sand Bomb" type="NONE" icon="icon.etc_spell_books_blue_i00">
 	<!-- Spellbook needed to learn Sand Bomb. Used by Treasure Hunters, Plains Walkers, and Abyss Walkers.\\nLevel: 55 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000"/>
 	</item>
 
 	<item id="49570" name="Spellbook: Mass Curse Gloom" type="NONE" icon="icon.etc_spell_books_blue_i00">
 	<!-- Spellbook needed to learn Mass Curse Gloom. Used by Necromancers.\\nLevel: 58 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000"/>
 	</item>
 
 	<item id="49571" name="Spellbook: Clear Mind" type="NONE" icon="icon.etc_spell_books_blue_i00">
 	<!-- Spellbook needed to learn Clear Mind. Used by Sorcerers, Spellsingers, and Spellhowlers.\\nLevel: 40 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000"/>
 	</item>
 
 	<weapon id="49573" name="Samurai Black Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
 	<!-- 30-day item. Cannot be enchanted or endued with special characteristics.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="2340" commission-type="OTHER_ITEM" duration="43200" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -671,7 +671,7 @@
 
 	<item id="49585" name="Golden Mermaid's Tears" type="SCROLL" icon="icon.general_fuel_i00">
 	<!-- 7-day item. Increases XP/SP gain by 50% for 1 hours. Effect remains after death.  -->
-		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39113" level="1"/>  <!-- Golden Mermaid's Tears -->
@@ -680,7 +680,7 @@
 
 	<weapon id="49586" name="Golden Mermaid's Fishing Rod" type="FISHING_ROD" body-part="TWO_HAND" icon="icon.bm_gold_fishing_pole">
 	<!-- 30-day item. Golden Mermaid's Fishing Rod.  Bobber usage: 1\\n\\nEnables to teleport to Giran/Gludin. Cooldown: 1 min. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1000" commission-type="OTHER_ITEM" duration="43200" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -697,7 +697,7 @@
 
 	<weapon id="49587" name="Golden Mermaid's Fishing Rod" type="FISHING_ROD" body-part="TWO_HAND" icon="icon.bm_gold_fishing_pole">
 	<!-- Golden Mermaid's fishing rod.   Consumes 1 Fishing Shot.\\n\\nEquip to use skill that lets you telepot to Giran or Gludin Harbor. Cooldown is 1 min. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="1000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -714,25 +714,25 @@
 
 	<item id="49588" name="Golden Mermaid's Fishing Rod Box" type="NONE" icon="icon.etc_bm_lure_box_i00">
 	<!-- Use to obtain a 30-day Golden Mermaid's Fishing Rod. \\n\\n<Note>\\nThe item in the box has movement limitations, so keep that in mind when opening the box. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes weight="100" duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49589" name="Golden Bait" type="LURE" icon="icon.bm_gold_lure">
 	<!-- Fishing Bait. Can be used for fishing Whales.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="EQUIP"/>
 	</item>
 
 	<item id="49590" name="Rare Accessory Lv. 3 Box" type="NONE" icon="icon.etc_box_of_adventure_3_i00">
 	<!-- Double-click to obtain the following: Enhanced Queen Ant's Ring Lv. 3 (30-day), Enhanced Orfen's Earring Lv. 3 (30-day), Enhanced Ring of Core Lv. 3 (30-day). -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<armor id="49591" name="Queen Ant's Ring Lv. 3" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_queen_ant_i03">
 	<!-- 30-day Item. MP +21, Poison Resistance and Atk. Rate +20%, P./M. Accuracy +3, P./M. Atk. +7%, P. Critical Damage +10%, M. Critical Damage +5%. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" commission-type="RING" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -746,7 +746,7 @@
 
 	<armor id="49592" name="Orfen's Earring Lv. 3" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_orfen_i03">
 	<!-- A 30-day item. MP +31, MEN Attack and Resistance +15%, Hold Attack and Resistance +20%, Heal Received +6%, Skill MP Consumption -5%. Activates MP Drain effect. The effect does not stack if two identical earrings are equipped. Cannot be enchanted. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" commission-type="EARRING" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -760,7 +760,7 @@
 
 	<armor id="49593" name="Ring of Core Lv. 3" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_core_i03">
 	<!-- 30-day Item. MP +21, MEN Atk. and Resistance +20%, P./M. Evasion +3, Received Damage -6%. Enables debuff removal skills. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" commission-type="RING" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -775,17 +775,17 @@
 
 	<item id="49594" name="Whale" type="SCROLL" icon="icon.fish_huge_i15">
 	<!-- Double-Click to obtain a Fishing Coin or, at a certain chance, Golden Boots.   -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<item id="49595" name="Scroll: 2,000 SP" type="SCROLL" icon="icon.etc_sp_scroll1_i00">
+	<item id="49595" name="Scroll: 2,000 SP,," type="SCROLL" icon="icon.etc_sp_scroll1_i00">
 	<!-- Scroll that replenishes 2,000 SP.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="49596" name="Scroll: 10,000 SP" type="SCROLL" icon="icon.etc_sp_scroll2_i00">
+	<item id="49596" name="Scroll: 10,000 SP,," type="SCROLL" icon="icon.etc_sp_scroll2_i00">
 	<!-- Scroll that replenishes 10,000 SP.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
@@ -799,14 +799,14 @@
 
 	<armor id="49598" name="Blue Talisman - Physical Critical" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i01">
 	<!-- Short-term (1-hour). Critical +10 when equipped. Effect does not stack with additional talismans of the same type.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49599" name="Blue Talisman - P. Atk." type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i01">
 	<!-- Short-term (1-hour). P. Atk. +3% when equipped. Effect does not stack with additional jewels of the same type.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 	</armor>

@@ -195,7 +195,7 @@
 
 	<item id="6319" name="Mimir's Elixir" type="NONE" icon="icon.etc_lesser_potion_yellow_i00">
 	<!-- Legendary elixir said to bestow ultimate wisdom. Take it to Magister Ladd. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
@@ -207,13 +207,13 @@
 
 	<item id="6321" name="True Gold" type="NONE" icon="icon.etc_broken_crystal_gold_i00">
 	<!-- Essential ingredient of Mimir's Elixir. Take it to Magister Ladd. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="6322" name="Philosopher's Stone" type="NONE" icon="icon.etc_bead_silver_i00">
 	<!-- Essential ingredient of Mimir's Elixir. Take it to Magister Joan. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
@@ -459,13 +459,13 @@
 
 	<item id="6350" name="Amulet: Pa'agrio's Honor" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Pa'agrio's Honor. Used by Overlords.\\nRequired level: 56 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="50000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="6351" name="Amulet: Ritual of Life" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Ritual of Life. Used by Overlords.\\nRequired level: 48 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="50000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
@@ -889,7 +889,7 @@
 
 	<armor id="6394" name="Red Party Mask" type="NONE" body-part="HAIR" icon="icon.etc_party_mask_i01">
 	<!-- Fashion item used to display a unique appearance.  Can be stored in a warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="10" commission-type="HAIR_ACCESSORY" />
 		<crystal />
 	</armor>
@@ -908,19 +908,19 @@
 
 	<item id="6397" name="Amulet: Chant of Vampire" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Chant of Vampire spell. Used by Warcryers.\\nRequired level: 44 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="6398" name="Spellbook: Body of Avatar" type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Spellbook needed to learn Body of Avatar. Used by Bishops.\\nRequired level: 48 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="6399" name="Rabbit Crest" type="NONE" icon="icon.etc_paper_black_i00">
 	<!-- The crest that indicates that its bearer's event collector is "rabbit." Without this badge, one cannot prove one's grade . -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 

@@ -2,136 +2,136 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="91200" name="Scroll of Escape: Wall of Argos" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- Move to the Wall of Argos Blood Samples with Magic Scroll.  \\n\\nNote: Can Move to the Wall of Argos through Gatekeeper Tatiana in the Goddard Castle. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91201" name="Secret Book - Fall Down" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Secret Book used to learn Fall Down. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120"/>
 	</item>
 
 	<item id="91202" name="Codex - Sublime Self-sacrifice" type="NONE" icon="icon.etc_magic_book_white_i00">
 	<!-- Scroll needed to learn Sublime Self-sacrifice. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120"/>
 	</item>
 
 	<item id="91203" name="Secret Book - Summon Feline Queen" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Secret Book used to learn Summon Feline Queen. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120"/>
 	</item>
 
 	<item id="91204" name="Secret Book - Summon Seraphim the Unicorn" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Secret Book used to learn Summon Seraphim the Unicorn. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120"/>
 	</item>
 
 	<item id="91205" name="Secret Book - Summon Nightshade" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Secret Book used to learn Summon Nightshade. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120"/>
 	</item>
 
 	<item id="91206" name="Chronicle Token" type="RUNE" icon="icon.etc_scroll_of_memory_i00">
 	<!-- CON, MEN, DEX, WIT, STR, INT +1 with Inventory. Attack/Magic Rate +5%.  The  -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91207" name="Blessing of Wind Box" type="NONE" icon="icon.sayha2017_box_i02">
 	<!-- Double-click to randomly receive Sayha's Blessing, Sayha's Silver Blessing, Sayha's Gold Blessing.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91208" name="Wind Gold Box" type="NONE" icon="icon.sayha2017_box_i03">
-	<!-- Double-click to randomly obtain 1 +15 A-grade, +16 B-/C-grade Weapon, Talisman of Power, Gem, or Enchant Scroll.  Will be deleted during maintenance on Wednesday, June 27th, 2018. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+	<!-- Double-click to randomly obtain 1 +15 A-grade, +16 B-/C-grade Weapon, Talisman of Power, Gem, or Enchant Scroll.  -->
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91209" name="Wind Silver Box" type="NONE" icon="icon.sayha2017_box_i04">
-	<!-- Double-click to randomly obtain various items such as +10 Earth Dragon/Fire Dragon Pendant, +10 Hair Accessory.  Will be deleted during maintenance on Wednesday, June 27th, 2018. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+	<!-- Double-click to randomly obtain various items such as +10 Earth Dragon/Fire Dragon Pendant, +10 Hair Accessory.  -->
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<armor id="91210" name="Sayha's Cloak - Black" type="NONE" body-part="BACK" icon="icon.sayha2017_back_i01">
 	<!-- Cloak imbued with Sayha's Energy. Enhance with Sayha's Cloak - Enchant Scroll. By amount various options apply.  -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="220" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91211" name="Sayha's Cloak - White" type="NONE" body-part="BACK" icon="icon.sayha2017_back_i03">
 	<!-- Cloak imbued with Sayha's Energy. Enhance with Sayha's Cloak - Enchant Scroll. By amount various options apply.  -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="220" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91212" name="Sayha's Cloak - Red" type="NONE" body-part="BACK" icon="icon.sayha2017_back_i02">
 	<!-- Cloak imbued with Sayha's Energy. Enhance with Sayha's Cloak - Enchant Scroll. By amount various options apply.  -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="220" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<item id="91213" name="Sayha's Cloak - Enchant Scroll" type="ENCHANT_ARMOR" icon="icon.sayha2017_scrl">
 	<!-- Varnish enhances Sayha's Cloak. Can Enhance to max. +10.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91214" name="Brilliant Sayha's Cloak - Enchant Scroll" type="SOLID_ENCHANT_ARMOR" icon="icon.sayha2017_scrl">
 	<!-- Varnish enhances Sayha's Cloak. Can Enhance up to max. +9. If Enhance fails, Sayha's Cloak does not disappear and conserves existing Enchant level.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91215" name="Shining Sayha's Cloak - Enchant Scroll" type="SOLID_ENCHANT_ARMOR" icon="icon.sayha2017_scrl">
 	<!-- Varnish enhances Sayha's Cloak. Can Enhance up to max. +7. If Enhance fails, Sayha's Cloak does not disappear and conserves existing Enchant level.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91216" name="+16 B-grade Weapon Pack" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Double-click for randomly receive a +16 B-grade Enhanced Hair Accessory.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91217" name="+10 Hair Accessory Pack" type="NONE" icon="icon.etc_pi_box_love_pack">
 	<!-- Double-click for randomly receive 1 +10 Enhanced Hair Accessory.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91218" name="Panda Transformation Scroll" type="POTION" icon="icon.sayha2017_panda">
 	<!-- Transforms you into Panda for 15 min. Effect remains after death. \\n Panda's Power: Max HP/MP +20%. Sayha's Grace Hunting XP/SP gain +20%. Effect remains after death. \\n<Warning>\\n If used when Teddy Bear/Blue Dynasty/Cat the Cat/Cat Buff is applied, existing buff will be replaced. Cooldown 1 min. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91219" name="Cat Transformation Scroll" type="POTION" icon="icon.sayha2017_cat">
 	<!-- Transforms you into Cat for 15 minutes. Effect remains even after death.  \\nCat's Energy: Max HP/MP +20%. XP/SP gain +20% during Sayha's Grace. Effect remains even after death. \\n<Warning>\\nIf used during Teddy Bear/Blue Dynasty/Kat the Cat/Panda Buff, the existing buff will be replaced. Cooldown is 1 minute. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91220" name="Shining Fishing kit Lv. 2" type="NONE" icon="icon.bm_freya_gift_box">
 	<!-- Double-click to obtain 2 Golden Mermaid's Fishing Rod Packs (30-day), 25920 Silver Bait, 20 Einhasad's Protections, 1 Refined Antharas' Earring Box (30-day), 1 Sayha's Jewel Box (30-day).  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<armor id="91221" name="Antharas' Earring Lv. 3" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_antaras_i02">
 	<!-- A 30-day item. MP +40, CON +1, MEN +1, Bleed Attack and Resistance +30%, Stun Attack and Resistance +20%, MEN Attack and Resistance +20%, Damage Reflect Resistance +15%, Heal Received +15%, Vampiric Rage +6%, Skill MP Consumption -6%. When two identical earrings are equipped, the effect of only one earring will be applied. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -142,62 +142,62 @@
 
 	<item id="91222" name="Antharas' Earring Lv. 3 Box" type="NONE" icon="icon.npoint_antaras_30day_box">
 	<!-- Double-click to receive Antharas' Earring Lv. 3(30-day). -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<armor id="91223" name="Aquamarine Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_aquamarine_i00">
 	<!-- 30-day item. When using a skill after equipping, at a set rate 50 MP Recovery. Effect does not stack with additional jewels of the same type.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<item id="91224" name="Sayha's Jewel Box" type="NONE" icon="icon.bm_sayhas_talisman_box">
 	<!-- Double-click to receive 1 each of Cat's Eye Lv5 (30-day), Aquamarine Lv5 (30-day).  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91225" name="Wealthy Merchant Red's Gift" type="NONE" icon="icon.etc_treasure_box_i10">
 	<!-- Double-click to receive various items such as Anakim/Lilith Runes, Inventory Expansion Tickets Lv. 3-5, or Red's Weapon Exchange Tickets.   -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91226" name="Red's Weapon Exchange Ticket" type="MATERIAL" icon="icon.etc_level_bustup_ticket_i00">
 	<!-- Pay Weapon Exchange Tickets and the fee to exchange for a weapon pack.  \\n\\n<Weapon Pack Exchange>\\nCan be exchanged through Wealthy Merchant Red.\\n- Required Quantity\\nC-grade: 6\\nB-grade: 20\\nA-grade: 54\\nTop-grade A-grade: 320 -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91227" name="Sayha's Cloak Exchange Ticket" type="MATERIAL" icon="icon.etc_exchange_ticket_i01">
 	<!-- Can exchange for Sayha's Cloak - Black/White/Red through Dimensional Merchant.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91228" name="Chronicle Cube" type="COUPON" icon="icon.ev_libra_cube">
 	<!-- A 30-day item. Double-click to obtain 3 Shining Scrolls of Mood Melody. Can also randomly obtain Dandy's Home Run Ball, Morale Bean Cake (Event), or Savior Scroll: Enchant Weapon. (Can be used once a day).  -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="43200" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91229" name="Chronicle Cube" type="COUPON" icon="icon.ev_libra_cube">
 	<!-- A 90-day item. Double-click to obtain 3 Shining Scrolls of Mood Melody. Can also randomly obtain Dandy's Home Run Ball, Morale Bean Cake (Event), or Savior Scroll: Enchant Weapon. (Can be used once a day).  -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="129600" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91230" name="Chronicle Token" type="RUNE" icon="icon.etc_scroll_of_memory_i00">
 	<!-- A 30-day item. When stored in the inventory, CON/MEN/DEX/WIT/STR/INT +1, Attack and Casting Spd. +5%.   -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="43200"/>
 	</item>
 
 	<item id="91231" name="Chronicle Token" type="RUNE" icon="icon.etc_scroll_of_memory_i00">
 	<!-- A 90-day item. When stored in the inventory, CON/MEN/DEX/WIT/STR/INT +1, Attack and Casting Spd. +5%.   -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="129600"/>
 	</item>
 
@@ -227,49 +227,49 @@
 
 	<item id="91236" name="Santa Girl's Gift Purse" type="NONE" icon="BranchSys.Icon.Br_santa_gift_click_i00">
 	<!-- Use to get various items such as Blessed Shield Talisman, Venir's Talisman Stage 18, A/B/C-grade equipment, A/B/C/D-grade Enchant Scroll Ticket. Can be transferred within the account through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91237" name="Santa Girl's Magic Box" type="COUPON" icon="BranchSys.icon.br_valentine_agathion_pack_i00">
 	<!-- Use to get Santa Girl's Gift Buff. (Can be used 1 time in 1 day.)  -->
-		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91238" name="Rudolph's Cube - 15" type="NONE" icon="Branchsys2.icon.cube_event_i03">
 	<!-- Item can be used 15 times. Use to get 1 Rudolph's Box. (Can be used 1 time in 1 day.) \\n -->
-		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="91239" name="Rudolph's Cube Box" type="NONE" icon="icon.bm_freya_dark_rune_box">
 	<!-- Use to get 1 Rudolph Cube(15). \\n -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91240" name="Christmas Amulet" type="RUNE" icon="BranchSys.icon.br_xmas_present_luck_i00">
 	<!-- 15-day item. With Inventory, Hunting XP/SP +20% Fishing XP/SP +20%.  \\n -->
-		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="21600"/>
 	</item>
 
 	<item id="91241" name="Christmas Amulet Box" type="NONE" icon="BranchSys.icon.br_fortuna_cube_s_i00">
 	<!-- Use to get 1 Christmas Amulet (15-day).  \\n -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="21600" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91242" name="Rudolph's Box" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i04">
 	<!-- Use to get Shining Golden Bait 720, High-grade Fisher's Blessing (4-hours) 1, Rudolph Agathion Box (2-hours) 2. \\n -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<armor id="91243" name="Shining Saviour's Earring" type="NONE" body-part="EAR" icon="icon.r2_earring_i01">
 	<!-- When equipped, XP/SP gain +2%, Max. MP +30, Max. HP +50, MEN/Stun Attack Resistance +4%. Vampiric Rage Effect. When two identical earrings are equipped, the effect of only one earring will be applied.  \\n -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -279,7 +279,7 @@
 
 	<armor id="91244" name="Dragon Pendant Lv1" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_dragon_i00">
 	<!-- Pendant imbued with Dragon's power, can be enhanced with Dragon Varnish max. +5. When enhanced each effect is supplemented, at +5 can upgrade to Lv2 through Head Blacksmith Ferris in the Town of Aden.  \\nUpgrade Materials: Crystal (C-grade) 200, 2,000,000 Adena -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -289,7 +289,7 @@
 
 	<armor id="91245" name="Dragon Pendant Lv2" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_dragon_i00">
 	<!-- Pendant imbued with Dragon's power, can be enhanced with Dragon Varnish max. +5. When enhanced each effect is supplemented, at +5 can upgrade to Lv3 through Head Blacksmith Ferris in the Town of Aden.  \\nUpgrade Materials: Crystal (B-grade) 1,500, 10,000,000 Adena -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -299,7 +299,7 @@
 
 	<armor id="91246" name="Dragon Pendant Lv3" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_dragon_i00">
 	<!-- Pendant imbued with Dragon's power, can be enhanced with Dragon Varnish max. +5. When enhanced each effect is supplemented, at +5 can upgrade to Lv4 through Head Blacksmith Ferris in the Town of Aden.  \\nUpgrade Materials: Crystal (B-grade) x5,000, 50,000,000 Adena -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -309,7 +309,7 @@
 
 	<armor id="91247" name="Dragon Pendant Lv4" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_dragon_i00">
 	<!-- Pendant imbued with Dragon's power, can be enhanced with Dragon Varnish max. +5. When enhanced each effect is supplemented, at +5 can upgrade to Blessed Dragon Pendant through Veruti in the Town of Giran. \\nUpgrade Materials: 1 Blessed Earth Dragon Pendant or Blessed Fire Dragon Pendant. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -319,7 +319,7 @@
 
 	<armor id="91248" name="Blessed Dragon Pendant" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_dragon_i01">
 	<!-- Pendant imbued with Dragon's power. When equipped M. Def. +50, EXP/SP +30%, P. Atk./M. Atk. Spd. 10%, P. Atk./M. Atk. Critical Damage +15%, P. Atk./M. Atk. +20%, Damage Reflect Resistance +20%, P. Atk./M. Atk. Damage -30%. Vitalizes Dragon Invocation, Dragon Barrier, Dragon Evasion Skill. Cannot be enhanced. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -329,25 +329,25 @@
 
 	<item id="91249" name="Dragon Varnish" type="BLESSED_ENCHANT_ARMOR" icon="icon.bm_pendant_dragon_scrl">
 	<!-- Varnish that enhances Dragon Pendant's power. Enhance to max. +5. If failed Enchant level is reset.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91250" name="Brilliant Dragon Varnish" type="SOLID_ENCHANT_ARMOR" icon="icon.bm_pendant_dragon_scrl">
 	<!-- Varnish that enhances Dragon Pendant's power. Enhance to max. +5. If failed Enchant level remains.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91251" name="Top-grade HP Potion" type="POTION" icon="icon.etc_potion_red_i00">
 	<!-- After instant 800 HP Recovery, CP Recovery with remaining points. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes weight="1" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91252" name="High-grade Quick MP Recovery Potion" type="POTION" icon="icon.etc_potion_blue_i00">
 	<!-- Item for Quick MP recovery. Does not have duration. Cannot be used when MP is full.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes weight="5" commission-type="POTION" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="51162" level="1"/>  <!-- High-grade MP Replenishing Potion -->
@@ -356,284 +356,284 @@
 
 	<item id="91253" name="New Year Herb" type="NONE" icon="icon.christmas_card_box2">
 	<!-- New Year Herb. For 5 min. P./M. Atk. +15%, P./M. Def. +15%, Atk. Spd./Casting Spd. +15%, HP/MP Recovery Bonus +30%, Speed +10. Deleted upon logout. -->
-		<restriction freightable="false" destroyable="false" tradable="false" depositable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91254" name="Rose Party Herb" type="NONE" icon="icon.etc_red_rose_i00">
 	<!-- For 5 min. P./M. Atk. +15%, P./M. Def. +15%, Atk. Spd./Casting Spd. +15%, HP/MP Recovery Bonus +30%, Speed +10. Deleted upon logout. -->
-		<restriction freightable="false" destroyable="false" tradable="false" depositable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91255" name="Dragon Relic" type="NONE" icon="icon.card_event_blue_box">
-	<!-- Double-click to randomly obtain 1 High-grade Enchant Weapon Pack ( B, C), Brilliant Talisman of Power Lv. 5, Blessed Dragon Pendant, Attribute Necklace, Permanent Doll of Border Series, or Singer, Dancer Transformation Scroll.   -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+	<!-- Double-click to randomly obtain 1 High-grade Enchant Weapon Pack (A, B, C), Brilliant Talisman of Power Lv. 5, Blessed Dragon Pendant, Attribute Necklace, Permanent Doll of Border Series, or Singer, Dancer Transformation Scroll.   -->
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91256" name="Baium Doll Lv. 1" type="RUNE" icon="icon.bm_baium_doll_30d">
 	<!-- Boosts abilities with the Baium Doll's Spell when stored in the inventory. Can be upgraded to Lv. 1 or 2 through Veruti in the Town of Giran. \\n\\n<Baium Doll's Spell Lv. 1>\\nMEN Attack Resistance +40%, Paralysis/Knock Down/Pull Attack Resistance +20%, P. Def/M. Def +12%, and Skill Cooldown -3% -->
-		<restriction freightable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91257" name="Queen Ant Doll Lv. 1" type="RUNE" icon="icon.bm_queen_ant_doll_30d">
 	<!-- Boosts abilities with the Queen Ant Doll's Spell when stored in the inventory. Can be upgraded to Lv. 1 or 2 through Veruti in the Town of Giran. \\n\\n<Queen Ant Doll's Spell Lv. 1>\\nP. Atk./P. Critical Damage +8%, Max HP +12% -->
-		<restriction freightable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91258" name="Orfen Doll Lv. 1" type="RUNE" icon="icon.bm_orfen_doll_30d">
 	<!-- Boosts abilities with the Orfen Doll's Spell when stored in the inventory. Can be upgraded to Lv. 1 or 2 through Veruti in the Town of Giran. \\n\\n<Orfen Doll's Spell Lv. 1>\\nM. Atk./M. Critical Damage +8%, Max MP +12% -->
-		<restriction freightable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91259" name="Transformation Scroll - Singer" type="POTION" icon="icon.ev_13th_paper_inzone">
 	<!-- Transforms you into Singer for 30 min. Effect remains after death. Cannot be used during Transformation. Cooldown 10 min. \\nChapa - Singer: Can use Song of Earth, Song of Wind, Hunter's Song, Song of Vitality. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91260" name="Transformation Scroll - Dancer" type="POTION" icon="icon.ev_13th_paper_field">
 	<!-- Transforms you into Dancer for 30 min. Effect remains after death. Cannot be used during Transformation. Cooldown 10 min. \\nChapa - Dancer: Can use Dance of the Warrior, Dance of Fire, Dance of Fury, Dance of Concentration. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<armor id="91261" name="Red Knights Outfit" type="HEAVY" body-part="ALL_DRESS" icon="icon.bm2018_dragon_i01">
 	<!-- Red Knights outfit. -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<item id="91262" name="Transformation Scroll: Ninja Assassin" type="POTION" icon="icon.bm2018_ninja_i01">
 	<!-- Can be transformed into a Ninja Assassin for 20 minutes. Remains after death. \\n\\n<Ninja Assassin's Energy> P. Atk. +7%, M. Atk. +7%, XP +10%. Has a chance to cancel enemy's target when attacking or using skills. Cooldown is 1 minute. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91263" name="Transformation Scroll: Blood Noblesse" type="POTION" icon="icon.bm2018_rednoblesse_i01">
 	<!-- Can be transformed into a Blood Noblesse for 20 minutes. Remains after death. \\n\\n<Blood Noblesse's Energy> P. Atk. +7%, M. Atk. +7%, XP +10%. Has a chance to deal powerful magic damage when attacking or using skills. Cooldown is 1 minute. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91264" name="Transformation Scroll: White Noblesse" type="POTION" icon="icon.bm2018_whitenoblesse_i01">
 	<!-- Can be transformed into a White Noblesse for 20 minutes. Remains after death. \\n\\n<White Noblesse's Energy> P. Atk. +7%, M. Atk. +7%, XP +10%. Has a chance to reduce enemy's M. Def. when attacking or using skills. Cooldown is 1 minute. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91265" name="Transformation Scroll: Blue Musketeer" type="POTION" icon="icon.bm2018_bluemusketeer_i01">
 	<!-- Can be transformed into a Blue Musketeer for 20 minutes. Remains after death. \\n\\n<Blue Musketeer's Energy> P. Atk. +7%, M. Atk. +7%, XP +10%. Has a chance to stun enemy when attacking or using skills. Cooldown is 1 minute. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91266" name="Transformation Scroll: Purple Cowboy" type="POTION" icon="icon.bm2018_cowboy_i01">
 	<!-- Can be transformed into a Purple Cowboy for 20 minutes. Remains after death. \\n\\n<Purple Cowboy's Energy> P. Atk. +7%, M. Atk. +7%, XP +10%. Has a chance to deal powerful physical damage when attacking or using skills. Cooldown is 1 minute. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91267" name="Transformation Scroll: High Priest" type="POTION" icon="icon.bm2018_healer_i01">
 	<!-- Can be transformed into a High Priest for 20 minutes. Remains after death. \\n\\n<High Priest's Energy> P. Atk. +7%, M. Atk. +7%, XP +10%. Has a chance to recover party members' HP/MP when attacking or using skills. Cooldown is 1 minute. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91268" name="Transformation Scroll: Wild Wolf" type="POTION" icon="icon.bm2018_barbarian_i01">
 	<!-- Can be transformed into a Wild Wolf for 20 minutes. Remains after death. \\n\\n<Wild Wolf's Energy> P. Atk. +7%, M. Atk. +7%, XP +10%. Has a chance to reduce enemy's P. Def. when attacking or using skills. Cooldown is 1 minute. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91269" name="Transformation Scroll: Valkyrie" type="POTION" icon="icon.bm2018_valkyrie_i01">
 	<!-- Can be transformed into a Valkyrie for 20 minutes. Remains after death. \\n\\n<Valkyrie's Energy> P. Atk. +7%, M. Atk. +7%, XP +10%. Has a chance to paralyze enemy when attacking or using skills. Cooldown is 1 minute. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91270" name="Transformation Scroll: Caravan" type="POTION" icon="icon.bm2018_pirate_i01">
 	<!-- Can be transformed into a Caravan for 20 minutes. Remains after death. \\n\\n<Caravan's Energy> P. Atk. +7%, M. Atk. +7%, XP +10%. Has a chance to increase party members' P. Atk./M. Atk. when attacking or using skills. Cooldown is 1 minute. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91271" name="Transformation Scroll: Dragon Berserker" type="POTION" icon="icon.bm2018_dragon_i01">
 	<!-- Can be transformed into a Dragon Berserker for 20 minutes. Remains after death. \\n\\n<Dragon Berserker's Energy> P. Atk. +10%, M. Atk. +10%, XP +20%. When attacking or using skills, there's a chance of P. Atk. +50%, M. Atk. +50%, Atk. Spd. +50%, Casting Spd. +50%, and reflecting 15% of damage received to the enemy. Cooldown is 1 minute. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91272" name="Transformation Sealbook: Ninja Assassin" type="POTION" icon="icon.bm2018_ninja_i01">
 	<!-- Obtain Ninja Assassin's skill.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91273" name="Transformation Sealbook: Blood Noblesse" type="POTION" icon="icon.bm2018_rednoblesse_i01">
 	<!-- Obtain Blood Noblesse's skill.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91274" name="Transformation Sealbook: White Noblesse" type="POTION" icon="icon.bm2018_whitenoblesse_i01">
 	<!-- Obtain White Noblesse's skill.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91275" name="Transformation Sealbook: Blue Musketeer" type="POTION" icon="icon.bm2018_bluemusketeer_i01">
 	<!-- Obtain Blue Musketeer's skill.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91276" name="Transformation Sealbook: Purple Cowboy" type="POTION" icon="icon.bm2018_cowboy_i01">
 	<!-- Obtain Purple Cowboy's skill.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91277" name="Transformation Sealbook: High Priest" type="POTION" icon="icon.bm2018_healer_i01">
 	<!-- Obtain High Priest's skill.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91278" name="Transformation Sealbook: Wild Wolf" type="POTION" icon="icon.bm2018_barbarian_i01">
 	<!-- Obtain Wild Wolf's skill.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91279" name="Transformation Sealbook: Valkyrie" type="POTION" icon="icon.bm2018_valkyrie_i01">
 	<!-- Obtain Valkyrie's skill.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91280" name="Transformation Sealbook: Caravan" type="POTION" icon="icon.bm2018_pirate_i01">
 	<!-- Obtain Caravan's skill.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91281" name="Transformation Sealbook: Dragon Berserker" type="POTION" icon="icon.bm2018_dragon_i01">
 	<!-- Obtain Dragon Berserker's skill.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91282" name="Mysterious Transformation Box" type="NONE" icon="icon.bm2018_transform_box">
 	<!-- Double-click to obtain Transformation Scroll: Dragon Berserker or 1 random Transformation Scroll or 1 Transformation Sealbook.   -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91283" name="Transformation Scroll - Song Dance" type="POTION" icon="icon.etc_roll_of_paper_black_i00">
 	<!-- Transforms you into Song Dance for 30 min. Effect remains after death. Cannot be used during Transformation. Cooldown 10 min. \\nChapa - Song Dance: Can use Song of Earth, Song of Wind, Hunter's Song, Song of Vitality, Dance of the Warrior, Dance of Fire, Dance of Fury, Dance of Concentration, Dance of Shadows. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91284" name="Fish Stew - Clarity Lv. 1" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min., P. Skill MP Consumption -10%, M. Skill MP Consumption -4%, Song/Dance Skill MP Consumption -10%.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91285" name="Fish Stew - Clarity Lv. 2" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min., P. Skill MP Consumption -15%, M. Skill MP Consumption -7%, Song/Dance Skill MP Consumption -15%.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91286" name="Fish Stew - Agility Lv. 1" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min., Evasion +2.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91287" name="Fish Stew - Agility Lv. 2" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min., Evasion +3.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91288" name="Fish Stew - Agility Lv. 3" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min., Evasion +4.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91289" name="Mysterious Transformation Sealbook Box" type="NONE" icon="icon.bm2018_transform_box">
 	<!-- Double-click to obtain Transformation Scroll: Dragon Berserker or 1 random Transformation Sealbook.   -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91290" name="Codex - Create Critical" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Scroll needed to learn Create Critical Lv. 1. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120"/>
 	</item>
 
 	<item id="91291" name="Codex - Create Critical" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Scroll needed to learn Create Critical Lv. 2. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120"/>
 	</item>
 
 	<item id="91292" name="Codex - Create Master" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Scroll needed to learn Create Master Lv. 1. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120"/>
 	</item>
 
 	<item id="91293" name="Codex - Mana Burn" type="NONE" icon="icon.etc_magic_book_white_i00">
 	<!-- Scroll needed to learn Mana Burn. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120"/>
 	</item>
 
 	<item id="91294" name="Codex - Bluff" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Scroll needed to learn Bluff. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120"/>
 	</item>
 
 	<item id="91295" name="Codex - Hawk Spirit Totem" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Scroll needed to learn Hawk Spirit Totem. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120"/>
 	</item>
 
 	<item id="91296" name="Inventory Expansion Ticket Lv. 4" type="NONE" icon="icon.etc_ticket_i00">
 	<!-- Old Inventory Expansion Ticket. It is too old to be used any more. Can be exchanged for a new Inventory Expansion Ticket Lv. 4 from a Fishing Guild Member. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91297" name="Inventory Expansion Ticket Lv. 5" type="NONE" icon="icon.etc_ticket_i00">
 	<!-- Old Inventory Expansion Ticket. It is too old to be used any more. Can be exchanged for a new Inventory Expansion Ticket Lv. 5 from a Fishing Guild Member. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91298" name="Spring Energy Lv. 1" type="NONE" icon="icon.etc_leaf_green_i00">
 	<!-- Max HP/MP +3%, P. Atk. +3%, M. Atk. +5%, Atk. Spd./Casting Spd. +3%, P. Def/M. Def +3%, XP/SP gain +3%, Sayha's Grace Consumption Rate -3% for 20 minutes when used.  \\n\\n<Note>\\nIf two Spring Energies of different levels are used, only the effects of the higher level will be applied.\\n\\n\\n\\nCan be exchanged for various items through Primavera NPC. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91299" name="Spring Energy Lv. 2" type="NONE" icon="icon.etc_leaf_green_i00">
 	<!-- Max HP/MP +5%, P. Atk. +5%, M. Atk. +8%, Atk. Spd./Casting Spd. +5%, P. Def/M. Def +5%, XP/SP gain +5%, Sayha's Grace Consumption Rate -5% for 20 minutes when used.  \\n\\n<Note>\\nIf two Spring Energies of different levels are used, only the effects of the higher level will be applied.\\n\\n -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 

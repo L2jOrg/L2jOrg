@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<weapon id="47927" name="Magic Fan - Blue" type="ROD" body-part="RIGHT_HAND" icon="icon.ev_kr_13th_present_blue" magic="true">
 	<!-- Within the swift breezes you can feel a magic energy. This magic fan is given out to commemorate the 13th anniversary of Lineage 2. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -19,20 +19,20 @@
 	</weapon>
 
 	<item id="47928" name="Magic Woodpile" type="NONE" icon="icon.ev_firewood_seed_solo">
-	<!-- Double-click to use a Magic Woodpile for one player. If you have the Magic Fan equipped, you can use magic to set fire to the woodpile. Will be deleted during maintenance on Wednesday, December 7th, 2016. -->
+	<!-- Double-click to use a Magic Woodpile for one player. If you have the Magic Fan equipped, you can use magic to set fire to the woodpile.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="47929" name="Large Magic Woodpile" type="NONE" icon="icon.ev_firewood_seed_party">
-	<!-- Double-click to use a Large Magic Woodpile for party use. If you have the Magic Fan equipped, you can use magic to set fire to the woodpile. Will be deleted during maintenance on Wednesday, December 7th, 2016. -->
+	<!-- Double-click to use a Large Magic Woodpile for party use. If you have the Magic Fan equipped, you can use magic to set fire to the woodpile.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<weapon id="47945" name="Magic Fan - Yellow" type="ROD" body-part="RIGHT_HAND" icon="icon.ev_kr_13th_present_yellow" magic="true">
 	<!-- Within the swift breezes you can feel a magic energy. This magic fan is given out to commemorate the 13th anniversary of Lineage 2. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>

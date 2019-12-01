@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<weapon id="1300" name="Apprentice's Rod" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_apprentices_rod_i00">
 	<!-- Temporary item for Kamex -->
-		<restriction freightable="false" tradable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="80" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="41" angle="240"/>
@@ -20,7 +20,7 @@
 
 	<weapon id="1301" name="Big Hammer" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_big_hammer_i00">
 	<!-- Temporary item for Kamex -->
-		<restriction freightable="false" tradable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="300" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -38,7 +38,7 @@
 
 	<weapon id="1302" name="Bec de Corbin" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_bech_de_corbin_i00">
 	<!-- Temporary item for Kamex -->
-		<restriction freightable="false" tradable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="750" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="66" angle="210"/>
@@ -59,7 +59,7 @@
 
 	<weapon id="1303" name="Lance" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_lancia_i00">
 	<!-- Temporary item for Kamex -->
-		<restriction freightable="false" tradable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="750" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="66" angle="210"/>
@@ -80,7 +80,7 @@
 
 	<weapon id="1304" name="Conjuror's Staff" type="HAMMER" body-part="TWO_HAND" icon="icon.weapon_apprentices_staff_i00">
 	<!-- Temporary item for Kamex -->
-		<restriction freightable="false" tradable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="46" angle="240"/>
@@ -98,7 +98,7 @@
 
 	<weapon id="1305" name="Knife" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_knife_i00">
 	<!-- Temporary item for Kamex -->
-		<restriction freightable="false" tradable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="26" angle="240"/>
@@ -116,7 +116,7 @@
 
 	<weapon id="1306" name="Crafted Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_knife_i00">
 	<!-- Temporary item for Kamex -->
-		<restriction freightable="false" tradable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="26" angle="240"/>
@@ -134,7 +134,7 @@
 
 	<weapon id="1307" name="Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_bow_i00">
 	<!-- Temporary item for Kamex -->
-		<restriction freightable="false" tradable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" commission-type="OTHER_ITEM" reuse-delay="10" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="5000" angle="360"/>
@@ -152,7 +152,7 @@
 
 	<armor id="1308" name="Top" type="HEAVY" body-part="CHEST" icon="icon.weapon_voodoo_doll_i00">
 	<!-- Temporary item for Kamex -->
-		<restriction freightable="false" tradable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1400" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -162,7 +162,7 @@
 
 	<armor id="1309" name="Mithril Breastplate" type="HEAVY" body-part="CHEST" icon="icon.weapon_voodoo_doll_i00">
 	<!-- Temporary item for Kamex -->
-		<restriction freightable="false" tradable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -172,7 +172,7 @@
 
 	<armor id="1310" name="Tunic of Magic" type="MAGIC" body-part="CHEST" icon="icon.weapon_voodoo_doll_i00">
 	<!-- Temporary item for Kamex -->
-		<restriction freightable="false" tradable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -183,7 +183,7 @@
 
 	<armor id="1311" name="Puma Skin Shirt" type="LIGHT" body-part="CHEST" icon="icon.weapon_voodoo_doll_i00">
 	<!-- Temporary item for Kamex -->
-		<restriction freightable="false" tradable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="300" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -193,7 +193,7 @@
 
 	<armor id="1312" name="White Tunic" type="MAGIC" body-part="CHEST" icon="icon.weapon_voodoo_doll_i00">
 	<!-- Temporary item for Kamex -->
-		<restriction freightable="false" tradable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -204,7 +204,7 @@
 
 	<armor id="1313" name="Pants" type="HEAVY" body-part="LEGS" icon="icon.weapon_voodoo_doll_i00">
 	<!-- Temporary item for Kamex -->
-		<restriction freightable="false" tradable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -214,7 +214,7 @@
 
 	<armor id="1314" name="Mithril Gaiters" type="HEAVY" body-part="LEGS" icon="icon.weapon_voodoo_doll_i00">
 	<!-- Temporary item for Kamex -->
-		<restriction freightable="false" tradable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="600" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -224,7 +224,7 @@
 
 	<armor id="1315" name="Stockings of Magic" type="MAGIC" body-part="LEGS" icon="icon.weapon_voodoo_doll_i00">
 	<!-- Temporary item for Kamex -->
-		<restriction freightable="false" tradable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -235,7 +235,7 @@
 
 	<armor id="1316" name="Puma Skin Gaiters" type="LIGHT" body-part="LEGS" icon="icon.weapon_voodoo_doll_i00">
 	<!-- Temporary item for Kamex -->
-		<restriction freightable="false" tradable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="400" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -245,7 +245,7 @@
 
 	<armor id="1317" name="Dark Stockings" type="MAGIC" body-part="LEGS" icon="icon.weapon_voodoo_doll_i00">
 	<!-- Temporary item for Kamex -->
-		<restriction freightable="false" tradable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -256,7 +256,7 @@
 
 	<armor id="1318" name="Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_gauntlet_i00">
 	<!-- Temporary item for Kamex -->
-		<restriction freightable="false" tradable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="80" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -266,7 +266,7 @@
 
 	<armor id="1319" name="Leather Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_gauntlet_i00">
 	<!-- Temporary item for Kamex -->
-		<restriction freightable="false" tradable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -276,7 +276,7 @@
 
 	<armor id="1320" name="Quality Leather Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_gauntlet_i00">
 	<!-- Temporary item for Kamex -->
-		<restriction freightable="false" tradable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -286,7 +286,7 @@
 
 	<armor id="1321" name="Rip Gauntlets" type="NONE" body-part="GLOVES" icon="icon.armor_gauntlet_i00">
 	<!-- Temporary item for Kamex -->
-		<restriction freightable="false" tradable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -296,7 +296,7 @@
 
 	<armor id="1322" name="Bracer" type="NONE" body-part="GLOVES" icon="icon.armor_gauntlet_i00">
 	<!-- Temporary item for Kamex -->
-		<restriction freightable="false" tradable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="80" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -306,7 +306,7 @@
 
 	<armor id="1323" name="Shoes" type="NONE" body-part="FEET" icon="icon.armor_iron_boots_i00">
 	<!-- Temporary item for Kamex -->
-		<restriction freightable="false" tradable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -316,7 +316,7 @@
 
 	<armor id="1324" name="Low Boots" type="NONE" body-part="FEET" icon="icon.armor_iron_boots_i00">
 	<!-- Temporary item for Kamex -->
-		<restriction freightable="false" tradable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -326,7 +326,7 @@
 
 	<armor id="1325" name="Leather Boots" type="NONE" body-part="FEET" icon="icon.armor_iron_boots_i00">
 	<!-- Temporary item for Kamex -->
-		<restriction freightable="false" tradable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="250" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -336,7 +336,7 @@
 
 	<armor id="1326" name="Iron Boots" type="NONE" body-part="FEET" icon="icon.armor_iron_boots_i00">
 	<!-- Temporary item for Kamex -->
-		<restriction freightable="false" tradable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="300" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -346,7 +346,7 @@
 
 	<armor id="1327" name="Boots" type="NONE" body-part="FEET" icon="icon.armor_iron_boots_i00">
 	<!-- Temporary item for Kamex -->
-		<restriction freightable="false" tradable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="200" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -356,7 +356,7 @@
 
 	<armor id="1328" name="Shield of Grace" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_leather_shield_i00">
 	<!-- Temporary item for Kamex -->
-		<restriction freightable="false" tradable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="300" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -368,7 +368,7 @@
 
 	<armor id="1329" name="Shield of Victory" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_small_shield_i00">
 	<!-- Temporary item for Kamex -->
-		<restriction freightable="false" tradable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="350" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -380,7 +380,7 @@
 
 	<armor id="1330" name="Zubei's Shield" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_buckler_i00">
 	<!-- Temporary item for Kamex -->
-		<restriction freightable="false" tradable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="500" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -392,7 +392,7 @@
 
 	<armor id="1331" name="Otherworldly Shield" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_round_shield_i00">
 	<!-- Temporary item for Kamex -->
-		<restriction freightable="false" tradable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="350" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -404,7 +404,7 @@
 
 	<armor id="1332" name="Knight's Shield" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_tower_shield_i00">
 	<!-- Temporary item for Kamex -->
-		<restriction freightable="false" tradable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="500" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -505,145 +505,145 @@
 
 	<item id="1346" name="Golem's Stoneheart" type="NONE" icon="icon.etc_squares_gray_i00">
 	<!-- Stone found within the remains of a destroyed golem. Take this to Trader Rorento. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1347" name="Monster Eye Meat" type="NONE" icon="icon.etc_bark_gold_i00">
 	<!-- The carcass of monster eye. Take this to Trader Sarien. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1348" name="Basilisk's Gizzard" type="NONE" icon="icon.etc_pouch_yellow_i00">
 	<!-- The digestive organ of a basilisk. Take this to Trader Sarien. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1349" name="Anatomy Diagram" type="NONE" icon="icon.etc_spell_books_red_i00">
 	<!-- Diagram designed by Avella physicians for human anatomy. Use this to perform Samed's request. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1350" name="Zombie Head" type="NONE" icon="icon.etc_skull_red_i00">
 	<!-- Head of zombie from ruins. Take this to Samed of the Town of Gludio. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1351" name="Zombie Heart" type="NONE" icon="icon.etc_bodypart_heart_i00">
 	<!-- Heart of zombie from ruins. Take this to Samed in the Town of Gludio. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1352" name="Zombie Liver" type="NONE" icon="icon.etc_bodypart_liver_i00">
 	<!-- Liver of zombie from ruins. Take this to Samed in the Town of Gludio. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1353" name="Deadman's Skull" type="NONE" icon="icon.etc_skull_white_i00">
 	<!-- Skull of skeleton from ruins. Take this to Samed in the Town of Gludio. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1354" name="Deadman's Rib Bone" type="NONE" icon="icon.etc_rib_white_i00">
 	<!-- Rib of skeleton from ruins. Take this to Samed in the Town of Gludio. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1355" name="Deadman's Spine" type="NONE" icon="icon.etc_piece_bone_red_i00">
 	<!-- Spine of skeleton from ruins. Take this to Samed in the Town of Gludio. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1356" name="Deadman's Arm Bone" type="NONE" icon="icon.etc_piece_bone_black_i00">
 	<!-- Arm bone of skeleton from ruins. Take this to Samed in the Town of Gludio. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1357" name="Deadman's Thigh Bone" type="NONE" icon="icon.etc_piece_bone_white_i00">
 	<!-- Thigh bone of skeleton from ruins. Take this to Samed in the Town of Gludio. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1358" name="Deadman's Complete Skeleton" type="NONE" icon="icon.etc_ashes_white_i00">
 	<!-- Complete skeleton put together with bone pieces by undertaker Varsak. Take this to Samed in the Town of Gludio. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1359" name="Red Cross Badge" type="NONE" icon="icon.etc_jewel_red_i00">
 	<!-- Soldier badge of foreign troops. Take this to Leopold in Gludin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1360" name="Blue Cross Badge" type="NONE" icon="icon.etc_jewel_blue_i00">
 	<!-- Badge of high ranking of Gracian foreign troops. Take this to Leopold in Gludin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1361" name="Black Cross Badge" type="NONE" icon="icon.etc_jewel_gold_i00">
 	<!-- Badge of captain ranking of Gracian foreign troops. Take this to Leopold in Gludin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1362" name="Spider's Carapace" type="NONE" icon="icon.item_normal72">
 	<!-- The hard carapace of a spider. Often used to coat a shield or a helmet. Take this to Trader Arodin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="1363" name="Spider Silk" type="NONE" icon="icon.item_normal168">
 	<!-- Tough, stretchy spider web. Used to make bowstrings. Take this to Trader Arodin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="1364" name="Spider's Poison Sac" type="NONE" icon="icon.item_canuse28">
 	<!-- Sac with a spider's deadly Poison in it. Can be sold to Trader Cullinas in Gludin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="1365" name="Broken Stoneheart" type="NONE" icon="icon.etc_plate_glay_i00">
 	<!-- Small pieces of stone found within the remains of a destroyed golem. Take this to Trader Rorento. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1366" name="Monster Eye's Lens" type="NONE" icon="icon.etc_crystal_ball_white_i00">
 	<!-- The transparent part of monster eye. Take this to Trader Sarien. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1367" name="Wolf Claw" type="NONE" icon="icon.etc_claw_i00">
 	<!-- Collect 50 wolf claws and take them to Trader Payne of the weapons and armor shop. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1368" name="Imp Shackles" type="NONE" icon="icon.accessary_cerberuss_earing_i00">
 	<!-- The metal shackles attached around the neck of the imp race. Take this to Sentry Kristin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1369" name="Black Lion Badge" type="NONE" icon="icon.etc_badge_black_i00">
 	<!-- A badge that indicates one is a member of the Black Lion troop. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
@@ -724,7 +724,7 @@
 
 	<item id="1378" name="Spellbook: Divine Heal" type="NONE" icon="icon.etc_spell_books_hfighter_i00">
 	<!-- Spellbook needed to learn Divine Heal. Used by Human Knights.\\nRequired level: 26 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="16883" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
@@ -736,19 +736,19 @@
 
 	<item id="1380" name="Spellbook: Entangle" type="NONE" icon="icon.etc_spell_books_efighter_i00">
 	<!-- Spellbook needed to learn Entangle. Used by Elven Knights and Elven Scouts.\\nRequired level: 36 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="47865" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1381" name="Spellbook: Freezing Strike" type="NONE" icon="icon.etc_spell_books_defighter_i00">
 	<!-- Spellbook needed to learn Freezing Strike. Used by Palus Knights and Assassins.\\nRequired level: 34 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="39568" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1382" name="Spellbook: Power Break" type="NONE" icon="icon.etc_spell_books_defighter_i00">
 	<!-- Spellbook needed to learn Power Break. Used by Palus Knights and Assassins.\\nRequired level: 32 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="32612" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
@@ -760,13 +760,13 @@
 
 	<item id="1384" name="Spellbook: Sprint" type="NONE" icon="icon.etc_spell_books_efighter_i00">
 	<!-- Spellbook needed to learn Sprint. Used by Elven Knights and Elven Scouts.\\nRequired level: 32 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="32612" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1385" name="Spellbook: Recharge" type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Spellbook needed to learn Recharge. Used by Elven Oracles and Shillien Oracles.\\nRequired level: 28 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="21437" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
@@ -784,7 +784,7 @@
 
 	<item id="1388" name="Spellbook: Mental Shield" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Mental Shield. Used by Clerics, Elven Oracles and Shillien Oracles.\\nRequired level: 25 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="15048" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
@@ -802,13 +802,13 @@
 
 	<item id="1391" name="Spellbook: Empower" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Empower. Used by Shillien Oracles.\\nRequired level: 25 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="15048" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1392" name="Spellbook: Berserker Spirit" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Berserker Spirit. Used by Clerics.\\nRequired level: 35 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="43681" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
@@ -820,7 +820,7 @@
 
 	<item id="1394" name="Spellbook: Sleep" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Sleep. Used by Human Wizards, Clerics, Elven Wizards, Elven Oracles, Dark Wizards, and Shillien Oracles.\\nRequired level: 23 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="10603" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
@@ -832,13 +832,13 @@
 
 	<item id="1398" name="Spellbook: Focus" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Focus. Used by Clerics and Shillien Oracles.\\nRequired level: 25 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="15048" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1399" name="Spellbook: Concentration" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Concentration. Used by Human Wizards, Clerics, Elven Wizards, Elven Oracles, Dark Wizards, and Shillien Oracles.\\nRequired level: 20 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="7461" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 

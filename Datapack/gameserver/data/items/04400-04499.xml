@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="4400" name="White Cloth" type="NONE" icon="icon.etc_piece_of_cloth_white_i00">
 	<!-- A reward for eliminating Angels. Collect 1,000 pcs. and bring them to Magister Hanellin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
@@ -149,13 +149,13 @@
 
 	<item id="4436" name="Bentley's Request" type="NONE" icon="icon.etc_piece_of_paper_gray_i00">
 	<!-- Request to find and bring back jade crystals from creatures such as Fline, Liele, Satyr etc. that inhabit the Enchanted Valley. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="4437" name="Carson's Request" type="NONE" icon="icon.etc_piece_of_paper_black_i00">
 	<!-- Request to recover the works of the ancient sculptor Berona from Hatar Ratmen and Vanor Silenos in the area near the Cemetery. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 

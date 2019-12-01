@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="38923" name="Squash Seed" type="NONE" icon="icon.etc_gourd_i00">
-	<!-- Squash Seed for solo play. Double-click and a High Quality Squash or Defective Squash (Solo) will appear. Will be deleted during maintenance on Wednesday, February 28th, 2018. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+	<!-- For characters level 40 or higher. Double-click and a High Quality Squash or Defective Squash will appear. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="17111" level="1"/>  <!-- Snowy Squash Seed -->
@@ -10,8 +10,8 @@
 	</item>
 
 	<item id="38924" name="Large Squash Seed" type="NONE" icon="icon.etc_gourd_i01">
-	<!-- A Large Squash Seed for parties. Double-click and a High Quality Large Squash or Defective Large Squash (Party) will appear. Will be deleted during maintenance on Wednesday, February 28th, 2018. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+	<!-- For characters level 40 or higher. Double-click and a High Quality Large Squash or Defective Large Squash will appear. -->
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="17112" level="1"/>  <!-- Large Snowy Squash Seed -->

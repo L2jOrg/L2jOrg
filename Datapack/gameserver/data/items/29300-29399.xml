@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<weapon id="29300" name="Atuba Mace" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_atuba_mace_i00" magic="true">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1010" price="1800000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -18,7 +18,7 @@
 	</weapon>
 
 	<weapon id="29301" name="Lesser Giant's Hammer" type="HAMMER" body-part="TWO_HAND" icon="icon.weapon_giants_hammer_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="2100" price="1400000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -35,7 +35,7 @@
 	</weapon>
 
 	<weapon id="29302" name="Short Spear" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_short_spear_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="2140" price="136000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -55,7 +55,7 @@
 	</weapon>
 
 	<weapon id="29303" name="Great Spear" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_long_spear_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="2120" price="244000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -75,7 +75,7 @@
 	</weapon>
 
 	<weapon id="29304" name="Winged Spear" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_winged_spear_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="2060" price="1400000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -95,7 +95,7 @@
 	</weapon>
 
 	<weapon id="29305" name="Trident" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_trident_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="2100" price="409000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -115,7 +115,7 @@
 	</weapon>
 
 	<weapon id="29306" name="Pike" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_pike_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="2090" price="644000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -135,7 +135,7 @@
 	</weapon>
 
 	<weapon id="29307" name="War Hammer" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_war_hammer_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="2080" price="967000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -155,7 +155,7 @@
 	</weapon>
 
 	<weapon id="29308" name="War Pick" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_hammer_in_flames_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="2050" price="1400000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -175,7 +175,7 @@
 	</weapon>
 
 	<weapon id="29309" name="Dwarven Trident" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_dwarven_trident_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="2090" price="644000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -195,7 +195,7 @@
 	</weapon>
 
 	<weapon id="29310" name="Dwarven Pike" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_dwarven_pike_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="2070" price="967000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -215,7 +215,7 @@
 	</weapon>
 
 	<weapon id="29311" name="Glaive" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_glaive_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="2050" price="1800000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -235,7 +235,7 @@
 	</weapon>
 
 	<weapon id="29312" name="Short Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_short_bow_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1950" price="768" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -252,7 +252,7 @@
 	</weapon>
 
 	<weapon id="29313" name="Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_bow_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1930" price="12500" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -269,7 +269,7 @@
 	</weapon>
 
 	<weapon id="29314" name="Hunting Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_hunting_bow_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1910" price="54100" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -286,7 +286,7 @@
 	</weapon>
 
 	<weapon id="29315" name="Forest Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_short_bow_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1900" price="136000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -303,7 +303,7 @@
 	</weapon>
 
 	<weapon id="29316" name="Compound Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_composition_bow_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1880" price="244000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -320,7 +320,7 @@
 	</weapon>
 
 	<weapon id="29317" name="Reinforced Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_strengthening_bow_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1870" price="409000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -337,7 +337,7 @@
 	</weapon>
 
 	<weapon id="29318" name="Longbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_long_bow_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1830" price="644000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -354,7 +354,7 @@
 	</weapon>
 
 	<weapon id="29319" name="Elven Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_elven_bow_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1850" price="644000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -371,7 +371,7 @@
 	</weapon>
 
 	<weapon id="29320" name="Dark Elven Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_dark_elven_bow_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1830" price="644000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -388,7 +388,7 @@
 	</weapon>
 
 	<weapon id="29321" name="Gastraphetes" type="BOW" body-part="TWO_HAND" icon="icon.weapon_gastraphetes_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1840" price="967000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -405,7 +405,7 @@
 	</weapon>
 
 	<weapon id="29322" name="Reinforced Longbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_strengthening_long_bow_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1820" price="1400000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -422,7 +422,7 @@
 	</weapon>
 
 	<weapon id="29323" name="Light Crossbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_cyclone_bow_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1810" price="1800000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -439,7 +439,7 @@
 	</weapon>
 
 	<weapon id="29324" name="Spiked Gloves" type="FIST" body-part="TWO_HAND" icon="icon.weapon_spike_glove_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1590" price="768" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -456,7 +456,7 @@
 	</weapon>
 
 	<weapon id="29325" name="Iron Gloves" type="FIST" body-part="TWO_HAND" icon="icon.weapon_iron_glove_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1580" price="12500" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -473,7 +473,7 @@
 	</weapon>
 
 	<weapon id="29326" name="Fox Claw Gloves" type="FIST" body-part="TWO_HAND" icon="icon.weapon_foxs_nail_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1560" price="54100" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -490,7 +490,7 @@
 	</weapon>
 
 	<weapon id="29327" name="Cestus" type="FIST" body-part="TWO_HAND" icon="icon.weapon_vipers_canine_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1570" price="136000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -507,7 +507,7 @@
 	</weapon>
 
 	<weapon id="29328" name="Viper Fang" type="FIST" body-part="TWO_HAND" icon="icon.weapon_vipers_canine_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1560" price="244000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -524,7 +524,7 @@
 	</weapon>
 
 	<weapon id="29329" name="Fist of Butcher" type="FIST" body-part="TWO_HAND" icon="icon.weapon_iron_glove_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1400" price="25500" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -541,7 +541,7 @@
 	</weapon>
 
 	<weapon id="29330" name="Bagh-Nakh" type="FIST" body-part="TWO_HAND" icon="icon.weapon_baghnakh_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1540" price="409000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -558,7 +558,7 @@
 	</weapon>
 
 	<weapon id="29331" name="Single-Edged Jamadhr" type="FIST" body-part="TWO_HAND" icon="icon.weapon_single-edged_jamadhr_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1550" price="644000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -575,7 +575,7 @@
 	</weapon>
 
 	<weapon id="29332" name="Triple-Edged Jamadhr" type="FIST" body-part="TWO_HAND" icon="icon.weapon_triple-edged_jamadhr_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1540" price="967000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -592,7 +592,7 @@
 	</weapon>
 
 	<weapon id="29333" name="Bich'Hwa" type="FIST" body-part="TWO_HAND" icon="icon.weapon_bichhwa_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1510" price="1400000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -609,7 +609,7 @@
 	</weapon>
 
 	<weapon id="29334" name="Scallop Jamadhr" type="FIST" body-part="TWO_HAND" icon="icon.weapon_scallop_jamadhr_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1520" price="1800000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -626,7 +626,7 @@
 	</weapon>
 
 	<armor id="29335" name="Bronze Breastplate" type="HEAVY" body-part="CHEST" icon="icon.armor_t34_u_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="8920" price="49200" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -635,7 +635,7 @@
 	</armor>
 
 	<armor id="29336" name="Piece Bone Breastplate" type="HEAVY" body-part="CHEST" icon="icon.armor_t33_u_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="8970" price="31800" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -644,7 +644,7 @@
 	</armor>
 
 	<armor id="29337" name="Bronze Gaiters" type="HEAVY" body-part="LEGS" icon="icon.armor_t34_l_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="3960" price="30700" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -653,7 +653,7 @@
 	</armor>
 
 	<armor id="29338" name="Piece Bone Gaiters" type="HEAVY" body-part="LEGS" icon="icon.armor_t33_l_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="4020" price="19900" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -662,7 +662,7 @@
 	</armor>
 
 	<armor id="29339" name="Compound Scale Mail" type="HEAVY" body-part="CHEST" icon="icon.armor_t20_u_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="8620" price="183000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -671,7 +671,7 @@
 	</armor>
 
 	<armor id="29340" name="Dwarven Scale Mail" type="HEAVY" body-part="CHEST" icon="icon.armor_t15_u_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="8540" price="183000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -680,7 +680,7 @@
 	</armor>
 
 	<armor id="29341" name="Breastplate" type="HEAVY" body-part="CHEST" icon="icon.armor_t40_u_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="8420" price="203000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -689,7 +689,7 @@
 	</armor>
 
 	<armor id="29342" name="Brigandine" type="HEAVY" body-part="CHEST" icon="icon.armor_t43_u_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="8320" price="299000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -698,7 +698,7 @@
 	</armor>
 
 	<armor id="29343" name="Half Plate Armor" type="HEAVY" body-part="CHEST" icon="icon.armor_t46_u_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="8220" price="391000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -707,7 +707,7 @@
 	</armor>
 
 	<armor id="29344" name="Mithril Breastplate" type="HEAVY" body-part="CHEST" icon="icon.armor_t19_u_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="8670" price="183000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -716,7 +716,7 @@
 	</armor>
 
 	<armor id="29345" name="Scale Mail" type="HEAVY" body-part="CHEST" icon="icon.armor_t08_u_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="8720" price="133000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -725,7 +725,7 @@
 	</armor>
 
 	<armor id="29346" name="Ring Breastplate" type="HEAVY" body-part="CHEST" icon="icon.armor_t12_u_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="8820" price="83500" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -734,7 +734,7 @@
 	</armor>
 
 	<armor id="29347" name="Plate Gaiters" type="HEAVY" body-part="LEGS" icon="icon.armor_t46_l_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="3770" price="244000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -743,7 +743,7 @@
 	</armor>
 
 	<armor id="29348" name="Brigandine Gaiters" type="HEAVY" body-part="LEGS" icon="icon.armor_t43_l_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="3820" price="187000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -752,7 +752,7 @@
 	</armor>
 
 	<armor id="29349" name="Mithril Scale Gaiters" type="HEAVY" body-part="LEGS" icon="icon.armor_t40_l_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="3870" price="187000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -761,7 +761,7 @@
 	</armor>
 
 	<armor id="29350" name="Dwarven Scale Gaiters" type="HEAVY" body-part="LEGS" icon="icon.armor_t15_l_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="3840" price="127000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -770,7 +770,7 @@
 	</armor>
 
 	<armor id="29351" name="Compound Scale Gaiters" type="HEAVY" body-part="LEGS" icon="icon.armor_t20_l_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="3770" price="127000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -779,7 +779,7 @@
 	</armor>
 
 	<armor id="29352" name="Mithril Gaiters" type="HEAVY" body-part="LEGS" icon="icon.armor_t19_l_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="3830" price="127000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -788,7 +788,7 @@
 	</armor>
 
 	<armor id="29353" name="Iron Plate Gaiters" type="HEAVY" body-part="LEGS" icon="icon.armor_t12_l_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="3820" price="52200" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -797,7 +797,7 @@
 	</armor>
 
 	<armor id="29354" name="Scale Gaiters" type="HEAVY" body-part="LEGS" icon="icon.armor_t08_l_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="3860" price="83300" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -806,7 +806,7 @@
 	</armor>
 
 	<armor id="29355" name="Durable Leather Shirt" type="LIGHT" body-part="CHEST" icon="icon.armor_t30_u_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="4720" price="36900" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -815,7 +815,7 @@
 	</armor>
 
 	<armor id="29356" name="Cotton Shirt" type="LIGHT" body-part="CHEST" icon="icon.armor_t07_u_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="4770" price="20300" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -824,7 +824,7 @@
 	</armor>
 
 	<armor id="29357" name="Bone Breastplate" type="LIGHT" body-part="CHEST" icon="icon.armor_t32_u_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="4770" price="20300" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -833,7 +833,7 @@
 	</armor>
 
 	<armor id="29358" name="Wooden Breastplate" type="LIGHT" body-part="CHEST" icon="icon.armor_t06_u_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="4820" price="7960" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -842,7 +842,7 @@
 	</armor>
 
 	<armor id="29359" name="Leather Shirt" type="LIGHT" body-part="CHEST" icon="icon.armor_t04_u_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="4830" price="2430" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -851,7 +851,7 @@
 	</armor>
 
 	<armor id="29360" name="Shirt" type="LIGHT" body-part="CHEST" icon="icon.armor_t02_u_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="4830" price="147" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -860,7 +860,7 @@
 	</armor>
 
 	<armor id="29361" name="Durable Leather Gaiters" type="LIGHT" body-part="LEGS" icon="icon.armor_t30_l_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1610" price="23000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -869,7 +869,7 @@
 	</armor>
 
 	<armor id="29362" name="Cotton Pants" type="LIGHT" body-part="LEGS" icon="icon.armor_t07_l_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1630" price="12700" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -878,7 +878,7 @@
 	</armor>
 
 	<armor id="29363" name="Bone Gaiters" type="LIGHT" body-part="LEGS" icon="icon.armor_t32_l_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1680" price="12700" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -887,7 +887,7 @@
 	</armor>
 
 	<armor id="29364" name="Wooden Gaiters" type="LIGHT" body-part="LEGS" icon="icon.armor_t06_l_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1670" price="4970" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -896,7 +896,7 @@
 	</armor>
 
 	<armor id="29365" name="Pants" type="LIGHT" body-part="LEGS" icon="icon.armor_t02_l_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1740" price="92" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -905,7 +905,7 @@
 	</armor>
 
 	<armor id="29366" name="Leather Pants" type="LIGHT" body-part="LEGS" icon="icon.armor_t04_l_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1730" price="1520" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -914,7 +914,7 @@
 	</armor>
 
 	<armor id="29367" name="Durable Leather Pants" type="LIGHT" body-part="LEGS" icon="icon.armor_t06_l_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1700" price="4970" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -923,7 +923,7 @@
 	</armor>
 
 	<armor id="29368" name="Puma Skin Shirt" type="LIGHT" body-part="CHEST" icon="icon.armor_t09_u_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="4700" price="62600" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -932,7 +932,7 @@
 	</armor>
 
 	<armor id="29369" name="Lion Skin Shirt" type="LIGHT" body-part="CHEST" icon="icon.armor_t18_u_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="4580" price="99900" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -941,7 +941,7 @@
 	</armor>
 
 	<armor id="29370" name="Mithril Banded Mail" type="LIGHT" body-part="CHEST" icon="icon.armor_t10_u_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="4570" price="152000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -950,7 +950,7 @@
 	</armor>
 
 	<armor id="29371" name="Reinforced Leather Shirt" type="LIGHT" body-part="CHEST" icon="icon.armor_t13_u_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="4570" price="152000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -959,7 +959,7 @@
 	</armor>
 
 	<armor id="29372" name="Manticore Skin Shirt" type="LIGHT" body-part="CHEST" icon="icon.armor_t42_u_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="4520" price="224000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -968,7 +968,7 @@
 	</armor>
 
 	<armor id="29373" name="Puma Skin Gaiters" type="LIGHT" body-part="LEGS" icon="icon.armor_t09_l_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1600" price="39100" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -977,7 +977,7 @@
 	</armor>
 
 	<armor id="29374" name="Lion Skin Gaiters" type="LIGHT" body-part="LEGS" icon="icon.armor_t18_l_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1570" price="62500" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -986,7 +986,7 @@
 	</armor>
 
 	<armor id="29375" name="Mithril Banded Gaiters" type="LIGHT" body-part="LEGS" icon="icon.armor_t10_l_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1580" price="95200" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -995,7 +995,7 @@
 	</armor>
 
 	<armor id="29376" name="Reinforced Leather Gaiters" type="LIGHT" body-part="LEGS" icon="icon.armor_t13_l_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1570" price="95200" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -1004,7 +1004,7 @@
 	</armor>
 
 	<armor id="29377" name="Manticore Skin Gaiters" type="LIGHT" body-part="LEGS" icon="icon.armor_t42_l_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1550" price="140000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -1014,7 +1014,7 @@
 
 	<armor id="29378" name="Salamander Skin Mail" type="LIGHT" body-part="FULL_ARMOR" icon="icon.armor_t45_ul_i00">
 	<!-- One-piece upper and lower body armor. Additional lower body armor cannot be worn while wearing this. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="6100" price="429000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -1023,7 +1023,7 @@
 	</armor>
 
 	<armor id="29379" name="Tunic of Devotion" type="MAGIC" body-part="CHEST" icon="icon.armor_t55_u_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="2090" price="20300" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -1034,7 +1034,7 @@
 
 	<armor id="29380" name="Tunic of Magic" type="MAGIC" body-part="CHEST" icon="icon.armor_t58_u_i00">
 	<!-- Tunic that is designed to be comfortable for those who use magic. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="2080" price="36900" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -1044,7 +1044,7 @@
 	</armor>
 
 	<armor id="29381" name="Leather Tunic" type="MAGIC" body-part="CHEST" icon="icon.armor_t05_u_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="2110" price="7960" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -1055,7 +1055,7 @@
 
 	<armor id="29382" name="Cotton Tunic" type="MAGIC" body-part="CHEST" icon="icon.armor_t50_u_i00">
 	<!-- Tunic made of tough cotton. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="2120" price="2430" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -1065,7 +1065,7 @@
 	</armor>
 
 	<armor id="29383" name="Tunic" type="MAGIC" body-part="CHEST" icon="icon.armor_t03_u_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="2150" price="147" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -1075,7 +1075,7 @@
 	</armor>
 
 	<armor id="29384" name="Feriotic Tunic" type="MAGIC" body-part="CHEST" icon="icon.armor_t52_u_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="2140" price="2430" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -1086,7 +1086,7 @@
 
 	<armor id="29385" name="Cotton Stockings" type="MAGIC" body-part="LEGS" icon="icon.armor_t50_l_i00">
 	<!-- Pair of pants made of tough cotton. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1060" price="1520" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -1097,7 +1097,7 @@
 
 	<armor id="29386" name="Stockings of Devotion" type="MAGIC" body-part="LEGS" icon="icon.armor_t55_l_i00">
 	<!-- Part of the devotion set. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1040" price="12700" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -1108,7 +1108,7 @@
 
 	<armor id="29387" name="Stockings of Magic" type="MAGIC" body-part="LEGS" icon="icon.armor_t58_l_i00">
 	<!-- Pair of pants that is designed to be comfortable for those who use magic. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1030" price="23000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -1118,7 +1118,7 @@
 	</armor>
 
 	<armor id="29388" name="Stockings" type="MAGIC" body-part="LEGS" icon="icon.armor_t03_l_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1080" price="92" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -1128,7 +1128,7 @@
 	</armor>
 
 	<armor id="29389" name="Feriotic Stockings" type="MAGIC" body-part="LEGS" icon="icon.armor_t52_l_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1070" price="1520" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -1138,7 +1138,7 @@
 	</armor>
 
 	<armor id="29390" name="Leather Stockings" type="MAGIC" body-part="LEGS" icon="icon.armor_t05_l_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1020" price="4970" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -1148,7 +1148,7 @@
 	</armor>
 
 	<armor id="29391" name="Elven Mithril Tunic" type="MAGIC" body-part="CHEST" icon="icon.armor_elven_tunic_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="720" price="224000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -1158,7 +1158,7 @@
 	</armor>
 
 	<armor id="29392" name="Cursed Tunic" type="MAGIC" body-part="CHEST" icon="icon.armor_t14_u_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="2090" price="62600" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -1168,7 +1168,7 @@
 	</armor>
 
 	<armor id="29393" name="Elven Tunic" type="MAGIC" body-part="CHEST" icon="icon.armor_t11_u_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="2080" price="99900" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -1178,7 +1178,7 @@
 	</armor>
 
 	<armor id="29394" name="White Tunic" type="MAGIC" body-part="CHEST" icon="icon.armor_t16_u_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="2040" price="99900" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -1188,7 +1188,7 @@
 	</armor>
 
 	<armor id="29395" name="Wizard Tunic" type="MAGIC" body-part="CHEST" icon="icon.armor_t17_u_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="2030" price="99900" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -1198,7 +1198,7 @@
 	</armor>
 
 	<armor id="29396" name="Tunic of Knowledge" type="MAGIC" body-part="CHEST" icon="icon.armor_t41_u_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="2020" price="152000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -1208,7 +1208,7 @@
 	</armor>
 
 	<armor id="29397" name="Mithril Tunic" type="MAGIC" body-part="CHEST" icon="icon.armor_t51_u_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="2010" price="224000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -1218,7 +1218,7 @@
 	</armor>
 
 	<armor id="29398" name="Mithril Stockings" type="MAGIC" body-part="LEGS" icon="icon.armor_elven_hose_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="2400" price="140000" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -1228,7 +1228,7 @@
 	</armor>
 
 	<armor id="29399" name="Cursed Stockings" type="MAGIC" body-part="LEGS" icon="icon.armor_t14_l_i00">
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1020" price="39100" enchant-enabled="false" />
 		<crystal />
 		<stats>

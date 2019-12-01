@@ -123,6 +123,7 @@
     <xs:complexType name="Restriction">
         <xs:attribute name="stackable" type="xs:boolean" default="false"/>
         <xs:attribute name="sellable" type="xs:boolean" default="true"/>
+        <xs:attribute name="private-sellable" type="xs:boolean" default="true"/>
         <xs:attribute name="dropable" type="xs:boolean" default="true"/>
         <xs:attribute name="destroyable" type="xs:boolean" default="true"/>
         <xs:attribute name="tradable" type="xs:boolean" default="true"/>

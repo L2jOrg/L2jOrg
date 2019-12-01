@@ -43,7 +43,7 @@
 
 	<item id="4205" name="Amulet: Pa'agrio's Rage" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Pa'agrio's Rage spell. Used by Overlords.\\nRequired level: 44 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
@@ -129,7 +129,7 @@
 	</item>
 
 	<weapon id="4219" name="Dream Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_knights_sword_i00">
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1530" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -145,7 +145,7 @@
 	</weapon>
 
 	<weapon id="4220" name="Dream Knife" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_assassin_knife_i00">
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1110" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -162,7 +162,7 @@
 	</weapon>
 
 	<weapon id="4221" name="Ubiquitous Axe" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_tomahawk_i00">
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1850" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -179,7 +179,7 @@
 	</weapon>
 
 	<armor id="4222" name="Dream Shield" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_hoplon_i00">
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1380" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -190,7 +190,7 @@
 	</armor>
 
 	<armor id="4223" name="Ubiquitous Shield" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_dwarven_chain_shield_i00">
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1380" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -201,7 +201,7 @@
 	</armor>
 
 	<armor id="4224" name="Dream Armor" type="HEAVY" body-part="CHEST" icon="icon.armor_blast_plate_i00">
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="8920" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -210,7 +210,7 @@
 	</armor>
 
 	<armor id="4225" name="Dream Stockings" type="HEAVY" body-part="LEGS" icon="icon.armor_mithril_gaiters_i00">
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="3960" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -219,7 +219,7 @@
 	</armor>
 
 	<armor id="4226" name="Dream Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_gauntlet_i00">
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="650" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -228,7 +228,7 @@
 	</armor>
 
 	<armor id="4227" name="Dream Boots" type="NONE" body-part="FEET" icon="icon.armor_chain_boots_i00">
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1310" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -237,7 +237,7 @@
 	</armor>
 
 	<armor id="4228" name="Ubiquitous Armor" type="HEAVY" body-part="CHEST" icon="icon.armor_compound_scale_mail_i00">
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="8920" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -246,7 +246,7 @@
 	</armor>
 
 	<armor id="4229" name="Ubiquitous Stockings" type="HEAVY" body-part="LEGS" icon="icon.armor_compound_scale_gaiters_i00">
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="3960" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -255,7 +255,7 @@
 	</armor>
 
 	<armor id="4230" name="Ubiquitous Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_manticor_skin_gloves_i00">
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="650" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -264,7 +264,7 @@
 	</armor>
 
 	<armor id="4231" name="Ubiquitous Boots" type="NONE" body-part="FEET" icon="icon.armor_iron_boots_i00">
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1310" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -298,331 +298,331 @@
 
 	<item id="4239" name="Blade Mold" type="NONE" icon="icon.etc_artisans_frame_i00">
 	<!-- Cargo that Trader Arodin needs to send to the Dark Elves. Find all 20 of them and take them to Trader Tyra. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4240" name="Tyra's Bill" type="NONE" icon="icon.etc_piece_of_paper_gray_i00">
 	<!-- Note from Trader Tyra. Take it to Trader Arodin in Gludin Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4241" name="Ranger's Report - Part 1" type="NONE" icon="icon.etc_piece_of_report_i00">
 	<!-- First piece of a ranger's report. Find all 4 pieces and take them to Guard Alvah. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4242" name="Ranger's Report - Part 2" type="NONE" icon="icon.etc_piece_of_report_i00">
 	<!-- Second piece of a ranger's report. Find all 4 pieces and take them to Guard Alvah. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4243" name="Ranger's Report - Part 3" type="NONE" icon="icon.etc_piece_of_report_i00">
 	<!-- Third piece of a ranger's report. Find all 4 pieces and take them to Guard Alvah. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4244" name="Ranger's Report - Part 4" type="NONE" icon="icon.etc_piece_of_report_i00">
 	<!-- Fourth piece of a ranger's report. Find all 4 pieces and take them to Guard Alvah. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4245" name="Weapons Trade Contract" type="NONE" icon="icon.etc_paper_red_i00">
 	<!-- The contract that was carried by an Ol Mahum General. It is engraved with the Mark of the Dwarves. Take it to Guard Alvah. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4246" name="Attack Directives" type="NONE" icon="icon.etc_roll_of_paper_red_i00">
 	<!-- Operation order that was carried by an Ol Mahum General. Take it to Guard Alvah. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4247" name="Certificate of the Silver Scale Guild" type="NONE" icon="icon.etc_crest_yellow_i00">
 	<!-- Certificate that verifies one's membership to the Silver Scale Guild. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4248" name="Rolento's Cargobox" type="NONE" icon="icon.etc_jewel_box_i00">
 	<!-- The war supplies that the Dwarven trader Rolento promised to send to Turek orcs. First, show it to Guard Alvah. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4249" name="Ol Mahum Captain's Head" type="NONE" icon="icon.etc_skull_red_i00">
 	<!-- Severed head of an Ol Mahum Captain. Collect 30 of them and take them to Turek Chief Burai. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4250" name="Jade Crystal" type="NONE" icon="icon.etc_gem_green_i00">
 	<!-- Jade gemstone from the Enchanted Valley. Collect them and take them to Bentley of Hunter's Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="4251" name="Ancient Goddess Statue" type="NONE" icon="icon.etc_statue_of_einhasad_gold_i00">
 	<!-- Statue of a goddess from an old empire that has been discovered in the cemetery. Take it to Priestess Flownia of Town of Aden. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="4252" name="GalfRedo Romer's Bust" type="NONE" icon="icon.etc_holy_statue_silver_i00">
 	<!-- Statue created by the ancient sculptor Berona. Take it to Trader Galibredo of the Town of Oren. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4253" name="Eye of the Shadow" type="NONE" icon="icon.etc_horn_i00">
 	<!-- Collect 50 eyes of the Shadow and take them to Warehouse Keeper Sorint. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="4254" name="Certificate of Participation: Battle Royal" type="NONE" icon="icon.etc_paper_white_i00">
 	<!-- The certificate that allows one to participate in a Battle Royal. This game is played by grade 1 members of the Coin Collectors Club. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="4255" name="Trade Cargo" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- The cargo boxes that have been robbed from the wagon of the Trade Guild. Collect 30 of them and take them to Guard Weisz. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4256" name="Agnes' Holy Symbol" type="NONE" icon="icon.etc_statue_of_einhasad_bronze_i00">
 	<!-- The Crucifix of the goddess of Einhasad. This article was left by Priestess Agnes after her death. Take it along with Agnes' Rosary to Priest Adonius. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4257" name="Agnes' Rosary" type="NONE" icon="icon.etc_evil_necklace_i00">
 	<!-- Rosary used while praying. It was left by Priestess Agnes after her death. Take it along with the Crucifix of the goddess of Einhasad to Priest Adonius. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4258" name="Sinister Totem" type="NONE" icon="icon.etc_totem_black_i00">
 	<!-- Black totem that exudes an evil aura. Take it to High Priestess Levian. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4259" name="Bear Skin" type="NONE" icon="icon.etc_leather_brown_i00">
 	<!-- The pelts obtained by hunting bears. Collect 20 of them and take them to Grocer Pano of Floran Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4260" name="Enku Orc's Head" type="NONE" icon="icon.etc_skull_red_i00">
 	<!-- Beheaded head of an Enku Orc. Collect 100 of them and take them to Orc Lady Jennifer. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="4261" name="Orc Heads Bouquet - 1" type="NONE" icon="icon.etc_flower_bouquet_i00">
 	<!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to High Prefect Drikus. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="4262" name="Orc Heads Bouquet - 2" type="NONE" icon="icon.etc_flower_bouquet_i00">
 	<!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Priest Manuel. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="4263" name="Orc Heads Bouquet - 3" type="NONE" icon="icon.etc_flower_bouquet_i00">
 	<!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Vuku Chief Driko. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="4264" name="Orc Heads Bouquet - 4" type="NONE" icon="icon.etc_flower_bouquet_i00">
 	<!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Seer Somak. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="4265" name="Orc Heads Bouquet - 5" type="NONE" icon="icon.etc_flower_bouquet_i00">
 	<!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Prefect Dowki. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="4266" name="Orc Heads Bouquet - 6" type="NONE" icon="icon.etc_flower_bouquet_i00">
 	<!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Watchman Endrigo. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="4267" name="Orc Heads Bouquet -7" type="NONE" icon="icon.etc_flower_bouquet_i00">
 	<!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Captain Lucas. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="4268" name="Jennifer's Box" type="NONE" icon="icon.etc_jewel_box_i00">
 	<!-- The box that a man who is smitten by Orc Lady Jennifer asked this to be delivered to her. What do you think is in the box...? -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="4269" name="Articles of Dead Heroes" type="NONE" icon="icon.etc_squares_gray_i00">
 	<!-- The articles of dead soldiers who were sent as an expeditionary force 1,000 years ago. These articles have been collected by hunting cave servants. Take them to Antharas Watchman Gilmore. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4270" name="Old Key" type="NONE" icon="icon.etc_old_key_i03">
 	<!-- Article left by a dead soldier. His descendent Sir Kristof Rodemai is living in Town of Giran. Take it to him. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4271" name="Old Hilt" type="NONE" icon="icon.etc_hilt_i00">
 	<!-- Article left by a dead soldier. His descendant Duelist Kaien is living in the Town of Oren. Take it to him. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4272" name="Totem Necklace" type="NONE" icon="icon.etc_totem_necklace_black_i00">
 	<!-- Article left by a dead soldier. His descendent, High Prefect Garvarentz, is living in Hunter's Village. Take it to him. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4273" name="Einhasad's Crucifix" type="NONE" icon="icon.etc_magic_coin_silver_i01">
 	<!-- Article left by a dead soldier. Take it to High Priest Orven of Einhasad Temple in Town of Aden where the dead soldier used to be stationed. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4274" name="Victim's Arm Bone" type="NONE" icon="icon.etc_piece_bone_black_i00">
 	<!-- The arm bone of a victim who has been eaten by a Crokian. Collect the five types of bones and take them to Xenovia. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4275" name="Victim's Thigh Bone" type="NONE" icon="icon.etc_piece_bone_white_i00">
 	<!-- The thigh bone of a victim who has been eaten by a Crokian. Collect the five types of bones and take them to Xenovia. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4276" name="Victim's Skull" type="NONE" icon="icon.etc_skull_white_i00">
 	<!-- The skull of a victim who has been eaten alive by a Crokian. Collect the five types of bones and take them to Xenovia. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4277" name="Victim's Rib Bone" type="NONE" icon="icon.etc_rib_white_i00">
 	<!-- The rib bone of a victim who has been eaten by a Crokian. Collect the five types of bones and take them to Xenovia. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4278" name="Victim's Spine" type="NONE" icon="icon.etc_piece_bone_red_i00">
 	<!-- The spine of a victim who has been eaten by a Crokian. Collect the five types of bones and take them to Xenovia. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4279" name="Jar of Bones" type="NONE" icon="icon.etc_oil_pot_black_i00">
 	<!-- Urn that contains the bones of all the victims. Ask Mad Doctor Orpheus to resurrect the victims. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4280" name="Useless Bone Pieces" type="NONE" icon="icon.etc_mithril_ore_i00">
 	<!-- Useless bone pieces obtained after hunting Crokians. If you take them to Orpheus, perhaps something good will happen...? -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4281" name="Powder to Summon Dead Souls" type="NONE" icon="icon.etc_powder_black_i00">
 	<!-- The magic powder bought from Magister Xenovia. Throw it along with the victims' bones into a the Psychic Medium's Urn. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4282" name="Sack of the Dead" type="NONE" icon="icon.etc_pouch_brown_i00">
 	<!-- Sack containing victim's soul. Urn was possessed by the victim's soul. Take it to Locksmith Dorothy. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4283" name="Frog Prince" type="NONE" icon="icon.etc_q_frog_green_i00">
 	<!-- What are you waiting for? You promised to help me! Release me from this curse immediately! I want to turn back to normal as soon as possible!!! -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="4284" name="Fly Powder" type="NONE" icon="icon.etc_powder_gray_i00">
 	<!-- Powder made by grinding dried flies. Use it when you fail in your attempt to transform a frog. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="4285" name="Calculator" type="NONE" icon="icon.etc_calculator_i00">
 	<!-- The latest model of calculator. Take it to Blacksmith Brunon. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4286" name="Gemstone Beast's Crystal" type="NONE" icon="icon.etc_crystal_ball_silver_i00">
 	<!-- Crystal obtained by slaying a gemstone beast. Collect 10 of these and take them to Blacksmith Silvera. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4289" name="Hanellin's Letter" type="NONE" icon="icon.etc_piece_of_paper_gray_i00">
 	<!-- Give this letter to Claudia Athebaldt in Aden. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4292" name="Key of Ark" type="NONE" icon="icon.etc_old_key_i00">
 	<!-- The key you got after killing Elberoth, the Ark Guardian. Use it to open the ark and obtain the sacred item. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4294" name="White Cloth" type="NONE" icon="icon.etc_piece_of_cloth_white_i00">
 	<!-- A reward for eliminating enemies in the Platinum Tribe. Collect 100 pcs. and bring them to Magister Hanellin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4295" name="Blood-stained Cloth" type="NONE" icon="icon.etc_piece_of_cloth_red_i00">
 	<!-- A cloth soaked in the blood of Angels and Platinum Tribe. According to Hanellin, you must wrap it around your body to challenge Baium. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4296" name="Order of Gosta" type="NONE" icon="icon.etc_paper_white_i00">
 	<!-- The order states that you should hunt Tasaba Lizardmen and Tasaba Lizardman Shaman and bring back their fangs as proof. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4297" name="Lizardman's Fang" type="NONE" icon="icon.etc_molar_white_i00">
 	<!-- The fangs that have been collected as proofs that Tasaba Lizardmen and Tasaba Lizardman Shaman have been hunted. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4298" name="Barrel of League" type="NONE" icon="icon.etc_wine_barrel_i00">
 	<!-- This seems to be the cargo that was stolen from Iason Heine's wagon by Tasaba Lizardmen. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 

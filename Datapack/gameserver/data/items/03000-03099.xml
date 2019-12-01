@@ -163,28 +163,28 @@
 
 	<item id="3023" name="Recipe: Lesser Giant's Key" type="RECIPE" icon="icon.etc_recipe_blue_i00">
 	<!-- For Dwarves only. Recipe for Quest. Required to make a Lesser Giant's Key. Requires Create Item - Skill Lv. 1. The success rate is 100%.  -->
-		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="30" immediate-effect="true" quest-item="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3024" name="Recipe: Journeyman Ring" type="RECIPE" icon="icon.etc_recipe_blue_i00">
 	<!-- For Dwarves only. Recipe for Quest. Required to make a Journeyman Ring. Requires Create Item - Skill Lv. 1. The success rate is 100%.  -->
-		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="30" immediate-effect="true" quest-item="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3025" name="Recipe: Amber Bead" type="RECIPE" icon="icon.etc_recipe_blue_i00">
 	<!-- For Dwarves only. Recipe for Quest. Required to make an Amber Bead. Requires Create Item - Skill Lv. 2. The success rate is 100%.  -->
-		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="30" immediate-effect="true" quest-item="true" action="RECIPE"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<weapon id="3026" name="Talin's Spear" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_short_spear_i00">
 	<!-- Use this spear to deliver the final blow to Eva's unicorn.  -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="800" price="136000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="66" angle="240"/>
@@ -205,7 +205,7 @@
 
 	<weapon id="3027" name="Old Knight Sword" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_brandish_i00">
 	<!-- Use this sword to deliver the final blow to the spirit of Sir Herod.  -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="2100" price="136000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="44" angle="240"/>
@@ -222,7 +222,7 @@
 
 	<weapon id="3028" name="Crescent Moon Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_short_bow_i00">
 	<!-- Use this bow to deliver the final blow to Commander Kadesh.  -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="600" commission-type="OTHER_ITEM" reuse-delay="1500" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="10" angle="360"/>
@@ -240,7 +240,7 @@
 
 	<weapon id="3029" name="Sword of Seal" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_gladius_i00">
 	<!-- Use this sword to deliver the final blow to Zeruel.  -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1200" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -263,7 +263,7 @@
 
 	<item id="3031" name="Spirit Ore" type="MATERIAL" icon="icon.etc_stone_gray_i00">
 	<!-- Consumed when using some skills. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes price="400" immediate-effect="true"/>
 	</item>
 
@@ -304,13 +304,13 @@
 
 	<item id="3037" name="Kakan's Letter" type="NONE" icon="icon.etc_scroll_gray_i00">
 	<!-- Kakan's letter to Sla. Collect three reply letters from Sla's disciples and deliver them to Prophet Sla at the Plains of Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="3038" name="Blueprint: Summon Mechanic Golem" type="NONE" icon="icon.etc_plan_i00">
 	<!-- Blueprint needed to learn the Summon Mechanic Golem technique. Used by Artisans.\\nRequired level: 28 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="21437" commission-type="SPELLBOOK" immediate-effect="true"/>
 		<action handler="Recipes"/>
 	</item>
@@ -329,7 +329,7 @@
 
 	<item id="3041" name="Spellbook: Summon Phantom Cubic" type="NONE" icon="icon.etc_spell_books_summon_i00">
 	<!-- Spellbook needed to learn Summon Phantom Cubic. Used by Shillien Knights.\\nRequired level: 40 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
@@ -347,25 +347,25 @@
 
 	<item id="3044" name="Spellbook: Horror" type="NONE" icon="icon.etc_spell_books_hfighter_i00">
 	<!-- Spellbook needed to learn Horror. Used by Dark Avengers.\\nRequired level: 46 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3045" name="Spellbook: Summon Life Cubic" type="NONE" icon="icon.etc_spell_books_defighter_i00">
 	<!-- Spellbook needed to learn Summon Life Cubic. Used by Templars.\\nRequired level: 42 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3046" name="Spellbook: Sacrifice" type="NONE" icon="icon.etc_spell_books_hfighter_i00">
 	<!-- Spellbook needed to learn Sacrifice. Used by Paladins.\\nRequired level: 50 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3047" name="Spellbook: Iron Will" type="NONE" icon="icon.etc_spell_books_hfighter_i00">
 	<!-- Spellbook needed to learn Iron Will. Used by Paladins and Dark Avengers.\\nRequired level: 43 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
@@ -383,19 +383,19 @@
 
 	<item id="3050" name="Spellbook: Hex" type="NONE" icon="icon.etc_spell_books_defighter_i00">
 	<!-- Spellbook needed to learn Hex. Used by Shillien Knights, Bladedancers, Abyss Walkers, and Phantom Rangers.\\nRequired level: 40 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3051" name="Spellbook: Spirit Barrier" type="NONE" icon="icon.etc_spell_books_efighter_i00">
 	<!-- Spellbook needed to learn Spirit Barrier. Used by Templars, Swordsingers, Plains Walkers, and Silver Rangers.\\nRequired level: 40 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3052" name="Spellbook: Hamstring" type="NONE" icon="icon.etc_spell_books_hfighter_i00">
 	<!-- Spellbook needed to learn Hamstring. Used by Dark Avengers.\\nRequired level: 43 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
@@ -413,7 +413,7 @@
 
 	<item id="3055" name="Spellbook: Lightning Strike" type="NONE" icon="icon.etc_spell_books_defighter_i00">
 	<!-- Spellbook needed to learn Lightning Strike. Used by Shillien Knights.\\nRequired level: 58 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
@@ -461,13 +461,13 @@
 
 	<item id="3063" name="Spellbook: Anchor" type="NONE" icon="icon.etc_spell_books_black_i00">
 	<!-- Spellbook needed to learn Anchor. Used by Necromancers.\\nRequired level: 40 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3064" name="Spellbook: Silence" type="NONE" icon="icon.etc_spell_books_black_i00">
 	<!-- Spellbook needed to learn Silence. Used by Necromancers and Spellhowlers.\\nRequired level: 40 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
@@ -479,7 +479,7 @@
 
 	<item id="3066" name="Spellbook: Curse Death Link" type="NONE" icon="icon.etc_spell_books_black_i00">
 	<!-- Spellbook needed to learn Curse Death Link. Used by Necromancers and Spellhowlers.\\nRequired level: 50 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
@@ -515,7 +515,7 @@
 
 	<item id="3072" name="Spellbook: Purify" type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Spellbook needed to learn Purify. Used by Bishops and Shillien Elders.\\nRequired level: 44 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
@@ -557,13 +557,13 @@
 
 	<item id="3079" name="Spellbook: Cancel" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Cancel. Used by Sorcerers and Spellsingers.\\nRequired level: 48 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3080" name="Spellbook: Sleeping Cloud" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Sleeping Cloud. Used by Sorcerers and Spellsingers.\\nRequired level: 44 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
@@ -617,7 +617,7 @@
 
 	<item id="3089" name="Spellbook: Tempest" type="NONE" icon="icon.etc_spell_books_element_i00">
 	<!-- Spellbook needed to learn Tempest. Used by Spellhowlers.\\nRequired level: 46 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
@@ -677,7 +677,7 @@
 
 	<item id="3099" name="Spellbook: Haste" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Haste. Used by Prophets.\\nRequired level: 44 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 

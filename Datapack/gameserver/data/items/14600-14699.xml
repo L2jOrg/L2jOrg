@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<armor id="14611" name="Rudolph's Nose" type="NONE" body-part="HAIR" icon="icon.Accessory_nose_of_rudolph_mask_i00">
 	<!-- Rudolph's Nose. 14-day. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" duration="20160" enchant-enabled="false" />
 		<crystal />
 	</armor>

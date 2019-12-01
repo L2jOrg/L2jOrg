@@ -44,49 +44,49 @@
 
 	<item id="91407" name="Elmoreden Treasure Chest" type="NONE" icon="icon.bm_elmoaden_box">
 	<!-- Double-click to obtain 1 Elmoreden Coin. If you're lucky, you can also get 1 Elmoreden Golden Box or Elmoreden Silver Box.   -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91408" name="Elmoreden Coin" type="NONE" icon="icon.bm_elmoaden_token">
 	<!-- Can be exchanged for a variety of items through the Dimensional Merchant.   -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91409" name="Elmoreden Relic Pouch" type="NONE" icon="icon.card_event_luck_pocket">
 	<!-- Double-click to randomly obtain 1 Refined Rare Accessory, Enchant Scroll or Enchant Stone.   -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91410" name="Elmoreden Golden Box" type="NONE" icon="icon.bm_elmoaden_gold_box">
-	<!-- Double-click to randomly obtain 1 High-grade Enchant Weapon Pack ( B, C), Brilliant Talisman of Power Lv. 5, or Blessed Dragon Pendant.   -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+	<!-- Double-click to randomly obtain 1 High-grade Enchant Weapon Pack (A, B, C), Brilliant Talisman of Power Lv. 5, or Blessed Dragon Pendant.   -->
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91411" name="Elmoreden Silver Box" type="NONE" icon="icon.bm_elmoaden_silver_box">
 	<!-- Double-click to randomly obtain 1 consumable item such as an Attribute Necklace or Sayha's Blessing.   -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91412" name="Scroll: Elmoreden XP" type="SCROLL" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- Recharges 500,000 XP. Give 8 Scrolls: Elmoreden XP and 2 Elmoreden Coins to the Dimensional Merchant to exchange them for 1 High-grade Scroll: Elmoreden XP.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91413" name="High-grade Scroll: Elmoreden XP" type="SCROLL" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- Recharges 20 million XP.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
-	<armor id="91414" name="+5 Dragon Pendant Lv. 2" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_dragon_i00">
+	<armor id="91414" name="+5 Dragon Pendant Lv. 2 " type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_dragon_i00">
 	<!-- A 30-day item. M. Def +25, P./M. Damage Received -15%, Atk. Spd./Casting Spd. +3%, P./M. Critical Damage +5%, XP/SP gain +20%.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="43200" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -94,153 +94,153 @@
 		</stats>
 	</armor>
 
-	<armor id="91415" name="Bracelet of Power" type="NONE" body-part="RIGHT_BRACELET" icon="icon.ertheia_bracelet_i01">
+	<armor id="91415" name="Bracelet of Power " type="NONE" body-part="RIGHT_BRACELET" icon="icon.ertheia_bracelet_i01">
 	<!-- A 30-day item. When equipped, opens up 5 Talisman slots. HP/MP Recovery +15%, P. Accuracy +2, M. Accuracy +2, Weight Limit +10000.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91416" name="Talisman of Fate Lv. 8" type="NONE" body-part="TALISMAN" icon="icon.bm_magic_square_talisman">
-	<!-- A 30-day item. When equipped, P./M. Def +34, P./M. Evasion +2, HP/MP/CP +200, Movement Speed +7, Atk. Spd./Casting Spd. +15, XP/SP gain +5%. Applies Power of Fate - Lv. 2 (has a chance to increase attack abilities) and enables Border Purification (removes Paralysis, Petrification, Poison, and Bleed).  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+	<armor id="91416" name="Talisman of Fate Lv. 8 " type="NONE" body-part="TALISMAN" icon="icon.bm_magic_square_talisman">
+	<!-- A 30-day item. When equipped, P./M. Def +34, P./M. Evasion +2, HP/MP/CP +200, Movement Speed +7, Atk. Spd./Casting Spd. +15, XP/SP gain +5%. Applies Power of Fate - Lv. 2 (has a chance to increase attack abilities) and enables Fate Purification (removes Paralysis, Petrification, Poison, and Bleed).  -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91417" name="Brooch Lv. 4" type="NONE" body-part="UNDERWEAR" icon="icon.etc_bm_brooch_lavianrose_i05">
+	<armor id="91417" name="Brooch Lv. 4 " type="NONE" body-part="UNDERWEAR" icon="icon.etc_bm_brooch_lavianrose_i05">
 	<!-- A 30-day item. When equipped, opens up 5 Gem slots and adds 12 slots to the inventory.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91418" name="Ruby Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_ruby_i00">
+	<armor id="91418" name="Ruby Lv. 5 " type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_ruby_i00">
 	<!-- A 30-day item. When equipped, Soulshot/Blessed Soulshot/Beast Soulshot damage +16%. If identical Gems are equipped, only the effect of the highest level Gem is applied.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91419" name="Sapphire Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_sapphire_i00">
+	<armor id="91419" name="Sapphire Lv. 5 " type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_sapphire_i00">
 	<!-- A 30-day item. When equipped, Spiritshot/Blessed Spiritshot/Beast Spiritshot damage +16%. If identical Gems are equipped, only the effect of the highest level Gem is applied.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91420" name="Diamond Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_diamond_i00">
+	<armor id="91420" name="Diamond Lv. 5 " type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_diamond_i00">
 	<!-- A 30-day item. When equipped, P. Def +130 and P. Critical Damage Received -10%. If identical Gems are equipped, only the effect of the highest level Gem is applied.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91421" name="Pearl Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_pearl_i00">
+	<armor id="91421" name="Pearl Lv. 5 " type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_pearl_i00">
 	<!-- A 30-day item. When equipped, M. Def +74 and M. Critical Damage Received -10%. If identical Gems are equipped, only the effect of the highest level Gem is applied.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<item id="91422" name="Queen Ant Doll Lv. 2" type="RUNE" icon="icon.bm_queen_ant_doll_30d">
 	<!-- Boosts abilities with the Queen Ant Doll's Spell when stored in the inventory. \\n\\n<Queen Ant Doll's Spell Lv. 2>\\nP. Atk. +12%, P. Critical Damage +10%, MAX HP +15% -->
-		<restriction freightable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91423" name="Baium Doll Lv. 2" type="RUNE" icon="icon.bm_baium_doll_30d">
 	<!-- Boosts abilities with the Baium Doll's Spell when stored in the inventory. \\n\\n<Baium Doll's Spell Lv. 2>\\nMEN Atk. Resistance +45%, Paralysis/Knock Down/Pull Resistance +25%, P. Def./M. Def. +15%, Skill Cooldown -4%. -->
-		<restriction freightable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91424" name="Orfen Doll Lv. 2" type="RUNE" icon="icon.bm_orfen_doll_30d">
 	<!-- Boosts abilities with the Orfen Doll's Spell when stored in the inventory. \\n\\n<Orfen Doll's Spell Lv. 2>\\nM. Atk. +15%, M. Critical Damage +10%, MAX MP +15% -->
-		<restriction freightable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<armor id="91425" name="Greater Vital Stone Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_vital_high_lv1_lavianrose">
 	<!-- A 30-day item. XP/SP gain +30% and Attribute XP +50% for hunting attribute NPCs while hunting during Sayha's Grace effect. Sayha's Grace Consumption Rate -35%. If identical Gems are equipped, only the effect of the highest level Gem is applied.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91426" name="Greater Aquamarine Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_castmpup_high_lv1_lavianrose">
 	<!-- A 30-day item. When equipped, Max MP +20% and has a chance to recover 200 MP upon using a skill. Instantly recovers 10% MP when a Special Ability is used. If identical Gems are equipped, only the effect of the highest level Gem is applied.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91427" name="Greater Diamond Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_phydef_high_lv1_lavianrose">
 	<!-- A 30-day item. When equipped, P. Def +400, P. Critical Damage Received -20%, and P. Critical Attack Receival Rate -10%. If identical Gems are equipped, only the effect of the highest level Gem is applied.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91428" name="Greater Pearl Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_magdef_high_lv1_lavianrose">
 	<!-- A 30-day item. When equipped, M. Def +250, M. Critical Damage Received -20%, M. Critical Attack Receival Rate -10%. If identical Gems are equipped, only the effect of the highest level Gem is applied.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91429" name="Greater Topaz Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_absdmg_high_lv1_lavianrose">
 	<!-- A 30-day item. Disrupts the target's skill casting when used. Inflicts fixed damage of 6000 Power in PvP. Removes up to 3 buffs from the enemy when a Special Ability is used. If identical Gems are equipped, only the effect of the highest level Gem is applied.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91430" name="Greater Garnet Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_garnet_high_lv1_lavianrose">
 	<!-- A 30-day item. When equipped, Stun/Pull/Silence/Paralysis/Fear Resistance +40%, Sleep/Poison Resistance +10%. Invincible against debuffs for 25 seconds upon using a skill. If identical Gems are equipped, only the effect of the highest level Gem is applied.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91431" name="Greater Ruby Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_ssdmg_high_lv1_lavianrose">
 	<!-- A 30-day item. When equipped, Soulshot/Blessed Soulshot/Beast Soulshot damage +20%, P. Atk. +7%, P. Critical Rate +5%. If identical Gems are equipped, only the effect of the highest level Gem is applied.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91432" name="Greater Sapphire Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_spsdmg_high_lv1_lavianrose">
 	<!-- A 30-day item. When equipped, Spiritshot/Blessed Spiritshot/Beast Spiritshot damage +20%, M. Atk. +14%, M. Critical Rate +10%. If identical Gems are equipped, only the effect of the highest level Gem is applied.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91433" name="Greater Jade Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_speedup_lv1_high">
 	<!-- A 30-day item. When equipped, Atk. Spd./Casting Spd. +20%, Movement Speed +7%, Resistance to Melee Weapon Attack +10%. If identical Gems are equipped, only the effect of the highest level Gem is applied.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91434" name="Greater Cat's Eye Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_red_catseye_high_lv1_lavianrose">
 	<!-- A 30-day item. When equipped, P./M. Critical Damage +20%, P./M. Skill Power +7%, Buff Removal Resistance +40%. If identical Gems are equipped, only the effect of the highest level Gem is applied.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91435" name="Greater Emerald Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_allstat_high_lv1_lavianrose">
 	<!-- A 30-day item. When equipped, CON/MEN/DEX/WIT/STR/INT +2. Damage Reflect Resistance +20%. If identical Gems are equipped, only the effect of the highest level Gem is applied.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91436" name="Blessed Dragon Pendant" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_dragon_i01">
 	<!-- A 30-day item. Pendant imbued with Dragon's power. When equipped, M. Def. +50, XP/SP +30%, P. Atk./M. Atk. Spd. 10%, P./M. Critical Damage +15%, P. Atk./M. Atk. +20%, Damage Reflect Resistance +20%, P. Atk./M. Atk. Damage -30%. Enables Dragon Invocation, Dragon Barrier, Dragon Evasion skills.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="43200" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -250,155 +250,155 @@
 
 	<armor id="91437" name="+10 Sayha's Cloak - White" type="NONE" body-part="BACK" icon="icon.sayha2017_back_i03">
 	<!-- A 30-day item. When equipped, Max HP/MP +15%, XP/SP gain +30%, P. Def +10%, P./M. Critical Damage +15%, M. Def +6%, Critical Damage Received -10%. Allows using Sayha Blink skill. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="220" duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<item id="91438" name="Shining Golden Bait Box" type="NONE" icon="icon.bm_gold_lure_special_box">
 	<!-- Double-click to obtain 1080 Shining Golden Bait.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91439" name="Greater Vital Stone Lv. 5 Box" type="NONE" icon="icon.etc_bm_jewelbox_vital_i00">
 	<!-- Double-click to obtain 1 Greater Vital Stone Lv. 5 (30-day).  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91440" name="Greater Aquamarine Lv. 5 Box" type="NONE" icon="icon.etc_bm_jewelbox_aquamarine_i00">
 	<!-- Double-click to obtain 1 Greater Aquamarine Lv. 5 (30-day).  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91441" name="Greater Diamond Lv. 5 Box" type="NONE" icon="icon.etc_bm_jewelbox_diamond_i00">
 	<!-- Double-click to obtain 1 Greater Diamond Lv. 5 (30-day).  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91442" name="Greater Pearl Lv. 5 Box" type="NONE" icon="icon.etc_bm_jewelbox_pearl_i00">
 	<!-- Double-click to obtain 1 Greater Pearl Lv. 5 (30-day).  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91443" name="Greater Topaz Lv. 5 Box" type="NONE" icon="icon.etc_bm_jewelbox_topaz_i00">
 	<!-- Double-click to obtain 1 Greater Topaz Lv. 5 (30-day).  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91444" name="Greater Garnet Lv. 5 Box" type="NONE" icon="icon.etc_bm_jewelbox_garnet_i01">
 	<!-- Double-click to obtain 1 Greater Garnet Lv. 5 (30-day).  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91445" name="Greater Ruby Lv. 5 Box" type="NONE" icon="icon.etc_bm_jewelbox_ruby_i00">
 	<!-- Double-click to obtain 1 Greater Ruby Lv. 5 (30-day).  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91446" name="Greater Sapphire Lv. 5 Box" type="NONE" icon="icon.etc_bm_jewelbox_sapphire_i00">
 	<!-- Double-click to obtain 1 Greater Sapphire Lv. 5 (30-day).  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91447" name="Greater Jade Lv. 5 Box" type="NONE" icon="icon.etc_bm_jewelbox_jade_i00">
 	<!-- Double-click to obtain 1 Greater Jade Lv. 5 (30-day).  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91448" name="Greater Cat's Eye Lv. 5 Box" type="NONE" icon="icon.bm_jewelbox_red_catseye_lavianrose">
 	<!-- Double-click to obtain 1 Greater Cat's Eye Lv. 5 (30-day).  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91449" name="Greater Emerald Lv. 5 Box" type="NONE" icon="icon.etc_bm_jewelbox_emerald_i00">
 	<!-- Double-click to obtain 1 Greater Emerald Lv. 5 (30-day).  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91450" name="Zaken's Earring Lv. 3 Box" type="NONE" icon="icon.npoint_earthworm_30day_box">
 	<!-- Double-click to obtain 1 Zaken's Earring Lv. 3 (30-day). -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91451" name="Baium's Ring Lv. 3 Box" type="NONE" icon="icon.npoint_tauti_30day_box">
 	<!-- Double-click to obtain 1 Baium's Ring Lv. 3 (30-day). -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91452" name="Blessed Dragon Pendant Box" type="NONE" icon="icon.etc_pi_box_belief_pack">
 	<!-- Double-click to obtain 1 Blessed Dragon Pendant (30-day).  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91453" name="+10 Sayha's Cloak Box" type="NONE" icon="icon.npoint_earring_of_lind_30day_box">
 	<!-- Double-click to obtain 1 +10 Sayha's Cloak - White (30-day).  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91454" name="+10 Sayha's Cloak Box - White" type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Double-click to obtain 1 +10 Sayha's Cloak - White.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91455" name="+10 Sayha's Cloak Box - Black" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- Double-click to obtain 1 +10 Sayha's Cloak - Black.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91456" name="+10 Sayha's Cloak Box - Red" type="NONE" icon="icon.etc_treasure_box_i03">
 	<!-- Double-click to obtain 1 +10 Sayha's Cloak - Red.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91457" name="Soccer Ball Herb of Victory" type="NONE" icon="BranchSys2.icon.br_soccer_ball_i00">
 	<!-- A soccer ball herb to wish for victory. P. Atk. +15%, M. Atk. +23%, P./M. Def +15%, Atk. Spd./Casting Spd. +15%, HP/MP Recovery Bonus +30% for 5 minutes. -->
-		<restriction freightable="false" destroyable="false" tradable="false" depositable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<armor id="91458" name="Red Mask of Victory" type="NONE" body-part="HAIR" icon="icon.accessory_worldcup_mask_i00">
 	<!-- A mask to wish for victory.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91459" name="Mark of Cheers" type="NONE" body-part="HAIR" icon="BranchSys2.icon.br_worldcup_face_deco_i00">
 	<!-- A mark of cheering spirit.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91460" name="Soccer Ball Afro Hair - Red" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon.br_worldcup_hair_i02">
 	<!-- When equipped, changes your hair style to Afro Hair dyed as a red soccer ball.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<weapon id="91461" name="Balloon Stick of Cheers - Red" type="ROD" body-part="RIGHT_HAND" icon="BranchSys2.icon.br_worldcup_stick_i00" magic="true">
 	<!-- A red balloon stick of cheering spirit.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -477,97 +477,97 @@
 
 	<item id="91472" name="+5 Sealed Agathion - Virgo" type="NONE" icon="icon.agathion_virgo_star_1">
 	<!-- Double-click to obtain +5 Enchanted Virgo Agathion.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91473" name="+5 Sealed Agathion - Capricorn" type="NONE" icon="icon.agathion_capr_star_1">
 	<!-- Double-click to obtain +5 Enchanted Capricorn Agathion.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91474" name="+5 Sealed Agathion - Libra" type="NONE" icon="icon.agathion_lib_star_1">
 	<!-- Double-click to obtain +5 Enchanted Libra Agathion.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91475" name="+5 Sealed Agathion - Taurus" type="NONE" icon="icon.agathion_tau_star_1">
 	<!-- Double-click to obtain +5 Enchanted Taurus Agathion.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91476" name="+5 Sealed Agathion - Leo" type="NONE" icon="icon.agathion_leo_star_1">
 	<!-- Double-click to obtain +5 Enchanted Leo Agathion.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91477" name="+5 Sealed Agathion - Gemini" type="NONE" icon="icon.agathion_gem_star_1">
 	<!-- Double-click to obtain +5 Enchanted Gemini Agathion.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91478" name="+5 Sealed Agathion - Scorpio" type="NONE" icon="icon.agathion_sco_star_1">
 	<!-- Double-click to obtain +5 Enchanted Scorpio Agathion.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91479" name="+5 Sealed Agathion - Aquarius" type="NONE" icon="icon.agathion_aqu_star_1">
 	<!-- Double-click to obtain +5 Enchanted Aquarius Agathion.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91480" name="+5 Sealed Agathion - Sagittarius" type="NONE" icon="icon.agathion_sag_star_1">
 	<!-- Double-click to obtain +5 Enchanted Sagittarius Agathion.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91481" name="Crystal of Soul" type="NONE" icon="icon.bm_dragon_shirt_upgrade_1">
 	<!-- A crystal created with the concentrated wills of heroes. Take it to Lorenzo in the Town of Aden to learn a certification skill.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91482" name="Codex - Detect Darkness" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Scroll needed to learn Detect Darkness. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120"/>
 	</item>
 
 	<item id="91483" name="Codex - Bind" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Scroll needed to learn Bind. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120"/>
 	</item>
 
 	<item id="91484" name="Codex - Mass Chain Strike" type="NONE" icon="icon.etc_magic_book_black_i00">
 	<!-- Scroll needed to learn Mass Chain Strike. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120"/>
 	</item>
 
 	<item id="91485" name="Codex - Reduce Crisis" type="NONE" icon="icon.etc_magic_book_black_i00">
 	<!-- Scroll needed to learn Reduce Crisis. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120"/>
 	</item>
 
 	<item id="91486" name="Codex - Full Swing" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Scroll needed to learn Full Swing.  -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120"/>
 	</item>
 
 	<item id="91487" name="Codex - Seal of Blockade" type="NONE" icon="icon.etc_magic_book_white_i00">
 	<!-- Scroll needed to learn Seal of Blockade. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120"/>
 	</item>
 
@@ -586,43 +586,43 @@
 
 	<item id="91490" name="Mysterious Soulshot (S-grade)" type="NONE" icon="icon.etc_spirit_bullet_gold_i00">
 	<!-- Bestows the high-grade Spirit Light on the weapon to spontaneously inflict a powerful attack on the enemy. Used with an S-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="SOULSHOT"/>
 	</item>
 
 	<item id="91491" name="Mysterious Blessed Soulshot (S-grade)" type="NONE" icon="icon.etc_bless_spirit_bullet_gold_i00">
 	<!-- Bestows the Spirit Light on the weapon to spontaneously inflict a powerful attack on the enemy. Used with an S-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="91492" name="Mysterious Spiritshot (S-grade)" type="NONE" icon="icon.etc_spell_shot_gold_i00">
 	<!-- Bestows the high-grade Spirit Light on the weapon to spontaneously increase M. Atk. Used with an S-grade weapon. Exchange for a new Spiritshot through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="SPIRITSHOT"/>
 	</item>
 
 	<item id="91493" name="Mysterious Blessed Spiritshot (S-grade)" type="NONE" icon="icon.etc_spell_shot_gold_i01">
 	<!-- Bestows the high-grade Spirit Light on the weapon to spontaneously increase M. Atk significantly. Used with an S-grade weapon. Exchange for a new Spiritshot through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="SPIRITSHOT"/>
 	</item>
 
 	<item id="91494" name="Codex - Create Critical" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Scroll needed to learn Create Critical Lv. 3. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120"/>
 	</item>
 
 	<item id="91495" name="Codex - Create Master" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Scroll needed to learn Create Master Lv. 2. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120"/>
 	</item>
 
 	<item id="91496" name="Codex - Create Master" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Scroll needed to learn Create Master Lv. 3. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120"/>
 	</item>
 
@@ -634,13 +634,13 @@
 
 	<item id="91498" name="Tallum Blade + Dark Legion's Edge Box" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- Double-click to obtain 1 +0 Tallum Blade and +0 Dark Legion's Edge.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91499" name="Crafting Pack - Forgotten Blade" type="NONE" icon="icon.event_hero_treasure_box_i00">
 	<!-- Double-click to obtain 1 Recipe: Forgotten Blade (30%) and 25 Forgotten Blade Edges.  -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 

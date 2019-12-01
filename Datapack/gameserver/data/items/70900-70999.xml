@@ -2,91 +2,91 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<armor id="70900" name="Stylish Straw Hat" type="NONE" body-part="HAIR_ALL" icon="BranchSys3.icon.g_straw_hat">
 	<!-- Uses 2 hair accessory slots.\\n -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70901" name="Crown" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_comfortspirit_hat_a_i00">
 	<!-- Uses 2 hair accessory slots.\\n -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70902" name="Party Mask" type="NONE" body-part="HAIR" icon="icon.etc_party_mask_i00">
 	<!-- Uses 1 hair accessory slot.\\n -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70903" name="Red Zubei - Heavy Armor" type="HEAVY" body-part="ALL_DRESS" icon="icon.armor_t2000_ul_i00">
 	<!-- Full Heavy Armor of Blue Dynasty It has no restrictions as to class, but for some races and classes heavy, light and magic armor look the same. Previous armor is taken off and becomes unavailable when it's equipped. Headpieces, weapon and magic armor are not removed.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70904" name="Red Zubei - Light Armor" type="LIGHT" body-part="ALL_DRESS" icon="icon.armor_t2000_ul_i00">
 	<!-- Full Light Armor of Blue Dynasty It has no restrictions as to class, but for some races and classes heavy, light and magic armor look the same. Previous armor is taken off and becomes unavailable when it's equipped. Headpieces, weapon and magic armor are not removed.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70905" name="Red Zubei - Robe" type="MAGIC" body-part="ALL_DRESS" icon="icon.armor_t2000_ul_i00">
 	<!-- Full Light Armor of Red Zubei. It has no restrictions as to class, but for some races and classes heavy, light and magic armor look the same. Previous armor is taken off and becomes unavailable when it's equipped. Headpieces, weapon and magic armor are not removed.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<item id="70906" name="Stable Cloak Enchantment Scroll - Legendary" type="SOLID_ENCHANT_ARMOR" icon="BranchIcon.icon.g_bm_cloak_enchant_scroll_legend">
 	<!-- Enchant scroll for the Ancient Kingdom's Cloak. Can be enchanted between +11-+15. Enchant level goes up by 1 when it succeeds, and if it fails, the enchant level remains the same. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70907" name="Ancient Cloak (Legendary) Scroll Pack" type="SCROLL" icon="icon.bm_freya_gift_box">
 	<!-- Double-click to obtain 1 Scroll: Enchant Cloak - Legendary or 1 Stable Cloak Enchantment Scroll - Legendary. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70908" name="Ancient Kingdom's Coin" type="NONE" icon="icon.bm_nebit_coin">
 	<!-- A coin imbued with the mysterious power of the Ancient Kingdom. Exchange it for a special gift through the Dimensional Merchant. -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="70909" name="+10 Elmoreden Cloak - Legendary Box" type="NONE" icon="BranchIcon.icon.etc_g_bm_godspirit_box">
 	<!-- Double-click to obtain a +10 Elmoreden Cloak - Legendary. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70910" name="+10 Aden Cloak - Legendary Box" type="NONE" icon="BranchIcon.icon.etc_g_bm_godspirit_box">
 	<!-- Double-click to obtain a +10 Aden Cloak - Legendary. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70911" name="+10 Elmore Cloak - Legendary Box" type="NONE" icon="BranchIcon.icon.etc_g_bm_godspirit_box">
 	<!-- Double-click to obtain a +10 Elmore Cloak - Legendary. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="70912" name="+10 Ferios Cloak - Legendary Box" type="NONE" icon="BranchIcon.icon.etc_g_bm_godspirit_box">
 	<!-- Double-click to obtain a +10 Ferios Cloak - Legendary. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<armor id="70913" name="Fire Dragon Pendant - Lv. 5" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pve">
 	<!-- A pendant that carries sealed energy of a Fire Dragon. Its effect is the same as from the enchanted to +5 Fire Dragon Pendant - Lv. 5.\\n -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="10080" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -96,7 +96,7 @@
 
 	<armor id="70914" name="Water Dragon Pendant - Lv. 5" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pvp_blue">
 	<!-- A pendant that carries sealed energy of a Water Dragon. Its effect is the same as from the enchanted to +5 Water Dragon Pendant - Lv. 5.\\n -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="10080" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -106,19 +106,19 @@
 
 	<item id="70915" name="Fire Dragon Pendant - Lv. 5 Chest +5" type="NONE" icon="icon.bm_freya_gift_box">
 	<!-- Double-click to obtain one +5 Fire Dragon Pendant - Lv. 5 (7-day).  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70916" name="Water Dragon Pendant - Lv. 5 Chest +5" type="NONE" icon="icon.bm_freya_gift_box">
 	<!-- Double-click to obtain one +5 Water Dragon Pendant - Lv. 5 (7-day).  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70917" name="Battle Box Lv. 1" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Reward for clan members. Double-click to obtain various items.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="51038" level="1"/>  <!-- Battle Box Lv. 1 -->
@@ -127,7 +127,7 @@
 
 	<item id="70918" name="Battle Box Lv. 2" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Reward for clan members. Double-click to obtain various items.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="51039" level="1"/>  <!-- Battle Box Lv. 2 -->
@@ -136,7 +136,7 @@
 
 	<item id="70919" name="Battle Box Lv. 3" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Reward for clan members. Double-click to obtain various items.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="51040" level="1"/>  <!-- Battle Box Lv. 3 -->
@@ -145,7 +145,7 @@
 
 	<item id="70920" name="Battle Box Lv. 4" type="NONE" icon="icon.etc_treasure_box_i04">
 	<!-- Reward for clan members. Double-click to obtain various items.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="51041" level="1"/>  <!-- Battle Box Lv. 4 -->
@@ -154,13 +154,13 @@
 
 	<item id="70921" name="Valor Box" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- Reward for valor warriors. Double-click to obtain various items.  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<armor id="70922" name="Bracelet of Duty Lv. 6" type="NONE" body-part="UNDERWEAR" icon="BranchIcon.Icon.g_pledge_bracelet_05">
 	<!-- Opens up four Talisman slots. STR +1, INT +1, DEX +1, WIT +1, CON +1, MEN +1. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" commission-type="BRACELET" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -170,7 +170,7 @@
 
 	<armor id="70923" name="Agathion Bracelet - Lv. 1" type="NONE" body-part="LEFT_BRACELET" icon="icon.lbracelet_agathion_charm">
 	<!-- 1-day item. 1 Agathion's main slot and 1 Agathion's side slot activated when equipped. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" duration="1440" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -180,7 +180,7 @@
 
 	<armor id="70924" name="Agathion Bracelet - Lv. 1" type="NONE" body-part="LEFT_BRACELET" icon="icon.lbracelet_agathion_charm">
 	<!-- 7-day item. When equipped, 1 Agathion's main slot and 1 Agathion's side slot activated. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" duration="10080" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -190,7 +190,7 @@
 
 	<armor id="70925" name="Agathion Bracelet - Lv. 1" type="NONE" body-part="LEFT_BRACELET" icon="icon.lbracelet_agathion_charm">
 	<!-- 15-day item. When equipped, 1 Agathion's main slot and 1 Agathion's side slot activated. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" duration="21600" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -200,7 +200,7 @@
 
 	<armor id="70926" name="Agathion Bracelet - Lv. 1" type="NONE" body-part="LEFT_BRACELET" icon="icon.lbracelet_agathion_charm">
 	<!-- 30-day item. When equipped, 1 Agathion's main slot and 1 Agathion's side slot activated. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -210,7 +210,7 @@
 
 	<armor id="70927" name="Agathion Bracelet - Lv. 1" type="NONE" body-part="LEFT_BRACELET" icon="icon.lbracelet_agathion_charm">
 	<!-- 60-day item. 1 Agathion's main slot and 1 Agathion's side slot activated when equipped. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" duration="86400" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -220,7 +220,7 @@
 
 	<armor id="70928" name="Agathion Bracelet - Lv. 1" type="NONE" body-part="LEFT_BRACELET" icon="icon.lbracelet_agathion_charm">
 	<!-- 90-day item. 1 Agathion's main slot and 1 Agathion's side slot activated when equipped. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" duration="129600" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -230,7 +230,7 @@
 
 	<armor id="70929" name="Agathion Bracelet - Lv. 1" type="NONE" body-part="LEFT_BRACELET" icon="icon.lbracelet_agathion_charm">
 	<!-- 1 Agathion's main slot and 1 Agathion's side slot activated when equipped. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -240,7 +240,7 @@
 
 	<armor id="70930" name="Agathion Bracelet Lv. 2" type="NONE" body-part="LEFT_BRACELET" icon="icon.lbracelet_agathion_charm">
 	<!-- 1 Agathion's main slot and 2 Agathion's side slot activated when equipped. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -250,7 +250,7 @@
 
 	<armor id="70931" name="Agathion Bracelet Lv. 3" type="NONE" body-part="LEFT_BRACELET" icon="icon.lbracelet_agathion_charm">
 	<!-- 1 Agathion's main slot and 2 Agathion's side slot activated when equipped. STR/INT/CON/MEN +1. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -261,7 +261,7 @@
 
 	<armor id="70932" name="Agathion Bracelet Lv. 4" type="NONE" body-part="LEFT_BRACELET" icon="icon.lbracelet_agathion_charm">
 	<!-- 1 Agathion's main slot and 3 Agathion's side slot activated when equipped. STR/INT/CON/MEN +1. MEN Attack/Stun/Sleep/Paralysis Resistance +5%. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -273,28 +273,28 @@
 
 	<armor id="70933" name="Agathion - Love (Event)" type="NONE" body-part="AGATHION" icon="icon.etc_rbracelet_aga_agit_i00">
 	<!-- 7-day item. Equipping it in the main slot summons the Agathion.\\n -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="10080" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70934" name="Agathion - Nevit's Herald Kanna" type="NONE" body-part="AGATHION" icon="icon.pi_high_agathion_bracelet_i00">
 	<!-- Equipping it in the main slot summons the Nevit's Herald Kanna Agathion.\\n -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70935" name="Agathion - Uthanka" type="NONE" body-part="AGATHION" icon="BranchSys.icon.br_aga_uthanka_i00">
 	<!-- Equipping it in the main slot summons the Uthanka Agathion.\\n -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="70960" name="Agathion - Singer and Dancer" type="NONE" body-part="AGATHION" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
+	<armor id="70960" name="Agathion - Singer and Dancer " type="NONE" body-part="AGATHION" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
 	<!-- Equipping it in the main slot summons the Singer & Dancer Agathion.\\n -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -307,275 +307,275 @@
 		</skills>
 	</armor>
 
-	<armor id="70961" name="Agathion - Singer and Dancer" type="NONE" body-part="AGATHION" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
+	<armor id="70961" name="Agathion - Singer and Dancer " type="NONE" body-part="AGATHION" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
 	<!-- 7-day item. Equipping it in the main slot summons the Singer & Dancer Agathion and activates the Special Ability option. \\n\\n<Special Ability>\\n1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes.\\n\\n2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes.\\n\\n3. Song of Wind: increases Speed by 20 for 5 minutes. Cooldown: 10 min.\\n\\n<Note>\\nDance of Fury, Dance of Concentration, and Song of Wind do not stack.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="10080" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="70962" name="Agathion - Singer and Dancer" type="NONE" body-part="AGATHION" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
+	<armor id="70962" name="Agathion - Singer and Dancer " type="NONE" body-part="AGATHION" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
 	<!-- 30-day item. Equipping it in the main slot summons the Singer & Dancer Agathion and activates the Special Ability option. \\n\\n<Special Ability>\\n1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes.\\n\\n2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes.\\n\\n3. Song of Wind: increases Speed by 20 for 5 minutes. Cooldown: 10 min.\\n\\n<Note>\\nDance of Fury, Dance of Concentration, and Song of Wind do not stack.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="70963" name="Agathion - Singer and Dancer" type="NONE" body-part="AGATHION" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
+	<armor id="70963" name="Agathion - Singer and Dancer " type="NONE" body-part="AGATHION" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
 	<!-- 90-day item. Equipping it in the main slot summons the Singer & Dancer Agathion and activates the Special Ability option. \\n\\n<Special Ability>\\n1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes.\\n\\n2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes.\\n\\n3. Song of Wind: increases Speed by 20 for 5 minutes. Cooldown: 10 min.\\n\\n<Note>\\nDance of Fury, Dance of Concentration, and Song of Wind do not stack.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="129600" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70964" name="Agathion - Griffin" type="NONE" body-part="AGATHION" icon="icon.etc_rbracelet_aga_agit_i00">
 	<!-- Equipping it in the main slot summons the Griffin Agathion and activates the Special Ability option. \\n\\n<Special Ability>\\n - STR/ INT +1. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70965" name="Agathion - Cheerleader Mae" type="NONE" body-part="AGATHION" icon="BranchSys.icon.br_aga_local2009_g_i00">
 	<!-- Equipping it in the main slot summons the Cheerleader Mae Agathion and activates the Special Ability option. \\n\\n<Special Ability>\\nCheerleader Mae's Support : P./ M. Atk. +5%, Atk. Spd./Casting Spd. +5%, Skill MP Consumption -10%, P./ M. Critical Damage +3%. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70966" name="Agathion - One-eyed Bat Drove" type="NONE" body-part="AGATHION" icon="BranchSys.icon.br_aga_bat_i00">
 	<!-- Equipping it in the main slot summons the One-eyed Bat Drove Agathion. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70967" name="Agathion - Zaken's Spirit Swords" type="NONE" body-part="AGATHION" icon="BranchSys2.Icon.br_aga_zaken_i00">
 	<!-- Equipping it in the main slot summons the Zaken's Spirit Swords Agathion. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70968" name="Agathion - Pegasus" type="NONE" body-part="AGATHION" icon="BranchSys.icon.br_aga_pegasus_i00">
 	<!-- Equipping it in the main slot summons the Pegasus Agathion. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70969" name="Agathion - Guangong" type="NONE" body-part="AGATHION" icon="BranchSys.icon.br_aga_warriorgod_i00">
 	<!-- Equipping it in the main slot summons the Guangong Agathion. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70970" name="Agathion - Mr. Lucky" type="NONE" body-part="AGATHION" icon="BranchSys.icon.br_aga_wealth_god_i00">
 	<!-- Equipping it in the main slot summons the Mr. Lucky Agathion.  -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70971" name="Agathion - Phoenix" type="NONE" body-part="AGATHION" icon="BranchSys2.icon.br_aga_china_phoenix_i00">
 	<!-- Equipping it in the main slot summons the Phoenix Agathion. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70972" name="Agathion - Saerom" type="NONE" body-part="AGATHION" icon="icon.pi_high_agathion_bracelet_i00">
 	<!-- Equipping it in the main slot summons the Saerom Agathion. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="70973" name="Agathion - Gwanseum Nyang" type="NONE" body-part="AGATHION" icon="BranchSys.icon.br_aga_mercygod_i00">
+	<armor id="70973" name="Agathion - Gwanseum Nyang " type="NONE" body-part="AGATHION" icon="BranchSys.icon.br_aga_mercygod_i00">
 	<!-- Equipping it in the main slot summons the Gwanseum Nyang Agathion. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70974" name="Agathion - Blue Opera" type="NONE" body-part="AGATHION" icon="BranchSys.icon.br_aga_blue_pekingopera_i00">
 	<!-- Equipping it in the main slot summons the Blue Opera Agathion. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70975" name="Agathion - Red Opera" type="NONE" body-part="AGATHION" icon="BranchSys.icon.br_aga_pekingopera_i00">
 	<!-- Equipping it in the main slot summons the Red Opera Agathion. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70976" name="Agathion - Miss Chipao" type="NONE" body-part="AGATHION" icon="BranchSys.icon.br_aga_chinesedress_i00">
 	<!-- Equipping it in the main slot summons the Miss Chipao Agathion. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70977" name="Agathion - Flower Fairy Spirit" type="NONE" body-part="AGATHION" icon="BranchSys2.icon.br_aga_flower_i00">
 	<!-- Equipping it in the main slot summons the Flower Fairy Spirit Agathion. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70978" name="Agathion - Lancet" type="NONE" body-part="AGATHION" icon="BranchSys.icon.br_aga_local2009_b_i00">
 	<!-- Equipping it in the main slot summons the Lancet Agathion. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70979" name="Agathion - Liposa" type="NONE" body-part="AGATHION" icon="BranchSys.icon.br_aga_local2009_a_i00">
 	<!-- Equipping it in the main slot summons the Liposa Agathion. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70980" name="Agathion - Velarin" type="NONE" body-part="AGATHION" icon="BranchSys.icon.br_aga_local2009_f_i00">
 	<!-- Equipping it in the main slot summons the Velarin Agathion. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70981" name="Agathion - Dulcinel" type="NONE" body-part="AGATHION" icon="BranchSys.icon.br_aga_local2009_e_i00">
 	<!-- Equipping it in the main slot summons the Dulcinel Agathion. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70982" name="Agathion - Chimeros" type="NONE" body-part="AGATHION" icon="BranchSys.icon.br_aga_local2009_d_i00">
 	<!-- Equipping it in the main slot summons the Chimeros Agathion. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70983" name="Agathion - Niveri" type="NONE" body-part="AGATHION" icon="BranchSys.icon.br_aga_local2009_c_i00">
 	<!-- Equipping it in the main slot summons the Niveri Agathion. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70984" name="Agathion - Hamell" type="NONE" body-part="AGATHION" icon="BranchSys.icon.br_aga_local2009_h_i00">
 	<!-- Equipping it in the main slot summons the Hamell Agathion. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70985" name="Agathion - Joriya" type="NONE" body-part="AGATHION" icon="BranchSys.icon.br_aga_local2009_g_i00">
 	<!-- Equipping it in the main slot summons the Joriya Agathion. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70986" name="Agathion - Ralmak" type="NONE" body-part="AGATHION" icon="BranchSys.icon.br_aga_local2009_i_i00">
 	<!-- Equipping it in the main slot summons the Ralmak Agathion. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70987" name="Agathion - Goras" type="NONE" body-part="AGATHION" icon="BranchSys.icon.br_aga_local2009_j_i00">
 	<!-- Equipping it in the main slot summons the Goras Agathion. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" />
 		<crystal />
 	</armor>
 
 	<armor id="70988" name="Agathion - Vensar" type="NONE" body-part="AGATHION" icon="BranchSys.icon.br_aga_local2009_l_i00">
 	<!-- Equipping it in the main slot summons the Vensar Agathion. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" />
 		<crystal />
 	</armor>
 
 	<armor id="70989" name="Agathion - Kiela" type="NONE" body-part="AGATHION" icon="BranchSys.icon.br_aga_local2009_k_i00">
 	<!-- Equipping it in the main slot summons the Kiela Agathion. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" />
 		<crystal />
 	</armor>
 
 	<armor id="70990" name="Agathion - Minion Eye" type="NONE" body-part="AGATHION" icon="icon.etc_rbracelet_aga_agit_i00">
 	<!-- Equipping it in the main slot summons the Minion Eye Agathion.\\n -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" />
 		<crystal />
 	</armor>
 
 	<armor id="70991" name="Agathion - Minion Eye" type="NONE" body-part="AGATHION" icon="icon.etc_rbracelet_aga_agit_i00">
 	<!-- 7-day item. Equipping it in the main slot summons the Minion Eye Agathion and activates the Special Ability option.\\n\\n\\n<Special Ability>\\n - Monster Eye Corage Lv 1\\n - Monster Eye Blessed Resurrection Lv 1 -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="10080" />
 		<crystal />
 	</armor>
 
 	<armor id="70992" name="Agathion - Minion Eye" type="NONE" body-part="AGATHION" icon="icon.etc_rbracelet_aga_agit_i00">
 	<!-- 30-day item. Equipping it in the main slot summons the Minion Eye Agathion and activates the Special Ability option.\\n\\n\\n<Special Ability>\\n - Monster Eye Courage Lv 1\\n - Monster Eye Blessed Resurrection Lv 1 -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" />
 		<crystal />
 	</armor>
 
 	<armor id="70993" name="Agathion - Matryoshka" type="NONE" body-part="AGATHION" icon="icon.etc_rbracelet_aga_agit_i00">
 	<!-- Equipping it in the main slot summons the Matryoshka Agathion.\\n -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" />
 		<crystal />
 	</armor>
 
 	<armor id="70994" name="Agathion - Matryoshka" type="NONE" body-part="AGATHION" icon="icon.etc_rbracelet_aga_agit_i00">
 	<!-- 7-day item. Equipping it in the main slot summons the Matryoshka Agathion and activates the Special Ability option.\\n\\n\\n<Special Ability>\\n - Matryoshka's Blessing Lv 1\\n - Matryoshka's Gift Lv 1\\n - Agathion Teleport (Aden/ Giran/ Dion/ Gludio) -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="10080" />
 		<crystal />
 	</armor>
 
 	<armor id="70995" name="Agathion - Matryoshka" type="NONE" body-part="AGATHION" icon="icon.etc_rbracelet_aga_agit_i00">
 	<!-- 30-day item. Equipping it in the main slot summons the Matryoshka Agathion and activates the Special Ability option.\\n\\n\\n<Special Ability>\\n - Matryoshka's Blessing Lv 1\\n - Matryoshka's Gift Lv 1\\n - Agathion Teleport (Aden/ Giran/ Dion/ Gludio) -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" />
 		<crystal />
 	</armor>
 
 	<armor id="70996" name="Agathion - Babayaga" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.br_babayaga_i00">
 	<!-- Equipping it in the main slot summons the Babayaga Agathion.\\n -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" />
 		<crystal />
 	</armor>
 
 	<armor id="70997" name="Agathion - Babayaga" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.br_babayaga_i00">
 	<!-- 7-day item. Equipping it in the main slot summons the Babayaga Agathion and activates the Special Ability option.\\n\\n\\n<Special Ability>\\n - Babayaga's Courage Lv 1\\n - Babayaga's Serenade Lv 1\\n - Agathion Teleport (Aden/ Giran/ Dion/ Gludio) -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="10080" />
 		<crystal />
 	</armor>
 
 	<armor id="70998" name="Agathion - Babayaga" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.br_babayaga_i00">
 	<!-- 30-day item. Equipping it in the main slot summons the Babayaga Agathion and activates the Special Ability option.\\n\\n\\n<Special Ability>\\n - Babayaga's Courage Lv 1\\n - Babayaga's Serenade Lv 1\\n - Agathion Teleport (Aden/ Giran/ Dion/ Gludio) -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" />
 		<crystal />
 	</armor>
 
 	<item id="70999" name="Agathion - Love (7-day) Pack - Event" type="NONE" icon="icon.etc_pi_gift_box_i02">
 	<!-- Double-click to obtain Agathion - Love (7-day) - Event.\\n -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 

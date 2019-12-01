@@ -287,13 +287,13 @@
 
 	<item id="5567" name="Letter of Greetings" type="NONE" icon="icon.etc_piece_of_paper_gray_i00">
 	<!-- Sla's letter to her disciples. Deliver it to Nyakuri in Dwarven Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="5568" name="Letter of Greetings" type="NONE" icon="icon.etc_piece_of_paper_gray_i00">
 	<!-- Sla's letter to her disciples. Deliver it to Ramus on Talking Island. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
@@ -427,7 +427,7 @@
 
 	<item id="5593" name="SP Scroll (Low-grade)" type="SCROLL" icon="icon.etc_sp_scroll1_i00">
 	<!-- Recharges SP by 2,000. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="30" price="50000" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2167" level="1"/>  <!-- SP Scroll -->
@@ -436,7 +436,7 @@
 
 	<item id="5594" name="SP Scroll (Mid-grade)" type="SCROLL" icon="icon.etc_sp_scroll2_i00">
 	<!-- Recharges SP by 10,000. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="30" price="300000" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2167" level="2"/>  <!-- SP Scroll -->
@@ -445,7 +445,7 @@
 
 	<item id="5595" name="SP Scroll (High-grade)" type="SCROLL" icon="icon.etc_sp_scroll3_i00">
 	<!-- Recharges SP by 100,000. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="30" price="1200000" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="2167" level="3"/>  <!-- SP Scroll -->
@@ -458,7 +458,7 @@
 		<attributes weight="920" price="14098000" commission-type="TWO_HAND_MAGIC_BLUNT_WEAPON"/>
 		<crystal type="A" count="1128"/>
 		<damage radius="46" angle="240"/>
-		<consume  soulshots="3" spiritshots="3"/>
+		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="pAtk" value="207.0"/>
 			<stat type="mAtk" value="157.0"/>
@@ -479,7 +479,7 @@
 		<attributes weight="920" price="14098000" commission-type="TWO_HAND_MAGIC_BLUNT_WEAPON"/>
 		<crystal type="A" count="1128"/>
 		<damage radius="46" angle="240"/>
-		<consume  soulshots="3" spiritshots="3"/>
+		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="pAtk" value="207.0"/>
 			<stat type="mAtk" value="157.0"/>
@@ -500,7 +500,7 @@
 		<attributes weight="920" price="14098000" commission-type="TWO_HAND_MAGIC_BLUNT_WEAPON"/>
 		<crystal type="A" count="1128"/>
 		<damage radius="46" angle="240"/>
-		<consume  soulshots="3" spiritshots="3"/>
+		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="pAtk" value="207.0"/>
 			<stat type="mAtk" value="157.0"/>
@@ -521,7 +521,7 @@
 		<attributes weight="1600" price="14098000" commission-type="BLUNT_WEAPON"/>
 		<crystal type="A" count="1128"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="3" spiritshots="3"/>
+		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="pAtk" value="213.0"/>
 			<stat type="mAtk" value="107.0"/>
@@ -532,7 +532,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3044" level="7"/>  <!-- Special Ability: Focus -->
+			<skill id="3050" level="1"/>  <!-- TODO Skill not found -->
 		</skills>
 	</weapon>
 

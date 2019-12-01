@@ -263,7 +263,7 @@
 	</item>
 
 	<item id="4037" name="Coin of Luck" type="NONE" icon="icon.etc_coins_gold_i00">
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes price="1" immediate-effect="true"/>
 	</item>
 

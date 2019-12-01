@@ -65,7 +65,7 @@
 
 	<item id="5009" name="Trophy of Alliance" type="NONE" icon="icon.etc_trophy_i01">
 	<!-- Mark that is needed to participate in a clan hall war.  -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes price="50" immediate-effect="true" quest-item="true"/>
 	</item>
 
@@ -80,7 +80,7 @@
 
 	<item id="5011" name="Star of Destiny" type="NONE" icon="icon.etc_badge_gold_i00">
 	<!-- Accessory that Maestro Reorin created after receiving a request from a woman of unknown identity. -->
-		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 

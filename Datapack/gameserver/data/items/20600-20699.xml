@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<armor id="20662" name="Agathion - Uthanka" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_uthanka_i00">
 	<!-- Bracelet that summons an Agathion - Uthanka. -->
-		<restriction olympiad-restricted="true" tradable="false" dropable="false"/>
+		<restriction olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -14,14 +14,14 @@
 
 	<armor id="20666" name="Valkyrie Hat" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_valkyrie_cap_i00">
 	<!-- A hat endowed with Valkyrie power. Occupies 2 Hair Accessory slots. -->
-		<restriction freightable="false" olympiad-restricted="true" dropable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" dropable="false" sellable="false"/>
 		<attributes weight="10" />
 		<crystal />
 	</armor>
 
 	<armor id="20678" name="Gatekeeper Hat" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_gatekeeper_of_hat_i00">
 	<!-- Hat worn by Gatekeepers. Uses 2 hair accessory slots.  -->
-		<restriction freightable="false" olympiad-restricted="true" dropable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" dropable="false" sellable="false"/>
 		<attributes weight="10" />
 		<crystal />
 	</armor>

@@ -2,157 +2,157 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="4315" name="Gandi Tribe's Relic" type="NONE" icon="icon.etc_royal_seal_of_lord_i00">
 	<!-- The sacred object of the Gandi Tribe that has been recovered from Bugbears. Take it to Gandi Chief Chianta in the Town of Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="4316" name="Swan's Flute" type="NONE" icon="icon.etc_dragon_flute_i00">
 	<!-- Flute that Troubadour Swan had obtained as a gift for Musician Nanarin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4317" name="Swan's Letter" type="NONE" icon="icon.etc_scroll_white_i00">
 	<!-- Love letter that Troubadour Swan wants to send to Musician Nanarin along with the flute. Take them to Musician Nanarin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4318" name="Event Clothes" type="NONE" icon="icon.etc_ladys_dress_i00">
 	<!-- Gift that Musician Nanarin is sending to Musician Barbado. Take it to Barbado. -->
-		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4319" name="Nanarin's Flute" type="NONE" icon="icon.etc_dragon_flute_i00">
 	<!-- Gift that Musician Nanarin is sending to Musician Barbado. Take it to Barbado. -->
-		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4320" name="Sabrin's Black Beer" type="NONE" icon="icon.etc_oil_pot_black_i00">
 	<!-- Gift that Musician Nanarin is sending to Musician Barbado. Take it to Barbado. -->
-		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4321" name="Stolen Black Beer" type="NONE" icon="icon.etc_oil_pot_black_i00">
 	<!-- Black beer that was stolen from Jonas. Take it to Trader Sabrin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4322" name="Stolen Event Clothes" type="NONE" icon="icon.etc_ladys_dress_i00">
 	<!-- Event clothes that were stolen from Trader Sonia. Take them to Guard Xaber. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4323" name="Clothes Chest Key" type="NONE" icon="icon.etc_old_key_i01">
 	<!-- The key given by Bard Swan. Use this key to open the clothes chest and retrieve the event clothes. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4324" name="Beer Chest Key" type="NONE" icon="icon.etc_old_key_i02">
 	<!-- The key given by Bard Swan. Use this key to open the beer chest and get the black beer out of it. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4325" name="Fairy Leaf" type="NONE" icon="icon.etc_leaf_green_i00">
 	<!-- Leaf given by Fairy Mimyu to put on the fairy's neck wound that was inflicted by a Hatchling. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4326" name="Ratman Scavenger's Skull" type="NONE" icon="icon.etc_pet_arms_i04">
 	<!-- Heads of Ratman Scavengers that you hunted after receiving a request from Katari. Collect 10 of them and take them to Katari. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4327" name="Turek War Hound's Tail" type="NONE" icon="icon.etc_mane_i00">
 	<!-- The tails of Turek war Hounds that Piotur asks you to catch. Collect 10 of them and take them to Piotur. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4328" name="Tyrant Kingpin's Heart" type="NONE" icon="icon.etc_heart_i00">
 	<!-- Tyrant Kingpin's Heart. Take it to Elder Casian. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4329" name="Trisalim Tarantula's Venom Sac" type="NONE" icon="icon.etc_poison_pouch_i00">
 	<!-- The venom sacs of Trisalim Tarantulas that Magister Joan asked you to hunt. Collect three and take them to Magister Joan. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4332" name="Tarlk Amulet" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Mark that can be obtained by catching a Tarlk Bugbear or a Tarlk Basilisk. Collect 30 and take them to a Clan Hall Herald. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4333" name="Contest Certificate" type="NONE" icon="icon.etc_paper_black_i00">
 	<!-- Certificate that one can present to participate in the hunt for Tarlk Basilisks, a preliminary contest for a Clan Hall Siege War. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4334" name="Ant Fluids" type="NONE" icon="icon.etc_reagent_red_i00">
 	<!-- Bodily fluids extracted from ants or Ant Captains. Collect 20 and take them to Elder Casian. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="4335" name="Noble Ant's Nerve Tissue" type="NONE" icon="icon.etc_bodypart_brain_i00">
 	<!-- The nerve tissue harvested from a Noble Ant's head. Take it to Elder Casian along with the Ant Fluids. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="4336" name="Casian's Enzyme" type="NONE" icon="icon.etc_spell_shot_silver_i00">
 	<!-- Enzyme created by Elder Casian. Find the Ant Larvae Sleeping within the Ant Nest Dungeon and administer the enzyme to them. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="4342" name="Water Crystal" type="NONE" icon="icon.etc_gem_blue_i00">
 	<!-- Lump of crystal that contains the energy of water. You should find the Stone Statue of Water and dedicate it to the statue. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="4343" name="Fire Crystal" type="NONE" icon="icon.etc_gem_red_i00">
 	<!-- Lump of crystal that contains the energy of fire. You should find the Stone Statue of Fire and dedicate it to the statue. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="4344" name="Wind Crystal" type="NONE" icon="icon.etc_gem_green_i00">
 	<!-- Lump of crystal that contains the energy of wind. You should find the Stone Statue of Wind and dedicate it to the statue. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="4345" name="Earth Crystal" type="NONE" icon="icon.etc_gem_yellow_i00">
 	<!-- Lump of crystal that contains the energy of earth. You should find the Stone Statue of Earth and dedicate it to the statue. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="4346" name="Dark Crystal" type="NONE" icon="icon.etc_gem_clear_i00">
 	<!-- Lump of crystal that contains the energy of darkness. You should find the Stone Statue of Darkness and dedicate it to the statue. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="4347" name="Crystal of Light" type="NONE" icon="icon.etc_gem_black_i00">
 	<!-- Lump of crystal that contains the energy of light. You should find the Stone Statue of Light and dedicate it to the statue. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
@@ -175,13 +175,13 @@
 	</item>
 
 	<item id="4351" name="Ancient Goddess Statue: Prototype" type="NONE" icon="icon.etc_statue_of_einhasad_gold_i00">
-	<!-- Statue created by Beron an ancient sculptor. - Prototype -->
+	<!-- Statue created by Berona, an ancient sculptor. - Prototype -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="5" price="2000" immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="4352" name="Ancient Goddess Statue: Original" type="NONE" icon="icon.etc_statue_of_einhasad_gold_i00">
-	<!-- Statue created by Beron a sculptor in ancient times. - Original -->
+	<!-- Statue created by Berona, a sculptor in ancient times. - Original -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="5" price="200" immediate-effect="true" quest-item="true"/>
 	</item>
@@ -434,8 +434,8 @@
 	</item>
 
 	<item id="4397" name="Book of Saint" type="NONE" icon="icon.etc_spellbook_gray_i00">
-	<!-- Holy Writ of Solin which looks like an ordinary book. Take it to Magister Hanellin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+	<!-- Holy Writ of Solina, which looks like an ordinary book. Take it to Magister Hanellin. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 

@@ -127,27 +127,27 @@
 	</item>
 
 	<item id="2130" name="Gemstone (D-grade)" type="MATERIAL" icon="icon.etc_crystal_ball_violet_i00">
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes price="1000" commission-type="GEMSTONE" immediate-effect="true"/>
 	</item>
 
 	<item id="2131" name="Gemstone (C-grade)" type="MATERIAL" icon="icon.etc_crystal_ball_green_i00">
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes price="3000" commission-type="GEMSTONE" immediate-effect="true"/>
 	</item>
 
 	<item id="2132" name="Gemstone (B-grade)" type="MATERIAL" icon="icon.etc_bead_green_i00">
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes price="10000" commission-type="GEMSTONE" immediate-effect="true"/>
 	</item>
 
 	<item id="2133" name="Gemstone (A-grade)" type="MATERIAL" icon="icon.etc_bead_red_i00">
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes price="30000" commission-type="GEMSTONE" immediate-effect="true"/>
 	</item>
 
 	<item id="2134" name="Gemstone (S-grade)" type="MATERIAL" icon="icon.etc_bead_silver_i00">
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes price="100000" commission-type="GEMSTONE"/>
 	</item>
 

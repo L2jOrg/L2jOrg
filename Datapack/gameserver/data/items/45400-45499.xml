@@ -20,7 +20,7 @@
 
 	<weapon id="45492" name="Fishing Rod" type="FISHING_ROD" body-part="TWO_HAND" icon="icon.weapon_fishing_rod_i03">
 	<!-- A Fishing Rod for one day.  Consumes 1 Fishing Shot. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1000" commission-type="OTHER_ITEM" duration="1440" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -37,7 +37,7 @@
 
 	<item id="45493" name="Fishing Rod Chest (1-day)" type="NONE" icon="icon.etc_box_of_adventure_1_i00">
 	<!-- Use it to obtain a 1-day Fishing Rod.  -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="100" price="20514" immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="45492" chance="100000"/>  <!-- Fishing Rod -->
@@ -46,7 +46,7 @@
 
 	<item id="45495" name="Normal Bait" type="LURE" icon="icon.etc_huge_lure">
 	<!-- Bait for fishing. Use to catch fish.  -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes price="7" immediate-effect="true" action="EQUIP"/>
 	</item>
 

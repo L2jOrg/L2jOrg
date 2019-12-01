@@ -2,13 +2,13 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="23767" name="Fortune Reading Ticket" type="NONE" icon="BranchSys3.icon1.g_luckygame_card_i00">
 	<!-- Ticket used in a Fortune Reading. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="23768" name="Luxury Fortune Reading Ticket" type="NONE" icon="BranchSys3.icon1.g_luckygame_card_i01">
 	<!-- Ticket used in a Luxury Fortune Reading. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 

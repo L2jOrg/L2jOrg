@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<weapon id="39719" name="Monster only_Crook Staff" type="SPEAR" body-part="TWO_HAND" icon="icon.wp_fishing4">
 	<!-- A monster-only weapon. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="205" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>

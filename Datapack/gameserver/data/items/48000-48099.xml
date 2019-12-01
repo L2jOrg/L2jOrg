@@ -2,44 +2,44 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<armor id="48016" name="White Knight Suit" type="HEAVY" body-part="ALL_DRESS" icon="icon.white_knight_suit">
 	<!-- N Shop Platinum exclusive item. A formal white knight suit. Previous armor is taken off and becomes unavailable when it's equipped. Hair accessories, weapon, and magic armor are not removed. -->
-		<restriction tradable="false" dropable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="48017" name="High Priest Outfit" type="HEAVY" body-part="ALL_DRESS" icon="icon.bm2018_healer_i01">
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="48018" name="Chevalier Garment" type="HEAVY" body-part="ALL_DRESS" icon="icon.chevalier_chest_change">
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="48019" name="Cat the Cat Garment" type="HEAVY" body-part="ALL_DRESS" icon="icon.cat_the_cat_change_0">
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="48020" name="Wild Wolf Outfit" type="HEAVY" body-part="ALL_DRESS" icon="icon.bm2018_barbarian_i01">
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="48021" name="Valkyrie Garment" type="HEAVY" body-part="ALL_DRESS" icon="icon.bm2018_valkyrie_i01">
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="48022" name="Teddy Bear Wear" type="HEAVY" body-part="ALL_DRESS" icon="icon.gomdori_chest_change">
 	<!-- Teddy Bear wear. Previous armor is taken off and becomes unavailable when it's equipped. Headpieces, weapon and magic armor are not removed.  -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
@@ -58,70 +58,70 @@
 
 	<armor id="48048" name="Agathion - Virgo" type="NONE" body-part="AGATHION" icon="icon.agathion_virgo_star_1">
 	<!-- An item which can be used to obtain the power of the Virgo Agathion.\\n\\nSummons Agathion from the main slot.\\nActivates Unique Ability.\\n\\n<Unique Ability>\\nM. Def. increased.\\nStarting at +6, bonus to MEN attacks.\\n -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="48049" name="Agathion - Capricorn" type="NONE" body-part="AGATHION" icon="icon.agathion_capr_star_1">
 	<!-- An item which can be used to obtain the power of the Capricorn Agathion.\\n\\nSummons Agathion from the main slot.\\nActivates Unique Ability.\\n\\n<Unique Ability>\\nM. Critical Rate increased.\\nStarting at +6, cooldown of M. Skills and songs/dances decreased.\\n -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="48050" name="Agathion - Libra" type="NONE" body-part="AGATHION" icon="icon.agathion_lib_star_1">
 	<!-- An item which can be used to obtain the power of the Libra Agathion.\\n\\nSummons Agathion from the main slot.\\nActivates Unique Ability.\\n\\n<Unique Ability>\\nCasting Spd. increased.\\nStarting at +6, MP Consumption for magic and songs/dance skills decreased.\\n -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="48052" name="Agathion - Taurus" type="NONE" body-part="AGATHION" icon="icon.agathion_tau_star_1">
 	<!-- An item which can be used to obtain the power of the Taurus Agathion.\\n\\nSummons Agathion from the main slot.\\nActivates Unique Ability.\\n\\n<Unique Ability>\\nP. Def. increased.\\nStarting at +6, bonus to stun attacks.\\n -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="48053" name="Agathion - Leo" type="NONE" body-part="AGATHION" icon="icon.agathion_leo_star_1">
 	<!-- An item which can be used to obtain the power of the Leo Agathion.\\n\\nSummons Agathion from the main slot.\\nActivates Unique Ability.\\n\\n<Unique Ability>\\nP. Atk. increased.\\nStarting at +6, bonus to Paralysis Attacks.\\n -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="48054" name="Agathion - Gemini" type="NONE" body-part="AGATHION" icon="icon.agathion_gem_star_1">
 	<!-- An item which can be used to obtain the power of the Gemini Agathion.\\n\\nSummons Agathion from the main slot.\\nActivates Unique Ability.\\n\\n<Unique Ability>\\nEffect of Sayha's Grace increased.\\nStarting at +6, Max HP/MP increased.\\n -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="48055" name="Agathion - Scorpio" type="NONE" body-part="AGATHION" icon="icon.agathion_sco_star_1">
 	<!-- An item which can be used to obtain the power of the Scorpio Agathion.\\n\\nSummons Agathion from the main slot.\\nActivates Unique Ability.\\n\\n<Unique Ability>\\nP. Critical Rate increased.\\nStarting at +6, cooldown of P. Skills and songs/dances decreased.\\n -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="48056" name="Agathion - Aquarius" type="NONE" body-part="AGATHION" icon="icon.agathion_aqu_star_1">
 	<!-- An item which can be used to obtain the power of the Aquarius Agathion.\\n\\nSummons Agathion from the main slot.\\nActivates Unique Ability.\\n\\n<Unique Ability>\\nM. Atk. increased.\\nStarting at +6, bonus to Hold/Sleep.\\n -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="48058" name="Agathion - Sagittarius" type="NONE" body-part="AGATHION" icon="icon.agathion_sag_star_1">
 	<!-- An item which can be used to obtain the power of the Sagittarius Agathion.\\n\\nSummons Agathion from the main slot.\\nActivates Unique Ability.\\n\\n<Unique Ability>\\nAtk. Spd. increased.\\nStarting at +6, MP Consumption for P. Skills and songs/dances decreased.\\n -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<item id="48066" name="Zodiac Agathion Box" type="NONE" icon="icon.star_agathion_cube">
 	<!-- Double-click to get a random Zodiac Agathion.\\n -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 

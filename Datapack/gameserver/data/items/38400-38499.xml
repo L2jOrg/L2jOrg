@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<weapon id="38421" name="Blue Mackerel: One-handed Blunt Weapon" type="BLUNT" body-part="RIGHT_HAND" icon="icon.wp_fishing1">
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="1720" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -19,7 +19,7 @@
 
 	<weapon id="38425" name="Monster Only: Amden Blunt Weapon" type="BLUNT" body-part="RIGHT_HAND" icon="BranchSys3.Icon.g_beam_dualblunt">
 	<!-- Monster weapon. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="250" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
@@ -36,7 +36,7 @@
 
 	<weapon id="38426" name="Monster Only: Amden Bow" type="DAGGER" body-part="RIGHT_HAND" icon="icon.pailaka_invader_bow_wp_i00">
 	<!-- Monster weapon. Bow -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="181" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
@@ -53,7 +53,7 @@
 
 	<weapon id="38427" name="Monster Only: Centaur Weapon" type="SWORD" body-part="RIGHT_HAND" icon="icon.Summon_orc_1hs_wp_i00">
 	<!-- Monster weapon. One-handed Sword -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="144" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
@@ -70,7 +70,7 @@
 
 	<weapon id="38428" name="Monster Only: Minotaur Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.Deathslayer_a_wp_i00">
 	<!-- Monster weapon. Dagger -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="106" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
@@ -87,7 +87,7 @@
 
 	<weapon id="38429" name="Monster Only: Tiger Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.Summon_orc_1hs_wp_i00">
 	<!-- Monster weapon. One-handed Sword. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="144" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
@@ -104,7 +104,7 @@
 
 	<weapon id="38430" name="Monster Only: Tiger Bow" type="BOW" body-part="RIGHT_HAND" icon="icon.pailaka_invader_bow_wp_i00">
 	<!-- Monster weapon. Bow -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="181" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
@@ -121,7 +121,7 @@
 
 	<weapon id="38431" name="Monster Only: Tiger Dagger" type="DUAL_DAGGER" body-part="TWO_HAND" icon="icon.Deathslayer_a_wp_i00">
 	<!-- Monster weapon. Dual Dagger  -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="106" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
@@ -138,7 +138,7 @@
 
 	<weapon id="38432" name="Monster Only: Tiger Jewel" type="SHIELD" body-part="LEFT_HAND" icon="icon.Summon_orc_1hs_wp_i00">
 	<!-- Monster weapon. One-handed Sword -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="144" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
@@ -155,7 +155,7 @@
 
 	<weapon id="38433" name="Monster Only: Tiger Blunt Weapon" type="HAMMER" body-part="TWO_HAND" icon="BranchSys3.Icon.g_beam_dualblunt">
 	<!-- Monster weapon. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="250" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
@@ -172,7 +172,7 @@
 
 	<weapon id="38434" name="Monster Only: Tiger Polearm" type="SPEAR" body-part="TWO_HAND" icon="icon.Summon_orc_pole_wp_i00">
 	<!-- Monster weapon. Spear.  -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="205" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
@@ -192,7 +192,7 @@
 
 	<weapon id="38435" name="Monster Only: Tiger Shield" type="SHIELD" body-part="LEFT_HAND" icon="icon.Summon_orc_shield_i00">
 	<!-- Monster weapon. Shield  -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="200" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
@@ -205,7 +205,7 @@
 
 	<armor id="38436" name="Monster Only: Tiger Sigil" type="SHIELD" body-part="LEFT_HAND" icon="icon.Summon_orc_shield_i00">
 	<!-- Monster weapon. Shield  -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="200" enchant-enabled="false" />
 		<crystal type="D"/>
 		<stats>
@@ -216,7 +216,7 @@
 
 	<weapon id="38437" name="Monster Only: Tiger Staff" type="SPEAR" body-part="TWO_HAND" icon="icon.Summon_orc_pole_wp_i00">
 	<!-- Monster weapon. Spear.  -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="205" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
@@ -236,7 +236,7 @@
 
 	<weapon id="38443" name="Monster Only: Centaur Axe" type="SWORD" body-part="RIGHT_HAND" icon="icon.Summon_orc_1hs_wp_i00">
 	<!-- Monster weapon. One-handed Sword  -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="144" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
@@ -253,7 +253,7 @@
 
 	<weapon id="38444" name="Monster Only: Centaur Shield" type="SHIELD" body-part="LEFT_HAND" icon="icon.Summon_orc_shield_i00">
 	<!-- Monster weapon. Shield  -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="200" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
@@ -266,7 +266,7 @@
 
 	<weapon id="38445" name="Monster Only: One-handed Blunt Weapon" type="HAMMER" body-part="RIGHT_HAND" icon="BranchSys3.Icon.g_beam_dualblunt">
 	<!-- Monster weapon. One-handed Blunt weapon -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="250" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
@@ -283,7 +283,7 @@
 
 	<weapon id="38446" name="Monster Only: Centaur Throwing Blade" type="DAGGER" body-part="RIGHT_HAND" icon="icon.Deathslayer_a_wp_i00">
 	<!-- Monster weapon. Dagger -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="106" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
@@ -300,7 +300,7 @@
 
 	<weapon id="38447" name="Monster Only: Miniotaur Polearm" type="SPEAR" body-part="TWO_HAND" icon="icon.Summon_orc_pole_wp_i00">
 	<!-- Monster weapon. Spear.  -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="205" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
@@ -320,7 +320,7 @@
 
 	<weapon id="38448" name="Monster Only: Minotaur Two-handed Axe" type="HAMMER" body-part="TWO_HAND" icon="BranchSys3.Icon.g_beam_dualdagger">
 	<!-- Monster weapon. Two-handed Blunt weapon. -->
-		<restriction dropable="false"/>
+		<restriction dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="205" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>

@@ -469,8 +469,8 @@
 	</item>
 
 	<armor id="29978" name="Bracelet of Duty Lv. 1" type="NONE" body-part="RIGHT_BRACELET" icon="BranchIcon.Icon.g_pledge_bracelet_01">
-	<!-- u,A special bracelet, which you can obtain for contribution to the Clan development. Opens up one Talisman slot. Can be enhanced up to Lv. 6 using Clan Coins at Grand Master’s in each town. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false"/>
+	<!-- A special bracelet, which you can obtain for contribution to the Clan development. Opens up one Talisman slot. Can be enhanced up to Lv. 6 using Clan Coins at Grand Master’s in each town. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" commission-type="BRACELET" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -479,8 +479,8 @@
 	</armor>
 
 	<armor id="29979" name="Bracelet of Duty Lv. 2" type="NONE" body-part="RIGHT_BRACELET" icon="BranchIcon.Icon.g_pledge_bracelet_02">
-	<!-- u,Opens up one Talisman slot. CON +1. Can be enhanced up to Lv. 6 using Clan Coins at Grand Master’s in each town. Cannot be exchanged, dropped, destroyed, or sold. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false"/>
+	<!-- Opens up one Talisman slot. CON +1. Can be enhanced up to Lv. 6 using Clan Coins at Grand Master’s in each town. Cannot be exchanged, dropped, destroyed, or sold. -->
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" commission-type="BRACELET" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -489,8 +489,8 @@
 	</armor>
 
 	<armor id="29980" name="Bracelet of Duty Lv. 3" type="NONE" body-part="RIGHT_BRACELET" icon="BranchIcon.Icon.g_pledge_bracelet_03">
-	<!-- u,Opens up two Talisman slots. CON +1, MEN +1. Can be enhanced up to Lv. 6 using Clan Coins at Grand Master’s in each town. Cannot be exchanged, dropped, destroyed, or sold. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false"/>
+	<!-- Opens up two Talisman slots. CON +1, MEN +1. Can be enhanced up to Lv. 6 using Clan Coins at Grand Master’s in each town. Cannot be exchanged, dropped, destroyed, or sold. -->
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" commission-type="BRACELET" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -499,8 +499,8 @@
 	</armor>
 
 	<armor id="29981" name="Bracelet of Duty Lv. 4" type="NONE" body-part="RIGHT_BRACELET" icon="BranchIcon.Icon.g_pledge_bracelet_04">
-	<!-- u,Opens up two Talisman slots. DEX +1, WIT +1, CON +1, MEN +1. Can be enhanced up to Lv. 6 using Clan Coins at Grand Master’s in each town. Cannot be exchanged, dropped, destroyed, or sold. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false"/>
+	<!-- Opens up two Talisman slots. DEX +1, WIT +1, CON +1, MEN +1. Can be enhanced up to Lv. 6 using Clan Coins at Grand Master’s in each town. Cannot be exchanged, dropped, destroyed, or sold. -->
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" commission-type="BRACELET" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -509,8 +509,8 @@
 	</armor>
 
 	<armor id="29982" name="Bracelet of Duty Lv. 5" type="NONE" body-part="RIGHT_BRACELET" icon="BranchIcon.Icon.g_pledge_bracelet_05">
-	<!-- u,Opens up three Talisman slots. STR +1, INT +1, DEX +1, WIT +1, CON +1, MEN +1. Can be enhanced up to Lv. 6 using Clan Coins at Grand Master’s in each town. Cannot be exchanged, dropped, destroyed, or sold. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false"/>
+	<!-- Opens up three Talisman slots. STR +1, INT +1, DEX +1, WIT +1, CON +1, MEN +1. Can be enhanced up to Lv. 6 using Clan Coins at Grand Master’s in each town. Cannot be exchanged, dropped, destroyed, or sold. -->
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" commission-type="BRACELET" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -520,25 +520,25 @@
 
 	<item id="29983" name="Silver Coin" type="MATERIAL" icon="BranchIcon.Icon.vip_silver_coin">
 	<!-- A special coin that can be obtained when hunting after reaching a certain VIP level. You can use them to buy certain items in the L2 Store. Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="29984" name="Gold Coin" type="MATERIAL" icon="BranchIcon.Icon.vip_gold_coin">
 	<!-- A very special coin that can be obtained when hunting after reaching a certain VIP level. You can use them to buy certain items in the L2 Store. Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="29985" name="Lindvior's Treasure Chest" type="NONE" icon="icon.bm_pirate_king_box">
-	<!-- u,Double-click to receive Lindvior’s Treasures. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+	<!-- Double-click to receive Lindvior’s Treasures. -->
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="29986" name="Lineage II Chest" type="NONE" icon="icon.ev_10th_present2">
-	<!-- u,A reward box given for collecting all the letters of the word “Lineage II”. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+	<!-- A reward box given for collecting all the letters of the word “Lineage II”. -->
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55319" level="1"/>  <!-- Lineage II Chest -->
@@ -546,8 +546,8 @@
 	</item>
 
 	<item id="29987" name="Chronicle Chest" type="NONE" icon="icon.ev_10th_present2">
-	<!-- u,A reward box given for collecting all the letters of the word “Chronicle”. There must be something interesting in there! Double-click to find out. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+	<!-- A reward box given for collecting all the letters of the word “Chronicle”. There must be something interesting in there! Double-click to find out. -->
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55321" level="1"/>  <!-- Chronicle Chest -->
@@ -555,8 +555,8 @@
 	</item>
 
 	<item id="29988" name="Memories Chest" type="NONE" icon="icon.ev_10th_present2">
-	<!-- u,A reward box given for collecting all the letters of the word “Memories”. There must be something interesting in there! Double-click to find out. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+	<!-- A reward box given for collecting all the letters of the word “Memories”. There must be something interesting in there! Double-click to find out. -->
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55320" level="1"/>  <!-- Memories Chest -->
@@ -565,7 +565,7 @@
 
 	<weapon id="29989" name="Valentine Two-handed Blunt Weapon" type="HAMMER" body-part="TWO_HAND" icon="icon.ev_hallowinday_candy_i00">
 	<!-- Modifies the appearance of a weapon. Valentine Two-handed Blunt Weapon form. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>

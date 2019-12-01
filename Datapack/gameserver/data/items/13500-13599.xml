@@ -2,21 +2,21 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<armor id="13501" name="Refined Romantic Chapeau" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_archer_hat2_i00">
 	<!-- Refined Romantic Chapeau. Uses 2 hair accessory slots. -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="13519" name="Gran Kain's Black Mask (Str+1 Int+1)" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_jjoro_masj_i00">
 	<!-- Mask worn only by elegant fighters for the Truth. When equipped increases STR/ INT by 1 and allows to use Blessed Teleport skill (Cooldown: 2 hours). Occupies 2 Hair Accessory slots. -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="13520" name="Event - Jindo Dog Hat" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_jindo_cap_i00">
 	<!-- Hat of a Jindo Dog. Uses 2 hair accessory slots. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -26,7 +26,7 @@
 
 	<armor id="13521" name="Event - Shaggy Dog Hat" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_sapsal_cap_i00">
 	<!-- Hat of a Shaggy Dog. Uses 2 hair accessory slots. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<stats>

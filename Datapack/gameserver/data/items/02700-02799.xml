@@ -2,601 +2,601 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="2700" name="Dieter's Key" type="NONE" icon="icon.etc_key_i00">
 	<!-- Key to the chest where Dieter Has hidden the Scriptures of Knowledge. Take this to Astrologer Creta in Floran Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2701" name="Creta's 2nd Letter" type="NONE" icon="icon.etc_letter_white_i00">
 	<!-- Creta's letter describing the theft of the Scriptures of Knowledge. Take this to Magister Dieter in the Town of Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2702" name="Dieter's Letter" type="NONE" icon="icon.etc_letter_blue_i00">
 	<!-- Letter from Magister Dieter to Trader Edroc of the weapons shop of Hunter's Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2703" name="Dieter's Diary" type="NONE" icon="icon.etc_spell_books_blue_i00">
 	<!-- Magister Dieter's Diary, given by him in hopes that it may be of aid in recovering the Scriptures of Knowledge. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2704" name="Raut's Letter Envelope" type="NONE" icon="icon.etc_plate_silver_i00">
 	<!-- Plain letter envelope with no contents. The envelope is addressed "To Warehouse Keeper Raut from Gludin". -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2705" name="Triff's Ring" type="NONE" icon="icon.accessary_aquastone_ring_i00">
 	<!-- Ring given by Drunkard Triff. Show this ring to those whom Triff Has entrusted with the Scriptures of Knowledge. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2706" name="Scripture Volume 1" type="NONE" icon="icon.etc_spell_books_blue_i00">
 	<!-- The 1st book of the Scriptures of Knowledge. Gather all 4 books. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2707" name="Scripture Volume 2" type="NONE" icon="icon.etc_spell_books_red_i00">
 	<!-- The 2nd book of the Scriptures of Knowledge. Gather all 4 books. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2708" name="Scripture Volume 3" type="NONE" icon="icon.weapon_apprentices_spellbook_i00">
 	<!-- The 3rd book of the Scriptures of Knowledge. Gather all 4 books. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2709" name="Scripture Volume 4" type="NONE" icon="icon.weapon_apprentices_spellbook_i01">
 	<!-- The 4th book of the Scriptures of Knowledge. Gather all 4 books. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2710" name="Valkon's Request" type="NONE" icon="icon.etc_scroll_gray_i00">
 	<!-- Request of Warehouse Keeper Valkon from Giran. The instructions are to bring back the Crystal of Purity. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2711" name="Poitan's Notes" type="NONE" icon="icon.weapon_apprentices_spellbook_i01">
 	<!-- Blacksmith Poitan's accounting books. Take this to Elder Casian of the Wastelands. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2712" name="Scriptures of Knowledge" type="NONE" icon="icon.etc_spell_books_red_i00">
 	<!-- Scripture edited by Elder Cronos. It is said to contain a vast knowledge of the past. It is part of a 4-scripture set. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2713" name="Strong Liquor" type="NONE" icon="icon.etc_potion_gold_i00">
 	<!-- As its name indicates, a strong liquor. Take this to Drunkard Triff at the harbor. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2714" name="Crystal of Purity" type="NONE" icon="icon.etc_gem_clear_i00">
 	<!-- Item that Warehouse Keeper Valkon in Town of Giran agreed to trade with you for scripture chapter 2. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2715" name="Casian's List" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- 10 Ghoul's Skins, 12 bottles of Medusa's Blood, 5 units of Fettered Soul Fluids, and 5 Reinforced Gargoyle's Nails. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2716" name="Ghoul's Skin" type="NONE" icon="icon.etc_leather_gray_i00">
 	<!-- "10 Ghoul's Skins (Execution Grounds), 12 samples of Medusa's Blood (Gorgon Flower Garden), 5 samples of Fettered Soul Fluids (Death Pass), and 5 Reinforced Gargoyle's Nails (Ivory Tower Crater)." -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2717" name="Medusa's Blood" type="NONE" icon="icon.etc_lesser_potion_scarlet_i00">
 	<!-- Medusa's Blood from the Gorgon Flower Garden. Gather 12 samples and take them to Elder Casian. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2718" name="Fettered Soul Fluids" type="NONE" icon="icon.etc_reagent_red_i00">
 	<!-- The ichor of a fettered soul from Death Pass. Gather 5 samples and take them to Elder Casian. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2719" name="Reinforced Gargoyle's Nail" type="NONE" icon="icon.etc_horn_i00">
 	<!-- The enchanted nails of a gargoyle from Ivory Tower Crater. Gather 5 of these and take them to Elder Casian. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2720" name="Mark of Cronos" type="NONE" icon="icon.etc_coins_silver_i00">
 	<!-- The mark of Cronos, the top sage of the continent. Take this to Magister Mirien in the Town of Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2721" name="Mark of Pilgrim" type="NONE" icon="icon.etc_jewel_silver_i00">
 	<!-- Mark given to those who have passed the Trial of the Pilgrim. Occupation change related item. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2722" name="Book of Sage" type="NONE" icon="icon.etc_spellbook_gray_i00">
 	<!-- Book received from Elder Casian. Take this book to Hermit Santiago in Orc Barracks. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2723" name="Mark of Trial" type="NONE" icon="icon.etc_totem_necklace_black_i00">
 	<!-- Mark given by Hermit Santiago in Orc Barracks. Show this to Seer Tanapi of Orc Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2724" name="Heart of Flame" type="NONE" icon="icon.etc_bead_red_i00">
 	<!-- Proof that you have an understanding of the Heart of Flame. In order to carry out the next stage of this trial, go see Gauri Twinklerock of Dwarven Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2725" name="Essence of Flame" type="NONE" icon="icon.etc_gem_red_i00">
 	<!-- Jewel obtained from the lava salamander. Take this to the Ancestor Martankus. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2726" name="Book of Gerald" type="NONE" icon="icon.weapon_apprentices_spellbook_i00">
 	<!-- Book given by Priest Gerald. The book looks very cheap. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2727" name="Grey Badge" type="NONE" icon="icon.etc_badge_black_i00">
 	<!-- Badge given by Wanderer Dorf. Take this to Priest Primos at Town of Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2728" name="Picture of Nahir" type="NONE" icon="icon.etc_plate_black_i00">
 	<!-- Picture of the monster, Nahir. Defeat Nahir, who lurks in the depths of the Elven Ruins on Talking Island. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2729" name="Hair of Nahir" type="NONE" icon="icon.etc_mane_i00">
 	<!-- The hair of the monster, Nahir. Take this to Priest Petron of Talking Island. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2730" name="Einhasad's Statue" type="NONE" icon="icon.etc_jewel_box_i00">
-	<!-- Einhasad's Statue given by Priest Petron. Take this to Andelli who lives near the Mother Tree Glade in the Elven Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+	<!-- Einhasad's Statue given by Priest Petron. Take this to Andellia, who lives near the Mother Tree Glade in the Elven Village. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2731" name="Book of Darkness" type="NONE" icon="icon.etc_spell_books_red_i00">
 	<!-- Book given by Uruha. The book contains unrecognizable letters written in blood. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2732" name="Debris of Willow" type="NONE" icon="icon.etc_bark_gold_i00">
 	<!-- Debris obtained from the black willow. Go and seek Uruha in the Neutral Zone while in possession of this. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2733" name="Tag of Rumor" type="NONE" icon="icon.etc_piece_of_paper_gray_i00">
 	<!-- This contains rumors regarding Wanderer Dorf and Priest Gerald. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2734" name="Mark of Trust" type="NONE" icon="icon.etc_jewel_green_i00">
 	<!-- Mark given to those who have passed the Testimony of Trust. Occupation change related item. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2735" name="Letter to Elf" type="NONE" icon="icon.etc_scroll_of_enchant_armor_i00">
 	<!-- Letter requesting the trust of the Elves. Deliver it to Hierarch Asterios of the Elven Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2736" name="Letter to Dark Elf" type="NONE" icon="icon.etc_scroll_of_enchant_weapon_i00">
 	<!-- Letter requesting the trust of the Dark Elves. Deliver this to Tetrarch Thifiell of the Dark Elf Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2737" name="Letter to Dwarf" type="NONE" icon="icon.etc_scroll_of_resurrection_i00">
 	<!-- Letter requesting the trust of the Dwarves. Deliver this to Lockirin at the Hall of Elders in the Dwarven Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2738" name="Letter to Orc" type="NONE" icon="icon.etc_scroll_of_return_i00">
 	<!-- Letter requesting the trust of the Orcs. Deliver it to the Pa'agrio Lord Kakai in the Orc Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2739" name="Letter to Seresin" type="NONE" icon="icon.etc_scroll_gray_i00">
 	<!-- Letter given by High Priest Hollint of Oren. Deliver this to Cardinal Seresin at the Town of Oren. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2740" name="Scroll of Dark Elf Trust" type="NONE" icon="icon.etc_scroll_of_enchant_weapon_i01">
 	<!-- Scroll of Hierarch Thifiell. Deliver it, along with the scroll of the Elf trust, to High Priest Hollint of Oren. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2741" name="Scroll of Elf Trust" type="NONE" icon="icon.etc_scroll_of_enchant_armor_i01">
 	<!-- Scroll Hierarch Asterios. Deliver it, along with the Scroll of Dark Elf Trust, to High Priest Hollint of Oren. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2742" name="Scroll of Dwarf Trust" type="NONE" icon="icon.etc_scroll_of_resurrection_i01">
 	<!-- Scroll given by Lockirin of the Iron Gate. Deliver this, along with the Scroll of Orc Trust, to Cardinal Seresin at the Town of Oren. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2743" name="Scroll of Orc Trust" type="NONE" icon="icon.etc_scroll_of_return_i01">
 	<!-- Scroll given by Kakai, Lord of Flame. Deliver this, along with the Scroll of Dwarf Trust, to Cardinal Seresin at the Town of Oren. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2744" name="Hollint's Recommendation" type="NONE" icon="icon.etc_letter_white_i00">
 	<!-- Deliver this to High Priest Biotin at the Temple of Einhasad on Talking Island. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2745" name="Order of Asterios" type="NONE" icon="icon.etc_letter_red_i00">
 	<!-- "Slay Luell of Zephyr Winds and Actea of Verdant Wilds and bring back proof of their deaths. Luelle of the Zephyr Winds can be found to the south of the Elven Forest when hunting Lirein, Lirein Turen. Actea of Verdant Wilds can be found to the south of the Elven Forest when hunting Dryad, Dryad Elder." -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2746" name="Breath of Winds" type="NONE" icon="icon.etc_potion_green_i00">
 	<!-- Obtained from the body of Luelle of the Zephyr Winds. Deliver it, along with the Seed of Verdure, to Hierarch Asterios at the Elven Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2747" name="Seed of Verdure" type="NONE" icon="icon.etc_broken_crystal_green_i00">
 	<!-- Obtained from the body of Actea of the Verdant Wilds. Deliver it, along with the Breath of Winds, to Hierarch Asterios at the Elven Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2748" name="Thifiell's Letter" type="NONE" icon="icon.etc_letter_blue_i00">
 	<!-- Give that to Clayton, Magister of the Dark Elf Guild in the Town of Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2749" name="Guardian Basilisk Blood" type="NONE" icon="icon.etc_reagent_red_i00">
 	<!-- Blood taken from a Guardian Basilisk in Death Pass. Collect 5 samples to produce Basilisk Plasma. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2750" name="Giant Aphid" type="NONE" icon="icon.etc_reagent_green_i00">
 	<!-- Acquired from various Ant Soldiers in the Ant Nest. Collect 5 to create Honey Dew. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2751" name="Stakatos Fluids" type="NONE" icon="icon.etc_reagent_blue_i00">
 	<!-- Fluid acquired from various Marsh Stakatos in Cruma Marshlands. Collect 5 to produce Stakato Ichor. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2752" name="Basilisk Plasma" type="NONE" icon="icon.etc_potion_red_i00">
 	<!-- Give that, along with Honey Dew and Stakato Ichor, to Clayton, Magister of the Dark Elf Guild in the Town of Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2753" name="Honey Dew" type="NONE" icon="icon.etc_potion_gold_i00">
 	<!-- Give that, along with Basilisk Plasma and Stakato Ichor, to Clayton, Magister of the Dark Elf Guild in the Town of Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2754" name="Stakato Ichor" type="NONE" icon="icon.etc_potion_blue_i00">
-	<!-- Give that, along with Honey Dew and Basilisk Plasm to Clayton, Magister of the Dark Elf Guild in the Town of Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+	<!-- Give that, along with Honey Dew and Basilisk Plasma, to Clayton, Magister of the Dark Elf Guild in the Town of Dion. -->
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2755" name="Order of Clayton" type="NONE" icon="icon.etc_letter_blue_i00">
 	<!-- Obtain Basilisk Plasma from a Guardian Basilisk in Death Pass, Stakato Ichor from a Marsh Stakato in Cruma Marshlands, Honey Dew from an Ant Guard in the Ant Nest and take them all to Clayton, Magister of the Dark Elf Guild in the Town of Dion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2756" name="Parasite of Lota" type="NONE" icon="icon.etc_totem_black_i00">
 	<!-- This may be obtained from the Windsus. Gather 10 of these and take them to Priest Manakia of the Orc Guild in Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2757" name="Letter to Manakia" type="NONE" icon="icon.etc_piece_of_paper_black_i00">
 	<!-- Letter received from Pa'agrio Lord Kakai. Deliver it to Priest Manakia of the Orc Guild in the Town of Giran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2758" name="Manakia's Letter" type="NONE" icon="icon.etc_piece_of_paper_gray_i00">
 	<!-- Letter received from Priest Manakia of the Orc Guild of the Town of Giran. Deliver it to Pa'agrio Lord Kakai. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2759" name="Letter to Nikola" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- Letter received from Lockirin of the Iron Gate. Deliver this to Maestro Nikola. You can find him near Cruma Tower. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2760" name="Order of Nikola" type="NONE" icon="icon.etc_scroll_white_i00">
 	<!-- Slay Porta in Cruma Tower, obtain the Heartstone of Porta and take it to Maestro Nikola. You can find him near Cruma Tower. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2761" name="Heartstone of Porta" type="NONE" icon="icon.etc_poison_pouch_i00">
 	<!-- Heartstone acquired from Porta. Bring it to Maestro Nikola. You can find him near Cruma Tower. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2762" name="Mark of Duelist" type="NONE" icon="icon.etc_jewel_red_i00">
 	<!-- Mark given to those who have passed the Trial of the Duelist. Item for occupational change. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2763" name="Order Gludio" type="NONE" icon="icon.etc_scroll_of_enchant_armor_i01">
 	<!-- Kill at least 10 Punchers in the Wastelands on Gludio Territory and 10 Noble Ant Captains in the Ant Nest. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2764" name="Order Dion" type="NONE" icon="icon.etc_scroll_of_enchant_weapon_i01">
 	<!-- Kill at least 10 Marsh Stakato Drones in Cruma Marshlands on Dion Territory and 10 Corpse Trackers on the Execution Grounds. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2765" name="Order Giran" type="NONE" icon="icon.etc_scroll_of_resurrection_i01">
 	<!-- Kill at least 10 Breka Orc Prefects in Breka's Stronghold on Dion Territory and 10 Fettered Souls in Death Pass. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2766" name="Order Oren" type="NONE" icon="icon.etc_scroll_of_return_i01">
 	<!-- Kill at least 10 Leto Lizardman Overlords on the Plains of the Lizardmen on Oren Territory and 10 Reinforced Monster Eyes in Ivory Tower Crater. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2767" name="Order Aden" type="NONE" icon="icon.etc_scroll_of_enchant_armor_i00">
 	<!-- "Kill at least 10 Tamlin Orcs and 10 Tamlin Orc Archers at Timak Outpost in Aden Territory." -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2768" name="Puncher's Shard" type="NONE" icon="icon.etc_stone_black_i00">
 	<!-- Shard of the broken Puncher. Collect 10 of these to take to Duelist Kaien of the Warrior Guild of Oren. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2769" name="Noble Ant's Feeler" type="NONE" icon="icon.etc_insect_leg_i00">
 	<!-- Noble Ant's Feelers. Collect 10 of these to take to Duelist Kaien of the Warrior Guild of Oren. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2770" name="Drone's Chitin" type="NONE" icon="icon.etc_fang_red_i00">
 	<!-- Drone's Chitin of the Marsh Stakato. Collect 10 of these to take to Duelist Kaien of the Warrior Guild of Oren. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2771" name="Corpse Tracker Fang" type="NONE" icon="icon.etc_fang_gray_i00">
 	<!-- Corpse Tracker Fang. Collect 10 of these to take to Duelist Kaien of the Warrior Guild of Oren. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2772" name="Overlord's Necklace" type="NONE" icon="icon.accessary_necklace_of_anguish_i00">
 	<!-- Breka Orc Prefect's Necklace. Collect 10 of these to take to Duelist Kaien of the Warrior Guild of Oren. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2773" name="Fettered Soul's Chain" type="NONE" icon="icon.etc_totem_necklace_red_i00">
 	<!-- The chains that surround a Fettered Soul's body. Collect 10 of these to take to Duelist Kaien of the Warrior Guild of Oren. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2774" name="Chief's Amulet" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Collect 10 Amulets of Leto Lizardman Overlord on the Plains of the Lizardmen and take them to Duelist Kaien of the Warrior Guild of Oren. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2775" name="Reinforced Monster Eye Meat" type="NONE" icon="icon.etc_meat_i00">
 	<!-- Reinforced Monster Eye Meat. Collect 10 of these to take to Duelist Kaien of the Warrior Guild of Oren. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2776" name="Tamlin Orc's Ring" type="NONE" icon="icon.accessary_cerberuss_ring_i00">
 	<!-- Tamlin Orc's Ring. Collect 10 of these to take to Duelist Kaien of the Warrior Guild of Oren. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2777" name="Tamlin Orc's Arrow" type="NONE" icon="icon.weapon_wooden_arrow_i01">
 	<!-- Tamlin Orc's Arrow. Collect 10 of these to take to Duelist Kaien of the Warrior Guild of Oren. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2778" name="Final Order" type="NONE" icon="icon.etc_scroll_white_i00">
 	<!-- Defeat the Excuro and Krator of the Cruma Tower, the Grandis of Giran, the Timak Orc Overlord of Oren, and the Lakin of Aden 3 times. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2779" name="Excuro's Skin" type="NONE" icon="icon.etc_leather_brown_i00">
 	<!-- Excuro's Skin. Collect 3 of these to take to Duelist Kaien of the Warrior Guild of Oren. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2780" name="Krator's Shard" type="NONE" icon="icon.etc_stone_gray_i00">
 	<!-- Krator's Shard. Collect 3 of these to take to Duelist Kaien of the Warrior Guild of Oren. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2781" name="Grandis' Skin" type="NONE" icon="icon.etc_leather_gray_i00">
 	<!-- Grandis' Skin. Collect 3 of these to take to Duelist Kaien of the Warrior Guild of Oren. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2782" name="Timak Orc's Belt" type="NONE" icon="icon.etc_piece_of_cloth_black_i00">
 	<!-- The Belt of a Timak Orc Prefect. Collect 3 of these to take to Duelist Kaien of the Warrior Guild of Oren. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2783" name="Lakin's Mace" type="NONE" icon="icon.weapon_spike_club_i00">
 	<!-- Lakin's Mace. Collect 3 of these to take to Duelist Kaien of the Warrior Guild of Oren. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2784" name="Luther's Letter" type="NONE" icon="icon.etc_scroll_gray_i00">
 	<!-- Letter given by Master Luther. Take this to Alex of the village of Floran. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2785" name="Alex's Warrant" type="NONE" icon="icon.etc_letter_white_i00">
 	<!-- Warrant written by Alex. Take this to Leirynn who can be found near the fishing spot of Floran Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2786" name="Leirynn's Order" type="NONE" icon="icon.etc_recipe_blue_i00">
 	<!-- List of orders given by Leirynn. "Slay 10 Delu Lizardmen Shamans on the outskirts of Floran Village and bring back their tokens." -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2787" name="Delu Totem" type="NONE" icon="icon.etc_totem_necklace_green_i00">
 	<!-- The totem of the Delu Lizardmen Shaman. Take this, along with the rest of totems, to Leirynn who can be found near the fishing spot of Floran Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2788" name="Leirynn's Order" type="NONE" icon="icon.etc_recipe_red_i00">
 	<!-- List of orders given by Leirynn. Slay Delu Chief Kalkis at the west of Floran Village and bring back proof. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2789" name="Chief Kalki's Fang" type="NONE" icon="icon.etc_fang_ivory_i00">
 	<!-- Proof that the Delu chief Kalkis Has been slain. Take this to Leirynn who can be found near the fishing spot of Floran Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2790" name="Leirynn's Report" type="NONE" icon="icon.etc_scroll_white_i00">
 	<!-- Report issued by Militiaman Leirynn. Take this to Captain Alex in Floran Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2791" name="Strange Map" type="NONE" icon="icon.etc_map_yellow_i00">
 	<!-- Strange map obtained from the Delu chief Kalkis. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2792" name="Lambert's Map" type="NONE" icon="icon.etc_map_yellow_i00">
 	<!-- Map where the name of Lambert, the former lord's guard, is written. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2793" name="Alex's Letter" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- Letter given by Alex. Take this and go to drunkard Borys at the Town of Gludio. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2794" name="Alex's Order" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- Alex's orders. The orders give instructions to find and recover Duke Ashton's missing gold. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2795" name="Wine Catalog" type="NONE" icon="icon.etc_spell_books_red_i00">
 	<!-- List of premium wine published by the Giran Traders' Guild. Show this to Grocer Tyra who can be found on the outskirts of the Spider Nest to the west from Dark Elven Altar of Rites. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2796" name="Tyra's Contract" type="NONE" icon="icon.etc_letter_blue_i00">
 	<!-- The contract that Trader Tyra Has drawn up. The contract states that Tyra will trade 10 pouches of Red Spore Dust for a Malrukian wine. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2797" name="Red Spore Dust" type="NONE" icon="icon.etc_powder_red_i00">
 	<!-- Red spore dust obtained by slaying the Giant Fungus. Collect 10 of these and take them to Grocer Tyra who can be found on the outskirts of the Spider Nest to the west from Dark Elven Altar of Rites. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2798" name="Malrukian Wine" type="NONE" icon="icon.etc_lesser_potion_purple_i00">
 	<!-- Premium wine crafted following the methods of the Maluk tribe. Take this to Drunkard Borys near the blacksmith' shop in the Town of Gludio. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="2799" name="Old Order" type="NONE" icon="icon.etc_piece_of_paper_black_i00">
 	<!-- Old order received from Drunkard Borys. Take this and go to Escort Jax at the south of the Wastelands. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 

@@ -8,7 +8,7 @@
 
 	<item id="1401" name="Spellbook: Acumen" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Acumen. Used by Clerics.\\nRequired level: 20 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="7461" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
@@ -56,7 +56,7 @@
 
 	<item id="1409" name="Spellbook: Slow" type="NONE" icon="icon.etc_spell_books_black_i00">
 	<!-- Spellbook needed to learn Slow. Used by Human Wizards and Dark Wizards.\\nRequired level: 35 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="43681" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
@@ -92,13 +92,13 @@
 
 	<item id="1415" name="Spellbook: Dryad Root" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Dryad Root. Used by Clerics, Oracles, and Shillien Oracles.\\nRequired level: 23 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="10603" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1416" name="Spellbook: Curse Chaos" type="NONE" icon="icon.etc_spell_books_black_i00">
 	<!-- Spellbook needed to learn Curse Chaos. Used by Human Wizards and Dark Wizards.\\nRequired level: 35 -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="43681" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
@@ -122,235 +122,235 @@
 
 	<item id="1420" name="Ingredient List" type="NONE" icon="icon.etc_piece_of_paper_white_i00">
 	<!-- List of cooking ingredients from Jonas. Mandragora essence. Honey. Dionian potato. Marsh moss. Floating eye meat. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1421" name="Sonia's Botany Book" type="NONE" icon="icon.etc_spell_books_blue_i00">
 	<!-- Picture that shows what a mandragora looks like. You need this to get mandragora roots. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1422" name="Red Mandragora Root" type="NONE" icon="icon.etc_pouch_yellow_i00">
 	<!-- Red mandragora root. Collect these to take them to Trader Sonia. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1423" name="White Mandragora Root" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Rare white mandragora root. Collect these to take them to Trader Sonia. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1424" name="Red Mandragora Sap" type="NONE" icon="icon.etc_potion_red_i00">
 	<!-- Red mandragora sap. One of the five ingredients needed for Jonas' cooking. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1425" name="White Mandragora Sap" type="NONE" icon="icon.etc_potion_clear_i00">
 	<!-- Transparent mandragora sap. One of the ingredients needed for Jonas' cooking. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1426" name="Jacob's Insect Book" type="NONE" icon="icon.etc_spell_books_red_i00">
 	<!-- Diagram that depicts the drawing of a bee. You must possess this in order to obtain nectar and royal jelly from the bloody bee or the Weird Wasp. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1427" name="Nectar" type="NONE" icon="icon.etc_reagent_gold_i00">
 	<!-- Honey water taken from a giant bee. Collect 20 of these to take them to Guard Jacob. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1428" name="Royal Jelly" type="NONE" icon="icon.etc_reagent_white_i00">
 	<!-- Rare ingredient that can be taken only from newborn working bees. Collect these and take them to Guard Jacob. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1429" name="Honey" type="NONE" icon="icon.etc_potion_yellow_i00">
 	<!-- Honey made from the nectar you collected from bees. One of the five ingredients needed for Jonas' cooking. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1430" name="Golden Honey" type="NONE" icon="icon.etc_potion_gold_i00">
 	<!-- Golden honey made from the nectar and the royal jelly you collected from bees. One of the five ingredients needed for Jonas' cooking. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1431" name="Pano's Contract" type="NONE" icon="icon.etc_letter_blue_i00">
 	<!-- Contract Grocer Pano gave you. It says, if you kill Hobgoblins and bring 30 pieces of proof, he will give you potatoes as a reward. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1432" name="Hobgoblin Amulet" type="NONE" icon="icon.etc_feather_black_i00">
 	<!-- Amulet made of a feather that Hobgoblins carry on themselves. Collect 30 of these and take them to Grocer Pano. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1433" name="Dionian Potato" type="NONE" icon="icon.etc_pouch_brown_i00">
 	<!-- The highest-quality potatoes grown in the rich soil of southern Dion. One of the five ingredients needed for Jonas' cooking. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1434" name="Glyvka's Botany Book" type="NONE" icon="icon.etc_spell_books_blue_i00">
 	<!-- Picture that explains how to collect moss. You need this to collect marsh moss from grey ants or crimson ants. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1435" name="Green Marsh Moss" type="NONE" icon="icon.etc_branch_green_i00">
 	<!-- Green marsh moss is sometimes used in cooking. Collect this and take it to Priestess Glyvka. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1436" name="Brown Marsh Moss" type="NONE" icon="icon.etc_branch_gold_i00">
 	<!-- Rare brown marsh moss. Its flavors are superior to the green ones. Collect this and take it to Priestess Glyvka. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1437" name="Green Moss Bundle" type="NONE" icon="icon.etc_bark_green_i00">
 	<!-- Bundle of well-cared-for moss, collected from a marshy place for cooking. One of the five ingredients needed for Jonas' cooking. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1438" name="Brown Moss Bundle" type="NONE" icon="icon.etc_bark_gold_i00">
 	<!-- Bundle of well-cared-for moss, collected from a marshy place for cooking. One of the five ingredients needed for Jonas' cooking. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1439" name="Rollant's Creature Book" type="NONE" icon="icon.etc_spell_books_red_i00">
 	<!-- Picture that shows what a monster eye looks like. You need this to collect the right monster eye searcher or the monster eye gazer. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1440" name="Body of Monster Eye" type="NONE" icon="icon.etc_leather_brown_i00">
 	<!-- Severed Deadman's Flesh body of monster eye. Take this to Magister Rollant. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1441" name="Monster Eye Meat" type="NONE" icon="icon.etc_pouch_yellow_i00">
 	<!-- The dead body of a monster eye, ready to cook. One of the five ingredients needed for Jonas' cooking. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1442" name="Jonas' 1st Steak Dish" type="NONE" icon="icon.etc_jewel_box_i00">
 	<!-- Plate that contains Jonas' monster eye steak. Take this to Magister Mirien. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1443" name="Jonas' 2nd Steak Dish" type="NONE" icon="icon.etc_jewel_box_i00">
 	<!-- Plate that contains Jonas' monster eye steak. Take this to Magister Mirien. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1444" name="Jonas' 3rd Steak Dish" type="NONE" icon="icon.etc_jewel_box_i00">
 	<!-- Plate that contains Jonas' monster eye steak. Take this to Magister Mirien. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1445" name="Jonas' 4th Steak Dish" type="NONE" icon="icon.etc_jewel_box_i00">
 	<!-- Plate that contains Jonas' monster eye steak. Take this to Magister Mirien. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1446" name="Jonas' 5th Steak Dish" type="NONE" icon="icon.etc_jewel_box_i00">
 	<!-- Plate that contains Jonas' monster eye steak. Take this to Magister Mirien. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1447" name="Mirien's Review" type="NONE" icon="icon.etc_letter_red_i00">
 	<!-- Letter from Magister Mirien about the taste of Jonas' dish. Take this to Jonas. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1452" name="Harpy's Feather" type="NONE" icon="icon.etc_feather_white_i00">
 	<!-- Feather taken from a harpy. Collect these and take them to Guard Belton. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1453" name="Medusa's Venom" type="NONE" icon="icon.etc_potion_green_i00">
 	<!-- Poison extracted from the snake hair of a medusa. Collect these and take them to Guard Belton. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1454" name="Wyrm's Tooth" type="NONE" icon="icon.etc_claw_i00">
 	<!-- Sharp fang of a Wyrm. Collect these and take them to Guard Belton. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1455" name="Jonas' Salad Recipe" type="NONE" icon="icon.item_canuse39">
 	<!-- Jonas' recipe for making marsh moss salad. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes price="9000" immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1456" name="Jonas' Sauce Recipe" type="NONE" icon="icon.item_canuse39">
 	<!-- Jonas' recipe for making mandragora sauce. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes price="11250" immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1457" name="Jonas' Steak Recipe" type="NONE" icon="icon.item_canuse39">
 	<!-- Jonas' recipe for making monster eye meat steak. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes price="13500" immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1458" name="Crystal (D-grade)" type="NONE" icon="icon.etc_crystal_blue_i00">
 	<!-- Crystal of D-grade . -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes price="650" commission-type="CRYSTAL" immediate-effect="true"/>
 	</item>
 
 	<item id="1459" name="Crystal (C-grade)" type="NONE" icon="icon.etc_crystal_green_i00">
 	<!-- Crystal of C-grade . -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes price="3000" commission-type="CRYSTAL" immediate-effect="true"/>
 	</item>
 
 	<item id="1460" name="Crystal (B-grade)" type="NONE" icon="icon.etc_crystal_red_i00">
 	<!-- Crystal of B-grade . -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes price="9000" commission-type="CRYSTAL" immediate-effect="true"/>
 	</item>
 
 	<item id="1461" name="Crystal (A-grade)" type="NONE" icon="icon.etc_crystal_silver_i00">
 	<!-- Crystal of A-grade. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes price="12500" commission-type="CRYSTAL" immediate-effect="true"/>
 	</item>
 
 	<item id="1462" name="Crystal (S-grade)" type="NONE" icon="icon.etc_crystal_gold_i00">
 	<!-- An S-grade crystal. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes price="15000"/>
 	</item>
 
@@ -438,163 +438,163 @@
 
 	<item id="1473" name="Kasha Wolf Fang" type="NONE" icon="icon.etc_claw_i00">
 	<!-- Fang that is obtained by killing a kasha wolf. Collect fifty and take these to Praetorian Rukain. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1474" name="Grave Robber's Head" type="NONE" icon="icon.etc_skull_black_i00">
 	<!-- The head of goblin robbers, who damaged the graves of Orc ancestors. Collect 50 to take to Seer Livina. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1475" name="Black Soulstone" type="NONE" icon="icon.etc_bead_gold_i00">
 	<!-- Black soulstone pulled out of the heart of a rakeclaw imp. Collect these to take to Atuba Chief Varkees. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1476" name="Red Soulstone" type="NONE" icon="icon.etc_crystal_ball_red_i00">
 	<!-- Red soulstone pulled out of the heart of a rakeclaw imp. Collect these to take to Atuba Chief Varkees. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1477" name="Maraku Werewolf Head" type="NONE" icon="icon.etc_skull_red_i00">
 	<!-- The head of a Maraku werewolf that has been cut off after they were defeated. Collect 40 of these and take them to Prefect Brukurse. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1478" name="Blackwing Bat Fang" type="NONE" icon="icon.etc_horn_i00">
 	<!-- Fang of a Blackwing Bat. Collect 70 of these and take them to Neruga Chief Tantus. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1479" name="Varangka's Parasite" type="NONE" icon="icon.etc_totem_black_i00">
 	<!-- Evil parasite that summons Varangka's trackers. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1480" name="Kasha's Parasitic Spirit" type="NONE" icon="icon.etc_totem_black_i00">
 	<!-- Parasite-type evil spirit that comes out of the grey bear polluted by kasha's evil spirit. This is the key calling forth the kasha totem spirit. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1481" name="Kasha's Crystal" type="NONE" icon="icon.etc_crystal_green_i00">
 	<!-- Crystal obtained by killing the grey bear totem polluted by kasha's evil spirit. Take this to Seer Tanapi. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1482" name="Black Wolf Pelt" type="NONE" icon="icon.etc_leather_gray_i00">
 	<!-- Pelt of a black wolf. Collect 40 to take to Maryse Redbonnet. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1483" name="Goblin Necklace" type="NONE" icon="icon.etc_totem_necklace_black_i00">
 	<!-- Necklace obtained by killing a low-level goblin. Collect these and take them to Golden Wheel's Spiron. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1484" name="Goblin Pendant" type="NONE" icon="icon.etc_totem_necklace_red_i00">
 	<!-- Necklace obtained by killing a high-level goblin. Collect these and take them to Golden Wheel's Spiron. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1485" name="Goblin Lord Pendant" type="NONE" icon="icon.etc_totem_necklace_green_i00">
 	<!-- Necklace obtained by killing the goblin lord. Collect these and take them to Golden Wheel's Spiron. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1486" name="Suspicious Memo" type="NONE" icon="icon.etc_piece_of_paper_gray_i00">
 	<!-- Suspicious memo obtained by killing a goblin brigand leader. Take this to Golden Wheel's Spiron. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1487" name="Suspicious Contract" type="NONE" icon="icon.etc_letter_white_i00">
 	<!-- Suspicious contract completed by collecting Suspicious Memos. This contract reveals that the Silver Scale Guild requested the brigands to attack the freight wagons. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1488" name="Chrysolite Ore" type="NONE" icon="icon.etc_plate_blue_i00">
 	<!-- Chrysolite Ore received from defeating Utuku Orcs. Collect these and take them to Filaur of the Grey Pillar. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1489" name="Torn Map Piece" type="NONE" icon="icon.etc_piece_of_paper_black_i00">
 	<!-- Part of the map that reveals the hidden vein of Chrysolite. Collect 4 of these pieces to complete the map. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1490" name="Hidden Ore Map" type="NONE" icon="icon.etc_recipe_blue_i00">
 	<!-- Map that reveals a hidden vein of Chrysolite. Take this to Filaur of the Grey Pillar. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1491" name="Bat Fang" type="NONE" icon="icon.etc_claw_i00">
 	<!-- Fang taken by killing a blade bat or a barb bat. Collect 100 and take them to Bronze Key's Keef -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1492" name="Floating Stone" type="NONE" icon="icon.etc_crystal_ball_blue_i00">
 	<!-- Stone that floats on water. Obtain it from a magical weaver. Collect 50 and take them to Black Anvil's Arin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1493" name="Tarantula Spider Silk" type="NONE" icon="icon.etc_skein_white_i00">
 	<!-- The spider silk that makes when making their nests. Collect these and take them to Trader Mion. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1494" name="Tarantula Spinnerette" type="NONE" icon="icon.etc_pouch_gray_i00">
 	<!-- Pocket shaped organ that makes spider silk. Take this to Defender Nathan. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1495" name="Giant Spider's Skin" type="NONE" icon="icon.etc_leather_gray_i00">
 	<!-- The husk of a giant spider that you peel off. Collect them and take them to Edmond. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1496" name="Mark of Flame" type="NONE" icon="icon.etc_scroll_of_enchant_weapon_i01">
 	<!-- This mark represents the qualification of Orc fighters. Take this and go to the Flame Guardian Vulkus. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1497" name="Necklace of Flame" type="NONE" icon="icon.item_normal142">
 	<!-- The necklace of flame given by Vulkus. Hand this to Kakai, the Lord of Flame, king of the Orcs. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="1498" name="Mining License" type="NONE" icon="icon.etc_letter_blue_i00">
 	<!-- License given to Dwarves to allow them to mine. Take this and go to Foreman Laferon. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="1499" name="Laferon's Recommendation" type="NONE" icon="icon.item_canuse15">
 	<!-- The recommendation of Foreman Laferon. Take this and go to First Elder Lockirin. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 

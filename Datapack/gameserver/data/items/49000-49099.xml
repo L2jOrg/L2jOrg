@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-	<armor id="49000" name="Agathion - Singer and Dancer" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
+	<armor id="49000" name="Agathion - Singer and Dancer " type="NONE" body-part="LEFT_BRACELET" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
 	<!-- Summons Singer & Dancer Agathion when equipped. 30-day. \\n<Active Skill>\\n1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes.\\n\\n2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes.\\n\\n3. Song of Wind: increases Speed by 20 for 5 minutes. Cooldown: 10 min.\\n\\n<Note>\\nDance of Fury, Dance of Concentration, and Song of Wind do not stack. Duration: 30 days. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -17,16 +17,16 @@
 
 	<item id="49001" name="Agathion - Singer and Dancer Pack (30-day)" type="NONE" icon="icon.etc_pi_gift_box_i04">
 	<!-- Double-click to obtain a Singer & Dancer Agathion (30-day).  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="49000" chance="100000"/>  <!-- Agathion - Singer and Dancer -->
+			<item id="49000" chance="100000"/>  <!-- Agathion - Singer and Dancer  -->
 		</extract>
 	</item>
 
-	<armor id="49002" name="Agathion - Singer and Dancer" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
+	<armor id="49002" name="Agathion - Singer and Dancer " type="NONE" body-part="LEFT_BRACELET" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
 	<!-- Summons Singer & Dancer Agathion when equipped. 90-day. \\n<Active Skill>\\n1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes.\\n\\n2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes.\\n\\n3. Song of Wind: increases Speed by 20 for 5 minutes. Cooldown: 10 min.\\n\\n<Note>\\nDance of Fury, Dance of Concentration, and Song of Wind do not stack. Duration: 90 days. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" duration="129600" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -41,34 +41,34 @@
 
 	<item id="49003" name="Agathion - Singer and Dancer Pack (90-day)" type="NONE" icon="icon.etc_pi_gift_box_i04">
 	<!-- Double-click to obtain a Singer & Dancer Agathion (90-day).  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="49002" chance="100000"/>  <!-- Agathion - Singer and Dancer -->
+			<item id="49002" chance="100000"/>  <!-- Agathion - Singer and Dancer  -->
 		</extract>
 	</item>
 
 	<item id="49004" name="Ol Mahum Memo" type="NONE" icon="icon.event_mahum_memo">
 	<!-- 10-year-old Memo from the Ol Mahum. Take 10 of these to the Turek Orc Elder for a Mahum Adena Bank. You can only get one, so the rest of the Memo is yours to do as you wish.   -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="49005" name="Turek Orc Memo" type="NONE" icon="icon.event_orc_memo">
 	<!-- 10-year-old Memo from the Turek Orcs. Take 10 of these to the Turek Orc Elder for an Orc Adena Bank. You can only get one, so the rest of the Memo is yours to do as you wish. Deleted after event. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="49006" name="Ol Mahum Adena Bank" type="COUPON" icon="icon.event_mahum_coinbox">
 	<!-- Shake and pour. Sometimes you get items, and sometimes you get money! Once a day only. 15-day.  -->
-		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="21600" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49007" name="Turek Orc Adena Bank" type="COUPON" icon="icon.event_orc_coinbox">
-	<!-- Shake and pour. Sometimes you get items, but rumor has it that the Gracian army's funds, which amounts to 100 million Aden are sealed in this. Once a day only. 30-day.  -->
-		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+	<!-- Shake and pour. Sometimes you get items, but rumor has it that the Gracian army's funds, which amounts to 100 million Adena, are sealed in this. Once a day only. 30-day.  -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="43200" action="SKILL_REDUCE"/>
 	</item>
 
@@ -98,13 +98,13 @@
 
 	<item id="49012" name="HP Potion" type="POTION" icon="icon.etc_reagent_white_i00">
 	<!-- Magical potion that slowly restores HP. Lasts 15 sec. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49013" name="Major HP Potion" type="POTION" icon="icon.etc_reagent_white_i00">
 	<!-- Magical potion that slowly restores HP. Lasts 15 sec. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
@@ -151,13 +151,13 @@
 	</item>
 
 	<item id="49021" name="Facelifting Potion Pack" type="NONE" icon="icon.event_high_oriental_park_i00">
-	<!-- Wrapped Pack containing either Facelifting Potion  B, or C. -->
+	<!-- Wrapped Pack containing either Facelifting Potion A, B, or C. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="49022" name="Dye Potion Pack" type="NONE" icon="icon.event_high_oriental_park_i00">
-	<!-- Wrapped Pack containing either Dye Potion  B, C, or D. -->
+	<!-- Wrapped Pack containing either Dye Potion A, B, C, or D. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true" action="CAPSULE"/>
 	</item>
@@ -182,7 +182,7 @@
 
 	<item id="49026" name="Scroll: PK (No-grade)" type="SCROLL" icon="icon.etc_ev_draco_pk_count_down">
 	<!-- Double-click to lower PK value by 1. It can only be used when the PK value is greater than or above 1, and reputation is 0. Intended for Lv. 1-19. Cannot be sold in the grocery store. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<condition add-name="true" msg-id="113">
 			<player level-min="21" level-max="85" chaotic="false"/>
 		</condition>
@@ -194,7 +194,7 @@
 
 	<item id="49027" name="Scroll: PK (D-grade)" type="SCROLL" icon="icon.etc_ev_draco_pk_count_down">
 	<!-- Double-click to lower PK value by 1. It can only be used when the PK value is greater than or above 1, and reputation is 0. Intended for Lv. 20-39. Cannot be sold in the grocery store. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<condition add-name="true" msg-id="113">
 			<player level-min="20" level-max="39" chaotic="false"/>
 		</condition>
@@ -206,7 +206,7 @@
 
 	<item id="49028" name="Scroll: PK (C-grade)" type="SCROLL" icon="icon.etc_ev_draco_pk_count_down">
 	<!-- Double-click to lower PK value by 1. It can only be used when the PK value is greater than or above 1, and reputation is 0. Intended for Lv. 40-51. Cannot be sold in the grocery store. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<condition add-name="true" msg-id="113">
 			<player level-min="40" level-max="51" chaotic="false"/>
 		</condition>
@@ -218,7 +218,7 @@
 
 	<item id="49029" name="Scroll: PK (B-grade)" type="SCROLL" icon="icon.etc_ev_draco_pk_count_down">
 	<!-- Double-click to lower PK value by 1. It can only be used when the PK value is greater than or above 1, and reputation is 0. Intended for Lv. 52-60. Cannot be sold in the grocery store. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<condition add-name="true" msg-id="113">
 			<player level-min="52" level-max="60" chaotic="false"/>
 		</condition>
@@ -230,7 +230,7 @@
 
 	<item id="49030" name="Scroll: PK (A-grade)" type="SCROLL" icon="icon.etc_ev_draco_pk_count_down">
 	<!-- Double-click to lower PK value by 1. It can only be used when the PK value is greater than or above 1, and reputation is 0. Intended for Lv. 61 and higher. Cannot be sold in the grocery store. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<condition add-name="true" msg-id="113">
 			<player level-min="61" level-max="75" chaotic="false"/>
 		</condition>
@@ -242,7 +242,7 @@
 
 	<armor id="49031" name="Chronicle Ring" type="NONE" body-part="FINGER" icon="icon.event_classic_ring">
 	<!-- HP Recovery Bonus + 5%, P./M. Accuracy + 1, Weight Limit + 5000. The bonuses from this item do not stack.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" commission-type="RING" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -255,7 +255,7 @@
 
 	<armor id="49032" name="Eva's Mark" type="NONE" body-part="HAIR" icon="icon.bm_soaring_bird">
 	<!-- Celebrate the launch of the classic server! Equip and use the skill created to teleport to the nearest town. Cooldown is 60 min. 30-day.  -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -265,25 +265,25 @@
 
 	<item id="49033" name="Classic Gift Box" type="NONE" icon="icon.etc_pi_box_love_pack">
 	<!-- Celebrate the launch of the classic server! Double-click to obtain an Eva's Mark (30-day).  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49034" name="Ol Mahum Adena Bank" type="COUPON" icon="icon.event_mahum_coinbox">
 	<!-- Shake and pour. Sometimes you get items, and sometimes you get money! One use only.  -->
-		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49035" name="Turek Orc Adena Bank" type="COUPON" icon="icon.event_orc_coinbox">
-	<!-- Shake and pour. Sometimes you get items, but rumor has it that the Gracian army's funds, which amounts to 100 million Aden are sealed in this. One-time use.  -->
-		<restriction freightable="false" tradable="false" dropable="false" depositable="false"/>
+	<!-- Shake and pour. Sometimes you get items, but rumor has it that the Gracian army's funds, which amounts to 100 million Adena, are sealed in this. One-time use.  -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49036" name="Adventurer's Wind Walk Potion" type="POTION" icon="icon.etc_potion_green_i00">
 	<!-- Magical potion that increases movement Speed.  -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
@@ -294,18 +294,18 @@
 	</item>
 
 	<item id="49037" name="Classic Inventory 1" type="NONE" icon="None">
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="49038" name="Classic Inventory 2" type="NONE" icon="None">
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<armor id="49039" name="Necklace (Novice)" type="NONE" body-part="NECK" icon="icon.accessary_necklace_of_knowledge_i00">
 	<!-- Novice Necklace. -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -315,7 +315,7 @@
 
 	<armor id="49040" name="Earring (Novice)" type="NONE" body-part="EAR" icon="icon.accessary_mage_earing_i00">
 	<!-- Novice Earring. -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -325,7 +325,7 @@
 
 	<armor id="49041" name="Ring (Novice)" type="NONE" body-part="FINGER" icon="icon.accessary_ring_of_knowledge_i00">
 	<!-- Novice Ring. -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -335,7 +335,7 @@
 
 	<armor id="49042" name="Shield (Novice)" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_small_shield_i00">
 	<!-- Novice Shield. -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes weight="1410" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -347,7 +347,7 @@
 
 	<weapon id="49043" name="Sword of Solidarity (Novice)" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_long_sword_i00">
 	<!-- A mithril sword forged long ago to commemorate the alliance between Elves and Humans. Novice only. -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes weight="1300" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -364,7 +364,7 @@
 
 	<weapon id="49044" name="Wand of Adept (Novice)" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_apprentices_wand_i00" magic="true">
 	<!-- The wand presented to those who have finished their studies at the school of magic. Novice only. -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes weight="1300" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -382,7 +382,7 @@
 
 	<weapon id="49045" name="Red Sunset Staff (Novice)" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_cedar_staff_i00" magic="true">
 	<!-- A staff used by warriors belonging to the Red Sunset clan.  Novice only. -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes weight="1700" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -400,7 +400,7 @@
 
 	<weapon id="49046" name="Red Sunset Sword (Novice)" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_brandish_i00">
 	<!-- A sword used by warriors belonging to the Red Sunset clan. Novice only. -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes weight="1300" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -452,7 +452,7 @@
 
 	<weapon id="49049" name="Eldritch Dagger (Novice)" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_knife_i00">
 	<!-- A steel dagger engraved with the runes of Shilen and Gran Kain. Novice only. -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes weight="1130" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -470,7 +470,7 @@
 
 	<weapon id="49050" name="Blood Saber (Novice)" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_broad_sword_i00">
 	<!-- An Oriharukon sword crafted in the Abella style of the east. Novice only. -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes weight="1450" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -505,7 +505,7 @@
 
 	<weapon id="49052" name="Butcher's Sword (Novice)" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_orcish_sword_i00">
 	<!-- A sword granted to young Orc Fighters who distinguished themselves at war. Novice only. -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes weight="1450" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -522,7 +522,7 @@
 
 	<weapon id="49053" name="Silversmith Hammer (Novice)" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_iron_hammer_i00">
 	<!-- A hammer silversmiths of the ancient Elmoreden used. Novice only. -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes weight="1860" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -540,55 +540,55 @@
 
 	<item id="49054" name="Forgotten Soulshot Shard" type="NONE" icon="icon.general_energy_condense_i00">
 	<!-- Soulshot shard obtained from the Forgotten Temple. Take it to Magister Nell of Gludin Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes quest-item="true"/>
 	</item>
 
 	<item id="49055" name="Boom Boom Shot" type="NONE" icon="icon.block_boom">
 	<!-- A magical bomb that triples the amount of Soulshots/Spiritshots/Blessed Spiritshots when put together in Spirit Boom's Shotgun. You can get one each day from Spirit Boom, and it resets at 6:30 am.  Temporary event item. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="49056" name="Lucky Soul Pack (No-grade)" type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Pack randomly containing 100 to 10,000 Mysterious Soulshots (No-grade).  Temporary event item. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="10" immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="49057" name="Lucky Soul Pack (D-grade)" type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- Pack randomly containing 100 to 10,000 Mysterious Soulshots (D-grade).  Temporary event item. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="10" immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="49058" name="Lucky Soul Pack (C-grade)" type="NONE" icon="icon.etc_treasure_box_i07">
 	<!-- Pack randomly containing 50 to 5,000 Mysterious Soulshots (C-grade).  Temporary event item. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="10" immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="49059" name="Lucky Spirit Pack (No-grade)" type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Pack randomly containing 50 to 1,000 Mysterious Spiritshots (No-grade).  Temporary event item. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="10" immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="49060" name="Lucky Spirit Pack (D-grade)" type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- Pack randomly containing 80 to 3,000 Mysterious Spiritshots (D-grade).  Temporary event item. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="10" immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="49061" name="Lucky Spirit Pack (C-grade)" type="NONE" icon="icon.etc_treasure_box_i07">
 	<!-- Pack randomly containing 30 to 1,000 Mysterious Spiritshots (C-grade).  Temporary event item. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="10" immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="49062" name="Mysterious Spiritshot (No-grade)" type="NONE" icon="icon.etc_spell_shot_white_i00">
 	<!-- Soulshot containing the light of Spirits. Instantly inflicts a powerful attack on the enemy. Use on no-grade weapons. Exchange for a new Spiritshot through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="SpiritShot">
 			<skill id="39029" level="1"/>  <!-- Mysterious Spiritshot (No-grade) -->
@@ -597,7 +597,7 @@
 
 	<item id="49063" name="Mysterious Spiritshot (D-grade)" type="NONE" icon="icon.etc_spell_shot_blue_i00">
 	<!-- Soulshot containing the light of Spirits. Instantly inflicts a powerful attack on the enemy. Use on D-grade weapons. Exchange for a new Spiritshot through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="SpiritShot">
 			<skill id="39030" level="1"/>  <!-- Mysterious Spiritshot (D-grade) -->
@@ -606,7 +606,7 @@
 
 	<item id="49064" name="Mysterious Spiritshot (C-grade)" type="NONE" icon="icon.etc_spell_shot_green_i00">
 	<!-- Soulshot containing the light of Spirits. Instantly inflicts a powerful attack on the enemy. Use on C-grade weapons. Exchange for a new Spiritshot through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="SpiritShot">
 			<skill id="39031" level="1"/>  <!-- Mysterious Spiritshot (C-grade) -->
@@ -615,91 +615,91 @@
 
 	<item id="49065" name="Blessed Lucky Spirit Pack (No-grade)" type="NONE" icon="icon.etc_treasure_box_i00">
 	<!-- Pack randomly containing 20 to 1,000 Mysterious Blessed Spiritshots (No-grade).  Temporary event item. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="10" immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="49066" name="Blessed Lucky Spirit Pack (D-grade)" type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- Pack randomly containing 20 to 1,000 Mysterious Blessed Spiritshots (D-grade).  Temporary event item. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="10" immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="49067" name="Blessed Lucky Spirit Pack (C-grade)" type="NONE" icon="icon.etc_treasure_box_i07">
 	<!-- Pack randomly containing 10 to 1,000 Mysterious Blessed Spiritshots (C-grade).  Temporary event item. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="10" immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="49068" name="Quick Stone" type="NONE" icon="icon.stone_8_i00">
 	<!-- For 20 min., XP and SP + 10%, and Speed + 20. Cooldown is 10 min. Does not disappear upon death.  Temporary event item. \\n<Note> When the Quick Step buff is applied, the effects of Wind Walk or potions that increase speed will not stack. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49069" name="Spirit Boom's Soulshot Pack (No-grade)" type="NONE" icon="icon.etc_pi_gift_box_i04">
 	<!-- Soulshot Pack augmented with a Boom Boom Shot. Contains 600 Mysterious Soulshots and a Lucky Soul Pack (No-grade).  Temporary event item. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49070" name="Spirit Boom's Soulshot Pack (D-grade)" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Soulshot Pack augmented with a Boom Boom Shot. Contains 1,350 Mysterious Soulshots and a Lucky Soul Pack (D-grade).  Temporary event item. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49071" name="Spirit Boom's Soulshot Pack (C-grade)" type="NONE" icon="icon.etc_pi_gift_box_i01">
 	<!-- Soulshot Pack augmented with a Boom Boom Shot. Contains 900 Mysterious Soulshots and a Lucky Soul Pack (C-grade).  Temporary event item. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49072" name="Spirit Boom's Spiritshot Pack (No-grade)" type="NONE" icon="icon.etc_pi_gift_box_i04">
 	<!-- Spiritshot Pack augmented with a Boom Boom Shot. Contains 270 Spiritshots and a Lucky Spirit Pack (No-grade).  Temporary event item. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49073" name="Spirit Boom's Spiritshot Pack (D-grade)" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Spiritshot Pack augmented with a Boom Boom Shot. Contains 750 Spiritshots and a Lucky Spirit Pack (D-grade).  Temporary event item. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49074" name="Spirit Boom's Spiritshot Pack (C-grade)" type="NONE" icon="icon.etc_pi_gift_box_i01">
 	<!-- Spiritshot Pack augmented with a Boom Boom Shot. Contains 390 Spiritshots and a Lucky Spirit Pack (C-grade).  Temporary event item. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49075" name="Spirit Boom's Blessed Spiritshot Pack (No-grade)" type="NONE" icon="icon.etc_pi_gift_box_i04">
 	<!-- Blessed Spiritshot Pack augmented with a Boom Boom Shot. Contains 120 Blessed Spiritshots and a Lucky Spirit Pack (No-grade).  Temporary event item. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49076" name="Spirit Boom's Blessed Spiritshot Pack (D-grade)" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Blessed Spiritshot Pack augmented with a Boom Boom Shot. Contains 300 Blessed Spiritshots and a Lucky Spirit Pack (D-grade).  Temporary event item. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49077" name="Spirit Boom's Blessed Spiritshot Pack (C-grade)" type="NONE" icon="icon.etc_pi_gift_box_i01">
 	<!-- Blessed Spiritshot Pack augmented with a Boom Boom Shot. Contains 150 Blessed Spiritshots and a Lucky Spirit Pack (C-grade).  Temporary event item. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49078" name="Chapeau 100-day Pack" type="NONE" icon="icon.etc_pi_gift_box_i02">
 	<!-- Pack containing a Refined Romantic Chapeau: Gold (100-day).  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49079" name="Chapeau 33-day Pack" type="NONE" icon="icon.etc_pi_gift_box_i03">
 	<!-- Pack containing a Refined Romantic Chapeau: Yellow (33-day).  -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
@@ -759,7 +759,7 @@
 
 	<item id="49086" name="Rice Cake of Fighting Spirit" type="NONE" icon="icon.bm_rice_cake_i00">
 	<!-- Increases XP and SP gain by 20% for 20 minutes. The effect remains after character's death. Cooldown is 10 minutes. \\n\\n<Note> The effect changes to the effect of Rice Cake of Flaming Fighting Spirit, if it is used when Rice Cake of Fighting Spirit is in effect. (inc. the one for XP). -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
@@ -780,7 +780,7 @@
 
 	<item id="49089" name="Scroll of Escape: Entrance to Cruma Tower" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- Magic scroll used to teleport the character to the Entrance to Cruma Tower.  -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
@@ -792,7 +792,7 @@
 
 	<item id="49090" name="Scroll of Escape: Entrance to Dragon Valley" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- Magic scroll used to teleport the character to the Entrance to Dragon Valley. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
@@ -804,7 +804,7 @@
 
 	<item id="49091" name="Scroll of Escape: Dragon Valley Bridge" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- Magic scroll used to teleport the character to Dragon Valley Bridge. -->
-		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
@@ -816,7 +816,7 @@
 
 	<item id="49092" name="Scroll of Escape: Talking Island Village" type="SCROLL" icon="icon.etc_capture_stone_i00">
 	<!-- Magic stone, used to teleport the character to Talking Island Village. Cooldown: 60 minutes.  -->
-		<restriction olympiad-restricted="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
@@ -828,7 +828,7 @@
 
 	<item id="49093" name="Scroll of Escape: Elven Village" type="SCROLL" icon="icon.etc_capture_stone_i00">
 	<!-- Magic stone, used to teleport the character to Elven Village. Cooldown: 60 minutes.  -->
-		<restriction olympiad-restricted="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
@@ -840,7 +840,7 @@
 
 	<item id="49094" name="Scroll of Escape: Dark Elf Village" type="SCROLL" icon="icon.etc_capture_stone_i00">
 	<!-- Magic stone, used to teleport the character to Dark Elf Village. Cooldown: 60 minutes.  -->
-		<restriction olympiad-restricted="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
@@ -852,7 +852,7 @@
 
 	<item id="49095" name="Scroll of Escape: Orc Village" type="SCROLL" icon="icon.etc_capture_stone_i00">
 	<!-- Magic stone, used to teleport the character to Orc Village. Cooldown: 60 minutes.  -->
-		<restriction olympiad-restricted="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
@@ -864,7 +864,7 @@
 
 	<item id="49096" name="Scroll of Escape: Dwarven Village" type="SCROLL" icon="icon.etc_capture_stone_i00">
 	<!-- Magic stone, used to teleport the character to Dwarven Village. Cooldown: 60 minutes.  -->
-		<restriction olympiad-restricted="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
@@ -876,7 +876,7 @@
 
 	<item id="49097" name="Scroll of Escape: Gludin" type="SCROLL" icon="icon.etc_capture_stone_i00">
 	<!-- Magic stone, used to teleport the character to Gludin Village. Cooldown: 60 minutes.  -->
-		<restriction olympiad-restricted="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
@@ -888,7 +888,7 @@
 
 	<item id="49098" name="Scroll of Escape: Gludio" type="SCROLL" icon="icon.etc_capture_stone_i00">
 	<!-- Magic stone, used to teleport the character to Town of Gludio. Cooldown: 60 minutes.  -->
-		<restriction olympiad-restricted="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
@@ -900,7 +900,7 @@
 
 	<item id="49099" name="Scroll of Escape: Dion" type="SCROLL" icon="icon.etc_capture_stone_i00">
 	<!-- Magic stone, used to teleport the character to Town of Dion. Cooldown: 60 minutes.  -->
-		<restriction olympiad-restricted="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction olympiad-restricted="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>

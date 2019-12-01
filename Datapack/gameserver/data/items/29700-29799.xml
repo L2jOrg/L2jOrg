@@ -2,13 +2,13 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="29700" name="A Little Blessed Scroll of Resurrection" type="SCROLL" icon="icon.etc_scroll_of_resurrection_i01">
 	<!-- Magical scroll that restores a little XP and resurrects you. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29701" name="Rare Accessory Lv. 1 Box" type="NONE" icon="icon.ev_10th_present2">
 	<!-- Double-click to receive one of the following items: Queen Ant's Ring Lv. 1 (30-day), Orfen's Earring Lv. 1 (30-day), Ring of Core Lv. 1 (30-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55043" level="1"/>  <!-- Rare Accessory Pack -->
@@ -17,19 +17,19 @@
 
 	<item id="29702" name="Chant of Vampire Amulet Box" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain 1 Amulet-Chant of Vampire. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29703" name="Body of Avatar Spellbook Box" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain 1 Amulet-Body of Avatar -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<armor id="29704" name="Fire Dragon Pendant Lv. 1" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pve">
-	<!-- Pendant imbued with the power of the Fire Dragon. Can enchant up to +10 with Pendant Varnish/Shining Pendant Varnish, and can combine 2 pendants of the same level through the Dimensional Merchant. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. -->
-		<restriction freightable="false"/>
+	<!-- Pendant imbued with the power of the Fire Dragon. Can enchant up to +10 with Pendant Polish/Shining Pendant Varnish, and can combine 2 pendants of the same level through Alchemist Veruti. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. -->
+		<restriction freightable="false" sellable="false"/>
 		<attributes />
 		<crystal />
 		<stats>
@@ -50,8 +50,8 @@
 	</armor>
 
 	<armor id="29705" name="Fire Dragon Pendant Lv. 2" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pve">
-	<!-- Pendant imbued with the power of the Fire Dragon. Can enchant up to +10 with Pendant Varnish/Shining Pendant Varnish, and can combine 2 pendants of the same level through the Dimensional Merchant. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. -->
-		<restriction freightable="false"/>
+	<!-- Pendant imbued with the power of the Fire Dragon. Can enchant up to +10 with Pendant Polish/Shining Pendant Varnish, and can combine 2 pendants of the same level through Alchemist Veruti. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. -->
+		<restriction freightable="false" sellable="false"/>
 		<attributes />
 		<crystal />
 		<stats>
@@ -72,8 +72,8 @@
 	</armor>
 
 	<armor id="29706" name="Fire Dragon Pendant Lv. 3" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pve">
-	<!-- Pendant imbued with the power of the Fire Dragon. Can enchant up to +10 with Pendant Varnish/Shining Pendant Varnish, and can combine 2 pendants of the same level through the Dimensional Merchant. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. Cannot be exchanged or dropped starting from Lv. 4 Pendants. -->
-		<restriction freightable="false"/>
+	<!-- Pendant imbued with the power of the Fire Dragon. Can enchant up to +10 with Pendant Polish/Shining Pendant Varnish, and can combine 2 pendants of the same level through Alchemist Veruti. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. Cannot be exchanged or dropped starting from Lv. 4 Pendants. -->
+		<restriction freightable="false" sellable="false"/>
 		<attributes />
 		<crystal />
 		<stats>
@@ -94,8 +94,8 @@
 	</armor>
 
 	<armor id="29707" name="Fire Dragon Pendant Lv. 4" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pve">
-	<!-- A pendant that contains the energy of Earth Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Cannot be exchanged or dropped. Can be stored in a warehouse. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+	<!-- Pendant imbued with the power of the Fire Dragon. Can enchant up to +10 with Pendant Polish/Shining Pendant Varnish, and can combine 2 pendants of the same level through Alchemist Veruti. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. Cannot be exchanged or dropped starting from Lv. 4 Pendants. -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes />
 		<crystal />
 		<stats>
@@ -116,8 +116,8 @@
 	</armor>
 
 	<armor id="29708" name="Fire Dragon Pendant Lv. 5" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pve">
-	<!-- A pendant that contains the energy of Earth Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Cannot be exchanged or dropped. Can be stored in a warehouse. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+	<!-- Pendant imbued with the power of the Fire Dragon. Can enchant up to +10 with Pendant Polish/Shining Pendant Varnish. The stats of the options increase when enchanted. Starting from +1, it disappears if it fails. -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes />
 		<crystal />
 		<stats>
@@ -138,8 +138,8 @@
 	</armor>
 
 	<armor id="29709" name="Water Dragon Pendant Lv. 1" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pvp_blue">
-	<!-- Pendant imbued with the power of the Water Dragon. Can enchant up to +10 with Pendant Varnish/Shining Pendant Varnish, and can combine 2 pendants of the same level through the Dimensional Merchant. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. -->
-		<restriction freightable="false"/>
+	<!-- Pendant imbued with the power of the Water Dragon. Can enchant up to +10 with Pendant Polish/Shining Pendant Varnish, and can combine 2 pendants of the same level through Alchemist Veruti. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. -->
+		<restriction freightable="false" sellable="false"/>
 		<attributes />
 		<crystal />
 		<stats>
@@ -160,8 +160,8 @@
 	</armor>
 
 	<armor id="29710" name="Water Dragon Pendant Lv. 2" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pvp_blue">
-	<!-- Pendant imbued with the power of the Water Dragon. Can enchant up to +10 with Pendant Varnish/Shining Pendant Varnish, and can combine 2 pendants of the same level through the Dimensional Merchant. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. -->
-		<restriction freightable="false"/>
+	<!-- Pendant imbued with the power of the Water Dragon. Can enchant up to +10 with Pendant Polish/Shining Pendant Varnish, and can combine 2 pendants of the same level through Alchemist Veruti. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. -->
+		<restriction freightable="false" sellable="false"/>
 		<attributes />
 		<crystal />
 		<stats>
@@ -182,8 +182,8 @@
 	</armor>
 
 	<armor id="29711" name="Water Dragon Pendant Lv. 3" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pvp_blue">
-	<!-- Pendant imbued with the power of the Water Dragon. Can enchant up to +10 with Pendant Varnish/Shining Pendant Varnish, and can combine 2 pendants of the same level through the Dimensional Merchant. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. Cannot be exchanged or dropped starting from Lv. 4 Pendants. -->
-		<restriction freightable="false"/>
+	<!-- Pendant imbued with the power of the Water Dragon. Can enchant up to +10 with Pendant Polish/Shining Pendant Varnish, and can combine 2 pendants of the same level through Alchemist Veruti. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. Cannot be exchanged or dropped starting from Lv. 4 Pendants. -->
+		<restriction freightable="false" sellable="false"/>
 		<attributes />
 		<crystal />
 		<stats>
@@ -204,8 +204,8 @@
 	</armor>
 
 	<armor id="29712" name="Water Dragon Pendant Lv. 4" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pvp_blue">
-	<!-- A pendant that contains the energy of Water Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Cannot be exchanged or dropped. Can be stored in a warehouse. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+	<!-- Pendant imbued with the power of the Water Dragon. Can enchant up to +10 with Pendant Polish/Shining Pendant Varnish, and can combine 2 pendants of the same level through Alchemist Veruti. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. Cannot be exchanged or dropped starting from Lv. 4 Pendants. -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes />
 		<crystal />
 		<stats>
@@ -226,8 +226,8 @@
 	</armor>
 
 	<armor id="29713" name="Water Dragon Pendant Lv. 5" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pvp_blue">
-	<!-- A pendant that contains the energy of Water Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Cannot be exchanged or dropped. Can be stored in a warehouse. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+	<!-- Pendant imbued with the power of the Water Dragon. Can enchant up to +10 with Pendant Polish/Shining Pendant Varnish. The stats of the options increase when enchanted. Starting from +1, it disappears if it fails. -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes />
 		<crystal />
 		<stats>
@@ -248,8 +248,8 @@
 	</armor>
 
 	<armor id="29714" name="Wind Dragon Pendant Lv. 1" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pve_white">
-	<!-- Pendant imbued with the power of the Wind Dragon. Can enchant up to +10 with Pendant Varnish/Shining Pendant Varnish, and can combine 2 pendants of the same level through the Dimensional Merchant. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. -->
-		<restriction freightable="false"/>
+	<!-- Pendant imbued with the power of the Wind Dragon. Can enchant up to +10 with Pendant Polish/Shining Pendant Varnish, and can combine 2 pendants of the same level through Alchemist Veruti. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. -->
+		<restriction freightable="false" sellable="false"/>
 		<attributes />
 		<crystal />
 		<stats>
@@ -270,8 +270,8 @@
 	</armor>
 
 	<armor id="29715" name="Wind Dragon Pendant Lv. 2" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pve_white">
-	<!-- Pendant imbued with the power of the Wind Dragon. Can enchant up to +10 with Pendant Varnish/Shining Pendant Varnish, and can combine 2 pendants of the same level through the Dimensional Merchant. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. -->
-		<restriction freightable="false"/>
+	<!-- Pendant imbued with the power of the Wind Dragon. Can enchant up to +10 with Pendant Polish/Shining Pendant Varnish, and can combine 2 pendants of the same level through Alchemist Veruti. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. -->
+		<restriction freightable="false" sellable="false"/>
 		<attributes />
 		<crystal />
 		<stats>
@@ -292,8 +292,8 @@
 	</armor>
 
 	<armor id="29716" name="Wind Dragon Pendant Lv. 3" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pve_white">
-	<!-- Pendant imbued with the power of the Wind Dragon. Can enchant up to +10 with Pendant Varnish/Shining Pendant Varnish, and can combine 2 pendants of the same level through the Dimensional Merchant. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. Cannot be exchanged or dropped starting from Lv. 4 Pendants. -->
-		<restriction freightable="false"/>
+	<!-- Pendant imbued with the power of the Wind Dragon. Can enchant up to +10 with Pendant Polish/Shining Pendant Varnish, and can combine 2 pendants of the same level through Alchemist Veruti. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. Cannot be exchanged or dropped starting from Lv. 4 Pendants. -->
+		<restriction freightable="false" sellable="false"/>
 		<attributes />
 		<crystal />
 		<stats>
@@ -314,8 +314,8 @@
 	</armor>
 
 	<armor id="29717" name="Wind Dragon Pendant Lv. 4" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pve_white">
-	<!-- A pendant that contains the energy of Wind Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Cannot be exchanged or dropped. Can be stored in a warehouse. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+	<!-- Pendant imbued with the power of the Wind Dragon. Can enchant up to +10 with Pendant Polish/Shining Pendant Varnish, and can combine 2 pendants of the same level through Alchemist Veruti. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. Cannot be exchanged or dropped starting from Lv. 4 Pendants. -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes />
 		<crystal />
 		<stats>
@@ -336,8 +336,8 @@
 	</armor>
 
 	<armor id="29718" name="Wind Dragon Pendant Lv. 5" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pve_white">
-	<!-- A pendant that contains the energy of Wind Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Cannot be exchanged or dropped. Can be stored in a warehouse. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+	<!-- Pendant imbued with the power of the Wind Dragon. Can enchant up to +10 with Pendant Polish/Shining Pendant Varnish. The stats of the options increase when enchanted. Starting from +1, it disappears if it fails. -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes />
 		<crystal />
 		<stats>
@@ -358,8 +358,8 @@
 	</armor>
 
 	<armor id="29719" name="Earth Dragon Pendant Lv. 1" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pvp">
-	<!-- Pendant imbued with the power of the Earth Dragon. Can enchant up to +10 with Pendant Varnish/Shining Pendant Varnish, and can combine 2 pendants of the same level through the Dimensional Merchant. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. -->
-		<restriction freightable="false"/>
+	<!-- Pendant imbued with the power of the Earth Dragon. Can enchant up to +10 with Pendant Polish/Shining Pendant Varnish, and can combine 2 pendants of the same level through Alchemist Veruti. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. -->
+		<restriction freightable="false" sellable="false"/>
 		<attributes />
 		<crystal />
 		<stats>
@@ -380,8 +380,8 @@
 	</armor>
 
 	<armor id="29720" name="Earth Dragon Pendant Lv. 2" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pvp">
-	<!-- Pendant imbued with the power of the Earth Dragon. Can enchant up to +10 with Pendant Varnish/Shining Pendant Varnish, and can combine 2 pendants of the same level through the Dimensional Merchant. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. -->
-		<restriction freightable="false"/>
+	<!-- Pendant imbued with the power of the Earth Dragon. Can enchant up to +10 with Pendant Polish/Shining Pendant Varnish, and can combine 2 pendants of the same level through Alchemist Veruti. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. -->
+		<restriction freightable="false" sellable="false"/>
 		<attributes />
 		<crystal />
 		<stats>
@@ -402,8 +402,8 @@
 	</armor>
 
 	<armor id="29721" name="Earth Dragon Pendant Lv. 3" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pvp">
-	<!-- Pendant imbued with the power of the Earth Dragon. Can enchant up to +10 with Pendant Varnish/Shining Pendant Varnish, and can combine 2 pendants of the same level through the Dimensional Merchant. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. Cannot be exchanged or dropped starting from Lv. 4 Pendants. -->
-		<restriction freightable="false"/>
+	<!-- Pendant imbued with the power of the Earth Dragon. Can enchant up to +10 with Pendant Polish/Shining Pendant Varnish, and can combine 2 pendants of the same level through Alchemist Veruti. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. Cannot be exchanged or dropped starting from Lv. 4 Pendants. -->
+		<restriction freightable="false" sellable="false"/>
 		<attributes />
 		<crystal />
 		<stats>
@@ -424,8 +424,8 @@
 	</armor>
 
 	<armor id="29722" name="Earth Dragon Pendant Lv. 4" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pvp">
-	<!-- A pendant that contains the energy of Earth Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Cannot be exchanged or dropped. Can be stored in a warehouse. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+	<!-- Pendant imbued with the power of the Earth Dragon. Can enchant up to +10 with Pendant Polish/Shining Pendant Varnish, and can combine 2 pendants of the same level through Alchemist Veruti. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. Cannot be exchanged or dropped starting from Lv. 4 Pendants. -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes />
 		<crystal />
 		<stats>
@@ -446,8 +446,8 @@
 	</armor>
 
 	<armor id="29723" name="Earth Dragon Pendant Lv. 5" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pvp">
-	<!-- A pendant that contains the energy of Earth Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Cannot be exchanged or dropped. Can be stored in a warehouse. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+	<!-- Pendant imbued with the power of the Earth Dragon. Can enchant up to +10 with Pendant Polish/Shining Pendant Varnish. The stats of the options increase when enchanted. Starting from +1, it disappears if it fails. -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes />
 		<crystal />
 		<stats>
@@ -469,7 +469,7 @@
 
 	<item id="29724" name="Fire Dragon's Pendant Box" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtain 1 Fire Dragon's Pendant Lv. 1 and 10 Pendant Varnish. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29704" chance="100000"/>  <!-- Fire Dragon Pendant Lv. 1 -->
@@ -479,25 +479,25 @@
 
 	<item id="29725" name="Water Dragon's Pendant Box" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtain 1 Water Dragon's Pendant Lv. 1 and 10 Pendant Varnish. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29726" name="Wind Dragon's Pendant Box" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtain 1 Wind Dragon's Pendant Lv. 1 and 10 Pendant Varnish. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29727" name="Earth Dragon's Pendant Box" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtain 1 Earth Dragon's Pendant Lv. 1 and 10 Pendant Varnish. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29728" name="Fire Dragon's Pendant Special Box" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtrain 10 Fire Dragon's Pendant Boxes. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29724" min-count="10" max-count="10" chance="100000"/>  <!-- Fire Dragon's Pendant Box -->
@@ -506,25 +506,25 @@
 
 	<item id="29729" name="Water Dragon's Pendant Special Box" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtrain 10 Water Dragon's Pendant Boxes. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29730" name="Wind Dragon's Pendant Special Box" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtrain 10 Wind Dragon's Pendant Boxes. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29731" name="Earth Dragon's Pendant Special Box" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtrain 10 Earth Dragon's Pendant Boxes. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29732" name="Fire Dragon's Shining Pendant Varnish Package" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtain 30 Fire Dragon's Pendant Boxes and 1 Shining Pendant Varnish. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29724" min-count="30" max-count="30" chance="100000"/>  <!-- Fire Dragon's Pendant Box -->
@@ -534,85 +534,85 @@
 
 	<item id="29733" name="Water Dragon's Shining Pendant Varnish Package" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtain 30 Water Dragon's Pendant Boxes and 1 Shining Pendant Varnish. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29734" name="Wind Dragon's Shining Pendant Varnish Package" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtain 30 Wind Dragon's Pendant Boxes and 1 Shining Pendant Varnish. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29735" name="Earth Dragon's Shining Pendant Varnish Package" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
 	<!-- Double-click to obtain 30 Earth Dragon's Pendant Boxes and 1 Shining Pendant Varnish. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="29736" name="Diana's Earring" type="NONE" icon="icon.accessary_mage_earing_i00">
 	<!-- Diana's onyx earring. Take it to Diana in the Talking Island Village. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="29737" name="Diana's Ring" type="NONE" icon="icon.accessary_ring_of_binding_i00">
 	<!-- Diana's sapphire ring. Take it to Diana in the Talking Island Village. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="29738" name="Diana's Necklace" type="NONE" icon="icon.item_normal142">
 	<!-- Diana's ruby necklace. Take it to Diana in the Talking Island Village. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="29739" name="Diana's Recommendation" type="NONE" icon="icon.etc_letter_envelope_i00">
 	<!-- Diana's Recommendation. You can participate in the Miss/Mr. event. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" depositable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="29740" name="Scroll: Enchant Weapon (B-grade)" type="ENCHANT_WEAPON" icon="br_cashtex.item.br_cash_scrl_of_ench_wp_b_i00">
 	<!-- When enchanted, P. Atk. +4 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29741" name="Scroll: Enchant Armor (B-grade)" type="ENCHANT_ARMOR" icon="br_cashtex.item.br_cash_scrl_of_ench_am_b_i00">
 	<!-- P. Def. + 1 for B-grade armor and accessories. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29742" name="Blessed Scroll: Enchant Weapon (B-grade)" type="BLESSED_ENCHANT_WEAPON" icon="icon.etc_blessed_scrl_of_ench_wp_b_i03">
 	<!-- When enchanted, P. Atk. +4 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. The item will not be crystallized even if enchantment fails, but the enchant value will be reset to 0. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29743" name="Blessed Scroll: Enchant Armor (B-grade)" type="BLESSED_ENCHANT_ARMOR" icon="icon.etc_blessed_scrl_of_ench_am_b_i03">
 	<!-- P. Def. + 1 for B-grade armor and accessories. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29744" name="Earth Dragon Antharas' Treasure Pouch" type="NONE" icon="BranchIcon.Icon.g_bm_antaras_pocket_i00">
 	<!-- Double-click to obtain one of Earth Dragon Antharas' treasures. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="29745" name="Premium Coin" type="NONE" icon="BranchIcon.Icon.g_bm_premium_coin_i00">
 	<!-- Coin received for purchasing promotional items. Exchange through the Dimensional Merchant for various items.  -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="29746" name="Mysterious Soulshot (B-grade)" type="NONE" icon="icon.bm_spirit_bullet_red">
 	<!-- Soulshot containing the light of Spirits; instantly inflicts a powerful attack on the enemy. Used with B-grade weapons. Exchange for a new Soulshot through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="SoulShots">
 			<skill id="55139" level="1"/>  <!-- TODO Skill not found -->
@@ -621,7 +621,7 @@
 
 	<item id="29747" name="Mysterious Blessed Spiritshot (B-grade)" type="NONE" icon="icon.bm_spell_shot_red">
 	<!-- Spiritshot containing the light of Spirits; it instantly and greatly increases the power of magic. Used with B-grade weapons. Exchange for a new Soulshot through the Dimensional Merchant. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="BlessedSpiritShot">
 			<skill id="55140" level="1"/>  <!-- TODO Skill not found -->
@@ -630,7 +630,7 @@
 
 	<item id="29748" name="Soulshot 300-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_pack_of_soulshot_b_i00">
 	<!-- Double-click to obtain 300 Soulshots. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29746" min-count="100" max-count="100" chance="100000"/>  <!-- Mysterious Soulshot (B-grade) -->
@@ -639,7 +639,7 @@
 
 	<item id="29749" name="Blessed Spiritshot 300-unit Pack" type="NONE" icon="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_b_i00">
 	<!-- Double-click to obtain 300 Blessed Spiritshots. -->
-		<restriction freightable="false" stackable="true" depositable="false"/>
+		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29747" min-count="100" max-count="100" chance="100000"/>  <!-- Mysterious Blessed Spiritshot (B-grade) -->
@@ -648,7 +648,7 @@
 
 	<item id="29750" name="Fighter Hunter Pack Lv. 4" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain 9000 Soulshots, XP/SP Boost Scrolls (30%) x12, and 2nd Class Transfer Buff Scrolls x12. -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29746" min-count="3000" max-count="3000" chance="100000"/>  <!-- Mysterious Soulshot (B-grade) -->
@@ -659,7 +659,7 @@
 
 	<item id="29751" name="Wizard Hunter Pack Lv. 4" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain 3000 Blessed Spiritshots, XP/SP Boost Scrolls (30%) x12, and 2nd Class Transfer Buff Scrolls x12. -->
-		<restriction stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29747" min-count="1000" max-count="1000" chance="100000"/>  <!-- Mysterious Blessed Spiritshot (B-grade) -->
@@ -670,14 +670,14 @@
 
 	<armor id="29752" name="Halloween Suit" type="HEAVY" body-part="ALL_DRESS" icon="icon.ev_wp_halloween">
 	<!-- When equipped, armor is unequipped and cannot be used. Weapons and magic armor remain equipped. Hair accessories also remain but the appearance won't be displayed. Cannot be dropped. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1000" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="29753" name="Blue Talisman - P. Crit." type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i01">
 	<!-- A 1-hour item. P. Critical Rate +10. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -687,7 +687,7 @@
 
 	<armor id="29754" name="Blue Talisman - P. Atk." type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i01">
 	<!-- A 1-hour item. P. Atk. +3%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -697,7 +697,7 @@
 
 	<armor id="29755" name="Blue Talisman - P. Def." type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i01">
 	<!-- A 1-hour item. P. Def. +3%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -707,7 +707,7 @@
 
 	<armor id="29756" name="Blue Talisman - P. Skills Evasion" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i01">
 	<!-- A 1-hour item. P. Skills Evasion +10%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -717,7 +717,7 @@
 
 	<armor id="29757" name="Blue Talisman - M. Crit." type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i01">
 	<!-- A 1-hour item. M. Critical +10. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -727,7 +727,7 @@
 
 	<armor id="29758" name="Blue Talisman - M. Atk." type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i01">
 	<!-- A 1-hour item. M. Atk. +3%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -737,7 +737,7 @@
 
 	<armor id="29759" name="Blue Talisman - M. Def." type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i01">
 	<!-- A 1-hour item. M. Def. +3%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -747,7 +747,7 @@
 
 	<armor id="29760" name="Blue Talisman - M. Skills Evasion" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i01">
 	<!-- A 1-hour item. M. Skills Evasion +10%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -757,7 +757,7 @@
 
 	<armor id="29761" name="Blue Talisman - Max. HP" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i01">
 	<!-- A 1-hour item. Max. HP +3%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -767,7 +767,7 @@
 
 	<armor id="29762" name="Blue Talisman - Max. MP" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i01">
 	<!-- A 1-hour item. Max. MP +3%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -777,7 +777,7 @@
 
 	<armor id="29763" name="Grey Talisman - Guard" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i07">
 	<!-- A 1-hour item. Can protect from Debuffs 5 times for 10 sec. when used. Reuse Time is 5 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -787,7 +787,7 @@
 
 	<armor id="29764" name="Grey Talisman - Denial" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i07">
 	<!-- A 1-hour item. Removes a Debuff when used. Reuse Time is 5 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -797,7 +797,7 @@
 
 	<armor id="29765" name="Grey Talisman - Benefaction" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i07">
 	<!-- A 1-hour item. When used, P. Def. +1800 and M. Def. +1620, Buff-canceling Attack Resistance +80% for 10 seconds. Reuse Time is 15 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -807,7 +807,7 @@
 
 	<armor id="29766" name="Grey Talisman - Blocking" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i07">
 	<!-- A 1-hour item. Restricts enemy's HP recovery up to 70% for 15 sec. when used. Reuse Time is 3 minutes. Can only be used on a PC. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -817,7 +817,7 @@
 
 	<armor id="29767" name="Grey Talisman - Gravity" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i07">
 	<!-- A 1-hour item. Atk. Spd. and Casting Spd. -20% for 15 sec. when used. Reuse Time is 3 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -827,7 +827,7 @@
 
 	<armor id="29768" name="Grey Talisman - Bond" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i07">
 	<!-- A 1-hour item. Target's Speed -30% for 15 sec. when used. Reuse Time is 3 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -837,7 +837,7 @@
 
 	<armor id="29769" name="White Talisman - P. Crit." type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i00">
 	<!-- A 1-hour item. P. Critical Rate +20. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -847,7 +847,7 @@
 
 	<armor id="29770" name="White Talisman - P. Atk." type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i00">
 	<!-- A 1-hour item. P. Atk. +4%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -857,7 +857,7 @@
 
 	<armor id="29771" name="White Talisman - P. Def" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i00">
 	<!-- A 1-hour item. P. Def. +5%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -867,7 +867,7 @@
 
 	<armor id="29772" name="White Talisman - P. Skills Evasion" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i00">
 	<!-- A 1-hour item. P. Skills Evasion +15%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -877,7 +877,7 @@
 
 	<armor id="29773" name="White Talisman - M. Crit." type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i00">
 	<!-- A 1-hour item. M. Critical +20. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -887,7 +887,7 @@
 
 	<armor id="29774" name="White Talisman - M. Atk." type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i00">
 	<!-- A 1-hour item. M. Atk. +4%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -897,7 +897,7 @@
 
 	<armor id="29775" name="White Talisman - M. Def." type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i00">
 	<!-- A 1-hour item. M. Def. +5%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -907,7 +907,7 @@
 
 	<armor id="29776" name="White Talisman - M. Skills Evasion" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i00">
 	<!-- A 1-hour item. M. Skills Evasion +15%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -917,7 +917,7 @@
 
 	<armor id="29777" name="White Talisman - Max. HP" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i00">
 	<!-- A 1-hour item. Max. HP +5%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -927,7 +927,7 @@
 
 	<armor id="29778" name="White Talisman - Max. MP" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i00">
 	<!-- A 1-hour item. Max. MP +5%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -937,7 +937,7 @@
 
 	<armor id="29779" name="Yellow Talisman - Guard" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i02">
 	<!-- A 1-hour item. Can protect from Debuffs 5 times for 10 sec. when used. Reuse Time is 4 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -947,7 +947,7 @@
 
 	<armor id="29780" name="Yellow Talisman - Denial" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i02">
 	<!-- A 1-hour item. Removes a Debuff when used. Reuse Time is 4 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -957,7 +957,7 @@
 
 	<armor id="29781" name="Yellow Talisman - Benefaction" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i02">
 	<!-- A 1-hour item. P. Def. +3600 and M. Def. +3240 for 10 sec. when used. Buff-canceling Attack Resistance +80%. Reuse Time is 15 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -967,7 +967,7 @@
 
 	<armor id="29782" name="Yellow Talisman - Blocking" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i02">
 	<!-- A 1-hour item. Restricts enemy's HP recovery up to 70% for 15 sec. when used. Reuse Time is 2 minutes. Can only be used on a PC. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -977,7 +977,7 @@
 
 	<armor id="29783" name="Yellow Talisman - Gravity" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i02">
 	<!-- A 1-hour item. Atk. Spd. and Casting Spd. -20% for 15 sec. when used. Reuse Time is 2 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -987,7 +987,7 @@
 
 	<armor id="29784" name="Yellow Talisman - Bond" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i02">
 	<!-- A 1-hour item. Target's Speed -30% for 15 sec. when used. Reuse Time is 2 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -997,7 +997,7 @@
 
 	<item id="29785" name="Blue Talisman Box - P. Crit." type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- By double-clicking it, you will get Blue Talisman - P. Crit. (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29753" chance="100000"/>  <!-- Blue Talisman - P. Crit. -->
@@ -1006,7 +1006,7 @@
 
 	<item id="29786" name="Blue Talisman Box - P. Atk." type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- By double-clicking it, you will get Blue Talisman - P. Atk. (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29754" chance="100000"/>  <!-- Blue Talisman - P. Atk. -->
@@ -1015,7 +1015,7 @@
 
 	<item id="29787" name="Blue Talisman Box - P. Def." type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- By double-clicking it, you will get Blue Talisman - P. Def. (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29755" chance="100000"/>  <!-- Blue Talisman - P. Def. -->
@@ -1024,7 +1024,7 @@
 
 	<item id="29788" name="Blue Talisman Box - P. Skills Evasion" type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- By double-clicking it, you will get Blue Talisman - P. Skills Evasion (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29756" chance="100000"/>  <!-- Blue Talisman - P. Skills Evasion -->
@@ -1033,7 +1033,7 @@
 
 	<item id="29789" name="Blue Talisman Box - M. Crit." type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- By double-clicking it, you will get Blue Talisman - M. Crit. (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29757" chance="100000"/>  <!-- Blue Talisman - M. Crit. -->
@@ -1042,7 +1042,7 @@
 
 	<item id="29790" name="Blue Talisman Box - M. Atk." type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- By double-clicking it, you will get Blue Talisman - M. Atk. (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29758" chance="100000"/>  <!-- Blue Talisman - M. Atk. -->
@@ -1051,7 +1051,7 @@
 
 	<item id="29791" name="Blue Talisman Box - M. Def." type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- By double-clicking it, you will get Blue Talisman - M. Def. (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29759" chance="100000"/>  <!-- Blue Talisman - M. Def. -->
@@ -1060,7 +1060,7 @@
 
 	<item id="29792" name="Blue Talisman Box - M. Skills Evasion" type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- By double-clicking it, you will get Blue Talisman - M. Skills Evasion (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29760" chance="100000"/>  <!-- Blue Talisman - M. Skills Evasion -->
@@ -1069,7 +1069,7 @@
 
 	<item id="29793" name="Blue Talisman Box - Max. HP" type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- By double-clicking it, you will get Blue Talisman - Max. HP (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29761" chance="100000"/>  <!-- Blue Talisman - Max. HP -->
@@ -1078,7 +1078,7 @@
 
 	<item id="29794" name="Blue Talisman Box - Max. MP" type="NONE" icon="icon.etc_treasure_box_i01">
 	<!-- By double-clicking it, you will get Blue Talisman - Max. MP (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29762" chance="100000"/>  <!-- Blue Talisman - Max. MP -->
@@ -1087,7 +1087,7 @@
 
 	<item id="29795" name="Grey Talisman Box - Guard" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- By double-clicking it, you will get Grey Talisman - Guard (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29763" chance="100000"/>  <!-- Grey Talisman - Guard -->
@@ -1096,7 +1096,7 @@
 
 	<item id="29796" name="Grey Talisman Box - Denial" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- By double-clicking it, you will get Grey Talisman - Denial (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29764" chance="100000"/>  <!-- Grey Talisman - Denial -->
@@ -1105,7 +1105,7 @@
 
 	<item id="29797" name="Grey Talisman Box - Benefaction" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- By double-clicking it, you will get Grey Talisman - Benefaction (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29765" chance="100000"/>  <!-- Grey Talisman - Benefaction -->
@@ -1114,7 +1114,7 @@
 
 	<item id="29798" name="Grey Talisman Box - Blocking" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- By double-clicking it, you will get Grey Talisman - Blocking (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29766" chance="100000"/>  <!-- Grey Talisman - Blocking -->
@@ -1123,7 +1123,7 @@
 
 	<item id="29799" name="Grey Talisman Box - Gravity" type="NONE" icon="icon.etc_treasure_box_i05">
 	<!-- By double-clicking it, you will get Grey Talisman - Gravity (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
-		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="29767" chance="100000"/>  <!-- Grey Talisman - Gravity -->

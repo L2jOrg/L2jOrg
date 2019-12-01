@@ -407,7 +407,7 @@
 	</item>
 
 	<weapon id="2368" name="Training Gloves" type="FIST" body-part="TWO_HAND" icon="icon.weapon_training_gloves_i00">
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1580" price="138" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="32" angle="240"/>
@@ -424,7 +424,7 @@
 	</weapon>
 
 	<weapon id="2369" name="Squire's Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_squires_sword_i00">
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1600" price="138" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -440,7 +440,7 @@
 	</weapon>
 
 	<weapon id="2370" name="Guild Member's Club" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_club_i00">
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1910" price="138" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>

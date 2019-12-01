@@ -2,14 +2,14 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<armor id="21162" name="Wedding Veil" type="NONE" body-part="HAIR_ALL" icon="BranchSys2.icon.br_wedding_vail_i00">
 	<!-- A shining white Wedding Veil, intended for female characters only. Occupies 2 Hair Accessory slots.\\nCannot be exchanged, dropped, sold. Can be stored in private warehouse. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<weapon id="21163" name="Wedding Bouquet" type="ETC" body-part="RIGHT_HAND" icon="BranchSys2.icon.br_wedding_bouquet_i00">
 	<!-- A Wedding Bouquet composed of lovely flowers, intended for female characters only.\\nCannot be exchanged, dropped, sold. Can be stored in private warehouse. -->
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="1600" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -26,7 +26,7 @@
 
 	<armor id="21165" name="Agathion - Zaken's Spirit Swords" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys2.Icon.br_aga_zaken_i00">
 	<!-- Zaken cannot be attacked, the skill will be removed. The bracelet is only issued by ID. -->
-		<restriction freightable="false" olympiad-restricted="true"/>
+		<restriction freightable="false" olympiad-restricted="true" sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>

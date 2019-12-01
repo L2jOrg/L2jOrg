@@ -2,14 +2,14 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<armor id="20900" name="Santa Hat" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_xmas_gawibawibo_cap_i00">
 	<!-- The Santa Hat made for celebrating Christmas. -->
-		<restriction freightable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" duration="20160" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<item id="20901" name="Santa Hat Set" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- The Santa Hat and Rudolph's Nose are packaged together. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" depositable="false"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 		<extract >
 			<item id="20900" chance="100000"/>  <!-- Santa Hat -->

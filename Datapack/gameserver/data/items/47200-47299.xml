@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<armor id="47226" name="Blood Noblesse Outfit" type="HEAVY" body-part="ALL_DRESS" icon="icon.bm2018_rednoblesse_i01">
 	<!-- Blood Noblesse outfit. -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -12,7 +12,7 @@
 
 	<armor id="47227" name="White Noblesse Outfit" type="HEAVY" body-part="ALL_DRESS" icon="icon.bm2018_whitenoblesse_i01">
 	<!-- White Noblesse outfit. -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -22,7 +22,7 @@
 
 	<armor id="47230" name="Blue Musketeer Outfit" type="HEAVY" body-part="ALL_DRESS" icon="icon.bm2018_bluemusketeer_i01">
 	<!-- Blue Musketeer outfit. -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -31,14 +31,14 @@
 	</armor>
 
 	<armor id="47231" name="Red Musketeer Garment" type="HEAVY" body-part="ALL_DRESS" icon="icon.inquisitor_red">
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false"/>
+		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="47232" name="Purple Cowboy Outfit" type="HEAVY" body-part="ALL_DRESS" icon="icon.bm2018_cowboy_i01">
 	<!-- Purple Cowboy outfit. -->
-		<restriction freightable="false"/>
+		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 		<stats>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<weapon id="38211" name="Blue Mackerel: One-handed Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.wp_fishing1">
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="1450" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -17,7 +17,7 @@
 	</weapon>
 
 	<weapon id="38212" name="Trumpetfish: Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.wp_fishing2">
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="1070" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -34,7 +34,7 @@
 	</weapon>
 
 	<weapon id="38213" name="Shark: Two-handed Sword" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.wp_fishing3">
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="2020" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -50,7 +50,7 @@
 	</weapon>
 
 	<weapon id="38214" name="Squid: Spear" type="SPEAR" body-part="TWO_HAND" icon="icon.wp_fishing4">
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="2060" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="66" angle="240"/>
@@ -69,7 +69,7 @@
 	</weapon>
 
 	<weapon id="38215" name="Sea Horse: Two-handed Magic Blunt Weapon" type="STAFF" body-part="TWO_HAND" icon="icon.wp_fishing5" magic="true">
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="1000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -86,7 +86,7 @@
 	</weapon>
 
 	<weapon id="38216" name="Lobster: Fist Weapon" type="FIST" body-part="TWO_HAND" icon="icon.wp_fishing6">
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="1510" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -103,7 +103,7 @@
 	</weapon>
 
 	<weapon id="38217" name="Giant Crab: Bow" type="BOW" body-part="TWO_HAND" icon="icon.wp_fishing7">
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="1820" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
@@ -120,7 +120,7 @@
 	</weapon>
 
 	<armor id="38220" name="Turtle: Shield" type="SHIELD" body-part="LEFT_HAND" icon="icon.wp_fishing10">
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="1320" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -131,7 +131,7 @@
 	</armor>
 
 	<weapon id="38221" name="Blue Mackerel: Dualsword" type="DUAL" body-part="TWO_HAND" icon="icon.wp_fishing11">
-		<restriction freightable="false" dropable="false"/>
+		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="2530" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
