@@ -32,6 +32,7 @@ import org.l2j.gameserver.util.MathUtil;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.util.GameUtils.*;
 import static org.l2j.gameserver.util.MathUtil.convertHeadingToDegree;
 
@@ -129,7 +130,7 @@ public final class Formulas {
                     }
                     damage /= 2;
                 } else {
-                    final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_RESISTED_YOUR_S2);
+                    final SystemMessage sm = getSystemMessage(SystemMessageId.C1_HAS_RESISTED_YOUR_S2);
                     sm.addString(target.getName());
                     sm.addSkillName(skill);
                     attacker.sendPacket(sm);
@@ -138,7 +139,7 @@ public final class Formulas {
             }
 
             if (isPlayer(target)) {
-                final SystemMessage sm = (skill.hasEffectType(EffectType.HP_DRAIN)) ? SystemMessage.getSystemMessage(SystemMessageId.YOU_RESISTED_C1_S_DRAIN) : SystemMessage.getSystemMessage(SystemMessageId.YOU_RESISTED_C1_S_MAGIC);
+                final SystemMessage sm = (skill.hasEffectType(EffectType.HP_DRAIN)) ? getSystemMessage(SystemMessageId.YOU_RESISTED_C1_S_DRAIN) : getSystemMessage(SystemMessageId.YOU_RESISTED_C1_S_MAGIC);
                 sm.addString(attacker.getName());
                 target.sendPacket(sm);
             }
@@ -540,31 +541,21 @@ public final class Formulas {
                 }
             }
 
-            if (!resisted)
-            {
+            if (!resisted) {
                 final double sphericBarrierRange = target.getStat().getValue(Stats.SPHERIC_BARRIER_RANGE, 0);
-                if (sphericBarrierRange > 0)
-                {
+                if (sphericBarrierRange > 0) {
                     resisted = !MathUtil.isInsideRadius3D(attacker, target, (int) sphericBarrierRange);
                 }
             }
 
-            final double sphericBarrierRange = target.getStat().getValue(Stats.SPHERIC_BARRIER_RANGE, 0);
-            if (!resisted && (sphericBarrierRange > 0)) {
-                resisted = !MathUtil.isInsideRadius3D(attacker, target, (int) sphericBarrierRange);
-            }
-
             if (resisted) {
-                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_RESISTED_YOUR_S2);
-                sm.addString(target.getName());
-                sm.addSkillName(skill);
-                attacker.sendPacket(sm);
+                attacker.sendPacket(getSystemMessage(SystemMessageId.C1_HAS_RESISTED_YOUR_S2).addString(target.getName()).addSkillName(skill));
                 return false;
             }
         }
 
         final int activateRate = skill.getActivateRate();
-        if ((activateRate == -1)) {
+        if (activateRate == -1) {
             return true;
         }
 
@@ -582,11 +573,8 @@ public final class Formulas {
         final double rate = baseMod * elementMod * traitMod * buffDebuffMod;
         final double finalRate = traitMod > 0 ? CommonUtil.constrain(rate, skill.getMinChance(), skill.getMaxChance()) * basicPropertyResist : 0;
 
-        if ((finalRate <= Rnd.get(100)) && (target != attacker)) {
-            final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_RESISTED_YOUR_S2);
-            sm.addString(target.getName());
-            sm.addSkillName(skill);
-            attacker.sendPacket(sm);
+        if (Rnd.chance(finalRate) && target != attacker) {
+            attacker.sendPacket(getSystemMessage(SystemMessageId.C1_HAS_RESISTED_YOUR_S2).addString(target.getName()).addSkillName(skill));
             return false;
         }
         return true;
@@ -704,7 +692,7 @@ public final class Formulas {
         // Failure calculation
         if (Config.ALT_GAME_MAGICFAILURES && !calcMagicSuccess(attacker, target, skill)) {
             if (isPlayer(attacker)) {
-                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.DAMAGE_IS_DECREASED_BECAUSE_C1_RESISTED_C2_S_MAGIC);
+                final SystemMessage sm = getSystemMessage(SystemMessageId.DAMAGE_IS_DECREASED_BECAUSE_C1_RESISTED_C2_S_MAGIC);
                 sm.addString(target.getName());
                 sm.addString(attacker.getName());
                 attacker.sendPacket(sm);
@@ -712,7 +700,7 @@ public final class Formulas {
             }
 
             if (isPlayer(target)) {
-                final SystemMessage sm2 = SystemMessage.getSystemMessage(SystemMessageId.C1_WEAKLY_RESISTED_C2_S_MAGIC);
+                final SystemMessage sm2 = getSystemMessage(SystemMessageId.C1_WEAKLY_RESISTED_C2_S_MAGIC);
                 sm2.addString(target.getName());
                 sm2.addString(attacker.getName());
                 target.sendPacket(sm2);
@@ -746,12 +734,12 @@ public final class Formulas {
     public static boolean calcPhysicalSkillEvasion(Creature activeChar, Creature target, Skill skill) {
         if (Rnd.get(100) < target.getStat().getSkillEvasionTypeValue(skill.getMagicType())) {
             if (isPlayer(activeChar)) {
-                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_DODGED_THE_ATTACK);
+                final SystemMessage sm = getSystemMessage(SystemMessageId.C1_DODGED_THE_ATTACK);
                 sm.addString(target.getName());
                 activeChar.getActingPlayer().sendPacket(sm);
             }
             if (isPlayer(target)) {
-                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_DODGED_C1_S_ATTACK);
+                final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_DODGED_C1_S_ATTACK);
                 sm.addString(activeChar.getName());
                 target.getActingPlayer().sendPacket(sm);
             }
@@ -821,12 +809,12 @@ public final class Formulas {
         final double chance = target.getStat().getValue(Stats.VENGEANCE_SKILL_PHYSICAL_DAMAGE, 0);
         if (Rnd.get(100) < chance) {
             if (isPlayer(target)) {
-                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_COUNTERED_C1_S_ATTACK);
+                final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_COUNTERED_C1_S_ATTACK);
                 sm.addString(attacker.getName());
                 target.sendPacket(sm);
             }
             if (isPlayer(attacker)) {
-                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_PERFORMING_A_COUNTERATTACK);
+                final SystemMessage sm = getSystemMessage(SystemMessageId.C1_IS_PERFORMING_A_COUNTERATTACK);
                 sm.addString(target.getName());
                 attacker.sendPacket(sm);
             }

@@ -39,6 +39,6 @@ public class BalakasScope implements IAffectScopeHandler
 	@Override
 	public Enum<AffectScope> getAffectScopeType()
 	{
-		return AffectScope.BALAKAS_SCOPE;
+		return AffectScope.VALAKAS_SCOPE;
 	}
 }

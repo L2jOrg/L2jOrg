@@ -11,6 +11,10 @@
         <xs:list itemType="xs:int"/>
     </xs:simpleType>
 
+    <xs:simpleType name="WeaponTypeList">
+        <xs:list itemType="WeaponType"/>
+    </xs:simpleType>
+
     <xs:complexType name="ItemInfo">
         <xs:attribute type="xs:positiveInteger" name="id" use="required"/>
         <xs:attribute type="xs:int" name="count" default="1"/>

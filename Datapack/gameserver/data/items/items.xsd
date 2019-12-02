@@ -275,6 +275,7 @@
         <xs:attribute name="chaotic" type="xs:boolean"/>
         <xs:attribute name="flying" type="xs:boolean"/>
     </xs:complexType>
+
     <xs:complexType name="ItemUseCondition">
         <xs:choice maxOccurs="unbounded" minOccurs="0">
             <xs:element name="player" type="playerType"/>
