@@ -156,7 +156,7 @@ public class TradeList {
 
         final WorldObject o = World.getInstance().findObject(objectId);
         if (!isItem(o)) {
-            LOGGER.warn("{} Trying to add something other than an item!", owner);
+            LOGGER.warn("{} Trying to add something other than an item!: ObjectId {} ", owner, objectId);
             return null;
         }
 

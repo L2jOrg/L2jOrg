@@ -47,7 +47,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 
     private volatile int y = 0;
 
-    private volatile int z = 0;
+    private volatile int z = -10000;
 
     private volatile int _heading = 0;
 

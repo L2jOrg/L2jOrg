@@ -407,7 +407,7 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_TRY_ENCHANT_ARTIFACT(0x160, null, ConnectionState.IN_GAME), // 152
     EX_XIGN_CODE(0x161, null, ConnectionState.IN_GAME), // 152
     EX_OPEN_HTML(0x164, ExOpenHtml::new, ConnectionState.IN_GAME),
-    EX_REQUEST_CLASS_CHANGE(0x165, null, ConnectionState.IN_GAME), // 228
+    EX_REQUEST_CLASS_CHANGE(0x165, ExRequestClassChange::new, ConnectionState.IN_GAME), // 228
     EX_REQUEST_CLASS_CHANGE_VERIFYING(0x166, null, ConnectionState.IN_GAME),
     EX_REQUEST_TELEPORT(0x167, ExRequestTeleport::new, ConnectionState.IN_GAME),
     EX_COSTUME_COLLECTION_SKILL_ACTIVE(0x16B, null, ConnectionState.IN_GAME),

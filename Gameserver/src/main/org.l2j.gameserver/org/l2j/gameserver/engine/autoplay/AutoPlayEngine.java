@@ -2,14 +2,20 @@ package org.l2j.gameserver.engine.autoplay;
 
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.serverpackets.autoplay.ExAutoPlayDoMacro;
+import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.World;
 
+import java.util.Comparator;
 import java.util.WeakHashMap;
 import java.util.concurrent.ScheduledFuture;
+import java.util.function.ToDoubleFunction;
+import java.util.function.ToIntFunction;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
@@ -85,7 +91,7 @@ public final class AutoPlayEngine {
 
                     var target = player.getTarget();
                     if(isNull(target) || (isMonster(target) && ((Monster) target).isDead())) {
-                        var monster = world.findAnyVisibleObject(player, Monster.class, range, false, m -> canBeTargeted(player, setting, m));
+                        var monster = world.findFirstVisibleObject(player, Monster.class, range, false, m -> canBeTargeted(player, setting, m), Comparator.comparingDouble(m -> MathUtil.calculateDistanceSq3D(player, m)));
                         player.setTarget(monster);
                     }
                     if(nonNull(player.getTarget())) {
@@ -96,8 +102,7 @@ public final class AutoPlayEngine {
         }
 
         private boolean canBeTargeted(Player player, AutoPlaySetting setting, Monster monster) {
-            var attackerList = monster.getAggroList();
-            return !monster.isDead() && monster.isAutoAttackable(player) && (!setting.isMannerMode() || attackerList.isEmpty() || attackerList.size() == 1 && attackerList.containsKey(player));
+            return !monster.isDead() && monster.isAutoAttackable(player) && (!setting.isMannerMode() || isNull(monster.getTarget()) || monster.getTarget().equals(player)) && GeoEngine.getInstance().canSeeTarget(player, monster);
         }
     }
 

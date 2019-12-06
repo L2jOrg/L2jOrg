@@ -184,7 +184,16 @@ public final class MapRegionManager extends GameXmlReader {
     private Location getChaoticLocation(Player player) {
         try {
             final RespawnZone zone = ZoneManager.getInstance().getZone(player, RespawnZone.class);
-            return nonNull(zone) ? getRestartRegion(player, zone.getRespawnPoint(player)).getChaoticSpawnLoc() : getMapRegion(player).getChaoticSpawnLoc();
+            if(nonNull(zone)) {
+                return getRestartRegion(player, zone.getRespawnPoint(player)).getChaoticSpawnLoc();
+            }
+
+            if (getMapRegion(player).getBannedRaces().containsKey(player.getRace()))
+            {
+                return regions.get(getMapRegion(player).getBannedRaces().get(player.getRace())).getChaoticSpawnLoc();
+            }
+
+            return  getMapRegion(player).getChaoticSpawnLoc();
         } catch (Exception e) {
             LOGGER.warn(e.getMessage(), e);
             if (player.isFlyingMounted()) {

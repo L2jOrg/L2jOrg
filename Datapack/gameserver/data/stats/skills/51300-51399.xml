@@ -494,7 +494,29 @@
 	</skill>
 	<skill id="51383" toLevel="1" name="Scroll of Escape: Cleaning-up the Grounds">
 		<!-- A magical scroll that relocates you to Vollodos in Dark Elf Village. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91648</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>11878</x>
+				<y>15763</y>
+				<z>-4552</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51384" toLevel="1" name="Scroll of Escape: Plundered Graves">
 		<!-- A magical scroll that relocates you to Uska in Orc Barracks. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
@@ -502,7 +524,29 @@
 	</skill>
 	<skill id="51385" toLevel="1" name="Scroll of Escape: Dangerous Predators">
 		<!-- A magical scroll that relocates you to Gerald in Dwarven Village. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91648</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>115160</x>
+				<y>-177295</y>
+				<z>-864</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51386" toLevel="1" name="Scroll of Escape: Captain Bathis">
 		<!-- A magical scroll that relocates you to the Captain Bathis in Gludio. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->

@@ -311,8 +311,14 @@
 
 	<item id="91648" name="Escape - Clean the Yard" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to Vollodos in Dark Elf Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false" olympiad-restricted="true"/>
+		<condition add-name="true" msg-id="113">
+			<player flying="false"/>
+		</condition>
+		<attributes action="SKILL_REDUCE" commission-type="SCROLL_OTHER"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="51383" level="1"/>
+		</skill-reducer>
 	</item>
 
 	<item id="91649" name="Escape - Suspicious Men" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
@@ -329,8 +335,14 @@
 
 	<item id="91651" name="Escape - Captain Bathis" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to Captain Bathis in the Town of Gludio. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false" olympiad-restricted="true"/>
+		<condition add-name="true" msg-id="113">
+			<player flying="false"/>
+		</condition>
+		<attributes action="SKILL_REDUCE" commission-type="SCROLL_OTHER"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="51385" level="1"/>
+		</skill-reducer>
 	</item>
 
 	<item id="91652" name="Big Spiderweb" type="NONE" icon="icon.etc_cobweb_i00">

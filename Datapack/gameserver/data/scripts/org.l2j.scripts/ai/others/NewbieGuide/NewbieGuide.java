@@ -14,20 +14,19 @@ import ai.AbstractNpcAI;
 /**
  * @author Mobius
  */
-public class NewbieGuide extends AbstractNpcAI
-{
+public class NewbieGuide extends AbstractNpcAI {
 	// NPCs
-	private static final int[] NEWBIE_GUIDES =
-	{
+	private static final int[] NEWBIE_GUIDES = {
 		30598,
 		30599,
 		30600,
 		30601,
 		30602,
+		34110,
 	};
 	// Items
-	private static final ItemHolder SOULSHOT_REWARD = new ItemHolder(5789, 200);
-	private static final ItemHolder SPIRITSHOT_REWARD = new ItemHolder(5790, 100);
+	private static final ItemHolder SOULSHOT_REWARD = new ItemHolder(91927, 200);
+	private static final ItemHolder SPIRITSHOT_REWARD = new ItemHolder(91927, 100);
 	// Other
 	private static final String TUTORIAL_QUEST = "Q00255_Tutorial";
 	private static final String SUPPORT_MAGIC_STRING = "<Button ALIGN=LEFT ICON=\"NORMAL\" action=\"bypass -h Link default/SupportMagic.htm\">Receive help from beneficial magic.</Button>";

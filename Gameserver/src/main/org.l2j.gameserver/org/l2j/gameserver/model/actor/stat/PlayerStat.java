@@ -27,7 +27,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import static java.util.Objects.isNull;
 
-public class PcStat extends PlayableStat {
+public class PlayerStat extends PlayableStat {
     public static final int MAX_VITALITY_POINTS = 140000;
     public static final int MIN_VITALITY_POINTS = 0;
     private static final int FANCY_FISHING_ROD_SKILL = 21484;
@@ -39,7 +39,7 @@ public class PcStat extends PlayableStat {
     private boolean _cloakSlot = false;
     private int _vitalityPoints = 0;
 
-    public PcStat(Player activeChar) {
+    public PlayerStat(Player activeChar) {
         super(activeChar);
     }
 
@@ -229,8 +229,6 @@ public class PcStat extends PlayableStat {
         player.broadcastStatusUpdate();
         // Update the overloaded status of the Player
         player.refreshOverloaded(true);
-        // Update the expertise status of the Player
-        player.refreshExpertisePenalty();
         // Send a Server->Client packet UserInfo to the Player
         player.sendPacket(new UserInfo(player));
         // Send acquirable skill list

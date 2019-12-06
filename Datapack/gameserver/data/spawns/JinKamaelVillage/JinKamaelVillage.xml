@@ -1,14 +1,14 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
     <spawn name="JinKamaelVillage">
-        <npc id="32478" x="-116951" y="45028" z="360" heading="14867"/>
-        <npc id="34117" x="-117342" y="45146" z="368" heading="14186"/>
-        <npc id="34110" x="-118075" y="45059" z="368" heading="17358"/>
-        <npc id="34111" x="-116626" y="44969" z="376" heading="12990"/>
-        <npc id="34112" x="-116679" y="46623" z="384" heading="46657"/>
-        <npc id="34113" x="-121407" y="43825" z="640" heading="6428" respawnTime="30sec"/>
-        <npc id="34114" x="-121265" y="43527" z="648" heading="11149" respawnTime="30sec"/>
-        <npc id="34115" x="-119337" y="47776" z="384" heading="47673" respawnTime="30sec"/>
-        <npc id="34116" x="-119757" y="38176" z="384" heading="51883" respawnTime="30sec"/>
+        <npc id="32478" x="-116951" y="45028" z="360" heading="14867" respawnTime="60sec"/>
+        <npc id="34117" x="-117342" y="45146" z="368" heading="14186" respawnTime="60sec"/>
+        <npc id="34110" x="-118075" y="45059" z="368" heading="17358" respawnTime="60sec"/>
+        <npc id="34111" x="-116626" y="44969" z="376" heading="12990" respawnTime="60sec"/>
+        <npc id="34112" x="-116679" y="46623" z="384" heading="46657" respawnTime="60sec"/>
+        <npc id="34113" x="-121407" y="43825" z="640" heading="6428" respawnTime="60sec"/>
+        <npc id="34114" x="-121265" y="43527" z="648" heading="11149" respawnTime="60sec"/>
+        <npc id="34115" x="-119337" y="47776" z="384" heading="47673" respawnTime="60sec"/>
+        <npc id="34116" x="-119757" y="38176" z="384" heading="51883" respawnTime="60sec"/>
     </spawn>
 
 </list>

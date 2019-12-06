@@ -23,8 +23,7 @@ import java.nio.file.Path;
 import java.util.List;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
-import static org.l2j.gameserver.util.GameUtils.isCreature;
-import static org.l2j.gameserver.util.GameUtils.isDoor;
+import static org.l2j.gameserver.util.GameUtils.*;
 
 /**
  * @author Hasha
@@ -315,7 +314,7 @@ public class GeoEngine {
      * @return {@code boolean} : True if origin can see target
      */
     public final boolean canSeeTarget(WorldObject origin, WorldObject target) {
-        if (isDoor(target) || (isCreature(target) && ((Creature) target).isFlying())) {
+        if (isDoor(target) || isArtifact(target) || (isCreature(target) && ((Creature) target).isFlying())) {
             return true;
         }
 

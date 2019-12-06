@@ -25,7 +25,7 @@ public final class RequestShortCutDel extends ClientPacket {
             return;
         }
 
-        if ((_page > 19) || (_page < 0)) {
+        if ((_page > 23) || (_page < 0)) {
             return;
         }
 

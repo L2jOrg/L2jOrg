@@ -151,9 +151,16 @@ public enum PlayerClass {
     dummyEntry33(null, null, null),
     dummyEntry34(null, null, null),
 
-    dummyEntry35(null, null, null),
-    dummyEntry36(null, null, null),
-    dummyEntry37(null, null, null),;
+    soldier(Race.JIN_KAMAEL, ClassType.Fighter, ClassLevel.FIRST),
+    trooper(Race.JIN_KAMAEL, ClassType.Fighter, ClassLevel.SECOND),
+    warder(Race.JIN_KAMAEL, ClassType.Fighter, ClassLevel.SECOND),
+    soulFinder(Race.JIN_KAMAEL, ClassType.Fighter, ClassLevel.SECOND),
+    berserker(Race.JIN_KAMAEL, ClassType.Fighter, ClassLevel.THIRD),
+    soulBreaker(Race.JIN_KAMAEL, ClassType.Fighter, ClassLevel.THIRD),
+    soulRanger(Race.JIN_KAMAEL, ClassType.Fighter, ClassLevel.THIRD),
+    doomBringer(Race.JIN_KAMAEL, ClassType.Fighter, ClassLevel.FOURTH),
+    soulHound(Race.JIN_KAMAEL, ClassType.Fighter, ClassLevel.FOURTH),
+    trickster(Race.JIN_KAMAEL, ClassType.Fighter, ClassLevel.FOURTH);
 
     private static final Set<PlayerClass> mainSubclassSet;
     private static final Set<PlayerClass> neverSubclassed = EnumSet.of(Overlord, Warsmith);
@@ -225,12 +232,8 @@ public enum PlayerClass {
             subclasses.remove(this);
 
             switch (player.getRace()) {
-                case ELF:
-                    subclasses.removeAll(getSet(DARK_ELF, ClassLevel.THIRD));
-                    break;
-                case DARK_ELF:
-                    subclasses.removeAll(getSet(ELF, ClassLevel.THIRD));
-                    break;
+                case ELF -> subclasses.removeAll(getSet(DARK_ELF, ClassLevel.THIRD));
+                case DARK_ELF -> subclasses.removeAll(getSet(ELF, ClassLevel.THIRD));
             }
 
             final Set<PlayerClass> unavailableClasses = subclassSetMap.get(this);

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets.raidbossinfo;
 
 import org.l2j.gameserver.instancemanager.DBSpawnManager;
-import org.l2j.gameserver.instancemanager.DBSpawnManager.DBStatusType;
+import org.l2j.gameserver.instancemanager.RaidBossStatus;
 import org.l2j.gameserver.instancemanager.GrandBossManager;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.raidbossinfo.ExRaidBossSpawnInfo;
@@ -20,7 +20,7 @@ public class RequestRaidBossSpawnInfo extends ClientPacket {
         final int count = readInt();
         for (int i = 0; i < count; i++) {
             final int bossId = readInt();
-            if (DBSpawnManager.getInstance().getNpcStatusId(bossId) == DBStatusType.ALIVE) {
+            if (DBSpawnManager.getInstance().getNpcStatusId(bossId) == RaidBossStatus.ALIVE) {
                 _bossIds.add(bossId);
             } else if (GrandBossManager.getInstance().getBossStatus(bossId) == 0) {
                 _bossIds.add(bossId);

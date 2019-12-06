@@ -820,6 +820,9 @@
 	<!-- For 20 minutes, P./M. Atk. +12%, P./M. Def. +15%, Max. HP/CP/MP +25%, P./M. Critical Rate +10, P./M. Critical Damage +5%, HP/MP Recovery Bonus +30%. At a certain chance absorbs 5% of the damage inflicted on target as HP. XP and SP gained through hunting +10%. Cooldown is 1 minute. Buff remains after death. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39273" level="1"/> <!-- Special Dragons Fruit -->
+		</skill-reducer>
 	</item>
 
 </list>

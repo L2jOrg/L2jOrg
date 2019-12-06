@@ -621,6 +621,9 @@
 	<!-- For 20 minutes, P./M. Atk. +12%, P./M. Def. +15%, Max. HP/CP/MP +25%, HP/MP Recovery Bonus +30%. P./M. Critical Rate +10, P./M. Critical Damage +5%.Vampiric Rage Effect +5%. XP and SP gained through hunting +10%. Cooldown is 1 minute. Buff remains after death.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="180" action="SKILL_REDUCE"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39269" level="1"/>
+		</skill-reducer>
 	</item>
 
 	<armor id="70768" name="Vital Stone Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_vital">

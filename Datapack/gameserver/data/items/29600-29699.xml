@@ -44,7 +44,7 @@
 	<item id="29603" name="Beginner's Pack - Stage 3" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Timed Weapon Exchange Coupon (D-grade), 4500 Soulshots, 1000 Blessed Spiritshots, and a Beginner's Pack - Stage 4. Lv. 20 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="20"/>
 		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
@@ -59,7 +59,7 @@
 	<item id="29604" name="Beginner's Pack - Stage 4" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Magic Necklace Crafting Pack, 4500 Soulshots, 1000 Blessed Spiritshots, and a Beginner's Pack - Stage 5. Lv. 25 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="25"/>
 		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
@@ -74,7 +74,7 @@
 	<item id="29605" name="Beginner's Pack - Stage 5" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Elven Ring Crafting Pack, 4500 Soulshots, 1000 Blessed Spiritshots, and a Beginner's Pack - Stage 6. Lv. 30 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="30"/>
 		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
@@ -89,7 +89,7 @@
 	<item id="29606" name="Beginner's Pack - Stage 6" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 20 XP/SP Boost Scrolls (40%), 4500 Soulshots, 1000 Blessed Spiritshots, and a Beginner's Pack - Stage 7. Lv. 35 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="35"/>
 		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
@@ -104,7 +104,7 @@
 	<item id="29607" name="Beginner's Pack - Stage 7" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get a Timed Weapon Exchange Coupon (C-grade). Lv. 40 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="40"/>
 		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
@@ -562,7 +562,7 @@
 	<item id="29635" name="Beginner's Pack - Stage 2" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 30 Full Buff Scrolls and a Beginner's Pack - Stage 3. Lv. 10 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="10"/>
 		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
@@ -575,7 +575,7 @@
 	<item id="29636" name="Beginner's Pack - Stage 3" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Saber*Elven Sword (30-day), 4500 Soulshots, 1000 Blessed Spiritshots, and a Beginner's Pack - Stage 4. Lv. 20 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="20"/>
 		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
@@ -590,7 +590,7 @@
 	<item id="29637" name="Beginner's Pack - Stage 4" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 4500 Soulshots, 1000 Blessed Spiritshots, and a Beginner's Pack - Stage 5. Lv. 25 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="25"/>
 		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
@@ -604,7 +604,7 @@
 	<item id="29638" name="Beginner's Pack - Stage 5" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 4500 Soulshots, 1000 Blessed Spiritshots, and a Beginner's Pack - Stage 6. Lv. 30 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="30"/>
 		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
@@ -618,7 +618,7 @@
 	<item id="29639" name="Beginner's Pack - Stage 6" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 20 XP/SP Boost Scrolls (40%), 4500 Soulshots, 1000 Spiritshots, and a Beginner's Pack - Stage 7. Lv. 35 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="35"/>
 		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
@@ -633,7 +633,7 @@
 	<item id="29640" name="Beginner's Pack - Stage 7" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get 1 Black Samurai Long Sword (30-day). Lv. 40 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="40"/>
 		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
@@ -771,7 +771,7 @@
 	<item id="29656" name="Intermediate Pack - Stage 1" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 2500 Soulshots, 500 Blessed Spiritshots, 30 Regular XP/SP Boost Scrolls, 1 Event Hair Accessory (30-day), 50 Quick Healing Potions, 30 Scrolls of Escape, 30 Wind Walk Potions, 30 Haste Potions, and an Intermediate Pack - Stage 2. Lv. 24 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="24"/>
 		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
@@ -791,7 +791,7 @@
 	<item id="29657" name="Intermediate Pack - Stage 2" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Timed Weapon Exchange Coupon (D-grade), and an Intermediate Pack - Stage 3. Lv. 25 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="25"/>
 		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
@@ -804,7 +804,7 @@
 	<item id="29658" name="Intermediate Pack - Stage 3" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following:  30 1st Class Transfer Buff Scrolls, and an Intermediate Pack - Stage 4. Lv. 28 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="28"/>
 		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
@@ -817,7 +817,7 @@
 	<item id="29659" name="Intermediate Pack - Stage 4" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Chronicles Box, 2250 Soulshots, 500 Blessed Spiritshots, and an Intermediate Pack - Stage 5. Lv. 30 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="30"/>
 		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
@@ -832,7 +832,7 @@
 	<item id="29660" name="Intermediate Pack - Stage 5" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Chronicles Box, 2250 Soulshots, 500 Blessed Spiritshots, 30 Scrolls of Escape, and an Intermediate Pack - Stage 6. Lv. 32 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="32"/>
 		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
@@ -848,7 +848,7 @@
 	<item id="29661" name="Intermediate Pack - Stage 6" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Chronicles Box, 2250 Soulshots, 500 Blessed Spiritshots, 50 Healing Potions, and an Intermediate Pack - Stage 7. Lv. 35 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="35"/>
 		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
@@ -864,7 +864,7 @@
 	<item id="29662" name="Intermediate Pack - Stage 7" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 20 XP/SP Boost Scrolls (Mid-grade), 2250 Soulshots, 500 Blessed Spiritshots, and an Intermediate Pack - Stage 8. Lv. 38 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="38"/>
 		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
@@ -879,7 +879,7 @@
 	<item id="29663" name="Intermediate Pack - Stage 8" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain the following items: 9000 Soulshots, 2000 Blessed Spiritshot , C-grade Timed Weapon Coupon (1), Traveler's Package - Lvl 9. For characters of Lvl 40 and above. Cannot be traded/dropped/sold in a private store. Can be stored in a warehouse. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="40"/>
 		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
@@ -894,7 +894,7 @@
 	<item id="29664" name="Intermediate Pack - Stage 9" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following:  3 Quick Healing Potions, 20 XP/SP Boost Scrolls (Mid-grade), 1 Chronicles Box, and an Intermediate Pack - Stage 10. Lv. 42 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="42"/>
 		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
@@ -909,7 +909,7 @@
 	<item id="29665" name="Intermediate Pack - Stage 10" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 20 XP/SP Boost Scrolls (Mid-grade), 9000  Soulshots, 2000 Blessed Spiritshots, and an Intermediate Pack - Stage 11. Lv. 45 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="45"/>
 		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
@@ -924,7 +924,7 @@
 	<item id="29666" name="Intermediate Pack - Stage 11" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain an Agathion - Griffin (30-day). Lv. 49 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="49"/>
 		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>

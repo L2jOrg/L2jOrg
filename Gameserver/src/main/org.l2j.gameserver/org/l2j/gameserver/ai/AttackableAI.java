@@ -480,7 +480,7 @@ public class AttackableAI extends CreatureAI {
             npc.setWalking();
 
             // Monster teleport to spawn
-            if (isMonster(npc) && (npc.getSpawn() != null) && !npc.isInInstance()) {
+            if (isMonster(npc) && (npc.getSpawn() != null) && !npc.isInInstance() && (npc.isInCombat() || !World.getInstance().hasVisiblePlayer(npc))) {
                 npc.teleToLocation(npc.getSpawn(), false);
             }
             return;

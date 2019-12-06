@@ -246,7 +246,6 @@ public final class Config {
     public static int[][] PARTY_XP_CUTOFF_GAPS;
     public static int[] PARTY_XP_CUTOFF_GAP_PERCENTS;
     public static boolean DISABLE_TUTORIAL;
-    public static boolean EXPERTISE_PENALTY;
     public static boolean STORE_RECIPE_SHOPLIST;
     public static boolean STORE_UI_SETTINGS;
 
@@ -1320,7 +1319,6 @@ public final class Config {
             PARTY_XP_CUTOFF_GAP_PERCENTS[i] = Integer.parseInt(percents[i]);
         }
         DISABLE_TUTORIAL = Character.getBoolean("DisableTutorial", false);
-        EXPERTISE_PENALTY = Character.getBoolean("ExpertisePenalty", true);
         STORE_RECIPE_SHOPLIST = Character.getBoolean("StoreRecipeShopList", false);
         STORE_UI_SETTINGS = Character.getBoolean("StoreCharUiSettings", true);
 

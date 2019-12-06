@@ -424,7 +424,7 @@
 	<item id="8871" name="Strategy Guide" type="NONE" icon="icon.etc_paper_black_i00">
 	<!-- This book contains information about the methods and strategies used to lead an alliance. Use it for alliance invitations. Available for levels 20 and above. -->
 		<restriction freightable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="20"/>
 		</condition>
 		<attributes weight="20" price="10000" immediate-effect="true" action="CREATE_MPCC"/>

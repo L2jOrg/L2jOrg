@@ -1,5 +1,6 @@
 package handlers.itemhandlers;
 
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.RecipeData;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.model.RecipeList;
@@ -17,8 +18,13 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 public class Recipes implements IItemHandler
 {
 	@Override
-	public boolean useItem(Playable playable, Item item, boolean forceUse)
-	{
+	public boolean useItem(Playable playable, Item item, boolean forceUse) {
+		if (!Config.IS_CRAFTING_ENABLED)
+		{
+			playable.sendMessage("Crafting is disabled, you cannot register this recipe.");
+			return false;
+		}
+
 		if (!isPlayer(playable))
 		{
 			playable.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);

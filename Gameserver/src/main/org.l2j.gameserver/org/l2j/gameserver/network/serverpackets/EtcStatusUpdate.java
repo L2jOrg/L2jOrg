@@ -23,13 +23,13 @@ public class EtcStatusUpdate extends ServerPacket {
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.ETC_STATUS_UPDATE);
 
-        writeByte((byte) _activeChar.getCharges()); // 1-7 increase force, lvl
+        writeByte(_activeChar.getCharges()); // 1-7 increase force, lvl
         writeInt(_activeChar.getWeightPenalty()); // 1-4 weight penalty, lvl (1=50%, 2=66.6%, 3=80%, 4=100%)
-        writeByte((byte) _activeChar.getExpertiseWeaponPenalty()); // Weapon Grade Penalty [1-4]
-        writeByte((byte) _activeChar.getExpertiseArmorPenalty()); // Armor Grade Penalty [1-4]
-        writeByte((byte) 0); // Death Penalty [1-15, 0 = disabled)], not used anymore in Ertheia
-        writeByte((byte) _activeChar.getChargedSouls());
-        writeByte((byte) _mask);
+        writeByte(0); // Weapon Grade Penalty [1-4]
+        writeByte(0); // Armor Grade Penalty [1-4]
+        writeByte(0); // Death Penalty [1-15, 0 = disabled)], not used anymore in Ertheia
+        writeByte(_activeChar.getChargedSouls());
+        writeByte(_mask);
     }
 
 }

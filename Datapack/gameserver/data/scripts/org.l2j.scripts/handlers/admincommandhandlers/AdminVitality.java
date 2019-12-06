@@ -19,7 +19,7 @@ package handlers.admincommandhandlers;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.stat.PcStat;
+import org.l2j.gameserver.model.actor.stat.PlayerStat;
 import org.l2j.gameserver.util.BuilderUtil;
 
 import java.util.StringTokenizer;
@@ -78,12 +78,12 @@ public class AdminVitality implements IAdminCommandHandler
 			}
 			else if (cmd.equals("admin_full_vitality"))
 			{
-				target.setVitalityPoints(PcStat.MAX_VITALITY_POINTS, true);
+				target.setVitalityPoints(PlayerStat.MAX_VITALITY_POINTS, true);
 				target.sendMessage("Admin completly recharged your Vitality");
 			}
 			else if (cmd.equals("admin_empty_vitality"))
 			{
-				target.setVitalityPoints(PcStat.MIN_VITALITY_POINTS, true);
+				target.setVitalityPoints(PlayerStat.MIN_VITALITY_POINTS, true);
 				target.sendMessage("Admin completly emptied your Vitality");
 			}
 			else if (cmd.equals("admin_get_vitality"))

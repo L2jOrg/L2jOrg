@@ -9,7 +9,7 @@ import org.l2j.gameserver.data.xml.impl.PlayerTemplateData;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.stat.PcStat;
+import org.l2j.gameserver.model.actor.stat.PlayerStat;
 import org.l2j.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.events.Containers;
@@ -172,7 +172,7 @@ public final class CharacterCreate extends ClientPacket {
         newChar.setTitle("");
 
         if (Config.ENABLE_VITALITY) {
-            newChar.setVitalityPoints(Math.min(Config.STARTING_VITALITY_POINTS, PcStat.MAX_VITALITY_POINTS), true);
+            newChar.setVitalityPoints(Math.min(Config.STARTING_VITALITY_POINTS, PlayerStat.MAX_VITALITY_POINTS), true);
         }
         if (Config.STARTING_LEVEL > 1) {
             newChar.getStat().addLevel((byte) (Config.STARTING_LEVEL - 1));

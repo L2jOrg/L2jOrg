@@ -69,7 +69,7 @@ public class GMViewCharacterInfo extends ServerPacket {
             writeInt(_activeChar.getInventory().getPaperdollItemDisplayId(slot));
         }
 
-        for (var slot : getPaperdollOrder()) {
+        for (var slot : getPaperdollOrder()) { // TODO review
             final VariationInstance augment = _activeChar.getInventory().getPaperdollAugmentation(slot);
             writeInt(augment != null ? augment.getOption1Id() : 0); // Confirmed
             writeInt(augment != null ? augment.getOption2Id() : 0); // Confirmed

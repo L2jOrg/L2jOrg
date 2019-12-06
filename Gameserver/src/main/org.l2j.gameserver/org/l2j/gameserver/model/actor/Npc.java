@@ -11,10 +11,7 @@ import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.handler.BypassHandler;
 import org.l2j.gameserver.handler.IBypassHandler;
-import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.instancemanager.DBSpawnManager;
-import org.l2j.gameserver.instancemanager.FortDataManager;
-import org.l2j.gameserver.instancemanager.WalkingManager;
+import org.l2j.gameserver.instancemanager.*;
 import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.instance.*;
 import org.l2j.gameserver.model.actor.stat.NpcStat;
@@ -114,7 +111,7 @@ public class Npc extends Creature {
     private NpcStringId _nameString;
 
     private StatsSet _params;
-    private DBSpawnManager.DBStatusType _raidStatus;
+    private RaidBossStatus _raidStatus;
 
     /**
      * Contains information about local tax payments.
@@ -1475,11 +1472,11 @@ public class Npc extends Creature {
         broadcastPacket(new ExShowChannelingEffect(this, target, state));
     }
 
-    public DBSpawnManager.DBStatusType getDBStatus() {
+    public RaidBossStatus getRaidBossStatus() {
         return _raidStatus;
     }
 
-    public void setDBStatus(DBSpawnManager.DBStatusType status) {
+    public void setRaidBossStatus(RaidBossStatus status) {
         _raidStatus = status;
     }
 }

@@ -546,7 +546,7 @@
 	<item id="70069" name="Scroll: Intensity Slash Lv. 1" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Inflicts physical damage by using the intense power of spirit.  Intended for Lv. 20 and higher. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="20"/>
 		</condition>
 		<attributes weight="120" action="SKILL_REDUCE"/>
@@ -558,7 +558,7 @@
 	<item id="70070" name="Scroll: Intensity Slash Lv. 2" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Inflicts physical damage by using the intense power of spirit.  Intended for Lv. 20 and higher. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="20"/>
 		</condition>
 		<attributes weight="120" action="SKILL_REDUCE"/>
@@ -570,7 +570,7 @@
 	<item id="70071" name="Scroll: Intensity Slash Lv. 3" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Inflicts physical damage by using the intense power of spirit.  Intended for Lv. 20 and higher. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="20"/>
 		</condition>
 		<attributes weight="120" action="SKILL_REDUCE"/>
@@ -582,7 +582,7 @@
 	<item id="70072" name="Scroll: Intensity Slash Lv. 4" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Inflicts physical damage by using the intense power of spirit.  Intended for Lv. 20 and higher. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="20"/>
 		</condition>
 		<attributes weight="120" action="SKILL_REDUCE"/>
@@ -594,7 +594,7 @@
 	<item id="70073" name="Scroll: Intensity Slash Lv. 5" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Inflicts physical damage by using the intense power of spirit.  Intended for Lv. 20 and higher. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="20"/>
 		</condition>
 		<attributes weight="120" action="SKILL_REDUCE"/>
@@ -606,7 +606,7 @@
 	<item id="70074" name="Scroll: Intensity Slash Lv. 6" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Inflicts physical damage by using the intense power of spirit.  Intended for Lv. 20 and higher. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="20"/>
 		</condition>
 		<attributes weight="120" action="SKILL_REDUCE"/>
@@ -618,7 +618,7 @@
 	<item id="70075" name="Scroll: Purity Blast Lv. 1" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Inflicts magical damage by using the power of holy magic.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="20"/>
 		</condition>
 		<attributes weight="120" action="SKILL_REDUCE"/>
@@ -630,7 +630,7 @@
 	<item id="70076" name="Scroll: Purity Blast Lv. 2" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Inflicts magical damage by using the power of holy magic.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="20"/>
 		</condition>
 		<attributes weight="120" action="SKILL_REDUCE"/>
@@ -642,7 +642,7 @@
 	<item id="70077" name="Scroll: Purity Blast Lv. 3" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Inflicts magical damage by using the power of holy magic.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="20"/>
 		</condition>
 		<attributes weight="120" action="SKILL_REDUCE"/>
@@ -654,7 +654,7 @@
 	<item id="70078" name="Scroll: Purity Blast Lv. 4" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Inflicts magical damage by using the power of holy magic.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="20"/>
 		</condition>
 		<attributes weight="120" action="SKILL_REDUCE"/>
@@ -666,7 +666,7 @@
 	<item id="70079" name="Scroll: Purity Blast Lv. 5" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Inflicts magical damage by using the power of holy magic.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="20"/>
 		</condition>
 		<attributes weight="120" action="SKILL_REDUCE"/>
@@ -678,7 +678,7 @@
 	<item id="70080" name="Scroll: Purity Blast Lv. 6" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Inflicts magical damage by using the power of holy magic.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="20"/>
 		</condition>
 		<attributes weight="120" action="SKILL_REDUCE"/>
@@ -690,7 +690,7 @@
 	<item id="70081" name="Scroll: Gratitude Burst Lv. 1" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Inflicts physical damage by using the power of a devout heart.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="20"/>
 		</condition>
 		<attributes weight="120" action="SKILL_REDUCE"/>
@@ -702,7 +702,7 @@
 	<item id="70082" name="Scroll: Gratitude Burst Lv. 2" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Inflicts physical damage by using the power of a devout heart.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="20"/>
 		</condition>
 		<attributes weight="120" action="SKILL_REDUCE"/>
@@ -714,7 +714,7 @@
 	<item id="70083" name="Scroll: Gratitude Burst Lv. 3" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Inflicts physical damage by using the power of a devout heart.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="20"/>
 		</condition>
 		<attributes weight="120" action="SKILL_REDUCE"/>
@@ -726,7 +726,7 @@
 	<item id="70084" name="Scroll: Gratitude Burst Lv. 4" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Inflicts physical damage by using the power of a devout heart.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="20"/>
 		</condition>
 		<attributes weight="120" action="SKILL_REDUCE"/>
@@ -738,7 +738,7 @@
 	<item id="70085" name="Scroll: Gratitude Burst Lv. 5" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Inflicts physical damage by using the power of a devout heart.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="20"/>
 		</condition>
 		<attributes weight="120" action="SKILL_REDUCE"/>
@@ -750,7 +750,7 @@
 	<item id="70086" name="Scroll: Grey Explosion Lv. 6" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Inflicts physical damage by using the power of a devout heart.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="20"/>
 		</condition>
 		<attributes weight="120" action="SKILL_REDUCE"/>
@@ -762,7 +762,7 @@
 	<item id="70087" name="Scroll: Platonic Tempest Lv. 1" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Inflicts magical damage to nearby enemies by entirely focusing on holy magic.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="20"/>
 		</condition>
 		<attributes weight="120" action="SKILL_REDUCE"/>
@@ -774,7 +774,7 @@
 	<item id="70088" name="Scroll: Platonic Tempest Lv. 2" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Inflicts magical damage to nearby enemies by entirely focusing on holy magic.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="20"/>
 		</condition>
 		<attributes weight="120" action="SKILL_REDUCE"/>
@@ -786,7 +786,7 @@
 	<item id="70089" name="Scroll: Platonic Tempest Lv. 3" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Inflicts magical damage to nearby enemies by entirely focusing on holy magic.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="20"/>
 		</condition>
 		<attributes weight="120" action="SKILL_REDUCE"/>
@@ -798,7 +798,7 @@
 	<item id="70090" name="Scroll: Platonic Tempest Lv. 4" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Inflicts magical damage to nearby enemies by entirely focusing on holy magic.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="20"/>
 		</condition>
 		<attributes weight="120" action="SKILL_REDUCE"/>
@@ -810,7 +810,7 @@
 	<item id="70091" name="Scroll: Platonic Tempest Lv. 5" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Inflicts magical damage to nearby enemies by entirely focusing on holy magic.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="20"/>
 		</condition>
 		<attributes weight="120" action="SKILL_REDUCE"/>
@@ -822,7 +822,7 @@
 	<item id="70092" name="Scroll: Platonic Tempest Lv. 6" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Inflicts magical damage to nearby enemies by entirely focusing on holy magic.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="20"/>
 		</condition>
 		<attributes weight="120" action="SKILL_REDUCE"/>

@@ -56,44 +56,25 @@ public final class RequestAcquireSkillInfo extends ClientPacket {
             return;
         }
 
-        // Hack check. Doesn't apply to all Skill Types
-        final int prevSkillLevel = activeChar.getSkillLevel(_id);
-        if ((prevSkillLevel > 0) && !((_skillType == AcquireSkillType.SUBPLEDGE))) {
-            if (prevSkillLevel == _level) {
-                LOGGER.warn(RequestAcquireSkillInfo.class.getSimpleName() + ": Player " + activeChar.getName() + " is requesting info for a skill that already knows, Id: " + _id + " level: " + _level + "!");
-            } else if (prevSkillLevel != (_level - 1)) {
-                LOGGER.warn(RequestAcquireSkillInfo.class.getSimpleName() + ": Player " + activeChar.getName() + " is requesting info for skill Id: " + _id + " level " + _level + " without knowing it's previous level!");
-            }
-        }
-
         final SkillLearn s = SkillTreesData.getInstance().getSkillLearn(_skillType, _id, _level, activeChar);
         if (s == null) {
             return;
         }
 
         switch (_skillType) {
-            case TRANSFORM:
-            case FISHING: {
-                client.sendPacket(new AcquireSkillInfo(_skillType, s));
-                break;
-            }
-            case CLASS: {
-                client.sendPacket(new ExAcquireSkillInfo(activeChar, s));
-                break;
-            }
-            case PLEDGE: {
+            case TRANSFORM, FISHING -> client.sendPacket(new AcquireSkillInfo(_skillType, s));
+            case CLASS -> client.sendPacket(new ExAcquireSkillInfo(activeChar, s));
+            case PLEDGE -> {
                 if (!activeChar.isClanLeader()) {
                     return;
                 }
                 client.sendPacket(new AcquireSkillInfo(_skillType, s));
-                break;
             }
-            case SUBPLEDGE: {
+            case SUBPLEDGE -> {
                 if (!activeChar.isClanLeader() || !activeChar.hasClanPrivilege(ClanPrivilege.CL_TROOPS_FAME)) {
                     return;
                 }
                 client.sendPacket(new AcquireSkillInfo(_skillType, s));
-                break;
             }
         }
     }

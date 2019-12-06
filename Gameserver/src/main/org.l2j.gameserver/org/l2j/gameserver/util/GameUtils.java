@@ -476,6 +476,10 @@ public final class GameUtils {
         return object instanceof Playable;
     }
 
+    public static boolean isArtifact(WorldObject object) {
+        return object instanceof Artefact;
+    }
+
     public static boolean isGM(Creature creature) {
         return nonNull(creature) && creature.isGM();
     }

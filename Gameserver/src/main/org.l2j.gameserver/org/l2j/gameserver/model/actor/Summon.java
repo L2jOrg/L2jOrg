@@ -793,7 +793,7 @@ public abstract class Summon extends Playable {
             return false;
         }
 
-        if ((target.getActingPlayer() != null) && (_owner.getSiegeState() > 0) && _owner.isInsideZone(ZoneType.SIEGE) && (target.getActingPlayer().getSiegeSide() == _owner.getSiegeSide())) {
+        if (_owner.isSiegeFriend(target)) {
             sendPacket(SystemMessageId.FORCE_ATTACK_IS_IMPOSSIBLE_AGAINST_A_TEMPORARY_ALLIED_MEMBER_DURING_A_SIEGE);
             sendPacket(ActionFailed.STATIC_PACKET);
             return false;

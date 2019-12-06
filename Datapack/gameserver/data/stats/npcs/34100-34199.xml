@@ -189,7 +189,7 @@
 		</collision>
 	</npc>
 	<npc id="34110" level="85" type="Folk" name="Newbie Guide">
-		<race>ETC</race>
+		<race>JIN_KAMAEL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
@@ -206,9 +206,9 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="34111" level="85" type="Folk" name="Reahen" title="Trader">
+	<npc id="34111" level="85" type="Merchant" name="Reahen" title="Trader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>JIN_KAMAEL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
@@ -350,7 +350,7 @@
 			<param name="MoveAroundSocial1" value="60"/>
 			<param name="MoveAroundSocial2" value="60"/>
 		</parameters>
-		<race>JIN_KAMAEL</race>
+		<race>DWARF</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />

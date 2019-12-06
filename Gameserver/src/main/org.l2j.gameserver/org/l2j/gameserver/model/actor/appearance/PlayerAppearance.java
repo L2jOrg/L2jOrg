@@ -130,7 +130,7 @@ public class PlayerAppearance {
     /**
      * @param isfemale
      */
-    public final void setSex(boolean isfemale) {
+    public final void setFemale(boolean isfemale) {
         female = isfemale;
     }
 

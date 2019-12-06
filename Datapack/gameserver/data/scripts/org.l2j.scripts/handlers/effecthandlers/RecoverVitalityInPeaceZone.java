@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.stat.PcStat;
+import org.l2j.gameserver.model.actor.stat.PlayerStat;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.BuffInfo;
@@ -61,9 +61,9 @@ public final class RecoverVitalityInPeaceZone extends AbstractEffect
 		
 		long vitality = effected.getActingPlayer().getVitalityPoints();
 		vitality += _amount;
-		if (vitality >= PcStat.MAX_VITALITY_POINTS)
+		if (vitality >= PlayerStat.MAX_VITALITY_POINTS)
 		{
-			vitality = PcStat.MAX_VITALITY_POINTS;
+			vitality = PlayerStat.MAX_VITALITY_POINTS;
 		}
 		effected.getActingPlayer().setVitalityPoints((int) vitality, true);
 		
@@ -81,9 +81,9 @@ public final class RecoverVitalityInPeaceZone extends AbstractEffect
 			{
 				long vitality = effected.getActingPlayer().getVitalityPoints();
 				vitality += _amount * 100;
-				if (vitality >= PcStat.MAX_VITALITY_POINTS)
+				if (vitality >= PlayerStat.MAX_VITALITY_POINTS)
 				{
-					vitality = PcStat.MAX_VITALITY_POINTS;
+					vitality = PlayerStat.MAX_VITALITY_POINTS;
 				}
 				effected.getActingPlayer().setVitalityPoints((int) vitality, true);
 			}

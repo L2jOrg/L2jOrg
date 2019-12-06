@@ -1,5 +1,7 @@
 package org.l2j.gameserver.data.xml.impl;
 
+import io.github.joealisson.primitive.HashIntSet;
+import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.util.filter.NumericNameFilter;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.item.EnchantItemGroupsData;
@@ -23,15 +25,18 @@ import org.w3c.dom.Node;
 import java.io.File;
 import java.io.FileFilter;
 import java.nio.file.Path;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
+import static java.util.Objects.isNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.model.items.BodyPart.FULL_ARMOR;
 
 public final class MultisellData extends GameXmlReader {
     public static final int PAGE_SIZE = 40;
     private static final Logger LOGGER = LoggerFactory.getLogger(MultisellData.class);
-    private static final FileFilter NUMERIC_FILTER = new NumericNameFilter();
 
     private final Map<Integer, MultisellListHolder> _multisells = new HashMap<>();
 
@@ -135,7 +140,7 @@ public final class MultisellData extends GameXmlReader {
                         entries.add(entry);
                     } else if ("npcs".equalsIgnoreCase(itemNode.getNodeName())) {
                         // Initialize NPCs with the size of child nodes.
-                        final Set<Integer> allowNpc = new HashSet<>(itemNode.getChildNodes().getLength());
+                        final IntSet allowNpc = new HashIntSet(itemNode.getChildNodes().getLength());
                         forEach(itemNode, n -> "npc".equalsIgnoreCase(n.getNodeName()), n -> allowNpc.add(Integer.parseInt(n.getTextContent())));
 
                         // Add npcs to stats set.
@@ -190,12 +195,15 @@ public final class MultisellData extends GameXmlReader {
             return;
         }
 
-        if (!template.isNpcAllowed(-1) && (((npc != null) && !template.isNpcAllowed(npc.getId())) || ((npc == null) && template.isNpcOnly()))) {
-            if (player.isGM()) {
-                player.sendMessage("Multisell " + listId + " is restricted. Under current conditions cannot be used. Only GMs are allowed to use it.");
-            } else {
-                LOGGER.warn(getClass().getSimpleName() + ": Player " + player + " attempted to open multisell " + listId + " from npc " + npc + " which is not allowed!");
-                return;
+        if (!template.isNpcAllowed(-1)) {
+            if (isNull(npc) || !template.isNpcAllowed(npc.getId())) {
+                if (player.isGM()) {
+                    player.sendMessage("Multisell " + listId + " is restricted. Under current conditions cannot be used. Only GMs are allowed to use it.");
+                }
+                else {
+                    LOGGER.warn("Player {} attempted to open multisell {} from npc {} which is not allowed!", player, listId, npc);
+                    return;
+                }
             }
         }
 

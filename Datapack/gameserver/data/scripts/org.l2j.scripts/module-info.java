@@ -85,6 +85,7 @@ open module org.l2j.scripts {
             ai.others.ClanHallDoorManager.ClanHallDoorManager,
             ai.others.ClanHallManager.ClanHallManager,
             ai.others.ClassMaster.ClassMaster,
+            ai.others.DimensionalMerchant.DimensionalMerchant,
             ai.others.MonumentOfHeroes.MonumentOfHeroes,
             ai.others.NewbieGuide.NewbieGuide,
             ai.others.OlyBuffer.OlyBuffer,

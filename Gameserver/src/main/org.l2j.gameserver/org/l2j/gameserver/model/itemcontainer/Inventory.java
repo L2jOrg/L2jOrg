@@ -346,9 +346,6 @@ public abstract class Inventory extends ItemContainer {
 
         try {
             unEquipItemInSlot(slot);
-            if (isPlayer(getOwner())) {
-                ((Player) getOwner()).refreshExpertisePenalty();
-            }
         } finally {
             removePaperdollListener(recorder);
         }
@@ -369,13 +366,7 @@ public abstract class Inventory extends ItemContainer {
         };
 
         if (nonNull(pdollSlot)) {
-            final Item old = setPaperdollItem(pdollSlot, null);
-            if (old != null) {
-                if (isPlayer(getOwner())) {
-                    ((Player) getOwner()).refreshExpertisePenalty();
-                }
-            }
-            return old;
+            return setPaperdollItem(pdollSlot, null);
         }
         return null;
     }

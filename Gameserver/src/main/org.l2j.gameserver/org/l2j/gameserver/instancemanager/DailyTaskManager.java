@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.stat.PcStat;
+import org.l2j.gameserver.model.actor.stat.PlayerStat;
 import org.l2j.gameserver.model.base.SubClass;
 import org.l2j.gameserver.model.eventengine.AbstractEvent;
 import org.l2j.gameserver.model.eventengine.AbstractEventManager;
@@ -86,21 +86,21 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
         }
 
         for (Player player : World.getInstance().getPlayers()) {
-            player.setVitalityPoints(PcStat.MAX_VITALITY_POINTS, false);
+            player.setVitalityPoints(PlayerStat.MAX_VITALITY_POINTS, false);
 
             for (SubClass subclass : player.getSubClasses().values()) {
-                subclass.setVitalityPoints(PcStat.MAX_VITALITY_POINTS);
+                subclass.setVitalityPoints(PlayerStat.MAX_VITALITY_POINTS);
             }
         }
 
         try (Connection con = DatabaseFactory.getInstance().getConnection()) {
             try (PreparedStatement st = con.prepareStatement("UPDATE character_subclasses SET vitality_points = ?")) {
-                st.setInt(1, PcStat.MAX_VITALITY_POINTS);
+                st.setInt(1, PlayerStat.MAX_VITALITY_POINTS);
                 st.execute();
             }
 
             try (PreparedStatement st = con.prepareStatement("UPDATE characters SET vitality_points = ?")) {
-                st.setInt(1, PcStat.MAX_VITALITY_POINTS);
+                st.setInt(1, PlayerStat.MAX_VITALITY_POINTS);
                 st.execute();
             }
         } catch (Exception e) {

@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.actor.stat;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.Position;
-import org.l2j.gameserver.model.CharEffectList;
+import org.l2j.gameserver.model.EffectList;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.AbnormalType;
@@ -756,7 +756,7 @@ public class CharStat {
             resetStats();
 
             // Collect all necessary effects
-            final CharEffectList effectList = _activeChar.getEffectList();
+            final EffectList effectList = _activeChar.getEffectList();
             final Stream<BuffInfo> passives = effectList.getPassives().stream().filter(BuffInfo::isInUse).filter(info -> info.getSkill().checkConditions(SkillConditionScope.PASSIVE, _activeChar, _activeChar));
             final Stream<BuffInfo> options = effectList.getOptions().stream().filter(BuffInfo::isInUse);
             final Stream<BuffInfo> effectsStream = Stream.concat(effectList.getEffects().stream().filter(BuffInfo::isInUse), Stream.concat(passives, options));

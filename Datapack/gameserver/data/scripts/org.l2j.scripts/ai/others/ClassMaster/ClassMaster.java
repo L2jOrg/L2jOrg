@@ -345,6 +345,11 @@ public final class ClassMaster extends AbstractNpcAI
 						htmltext = "test_server_helper026i.html";
 						break;
 					}
+					case JIN_KAMAEL_SOLDIER:
+					{
+						htmltext = "test_server_helper026j.html";
+						break;
+					}
 				}
 			}
 		}
@@ -509,6 +514,12 @@ public final class ClassMaster extends AbstractNpcAI
 					case SCAVENGER:
 					{
 						htmltext = "test_server_helper020a.html";
+						break;
+					}
+					case JIN_KAMAEL_SOLDIER:
+					case TROOPER:
+					{
+						htmltext = "test_server_helper020c.html";
 						break;
 					}
 				}
@@ -677,9 +688,9 @@ public final class ClassMaster extends AbstractNpcAI
 	{
 		if (event.getCommand().startsWith("Quest ClassMaster "))
 		{
-			final String html = onAdvEvent(event.getCommand().substring(18), null, event.getActiveChar());
-			event.getActiveChar().sendPacket(TutorialCloseHtml.STATIC_PACKET);
-			showResult(event.getActiveChar(), html);
+			final String html = onAdvEvent(event.getCommand().substring(18), null, event.getPlayer());
+			event.getPlayer().sendPacket(TutorialCloseHtml.STATIC_PACKET);
+			showResult(event.getPlayer(), html);
 		}
 	}
 	

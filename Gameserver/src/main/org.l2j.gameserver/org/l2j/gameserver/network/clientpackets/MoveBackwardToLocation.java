@@ -47,99 +47,28 @@ public class MoveBackwardToLocation extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getPlayer();
-        if (activeChar == null) {
+        final Player player = client.getPlayer();
+        if (player == null) {
             return;
         }
 
-        if ((Config.PLAYER_MOVEMENT_BLOCK_TIME > 0) && !activeChar.isGM() && (activeChar.getNotMoveUntil() > System.currentTimeMillis())) {
-            activeChar.sendPacket(SystemMessageId.YOU_CANNOT_MOVE_WHILE_SPEAKING_TO_AN_NPC_ONE_MOMENT_PLEASE);
-            activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+        if ((Config.PLAYER_MOVEMENT_BLOCK_TIME > 0) && !player.isGM() && (player.getNotMoveUntil() > System.currentTimeMillis())) {
+            player.sendPacket(SystemMessageId.YOU_CANNOT_MOVE_WHILE_SPEAKING_TO_AN_NPC_ONE_MOMENT_PLEASE);
+            player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
 
         if ((_targetX == _originX) && (_targetY == _originY) && (_targetZ == _originZ)) {
-            activeChar.sendPacket(new StopMove(activeChar));
-            activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+            player.sendPacket(new StopMove(player));
+            player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
 
         // Mobius: Check for possible door logout and move over exploit. Also checked at ValidatePosition.
-        if (DoorDataManager.getInstance().checkIfDoorsBetween(activeChar.getX(), activeChar.getY(), activeChar.getZ(), _targetX, _targetY, _targetZ, activeChar.getInstanceWorld(), false)) {
-            activeChar.stopMove(activeChar.getLastServerPosition());
-            activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+        if (DoorDataManager.getInstance().checkIfDoorsBetween(player.getX(), player.getY(), player.getZ(), _targetX, _targetY, _targetZ, player.getInstanceWorld(), false)) {
+            player.stopMove(player.getLastServerPosition());
+            player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
-        }
-
-        // Prevent player force moving in or out siege area.
-        final AdminTeleportType teleMode = activeChar.getTeleMode();
-        if (!activeChar.isFlying() && (teleMode == AdminTeleportType.NORMAL))
-        {
-            final boolean siegable = activeChar.isInsideZone(ZoneType.CASTLE) || activeChar.isInsideZone(ZoneType.FORT);
-            boolean waterContact = activeChar.isInsideZone(ZoneType.WATER);
-            if (siegable && !waterContact) // Need to know if activeChar is over water only when siegable.
-            {
-                for (Zone zone : ZoneManager.getInstance().getZones(_originX, _originY))
-                {
-                    if ((zone instanceof WaterZone) && ((zone.getArea().getHighZ() + activeChar.getCollisionHeight()) > _originZ))
-                    {
-                        waterContact = true;
-                        break;
-                    }
-                }
-            }
-            if (activeChar.isInsideZone(ZoneType.HQ) || (siegable && waterContact))
-            {
-                boolean limited = false;
-                boolean water = false;
-                for (Zone zone : ZoneManager.getInstance().getZones(_targetX, _targetY, _targetZ))
-                {
-                    if ((zone instanceof CastleZone) || (zone instanceof FortZone))
-                    {
-                        if (!isInsideRadius3D(_originX, _originY, _originZ, _targetX, _targetY, _targetZ, 1000))
-                        {
-                            activeChar.stopMove(activeChar.getLastServerPosition());
-                            activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-                            return;
-                        }
-                        limited = true;
-                    }
-                    if (zone instanceof WaterZone)
-                    {
-                        water = true;
-                    }
-                }
-                if (limited && !water && !GeoEngine.getInstance().canSeeTarget(activeChar, new Location(_targetX, _targetY, _targetZ)))
-                {
-                    activeChar.stopMove(activeChar.getLastServerPosition());
-                    activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-                    return;
-                }
-            }
-            else if (siegable)
-            {
-                for (Zone zone : ZoneManager.getInstance().getZones(_targetX, _targetY, _targetZ))
-                {
-                    if ((zone instanceof WaterZone) || (zone instanceof HqZone))
-                    {
-                        if ((Math.abs(_targetZ - _originZ) > 250) || !GeoEngine.getInstance().canSeeTarget(activeChar, new Location(_targetX, _targetY, _targetZ)))
-                        {
-                            activeChar.stopMove(activeChar.getLastServerPosition());
-                            activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-                            return;
-                        }
-                    }
-                    else if ((zone instanceof CastleZone) || (zone instanceof FortZone))
-                    {
-                        if (((Math.abs(_targetZ - _originZ) < 100) || (!MathUtil.isInsideRadius3D(_originX, _originY, _originZ, _targetX, _targetY, _targetZ, 2000))) && !GeoEngine.getInstance().canMoveToTarget(_originX, _originY, _originZ, _targetX, _targetY, _targetZ, activeChar.getInstanceWorld()))
-                        {
-                            activeChar.stopMove(activeChar.getLastServerPosition());
-                            activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-                            return;
-                        }
-                    }
-                }
-            }
         }
 
         // Correcting targetZ from floor level to head level (?)
@@ -148,17 +77,17 @@ public class MoveBackwardToLocation extends ClientPacket {
         // L2J uses floor, not head level as char coordinates. This is some
         // sort of incompatibility fix.
         // Validate position packets sends head level.
-        _targetZ += activeChar.getTemplate().getCollisionHeight();
+        _targetZ += player.getTemplate().getCollisionHeight();
 
-        if (!activeChar.isCursorKeyMovementActive() && (activeChar.isInFrontOf(new Location(_targetX, _targetY, _targetZ)) || activeChar.isOnSideOf(new Location(_originX, _originY, _originZ)))) {
-            activeChar.setCursorKeyMovementActive(true);
+        if (!player.isCursorKeyMovementActive() && (player.isInFrontOf(new Location(_targetX, _targetY, _targetZ)) || player.isOnSideOf(new Location(_originX, _originY, _originZ)))) {
+            player.setCursorKeyMovementActive(true);
         }
 
         if (_movementMode == 1) {
-            activeChar.setCursorKeyMovement(false);
-            final TerminateReturn terminate = EventDispatcher.getInstance().notifyEvent(new OnPlayerMoveRequest(activeChar, new Location(_targetX, _targetY, _targetZ)), activeChar, TerminateReturn.class);
+            player.setCursorKeyMovement(false);
+            final TerminateReturn terminate = EventDispatcher.getInstance().notifyEvent(new OnPlayerMoveRequest(player, new Location(_targetX, _targetY, _targetZ)), player, TerminateReturn.class);
             if ((terminate != null) && terminate.terminate()) {
-                activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+                player.sendPacket(ActionFailed.STATIC_PACKET);
                 return;
             }
         } else // 0
@@ -166,41 +95,42 @@ public class MoveBackwardToLocation extends ClientPacket {
             if (!Config.ENABLE_KEYBOARD_MOVEMENT) {
                 return;
             }
-            activeChar.setCursorKeyMovement(true);
-            if (!activeChar.isCursorKeyMovementActive()) {
+            player.setCursorKeyMovement(true);
+            if (!player.isCursorKeyMovementActive()) {
                 return;
             }
         }
 
+        final AdminTeleportType teleMode = player.getTeleMode();
         switch (teleMode) {
             case DEMONIC -> {
-                activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-                activeChar.teleToLocation(new Location(_targetX, _targetY, _targetZ));
-                activeChar.setTeleMode(AdminTeleportType.NORMAL);
+                player.sendPacket(ActionFailed.STATIC_PACKET);
+                player.teleToLocation(new Location(_targetX, _targetY, _targetZ));
+                player.setTeleMode(AdminTeleportType.NORMAL);
             }
             case CHARGE -> {
-                activeChar.setXYZ(_targetX, _targetY, _targetZ);
-                Broadcast.toSelfAndKnownPlayers(activeChar, new MagicSkillUse(activeChar, 30012, 10, 500, 0));
-                Broadcast.toSelfAndKnownPlayers(activeChar, new FlyToLocation(activeChar, _targetX, _targetY, _targetZ, FlyType.CHARGE));
-                Broadcast.toSelfAndKnownPlayers(activeChar, new MagicSkillLaunched(activeChar, 30012, 10));
-                activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+                player.setXYZ(_targetX, _targetY, _targetZ);
+                Broadcast.toSelfAndKnownPlayers(player, new MagicSkillUse(player, 30012, 10, 500, 0));
+                Broadcast.toSelfAndKnownPlayers(player, new FlyToLocation(player, _targetX, _targetY, _targetZ, FlyType.CHARGE));
+                Broadcast.toSelfAndKnownPlayers(player, new MagicSkillLaunched(player, 30012, 10));
+                player.sendPacket(ActionFailed.STATIC_PACKET);
             }
             default -> {
-                final double dx = _targetX - activeChar.getX();
-                final double dy = _targetY - activeChar.getY();
+                final double dx = _targetX - player.getX();
+                final double dy = _targetY - player.getY();
                 // Can't move if character is confused, or trying to move a huge distance
-                if (activeChar.isControlBlocked() || (((dx * dx) + (dy * dy)) > 98010000)) // 9900*9900
+                if (player.isControlBlocked() || (((dx * dx) + (dy * dy)) > 98010000)) // 9900*9900
                 {
-                    activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+                    player.sendPacket(ActionFailed.STATIC_PACKET);
                     return;
                 }
-                activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(_targetX, _targetY, _targetZ));
+                player.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(_targetX, _targetY, _targetZ));
             }
         }
 
         // Mobius: Check spawn protections.
-        if (activeChar.isSpawnProtected() || activeChar.isTeleportProtected()) {
-            activeChar.onActionRequest();
+        if (player.isSpawnProtected() || player.isTeleportProtected()) {
+            player.onActionRequest();
         }
     }
 }

@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.skills;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.world.WorldTimeController;
-import org.l2j.gameserver.model.CharEffectList;
+import org.l2j.gameserver.model.EffectList;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -279,7 +279,7 @@ public final class BuffInfo {
      * Stops all the effects for this buff info.<br>
      * Removes effects stats.<br>
      * <b>It will not remove the buff info from the effect list</b>.<br>
-     * Instead call {@link CharEffectList#stopSkillEffects(boolean, Skill)}
+     * Instead call {@link EffectList#stopSkillEffects(boolean, Skill)}
      *
      * @param removed if {@code true} the skill will be handled as removed
      */

@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.admincommandhandlers;
 
 import org.l2j.commons.database.DatabaseFactory;
@@ -47,7 +31,6 @@ import java.util.*;
 
 import static org.l2j.gameserver.network.SystemMessageId.YOUR_TITLE_HAS_BEEN_CHANGED;
 import static org.l2j.gameserver.util.GameUtils.*;
-
 
 /**
  * EditChar admin command implementation.
@@ -321,13 +304,11 @@ public class AdminEditChar implements IAdminCommandHandler
 				final String val = command.substring(10);
 				final int recVal = Integer.parseInt(val);
 				final WorldObject target = activeChar.getTarget();
-				if ((target != null) && isPlayer(target))
+				if (isPlayer(target))
 				{
 					final Player player = (Player) target;
 					player.setRecomHave(recVal);
 					player.broadcastUserInfo();
-					player.sendPacket(new UserInfo(player));
-					player.sendPacket(new ExVoteSystemInfo(player));
 					player.sendMessage("A GM changed your Recommend points to " + recVal);
 					activeChar.sendMessage(player.getName() + "'s Recommend changed to " + recVal);
 				}
@@ -479,7 +460,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				return false;
 			}
-			player.getAppearance().setSex(player.getAppearance().isFemale() ? false : true);
+			player.getAppearance().setFemale(player.getAppearance().isFemale() ? false : true);
 			player.sendMessage("Your gender has been changed by a GM");
 			player.broadcastUserInfo();
 		}

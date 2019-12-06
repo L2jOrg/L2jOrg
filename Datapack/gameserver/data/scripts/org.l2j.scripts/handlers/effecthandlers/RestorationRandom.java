@@ -130,9 +130,14 @@ public final class RestorationRandom extends AbstractEffect
 		if (!extractedItems.isEmpty())
 		{
 			final InventoryUpdate playerIU = new InventoryUpdate();
-			for (Entry<Item, Long> entry : extractedItems.entrySet())
-			{
-				playerIU.addModifiedItem(entry.getKey());
+			for (Entry<Item, Long> entry : extractedItems.entrySet()) {
+				if (entry.getKey().isStackable()) {
+					playerIU.addModifiedItem(entry.getKey());
+				} else {
+					for (var itemInstance : player.getInventory().getItemsByItemId(entry.getKey().getId())) {
+						playerIU.addModifiedItem(itemInstance);
+					}
+				}
 				sendMessage(player, entry.getKey(), entry.getValue());
 			}
 			player.sendPacket(playerIU);

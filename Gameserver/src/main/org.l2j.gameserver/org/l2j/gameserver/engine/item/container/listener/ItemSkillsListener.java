@@ -166,11 +166,6 @@ public final class ItemSkillsListener implements PlayerInventoryListener {
 
         final Player player = (Player) inventory.getOwner();
 
-        // Any item equipped that result in expertise penalty do not give any skills at all.
-        if (item.getTemplate().getCrystalType().getId() > player.getExpertiseLevel()) {
-            return;
-        }
-
         final AtomicBoolean update = new AtomicBoolean();
         final AtomicBoolean updateTimestamp = new AtomicBoolean();
 

@@ -1,28 +1,12 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.admincommandhandlers;
 
+import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
+import org.l2j.gameserver.model.actor.instance.*;
+import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Npc;
-import org.l2j.gameserver.model.actor.instance.Artefact;
-import org.l2j.gameserver.model.actor.instance.Observation;
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.util.BuilderUtil;
 
@@ -31,6 +15,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.StringTokenizer;
 
+import static org.l2j.commons.util.Util.isNullOrEmpty;
+import static org.l2j.gameserver.util.GameUtils.*;
 import static org.l2j.gameserver.util.GameUtils.isMonster;
 import static org.l2j.gameserver.util.GameUtils.isNpc;
 
@@ -66,14 +52,22 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 				{
 					if (isNpc(obj) //
 						&& !isMonster(obj) //
+						&& !isArtifact(obj)
+
 						&& !(obj instanceof Observation) //
-						&& !(obj instanceof Artefact) //
 						&& !results.contains(obj.getId()))
 					{
 						final Npc npc = (Npc) obj;
-						if ((npc.getLocation().getX() > topLeftX) && (npc.getLocation().getX() < bottomRightX) && (npc.getLocation().getY() > topLeftY) && (npc.getLocation().getY() < bottomRightY) && npc.isTalkable() && !npc.hasListener(EventType.ON_NPC_FIRST_TALK) && (npc.getHtmlPath(npc.getId(), 0) == "data/html/npcdefault.htm"))
+						if ((npc.getLocation().getX() > topLeftX) && (npc.getLocation().getX() < bottomRightX) && (npc.getLocation().getY() > topLeftY) && (npc.getLocation().getY() < bottomRightY) && npc.isTalkable() && !npc.hasListener(EventType.ON_NPC_FIRST_TALK))
 						{
-							results.add(npc.getId());
+							if ((npc.getHtmlPath(npc.getId(), 0).equals("data/html/npcdefault.htm")) //
+									|| ((obj instanceof Fisherman) && isNullOrEmpty(HtmCache.getInstance().getHtm(null, "data/html/fisherman/" + npc.getId() + ".htm"))) //
+									|| ((obj instanceof Warehouse) && isNullOrEmpty(HtmCache.getInstance().getHtm(null, "data/html/warehouse/" + npc.getId() + ".htm"))) //
+									|| ((obj instanceof Merchant && !(obj instanceof Fisherman)) && isNullOrEmpty(HtmCache.getInstance().getHtm(null, "data/html/merchant/" + npc.getId() + ".htm"))) //
+									|| ((obj instanceof Guard) && isNullOrEmpty(HtmCache.getInstance().getHtm(null, "data/html/guard/" + npc.getId() + ".htm"))))
+							{
+								results.add(npc.getId());
+							}
 						}
 					}
 				}
@@ -93,14 +87,21 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 				{
 					if (isNpc(obj) //
 						&& !isMonster(obj) //
+						&& !isArtifact(obj)
 						&& !(obj instanceof Observation) //
-						&& !(obj instanceof Artefact) //
 						&& !results.contains(obj.getId()))
 					{
 						final Npc npc = (Npc) obj;
-						if (npc.isTalkable() && !npc.hasListener(EventType.ON_NPC_FIRST_TALK) && (npc.getHtmlPath(npc.getId(), 0) == "data/html/npcdefault.htm"))
+						if (npc.isTalkable() && !npc.hasListener(EventType.ON_NPC_FIRST_TALK))
 						{
-							results.add(npc.getId());
+							if ((npc.getHtmlPath(npc.getId(), 0).equals("data/html/npcdefault.htm") //
+									|| ((obj instanceof Fisherman) && isNullOrEmpty(HtmCache.getInstance().getHtm(null, "data/html/fisherman/" + npc.getId() + ".htm"))) //
+									|| ((obj instanceof Warehouse) && isNullOrEmpty(HtmCache.getInstance().getHtm(null, "data/html/warehouse/" + npc.getId() + ".htm"))) //
+									|| ((obj instanceof Merchant &&  !(obj instanceof Fisherman)) && isNullOrEmpty(HtmCache.getInstance().getHtm(null, "data/html/merchant/" + npc.getId() + ".htm"))) //
+									|| ((obj instanceof Guard) && isNullOrEmpty(HtmCache.getInstance().getHtm(null, "data/html/guard/" + npc.getId() + ".htm")))))
+							{
+								results.add(npc.getId());
+							}
 						}
 					}
 				}
@@ -110,6 +111,34 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 					BuilderUtil.sendSysMessage(activeChar, "NPC " + id + " does not have a default html.");
 				}
 				BuilderUtil.sendSysMessage(activeChar, "Found " + results.size() + " results.");
+				break;
+			}
+			case "admin_next_missing_html":
+			{
+				for (WorldObject obj : World.getInstance().getVisibleObjects())
+				{
+					if (isNpc(obj) //
+							&& !isMonster(obj) //
+							&& !isArtifact(obj)
+							&& !(obj instanceof Observation) //
+							&& !(obj instanceof FlyTerrainObject))
+					{
+						final Npc npc = (Npc) obj;
+						if (npc.isTalkable() && !npc.hasListener(EventType.ON_NPC_FIRST_TALK))
+						{
+							if ((npc.getHtmlPath(npc.getId(), 0).equals("data/html/npcdefault.htm")) //
+									|| ((obj instanceof Fisherman) && isNullOrEmpty(HtmCache.getInstance().getHtm(null, "data/html/fisherman/" + npc.getId() + ".htm"))) //
+									|| ((obj instanceof Warehouse) && isNullOrEmpty(HtmCache.getInstance().getHtm(null, "data/html/warehouse/" + npc.getId() + ".htm"))) //
+									|| ((obj instanceof Merchant && !(obj instanceof Fisherman)) && isNullOrEmpty(HtmCache.getInstance().getHtm(null, "data/html/merchant/" + npc.getId() + ".htm"))) //
+									|| ((obj instanceof Guard) && isNullOrEmpty(HtmCache.getInstance().getHtm(null, "data/html/guard/" + npc.getId() + ".htm"))))
+							{
+								activeChar.teleToLocation(npc);
+								BuilderUtil.sendSysMessage(activeChar, "NPC " + npc.getId() + " does not have a default html.");
+								break;
+							}
+						}
+					}
+				}
 				break;
 			}
 		}

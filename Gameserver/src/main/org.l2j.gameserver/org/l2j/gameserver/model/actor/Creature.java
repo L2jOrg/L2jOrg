@@ -8,10 +8,10 @@ import org.l2j.gameserver.ai.AttackableAI;
 import org.l2j.gameserver.ai.CreatureAI;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.data.xml.CategoryManager;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.data.xml.impl.TransformData;
-import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.geo.SyncMode;
 import org.l2j.gameserver.engine.geo.settings.GeoEngineSettings;
@@ -75,8 +75,10 @@ import java.util.concurrent.locks.StampedLock;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
+import static org.l2j.gameserver.util.GameUtils.isMonster;
 import static org.l2j.gameserver.util.MathUtil.calculateHeadingFrom;
 import static org.l2j.gameserver.util.MathUtil.convertHeadingToDegree;
 
@@ -113,7 +115,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     /**
      * Creatures effect list.
      */
-    private final CharEffectList _effectList = new CharEffectList(this);
+    private final EffectList _effectList = new EffectList(this);
     private final AtomicInteger _abnormalShieldBlocks = new AtomicInteger();
     private final Map<Integer, Integer> _knownRelations = new ConcurrentHashMap<>();
     private final Map<StatusUpdateType, Integer> _statusUpdates = new ConcurrentHashMap<>();
@@ -261,7 +263,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         setIsInvul(true);
     }
 
-    public final CharEffectList getEffectList() {
+    public final EffectList getEffectList() {
         return _effectList;
     }
 
@@ -774,7 +776,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                     sendPacket(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE);
                     sendPacket(ActionFailed.STATIC_PACKET);
                     return;
-                } else if ((target.getActingPlayer() != null) && (getActingPlayer().getSiegeState() > 0) && isInsideZone(ZoneType.SIEGE) && (target.getActingPlayer().getSiegeState() == getActingPlayer().getSiegeState()) && (target.getActingPlayer() != this) && (target.getActingPlayer().getSiegeSide() == getActingPlayer().getSiegeSide())) {
+                } else if (getActingPlayer().isSiegeFriend(target)) {
                     sendPacket(SystemMessageId.FORCE_ATTACK_IS_IMPOSSIBLE_AGAINST_A_TEMPORARY_ALLIED_MEMBER_DURING_A_SIEGE);
                     sendPacket(ActionFailed.STATIC_PACKET);
                     return;
@@ -1348,7 +1350,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         // Stop HP/MP/CP Regeneration task
         _status.stopHpMpRegeneration();
 
-        if (GameUtils.isMonster(this)) {
+        if (isMonster(this)) {
             final Spawn spawn = ((Npc) this).getSpawn();
             if ((spawn != null) && spawn.isRespawnEnabled())
             {
@@ -1402,12 +1404,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             getAI().stopAITask();
         }
 
-        // Removes itself from the summoned list.
         if ((_summoner != null)) {
             _summoner.removeSummonedNpc(getObjectId());
         }
 
-        // Remove all effects, do not broadcast changes.
         _effectList.stopAllEffectsWithoutExclusions(false, false);
 
         // Cancel all timers related to this Creature
@@ -1417,7 +1417,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
         // Set world region to null.
         setWorldRegion(null);
-
         return true;
     }
 
@@ -1862,7 +1861,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             return Config.CHAMP_TITLE;
         }
         // Custom level titles
-        if (Config.SHOW_NPC_LVL && GameUtils.isMonster(this)) {
+        if (Config.SHOW_NPC_LVL && isMonster(this)) {
             String t = "Lv " + getLevel() + (((Monster) this).isAggressive() ? "*" : "");
             if (_title != null) {
                 t += " " + _title;
@@ -2208,7 +2207,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             if (GameUtils.isPlayer(this)) {
                 final Player player = getActingPlayer();
                 player.refreshOverloaded(true);
-                player.refreshExpertisePenalty();
                 sendPacket(info);
 
                 if (broadcastFull) {
@@ -2511,6 +2509,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         // Set the timer of last position update to now
         m._moveTimestamp = gameTicks;
 
+        broadcastPacket(new MoveToLocation(this));
+
         if (distFraction > 1) {
             ThreadPool.execute(() -> getAI().notifyEvent(CtrlEvent.EVT_ARRIVED));
             return true;
@@ -2773,7 +2773,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
                 if (!isInVehicle // Not in vehicle.
                         && !(GameUtils.isPlayer(this) && (distance > 3000)) // Should be able to click far away and move.
-                        && !(GameUtils.isMonster(this) && (Math.abs(dz) > 100)) // Monsters can move on ledges.
+                        && !(isMonster(this) && (Math.abs(dz) > 100)) // Monsters can move on ledges.
                         && !(((curZ - z) > 300) && (distance < 300))) // Prohibit correcting destination if character wants to fall.
                 {
                     // location different if destination wasn't reached (or just z coord is different)
@@ -2823,9 +2823,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             // If no distance to go through, the movement is canceled
             if ((distance < 1) && (geoSettings.isEnabledPathFinding() || GameUtils.isPlayable(this))) {
                 if (GameUtils.isSummon(this)) {
-                    ((Summon) this).setFollowStatus(false);
+                    // Do not break following owner.
+                    if (getAI().getTarget() != getActingPlayer()) {
+                        ((Summon) this).setFollowStatus(false);
+                        getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+                    }
+                } else {
+                    getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
                 }
-                getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
                 return;
             }
         }
@@ -3896,7 +3901,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      *
      * @param flag int
      * @return boolean
-     * @see CharEffectList#isAffected(EffectFlag)
+     * @see EffectList#isAffected(EffectFlag)
      */
     public boolean isAffected(EffectFlag flag) {
         return _effectList.isAffected(flag);
@@ -4263,7 +4268,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     public Queue<AbstractEventListener> getListeners(EventType type) {
         final Queue<AbstractEventListener> objectListenres = super.getListeners(type);
         final Queue<AbstractEventListener> templateListeners = _template.getListeners(type);
-        final Queue<AbstractEventListener> globalListeners = GameUtils.isNpc(this) && !GameUtils.isMonster(this) ? Containers.Npcs().getListeners(type) : GameUtils.isMonster(this) ? Containers.Monsters().getListeners(type) : GameUtils.isPlayer(this) ? Containers.Players().getListeners(type) : EmptyQueue.emptyQueue();
+        final Queue<AbstractEventListener> globalListeners = GameUtils.isNpc(this) && !isMonster(this) ? Containers.Npcs().getListeners(type) : isMonster(this) ? Containers.Monsters().getListeners(type) : GameUtils.isPlayer(this) ? Containers.Players().getListeners(type) : EmptyQueue.emptyQueue();
 
         // Attempt to do not create collection
         if (objectListenres.isEmpty() && templateListeners.isEmpty() && globalListeners.isEmpty()) {

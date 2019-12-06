@@ -161,16 +161,10 @@ public final class Door extends Creature {
         return getTemplate().getId();
     }
 
-    /**
-     * @return Returns the open.
-     */
     public boolean isOpen() {
         return open;
     }
 
-    /**
-     * @param open The open to set.
-     */
     public void setOpen(boolean open) {
         this.open = open;
         if (getChildId() > 0) {

@@ -24,6 +24,9 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Formulas;
 
+import static org.l2j.gameserver.util.GameUtils.isAttackable;
+import static org.l2j.gameserver.util.GameUtils.isNpc;
+
 /**
  * @author Mobius
  */
@@ -46,8 +49,12 @@ public final class Compelling extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, Item item)
-	{
+	public void instant(Creature effector, Creature effected, Skill skill, Item item) {
+		// Prevent compelling raids and town NPCs.
+		if (effected == null || effected.isRaid() || isNpc(effected) && !isAttackable(effected)){
+			return;
+		}
+
 		effected.setRunning();
 		effected.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, effector.getLocation());
 	}

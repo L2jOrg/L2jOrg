@@ -10,31 +10,22 @@ import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
+import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.util.GameUtils.isAttackable;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
- * @author UnAfraid, Nos
+ * @author UnAfraid, Nos, Mobius
  */
 public class Die extends ServerPacket {
-    private final int _objectId;
-    private final boolean _isSweepable;
-    private boolean _toVillage;
-    private boolean _toClanHall;
-    private boolean _toCastle;
-    private boolean _toOutpost;
-    private boolean _useFeather;
-    private boolean _toFortress;
-    private boolean _hideAnimation;
-    private List<Integer> _items = null;
-    private boolean _itemsEnabled;
+    private final int objectId;
+    private final boolean isSweepable;
+    private int flags = 0;
 
     public Die(Creature activeChar) {
-        _objectId = activeChar.getObjectId();
+        objectId = activeChar.getObjectId();
+        isSweepable = isAttackable(activeChar) && activeChar.isSweepActive();
+
         if (isPlayer(activeChar)) {
             final Clan clan = activeChar.getActingPlayer().getClan();
             boolean isInCastleDefense = false;
@@ -51,60 +42,24 @@ public class Die extends ServerPacket {
                 isInFortDefense = (siegeClan == null) && fort.getSiege().checkIsDefender(clan);
             }
 
-            _toVillage = activeChar.canRevive() && !activeChar.isPendingRevive();
-            _toClanHall = (clan != null) && (clan.getHideoutId() > 0);
-            _toCastle = ((clan != null) && (clan.getCastleId() > 0)) || isInCastleDefense;
-            _toOutpost = ((siegeClan != null) && !isInCastleDefense && !isInFortDefense && !siegeClan.getFlag().isEmpty());
-            _useFeather = activeChar.getAccessLevel().allowFixedRes() || activeChar.getInventory().haveItemForSelfResurrection();
-            _toFortress = ((clan != null) && (clan.getFortId() > 0)) || isInFortDefense;
-        }
-
-        _isSweepable = isAttackable(activeChar) && activeChar.isSweepActive();
-    }
-
-    public void setHideAnimation(boolean val) {
-        _hideAnimation = val;
-    }
-
-    public void addItem(int itemId) {
-        if (_items == null) {
-            _items = new ArrayList<>(8);
-        }
-
-        if (_items.size() < 8) {
-            _items.add(itemId);
-        } else {
-            throw new IndexOutOfBoundsException("Die packet doesn't support more then 8 items!");
+            flags += nonNull(clan) && clan.getHideoutId() > 0 ? 2 : 0; // clan hall
+            flags += (nonNull(clan) && (clan.getCastleId() > 0)) || isInCastleDefense ? 4 : 0; // castle
+            flags += (nonNull(clan) && (clan.getFortId() > 0)) || isInFortDefense ? 8 : 0; // fortress
+            flags += nonNull(siegeClan) && !isInCastleDefense && !isInFortDefense && !siegeClan.getFlag().isEmpty() ? 16 : 0; // outpost
+            flags += activeChar.getAccessLevel().allowFixedRes() || activeChar.getInventory().haveItemForSelfResurrection() ? 32 : 0; // feather
         }
     }
 
-    public List<Integer> getItems() {
-        return _items != null ? _items : Collections.emptyList();
-    }
-
-    public void setItemsEnabled(boolean val) {
-        _itemsEnabled = val;
-    }
 
     @Override
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.DIE);
 
-        writeInt(_objectId);
-        writeInt(_toVillage ? 0x01 : 0x00);
-        writeInt(_toClanHall ? 0x01 : 0x00);
-        writeInt(_toCastle ? 0x01 : 0x00);
-        writeInt(_toOutpost ? 0x01 : 0x00);
-        writeInt(_isSweepable ? 0x01 : 0x00);
-        writeInt(_useFeather ? 0x01 : 0x00);
-        writeInt(_toFortress ? 0x01 : 0x00);
-        writeInt(0x00); // Disables use Feather button for X seconds
-        writeInt(0x00); // Adventure's Song
-        writeByte((byte) (_hideAnimation ? 0x01 : 0x00));
-
-        writeInt(_itemsEnabled ? 0x01 : 0x00);
-        writeInt(getItems().size());
-        getItems().forEach(this::writeInt);
+        writeInt(objectId);
+        writeByte(flags);
+        writeByte(0);
+        writeByte(isSweepable);
+        writeByte(0); // resurrection during siege.
     }
 
 }

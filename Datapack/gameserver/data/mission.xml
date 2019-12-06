@@ -8,7 +8,7 @@
             <param name="maxLevel">20</param>
         </handler>
         <reward id="49674"/> <!-- Rice Cake of Flaming Fighting Spirit -->
-        <reward id="71683"/> <!-- Transformation Sealbook Fragment -->
+        <reward id="71683" count="5"/> <!-- Transformation Sealbook Fragment -->
     </mission>
 
     <mission id="1002" name="Daily Hunting (Lv. 21-40)" required-completion="30">
@@ -37,7 +37,7 @@
             <param name="maxLevel">60</param>
         </handler>
         <reward id="49674"/> <!-- Rice Cake of Flaming Fighting Spirit -->
-        <reward id="71683"/> <!-- Transformation Sealbook Fragment -->
+        <reward id="71683" count="5"/> <!-- Transformation Sealbook Fragment -->
     </mission>
 
     <mission id="1005" name="Daily Hunting (Lv. 61-70)" required-completion="60">
@@ -46,7 +46,7 @@
             <param name="maxLevel">70</param>
         </handler>
         <reward id="49674"/> <!-- Rice Cake of Flaming Fighting Spirit -->
-        <reward id="71683"/> <!-- Transformation Sealbook Fragment -->
+        <reward id="71683" count="5"/> <!-- Transformation Sealbook Fragment -->
     </mission>
 
     <mission id="1006" name="Daily Hunting (Lv. 71-75)" required-completion="80">
@@ -55,7 +55,7 @@
             <param name="maxLevel">75</param>
         </handler>
         <reward id="49674"/> <!-- Rice Cake of Flaming Fighting Spirit -->
-        <reward id="71683"/> <!-- Transformation Sealbook Fragment -->
+        <reward id="71683" count="5"/> <!-- Transformation Sealbook Fragment -->
     </mission>
 
     <mission id="1007" name="Daily Hunting (Lv. 76 or higher)" required-completion="100">
@@ -63,7 +63,7 @@
             <param name="minLevel">76</param>
         </handler>
         <reward id="49674"/> <!-- Rice Cake of Flaming Fighting Spirit -->
-        <reward id="71683"/> <!-- Transformation Sealbook Fragment -->
+        <reward id="71683" count="5"/> <!-- Transformation Sealbook Fragment -->
     </mission>
 
     <mission id="1015" name="Go Fishing" required-completion="100" cycle="WEEKLY">
@@ -470,8 +470,8 @@
 
     <mission id="1151" name="Daily Hunting IV (Lv. 71-75)" required-completion="300">
         <handler name="hunt">
-            <param name="minLevel">61</param>
-            <param name="maxLevel">70</param>
+            <param name="minLevel">71</param>
+            <param name="maxLevel">75</param>
         </handler>
         <reward id="49674" count="3"/> <!--  Rice Cake of Flaming Fighting Spirit -->
     </mission>
@@ -518,24 +518,23 @@
 
     <mission id="1157" name="Daily Hunting V (Lv. 61-70)" required-completion="300">
         <handler name="hunt">
-            <param name="minLevel">51</param>
-            <param name="maxLevel">60</param>
+            <param name="minLevel">61</param>
+            <param name="maxLevel">70</param>
         </handler>
         <reward id="49674" count="3"/> <!--  Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
     <mission id="1158" name="Daily Hunting V (Lv. 71-75)" required-completion="400">
         <handler name="hunt">
-            <param name="minLevel">51</param>
-            <param name="maxLevel">60</param>
+            <param name="minLevel">71</param>
+            <param name="maxLevel">75</param>
         </handler>
         <reward id="49674" count="3"/> <!--  Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
     <mission id="1159" name="Daily Hunting V (Lv. 76 or higher)" required-completion="500">
         <handler name="hunt">
-            <param name="minLevel">51</param>
-            <param name="maxLevel">60</param>
+            <param name="minLevel">76</param>
         </handler>
         <reward id="49674" count="3"/> <!--  Rice Cake of Flaming Fighting Spirit -->
     </mission>

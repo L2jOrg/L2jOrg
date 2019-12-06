@@ -38,7 +38,7 @@ import org.l2j.gameserver.model.actor.*;
 import org.l2j.gameserver.model.actor.appearance.PlayerAppearance;
 import org.l2j.gameserver.model.actor.request.AbstractRequest;
 import org.l2j.gameserver.model.actor.request.impl.CaptchaRequest;
-import org.l2j.gameserver.model.actor.stat.PcStat;
+import org.l2j.gameserver.model.actor.stat.PlayerStat;
 import org.l2j.gameserver.model.actor.status.PcStatus;
 import org.l2j.gameserver.model.actor.tasks.player.*;
 import org.l2j.gameserver.model.actor.templates.PlayerTemplate;
@@ -661,9 +661,6 @@ public final class Player extends Playable {
      * The fists Weapon of the Player (used when no weapon is equipped)
      */
     private Weapon _fistsWeaponItem;
-    private int _expertiseArmorPenalty = 0;
-    private int _expertiseWeaponPenalty = 0;
-    private int _expertisePenaltyBonus = 0;
     private volatile Map<Class<? extends AbstractRequest>, AbstractRequest> requests;
     /**
      * Active Brooch Jewels
@@ -966,10 +963,6 @@ public final class Player extends Playable {
 
             // Update the overloaded status of the Player
             player.refreshOverloaded(false);
-
-            // Update the expertise status of the Player
-            player.refreshExpertisePenalty();
-
             player.restoreFriendList();
 
             player.loadRecommendations();
@@ -1180,13 +1173,13 @@ public final class Player extends Playable {
     }
 
     @Override
-    public final PcStat getStat() {
-        return (PcStat) super.getStat();
+    public final PlayerStat getStat() {
+        return (PlayerStat) super.getStat();
     }
 
     @Override
     public void initCharStat() {
-        setStat(new PcStat(this));
+        setStat(new PlayerStat(this));
     }
 
     @Override
@@ -1867,22 +1860,6 @@ public final class Player extends Playable {
         broadcastReputation();
     }
 
-    public int getExpertiseArmorPenalty() {
-        return _expertiseArmorPenalty;
-    }
-
-    public int getExpertiseWeaponPenalty() {
-        return _expertiseWeaponPenalty;
-    }
-
-    public int getExpertisePenaltyBonus() {
-        return _expertisePenaltyBonus;
-    }
-
-    public void setExpertisePenaltyBonus(int bonus) {
-        _expertisePenaltyBonus = bonus;
-    }
-
     public int getWeightPenalty() {
         if (_dietMode) {
             return 0;
@@ -1929,66 +1906,6 @@ public final class Player extends Playable {
         }
     }
 
-    public void refreshExpertisePenalty() {
-        if (!Config.EXPERTISE_PENALTY) {
-            return;
-        }
-
-        final int expertiseLevel = getExpertiseLevel();
-
-        int armorPenalty = 0;
-        int weaponPenalty = 0;
-        int crystaltype;
-
-        for (Item item : getInventory().getItems()) {
-            if ((item != null) && item.isEquipped() && ((item.getItemType() != EtcItemType.ARROW) && (item.getItemType() != EtcItemType.BOLT))) {
-                crystaltype = item.getTemplate().getCrystalType().getId();
-                if (crystaltype > expertiseLevel) {
-                    if (item.isWeapon() && (crystaltype > weaponPenalty)) {
-                        weaponPenalty = crystaltype;
-                    } else if (crystaltype > armorPenalty) {
-                        armorPenalty = crystaltype;
-                    }
-                }
-            }
-        }
-
-        boolean changed = false;
-        final int bonus = getExpertisePenaltyBonus();
-
-        // calc weapon penalty
-        weaponPenalty = weaponPenalty - expertiseLevel - bonus;
-        weaponPenalty = min(Math.max(weaponPenalty, 0), 4);
-
-        if ((_expertiseWeaponPenalty != weaponPenalty) || (getSkillLevel(CommonSkill.WEAPON_GRADE_PENALTY.getId()) != weaponPenalty)) {
-            _expertiseWeaponPenalty = weaponPenalty;
-            if (_expertiseWeaponPenalty > 0) {
-                addSkill(SkillData.getInstance().getSkill(CommonSkill.WEAPON_GRADE_PENALTY.getId(), _expertiseWeaponPenalty));
-            } else {
-                removeSkill(getKnownSkill(CommonSkill.WEAPON_GRADE_PENALTY.getId()), false, true);
-            }
-            changed = true;
-        }
-
-        // calc armor penalty
-        armorPenalty = armorPenalty - expertiseLevel - bonus;
-        armorPenalty = min(Math.max(armorPenalty, 0), 4);
-
-        if ((_expertiseArmorPenalty != armorPenalty) || (getSkillLevel(CommonSkill.ARMOR_GRADE_PENALTY.getId()) != armorPenalty)) {
-            _expertiseArmorPenalty = armorPenalty;
-            if (_expertiseArmorPenalty > 0) {
-                addSkill(SkillData.getInstance().getSkill(CommonSkill.ARMOR_GRADE_PENALTY.getId(), _expertiseArmorPenalty));
-            } else {
-                removeSkill(getKnownSkill(CommonSkill.ARMOR_GRADE_PENALTY.getId()), false, true);
-            }
-            changed = true;
-        }
-
-        if (changed) {
-            sendPacket(new EtcStatusUpdate(this));
-        }
-    }
-
     public void useEquippableItem(Item item, boolean abortAttack) {
         Set<Item> modifiedItems;
         final boolean isEquiped = item.isEquipped();
@@ -2030,7 +1947,6 @@ public final class Player extends Playable {
             }
         }
 
-        refreshExpertisePenalty();
         broadcastUserInfo();
 
         final InventoryUpdate iu = new InventoryUpdate(modifiedItems);
@@ -4426,7 +4342,7 @@ public final class Player extends Playable {
 
         // If both players are in SIEGE zone just increase siege kills/deaths
         if (isInsideZone(ZoneType.SIEGE) && killedPlayer.isInsideZone(ZoneType.SIEGE)) {
-            if ((getSiegeState() > 0) && (killedPlayer.getSiegeState() > 0) && (getSiegeState() != killedPlayer.getSiegeState())) {
+            if (!isSiegeFriend(killedPlayable)) {
                 final Clan targetClan = killedPlayer.getClan();
                 if ((_clan != null) && (targetClan != null)) {
                     _clan.addSiegeKill();
@@ -4927,7 +4843,6 @@ public final class Player extends Playable {
         this.privateStoreType = privateStoreType;
 
         if (Config.OFFLINE_DISCONNECT_FINISHED && (privateStoreType == PrivateStoreType.NONE) && ((_client == null) || _client.isDetached())) {
-            IdFactory.getInstance().releaseId(getObjectId());    // WTF
             Disconnection.of(this).storeMe().deleteMe();
         }
     }
@@ -5395,7 +5310,6 @@ public final class Player extends Playable {
      */
     public void updateAndBroadcastStatus(int broadcastType) {
         refreshOverloaded(true);
-        refreshExpertisePenalty();
         // Send a Server->Client packet UserInfo to this Player and CharInfo to all Player in its _KnownPlayers (broadcast)
         if (broadcastType == 1) {
             sendPacket(new UserInfo(this));
@@ -5509,7 +5423,7 @@ public final class Player extends Playable {
             statement.setInt(31, _baseClass);
             statement.setInt(32, isNoble() ? 1 : 0);
             statement.setLong(33, 0);
-            statement.setInt(34, PcStat.MIN_VITALITY_POINTS);
+            statement.setInt(34, PlayerStat.MIN_VITALITY_POINTS);
             statement.setDate(35, new Date(_createDate.getTimeInMillis()));
             statement.executeUpdate();
         } catch (Exception e) {
@@ -5839,102 +5753,105 @@ public final class Player extends Playable {
             return;
         }
 
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement delete = con.prepareStatement(DELETE_SKILL_SAVE);
-             PreparedStatement statement = con.prepareStatement(ADD_SKILL_SAVE)) {
+        try (Connection con = DatabaseFactory.getInstance().getConnection()) {
+
             // Delete all current stored effects for char to avoid dupe
-            delete.setInt(1, getObjectId());
-            delete.setInt(2, _classIndex);
-            delete.execute();
+            try (PreparedStatement delete = con.prepareStatement(DELETE_SKILL_SAVE)) {
+                delete.setInt(1, getObjectId());
+                delete.setInt(2, _classIndex);
+                delete.execute();
+            }
 
             int buff_index = 0;
             final List<Long> storedSkills = new ArrayList<>();
 
-            // Store all effect data along with calulated remaining
-            // reuse delays for matching skills. 'restore_type'= 0.
-            if (storeEffects) {
-                for (BuffInfo info : getEffectList().getEffects()) {
-                    if (info == null) {
-                        continue;
-                    }
+            try(PreparedStatement statement = con.prepareStatement(ADD_SKILL_SAVE)) {
+                // Store all effect data along with calulated remaining
+                // reuse delays for matching skills. 'restore_type'= 0.
+                if (storeEffects) {
+                    for (BuffInfo info : getEffectList().getEffects()) {
+                        if (info == null) {
+                            continue;
+                        }
 
-                    final Skill skill = info.getSkill();
+                        final Skill skill = info.getSkill();
 
-                    // Do not store those effects.
-                    if (skill.isDeleteAbnormalOnLeave()) {
-                        continue;
-                    }
+                        // Do not store those effects.
+                        if (skill.isDeleteAbnormalOnLeave()) {
+                            continue;
+                        }
 
-                    // Do not save heals.
-                    if (skill.getAbnormalType() == AbnormalType.LIFE_FORCE_OTHERS) {
-                        continue;
-                    }
+                        // Do not save heals.
+                        if (skill.getAbnormalType() == AbnormalType.LIFE_FORCE_OTHERS) {
+                            continue;
+                        }
 
-                    // Toggles are skipped, unless they are necessary to be always on.
-                    if ((skill.isToggle() && !skill.isNecessaryToggle())) {
-                        continue;
-                    }
+                        // Toggles are skipped, unless they are necessary to be always on.
+                        if ((skill.isToggle() && !skill.isNecessaryToggle())) {
+                            continue;
+                        }
 
-                    if (skill.isMentoring()) {
-                        continue;
-                    }
+                        if (skill.isMentoring()) {
+                            continue;
+                        }
 
-                    // Dances and songs are not kept in retail.
-                    if (skill.isDance() && !Config.ALT_STORE_DANCES) {
-                        continue;
-                    }
+                        // Dances and songs are not kept in retail.
+                        if (skill.isDance() && !Config.ALT_STORE_DANCES) {
+                            continue;
+                        }
 
-                    if (storedSkills.contains(skill.getReuseHashCode())) {
-                        continue;
-                    }
+                        if (storedSkills.contains(skill.getReuseHashCode())) {
+                            continue;
+                        }
 
-                    storedSkills.add(skill.getReuseHashCode());
-
-                    statement.setInt(1, getObjectId());
-                    statement.setInt(2, skill.getId());
-                    statement.setInt(3, skill.getLevel());
-                    statement.setInt(4, skill.getSubLevel());
-                    statement.setInt(5, info.getTime());
-
-                    final TimeStamp t = getSkillReuseTimeStamp(skill.getReuseHashCode());
-                    statement.setLong(6, (t != null) && t.hasNotPassed() ? t.getReuse() : 0);
-                    statement.setDouble(7, (t != null) && t.hasNotPassed() ? t.getStamp() : 0);
-
-                    statement.setInt(8, 0); // Store type 0, active buffs/debuffs.
-                    statement.setInt(9, _classIndex);
-                    statement.setInt(10, ++buff_index);
-                    statement.addBatch();
-                }
-                statement.executeBatch();
-            }
-
-            // Skills under reuse.
-            final Map<Long, TimeStamp> reuseTimeStamps = getSkillReuseTimeStamps();
-            if (reuseTimeStamps != null) {
-                for (Entry<Long, TimeStamp> ts : reuseTimeStamps.entrySet()) {
-                    final long hash = ts.getKey();
-                    if (storedSkills.contains(hash)) {
-                        continue;
-                    }
-
-                    final TimeStamp t = ts.getValue();
-                    if ((t != null) && t.hasNotPassed()) {
-                        storedSkills.add(hash);
+                        storedSkills.add(skill.getReuseHashCode());
 
                         statement.setInt(1, getObjectId());
-                        statement.setInt(2, t.getSkillId());
-                        statement.setInt(3, t.getSkillLvl());
-                        statement.setInt(4, t.getSkillSubLvl());
-                        statement.setInt(5, -1);
-                        statement.setLong(6, t.getReuse());
-                        statement.setDouble(7, t.getStamp());
-                        statement.setInt(8, 1); // Restore type 1, skill reuse.
+                        statement.setInt(2, skill.getId());
+                        statement.setInt(3, skill.getLevel());
+                        statement.setInt(4, skill.getSubLevel());
+                        statement.setInt(5, info.getTime());
+
+                        final TimeStamp t = getSkillReuseTimeStamp(skill.getReuseHashCode());
+                        statement.setLong(6, (t != null) && t.hasNotPassed() ? t.getReuse() : 0);
+                        statement.setDouble(7, (t != null) && t.hasNotPassed() ? t.getStamp() : 0);
+
+                        statement.setInt(8, 0); // Store type 0, active buffs/debuffs.
                         statement.setInt(9, _classIndex);
                         statement.setInt(10, ++buff_index);
                         statement.addBatch();
                     }
+                    statement.executeBatch();
                 }
-                statement.executeBatch();
+
+                // Skills under reuse.
+                final Map<Long, TimeStamp> reuseTimeStamps = getSkillReuseTimeStamps();
+                if (reuseTimeStamps != null) {
+                    for (Entry<Long, TimeStamp> ts : reuseTimeStamps.entrySet()) {
+                        final long hash = ts.getKey();
+                        if (storedSkills.contains(hash)) {
+                            continue;
+                        }
+
+                        final TimeStamp t = ts.getValue();
+                        if ((t != null) && t.hasNotPassed()) {
+                            storedSkills.add(hash);
+
+                            statement.setInt(1, getObjectId());
+                            statement.setInt(2, t.getSkillId());
+                            statement.setInt(3, t.getSkillLvl());
+                            statement.setInt(4, t.getSkillSubLvl());
+                            statement.setInt(5, -1);
+                            statement.setLong(6, t.getReuse());
+                            statement.setDouble(7, t.getStamp());
+                            statement.setInt(8, 1); // Restore type 1, skill reuse.
+                            statement.setInt(9, _classIndex);
+                            statement.setInt(10, ++buff_index);
+                            statement.addBatch();
+                        }
+                    }
+                    statement.executeBatch();
+                }
             }
         } catch (Exception e) {
             LOGGER.warn("Could not store char effect data: ", e);
@@ -6124,7 +6041,6 @@ public final class Player extends Playable {
         final int classIndex = (newClassIndex > -1) ? newClassIndex : _classIndex;
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement(ADD_NEW_SKILLS)) {
-            con.setAutoCommit(false);
             for (Skill addSkill : newSkills) {
                 ps.setInt(1, getObjectId());
                 ps.setInt(2, addSkill.getId());
@@ -6134,7 +6050,6 @@ public final class Player extends Playable {
                 ps.addBatch();
             }
             ps.executeBatch();
-            con.commit();
         } catch (SQLException e) {
             LOGGER.warn("Error could not store char skills: " + e.getMessage(), e);
         }
@@ -6875,16 +6790,14 @@ public final class Player extends Playable {
         }
 
         // ************************************* Check Target *******************************************
-        // Create and set a WorldObject containing the target of the skill
-        final WorldObject target = skill.getTarget(this, forceUse, dontMove, true);
         final Location worldPosition = _currentSkillWorldPosition;
-
         if ((skill.getTargetType() == TargetType.GROUND) && (worldPosition == null)) {
-            LOGGER.info("WorldPosition is null for skill: " + skill.getName() + ", player: " + getName() + ".");
             sendPacket(ActionFailed.STATIC_PACKET);
             return false;
         }
 
+        // Create and set a WorldObject containing the target of the skill
+        final WorldObject target = skill.getTarget(this, forceUse, dontMove, true);
         // Check the validity of the target
         if (target == null) {
             sendPacket(ActionFailed.STATIC_PACKET);
@@ -7763,7 +7676,7 @@ public final class Player extends Playable {
             final SubClass newClass = new SubClass();
             newClass.setClassId(classId);
             newClass.setClassIndex(classIndex);
-            newClass.setVitalityPoints(PcStat.MAX_VITALITY_POINTS);
+            newClass.setVitalityPoints(PlayerStat.MAX_VITALITY_POINTS);
             if (isDualClass) {
                 newClass.setIsDualClass(true);
                 newClass.setExp(ExperienceData.getInstance().getExpForLevel(Config.BASE_DUALCLASS_LEVEL));
@@ -8087,7 +8000,6 @@ public final class Player extends Playable {
             }
 
             refreshOverloaded(true);
-            refreshExpertisePenalty();
             broadcastUserInfo();
 
             // Clear resurrect xp calculation
@@ -8363,19 +8275,6 @@ public final class Player extends Playable {
         }
     }
 
-    /**
-     * Expertise of the Player (None=0, D=1, C=2, B=3, A=4, S=5, S80=6, S84=7)
-     *
-     * @return int Expertise skill level.
-     */
-    public int getExpertiseLevel() {
-        int level = getSkillLevel(239);
-        if (level < 0) {
-            level = 0;
-        }
-        return level;
-    }
-
     @Override
     public void teleToLocation(ILocational loc, boolean allowRandomOffset) {
         if ((_vehicle != null) && !_vehicle.isTeleporting()) {
@@ -8485,10 +8384,6 @@ public final class Player extends Playable {
 
     public void removeExpAndSp(long removeExp, long removeSp) {
         getStat().removeExpAndSp(removeExp, removeSp, true);
-    }
-
-    public void removeExpAndSp(long removeExp, long removeSp, boolean sendMessage) {
-        getStat().removeExpAndSp(removeExp, removeSp, sendMessage);
     }
 
     @Override
@@ -11276,5 +11171,35 @@ public final class Player extends Playable {
 
     public boolean hasMentorRelationship(Player player) {
         return nonNull(MentorManager.getInstance().getMentee(objectId, player.getObjectId())) || nonNull(MentorManager.getInstance().getMentee(player.getObjectId(), objectId));
+    }
+
+    public boolean isSiegeFriend(WorldObject target)
+    {
+        // If i'm natural or not in siege zone, not friends.
+        if ((_siegeState == 0) || !isInsideZone(ZoneType.SIEGE))
+        {
+            return false;
+        }
+
+        // If target isn't a player, is self, isn't on same siege or not on same state, not friends.
+        var targetPlayer = target.getActingPlayer();
+        if ((targetPlayer == null) || (targetPlayer == this) || (targetPlayer.getSiegeSide() != _siegeSide) || (_siegeState != targetPlayer.getSiegeState()))
+        {
+            return false;
+        }
+
+        // Attackers are considered friends only if castle has no owner.
+        if (_siegeState == 1)
+        {
+            final Castle castle = CastleManager.getInstance().getCastleById(_siegeSide);
+            if (castle == null)
+            {
+                return false;
+            }
+            return castle.getOwner() == null;
+        }
+
+        // Both are defenders, friends.
+        return true;
     }
 }

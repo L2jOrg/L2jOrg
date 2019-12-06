@@ -987,9 +987,70 @@
         <!-- For 20 min., Acquired XP/ SP +10%, P./ M. Atk. +12%, P./ M. Critical Rate +10, P./ M. Critical Damage +5%, P./ M. Def. +15%, Max HP/ MP/ CP +25%, HP/ MP Recovery Bonus +30%. With a certain chance, converts 5% of P. melee damage dealt into HP. Effect remains after death. -->
         <icon>icon.bm_dragon_fruit</icon>
         <operateType>A1</operateType>
+        <abnormalTime>1200</abnormalTime>
+        <abnormalLvl>1</abnormalLvl>
         <isMagic>4</isMagic>
         <reuseDelay>60000</reuseDelay>
         <effectPoint>1</effectPoint>
+        <stayAfterDeath>true</stayAfterDeath>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <magicCriticalRate>5</magicCriticalRate>
+        <magicLvl>1</magicLvl>
+        <itemConsumeCount>1</itemConsumeCount>
+        <itemConsumeId>70767</itemConsumeId>
+        <effects>
+            <effect name="ExpModify">
+                <amount>10</amount>
+            </effect>
+            <effect name="SpModify">
+                <amount>10</amount>
+            </effect>
+            <effect name="PAtk">
+                <amount>12</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="MAtk">
+                <amount>12</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="CriticalRate">
+                <amount>10</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="CriticalDamage">
+                <amount>5</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="MagicCriticalDamage">
+                <amount>5</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="MaxHp">
+                <amount>25</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="MaxMp">
+                <amount>25</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="MaxCp">
+                <amount>25</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="HpRegen">
+                <amount>30</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="MpRegen">
+                <amount>30</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="VampiricAttack">
+                <amount>5</amount>
+                <chance>30</chance>
+            </effect>
+        </effects>
     </skill>
     <skill id="39270" toLevel="1" name="Dragon??s Treasure Chest">
         <icon>icon.bm_dragon_present</icon>
@@ -1040,9 +1101,72 @@
         <!-- For 20 min., Acquired XP/ SP +10%, P./ M. Atk. +12%, P./ M. Critical Rate +10, P./ M. Critical Damage +5%, P./ M. Def. +15%, Max HP/ MP/ CP +25%, HP/ MP Recovery Bonus +30%. With a certain chance, converts 5% of P. melee damage dealt into HP. Effect remains after death. -->
         <icon>icon.bm_dragon_fruit</icon>
         <operateType>A1</operateType>
+        <abnormalType>SPECIAL</abnormalType>
+        <abnormalTime>1200</abnormalTime>
+        <abnormalLvl>1</abnormalLvl>
         <isMagic>4</isMagic>
         <reuseDelay>60000</reuseDelay>
         <effectPoint>1</effectPoint>
+        <stayAfterDeath>true</stayAfterDeath>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <magicCriticalRate>5</magicCriticalRate>
+        <magicLvl>1</magicLvl>
+        <itemConsumeCount>1</itemConsumeCount>
+        <itemConsumeId>90499</itemConsumeId>
+        <reuseDelay>60000</reuseDelay>
+        <effects>
+            <effect name="ExpModify">
+                <amount>10</amount>
+            </effect>
+            <effect name="SpModify">
+                <amount>10</amount>
+            </effect>
+            <effect name="PAtk">
+                <amount>12</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="MAtk">
+                <amount>12</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="CriticalRate">
+                <amount>10</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="CriticalDamage">
+                <amount>5</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="MagicCriticalDamage">
+                <amount>5</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="MaxHp">
+                <amount>25</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="MaxMp">
+                <amount>25</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="MaxCp">
+                <amount>25</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="HpRegen">
+                <amount>30</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="MpRegen">
+                <amount>30</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="VampiricAttack">
+                <amount>5</amount>
+                <chance>30</chance>
+            </effect>
+        </effects>
     </skill>
     <skill id="39274" toLevel="1" name="Lesser GM's Blessing Chest">
         <operateType>A1</operateType>

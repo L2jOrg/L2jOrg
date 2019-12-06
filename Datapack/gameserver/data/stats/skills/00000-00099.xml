@@ -1,5 +1,318 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+    <skil id="1" name="Triple Slash" max-level="45" debuff="true" action="A2">
+        <!-- Quickly strikes the target three times with $s1 Power. For $s2, enemy's P. Def. -$s3. Requires dual swords. Ignores shield block. Over-hit. -->
+        <icon initial="icon.skill0001"/>
+        <attributes next-action="ATTACK" property="PHYSIC" reuse="3000" magic-critical-rate="5">
+            <magic-level>
+                <value level="1">4854</value>
+                <value level="2">45</value>
+            </magic-level>
+            <mana-consume>
+                <value level="1">38</value>
+                <value level="2">39</value>
+                <value level="3">40</value>
+                <value level="4">41</value>
+                <value level="5">42</value>
+                <value level="6">43</value>
+                <value level="7">44</value>
+                <value level="8">45</value>
+                <value level="9">46</value>
+                <value level="10">47</value>
+                <value level="11">48</value>
+                <value level="12">49</value>
+                <value level="13">50</value>
+                <value level="14">51</value>
+                <value level="15">52</value>
+                <value level="16">53</value>
+                <value level="17">54</value>
+                <value level="18">55</value>
+                <value level="19">56</value>
+                <value level="20">57</value>
+                <value level="21">58</value>
+                <value level="22">59</value>
+                <value level="23">60</value>
+                <value level="24">61</value>
+                <value level="25">62</value>
+                <value level="26">63</value>
+                <value level="27">64</value>
+                <value level="28">65</value>
+                <value level="29">66</value>
+                <value level="30">67</value>
+                <value level="31">68</value>
+                <value level="32">69</value>
+                <value level="33">70</value>
+                <value level="34">71</value>
+                <value level="35">72</value>
+                <value level="36">73</value>
+                <value level="37">74</value>
+                <value level="38">76</value>
+                <value level="39">77</value>
+                <value level="40">78</value>
+                <value level="41">80</value>
+                <value level="42">81</value>
+                <value level="43">82</value>
+                <value level="44">83</value>
+                <value level="45">84</value>
+            </mana-consume>
+            <cast-range initial="40"/>
+            <cool-time initial="500"/>
+            <effect-point>
+                <value>-107</value>
+                <value level="2">-110</value>
+                <value level="3">-113</value>
+                <value level="4">-116</value>
+                <value level="5">-119</value>
+                <value level="6">-121</value>
+                <value level="7">-124</value>
+                <value level="8">-127</value>
+                <value level="9">-130</value>
+                <value level="10">-133</value>
+                <value level="11">-136</value>
+                <value level="12">-139</value>
+                <value level="13">-142</value>
+                <value level="14">-144</value>
+                <value level="15">-147</value>
+                <value level="16">-150</value>
+                <value level="17">-153</value>
+                <value level="18">-155</value>
+                <value level="19">-158</value>
+                <value level="20">-161</value>
+                <value level="21">-163</value>
+                <value level="22">-166</value>
+                <value level="23">-168</value>
+                <value level="24">-170</value>
+                <value level="25">-173</value>
+                <value level="26">-175</value>
+                <value level="27">-177</value>
+                <value level="28">-179</value>
+                <value level="29">-181</value>
+                <value level="30">-183</value>
+                <value level="31">-185</value>
+                <value level="32">-187</value>
+                <value level="33">-189</value>
+                <value level="34">-190</value>
+                <value level="35">-192</value>
+                <value level="36">-193</value>
+                <value level="37">-194</value>
+                <value level="38">-196</value>
+                <value level="39">-197</value>
+                <value level="40">-199</value>
+                <value level="41">-202</value>
+                <value level="42">-203</value>
+                <value level="43">-205</value>
+                <value level="44">-206</value>
+                <value level="45">-208</value>
+            </effect-point>
+            <effect-range initial="400"/>
+            <hit-time initial="1733"/>
+        </attributes>
+        <target type="ENEMY"/>
+        <abnormal type="PD_DOWN">
+            <level initial="1"/>
+            <time initial="10"/>
+            <chance initial="70"/>
+        </abnormal>
+        <conditions>
+            <weapon>
+                <type>DUAL</type>
+                <type>DUAL_BLUNT</type>
+            </weapon>
+        </conditions>
+        <effects>
+            <physic-attack ignore-shield="true" critical-chance="15" over-hit="true">
+                <power>
+                    <value level="1">517</value>
+                    <value level="2">549</value>
+                    <value level="3">583</value>
+                    <value level="4">619</value>
+                    <value level="5">656</value>
+                    <value level="6">694</value>
+                    <value level="7">735</value>
+                    <value level="8">777</value>
+                    <value level="9">820</value>
+                    <value level="10">865</value>
+                    <value level="11">912</value>
+                    <value level="12">960</value>
+                    <value level="13">1010</value>
+                    <value level="14">1062</value>
+                    <value level="15">1115</value>
+                    <value level="16">1169</value>
+                    <value level="17">1225</value>
+                    <value level="18">1283</value>
+                    <value level="19">1342</value>
+                    <value level="20">1402</value>
+                    <value level="21">1464</value>
+                    <value level="22">1527</value>
+                    <value level="23">1591</value>
+                    <value level="24">1656</value>
+                    <value level="25">1722</value>
+                    <value level="26">1789</value>
+                    <value level="27">1857</value>
+                    <value level="28">1926</value>
+                    <value level="29">1995</value>
+                    <value level="30">2065</value>
+                    <value level="31">2135</value>
+                    <value level="32">2206</value>
+                    <value level="33">2277</value>
+                    <value level="34">2347</value>
+                    <value level="35">2417</value>
+                    <value level="36">2488</value>
+                    <value level="37">2557</value>
+                    <value level="38">2581</value>
+                    <value level="39">2604</value>
+                    <value level="40">2627</value>
+                    <value level="41">2673</value>
+                    <value level="42">2696</value>
+                    <value level="43">2719</value>
+                    <value level="44">2742</value>
+                    <value level="45">2765</value>
+                </power>
+            </physic-attack>
+            <physic-defense amount="-23" mode="PERCENT"/>
+        </effects>
+    </skil>
+    <skil id="2" name="Confusion" max-level="19" type="MAGIC" action="A1" debuff="true">
+        <icon initial="icon.skill0002"/>
+        <attributes reuse="5000" magic-critical-rate="5" trait="DERANGEMENT">
+            <magic-level>
+                <value level="1">24</value>
+                <value level="2">28</value>
+                <value level="3">32</value>
+                <value level="4">36</value>
+                <value level="5">40</value>
+                <value level="6">43</value>
+                <value level="7">46</value>
+                <value level="8">49</value>
+                <value level="9">52</value>
+                <value level="10">55</value>
+                <value level="11">58</value>
+                <value level="12">60</value>
+                <value level="13">62</value>
+                <value level="14">64</value>
+                <value level="15">66</value>
+                <value level="16">68</value>
+                <value level="17">70</value>
+                <value level="18">72</value>
+                <value level="19">74</value>
+            </magic-level>
+            <mana-init-consume>
+                <value level="1">3</value>
+                <value level="2">3</value>
+                <value level="3">3</value>
+                <value level="4">4</value>
+                <value level="5">4</value>
+                <value level="6">4</value>
+                <value level="7">5</value>
+                <value level="8">5</value>
+                <value level="9">5</value>
+                <value level="10">5</value>
+                <value level="11">6</value>
+                <value level="12">6</value>
+                <value level="13">6</value>
+                <value level="14">6</value>
+                <value level="15">7</value>
+                <value level="16">7</value>
+                <value level="17">7</value>
+                <value level="18">7</value>
+                <value level="19">7</value>
+            </mana-init-consume>
+            <mana-consume>
+                <value level="1">9</value>
+                <value level="2">10</value>
+                <value level="3">11</value>
+                <value level="4">13</value>
+                <value level="5">14</value>
+                <value level="6">15</value>
+                <value level="7">17</value>
+                <value level="8">18</value>
+                <value level="9">19</value>
+                <value level="10">20</value>
+                <value level="11">22</value>
+                <value level="12">22</value>
+                <value level="13">23</value>
+                <value level="14">24</value>
+                <value level="15">25</value>
+                <value level="16">26</value>
+                <value level="17">26</value>
+                <value level="18">27</value>
+                <value level="19">28</value>
+            </mana-consume>
+            <cast-range initial="600"/>
+            <cool-time/>
+            <effect-point/>
+            <effect-range initial="1100"/>
+            <hit-time initial="1500"/>
+        </attributes>
+        <target type="ENEMY_ONLY"/>
+        <effects>
+            <randomizeHate chance="80"/>
+        </effects>
+    </skil>
+    <skil id="3" name="Power Strike" action="A1">
+        <icon initial="icon.skill0003"/>
+        <attributes next-action="ATTACK" reuse="3000" magic-critical-rate="5">
+            <magic-level>
+                <value level="1">3</value>
+                <value level="2">4</value>
+                <value level="3">5</value>
+                <value level="4">8</value>
+                <value level="5">9</value>
+                <value level="6">10</value>
+                <value level="7">13</value>
+                <value level="8">14</value>
+                <value level="9">15</value>
+            </magic-level>
+            <mana-consume>
+                <value level="1">9</value>
+                <value level="2">9</value>
+                <value level="3">10</value>
+                <value level="4">11</value>
+                <value level="5">12</value>
+                <value level="6">13</value>
+                <value level="7">16</value>
+                <value level="8">16</value>
+                <value level="9">17</value>
+            </mana-consume>
+            <cast-range initial="40"/>
+            <cool-time initial="720"/>
+            <effect-point>
+                <value level="1">-26</value>
+                <value level="2">-27</value>
+                <value level="3">-29</value>
+                <value level="4">-32</value>
+                <value level="5">-34</value>
+                <value level="6">-35</value>
+                <value level="7">-40</value>
+                <value level="8">-42</value>
+                <value level="9">-43</value>
+            </effect-point>
+            <effect-range initial="400"/>
+            <hit-time initial="1080"/>
+        </attributes>
+        <target type="ENEMY"/>
+        <conditions>
+            <weapon>
+                <type>SWORD</type>
+                <type>BLUNT</type>
+            </weapon>
+        </conditions>
+        <effects>
+            <physic-attack over-hit="true">
+                <power>
+                    <value level="1">30</value>
+                    <value level="2">32</value>
+                    <value level="3">35</value>
+                    <value level="4">46</value>
+                    <value level="5">51</value>
+                    <value level="6">55</value>
+                    <value level="7">71</value>
+                    <value level="8">78</value>
+                    <value level="9">84</value>
+                </power>
+            </physic-attack>
+        </effects>
+    </skil>
     <skill id="1" toLevel="45" name="Triple Slash">
         <!-- Quickly strikes the target three times with $s1 Power. For $s2, enemy's P. Def. -$s3. Requires dual swords. Ignores shield block. Over-hit. -->
         <icon>icon.skill0001</icon>

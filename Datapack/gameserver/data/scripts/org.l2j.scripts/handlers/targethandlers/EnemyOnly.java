@@ -131,8 +131,7 @@ public class EnemyOnly implements ITargetTypeHandler
 			// Is this check still actual?
 			if ((target.getActingPlayer() != null) && (activeChar.getActingPlayer() != null))
 			{
-				if ((activeChar.getActingPlayer().getSiegeState() > 0) && activeChar.isInsideZone(ZoneType.SIEGE) && (target.getActingPlayer().getSiegeState() == activeChar.getActingPlayer().getSiegeState()) && (target.getActingPlayer() != activeChar.getActingPlayer()) && (target.getActingPlayer().getSiegeSide() == activeChar.getActingPlayer().getSiegeSide()))
-				{
+				if (activeChar.getActingPlayer().isSiegeFriend(target)) {
 					if (sendMessage)
 					{
 						activeChar.sendPacket(SystemMessageId.FORCE_ATTACK_IS_IMPOSSIBLE_AGAINST_A_TEMPORARY_ALLIED_MEMBER_DURING_A_SIEGE);

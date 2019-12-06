@@ -46,9 +46,6 @@ public final class WorldRegion {
     WorldRegion(int regionX, int regionY) {
         this.regionX = regionX;
         this.regionY = regionY;
-
-        // Default a newly initialized region to inactive, unless always on is specified.
-        active = Config.GRIDS_ALWAYS_ON;
     }
 
     private boolean areNeighborsEmpty() {

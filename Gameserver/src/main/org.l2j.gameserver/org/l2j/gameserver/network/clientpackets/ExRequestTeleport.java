@@ -31,6 +31,8 @@ public class ExRequestTeleport extends ClientPacket {
         }
 
         if(GameUtils.canTeleport(player) && (player.getLevel() <= 40 || player.reduceAdena("Teleport", info.getPrice(), null, true))) {
+            player.abortCast();
+            player.stopMove(null);
             player.teleToLocation(info.getLocation());
         }
     }

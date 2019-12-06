@@ -21,10 +21,7 @@ import org.l2j.gameserver.model.events.impl.sieges.OnCastleSiegeFinish;
 import org.l2j.gameserver.model.events.impl.sieges.OnCastleSiegeOwnerChange;
 import org.l2j.gameserver.model.events.impl.sieges.OnCastleSiegeStart;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.RelationChanged;
-import org.l2j.gameserver.network.serverpackets.SiegeInfo;
-import org.l2j.gameserver.network.serverpackets.SystemMessage;
-import org.l2j.gameserver.network.serverpackets.UserInfo;
+import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.World;
@@ -40,14 +37,16 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.stream.Collectors;
 
 import static java.util.Objects.nonNull;
+import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 
 public class Siege implements Siegable {
+    protected static final Logger LOGGER = LoggerFactory.getLogger(Siege.class);
+
     // typeId's
     public static final byte OWNER = -1;
     public static final byte DEFENDER = 0;
     public static final byte ATTACKER = 1;
     public static final byte DEFENDER_NOT_APPROVED = 2;
-    protected static final Logger LOGGER = LoggerFactory.getLogger(Siege.class);
     final Castle castle;
     // must support Concurrent Modifications
     private final Collection<SiegeClan> _attackerClans = ConcurrentHashMap.newKeySet();
@@ -72,16 +71,13 @@ public class Siege implements Siegable {
     @Override
     public void endSiege() {
         if (_isInProgress) {
-            SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_S1_SIEGE_HAS_FINISHED);
-            sm.addCastleId(castle.getResidenceId());
-            Broadcast.toAllOnlinePlayers(sm);
+            Broadcast.toAllOnlinePlayers(getSystemMessage(SystemMessageId.THE_S1_SIEGE_HAS_FINISHED).addCastleId(castle.getResidenceId()));
+            Broadcast.toAllOnlinePlayers(new PlaySound("systemmsg_eu.18"));
 
             if (castle.getOwnerId() > 0) {
                 final Clan clan = ClanTable.getInstance().getClan(getCastle().getOwnerId());
-                sm = SystemMessage.getSystemMessage(SystemMessageId.CLAN_S1_IS_VICTORIOUS_OVER_S2_S_CASTLE_SIEGE);
-                sm.addString(clan.getName());
-                sm.addCastleId(castle.getResidenceId());
-                Broadcast.toAllOnlinePlayers(sm);
+
+                Broadcast.toAllOnlinePlayers(getSystemMessage(SystemMessageId.CLAN_S1_IS_VICTORIOUS_OVER_S2_S_CASTLE_SIEGE).addString(clan.getName()).addCastleId(castle.getResidenceId()));
 
                 if (clan.getId() == _firstOwnerClanId) {
                     // Owner is unchanged
@@ -98,9 +94,7 @@ public class Siege implements Siegable {
                     }
                 }
             } else {
-                sm = SystemMessage.getSystemMessage(SystemMessageId.THE_SIEGE_OF_S1_HAS_ENDED_IN_A_DRAW);
-                sm.addCastleId(castle.getResidenceId());
-                Broadcast.toAllOnlinePlayers(sm);
+                Broadcast.toAllOnlinePlayers( getSystemMessage(SystemMessageId.THE_SIEGE_OF_S1_HAS_ENDED_IN_A_DRAW).addCastleId(castle.getResidenceId()));
             }
 
             for (SiegeClan attackerClan : getAttackerClans()) {
@@ -275,9 +269,9 @@ public class Siege implements Siegable {
             if (getAttackerClans().isEmpty()) {
                 SystemMessage sm;
                 if (_firstOwnerClanId <= 0) {
-                    sm = SystemMessage.getSystemMessage(SystemMessageId.THE_SIEGE_OF_S1_HAS_BEEN_CANCELED_DUE_TO_LACK_OF_INTEREST);
+                    sm = getSystemMessage(SystemMessageId.THE_SIEGE_OF_S1_HAS_BEEN_CANCELED_DUE_TO_LACK_OF_INTEREST);
                 } else {
-                    sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S_SIEGE_WAS_CANCELED_BECAUSE_THERE_WERE_NO_CLANS_THAT_PARTICIPATED);
+                    sm = getSystemMessage(SystemMessageId.S1_S_SIEGE_WAS_CANCELED_BECAUSE_THERE_WERE_NO_CLANS_THAT_PARTICIPATED);
                     final Clan ownerClan = ClanTable.getInstance().getClan(_firstOwnerClanId);
                     ownerClan.increaseBloodAllianceCount();
                 }
@@ -308,9 +302,10 @@ public class Siege implements Siegable {
             _siegeEndDate.add(Calendar.MINUTE, SiegeManager.getInstance().getSiegeLength());
             ThreadPool.schedule(new ScheduleEndSiegeTask(castle), 1000); // Prepare auto end task
 
-            final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_S1_SIEGE_HAS_STARTED);
+            final SystemMessage sm = getSystemMessage(SystemMessageId.THE_S1_SIEGE_HAS_STARTED);
             sm.addCastleId(castle.getResidenceId());
             Broadcast.toAllOnlinePlayers(sm);
+            Broadcast.toAllOnlinePlayers(new PlaySound("systemmsg_eu.17"));
 
             // Notify to scripts.
             EventDispatcher.getInstance().notifyEventAsync(new OnCastleSiegeStart(this), getCastle());
@@ -819,7 +814,7 @@ public class Siege implements Siegable {
      */
     private boolean checkIfCanRegister(Player player, byte typeId) {
         if (_isRegistrationOver) {
-            final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_DEADLINE_TO_REGISTER_FOR_THE_SIEGE_OF_S1_HAS_PASSED);
+            final SystemMessage sm = getSystemMessage(SystemMessageId.THE_DEADLINE_TO_REGISTER_FOR_THE_SIEGE_OF_S1_HAS_PASSED);
             sm.addCastleId(castle.getResidenceId());
             player.sendPacket(sm);
         } else if (_isInProgress) {
@@ -1075,7 +1070,7 @@ public class Siege implements Siegable {
             }
         }
 
-        final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_ANNOUNCED_THE_NEXT_CASTLE_SIEGE_TIME);
+        final SystemMessage sm = getSystemMessage(SystemMessageId.S1_HAS_ANNOUNCED_THE_NEXT_CASTLE_SIEGE_TIME);
         sm.addCastleId(castle.getResidenceId());
         Broadcast.toAllOnlinePlayers(sm);
 
@@ -1314,27 +1309,27 @@ public class Siege implements Siegable {
             try {
                 final long timeRemaining = _siegeEndDate.getTimeInMillis() - Calendar.getInstance().getTimeInMillis();
                 if (timeRemaining > 3600000) {
-                    final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HOUR_S_UNTIL_CASTLE_SIEGE_CONCLUSION);
+                    final SystemMessage sm = getSystemMessage(SystemMessageId.S1_HOUR_S_UNTIL_CASTLE_SIEGE_CONCLUSION);
                     sm.addInt(2);
                     announceToPlayer(sm, true);
                     ThreadPool.schedule(new ScheduleEndSiegeTask(_castleInst), timeRemaining - 3600000); // Prepare task for 1 hr left.
                 } else if ((timeRemaining <= 3600000) && (timeRemaining > 600000)) {
-                    final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MINUTE_S_UNTIL_CASTLE_SIEGE_CONCLUSION);
+                    final SystemMessage sm = getSystemMessage(SystemMessageId.S1_MINUTE_S_UNTIL_CASTLE_SIEGE_CONCLUSION);
                     sm.addInt((int) timeRemaining / 60000);
                     announceToPlayer(sm, true);
                     ThreadPool.schedule(new ScheduleEndSiegeTask(_castleInst), timeRemaining - 600000); // Prepare task for 10 minute left.
                 } else if ((timeRemaining <= 600000) && (timeRemaining > 300000)) {
-                    final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MINUTE_S_UNTIL_CASTLE_SIEGE_CONCLUSION);
+                    final SystemMessage sm = getSystemMessage(SystemMessageId.S1_MINUTE_S_UNTIL_CASTLE_SIEGE_CONCLUSION);
                     sm.addInt((int) timeRemaining / 60000);
                     announceToPlayer(sm, true);
                     ThreadPool.schedule(new ScheduleEndSiegeTask(_castleInst), timeRemaining - 300000); // Prepare task for 5 minute left.
                 } else if ((timeRemaining <= 300000) && (timeRemaining > 10000)) {
-                    final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MINUTE_S_UNTIL_CASTLE_SIEGE_CONCLUSION);
+                    final SystemMessage sm = getSystemMessage(SystemMessageId.S1_MINUTE_S_UNTIL_CASTLE_SIEGE_CONCLUSION);
                     sm.addInt((int) timeRemaining / 60000);
                     announceToPlayer(sm, true);
                     ThreadPool.schedule(new ScheduleEndSiegeTask(_castleInst), timeRemaining - 10000); // Prepare task for 10 seconds count down
                 } else if ((timeRemaining <= 10000) && (timeRemaining > 0)) {
-                    final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THIS_CASTLE_SIEGE_WILL_END_IN_S1_SECOND_S);
+                    final SystemMessage sm = getSystemMessage(SystemMessageId.THIS_CASTLE_SIEGE_WILL_END_IN_S1_SECOND_S);
                     sm.addInt((int) timeRemaining / 1000);
                     announceToPlayer(sm, true);
                     ThreadPool.schedule(new ScheduleEndSiegeTask(_castleInst), timeRemaining); // Prepare task for second count down
@@ -1375,7 +1370,7 @@ public class Siege implements Siegable {
                 if (timeRemaining > 86400000) {
                     _scheduledStartSiegeTask = ThreadPool.schedule(new ScheduleStartSiegeTask(_castleInst), timeRemaining - 86400000); // Prepare task for 24 before siege start to end registration
                 } else if ((timeRemaining <= 86400000) && (timeRemaining > 13600000)) {
-                    final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_REGISTRATION_TERM_FOR_S1_HAS_ENDED);
+                    final SystemMessage sm = getSystemMessage(SystemMessageId.THE_REGISTRATION_TERM_FOR_S1_HAS_ENDED);
                     sm.addCastleId(castle.getResidenceId());
                     Broadcast.toAllOnlinePlayers(sm);
                     _isRegistrationOver = true;

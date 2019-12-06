@@ -1727,26 +1727,88 @@
         <!-- For 20 min., Atk. Spd. +5%. -->
         <icon>icon.bm_agathion_fury</icon>
         <operateType>A1</operateType>
-        <isMagic>4</isMagic>
         <hitTime>2000</hitTime>
         <effectPoint>100</effectPoint>
+        <abnormalLvl>1</abnormalLvl>
+        <abnormalTime>1200</abnormalTime>
+        <abnormalType>DANCE_OF_FURY</abnormalType>
+        <affectRange>1000</affectRange>
+        <isMagic>3</isMagic> <!-- Dance Skill -->
+        <magicLvl>1</magicLvl>
+        <operateType>A2</operateType>
+        <reuseDelay>600000</reuseDelay>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>5</magicCriticalRate>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <affectObject>FRIEND</affectObject>
+        <conditions>
+            <condition name="OpNeedAgathion" />
+        </conditions>
+        <effects>
+            <effect name="PhysicalAttackSpeed">
+                <amount>5</amount>
+                <mode>PER</mode>
+            </effect>
+        </effects>
     </skill>
     <skill id="55271" toLevel="1" name="Agathion - Dance of Concentration">
         <!-- For 20 min., Casting Spd. +5%. -->
         <icon>icon.bm_agathion_concentration</icon>
         <operateType>A1</operateType>
-        <isMagic>4</isMagic>
         <hitTime>2000</hitTime>
         <effectPoint>100</effectPoint>
+        <abnormalLvl>1</abnormalLvl>
+        <abnormalTime>1200</abnormalTime>
+        <abnormalType>DANCE_OF_CONCENTRATION</abnormalType>
+        <affectRange>1000</affectRange>
+        <isMagic>3</isMagic> <!-- Dance Skill -->
+        <magicLvl>1</magicLvl>
+        <operateType>A2</operateType>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>5</magicCriticalRate>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <affectObject>FRIEND</affectObject>
+        <reuseDelay>600000</reuseDelay>
+        <conditions>
+            <condition name="OpNeedAgathion" />
+        </conditions>
+        <effects>
+            <effect name="MagicalAttackSpeed">
+                <amount>5</amount>
+                <mode>PER</mode>
+            </effect>
+        </effects>
     </skill>
     <skill id="55272" toLevel="1" name="Agathion - Song of Wind">
         <!-- For 5 min., Speed +20. -->
         <icon>icon.bm_agathion_wind</icon>
-        <operateType>A1</operateType>
-        <isMagic>4</isMagic>
+        <operateType>A2</operateType>
         <hitTime>2000</hitTime>
         <reuseDelay>600000</reuseDelay>
         <effectPoint>100</effectPoint>
+        <abnormalLvl>1</abnormalLvl>
+        <abnormalTime>300</abnormalTime>
+        <abnormalType>SONG_OF_WIND</abnormalType>
+        <affectRange>1000</affectRange>
+        <hitTime>2500</hitTime>
+        <isMagic>3</isMagic> <!-- Dance Skill -->
+        <magicLvl>1</magicLvl>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>5</magicCriticalRate>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <affectObject>FRIEND</affectObject>
+        <conditions>
+            <condition name="OpNeedAgathion" />
+        </conditions>
+        <effects>
+            <effect name="Speed">
+                <amount>20</amount>
+                <mode>DIFF</mode>
+            </effect>
+        </effects>
     </skill>
     <skill id="55273" toLevel="3" name="Energy of Development">
         <!-- For 10 min., Acquired XP/ SP +$s1. -->

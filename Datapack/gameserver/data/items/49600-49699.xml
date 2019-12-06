@@ -557,7 +557,7 @@
 	<armor id="49681" name="Talisman of Insolence Lv. 6" type="NONE" body-part="TALISMAN" icon="icon.oman_tallisman_new_i01">
 	<!-- P. Atk. +200, M. Atk. +275, Magic Attack Resistance +8%, Skill Power +3%, all kinds of Weapon Resistance +3%, CON +1, MEN +1, STR +1, INT +1. P./ M. Critical Rate +10. MP Consumption for skill use -4%. Available only for Lv. 60 and higher. Blacksmith Beggins in Giran can help exchange this Lv. 6 Talisman and Baium’s Soul for Talisman of Baium. Effects from two such Talismans do not stack. -->
 		<restriction freightable="false" sellable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="60"/>
 		</condition>
 		<attributes weight="120" enchant-enabled="false" />
@@ -578,7 +578,7 @@
 	<armor id="49683" name="Talisman of Baium" type="NONE" body-part="TALISMAN" icon="icon.baium_talisman_new">
 	<!-- P. Atk. +284, M. Atk. +392, Magic Attack Resistance +10%, Skill Power +5%, All Weapon Resistance +5%, CON +1, MEN +1, STR +1, INT +1, DEX +1, WIT +1. P./M. Critical Rate +20. MP Consumption for skill use -5%. Skill Cooldown -3%. Available only for level 60 and higher. When two or more Talismans of identical effects are equipped, the effect of only one Talisman will be applied. -->
 		<restriction freightable="false" sellable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="60"/>
 		</condition>
 		<attributes weight="120" enchant-enabled="false" />

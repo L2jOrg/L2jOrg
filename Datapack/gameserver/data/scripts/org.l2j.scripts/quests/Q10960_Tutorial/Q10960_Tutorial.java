@@ -355,7 +355,7 @@ public class Q10960_Tutorial extends Quest {
     @RegisterEvent(EventType.ON_PLAYER_BYPASS)
     @RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
     public void OnPlayerBypass(OnPlayerBypass event) {
-        final Player player = event.getActiveChar();
+        final Player player = event.getPlayer();
         if (event.getCommand().startsWith(TUTORIAL_BYPASS))
         {
             notifyEvent(event.getCommand().replace(TUTORIAL_BYPASS, ""), null, player);

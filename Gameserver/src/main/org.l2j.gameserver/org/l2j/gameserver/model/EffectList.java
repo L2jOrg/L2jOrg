@@ -50,8 +50,8 @@ import static org.l2j.gameserver.util.GameUtils.*;
  *
  * @author Zoey76
  */
-public final class CharEffectList {
-    private static final Logger LOGGER = LoggerFactory.getLogger(CharEffectList.class);
+public final class EffectList {
+    private static final Logger LOGGER = LoggerFactory.getLogger(EffectList.class);
     /**
      * Count of specific types of buffs.
      */
@@ -114,7 +114,7 @@ public final class CharEffectList {
      *
      * @param owner the creature that owns this effect list
      */
-    public CharEffectList(Creature owner) {
+    public EffectList(Creature owner) {
         _owner = owner;
     }
 

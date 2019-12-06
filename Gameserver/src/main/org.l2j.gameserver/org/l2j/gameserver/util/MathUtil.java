@@ -108,7 +108,7 @@ public final class MathUtil {
         return pow(x1 -x2, 2) + pow(y1 - y2, 2) + pow(z1 - z2, 2);
     }
 
-    private static double calculateDistanceSq3D(ILocational object, ILocational other) {
+    public static double calculateDistanceSq3D(ILocational object, ILocational other) {
         return calculateDistanceSq3D(object.getX(), object.getY(), object.getZ(), other.getX(), other.getY(), other.getZ());
     }
 

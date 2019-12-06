@@ -81,7 +81,7 @@ public class Wear implements IBypassHandler
 		
 		player.setInventoryBlockingStatus(true);
 		
-		player.sendPacket(new ShopPreviewList(buyList, player.getAdena(), player.getExpertiseLevel()));
+		player.sendPacket(new ShopPreviewList(buyList, player.getAdena()));
 	}
 	
 	@Override

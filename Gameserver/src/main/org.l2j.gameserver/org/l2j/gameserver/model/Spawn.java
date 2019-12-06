@@ -107,7 +107,7 @@ public class Spawn extends Location implements IIdentifiable, INamable {
      * @throws ClassCastException     when template type is not subclass of Npc
      */
     public Spawn(NpcTemplate template) throws SecurityException, ClassNotFoundException, NoSuchMethodException, ClassCastException {
-        super(0, 0, 0);
+        super(0, 0, -10000);
         // Set the _template of the Spawn
         _template = template;
 
@@ -131,7 +131,7 @@ public class Spawn extends Location implements IIdentifiable, INamable {
      * @throws ClassCastException
      */
     public Spawn(int npcId) throws SecurityException, ClassNotFoundException, NoSuchMethodException, ClassCastException {
-        super(0, 0, 0);
+        super(0, 0, -10000);
         _template = Objects.requireNonNull(NpcData.getInstance().getTemplate(npcId), "NpcTemplate not found for NPC ID: " + npcId);
 
         final String className = "org.l2j.gameserver.model.actor.instance." + _template.getType();
@@ -366,9 +366,9 @@ public class Spawn extends Location implements IIdentifiable, INamable {
      * @return
      */
     private Npc initializeNpcInstance(Npc npc) {
-        int newLocX = 0;
-        int newLocY = 0;
-        int newLocZ = 0;
+        int newLocX;
+        int newLocY;
+        int newLocZ = -10000;
 
         // If Locx and Locy are not defined, the Folk must be spawned in an area defined by location or spawn territory
         // New method
@@ -407,7 +407,6 @@ public class Spawn extends Location implements IIdentifiable, INamable {
             {
                 newLocZ = geoZ;
             }
-            newLocZ = GeoEngine.getInstance().getHeight(newLocX, newLocY, newLocZ);
         }
 
         // Set is not random walk default value

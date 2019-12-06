@@ -16,7 +16,7 @@ import java.util.concurrent.ScheduledFuture;
 /**
  * This class manages all Monsters. Monster:
  * <ul>
- * <li>L2MinionInstance</li>
+ * <li>Minion</li>
  * <li>RaidBoss</li>
  * <li>GrandBoss</li>
  * </ul>

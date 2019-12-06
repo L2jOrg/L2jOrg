@@ -338,9 +338,10 @@
 		<crystal />
 		<stats>
 			<stat type="mDef" value="84.0"/>
+			<stat type="maxMp" value="34"/>
 		</stats>
 		<skills>
-			<skill id="3558" level="1"/>  <!-- Damaged Antharas' Earring -->
+			<skill id="3558" level="13"/>  <!-- Damaged Antharas' Earring -->
 		</skills>
 	</armor>
 
@@ -353,6 +354,9 @@
 			<stat type="mDef" value="94.0"/>
 			<stat type="maxMp" value="40.0"/>
 		</stats>
+		<skills>
+			<skill id="3558" level="14" /> <!-- Antharas' Earring -->
+		</skills>
 	</armor>
 
 	<armor id="91140" name="Venir's Talisman Lv19" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">

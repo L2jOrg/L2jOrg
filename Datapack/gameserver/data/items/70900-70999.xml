@@ -301,9 +301,9 @@
 			<skill id="21233" level="1"/>  <!-- Summon Agathion - Singer and Dancer -->
 			<skill id="23234" level="1"/>  <!-- Singer and Dancer Agathion Cute Trick -->
 			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
-			<skill id="39016" level="1"/>  <!-- Dance of Fury -->
-			<skill id="39017" level="1"/>  <!-- Dance of Concentration -->
-			<skill id="39018" level="1"/>  <!-- Song of Wind -->
+			<skill id="55270" level="1"/>  <!-- Agathion - Dance of Fury -->
+			<skill id="55271" level="1"/>  <!-- Agathion - Dance of Concentration -->
+			<skill id="55272" level="1"/>  <!-- Agathion - Song of Wind -->
 		</skills>
 	</armor>
 
@@ -312,6 +312,14 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="10080" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="21233" level="1" /> <!-- Release Agathion's Seal - Singer and Dancer -->
+			<skill id="23234" level="1" /> <!-- Singer and Dancer Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+			<skill id="55270" level="1" /> <!-- Agathion - Dance of Fury -->
+			<skill id="55271" level="1" /> <!-- Agathion - Dance of Concentration -->
+			<skill id="55272" level="1" /> <!-- Agathion - Song of Wind -->
+		</skills>
 	</armor>
 
 	<armor id="70962" name="Agathion - Singer and Dancer " type="NONE" body-part="AGATHION" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
@@ -319,6 +327,14 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="21233" level="1" /> <!-- Release Agathion's Seal - Singer and Dancer -->
+			<skill id="23234" level="1" /> <!-- Singer and Dancer Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+			<skill id="55270" level="1" /> <!-- Agathion - Dance of Fury -->
+			<skill id="55271" level="1" /> <!-- Agathion - Dance of Concentration -->
+			<skill id="55272" level="1" /> <!-- Agathion - Song of Wind -->
+		</skills>
 	</armor>
 
 	<armor id="70963" name="Agathion - Singer and Dancer " type="NONE" body-part="AGATHION" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
@@ -326,6 +342,14 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="129600" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="21233" level="1" /> <!-- Release Agathion's Seal - Singer and Dancer -->
+			<skill id="23234" level="1" /> <!-- Singer and Dancer Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+			<skill id="55270" level="1" /> <!-- Agathion - Dance of Fury -->
+			<skill id="55271" level="1" /> <!-- Agathion - Dance of Concentration -->
+			<skill id="55272" level="1" /> <!-- Agathion - Song of Wind -->
+		</skills>
 	</armor>
 
 	<armor id="70964" name="Agathion - Griffin" type="NONE" body-part="AGATHION" icon="icon.etc_rbracelet_aga_agit_i00">

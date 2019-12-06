@@ -31,6 +31,9 @@ import java.util.Collections;
 import java.util.List;
 import java.util.OptionalLong;
 
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
+import static org.l2j.gameserver.model.actor.Npc.INTERACTION_DISTANCE;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 
 /**
@@ -109,10 +112,21 @@ public class MultiSellChoose extends ClientPacket {
         }
 
         final Npc npc = player.getLastFolkNPC();
-        if (!list.isNpcAllowed(-1) && !isAllowedToUse(player, npc, list)) {
-            if (player.isGM()) {
-                player.sendMessage("Multisell " + _listId + " is restricted. Under current conditions cannot be used. Only GMs are allowed to use it.");
-            } else {
+        if (!list.isNpcAllowed(-1)) {
+            if (isNull(npc) || !list.isNpcAllowed(npc.getId())) {
+                if (player.isGM()) {
+                    player.sendMessage("Multisell " + _listId + " is restricted. Under current conditions cannot be used. Only GMs are allowed to use it.");
+                } else {
+                    player.setMultiSell(null);
+                    return;
+                }
+            }
+        }
+
+        if (!player.isGM() && nonNull(npc))
+        {
+            if (!isInsideRadius3D(player, npc, INTERACTION_DISTANCE) || (player.getInstanceId() != npc.getInstanceId()))
+            {
                 player.setMultiSell(null);
                 return;
             }
@@ -535,25 +549,6 @@ public class MultiSellChoose extends ClientPacket {
             return false;
         }
 
-        return true;
-    }
-
-    /**
-     * @param player
-     * @param npc
-     * @param list
-     * @return {@code true} if player can buy stuff from the multisell, {@code false} otherwise.
-     */
-    private boolean isAllowedToUse(Player player, Npc npc, PreparedMultisellListHolder list) {
-        if (npc != null) {
-            if (!list.isNpcAllowed(npc.getId())) {
-                return false;
-            } else if (list.isNpcOnly() && (!list.checkNpcObjectId(npc.getObjectId()) || (npc.getInstanceWorld() != player.getInstanceWorld()) || !isInsideRadius3D(player, npc, Npc.INTERACTION_DISTANCE))) {
-                return false;
-            }
-        } else if (list.isNpcOnly()) {
-            return false;
-        }
         return true;
     }
 }

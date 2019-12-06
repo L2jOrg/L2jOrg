@@ -7,7 +7,7 @@ import org.l2j.gameserver.instancemanager.DuelManager;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.stat.PcStat;
+import org.l2j.gameserver.model.actor.stat.PlayerStat;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.entity.Duel;
 import org.l2j.gameserver.model.skills.AbnormalType;
@@ -296,7 +296,7 @@ public class PcStatus extends PlayableStatus {
 
     @Override
     protected void doRegeneration() {
-        final PcStat charstat = getActiveChar().getStat();
+        final PlayerStat charstat = getActiveChar().getStat();
 
         // Modify the current CP of the Creature and broadcast Server->Client packet StatusUpdate
         if (_currentCp < charstat.getMaxRecoverableCp()) {

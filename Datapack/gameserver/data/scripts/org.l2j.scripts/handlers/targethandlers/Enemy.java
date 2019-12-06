@@ -22,7 +22,6 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.TargetType;
-import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.MathUtil;
 
@@ -127,8 +126,7 @@ public class Enemy implements ITargetTypeHandler
 			// Is this check still actual?
 			if (forceUse && (target.getActingPlayer() != null) && (activeChar.getActingPlayer() != null))
 			{
-				if ((activeChar.getActingPlayer().getSiegeState() > 0) && activeChar.isInsideZone(ZoneType.SIEGE) && (target.getActingPlayer().getSiegeState() == activeChar.getActingPlayer().getSiegeState()) && (target.getActingPlayer() != activeChar.getActingPlayer()) && (target.getActingPlayer().getSiegeSide() == activeChar.getActingPlayer().getSiegeSide()))
-				{
+				if (activeChar.getActingPlayer().isSiegeFriend(target)) {
 					if (sendMessage)
 					{
 						activeChar.sendPacket(SystemMessageId.FORCE_ATTACK_IS_IMPOSSIBLE_AGAINST_A_TEMPORARY_ALLIED_MEMBER_DURING_A_SIEGE);

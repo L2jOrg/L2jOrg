@@ -13,13 +13,11 @@ public class ShopPreviewList extends ServerPacket {
     private final int _listId;
     private final Collection<Product> _list;
     private final long _money;
-    private int _expertise;
 
-    public ShopPreviewList(ProductList list, long currentMoney, int expertiseIndex) {
+    public ShopPreviewList(ProductList list, long currentMoney) {
         _listId = list.getListId();
         _list = list.getProducts();
         _money = currentMoney;
-        _expertise = expertiseIndex;
     }
 
     @Override
@@ -32,14 +30,14 @@ public class ShopPreviewList extends ServerPacket {
 
         int newlength = 0;
         for (Product product : _list) {
-            if ((product.getCrystalType().getId() <= _expertise) && product.isEquipable()) {
+            if (product.isEquipable()) {
                 newlength++;
             }
         }
         writeShort((short) newlength);
 
         for (Product product : _list) {
-            if ((product.getCrystalType().getId() <= _expertise) && product.isEquipable()) {
+            if (product.isEquipable()) {
                 writeInt(product.getItemId());
                 writeShort(product.getType2()); // item type2
 

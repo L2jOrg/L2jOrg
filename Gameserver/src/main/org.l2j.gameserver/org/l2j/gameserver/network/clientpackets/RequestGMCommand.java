@@ -72,10 +72,11 @@ public final class RequestGMCommand extends ClientPacket {
             {
                 // gm warehouse view to be implemented
                 if (player != null) {
-                    client.sendPacket(new GMViewWarehouseWithdrawList(player));
-                    // clan warehouse
+                    client.sendPacket(new GMViewWarehouseWithdrawList(1, player));
+                    client.sendPacket(new GMViewWarehouseWithdrawList(2, player));
                 } else {
-                    client.sendPacket(new GMViewWarehouseWithdrawList(clan));
+                    client.sendPacket(new GMViewWarehouseWithdrawList(1, clan));
+                    client.sendPacket(new GMViewWarehouseWithdrawList(2, clan));
                 }
                 break;
             }

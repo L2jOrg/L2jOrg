@@ -299,7 +299,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
     @RegisterEvent(EventType.ON_PLAYER_BYPASS)
     @RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
     public TerminateReturn OnPlayerBypass(OnPlayerBypass event) {
-        final Player player = event.getActiveChar();
+        final Player player = event.getPlayer();
         if (player == null) {
             return null;
         }

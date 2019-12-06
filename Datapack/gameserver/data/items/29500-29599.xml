@@ -96,7 +96,7 @@
 	<item id="29511" name="Beginner's Pack - Stage 2" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 30 Full Buff Scrolls and a Beginner's Pack - Stage 3. Lv. 10 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="10"/>
 		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
@@ -109,7 +109,7 @@
 	<item id="29512" name="Beginner's Pack - Stage 3" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Saber*Elven Sword (30-day), 4500 Soulshots, 1000 Blessed Spiritshots, and a Beginner's Pack - Stage 4. Lv. 20 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="20"/>
 		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
@@ -124,7 +124,7 @@
 	<item id="29513" name="Beginner's Pack - Stage 4" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Magic Necklace Crafting Pack, 4500 Soulshots, 1000 Blessed Spiritshots, and a Beginner's Pack - Stage 5. Lv. 25 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="25"/>
 		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
@@ -139,7 +139,7 @@
 	<item id="29514" name="Beginner's Pack - Stage 5" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Elven Ring Crafting Pack, 4500 Soulshots, 1000 Blessed Spiritshots, and a Beginner's Pack - Stage 6. Lv. 30 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="30"/>
 		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
@@ -154,7 +154,7 @@
 	<item id="29515" name="Beginner's Pack - Stage 6" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 20 XP/SP Boost Scrolls (40%), 4500 Soulshots, 1000 Blessed Spiritshots, and a Beginner's Pack - Stage 7. Lv. 35 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="35"/>
 		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
@@ -169,7 +169,7 @@
 	<item id="29516" name="Beginner's Pack - Stage 7" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Get a Black Samurai Long Sword (30-day). Lv. 40 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113">
+		<condition msg-id="113" add-name="true">
 			<player level-min="40"/>
 		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
@@ -755,9 +755,9 @@
 			<skill id="21233" level="1"/>  <!-- Summon Agathion - Singer and Dancer -->
 			<skill id="23234" level="1"/>  <!-- Singer and Dancer Agathion Cute Trick -->
 			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
-			<skill id="39016" level="1"/>  <!-- Dance of Fury -->
-			<skill id="39017" level="1"/>  <!-- Dance of Concentration -->
-			<skill id="39018" level="1"/>  <!-- Song of Wind -->
+			<skill id="55270" level="1"/>  <!-- Agathion - Dance of Fury -->
+			<skill id="55271" level="1"/>  <!-- Agathion - Dance of Concentration -->
+			<skill id="55272" level="1"/>  <!-- Agathion - Song of Wind -->
 		</skills>
 	</armor>
 
