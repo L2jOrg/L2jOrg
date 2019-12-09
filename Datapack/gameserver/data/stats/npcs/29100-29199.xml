@@ -109,7 +109,7 @@
             <skill id="4416" level="10"/> <!-- Dragons -->
         </skillList>
     </npc>
-    <npc id="29105" level="82" type="RaidBoss" name="King Ignis">
+    <npc id="29105" level="82" type="RaidBoss" name="King Ignis" title="Flame Spirit King">
         <race>ELEMENTAL</race>
         <sex>MALE</sex>
         <acquire exp="806880000" sp="21785760" raidPoints="0"/>
@@ -131,6 +131,8 @@
             <skill id="50079" level="1"/> <!-- 82 Lv. Raid Boss -->
             <skill id="4416" level="7"/> <!-- Spirits -->
             <skill id="5620" level="2"/> <!-- Melee Attack Vulnerability -->
+            <skill id="50069" level="1" /> <!-- Fire Breath -->
+            <skill id="50070" level="1" /> <!-- Tears of Fire -->
         </skillList>
         <dropLists>
             <drop>
@@ -403,7 +405,7 @@
             </drop>
         </dropLists>
     </npc>
-    <npc id="29108" level="82" type="RaidBoss" name="King Petram">
+    <npc id="29108" level="82" type="RaidBoss" name="King Petram" title="Earth Spirit King">
         <race>ELEMENTAL</race>
         <sex>MALE</sex>
         <acquire exp="806880000" sp="21785760" raidPoints="0"/>
@@ -416,7 +418,7 @@
                 <run ground="190"/>
             </speed>
         </stats>
-        <status attackable="true"/>
+        <status attackable="true" canMove="false"/>
         <collision>
             <radius normal="80"/>
             <height normal="125"/>
@@ -539,7 +541,7 @@
             <height normal="0.001"/>
         </collision>
     </npc>
-    <npc id="29111" level="80" type="Folk" name="Water Slime">
+    <npc id="29111" level="80" type="Monster" name="Water Slime">
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
@@ -558,7 +560,7 @@
             <height normal="39"/>
         </collision>
     </npc>
-    <npc id="29112" level="80" type="Folk" name="Procella's Guardian">
+    <npc id="29112" level="80" type="Monster" name="Procella's Guardian">
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
@@ -577,7 +579,7 @@
             <height normal="133"/>
         </collision>
     </npc>
-    <npc id="29113" level="80" type="Folk" name="Procella's Guardian">
+    <npc id="29113" level="80" type="Monster" name="Procella's Guardian">
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
@@ -596,7 +598,7 @@
             <height normal="133"/>
         </collision>
     </npc>
-    <npc id="29114" level="80" type="Folk" name="Procella's Guardian">
+    <npc id="29114" level="80" type="Monster" name="Procella's Guardian">
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
@@ -615,11 +617,11 @@
             <height normal="133"/>
         </collision>
     </npc>
-    <npc id="29115" level="80" type="Folk" name="Procella's Storm">
+    <npc id="29115" level="80" type="Monster" name="Procella's Storm">
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="88" int="79" dex="55" wit="20" con="82" men="78">
             <vitals hp="8446" hpRegen="10.5" mp="18000" mpRegen="3.6"/>
             <speed>
                 <walk ground="50"/>
@@ -634,7 +636,7 @@
             <height normal="100"/>
         </collision>
     </npc>
-    <npc id="29116" level="80" type="Folk" name="Petram Piece">
+    <npc id="29116" level="80" type="Monster" name="Petram Piece">
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
@@ -647,13 +649,13 @@
             <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
             <defence physical="405.85106382979" magical="297.0297029703"/>
         </stats>
-        <status attackable="false"/>
+        <status attackable="false" canMove="false"/>
         <collision>
             <radius normal="40"/>
             <height normal="61"/>
         </collision>
     </npc>
-    <npc id="29117" level="80" type="Folk" name="Petram Fragment">
+    <npc id="29117" level="80" type="Monster" name="Petram Fragment">
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
@@ -666,7 +668,7 @@
             <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
             <defence physical="405.85106382979" magical="297.0297029703"/>
         </stats>
-        <status attackable="false"/>
+        <status attackable="false" canMove="false"/>
         <collision>
             <radius normal="40"/>
             <height normal="61"/>

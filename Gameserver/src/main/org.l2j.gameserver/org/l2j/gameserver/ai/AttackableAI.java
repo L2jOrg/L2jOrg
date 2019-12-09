@@ -36,6 +36,7 @@ import java.util.Set;
 import java.util.concurrent.Future;
 import java.util.stream.Stream;
 
+import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.util.GameUtils.*;
 import static org.l2j.gameserver.util.MathUtil.*;
 
@@ -232,12 +233,12 @@ public class AttackableAI extends CreatureAI {
 
         // self and buffs
         if ((lastBuffTick + 30) < WorldTimeController.getInstance().getGameTicks()) {
-            for (Skill buff : getActiveChar().getTemplate().getAISkills(AISkillScope.BUFF)) {
-                target = skillTargetReconsider(buff, true);
-                if (target != null) {
-                    setTarget(target);
+            for (var buff : getActiveChar().getTemplate().getAISkills(AISkillScope.BUFF)) {
+                var buffTarget = skillTargetReconsider(buff, true);
+                if (nonNull(buffTarget)) {
+                    setTarget(buffTarget);
                     actor.doCast(buff);
-                    LOGGER.debug(this + " used buff skill " + buff + " on " + actor);
+                    setTarget(target);
                     break;
                 }
             }

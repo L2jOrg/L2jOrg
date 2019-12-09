@@ -146,6 +146,9 @@ public class SkillChannelizer implements Runnable {
                 if (skill.getChannelingSkillId() > 0) {
                     final int maxSkillLevel = SkillData.getInstance().getMaxLevel(skill.getChannelingSkillId());
                     final int skillLevel = Math.min(character.getSkillChannelized().getChannerlizersSize(skill.getChannelingSkillId()), maxSkillLevel);
+                    if (skillLevel == 0) {
+                        continue;
+                    }
                     final BuffInfo info = character.getEffectList().getBuffInfoBySkillId(skill.getChannelingSkillId());
 
                     if ((info == null) || (info.getSkill().getLevel() < skillLevel)) {

@@ -12061,14 +12061,6 @@ public final class NpcStringId {
     public static NpcStringId THE_GODDESS_RESURRECTION_HAS_ALREADY_BEGUN_HUHU_INSIGNIFICANT_CREATURES_LIKE_YOU_CAN_DO_NOTHING;
     @ClientString(id = 1010228, message = "Land of Winds (Lv. 78)")
     public static NpcStringId LAND_OF_WINDS_LV_78;
-    @ClientString(id = 1010229, message = "You have destroyed the Limit Barrier!")
-    public static NpcStringId YOU_HAVE_DESTROYED_THE_LIMIT_BARRIER;
-
-	@ClientString(id = 1010230, message = "You have failed to destroy the Limit Barrier.\nThe raid boss fully recovers its health.")
-    public static NpcStringId YOU_HAVE_FAILED_TO_DESTROY_THE_LIMIT_BARRIER_NTHE_RAID_BOSS_FULLY_RECOVERS_ITS_HEALTH;
-
-	@ClientString(id = 1010231, message = "The Raid Boss uses the Limit Barrier.\nFocus your attacks to destroy the Limit Barrier in 15 sec.")
-	public static NpcStringId THE_RAID_BOSS_USES_THE_LIMIT_BARRIER_NFOCUS_YOUR_ATTACKS_TO_DESTROY_THE_LIMIT_BARRIER_IN_15_SEC;
 
 	@ClientString(id = 1010232, message = "The Raid Boss has recovered its strength!")
 	public static NpcStringId THE_RAID_BOSS_HAS_RECOVERED_ITS_STRENGTH;
@@ -21215,10 +21207,6 @@ public final class NpcStringId {
     public static NpcStringId I_SEE_A_CHEST_FULL_OF_TREASURES;
     @ClientString(id = 1803683, message = "Antharas is trying to escape.")
     public static NpcStringId ANTHARAS_IS_TRYING_TO_ESCAPE;
-    @ClientString(id = 1803684, message = "Balthus Knights are looking for mercenaries!")
-    public static NpcStringId BALTHUS_KNIGHTS_ARE_LOOKING_FOR_MERCENARIES;
-    @ClientString(id = 1803685, message = "Let's join our forces and face this together!")
-    public static NpcStringId LET_S_JOIN_OUR_FORCES_AND_FACE_THIS_TOGETHER;
     @ClientString(id = 1803686, message = "Pretty good! Go to level 1 and get through with this!")
     public static NpcStringId PRETTY_GOOD_GO_TO_LEVEL_1_AND_GET_THROUGH_WITH_THIS;
     @ClientString(id = 1803687, message = "Wind Spirit King appeared somewhere close!")
@@ -24507,6 +24495,15 @@ public final class NpcStringId {
     @ClientString(id = 1000521, message = "Not even the gods themselves could touch me. But you, $s1, you dare challenge me?! Ignorant mortal!")
     public static NpcStringId NOT_EVEN_THE_GODS_THEMSELVES_COULD_TOUCH_ME_BUT_YOU_S1_YOU_DARE_CHALLENGE_ME_IGNORANT_MORTAL;
 
+    @ClientString(id = 1010229, message = "You have destroyed the Limit Barrier!")
+    public static NpcStringId YOU_HAVE_DESTROYED_THE_LIMIT_BARRIER;
+
+    @ClientString(id = 1010230, message = "You have failed to destroy the Limit Barrier.\nThe raid boss fully recovers its health.")
+    public static NpcStringId YOU_HAVE_FAILED_TO_DESTROY_THE_LIMIT_BARRIER_NTHE_RAID_BOSS_FULLY_RECOVERS_ITS_HEALTH;
+
+    @ClientString(id = 1010231, message = "The Raid Boss uses the Limit Barrier.\nFocus your attacks to destroy the Limit Barrier in 15 sec.")
+    public static NpcStringId THE_RAID_BOSS_USES_THE_LIMIT_BARRIER_NFOCUS_YOUR_ATTACKS_TO_DESTROY_THE_LIMIT_BARRIER_IN_15_SEC;
+
     @ClientString(id = 1300004, message = "You may have broken our arrows, but you will never break our will! Archers, retreat!")
     public static NpcStringId YOU_MAY_HAVE_BROKEN_OUR_ARROWS_BUT_YOU_WILL_NEVER_BREAK_OUR_WILL_ARCHERS_RETREAT;
 
@@ -24545,6 +24542,12 @@ public final class NpcStringId {
 
     @ClientString(id = 1803665, message = "Ha! Not bad.")
     public static NpcStringId HA_NOT_BAD;
+
+    @ClientString(id = 1803684, message = "Balthus Knights are looking for mercenaries!")
+    public static NpcStringId BALTHUS_KNIGHTS_ARE_LOOKING_FOR_MERCENARIES;
+
+    @ClientString(id = 1803685, message = "Let's join our forces and face this together!")
+    public static NpcStringId LET_S_JOIN_OUR_FORCES_AND_FACE_THIS_TOGETHER;
 
     @ClientString(id = 1803666, message = "Welcome to the Arena! Test your clan's strength!")
     public static NpcStringId WELCOME_TO_THE_ARENA_TEST_YOUR_CLAN_S_STRENGTH;

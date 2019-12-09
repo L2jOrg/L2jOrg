@@ -707,22 +707,27 @@ public abstract class Inventory extends ItemContainer {
             ps.setString(3, getEquipLocation().name());
             try (ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
-                    final Item item = new Item(rs);
-                    if (isPlayer(getOwner())) {
-                        final Player player = (Player) getOwner();
 
-                        if (!player.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !player.isHero() && item.isHeroItem()) {
-                            item.setItemLocation(ItemLocation.INVENTORY);
+                    try {
+                        final Item item = new Item(rs);
+                        if (isPlayer(getOwner())) {
+                            final Player player = (Player) getOwner();
+
+                            if (!player.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !player.isHero() && item.isHeroItem()) {
+                                item.setItemLocation(ItemLocation.INVENTORY);
+                            }
                         }
-                    }
 
-                    World.getInstance().addObject(item);
+                        World.getInstance().addObject(item);
 
-                    // If stackable item is found in inventory just add to current quantity
-                    if (item.isStackable() && (getItemByItemId(item.getId()) != null)) {
-                        addItem("Restore", item, getOwner().getActingPlayer(), null);
-                    } else {
-                        addItem(item);
+                        // If stackable item is found in inventory just add to current quantity
+                        if (item.isStackable() && (getItemByItemId(item.getId()) != null)) {
+                            addItem("Restore", item, getOwner().getActingPlayer(), null);
+                        } else {
+                            addItem(item);
+                        }
+                    }catch (Exception e) {
+                        LOGGER.warn("Could not restore item {}  for {}", rs.getInt("item_id"), getOwner());
                     }
                 }
             }

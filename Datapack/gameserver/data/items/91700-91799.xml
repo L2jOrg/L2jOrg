@@ -498,16 +498,22 @@
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<item id="91780" name="Dragon Scroll" type="NONE" icon="icon.ev_charge_scroll">
+	<item id="91780" name="Dragon Scroll" type="SCROLL" icon="icon.ev_charge_scroll">
 	<!-- For 20 minutes, P. Atk. +200, M. Atk. +350, P. Critical/M. Critical Rate +30, Atk. Spd./Casting Spd. +50, P. Def./M. Def. +200, Max HP/Max MP/Max CP +500. The effect remains active even after death. Cooldown 1 minute. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" immediate-effect="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="54071"/>  <!-- Dragon Scroll (Event) -->
+		</skill-reducer>
 	</item>
 
 	<item id="91781" name="Sayha's Buff Scroll" type="NONE" icon="icon.etc_ssq_i00">
 	<!-- Activates Sayha's Shield, Sayha's Magic Barrier, Sayha's Decrease Weight, Sayha's Clarity, Sayha's Berserker Spirit, Sayha's Wind Walk, Sayha's Might, Sayha's Focus, Sayha's Haste, Sayha's Death Whisper, Sayha's Empower, Sayha's Wild Magic, Sayha's Acumen, Sayha's Concentration, Sayha's Prophecy, Sayha's Restore HP, and Sayha's Restore MP effects for 20 minutes on use. No item can be used while Sayha's Restore MP is active. Cooldown 1 minute. Caution: If used while having Sayha's Victory effect, the Sayha's Victory buff effect will not be applied. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" immediate-effect="true"/>
+		<skill-reducer>
+			<skill id="54070"/> <!-- Sayha's Effect Scroll (Event) -->
+		</skill-reducer>
 	</item>
 
 	<item id="91782" name="Nuia's Gift" type="NONE" icon="icon.npoint_valakas_30day_box">

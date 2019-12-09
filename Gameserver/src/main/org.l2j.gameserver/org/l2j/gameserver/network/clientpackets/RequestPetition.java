@@ -30,10 +30,15 @@ public final class RequestPetition extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getPlayer();
-        if (activeChar == null) {
+        final Player player = client.getPlayer();
+        if (player == null) {
             return;
         }
+
+        if ((_type <= 0) || (_type >= 10)) {
+            return;
+        }
+
 
         if (!AdminData.getInstance().isGmOnline(false)) {
             client.sendPacket(SystemMessageId.THERE_ARE_NO_GMS_CURRENTLY_VISIBLE_IN_THE_PUBLIC_LIST_AS_THEY_MAY_BE_PERFORMING_OTHER_FUNCTIONS_AT_THE_MOMENT);
@@ -45,7 +50,7 @@ public final class RequestPetition extends ClientPacket {
             return;
         }
 
-        if (PetitionManager.getInstance().isPlayerPetitionPending(activeChar)) {
+        if (PetitionManager.getInstance().isPlayerPetitionPending(player)) {
             client.sendPacket(SystemMessageId.YOU_MAY_ONLY_SUBMIT_ONE_PETITION_ACTIVE_AT_A_TIME);
             return;
         }
@@ -55,7 +60,7 @@ public final class RequestPetition extends ClientPacket {
             return;
         }
 
-        final int totalPetitions = PetitionManager.getInstance().getPlayerTotalPetitionCount(activeChar) + 1;
+        final int totalPetitions = PetitionManager.getInstance().getPlayerTotalPetitionCount(player) + 1;
 
         if (totalPetitions > Config.MAX_PETITIONS_PER_PLAYER) {
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.WE_HAVE_RECEIVED_S1_PETITIONS_FROM_YOU_TODAY_AND_THAT_IS_THE_MAXIMUM_THAT_YOU_CAN_SUBMIT_IN_ONE_DAY_YOU_CANNOT_SUBMIT_ANY_MORE_PETITIONS);
@@ -69,7 +74,7 @@ public final class RequestPetition extends ClientPacket {
             return;
         }
 
-        final int petitionId = PetitionManager.getInstance().submitPetition(activeChar, _content, _type);
+        final int petitionId = PetitionManager.getInstance().submitPetition(player, _content, _type);
 
         SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PETITION_APPLICATION_HAS_BEEN_ACCEPTED_NRECEIPT_NO_IS_S1);
         sm.addInt(petitionId);

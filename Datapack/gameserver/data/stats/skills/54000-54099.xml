@@ -645,16 +645,159 @@
 	<skill id="54070" toLevel="1" name="Sayha's Effect Scroll (Event)">
 		<!-- A magic scroll which allows getting various buffs. -->
 		<icon>icon.etc_ssq_i00</icon>
-		<operateType>A1</operateType>
-		<reuseDelay>60000</reuseDelay>
+        <operateType>A2</operateType>
+        <hitTime>4000</hitTime>
+        <abnormalTime>1200</abnormalTime>
+        <itemConsumeId>91781</itemConsumeId>
+        <itemConsumeCount>1</itemConsumeCount>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <abnormalTime>-1</abnormalTime><!-- 60000 TODO:aaaaaaaaaaaaaaaaaaaaaaaaaaaaa-->
+        <abnormalType>MULTI_BUFF</abnormalType>
+        <canBeDispelled>false</canBeDispelled>
+        <stayAfterDeath>true</stayAfterDeath>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>5</magicCriticalRate>
+        <abnormalLvl>1</abnormalLvl>
+        <isMagic>1</isMagic> <!-- Magic Skill -->
+        <magicLvl>1</magicLvl>
+        <selfEffects>
+            <effect name="CallSkill">
+                <skillId>54100</skillId> <!-- Sayha's Shield -->
+                <skillLevel>1</skillLevel>
+            </effect>
+            <effect name="CallSkill">
+                <skillId>54101</skillId> <!-- Sayha's Magic Barrier -->
+                <skillLevel>1</skillLevel>
+            </effect>
+            <effect name="CallSkill">
+                <skillId>54103</skillId> <!-- Sayha's Decrease Weight -->
+                <skillLevel>1</skillLevel>
+            </effect>
+            <effect name="CallSkill">
+                <skillId>54112</skillId> <!-- Sayha's Clarity -->
+                <skillLevel>1</skillLevel>
+            </effect>
+            <effect name="CallSkill">
+                <skillId>54104</skillId> <!-- Sayha's Berserker Spirit -->
+                <skillLevel>1</skillLevel>
+            </effect>
+            <effect name="CallSkill">
+                <skillId>54105</skillId> <!-- Sayha's Wind Walk -->
+                <skillLevel>1</skillLevel>
+            </effect>
+            <effect name="CallSkill">
+                <skillId>54106</skillId> <!-- Sayha's Might -->
+                <skillLevel>1</skillLevel>
+            </effect>
+            <effect name="CallSkill">
+                <skillId>54108</skillId> <!-- Sayha's Focus -->
+                <skillLevel>1</skillLevel>
+            </effect>
+            <effect name="CallSkill">
+                <skillId>54109</skillId> <!-- Sayha's Haste -->
+                <skillLevel>1</skillLevel>
+            </effect>
+            <effect name="CallSkill">
+                <skillId>54110</skillId> <!-- Sayha's Death Whisper -->
+                <skillLevel>1</skillLevel>
+            </effect>
+            <effect name="CallSkill">
+                <skillId>54111</skillId> <!-- Sayha's Empower -->
+                <skillLevel>1</skillLevel>
+            </effect>
+            <effect name="CallSkill">
+                <skillId>54113</skillId> <!-- Sayha's Wild Magic -->
+                <skillLevel>1</skillLevel>
+            </effect>
+            <effect name="CallSkill">
+                <skillId>54114</skillId> <!-- Sayha's Acumen -->
+                <skillLevel>1</skillLevel>
+            </effect>
+            <effect name="CallSkill">
+                <skillId>54115</skillId> <!-- Sayha's Concentration -->
+                <skillLevel>1</skillLevel>
+            </effect>
+            <effect name="CallSkill">
+                <skillId>54116</skillId> <!-- Sayha's Victory -->
+                <skillLevel>1</skillLevel>
+            </effect>
+            <effect name="CallSkill">
+                <skillId>54117</skillId> <!-- Sayha's Recover Hp -->
+                <skillLevel>1</skillLevel>
+            </effect>
+            <effect name="CallSkill">
+                <skillId>54118</skillId> <!-- Sayha's Recover Mp -->
+                <skillLevel>1</skillLevel>
+            </effect>
+        </selfEffects>
 	</skill>
 	<skill id="54071" toLevel="1" name="Dragon Scroll (Event)">
 		<!-- For 20 min., P. Atk. +200, M. Atk. +350, P./ M. Critical Rate +30, Atk. Spd./ Casting Spd. +50, P./ M. Def. +200, Max HP/ MP/ CP +500. The effect remains after death. -->
 		<icon>icon.ev_charge_scroll</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
-		<reuseDelay>60000</reuseDelay>
-		<effectPoint>1</effectPoint>
+        <operateType>A2</operateType>
+        <reuseDelay>60000</reuseDelay>
+        <hitTime>4000</hitTime>
+        <abnormalTime>1200</abnormalTime>
+        <itemConsumeId>91780</itemConsumeId>
+        <itemConsumeCount>1</itemConsumeCount>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <abnormalTime>1200</abnormalTime>
+        <abnormalType>MULTI_BUFF</abnormalType>
+        <canBeDispelled>false</canBeDispelled>
+        <stayAfterDeath>true</stayAfterDeath>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>5</magicCriticalRate>
+        <abnormalLvl>1</abnormalLvl>
+        <isMagic>1</isMagic> <!-- Magic Skill -->
+        <magicLvl>1</magicLvl>
+        <effects>
+            <effect name="PAtk">
+                <amount>200</amount>
+                <mode>DIFF</mode>
+            </effect>
+            <effect name="MAtk">
+                <amount>350</amount>
+                <mode>DIFF</mode>
+            </effect>
+            <effect name="CriticalRate">
+                <amount>30</amount>
+                <mode>DIFF</mode>
+            </effect>
+            <effect name="MagicCriticalRate">
+                <amount>30</amount>
+                <mode>DIFF</mode>
+            </effect>
+            <effect name="PhysicalAttackSpeed">
+                <amount>50</amount>
+                <mode>DIFF</mode>
+            </effect>
+            <effect name="MagicalAttackSpeed">
+                <amount>50</amount>
+                <mode>DIFF</mode>
+            </effect>
+            <effect name="PhysicalDefence">
+                <amount>200</amount>
+                <mode>DIFF</mode>
+            </effect>
+            <effect name="MagicalDefence">
+                <amount>200</amount>
+                <mode>DIFF</mode>
+            </effect>
+            <effect name="MaxHp">
+                <amount>500</amount>
+                <mode>DIFF</mode>
+            </effect>
+            <effect name="MaxMp">
+                <amount>500</amount>
+                <mode>DIFF</mode>
+            </effect>
+            <effect name="MaxCp">
+                <amount>500</amount>
+                <mode>DIFF</mode>
+            </effect>
+        </effects>
 	</skill>
 	<skill id="54072" toLevel="1" name="Aden Treasure Chest">
 		<operateType>A1</operateType>

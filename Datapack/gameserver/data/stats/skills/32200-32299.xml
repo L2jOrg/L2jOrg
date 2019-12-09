@@ -2,7 +2,23 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
     <skill id="32203" toLevel="1" name="Limit Barrier">
         <!-- This barrier can be removed only after hit 500 times. If you fail to hit it 500 times within 15 sec., the Raid Boss fully recovers HP. -->
-        <icon>icon.skill11621</icon>
-        <operateType>A1</operateType>
+        <icon>icon.skill32203</icon>
+        <operateType>A2</operateType>
+        <mpConsume>1</mpConsume>
+        <hitTime>100</hitTime>
+        <reuseDelay>15000</reuseDelay>
+        <effectPoint>867</effectPoint>
+        <abnormalType>INVINCIBILITY_SPECIAL</abnormalType>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>-5</magicCriticalRate>
+        <magicLvl>40</magicLvl>
+        <abnormalLvl>1</abnormalLvl>
+        <abnormalTime>-1</abnormalTime>
+        <staticReuse>true</staticReuse>
+        <abnormalVisualEffect>INFINITE_SHIELD4_AVE_2</abnormalVisualEffect>
+        <isMagic>1</isMagic>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <affectObject>FRIEND</affectObject>
     </skill>
 </list>

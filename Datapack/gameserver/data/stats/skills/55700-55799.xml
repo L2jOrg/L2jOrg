@@ -3,9 +3,26 @@
     <skill id="55700" toLevel="1" name="Scroll: Dance of Fire">
         <!-- For 10 min., P. Critical Damage +35%. -->
         <icon>icon.skill0274</icon>
-        <operateType>A1</operateType>
+        <abnormalLvl>4</abnormalLvl>
+        <abnormalTime>600</abnormalTime>
+        <abnormalType>CRITICAL_DMG_UP</abnormalType>
+        <itemConsumeCount>1</itemConsumeCount>
+        <itemConsumeId>29014</itemConsumeId>
         <hitTime>2500</hitTime>
         <reuseDelay>3000</reuseDelay>
+        <isMagic>2</isMagic> <!-- Static Skill -->
+        <magicLvl>1</magicLvl>
+        <operateType>A2</operateType>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>5</magicCriticalRate>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="CriticalDamage">
+                <amount>35</amount>
+                <mode>PER</mode>
+            </effect>
+        </effects>
     </skill>
 	<skill id="55701" toLevel="1" name="Summon Agathion - Sin Eater">
         <!-- Summon Sin Eater Agathion. -->
@@ -117,7 +134,6 @@
     <skill id="55711" toLevel="1" name="Remove Lv. 4 Brooch">
         <!-- Bright light fades. -->
         <operateType>A1</operateType>
-		<effectPoint>1</effectPoint>
         <effects>
 			<effect name="DispelBySlot">
 				<dispel>AVE_BROOCH,10</dispel>

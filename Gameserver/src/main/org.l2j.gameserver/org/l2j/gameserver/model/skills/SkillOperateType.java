@@ -29,7 +29,7 @@ public enum SkillOperateType {
     A2,
 
     /**
-     * Active Skill with "Instant effect for target + Continuous effect for self"
+     * Active Skill with "Instant effect for target + Continuous effect + Continuous effect for self"
      */
     A3,
 
@@ -141,20 +141,10 @@ public enum SkillOperateType {
      * @return {@code true} if the operative skill type is continuous, {@code false} otherwise
      */
     public boolean isContinuous() {
-        switch (this) {
-            case A2:
-            case A4:
-            case A5:
-            case A6:
-            case DA2:
-            case DA4:
-            case DA5: {
-                return true;
-            }
-            default: {
-                return false;
-            }
-        }
+        return switch (this) {
+            case A2, A3, A4, A5, A6, DA2, DA4, DA5 -> true;
+            default -> false;
+        };
     }
 
     /**

@@ -4,6 +4,7 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.ExperienceData;
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.model.CharSelectInfoPackage;
 import org.l2j.gameserver.model.Clan;
@@ -282,11 +283,11 @@ public class CharSelectionInfo extends ServerPacket {
             writeInt(0x00); // HAIR2 Visual ID not Used on Classic
 
 
-            writeShort( 0x00); // Upper Body enchant level
-            writeShort( 0x00); // Lower Body enchant level
-            writeShort( 0x00); // Headgear enchant level
-            writeShort( 0x00); // Gloves enchant level
-            writeShort( 0x00); // Boots enchant level
+            writeShort( charInfoPackage.getEnchantEffect(InventorySlot.CHEST.getId())); // Upper Body enchant level
+            writeShort( charInfoPackage.getEnchantEffect(InventorySlot.LEGS.getId())); // Lower Body enchant level
+            writeShort( charInfoPackage.getEnchantEffect(InventorySlot.HEAD.getId())); // Headgear enchant level
+            writeShort( charInfoPackage.getEnchantEffect(InventorySlot.GLOVES.getId())); // Gloves enchant level
+            writeShort( charInfoPackage.getEnchantEffect(InventorySlot.FEET.getId())); // Boots enchant level
 
             writeInt(charInfoPackage.getHairStyle());
             writeInt(charInfoPackage.getHairColor());
@@ -299,7 +300,7 @@ public class CharSelectionInfo extends ServerPacket {
             writeInt(charInfoPackage.getClassId());
             writeInt(i == _activeId);
 
-            writeByte(Math.min(charInfoPackage.getEnchantEffect(), 127));
+            writeByte(Math.min(charInfoPackage.getEnchantEffect(RIGHT_HAND.getId()), 127));
             writeInt(charInfoPackage.getAugmentation() != null ? charInfoPackage.getAugmentation().getOption1Id() : 0);
             writeInt(charInfoPackage.getAugmentation() != null ? charInfoPackage.getAugmentation().getOption2Id() : 0);
 
@@ -318,7 +319,7 @@ public class CharSelectionInfo extends ServerPacket {
             writeInt(charInfoPackage.getVitalityItemsUsed()); // Remaining vitality item uses
             writeInt(charInfoPackage.getAccessLevel() == -100 ? 0x00 : 0x01); // Char is active or not
             writeByte(charInfoPackage.isNoble());
-            writeByte(Hero.getInstance().isHero(charInfoPackage.getObjectId())); // Hero glow
+            writeByte(Hero.getInstance().isHero(charInfoPackage.getObjectId()) ? 0x02 : 0x00); // Hero glow
             writeByte(charInfoPackage.isHairAccessoryEnabled()); // Show hair accessory if enabled
         }
     }

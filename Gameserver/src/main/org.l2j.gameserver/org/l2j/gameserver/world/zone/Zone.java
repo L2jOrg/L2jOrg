@@ -147,7 +147,7 @@ public abstract class Zone extends ListenersContainer {
             }
 
             if(nonNull(classes)) {
-                return Arrays.stream(classes).anyMatch(id -> id == ((Player) creature).getClassId().ordinal());
+                return Arrays.stream(classes).anyMatch(id -> id == ((Player) creature).getClassId().getId());
             }
         }
         return true;

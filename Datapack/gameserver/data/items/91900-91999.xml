@@ -137,7 +137,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="1" price="30" commission-type="POTION" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="50151" level="1"/>  <!-- HP Potion -->
+			<skill id="50151"/>  <!-- HP Potion -->
 		</skill-reducer>
 	</item>
 

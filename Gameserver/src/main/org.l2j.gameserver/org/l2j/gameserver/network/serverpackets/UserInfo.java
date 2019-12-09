@@ -270,7 +270,9 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             writeByte(0x00); // Vita Bonus
             writeInt(player.getFame());
             writeInt(player.getRaidbossPoints());
-            writeInt(0x00); // unk 196
+            writeByte(0x00); // unk
+            writeByte(0x40); // unk
+            writeShort(0x00); // unk 196
         }
 
         if (containsMask(UserInfoType.SLOTS)) {

@@ -797,16 +797,16 @@ public class CreatureAI extends AbstractAI {
             return false; // skill radius -1
         }
 
-        offset += actor.getTemplate().getCollisionRadius();
+        int offsetWithCollision = offset + actor.getTemplate().getCollisionRadius();
         if (isCreature(target)) {
-            offset += ((Creature) target).getTemplate().getCollisionRadius();
+            offsetWithCollision += ((Creature) target).getTemplate().getCollisionRadius();
         }
 
-        if (!MathUtil.isInsideRadius2D(actor, target, offset)) {
+        if (!MathUtil.isInsideRadius2D(actor, target, offsetWithCollision)) {
             // Caller should be Playable and thinkAttack/thinkCast/thinkInteract/thinkPickUp
             if (isFollowing()) {
                 // allow larger hit range when the target is moving (check is run only once per second)
-                if (!MathUtil.isInsideRadius2D(actor, target, offset + 100)) {
+                if (!MathUtil.isInsideRadius2D(actor, target, offsetWithCollision + 100)) {
                     return true;
                 }
                 stopFollow();

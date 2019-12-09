@@ -51,7 +51,7 @@ public class Toma extends AbstractNpcAI
 	{
 		if (event.equals("RESPAWN_TOMA"))
 		{
-			addSpawn(TOMA, LOCATIONS[getRandom(LOCATIONS.length)], false, TELEPORT_DELAY);
+			addSpawn(TOMA, getRandomEntry(LOCATIONS), false, TELEPORT_DELAY);
 		}
 		return null;
 	}

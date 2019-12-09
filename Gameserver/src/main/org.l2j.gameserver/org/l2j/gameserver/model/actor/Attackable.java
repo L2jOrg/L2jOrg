@@ -1174,13 +1174,9 @@ public class Attackable extends Npc {
         _seederObjId = 0;
 
         // check the region where this mob is, do not activate the AI if region is inactive.
-        // if (!isInActiveRegion())
-        // {
-        // if (hasAI())
-        // {
-        // getAI().stopAITask();
-        // }
-        // }
+         if (hasAI() && !isInActiveRegion()) {
+            getAI().stopAITask();
+         }
     }
 
     @Override

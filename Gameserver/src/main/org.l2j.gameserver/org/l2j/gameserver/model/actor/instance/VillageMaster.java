@@ -2,8 +2,10 @@ package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.data.xml.CategoryManager;
 import org.l2j.gameserver.data.xml.impl.ClassListData;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
+import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.instancemanager.CastleManager;
@@ -18,7 +20,6 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.base.AcquireSkillType;
 import org.l2j.gameserver.model.base.ClassId;
-import org.l2j.gameserver.model.base.PlayerClass;
 import org.l2j.gameserver.model.base.SubClass;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Fort;
@@ -31,12 +32,12 @@ import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
+import java.util.stream.Collectors;
 
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.util.Util.isAlphaNumeric;
 
 /**
@@ -47,6 +48,36 @@ import static org.l2j.commons.util.Util.isAlphaNumeric;
 public class VillageMaster extends Folk {
     private static final Logger LOGGER = LoggerFactory.getLogger(VillageMaster.class);
 
+    private static final Set<ClassId> mainSubclassSet;
+    private static final Set<ClassId> neverSubclassed = EnumSet.of(ClassId.OVERLORD, ClassId.WARSMITH);
+    private static final Set<ClassId> subclasseSet1 = EnumSet.of(ClassId.DARK_AVENGER, ClassId.PALADIN, ClassId.TEMPLE_KNIGHT, ClassId.SHILLIEN_KNIGHT);
+    private static final Set<ClassId> subclasseSet2 = EnumSet.of(ClassId.TREASURE_HUNTER, ClassId.ABYSS_WALKER, ClassId.PLAINS_WALKER);
+    private static final Set<ClassId> subclasseSet3 = EnumSet.of(ClassId.HAWKEYE, ClassId.SILVER_RANGER, ClassId.PHANTOM_RANGER);
+    private static final Set<ClassId> subclasseSet4 = EnumSet.of(ClassId.WARLOCK, ClassId.ELEMENTAL_SUMMONER, ClassId.PHANTOM_SUMMONER);
+    private static final Set<ClassId> subclasseSet5 = EnumSet.of(ClassId.SORCERER, ClassId.SPELLSINGER, ClassId.SPELLHOWLER);
+    private static final EnumMap<ClassId, Set<ClassId>> subclassSetMap = new EnumMap<>(ClassId.class);
+    static
+    {
+        final Set<ClassId> subclasses = CategoryManager.getInstance().getCategoryByType(CategoryType.THIRD_CLASS_GROUP).stream().mapToObj(ClassId::getClassId).collect(Collectors.toSet());
+        subclasses.removeAll(neverSubclassed);
+        mainSubclassSet = subclasses;
+        subclassSetMap.put(ClassId.DARK_AVENGER, subclasseSet1);
+        subclassSetMap.put(ClassId.PALADIN, subclasseSet1);
+        subclassSetMap.put(ClassId.TEMPLE_KNIGHT, subclasseSet1);
+        subclassSetMap.put(ClassId.SHILLIEN_KNIGHT, subclasseSet1);
+        subclassSetMap.put(ClassId.TREASURE_HUNTER, subclasseSet2);
+        subclassSetMap.put(ClassId.ABYSS_WALKER, subclasseSet2);
+        subclassSetMap.put(ClassId.PLAINS_WALKER, subclasseSet2);
+        subclassSetMap.put(ClassId.HAWKEYE, subclasseSet3);
+        subclassSetMap.put(ClassId.SILVER_RANGER, subclasseSet3);
+        subclassSetMap.put(ClassId.PHANTOM_RANGER, subclasseSet3);
+        subclassSetMap.put(ClassId.WARLOCK, subclasseSet4);
+        subclassSetMap.put(ClassId.ELEMENTAL_SUMMONER, subclasseSet4);
+        subclassSetMap.put(ClassId.PHANTOM_SUMMONER, subclasseSet4);
+        subclassSetMap.put(ClassId.SORCERER, subclasseSet5);
+        subclassSetMap.put(ClassId.SPELLSINGER, subclasseSet5);
+        subclassSetMap.put(ClassId.SPELLHOWLER, subclasseSet5);
+    }
     /**
      * Creates a village master.
      *
@@ -541,7 +572,7 @@ public class VillageMaster extends Folk {
                 LOGGER.warn(VillageMaster.class.getName() + ": Wrong numeric values for command " + command);
             }
 
-            Set<PlayerClass> subsAvailable = null;
+            Set<ClassId> subsAvailable = null;
             switch (cmdChoice) {
                 case 0: // Subclass change menu
                     html.setFile(player, getSubClassMenu(player.getRace()));
@@ -557,8 +588,11 @@ public class VillageMaster extends Folk {
                     if ((subsAvailable != null) && !subsAvailable.isEmpty()) {
                         html.setFile(player, "data/html/villagemaster/SubClass_Add.htm");
                         final StringBuilder content1 = new StringBuilder(200);
-                        for (PlayerClass subClass : subsAvailable) {
-                            content1.append("<a action=\"bypass -h npc_%objectId%_Subclass 4 " + subClass.ordinal() + "\" msg=\"1268;" + ClassListData.getInstance().getClass(subClass.ordinal()).getClassName() + "\">" + ClassListData.getInstance().getClass(subClass.ordinal()).getClientCode() + "</a><br>");
+                        for (var subClass : subsAvailable) {
+                            var playerClass = ClassListData.getInstance().getClass(subClass.getId());
+                            if(nonNull(playerClass)) {
+                                content1.append("<a action=\"bypass -h npc_%objectId%_Subclass 4 ").append(subClass.getId()).append("\" msg=\"1268;").append(playerClass.getClassName()).append("\">").append(playerClass.getClientCode()).append("</a><br>");
+                            }
                         }
                         html.replace("%list%", content1.toString());
                     } else {
@@ -737,8 +771,8 @@ public class VillageMaster extends Folk {
                     }
 
                     final StringBuilder content6 = new StringBuilder(200);
-                    for (PlayerClass subClass : subsAvailable) {
-                        content6.append("<a action=\"bypass -h npc_%objectId%_Subclass 7 " + paramOne + " " + subClass.ordinal() + "\" msg=\"1445;\">" + ClassListData.getInstance().getClass(subClass.ordinal()).getClientCode() + "</a><br>");
+                    for (var subClass : subsAvailable) {
+                        content6.append("<a action=\"bypass -h npc_%objectId%_Subclass 7 ").append(paramOne).append(" ").append(subClass.getId()).append("\" msg=\"1445;\">").append(ClassListData.getInstance().getClass(subClass.ordinal()).getClientCode()).append("</a><br>");
                     }
 
                     switch (paramOne) {
@@ -831,7 +865,7 @@ public class VillageMaster extends Folk {
      * @param player
      * @return
      */
-    private final Set<PlayerClass> getAvailableSubClasses(Player player) {
+    private Set<ClassId> getAvailableSubClasses(Player player) {
         // get player base class
         final int currentBaseId = player.getBaseClass();
         final ClassId baseCID = ClassId.getClassId(currentBaseId);
@@ -839,7 +873,7 @@ public class VillageMaster extends Folk {
         // we need 2nd occupation ID
         final int baseClassId;
         if (baseCID.level() > 2) {
-            baseClassId = baseCID.getParent().ordinal();
+            baseClassId = baseCID.getParent().getId();
         } else {
             baseClassId = currentBaseId;
         }
@@ -849,11 +883,11 @@ public class VillageMaster extends Folk {
          * You may not select Overlord and Warsmith class as a subclass. You may not select a similar class as the subclass. The occupations classified as similar classes are as follows: Treasure Hunter, Plainswalker and Abyss Walker Hawkeye, Silver Ranger and Phantom Ranger Paladin, Dark Avenger, Temple Knight
          * and Shillien Knight Warlocks, Elemental Summoner and Phantom Summoner Elder and Shillien Elder Swordsinger and Bladedancer Sorcerer, Spellsinger and Spellhowler Also,
          */
-        final Set<PlayerClass> availSubs = PlayerClass.values()[baseClassId].getAvailableSubclasses(player);
+        final Set<ClassId> availSubs = getSubclasses(player, baseClassId);
 
         if ((availSubs != null) && !availSubs.isEmpty()) {
-            for (Iterator<PlayerClass> availSub = availSubs.iterator(); availSub.hasNext(); ) {
-                final PlayerClass pclass = availSub.next();
+            for (Iterator<ClassId> availSub = availSubs.iterator(); availSub.hasNext(); ) {
+                var pclass = availSub.next();
 
                 // check for the village master
                 if (!checkVillageMaster(pclass)) {
@@ -862,7 +896,7 @@ public class VillageMaster extends Folk {
                 }
 
                 // scan for already used subclasses
-                final int availClassId = pclass.ordinal();
+                final int availClassId = pclass.getId();
                 final ClassId cid = ClassId.getClassId(availClassId);
                 SubClass prevSubClass;
                 ClassId subClassId;
@@ -881,6 +915,41 @@ public class VillageMaster extends Folk {
         return availSubs;
     }
 
+    public final Set<ClassId> getSubclasses(Player player, int classId)
+    {
+        Set<ClassId> subclasses = null;
+        final ClassId pClass = ClassId.getClassId(classId);
+
+        if (CategoryManager.getInstance().isInCategory(CategoryType.THIRD_CLASS_GROUP, classId) || (CategoryManager.getInstance().isInCategory(CategoryType.FOURTH_CLASS_GROUP, classId)))
+        {
+            subclasses = EnumSet.copyOf(mainSubclassSet);
+            subclasses.remove(pClass);
+
+            // Kamaels can only take Kamael classes as subclasses.
+            for (ClassId cid : ClassId.values())
+            {
+                if ((cid.getRace() == Race.JIN_KAMAEL) && (player.getRace() != Race.JIN_KAMAEL))
+                {
+                    subclasses.remove(cid);
+                }
+            }
+
+            Set<ClassId> unavailableClasses = subclassSetMap.get(pClass);
+
+            if (unavailableClasses != null)
+            {
+                subclasses.removeAll(unavailableClasses);
+            }
+        }
+
+        if (subclasses != null)
+        {
+            final ClassId currClassId = player.getClassId();
+            subclasses.removeIf(currClassId::equalsOrChildOf);
+        }
+        return subclasses;
+    }
+
     /**
      * Check new subclass classId for validity (villagemaster race/type, is not contains in previous subclasses, is contains in allowed subclasses) Base class not added into allowed subclasses.
      *
@@ -888,7 +957,7 @@ public class VillageMaster extends Folk {
      * @param classId
      * @return
      */
-    private final boolean isValidNewSubClass(Player player, int classId) {
+    private boolean isValidNewSubClass(Player player, int classId) {
         if (!checkVillageMaster(classId)) {
             return false;
         }
@@ -912,19 +981,19 @@ public class VillageMaster extends Folk {
         // we need 2nd occupation ID
         final int baseClassId;
         if (baseCID.level() > 2) {
-            baseClassId = baseCID.getParent().ordinal();
+            baseClassId = baseCID.getParent().getId();
         } else {
             baseClassId = currentBaseId;
         }
 
-        final Set<PlayerClass> availSubs = PlayerClass.values()[baseClassId].getAvailableSubclasses(player);
+        final Set<ClassId> availSubs = getSubclasses(player, baseClassId);
         if ((availSubs == null) || availSubs.isEmpty()) {
             return false;
         }
 
         boolean found = false;
-        for (PlayerClass pclass : availSubs) {
-            if (pclass.ordinal() == classId) {
+        for (var pclass : availSubs) {
+            if (pclass.getId() == classId) {
                 found = true;
                 break;
             }
@@ -932,11 +1001,11 @@ public class VillageMaster extends Folk {
         return found;
     }
 
-    protected boolean checkVillageMasterRace(PlayerClass pclass) {
+    protected boolean checkVillageMasterRace(ClassId pclass) {
         return true;
     }
 
-    protected boolean checkVillageMasterTeachType(PlayerClass pclass) {
+    protected boolean checkVillageMasterTeachType(ClassId pclass) {
         return true;
     }
 
@@ -947,7 +1016,7 @@ public class VillageMaster extends Folk {
      * @return
      */
     public final boolean checkVillageMaster(int classId) {
-        return checkVillageMaster(PlayerClass.values()[classId]);
+        return checkVillageMaster(ClassId.getClassId(classId));
     }
 
     /**
@@ -956,7 +1025,7 @@ public class VillageMaster extends Folk {
      * @param pclass
      * @return
      */
-    public final boolean checkVillageMaster(PlayerClass pclass) {
+    public final boolean checkVillageMaster(ClassId pclass) {
         if (Config.ALT_GAME_SUBCLASS_EVERYWHERE) {
             return true;
         }

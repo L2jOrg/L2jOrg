@@ -1,5 +1,6 @@
 package org.l2j.gameserver.model;
 
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.handler.ActionHandler;
 import org.l2j.gameserver.handler.ActionShiftHandler;
@@ -12,6 +13,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.ListenersContainer;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.interfaces.*;
+import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
@@ -516,11 +518,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      * @return the angle this object has to turn to have the given object in front of it
      */
     public double calculateDirectionTo(ILocational target) {
-        int heading = calculateHeadingFrom(this, target) - _heading;
-        if (heading < 0) {
-            heading += 65535;
-        }
-        return convertHeadingToDegree(heading);
+        return MathUtil.calculateAngleFrom(this, target);
     }
 
     /**

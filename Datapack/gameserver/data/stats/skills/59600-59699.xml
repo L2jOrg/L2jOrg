@@ -164,10 +164,69 @@
 	<skill id="59634" toLevel="1" name="Dragon Scroll (Event)">
 		<!-- For 20 min., P./ M. Atk. +150, P./ M. Critical Rate +30, Atk. Spd./ Casting Spd. +50, P./ M. Def. +200, Max HP/ MP/ CP +500. The effect remains after death. -->
 		<icon>icon.ev_charge_scroll</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
+		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
-		<effectPoint>1</effectPoint>
+		<hitTime>4000</hitTime>
+		<abnormalTime>1200</abnormalTime>
+		<itemConsumeId>71741</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<canBeDispelled>false</canBeDispelled>
+		<stayAfterDeath>true</stayAfterDeath>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<abnormalLvl>1</abnormalLvl>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>150</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>150</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>30</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>30</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>200</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>200</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>500</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="59635" toLevel="9" name="Dimensional Border Power">
 		<!-- P./ M. Atk. +$s1, P./ M. Critical Damage +$s2. -->

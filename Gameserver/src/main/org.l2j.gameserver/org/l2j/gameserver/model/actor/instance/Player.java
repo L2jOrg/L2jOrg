@@ -20,6 +20,7 @@ import org.l2j.gameserver.data.database.dao.CharacterDAO;
 import org.l2j.gameserver.data.database.dao.ElementalSpiritDAO;
 import org.l2j.gameserver.data.database.data.CharacterData;
 import org.l2j.gameserver.data.database.data.ElementalSpiritData;
+import org.l2j.gameserver.data.xml.CategoryManager;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.api.elemental.ElementalSpirit;
 import org.l2j.gameserver.api.elemental.ElementalType;
@@ -31,7 +32,6 @@ import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.handler.ItemHandler;
-import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.*;
 import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.*;
@@ -44,8 +44,6 @@ import org.l2j.gameserver.model.actor.tasks.player.*;
 import org.l2j.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2j.gameserver.model.actor.transform.Transform;
 import org.l2j.gameserver.model.base.ClassId;
-import org.l2j.gameserver.model.base.ClassLevel;
-import org.l2j.gameserver.model.base.PlayerClass;
 import org.l2j.gameserver.model.base.SubClass;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2j.gameserver.model.cubic.CubicInstance;
@@ -2032,7 +2030,7 @@ public final class Player extends Playable {
         }
 
         try {
-            if ((getLvlJoinedAcademy() != 0) && (_clan != null) && (PlayerClass.values()[Id].getLevel() == ClassLevel.THIRD)) {
+            if ((getLvlJoinedAcademy() != 0) && (_clan != null) && CategoryManager.getInstance().isInCategory(CategoryType.THIRD_CLASS_GROUP, Id)) {
                 if (getLvlJoinedAcademy() <= 16) {
                     _clan.addReputationScore(Config.JOIN_ACADEMY_MAX_REP_SCORE, true);
                 } else if (getLvlJoinedAcademy() >= 39) {
@@ -3597,10 +3595,7 @@ public final class Player extends Playable {
     }
 
     public int getAllyCrestId() {
-        if ((clanId == 0) || (_clan == null) || (_clan.getAllyId() == 0)) {
-            return 0;
-        }
-        return _clan.getAllyCrestId();
+        return zeroIfNullOrElse(_clan, Clan::getAllyCrestId);
     }
 
     /**
@@ -4896,7 +4891,7 @@ public final class Player extends Playable {
     }
 
     /**
-     * Equip arrows needed in left hand and send a Server->Client packet ItemList to the L2PcINstance then return True.
+     * Equip arrows needed in left hand and send a Server->Client packet ItemList to the Player then return True.
      *
      * @param type
      */

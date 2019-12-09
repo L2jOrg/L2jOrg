@@ -13,12 +13,7 @@ import java.util.Set;
  */
 public final class OlympiadAnnouncer implements Runnable {
     private static final int OLY_MANAGER = 31688;
-    private final Set<Spawn> _managers;
     private int _currentStadium = 0;
-
-    public OlympiadAnnouncer() {
-        _managers = SpawnTable.getInstance().getSpawns(OLY_MANAGER);
-    }
 
     @Override
     public void run() {
@@ -46,7 +41,7 @@ public final class OlympiadAnnouncer implements Runnable {
                     }
                 }
 
-                for (Spawn spawn : _managers) {
+                for (Spawn spawn : SpawnTable.getInstance().getSpawns(OLY_MANAGER)) {
                     final Npc manager = spawn.getLastSpawn();
                     if (manager != null) {
                         manager.broadcastSay(ChatType.NPC_SHOUT, npcString, arenaId);

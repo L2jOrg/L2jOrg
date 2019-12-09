@@ -748,13 +748,13 @@ public final class Formulas {
         return false;
     }
 
-    public static boolean calcSkillMastery(Creature actor, Skill sk) {
-        // Static Skills are not affected by Skill Mastery.
-        if (sk.isStatic() || !isPlayer(actor)) {
+    public static boolean calcSkillMastery(Creature actor, Skill skill) {
+        // Static Skills and Item skills  are not affected by Skill Mastery.
+        if (skill.isStatic() || !isPlayer(actor) || skill.getReferenceItemId() > 0) {
             return false;
         }
 
-        final int val = (int) actor.getStat().getValue(Stats.SKILL_CRITICAL, -1);
+        final int val = (int) actor.getStat().getAdd(Stats.SKILL_CRITICAL, -1);
 
         if (val == -1) {
             return false;

@@ -29,7 +29,7 @@ public class SchemeBufferTable {
     private static final String DELETE_SCHEMES = "TRUNCATE TABLE buffer_schemes";
     private static final String INSERT_SCHEME = "INSERT INTO buffer_schemes (object_id, scheme_name, skills) VALUES (?,?,?)";
 
-    private final Map<Integer, HashMap<String, ArrayList<Integer>>> _schemesTable = new ConcurrentHashMap<>();
+    private final Map<Integer, Map<String, ArrayList<Integer>>> _schemesTable = new ConcurrentHashMap<>();
     private final Map<Integer, BuffSkillHolder> _availableBuffs = new LinkedHashMap<>();
 
     private SchemeBufferTable() {
@@ -107,7 +107,7 @@ public class SchemeBufferTable {
             st = con.prepareStatement(INSERT_SCHEME);
 
             // Save _schemesTable content.
-            for (Map.Entry<Integer, HashMap<String, ArrayList<Integer>>> player : _schemesTable.entrySet()) {
+            for (var player : _schemesTable.entrySet()) {
                 for (Map.Entry<String, ArrayList<Integer>> scheme : player.getValue().entrySet()) {
                     // Build a String composed of skill ids seperated by a ",".
                     final StringBuilder sb = new StringBuilder();
@@ -135,7 +135,7 @@ public class SchemeBufferTable {
 
     public void setScheme(int playerId, String schemeName, ArrayList<Integer> list) {
         if (!_schemesTable.containsKey(playerId)) {
-            _schemesTable.put(playerId, new HashMap<>());
+            _schemesTable.put(playerId, new TreeMap<>(String.CASE_INSENSITIVE_ORDER));
         } else if (_schemesTable.get(playerId).size() >= Config.BUFFER_MAX_SCHEMES) {
             return;
         }

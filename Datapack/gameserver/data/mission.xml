@@ -128,7 +128,7 @@
         <handler name="hunt">
             <param name="minLevel">55</param>
             <param name="maxLevel">70</param>
-            <param name="monsters">20673</param>
+            <param name="monsters">20673 21660</param>
         </handler>
         <reward id="49781" count="9"/> <!-- Super XP Scroll -->
     </mission>
@@ -378,7 +378,7 @@
     <mission id="1140" name="Imperial Tomb Exploration" required-completion="500">
         <handler name="hunt">
             <param name="minLevel">78</param>
-            <param name="monsters">2 <!-- Todo Imperial tomb monsters --> </param>
+            <param name="monsters">21396 21397 21398 21399 21400 21401 21402 21403 21404 21405 21406 21407 21408 21409 21410 21411 21412 21413 21414 21415 21416 21417 21418 21419 21420 21421 21422 21423 21424 21425 21426 21427 21428 21429 21430 21431 21432 21433 21434 21435 21436 21437 21438 21439 21440 </param>
         </handler>
         <reward id="91406"/> <!-- Sepulcher Pass -->
     </mission>
@@ -387,7 +387,7 @@
         <handler name="hunt">
             <param name="minLevel">20</param>
             <param name="maxLevel">30</param>
-            <param name="monsters">2 <!-- Todo monsters in Windmill Hill/Ruins of Agony/Abandoned Camp --> </param>
+            <param name="monsters">20017 20026 20029 20030 20035 20038 20042 20043 20045 20050 20051 20053 20054 20055 20058 20059 20060 20061 20062 20063 20064 20066 20076 20310 20359 20436 20437 20438 20439 20548 20782 </param>
         </handler>
         <reward id="91654"/> <!--Adventurer's Mark Lv. 1 -->
     </mission>
@@ -396,7 +396,7 @@
         <handler name="hunt">
             <param name="minLevel">31</param>
             <param name="maxLevel">40</param>
-            <param name="monsters">2 <!-- Todo  monsters in Gorgon Flower Garden/Ant Nest/Cruma Marshlands/Execution Grounds/Death Pass --> </param>
+            <param name="monsters">20075 20079 20080 20081 20082 20083 20084 20086 20087 20088 20089 20090 20144 20145 20156 20157 20158 20160 20171 20176 20197 20198 20199 20200 20201 20202 20199 20225 20226 20227 20228 20229 20230 20231 20232 20233 20234 20248 20249 20550 20551 20552 20553 20554 </param>
         </handler>
         <reward id="91655"/> <!--Adventurer's Mark Lv. 2 -->
     </mission>
@@ -405,7 +405,7 @@
         <handler name="hunt">
             <param name="minLevel">41</param>
             <param name="maxLevel">60</param>
-            <param name="monsters">2 <!-- Todo  monsters in  Ivory Tower Crater/Sea of Spores/CemeteryEnchanted Valley/Fields of Massacre. --> </param>
+            <param name="monsters">20555 20556 20557 20558 20559 20560 20561 20562 20563 20564 20565 20566 20567 20589 20590 20591 20592 20593 20594 20595 20596 20597 20598 20599 20666 20668 20669 20674 20675 20678 20974 20975 20976 20996 20997 20998 20999 21000 21001 21002 21003 21004 21005 21006 21007 21008 21009 21010</param>
         </handler>
         <reward id="91656"/> <!--Adventurer's Mark Lv. 3 -->
     </mission>
@@ -414,7 +414,7 @@
         <handler name="hunt">
             <param name="minLevel">61</param>
             <param name="maxLevel">75</param>
-            <param name="monsters">2 <!-- Todo  monsters in Plains of Glory/War-Torn Plains/The Patriot's Necropolis/Necropolis of Devotion/Silent Valley. --> </param>
+             <param name="monsters">20659 20660 20661 20662 20663 20664 20665 20667 20681 20682 20683 20684 20685 20686 20965 20966 20967 20968 20969 20970 20971 20972 20973 21620 21621 21622 21623 21624 21625 21626 21627 21628 21629 21630 21631 21632 21633 21634 21635 21636 21637 </param>
         </handler>
         <reward id="91657"/> <!--Adventurer's Mark Lv. 4 -->
     </mission>
@@ -422,7 +422,7 @@
     <mission id="1145" name="Adventurer's Journey V (Lv. 76+)" required-completion="1000">
         <handler name="hunt">
             <param name="maxLevel">76</param>
-            <param name="monsters">2 <!-- Todo  monsters in  Wind Plateau / Forge of the Gods / Wall of Argos / Garden of Eva. --> </param>
+            <param name="monsters">20110 20792 20794 20795 20796 20797 20798 20799 20800 20801 20802 20803 20849 20994 20995 21661 21662 21663 21664 21665 21666 21667 21668 21669 21670 21671 21672 21673 21674 21675 21676 21678 21686 21761 21762 21763 21764 21765 21766 21768 21769 21774 21775 21777 21778 21779 21780 21781 21782 21783 21784 21813 21814 21815 21816 21817 21818 21819 21820 21821 21822 21823 21824 21825 21826 21827 21828 21829 21830 21831 </param>
         </handler>
         <reward id="91931"/> <!-- Adventurer's Mark Lv. 5-->
     </mission>

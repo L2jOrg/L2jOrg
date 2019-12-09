@@ -9,6 +9,7 @@ import org.l2j.gameserver.engine.item.EnchantItemGroupsData;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.CursedWeaponsManager;
+import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.instancemanager.WalkingManager;
 import org.l2j.gameserver.world.zone.ZoneManager;
@@ -249,6 +250,12 @@ public class AdminReload implements IAdminCommandHandler
 				{
 					AttendanceRewardData.getInstance().load();
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Attendance Reward data.");
+					break;
+				}
+				case "instance":
+				{
+					InstanceManager.getInstance().load();
+					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Instances data.");
 					break;
 				}
 				default:

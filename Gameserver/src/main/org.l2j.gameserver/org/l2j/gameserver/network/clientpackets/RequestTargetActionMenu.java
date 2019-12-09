@@ -4,6 +4,7 @@ import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 
 import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 
 /**
  * @author Mobius
@@ -25,6 +26,8 @@ public class RequestTargetActionMenu extends ClientPacket {
         }
 
         var object = World.getInstance().findVisibleObject(player, _objectId);
-        player.setTarget(object);
+        if (nonNull(object) && object.isAutoAttackable(player)) {
+            player.setTarget(object);
+        }
     }
 }

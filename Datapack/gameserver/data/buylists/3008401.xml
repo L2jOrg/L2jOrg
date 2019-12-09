@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/buylist.xsd">
 	<npcs>
-		<npc>30084</npc> <!--Warrior Weapon Merchant Graham -->
+		<npc>30084</npc> <!-- Graham -->
 	</npcs>
 	<item id="2" price="149600" /> <!-- Long Sword -->
 	<item id="218" price="149600" /> <!-- Throwing Knife -->
 	<item id="272" price="149600" /> <!-- Forest Bow -->
 	<item id="15" price="149600" /> <!-- Short Spear -->
 	<item id="256" price="149600" /> <!-- Cestus -->
-	<item id="68" price="268400" /> <!-- Falcion -->
+	<item id="68" price="268400" /> <!-- Falchion -->
 	<item id="219" price="268400" /> <!-- Sword Breaker -->
 	<item id="273" price="268400" /> <!-- Compound Bow -->
 	<item id="155" price="268400" /> <!-- Flanged Mace -->
 	<item id="87" price="268400" /> <!-- Iron Hammer -->
 	<item id="16" price="268400" /> <!-- Great Spear -->
 	<item id="257" price="268400" /> <!-- Viper Fang -->
-	<item id="5284" price="268400" /> <!-- Zweinhandler -->
+	<item id="5284" price="268400" /> <!-- Zweihander -->
+	<item id="91891" price="268400" /> <!-- Warrior's Rapier -->
+	<item id="91877" price="268400" /> <!-- Ancient Warrior's Sword -->
 	<item id="123" price="449900" /> <!-- Saber -->
 	<item id="7880" price="449900" /> <!-- Steel Sword -->
 	<item id="220" price="449900" /> <!-- Crafted Dagger -->
@@ -27,6 +29,7 @@
 	<item id="291" price="449900" /> <!-- Trident -->
 	<item id="258" price="449900" /> <!-- Bagh-Nakh -->
 	<item id="5285" price="449900" /> <!-- Heavy Sword -->
+	<item id="91881" price="449900" /> <!-- Talwar -->
 	<item id="69" price="708400" /> <!-- Bastard Sword -->
 	<item id="126" price="708400" /> <!-- Artisan's Sword -->
 	<item id="222" price="708400" /> <!-- Poniard Dagger -->
@@ -37,6 +40,8 @@
 	<item id="292" price="708400" /> <!-- Pike -->
 	<item id="295" price="708400" /> <!-- Dwarven Trident -->
 	<item id="259" price="708400" /> <!-- Single-Edged Jamadhr -->
+	<item id="91895" price="708400" /> <!-- Fleuret -->
+	<item id="91880" price="708400" /> <!-- Military Talwar -->
 	<item id="124" price="1063700" /> <!-- Two-Handed Sword -->
 	<item id="127" price="1063700" /> <!-- Crimson Sword -->
 	<item id="130" price="1063700" /> <!-- Elven Sword -->
@@ -45,7 +50,9 @@
 	<item id="157" price="1063700" /> <!-- Spiked Club -->
 	<item id="293" price="1063700" /> <!-- War Hammer -->
 	<item id="296" price="1063700" /> <!-- Dwarven Pike -->
-	<item id="260" price="1540000" /> <!-- Triple-Edged Jamadhr -->
+	<item id="260" price="1063700" /> <!-- Triple-Edged Jamadhr -->
+	<item id="91894" price="1063700" /> <!-- Estoc -->
+	<item id="91879" price="1063700" /> <!-- Field Sword -->
 	<item id="129" price="1540000" /> <!-- Sword of Revolution -->
 	<item id="224" price="1540000" /> <!-- Maingauche -->
 	<item id="1660" price="1540000" /> <!-- Cursed Maingauche -->
@@ -58,4 +65,5 @@
 	<item id="88" price="1540000" /> <!-- Morning Star -->
 	<item id="93" price="1540000" /> <!-- Winged Spear -->
 	<item id="261" price="1540000" /> <!-- Bich'Kwa -->
+	<item id="91893" price="1540000" /> <!-- Épée -->
 </list>

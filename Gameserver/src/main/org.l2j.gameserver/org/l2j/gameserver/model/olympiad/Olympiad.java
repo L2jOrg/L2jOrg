@@ -326,31 +326,7 @@ public class Olympiad extends ListenersContainer {
             return;
         }
 
-        _compStart = Calendar.getInstance();
-            final int currentDay = _compStart.get(Calendar.DAY_OF_WEEK);
-            boolean dayFound = false;
-            int dayCounter = 0;
-            for (int i = currentDay; i < 8; i++) {
-                if (Config.ALT_OLY_COMPETITION_DAYS.contains(i)) {
-                    dayFound = true;
-                    break;
-                }
-                dayCounter++;
-            }
-            if (!dayFound) {
-                for (int i = 1; i < 8; i++) {
-                    if (Config.ALT_OLY_COMPETITION_DAYS.contains(i)) {
-                        break;
-                    }
-                    dayCounter++;
-                }
-            }
-            if (dayCounter > 0) {
-                _compStart.add(Calendar.DAY_OF_MONTH, dayCounter);
-            }
-        _compStart.set(Calendar.HOUR_OF_DAY, COMP_START);
-        _compStart.set(Calendar.MINUTE, COMP_MIN);
-        _compEnd = _compStart.getTimeInMillis() + COMP_PERIOD;
+        setNewCompBegin();
 
         if (_scheduledOlympiadEnd != null) {
             _scheduledOlympiadEnd.cancel(true);
@@ -538,27 +514,25 @@ public class Olympiad extends ListenersContainer {
 
     private long setNewCompBegin() {
         _compStart = Calendar.getInstance();
-            final int currentDay = _compStart.get(Calendar.DAY_OF_WEEK);
-            boolean dayFound = false;
-            int dayCounter = 0;
-            for (int i = currentDay; i < 8; i++) {
-                if (Config.ALT_OLY_COMPETITION_DAYS.contains(i)) {
-                    dayFound = true;
-                    break;
-                }
-                dayCounter++;
+        var currentHour = _compStart.get(Calendar.HOUR_OF_DAY);
+
+        if(currentHour > COMP_START || (currentHour == COMP_START && _compStart.get(Calendar.MINUTE) >= COMP_MIN)) {
+            _compStart.add(Calendar.DAY_OF_MONTH, 1);
+        }
+
+        var currentDay = _compStart.get(Calendar.DAY_OF_WEEK);
+        var dayCounter = 0;
+        for (var i = currentDay; dayCounter < 8; i++, dayCounter++) {
+            if(Config.ALT_OLY_COMPETITION_DAYS.contains(i)) {
+                break;
             }
-            if (!dayFound) {
-                for (int i = 1; i < 8; i++) {
-                    if (Config.ALT_OLY_COMPETITION_DAYS.contains(i)) {
-                        break;
-                    }
-                    dayCounter++;
-                }
+            if(i == Calendar.SATURDAY)  {
+                i = 0;
             }
-            if (dayCounter > 0) {
-                _compStart.add(Calendar.DAY_OF_MONTH, dayCounter);
-            }
+        }
+        if (dayCounter > 0) {
+            _compStart.add(Calendar.DAY_OF_MONTH, dayCounter);
+        }
         _compStart.set(Calendar.HOUR_OF_DAY, COMP_START);
         _compStart.set(Calendar.MINUTE, COMP_MIN);
         _compStart.add(Calendar.HOUR_OF_DAY, 24);

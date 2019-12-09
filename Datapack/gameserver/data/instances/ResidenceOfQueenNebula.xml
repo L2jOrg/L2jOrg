@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instance id="196" maxWorlds="80" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/instance.xsd">
+    <time duration="120" empty="0" />
+    <removeBuffs type="ALL" />
+    <locations>
+        <enter type="FIXED">
+            <location x="222149" y="168087" z="-15485" />
+        </enter>
+        <exit type="ORIGIN" />
+    </locations>
+    <conditions>
+        <condition type="Party" />
+        <condition type="CommandChannel" />
+        <condition type="CommandChannelLeader" />
+        <condition type="GroupMin">
+            <param name="limit" value="18" /> <!-- The Kamael update -->
+        </condition>
+        <condition type="GroupMax">
+            <param name="limit" value="100" />
+        </condition>
+        <condition type="Level">
+            <param name="min" value="76" />
+            <param name="max" value="82" />
+        </condition>
+        <condition type="Distance" />
+        <condition type="Reenter" />
+    </conditions>
+    <reenter apply="ON_ENTER">
+        <reset day="WEDNESDAY" hour="6" minute="30" />
+    </reenter>
+    <spawnlist>
+        <group>
+            <npc id="29106" x="222127" y="169057" z="-15486" heading="48730" /> <!-- Nebula -->
+        </group>
+    </spawnlist>
+</instance>

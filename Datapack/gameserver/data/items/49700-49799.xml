@@ -645,30 +645,45 @@
 	<!-- XP +1,000.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39180"/> <!-- Low-grade Scroll of Experience -->
+		</skill-reducer>
 	</item>
 
 	<item id="49778" name="Mid-grade XP Scroll" type="SCROLL" icon="icon.etc_recall_exp_scroll">
 	<!-- XP +10,000.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39181"/> <!-- Average Scroll of Experience -->
+		</skill-reducer>
 	</item>
 
 	<item id="49779" name="High-grade XP Scroll" type="SCROLL" icon="icon.etc_recall_exp_scroll">
 	<!-- XP +100,000.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39182"/> <!-- Greater Scroll of Experience -->
+		</skill-reducer>
 	</item>
 
 	<item id="49780" name="Top-grade XP Scroll" type="SCROLL" icon="icon.etc_recall_exp_scroll">
 	<!-- XP +500,000.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39183"/> <!-- Top-grade Scroll of Experience -->
+		</skill-reducer>
 	</item>
 
 	<item id="49781" name="Super XP Scroll" type="SCROLL" icon="icon.etc_recall_exp_scroll">
 	<!-- XP +1,000,000.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39184"/> <!-- Highest-grade Scroll of Experience -->
+		</skill-reducer>
 	</item>
 
 	<item id="49782" name="Oriana's Lucky Draw Supply Item" type="COUPON" icon="icon.etc_ev_kalie_treasure_box">

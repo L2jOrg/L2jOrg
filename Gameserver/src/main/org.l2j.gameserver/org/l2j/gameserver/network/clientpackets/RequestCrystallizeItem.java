@@ -47,12 +47,6 @@ public final class RequestCrystallizeItem extends ClientPacket {
             return;
         }
 
-        // if (!client.getFloodProtectors().getTransaction().tryPerformAction("crystallize"))
-        // {
-        // activeChar.sendMessage("You are crystallizing too fast.");
-        // return;
-        // }
-
         if (_count <= 0) {
             GameUtils.handleIllegalPlayerAction(activeChar, "[RequestCrystallizeItem] count <= 0! ban! oid: " + _objectId + " owner: " + activeChar.getName(), Config.DEFAULT_PUNISH);
             return;
@@ -67,8 +61,8 @@ public final class RequestCrystallizeItem extends ClientPacket {
         if (skillLevel <= 0) {
             client.sendPacket(SystemMessageId.YOU_MAY_NOT_CRYSTALLIZE_THIS_ITEM_YOUR_CRYSTALLIZATION_SKILL_LEVEL_IS_TOO_LOW);
             client.sendPacket(ActionFailed.STATIC_PACKET);
-            if ((activeChar.getRace() != Race.DWARF) && (activeChar.getClassId().ordinal() != 117) && (activeChar.getClassId().ordinal() != 55)) {
-                LOGGER.info("Player " + activeChar + " used crystalize with classid: " + activeChar.getClassId().ordinal());
+            if ((activeChar.getRace() != Race.DWARF) && (activeChar.getClassId().getId() != 117) && (activeChar.getClassId().getId() != 55)) {
+                LOGGER.info("Player {} used crystalize with classid: {}", activeChar, activeChar.getClassId().getId());
             }
             return;
         }

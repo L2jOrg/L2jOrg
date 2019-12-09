@@ -134,7 +134,10 @@
 	<item id="29014" name="Scroll: Dance of Fire" type="SCROLL" icon="BranchIcon.Icon.etc_g_bm_dance_scroll_i00">
 	<!-- Grants the effect of the Dance of Fire for 10 minutes. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="5" action="SKILL_REDUCE"/>
+		<attributes weight="5" action="SKILL_REDUCE" immediate-effect="true"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="55700"/> <!-- Scroll: Dance of Fire -->
+		</skill-reducer>
 	</item>
 
 	<item id="29015" name="Scroll: Enchant Weapon (D-grade)" type="ENCHANT_WEAPON" icon="br_cashtex.item.br_cash_scrl_of_ench_wp_d_i00">

@@ -211,7 +211,7 @@
 
     <xs:complexType name="SkillType">
         <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
-        <xs:attribute name="level" type="xs:positiveInteger" use="required"/>
+        <xs:attribute name="level" type="xs:positiveInteger" default="1"/>
         <xs:attribute name="type" default="NORMAL">
             <xs:simpleType>
                 <xs:restriction base="xs:token">

@@ -337,11 +337,62 @@
             <value level="4">icon.skill50036_4</value>
             <value level="5">icon.skill50036_5</value>
         </icon>
-        <operateType>A1</operateType>
+        <operateType>A2</operateType>
+        <abnormalLvl>
+            <value level="1">1</value>
+            <value level="2">2</value>
+            <value level="3">3</value>
+            <value level="4">4</value>
+            <value level="5">5</value>
+        </abnormalLvl>
+        <abnormalTime>-1</abnormalTime>
+        <activateRate>100</activateRate>
+        <abnormalType>FREEZING</abnormalType>
         <isDebuff>true</isDebuff>
         <hitTime>1500</hitTime>
         <coolTime>500</coolTime>
         <effectPoint>-100</effectPoint>
+        <effectRange>1000</effectRange>
+        <targetType>ENEMY</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="PveMagicalSkillDefenceBonus">
+                <amount>
+                    <value level="1">-10</value>
+                    <value level="2">-20</value>
+                    <value level="3">-40</value>
+                    <value level="4">-70</value>
+                </amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="PvePhysicalAttackDefenceBonus">
+                <amount>
+                    <value level="1">-10</value>
+                    <value level="2">-20</value>
+                    <value level="3">-40</value>
+                    <value level="4">-70</value>
+                </amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="PvePhysicalSkillDefenceBonus">
+                <amount>
+                    <value level="1">-10</value>
+                    <value level="2">-20</value>
+                    <value level="3">-40</value>
+                    <value level="4">-70</value>
+                </amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="Speed">
+                <amount>
+                    <value level="1">-20</value>
+                    <value level="2">-40</value>
+                    <value level="3">-60</value>
+                    <value level="4">-80</value>
+                </amount>
+                <mode>DIFF</mode>
+            </effect>
+        </effects>
     </skill>
     <skill id="50037" toLevel="1" name="Aqua Summon">
         <!-- Summons water drops. -->
@@ -358,9 +409,21 @@
     </skill>
     <skill id="50039" toLevel="1" name="Aqua Destruction">
         <!-- 50% chance to cancel Aqua Rage. -->
-        <operateType>A1</operateType>
+        <operateType>A2</operateType>
+        <abnormalLvl>5</abnormalLvl>
+        <abnormalTime>1</abnormalTime>
+        <activateRate>500</activateRate>
+        <abnormalType>FREEZING</abnormalType>
         <hitTime>2000</hitTime>
         <effectPoint>-100</effectPoint>
+        <targetType>ENEMY</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="DispelBySlotProbability">
+                <dispel>FREEZING</dispel>
+                <rate>100</rate>
+            </effect>
+        </effects>
     </skill>
     <skill id="50040" toLevel="2" name="Aqua Suicide">
         <!-- Attacks nearby enemies with 170 Power added to M. Atk. -->
@@ -386,12 +449,34 @@
     <skill id="50043" toLevel="2" name="Hurricane Bolt">
 		<!-- Bolt of lightning attacks with 138 Power added to M. Atk., paralyses for 5 sec. -->
         <icon>icon.skill1170</icon>
-        <operateType>A1</operateType>
-        <isDebuff>true</isDebuff>
-        <castRange>600</castRange>
-        <hitTime>2500</hitTime>
-        <coolTime>500</coolTime>
+        <abnormalTime>5</abnormalTime>
+        <activateRate>80</activateRate>
+        <basicProperty>MAGIC</basicProperty>
+        <castRange>900</castRange>
         <effectPoint>-100</effectPoint>
+        <effectRange>1400</effectRange>
+        <hitTime>2500</hitTime>
+        <isDebuff>true</isDebuff>
+        <isMagic>1</isMagic> <!-- Magic Skill -->
+        <lvlBonusRate>1</lvlBonusRate>
+        <magicLvl>85</magicLvl>
+        <mpConsume>69</mpConsume>
+        <operateType>A2</operateType>
+        <abnormalType>PARALYZE</abnormalType>
+        <magicCriticalRate>-5</magicCriticalRate>
+        <abnormalLvl>1</abnormalLvl>
+        <trait>PARALYZE</trait>
+        <attributeType>DARK</attributeType>
+        <attributeValue>120</attributeValue>
+        <abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
+        <targetType>ENEMY</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="BlockActions" />
+            <effect name="MagicalAttack">
+                <power>138</power>
+            </effect>
+        </effects>
     </skill>
     <skill id="50044" toLevel="2" name="Hurricane Destruction">
         <!-- Strong whirlwind attacks with 170 Power added to M. Atk. and knocks down nereby enemies. -->
@@ -466,11 +551,94 @@
             <value level="9">icon.skill50050_9</value>
             <value level="10">icon.skill50050_10</value>
         </icon>
-        <operateType>A1</operateType>
+        <abnormalLvl>
+            <value level="1">1</value>
+            <value level="2">2</value>
+            <value level="3">3</value>
+            <value level="4">4</value>
+            <value level="5">5</value>
+            <value level="6">6</value>
+            <value level="7">7</value>
+            <value level="8">8</value>
+            <value level="9">9</value>
+            <value level="10">10</value>
+        </abnormalLvl>
+        <abnormalTime>-1</abnormalTime>
+        <subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
+        <abnormalType>BLEEDING</abnormalType>
+        <abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+        <activateRate>100</activateRate>
+        <basicProperty>PHYSICAL</basicProperty>
+        <castRange>40</castRange>
+        <coolTime>720</coolTime>
+        <effectPoint>
+            <value level="1">-574</value>
+            <value level="2">-582</value>
+            <value level="3">-590</value>
+            <value level="4">-597</value>
+            <value level="5">-604</value>
+            <value level="6">-611</value>
+            <value level="7">-617</value>
+            <value level="8">-624</value>
+            <value level="9">-630</value>
+            <value level="10">-635</value>
+        </effectPoint>
+        <effectRange>1000</effectRange>
+        <hitTime>4000</hitTime>
+        <hpConsume>
+            <value level="1">505</value>
+            <value level="2">514</value>
+            <value level="3">522</value>
+            <value level="4">531</value>
+            <value level="5">540</value>
+            <value level="6">548</value>
+            <value level="7">557</value>
+            <value level="8">565</value>
+            <value level="9">573</value>
+            <value level="10">581</value>
+        </hpConsume>
         <isDebuff>true</isDebuff>
-        <hitTime>1500</hitTime>
-        <coolTime>500</coolTime>
-        <effectPoint>-100</effectPoint>
+        <isMagic>1</isMagic> <!-- Magic Skill -->
+        <lvlBonusRate>20</lvlBonusRate>
+        <magicLvl>
+            <value level="1">82</value>
+            <value level="2">82</value>
+            <value level="3">82</value>
+            <value level="4">82</value>
+            <value level="5">82</value>
+            <value level="6">82</value>
+            <value level="7">82</value>
+            <value level="8">82</value>
+            <value level="9">82</value>
+            <value level="10">82</value>
+        </magicLvl>
+        <operateType>A2</operateType>
+        <reuseDelay>180000</reuseDelay>
+        <magicCriticalRate>5</magicCriticalRate>
+        <targetType>ENEMY</targetType>
+        <affectScope>RANGE</affectScope>
+        <affectObject>NOT_FRIEND</affectObject>
+        <effects>
+            <effect name="DamOverTime">
+                <power>
+                    <value level="1">25</value>
+                    <value level="2">34</value>
+                    <value level="3">44</value>
+                    <value level="4">54</value>
+                    <value level="5">62</value>
+                    <value level="6">67</value>
+                    <value level="7">72</value>
+                    <value level="8">77</value>
+                    <value level="9">83</value>
+                    <value level="10">90</value>
+                </power>
+                <ticks>5</ticks>
+            </effect>
+            <effect name="Speed">
+                <amount>-20</amount>
+                <mode>PER</mode>
+            </effect>
+        </effects>
     </skill>
     <skill id="50051" toLevel="2" name="Tears of Fire">
         <!-- Attacks nearby enemies with 138 Power added to M. Atk. -->
@@ -641,21 +809,54 @@
     </skill>
     <skill id="50069" toLevel="1" name="Fire Breath">
         <!-- Deals fire damage to the targets around the boss. -->
+        <affectRange>150</affectRange>
+        <castRange>600</castRange>
+        <effectPoint>-1</effectPoint>
+        <effectRange>1100</effectRange>
+        <attributeType>FIRE</attributeType>
+        <attributeValue>180</attributeValue>
+        <hitTime>4000</hitTime>
+        <isMagic>2</isMagic> <!-- Static Skill -->
+        <magicLvl>99</magicLvl>
         <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <hitTime>1500</hitTime>
-        <coolTime>500</coolTime>
-        <reuseDelay>5000</reuseDelay>
-        <effectPoint>-100</effectPoint>
+        <reuseDelay>15000</reuseDelay>
+        <abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
+        <magicCriticalRate>-5</magicCriticalRate>
+        <targetType>ENEMY</targetType>
+        <affectScope>RANGE</affectScope>
+        <affectObject>NOT_FRIEND</affectObject>
+        <effects>
+            <effect name="MagicalAttack">
+                <power>250</power>
+            </effect>
+        </effects>
     </skill>
     <skill id="50070" toLevel="1" name="Tears of Fire">
         <!-- Affects the area. Deals a lot of damage. -->
-        <operateType>A1</operateType>
+        <affectLimit>6-12</affectLimit>
+        <affectRange>200</affectRange>
+        <effectPoint>-338</effectPoint>
+        <attributeType>FIRE</attributeType>
+        <attributeValue>150</attributeValue>
+        <hitTime>4000</hitTime>
+        <icon>icon.skill50070</icon>
         <isMagic>1</isMagic> <!-- Magic Skill -->
-        <hitTime>2000</hitTime>
-        <coolTime>500</coolTime>
-        <reuseDelay>5000</reuseDelay>
-        <effectPoint>-100</effectPoint>
+        <magicLvl>82</magicLvl>
+        <mpConsume>125</mpConsume>
+        <mpInitialConsume>21</mpInitialConsume>
+        <operateType>A1</operateType>
+        <reuseDelay>8000</reuseDelay>
+        <magicCriticalRate>5</magicCriticalRate>
+        <targetType>SELF</targetType>
+        <affectScope>POINT_BLANK</affectScope>
+        <affectObject>NOT_FRIEND</affectObject>
+        <effects>
+            <effect name="MagicalAttack">
+                <power>
+                    <value level="1">138</value>
+                </power>
+            </effect>
+        </effects>
     </skill>
     <skill id="50071" toLevel="1" name="Aqua Arrow">
         <!-- Deals M. Damage to a random target. -->

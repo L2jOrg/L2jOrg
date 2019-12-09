@@ -654,23 +654,55 @@
             </effect>
         </effects>
     </skill>
-    <skill id="55243" toLevel="2" name="Scroll: Dance of the Warrior">
+    <skill id="55243" toLevel="1" name="Scroll: Dance of the Warrior">
         <!-- For 10 min., P. Atk +12%. -->
         <icon>icon.skill0271</icon>
-        <operateType>A1</operateType>
-        <isMagic>3</isMagic> <!-- Dance Skill -->
+        <abnormalLvl>4</abnormalLvl>
+        <abnormalTime>600</abnormalTime>
+        <abnormalType>CRITICAL_DMG_UP</abnormalType>
+        <itemConsumeCount>1</itemConsumeCount>
+        <itemConsumeId>70110</itemConsumeId>
         <hitTime>2500</hitTime>
         <reuseDelay>3000</reuseDelay>
         <effectPoint>523</effectPoint>
+        <isMagic>3</isMagic> <!-- Static Skill -->
+        <magicLvl>1</magicLvl>
+        <operateType>A2</operateType>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>5</magicCriticalRate>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="PAtk">
+                <amount>12</amount>
+                <mode>PER</mode>
+            </effect>
+        </effects>
     </skill>
-    <skill id="55244" toLevel="2" name="Scroll: Dance of the Mystic">
+    <skill id="55244" toLevel="1" name="Scroll: Dance of the Mystic">
         <!-- For 10 min., M. Atk +20%. -->
         <icon>icon.skill0273</icon>
-        <operateType>A1</operateType>
-        <isMagic>3</isMagic> <!-- Dance Skill -->
+        <abnormalLvl>4</abnormalLvl>
+        <abnormalTime>600</abnormalTime>
+        <abnormalType>CRITICAL_DMG_UP</abnormalType>
+        <itemConsumeCount>1</itemConsumeCount>
+        <itemConsumeId>70111</itemConsumeId>
         <hitTime>2500</hitTime>
         <reuseDelay>3000</reuseDelay>
-        <effectPoint>467</effectPoint>
+        <effectPoint>523</effectPoint>
+        <isMagic>3</isMagic> <!-- Static Skill -->
+        <magicLvl>1</magicLvl>
+        <operateType>A2</operateType>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>5</magicCriticalRate>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="MAtk">
+                <amount>20</amount>
+                <mode>PER</mode>
+            </effect>
+        </effects>
     </skill>
 	<skill id="55245" toLevel="8" name="Scroll of Escape: Town of Aden">
         <operateType>A1</operateType>

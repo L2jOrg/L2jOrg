@@ -34,7 +34,12 @@ open module org.l2j.scripts {
     uses org.l2j.gameserver.model.quest.Quest;
 
     provides instances.AbstractInstance
-        with  instances.MonsterArena.MonsterArena;
+        with  instances.MonsterArena.MonsterArena,
+            instances.ResidenceOfQueenNebula.ResidenceOfQueenNebula,
+            instances.ResidenceOfKingProcella.ResidenceOfKingProcella,
+            instances.ResidenceOfKingPetram.ResidenceOfKingPetram,
+            instances.ResidenceOfKingIgnis.ResidenceOfKingIgnis;
+
 
     provides events.ScriptEvent
         with events.ChefMonkeyEvent.ChefMonkeyEvent,
@@ -72,6 +77,8 @@ open module org.l2j.scripts {
             ai.bosses.Orfen.Orfen,
             ai.bosses.QueenAnt.QueenAnt,
             ai.bosses.Zaken.Zaken,
+            ai.bosses.LimitBarrier,
+
 
             ai.others.ArenaManager.ArenaManager,
             ai.others.CastleBlacksmith.CastleBlacksmith,

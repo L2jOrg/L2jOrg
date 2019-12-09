@@ -313,17 +313,10 @@ public final class SkillTreesData extends GameXmlReader {
             return result;
         }
 
-        final boolean isAwaken = player.isDualClassActive();
-
-
         for (var entry : skills.entrySet()) {
             final SkillLearn skill = entry.getValue();
 
             if(skill.isAutoGet() && !includeAutoGet || skill.isLearnedByFS() && !includeByFs || isRemoveSkill(classId, skill.getSkillId())) {
-                continue;
-            }
-
-            if (isAwaken && !isCurrentClassSkillNoParent(classId, entry.getKey())) {
                 continue;
             }
 
@@ -766,7 +759,7 @@ public final class SkillTreesData extends GameXmlReader {
             array = tempMap.keySet().toArray();
             tempMap.clear();
             Arrays.sort(array);
-            _skillsByClassIdHashCodes.put(cls.ordinal(), array);
+            _skillsByClassIdHashCodes.put(cls.getId(), array);
         }
 
         // Race specific skills from Fishing and Transformation skill trees.
@@ -847,7 +840,7 @@ public final class SkillTreesData extends GameXmlReader {
         final int maxLvl = SkillData.getInstance().getMaxLevel(skill.getId());
         final long hashCode = SkillData.getSkillHashCode(skill.getId(), Math.min(skill.getLevel(), maxLvl));
 
-        if (Arrays.binarySearch(_skillsByClassIdHashCodes.get(player.getClassId().ordinal()), hashCode) >= 0) {
+        if (Arrays.binarySearch(_skillsByClassIdHashCodes.get(player.getClassId().getId()), hashCode) >= 0) {
             return true;
         }
 

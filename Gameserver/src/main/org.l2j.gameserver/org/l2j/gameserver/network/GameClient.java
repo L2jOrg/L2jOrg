@@ -404,7 +404,15 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
             if (player.isOnlineInt() == 1) {
                 LOGGER.error("Attempt of double login: {} ({}) {}", player.getName(), objectId, accountName);
             }
-            Disconnection.of(player).defaultSequence(false);
+            if (player.getClient() != null)
+            {
+                Disconnection.of(player).defaultSequence(false);
+            }
+            else
+            {
+                player.storeMe();
+                player.deleteMe();
+            }
             return null;
         }
 

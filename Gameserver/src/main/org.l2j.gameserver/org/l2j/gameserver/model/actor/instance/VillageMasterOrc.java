@@ -18,7 +18,7 @@ package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
-import org.l2j.gameserver.model.base.PlayerClass;
+import org.l2j.gameserver.model.base.ClassId;
 
 public final class VillageMasterOrc extends VillageMaster {
     /**
@@ -31,11 +31,11 @@ public final class VillageMasterOrc extends VillageMaster {
     }
 
     @Override
-    protected final boolean checkVillageMasterRace(PlayerClass pclass) {
+    protected final boolean checkVillageMasterRace(ClassId pclass) {
         if (pclass == null) {
             return false;
         }
 
-        return pclass.isOfRace(Race.ORC);
+        return pclass.getRace() == Race.ORC;
     }
 }

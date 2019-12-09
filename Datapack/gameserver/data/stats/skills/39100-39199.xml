@@ -1676,31 +1676,96 @@
         <!-- 1000 XP. -->
         <icon>icon.etc_recall_exp_scroll</icon>
         <operateType>A1</operateType>
-        <reuseDelay>3000</reuseDelay>
+        <itemConsumeCount>1</itemConsumeCount>
+        <itemConsumeId>49777</itemConsumeId> <!-- XP Scroll: 1,000 -->
+        <magicCriticalRate>5</magicCriticalRate>
+        <hitCancelTime>0</hitCancelTime>
+        <magicLvl>1</magicLvl>
+        <isMagic>2</isMagic>
+        <reuseDelay>500</reuseDelay>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="GiveXp">
+                <xp>1000</xp>
+            </effect>
+        </effects>
     </skill>
     <skill id="39181" toLevel="1" name="Average Scroll of Experience">
         <!-- 10,000 XP. -->
         <icon>icon.etc_recall_exp_scroll</icon>
         <operateType>A1</operateType>
-        <reuseDelay>3000</reuseDelay>
+        <itemConsumeCount>1</itemConsumeCount>
+        <itemConsumeId>49778</itemConsumeId> <!-- XP Scroll: 10,000 -->
+        <magicCriticalRate>5</magicCriticalRate>
+        <hitCancelTime>0</hitCancelTime>
+        <magicLvl>1</magicLvl>
+        <isMagic>2</isMagic>
+        <reuseDelay>500</reuseDelay>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="GiveXp">
+                <xp>10000</xp>
+            </effect>
+        </effects>
     </skill>
     <skill id="39182" toLevel="1" name="Greater Scroll of Experience">
         <!-- 100,000 XP. -->
         <icon>icon.etc_recall_exp_scroll</icon>
         <operateType>A1</operateType>
-        <reuseDelay>3000</reuseDelay>
+        <itemConsumeCount>1</itemConsumeCount>
+        <itemConsumeId>49779</itemConsumeId> <!-- XP Scroll: 100,000 -->
+        <magicCriticalRate>5</magicCriticalRate>
+        <hitCancelTime>0</hitCancelTime>
+        <magicLvl>1</magicLvl>
+        <isMagic>2</isMagic>
+        <reuseDelay>500</reuseDelay>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="GiveXp">
+                <xp>100000</xp>
+            </effect>
+        </effects>
     </skill>
     <skill id="39183" toLevel="1" name="Top-grade Scroll of Experience">
         <!-- 500,000 XP. -->
         <icon>icon.etc_recall_exp_scroll</icon>
         <operateType>A1</operateType>
-        <reuseDelay>3000</reuseDelay>
+        <itemConsumeCount>1</itemConsumeCount>
+        <itemConsumeId>49780</itemConsumeId> <!-- XP Scroll: 500,000 -->
+        <magicCriticalRate>5</magicCriticalRate>
+        <hitCancelTime>0</hitCancelTime>
+        <magicLvl>1</magicLvl>
+        <isMagic>2</isMagic>
+        <reuseDelay>500</reuseDelay>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="GiveXp">
+                <xp>500000</xp>
+            </effect>
+        </effects>
     </skill>
     <skill id="39184" toLevel="1" name="Highest-grade Scroll of Experience">
         <!-- 1,000,000 XP. -->
         <icon>icon.etc_recall_exp_scroll</icon>
         <operateType>A1</operateType>
-        <reuseDelay>3000</reuseDelay>
+        <itemConsumeCount>1</itemConsumeCount>
+        <itemConsumeId>49781</itemConsumeId> <!-- XP Scroll: 1,000,000 -->
+        <magicCriticalRate>5</magicCriticalRate>
+        <hitCancelTime>0</hitCancelTime>
+        <magicLvl>1</magicLvl>
+        <isMagic>2</isMagic>
+        <reuseDelay>500</reuseDelay>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="GiveXp">
+                <xp>1000000</xp>
+            </effect>
+        </effects>
     </skill>
     <skill id="39185" toLevel="1" name="Support Blow">
         <!-- Inflicts 50 damage. Can be used only in PvP. -->

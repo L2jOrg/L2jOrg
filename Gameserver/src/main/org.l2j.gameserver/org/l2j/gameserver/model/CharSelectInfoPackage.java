@@ -236,8 +236,8 @@ public class CharSelectInfoPackage {
         _sp = sp;
     }
 
-    public int getEnchantEffect() {
-        return _paperdoll[RIGHT_HAND.getId()][2];
+    public int getEnchantEffect(int slot) {
+        return _paperdoll[slot][2];
     }
 
     public int getReputation() {
