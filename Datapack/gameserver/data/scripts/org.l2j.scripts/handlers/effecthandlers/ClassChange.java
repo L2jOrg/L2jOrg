@@ -1,6 +1,5 @@
 package handlers.effecthandlers;
 
-import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.enums.SubclassInfoType;
 import org.l2j.gameserver.model.StatsSet;
@@ -12,6 +11,7 @@ import org.l2j.gameserver.model.olympiad.OlympiadManager;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.AcquireSkillList;
+import org.l2j.gameserver.network.serverpackets.ExStorageMaxCount;
 import org.l2j.gameserver.network.serverpackets.ExSubjobInfo;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
@@ -59,12 +59,16 @@ public class ClassChange extends AbstractEffect
 			identifyCrisis.applyEffects(player, player);
 		}
 
+		final int activeClass = player.getClassId().getId();
+		player.setActiveClass(_index);
+
 		final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_SUCCESSFULLY_SWITCHED_S1_TO_S2);
 		msg.addClassId(activeClass);
 		msg.addClassId(player.getClassId().getId());
 		player.sendPacket(msg);
 
 		player.broadcastUserInfo();
+		player.sendPacket(new ExStorageMaxCount(player));
 		player.sendPacket(new AcquireSkillList(player));
 		player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.CLASS_CHANGED));
 

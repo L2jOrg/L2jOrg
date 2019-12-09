@@ -542,7 +542,10 @@
         </collision>
     </npc>
     <npc id="29111" level="80" type="Monster" name="Water Slime">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <parameters>
+            <skill name="Skill01_ID" id="50039" level="1" />
+            <param name="Skill01_Probablity" value="9000" />
+        </parameters>
         <race>ETC</race>
         <sex>FEMALE</sex>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -554,7 +557,10 @@
             <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
             <defence physical="405.85106382979" magical="297.0297029703"/>
         </stats>
-        <status attackable="false"/>
+        <status attackable="true" />
+        <skillList>
+            <skill id="50039" level="1" /> <!-- Aqua Destruction -->
+        </skillList>
         <collision>
             <radius normal="36"/>
             <height normal="39"/>

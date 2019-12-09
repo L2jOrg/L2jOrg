@@ -1774,9 +1774,6 @@
         <targetType>SELF</targetType>
         <affectScope>SINGLE</affectScope>
         <affectObject>FRIEND</affectObject>
-        <conditions>
-            <condition name="OpNeedAgathion" />
-        </conditions>
         <effects>
             <effect name="PhysicalAttackSpeed">
                 <amount>5</amount>
@@ -1803,9 +1800,6 @@
         <affectScope>SINGLE</affectScope>
         <affectObject>FRIEND</affectObject>
         <reuseDelay>600000</reuseDelay>
-        <conditions>
-            <condition name="OpNeedAgathion" />
-        </conditions>
         <effects>
             <effect name="MagicalAttackSpeed">
                 <amount>5</amount>
@@ -1832,9 +1826,6 @@
         <targetType>SELF</targetType>
         <affectScope>SINGLE</affectScope>
         <affectObject>FRIEND</affectObject>
-        <conditions>
-            <condition name="OpNeedAgathion" />
-        </conditions>
         <effects>
             <effect name="Speed">
                 <amount>20</amount>

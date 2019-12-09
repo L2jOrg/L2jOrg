@@ -141,6 +141,7 @@ public final class UseItem extends ClientPacket {
             }
         }
 
+        player.onActionRequest();
         if (item.isEquipable()) {
             handleEquipable(player, item);
         } else {

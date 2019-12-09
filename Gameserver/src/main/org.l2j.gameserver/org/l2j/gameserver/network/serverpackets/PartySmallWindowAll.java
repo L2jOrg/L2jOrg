@@ -1,10 +1,13 @@
 package org.l2j.gameserver.network.serverpackets;
 
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
+
+import static org.l2j.commons.util.Util.*;
 
 public final class PartySmallWindowAll extends ServerPacket {
     private final Party _party;
@@ -36,37 +39,31 @@ public final class PartySmallWindowAll extends ServerPacket {
                 writeInt((int) member.getCurrentMp());
                 writeInt(member.getMaxMp());
                 writeInt(member.getVitalityPoints());
-                writeByte((byte) member.getLevel());
-                writeShort((short) member.getClassId().getId());
-                writeByte((byte) 0x01); // Unk
-                writeShort((short) member.getRace().ordinal());
+                writeByte(member.getLevel());
+                writeShort(member.getClassId().getId());
+                writeByte(0x01); // Unk
+                writeShort(member.getRace().ordinal());
+                writeInt(0x00);
+
                 final Summon pet = member.getPet();
                 writeInt(member.getServitors().size() + (pet != null ? 1 : 0)); // Summon size, one only atm
-                if (pet != null) {
-                    writeInt(pet.getObjectId());
-                    writeInt(pet.getId() + 1000000);
-                    writeByte((byte) pet.getSummonType());
-                    writeString(pet.getName());
-                    writeInt((int) pet.getCurrentHp());
-                    writeInt(pet.getMaxHp());
-                    writeInt((int) pet.getCurrentMp());
-                    writeInt(pet.getMaxMp());
-                    writeByte((byte) pet.getLevel());
-                }
-                member.getServitors().values().forEach(s ->
-                {
-                    writeInt(s.getObjectId());
-                    writeInt(s.getId() + 1000000);
-                    writeByte((byte) s.getSummonType());
-                    writeString(s.getName());
-                    writeInt((int) s.getCurrentHp());
-                    writeInt(s.getMaxHp());
-                    writeInt((int) s.getCurrentMp());
-                    writeInt(s.getMaxMp());
-                    writeByte((byte) s.getLevel());
-                });
+
+                doIfNonNull(pet, this::writeSummonStatus);
+                member.getServitors().values().forEach(this::writeSummonStatus);
             }
         }
+    }
+
+    private void writeSummonStatus(Summon summon) {
+        writeInt(summon.getObjectId());
+        writeInt(summon.getId() + 1000000);
+        writeByte(summon.getSummonType());
+        writeString(summon.getName());
+        writeInt((int) summon.getCurrentHp());
+        writeInt(summon.getMaxHp());
+        writeInt((int) summon.getCurrentMp());
+        writeInt(summon.getMaxMp());
+        writeByte(summon.getLevel());
     }
 
 }

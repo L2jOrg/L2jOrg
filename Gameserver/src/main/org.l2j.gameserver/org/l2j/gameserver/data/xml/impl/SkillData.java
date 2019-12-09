@@ -90,7 +90,7 @@ public class SkillData extends GameXmlReader {
         final int maxLvl = getMaxLevel(skillId);
         // requested level too high
         if ((maxLvl > 0) && (level > maxLvl)) {
-            LOGGER.warn(": Call to unexisting skill level id: " + skillId + " requested level: " + level + " max level: " + maxLvl + ".", new Throwable());
+            LOGGER.warn("Call to unexisting skill level id: {} requested level: {} max level: {}.", skillId, level, maxLvl, new Throwable());
             return _skills.get(getSkillHashCode(skillId, maxLvl));
         }
 

@@ -750,7 +750,7 @@ public final class Formulas {
 
     public static boolean calcSkillMastery(Creature actor, Skill skill) {
         // Static Skills and Item skills  are not affected by Skill Mastery.
-        if (skill.isStatic() || !isPlayer(actor) || skill.getReferenceItemId() > 0) {
+        if (!isPlayer(actor)) {
             return false;
         }
 

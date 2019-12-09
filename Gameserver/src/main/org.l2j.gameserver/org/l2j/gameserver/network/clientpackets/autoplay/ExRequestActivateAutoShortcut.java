@@ -15,13 +15,13 @@ public class ExRequestActivateAutoShortcut extends ClientPacket {
     private int room;
 
     @Override
-    protected void readImpl() throws Exception {
+    protected void readImpl()  {
         room = readShort();
         activate = readByteAsBoolean();
     }
 
     @Override
-    protected void runImpl() throws Exception {
+    protected void runImpl() {
         if(!activate) {
             client.sendPacket(new ExActivateAutoShortcut(room, activate));
             return;

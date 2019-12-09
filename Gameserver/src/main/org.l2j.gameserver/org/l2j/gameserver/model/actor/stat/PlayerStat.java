@@ -26,6 +26,7 @@ import org.l2j.gameserver.world.zone.ZoneType;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import static java.util.Objects.isNull;
+import static org.l2j.gameserver.enums.UserInfoType.CURRENT_HPMPCP_EXP_SP;
 
 public class PlayerStat extends PlayableStat {
     public static final int MAX_VITALITY_POINTS = 140000;
@@ -222,7 +223,7 @@ public class PlayerStat extends PlayableStat {
             }
         }
 
-        if(getLevel() >= 40) {
+        if (getLevel() >= 40) {
             player.initElementalSpirits();
         }
 
@@ -243,11 +244,7 @@ public class PlayerStat extends PlayableStat {
         if (!super.addSp(value)) {
             return false;
         }
-
-        final UserInfo ui = new UserInfo(getCreature(), false);
-        ui.addComponentType(UserInfoType.CURRENT_HPMPCP_EXP_SP);
-        getCreature().sendPacket(ui);
-
+        getCreature().broadcastUserInfo(CURRENT_HPMPCP_EXP_SP);
         return true;
     }
 

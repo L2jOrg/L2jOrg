@@ -70,6 +70,11 @@ public final class PullBack extends AbstractEffect
 			return;
 		}
 
+		// Prevent pulling debuff blocked characters.
+		if ((effected.isDebuffBlocked())) {
+			return;
+		}
+
 		// Prevent pulling NPCs.
 		if (!isPlayable(effected) && !isMonster(effected))
 		{

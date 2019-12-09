@@ -4060,11 +4060,11 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="215"/> <!-- Doom Dagger -->
-        <acquire exp="1721" sp="51"/>
+        <acquire exp="2009" sp="61" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="260.84229" hpRegen="4.5" mp="374.355" mpRegen="1.8"/>
-            <attack physical="78.92488864" magical="67.7543" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120"/>
-            <defence physical="134.187009" magical="89.26566"/>
+            <vitals hp="670.347" hpRegen="4.5" mp="381.969" mpRegen="1.8" />
+            <attack physical="99.21986" magical="67.7543" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+            <defence physical="121.98819" magical="89.26566" />
             <speed>
                 <walk ground="80"/>
                 <run ground="130"/>
@@ -4127,11 +4127,11 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="275"/> <!-- Longbow -->
-        <acquire exp="1834" sp="55"/>
+        <acquire exp="2141" sp="65" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="274.38934" hpRegen="4.5" mp="390.285" mpRegen="1.8"/>
-            <attack physical="214.453805" magical="72.49711" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0"/>
-            <defence physical="138.134997" magical="91.89199"/>
+            <vitals hp="705.162" hpRegen="4.5" mp="398.223" mpRegen="1.8" />
+            <attack physical="106.16525" magical="72.49711" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+            <defence physical="125.57727" magical="91.89199" />
             <speed>
                 <walk ground="45"/>
                 <run ground="130"/>
@@ -4195,11 +4195,11 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="7"/> <!-- Apprentice's Rod -->
-        <acquire exp="2071" sp="62"/>
+        <acquire exp="2417" sp="73" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="302.46868" hpRegen="4.5" mp="422.145" mpRegen="1.8"/>
-            <attack physical="110.1891091" magical="82.76936" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
-            <defence physical="146.24346" magical="97.28601"/>
+            <vitals hp="777.324" hpRegen="4.5" mp="430.731" mpRegen="1.8" />
+            <attack physical="121.20802" magical="82.76936" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+            <defence physical="132.9486" magical="97.28601" />
             <speed>
                 <walk ground="50"/>
                 <run ground="120"/>
@@ -4261,11 +4261,11 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="79"/> <!-- Damascus Sword -->
-        <acquire exp="2212" sp="66"/>
+        <acquire exp="2582" sp="78" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="317.24728" hpRegen="4.5" mp="438.075" mpRegen="1.8"/>
-            <attack physical="142.261856" magical="88.31491" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
-            <defence physical="124.2995273" magical="100.0527"/>
+            <vitals hp="815.304" hpRegen="4.5" mp="446.985" mpRegen="1.8" />
+            <attack physical="129.32896" magical="88.31491" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+            <defence physical="136.72948" magical="100.0527" />
             <speed>
                 <walk ground="80"/>
                 <run ground="174"/>
@@ -4332,11 +4332,11 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="123" lhand="20"/> <!-- Saber / Buckler -->
-        <acquire exp="1966" sp="59"/>
+        <acquire exp="2295" sp="69" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="287.93639" hpRegen="4.5" mp="405.33" mpRegen="1.8"/>
-            <attack physical="124.839715" magical="77.49941" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
-            <defence physical="117.4826818" magical="94.5656" shield="65" shieldRate="20"/>
+            <vitals hp="739.977" hpRegen="4.5" mp="413.574" mpRegen="1.8" />
+            <attack physical="113.49065" magical="77.49941" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+            <defence physical="129.23095" magical="94.5656" />
             <speed>
                 <walk ground="80"/>
                 <run ground="120"/>

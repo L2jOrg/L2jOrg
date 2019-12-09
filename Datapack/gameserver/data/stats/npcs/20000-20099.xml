@@ -4,11 +4,11 @@
         <!-- L2wiki: https://l2wiki.com/classic/Gremlin -->
         <race>FAIRY</race>
         <sex>MALE</sex>
-        <acquire exp="29" sp="0"/>
+        <acquire exp="30" sp="1" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="65" hpRegen="2" mp="49" mpRegen="0.9"/>
-            <attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
-            <defence physical="44.44444" magical="32.52252"/>
+            <vitals hp="41.145" hpRegen="2" mp="44.247" mpRegen="0.9" />
+            <attack physical="8.47458" magical="5.78704" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+            <defence physical="44.44444" magical="32.52252" />
             <speed>
                 <walk ground="20"/>
                 <run ground="50"/>
@@ -81,10 +81,10 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="4"/> <!-- Club -->
-        <acquire exp="220" sp="6"/>
+        <acquire exp="221" sp="7" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="32.75923" hpRegen="2" mp="75.225" mpRegen="0.9"/>
-            <attack physical="12.34006" magical="8.42666" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
+            <vitals hp="84.189" hpRegen="2" mp="76.755" mpRegen="0.9" />
+            <attack physical="12.34006" magical="8.42666" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
             <defence physical="51.60553" magical="37.76269"/>
             <speed>
                 <walk ground="40"/>

@@ -15,13 +15,11 @@ public class NotifyExitBeautyShop extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getPlayer();
-        if (activeChar == null) {
+        final Player player = client.getPlayer();
+        if (player == null) {
             return;
         }
 
-        final UserInfo userInfo = new UserInfo(activeChar, false);
-        userInfo.addComponentType(UserInfoType.APPAREANCE);
-        client.sendPacket(userInfo);
+        player.broadcastUserInfo(UserInfoType.APPAREANCE);
     }
 }

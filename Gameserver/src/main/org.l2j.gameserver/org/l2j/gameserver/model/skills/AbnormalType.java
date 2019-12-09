@@ -208,8 +208,8 @@ public enum AbnormalType {
     CLAN_TEAMWORK(-1),
     SONG_OF_ARCHERY(-1),
     DANCE_OF_SAGE(-1),
-    SONG_WEAPON(-1), // TODO: need find proper name
-    HEAL_RESISTANCE(-1), // TODO: need find proper name
+	SONG_WEAPON(-1),
+	HEAL_RESISTANCE(-1),
     AVE_BROOCH(-1),
     AB_HAWK_EYE(0),
     ALL_ATTACK_DOWN(1),
@@ -509,7 +509,8 @@ public enum AbnormalType {
     HERB_SPEED(-1),
     HERB_ACCURANCY(-1),
     WARRIOR_BANE(-1),
-    MAGE_BANE(-1);
+	MAGE_BANE(-1),
+	DRAGON_FRUIT(-1);
 
     protected static final Logger LOGGER = LoggerFactory.getLogger(AbnormalType.class);
     private int _clientId;

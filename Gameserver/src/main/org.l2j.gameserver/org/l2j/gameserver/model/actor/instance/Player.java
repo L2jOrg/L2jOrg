@@ -3308,11 +3308,11 @@ public final class Player extends Playable {
     }
 
     public boolean isSpawnProtected() {
-        return _spawnProtectEndTime > System.currentTimeMillis();
+        return _spawnProtectEndTime > 0 && _spawnProtectEndTime > System.currentTimeMillis();
     }
 
     public boolean isTeleportProtected() {
-        return _teleportProtectEndTime > System.currentTimeMillis();
+        return _teleportProtectEndTime > 0  && _teleportProtectEndTime > System.currentTimeMillis();
     }
 
     public void setSpawnProtection(boolean protect) {
@@ -3555,9 +3555,7 @@ public final class Player extends Playable {
 
     public final void broadcastTitleInfo() {
         // Send a Server->Client packet UserInfo to this Player
-        final UserInfo ui = new UserInfo(this, false);
-        ui.addComponentType(UserInfoType.CLAN);
-        sendPacket(ui);
+        broadcastUserInfo(UserInfoType.CLAN);
 
         // Send a Server->Client packet TitleUpdate to all Player in _KnownPlayers of the Player
         broadcastPacket(new NicknameChanged(this));
@@ -5759,6 +5757,7 @@ public final class Player extends Playable {
 
             int buff_index = 0;
             final List<Long> storedSkills = new ArrayList<>();
+            final long currentTime = System.currentTimeMillis();
 
             try(PreparedStatement statement = con.prepareStatement(ADD_SKILL_SAVE)) {
                 // Store all effect data along with calulated remaining
@@ -5808,8 +5807,8 @@ public final class Player extends Playable {
                         statement.setInt(5, info.getTime());
 
                         final TimeStamp t = getSkillReuseTimeStamp(skill.getReuseHashCode());
-                        statement.setLong(6, (t != null) && t.hasNotPassed() ? t.getReuse() : 0);
-                        statement.setDouble(7, (t != null) && t.hasNotPassed() ? t.getStamp() : 0);
+                        statement.setLong(6, (t != null) && (currentTime < t.getStamp()) ? t.getReuse() : 0);
+                        statement.setDouble(7, (t != null) && (currentTime < t.getStamp()) ? t.getStamp() : 0);
 
                         statement.setInt(8, 0); // Store type 0, active buffs/debuffs.
                         statement.setInt(9, _classIndex);
@@ -5820,32 +5819,28 @@ public final class Player extends Playable {
                 }
 
                 // Skills under reuse.
-                final Map<Long, TimeStamp> reuseTimeStamps = getSkillReuseTimeStamps();
-                if (reuseTimeStamps != null) {
-                    for (Entry<Long, TimeStamp> ts : reuseTimeStamps.entrySet()) {
-                        final long hash = ts.getKey();
-                        if (storedSkills.contains(hash)) {
-                            continue;
-                        }
-
-                        final TimeStamp t = ts.getValue();
-                        if ((t != null) && t.hasNotPassed()) {
-                            storedSkills.add(hash);
-
-                            statement.setInt(1, getObjectId());
-                            statement.setInt(2, t.getSkillId());
-                            statement.setInt(3, t.getSkillLvl());
-                            statement.setInt(4, t.getSkillSubLvl());
-                            statement.setInt(5, -1);
-                            statement.setLong(6, t.getReuse());
-                            statement.setDouble(7, t.getStamp());
-                            statement.setInt(8, 1); // Restore type 1, skill reuse.
-                            statement.setInt(9, _classIndex);
-                            statement.setInt(10, ++buff_index);
-                            statement.addBatch();
-                        }
+                for (Entry<Long, TimeStamp> ts : getSkillReuseTimeStamps().entrySet()) {
+                    final long hash = ts.getKey();
+                    if (storedSkills.contains(hash)) {
+                        continue;
                     }
-                    statement.executeBatch();
+
+                    final TimeStamp t = ts.getValue();
+                    if ((t != null) && (currentTime < t.getStamp())) {
+                        storedSkills.add(hash);
+
+                        statement.setInt(1, getObjectId());
+                        statement.setInt(2, t.getSkillId());
+                        statement.setInt(3, t.getSkillLvl());
+                        statement.setInt(4, t.getSkillSubLvl());
+                        statement.setInt(5, -1);
+                        statement.setLong(6, t.getReuse());
+                        statement.setDouble(7, t.getStamp());
+                        statement.setInt(8, 1); // Restore type 1, skill reuse.
+                        statement.setInt(9, _classIndex);
+                        statement.setInt(10, ++buff_index);
+                        statement.addBatch();
+                    }
                 }
             }
         } catch (Exception e) {
@@ -5860,20 +5855,18 @@ public final class Player extends Playable {
             ps1.setInt(1, getObjectId());
             ps1.execute();
 
-            final Map<Integer, TimeStamp> itemReuseTimeStamps = getItemReuseTimeStamps();
-            if (itemReuseTimeStamps != null) {
-                for (TimeStamp ts : itemReuseTimeStamps.values()) {
-                    if ((ts != null) && ts.hasNotPassed()) {
-                        ps2.setInt(1, getObjectId());
-                        ps2.setInt(2, ts.getItemId());
-                        ps2.setInt(3, ts.getItemObjectId());
-                        ps2.setLong(4, ts.getReuse());
-                        ps2.setDouble(5, ts.getStamp());
-                        ps2.addBatch();
-                    }
+            final long currentTime = System.currentTimeMillis();
+            for (TimeStamp ts : getItemReuseTimeStamps().values()) {
+                if ((ts != null) && (currentTime < ts.getStamp())) {
+                    ps2.setInt(1, getObjectId());
+                    ps2.setInt(2, ts.getItemId());
+                    ps2.setInt(3, ts.getItemObjectId());
+                    ps2.setLong(4, ts.getReuse());
+                    ps2.setDouble(5, ts.getStamp());
+                    ps2.addBatch();
                 }
-                ps2.executeBatch();
             }
+            ps2.executeBatch();
         } catch (Exception e) {
             LOGGER.warn("Could not store char item reuse data: ", e);
         }
@@ -6101,6 +6094,7 @@ public final class Player extends Playable {
             statement.setInt(1, getObjectId());
             statement.setInt(2, _classIndex);
             try (ResultSet rset = statement.executeQuery()) {
+                final long currentTime = System.currentTimeMillis();
                 while (rset.next()) {
                     final int remainingTime = rset.getInt("remaining_time");
                     final long reuseDelay = rset.getLong("reuse_delay");
@@ -6112,7 +6106,7 @@ public final class Player extends Playable {
                         continue;
                     }
 
-                    final long time = systime - System.currentTimeMillis();
+                    final long time = systime - currentTime;
                     if (time > 10) {
                         disableSkill(skill, time);
                         addTimeStamp(skill, reuseDelay, systime);
@@ -6149,15 +6143,14 @@ public final class Player extends Playable {
             statement.setInt(1, getObjectId());
             try (ResultSet rset = statement.executeQuery()) {
                 int itemId;
-                @SuppressWarnings("unused")
-                int itemObjId;
                 long reuseDelay;
                 long systime;
                 boolean isInInventory;
                 long remainingTime;
+                final long currentTime = System.currentTimeMillis();
+
                 while (rset.next()) {
                     itemId = rset.getInt("itemId");
-                    itemObjId = rset.getInt("itemObjId");
                     reuseDelay = rset.getLong("reuseDelay");
                     systime = rset.getLong("systime");
                     isInInventory = true;
@@ -6170,7 +6163,7 @@ public final class Player extends Playable {
                     }
 
                     if ((item != null) && (item.getId() == itemId) && (item.getReuseDelay() > 0)) {
-                        remainingTime = systime - System.currentTimeMillis();
+                        remainingTime = systime - currentTime;
                         // Hardcoded to 10 seconds.
                         if (remainingTime > 10) {
                             addTimeStampItem(item, reuseDelay, systime);
@@ -6219,6 +6212,7 @@ public final class Player extends Playable {
             try (ResultSet rset = statement.executeQuery()) {
                 int slot;
                 int symbolId;
+                final long currentTime = System.currentTimeMillis();
                 while (rset.next()) {
                     slot = rset.getInt("slot");
                     if ((slot < 1) || (slot > 3)) {
@@ -6234,13 +6228,12 @@ public final class Player extends Playable {
 
                     // Task for henna duration
                     if (henna.getDuration() > 0) {
-                        final long currentTime = System.currentTimeMillis();
                         final long remainingTime = getVariables().getLong("HennaDuration" + slot, currentTime) - currentTime;
                         if (remainingTime < 0) {
                             removeHenna(slot);
                             continue;
                         }
-                        _hennaRemoveSchedules.put(slot, ThreadPool.schedule(new HennaDurationTask(this, slot), System.currentTimeMillis() + remainingTime));
+                        _hennaRemoveSchedules.put(slot, ThreadPool.schedule(new HennaDurationTask(this, slot), currentTime + remainingTime));
                     }
 
                     _henna[slot - 1] = henna;
@@ -6508,7 +6501,7 @@ public final class Player extends Playable {
             return false;
         }
 
-        if (isLocked()) {
+        if (isSubClassLocked()) {
             LOGGER.warn("Player {} tried to restart/logout during class change.", getName());
             return false;
         }
@@ -7639,7 +7632,6 @@ public final class Player extends Playable {
             sl.setLastLearnedSkillId(lastLearnedSkillId);
         }
         sendPacket(sl);
-
         sendPacket(new AcquireSkillList(this));
     }
 
@@ -7889,15 +7881,15 @@ public final class Player extends Playable {
      * @param classIndex
      * @return
      */
-    public boolean setActiveClass(int classIndex) {
+    public void setActiveClass(int classIndex) {
         if (!_subclassLock.tryLock()) {
-            return false;
+            return;
         }
 
         try {
             // Cannot switch or change subclasses while transformed
             if (isTransformed()) {
-                return false;
+                return;
             }
 
             // Remove active item skills before saving char to database
@@ -7937,7 +7929,7 @@ public final class Player extends Playable {
                     setClassTemplate(getSubClasses().get(classIndex).getClassId());
                 } catch (Exception e) {
                     LOGGER.warn("Could not switch " + getName() + "'s sub class to class index " + classIndex + ": " + e.getMessage(), e);
-                    return false;
+                    return;
                 }
             }
             _classIndex = classIndex;
@@ -8008,13 +8000,12 @@ public final class Player extends Playable {
             sendPacket(new ExStorageMaxCount(this));
 
             EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSubChange(this), this);
-            return true;
         } finally {
             _subclassLock.unlock();
         }
     }
 
-    public boolean isLocked() {
+    public boolean isSubClassLocked() {
         return _subclassLock.isLocked();
     }
 
@@ -9788,7 +9779,7 @@ public final class Player extends Playable {
     }
 
     public boolean isAllowedToEnchantSkills() {
-        if (isLocked()) {
+        if (isSubClassLocked()) {
             return false;
         }
         if (isTransformed()) {
@@ -10021,17 +10012,19 @@ public final class Player extends Playable {
             return false;
         }
 
-        if (System.currentTimeMillis() < _fallingTimestamp) {
+        if (_fallingTimestamp > 0 && System.currentTimeMillis() < _fallingTimestamp) {
             return true;
         }
 
         final int deltaZ = getZ() - z;
         if (deltaZ <= getBaseTemplate().getSafeFallHeight()) {
+            _fallingTimestamp = 0;
             return false;
         }
 
         // If there is no geodata loaded for the place we are client Z correction might cause falling damage.
         if (!GeoEngine.getInstance().hasGeo(getX(), getY())) {
+            _fallingTimestamp = 0;
             return false;
         }
 
@@ -10143,7 +10136,7 @@ public final class Player extends Playable {
     }
 
     public void setPcCafePoints(int count) {
-        model.setPcCafePoints(min(count, 200000));
+        model.setPcCafePoints(min(count, Config.PC_CAFE_MAX_POINTS));
     }
 
     /**

@@ -1,13 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-	<xs:include schemaLocation="common.xsd"/>
+	<!--<xs:include schemaLocation="common.xsd"/>-->
 
 	<xs:element name="list">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="skil" type="Skill" maxOccurs="unbounded"/>
-
 				<xs:element maxOccurs="unbounded" name="skill">
 					<xs:complexType>
 						<xs:sequence>
@@ -2030,6 +2028,7 @@
 		</xs:complexType>
 	</xs:element>
 
+<!--
 	<xs:complexType name="Skill">
 		<xs:sequence>
 			<xs:element name="icon" type="MappedLevelToken" maxOccurs="unbounded"/>
@@ -2179,6 +2178,7 @@
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
+-->
 
 	<xs:simpleType name="AbnormalType">
 		<xs:restriction base="xs:token">

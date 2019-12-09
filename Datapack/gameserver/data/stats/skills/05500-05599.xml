@@ -1011,9 +1011,6 @@
         <hitCancelTime>0</hitCancelTime>
         <targetType>SELF</targetType>
         <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpNeedAgathion"/>
-        </conditions>
     </skill>
     <skill id="5539" toLevel="1" name="Little Angel Agathion Special Skill: Mysterious Power">
         <!-- A mysterious power that no one knows. Use with caution! -->
@@ -1033,9 +1030,6 @@
         <trait>ETC</trait>
         <targetType>SELF</targetType>
         <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpNeedAgathion"/>
-        </conditions>
     </skill>
     <skill id="5540" toLevel="1" name="Little Angel Agathion Special Skill: Blessed Escape">
         <!-- Allows the use of Blessed Teleport. -->
@@ -1052,7 +1046,6 @@
         <affectScope>SINGLE</affectScope>
         <conditions>
             <condition name="OpCanEscape"/>
-            <condition name="OpNeedAgathion"/>
         </conditions>
         <effects>
             <effect name="Escape">
@@ -1076,7 +1069,6 @@
         <targetType>PC_BODY</targetType>
         <affectScope>SINGLE</affectScope>
         <conditions>
-            <condition name="OpNeedAgathion"/>
             <condition name="OpResurrection"/>
         </conditions>
         <effects>
@@ -1096,9 +1088,6 @@
         <hitCancelTime>0</hitCancelTime>
         <targetType>SELF</targetType>
         <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpNeedAgathion"/>
-        </conditions>
     </skill>
     <skill id="5543" toLevel="1" name="Little Devil Agathion Special Skill: Mysterious Power">
         <!-- A mysterious power that no one knows. Use with caution! -->
@@ -1118,9 +1107,6 @@
         <trait>ETC</trait>
         <targetType>SELF</targetType>
         <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpNeedAgathion"/>
-        </conditions>
     </skill>
     <skill id="5544" toLevel="1" name="Little Devil Agathion Special Skill: Blessed Escape">
         <!-- Allows the use of Blessed Teleport. -->
@@ -1137,7 +1123,6 @@
         <affectScope>SINGLE</affectScope>
         <conditions>
             <condition name="OpCanEscape"/>
-            <condition name="OpNeedAgathion"/>
         </conditions>
         <effects>
             <effect name="Escape">
@@ -1161,7 +1146,6 @@
         <targetType>PC_BODY</targetType>
         <affectScope>SINGLE</affectScope>
         <conditions>
-            <condition name="OpNeedAgathion"/>
             <condition name="OpResurrection"/>
         </conditions>
         <effects>

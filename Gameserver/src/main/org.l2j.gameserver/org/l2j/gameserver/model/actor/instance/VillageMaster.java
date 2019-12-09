@@ -925,13 +925,11 @@ public class VillageMaster extends Folk {
             subclasses = EnumSet.copyOf(mainSubclassSet);
             subclasses.remove(pClass);
 
-            // Kamaels can only take Kamael classes as subclasses.
-            for (ClassId cid : ClassId.values())
-            {
-                if ((cid.getRace() == Race.JIN_KAMAEL) && (player.getRace() != Race.JIN_KAMAEL))
-                {
-                    subclasses.remove(cid);
-                }
+            switch (player.getRace()) {
+                case JIN_KAMAEL -> subclasses.removeIf(sub -> sub.getRace() != Race.JIN_KAMAEL);
+                case ELF -> subclasses.removeIf(sub -> sub.getRace() == Race.DARK_ELF || sub.getRace() == Race.JIN_KAMAEL);
+                case DARK_ELF -> subclasses.removeIf(sub -> sub.getRace() == Race.ELF || sub.getRace() == Race.JIN_KAMAEL);
+                default -> subclasses.removeIf(sub -> sub.getRace() == Race.JIN_KAMAEL);
             }
 
             Set<ClassId> unavailableClasses = subclassSetMap.get(pClass);

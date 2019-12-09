@@ -14,13 +14,13 @@ import java.util.List;
  * @version Classic 2.0
  */
 public class AcquireSkillList extends ServerPacket {
-    final Player _activeChar;
+    final Player player;
     final List<SkillLearn> _learnable;
 
-    public AcquireSkillList(Player activeChar) {
-        _activeChar = activeChar;
-        _learnable = SkillTreesData.getInstance().getAvailableSkills(activeChar, activeChar.getClassId(), false, false);
-        _learnable.addAll(SkillTreesData.getInstance().getNextAvailableSkills(activeChar, activeChar.getClassId(), false, false));
+    public AcquireSkillList(Player player) {
+        this.player = player;
+        _learnable = SkillTreesData.getInstance().getAvailableSkills(player, player.getClassId(), false, false);
+        _learnable.addAll(SkillTreesData.getInstance().getNextAvailableSkills(player, player.getClassId(), false, false));
     }
 
     @Override

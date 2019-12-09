@@ -1,8 +1,10 @@
 package org.l2j.gameserver.network.serverpackets;
 
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.instancemanager.CursedWeaponsManager;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.actor.instance.Decoy;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -16,13 +18,15 @@ import org.l2j.gameserver.network.ServerPacketId;
 
 import java.util.Set;
 
+import static org.l2j.commons.util.Util.zeroIfNullOrElse;
 import static org.l2j.gameserver.enums.InventorySlot.*;
 
 public class CharInfo extends ServerPacket {
 
     private static final InventorySlot[] PAPERDOLL_ORDER = new InventorySlot[] {PENDANT, HEAD, RIGHT_HAND, LEFT_HAND, GLOVES, CHEST, LEGS, FEET, CLOAK, TWO_HAND, HAIR, HAIR2};
 
-    private final Player _activeChar;
+    private final Player player;
+    private final Clan _clan;
     private final int _mAtkSpd;
     private final int _pAtkSpd;
     private final int _runSpd;
@@ -43,32 +47,33 @@ public class CharInfo extends ServerPacket {
     private int _armorEnchant;
     private int _vehicleId = 0;
 
-    public CharInfo(Player cha, boolean gmSeeInvis) {
-        _activeChar = cha;
-        _objId = cha.getObjectId();
-        if ((_activeChar.getVehicle() != null) && (_activeChar.getInVehiclePosition() != null)) {
-            _x = _activeChar.getInVehiclePosition().getX();
-            _y = _activeChar.getInVehiclePosition().getY();
-            _z = _activeChar.getInVehiclePosition().getZ();
-            _vehicleId = _activeChar.getVehicle().getObjectId();
+    public CharInfo(Player player, boolean gmSeeInvis) {
+        this.player = player;
+        _objId = player.getObjectId();
+        _clan = player.getClan();
+        if ((this.player.getVehicle() != null) && (this.player.getInVehiclePosition() != null)) {
+            _x = this.player.getInVehiclePosition().getX();
+            _y = this.player.getInVehiclePosition().getY();
+            _z = this.player.getInVehiclePosition().getZ();
+            _vehicleId = this.player.getVehicle().getObjectId();
         } else {
-            _x = _activeChar.getX();
-            _y = _activeChar.getY();
-            _z = _activeChar.getZ();
+            _x = this.player.getX();
+            _y = this.player.getY();
+            _z = this.player.getZ();
         }
-        _heading = _activeChar.getHeading();
-        _mAtkSpd = _activeChar.getMAtkSpd();
-        _pAtkSpd = _activeChar.getPAtkSpd();
-        _attackSpeedMultiplier = (float) _activeChar.getAttackSpeedMultiplier();
-        _moveMultiplier = cha.getMovementSpeedMultiplier();
-        _runSpd = (int) Math.round(cha.getRunSpeed() / _moveMultiplier);
-        _walkSpd = (int) Math.round(cha.getWalkSpeed() / _moveMultiplier);
-        _swimRunSpd = (int) Math.round(cha.getSwimRunSpeed() / _moveMultiplier);
-        _swimWalkSpd = (int) Math.round(cha.getSwimWalkSpeed() / _moveMultiplier);
-        _flyRunSpd = cha.isFlying() ? _runSpd : 0;
-        _flyWalkSpd = cha.isFlying() ? _walkSpd : 0;
-        _enchantLevel = cha.getInventory().getWeaponEnchant();
-        _armorEnchant = cha.getInventory().getArmorMinEnchant();
+        _heading = this.player.getHeading();
+        _mAtkSpd = this.player.getMAtkSpd();
+        _pAtkSpd = this.player.getPAtkSpd();
+        _attackSpeedMultiplier = (float) this.player.getAttackSpeedMultiplier();
+        _moveMultiplier = player.getMovementSpeedMultiplier();
+        _runSpd = (int) Math.round(player.getRunSpeed() / _moveMultiplier);
+        _walkSpd = (int) Math.round(player.getWalkSpeed() / _moveMultiplier);
+        _swimRunSpd = (int) Math.round(player.getSwimRunSpeed() / _moveMultiplier);
+        _swimWalkSpd = (int) Math.round(player.getSwimWalkSpeed() / _moveMultiplier);
+        _flyRunSpd = player.isFlying() ? _runSpd : 0;
+        _flyWalkSpd = player.isFlying() ? _walkSpd : 0;
+        _enchantLevel = player.getInventory().getWeaponEnchant();
+        _armorEnchant = player.getInventory().getArmorMinEnchant();
         _gmSeeInvis = gmSeeInvis;
     }
 
@@ -84,26 +89,26 @@ public class CharInfo extends ServerPacket {
     @Override
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.CHAR_INFO);
-        final CeremonyOfChaosEvent event = _activeChar.getEvent(CeremonyOfChaosEvent.class);
-        final CeremonyOfChaosMember cocPlayer = event != null ? event.getMember(_activeChar.getObjectId()) : null;
+        final CeremonyOfChaosEvent event = player.getEvent(CeremonyOfChaosEvent.class);
+        final CeremonyOfChaosMember cocPlayer = event != null ? event.getMember(player.getObjectId()) : null;
         writeByte(0x00); // Grand Crusade
         writeInt(_x); // Confirmed
         writeInt(_y); // Confirmed
         writeInt(_z); // Confirmed
         writeInt(_vehicleId); // Confirmed
         writeInt(_objId); // Confirmed
-        writeString(_activeChar.getAppearance().getVisibleName()); // Confirmed
+        writeString(player.getAppearance().getVisibleName()); // Confirmed
 
-        writeShort((short) _activeChar.getRace().ordinal()); // Confirmed
-        writeByte((byte) (_activeChar.getAppearance().isFemale() ? 0x01 : 0x00)); // Confirmed
-        writeInt(_activeChar.getBaseClass()); // Confirmed
+        writeShort((short) player.getRace().ordinal()); // Confirmed
+        writeByte((byte) (player.getAppearance().isFemale() ? 0x01 : 0x00)); // Confirmed
+        writeInt(player.getBaseClass()); // Confirmed
 
         for (var slot : getPaperdollOrder()) {
-            writeInt(_activeChar.getInventory().getPaperdollItemDisplayId(slot)); // Confirmed
+            writeInt(player.getInventory().getPaperdollItemDisplayId(slot)); // Confirmed
         }
 
         for (var slot : getPaperdollOrderAugument()) {
-            final VariationInstance augment = _activeChar.getInventory().getPaperdollAugmentation(slot);
+            final VariationInstance augment = player.getInventory().getPaperdollAugmentation(slot);
             writeInt(augment != null ? augment.getOption1Id() : 0); // Confirmed
             writeInt(augment != null ? augment.getOption2Id() : 0); // Confirmed
         }
@@ -120,8 +125,8 @@ public class CharInfo extends ServerPacket {
         writeInt(0x00); // HAIR Visual ID is not used on Classic
         writeInt(0x00); // HAIR2 Visual ID is not used on Classic
 
-        writeByte(_activeChar.getPvpFlag());
-        writeInt(_activeChar.getReputation());
+        writeByte(player.getPvpFlag());
+        writeInt(player.getReputation());
 
         writeInt(_mAtkSpd);
         writeInt(_pAtkSpd);
@@ -137,92 +142,92 @@ public class CharInfo extends ServerPacket {
         writeDouble(_moveMultiplier);
         writeDouble(_attackSpeedMultiplier);
 
-        writeDouble(_activeChar.getCollisionRadius());
-        writeDouble(_activeChar.getCollisionHeight());
+        writeDouble(player.getCollisionRadius());
+        writeDouble(player.getCollisionHeight());
 
-        writeInt(_activeChar.getVisualHair());
-        writeInt(_activeChar.getVisualHairColor());
-        writeInt(_activeChar.getVisualFace());
+        writeInt(player.getVisualHair());
+        writeInt(player.getVisualHairColor());
+        writeInt(player.getVisualFace());
 
-        writeString(_gmSeeInvis ? "Invisible" : _activeChar.getAppearance().getVisibleTitle());
+        writeString(_gmSeeInvis ? "Invisible" : player.getAppearance().getVisibleTitle());
 
-        writeInt(_activeChar.getAppearance().getVisibleClanId());
-        writeInt(_activeChar.getAppearance().getVisibleClanCrestId());
-        writeInt(_activeChar.getAppearance().getVisibleAllyId());
-        writeInt(_activeChar.getAppearance().getVisibleAllyCrestId());
+        writeInt(player.getAppearance().getVisibleClanId());
+        writeInt(player.getAppearance().getVisibleClanCrestId());
+        writeInt(player.getAppearance().getVisibleAllyId());
+        writeInt(player.getAppearance().getVisibleAllyCrestId());
 
-        writeByte((byte) (_activeChar.isSitting() ? 0x00 : 0x01)); // Confirmed
-        writeByte((byte) (_activeChar.isRunning() ? 0x01 : 0x00)); // Confirmed
-        writeByte((byte) (_activeChar.isInCombat() ? 0x01 : 0x00)); // Confirmed
+        writeByte(!player.isSitting()); // Confirmed
+        writeByte(player.isRunning()); // Confirmed
+        writeByte(player.isInCombat()); // Confirmed
 
-        writeByte((byte) (!_activeChar.isInOlympiadMode() && _activeChar.isAlikeDead() ? 0x01 : 0x00)); // Confirmed
+        writeByte(!player.isInOlympiadMode() && player.isAlikeDead()); // Confirmed
 
-        writeByte((byte) (_activeChar.isInvisible() ? 0x01 : 0x00));
+        writeByte(player.isInvisible());
 
-        writeByte((byte) _activeChar.getMountType().ordinal()); // 1-on Strider, 2-on Wyvern, 3-on Great Wolf, 0-no mount
-        writeByte((byte) _activeChar.getPrivateStoreType().getId()); // Confirmed
+        writeByte(player.getMountType().ordinal()); // 1-on Strider, 2-on Wyvern, 3-on Great Wolf, 0-no mount
+        writeByte(player.getPrivateStoreType().getId()); // Confirmed
 
-        writeShort((short) _activeChar.getCubics().size()); // Confirmed
-        _activeChar.getCubics().keySet().forEach(key -> writeShort(key.shortValue()));
+        writeShort(player.getCubics().size()); // Confirmed
+        player.getCubics().keySet().forEach(key -> writeShort(key.shortValue()));
 
-        writeByte((byte) (_activeChar.isInMatchingRoom() ? 0x01 : 0x00)); // Confirmed
+        writeByte(player.isInMatchingRoom()); // Confirmed
 
-        writeByte((byte) (_activeChar.isInsideZone(ZoneType.WATER) ? 1 : _activeChar.isFlyingMounted() ? 2 : 0));
-        writeShort((short) _activeChar.getRecomHave()); // Confirmed
-        writeInt(_activeChar.getMountNpcId() == 0 ? 0 : _activeChar.getMountNpcId() + 1000000);
+        writeByte(player.isInsideZone(ZoneType.WATER) ? 1 : player.isFlyingMounted() ? 2 : 0);
+        writeShort(player.getRecomHave()); // Confirmed
+        writeInt(player.getMountNpcId() == 0 ? 0 : player.getMountNpcId() + 1000000);
 
-        writeInt(_activeChar.getClassId().getId()); // Confirmed
+        writeInt(player.getClassId().getId()); // Confirmed
         writeInt(0x00); // TODO: Find me!
-        writeByte((byte) (_activeChar.isMounted() ? 0 : _enchantLevel)); // Confirmed
+        writeByte(player.isMounted() ? 0 : _enchantLevel); // Confirmed
 
-        writeByte((byte) _activeChar.getTeam().getId()); // Confirmed
+        writeByte(player.getTeam().getId()); // Confirmed
 
-        writeInt(_activeChar.getClanCrestLargeId());
-        writeByte((byte) (_activeChar.isNoble() ? 1 : 0)); // Confirmed
-        writeByte((byte) (_activeChar.isHero() || (_activeChar.isGM() && Config.GM_HERO_AURA) ? 2 : 0)); // 152 - Value for enabled changed to 2?
+        writeInt(player.getClanCrestLargeId());
+        writeByte(player.isNoble()); // Confirmed
+        writeByte((player.isHero() || (player.isGM() && Config.GM_HERO_AURA) ? 2 : 0)); // 152 - Value for enabled changed to 2?
 
-        writeByte((byte) (_activeChar.isFishing() ? 1 : 0)); // Confirmed
+        writeByte(player.isFishing()); // Confirmed
 
-        final ILocational baitLocation = _activeChar.getFishing().getBaitLocation();
+        final ILocational baitLocation = player.getFishing().getBaitLocation();
         writeInt(baitLocation.getX()); // Confirmed
         writeInt(baitLocation.getY()); // Confirmed
         writeInt(baitLocation.getZ()); // Confirmed
 
-        writeInt(_activeChar.getAppearance().getNameColor()); // Confirmed
+        writeInt(player.getAppearance().getNameColor()); // Confirmed
 
         writeInt(_heading); // Confirmed
 
-        writeByte((byte) _activeChar.getPledgeClass());
-        writeShort((short) _activeChar.getPledgeType());
+        writeByte(player.getPledgeClass());
+        writeShort(player.getPledgeType());
 
-        writeInt(_activeChar.getAppearance().getTitleColor()); // Confirmed
+        writeInt(player.getAppearance().getTitleColor()); // Confirmed
 
-        writeByte((byte) (_activeChar.isCursedWeaponEquipped() ? CursedWeaponsManager.getInstance().getLevel(_activeChar.getCursedWeaponEquippedId()) : 0));
+        writeByte((player.isCursedWeaponEquipped() ? CursedWeaponsManager.getInstance().getLevel(player.getCursedWeaponEquippedId()) : 0));
 
-        writeInt(_activeChar.getAppearance().getVisibleClanId() > 0 ? _activeChar.getClan().getReputationScore() : 0);
-        writeInt(_activeChar.getTransformationDisplayId()); // Confirmed
-        writeInt(_activeChar.getAgathionId()); // Confirmed
+        writeInt(zeroIfNullOrElse(_clan, Clan::getReputationScore));
+        writeInt(player.getTransformationDisplayId()); // Confirmed
+        writeInt(player.getAgathionId()); // Confirmed
 
-        writeByte((byte) 0x01); // TODO: Find me!
+        writeByte(0x01); // TODO: Find me!
 
-        writeInt((int) Math.round(_activeChar.getCurrentCp())); // Confirmed
-        writeInt(_activeChar.getMaxHp()); // Confirmed
-        writeInt((int) Math.round(_activeChar.getCurrentHp())); // Confirmed
-        writeInt(_activeChar.getMaxMp()); // Confirmed
-        writeInt((int) Math.round(_activeChar.getCurrentMp())); // Confirmed
+        writeInt((int) Math.round(player.getCurrentCp())); // Confirmed
+        writeInt(player.getMaxHp()); // Confirmed
+        writeInt((int) Math.round(player.getCurrentHp())); // Confirmed
+        writeInt(player.getMaxMp()); // Confirmed
+        writeInt((int) Math.round(player.getCurrentMp())); // Confirmed
 
-        writeByte((byte) 0x00); // special effect ? TODO: Find me!
-        final Set<AbnormalVisualEffect> abnormalVisualEffects = _activeChar.getEffectList().getCurrentAbnormalVisualEffects();
+        writeByte(0x00); // special effect ? TODO: Find me!
+        final Set<AbnormalVisualEffect> abnormalVisualEffects = player.getEffectList().getCurrentAbnormalVisualEffects();
         writeInt(abnormalVisualEffects.size() + (_gmSeeInvis ? 1 : 0)); // Confirmed
         for (AbnormalVisualEffect abnormalVisualEffect : abnormalVisualEffects) {
-            writeShort((short) abnormalVisualEffect.getClientId()); // Confirmed
+            writeShort(abnormalVisualEffect.getClientId()); // Confirmed
         }
         if (_gmSeeInvis) {
-            writeShort((short) AbnormalVisualEffect.STEALTH.getClientId());
+            writeShort(AbnormalVisualEffect.STEALTH.getClientId());
         }
-        writeByte((byte)( cocPlayer != null ? cocPlayer.getPosition() : _activeChar.isTrueHero() ? 100 : 0));
-        writeByte((byte) (_activeChar.isHairAccessoryEnabled() ? 0x01 : 0x00)); // Hair accessory
-        writeByte((byte) _activeChar.getAbilityPointsUsed()); // Used Ability Points
+        writeByte(cocPlayer != null ? cocPlayer.getPosition() : player.isTrueHero() ? 100 : 0);
+        writeByte(player.isHairAccessoryEnabled()); // Hair accessory
+        writeByte(player.getAbilityPointsUsed()); // Used Ability Points
         writeLong(0x00); // 196 TODO find me
     }
 

@@ -48,6 +48,12 @@ public class Util {
         return isNull(obj) ? null : function.apply(obj);
     }
 
+    public static <T> void doIfNonNull(T obj, Consumer<T> action) {
+        if(nonNull(obj)) {
+            action.accept(obj);
+        }
+    }
+
     public static boolean contains(int[] array, int obj) {
         for (int element : array) {
             if (element == obj) {

@@ -651,9 +651,6 @@
         <trait>ETC</trait>
         <targetType>SELF</targetType>
         <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpNeedAgathion"/>
-        </conditions>
     </skill>
     <skill id="6138" toLevel="1" name="Agathion Juju - Large Firecracker">
         <!-- Can set off large firecrackers. -->
@@ -667,9 +664,6 @@
         <hitCancelTime>0</hitCancelTime>
         <targetType>SELF</targetType>
         <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpNeedAgathion"/>
-        </conditions>
     </skill>
     <skill id="6139" toLevel="1" name="Fake Tears">
         <!-- For 10 min., weapon appearances change through the effect of the "Fake Tears" that were scattered by "Pierre Baguette." But weapons don't change their abilities. -->

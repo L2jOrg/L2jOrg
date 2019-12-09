@@ -91,7 +91,7 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
                     handler.useAdminCommand(fullCommand, player);
                 } catch (RuntimeException e) {
                     player.sendMessage("Exception during execution of  '" + fullCommand + "': " + e.toString());
-                    LOGGER.warn("Exception during execution of " + fullCommand, e);
+                    LOGGER.warn("Exception during execution of {}: {}", fullCommand, e);
                 } finally {
                     final long runtime = System.currentTimeMillis() - begin;
                     player.sendMessage("The execution of '" + fullCommand + "' took " + TimeInterpreter.consolidateMillis(runtime) + ".");

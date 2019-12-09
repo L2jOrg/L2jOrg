@@ -15,7 +15,7 @@ public class ExAutoPlaySetting extends ClientPacket {
     private short nextTargetMode;
     private boolean isNearTarget;
     private int usableHpPotionPercent;
-    private boolean mannerMode;
+    private boolean respectfulHunt;
 
     @Override
     protected void readImpl() throws Exception {
@@ -25,12 +25,12 @@ public class ExAutoPlaySetting extends ClientPacket {
         nextTargetMode = readShort();
         isNearTarget = readByteAsBoolean();
         usableHpPotionPercent = readInt();
-        mannerMode = readByteAsBoolean();
+        respectfulHunt = readByteAsBoolean();
     }
 
     @Override
     protected void runImpl() {
-        var setting = new AutoPlaySetting(options, active, pickUp, nextTargetMode, isNearTarget, usableHpPotionPercent, mannerMode);
+        var setting = new AutoPlaySetting(options, active, pickUp, nextTargetMode, isNearTarget, usableHpPotionPercent, respectfulHunt);
         if(active) {
             AutoPlayEngine.getInstance().startAutoPlay(client.getPlayer(), setting);
         } else {

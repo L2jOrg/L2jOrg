@@ -3,6 +3,8 @@ package org.l2j.gameserver.model.holders;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.model.skills.Skill;
 
+import static java.util.Objects.isNull;
+
 /**
  * Simple class for storing skill id/level.
  *
@@ -12,6 +14,7 @@ public class SkillHolder {
     private final int _skillId;
     private final int _skillLevel;
     private final int _skillSubLevel;
+    private Skill skill;
 
     public SkillHolder(int skillId, int skillLevel) {
         _skillId = skillId;
@@ -44,7 +47,10 @@ public class SkillHolder {
     }
 
     public final Skill getSkill() {
-        return SkillData.getInstance().getSkill(_skillId, Math.max(_skillLevel, 1), _skillSubLevel);
+        if(isNull(skill)) {
+            skill = SkillData.getInstance().getSkill(_skillId, Math.max(_skillLevel, 1), _skillSubLevel);
+        }
+        return skill;
     }
 
     @Override

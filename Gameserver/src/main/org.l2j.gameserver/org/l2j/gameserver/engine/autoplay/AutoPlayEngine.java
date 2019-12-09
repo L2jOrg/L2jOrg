@@ -7,15 +7,12 @@ import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.serverpackets.autoplay.ExAutoPlayDoMacro;
-import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.World;
 
 import java.util.Comparator;
 import java.util.WeakHashMap;
 import java.util.concurrent.ScheduledFuture;
-import java.util.function.ToDoubleFunction;
-import java.util.function.ToIntFunction;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;

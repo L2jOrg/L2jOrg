@@ -565,6 +565,10 @@ public final class CastleManorManager extends GameXmlReader implements IStorable
     }
 
     public final void resetManorData(int castleId) {
+        if (!Config.ALLOW_MANOR) {
+            return;
+        }
+
         _procure.get(castleId).clear();
         _procureNext.get(castleId).clear();
         _production.get(castleId).clear();

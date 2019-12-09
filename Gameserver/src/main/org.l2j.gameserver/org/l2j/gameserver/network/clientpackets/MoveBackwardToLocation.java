@@ -128,9 +128,6 @@ public class MoveBackwardToLocation extends ClientPacket {
             }
         }
 
-        // Mobius: Check spawn protections.
-        if (player.isSpawnProtected() || player.isTeleportProtected()) {
-            player.onActionRequest();
-        }
+        player.onActionRequest();
     }
 }

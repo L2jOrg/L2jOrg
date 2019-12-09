@@ -31,9 +31,6 @@
         <irreplacableBuff>true</irreplacableBuff>
         <targetType>SELF</targetType>
         <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpNeedAgathion"/>
-        </conditions>
         <effects>
             <effect name="PAtk">
                 <amount>10</amount>
@@ -67,8 +64,5 @@
         <hitCancelTime>0</hitCancelTime>
         <targetType>SELF</targetType>
         <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpNeedAgathion"/>
-        </conditions>
     </skill>
 </list>

@@ -40,33 +40,33 @@ public final class Action extends ClientPacket {
     @Override
     public void runImpl() {
         // Get the current Player of the player
-        final Player activeChar = client.getPlayer();
-        if (activeChar == null) {
+        final Player player = client.getPlayer();
+        if (player == null) {
             return;
         }
 
-        if (activeChar.inObserverMode()) {
-            activeChar.sendPacket(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE);
+        if (player.inObserverMode()) {
+            player.sendPacket(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE);
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
 
-        final BuffInfo info = activeChar.getEffectList().getFirstBuffInfoByAbnormalType(AbnormalType.BOT_PENALTY);
+        final BuffInfo info = player.getEffectList().getFirstBuffInfoByAbnormalType(AbnormalType.BOT_PENALTY);
         if (info != null) {
             for (AbstractEffect effect : info.getEffects()) {
                 if (!effect.checkCondition(-4)) {
-                    activeChar.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_SO_YOUR_ACTIONS_HAVE_BEEN_RESTRICTED);
-                    activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+                    player.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_SO_YOUR_ACTIONS_HAVE_BEEN_RESTRICTED);
+                    player.sendPacket(ActionFailed.STATIC_PACKET);
                     return;
                 }
             }
         }
 
         final WorldObject obj;
-        if (activeChar.getTargetId() == _objectId) {
-            obj = activeChar.getTarget();
-        } else if (activeChar.isInAirShip() && (activeChar.getAirShip().getHelmObjectId() == _objectId)) {
-            obj = activeChar.getAirShip();
+        if (player.getTargetId() == _objectId) {
+            obj = player.getTarget();
+        } else if (player.isInAirShip() && (player.getAirShip().getHelmObjectId() == _objectId)) {
+            obj = player.getAirShip();
         } else {
             obj = World.getInstance().findObject(_objectId);
         }
@@ -78,48 +78,45 @@ public final class Action extends ClientPacket {
             return;
         }
 
-        if ((!obj.isTargetable() || activeChar.isTargetingDisabled()) && !activeChar.canOverrideCond(PcCondOverride.TARGET_ALL)) {
+        if ((!obj.isTargetable() || player.isTargetingDisabled()) && !player.canOverrideCond(PcCondOverride.TARGET_ALL)) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
 
         // Players can't interact with objects in the other instances
-        if (obj.getInstanceWorld() != activeChar.getInstanceWorld()) {
+        if (obj.getInstanceWorld() != player.getInstanceWorld()) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
 
         // Only GMs can directly interact with invisible characters
-        if (!obj.isVisibleFor(activeChar)) {
+        if (!obj.isVisibleFor(player)) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
 
         // Check if the target is valid, if the player haven't a shop or isn't the requester of a transaction (ex : FriendInvite, JoinAlly, JoinParty...)
-        if (activeChar.getActiveRequester() != null) {
+        if (player.getActiveRequester() != null) {
             // Actions prohibited when in trade
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
 
+        player.onActionRequest();
+
         switch (_actionId) {
-            case 0: {
-                obj.onAction(activeChar);
-                break;
-            }
-            case 1: {
-                if (!activeChar.isGM() && (!( isNpc(obj) && Config.ALT_GAME_VIEWNPC))) {
-                    obj.onAction(activeChar, false);
+            case 0 -> obj.onAction(player);
+            case 1 -> {
+                if (!player.isGM() && (!(isNpc(obj) && Config.ALT_GAME_VIEWNPC))) {
+                    obj.onAction(player, false);
                 } else {
-                    obj.onActionShift(activeChar);
+                    obj.onActionShift(player);
                 }
-                break;
             }
-            default: {
+            default -> {
                 // Invalid action detected (probably client cheating), log this
-                LOGGER.warn("Character: {} requested invalid action: {}", activeChar.getName(), _actionId);
+                LOGGER.warn("Character: {} requested invalid action: {}", player.getName(), _actionId);
                 client.sendPacket(ActionFailed.STATIC_PACKET);
-                break;
             }
         }
     }

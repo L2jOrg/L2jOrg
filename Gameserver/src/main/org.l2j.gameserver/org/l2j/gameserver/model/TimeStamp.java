@@ -24,7 +24,7 @@ import org.l2j.gameserver.model.skills.Skill;
  * valid time stamps and reuse for skills and items reuse upon re-login.<br>
  * <b>Filter this carefully as it becomes redundant to store reuse for small delays.</b>
  *
- * @author Yesod, Zoey76
+ * @author Yesod, Zoey76, Mobius
  */
 public class TimeStamp {
     /**
@@ -46,7 +46,7 @@ public class TimeStamp {
     /**
      * Time stamp.
      */
-    private final long _stamp;
+    private volatile long _stamp;
     /**
      * Shared reuse group.
      */
@@ -64,7 +64,7 @@ public class TimeStamp {
         _id2 = skill.getLevel();
         _id3 = skill.getSubLevel();
         _reuse = reuse;
-        _stamp = systime > 0 ? systime : System.currentTimeMillis() + reuse;
+        _stamp = systime > 0 ? systime : reuse != 0 ? System.currentTimeMillis() + reuse : 0;
         _group = -1;
     }
 
@@ -80,7 +80,7 @@ public class TimeStamp {
         _id2 = item.getObjectId();
         _id3 = 0;
         _reuse = reuse;
-        _stamp = systime > 0 ? systime : System.currentTimeMillis() + reuse;
+        _stamp = systime > 0 ? systime : reuse != 0 ? System.currentTimeMillis() + reuse : 0;
         _group = item.getSharedReuseGroup();
     }
 
@@ -163,7 +163,16 @@ public class TimeStamp {
      * @return the remaining time for this time stamp to expire
      */
     public long getRemaining() {
-        return Math.max(_stamp - System.currentTimeMillis(), 0);
+        if (_stamp == 0)
+        {
+            return 0;
+        }
+        final long remainingTime = Math.max(_stamp - System.currentTimeMillis(), 0);
+        if (remainingTime == 0)
+        {
+            _stamp = 0;
+        }
+        return remainingTime;
     }
 
     /**
@@ -172,6 +181,15 @@ public class TimeStamp {
      * @return {@code true} if this time stamp has expired, {@code false} otherwise
      */
     public boolean hasNotPassed() {
-        return System.currentTimeMillis() < _stamp;
+        if (_stamp == 0)
+        {
+            return false;
+        }
+        final boolean hasNotPassed = System.currentTimeMillis() < _stamp;
+        if (!hasNotPassed)
+        {
+            _stamp = 0;
+        }
+        return hasNotPassed;
     }
 }

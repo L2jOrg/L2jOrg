@@ -169,17 +169,14 @@ public class AdminSkill implements IAdminCommandHandler
 		{
 			adminGiveClanSkills(activeChar, true);
 		}
-		else if (command.equals("admin_remove_all_skills"))
-		{
+		else if (command.equals("admin_remove_all_skills")) {
 			final WorldObject target = activeChar.getTarget();
-			if (!isPlayer(target))
-			{
+			if (!isPlayer(target)) {
 				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				return false;
 			}
 			final Player player = target.getActingPlayer();
-			for (Skill skill : player.getAllSkills())
-			{
+			for (Skill skill : player.getAllSkills()) {
 				player.removeSkill(skill);
 			}
 			BuilderUtil.sendSysMessage(activeChar, "You have removed all skills from " + player.getName() + ".");
