@@ -131,13 +131,19 @@
 	<item id="70621" name="Einhasad's Protection" type="SCROLL" icon="BranchSys2.icon.br_soulavatar_regen_i00">
 	<!-- Einhasad's Protection maintains buffs and debuffs even after death. The item disappears if a character dies.\\n -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55576"/> <!-- Einhasad's Protection -->
+		</skill-reducer>
 	</item>
 
 	<item id="70622" name="Einhasad's Salvation" type="SCROLL" icon="BranchSys2.icon.br_soulavatar_active_i00">
 	<!-- Einhasad's Salvation maintains buffs and debuffs even after death, allows to resurrect with full HP. The item disappears if a character dies.\\n -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55577"/> <!-- Einhasad's Salvation -->
+		</skill-reducer>
 	</item>
 
 	<item id="70623" name="Lucky Charm" type="RUNE" icon="BranchSys.icon.br_four_leaf_clover_i00">
@@ -203,19 +209,28 @@
 	<item id="70633" name="Blue Dynasty Transformation Scroll" type="POTION" icon="icon.etc_charm_of_courage_i01">
 	<!-- Transforms you into Blue Dynasty for 30 min. P./ M. Atk. +3%, P./ M. Def. +3%, Atk. Spd. +5%, Max. HP/MP +7%, Speed +5, P./ M. Accuracy +2, M. Critical Rate +2. Effect remains after death -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55693"/> <!-- Blue Dynasty Transformation Scroll -->
+		</skill-reducer>
 	</item>
 
 	<item id="70634" name="Red Zubei Transformation Scroll" type="POTION" icon="icon.etc_charm_of_courage_i04">
 	<!-- Transforms you into Red Zubei for 30 minutes. P./ M. Atk. +2%, P./ M. Def. +2%, Atk. Spd. +3%, Max. HP/MP +5%, Speed +4, P./ M. Accuracy +1, M. Critical Rate +1. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55694"/> <!-- Red Zubei Transformation Scroll -->
+		</skill-reducer>
 	</item>
 
 	<item id="70635" name="Formal Wear Appearance Scroll" type="POTION" icon="icon.etc_charm_of_courage_i02">
 	<!-- Transforms you into Formal Wear for 30 min. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55583"/> <!-- Formal Wear Appearance Scroll -->
+		</skill-reducer>
 	</item>
 
 	<item id="70636" name="Party Buff Scroll - Lv. 1" type="SCROLL" icon="icon.etc_trans_4f_s_b_01">

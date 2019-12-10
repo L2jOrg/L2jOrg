@@ -180,7 +180,10 @@
 	<item id="91028" name="Maliss's High-grade HP Potion" type="POTION" icon="BranchSys.icon.br_vitality_potion_i01">
 	<!-- After instant 1000 HP Recovery, CP Recovery with remaining points. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="HEALING"/>
+		<skill-reducer>
+			<skill id="51083"/> <!-- High-grade Maliss' HP Recovery Potion -->
+		</skill-reducer>
 	</item>
 
 	<item id="91029" name="Hidden Box" type="NONE" icon="icon.etc_exchange_box_i00">
@@ -192,9 +195,9 @@
 	<item id="91030" name="Spirit's Blessing" type="NONE" icon="icon.elemental_bless_scrl_i00">
 	<!-- Activates a buff when the item is used. Attribute XP gain +20% for 20 minutes when hunting attribute monsters.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="54028" level="1"/>  <!-- Spirit's Blessing -->
+		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use-type="HEALING"/>
+		<skill-reducer>
+			<skill id="54028"/>  <!-- Spirit's Blessing -->
 		</skill-reducer>
 	</item>
 

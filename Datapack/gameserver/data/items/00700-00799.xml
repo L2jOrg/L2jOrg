@@ -222,9 +222,9 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="20" price="1200" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
+		<attributes weight="20" price="1200" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2011" level="1"/>  <!-- Wind Walk Potion -->
+			<skill id="2011"/>  <!-- Wind Walk Potion -->
 		</skill-reducer>
 	</item>
 
@@ -234,9 +234,9 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="20" price="2400" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
+		<attributes weight="20" price="2400" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2012" level="1"/>  <!-- Haste Potion -->
+			<skill id="2012"/>  <!-- Haste Potion -->
 		</skill-reducer>
 	</item>
 

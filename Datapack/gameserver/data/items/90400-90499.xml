@@ -49,36 +49,36 @@
 	<item id="90407" name="Chef's Fish Stew - Victory" type="SCROLL" icon="icon.fish_stew_residence_cha">
 	<!-- For 20 min. activates Chant of Victory Lv. 1. \\n<Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
 		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39228" level="1"/>  <!-- Chef's Fish Stew - Victory -->
+		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39228"/>  <!-- Chef's Fish Stew - Victory -->
 		</skill-reducer>
 	</item>
 
 	<item id="90408" name="Chef's Fish Stew - Fire" type="SCROLL" icon="icon.fish_stew_residence_cha">
 	<!-- For 20 min. activates Prophecy of Fire Lv. 1.  \\n<Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
 		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39229" level="1"/>  <!-- Chef's Fish Stew - Fire -->
+		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39229"/>  <!-- Chef's Fish Stew - Fire -->
 		</skill-reducer>
 	</item>
 
 	<item id="90409" name="Chef's Fish Stew - Water" type="SCROLL" icon="icon.fish_stew_residence_cha">
 	<!-- For 20 min. activates Prophecy of Water Lv. 1.  \\n<Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
 		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39230" level="1"/>  <!-- Chef's Fish Stew - Water -->
+		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39230"/>  <!-- Chef's Fish Stew - Water -->
 		</skill-reducer>
 	</item>
 
 	<item id="90410" name="Chef's Fish Stew - Wind" type="SCROLL" icon="icon.fish_stew_residence_cha">
 	<!-- For 20 min. activates Prophecy of Wind Lv. 1.  \\n<Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
 		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39231" level="1"/>  <!-- Chef's Fish Stew - Wind -->
+		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39231"/>  <!-- Chef's Fish Stew - Wind -->
 		</skill-reducer>
 	</item>
 
@@ -367,103 +367,154 @@
 	<item id="90438" name="Fish Stew - Might Lv. 2" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. P. Atk. +12%.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39047" level="2"/> <!-- Fish Stew - Might -->
+		</skill-reducer>
 	</item>
 
 	<item id="90439" name="Fish Stew - Might Lv. 3" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. P. Atk. +15%.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39047" level="3"/>
+		</skill-reducer>
 	</item>
 
 	<item id="90440" name="Fish Stew - Shield Lv. 2" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. P. Def. +12%.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39048" level="2"/> <!-- Fish Stew - Shield -->
+		</skill-reducer>
 	</item>
 
 	<item id="90441" name="Fish Stew - Shield Lv. 3" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. P. Def. +15%.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39049" level="3"/> <!-- Fish Stew - Shield -->
+		</skill-reducer>
 	</item>
 
 	<item id="90442" name="Fish Stew - Empower Lv. 2" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. M. Atk. +65%.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39051" level="2"/> <!-- Fish Stew - Empower -->
+		</skill-reducer>
 	</item>
 
 	<item id="90443" name="Fish Stew - Empower Lv. 3" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. M. Atk. +75%.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39051" level="3"/> <!-- Fish Stew - Empower -->
+		</skill-reducer>
 	</item>
 
 	<item id="90444" name="Fish Stew - Magic Barrier Lv. 2" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. M. Def. +30%.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39049" level="2"/> <!-- Fish Stew - Magic Barrier -->
+		</skill-reducer>
 	</item>
 
 	<item id="90445" name="Fish Stew - Vampiric Rage Lv. 2" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. recovers as HP 7% of the physical damage inflicted on the enemy with a certain probability.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39050" level="2"/> <!-- Fish Stew - Vampiric Rage -->
+		</skill-reducer>
 	</item>
 
 	<item id="90446" name="Fish Stew - Vampiric Rage Lv. 3" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. recovers as HP 8% of the physical damage inflicted on the enemy with a certain probability.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39050" level="3"/> <!-- Fish Stew - Vampiric Rage -->
+		</skill-reducer>
 	</item>
 
 	<item id="90447" name="Fish Stew - Greater Might Lv. 1" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. P. Atk. +4%.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39261"/> <!-- Fish Stew - Greater Might -->
+		</skill-reducer>
 	</item>
 
 	<item id="90448" name="Fish Stew - Greater Shield Lv. 1" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. P. Def. +5%.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39262"/> <!-- Fish Stew - Greater Shield -->
+		</skill-reducer>
 	</item>
 
 	<item id="90449" name="Fish Stew - Wild Magic Lv. 1" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. M. Critical Rate +10. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39263"/> <!-- Fish Stew - Wild Magic -->
+		</skill-reducer>
 	</item>
 
 	<item id="90450" name="Fish Stew - Berserker Spirit Lv. 1" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. P. Def. -5%, M. Def. -10%, P. Evasion -2; P. Atk. +5%, M. Atk. +10%, Atk. Spd. +5%, Casting Spd. +5%, Speed +5.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39264"/> <!--Fish Stew - Berserker Spirit -->
+		</skill-reducer>
 	</item>
 
 	<item id="90451" name="Fish Stew - Berserker Spirit Lv. 2" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. P. Def. -8%, M. Def. -16%, P. Evasion -4; P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, Speed +8.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39264" level="2"/> <!-- Fish Stew - Berserker Spirit -->
+		</skill-reducer>
 	</item>
 
 	<item id="90452" name="Fish Stew - Decrease Weight Lv. 1" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. Weight limit +3000.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39265"/> <!-- Fish Stew - Decrease Weight -->
+		</skill-reducer>
 	</item>
 
 	<item id="90453" name="Fish Stew - Decrease Weight Lv. 2" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. Weight limit +6000.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39266" level="2"/> <!-- Fish Stew - Decrease Weight -->
+		</skill-reducer>
 	</item>
 
 	<item id="90454" name="Fish Stew - Decrease Weight Lv. 3" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. Weight limit +9000.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39266" level="3"/>
+		</skill-reducer>
 	</item>
 
 	<armor id="90455" name="Avadon Circlet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
@@ -781,7 +832,10 @@
 	<item id="90495" name="Scroll of Mood Melody" type="SCROLL" icon="icon.bm_magmeld">
 	<!-- For 20 minutes, grants the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk, Death Whisper, and Vampiric Rage. Will not be deleted upon death.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39164"/> <!-- Scroll of Mood Melody -->
+		</skill-reducer>
 	</item>
 
 	<armor id="90496" name="Earth Dragon Belt" type="LIGHT" body-part="BELT" icon="icon.bm_antaras_belt">
@@ -819,9 +873,9 @@
 	<item id="90499" name="Golden Fruit Buff Lv. 1" type="SCROLL" icon="icon.bm_dragon_fruit">
 	<!-- For 20 minutes, P./M. Atk. +12%, P./M. Def. +15%, Max. HP/CP/MP +25%, P./M. Critical Rate +10, P./M. Critical Damage +5%, HP/MP Recovery Bonus +30%. At a certain chance absorbs 5% of the damage inflicted on target as HP. XP and SP gained through hunting +10%. Cooldown is 1 minute. Buff remains after death. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39273" level="1"/> <!-- Special Dragons Fruit -->
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39273"/> <!-- Special Dragons Fruit -->
 		</skill-reducer>
 	</item>
 

@@ -41,11 +41,6 @@ public class DropProtection implements Runnable {
         }
 
         return (_owner.getParty() != null) && (_owner.getParty() == actor.getParty());
-
-        /*
-         * if (_owner.getClan() != null && _owner.getClan() == actor.getClan()) return true;
-         */
-
     }
 
     public boolean tryPickUp(Pet pet) {

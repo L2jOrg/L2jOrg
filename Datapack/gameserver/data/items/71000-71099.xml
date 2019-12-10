@@ -141,19 +141,28 @@
 	<item id="71023" name="Transformation Scroll: Teddy Bear" type="POTION" icon="icon.gomdori_chest_change">
 	<!-- Changes the appearance to that of a teddy bear for 15 min. During transformation HP/MP +20%, P./ M. Def. +3%, acquired XP/SP during hunt +5%. Effect remains after death.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39367"/> <!-- Transformation Scroll: Teddy Bear -->
+		</skill-reducer>
 	</item>
 
 	<item id="71024" name="Transformation Scroll: Panda" type="POTION" icon="icon.sayha2017_panda">
 	<!-- Changes the appearance to that of a panda for 15 min. During transformation HP/MP +20%, P./ M. Def. +3%, acquired XP/SP during hunt +5%. Effect remains after death.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51147"/> <!-- Transformation Scroll: Panda -->
+		</skill-reducer>
 	</item>
 
 	<item id="71025" name="Transformation Scroll: Cat" type="POTION" icon="icon.sayha2017_cat">
 	<!-- Changes the appearance to that of a cat for 15 min. During transformation HP/MP +20%, P./ M. Def. +3%, acquired XP/SP during hunt +5%. Effect remains after death.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51148"/> <!-- Transformation into Cat -->
+		</skill-reducer>
 	</item>
 
 	<item id="71026" name="Matchstick" type="NONE" icon="BranchIcon.icon.g_event_match_body">

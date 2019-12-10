@@ -114,13 +114,19 @@
 	<item id="91218" name="Panda Transformation Scroll" type="POTION" icon="icon.sayha2017_panda">
 	<!-- Transforms you into Panda for 15 min. Effect remains after death. \\n Panda's Power: Max HP/MP +20%. Sayha's Grace Hunting XP/SP gain +20%. Effect remains after death. \\n<Warning>\\n If used when Teddy Bear/Blue Dynasty/Cat the Cat/Cat Buff is applied, existing buff will be replaced. Cooldown 1 min. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55895"/> <!-- Transformation into Panda -->
+		</skill-reducer>
 	</item>
 
 	<item id="91219" name="Cat Transformation Scroll" type="POTION" icon="icon.sayha2017_cat">
 	<!-- Transforms you into Cat for 15 minutes. Effect remains even after death.  \\nCat's Energy: Max HP/MP +20%. XP/SP gain +20% during Sayha's Grace. Effect remains even after death. \\n<Warning>\\nIf used during Teddy Bear/Blue Dynasty/Kat the Cat/Panda Buff, the existing buff will be replaced. Cooldown is 1 minute. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51148"/> <!-- Transformation into Cat -->
+		</skill-reducer>
 	</item>
 
 	<item id="91220" name="Shining Fishing kit Lv. 2" type="NONE" icon="icon.bm_freya_gift_box">
@@ -342,7 +348,10 @@
 	<item id="91251" name="Top-grade HP Potion" type="POTION" icon="icon.etc_potion_red_i00">
 	<!-- After instant 800 HP Recovery, CP Recovery with remaining points. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes weight="1" action="SKILL_REDUCE"/>
+		<attributes weight="1" action="SKILL_REDUCE" auto-use-type="HEALING"/>
+		<skill-reducer>
+			<skill id="51161"/> <!-- Highest-grade HP Recovery Potion -->
+		</skill-reducer>
 	</item>
 
 	<item id="91252" name="High-grade Quick MP Recovery Potion" type="POTION" icon="icon.etc_potion_blue_i00">
@@ -412,61 +421,88 @@
 	<item id="91262" name="Transformation Scroll: Ninja Assassin" type="POTION" icon="icon.bm2018_ninja_i01">
 	<!-- Can be transformed into a Ninja Assassin for 20 minutes. Remains after death. \\n\\n<Ninja Assassin's Energy> P. Atk. +7%, M. Atk. +7%, XP +10%. Has a chance to cancel enemy's target when attacking or using skills. Cooldown is 1 minute. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51184"/> <!-- Ninja Assassin -->
+		</skill-reducer>
 	</item>
 
 	<item id="91263" name="Transformation Scroll: Blood Noblesse" type="POTION" icon="icon.bm2018_rednoblesse_i01">
 	<!-- Can be transformed into a Blood Noblesse for 20 minutes. Remains after death. \\n\\n<Blood Noblesse's Energy> P. Atk. +7%, M. Atk. +7%, XP +10%. Has a chance to deal powerful magic damage when attacking or using skills. Cooldown is 1 minute. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51191"/> <!-- Blood Noblesse -->
+		</skill-reducer>
 	</item>
 
 	<item id="91264" name="Transformation Scroll: White Noblesse" type="POTION" icon="icon.bm2018_whitenoblesse_i01">
 	<!-- Can be transformed into a White Noblesse for 20 minutes. Remains after death. \\n\\n<White Noblesse's Energy> P. Atk. +7%, M. Atk. +7%, XP +10%. Has a chance to reduce enemy's M. Def. when attacking or using skills. Cooldown is 1 minute. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51192"/> <!-- White Noblesse -->
+		</skill-reducer>
 	</item>
 
 	<item id="91265" name="Transformation Scroll: Blue Musketeer" type="POTION" icon="icon.bm2018_bluemusketeer_i01">
 	<!-- Can be transformed into a Blue Musketeer for 20 minutes. Remains after death. \\n\\n<Blue Musketeer's Energy> P. Atk. +7%, M. Atk. +7%, XP +10%. Has a chance to stun enemy when attacking or using skills. Cooldown is 1 minute. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51185"/> <!-- Blue Musketeer -->
+		</skill-reducer>
 	</item>
 
 	<item id="91266" name="Transformation Scroll: Purple Cowboy" type="POTION" icon="icon.bm2018_cowboy_i01">
 	<!-- Can be transformed into a Purple Cowboy for 20 minutes. Remains after death. \\n\\n<Purple Cowboy's Energy> P. Atk. +7%, M. Atk. +7%, XP +10%. Has a chance to deal powerful physical damage when attacking or using skills. Cooldown is 1 minute. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51189"/> <!-- Purple Cowboy -->
+		</skill-reducer>
 	</item>
 
 	<item id="91267" name="Transformation Scroll: High Priest" type="POTION" icon="icon.bm2018_healer_i01">
 	<!-- Can be transformed into a High Priest for 20 minutes. Remains after death. \\n\\n<High Priest's Energy> P. Atk. +7%, M. Atk. +7%, XP +10%. Has a chance to recover party members' HP/MP when attacking or using skills. Cooldown is 1 minute. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51190"/> <!-- High Priest -->
+		</skill-reducer>
 	</item>
 
 	<item id="91268" name="Transformation Scroll: Wild Wolf" type="POTION" icon="icon.bm2018_barbarian_i01">
 	<!-- Can be transformed into a Wild Wolf for 20 minutes. Remains after death. \\n\\n<Wild Wolf's Energy> P. Atk. +7%, M. Atk. +7%, XP +10%. Has a chance to reduce enemy's P. Def. when attacking or using skills. Cooldown is 1 minute. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51187"/> <!-- Wild Wolf -->
+		</skill-reducer>
 	</item>
 
 	<item id="91269" name="Transformation Scroll: Valkyrie" type="POTION" icon="icon.bm2018_valkyrie_i01">
 	<!-- Can be transformed into a Valkyrie for 20 minutes. Remains after death. \\n\\n<Valkyrie's Energy> P. Atk. +7%, M. Atk. +7%, XP +10%. Has a chance to paralyze enemy when attacking or using skills. Cooldown is 1 minute. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51186"/> <!-- Valkyrie -->
+		</skill-reducer>
 	</item>
 
 	<item id="91270" name="Transformation Scroll: Caravan" type="POTION" icon="icon.bm2018_pirate_i01">
 	<!-- Can be transformed into a Caravan for 20 minutes. Remains after death. \\n\\n<Caravan's Energy> P. Atk. +7%, M. Atk. +7%, XP +10%. Has a chance to increase party members' P. Atk./M. Atk. when attacking or using skills. Cooldown is 1 minute. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
 	</item>
 
 	<item id="91271" name="Transformation Scroll: Dragon Berserker" type="POTION" icon="icon.bm2018_dragon_i01">
 	<!-- Can be transformed into a Dragon Berserker for 20 minutes. Remains after death. \\n\\n<Dragon Berserker's Energy> P. Atk. +10%, M. Atk. +10%, XP +20%. When attacking or using skills, there's a chance of P. Atk. +50%, M. Atk. +50%, Atk. Spd. +50%, Casting Spd. +50%, and reflecting 15% of damage received to the enemy. Cooldown is 1 minute. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51183"/> <!-- Dragon Berserker -->
+		</skill-reducer>
 	</item>
 
 	<item id="91272" name="Transformation Sealbook: Ninja Assassin" type="POTION" icon="icon.bm2018_ninja_i01">
@@ -544,31 +580,46 @@
 	<item id="91284" name="Fish Stew - Clarity Lv. 1" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min., P. Skill MP Consumption -10%, M. Skill MP Consumption -4%, Song/Dance Skill MP Consumption -10%.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes/>
+		<attributes  auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51224"/> <!-- Fish Stew - Clarity -->
+		</skill-reducer>
 	</item>
 
 	<item id="91285" name="Fish Stew - Clarity Lv. 2" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min., P. Skill MP Consumption -15%, M. Skill MP Consumption -7%, Song/Dance Skill MP Consumption -15%.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes/>
+		<attributes auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51224" level="2"/>
+		</skill-reducer>
 	</item>
 
 	<item id="91286" name="Fish Stew - Agility Lv. 1" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min., Evasion +2.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes/>
+		<attributes auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51225"/> <!-- Fish Stew - Agility -->
+		</skill-reducer>
 	</item>
 
 	<item id="91287" name="Fish Stew - Agility Lv. 2" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min., Evasion +3.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes/>
+		<attributes auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51225" level="2"/> <!-- Fish Stew - Agility -->
+		</skill-reducer>
 	</item>
 
 	<item id="91288" name="Fish Stew - Agility Lv. 3" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min., Evasion +4.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes/>
+		<attributes auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51225" level="3"/> <!-- Fish Stew - Agility -->
+		</skill-reducer>
 	</item>
 
 	<item id="91289" name="Mysterious Transformation Sealbook Box" type="NONE" icon="icon.bm2018_transform_box">

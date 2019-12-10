@@ -305,7 +305,10 @@
 	<item id="70426" name="Energy of Protection" type="POTION" icon="icon.general_energy_condense_i01">
 	<!-- For 20 min. Max HP/ MP +5%, XP/ SP +30%. Provides Mental Attack/Paralysis Resistance.\\n<Attention> Cannot be stacked with Life Control Tower's and  Angel Cat's Blessing. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="30" action="SKILL_REDUCE"/>
+		<attributes weight="30" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55464"/> <!-- Energy of Protection -->
+		</skill-reducer>
 	</item>
 
 	<item id="70427" name="Talisman of Fate Lv. 4 Pack" type="NONE" icon="icon.bm_ensoulbox_PvE">

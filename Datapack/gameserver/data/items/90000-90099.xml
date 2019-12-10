@@ -309,9 +309,9 @@
 	<item id="90043" name="Dark Assassin Transformation Potion" type="POTION" icon="icon.empty_bottle">
 	<!-- For 15 minutes transforms you into Dark Assassin. \\nTransformation into Dark Assassin: Max HP/MP +5%, P./M. Accuracy +1, P./M. Atk. +2%, P./M. Def. +2%, Atk. Spd. +3%, M. Critical Rate +1, Speed +4. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="5" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39205" level="1"/>  <!-- Dark Assassin Transformation Potion -->
+		<attributes weight="5" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39205"/>  <!-- Dark Assassin Transformation Potion -->
 		</skill-reducer>
 	</item>
 

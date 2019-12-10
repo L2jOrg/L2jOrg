@@ -271,13 +271,19 @@
 	<item id="90143" name="XP/SP Hourglass (100%) - 1 Hour" type="SCROLL" icon="icon.etc_dragons_blood_i03">
 	<!-- Increases XP/SP gain by 100% for 1 hour. Cooldown: 1 hour. The effect persists through death. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55360"/> <!-- Irene's Song -->
+		</skill-reducer>
 	</item>
 
 	<item id="90144" name="Transformation Scroll: White Assassin" type="POTION" icon="icon.scroll_of_verification_i06">
 	<!-- For 15 minutes transforms you into White Assassin. Will not be deleted upon death. \\nTransformation into White Assassin: Max HP/MP +7%, P./M. Accuracy +2, P./M. Atk. +3%, P./M. Def. +3%, Atk. Spd. +5%, M. Critical Rate +20, Speed +5.  -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39210"/> <!-- Transformation Scroll: White Assassin -->
+		</skill-reducer>
 	</item>
 
 	<armor id="90145" name="Ring of Savior" type="NONE" body-part="FINGER" icon="icon.event_classic_ring">
@@ -618,25 +624,37 @@
 	<item id="90183" name="Chef's Fish Stew - Victory" type="SCROLL" icon="icon.fish_stew_residence_cha">
 	<!-- For 10 min. activates Chant of Victory Lv. 1. \\n<Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39253"/> <!-- Chef's Fish Stew - Victory -->
+		</skill-reducer>
 	</item>
 
 	<item id="90184" name="Chef's Fish Stew - Fire" type="SCROLL" icon="icon.fish_stew_residence_cha">
 	<!-- For 10 min. activates Prophecy of Fire Lv. 1. \\n<Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39254"/> <!-- Chef's Fish Stew - Fire -->
+		</skill-reducer>
 	</item>
 
 	<item id="90185" name="Chef's Fish Stew - Water" type="SCROLL" icon="icon.fish_stew_residence_cha">
 	<!-- For 10 min. activates Prophecy of Water Lv. 1. \\n<Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39255"/> <!-- Chef's Fish Stew - Water -->
+		</skill-reducer>
 	</item>
 
 	<item id="90186" name="Chef's Fish Stew - Wind" type="SCROLL" icon="icon.fish_stew_residence_cha">
 	<!-- For 10 min. activates Prophecy of Wind Lv. 1. \\n<Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39256"/> <!-- Chef's Fish Stew - Wind -->
+		</skill-reducer>
 	</item>
 
 	<item id="90187" name="Gold Urn" type="NONE" icon="icon.bm_gold_pot">

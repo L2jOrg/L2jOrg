@@ -193,8 +193,8 @@
 	<item id="29519" name="XP/SP Boost Scroll (Mid-grade)" type="POTION" icon="icon.etc_recall_exp_scroll">
 	<!-- XP/SP Gain + 40% for 20 minutes. Effect remains even after death. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
 			<skill id="55000" level="2"/>  <!-- XP/SP Scroll -->
 		</skill-reducer>
 	</item>
@@ -473,17 +473,17 @@
 	<item id="29552" name="1st Class Transfer Buff Scroll" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- For 20 min., Shield Lv. 2, Might Lv. 2, Concentration Lv. 2, Acumen Lv. 1, Wind Walk Lv. 1, Focus Lv. 1, Agility Lv. 1, Empower Lv. 1. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55035" level="1"/>  <!-- 1st Class Buff Scroll -->
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55035"/>  <!-- 1st Class Buff Scroll -->
 		</skill-reducer>
 	</item>
 
 	<item id="29553" name="2nd Class Transfer Buff Scroll" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- For 20 min., Shield Lv. 3, Might Lv. 3, Acumen Lv. 2, Wind Walk Lv. 2, Focus Lv. 2, Regeneration Lv. 1, Guidance Lv. 1, Death Whisper Lv. 1, Magic Barrier Lv. 1, Blessed Body Lv. 1, Blessed Soul Lv. 1, Haste Lv. 1, Agility Lv. 2, Empower Lv. 2. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
 			<skill id="55036" level="2"/>  <!-- 2nd Class Buff Scroll -->
 		</skill-reducer>
 	</item>
@@ -563,9 +563,9 @@
 	<item id="29565" name="XP/SP Boost Scroll" type="POTION" icon="icon.etc_recall_exp_scroll">
 	<!-- Increases XP/SP from hunting by 20% for 60 minutes. Effect remains even after death. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55041" level="1"/>  <!-- XP/SP Scroll -->
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55041"/>  <!-- XP/SP Scroll -->
 		</skill-reducer>
 	</item>
 

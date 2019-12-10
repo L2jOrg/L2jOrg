@@ -54,9 +54,9 @@
 	<item id="90508" name="Golden Fruit Buff Lv. 1" type="SCROLL" icon="icon.bm_dragon_fruit">
 	<!-- For 20 minutes, P./M. Atk. +12%, P./M. Def. +15%, Max. HP/CP/MP +25%, P./M. Critical Rate +10, P./M. Critical Damage +5%, HP/MP Recovery Bonus +30%. At a certain chance absorbs 5% of the damage inflicted on target as HP. XP and SP gained through hunting +10%. Cooldown is 1 minute. Buff remains after death. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55682" level="1"/>  <!-- Special Dragons Fruit -->
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55682"/>  <!-- Special Dragons Fruit -->
 		</skill-reducer>
 	</item>
 
@@ -123,13 +123,19 @@
 	<item id="90519" name="Shining Scroll of Mood Melody" type="SCROLL" icon="icon.bm_magmeld">
 	<!-- For 20 minutes activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Purity, Wild Magic, Concentration. Cannot be used together with Scroll of Mood Melody. This effect will not be removed after death.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39298"/> <!-- Shining Scroll of Mood Melody -->
+		</skill-reducer>
 	</item>
 
 	<item id="90520" name="Fire Dragon's Blessing Scroll" type="SCROLL" icon="icon.bm_blessing_dragon">
 	<!-- For 20 minutes.\\n\\nBlessing Of Fire Dragon: Buff/ debuff effects remain after death, but Blessing of Fire Dragon is consumed. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51014"/> <!-- Blessing of Fire Dragon Scroll -->
+		</skill-reducer>
 	</item>
 
 	<item id="90521" name="Golden Fishing Rod Pouch" type="NONE" icon="Icon.bm_gold_fishing_poket">

@@ -353,19 +353,28 @@
 	<item id="70353" name="Transformation Scroll: Pirate" type="POTION" icon="icon.etc_charm_of_courage_i03">
 	<!-- Transforms you into Pirate for 30 min. Effect remains after death. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55412"/> <!-- Transformation Scroll: Pirate -->
+		</skill-reducer>
 	</item>
 
 	<item id="70354" name="Transformation Scroll: Dark Assassin" type="POTION" icon="icon.etc_charm_of_courage_i05">
 	<!-- Transforms you into Dark Assassin for 30 min. Effect remains after death. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55413"/> <!-- Transformation Scroll: Dark Assassin -->
+		</skill-reducer>
 	</item>
 
 	<item id="70355" name="Transformation Scroll: White Assassin" type="POTION" icon="icon.etc_charm_of_courage_i00">
 	<!-- Transforms you into White Assassin for 30 min. Effect remains after death. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55692"/> <!-- Transformation Scroll: White Assassin -->
+		</skill-reducer>
 	</item>
 
 	<item id="70356" name="Scroll: Enchant Armor (A-grade)" type="ENCHANT_ARMOR" icon="icon.etc_scroll_of_enchant_armor_i04">

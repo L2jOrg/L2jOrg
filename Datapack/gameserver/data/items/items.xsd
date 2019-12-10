@@ -105,9 +105,18 @@
                 <xs:attribute name="infinite" type="xs:boolean" default="false"/>
                 <xs:attribute name="commission-type" type="CommissionType" default="OTHER_ITEM"/>
                 <xs:attribute name="action" type="ActionType" default="NONE"/>
+                <xs:attribute name="auto-use-type" type="AutoUseType" default="NONE"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
+
+    <xs:simpleType name="AutoUseType">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="NONE"/>
+            <xs:enumeration value="SUPPLY"/>
+            <xs:enumeration value="HEALING"/>
+        </xs:restriction>
+    </xs:simpleType>
 
     <xs:complexType name="AbstractItem" abstract="true">
         <xs:sequence>
@@ -153,7 +162,7 @@
         <xs:sequence>
             <xs:element name="skill" type="SkillType" maxOccurs="unbounded"/>
         </xs:sequence>
-        <xs:attribute name="type" type="xs:token"/>
+        <xs:attribute name="type" type="xs:token" default="ItemSkills"/>
     </xs:complexType>
 
     <xs:complexType name="ItemExtract">

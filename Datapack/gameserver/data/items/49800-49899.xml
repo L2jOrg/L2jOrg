@@ -282,19 +282,28 @@
 	<item id="49845" name="Sayha's Blessing" type="POTION" icon="icon.etc_wind_potion_i00">
 	<!-- Sayha Grace points +35,000 (1 slot). -->
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39191"/> <!-- Sayha's Blessing -->
+		</skill-reducer>
 	</item>
 
 	<item id="49846" name="Sayha's Silver Light Blessing" type="POTION" icon="icon.bm_sayha_silver_blessed">
 	<!-- Sayha Grace points +70,000 (2 slots). -->
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39192"/> <!-- Sayha's Silver Light Blessing -->
+		</skill-reducer>
 	</item>
 
 	<item id="49847" name="Sayha's Golden Light Blessing" type="POTION" icon="icon.bm_sayha_gold_blessed">
 	<!-- Sayha Grace points +105,000 (3 slots). -->
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39193"/> <!-- Sayha's Silver Light Blessing -->
+		</skill-reducer>
 	</item>
 
 	<item id="49848" name="Fire Dragon Pendant Chest +10" type="NONE" icon="icon.bm_pendant_pve_box">
@@ -324,7 +333,10 @@
 	<item id="49851" name="Sayha's Gust" type="NONE" icon="icon.bm_sayha_storm">
 	<!-- Sayha Grace points +100%, XP/SP gain +100%. This effect remains even after character's death. Duration: 10 minutes. Cooldown: 10 minutes. Available when more than one slot of the bar of Sayha’s Grace points is filled. Cannot be dropped or sold in the grocery store. -->
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39194"/> <!-- Sayha's Gust -->
+		</skill-reducer>
 	</item>
 
 	<item id="49852" name="Secret Book of Beggins’ Enchantments - IV" type="NONE" icon="icon.mercenary_certification_i02">

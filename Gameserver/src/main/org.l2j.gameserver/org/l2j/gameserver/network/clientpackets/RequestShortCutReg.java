@@ -2,12 +2,19 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.enums.ShortcutType;
 import org.l2j.gameserver.model.Shortcut;
+import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.serverpackets.ShortCutRegister;
 
+import static java.util.Objects.isNull;
 import static org.l2j.gameserver.network.SystemMessageId.ONLY_MACROS_CAN_BE_REGISTERED;
 
+/**
+ * @author JoeAlisson
+ */
 public final class RequestShortCutReg extends ClientPacket {
     private static final int AUTO_PLAY_PAGE = 23;
+    private static final int AUTO_POTION_SLOT = 1;
+    private static final int MACRO_SLOT = 0;
 
     private ShortcutType type;
     private int id;
@@ -21,9 +28,9 @@ public final class RequestShortCutReg extends ClientPacket {
     public void readImpl() {
         final int typeId = readInt();
         type = ShortcutType.values()[(typeId < 1) || (typeId > 6) ? 0 : typeId];
-        final int slot = readInt();
-        this.slot = slot % 12;
-        page = slot / 12;
+        final int room = readInt();
+        this.slot = room % 12;
+        page = room / 12;
         readByte(); // unk 0
         id = readInt();
         lvl = readShort();
@@ -33,18 +40,20 @@ public final class RequestShortCutReg extends ClientPacket {
 
     @Override
     public void runImpl() {
-        if ((client.getPlayer() == null) || (page > 23) || (page < 0)) {
+        var player = client.getPlayer();
+        if (isNull(player) || (page > 23) || (page < 0)) {
             return;
         }
 
         if(page == AUTO_PLAY_PAGE) {
-            if(slot == 0 && type != ShortcutType.MACRO) {
+            if(slot == MACRO_SLOT && type != ShortcutType.MACRO) {
                 client.sendPacket(ONLY_MACROS_CAN_BE_REGISTERED);
                 return;
             }
 
-            if(slot == 1 && ( type != ShortcutType.ITEM || !client.getPlayer().getInventory().getItemByObjectId(id).isPotion())) {
-                return; // TODO restrict to HP auto potion only
+            Item item;
+            if(slot == AUTO_POTION_SLOT && ( type != ShortcutType.ITEM || isNull(item = player.getInventory().getItemByObjectId(id)) || !item.isAutoPotion())) {
+                return;
             }
         }
 

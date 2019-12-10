@@ -19,6 +19,7 @@ public final class EtcItem extends ItemTemplate {
     private int _extractableCountMin;
     private int _extractableCountMax;
     private boolean isInfinite;
+    private AutoUseType autoUseType;
 
     public EtcItem(int id, String name, EtcItemType type) {
         super(id, name);
@@ -126,4 +127,17 @@ public final class EtcItem extends ItemTemplate {
     public void setAction(ActionType action) {
         _defaultAction = action;
     }
+
+    public void setAutoUseType(AutoUseType autoUseType) {
+        this.autoUseType = autoUseType;
+    }
+
+    public boolean isAutoPotion() {
+        return autoUseType == AutoUseType.HEALING;
+    }
+
+    public boolean isAutoSupply() {
+        return autoUseType == AutoUseType.SUPPLY;
+    }
+
 }

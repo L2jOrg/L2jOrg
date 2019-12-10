@@ -354,54 +354,54 @@
 	<item id="70040" name="Roast Blue Mackerel - STR" type="SCROLL" icon="BranchIcon.Icon.roasted_mackerel_buff">
 	<!-- For 20 min. STR +1.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55187" level="1"/>  <!-- Roast Blue Mackerel - STR -->
+		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55187"/>  <!-- Roast Blue Mackerel - STR -->
 		</skill-reducer>
 	</item>
 
 	<item id="70041" name="Roast Blue Mackerel - INT" type="SCROLL" icon="BranchIcon.Icon.roasted_mackerel_buff">
 	<!-- For 20 min. INT +1.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55188" level="1"/>  <!-- Roast Blue Mackerel - INT -->
+		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55188"/>  <!-- Roast Blue Mackerel - INT -->
 		</skill-reducer>
 	</item>
 
 	<item id="70042" name="Roast Blue Mackerel - CON" type="SCROLL" icon="BranchIcon.Icon.roasted_mackerel_buff">
 	<!-- For 20 min. CON +1.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55189" level="1"/>  <!-- Roast Blue Mackerel - CON -->
+		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55189"/>  <!-- Roast Blue Mackerel - CON -->
 		</skill-reducer>
 	</item>
 
 	<item id="70043" name="Roast Blue Mackerel - DEX" type="SCROLL" icon="BranchIcon.Icon.roasted_mackerel_buff">
 	<!-- For 20 min. DEX +1.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55190" level="1"/>  <!-- Roast Blue Mackerel - DEX -->
+		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55190"/>  <!-- Roast Blue Mackerel - DEX -->
 		</skill-reducer>
 	</item>
 
 	<item id="70044" name="Roast Blue Mackerel - MEN" type="SCROLL" icon="BranchIcon.Icon.roasted_mackerel_buff">
 	<!-- For 20 min. MEN +1.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55191" level="1"/>  <!-- Roast Blue Mackerel - MEN -->
+		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55191"/>  <!-- Roast Blue Mackerel - MEN -->
 		</skill-reducer>
 	</item>
 
 	<item id="70045" name="Roast Blue Mackerel - WIT" type="SCROLL" icon="BranchIcon.Icon.roasted_mackerel_buff">
 	<!-- For 20 min. WIT +1.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55192" level="1"/>  <!-- Roast Blue Mackerel - WIT -->
+		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55192"/>  <!-- Roast Blue Mackerel - WIT -->
 		</skill-reducer>
 	</item>
 

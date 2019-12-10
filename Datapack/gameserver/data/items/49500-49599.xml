@@ -9,9 +9,9 @@
 	<item id="49501" name="Fish Stew - Guildsman's Gratitude Lv. 1" type="SCROLL" icon="icon.ev_invasion_buff_box">
 	<!-- Increases XP and SP obtained from hunting by 10% for 20 min.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39076" level="1"/>  <!-- Fish Stew - Guild's Gratitude -->
+		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39076"/>  <!-- Fish Stew - Guild's Gratitude -->
 		</skill-reducer>
 	</item>
 
@@ -154,9 +154,9 @@
 	<item id="49518" name="Pirate's Special Fruit" type="SCROLL" icon="icon.etc_codran_i09">
 	<!-- For 20 min., P./M. Atk. + 7%, P./M. Def. + 10%, Max HP/CP/MP + 15%, HP/MP Recovery + 20%. Has a chance of recovering 3% of physical damage dealt to enemy as HP. Increase XP/SP gain by 5% when hunting. Cooldown is 1 minute. Effect remains even after death. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes reuse-delay="60000" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39144" level="1"/>  <!-- Special Pirate Fruit -->
+		<attributes reuse-delay="60000" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39144"/>  <!-- Special Pirate Fruit -->
 		</skill-reducer>
 	</item>
 
@@ -223,7 +223,10 @@
 	<item id="49528" name="Pirate's HP Potion" type="POTION" icon="icon.etc_potion_red_i00">
 	<!-- After instant 600 HP Recovery, CP Recovery with remaining points. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="1" action="SKILL_REDUCE"/>
+		<attributes weight="1" action="SKILL_REDUCE" auto-use-type="HEALING"/>
+		<skill-reducer>
+			<skill id="39089"/> <!--Pirate Healing Potion" -->
+		</skill-reducer>
 	</item>
 
 	<armor id="49529" name="Blue Dynasty- Heavy Armor" type="HEAVY" body-part="ALL_DRESS" icon="icon.armor_t2000_ul_i00">
@@ -257,7 +260,10 @@
 	<item id="49533" name="Hero’s HP Potion" type="POTION" icon="icon.etc_lesser_potion_red_i00">
 	<!-- After instant 500 HP Recovery, CP Recovery with remaining points. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="1" action="SKILL_REDUCE"/>
+		<attributes weight="1" action="SKILL_REDUCE" auto-use-type="HEALING"/>
+		<skill-reducer>
+			<skill id="39103"/> <!-- Hero HP Potion -->
+		</skill-reducer>
 	</item>
 
 	<item id="49534" name="Hero Cube" type="COUPON" icon="icon.special_cube_i00">

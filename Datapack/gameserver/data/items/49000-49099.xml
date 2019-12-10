@@ -287,9 +287,9 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="20" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39028" level="1"/>  <!-- Newbie Wind Walk Potion -->
+		<attributes weight="20" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39028"/>  <!-- Newbie Wind Walk Potion -->
 		</skill-reducer>
 	</item>
 
@@ -706,18 +706,18 @@
 	<item id="49080" name="Rice Cake of Fighting Spirit" type="NONE" icon="icon.bm_rice_cake_i00">
 	<!-- Increases XP and SP gain by 20% for 20 minutes. The effect remains after character's death. Cooldown is 1 minute. \\n\\n<Note> The effect changes to the effect of Rice Cake of Flaming Fighting Spirit, if it is used when Rice Cake of Fighting Spirit is in effect. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="32000" level="1"/>  <!-- Rice Cake of Fighting Spirit -->
+		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="32000"/>  <!-- Rice Cake of Fighting Spirit -->
 		</skill-reducer>
 	</item>
 
 	<item id="49081" name="Rice Cake of Flaming Fighting Spirit" type="NONE" icon="icon.bm_rice_cake_i01">
 	<!-- Increases XP and SP gain by 30% for 20 minutes. The effect remains after character's death. Cooldown is 1 minute. \\n\\n<Note> The effect does not change if Rice Cake of Fighting Spirit is when Rice Cake of Flaming Fighting Spirit is in effect. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="32002" level="1"/>  <!-- Rice Cake of Flaming Fighting Spirit -->
+		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="32002"/>  <!-- Rice Cake of Flaming Fighting Spirit -->
 		</skill-reducer>
 	</item>
 
@@ -760,7 +760,10 @@
 	<item id="49086" name="Rice Cake of Fighting Spirit" type="NONE" icon="icon.bm_rice_cake_i00">
 	<!-- Increases XP and SP gain by 20% for 20 minutes. The effect remains after character's death. Cooldown is 10 minutes. \\n\\n<Note> The effect changes to the effect of Rice Cake of Flaming Fighting Spirit, if it is used when Rice Cake of Fighting Spirit is in effect. (inc. the one for XP). -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="32000"/> <!-- Rice Cake of Fighting Spirit -->
+		</skill-reducer>
 	</item>
 
 	<item id="49087" name="Greater Scroll of Escape" type="SCROLL" icon="icon.etc_scroll_of_return_i01">

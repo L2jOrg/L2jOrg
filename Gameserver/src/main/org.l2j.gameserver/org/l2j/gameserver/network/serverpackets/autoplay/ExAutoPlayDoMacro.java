@@ -18,7 +18,7 @@ public final class ExAutoPlayDoMacro extends ServerPacket {
     }
 
     @Override
-    protected void writeImpl(GameClient client) throws Exception {
+    protected void writeImpl(GameClient client)  {
         writeId(ServerPacketId.EX_AUTOPLAY_DO_MACRO);
         writeInt(0x114); // macro number ?
     }

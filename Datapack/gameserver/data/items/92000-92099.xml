@@ -204,7 +204,7 @@
 	<item id="92033" name="Magic Flame" type="NONE" icon="icon.bm_soul_of_shilen">
 	<!-- Only for Lv. 75 or lower level characters. 100% Magic Lamp gauge recharge for 1 hour when used. Cooldown 1 minute. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
 	</item>
 
 	<item id="92034" name="Strong Jewelry Box" type="NONE" icon="icon.bm_2018_jewelbox_random">

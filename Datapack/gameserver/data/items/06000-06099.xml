@@ -33,9 +33,9 @@
 	<item id="6035" name="Magic Haste Potion" type="POTION" icon="icon.etc_potion_of_acumen2_i00">
 	<!-- Casting Spd. is raised. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" price="2400" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2169" level="1"/>  <!-- Magic Haste Potion -->
+		<attributes weight="20" price="2400" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="2169"/>  <!-- Magic Haste Potion -->
 		</skill-reducer>
 	</item>
 
@@ -45,8 +45,8 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="20" price="3400" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<attributes weight="20" price="3400" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
 			<skill id="2169" level="2"/>  <!-- Magic Haste Potion -->
 		</skill-reducer>
 	</item>
@@ -55,7 +55,7 @@
 	<!-- If you use it on the target who is asleep, the target will wake up. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="5" price="100" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="2170" level="1"/>  <!-- Scroll: Cancel Sleep -->
 		</skill-reducer>
 	</item>

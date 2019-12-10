@@ -411,7 +411,10 @@
 	<item id="49663" name="Maliss's HP Potion" type="POTION" icon="BranchSys.icon.br_vitality_potion_i01">
 	<!-- After instant 500 HP Recovery, CP Recovery with remaining points. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="HEALING"/>
+		<skill-reducer>
+			<skill id="39123"/> <!-- Melissa's Healing Potion -->
+		</skill-reducer>
 	</item>
 
 	<item id="49664" name="Weapon Supply Box (B-grade)" type="NONE" icon="icon.etc_equip_item_box_i02">
@@ -495,7 +498,10 @@
 	<item id="49674" name="Rice Cake of Flaming Fighting Spirit" type="NONE" icon="icon.bm_rice_cake_i01">
 	<!-- Increases XP/ SP gain by +30% for 20 minutes. The effect remains after character's death. Cooldown: 1 minute. \\n\\n<Note> The effect does not change if Rice Cake of Fighting Spirit is used throughout the duration time of Rice Cake of Flaming Fighting Spirit. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="50134"/> <!-- Rice Cake of Flaming Fighting Spirit -->
+		</skill-reducer>
 	</item>
 
 	<item id="49675" name="Hero Cube Box" type="NONE" icon="icon.etc_pi_gift_box_i03">
@@ -684,8 +690,8 @@
 	<item id="49697" name="Special Fruit Buff" type="SCROLL" icon="icon.etc_codran_i09">
 	<!-- For 20 minutes, P./M. Atk. +7%, P./M. Def. +10%, Max. HP/CP/MP +15%, HP/MP Regeneration +20%. At a certain chance absorbs 3% of the damage inflicted on target as HP. Increases XP/SP gain by +5%. Cooldown is 1 minute. Buff remains after death.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes reuse-delay="60000" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<attributes reuse-delay="60000" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
 			<skill id="55160" level="1"/>  <!-- Special Pirate Fruit -->
 		</skill-reducer>
 	</item>

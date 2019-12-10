@@ -30,7 +30,6 @@ public final class AutoPlayEngine {
     private final Object taskLocker = new Object();
 
     private AutoPlayEngine() {
-
     }
 
     public void startAutoPlay(Player player, AutoPlaySetting setting) {
@@ -61,45 +60,39 @@ public final class AutoPlayEngine {
         @Override
         public void run() {
             var world = World.getInstance();
-            var it = players.entrySet().iterator();
-            while (it.hasNext()) {
-                var entry = it.next();
+
+            players.entrySet().parallelStream().forEach(entry -> {
                 var player = entry.getKey();
-                if(isNull(player))  {
-                    it.remove();
-                } else {
-                    var setting = entry.getValue();
-                    var range = setting.isNearTarget() ? 600 : 1400;
+                if(isNull(player) || player.getAI().getIntention() == CtrlIntention.AI_INTENTION_PICK_UP)  {
+                    return;
+                }
 
-                    /**
-                     * 91974, 91912, 1540, 49528, 49533, 91251
-                     * 91690, 91843, 91857
-                     */
+                var setting = entry.getValue();
 
-                    if(setting.isAutoPickUpOn()) {
-                        world.forAnyVisibleObjectInRange(player, Item.class, range,
-                                item -> player.getAI().setIntention(CtrlIntention.AI_INTENTION_PICK_UP, item),
-                                item -> item.getDropProtection().tryPickUp(player));
-                    }
+                var range = setting.isNearTarget() ? 600 : 1400;
 
-                    if(player.getAI().getIntention() == CtrlIntention.AI_INTENTION_PICK_UP) {
-                        continue;
-                    }
-
-                    var target = player.getTarget();
-                    if(isNull(target) || (isMonster(target) && ((Monster) target).isDead())) {
-                        var monster = world.findFirstVisibleObject(player, Monster.class, range, false, m -> canBeTargeted(player, setting, m), Comparator.comparingDouble(m -> MathUtil.calculateDistanceSq3D(player, m)));
-                        player.setTarget(monster);
-                    }
-                    if(nonNull(player.getTarget())) {
-                        player.sendPacket(ExAutoPlayDoMacro.STATIC);
+                if(setting.isAutoPickUpOn()) {
+                    var item = world.findAnyVisibleObject(player, Item.class, range, false, it -> it.getDropProtection().tryPickUp(player));
+                    if(nonNull(item)) {
+                        player.getAI().setIntention(CtrlIntention.AI_INTENTION_PICK_UP, item);
+                        return;
                     }
                 }
-            }
+
+                var target = player.getTarget();
+                if(isNull(target) || (isMonster(target) && ((Monster) target).isDead())) {
+                    var monster = world.findFirstVisibleObject(player, Monster.class, range, false, m -> canBeTargeted(player, setting, m), Comparator.comparingDouble(m -> MathUtil.calculateDistanceSq3D(player, m)));
+                    player.setTarget(monster);
+                }
+                if(nonNull(player.getTarget())) {
+                    player.sendPacket(ExAutoPlayDoMacro.STATIC);
+                }
+
+            });
         }
 
         private boolean canBeTargeted(Player player, AutoPlaySetting setting, Monster monster) {
-            return !monster.isDead() && monster.isAutoAttackable(player) && (!setting.isMannerMode() || isNull(monster.getTarget()) || monster.getTarget().equals(player)) && GeoEngine.getInstance().canSeeTarget(player, monster);
+            return !monster.isDead() && monster.isAutoAttackable(player) && (!setting.isRespectfulMode() || isNull(monster.getTarget()) || monster.getTarget().equals(player)) && GeoEngine.getInstance().canSeeTarget(player, monster);
         }
     }
 

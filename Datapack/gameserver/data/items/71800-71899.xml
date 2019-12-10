@@ -166,7 +166,7 @@
 	<item id="71828" name="Scroll: Summon Storm" type="NONE" icon="icon.scrl_of_storm">
 	<!-- Fills you with Storm Energy, granting +50% XP and SP gain bonus for 2 hours. Cooldown: 2 hours. Storm Energy does not disappear after character's death.  Available for levels 1-60. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
 	</item>
 
 	<item id="71829" name="XP/SP Rune - 50% (1-hour) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">

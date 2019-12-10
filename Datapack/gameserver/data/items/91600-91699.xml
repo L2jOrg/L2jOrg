@@ -270,7 +270,10 @@
 	<item id="91641" name="Sayha's Blessing" type="POTION" icon="icon.etc_wind_potion_i00">
 	<!-- Recharges 35,000 Sayha's Grace Points. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39191"/> <!-- Sayha's Blessing -->
+		</skill-reducer>
 	</item>
 
 	<item id="91642" name="15th Anniversary Gift Box" type="NONE" icon="icon.event_six_party_box_i00">
@@ -396,19 +399,28 @@
 	<item id="91660" name="Shining Scroll of Mood Melody" type="SCROLL" icon="icon.bm_magmeld">
 	<!-- Activates Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration effects for 1 hour. The buff effect doesn't disappear upon death\\n\\n<Note>\\n1. Shining Scroll of Mood Melody cannot be stacked with Scroll of Mood Melody.\\n\\n2. Its duration is equal to that of the last used item. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes duration="60" action="SKILL_REDUCE"/>
+		<attributes duration="60" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39298"/> <!-- Shining Scroll of Mood Melody -->
+		</skill-reducer>
 	</item>
 
 	<item id="91661" name="Shining Scroll of Mood Melody" type="SCROLL" icon="icon.bm_magmeld">
 	<!-- Activates Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration effects for 4 hours. The buff effect doesn't disappear upon death\\n\\n<Note>\\n1. Shining Scroll of Mood Melody cannot be stacked with Scroll of Mood Melody.\\n\\n2. Its duration is equal to that of the last used item. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes duration="240" action="SKILL_REDUCE"/>
+		<attributes duration="240" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="32298"/> <!-- Shining Scroll of Mood Melody -->
+		</skill-reducer>
 	</item>
 
 	<item id="91662" name="Shining Scroll of Mood Melody" type="SCROLL" icon="icon.bm_magmeld">
 	<!-- Activates Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration effects for 8 hours. The buff effect doesn't disappear upon death\\n\\n<Note>\\n1. Shining Scroll of Mood Melody cannot be stacked with Scroll of Mood Melody.\\n\\n2. Its duration is equal to that of the last used item. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes duration="480" action="SKILL_REDUCE"/>
+		<attributes duration="480" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="32298"/> <!-- Shining Scroll of Mood Melody -->
+		</skill-reducer>
 	</item>
 
 	<item id="91663" name="L2 Coin" type="NONE" icon="icon.etc_11th_token">
@@ -432,7 +444,10 @@
 	<item id="91666" name="Sayha's Storm Lv. 1" type="NONE" icon="icon.bm_sayha_storm">
 	<!-- Sayha's Grace Consumption +100% and XP/SP Gain +100% while hunting monsters. The effect remains active even after death. Duration 20 minutes. Cooldown 1 minute. Available only when Sayha's Grace is 35,000 or higher. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51398"/> <!-- Sayha's Storm Lv. 1 (Event) -->
+		</skill-reducer>
 	</item>
 
 	<armor id="91667" name="+7 Sayha's Cloak - White" type="NONE" body-part="BACK" icon="icon.sayha2017_back_i03">
@@ -674,7 +689,10 @@
 	<item id="91690" name="Maliss's HP Potion" type="POTION" icon="BranchSys.icon.br_vitality_potion_i01">
 	<!-- After instant 500 HP Recovery, CP Recovery with remaining points. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="HEALING"/>
+		<skill-reducer>
+			<skill id="39123"/> <!-- Melissa's Healing Potion -->
+		</skill-reducer>
 	</item>
 
 	<item id="91691" name="Maliss's MP Recovery Potion" type="POTION" icon="icon.freya_potion">

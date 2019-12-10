@@ -141,13 +141,16 @@
 	<item id="71215" name="Seven Deadly Sins Special Pie" type="POTION" icon="BranchSys3.icon1.g_torun_gingerbread_pl">
 	<!-- Buff to celebrate the collaboration with Seven Deadly Sins. Might, Haste, Empower, Acument, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration, Blessed Body, Blessed Soul, Magic Barrier applied for 20 minutes.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
 	</item>
 
 	<item id="71216" name="Seven Deadly Sins Special Beer" type="SCROLL" icon="BranchSys3.icon1.g_beerfestival_octoberfest_beer">
 	<!-- Buff to celebrate the collaboration with Seven Deadly Sins. Chant of Victory Lv. 1 applied for 20 minutes. \\n<Warning>\\n Cannot be used with Prophecy type effects. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="56089"/> <!-- Seven Deadly Sins Special Beer - Victory -->
+		</skill-reducer>
 	</item>
 
 	<item id="71217" name="Seven Deadly Sins Card: Meliodas" type="CARD" icon="BranchIcon.icon.icon_card_sin_meli">

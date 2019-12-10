@@ -29,9 +29,9 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="5" commission-type="POTION" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55235" level="1"/>  <!-- Adventurer's Potion - Atk. Spd. -->
+		<attributes weight="5" commission-type="POTION" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55235"/>  <!-- Adventurer's Potion - Atk. Spd. -->
 		</skill-reducer>
 	</item>
 
@@ -41,27 +41,27 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="5" commission-type="POTION" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55236" level="1"/>  <!-- Adventurer's Potion - Casting Spd. -->
+		<attributes weight="5" commission-type="POTION" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55236"/>  <!-- Adventurer's Potion - Casting Spd. -->
 		</skill-reducer>
 	</item>
 
 	<item id="70104" name="Scroll: Vampiric Rage" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Recovers 6% HP from the received physical damage for 20 minutes.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="5" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55237" level="1"/>  <!-- Scroll: Vampiric Rage -->
+		<attributes weight="5" commission-type="SCROLL_OTHER" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55237"/>  <!-- Scroll: Vampiric Rage -->
 		</skill-reducer>
 	</item>
 
 	<item id="70105" name="Scroll of Mana" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Increases MP Recovery Rate for 20 minutes.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="5" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55241" level="1"/>  <!-- Scroll: Mana Regeneration -->
+		<attributes weight="5" commission-type="SCROLL_OTHER" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55241"/>  <!-- Scroll: Mana Regeneration -->
 		</skill-reducer>
 	</item>
 
@@ -77,9 +77,9 @@
 	<item id="70107" name="Scroll: Berserker Spirit" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- When used, P. Def. -5%, M. Def. -10%, Evasion -2; P. Atk. +5%, M. Atk. +10%, Atk. Spd. +5%, Casting Spd. +5%, Speed +5. Duration: 20 minutes.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="5" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55242" level="1"/>  <!-- Scroll: Berserker Spirit -->
+		<attributes weight="5" commission-type="SCROLL_OTHER" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55242"/>  <!-- Scroll: Berserker Spirit -->
 		</skill-reducer>
 	</item>
 
@@ -112,8 +112,8 @@
 	<item id="70110" name="Scroll: Dance of the Warrior" type="SCROLL" icon="BranchIcon.Icon.etc_g_bm_dance_scroll_i00">
 	<!-- Provides Dance of the Warrior effect for 10 minutes.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="5" commission-type="SCROLL_OTHER" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<attributes weight="5" commission-type="SCROLL_OTHER" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
 			<skill id="55243"/>  <!-- Scroll: Dance of the Warrior -->
 		</skill-reducer>
 	</item>
@@ -121,8 +121,8 @@
 	<item id="70111" name="Scroll: Dance of the Mystic" type="SCROLL" icon="BranchIcon.Icon.etc_g_bm_dance_scroll_i00">
 	<!-- Provides Dance of the Mystic effect for 10 minutes.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="5" commission-type="SCROLL_OTHER" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<attributes weight="5" commission-type="SCROLL_OTHER" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
 			<skill id="55244"/>  <!-- Scroll: Dance of the Mystic -->
 		</skill-reducer>
 	</item>

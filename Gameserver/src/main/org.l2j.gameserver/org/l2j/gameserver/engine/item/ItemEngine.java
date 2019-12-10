@@ -317,6 +317,7 @@ public final class ItemEngine extends GameXmlReader {
         item.setInfinite(parseBoolean(attr, "infinite"));
         item.setSelfResurrection(parseBoolean(attr, "self-resurrection"));
         item.setAction(parseEnum(attr, ActionType.class, "action"));
+        item.setAutoUseType(parseEnum(attr, AutoUseType.class, "auto-use-type"));
     }
 
     private void parseCommonAttributes(ItemTemplate item, Node node) {

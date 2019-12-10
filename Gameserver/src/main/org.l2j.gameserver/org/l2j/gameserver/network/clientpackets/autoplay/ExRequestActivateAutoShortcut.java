@@ -37,11 +37,12 @@ public class ExRequestActivateAutoShortcut extends ClientPacket {
 
             var player = client.getPlayer();
             var shortcut = player.getShortCut(slot, page);
-            if (nonNull(shortcut)) {
 
+            if (nonNull(shortcut)) {
                 if (page == 23 && slot == 1) { // auto potion
                     var item = player.getInventory().getItemByObjectId(shortcut.getId());
-                    if (isNull(item) || !item.isPotion()) {
+                    if (isNull(item) || !item.isAutoPotion()) {
+                        player.deleteShortCut(slot, page);
                         return;
                     }
                 }

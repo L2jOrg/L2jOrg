@@ -687,45 +687,45 @@
 	<item id="49460" name="Fish Stew - Might Lv. 1" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. P. Atk. +8%.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes for-npc="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39047" level="1"/>  <!-- Fish Stew - Might -->
+		<attributes for-npc="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39047"/>  <!-- Fish Stew - Might -->
 		</skill-reducer>
 	</item>
 
 	<item id="49461" name="Fish Stew - Shield Lv. 1" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. P. Def. +8%.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes for-npc="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39048" level="1"/>  <!-- Fish Stew - Shield -->
+		<attributes for-npc="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39048"/>  <!-- Fish Stew - Shield -->
 		</skill-reducer>
 	</item>
 
 	<item id="49462" name="Fish Stew - Magic Barrier Lv. 1" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. M. Def. +23%.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes for-npc="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39049" level="1"/>  <!-- Fish Stew - Magic Barrier -->
+		<attributes for-npc="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39049"/>  <!-- Fish Stew - Magic Barrier -->
 		</skill-reducer>
 	</item>
 
 	<item id="49463" name="Fish Stew - Vampiric Rage Lv. 1" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. recovers as HP 6% of the physical damage inflicted on the enemy with a certain probability.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes for-npc="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39050" level="1"/>  <!-- Fish Stew - Vampiric Rage -->
+		<attributes for-npc="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39050"/>  <!-- Fish Stew - Vampiric Rage -->
 		</skill-reducer>
 	</item>
 
 	<item id="49464" name="Fish Stew - Empower Lv. 1" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. M. Atk. +55%.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes for-npc="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39051" level="1"/>  <!-- Fish Stew - Empower -->
+		<attributes for-npc="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39051"/>  <!-- Fish Stew - Empower -->
 		</skill-reducer>
 	</item>
 

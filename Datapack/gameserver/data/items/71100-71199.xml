@@ -55,7 +55,10 @@
 	<item id="71107" name="Irene' Hourglass - 1 Hour" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\\nIntended for Lv. 1~19.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55999"/> <!-- Irene's Hourglass - 1 Hour -->
+		</skill-reducer>
 	</item>
 
 	<item id="71108" name="Package: Irene' Hourglass (1 hour)" type="NONE" icon="icon.etc_pi_gift_box_i00">

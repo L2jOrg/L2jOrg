@@ -471,19 +471,28 @@
 	<item id="70574" name="Strawberry Juice" type="SCROLL" icon="icon.etc_fruit_cocktail_i01">
 	<!-- For 5 min. activates Prophecy of Fire - Lv. 1, when used.\\n<Note> The effect does not stack with Strawberry Juice, Cherry Juice, or any of the Prophecies.\\n  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55679"/>  <!-- Strawberry Juice -->
+		</skill-reducer>
 	</item>
 
 	<item id="70575" name="Mango Juice" type="SCROLL" icon="icon.etc_fruit_cocktail_i03">
 	<!-- For 5 min. activates Prophecy of Water - Lv. 1, when used.\\n<Note> The effect does not stack with Strawberry Juice, Cherry Juice, or any of the Prophecies.\\n  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55680"/> <!-- Mango Juice -->
+		</skill-reducer>
 	</item>
 
 	<item id="70576" name="Cherry Juice" type="SCROLL" icon="icon.etc_fruit_cocktail_i02">
 	<!-- For 5 min. activates Prophecy of Wind - Lv. 1, when used.\\n<Note> The effect does not stack with Mango Juice, Strawberry Juice, or any of the Prophecies.\\n  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55681"/> <!-- Cherry Juice -->
+		</skill-reducer>
 	</item>
 
 	<weapon id="70577" name="Damascus" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_damascus_i00">

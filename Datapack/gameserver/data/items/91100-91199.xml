@@ -61,13 +61,19 @@
 	<item id="91109" name="Blue Dynasty Scroll" type="POTION" icon="icon.scroll_of_verification_i01">
 	<!-- Transforms you into Blue Dynasty for 15 min. Effect remains after death. \\n Blue Dynasty's Power: Max HP/MP +20%. When Sayha's Grace applies, XP/ SP gain +20%. Effect remains after death. \\n<Warning>\\n If used when Teddy Bear/Cat the Cat/Cat/Panda Buff is applied, existing buff will be replaced. Cooldown 1 min. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55693"/> <!-- Blue Dynasty Transformation Scroll -->
+		</skill-reducer>
 	</item>
 
 	<item id="91110" name="Cat the Cat Scroll" type="POTION" icon="icon.scroll_of_verification_i03">
 	<!-- Transforms you into Kat the Cat for 15 minutes. Effect remains even after death. Cannot be dropped or sold at an NCP's store. \\nKat the Cat's Energy: Max HP/MP +20%. XP/SP gain +20% during Sayha's Grace. Effect remains even after death. \\n<Warning>\\nIf used during Teddy Bear/Blue Dynasty/Cat/Panda Buff, the existing buff will be replaced. Cooldown is 1 minute. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51148"/> <!-- Transformation into Cat -->
+		</skill-reducer>
 	</item>
 
 	<armor id="91111" name="Pisces Agathion" type="NONE" body-part="AGATHION" icon="icon.pis_agathion_i00">
@@ -322,7 +328,10 @@
 	<item id="91136" name="Dandy's Golden Ball" type="SCROLL" icon="BranchIcon.icon.g_ev_goldenball">
 	<!-- Golden Ball gifted by Dandy that crossed dimensions. Double-click to increase 1-hour XP and SP 100% and recharge Sayha's Grace max. Flanchard changes to appearance of NC Dinos Uniform. -->
 		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51108"/> <!-- Dandy's Golden Ball -->
+		</skill-reducer>
 	</item>
 
 	<item id="91137" name="Windstorm Box" type="NONE" icon="icon.bm_circlet_upgrade_box">
@@ -677,18 +686,18 @@
 	<item id="91185" name="Intermediate Spirit's Blessing" type="NONE" icon="icon.elemental_bless_scrl_i00">
 	<!-- Activates a buff when the item is used. Attribute XP gain +30% for 20 minutes when hunting attribute monsters.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51126" level="1"/>  <!-- Intermediate Spirit's Blessing -->
+		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51126"/>  <!-- Intermediate Spirit's Blessing -->
 		</skill-reducer>
 	</item>
 
 	<item id="91186" name="High-grade Spirit's Blessing" type="NONE" icon="icon.elemental_bless_scrl_i00">
 	<!-- Activates a buff when the item is used. Attribute XP gain +50% for 20 minutes when hunting attribute monsters.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51127" level="1"/>  <!-- Advanced Spirit's Blessing -->
+		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51127"/>  <!-- Advanced Spirit's Blessing -->
 		</skill-reducer>
 	</item>
 
@@ -707,36 +716,36 @@
 	<item id="91189" name="Fire Attack Potion" type="POTION" icon="icon.etc_fire_potion_i00">
 	<!-- Increases Fire Attack +50 for 20 min.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51130" level="1"/>  <!-- Fire Attack Potion -->
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51130"/>  <!-- Fire Attack Potion -->
 		</skill-reducer>
 	</item>
 
 	<item id="91190" name="Water Attack Potion" type="POTION" icon="icon.etc_water_potion_i00">
 	<!-- Increases Water Attack +50 for 20 min.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51131" level="1"/>  <!-- Water Attack Potion -->
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51131"/>  <!-- Water Attack Potion -->
 		</skill-reducer>
 	</item>
 
 	<item id="91191" name="Wind Attack Potion" type="POTION" icon="icon.etc_wind_potion_i00">
 	<!-- Increases Wind Attack +50 for 20 min.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51132" level="1"/>  <!-- Wind Attack Potion -->
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51132"/>  <!-- Wind Attack Potion -->
 		</skill-reducer>
 	</item>
 
 	<item id="91192" name="Earth Attack Potion" type="POTION" icon="icon.etc_earth_potion_i00">
 	<!-- Increases Earth Attack +50 for 20 min.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51133" level="1"/>  <!-- Earth Attack Potion -->
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51133"/>  <!-- Earth Attack Potion -->
 		</skill-reducer>
 	</item>
 

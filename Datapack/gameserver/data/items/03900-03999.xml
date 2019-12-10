@@ -6,9 +6,9 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE"/>
+		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2050" level="1"/>  <!-- Scroll: Guidance -->
+			<skill id="2050"/>  <!-- Scroll: Guidance -->
 		</skill-reducer>
 	</item>
 
@@ -18,9 +18,9 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE"/>
+		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2051" level="1"/>  <!-- Scroll: Death Whisper -->
+			<skill id="2051"/>  <!-- Scroll: Death Whisper -->
 		</skill-reducer>
 	</item>
 
@@ -30,9 +30,9 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE"/>
+		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2052" level="1"/>  <!-- Scroll: Focus -->
+			<skill id="2052"/>  <!-- Scroll: Focus -->
 		</skill-reducer>
 	</item>
 
@@ -42,9 +42,9 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE"/>
+		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2053" level="1"/>  <!-- Scroll: Acumen -->
+			<skill id="2053"/>  <!-- Scroll: Acumen -->
 		</skill-reducer>
 	</item>
 
@@ -54,9 +54,9 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE"/>
+		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2054" level="1"/>  <!-- Scroll: Haste -->
+			<skill id="2054"/>  <!-- Scroll: Haste -->
 		</skill-reducer>
 	</item>
 
@@ -66,9 +66,9 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE"/>
+		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2055" level="1"/>  <!-- Scroll: Agility -->
+			<skill id="2055"/>  <!-- Scroll: Agility -->
 		</skill-reducer>
 	</item>
 
@@ -78,9 +78,9 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE"/>
+		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2056" level="1"/>  <!-- Scroll: Empower -->
+			<skill id="2056"/>  <!-- Scroll: Empower -->
 		</skill-reducer>
 	</item>
 
@@ -90,9 +90,9 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2057" level="1"/>  <!-- Scroll: Might -->
+		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="2057"/>  <!-- Scroll: Might -->
 		</skill-reducer>
 	</item>
 
@@ -102,9 +102,9 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2058" level="1"/>  <!-- Scroll: Wind Walk -->
+		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="2058"/>  <!-- Scroll: Wind Walk -->
 		</skill-reducer>
 	</item>
 
@@ -114,9 +114,9 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2059" level="1"/>  <!-- Scroll: Shield -->
+		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="2059"/>  <!-- Scroll: Shield -->
 		</skill-reducer>
 	</item>
 

@@ -47,7 +47,7 @@ public class AutoPlaySetting {
         return usableHpPotionPercent;
     }
 
-    public boolean isMannerMode() {
+    public boolean isRespectfulMode() {
         return mannerMode;
     }
 }

@@ -644,7 +644,10 @@
 	<item id="90794" name="Shining Scroll of Mood Melody" type="SCROLL" icon="icon.bm_magmeld">
 	<!-- For 20 minutes activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Purity, Wild Magic, Concentration. Cannot be used together with Scroll of Mood Melody.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39298"/> <!-- Shining Scroll of Mood Melody -->
+		</skill-reducer>
 	</item>
 
 	<item id="90795" name="Zaken's Earring Lv. 1 Box" type="NONE" icon="icon.bm_freya_gift_box">

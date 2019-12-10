@@ -25,6 +25,6 @@ public class ExAutoPlaySetting extends ServerPacket {
         writeShort(setting.getNextTargetMode());
         writeByte(setting.isNearTarget());
         writeInt(setting.getUsableHpPotionPercent());
-        writeByte(setting.isMannerMode());
+        writeByte(setting.isRespectfulMode());
     }
 }

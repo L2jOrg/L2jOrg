@@ -294,9 +294,9 @@
 		<condition add-name="true" msg-id="113">
 			<player flying="false"/>
 		</condition>
-		<attributes weight="1" price="10000" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
+		<attributes weight="1" price="10000" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="HEALING"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2038" level="1"/>  <!-- Quick Healing Potion -->
+			<skill id="2038"/>  <!-- Quick Healing Potion -->
 		</skill-reducer>
 	</item>
 
