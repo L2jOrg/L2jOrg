@@ -1,8 +1,9 @@
 package org.l2j.gameserver.network.clientpackets.autoplay;
 
 import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
-import org.l2j.gameserver.engine.autoplay.AutoPlaySetting;
+import org.l2j.gameserver.engine.autoplay.AutoPlaySettings;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
+import org.l2j.gameserver.network.serverpackets.autoplay.ExAutoPlaySettingResponse;
 
 /**
  * @author JoeAlisson
@@ -30,12 +31,14 @@ public class ExAutoPlaySetting extends ClientPacket {
 
     @Override
     protected void runImpl() {
-        var setting = new AutoPlaySetting(options, active, pickUp, nextTargetMode, isNearTarget, usableHpPotionPercent, respectfulHunt);
+        var player = client.getPlayer();
+        var settings = new AutoPlaySettings(options, active, pickUp, nextTargetMode, isNearTarget, usableHpPotionPercent, respectfulHunt);
+        player.setAutoPlaySettings(settings);
         if(active) {
-            AutoPlayEngine.getInstance().startAutoPlay(client.getPlayer(), setting);
+            AutoPlayEngine.getInstance().startAutoPlay(client.getPlayer());
         } else {
             AutoPlayEngine.getInstance().stopAutoPlay(client.getPlayer());
         }
-        client.sendPacket(new org.l2j.gameserver.network.serverpackets.autoplay.ExAutoPlaySetting(setting));
+        client.sendPacket(new ExAutoPlaySettingResponse(settings));
     }
 }

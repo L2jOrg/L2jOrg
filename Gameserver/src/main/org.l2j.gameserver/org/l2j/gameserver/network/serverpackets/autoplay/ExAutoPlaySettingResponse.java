@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets.autoplay;
 
-import org.l2j.gameserver.engine.autoplay.AutoPlaySetting;
+import org.l2j.gameserver.engine.autoplay.AutoPlaySettings;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -8,11 +8,11 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
 /**
  * @author JoeAlisson
  */
-public class ExAutoPlaySetting extends ServerPacket {
+public class ExAutoPlaySettingResponse extends ServerPacket {
 
-    private final AutoPlaySetting setting;
+    private final AutoPlaySettings setting;
 
-    public ExAutoPlaySetting(AutoPlaySetting setting) {
+    public ExAutoPlaySettingResponse(AutoPlaySettings setting) {
         this.setting = setting;
     }
 

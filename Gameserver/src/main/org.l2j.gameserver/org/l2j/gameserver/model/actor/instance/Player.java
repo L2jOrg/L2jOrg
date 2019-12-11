@@ -21,6 +21,8 @@ import org.l2j.gameserver.data.database.dao.ElementalSpiritDAO;
 import org.l2j.gameserver.data.database.data.CharacterData;
 import org.l2j.gameserver.data.database.data.ElementalSpiritData;
 import org.l2j.gameserver.data.xml.CategoryManager;
+import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
+import org.l2j.gameserver.engine.autoplay.AutoPlaySettings;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.api.elemental.ElementalSpirit;
 import org.l2j.gameserver.api.elemental.ElementalType;
@@ -129,6 +131,7 @@ public final class Player extends Playable {
     private byte vipTier;
     private ElementalSpirit[] spirits;
     private ElementalType activeElementalSpiritType;
+    private AutoPlaySettings autoPlaySettings;
 
     private Player(CharacterData characterData, PlayerTemplate template) {
         super(characterData.getCharId(), template);
@@ -8599,7 +8602,8 @@ public final class Player extends Playable {
     @Override
     public boolean deleteMe() {
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLogout(this), this);
-
+        AutoPlayEngine.getInstance().stopAutoPlay(this);
+        AutoPlayEngine.getInstance().stopAutoPotion(this);
         try {
             for (Zone zone : ZoneManager.getInstance().getZones(this)) {
                 zone.onPlayerLogoutInside(this);
@@ -11189,5 +11193,13 @@ public final class Player extends Playable {
 
         // Both are defenders, friends.
         return true;
+    }
+
+    public void setAutoPlaySettings(AutoPlaySettings autoPlaySettings) {
+        this.autoPlaySettings = autoPlaySettings;
+    }
+
+    public AutoPlaySettings getAutoPlaySettings() {
+        return autoPlaySettings;
     }
 }

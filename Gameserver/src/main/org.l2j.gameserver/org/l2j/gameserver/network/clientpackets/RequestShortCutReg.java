@@ -12,9 +12,6 @@ import static org.l2j.gameserver.network.SystemMessageId.ONLY_MACROS_CAN_BE_REGI
  * @author JoeAlisson
  */
 public final class RequestShortCutReg extends ClientPacket {
-    private static final int AUTO_PLAY_PAGE = 23;
-    private static final int AUTO_POTION_SLOT = 1;
-    private static final int MACRO_SLOT = 0;
 
     private ShortcutType type;
     private int id;
@@ -45,14 +42,14 @@ public final class RequestShortCutReg extends ClientPacket {
             return;
         }
 
-        if(page == AUTO_PLAY_PAGE) {
-            if(slot == MACRO_SLOT && type != ShortcutType.MACRO) {
+        if(page == Shortcut.AUTO_PLAY_PAGE) {
+            if(slot == Shortcut.AUTO_MACRO_SLOT && type != ShortcutType.MACRO) {
                 client.sendPacket(ONLY_MACROS_CAN_BE_REGISTERED);
                 return;
             }
 
             Item item;
-            if(slot == AUTO_POTION_SLOT && ( type != ShortcutType.ITEM || isNull(item = player.getInventory().getItemByObjectId(id)) || !item.isAutoPotion())) {
+            if(slot == Shortcut.AUTO_POTION_SLOT && ( type != ShortcutType.ITEM || isNull(item = player.getInventory().getItemByObjectId(id)) || !item.isAutoPotion())) {
                 return;
             }
         }

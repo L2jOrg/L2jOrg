@@ -1,5 +1,8 @@
 package org.l2j.gameserver.network.clientpackets.autoplay;
 
+import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
+import org.l2j.gameserver.model.Shortcut;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.autoplay.ExActivateAutoShortcut;
 
@@ -22,16 +25,10 @@ public class ExRequestActivateAutoShortcut extends ClientPacket {
 
     @Override
     protected void runImpl() {
-        if(!activate) {
-            client.sendPacket(new ExActivateAutoShortcut(room, activate));
-            return;
-        }
-
         if(room == -1) {
             // TODO auto supply
             client.sendPacket(new ExActivateAutoShortcut(room, activate));
         } else {
-
             var slot = room % 12;
             var page = room / 12;
 
@@ -39,18 +36,33 @@ public class ExRequestActivateAutoShortcut extends ClientPacket {
             var shortcut = player.getShortCut(slot, page);
 
             if (nonNull(shortcut)) {
-                if (page == 23 && slot == 1) { // auto potion
-                    var item = player.getInventory().getItemByObjectId(shortcut.getId());
-                    if (isNull(item) || !item.isAutoPotion()) {
-                        player.deleteShortCut(slot, page);
+                if (page == Shortcut.AUTO_PLAY_PAGE && slot == Shortcut.AUTO_POTION_SLOT) { // auto potion
+                    if (!handleAutoPotion(player, shortcut)) {
                         return;
                     }
                 }
 
                 // TODO auto skill
                 client.sendPacket(new ExActivateAutoShortcut(room, activate));
+            } else {
+                client.sendPacket(new ExActivateAutoShortcut(room, false));
             }
         }
 
+    }
+
+    private boolean handleAutoPotion(Player player, Shortcut shortcut) {
+        var item = player.getInventory().getItemByObjectId(shortcut.getId());
+        if (isNull(item) || !item.isAutoPotion()) {
+            player.deleteShortCut(shortcut.getSlot(), shortcut.getPage());
+            client.sendPacket(new ExActivateAutoShortcut(room, false));
+            return false;
+        }
+        if(activate) {
+            AutoPlayEngine.getInstance().startAutoPotion(player);
+        } else {
+            AutoPlayEngine.getInstance().stopAutoPotion(player);
+        }
+        return true;
     }
 }
