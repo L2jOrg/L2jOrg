@@ -13,7 +13,7 @@ public class ExCoinCount extends ServerPacket {
 
     @Override
     protected void writeImpl(GameClient client) throws Exception {
-        writeId(ServerPacketId.EX_COIN_COUNT);
+        writeId(ServerPacketId.EX_BLOOD_COIN_COUNT);
         writeLong(coins);
     }
 }
