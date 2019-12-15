@@ -351,8 +351,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="HpCpHeal">
-				<amount>50</amount>
-				<mode>DIFF</mode>
+				<power>50</power>
 			</effect>
 		</effects>
 	</skill>

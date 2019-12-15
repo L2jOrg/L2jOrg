@@ -19,7 +19,7 @@ public final class EffectHandler {
 
     }
 
-    public void registerHandler(String name, Function<StatsSet, AbstractEffect> handlerFactory) {
+    public void registerFactory(String name, Function<StatsSet, AbstractEffect> handlerFactory) {
         _effectHandlerFactories.put(name, handlerFactory);
     }
 
