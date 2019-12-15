@@ -1764,6 +1764,10 @@ public final class Item extends WorldObject {
         return template instanceof EtcItem && ((EtcItem) template).isAutoPotion();
     }
 
+    public boolean isAutoSupply() {
+        return template instanceof EtcItem && ((EtcItem) template).isAutoSupply();
+    }
+
     static class ScheduleLifeTimeTask implements Runnable {
         private static final Logger LOGGER = LoggerFactory.getLogger(ScheduleLifeTimeTask.class);
         private final Item _limitedItem;

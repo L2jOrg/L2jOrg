@@ -43,13 +43,18 @@ public final class RequestShortCutReg extends ClientPacket {
         }
 
         if(page == Shortcut.AUTO_PLAY_PAGE) {
-            if(slot == Shortcut.AUTO_MACRO_SLOT && type != ShortcutType.MACRO) {
+            if (slot == Shortcut.AUTO_MACRO_SLOT && type != ShortcutType.MACRO) {
                 client.sendPacket(ONLY_MACROS_CAN_BE_REGISTERED);
                 return;
             }
 
             Item item;
-            if(slot == Shortcut.AUTO_POTION_SLOT && ( type != ShortcutType.ITEM || isNull(item = player.getInventory().getItemByObjectId(id)) || !item.isAutoPotion())) {
+            if (slot == Shortcut.AUTO_POTION_SLOT && (type != ShortcutType.ITEM || isNull(item = player.getInventory().getItemByObjectId(id)) || !item.isAutoPotion())) {
+                return;
+            }
+        } else if (page == Shortcut.AUTO_SUPPLY_PAGE ) {
+            Item item = player.getInventory().getItemByObjectId(id);
+            if(isNull(item) || !item.isAutoSupply()) {
                 return;
             }
         }

@@ -309,6 +309,7 @@ public enum AbnormalVisualEffect {
     FIREWORKS_015T(318),
     P_CAKE_AVE(319),
     ZARICHE_PRISION_AVE(323),
+    RUDOLPH(324),
     XMAS_HEART_AVE(325),
     XMAS_HAND_AVE(326),
     LUCKYBAG_AVE(327),

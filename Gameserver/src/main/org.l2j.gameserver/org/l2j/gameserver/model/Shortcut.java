@@ -10,6 +10,7 @@ import org.l2j.gameserver.enums.ShortcutType;
 public class Shortcut {
 
     public static final int AUTO_PLAY_PAGE = 23;
+    public static final int AUTO_SUPPLY_PAGE = 22;
     public static final int AUTO_MACRO_SLOT = 0;
     public static final int AUTO_POTION_SLOT = 1;
 
