@@ -4222,7 +4222,7 @@ public final class Player extends Playable {
         stopWaterTask();
 
         AntiFeedManager.getInstance().setLastDeathTime(getObjectId());
-
+        AutoPlayEngine.getInstance().stopTasks(this);
         // FIXME: Karma reduction tempfix.
         if (getReputation() < 0) {
             final int newRep = getReputation() - (getReputation() / 4);
@@ -8602,8 +8602,7 @@ public final class Player extends Playable {
     @Override
     public boolean deleteMe() {
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLogout(this), this);
-        AutoPlayEngine.getInstance().stopAutoPlay(this);
-        AutoPlayEngine.getInstance().stopAutoPotion(this);
+        AutoPlayEngine.getInstance().stopTasks(this);
         try {
             for (Zone zone : ZoneManager.getInstance().getZones(this)) {
                 zone.onPlayerLogoutInside(this);

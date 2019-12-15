@@ -41,6 +41,11 @@ public final class AutoPlayEngine {
 
     }
 
+    public void stopTasks(Player player) {
+        stopAutoPlay(player);
+        stopAutoPotion(player);
+    }
+
     public void startAutoPlay(Player player) {
         players.add(player);
         synchronized (autoPlayTaskLocker) {
@@ -144,7 +149,7 @@ public final class AutoPlayEngine {
                     }
                 }
             }
-        }
+            }
 
         private void useItem(Player player, Item item) {
             var reuseDelay = item.getReuseDelay();
