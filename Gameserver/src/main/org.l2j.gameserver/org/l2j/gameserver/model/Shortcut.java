@@ -9,6 +9,7 @@ import org.l2j.gameserver.enums.ShortcutType;
  */
 public class Shortcut {
 
+    public static final int MAX_SLOTS_PER_PAGE = 12;
     public static final int AUTO_PLAY_PAGE = 23;
     public static final int AUTO_SUPPLY_PAGE = 22;
     public static final int AUTO_MACRO_SLOT = 0;
@@ -17,44 +18,48 @@ public class Shortcut {
     /**
      * Slot from 0 to 11.
      */
-    private final int _slot;
+    private final int slot;
     /**
-     * Page from 0 to 9.
+     * Page from 0 to 23.
      */
-    private final int _page;
+    private final int page;
     /**
      * Type: item, skill, action, macro, recipe, bookmark.
      */
-    private final ShortcutType _type;
+    private final ShortcutType type;
     /**
      * Shortcut ID.
      */
-    private final int _id;
+    private final int id;
     /**
      * Shortcut level (skills).
      */
-    private final int _level;
+    private final int level;
     /**
      * Shortcut level (skills).
      */
-    private final int _subLevel;
+    private final int subLevel;
     /**
      * Character type: 1 player, 2 summon.
      */
-    private final int _characterType;
+    private final int characterType;
     /**
      * Shared reuse group.
      */
-    private int _sharedReuseGroup = -1;
+    private int sharedReuseGroup = -1;
 
     public Shortcut(int slot, int page, ShortcutType type, int id, int level, int subLevel, int characterType) {
-        _slot = slot;
-        _page = page;
-        _type = type;
-        _id = id;
-        _level = level;
-        _subLevel = subLevel;
-        _characterType = characterType;
+        this.slot = slot;
+        this.page = page;
+        this.type = type;
+        this.id = id;
+        this.level = level;
+        this.subLevel = subLevel;
+        this.characterType = characterType;
+    }
+
+    public int getClientId() {
+        return pageAndSlotToClientId(page, slot);
     }
 
     /**
@@ -63,7 +68,7 @@ public class Shortcut {
      * @return the ID
      */
     public int getId() {
-        return _id;
+        return id;
     }
 
     /**
@@ -72,7 +77,7 @@ public class Shortcut {
      * @return the level
      */
     public int getLevel() {
-        return _level;
+        return level;
     }
 
     /**
@@ -81,7 +86,7 @@ public class Shortcut {
      * @return the level
      */
     public int getSubLevel() {
-        return _subLevel;
+        return subLevel;
     }
 
     /**
@@ -90,7 +95,7 @@ public class Shortcut {
      * @return the page
      */
     public int getPage() {
-        return _page;
+        return page;
     }
 
     /**
@@ -99,7 +104,7 @@ public class Shortcut {
      * @return the slot
      */
     public int getSlot() {
-        return _slot;
+        return slot;
     }
 
     /**
@@ -108,7 +113,7 @@ public class Shortcut {
      * @return the type
      */
     public ShortcutType getType() {
-        return _type;
+        return type;
     }
 
     /**
@@ -117,7 +122,7 @@ public class Shortcut {
      * @return the character type
      */
     public int getCharacterType() {
-        return _characterType;
+        return characterType;
     }
 
     /**
@@ -126,7 +131,7 @@ public class Shortcut {
      * @return the shared reuse group
      */
     public int getSharedReuseGroup() {
-        return _sharedReuseGroup;
+        return sharedReuseGroup;
     }
 
     /**
@@ -135,6 +140,10 @@ public class Shortcut {
      * @param sharedReuseGroup the shared reuse group to set
      */
     public void setSharedReuseGroup(int sharedReuseGroup) {
-        _sharedReuseGroup = sharedReuseGroup;
+        this.sharedReuseGroup = sharedReuseGroup;
+    }
+
+    public static int pageAndSlotToClientId(int page, int slot) {
+        return  slot + (page * MAX_SLOTS_PER_PAGE);
     }
 }

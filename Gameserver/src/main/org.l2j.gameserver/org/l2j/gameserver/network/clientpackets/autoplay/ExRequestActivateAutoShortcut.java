@@ -6,6 +6,8 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.autoplay.ExActivateAutoShortcut;
 
+import java.util.stream.IntStream;
+
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 
@@ -25,14 +27,18 @@ public class ExRequestActivateAutoShortcut extends ClientPacket {
 
     @Override
     protected void runImpl() {
+        var player = client.getPlayer();
         if(room == -1) {
-            // TODO auto supply
-            client.sendPacket(new ExActivateAutoShortcut(room, activate));
+            for (int i = 0; i < Shortcut.MAX_SLOTS_PER_PAGE; i++) {
+                var shortcut = player.getShortCut(i, Shortcut.AUTO_SUPPLY_PAGE);
+                if(nonNull(shortcut) && handleAutoSupply(player, shortcut)) {
+                    client.sendPacket(new ExActivateAutoShortcut(shortcut.getId(), activate));
+                }
+            }
         } else {
             var slot = room % 12;
             var page = room / 12;
 
-            var player = client.getPlayer();
             var shortcut = player.getShortCut(slot, page);
 
             if (nonNull(shortcut)) {
@@ -40,8 +46,11 @@ public class ExRequestActivateAutoShortcut extends ClientPacket {
                     if (!handleAutoPotion(player, shortcut)) {
                         return;
                     }
+                } else if(page == Shortcut.AUTO_SUPPLY_PAGE) {
+                    if(!handleAutoSupply(player, shortcut)) {
+                        return;
+                    }
                 }
-
                 // TODO auto skill
                 client.sendPacket(new ExActivateAutoShortcut(room, activate));
             } else {
@@ -49,6 +58,21 @@ public class ExRequestActivateAutoShortcut extends ClientPacket {
             }
         }
 
+    }
+
+    private boolean handleAutoSupply(Player player, Shortcut shortcut) {
+        var item = player.getInventory().getItemByObjectId(shortcut.getId());
+        if(isNull(item) || !item.isAutoSupply()) {
+            player.deleteShortCut(shortcut.getSlot(), shortcut.getPage());
+            client.sendPacket(new ExActivateAutoShortcut(shortcut.getId(), false));
+            return false;
+        }
+        if(activate) {
+            AutoPlayEngine.getInstance().startAutoSupply(player, shortcut.getClientId());
+        } else {
+            AutoPlayEngine.getInstance().stopAutoSupply(player, shortcut.getClientId());
+        }
+        return true;
     }
 
     private boolean handleAutoPotion(Player player, Shortcut shortcut) {

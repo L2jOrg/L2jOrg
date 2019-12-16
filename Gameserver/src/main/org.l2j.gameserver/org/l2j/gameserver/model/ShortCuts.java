@@ -15,9 +15,8 @@ import java.sql.ResultSet;
 import java.util.Map;
 import java.util.TreeMap;
 
-
 public class ShortCuts implements IRestorable {
-    private static final int MAX_SHORTCUTS_PER_BAR = 12;
+
     private static final Logger LOGGER = LoggerFactory.getLogger(ShortCuts.class);
     private final Player _owner;
     private final Map<Integer, Shortcut> shortCuts = new TreeMap<>();
@@ -31,7 +30,7 @@ public class ShortCuts implements IRestorable {
     }
 
     public Shortcut getShortCut(int slot, int page) {
-        Shortcut sc = shortCuts.get(slot + (page * MAX_SHORTCUTS_PER_BAR));
+        Shortcut sc = shortCuts.get(Shortcut.pageAndSlotToClientId(page, slot));
         // Verify shortcut
         if ((sc != null) && (sc.getType() == ShortcutType.ITEM) && (_owner.getInventory().getItemByObjectId(sc.getId()) == null)) {
             deleteShortCut(sc.getSlot(), sc.getPage());
@@ -49,7 +48,7 @@ public class ShortCuts implements IRestorable {
             }
             shortcut.setSharedReuseGroup(item.getSharedReuseGroup());
         }
-        registerShortCutInDb(shortcut, shortCuts.put(shortcut.getSlot() + (shortcut.getPage() * MAX_SHORTCUTS_PER_BAR), shortcut));
+        registerShortCutInDb(shortcut, shortCuts.put(shortcut.getClientId(), shortcut));
     }
 
     private void registerShortCutInDb(Shortcut shortcut, Shortcut oldShortCut) {
@@ -78,7 +77,7 @@ public class ShortCuts implements IRestorable {
      * @param page
      */
     public synchronized void deleteShortCut(int slot, int page) {
-        final Shortcut old = shortCuts.remove(slot + (page * MAX_SHORTCUTS_PER_BAR));
+        final Shortcut old = shortCuts.remove(Shortcut.pageAndSlotToClientId(page, slot));
         if ((old == null) || (_owner == null)) {
             return;
         }
@@ -126,7 +125,8 @@ public class ShortCuts implements IRestorable {
                     final int id = rset.getInt("shortcut_id");
                     final int level = rset.getInt("level");
                     final int subLevel = rset.getInt("sub_level");
-                    shortCuts.put(slot + (page * MAX_SHORTCUTS_PER_BAR), new Shortcut(slot, page, ShortcutType.values()[type], id, level, subLevel, 1));
+                    var shortcut = new Shortcut(slot, page, ShortcutType.values()[type], id, level, subLevel, 1);
+                    shortCuts.put(shortcut.getClientId(), shortcut);
                 }
             }
         } catch (Exception e) {

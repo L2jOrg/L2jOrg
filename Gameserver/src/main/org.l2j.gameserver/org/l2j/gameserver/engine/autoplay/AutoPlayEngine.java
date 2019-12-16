@@ -1,5 +1,7 @@
 package org.l2j.gameserver.engine.autoplay;
 
+import io.github.joealisson.primitive.HashIntSet;
+import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.engine.geo.GeoEngine;
@@ -14,6 +16,7 @@ import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
 
 import java.util.Comparator;
+import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
@@ -30,6 +33,7 @@ public final class AutoPlayEngine {
     private static final int AUTO_PLAY_INTERVAL = 2000;
     private final Set<Player> players = ConcurrentHashMap.newKeySet();
     private final Set<Player> autoPotionPlayers = ConcurrentHashMap.newKeySet();
+    private final Map<Player, IntSet> autoSuppliesPlayers = new ConcurrentHashMap<>();
     private final DoMacro doMacroTask = new DoMacro();
     private final DoAutoSupply doAutoSupply = new DoAutoSupply();
     private ScheduledFuture<?> autoPlayTask;
@@ -44,6 +48,7 @@ public final class AutoPlayEngine {
     public void stopTasks(Player player) {
         stopAutoPlay(player);
         stopAutoPotion(player);
+
     }
 
     public void startAutoPlay(Player player) {
@@ -77,7 +82,36 @@ public final class AutoPlayEngine {
     public void stopAutoPotion(Player player) {
         autoPotionPlayers.remove(player);
         synchronized (autoSupplyTaskLocker) {
-            if(autoPotionPlayers.isEmpty() && nonNull(autoSupplyTask)) {
+            if(autoPotionPlayers.isEmpty() && autoSuppliesPlayers.isEmpty() && nonNull(autoSupplyTask)) {
+                autoSupplyTask.cancel(false);
+                autoSupplyTask = null;
+            }
+        }
+    }
+
+    public void startAutoSupply(Player player, int shortcutClientId) {
+        autoSuppliesPlayers.computeIfAbsent(player, p -> new HashIntSet()).add(shortcutClientId);
+        synchronized (autoSupplyTaskLocker) {
+            if(isNull(autoSupplyTask)) {
+                autoSupplyTask = ThreadPool.scheduleAtFixedDelay(doAutoSupply, AUTO_PLAY_INTERVAL, AUTO_PLAY_INTERVAL);
+            }
+        }
+    }
+
+    public void stopAutoSupply(Player player, int shortcutClientId) {
+        var shortcuts = autoSuppliesPlayers.get(player);
+        if(nonNull(shortcuts)) {
+            shortcuts.remove(shortcutClientId);
+            if(shortcuts.isEmpty()) {
+                stopAutoSupply(player);
+            }
+        }
+    }
+
+    public void stopAutoSupply(Player player) {
+        autoSuppliesPlayers.remove(player);
+        synchronized (autoSupplyTaskLocker) {
+            if(autoSuppliesPlayers.isEmpty() && autoPotionPlayers.isEmpty() && nonNull(autoSupplyTask)) {
                 autoSupplyTask.cancel(false);
                 autoSupplyTask = null;
             }
@@ -149,7 +183,7 @@ public final class AutoPlayEngine {
                     }
                 }
             }
-            }
+        }
 
         private void useItem(Player player, Item item) {
             var reuseDelay = item.getReuseDelay();
