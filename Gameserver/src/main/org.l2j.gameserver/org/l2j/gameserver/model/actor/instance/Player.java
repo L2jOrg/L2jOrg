@@ -1507,6 +1507,10 @@ public final class Player extends Playable {
         return shortCuts.getShortCut(slot, page);
     }
 
+    public Shortcut getShortCut(int shortcutId) {
+        return shortCuts.getShortCut(shortcutId);
+    }
+
     /**
      * Add a L2shortCut to the Player _shortCuts
      *

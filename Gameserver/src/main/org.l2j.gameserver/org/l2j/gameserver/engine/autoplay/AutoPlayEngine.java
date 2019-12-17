@@ -48,7 +48,7 @@ public final class AutoPlayEngine {
     public void stopTasks(Player player) {
         stopAutoPlay(player);
         stopAutoPotion(player);
-
+        stopAutoSupply(player);
     }
 
     public void startAutoPlay(Player player) {
@@ -133,7 +133,7 @@ public final class AutoPlayEngine {
             var world = World.getInstance();
 
             players.parallelStream().forEach(player -> {
-                if(isNull(player) || player.getAI().getIntention() == CtrlIntention.AI_INTENTION_PICK_UP || player.isInsideZone(ZoneType.PEACE))  {
+                if(isNull(player) || canNotUseAutoPlay(player))  {
                     return;
                 }
 
@@ -160,7 +160,8 @@ public final class AutoPlayEngine {
             });
         }
         private boolean canBeTargeted(Player player, AutoPlaySettings setting, Monster monster) {
-            return !monster.isDead() && monster.isAutoAttackable(player) && (!setting.isRespectfulMode() || isNull(monster.getTarget()) || monster.getTarget().equals(player)) && GeoEngine.getInstance().canSeeTarget(player, monster);
+            return !monster.isDead() && monster.isAutoAttackable(player) && (!setting.isRespectfulMode() || isNull(monster.getTarget()) || monster.getTarget().equals(player)) &&
+                    GeoEngine.getInstance().canSeeTarget(player, monster) && GeoEngine.getInstance().canMoveToTarget(player, monster);
         }
     }
 
@@ -168,9 +169,46 @@ public final class AutoPlayEngine {
 
         @Override
         public void run() {
+            useAutoPotion();
+            useAutoSupplies();
+        }
+
+        private void useAutoSupplies() {
+            var entryIt = autoSuppliesPlayers.entrySet().iterator();
+            while (entryIt.hasNext()) {
+                var entry = entryIt.next();
+                var player = entry.getKey();
+
+                if(canNotUseAutoPlay(player)) {
+                    continue;
+                }
+
+                var shortcuts = entry.getValue();
+                var shortcutIt = shortcuts.iterator();
+                while (shortcutIt.hasNext()) {
+                    var shortcut = player.getShortCut(shortcutIt.next());
+                    if(nonNull(shortcut)) {
+                        var item = player.getInventory().getItemByObjectId(shortcut.getId());
+                        useItem(player, item);
+                    }  else {
+                        shortcutIt.remove();
+                    }
+                }
+
+                if(shortcuts.isEmpty()) {
+                    entryIt.remove();;
+                }
+            }
+        }
+
+        private void useAutoPotion() {
             var it = autoPotionPlayers.iterator();
             while (it.hasNext()) {
                 var player = it.next();
+                if (canNotUseAutoPlay(player)) {
+                    continue;
+                }
+
                 var settings = player.getAutoPlaySettings();
                 if(settings.getUsableHpPotionPercent() >= player.getCurrentHpPercent()) {
 
@@ -196,5 +234,9 @@ public final class AutoPlayEngine {
                 }
             }
         }
+    }
+
+    private boolean canNotUseAutoPlay(Player player) {
+        return player.getAI().getIntention() == CtrlIntention.AI_INTENTION_PICK_UP || player.hasBlockActions() || player.isControlBlocked() || player.isAlikeDead() || player.isInsideZone(ZoneType.PEACE);
     }
 }

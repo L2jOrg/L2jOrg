@@ -36,12 +36,12 @@ public class ExRequestActivateAutoShortcut extends ClientPacket {
                 }
             }
         } else {
-            var slot = room % 12;
-            var page = room / 12;
-
-            var shortcut = player.getShortCut(slot, page);
+            var shortcut = player.getShortCut(room);
 
             if (nonNull(shortcut)) {
+                var slot = room % 12;
+                var page = room / 12;
+
                 if (page == Shortcut.AUTO_PLAY_PAGE && slot == Shortcut.AUTO_POTION_SLOT) { // auto potion
                     if (!handleAutoPotion(player, shortcut)) {
                         return;

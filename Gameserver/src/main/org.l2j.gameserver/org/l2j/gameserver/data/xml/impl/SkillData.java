@@ -360,8 +360,7 @@ public class SkillData extends GameXmlReader {
             }
         }
 
-        values.forEach((level, subLevelMap) ->
-        {
+        values.forEach((level, subLevelMap) -> {
             subLevelMap.forEach((subLevel, value) ->
             {
                 info.computeIfAbsent(level, k -> new HashMap<>()).computeIfAbsent(subLevel, k -> new StatsSet()).set(node.getNodeName(), value);

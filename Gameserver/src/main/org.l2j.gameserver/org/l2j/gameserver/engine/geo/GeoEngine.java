@@ -7,7 +7,10 @@ import org.l2j.gameserver.engine.geo.settings.GeoEngineSettings;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.model.actor.instance.Monster;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.instancezone.Instance;
+import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.World;
@@ -540,6 +543,10 @@ public class GeoEngine {
         return Math.abs(goz - gtz) < (GeoStructure.CELL_HEIGHT * 4);
     }
 
+    public boolean canMoveToTarget(Creature creature, ILocational location) {
+        return canMoveToTarget(creature.getX(), creature.getY(), creature.getZ(), location.getX(), location.getY(), location.getZ(), creature.getInstanceWorld());
+    }
+
     /**
      * Check movement from coordinates to coordinates.
      *
@@ -759,6 +766,7 @@ public class GeoEngine {
     public static GeoEngine getInstance() {
         return Singleton.INSTANCE;
     }
+
 
     private static class Singleton {
         private static final GeoEngine INSTANCE = getSettings(GeoEngineSettings.class).isEnabledPathFinding() ? new GeoEnginePathFinding() : new GeoEngine();

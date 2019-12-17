@@ -1,6 +1,7 @@
 package org.l2j.gameserver.model.effects;
 
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
@@ -16,7 +17,7 @@ import org.slf4j.LoggerFactory;
  *
  * @author Zoey76
  */
-public abstract class AbstractEffect {
+public abstract class AbstractEffect implements Cloneable {
     protected static final Logger LOGGER = LoggerFactory.getLogger(AbstractEffect.class);
 
     private int _ticks;
