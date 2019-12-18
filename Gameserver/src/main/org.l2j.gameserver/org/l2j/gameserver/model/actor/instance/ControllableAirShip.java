@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.actor.instance;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.idfactory.IdFactory;
-import org.l2j.gameserver.model.actor.stat.ControllableAirShipStat;
+import org.l2j.gameserver.model.actor.stat.ControllableAirShipStats;
 import org.l2j.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -32,13 +32,13 @@ public class ControllableAirShip extends AirShip {
     }
 
     @Override
-    public ControllableAirShipStat getStat() {
-        return (ControllableAirShipStat) super.getStat();
+    public ControllableAirShipStats getStats() {
+        return (ControllableAirShipStats) super.getStats();
     }
 
     @Override
     public void initCharStat() {
-        setStat(new ControllableAirShipStat(this));
+        setStat(new ControllableAirShipStats(this));
     }
 
     @Override

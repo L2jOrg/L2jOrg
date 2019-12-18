@@ -7,12 +7,12 @@ import org.l2j.gameserver.instancemanager.DuelManager;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.stat.PlayerStat;
+import org.l2j.gameserver.model.actor.stat.PlayerStats;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.entity.Duel;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.stats.Formulas;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -116,7 +116,7 @@ public class PcStatus extends PlayableStatus {
             // Check and calculate transfered damage
             final Summon summon = getActiveChar().getFirstServitor();
             if ((summon != null) && GameUtils.checkIfInRange(1000, getActiveChar(), summon, true)) {
-                tDmg = ((int) value * (int) getActiveChar().getStat().getValue(Stats.TRANSFER_DAMAGE_SUMMON_PERCENT, 0)) / 100;
+                tDmg = ((int) value * (int) getActiveChar().getStats().getValue(Stat.TRANSFER_DAMAGE_SUMMON_PERCENT, 0)) / 100;
 
                 // Only transfer dmg up to current HP, it should not be killed
                 tDmg = Math.min((int) summon.getCurrentHp() - 1, tDmg);
@@ -127,7 +127,7 @@ public class PcStatus extends PlayableStatus {
                 }
             }
 
-            mpDam = ((int) value * (int) getActiveChar().getStat().getValue(Stats.MANA_SHIELD_PERCENT, 0)) / 100;
+            mpDam = ((int) value * (int) getActiveChar().getStats().getValue(Stat.MANA_SHIELD_PERCENT, 0)) / 100;
 
             if (mpDam > 0) {
                 mpDam = (int) (value - mpDam);
@@ -149,7 +149,7 @@ public class PcStatus extends PlayableStatus {
             if ((caster != null) && (getActiveChar().getParty() != null) && GameUtils.checkIfInRange(1000, getActiveChar(), caster, true) && !caster.isDead() && (getActiveChar() != caster) && getActiveChar().getParty().getMembers().contains(caster)) {
                 int transferDmg = 0;
 
-                transferDmg = ((int) value * (int) getActiveChar().getStat().getValue(Stats.TRANSFER_DAMAGE_TO_PLAYER, 0)) / 100;
+                transferDmg = ((int) value * (int) getActiveChar().getStats().getValue(Stat.TRANSFER_DAMAGE_TO_PLAYER, 0)) / 100;
                 transferDmg = Math.min((int) caster.getCurrentHp() - 1, transferDmg);
                 if (transferDmg > 0) {
                     int membersInRange = 0;
@@ -258,7 +258,7 @@ public class PcStatus extends PlayableStatus {
     public final void setCurrentCp(double newCp, boolean broadcastPacket) {
         // Get the Max CP of the Creature
         final int currentCp = (int) _currentCp;
-        final int maxCp = getActiveChar().getStat().getMaxCp();
+        final int maxCp = getActiveChar().getStats().getMaxCp();
 
         synchronized (this) {
             if (getActiveChar().isDead()) {
@@ -296,21 +296,21 @@ public class PcStatus extends PlayableStatus {
 
     @Override
     protected void doRegeneration() {
-        final PlayerStat charstat = getActiveChar().getStat();
+        final PlayerStats charstat = getActiveChar().getStats();
 
         // Modify the current CP of the Creature and broadcast Server->Client packet StatusUpdate
         if (_currentCp < charstat.getMaxRecoverableCp()) {
-            setCurrentCp(_currentCp + getActiveChar().getStat().getValue(Stats.REGENERATE_CP_RATE), false);
+            setCurrentCp(_currentCp + getActiveChar().getStats().getValue(Stat.REGENERATE_CP_RATE), false);
         }
 
         // Modify the current HP of the Creature and broadcast Server->Client packet StatusUpdate
         if (getCurrentHp() < charstat.getMaxRecoverableHp()) {
-            setCurrentHp(getCurrentHp() + getActiveChar().getStat().getValue(Stats.REGENERATE_HP_RATE), false);
+            setCurrentHp(getCurrentHp() + getActiveChar().getStats().getValue(Stat.REGENERATE_HP_RATE), false);
         }
 
         // Modify the current MP of the Creature and broadcast Server->Client packet StatusUpdate
         if (getCurrentMp() < charstat.getMaxRecoverableMp()) {
-            setCurrentMp(getCurrentMp() + getActiveChar().getStat().getValue(Stats.REGENERATE_MP_RATE), false);
+            setCurrentMp(getCurrentMp() + getActiveChar().getStats().getValue(Stat.REGENERATE_MP_RATE), false);
         }
 
         getActiveChar().broadcastStatusUpdate(); // send the StatusUpdate packet

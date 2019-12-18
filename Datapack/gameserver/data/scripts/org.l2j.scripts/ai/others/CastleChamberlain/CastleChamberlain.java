@@ -540,7 +540,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 						final Door door = castle.getDoor(doors[0]);
 						if (door != null)
 						{
-							final int currentLevel = door.getStat().getUpgradeHpRatio();
+							final int currentLevel = door.getStats().getUpgradeHpRatio();
 							if (currentLevel >= level)
 							{
 								final NpcHtmlMessage html = getHtmlPacket(player, npc, "chamberlain-15.html");

@@ -3,87 +3,74 @@ package handlers.effecthandlers;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.events.EventType;
-import org.l2j.gameserver.model.events.ListenersContainer;
 import org.l2j.gameserver.model.events.impl.character.OnCreatureHpChange;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.function.Consumer;
+
+import static java.util.Objects.isNull;
 
 /**
  * @author Mobius
  */
-abstract class AbstractConditionalHpEffect extends AbstractStatEffect
-{
-	private final int _hpPercent;
-	private final Map<Creature, AtomicBoolean> _updates = new ConcurrentHashMap<>();
+abstract class AbstractConditionalHpEffect extends AbstractStatEffect {
+
+	private final int hpPercent;
+	private final Map<Creature, AtomicBoolean> updates = new ConcurrentHashMap<>();
 	
-	protected AbstractConditionalHpEffect(StatsSet params, Stats stat)
-	{
+	protected AbstractConditionalHpEffect(StatsSet params, Stat stat) {
 		super(params, stat);
-		_hpPercent = params.getInt("hpPercent", 0);
+		hpPercent = params.getInt("hpPercent", 0);
 	}
 	
 	@Override
-	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
-	{
-		// Augmentation option
-		if (skill == null)
-		{
+	public void onStart(Creature effector, Creature effected, Skill skill, Item item) {
+		if (isNull(skill)) {
 			return;
 		}
-		
-		// Register listeners
-		if ((_hpPercent > 0) && !_updates.containsKey(effected))
-		{
-			_updates.put(effected, new AtomicBoolean(canPump(effector, effected, skill)));
-			final ListenersContainer container = effected;
-			container.addListener(new ConsumerEventListener(container, EventType.ON_CREATURE_HP_CHANGE, (OnCreatureHpChange event) -> onHpChange(event), this));
+
+		if (hpPercent > 0 && !updates.containsKey(effected)) {
+			updates.put(effected, new AtomicBoolean(canPump(effector, effected, skill)));
+			effected.addListener(new ConsumerEventListener(effected, EventType.ON_CREATURE_HP_CHANGE, (Consumer<OnCreatureHpChange>) this::onHpChange, this));
 		}
 	}
 	
 	@Override
-	public void onExit(Creature effector, Creature effected, Skill skill)
-	{
-		// Augmentation option
-		if (skill == null)
-		{
+	public void onExit(Creature effector, Creature effected, Skill skill) {
+		if (isNull(skill)) {
 			return;
 		}
 		
 		effected.removeListenerIf(listener -> listener.getOwner() == this);
-		_updates.remove(effected);
+		updates.remove(effected);
 	}
 	
 	@Override
-	public boolean canPump(Creature effector, Creature effected, Skill skill)
-	{
-		return (_hpPercent <= 0) || (effected.getCurrentHpPercent() <= _hpPercent);
+	public boolean canPump(Creature effector, Creature effected, Skill skill) {
+		return hpPercent <= 0 || effected.getCurrentHpPercent() <= hpPercent;
 	}
 	
-	private void onHpChange(OnCreatureHpChange event)
-	{
-		final Creature activeChar = event.getCreature();
-		final AtomicBoolean update = _updates.get(activeChar);
-		if (update == null) {
+	private void onHpChange(OnCreatureHpChange event) {
+		final Creature creature = event.getCreature();
+		final AtomicBoolean update = updates.get(creature);
+		if (isNull(update)) {
 			return;
 		}
-		if (canPump(null, activeChar, null))
-		{
-			if (update.get())
-			{
+
+		if (canPump(null, creature, null)) {
+			if (update.get()) {
 				update.set(false);
-				activeChar.getStat().recalculateStats(true);
+				creature.getStats().recalculateStats(true);
 			}
-		}
-		else if (!update.get())
-		{
+		} else if (!update.get()) {
 			update.set(true);
-			activeChar.getStat().recalculateStats(true);
+			creature.getStats().recalculateStats(true);
 		}
 	}
 }

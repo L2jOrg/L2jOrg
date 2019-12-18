@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.enums.AttributeType;
@@ -21,55 +5,32 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
+
+import java.util.Collections;
 
 /**
  * @author Sdw
  */
-public class DefenceAttribute extends AbstractEffect
-{
-	private final AttributeType _attribute;
-	private final double _amount;
+public class DefenceAttribute extends AbstractEffect {
+	private final AttributeType attribute;
+	private final double amount;
 	
-	public DefenceAttribute(StatsSet params)
-	{
-		_amount = params.getDouble("amount", 0);
-		_attribute = params.getEnum("attribute", AttributeType.class, AttributeType.FIRE);
+	public DefenceAttribute(StatsSet params) {
+		amount = params.getDouble("amount", 0);
+		attribute = params.getEnum("attribute", AttributeType.class, AttributeType.FIRE);
 	}
 	
 	@Override
-	public void pump(Creature effected, Skill skill)
-	{
-		Stats stat = Stats.FIRE_RES;
-		
-		switch (_attribute)
-		{
-			case WATER:
-			{
-				stat = Stats.WATER_RES;
-				break;
-			}
-			case WIND:
-			{
-				stat = Stats.WIND_RES;
-				break;
-			}
-			case EARTH:
-			{
-				stat = Stats.EARTH_RES;
-				break;
-			}
-			case HOLY:
-			{
-				stat = Stats.HOLY_RES;
-				break;
-			}
-			case DARK:
-			{
-				stat = Stats.DARK_RES;
-				break;
-			}
-		}
-		effected.getStat().mergeAdd(stat, _amount);
+	public void pump(Creature effected, Skill skill) {
+		Stat stat = switch (attribute) {
+			case WATER -> Stat.WATER_RES;
+			case WIND ->  Stat.WIND_RES;
+			case EARTH -> Stat.EARTH_RES;
+			case HOLY ->  Stat.HOLY_RES;
+			case DARK ->  Stat.DARK_RES;
+			default -> Stat.FIRE_RES;
+		};
+		effected.getStats().mergeAdd(stat, amount);
 	}
 }

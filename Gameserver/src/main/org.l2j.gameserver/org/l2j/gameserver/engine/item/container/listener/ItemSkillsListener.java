@@ -43,7 +43,7 @@ public final class ItemSkillsListener implements PlayerInventoryListener {
             item.getAugmentation().removeBonus(player);
         }
 
-        player.getStat().recalculateStats(true);
+        player.getStats().recalculateStats(true);
 
         it.forEachSkill(ItemSkillType.ON_ENCHANT, holder -> {
             if(verifySkillActiveIfAddtionalAgathion(slot, holder)) {
@@ -175,7 +175,7 @@ public final class ItemSkillsListener implements PlayerInventoryListener {
         }
 
         // Recalculate all stats
-        player.getStat().recalculateStats(true);
+        player.getStats().recalculateStats(true);
 
         item.getTemplate().forEachSkill(ItemSkillType.ON_ENCHANT, holder -> {
 

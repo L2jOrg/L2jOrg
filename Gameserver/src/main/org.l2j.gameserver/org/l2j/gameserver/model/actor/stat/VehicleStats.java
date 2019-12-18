@@ -16,33 +16,30 @@
  */
 package org.l2j.gameserver.model.actor.stat;
 
-import org.l2j.gameserver.model.actor.instance.Door;
+import org.l2j.gameserver.model.actor.Vehicle;
 
-/**
- * @author malyelfik
- */
-public class DoorStat extends CharStat {
-    private int _upgradeHpRatio = 1;
+public class VehicleStats extends CreatureStats {
+    private float _moveSpeed = 0;
+    private int _rotationSpeed = 0;
 
-    public DoorStat(Door activeChar) {
+    public VehicleStats(Vehicle activeChar) {
         super(activeChar);
     }
 
     @Override
-    public Door getCreature() {
-        return (Door) super.getCreature();
+    public double getMoveSpeed() {
+        return _moveSpeed;
     }
 
-    @Override
-    public int getMaxHp() {
-        return super.getMaxHp() * _upgradeHpRatio;
+    public final void setMoveSpeed(float speed) {
+        _moveSpeed = speed;
     }
 
-    public int getUpgradeHpRatio() {
-        return _upgradeHpRatio;
+    public final double getRotationSpeed() {
+        return _rotationSpeed;
     }
 
-    public void setUpgradeHpRatio(int ratio) {
-        _upgradeHpRatio = ratio;
+    public final void setRotationSpeed(int speed) {
+        _rotationSpeed = speed;
     }
 }

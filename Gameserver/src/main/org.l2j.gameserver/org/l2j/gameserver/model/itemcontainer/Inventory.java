@@ -738,23 +738,23 @@ public abstract class Inventory extends ItemContainer {
     }
 
     public int getTalismanSlots() {
-        return getOwner().getActingPlayer().getStat().getTalismanSlots();
+        return getOwner().getActingPlayer().getStats().getTalismanSlots();
     }
 
     public int getArtifactSlots() {
-        return min(getOwner().getActingPlayer().getStat().getArtifactSlots(), 3);
+        return min(getOwner().getActingPlayer().getStats().getArtifactSlots(), 3);
     }
 
     public int getBroochJewelSlots() {
-        return getOwner().getActingPlayer().getStat().getBroochJewelSlots();
+        return getOwner().getActingPlayer().getStats().getBroochJewelSlots();
     }
 
     public int getAgathionSlots() {
-        return getOwner().getActingPlayer().getStat().getAgathionSlots();
+        return getOwner().getActingPlayer().getStats().getAgathionSlots();
     }
 
     public boolean canEquipCloak() {
-        return getOwner().getActingPlayer().getStat().canEquipCloak();
+        return getOwner().getActingPlayer().getStats().canEquipCloak();
     }
 
     /**

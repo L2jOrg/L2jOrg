@@ -14,7 +14,7 @@ import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.instancemanager.*;
 import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.instance.*;
-import org.l2j.gameserver.model.actor.stat.NpcStat;
+import org.l2j.gameserver.model.actor.stat.NpcStats;
 import org.l2j.gameserver.model.actor.status.NpcStatus;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.entity.Castle;
@@ -196,13 +196,13 @@ public class Npc extends Creature {
     }
 
     @Override
-    public NpcStat getStat() {
-        return (NpcStat) super.getStat();
+    public NpcStats getStats() {
+        return (NpcStats) super.getStats();
     }
 
     @Override
     public void initCharStat() {
-        setStat(new NpcStat(this));
+        setStat(new NpcStats(this));
     }
 
     @Override

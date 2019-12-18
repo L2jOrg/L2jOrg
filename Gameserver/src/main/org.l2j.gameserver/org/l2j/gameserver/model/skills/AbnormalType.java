@@ -1,6 +1,5 @@
 package org.l2j.gameserver.model.skills;
 
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

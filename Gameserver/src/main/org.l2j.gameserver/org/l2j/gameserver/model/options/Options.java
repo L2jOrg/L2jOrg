@@ -151,7 +151,7 @@ public class Options {
             }
         }
 
-        player.getStat().recalculateStats(true);
+        player.getStats().recalculateStats(true);
         player.sendSkillList();
     }
 
@@ -179,7 +179,7 @@ public class Options {
             }
         }
 
-        player.getStat().recalculateStats(true);
+        player.getStats().recalculateStats(true);
         player.sendSkillList();
     }
 

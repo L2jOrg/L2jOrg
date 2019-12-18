@@ -48,7 +48,7 @@ public class PetStatusUpdate extends ServerPacket {
         writeInt((int) _summon.getCurrentMp());
         writeInt(_summon.getMaxMp());
         writeInt(_summon.getLevel());
-        writeLong(_summon.getStat().getExp());
+        writeLong(_summon.getStats().getExp());
         writeLong(_summon.getExpForThisLevel()); // 0% absolute value
         writeLong(_summon.getExpForNextLevel()); // 100% absolute value
         writeInt(0x01); // TODO: Find me!

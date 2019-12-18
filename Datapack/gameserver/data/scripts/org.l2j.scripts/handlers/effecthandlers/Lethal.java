@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.effecthandlers;
 
 import org.l2j.commons.util.Rnd;
@@ -25,25 +9,24 @@ import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Formulas;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
+import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.util.GameUtils.*;
 
 /**
  * Lethal effect implementation.
  * @author Adry_85
  */
-public final class Lethal extends AbstractEffect
-{
-	private final double _fullLethal;
-	private final double _halfLethal;
+public final class Lethal extends AbstractEffect {
+	private final double fullLethal;
+	private final double halfLethal;
 	
-	public Lethal(StatsSet params)
-	{
-		_fullLethal = params.getDouble("fullLethal", 0);
-		_halfLethal = params.getDouble("halfLethal", 0);
+	public Lethal(StatsSet params) {
+		fullLethal = params.getDouble("fullLethal", 0);
+		halfLethal = params.getDouble("halfLethal", 0);
 	}
 	
 	@Override
@@ -59,71 +42,54 @@ public final class Lethal extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, Item item)
-	{
-		if (isPlayer(effector) && !effector.getAccessLevel().canGiveDamage())
-		{
+	public void instant(Creature effector, Creature effected, Skill skill, Item item) {
+		if (isPlayer(effector) && !effector.getAccessLevel().canGiveDamage()) {
 			return;
 		}
 		
-		if (skill.getMagicLevel() < (effected.getLevel() - 6))
-		{
+		if (skill.getMagicLevel() < (effected.getLevel() - 6)) {
 			return;
 		}
 		
-		if (!effected.isLethalable() || effected.isHpBlocked())
-		{
+		if (!effected.isLethalable() || effected.isHpBlocked()) {
 			return;
 		}
 		
-		if (isPlayer(effector) && isPlayer(effected) && effected.isAffected(EffectFlag.DUELIST_FURY) && !effector.isAffected(EffectFlag.DUELIST_FURY))
-		{
+		if (isPlayer(effector) && isPlayer(effected) && effected.isAffected(EffectFlag.DUELIST_FURY) && !effector.isAffected(EffectFlag.DUELIST_FURY)) {
 			return;
 		}
 		
 		final double chanceMultiplier = Formulas.calcAttributeBonus(effector, effected, skill) * Formulas.calcGeneralTraitBonus(effector, effected, skill.getTraitType(), false);
 		
 		// Calculate instant kill resistance first.
-		if (Rnd.get(100) < effected.getStat().getValue(Stats.INSTANT_KILL_RESIST, 0))
-		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_EVADED_C2_S_ATTACK);
-			sm.addString(effected.getName());
-			sm.addString(effector.getName());
-			effected.sendPacket(sm);
-			final SystemMessage sm2 = SystemMessage.getSystemMessage(SystemMessageId.C1_S_ATTACK_WENT_ASTRAY);
-			sm2.addString(effector.getName());
-			effector.sendPacket(sm2);
+		if (Rnd.get(100) < effected.getStats().getValue(Stat.INSTANT_KILL_RESIST, 0)) {
+			effected.sendPacket(getSystemMessage(SystemMessageId.C1_HAS_EVADED_C2_S_ATTACK).addString(effected.getName()).addString(effector.getName()));
+			effector.sendPacket(getSystemMessage(SystemMessageId.C1_S_ATTACK_WENT_ASTRAY).addString(effector.getName()));
 		}
 		// Lethal Strike
-		else if (Rnd.get(100) < (_fullLethal * chanceMultiplier))
-		{
+		else if (Rnd.get(100) < fullLethal * chanceMultiplier) {
 			// for Players CP and HP is set to 1.
-			if (isPlayer(effected))
-			{
+			if (isPlayer(effected)) {
 				effected.setCurrentCp(1);
 				effected.setCurrentHp(1);
 				effected.sendPacket(SystemMessageId.LETHAL_STRIKE);
 			}
 			// for Monsters HP is set to 1.
-			else if (isMonster(effected) || isSummon(effected))
-			{
+			else if (isMonster(effected) || isSummon(effected)) {
 				effected.setCurrentHp(1);
 			}
 			effector.sendPacket(SystemMessageId.HIT_WITH_LETHAL_STRIKE);
 		}
 		// Half-Kill
-		else if (Rnd.get(100) < (_halfLethal * chanceMultiplier))
-		{
+		else if (Rnd.get(100) < (halfLethal * chanceMultiplier)) {
 			// for Players CP is set to 1.
-			if (isPlayer(effected))
-			{
+			if (isPlayer(effected)) {
 				effected.setCurrentCp(1);
 				effected.sendPacket(SystemMessageId.HALF_KILL);
 				effected.sendPacket(SystemMessageId.YOUR_CP_WAS_DRAINED_BECAUSE_YOU_WERE_HIT_WITH_A_HALF_KILL_SKILL);
 			}
 			// for Monsters HP is set to 50%.
-			else if (isMonster(effected) || isSummon(effected))
-			{
+			else if (isMonster(effected) || isSummon(effected)) {
 				effected.setCurrentHp(effected.getCurrentHp() * 0.5);
 			}
 			effector.sendPacket(SystemMessageId.HALF_KILL);

@@ -18,7 +18,7 @@ package org.l2j.gameserver.model.stats.finalizers;
 
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.stats.IStatsFunction;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 
 import java.util.Optional;
 
@@ -27,12 +27,12 @@ import java.util.Optional;
  */
 public class VampiricChanceFinalizer implements IStatsFunction {
     @Override
-    public double calc(Creature creature, Optional<Double> base, Stats stat) {
+    public double calc(Creature creature, Optional<Double> base, Stat stat) {
         throwIfPresent(base);
 
-        final double amount = creature.getStat().getValue(Stats.ABSORB_DAMAGE_PERCENT, 0) * 100;
-        final double vampiricSum = creature.getStat().getVampiricSum();
+        final double amount = creature.getStats().getValue(Stat.ABSORB_DAMAGE_PERCENT, 0) * 100;
+        final double vampiricSum = creature.getStats().getVampiricSum();
 
-        return amount > 0 ? Stats.defaultValue(creature, stat, Math.min(1.0, vampiricSum / amount / 100)) : 0;
+        return amount > 0 ? Stat.defaultValue(creature, stat, Math.min(1.0, vampiricSum / amount / 100)) : 0;
     }
 }

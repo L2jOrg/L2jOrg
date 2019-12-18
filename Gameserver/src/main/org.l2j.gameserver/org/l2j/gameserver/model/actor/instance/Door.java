@@ -13,7 +13,7 @@ import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.stat.DoorStat;
+import org.l2j.gameserver.model.actor.stat.DoorStats;
 import org.l2j.gameserver.model.actor.status.DoorStatus;
 import org.l2j.gameserver.model.actor.templates.DoorTemplate;
 import org.l2j.gameserver.model.entity.Castle;
@@ -103,12 +103,12 @@ public final class Door extends Creature {
 
     @Override
     public void initCharStat() {
-        setStat(new DoorStat(this));
+        setStat(new DoorStats(this));
     }
 
     @Override
-    public DoorStat getStat() {
-        return (DoorStat) super.getStat();
+    public DoorStats getStats() {
+        return (DoorStats) super.getStats();
     }
 
     /**

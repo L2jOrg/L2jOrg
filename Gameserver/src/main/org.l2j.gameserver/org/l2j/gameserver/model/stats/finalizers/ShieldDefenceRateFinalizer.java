@@ -18,7 +18,7 @@ package org.l2j.gameserver.model.stats.finalizers;
 
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.stats.IStatsFunction;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 
 import java.util.Optional;
 
@@ -27,9 +27,9 @@ import java.util.Optional;
  */
 public class ShieldDefenceRateFinalizer implements IStatsFunction {
     @Override
-    public double calc(Creature creature, Optional<Double> base, Stats stat) {
+    public double calc(Creature creature, Optional<Double> base, Stat stat) {
         throwIfPresent(base);
 
-        return Stats.defaultValue(creature, stat, calcWeaponPlusBaseValue(creature, stat));
+        return Stat.defaultValue(creature, stat, calcWeaponPlusBaseValue(creature, stat));
     }
 }

@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.enums.ShotType;
@@ -26,10 +10,10 @@ import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Formulas;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
+import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.util.GameUtils.isAttackable;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
@@ -37,28 +21,26 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * Energy Attack effect implementation.
  * @author NosBit
  */
-public final class EnergyAttack extends AbstractEffect
-{
-	private final double _power;
-	private final int _chargeConsume;
-	private final int _criticalChance;
-	private final boolean _ignoreShieldDefence;
-	private final boolean _overHit;
-	private final double _pDefMod;
+public final class EnergyAttack extends AbstractEffect {
+
+	private final double power;
+	private final int chargeConsume;
+	private final int criticalChance;
+	private final boolean ignoreShieldDefence;
+	private final boolean overHit;
+	private final double pDefMod;
 	
-	public EnergyAttack(StatsSet params)
-	{
-		_power = params.getDouble("power", 0);
-		_criticalChance = params.getInt("criticalChance", 0);
-		_ignoreShieldDefence = params.getBoolean("ignoreShieldDefence", false);
-		_overHit = params.getBoolean("overHit", false);
-		_chargeConsume = params.getInt("chargeConsume", 0);
-		_pDefMod = params.getDouble("pDefMod", 1.0);
+	public EnergyAttack(StatsSet params) {
+		power = params.getDouble("power", 0);
+		criticalChance = params.getInt("criticalChance", 0);
+		ignoreShieldDefence = params.getBoolean("ignoreShieldDefence", false);
+		overHit = params.getBoolean("overHit", false);
+		chargeConsume = params.getInt("chargeConsume", 0);
+		pDefMod = params.getDouble("pDefMod", 1.0);
 	}
 	
 	@Override
-	public boolean calcSuccess(Creature effector, Creature effected, Skill skill)
-	{
+	public boolean calcSuccess(Creature effector, Creature effected, Skill skill) {
 		// TODO: Verify this on retail
 		return !Formulas.calcPhysicalSkillEvasion(effector, effected, skill);
 	}
@@ -76,55 +58,38 @@ public final class EnergyAttack extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, Item item)
-	{
-		if (!isPlayer(effector))
-		{
+	public void instant(Creature effector, Creature effected, Skill skill, Item item) {
+		if (!isPlayer(effector)) {
 			return;
 		}
 		
 		final Player attacker = effector.getActingPlayer();
 		
-		final int charge = Math.min(_chargeConsume, attacker.getCharges());
+		final int charge = Math.min(chargeConsume, attacker.getCharges());
 		
-		if (!attacker.decreaseCharges(charge))
-		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
-			sm.addSkillName(skill);
-			attacker.sendPacket(sm);
+		if (!attacker.decreaseCharges(charge)) {
+			attacker.sendPacket(getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(skill));
 			return;
 		}
 		
-		if (_overHit && isAttackable(effected))
-		{
+		if (overHit && isAttackable(effected)) {
 			((Attackable) effected).overhitEnabled(true);
 		}
 		
-		double defence = effected.getPDef() * _pDefMod;
+		double defence = effected.getPDef() * pDefMod;
 		
-		if (!_ignoreShieldDefence)
-		{
+		if (!ignoreShieldDefence) {
 			final byte shield = Formulas.calcShldUse(attacker, effected);
-			switch (shield)
-			{
-				case Formulas.SHIELD_DEFENSE_SUCCEED:
-				{
-					defence += effected.getShldDef();
-					break;
-				}
-				case Formulas.SHIELD_DEFENSE_PERFECT_BLOCK:
-				{
-					defence = -1;
-					break;
-				}
+			switch (shield) {
+				case Formulas.SHIELD_DEFENSE_SUCCEED -> defence += effected.getShldDef();
+				case Formulas.SHIELD_DEFENSE_PERFECT_BLOCK -> defence = -1;
 			}
 		}
 		
 		double damage = 1;
-		final boolean critical = Formulas.calcCrit(_criticalChance, attacker, effected, skill);
+		final boolean critical = Formulas.calcCrit(criticalChance, attacker, effected, skill);
 		
-		if (defence != -1)
-		{
+		if (defence != -1) {
 			// Trait, elements
 			final double weaponTraitMod = Formulas.calcWeaponTraitBonus(attacker, effected);
 			final double generalTraitMod = Formulas.calcGeneralTraitBonus(attacker, effected, skill.getTraitType(), true);
@@ -136,26 +101,23 @@ public final class EnergyAttack extends AbstractEffect
 			final double energyChargesBoost = 1 + (charge * 0.1); // 10% bonus damage for each charge used.
 			final double critMod = critical ? Formulas.calcCritDamage(attacker, effected, skill) : 1;
 			double ssmod = 1;
-			if (skill.useSoulShot())
-			{
-				if (attacker.isChargedShot(ShotType.SOULSHOTS))
-				{
-					ssmod = 2 * attacker.getStat().getValue(Stats.SHOTS_BONUS); // 2.04 for dual weapon?
-				}
-				else if (attacker.isChargedShot(ShotType.BLESSED_SOULSHOTS))
-				{
-					ssmod = 4 * attacker.getStat().getValue(Stats.SHOTS_BONUS);
+
+			if (skill.useSoulShot()) {
+				if (attacker.isChargedShot(ShotType.SOULSHOTS)) {
+					ssmod = 2 * attacker.getStats().getValue(Stat.SHOTS_BONUS); // 2.04 for dual weapon?
+				} else if (attacker.isChargedShot(ShotType.BLESSED_SOULSHOTS)) {
+					ssmod = 4 * attacker.getStats().getValue(Stat.SHOTS_BONUS);
 				}
 			}
 			
 			// ...................________Initial Damage_________...__Charges Additional Damage__...____________________________________
 			// ATTACK CALCULATION ((77 * ((pAtk * lvlMod) + power) * (1 + (0.1 * chargesConsumed)) / pdef) * skillPower) + skillPowerAdd
 			// ```````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^```^^^^^^^^^^^^^^^^^^^^^^^^^^^^^```^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-			final double baseMod = (77 * ((attacker.getPAtk() * attacker.getLevelMod()) + _power + effector.getStat().getValue(Stats.SKILL_POWER_ADD, 0))) / defence;
+			final double baseMod = (77 * ((attacker.getPAtk() * attacker.getLevelMod()) + power + effector.getStats().getValue(Stat.SKILL_POWER_ADD, 0))) / defence;
 			damage = baseMod * ssmod * critMod * weaponTraitMod * generalTraitMod * weaknessMod * attributeMod * energyChargesBoost * pvpPveMod;
 		}
 
-		damage = Math.max(0, damage * effector.getStat().getValue(Stats.PHYSICAL_SKILL_POWER, 1));
+		damage = Math.max(0, damage * effector.getStats().getValue(Stat.PHYSICAL_SKILL_POWER, 1));
 		
 		effector.doAttack(damage, effected, skill, false, false, critical, false);
 	}

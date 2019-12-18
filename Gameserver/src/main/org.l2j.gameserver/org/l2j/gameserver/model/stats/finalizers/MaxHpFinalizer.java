@@ -8,7 +8,7 @@ import org.l2j.gameserver.model.items.BodyPart;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 
 import java.util.Optional;
 
@@ -20,7 +20,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public class MaxHpFinalizer implements IStatsFunction {
     @Override
-    public double calc(Creature creature, Optional<Double> base, Stats stat) {
+    public double calc(Creature creature, Optional<Double> base, Stat stat) {
         throwIfPresent(base);
 
         double baseValue = creature.getTemplate().getBaseValue(stat, 0);
@@ -47,6 +47,6 @@ public class MaxHpFinalizer implements IStatsFunction {
         }
         final double conBonus = creature.getCON() > 0 ? BaseStats.CON.calcBonus(creature) : 1.;
         baseValue *= conBonus;
-        return Stats.defaultValue(creature, stat, baseValue);
+        return Stat.defaultValue(creature, stat, baseValue);
     }
 }

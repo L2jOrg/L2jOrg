@@ -11,7 +11,7 @@ import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.VehiclePathPoint;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.stat.VehicleStat;
+import org.l2j.gameserver.model.actor.stat.VehicleStats;
 import org.l2j.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.items.Weapon;
@@ -74,10 +74,10 @@ public abstract class Vehicle extends Creature {
         if ((_currentPath != null) && (_currentPath.length > 0)) {
             final VehiclePathPoint point = _currentPath[0];
             if (point.getMoveSpeed() > 0) {
-                getStat().setMoveSpeed(point.getMoveSpeed());
+                getStats().setMoveSpeed(point.getMoveSpeed());
             }
             if (point.getRotationSpeed() > 0) {
-                getStat().setRotationSpeed(point.getRotationSpeed());
+                getStats().setRotationSpeed(point.getRotationSpeed());
             }
 
             getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(point.getX(), point.getY(), point.getZ(), 0));
@@ -101,10 +101,10 @@ public abstract class Vehicle extends Creature {
                         _currentPath = null;
                     } else {
                         if (point.getMoveSpeed() > 0) {
-                            getStat().setMoveSpeed(point.getMoveSpeed());
+                            getStats().setMoveSpeed(point.getMoveSpeed());
                         }
                         if (point.getRotationSpeed() > 0) {
-                            getStat().setRotationSpeed(point.getRotationSpeed());
+                            getStats().setRotationSpeed(point.getRotationSpeed());
                         }
 
                         final MoveData m = new MoveData();
@@ -137,13 +137,13 @@ public abstract class Vehicle extends Creature {
     }
 
     @Override
-    public VehicleStat getStat() {
-        return (VehicleStat) super.getStat();
+    public VehicleStats getStats() {
+        return (VehicleStats) super.getStats();
     }
 
     @Override
     public void initCharStat() {
-        setStat(new VehicleStat(this));
+        setStat(new VehicleStats(this));
     }
 
     public boolean isInDock() {

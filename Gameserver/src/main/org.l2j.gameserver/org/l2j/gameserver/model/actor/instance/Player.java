@@ -40,7 +40,7 @@ import org.l2j.gameserver.model.actor.*;
 import org.l2j.gameserver.model.actor.appearance.PlayerAppearance;
 import org.l2j.gameserver.model.actor.request.AbstractRequest;
 import org.l2j.gameserver.model.actor.request.impl.CaptchaRequest;
-import org.l2j.gameserver.model.actor.stat.PlayerStat;
+import org.l2j.gameserver.model.actor.stat.PlayerStats;
 import org.l2j.gameserver.model.actor.status.PcStatus;
 import org.l2j.gameserver.model.actor.tasks.player.*;
 import org.l2j.gameserver.model.actor.templates.PlayerTemplate;
@@ -79,7 +79,7 @@ import org.l2j.gameserver.model.skills.targets.TargetType;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.model.stats.MoveType;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.model.variables.AccountVariables;
 import org.l2j.gameserver.model.variables.PlayerVariables;
 import org.l2j.gameserver.network.Disconnection;
@@ -209,7 +209,7 @@ public final class Player extends Playable {
     }
 
     public double getActiveElementalSpiritAttack() {
-        return getStat().getElementalSpiritPower(activeElementalSpiritType, zeroIfNullOrElse(getElementalSpirit(activeElementalSpiritType), ElementalSpirit::getAttack));
+        return getStats().getElementalSpiritPower(activeElementalSpiritType, zeroIfNullOrElse(getElementalSpirit(activeElementalSpiritType), ElementalSpirit::getAttack));
     }
 
     public double getFireSpiritDefense() {
@@ -229,19 +229,19 @@ public final class Player extends Playable {
     }
 
     public double getElementalSpiritDefenseOf(ElementalType type) {
-        return getStat().getElementalSpiritDefense(type, zeroIfNullOrElse(getElementalSpirit(type), ElementalSpirit::getDefense));
+        return getStats().getElementalSpiritDefense(type, zeroIfNullOrElse(getElementalSpirit(type), ElementalSpirit::getDefense));
     }
 
     public double getElementalSpiritCritRate() {
-        return getStat().getElementalSpiritCriticalRate(zeroIfNullOrElse(getElementalSpirit(activeElementalSpiritType), ElementalSpirit::getCriticalRate));
+        return getStats().getElementalSpiritCriticalRate(zeroIfNullOrElse(getElementalSpirit(activeElementalSpiritType), ElementalSpirit::getCriticalRate));
     }
 
     public double getElementalSpiritCritDamage() {
-        return getStat().getElementalSpiritCriticalDamage(zeroIfNullOrElse(getElementalSpirit(activeElementalSpiritType), ElementalSpirit::getCriticalDamage));
+        return getStats().getElementalSpiritCriticalDamage(zeroIfNullOrElse(getElementalSpirit(activeElementalSpiritType), ElementalSpirit::getCriticalDamage));
     }
 
     public double getElementalSpiritXpBonus() {
-        return getStat().getElementalSpiritXpBonus();
+        return getStats().getElementalSpiritXpBonus();
     }
 
     public ElementalSpirit getElementalSpirit(ElementalType type) {
@@ -790,16 +790,16 @@ public final class Player extends Playable {
         Player player = new Player(character, template);
 
         player.setHeading(character.getHeading());
-        player.getStat().setExp(character.getExp());
-        player.getStat().setLevel(character.getLevel());
-        player.getStat().setSp(character.getSp());
+        player.getStats().setExp(character.getExp());
+        player.getStats().setLevel(character.getLevel());
+        player.getStats().setSp(character.getSp());
         player.setReputation(character.getReputation());
         player.setFame(character.getFame());
         player.setPvpKills(character.getPvP());
         player.setPkKills(character.getPk());
         player.setOnlineTime(character.getOnlineTime());
         player.setNoble(character.isNobless());
-        player.getStat().setVitalityPoints(character.getVitalityPoints());
+        player.getStats().setVitalityPoints(character.getVitalityPoints());
 
         player.setHero(Hero.getInstance().isHero(objectId));
 
@@ -960,7 +960,7 @@ public final class Player extends Playable {
             }
 
             // Recalculate all stats
-            player.getStat().recalculateStats(false);
+            player.getStats().recalculateStats(false);
 
             // Update the overloaded status of the Player
             player.refreshOverloaded(false);
@@ -1174,13 +1174,13 @@ public final class Player extends Playable {
     }
 
     @Override
-    public final PlayerStat getStat() {
-        return (PlayerStat) super.getStat();
+    public final PlayerStats getStats() {
+        return (PlayerStats) super.getStats();
     }
 
     @Override
     public void initCharStat() {
-        setStat(new PlayerStat(this));
+        setStat(new PlayerStats(this));
     }
 
     @Override
@@ -1237,7 +1237,7 @@ public final class Player extends Playable {
      */
     @Override
     public final int getLevel() {
-        return getStat().getLevel();
+        return getStats().getLevel();
     }
 
     public boolean isInStoreMode() {
@@ -2107,7 +2107,7 @@ public final class Player extends Playable {
      * @return the Experience of the Player.
      */
     public long getExp() {
-        return getStat().getExp();
+        return getStats().getExp();
     }
 
     /**
@@ -2120,7 +2120,7 @@ public final class Player extends Playable {
             exp = 0;
         }
 
-        getStat().setExp(exp);
+        getStats().setExp(exp);
     }
 
     /**
@@ -2330,7 +2330,7 @@ public final class Player extends Playable {
      * @return the SP amount of the Player.
      */
     public long getSp() {
-        return getStat().getSp();
+        return getStats().getSp();
     }
 
     /**
@@ -2343,7 +2343,7 @@ public final class Player extends Playable {
             sp = 0;
         }
 
-        super.getStat().setSp(sp);
+        super.getStats().setSp(sp);
     }
 
     /**
@@ -4259,13 +4259,13 @@ public final class Player extends Playable {
             // Classic calculation.
             if (GameUtils.isPlayable(killer) && (getReputation() < 0) && (_pkKills >= Config.KARMA_PK_LIMIT)) {
                 isKarmaDrop = true;
-                dropPercent = Config.KARMA_RATE_DROP * getStat().getValue(Stats.REDUCE_DEATH_PENALTY_BY_PVP, 1);
+                dropPercent = Config.KARMA_RATE_DROP * getStats().getValue(Stat.REDUCE_DEATH_PENALTY_BY_PVP, 1);
                 dropEquip = Config.KARMA_RATE_DROP_EQUIP;
                 dropEquipWeapon = Config.KARMA_RATE_DROP_EQUIP_WEAPON;
                 dropItem = Config.KARMA_RATE_DROP_ITEM;
                 dropLimit = Config.KARMA_DROP_LIMIT;
             } else if (GameUtils.isNpc(killer)) {
-                dropPercent = Config.PLAYER_RATE_DROP * (killer.isRaid() ? getStat().getValue(Stats.REDUCE_DEATH_PENALTY_BY_RAID, 1) : getStat().getValue(Stats.REDUCE_DEATH_PENALTY_BY_MOB, 1));
+                dropPercent = Config.PLAYER_RATE_DROP * (killer.isRaid() ? getStats().getValue(Stat.REDUCE_DEATH_PENALTY_BY_RAID, 1) : getStats().getValue(Stat.REDUCE_DEATH_PENALTY_BY_MOB, 1));
                 dropEquip = Config.PLAYER_RATE_DROP_EQUIP;
                 dropEquipWeapon = Config.PLAYER_RATE_DROP_EQUIP_WEAPON;
                 dropItem = Config.PLAYER_RATE_DROP_ITEM;
@@ -4457,7 +4457,7 @@ public final class Player extends Playable {
     public void restoreExp(double restorePercent) {
         if (model.getExpBeforeDeath() > 0) {
             // Restore the specified % of lost experience.
-            getStat().addExp(Math.round(((model.getExpBeforeDeath() - getExp()) * restorePercent) / 100));
+            getStats().addExp(Math.round(((model.getExpBeforeDeath() - getExp()) * restorePercent) / 100));
             model.setExpBeforeDeath(0);
         }
     }
@@ -4478,11 +4478,11 @@ public final class Player extends Playable {
 
         if (killer != null) {
             if (killer.isRaid()) {
-                percentLost *= getStat().getValue(Stats.REDUCE_EXP_LOST_BY_RAID, 1);
+                percentLost *= getStats().getValue(Stat.REDUCE_EXP_LOST_BY_RAID, 1);
             } else if (GameUtils.isMonster(killer)) {
-                percentLost *= getStat().getValue(Stats.REDUCE_EXP_LOST_BY_MOB, 1);
+                percentLost *= getStats().getValue(Stat.REDUCE_EXP_LOST_BY_MOB, 1);
             } else if (GameUtils.isPlayable(killer)) {
-                percentLost *= getStat().getValue(Stats.REDUCE_EXP_LOST_BY_PVP, 1);
+                percentLost *= getStats().getValue(Stat.REDUCE_EXP_LOST_BY_PVP, 1);
             }
         }
 
@@ -4495,9 +4495,9 @@ public final class Player extends Playable {
         long lostExp = 0;
         if (!Event.isParticipant(this)) {
             if (lvl < ExperienceData.getInstance().getMaxLevel()) {
-                lostExp = Math.round(((getStat().getExpForLevel(lvl + 1) - getStat().getExpForLevel(lvl)) * percentLost) / 100);
+                lostExp = Math.round(((getStats().getExpForLevel(lvl + 1) - getStats().getExpForLevel(lvl)) * percentLost) / 100);
             } else {
-                lostExp = Math.round(((getStat().getExpForLevel(ExperienceData.getInstance().getMaxLevel()) - getStat().getExpForLevel(ExperienceData.getInstance().getMaxLevel() - 1)) * percentLost) / 100);
+                lostExp = Math.round(((getStats().getExpForLevel(ExperienceData.getInstance().getMaxLevel()) - getStats().getExpForLevel(ExperienceData.getInstance().getMaxLevel() - 1)) * percentLost) / 100);
             }
         }
 
@@ -4506,7 +4506,7 @@ public final class Player extends Playable {
         }
 
         model.setExpBeforeDeath(getExp());
-        getStat().removeExp(lostExp);
+        getStats().removeExp(lostExp);
     }
 
     /**
@@ -5423,7 +5423,7 @@ public final class Player extends Playable {
             statement.setInt(31, _baseClass);
             statement.setInt(32, isNoble() ? 1 : 0);
             statement.setLong(33, 0);
-            statement.setInt(34, PlayerStat.MIN_VITALITY_POINTS);
+            statement.setInt(34, PlayerStats.MIN_VITALITY_POINTS);
             statement.setDate(35, new Date(_createDate.getTimeInMillis()));
             statement.executeUpdate();
         } catch (Exception e) {
@@ -5657,9 +5657,9 @@ public final class Player extends Playable {
 
     private void storeCharBase() {
         // Get the exp, level, and sp of base class to store in base table
-        final long exp = getStat().getBaseExp();
-        final int level = getStat().getBaseLevel();
-        final long sp = getStat().getBaseSp();
+        final long exp = getStats().getBaseExp();
+        final int level = getStats().getBaseLevel();
+        final long sp = getStats().getBaseSp();
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement statement = con.prepareStatement(UPDATE_CHARACTER)) {
             statement.setInt(1, level);
@@ -5711,7 +5711,7 @@ public final class Player extends Playable {
             statement.setLong(41, getClanJoinExpiryTime());
             statement.setString(42, getName());
             statement.setInt(43, _bookmarkslot);
-            statement.setInt(44, getStat().getBaseVitalityPoints());
+            statement.setInt(44, getStats().getBaseVitalityPoints());
             statement.setString(45, _lang);
 
             statement.setInt(46, getPcCafePoints());
@@ -7670,7 +7670,7 @@ public final class Player extends Playable {
             final SubClass newClass = new SubClass();
             newClass.setClassId(classId);
             newClass.setClassIndex(classIndex);
-            newClass.setVitalityPoints(PlayerStat.MAX_VITALITY_POINTS);
+            newClass.setVitalityPoints(PlayerStats.MAX_VITALITY_POINTS);
             if (isDualClass) {
                 newClass.setIsDualClass(true);
                 newClass.setExp(ExperienceData.getInstance().getExpForLevel(Config.BASE_DUALCLASS_LEVEL));
@@ -8068,7 +8068,7 @@ public final class Player extends Playable {
 
     public void startWaterTask() {
         if (!isDead() && (_taskWater == null)) {
-            final int timeinwater = (int) getStat().getValue(Stats.BREATH, 60000);
+            final int timeinwater = (int) getStats().getValue(Stat.BREATH, 60000);
 
             sendPacket(new SetupGauge(getObjectId(), 2, timeinwater));
             _taskWater = ThreadPool.scheduleAtFixedRate(new WaterTask(this), timeinwater, 1000);
@@ -8368,15 +8368,15 @@ public final class Player extends Playable {
 
     @Override
     public void addExpAndSp(double addToExp, double addToSp) {
-        getStat().addExpAndSp(addToExp, addToSp, false);
+        getStats().addExpAndSp(addToExp, addToSp, false);
     }
 
     public void addExpAndSp(double addToExp, double addToSp, boolean useVitality) {
-        getStat().addExpAndSp(addToExp, addToSp, useVitality);
+        getStats().addExpAndSp(addToExp, addToSp, useVitality);
     }
 
     public void removeExpAndSp(long removeExp, long removeSp) {
-        getStat().removeExpAndSp(removeExp, removeSp, true);
+        getStats().removeExpAndSp(removeExp, removeSp, true);
     }
 
     @Override
@@ -8906,7 +8906,7 @@ public final class Player extends Playable {
         } else if (getRace() == Race.DWARF) {
             ivlim = Config.INVENTORY_MAXIMUM_DWARF;
         }
-        return ivlim + (int) getStat().getValue(Stats.INVENTORY_NORMAL, 0);
+        return ivlim + (int) getStats().getValue(Stat.INVENTORY_NORMAL, 0);
     }
 
     public int getWareHouseLimit() {
@@ -8917,7 +8917,7 @@ public final class Player extends Playable {
             whlim = Config.WAREHOUSE_SLOTS_NO_DWARF;
         }
 
-        whlim += (int) getStat().getValue(Stats.STORAGE_PRIVATE, 0);
+        whlim += (int) getStats().getValue(Stat.STORAGE_PRIVATE, 0);
 
         return whlim;
     }
@@ -8931,7 +8931,7 @@ public final class Player extends Playable {
             pslim = Config.MAX_PVTSTORESELL_SLOTS_OTHER;
         }
 
-        pslim += (int) getStat().getValue(Stats.TRADE_SELL, 0);
+        pslim += (int) getStats().getValue(Stat.TRADE_SELL, 0);
 
         return pslim;
     }
@@ -8944,20 +8944,20 @@ public final class Player extends Playable {
         } else {
             pblim = Config.MAX_PVTSTOREBUY_SLOTS_OTHER;
         }
-        pblim += (int) getStat().getValue(Stats.TRADE_BUY, 0);
+        pblim += (int) getStats().getValue(Stat.TRADE_BUY, 0);
 
         return pblim;
     }
 
     public int getDwarfRecipeLimit() {
         int recdlim = Config.DWARF_RECIPE_LIMIT;
-        recdlim += (int) getStat().getValue(Stats.RECIPE_DWARVEN, 0);
+        recdlim += (int) getStats().getValue(Stat.RECIPE_DWARVEN, 0);
         return recdlim;
     }
 
     public int getCommonRecipeLimit() {
         int recclim = Config.COMMON_RECIPE_LIMIT;
-        recclim += (int) getStat().getValue(Stats.RECIPE_COMMON, 0);
+        recclim += (int) getStats().getValue(Stat.RECIPE_COMMON, 0);
         return recclim;
     }
 
@@ -9225,15 +9225,15 @@ public final class Player extends Playable {
     }
 
     public int getVitalityPoints() {
-        return getStat().getVitalityPoints();
+        return getStats().getVitalityPoints();
     }
 
     public void setVitalityPoints(int points, boolean quiet) {
-        getStat().setVitalityPoints(points, quiet);
+        getStats().setVitalityPoints(points, quiet);
     }
 
     public void updateVitalityPoints(int points, boolean useRates, boolean quiet) {
-        getStat().updateVitalityPoints(points, useRates, quiet);
+        getStats().updateVitalityPoints(points, useRates, quiet);
     }
 
     public void checkItemRestriction() {
@@ -10704,7 +10704,7 @@ public final class Player extends Playable {
      * @return The amount of times player can use world chat
      */
     public int getWorldChatPoints() {
-        return (int) getStat().getValue(Stats.WORLD_CHAT_POINTS, Config.WORLD_CHAT_POINTS_PER_DAY);
+        return (int) getStats().getValue(Stat.WORLD_CHAT_POINTS, Config.WORLD_CHAT_POINTS_PER_DAY);
     }
 
     /**
@@ -10763,7 +10763,7 @@ public final class Player extends Playable {
      * @return the maximum amount of points that player can use
      */
     public int getMaxSummonPoints() {
-        return (int) getStat().getValue(Stats.MAX_SUMMON_POINTS, 0);
+        return (int) getStats().getValue(Stat.MAX_SUMMON_POINTS, 0);
     }
 
     /**

@@ -119,7 +119,7 @@ public class CharSummonTable {
         if (!pet.isRespawned()) {
             pet.setCurrentHp(pet.getMaxHp());
             pet.setCurrentMp(pet.getMaxMp());
-            pet.getStat().setExp(pet.getExpForThisLevel());
+            pet.getStats().setExp(pet.getExpForThisLevel());
             pet.setCurrentFed(pet.getMaxFed());
         }
 

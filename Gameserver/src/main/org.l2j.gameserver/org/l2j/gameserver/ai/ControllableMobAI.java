@@ -125,7 +125,7 @@ public final class ControllableMobAI extends AttackableAI {
             // check distant skills
 
             for (Skill sk : actor.getAllSkills()) {
-                if (GameUtils.checkIfInRange(sk.getCastRange(), actor, target, true) && !actor.isSkillDisabled(sk) && (actor.getCurrentMp() > actor.getStat().getMpConsume(sk))) {
+                if (GameUtils.checkIfInRange(sk.getCastRange(), actor, target, true) && !actor.isSkillDisabled(sk) && (actor.getCurrentMp() > actor.getStats().getMpConsume(sk))) {
                     actor.doCast(sk);
                     return;
                 }
@@ -168,7 +168,7 @@ public final class ControllableMobAI extends AttackableAI {
             for (Skill sk : actor.getAllSkills()) {
                 final int castRange = sk.getCastRange();
 
-                if (((castRange * castRange) >= dist2) && !actor.isSkillDisabled(sk) && (actor.getCurrentMp() > actor.getStat().getMpConsume(sk))) {
+                if (((castRange * castRange) >= dist2) && !actor.isSkillDisabled(sk) && (actor.getCurrentMp() > actor.getStats().getMpConsume(sk))) {
                     actor.doCast(sk);
                     return;
                 }
@@ -202,7 +202,7 @@ public final class ControllableMobAI extends AttackableAI {
             for (Skill sk : actor.getAllSkills()) {
                 final int castRange = sk.getCastRange();
 
-                if (((castRange * castRange) >= dist2) && !actor.isSkillDisabled(sk) && (actor.getCurrentMp() > actor.getStat().getMpConsume(sk))) {
+                if (((castRange * castRange) >= dist2) && !actor.isSkillDisabled(sk) && (actor.getCurrentMp() > actor.getStats().getMpConsume(sk))) {
                     actor.doCast(sk);
                     return;
                 }
@@ -257,7 +257,7 @@ public final class ControllableMobAI extends AttackableAI {
                 for (Skill sk : actor.getAllSkills()) {
                     final int castRange = sk.getCastRange();
 
-                    if (((castRange * castRange) >= dist2) && !actor.isSkillDisabled(sk) && (actor.getCurrentMp() > actor.getStat().getMpConsume(sk))) {
+                    if (((castRange * castRange) >= dist2) && !actor.isSkillDisabled(sk) && (actor.getCurrentMp() > actor.getStats().getMpConsume(sk))) {
                         actor.doCast(sk);
                         return;
                     }
@@ -291,7 +291,7 @@ public final class ControllableMobAI extends AttackableAI {
                 for (Skill sk : actor.getAllSkills()) {
                     final int castRange = sk.getCastRange();
 
-                    if (((castRange * castRange) >= dist2) && !actor.isSkillDisabled(sk) && (actor.getCurrentMp() < actor.getStat().getMpConsume(sk))) {
+                    if (((castRange * castRange) >= dist2) && !actor.isSkillDisabled(sk) && (actor.getCurrentMp() < actor.getStats().getMpConsume(sk))) {
                         actor.doCast(sk);
                         return;
                     }

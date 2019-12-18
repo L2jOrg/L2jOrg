@@ -15,7 +15,7 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.WeaponType;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.stats.Formulas;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.mission.ExOneDayReceiveRewardList;
@@ -28,7 +28,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import static java.util.Objects.isNull;
 import static org.l2j.gameserver.enums.UserInfoType.CURRENT_HPMPCP_EXP_SP;
 
-public class PlayerStat extends PlayableStat {
+public class PlayerStats extends PlayableStats {
     public static final int MAX_VITALITY_POINTS = 140000;
     public static final int MIN_VITALITY_POINTS = 0;
     private static final int FANCY_FISHING_ROD_SKILL = 21484;
@@ -40,7 +40,7 @@ public class PlayerStat extends PlayableStat {
     private boolean _cloakSlot = false;
     private int _vitalityPoints = 0;
 
-    public PlayerStat(Player activeChar) {
+    public PlayerStats(Player activeChar) {
         super(activeChar);
     }
 
@@ -214,8 +214,8 @@ public class PlayerStat extends PlayableStat {
             final Pet pet = sPet;
             if (pet.getPetData().isSynchLevel() && (pet.getLevel() != getLevel())) {
                 final byte availableLevel = (byte) Math.min(pet.getPetData().getMaxLevel(), getLevel());
-                pet.getStat().setLevel(availableLevel);
-                pet.getStat().getExpForLevel(availableLevel);
+                pet.getStats().setLevel(availableLevel);
+                pet.getStats().getExpForLevel(availableLevel);
                 pet.setCurrentHp(pet.getMaxHp());
                 pet.setCurrentMp(pet.getMaxMp());
                 pet.broadcastPacket(new SocialAction(player.getObjectId(), SocialAction.LEVEL_UP));
@@ -384,7 +384,7 @@ public class PlayerStat extends PlayableStat {
     }
 
     public double getVitalityExpBonus() {
-        return (getVitalityPoints() > 0) ? getValue(Stats.VITALITY_EXP_RATE, Config.RATE_VITALITY_EXP_MULTIPLIER) : 1.0;
+        return (getVitalityPoints() > 0) ? getValue(Stat.VITALITY_EXP_RATE, Config.RATE_VITALITY_EXP_MULTIPLIER) : 1.0;
     }
 
     /*
@@ -435,7 +435,7 @@ public class PlayerStat extends PlayableStat {
 
             if (points < 0) // vitality consumed
             {
-                final int stat = (int) getValue(Stats.VITALITY_CONSUME_RATE, 1);
+                final int stat = (int) getValue(Stat.VITALITY_CONSUME_RATE, 1);
 
                 if (stat == 0) {
                     return;
@@ -476,7 +476,7 @@ public class PlayerStat extends PlayableStat {
         vitality = getVitalityExpBonus();
 
         // Bonus exp from skills
-        bonusExp = 1 + (getValue(Stats.BONUS_EXP, 0) / 100);
+        bonusExp = 1 + (getValue(Stat.BONUS_EXP, 0) / 100);
 
         if (vitality > 1.0) {
             bonus += (vitality - 1);
@@ -504,7 +504,7 @@ public class PlayerStat extends PlayableStat {
         vitality = getVitalityExpBonus();
 
         // Bonus sp from skills
-        bonusSp = 1 + (getValue(Stats.BONUS_SP, 0) / 100);
+        bonusSp = 1 + (getValue(Stat.BONUS_SP, 0) / 100);
 
         if (vitality > 1.0) {
             bonus += (vitality - 1);
@@ -529,7 +529,7 @@ public class PlayerStat extends PlayableStat {
      * @return the maximum brooch jewel count
      */
     public int getBroochJewelSlots() {
-        return (int) getValue(Stats.BROOCH_JEWELS, 0);
+        return (int) getValue(Stat.BROOCH_JEWELS, 0);
     }
 
     /**
@@ -538,7 +538,7 @@ public class PlayerStat extends PlayableStat {
      * @return the maximum agathion count
      */
     public int getAgathionSlots() {
-        return (int) getValue(Stats.AGATHION_SLOTS, 0);
+        return (int) getValue(Stat.AGATHION_SLOTS, 0);
     }
 
     /**
@@ -547,11 +547,11 @@ public class PlayerStat extends PlayableStat {
      * @return the maximum artifact book count
      */
     public int getArtifactSlots() {
-        return (int) getValue(Stats.ARTIFACT_SLOTS, 0);
+        return (int) getValue(Stat.ARTIFACT_SLOTS, 0);
     }
 
     public double getElementalSpiritXpBonus() {
-        return getValue(Stats.ELEMENTAL_SPIRIT_BONUS_XP, 1);
+        return getValue(Stat.ELEMENTAL_SPIRIT_BONUS_XP, 1);
     }
 
     public double getElementalSpiritPower(ElementalType type, double base) {
@@ -559,11 +559,11 @@ public class PlayerStat extends PlayableStat {
     }
 
     public double getElementalSpiritCriticalRate(int base) {
-        return getValue(Stats.ELEMENTAL_SPIRIT_CRITICAL_RATE, base);
+        return getValue(Stat.ELEMENTAL_SPIRIT_CRITICAL_RATE, base);
     }
 
     public double getElementalSpiritCriticalDamage(double base) {
-        return getValue(Stats.ELEMENTAL_SPIRIT_CRITICAL_DAMAGE, base);
+        return getValue(Stat.ELEMENTAL_SPIRIT_CRITICAL_DAMAGE, base);
     }
 
     public double getElementalSpiritDefense(ElementalType type, double base) {
@@ -576,7 +576,7 @@ public class PlayerStat extends PlayableStat {
 
         final Player player = getCreature();
         if (player.hasAbnormalType(AbnormalType.ABILITY_CHANGE) && player.hasServitors()) {
-            player.getServitors().values().forEach(servitor -> servitor.getStat().recalculateStats(broadcast));
+            player.getServitors().values().forEach(servitor -> servitor.getStats().recalculateStats(broadcast));
         }
     }
 }

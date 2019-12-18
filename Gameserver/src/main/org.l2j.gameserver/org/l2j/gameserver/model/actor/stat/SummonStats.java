@@ -3,8 +3,8 @@ package org.l2j.gameserver.model.actor.stat;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Summon;
 
-public class SummonStat extends PlayableStat {
-    public SummonStat(Summon activeChar) {
+public class SummonStats extends PlayableStats {
+    public SummonStats(Summon activeChar) {
         super(activeChar);
     }
 

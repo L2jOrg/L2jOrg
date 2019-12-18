@@ -24,18 +24,18 @@ import java.util.stream.Stream;
 
 import static org.l2j.gameserver.util.GameUtils.isSummon;
 
-public class CharStat {
+public class CreatureStats {
     private final Creature _activeChar;
-    private final Map<Stats, Double> _statsAdd = new EnumMap<>(Stats.class);
-    private final Map<Stats, Double> _statsMul = new EnumMap<>(Stats.class);
-    private final Map<Stats, Map<MoveType, Double>> _moveTypeStats = new ConcurrentHashMap<>();
+    private final Map<Stat, Double> statsAdd = new EnumMap<>(Stat.class);
+    private final Map<Stat, Double> _statsMul = new EnumMap<>(Stat.class);
+    private final Map<Stat, Map<MoveType, Double>> _moveTypeStats = new ConcurrentHashMap<>();
     private final Map<Integer, Double> _reuseStat = new ConcurrentHashMap<>();
     private final Map<Integer, Double> _mpConsumeStat = new ConcurrentHashMap<>();
     private final Map<Integer, LinkedList<Double>> _skillEvasionStat = new ConcurrentHashMap<>();
-    private final Map<Stats, Map<Position, Double>> _positionStats = new ConcurrentHashMap<>();
+    private final Map<Stat, Map<Position, Double>> _positionStats = new ConcurrentHashMap<>();
     private final Deque<StatsHolder> _additionalAdd = new ConcurrentLinkedDeque<>();
     private final Deque<StatsHolder> _additionalMul = new ConcurrentLinkedDeque<>();
-    private final Map<Stats, Double> _fixedValue = new ConcurrentHashMap<>();
+    private final Map<Stat, Double> _fixedValue = new ConcurrentHashMap<>();
 
     private final float[] _attackTraitValues = new float[TraitType.values().length];
     private final float[] _defenceTraitValues = new float[TraitType.values().length];
@@ -58,7 +58,7 @@ public class CharStat {
     private double _attackSpeedMultiplier = 1;
     private double _mAttackSpeedMultiplier = 1;
 
-    public CharStat(Creature activeChar) {
+    public CreatureStats(Creature activeChar) {
         _activeChar = activeChar;
         for (int i = 0; i < TraitType.values().length; i++)
         {
@@ -71,14 +71,14 @@ public class CharStat {
      * @return the Accuracy (base+modifier) of the Creature in function of the Weapon Expertise Penalty.
      */
     public int getAccuracy() {
-        return (int) getValue(Stats.ACCURACY_COMBAT);
+        return (int) getValue(Stat.ACCURACY_COMBAT);
     }
 
     /**
      * @return the Magic Accuracy (base+modifier) of the Creature
      */
     public int getMagicAccuracy() {
-        return (int) getValue(Stats.ACCURACY_MAGIC);
+        return (int) getValue(Stat.ACCURACY_MAGIC);
     }
 
     public Creature getCreature() {
@@ -100,7 +100,7 @@ public class CharStat {
      * @return the CON of the Creature (base+modifier).
      */
     public final int getCON() {
-        return (int) getValue(Stats.STAT_CON);
+        return (int) getValue(Stat.STAT_CON);
     }
 
     /**
@@ -108,35 +108,35 @@ public class CharStat {
      * @return the Critical Damage rate (base+modifier) of the Creature.
      */
     public final double getCriticalDmg(double init) {
-        return getValue(Stats.CRITICAL_DAMAGE, init);
+        return getValue(Stat.CRITICAL_DAMAGE, init);
     }
 
     /**
      * @return the Critical Hit rate (base+modifier) of the Creature.
      */
     public int getCriticalHit() {
-        return (int) getValue(Stats.CRITICAL_RATE);
+        return (int) getValue(Stat.CRITICAL_RATE);
     }
 
     /**
      * @return the DEX of the Creature (base+modifier).
      */
     public final int getDEX() {
-        return (int) getValue(Stats.STAT_DEX);
+        return (int) getValue(Stat.STAT_DEX);
     }
 
     /**
      * @return the Attack Evasion rate (base+modifier) of the Creature.
      */
     public int getEvasionRate() {
-        return (int) getValue(Stats.EVASION_RATE);
+        return (int) getValue(Stat.EVASION_RATE);
     }
 
     /**
      * @return the Attack Evasion rate (base+modifier) of the Creature.
      */
     public int getMagicEvasionRate() {
-        return (int) getValue(Stats.MAGIC_EVASION_RATE);
+        return (int) getValue(Stat.MAGIC_EVASION_RATE);
     }
 
     public long getExp() {
@@ -151,7 +151,7 @@ public class CharStat {
      * @return the INT of the Creature (base+modifier).
      */
     public int getINT() {
-        return (int) getValue(Stats.STAT_INT);
+        return (int) getValue(Stat.STAT_INT);
     }
 
     public byte getLevel() {
@@ -168,34 +168,34 @@ public class CharStat {
      */
     public final int getMagicalAttackRange(Skill skill) {
         if (skill != null) {
-            return (int) getValue(Stats.MAGIC_ATTACK_RANGE, skill.getCastRange());
+            return (int) getValue(Stat.MAGIC_ATTACK_RANGE, skill.getCastRange());
         }
 
         return _activeChar.getTemplate().getBaseAttackRange();
     }
 
     public int getMaxCp() {
-        return (int) getValue(Stats.MAX_CP);
+        return (int) getValue(Stat.MAX_CP);
     }
 
     public int getMaxRecoverableCp() {
-        return (int) getValue(Stats.MAX_RECOVERABLE_CP, getMaxCp());
+        return (int) getValue(Stat.MAX_RECOVERABLE_CP, getMaxCp());
     }
 
     public int getMaxHp() {
-        return (int) getValue(Stats.MAX_HP);
+        return (int) getValue(Stat.MAX_HP);
     }
 
     public int getMaxRecoverableHp() {
-        return (int) getValue(Stats.MAX_RECOVERABLE_HP, getMaxHp());
+        return (int) getValue(Stat.MAX_RECOVERABLE_HP, getMaxHp());
     }
 
     public int getMaxMp() {
-        return (int) getValue(Stats.MAX_MP);
+        return (int) getValue(Stat.MAX_MP);
     }
 
     public int getMaxRecoverableMp() {
-        return (int) getValue(Stats.MAX_RECOVERABLE_MP, getMaxMp());
+        return (int) getValue(Stat.MAX_RECOVERABLE_MP, getMaxMp());
     }
 
     /**
@@ -205,21 +205,21 @@ public class CharStat {
      * @return
      */
     public int getMAtk() {
-        return (int) getValue(Stats.MAGIC_ATTACK);
+        return (int) getValue(Stat.MAGIC_ATTACK);
     }
 
     /**
      * @return the MAtk Speed (base+modifier) of the Creature in function of the Armour Expertise Penalty.
      */
     public int getMAtkSpd() {
-        return (int) getValue(Stats.MAGIC_ATTACK_SPEED);
+        return (int) getValue(Stat.MAGIC_ATTACK_SPEED);
     }
 
     /**
      * @return the Magic Critical Hit rate (base+modifier) of the Creature.
      */
     public final int getMCriticalHit() {
-        return (int) getValue(Stats.MAGIC_CRITICAL_RATE);
+        return (int) getValue(Stat.MAGIC_CRITICAL_RATE);
     }
 
     /**
@@ -228,22 +228,22 @@ public class CharStat {
      * @return the MDef (base+modifier) of the Creature against a skill in function of abnormal effects in progress.
      */
     public int getMDef() {
-        return (int) getValue(Stats.MAGICAL_DEFENCE);
+        return (int) getValue(Stat.MAGICAL_DEFENCE);
     }
 
     /**
      * @return the MEN of the Creature (base+modifier).
      */
     public final int getMEN() {
-        return (int) getValue(Stats.STAT_MEN);
+        return (int) getValue(Stat.STAT_MEN);
     }
 
     public double getMovementSpeedMultiplier() {
         double baseSpeed;
         if (_activeChar.isInsideZone(ZoneType.WATER)) {
-            baseSpeed = _activeChar.getTemplate().getBaseValue(_activeChar.isRunning() ? Stats.SWIM_RUN_SPEED : Stats.SWIM_WALK_SPEED, 0);
+            baseSpeed = _activeChar.getTemplate().getBaseValue(_activeChar.isRunning() ? Stat.SWIM_RUN_SPEED : Stat.SWIM_WALK_SPEED, 0);
         } else {
-            baseSpeed = _activeChar.getTemplate().getBaseValue(_activeChar.isRunning() ? Stats.RUN_SPEED : Stats.WALK_SPEED, 0);
+            baseSpeed = _activeChar.getTemplate().getBaseValue(_activeChar.isRunning() ? Stat.RUN_SPEED : Stat.WALK_SPEED, 0);
         }
         return getMoveSpeed() * (1. / baseSpeed);
     }
@@ -252,28 +252,28 @@ public class CharStat {
      * @return the RunSpeed (base+modifier) of the Creature in function of the Armour Expertise Penalty.
      */
     public double getRunSpeed() {
-        return getValue(_activeChar.isInsideZone(ZoneType.WATER) ? Stats.SWIM_RUN_SPEED : Stats.RUN_SPEED);
+        return getValue(_activeChar.isInsideZone(ZoneType.WATER) ? Stat.SWIM_RUN_SPEED : Stat.RUN_SPEED);
     }
 
     /**
      * @return the WalkSpeed (base+modifier) of the Creature.
      */
     public double getWalkSpeed() {
-        return getValue(_activeChar.isInsideZone(ZoneType.WATER) ? Stats.SWIM_WALK_SPEED : Stats.WALK_SPEED);
+        return getValue(_activeChar.isInsideZone(ZoneType.WATER) ? Stat.SWIM_WALK_SPEED : Stat.WALK_SPEED);
     }
 
     /**
      * @return the SwimRunSpeed (base+modifier) of the Creature.
      */
     public double getSwimRunSpeed() {
-        return getValue(Stats.SWIM_RUN_SPEED);
+        return getValue(Stat.SWIM_RUN_SPEED);
     }
 
     /**
      * @return the SwimWalkSpeed (base+modifier) of the Creature.
      */
     public double getSwimWalkSpeed() {
-        return getValue(Stats.SWIM_WALK_SPEED);
+        return getValue(Stat.SWIM_WALK_SPEED);
     }
 
     /**
@@ -290,28 +290,28 @@ public class CharStat {
      * @return the PAtk (base+modifier) of the Creature.
      */
     public int getPAtk() {
-        return (int) getValue(Stats.PHYSICAL_ATTACK);
+        return (int) getValue(Stat.PHYSICAL_ATTACK);
     }
 
     /**
      * @return the PAtk Speed (base+modifier) of the Creature in function of the Armour Expertise Penalty.
      */
     public int getPAtkSpd() {
-        return (int) getValue(Stats.PHYSICAL_ATTACK_SPEED);
+        return (int) getValue(Stat.PHYSICAL_ATTACK_SPEED);
     }
 
     /**
      * @return the PDef (base+modifier) of the Creature.
      */
     public int getPDef() {
-        return (int) getValue(Stats.PHYSICAL_DEFENCE);
+        return (int) getValue(Stat.PHYSICAL_DEFENCE);
     }
 
     /**
      * @return the Physical Attack range (base+modifier) of the Creature.
      */
     public final int getPhysicalAttackRange() {
-        return (int) getValue(Stats.PHYSICAL_ATTACK_RANGE);
+        return (int) getValue(Stat.PHYSICAL_ATTACK_RANGE);
     }
 
     public int getPhysicalAttackRadius() {
@@ -326,14 +326,14 @@ public class CharStat {
      * @return the weapon reuse modifier.
      */
     public final double getWeaponReuseModifier() {
-        return getValue(Stats.ATK_REUSE, 1);
+        return getValue(Stat.ATK_REUSE, 1);
     }
 
     /**
      * @return the ShieldDef rate (base+modifier) of the Creature.
      */
     public final int getShldDef() {
-        return (int) getValue(Stats.SHIELD_DEFENCE);
+        return (int) getValue(Stat.SHIELD_DEFENCE);
     }
 
     public long getSp() {
@@ -348,14 +348,14 @@ public class CharStat {
      * @return the STR of the Creature (base+modifier).
      */
     public final int getSTR() {
-        return (int) getValue(Stats.STAT_STR);
+        return (int) getValue(Stat.STAT_STR);
     }
 
     /**
      * @return the WIT of the Creature (base+modifier).
      */
     public final int getWIT() {
-        return (int) getValue(Stats.STAT_WIT);
+        return (int) getValue(Stat.STAT_WIT);
     }
 
     /**
@@ -423,22 +423,22 @@ public class CharStat {
     public int getAttackElementValue(AttributeType attackAttribute) {
         switch (attackAttribute) {
             case FIRE: {
-                return (int) getValue(Stats.FIRE_POWER);
+                return (int) getValue(Stat.FIRE_POWER);
             }
             case WATER: {
-                return (int) getValue(Stats.WATER_POWER);
+                return (int) getValue(Stat.WATER_POWER);
             }
             case WIND: {
-                return (int) getValue(Stats.WIND_POWER);
+                return (int) getValue(Stat.WIND_POWER);
             }
             case EARTH: {
-                return (int) getValue(Stats.EARTH_POWER);
+                return (int) getValue(Stat.EARTH_POWER);
             }
             case HOLY: {
-                return (int) getValue(Stats.HOLY_POWER);
+                return (int) getValue(Stat.HOLY_POWER);
             }
             case DARK: {
-                return (int) getValue(Stats.DARK_POWER);
+                return (int) getValue(Stat.DARK_POWER);
             }
             default: {
                 return 0;
@@ -449,25 +449,25 @@ public class CharStat {
     public int getDefenseElementValue(AttributeType defenseAttribute) {
         switch (defenseAttribute) {
             case FIRE: {
-                return (int) getValue(Stats.FIRE_RES);
+                return (int) getValue(Stat.FIRE_RES);
             }
             case WATER: {
-                return (int) getValue(Stats.WATER_RES);
+                return (int) getValue(Stat.WATER_RES);
             }
             case WIND: {
-                return (int) getValue(Stats.WIND_RES);
+                return (int) getValue(Stat.WIND_RES);
             }
             case EARTH: {
-                return (int) getValue(Stats.EARTH_RES);
+                return (int) getValue(Stat.EARTH_RES);
             }
             case HOLY: {
-                return (int) getValue(Stats.HOLY_RES);
+                return (int) getValue(Stat.HOLY_RES);
             }
             case DARK: {
-                return (int) getValue(Stats.DARK_RES);
+                return (int) getValue(Stat.DARK_RES);
             }
             default: {
-                return (int) getValue(Stats.BASE_ATTRIBUTE_RES);
+                return (int) getValue(Stat.BASE_ATTRIBUTE_RES);
             }
         }
     }
@@ -647,8 +647,8 @@ public class CharStat {
      * @param stat
      * @param val
      */
-    public void mergeAdd(Stats stat, double val) {
-        _statsAdd.merge(stat, val, stat::functionAdd);
+    public void mergeAdd(Stat stat, double val) {
+        statsAdd.merge(stat, val, stat::functionAdd);
     }
 
     /**
@@ -657,7 +657,7 @@ public class CharStat {
      * @param stat
      * @param val
      */
-    public void mergeMul(Stats stat, double val) {
+    public void mergeMul(Stat stat, double val) {
         _statsMul.merge(stat, val, stat::functionMul);
     }
 
@@ -665,7 +665,7 @@ public class CharStat {
      * @param stat
      * @return the add value
      */
-    public double getAdd(Stats stat) {
+    public double getAdd(Stat stat) {
         return getAdd(stat, 0d);
     }
 
@@ -674,10 +674,10 @@ public class CharStat {
      * @param defaultValue
      * @return the add value
      */
-    public double getAdd(Stats stat, double defaultValue) {
+    public double getAdd(Stat stat, double defaultValue) {
         _lock.readLock().lock();
         try {
-            return _statsAdd.getOrDefault(stat, defaultValue);
+            return statsAdd.getOrDefault(stat, defaultValue);
         } finally {
             _lock.readLock().unlock();
         }
@@ -687,7 +687,7 @@ public class CharStat {
      * @param stat
      * @return the mul value
      */
-    public double getMul(Stats stat) {
+    public double getMul(Stat stat) {
         return getMul(stat, 1d);
     }
 
@@ -696,7 +696,7 @@ public class CharStat {
      * @param defaultValue
      * @return the mul value
      */
-    public double getMul(Stats stat, double defaultValue) {
+    public double getMul(Stat stat, double defaultValue) {
         _lock.readLock().lock();
         try {
             return _statsMul.getOrDefault(stat, defaultValue);
@@ -710,7 +710,7 @@ public class CharStat {
      * @param baseValue
      * @return the final value of the stat
      */
-    public double getValue(Stats stat, double baseValue) {
+    public double getValue(Stat stat, double baseValue) {
         final Double fixedValue = _fixedValue.get(stat);
         return fixedValue != null ? fixedValue : stat.finalize(_activeChar, Optional.of(baseValue));
     }
@@ -719,20 +719,20 @@ public class CharStat {
      * @param stat
      * @return the final value of the stat
      */
-    public double getValue(Stats stat) {
+    public double getValue(Stat stat) {
         final Double fixedValue = _fixedValue.get(stat);
         return fixedValue != null ? fixedValue : stat.finalize(_activeChar, Optional.empty());
     }
 
     protected void resetStats() {
-        _statsAdd.clear();
+        statsAdd.clear();
         _statsMul.clear();
         _vampiricSum = 0;
 
         // Initialize default values
-        for (Stats stat : Stats.values()) {
+        for (Stat stat : Stat.values()) {
             if (stat.getResetAddValue() != null) {
-                _statsAdd.put(stat, stat.getResetAddValue());
+                statsAdd.put(stat, stat.getResetAddValue());
             }
             if (stat.getResetMulValue() != null) {
                 _statsMul.put(stat, stat.getResetMulValue());
@@ -747,8 +747,8 @@ public class CharStat {
      */
     public final void recalculateStats(boolean broadcast) {
         // Copy old data before wiping it out
-        final Map<Stats, Double> adds = !broadcast ? Collections.emptyMap() : new EnumMap<>(_statsAdd);
-        final Map<Stats, Double> muls = !broadcast ? Collections.emptyMap() : new EnumMap<>(_statsMul);
+        final Map<Stat, Double> adds = !broadcast ? Collections.emptyMap() : new EnumMap<>(statsAdd);
+        final Map<Stat, Double> muls = !broadcast ? Collections.emptyMap() : new EnumMap<>(_statsMul);
 
         _lock.writeLock().lock();
         try {
@@ -796,10 +796,10 @@ public class CharStat {
 
         if (broadcast) {
             // Calculate the difference between old and new stats
-            final Set<Stats> changed = new HashSet<>();
-            for (Stats stat : Stats.values()) {
+            final Set<Stat> changed = new HashSet<>();
+            for (Stat stat : Stat.values()) {
                 Double value;
-                if ( ( value = _statsAdd.getOrDefault(stat, stat.getResetAddValue()) ) != null && !value.equals(adds.getOrDefault(stat, stat.getResetAddValue()))) {
+                if ( ( value = statsAdd.getOrDefault(stat, stat.getResetAddValue()) ) != null && !value.equals(adds.getOrDefault(stat, stat.getResetAddValue()))) {
                     changed.add(stat);
                 } else if ( (value = _statsMul.getOrDefault(stat, stat.getResetMulValue())) != null && !value.equals(muls.getOrDefault(stat, stat.getResetMulValue()))) {
                     changed.add(stat);
@@ -823,19 +823,19 @@ public class CharStat {
         }
     }
 
-    public double getPositionTypeValue(Stats stat, Position position) {
+    public double getPositionTypeValue(Stat stat, Position position) {
         return _positionStats.getOrDefault(stat, Collections.emptyMap()).getOrDefault(position, 1d);
     }
 
-    public void mergePositionTypeValue(Stats stat, Position position, double value, BiFunction<? super Double, ? super Double, ? extends Double> func) {
+    public void mergePositionTypeValue(Stat stat, Position position, double value, BiFunction<? super Double, ? super Double, ? extends Double> func) {
         _positionStats.computeIfAbsent(stat, key -> new ConcurrentHashMap<>()).merge(position, value, func);
     }
 
-    public double getMoveTypeValue(Stats stat, MoveType type) {
+    public double getMoveTypeValue(Stat stat, MoveType type) {
         return _moveTypeStats.getOrDefault(stat, Collections.emptyMap()).getOrDefault(type, 0d);
     }
 
-    public void mergeMoveTypeValue(Stats stat, MoveType type, double value) {
+    public void mergeMoveTypeValue(Stat stat, MoveType type, double value) {
         _moveTypeStats.computeIfAbsent(stat, key -> new ConcurrentHashMap<>()).merge(type, value, MathUtil::add);
     }
 
@@ -906,7 +906,7 @@ public class CharStat {
      * @param condition
      * @return
      */
-    public boolean addAdditionalStat(Stats stat, double value, BiPredicate<Creature, StatsHolder> condition) {
+    public boolean addAdditionalStat(Stat stat, double value, BiPredicate<Creature, StatsHolder> condition) {
         return _additionalAdd.add(new StatsHolder(stat, value, condition));
     }
 
@@ -917,7 +917,7 @@ public class CharStat {
      * @param value
      * @return
      */
-    public boolean addAdditionalStat(Stats stat, double value) {
+    public boolean addAdditionalStat(Stat stat, double value) {
         return _additionalAdd.add(new StatsHolder(stat, value));
     }
 
@@ -926,7 +926,7 @@ public class CharStat {
      * @param value
      * @return {@code true} if 'add' was removed, {@code false} in case there wasn't such stat and value
      */
-    public boolean removeAddAdditionalStat(Stats stat, double value) {
+    public boolean removeAddAdditionalStat(Stat stat, double value) {
         final Iterator<StatsHolder> it = _additionalAdd.iterator();
         while (it.hasNext()) {
             final StatsHolder holder = it.next();
@@ -946,7 +946,7 @@ public class CharStat {
      * @param condition
      * @return
      */
-    public boolean mulAdditionalStat(Stats stat, double value, BiPredicate<Creature, StatsHolder> condition) {
+    public boolean mulAdditionalStat(Stat stat, double value, BiPredicate<Creature, StatsHolder> condition) {
         return _additionalMul.add(new StatsHolder(stat, value, condition));
     }
 
@@ -957,7 +957,7 @@ public class CharStat {
      * @param value
      * @return {@code true}
      */
-    public boolean mulAdditionalStat(Stats stat, double value) {
+    public boolean mulAdditionalStat(Stat stat, double value) {
         return _additionalMul.add(new StatsHolder(stat, value));
     }
 
@@ -966,7 +966,7 @@ public class CharStat {
      * @param value
      * @return {@code true} if 'mul' was removed, {@code false} in case there wasn't such stat and value
      */
-    public boolean removeMulAdditionalStat(Stats stat, double value) {
+    public boolean removeMulAdditionalStat(Stat stat, double value) {
         final Iterator<StatsHolder> it = _additionalMul.iterator();
         while (it.hasNext()) {
             final StatsHolder holder = it.next();
@@ -983,7 +983,7 @@ public class CharStat {
      * @param value
      * @return true if the there wasn't previously set fixed value, {@code false} otherwise
      */
-    public boolean addFixedValue(Stats stat, Double value) {
+    public boolean addFixedValue(Stat stat, Double value) {
         return _fixedValue.put(stat, value) == null;
     }
 
@@ -991,7 +991,7 @@ public class CharStat {
      * @param stat
      * @return {@code true} if fixed value is removed, {@code false} otherwise
      */
-    public boolean removeFixedValue(Stats stat) {
+    public boolean removeFixedValue(Stat stat) {
         return _fixedValue.remove(stat) != null;
     }
 }

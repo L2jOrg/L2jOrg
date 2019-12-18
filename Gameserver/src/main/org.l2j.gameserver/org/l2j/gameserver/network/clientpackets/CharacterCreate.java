@@ -9,7 +9,7 @@ import org.l2j.gameserver.data.xml.impl.PlayerTemplateData;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.stat.PlayerStat;
+import org.l2j.gameserver.model.actor.stat.PlayerStats;
 import org.l2j.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.events.Containers;
@@ -172,13 +172,13 @@ public final class CharacterCreate extends ClientPacket {
         newChar.setTitle("");
 
         if (Config.ENABLE_VITALITY) {
-            newChar.setVitalityPoints(Math.min(Config.STARTING_VITALITY_POINTS, PlayerStat.MAX_VITALITY_POINTS), true);
+            newChar.setVitalityPoints(Math.min(Config.STARTING_VITALITY_POINTS, PlayerStats.MAX_VITALITY_POINTS), true);
         }
         if (Config.STARTING_LEVEL > 1) {
-            newChar.getStat().addLevel((byte) (Config.STARTING_LEVEL - 1));
+            newChar.getStats().addLevel((byte) (Config.STARTING_LEVEL - 1));
         }
         if (Config.STARTING_SP > 0) {
-            newChar.getStat().addSp(Config.STARTING_SP);
+            newChar.getStats().addSp(Config.STARTING_SP);
         }
 
         final List<PcItemTemplate> initialItems = InitialEquipmentData.getInstance().getEquipmentList(newChar.getClassId());

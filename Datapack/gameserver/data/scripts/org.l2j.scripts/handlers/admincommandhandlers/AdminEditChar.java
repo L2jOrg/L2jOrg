@@ -15,7 +15,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.html.PageBuilder;
 import org.l2j.gameserver.model.html.PageResult;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
@@ -691,15 +691,15 @@ public class AdminEditChar implements IAdminCommandHandler
 				{
 					final String val = command.substring(20);
 					final int level = Integer.parseInt(val);
-					final long oldexp = pet.getStat().getExp();
-					final long newexp = pet.getStat().getExpForLevel(level);
+					final long oldexp = pet.getStats().getExp();
+					final long newexp = pet.getStats().getExpForLevel(level);
 					if (oldexp > newexp)
 					{
-						pet.getStat().removeExp(oldexp - newexp);
+						pet.getStats().removeExp(oldexp - newexp);
 					}
 					else if (oldexp < newexp)
 					{
-						pet.getStat().addExp(newexp - oldexp);
+						pet.getStats().addExp(newexp - oldexp);
 					}
 				}
 				catch (Exception e)
@@ -886,8 +886,8 @@ public class AdminEditChar implements IAdminCommandHandler
 			
 			try
 			{
-				Stats stat = null;
-				for (Stats stats : Stats.values())
+				Stat stat = null;
+				for (Stat stats : Stat.values())
 				{
 					if (statName.equalsIgnoreCase(stats.name()) || statName.equalsIgnoreCase(stats.getValue()))
 					{
@@ -905,8 +905,8 @@ public class AdminEditChar implements IAdminCommandHandler
 				final Creature targetCreature = (Creature) target;
 				if (value >= 0)
 				{
-					targetCreature.getStat().addFixedValue(stat, value);
-					targetCreature.getStat().recalculateStats(true);
+					targetCreature.getStats().addFixedValue(stat, value);
+					targetCreature.getStats().recalculateStats(true);
 					BuilderUtil.sendSysMessage(activeChar, "Fixed stat: " + stat + " has been set to " + value);
 				}
 				else
@@ -937,8 +937,8 @@ public class AdminEditChar implements IAdminCommandHandler
 			}
 			final String statName = st.nextToken();
 			
-			Stats stat = null;
-			for (Stats stats : Stats.values())
+			Stat stat = null;
+			for (Stat stats : Stat.values())
 			{
 				if (statName.equalsIgnoreCase(stats.name()) || statName.equalsIgnoreCase(stats.getValue()))
 				{
@@ -953,8 +953,8 @@ public class AdminEditChar implements IAdminCommandHandler
 			}
 			
 			final Creature targetCreature = (Creature) target;
-			targetCreature.getStat().removeFixedValue(stat);
-			targetCreature.getStat().recalculateStats(true);
+			targetCreature.getStats().removeFixedValue(stat);
+			targetCreature.getStats().recalculateStats(true);
 			BuilderUtil.sendSysMessage(activeChar, "Fixed stat: " + stat + " has been removed.");
 		}
 		return true;
@@ -1521,13 +1521,13 @@ public class AdminEditChar implements IAdminCommandHandler
 		final String name = target.getName();
 		html.replace("%name%", name == null ? "N/A" : name);
 		html.replace("%level%", Integer.toString(target.getLevel()));
-		html.replace("%exp%", Long.toString(target.getStat().getExp()));
+		html.replace("%exp%", Long.toString(target.getStats().getExp()));
 		final String owner = target.getActingPlayer().getName();
 		html.replace("%owner%", " <a action=\"bypass -h admin_character_info " + owner + "\">" + owner + "</a>");
 		html.replace("%class%", target.getClass().getSimpleName());
 		html.replace("%ai%", target.hasAI() ? target.getAI().getIntention().name() : "NULL");
-		html.replace("%hp%", (int) target.getStatus().getCurrentHp() + "/" + target.getStat().getMaxHp());
-		html.replace("%mp%", (int) target.getStatus().getCurrentMp() + "/" + target.getStat().getMaxMp());
+		html.replace("%hp%", (int) target.getStatus().getCurrentHp() + "/" + target.getStats().getMaxHp());
+		html.replace("%mp%", (int) target.getStatus().getCurrentMp() + "/" + target.getStats().getMaxMp());
 		html.replace("%karma%", Integer.toString(target.getReputation()));
 		html.replace("%race%", target.getTemplate().getRace().toString());
 		if (isPet(target))

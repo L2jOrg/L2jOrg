@@ -164,7 +164,7 @@ public class SchemeBuffer extends Npc {
                         player.sendMessage("This scheme has reached the maximum amount of dances/songs.");
                     }
                 } else {
-                    if (getCountOf(skills, false) < player.getStat().getMaxBuffCount()) {
+                    if (getCountOf(skills, false) < player.getStats().getMaxBuffCount()) {
                         skills.add(skillId);
                     } else {
                         player.sendMessage("This scheme has reached the maximum amount of buffs.");
@@ -277,7 +277,7 @@ public class SchemeBuffer extends Npc {
 
         html.setFile(player, getHtmlPath(getId(), 2));
         html.replace("%schemename%", schemeName);
-        html.replace("%count%", getCountOf(schemeSkills, false) + " / " + player.getStat().getMaxBuffCount() + " buffs, " + getCountOf(schemeSkills, true) + " / " + Config.DANCES_MAX_AMOUNT + " dances/songs");
+        html.replace("%count%", getCountOf(schemeSkills, false) + " / " + player.getStats().getMaxBuffCount() + " buffs, " + getCountOf(schemeSkills, true) + " / " + Config.DANCES_MAX_AMOUNT + " dances/songs");
         html.replace("%typesframe%", getTypesFrame(groupType, schemeName));
         html.replace("%skilllistframe%", getGroupSkillList(player, groupType, schemeName, page));
         html.replace("%objectId%", getObjectId());

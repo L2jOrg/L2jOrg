@@ -15,7 +15,7 @@ public class ExVitalityEffectInfo extends ServerPacket {
 
     public ExVitalityEffectInfo(Player cha) {
         _points = cha.getVitalityPoints();
-        _vitalityBonus = (int) cha.getStat().getVitalityExpBonus() * 100;
+        _vitalityBonus = (int) cha.getStats().getVitalityExpBonus() * 100;
         _vitalityItemsRemaining = Config.VITALITY_MAX_ITEMS_ALLOWED - cha.getVitalityItemsUsed();
     }
 

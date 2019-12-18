@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.effecthandlers;
 
 import org.l2j.commons.util.Rnd;
@@ -37,26 +21,26 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import static java.util.Objects.nonNull;
+import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
+
 /**
  * Restoration Random effect implementation.<br>
  * This effect is present in item skills that "extract" new items upon usage.<br>
  * This effect has been unhardcoded in order to work on targets as well.
  * @author Zoey76, Mobius
  */
-public final class RestorationRandom extends AbstractEffect
-{
-	private final List<ExtractableProductItem> _products = new ArrayList<>();
+public final class RestorationRandom extends AbstractEffect {
+
+	private final List<ExtractableProductItem> products = new ArrayList<>();
 	
-	public RestorationRandom(StatsSet params)
-	{
-		for (StatsSet group : params.getList("items", StatsSet.class))
-		{
+	public RestorationRandom(StatsSet params) {
+		for (StatsSet group : params.getList("items", StatsSet.class)) {
 			final List<RestorationItemHolder> items = new ArrayList<>();
-			for (StatsSet item : group.getList(".", StatsSet.class))
-			{
+			for (StatsSet item : group.getList(".", StatsSet.class)) {
 				items.add(new RestorationItemHolder(item.getInt(".id"), item.getInt(".count"), item.getInt(".minEnchant", 0), item.getInt(".maxEnchant", 0)));
 			}
-			_products.add(new ExtractableProductItem(items, group.getFloat(".chance")));
+			products.add(new ExtractableProductItem(items, group.getFloat(".chance")));
 		}
 	}
 	
@@ -67,10 +51,9 @@ public final class RestorationRandom extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, Item item)
-	{
+	public void instant(Creature effector, Creature effected, Skill skill, Item item) {
 		final double rndNum = 100 * Rnd.nextDouble();
-		double chance = 0;
+		double chance;
 		double chanceFrom = 0;
 		final List<RestorationItemHolder> creationList = new ArrayList<>();
 		
@@ -83,11 +66,9 @@ public final class RestorationRandom extends AbstractEffect
 		// If you get chance equal 45% you fall into the second zone 30-80.
 		// Meaning you get the second production list.
 		// Calculate extraction
-		for (ExtractableProductItem expi : _products)
-		{
+		for (ExtractableProductItem expi : products) {
 			chance = expi.getChance();
-			if ((rndNum >= chanceFrom) && (rndNum <= (chance + chanceFrom)))
-			{
+			if ((rndNum >= chanceFrom) && (rndNum <= (chance + chanceFrom))) {
 				creationList.addAll(expi.getItems());
 				break;
 			}
@@ -95,40 +76,32 @@ public final class RestorationRandom extends AbstractEffect
 		}
 		
 		final Player player = effected.getActingPlayer();
-		if (creationList.isEmpty())
-		{
+		if (creationList.isEmpty()) {
 			player.sendPacket(SystemMessageId.THERE_WAS_NOTHING_FOUND_INSIDE);
 			return;
 		}
 		
 		final Map<Item, Long> extractedItems = new HashMap<>();
-		for (RestorationItemHolder createdItem : creationList)
-		{
-			if ((createdItem.getId() <= 0) || (createdItem.getCount() <= 0))
-			{
+		for (RestorationItemHolder createdItem : creationList) {
+			if ((createdItem.getId() <= 0) || (createdItem.getCount() <= 0)) {
 				continue;
 			}
 			
 			long itemCount = (long) (createdItem.getCount() * Config.RATE_EXTRACTABLE);
 			final Item newItem = player.addItem("Extract", createdItem.getId(), itemCount, effector, false);
 			
-			if (createdItem.getMaxEnchant() > 0)
-			{
+			if (nonNull(newItem) && createdItem.getMaxEnchant() > 0) {
 				newItem.setEnchantLevel(Rnd.get(createdItem.getMinEnchant(), createdItem.getMaxEnchant()));
 			}
 			
-			if (extractedItems.get(newItem) != null)
-			{
+			if (nonNull(extractedItems.get(newItem))){
 				extractedItems.put(newItem, extractedItems.get(newItem) + itemCount);
-			}
-			else
-			{
+			} else {
 				extractedItems.put(newItem, itemCount);
 			}
 		}
 		
-		if (!extractedItems.isEmpty())
-		{
+		if (!extractedItems.isEmpty()) {
 			final InventoryUpdate playerIU = new InventoryUpdate();
 			for (Entry<Item, Long> entry : extractedItems.entrySet()) {
 				if (entry.getKey().isStackable()) {
@@ -150,25 +123,14 @@ public final class RestorationRandom extends AbstractEffect
 		return EffectType.EXTRACT_ITEM;
 	}
 	
-	private void sendMessage(Player player, Item item, Long count)
-	{
+	private void sendMessage(Player player, Item item, Long count) {
 		final SystemMessage sm;
-		if (count > 1)
-		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
-			sm.addItemName(item);
-			sm.addLong(count);
-		}
-		else if (item.getEnchantLevel() > 0)
-		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_A_S1_S2);
-			sm.addInt(item.getEnchantLevel());
-			sm.addItemName(item);
-		}
-		else
-		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1);
-			sm.addItemName(item);
+		if (count > 1) {
+			sm = getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1).addItemName(item).addLong(count);
+		} else if (item.getEnchantLevel() > 0) {
+			sm = getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_A_S1_S2).addInt(item.getEnchantLevel()).addItemName(item);
+		} else {
+			sm = getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1).addItemName(item);
 		}
 		player.sendPacket(sm);
 	}

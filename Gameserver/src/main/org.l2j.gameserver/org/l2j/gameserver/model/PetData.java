@@ -163,7 +163,7 @@ public class PetData {
                 continue;
             }
             found = true;
-            if (temp.getSkillLevel() == 0) {
+            if (temp.getLevel() == 0) {
                 if (petLvl < 70) {
                     lvl = (petLvl / 10);
                     if (lvl <= 0) {
@@ -180,8 +180,8 @@ public class PetData {
                 }
                 break;
             } else if (temp.getMinLevel() <= petLvl) {
-                if (temp.getSkillLevel() > lvl) {
-                    lvl = temp.getSkillLevel();
+                if (temp.getLevel() > lvl) {
+                    lvl = temp.getLevel();
                 }
             }
         }

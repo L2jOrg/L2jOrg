@@ -19,7 +19,7 @@ package org.l2j.gameserver.model.stats.functions;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.conditions.Condition;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 
 /**
  * Returns the initial value divided the function value, if the condition are met.
@@ -27,7 +27,7 @@ import org.l2j.gameserver.model.stats.Stats;
  * @author Zoey76
  */
 public class FuncDiv extends AbstractFunction {
-    public FuncDiv(Stats stat, int order, Object owner, double value, Condition applayCond) {
+    public FuncDiv(Stat stat, int order, Object owner, double value, Condition applayCond) {
         super(stat, order, owner, value, applayCond);
     }
 

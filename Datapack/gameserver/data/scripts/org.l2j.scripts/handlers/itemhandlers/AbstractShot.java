@@ -67,7 +67,7 @@ public abstract class AbstractShot implements IItemHandler {
         if (jewel != null){
             Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, player, jewel.getEffectId(), 1, 0, 0), 600);
         } else {
-            skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, player, holder.getSkillId(), holder.getSkillLevel(), 0, 0), 600));
+            skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, player, holder.getSkillId(), holder.getLevel(), 0, 0), 600));
         }
         return true;
     }

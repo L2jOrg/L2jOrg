@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Attackable;
@@ -10,7 +11,7 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Formulas;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 
 import java.util.Collections;
 import java.util.HashSet;
@@ -26,41 +27,35 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * For ranged skills: 70 * (patk * lvlmod + power + patk + power) * crit * ss * skillpower / pdef <br>
  * @author Nik
  */
-public final class PhysicalAttack extends AbstractEffect
-{
-	private final double _power;
-	private final double _pAtkMod;
-	private final double _pDefMod;
-	private final double _criticalChance;
-	private final boolean _ignoreShieldDefence;
-	private final boolean _overHit;
+public final class PhysicalAttack extends AbstractEffect {
+	private final double power;
+	private final double pAtkMod;
+	private final double pDefMod;
+	private final double criticalChance;
+	private final boolean ignoreShieldDefence;
+	private final boolean overHit;
 	
-	private final Set<AbnormalType> _abnormals;
-	private final double _abnormalPowerMod;
+	private final Set<AbnormalType> abnormals;
+	private final double abnormalPowerMod;
 	
-	public PhysicalAttack(StatsSet params)
-	{
-		_power = params.getDouble("power", 0);
-		_pAtkMod = params.getDouble("pAtkMod", 1.0);
-		_pDefMod = params.getDouble("pDefMod", 1.0);
-		_criticalChance = params.getDouble("criticalChance", 0);
-		_ignoreShieldDefence = params.getBoolean("ignoreShieldDefence", false);
-		_overHit = params.getBoolean("overHit", false);
+	public PhysicalAttack(StatsSet params) {
+		power = params.getDouble("power", 0);
+		pAtkMod = params.getDouble("pAtkMod", 1.0);
+		pDefMod = params.getDouble("pDefMod", 1.0);
+		criticalChance = params.getDouble("criticalChance", 0);
+		ignoreShieldDefence = params.getBoolean("ignoreShieldDefence", false);
+		overHit = params.getBoolean("overHit", false);
 		
 		final String abnormals = params.getString("abnormalType", null);
-		if ((abnormals != null) && !abnormals.isEmpty())
-		{
-			_abnormals = new HashSet<>();
-			for (String slot : abnormals.split(";"))
-			{
-				_abnormals.add(AbnormalType.getAbnormalType(slot));
+		if (Util.isNotEmpty(abnormals)) {
+			this.abnormals = new HashSet<>();
+			for (String slot : abnormals.split(";")) {
+				this.abnormals.add(AbnormalType.getAbnormalType(slot));
 			}
+		}else {
+			this.abnormals = Collections.emptySet();
 		}
-		else
-		{
-			_abnormals = Collections.<AbnormalType> emptySet();
-		}
-		_abnormalPowerMod = params.getDouble("damageModifier", 1);
+		abnormalPowerMod = params.getDouble("damageModifier", 1);
 	}
 	
 	@Override
@@ -82,48 +77,33 @@ public final class PhysicalAttack extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, Item item)
-	{
-		if (effector.isAlikeDead())
-		{
+	public void instant(Creature effector, Creature effected, Skill skill, Item item) {
+		if (effector.isAlikeDead()) {
 			return;
 		}
 		
-		if (isPlayer(effected) && effected.getActingPlayer().isFakeDeath())
-		{
+		if (isPlayer(effected) && effected.getActingPlayer().isFakeDeath()) {
 			effected.stopFakeDeath(true);
 		}
 		
-		if (_overHit && isAttackable(effected))
-		{
+		if (overHit && isAttackable(effected)) {
 			((Attackable) effected).overhitEnabled(true);
 		}
 		
-		final double attack = effector.getPAtk() * _pAtkMod;
-		double defence = effected.getPDef() * _pDefMod;
+		final double attack = effector.getPAtk() * pAtkMod;
+		double defence = effected.getPDef() * pDefMod;
 		
-		if (!_ignoreShieldDefence)
-		{
-			switch (Formulas.calcShldUse(effector, effected))
-			{
-				case Formulas.SHIELD_DEFENSE_SUCCEED:
-				{
-					defence += effected.getShldDef();
-					break;
-				}
-				case Formulas.SHIELD_DEFENSE_PERFECT_BLOCK:
-				{
-					defence = -1;
-					break;
-				}
+		if (!ignoreShieldDefence) {
+			switch (Formulas.calcShldUse(effector, effected)) {
+				case Formulas.SHIELD_DEFENSE_SUCCEED -> defence += effected.getShldDef();
+				case Formulas.SHIELD_DEFENSE_PERFECT_BLOCK -> defence = -1;
 			}
 		}
 		
 		double damage = 1;
-		final boolean critical = Formulas.calcCrit(_criticalChance, effected, effector, skill);
+		final boolean critical = Formulas.calcCrit(criticalChance, effected, effector, skill);
 		
-		if (defence != -1)
-		{
+		if (defence != -1) {
 			// Trait, elements
 			final double weaponTraitMod = Formulas.calcWeaponTraitBonus(effector, effected);
 			final double generalTraitMod = Formulas.calcGeneralTraitBonus(effector, effected, skill.getTraitType(), true);
@@ -134,20 +114,19 @@ public final class PhysicalAttack extends AbstractEffect
 			
 			// Skill specific mods.
 			final double weaponMod = effector.getAttackType().isRanged() ? 70 : 77;
-			final double power = _power + effector.getStat().getValue(Stats.SKILL_POWER_ADD, 0);
+			final double power = this.power + effector.getStats().getValue(Stat.SKILL_POWER_ADD, 0);
 			final double rangedBonus = effector.getAttackType().isRanged() ? attack + power : 0;
-			final double abnormalMod = _abnormals.stream().anyMatch(effected::hasAbnormalType) ? _abnormalPowerMod : 1;
+			final double abnormalMod = abnormals.stream().anyMatch(effected::hasAbnormalType) ? abnormalPowerMod : 1;
 			final double critMod = critical ? Formulas.calcCritDamage(effector, effected, skill) : 1;
 			double ssmod = 1;
-			if (skill.useSoulShot())
-			{
+			if (skill.useSoulShot()) {
 				if (effector.isChargedShot(ShotType.SOULSHOTS))
 				{
-					ssmod = 2 * effector.getStat().getValue(Stats.SHOTS_BONUS); // 2.04 for dual weapon?
+					ssmod = 2 * effector.getStats().getValue(Stat.SHOTS_BONUS); // 2.04 for dual weapon?
 				}
 				else if (effector.isChargedShot(ShotType.BLESSED_SOULSHOTS))
 				{
-					ssmod = 4 * effector.getStat().getValue(Stats.SHOTS_BONUS);
+					ssmod = 4 * effector.getStats().getValue(Stat.SHOTS_BONUS);
 				}
 			}
 			
@@ -156,7 +135,7 @@ public final class PhysicalAttack extends AbstractEffect
 			// ```````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^``````````````````````````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 			final double baseMod = (weaponMod * ((attack * effector.getLevelMod()) + power + rangedBonus)) / defence;
 			damage = baseMod * abnormalMod * ssmod * critMod * weaponTraitMod * generalTraitMod * weaknessMod * attributeMod * pvpPveMod * randomMod;
-			damage *= effector.getStat().getValue(Stats.PHYSICAL_SKILL_POWER, 1);
+			damage *= effector.getStats().getValue(Stat.PHYSICAL_SKILL_POWER, 1);
 		}
 		
 		effector.doAttack(damage, effected, skill, false, false, critical, false);

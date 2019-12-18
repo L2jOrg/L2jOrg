@@ -4,7 +4,7 @@ import org.l2j.gameserver.ai.CreatureAI;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.stat.StaticObjStat;
+import org.l2j.gameserver.model.actor.stat.StaticObjStats;
 import org.l2j.gameserver.model.actor.status.StaticObjStatus;
 import org.l2j.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2j.gameserver.model.items.Weapon;
@@ -55,13 +55,13 @@ public final class StaticWorldObject extends Creature {
     }
 
     @Override
-    public final StaticObjStat getStat() {
-        return (StaticObjStat) super.getStat();
+    public final StaticObjStats getStats() {
+        return (StaticObjStats) super.getStats();
     }
 
     @Override
     public void initCharStat() {
-        setStat(new StaticObjStat(this));
+        setStat(new StaticObjStats(this));
     }
 
     @Override

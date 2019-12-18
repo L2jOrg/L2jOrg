@@ -19,7 +19,7 @@ package org.l2j.gameserver.model.stats.finalizers;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.items.BodyPart;
 import org.l2j.gameserver.model.stats.IStatsFunction;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.world.WorldTimeController;
 
 import java.util.Optional;
@@ -31,7 +31,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public class PAccuracyFinalizer implements IStatsFunction {
     @Override
-    public double calc(Creature creature, Optional<Double> base, Stats stat) {
+    public double calc(Creature creature, Optional<Double> base, Stat stat) {
         throwIfPresent(base);
 
         double baseValue = calcWeaponPlusBaseValue(creature, stat);
@@ -65,10 +65,10 @@ public class PAccuracyFinalizer implements IStatsFunction {
 
         // Shadow sense
         if (WorldTimeController.getInstance().isNight()) {
-            baseValue += creature.getStat().getAdd(Stats.HIT_AT_NIGHT, 0);
+            baseValue += creature.getStats().getAdd(Stat.HIT_AT_NIGHT, 0);
         }
 
-        return Stats.defaultValue(creature, stat, baseValue);
+        return Stat.defaultValue(creature, stat, baseValue);
     }
 
     @Override

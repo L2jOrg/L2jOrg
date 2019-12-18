@@ -352,7 +352,7 @@ public class SkillCaster implements Runnable {
         }
 
         // Check if the caster has enough MP
-        if (caster.getCurrentMp() < (caster.getStat().getMpConsume(skill) + caster.getStat().getMpInitialConsume(skill))) {
+        if (caster.getCurrentMp() < (caster.getStats().getMpConsume(skill) + caster.getStats().getMpInitialConsume(skill))) {
             caster.sendPacket(SystemMessageId.NOT_ENOUGH_MP);
             caster.sendPacket(ActionFailed.STATIC_PACKET);
             return false;
@@ -511,7 +511,7 @@ public class SkillCaster implements Runnable {
         }
 
         // Disable the skill during the re-use delay and create a task EnableSkill with Medium priority to enable it at the end of the re-use delay
-        int reuseDelay = caster.getStat().getReuseTime(_skill);
+        int reuseDelay = caster.getStats().getReuseTime(_skill);
         if (reuseDelay > 10) {
             if (!_skill.isStatic() && _skill.getReferenceItemId() == 0 && _skill.getOperateType() == SkillOperateType.A1 && Formulas.calcSkillMastery(caster, _skill)) {
                 reuseDelay = 100;
@@ -548,7 +548,7 @@ public class SkillCaster implements Runnable {
         }
 
         // Consume skill initial MP needed for cast. Retail sends it regardless if > 0 or not.
-        final int initmpcons = caster.getStat().getMpInitialConsume(_skill);
+        final int initmpcons = caster.getStats().getMpInitialConsume(_skill);
         if (initmpcons > 0) {
             if (initmpcons > caster.getCurrentMp()) {
                 caster.sendPacket(SystemMessageId.NOT_ENOUGH_MP);
@@ -674,7 +674,7 @@ public class SkillCaster implements Runnable {
         final StatusUpdate su = new StatusUpdate(caster);
 
         // Consume the required MP or stop casting if not enough.
-        final double mpConsume = _skill.getMpConsume() > 0 ? caster.getStat().getMpConsume(_skill) : 0;
+        final double mpConsume = _skill.getMpConsume() > 0 ? caster.getStats().getMpConsume(_skill) : 0;
         if (mpConsume > 0) {
             if (mpConsume > caster.getCurrentMp()) {
                 caster.sendPacket(SystemMessageId.NOT_ENOUGH_MP);

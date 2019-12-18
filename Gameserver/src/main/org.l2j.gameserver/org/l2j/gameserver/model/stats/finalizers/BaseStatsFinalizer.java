@@ -23,7 +23,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 
 import java.util.HashSet;
 import java.util.Optional;
@@ -36,7 +36,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public class BaseStatsFinalizer implements IStatsFunction {
     @Override
-    public double calc(Creature creature, Optional<Double> base, Stats stat) {
+    public double calc(Creature creature, Optional<Double> base, Stat stat) {
         throwIfPresent(base);
 
         // Apply template value
@@ -61,7 +61,7 @@ public class BaseStatsFinalizer implements IStatsFunction {
             baseValue += player.getHennaValue(BaseStats.valueOf(stat));
         }
 
-        return validateValue(creature, Stats.defaultValue(creature, stat, baseValue), 1, BaseStats.MAX_STAT_VALUE - 1);
+        return validateValue(creature, Stat.defaultValue(creature, stat, baseValue), 1, BaseStats.MAX_STAT_VALUE - 1);
     }
 
 }

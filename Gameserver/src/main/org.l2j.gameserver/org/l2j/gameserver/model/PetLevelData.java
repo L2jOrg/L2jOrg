@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model;
 
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 
 /**
  * Stats definition for each pet level.
@@ -163,7 +163,7 @@ public class PetLevelData {
      * @param stat movement type
      * @return the base riding speed of given movement type.
      */
-    public double getSpeedOnRide(Stats stat) {
+    public double getSpeedOnRide(Stat stat) {
         switch (stat) {
             case WALK_SPEED: {
                 return _walkSpeedOnRide;

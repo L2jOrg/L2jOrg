@@ -23,7 +23,7 @@ import org.l2j.gameserver.model.actor.instance.FriendlyNpc;
 import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.Trap;
-import org.l2j.gameserver.model.actor.stat.CharStat;
+import org.l2j.gameserver.model.actor.stat.CreatureStats;
 import org.l2j.gameserver.model.actor.status.CharStatus;
 import org.l2j.gameserver.model.actor.tasks.character.NotifyAITask;
 import org.l2j.gameserver.model.actor.templates.CreatureTemplate;
@@ -75,8 +75,6 @@ import java.util.concurrent.locks.StampedLock;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-import static java.util.Objects.isNull;
-import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 import static org.l2j.gameserver.util.GameUtils.isMonster;
@@ -117,7 +115,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * Creatures effect list.
      */
     private final EffectList _effectList = new EffectList(this);
-    private final AtomicInteger _abnormalShieldBlocks = new AtomicInteger();
+    private final AtomicInteger abnormalShieldBlocks = new AtomicInteger();
     private final Map<Integer, Integer> _knownRelations = new ConcurrentHashMap<>();
     private final Map<StatusUpdateType, Integer> _statusUpdates = new ConcurrentHashMap<>();
 
@@ -144,7 +142,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     private boolean _isFlying = false;
     private boolean _blockActions = false;
     private volatile Map<Integer, AtomicInteger> _blockActionsAllowedSkills = new ConcurrentHashMap<>();
-    private CharStat _stat;
+    private CreatureStats stats;
     private CharStatus _status;
     private CreatureTemplate _template; // The link on the CreatureTemplate object containing generic and static properties of this Creature type (ex : Max HP, Speed...)
     private String _title;
@@ -421,7 +419,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     protected void initCharStatusUpdateValues() {
-        _hpUpdateIncCheck = _stat.getMaxHp();
+        _hpUpdateIncCheck = stats.getMaxHp();
         _hpUpdateInterval = _hpUpdateIncCheck / MAX_STATUS_BAR_PX;
         _hpUpdateDecCheck = _hpUpdateIncCheck - _hpUpdateInterval;
     }
@@ -520,7 +518,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      */
     protected boolean needHpUpdate() {
         final double currentHp = _status.getCurrentHp();
-        final double maxHp = _stat.getMaxHp();
+        final double maxHp = stats.getMaxHp();
 
         if ((currentHp <= 1.0) || (maxHp < MAX_STATUS_BAR_PX)) {
             return true;
@@ -566,7 +564,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         }
 
         // HP
-        su.addUpdate(StatusUpdateType.MAX_HP, _stat.getMaxHp());
+        su.addUpdate(StatusUpdateType.MAX_HP, stats.getMaxHp());
         su.addUpdate(StatusUpdateType.CUR_HP, (int) _status.getCurrentHp());
 
         // MP
@@ -876,7 +874,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
             final WeaponType attackType = getAttackType();
             final boolean isTwoHanded = (weaponItem != null) && (weaponItem.getBodyPart() == BodyPart.TWO_HAND);
-            final int timeAtk = Formulas.calculateTimeBetweenAttacks(_stat.getPAtkSpd());
+            final int timeAtk = Formulas.calculateTimeBetweenAttacks(stats.getPAtkSpd());
             final int timeToHit = Formulas.calculateTimeToHit(timeAtk, weaponType, isTwoHanded, false);
             _attackEndTime = System.nanoTime() + (TimeUnit.MILLISECONDS.toNanos(timeAtk));
 
@@ -969,11 +967,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         }
 
         // H5 Changes: without Polearm Mastery (skill 216) max simultaneous attacks is 3 (1 by default + 2 in skill 3599).
-        int attackCountMax = (int) _stat.getValue(Stats.ATTACK_COUNT_MAX, 1);
-        if ((attackCountMax > 1) && !(_stat.getValue(Stats.PHYSICAL_POLEARM_TARGET_SINGLE, 0) > 0)) {
+        int attackCountMax = (int) stats.getValue(Stat.ATTACK_COUNT_MAX, 1);
+        if ((attackCountMax > 1) && !(stats.getValue(Stat.PHYSICAL_POLEARM_TARGET_SINGLE, 0) > 0)) {
             final double headingAngle = convertHeadingToDegree(getHeading());
-            final int maxRadius = _stat.getPhysicalAttackRadius();
-            final int physicalAttackAngle = _stat.getPhysicalAttackAngle();
+            final int maxRadius = stats.getPhysicalAttackRadius();
+            final int physicalAttackAngle = stats.getPhysicalAttackAngle();
 
             World.getInstance().forVisibleObjectsInRange(this, Creature.class, maxRadius, attackCountMax, creature -> canBeAttacked(target, headingAngle, physicalAttackAngle, creature),
                     creature -> attack.addHit(generateHit(creature, weapon, attack.isShotUsed(), false)));
@@ -1000,7 +998,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         // Check if hit isn't missed
         if (!miss) {
             shld = Formulas.calcShldUse(this, target);
-            crit = Formulas.calcCrit(_stat.getCriticalHit(), this, target, null);
+            crit = Formulas.calcCrit(stats.getCriticalHit(), this, target, null);
             damage = (int) Formulas.calcAutoAttackDamage(this, target, shld, crit, shotConsumed);
             if (halfDamage) {
                 damage /= 2;
@@ -1411,14 +1409,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             setIsPendingRevive(false);
             setIsDead(false);
 
-            if ((Config.RESPAWN_RESTORE_CP > 0) && (_status.getCurrentCp() < (_stat.getMaxCp() * Config.RESPAWN_RESTORE_CP))) {
-                _status.setCurrentCp(_stat.getMaxCp() * Config.RESPAWN_RESTORE_CP);
+            if ((Config.RESPAWN_RESTORE_CP > 0) && (_status.getCurrentCp() < (stats.getMaxCp() * Config.RESPAWN_RESTORE_CP))) {
+                _status.setCurrentCp(stats.getMaxCp() * Config.RESPAWN_RESTORE_CP);
             }
-            if ((Config.RESPAWN_RESTORE_HP > 0) && (_status.getCurrentHp() < (_stat.getMaxHp() * Config.RESPAWN_RESTORE_HP))) {
-                _status.setCurrentHp(_stat.getMaxHp() * Config.RESPAWN_RESTORE_HP);
+            if ((Config.RESPAWN_RESTORE_HP > 0) && (_status.getCurrentHp() < (stats.getMaxHp() * Config.RESPAWN_RESTORE_HP))) {
+                _status.setCurrentHp(stats.getMaxHp() * Config.RESPAWN_RESTORE_HP);
             }
-            if ((Config.RESPAWN_RESTORE_MP > 0) && (_status.getCurrentMp() < (_stat.getMaxMp() * Config.RESPAWN_RESTORE_MP))) {
-                _status.setCurrentMp(_stat.getMaxMp() * Config.RESPAWN_RESTORE_MP);
+            if ((Config.RESPAWN_RESTORE_MP > 0) && (_status.getCurrentMp() < (stats.getMaxMp() * Config.RESPAWN_RESTORE_MP))) {
+                _status.setCurrentMp(stats.getMaxMp() * Config.RESPAWN_RESTORE_MP);
             }
 
             // Start broadcast status
@@ -1682,7 +1680,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             return;
         }
         running = value;
-        if (_stat.getRunSpeed() != 0) {
+        if (stats.getRunSpeed() != 0) {
             broadcastPacket(new ChangeMoveType(this));
         }
         if (GameUtils.isPlayer(this)) {
@@ -1696,7 +1694,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                     return;
                 }
 
-                if (_stat.getRunSpeed() == 0) {
+                if (stats.getRunSpeed() == 0) {
                     player.sendPacket(new ServerObjectInfo((Npc) this, player));
                 } else {
                     player.sendPacket(new NpcInfo((Npc) this));
@@ -1781,12 +1779,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         _isFlying = mode;
     }
 
-    public CharStat getStat() {
-        return _stat;
+    public CreatureStats getStats() {
+        return stats;
     }
 
-    public final void setStat(CharStat value) {
-        _stat = value;
+    public final void setStat(CreatureStats value) {
+        stats = value;
     }
 
     /**
@@ -1794,7 +1792,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * Removes the need for instanceof checks.
      */
     public void initCharStat() {
-        _stat = new CharStat(this);
+        stats = new CreatureStats(this);
     }
 
     public CharStatus getStatus() {
@@ -2054,7 +2052,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return info == null ? 0 : info.getSkill().getLevel();
     }
 
-    public void broadcastModifiedStats(Set<Stats> changed) {
+    public void broadcastModifiedStats(Set<Stat> changed) {
         if (!isSpawned()) {
             return;
         }
@@ -2069,7 +2067,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         }
 
         // If this creature was previously moving, but now due to stat change can no longer move, broadcast StopMove packet.
-        if (isMoving() && (_stat.getMoveSpeed() <= 0)) {
+        if (isMoving() && (stats.getMoveSpeed() <= 0)) {
             stopMove(null);
         }
 
@@ -2086,7 +2084,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 info = new UserInfo(getActingPlayer(), false);
                 info.addComponentType(UserInfoType.SLOTS, UserInfoType.ENCHANTLEVEL);
             }
-            for (Stats stat : changed) {
+            for (Stat stat : changed) {
                 if (info != null) {
                     switch (stat) {
                         case MOVE_SPEED:
@@ -2122,7 +2120,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                             if (GameUtils.isPlayer(this)) {
                                 info.addComponentType(UserInfoType.MAX_HPCPMP);
                             } else {
-                                su.addUpdate(StatusUpdateType.MAX_CP, _stat.getMaxCp());
+                                su.addUpdate(StatusUpdateType.MAX_CP, stats.getMaxCp());
                             }
                             break;
                         }
@@ -2130,7 +2128,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                             if (GameUtils.isPlayer(this)) {
                                 info.addComponentType(UserInfoType.MAX_HPCPMP);
                             } else {
-                                su.addUpdate(StatusUpdateType.MAX_HP, _stat.getMaxHp());
+                                su.addUpdate(StatusUpdateType.MAX_HP, stats.getMaxHp());
                             }
                             break;
                         }
@@ -2138,7 +2136,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                             if (GameUtils.isPlayer(this)) {
                                 info.addComponentType(UserInfoType.MAX_HPCPMP);
                             } else {
-                                su.addUpdate(StatusUpdateType.MAX_CP, _stat.getMaxMp());
+                                su.addUpdate(StatusUpdateType.MAX_CP, stats.getMaxMp());
                             }
                             break;
                         }
@@ -2204,7 +2202,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                             return;
                         }
 
-                        if (_stat.getRunSpeed() == 0) {
+                        if (stats.getRunSpeed() == 0) {
                             player.sendPacket(new ServerObjectInfo((Npc) this, player));
                         } else {
                             player.sendPacket(new NpcInfo((Npc) this));
@@ -2436,7 +2434,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 final double angle = convertHeadingToDegree(getHeading());
                 final double radian = Math.toRadians(angle);
                 final double course = Math.toRadians(180);
-                final double frontDistance = 10 * (_stat.getMoveSpeed() / 100);
+                final double frontDistance = 10 * (stats.getMoveSpeed() / 100);
                 final int x1 = (int) (Math.cos(Math.PI + radian + course) * frontDistance);
                 final int y1 = (int) (Math.sin(Math.PI + radian + course) * frontDistance);
                 final int x = xPrev + x1;
@@ -2467,7 +2465,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
         double distFraction = Double.MAX_VALUE;
         if (delta > 1) {
-            final double distPassed = (_stat.getMoveSpeed() * (gameTicks - m._moveTimestamp)) / WorldTimeController.TICKS_PER_SECOND;
+            final double distPassed = (stats.getMoveSpeed() * (gameTicks - m._moveTimestamp)) / WorldTimeController.TICKS_PER_SECOND;
             distFraction = distPassed / delta;
         }
 
@@ -2631,7 +2629,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      */
     public void moveToLocation(int x, int y, int z, int offset) {
         // Get the Move Speed of the L2Charcater
-        final double speed = _stat.getMoveSpeed();
+        final double speed = stats.getMoveSpeed();
         if ((speed <= 0) || isMovementDisabled()) {
             return;
         }
@@ -2857,7 +2855,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         }
 
         // Get the Move Speed of the L2Charcater
-        final double speed = _stat.getMoveSpeed();
+        final double speed = stats.getMoveSpeed();
         if ((speed <= 0) || isMovementDisabled()) {
             // Cancel the move action
             _move = null;
@@ -3300,7 +3298,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                     _effectList.stopSkillEffects(true, oldSkill);
                 }
 
-                _stat.recalculateStats(true);
+                stats.recalculateStats(true);
             }
 
             if (newSkill.isPassive()) {
@@ -3329,7 +3327,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             // Stop effects.
             if (cancelEffect || oldSkill.isToggle() || oldSkill.isPassive()) {
                 stopSkillEffects(true, oldSkill.getId());
-                _stat.recalculateStats(true);
+                stats.recalculateStats(true);
             }
         }
 
@@ -3416,7 +3414,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @return a multiplier based on weapon random damage
      */
     public final double getRandomDamageMultiplier() {
-        final int random = (int) _stat.getValue(Stats.RANDOM_DAMAGE);
+        final int random = (int) stats.getValue(Stat.RANDOM_DAMAGE);
         return (1 + ((double) Rnd.get(-random, random) / 100));
     }
 
@@ -3436,143 +3434,143 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     public abstract int getLevel();
 
     public int getAccuracy() {
-        return _stat.getAccuracy();
+        return stats.getAccuracy();
     }
 
     public int getMagicAccuracy() {
-        return _stat.getMagicAccuracy();
+        return stats.getMagicAccuracy();
     }
 
     public int getMagicEvasionRate() {
-        return _stat.getMagicEvasionRate();
+        return stats.getMagicEvasionRate();
     }
 
     public final double getAttackSpeedMultiplier() {
-        return _stat.getAttackSpeedMultiplier();
+        return stats.getAttackSpeedMultiplier();
     }
 
     public final double getCriticalDmg(int init) {
-        return _stat.getCriticalDmg(init);
+        return stats.getCriticalDmg(init);
     }
 
     public int getCriticalHit() {
-        return _stat.getCriticalHit();
+        return stats.getCriticalHit();
     }
 
     public int getEvasionRate() {
-        return _stat.getEvasionRate();
+        return stats.getEvasionRate();
     }
 
     public final int getMagicalAttackRange(Skill skill) {
-        return _stat.getMagicalAttackRange(skill);
+        return stats.getMagicalAttackRange(skill);
     }
 
     public final int getMaxCp() {
-        return _stat.getMaxCp();
+        return stats.getMaxCp();
     }
 
     public final int getMaxRecoverableCp() {
-        return _stat.getMaxRecoverableCp();
+        return stats.getMaxRecoverableCp();
     }
 
     public int getMAtk() {
-        return _stat.getMAtk();
+        return stats.getMAtk();
     }
 
     public int getMAtkSpd() {
-        return _stat.getMAtkSpd();
+        return stats.getMAtkSpd();
     }
 
     public int getMaxMp() {
-        return _stat.getMaxMp();
+        return stats.getMaxMp();
     }
 
     public int getMaxRecoverableMp() {
-        return _stat.getMaxRecoverableMp();
+        return stats.getMaxRecoverableMp();
     }
 
     public int getMaxHp() {
-        return _stat.getMaxHp();
+        return stats.getMaxHp();
     }
 
     public int getMaxRecoverableHp() {
-        return _stat.getMaxRecoverableHp();
+        return stats.getMaxRecoverableHp();
     }
 
     public final int getMCriticalHit() {
-        return _stat.getMCriticalHit();
+        return stats.getMCriticalHit();
     }
 
     public int getMDef() {
-        return _stat.getMDef();
+        return stats.getMDef();
     }
 
     public int getPAtk() {
-        return _stat.getPAtk();
+        return stats.getPAtk();
     }
 
     public int getPAtkSpd() {
-        return _stat.getPAtkSpd();
+        return stats.getPAtkSpd();
     }
 
     public int getPDef() {
-        return _stat.getPDef();
+        return stats.getPDef();
     }
 
     public final int getPhysicalAttackRange() {
-        return _stat.getPhysicalAttackRange();
+        return stats.getPhysicalAttackRange();
     }
 
     public double getMovementSpeedMultiplier() {
-        return _stat.getMovementSpeedMultiplier();
+        return stats.getMovementSpeedMultiplier();
     }
 
     public double getRunSpeed() {
-        return _stat.getRunSpeed();
+        return stats.getRunSpeed();
     }
 
     public double getWalkSpeed() {
-        return _stat.getWalkSpeed();
+        return stats.getWalkSpeed();
     }
 
     public final double getSwimRunSpeed() {
-        return _stat.getSwimRunSpeed();
+        return stats.getSwimRunSpeed();
     }
 
     public final double getSwimWalkSpeed() {
-        return _stat.getSwimWalkSpeed();
+        return stats.getSwimWalkSpeed();
     }
 
     public double getMoveSpeed() {
-        return _stat.getMoveSpeed();
+        return stats.getMoveSpeed();
     }
 
     public final int getShldDef() {
-        return _stat.getShldDef();
+        return stats.getShldDef();
     }
 
     public int getSTR() {
-        return _stat.getSTR();
+        return stats.getSTR();
     }
 
     public int getDEX() {
-        return _stat.getDEX();
+        return stats.getDEX();
     }
 
     public int getCON() {
-        return _stat.getCON();
+        return stats.getCON();
     }
 
     public int getINT() {
-        return _stat.getINT();
+        return stats.getINT();
     }
 
     public int getWIT() {
-        return _stat.getWIT();
+        return stats.getWIT();
     }
 
     public int getMEN() {
-        return _stat.getMEN();
+        return stats.getMEN();
     }
 
     // Status - NEED TO REMOVE ONCE L2CHARTATUS IS COMPLETE
@@ -3592,7 +3590,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         if (!reflect && !isDOT) {
             // RearDamage effect bonus.
             if (isBehind(target)) {
-                damage *= _stat.getValue(Stats.REAR_DAMAGE_RATE, 1);
+                damage *= stats.getValue(Stat.REAR_DAMAGE_RATE, 1);
             }
 
             // Counterattacks happen before damage received.
@@ -3600,7 +3598,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 Formulas.calcCounterAttack(this, target, skill, true);
 
                 // Shield Deflect Magic: Reflect all damage on caster.
-                if (skill.isMagic() && (target.getStat().getValue(Stats.VENGEANCE_SKILL_MAGIC_DAMAGE, 0) > Rnd.get(100))) {
+                if (skill.isMagic() && (target.getStats().getValue(Stat.VENGEANCE_SKILL_MAGIC_DAMAGE, 0) > Rnd.get(100))) {
                     reduceCurrentHp(damage, target, skill, isDOT, directlyToHp, critical, true);
                     return;
                 }
@@ -3615,7 +3613,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             int reflectedDamage = 0;
 
             // Reduce HP of the target and calculate reflection damage to reduce HP of attacker if necessary
-            double reflectPercent = target.getStat().getValue(Stats.REFLECT_DAMAGE_PERCENT, 0) - getStat().getValue(Stats.REFLECT_DAMAGE_PERCENT_DEFENSE, 0);
+            double reflectPercent = target.getStats().getValue(Stat.REFLECT_DAMAGE_PERCENT, 0) - getStats().getValue(Stat.REFLECT_DAMAGE_PERCENT_DEFENSE, 0);
             if (reflectPercent > 0)
             {
                 reflectedDamage = (int) ((reflectPercent / 100.) * damage);
@@ -3624,21 +3622,21 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 // Reflected damage is limited by P.Def/M.Def
                 if ((skill != null) && skill.isMagic())
                 {
-                    reflectedDamage = (int) Math.min(reflectedDamage, target.getStat().getMDef() * 1.5);
+                    reflectedDamage = (int) Math.min(reflectedDamage, target.getStats().getMDef() * 1.5);
                 }
                 else
                 {
-                    reflectedDamage = Math.min(reflectedDamage, target.getStat().getPDef());
+                    reflectedDamage = Math.min(reflectedDamage, target.getStats().getPDef());
                 }
             }
 
             // Absorb HP from the damage inflicted
             if (skill == null) // Classic: Skills counted with the Vampiric Rage effect was introduced on GoD chronicles.
             {
-                double absorbPercent = getStat().getValue(Stats.ABSORB_DAMAGE_PERCENT, 0) * target.getStat().getValue(Stats.ABSORB_DAMAGE_DEFENCE, 1);
-                if ((absorbPercent > 0) && (Rnd.nextDouble() < _stat.getValue(Stats.ABSORB_DAMAGE_CHANCE)))
+                double absorbPercent = getStats().getValue(Stat.ABSORB_DAMAGE_PERCENT, 0) * target.getStats().getValue(Stat.ABSORB_DAMAGE_DEFENCE, 1);
+                if ((absorbPercent > 0) && (Rnd.nextDouble() < stats.getValue(Stat.ABSORB_DAMAGE_CHANCE)))
                 {
-                    int absorbDamage = (int) Math.min(absorbPercent * damage, _stat.getMaxRecoverableHp() - _status.getCurrentHp());
+                    int absorbDamage = (int) Math.min(absorbPercent * damage, stats.getMaxRecoverableHp() - _status.getCurrentHp());
                     absorbDamage = Math.min(absorbDamage, (int) target.getCurrentHp());
                     if (absorbDamage > 0)
                     {
@@ -3652,10 +3650,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             {
                 if (Rnd.get(10) < 3) // Classic: Static 30% change.
                 {
-                    double absorbPercent = _stat.getValue(Stats.ABSORB_MANA_DAMAGE_PERCENT, 0);
+                    double absorbPercent = stats.getValue(Stat.ABSORB_MANA_DAMAGE_PERCENT, 0);
                     if (absorbPercent > 0)
                     {
-                        int absorbDamage = (int) Math.min((absorbPercent / 100.) * damage, _stat.getMaxRecoverableMp() - _status.getCurrentMp());
+                        int absorbDamage = (int) Math.min((absorbPercent / 100.) * damage, stats.getMaxRecoverableMp() - _status.getCurrentMp());
                         absorbDamage = Math.min(absorbDamage, (int) target.getCurrentMp());
                         if (absorbDamage > 0)
                         {
@@ -3702,9 +3700,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         // Calculate PvP/PvE damage received. It is a post-attack stat.
         if (attacker != null) {
             if (GameUtils.isPlayable(attacker)) {
-                value *= (100 + _stat.getValue(Stats.PVP_DAMAGE_TAKEN)) / 100;
+                value *= (100 + stats.getValue(Stat.PVP_DAMAGE_TAKEN)) / 100;
             } else {
-                value *= (100 + _stat.getValue(Stats.PVE_DAMAGE_TAKEN)) / 100;
+                value *= (100 + stats.getValue(Stat.PVE_DAMAGE_TAKEN)) / 100;
             }
 
             elementalDamage = Formulas.calcSpiritElementalDamage(attacker, this, value);
@@ -3712,7 +3710,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             value += elementalDamage;
         }
 
-        final double damageCap = _stat.getValue(Stats.DAMAGE_LIMIT);
+        final double damageCap = stats.getValue(Stat.DAMAGE_LIMIT);
         if (damageCap > 0) {
             value = Math.min(value, damageCap);
         }
@@ -3754,7 +3752,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public final int getCurrentCpPercent() {
-        return (int) ((_status.getCurrentCp() * 100) / _stat.getMaxCp());
+        return (int) ((_status.getCurrentCp() * 100) / stats.getMaxCp());
     }
 
     public final void setCurrentCp(double newCp, boolean broadcast) {
@@ -3770,7 +3768,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public final int getCurrentHpPercent() {
-        return (int) ((_status.getCurrentHp() * 100) / _stat.getMaxHp());
+        return (int) ((_status.getCurrentHp() * 100) / stats.getMaxHp());
     }
 
     public final void setCurrentHp(double newHp, boolean broadcast) {
@@ -3790,7 +3788,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public final int getCurrentMpPercent() {
-        return (int) ((_status.getCurrentMp() * 100) / _stat.getMaxMp());
+        return (int) ((_status.getCurrentMp() * 100) / stats.getMaxMp());
     }
 
     public final void setCurrentMp(double newMp, boolean broadcast) {
@@ -3805,14 +3803,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             // Weight Limit = (CON Modifier*69000) * Skills
             // Source http://l2p.bravehost.com/weightlimit.html (May 2007)
             final double baseLoad = Math.floor(BaseStats.CON.calcBonus(this) * 69000 * Config.ALT_WEIGHT_LIMIT);
-            return (int) _stat.getValue(Stats.WEIGHT_LIMIT, baseLoad);
+            return (int) stats.getValue(Stat.WEIGHT_LIMIT, baseLoad);
         }
         return 0;
     }
 
     public int getBonusWeightPenalty() {
         if (GameUtils.isPlayer(this) || GameUtils.isPet(this)) {
-            return (int) _stat.getValue(Stats.WEIGHT_PENALTY, 1);
+            return (int) stats.getValue(Stat.WEIGHT_PENALTY, 1);
         }
         return 0;
     }
@@ -3845,15 +3843,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public AttributeType getAttackElement() {
-        return _stat.getAttackElement();
+        return stats.getAttackElement();
     }
 
     public int getAttackElementValue(AttributeType attackAttribute) {
-        return _stat.getAttackElementValue(attackAttribute);
+        return stats.getAttackElementValue(attackAttribute);
     }
 
     public int getDefenseElementValue(AttributeType defenseAttribute) {
-        return _stat.getDefenseElementValue(defenseAttribute);
+        return stats.getDefenseElementValue(defenseAttribute);
     }
 
     public final void startPhysicalAttackMuted() {
@@ -4227,7 +4225,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     public boolean isIgnoringSkillEffects(int skillId, int skillLvl) {
         if (_ignoreSkillEffects != null) {
             final SkillHolder holder = getIgnoreSkillEffects().get(skillId);
-            return ((holder != null) && ((holder.getSkillLevel() < 1) || (holder.getSkillLevel() == skillLvl)));
+            return ((holder != null) && ((holder.getLevel() < 1) || (holder.getLevel() == skillLvl)));
         }
         return false;
     }
@@ -4310,7 +4308,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @return the amount of debuffs that player can avoid
      */
     public int getAbnormalShieldBlocks() {
-        return _abnormalShieldBlocks.get();
+        return abnormalShieldBlocks.get();
     }
 
     /**
@@ -4319,14 +4317,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @param times
      */
     public void setAbnormalShieldBlocks(int times) {
-        _abnormalShieldBlocks.set(times);
+        abnormalShieldBlocks.set(times);
     }
 
     /**
      * @return the amount of debuffs that player can avoid
      */
     public int decrementAbnormalShieldBlocks() {
-        return _abnormalShieldBlocks.decrementAndGet();
+        return abnormalShieldBlocks.decrementAndGet();
     }
 
     public boolean hasAbnormalType(AbnormalType abnormalType) {

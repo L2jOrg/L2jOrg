@@ -203,7 +203,7 @@ public final class ClanHallManager extends AbstractNpcAI
 											final SkillHolder skill = new SkillHolder(Integer.parseInt(skillData[0]), Integer.parseInt(skillData[1]));
 											if (Util.contains(ALLOWED_BUFFS, skill.getSkillId()))
 											{
-												if (npc.getCurrentMp() < (npc.getStat().getMpConsume(skill.getSkill()) + npc.getStat().getMpInitialConsume(skill.getSkill())))
+												if (npc.getCurrentMp() < (npc.getStats().getMpConsume(skill.getSkill()) + npc.getStats().getMpInitialConsume(skill.getSkill())))
 												{
 													htmltext = getHtm(player, "ClanHallManager-funcBuffsNoMp.html");
 												}

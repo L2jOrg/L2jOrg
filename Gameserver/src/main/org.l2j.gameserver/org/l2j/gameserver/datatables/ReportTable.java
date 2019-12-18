@@ -167,7 +167,7 @@ public final class ReportTable {
             return false;
         }
 
-        if (bot.getExp() == bot.getStat().getStartingExp()) {
+        if (bot.getExp() == bot.getStats().getStartingExp()) {
             reporter.sendPacket(SystemMessageId.YOU_CANNOT_REPORT_A_CHARACTER_WHO_HAS_NOT_ACQUIRED_ANY_XP_AFTER_CONNECTING);
             return false;
         }

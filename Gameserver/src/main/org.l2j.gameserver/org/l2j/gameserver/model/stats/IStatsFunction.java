@@ -146,13 +146,13 @@ public interface IStatsFunction {
         return 0;
     }
 
-    default double calcWeaponBaseValue(Creature creature, Stats stat) {
+    default double calcWeaponBaseValue(Creature creature, Stat stat) {
         final double baseTemplateValue = creature.getTemplate().getBaseValue(stat, 0);
         double baseValue = creature.getTransformation().map(transform -> transform.getStats(creature, stat, baseTemplateValue)).orElse(baseTemplateValue);
         if (isPet(creature)) {
             final Pet pet = (Pet) creature;
             final Item weapon = pet.getActiveWeaponInstance();
-            final double baseVal = stat == Stats.PHYSICAL_ATTACK ? pet.getPetLevelData().getPetPAtk() : stat == Stats.MAGIC_ATTACK ? pet.getPetLevelData().getPetMAtk() : baseTemplateValue;
+            final double baseVal = stat == Stat.PHYSICAL_ATTACK ? pet.getPetLevelData().getPetPAtk() : stat == Stat.MAGIC_ATTACK ? pet.getPetLevelData().getPetMAtk() : baseTemplateValue;
             baseValue = baseVal + (weapon != null ? weapon.getTemplate().getStats(stat, baseVal) : 0);
         } else if (isPlayer(creature) && (!creature.isTransformed() || (creature.getTransformation().get().getType() == TransformType.COMBAT) || (creature.getTransformation().get().getType() == TransformType.MODE_CHANGE))) {
             final Item weapon = creature.getActiveWeaponInstance();
@@ -162,7 +162,7 @@ public interface IStatsFunction {
         return baseValue;
     }
 
-    default double calcWeaponPlusBaseValue(Creature creature, Stats stat) {
+    default double calcWeaponPlusBaseValue(Creature creature, Stat stat) {
         final double baseTemplateValue = creature.getTemplate().getBaseValue(stat, 0);
         double baseValue = creature.getTransformation().filter(transform -> !transform.isStance()).map(transform -> transform.getStats(creature, stat, baseTemplateValue)).orElse(baseTemplateValue);
 
@@ -176,7 +176,7 @@ public interface IStatsFunction {
         return baseValue;
     }
 
-    default double calcEnchantedItemBonus(Creature creature, Stats stat) {
+    default double calcEnchantedItemBonus(Creature creature, Stat stat) {
         if (!isPlayer(creature)) {
             return 0;
         }
@@ -184,13 +184,13 @@ public interface IStatsFunction {
         return creature.getInventory().calcForEachEquippedItem(item -> calcEnchantStatBonus(creature, stat, item),0, Double::sum);
     }
 
-    private double calcEnchantStatBonus(Creature creature, Stats stat, Item item) {
+    private double calcEnchantStatBonus(Creature creature, Stat stat, Item item) {
         if(!item.isEnchanted()) {
             return 0;
         }
         var bodyPart = item.getBodyPart();
         if(bodyPart.isAnyOf(BodyPart.HAIR, BodyPart.HAIR2, BodyPart.HAIR_ALL)) {
-             if(stat != Stats.PHYSICAL_DEFENCE && stat != Stats.MAGICAL_DEFENCE) {
+             if(stat != Stat.PHYSICAL_DEFENCE && stat != Stat.MAGICAL_DEFENCE) {
                  return 0;
              }
         } else if(item.getStats(stat, 0) <= 0) {
@@ -204,11 +204,11 @@ public interface IStatsFunction {
             enchant = Config.ALT_OLY_ENCHANT_LIMIT;
         }
 
-        if ((stat == Stats.MAGICAL_DEFENCE) || (stat == Stats.PHYSICAL_DEFENCE)) {
+        if ((stat == Stat.MAGICAL_DEFENCE) || (stat == Stat.PHYSICAL_DEFENCE)) {
             return calcEnchantDefBonus(item, blessedBonus, enchant);
-        } else if (stat == Stats.MAGIC_ATTACK) {
+        } else if (stat == Stat.MAGIC_ATTACK) {
             return calcEnchantMatkBonus(item, blessedBonus, enchant);
-        } else if ((stat == Stats.PHYSICAL_ATTACK) && item.isWeapon()) {
+        } else if ((stat == Stat.PHYSICAL_ATTACK) && item.isWeapon()) {
             return calcEnchantedPAtkBonus(item, blessedBonus, enchant);
         }
         return 0;
@@ -222,5 +222,5 @@ public interface IStatsFunction {
         return Math.max(minValue, value);
     }
 
-    double calc(Creature creature, Optional<Double> base, Stats stat);
+    double calc(Creature creature, Optional<Double> base, Stat stat);
 }

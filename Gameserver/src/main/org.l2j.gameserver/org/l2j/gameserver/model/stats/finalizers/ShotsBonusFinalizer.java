@@ -21,7 +21,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.stats.IStatsFunction;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 
 import java.util.Optional;
 
@@ -30,7 +30,7 @@ import java.util.Optional;
  */
 public class ShotsBonusFinalizer implements IStatsFunction {
     @Override
-    public double calc(Creature creature, Optional<Double> base, Stats stat) {
+    public double calc(Creature creature, Optional<Double> base, Stat stat) {
         throwIfPresent(base);
 
         double baseValue = 1;
@@ -45,6 +45,6 @@ public class ShotsBonusFinalizer implements IStatsFunction {
                 rubyBonus = player.getActiveRubyJewel().getBonus();
             }
         }
-        return Stats.defaultValue(creature, stat, CommonUtil.constrain(baseValue, 1.0, 1.21) + rubyBonus);
+        return Stat.defaultValue(creature, stat, CommonUtil.constrain(baseValue, 1.0, 1.21) + rubyBonus);
     }
 }

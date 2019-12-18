@@ -13,7 +13,7 @@ import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.util.GameUtils;
@@ -273,7 +273,7 @@ public class RecipeController {
 
                 // if still not empty, schedule another pass
                 if (!_items.isEmpty()) {
-                    _delay = (int) (Config.ALT_GAME_CREATION_SPEED * _player.getStat().getReuseTime(_skill) * WorldTimeController.TICKS_PER_SECOND * WorldTimeController.MILLIS_IN_TICK);
+                    _delay = (int) (Config.ALT_GAME_CREATION_SPEED * _player.getStats().getReuseTime(_skill) * WorldTimeController.TICKS_PER_SECOND * WorldTimeController.MILLIS_IN_TICK);
 
                     // FIXME: please fix this packet to show crafting animation (somebody)
                     final MagicSkillUse msk = new MagicSkillUse(_player, _skillId, _skillLevel, _delay, 0);
@@ -600,7 +600,7 @@ public class RecipeController {
 
                 // Added multiplication of Creation speed with XP/SP gain slower crafting -> more XP,
                 // faster crafting -> less XP you can use ALT_GAME_CREATION_XP_RATE/SP to modify XP/SP gained (default = 1)
-                _player.addExpAndSp((int) _player.getStat().getValue(Stats.EXPSP_RATE, _exp * Config.ALT_GAME_CREATION_XP_RATE * Config.ALT_GAME_CREATION_SPEED), (int) _player.getStat().getValue(Stats.EXPSP_RATE, _sp * Config.ALT_GAME_CREATION_SP_RATE * Config.ALT_GAME_CREATION_SPEED));
+                _player.addExpAndSp((int) _player.getStats().getValue(Stat.EXPSP_RATE, _exp * Config.ALT_GAME_CREATION_XP_RATE * Config.ALT_GAME_CREATION_SPEED), (int) _player.getStats().getValue(Stat.EXPSP_RATE, _sp * Config.ALT_GAME_CREATION_SP_RATE * Config.ALT_GAME_CREATION_SPEED));
             }
             updateMakeInfo(true); // success
         }

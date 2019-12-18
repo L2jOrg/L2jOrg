@@ -76,7 +76,7 @@ public class PetSkillData extends GameXmlReader {
             if (skillHolder.getSkillId() != skillId) {
                 continue;
             }
-            if (skillHolder.getSkillLevel() == 0) {
+            if (skillHolder.getLevel() == 0) {
                 if (pet.getLevel() < 70) {
                     lvl = pet.getLevel() / 10;
                     if (lvl <= 0) {
@@ -93,8 +93,8 @@ public class PetSkillData extends GameXmlReader {
                 }
                 break;
             } else if (1 <= pet.getLevel()) {
-                if (skillHolder.getSkillLevel() > lvl) {
-                    lvl = skillHolder.getSkillLevel();
+                if (skillHolder.getLevel() > lvl) {
+                    lvl = skillHolder.getLevel();
                 }
             }
         }

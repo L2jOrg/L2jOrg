@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.enums.ShotType;
@@ -32,25 +16,23 @@ import static org.l2j.gameserver.util.GameUtils.isAttackable;
  * Backstab effect implementation.
  * @author Adry_85
  */
-public final class Backstab extends AbstractEffect
-{
-	private final double _power;
-	private final double _chanceBoost;
-	private final double _criticalChance;
-	private final boolean _overHit;
+public final class Backstab extends AbstractEffect {
+
+	private final double power;
+	private final double chanceBoost;
+	private final double criticalChance;
+	private final boolean overHit;
 	
-	public Backstab(StatsSet params)
-	{
-		_power = params.getDouble("power");
-		_chanceBoost = params.getDouble("chanceBoost");
-		_criticalChance = params.getDouble("criticalChance", 0);
-		_overHit = params.getBoolean("overHit", false);
+	public Backstab(StatsSet params) {
+		power = params.getDouble("power");
+		chanceBoost = params.getDouble("chanceBoost");
+		criticalChance = params.getDouble("criticalChance", 0);
+		overHit = params.getBoolean("overHit", false);
 	}
 	
 	@Override
-	public boolean calcSuccess(Creature effector, Creature effected, Skill skill)
-	{
-		return !effector.isInFrontOf(effected) && !Formulas.calcPhysicalSkillEvasion(effector, effected, skill) && Formulas.calcBlowSuccess(effector, effected, skill, _chanceBoost);
+	public boolean calcSuccess(Creature effector, Creature effected, Skill skill) {
+		return !effector.isInFrontOf(effected) && !Formulas.calcPhysicalSkillEvasion(effector, effected, skill) && Formulas.calcBlowSuccess(effector, effected, skill, chanceBoost);
 	}
 	
 	@Override
@@ -66,24 +48,20 @@ public final class Backstab extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, Item item)
-	{
-		if (effector.isAlikeDead())
-		{
+	public void instant(Creature effector, Creature effected, Skill skill, Item item) {
+		if (effector.isAlikeDead()) {
 			return;
 		}
 		
-		if (_overHit && isAttackable(effected))
-		{
+		if (overHit && isAttackable(effected)) {
 			((Attackable) effected).overhitEnabled(true);
 		}
 		
 		final boolean ss = skill.useSoulShot() && (effector.isChargedShot(ShotType.SOULSHOTS) || effector.isChargedShot(ShotType.BLESSED_SOULSHOTS));
 		final byte shld = Formulas.calcShldUse(effector, effected);
-		double damage = Formulas.calcBlowDamage(effector, effected, skill, true, _power, shld, ss);
+		double damage = Formulas.calcBlowDamage(effector, effected, skill, true, power, shld, ss);
 		
-		if (Formulas.calcCrit(_criticalChance, effector, effected, skill))
-		{
+		if (Formulas.calcCrit(criticalChance, effector, effected, skill)) {
 			damage *= 2;
 		}
 		

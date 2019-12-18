@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Formulas;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExMagicAttackInfo;
 
@@ -89,7 +89,7 @@ public final class HpCpHeal extends AbstractEffect {
 		double mAtkMul = 1;
 		final boolean sps = skill.isMagic() && effector.isChargedShot(ShotType.SPIRITSHOTS);
 		final boolean bss = skill.isMagic() && effector.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
-		final double shotsBonus = effector.getStat().getValue(Stats.SHOTS_BONUS);
+		final double shotsBonus = effector.getStats().getValue(Stat.SHOTS_BONUS);
 
 		if (((sps || bss) && (isPlayer(effector) && effector.getActingPlayer().isMageClass())) || isSummon(effector)) {
 			staticShotBonus = skill.getMpConsume(); // static bonus for spiritshots
@@ -105,8 +105,8 @@ public final class HpCpHeal extends AbstractEffect {
 
 		if (!skill.isStatic()) {
 			amount += staticShotBonus + Math.sqrt(mAtkMul * effector.getMAtk());
-			amount *= effected.getStat().getValue(Stats.HEAL_EFFECT, 1);
-			amount += effected.getStat().getValue(Stats.HEAL_EFFECT_ADD, 0);
+			amount *= effected.getStats().getValue(Stat.HEAL_EFFECT, 1);
+			amount += effected.getStats().getValue(Stat.HEAL_EFFECT_ADD, 0);
 			// Heal critic, since CT2.3 Gracia Final
 			if (skill.isMagic() && (Formulas.calcCrit(skill.getMagicCriticalRate(), effector, effected, skill) || effector.isAffected(EffectFlag.HPCPHEAL_CRITICAL))) {
 				amount *= 3;

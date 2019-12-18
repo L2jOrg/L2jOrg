@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.effecthandlers;
 
 import org.l2j.commons.util.Rnd;
@@ -31,15 +15,13 @@ import static org.l2j.gameserver.util.GameUtils.isDoor;
  * Open Door effect implementation.
  * @author Adry_85
  */
-public final class OpenDoor extends AbstractEffect
-{
-	private final int _chance;
-	private final boolean _isItem;
+public final class OpenDoor extends AbstractEffect {
+	private final int chance;
+	private final boolean isItem;
 	
-	public OpenDoor(StatsSet params)
-	{
-		_chance = params.getInt("chance", 0);
-		_isItem = params.getBoolean("isItem", false);
+	public OpenDoor(StatsSet params) {
+		chance = params.getInt("chance", 0);
+		isItem = params.getBoolean("isItem", false);
 	}
 	
 	@Override
@@ -49,26 +31,20 @@ public final class OpenDoor extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, Item item)
-	{
-		if (!isDoor(effected) || (effector.getInstanceWorld() != effected.getInstanceWorld()))
-		{
+	public void instant(Creature effector, Creature effected, Skill skill, Item item) {
+		if (!isDoor(effected) || (effector.getInstanceWorld() != effected.getInstanceWorld())) {
 			return;
 		}
 		
 		final Door door = (Door) effected;
-		if ((!door.isOpenableBySkill() && !_isItem) || (door.getFort() != null))
-		{
+		if ((!door.isOpenableBySkill() && !isItem) || (door.getFort() != null)) {
 			effector.sendPacket(SystemMessageId.THIS_DOOR_CANNOT_BE_UNLOCKED);
 			return;
 		}
 		
-		if ((Rnd.get(100) < _chance) && !door.isOpen())
-		{
+		if (Rnd.get(100) < chance && !door.isOpen()) {
 			door.openMe();
-		}
-		else
-		{
+		} else {
 			effector.sendPacket(SystemMessageId.YOU_HAVE_FAILED_TO_UNLOCK_THE_DOOR);
 		}
 	}

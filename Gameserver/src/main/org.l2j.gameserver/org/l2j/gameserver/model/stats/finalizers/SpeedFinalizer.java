@@ -24,7 +24,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.BodyPart;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.SwampZone;
@@ -39,7 +39,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public class SpeedFinalizer implements IStatsFunction {
     @Override
-    public double calc(Creature creature, Optional<Double> base, Stats stat) {
+    public double calc(Creature creature, Optional<Double> base, Stat stat) {
         throwIfPresent(base);
 
         double baseValue = getBaseSpeed(creature, stat);
@@ -48,14 +48,14 @@ public class SpeedFinalizer implements IStatsFunction {
             baseValue += calcEnchantBodyPart(creature, BodyPart.FEET);
         }
 
-        final byte speedStat = (byte) creature.getStat().getAdd(Stats.STAT_BONUS_SPEED, -1);
+        final byte speedStat = (byte) creature.getStats().getAdd(Stat.STAT_BONUS_SPEED, -1);
         if ((speedStat >= 0) && (speedStat < BaseStats.values().length)) {
             final BaseStats baseStat = BaseStats.values()[speedStat];
             final double bonusDex = Math.max(0, baseStat.calcValue(creature) - 55);
             baseValue += bonusDex;
         }
 
-        return validateValue(creature, Stats.defaultValue(creature, stat, baseValue), 1, Config.MAX_RUN_SPEED);
+        return validateValue(creature, Stat.defaultValue(creature, stat, baseValue), 1, Config.MAX_RUN_SPEED);
     }
 
     @Override
@@ -67,7 +67,7 @@ public class SpeedFinalizer implements IStatsFunction {
         return (0.6 * Math.max(enchantLevel - 3, 0)) + (0.6 * Math.max(enchantLevel - 6, 0));
     }
 
-    private double getBaseSpeed(Creature creature, Stats stat) {
+    private double getBaseSpeed(Creature creature, Stat stat) {
         double baseValue = calcWeaponPlusBaseValue(creature, stat);
         if (isPlayer(creature)) {
             final Player player = creature.getActingPlayer();

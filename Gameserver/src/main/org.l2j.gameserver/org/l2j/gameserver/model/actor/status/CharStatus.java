@@ -7,7 +7,7 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.OnCreatureHpChange;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.stats.Formulas;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -219,7 +219,7 @@ public class CharStatus {
     public boolean setCurrentHp(double newHp, boolean broadcastPacket) {
         // Get the Max HP of the Creature
         final int oldHp = (int) _currentHp;
-        final double maxHp = _activeChar.getStat().getMaxHp();
+        final double maxHp = _activeChar.getStats().getMaxHp();
 
         synchronized (this) {
             if (_activeChar.isDead()) {
@@ -284,7 +284,7 @@ public class CharStatus {
     public final boolean setCurrentMp(double newMp, boolean broadcastPacket) {
         // Get the Max MP of the Creature
         final int currentMp = (int) _currentMp;
-        final int maxMp = _activeChar.getStat().getMaxMp();
+        final int maxMp = _activeChar.getStats().getMaxMp();
 
         synchronized (this) {
             if (_activeChar.isDead()) {
@@ -323,8 +323,8 @@ public class CharStatus {
     protected void doRegeneration() {
         // Modify the current HP/MP of the Creature and broadcast Server->Client packet StatusUpdate
         if (!_activeChar.isDead() && ((_currentHp < _activeChar.getMaxRecoverableHp()) || (_currentMp < _activeChar.getMaxRecoverableMp()))) {
-            final double newHp = _currentHp + _activeChar.getStat().getValue(Stats.REGENERATE_HP_RATE);
-            final double newMp = _currentMp + _activeChar.getStat().getValue(Stats.REGENERATE_MP_RATE);
+            final double newHp = _currentHp + _activeChar.getStats().getValue(Stat.REGENERATE_HP_RATE);
+            final double newMp = _currentMp + _activeChar.getStats().getValue(Stat.REGENERATE_MP_RATE);
             setCurrentHpMp(newHp, newMp);
         } else {
             stopHpMpRegeneration();

@@ -26,8 +26,8 @@ public class ExShuttleMove extends ServerPacket {
         writeId(ServerPacketId.EX_SUTTLE_MOVE);
 
         writeInt(_shuttle.getObjectId());
-        writeInt((int) _shuttle.getStat().getMoveSpeed());
-        writeInt((int) _shuttle.getStat().getRotationSpeed());
+        writeInt((int) _shuttle.getStats().getMoveSpeed());
+        writeInt((int) _shuttle.getStats().getRotationSpeed());
         writeInt(_x);
         writeInt(_y);
         writeInt(_z);

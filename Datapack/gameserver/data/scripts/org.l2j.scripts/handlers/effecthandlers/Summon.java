@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.data.xml.impl.ExperienceData;
@@ -37,26 +21,23 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * Summon effect implementation.
  * @author UnAfraid
  */
-public final class Summon extends AbstractEffect
-{
-	private final int _npcId;
-	private final float _expMultiplier;
-	private final ItemHolder _consumeItem;
-	private final int _lifeTime;
-	private final int _consumeItemInterval;
+public final class Summon extends AbstractEffect {
+	private final int npcId;
+	private final float expMultiplier;
+	private final ItemHolder consumeItem;
+	private final int lifeTime;
+	private final int consumeItemInterval;
 	
-	public Summon(StatsSet params)
-	{
-		if (params.isEmpty())
-		{
+	public Summon(StatsSet params) {
+		if (params.isEmpty()) {
 			throw new IllegalArgumentException("Summon effect without parameters!");
 		}
 		
-		_npcId = params.getInt("npcId");
-		_expMultiplier = params.getFloat("expMultiplier", 1);
-		_consumeItem = new ItemHolder(params.getInt("consumeItemId", 0), params.getInt("consumeItemCount", 1));
-		_consumeItemInterval = params.getInt("consumeItemInterval", 0);
-		_lifeTime = params.getInt("lifeTime", 0) > 0 ? params.getInt("lifeTime") * 1000 : -1; // Classic change.
+		npcId = params.getInt("npcId");
+		expMultiplier = params.getFloat("expMultiplier", 1);
+		consumeItem = new ItemHolder(params.getInt("consumeItemId", 0), params.getInt("consumeItemCount", 1));
+		consumeItemInterval = params.getInt("consumeItemInterval", 0);
+		lifeTime = params.getInt("lifeTime", 0) > 0 ? params.getInt("lifeTime") * 1000 : -1; // Classic change.
 	}
 	
 	@Override
@@ -72,46 +53,40 @@ public final class Summon extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, Item item)
-	{
-		if (!isPlayer(effected))
-		{
+	public void instant(Creature effector, Creature effected, Skill skill, Item item) {
+		if (!isPlayer(effected)) {
 			return;
 		}
 		
 		final Player player = effected.getActingPlayer();
-		if (player.hasServitors())
-		{
+		if (player.hasServitors()) {
 			player.getServitors().values().forEach(s -> s.unSummon(player));
 		}
-		final NpcTemplate template = NpcData.getInstance().getTemplate(_npcId);
+		final NpcTemplate template = NpcData.getInstance().getTemplate(npcId);
 		final Servitor summon = new Servitor(template, player);
-		final int consumeItemInterval = (_consumeItemInterval > 0 ? _consumeItemInterval : (template.getRace() != Race.SIEGE_WEAPON ? 240 : 60)) * 1000;
+		final int consumeItemInterval = (this.consumeItemInterval > 0 ? this.consumeItemInterval : (template.getRace() != Race.SIEGE_WEAPON ? 240 : 60)) * 1000;
 		
 		summon.setName(template.getName());
 		summon.setTitle(effected.getName());
 		summon.setReferenceSkill(skill.getId());
-		summon.setExpMultiplier(_expMultiplier);
-		summon.setLifeTime(_lifeTime <= 0 ? Integer.MAX_VALUE : _lifeTime); // Classic hack. Resummon upon entering game.
-		summon.setItemConsume(_consumeItem);
+		summon.setExpMultiplier(expMultiplier);
+		summon.setLifeTime(lifeTime <= 0 ? Integer.MAX_VALUE : lifeTime); // Classic hack. Resummon upon entering game.
+		summon.setItemConsume(consumeItem);
 		summon.setItemConsumeInterval(consumeItemInterval);
-		
-		if (summon.getLevel() >= ExperienceData.getInstance().getMaxLevel())
-		{
-			summon.getStat().setExp(ExperienceData.getInstance().getExpForLevel(ExperienceData.getInstance().getMaxLevel() - 1));
-			LOGGER.warn(": (" + summon.getName() + ") NpcID: " + summon.getId() + " has a level above " + ExperienceData.getInstance().getMaxLevel() + ". Please rectify.");
-		}
-		else
-		{
-			summon.getStat().setExp(ExperienceData.getInstance().getExpForLevel(summon.getLevel() % ExperienceData.getInstance().getMaxPetLevel()));
+
+		var maxLevel = ExperienceData.getInstance().getMaxLevel();
+
+		if (summon.getLevel() >= maxLevel) {
+			summon.getStats().setExp(ExperienceData.getInstance().getExpForLevel(maxLevel - 1));
+			LOGGER.warn("({}) NpcID: {} has a level above {}. Please rectify.", summon.getName(), summon.getId(), maxLevel);
+		} else {
+			summon.getStats().setExp(ExperienceData.getInstance().getExpForLevel(summon.getLevel() % ExperienceData.getInstance().getMaxPetLevel()));
 		}
 		
 		// Summons must have their master buffs upon spawn.
-		for (BuffInfo effect : player.getEffectList().getEffects())
-		{
+		for (BuffInfo effect : player.getEffectList().getEffects()) {
 			final Skill sk = effect.getSkill();
-			if (!sk.isBad())
-			{
+			if (!sk.isBad()) {
 				sk.applyEffects(player, summon, false, effect.getTime());
 			}
 		}

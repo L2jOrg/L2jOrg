@@ -5,7 +5,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 
 import java.util.Optional;
 
@@ -16,7 +16,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public class RegenCPFinalizer implements IStatsFunction {
     @Override
-    public double calc(Creature creature, Optional<Double> base, Stats stat) {
+    public double calc(Creature creature, Optional<Double> base, Stat stat) {
         throwIfPresent(base);
         if (!isPlayer(creature)) {
             return 0;
@@ -31,6 +31,6 @@ public class RegenCPFinalizer implements IStatsFunction {
         } else if (player.isRunning()) {
             baseValue *= 0.7; // Running
         }
-        return Stats.defaultValue(player, stat, baseValue);
+        return Stat.defaultValue(player, stat, baseValue);
     }
 }

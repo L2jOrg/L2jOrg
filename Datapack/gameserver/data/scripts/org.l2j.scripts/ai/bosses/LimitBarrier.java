@@ -142,7 +142,7 @@ public final class LimitBarrier extends AbstractNpcAI {
                     {
                         npc.broadcastPacket(new ExShowScreenMessage(NpcStringId.YOU_HAVE_FAILED_TO_DESTROY_THE_LIMIT_BARRIER_NTHE_RAID_BOSS_FULLY_RECOVERS_ITS_HEALTH, 2, 5000, true));
                     }
-                    npc.setCurrentHp(npc.getStat().getMaxHp(), true);
+                    npc.setCurrentHp(npc.getStats().getMaxHp(), true);
                     npc.stopSkillEffects(true, LIMIT_BARRIER.getSkillId());
                     RAIDBOSS_HITS.put(npc, 0);
                 }

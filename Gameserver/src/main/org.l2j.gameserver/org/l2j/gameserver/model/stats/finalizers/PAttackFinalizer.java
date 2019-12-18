@@ -21,7 +21,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.items.BodyPart;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 
 import java.util.Optional;
 
@@ -32,7 +32,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public class PAttackFinalizer implements IStatsFunction {
     @Override
-    public double calc(Creature creature, Optional<Double> base, Stats stat) {
+    public double calc(Creature creature, Optional<Double> base, Stat stat) {
         throwIfPresent(base);
 
         double baseValue = calcWeaponBaseValue(creature, stat);
@@ -51,7 +51,7 @@ public class PAttackFinalizer implements IStatsFunction {
         }
         final double strBonus = creature.getSTR() > 0 ? BaseStats.STR.calcBonus(creature) : 1.;
         baseValue *= strBonus * creature.getLevelMod();
-        return Math.min(Stats.defaultValue(creature, stat, baseValue), Config.MAX_PATK);
+        return Math.min(Stat.defaultValue(creature, stat, baseValue), Config.MAX_PATK);
     }
 
     @Override

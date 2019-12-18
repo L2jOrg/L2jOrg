@@ -17,7 +17,7 @@ import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.util.GameUtils;
@@ -691,8 +691,8 @@ public class Party extends AbstractPlayerGroup {
                 final double preCalculation = (sqLevel / sqLevelSum) * penalty;
 
                 // Add the XP/SP points to the requested party member
-                double exp = member.getStat().getValue(Stats.EXPSP_RATE, xpReward * preCalculation);
-                double sp = member.getStat().getValue(Stats.EXPSP_RATE, spReward * preCalculation);
+                double exp = member.getStats().getValue(Stat.EXPSP_RATE, xpReward * preCalculation);
+                double sp = member.getStats().getValue(Stat.EXPSP_RATE, spReward * preCalculation);
 
                 exp = calculateExpSpPartyCutoff(member.getActingPlayer(), topLvl, exp, sp, target.useVitalityRate());
                 if (exp > 0) {
@@ -700,7 +700,7 @@ public class Party extends AbstractPlayerGroup {
                     if (clan != null) {
                         double finalExp = exp;
                         if (target.useVitalityRate()) {
-                            finalExp *= member.getStat().getExpBonusMultiplier();
+                            finalExp *= member.getStats().getExpBonusMultiplier();
                         }
                         clan.addHuntingPoints(member, target, finalExp);
                     }

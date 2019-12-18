@@ -64,6 +64,6 @@ public class CubicSkill extends SkillHolder implements ICubicConditionHolder {
 
     @Override
     public String toString() {
-        return "Cubic skill id: " + getSkillId() + " level: " + getSkillLevel() + " triggerRate: " + _triggerRate + " successRate: " + _successRate + " canUseOnStaticObjects: " + _canUseOnStaticObjects + " targetType: " + _targetType + " isTargetingDebuff: " + _targetDebuff + Config.EOL;
+        return "Cubic skill id: " + getSkillId() + " level: " + getLevel() + " triggerRate: " + _triggerRate + " successRate: " + _successRate + " canUseOnStaticObjects: " + _canUseOnStaticObjects + " targetType: " + _targetType + " isTargetingDebuff: " + _targetDebuff + Config.EOL;
     }
 }

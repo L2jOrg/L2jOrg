@@ -160,7 +160,7 @@ public final class WorldTimeController extends Thread {
         final SystemMessage msg = SystemMessage.getSystemMessage(isNight() ? SystemMessageId.IT_IS_NOW_MIDNIGHT_AND_THE_EFFECT_OF_S1_CAN_BE_FELT : SystemMessageId.IT_IS_DAWN_AND_THE_EFFECT_OF_S1_WILL_NOW_DISAPPEAR);
         msg.addSkillName(CommonSkill.SHADOW_SENSE_ID.getId());
         for (Creature character : shadowSenseCharacters) {
-            character.getStat().recalculateStats(true);
+            character.getStats().recalculateStats(true);
             character.sendPacket(msg);
         }
     }

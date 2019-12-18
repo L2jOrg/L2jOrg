@@ -4,6 +4,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.enums.InventorySlot;
+import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.impl.NpcData;
@@ -60,7 +61,6 @@ import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.spawns.SpawnGroup;
 import org.l2j.gameserver.model.spawns.SpawnTemplate;
-import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -717,7 +717,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
             item.setAttribute(new AttributeHolder(attributeType, attributeValue), true);
             if (item.isEquipped()) {
                 // Recalculate all stats
-                player.getStat().recalculateStats(true);
+                player.getStats().recalculateStats(true);
             }
 
             final InventoryUpdate iu = new InventoryUpdate();
@@ -982,7 +982,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         if (player.isSimulatingTalking()) {
             return;
         }
-        player.addExpAndSp((long) player.getStat().getValue(Stats.EXPSP_RATE, (exp * Config.RATE_QUEST_REWARD_XP)), (int) player.getStat().getValue(Stats.EXPSP_RATE, (sp * Config.RATE_QUEST_REWARD_SP)));
+        player.addExpAndSp((long) player.getStats().getValue(Stat.EXPSP_RATE, (exp * Config.RATE_QUEST_REWARD_XP)), (int) player.getStats().getValue(Stat.EXPSP_RATE, (sp * Config.RATE_QUEST_REWARD_SP)));
         PcCafePointsManager.getInstance().givePcCafePoint(player, (long) (exp * Config.RATE_QUEST_REWARD_XP));
     }
 

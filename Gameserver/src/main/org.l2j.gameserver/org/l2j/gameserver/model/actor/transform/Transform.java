@@ -17,7 +17,7 @@ import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.model.items.type.WeaponType;
 import org.l2j.gameserver.model.skills.AbnormalType;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.serverpackets.ExBasicActionList;
 import org.l2j.gameserver.network.serverpackets.ExUserInfoEquipSlot;
 import org.l2j.gameserver.network.serverpackets.SkillCoolTime;
@@ -333,7 +333,7 @@ public final class Transform implements IIdentifiable {
             if (!template.getAdditionalSkills().isEmpty()) {
                 for (AdditionalSkillHolder holder : template.getAdditionalSkills()) {
                     if (player.getLevel() >= holder.getMinLevel()) {
-                        if (player.getSkillLevel(holder.getSkillId()) < holder.getSkillLevel()) {
+                        if (player.getSkillLevel(holder.getSkillId()) < holder.getLevel()) {
                             player.addTransformSkill(holder.getSkill());
                         }
                     }
@@ -353,14 +353,14 @@ public final class Transform implements IIdentifiable {
         return defaultAttackType;
     }
 
-    public double getStats(Creature creature, Stats stats, double defaultValue) {
+    public double getStats(Creature creature, Stat stat, double defaultValue) {
         double val = defaultValue;
         final TransformTemplate template = getTemplate(creature);
         if (template != null) {
-            val = template.getStats(stats, defaultValue);
+            val = template.getStats(stat, defaultValue);
             final TransformLevelData data = template.getData(creature.getLevel());
             if (data != null) {
-                val = data.getStats(stats, defaultValue);
+                val = data.getStats(stat, defaultValue);
             }
         }
         return val;

@@ -20,7 +20,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 
 import java.util.Optional;
 
@@ -29,7 +29,7 @@ import java.util.Optional;
  */
 public class PAttackSpeedFinalizer implements IStatsFunction {
     @Override
-    public double calc(Creature creature, Optional<Double> base, Stats stat) {
+    public double calc(Creature creature, Optional<Double> base, Stat stat) {
         throwIfPresent(base);
         double baseValue = calcWeaponBaseValue(creature, stat);
         if (Config.CHAMPION_ENABLE && creature.isChampion()) {
@@ -40,9 +40,9 @@ public class PAttackSpeedFinalizer implements IStatsFunction {
         return validateValue(creature, defaultValue(creature, stat, baseValue), 1, Config.MAX_PATK_SPEED);
     }
 
-    private double defaultValue(Creature creature, Stats stat, double baseValue) {
-        final double mul = Math.max(creature.getStat().getMul(stat), 0.7);
-        final double add = creature.getStat().getAdd(stat);
-        return (baseValue * mul) + add + creature.getStat().getMoveTypeValue(stat, creature.getMoveType());
+    private double defaultValue(Creature creature, Stat stat, double baseValue) {
+        final double mul = Math.max(creature.getStats().getMul(stat), 0.7);
+        final double add = creature.getStats().getAdd(stat);
+        return (baseValue * mul) + add + creature.getStats().getMoveTypeValue(stat, creature.getMoveType());
     }
 }

@@ -303,7 +303,7 @@ public final class RequestAcquireSkill extends ClientPacket {
                 // Check for required skills.
                 if (!skillLearn.getPreReqSkills().isEmpty()) {
                     for (SkillHolder skill : skillLearn.getPreReqSkills()) {
-                        if (player.getSkillLevel(skill.getSkillId()) < skill.getSkillLevel()) {
+                        if (player.getSkillLevel(skill.getSkillId()) < skill.getLevel()) {
                             if (skill.getSkillId() == CommonSkill.ONYX_BEAST_TRANSFORMATION.getId()) {
                                 player.sendPacket(SystemMessageId.YOU_MUST_LEARN_THE_ONYX_BEAST_SKILL_BEFORE_YOU_CAN_LEARN_FURTHER_SKILLS);
                             } else {

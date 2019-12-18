@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.world.World;
@@ -30,19 +14,18 @@ import org.l2j.gameserver.util.GameUtils;
  * Transfer Hate effect implementation.
  * @author Adry_85
  */
-public final class TransferHate extends AbstractEffect
-{
-	private final int _chance;
+public final class TransferHate extends AbstractEffect {
+	private final int chance;
 	
 	public TransferHate(StatsSet params)
 	{
-		_chance = params.getInt("chance", 100);
+		chance = params.getInt("chance", 100);
 	}
 	
 	@Override
 	public boolean calcSuccess(Creature effector, Creature effected, Skill skill)
 	{
-		return Formulas.calcProbability(_chance, effector, effected, skill);
+		return Formulas.calcProbability(chance, effector, effected, skill);
 	}
 	
 	@Override
@@ -58,17 +41,13 @@ public final class TransferHate extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, Item item)
-	{
-		World.getInstance().forEachVisibleObjectInRange(effector, Attackable.class, skill.getAffectRange(), hater ->
-		{
-			if (hater.isDead())
-			{
+	public void instant(Creature effector, Creature effected, Skill skill, Item item) {
+		World.getInstance().forEachVisibleObjectInRange(effector, Attackable.class, skill.getAffectRange(), hater -> {
+			if (hater.isDead()) {
 				return;
 			}
 			final int hate = hater.getHating(effector);
-			if (hate <= 0)
-			{
+			if (hate <= 0) {
 				return;
 			}
 			

@@ -18,7 +18,7 @@ import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.stat.SummonStat;
+import org.l2j.gameserver.model.actor.stat.SummonStats;
 import org.l2j.gameserver.model.actor.status.SummonStatus;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.effects.EffectFlag;
@@ -101,13 +101,13 @@ public abstract class Summon extends Playable {
     }
 
     @Override
-    public SummonStat getStat() {
-        return (SummonStat) super.getStat();
+    public SummonStats getStats() {
+        return (SummonStats) super.getStats();
     }
 
     @Override
     public void initCharStat() {
-        setStat(new SummonStat(this));
+        setStat(new SummonStats(this));
     }
 
     @Override
@@ -523,7 +523,7 @@ public abstract class Summon extends Playable {
         }
 
         // Check if the summon has enough MP
-        if (getCurrentMp() < (getStat().getMpConsume(skill) + getStat().getMpInitialConsume(skill))) {
+        if (getCurrentMp() < (getStats().getMpConsume(skill) + getStats().getMpInitialConsume(skill))) {
             // Send a System Message to the caster
             sendPacket(SystemMessageId.NOT_ENOUGH_MP);
             return false;

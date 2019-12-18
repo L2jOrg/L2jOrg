@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.model.StatsSet;
@@ -25,23 +9,23 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.PetItemList;
 
+import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.util.GameUtils.*;
 
 /**
  * Restoration effect implementation.
  * @author Zoey76, Mobius
  */
-public final class Restoration extends AbstractEffect
-{
-	private final int _itemId;
-	private final int _itemCount;
-	private final int _itemEnchantmentLevel;
+public final class Restoration extends AbstractEffect {
+
+	private final int itemId;
+	private final int itemCount;
+	private final int itemEnchantmentLevel;
 	
-	public Restoration(StatsSet params)
-	{
-		_itemId = params.getInt("itemId", 0);
-		_itemCount = params.getInt("itemCount", 0);
-		_itemEnchantmentLevel = params.getInt("itemEnchantmentLevel", 0);
+	public Restoration(StatsSet params) {
+		itemId = params.getInt("itemId", 0);
+		itemCount = params.getInt("itemCount", 0);
+		itemEnchantmentLevel = params.getInt("itemEnchantmentLevel", 0);
 	}
 	
 	@Override
@@ -51,34 +35,27 @@ public final class Restoration extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, Item item)
-	{
-		if (!isPlayable(effected))
-		{
+	public void instant(Creature effector, Creature effected, Skill skill, Item item) {
+		if (!isPlayable(effected)){
 			return;
 		}
 		
-		if ((_itemId <= 0) || (_itemCount <= 0))
-		{
+		if (itemId <= 0 || itemCount <= 0) {
 			effected.sendPacket(SystemMessageId.THERE_WAS_NOTHING_FOUND_INSIDE);
-			LOGGER.warn(Restoration.class.getSimpleName() + " effect with wrong item Id/count: " + _itemId + "/" + _itemCount + "!");
+			LOGGER.warn("effect with wrong item Id/count: {}/{}!", itemId, itemCount);
 			return;
 		}
 		
-		if (isPlayer(effected))
-		{
-			final Item newItem = effected.getActingPlayer().addItem("Skill", _itemId, _itemCount, effector, true);
-			if (_itemEnchantmentLevel > 0)
-			{
-				newItem.setEnchantLevel(_itemEnchantmentLevel);
+		if (isPlayer(effected)) {
+			final Item newItem = effected.getActingPlayer().addItem("Skill", itemId, itemCount, effector, true);
+			if (nonNull(newItem) && itemEnchantmentLevel > 0) {
+				newItem.setEnchantLevel(itemEnchantmentLevel);
 			}
 		}
-		else if (isPet(effected))
-		{
-			final Item newItem = effected.getInventory().addItem("Skill", _itemId, _itemCount, effected.getActingPlayer(), effector);
-			if (_itemEnchantmentLevel > 0)
-			{
-				newItem.setEnchantLevel(_itemEnchantmentLevel);
+		else if (isPet(effected)) {
+			final Item newItem = effected.getInventory().addItem("Skill", itemId, itemCount, effected.getActingPlayer(), effector);
+			if (itemEnchantmentLevel > 0) {
+				newItem.setEnchantLevel(itemEnchantmentLevel);
 			}
 			effected.getActingPlayer().sendPacket(new PetItemList(effected.getInventory().getItems()));
 		}

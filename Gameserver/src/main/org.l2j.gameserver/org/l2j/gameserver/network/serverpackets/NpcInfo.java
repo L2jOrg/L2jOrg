@@ -50,7 +50,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType> {
             addComponentType(NpcInfoType.HEADING);
         }
 
-        if ((npc.getStat().getPAtkSpd() > 0) || (npc.getStat().getMAtkSpd() > 0)) {
+        if ((npc.getStats().getPAtkSpd() > 0) || (npc.getStats().getMAtkSpd() > 0)) {
             addComponentType(NpcInfoType.ATK_CAST_SPEED);
         }
 
@@ -247,8 +247,8 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType> {
             writeInt(_npc.getMAtkSpd());
         }
         if (containsMask(NpcInfoType.SPEED_MULTIPLIER)) {
-            writeFloat((float) _npc.getStat().getMovementSpeedMultiplier());
-            writeFloat((float) _npc.getStat().getAttackSpeedMultiplier());
+            writeFloat((float) _npc.getStats().getMovementSpeedMultiplier());
+            writeFloat((float) _npc.getStats().getAttackSpeedMultiplier());
         }
         if (containsMask(NpcInfoType.EQUIPPED)) {
             writeInt(_npc.getRightHandItem());

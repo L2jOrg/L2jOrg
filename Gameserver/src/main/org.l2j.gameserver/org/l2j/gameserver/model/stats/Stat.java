@@ -9,13 +9,13 @@ import java.util.NoSuchElementException;
 import java.util.Optional;
 import java.util.function.BiFunction;
 
-
 /**
  * Enum of basic stats.
  *
  * @author mkizub, UnAfraid, NosBit, Sdw
+ * @author JoeAlisson
  */
-public enum Stats {
+public enum Stat {
     // HP, MP & CP
     MAX_HP("maxHp", new MaxHpFinalizer()),
     MAX_MP("maxMp", new MaxMpFinalizer()),
@@ -81,7 +81,7 @@ public enum Stats {
     MAGIC_CRITICAL_DAMAGE_ADD("mCritPowerAdd"),
     SHIELD_DEFENCE_RATE("rShld", new ShieldDefenceRateFinalizer()),
     CRITICAL_RATE("rCrit", new PCriticalRateFinalizer(), MathUtil::add, MathUtil::add, null, 1d),
-    CRITICAL_RATE_SKILL("rCritSkill", Stats::defaultValue, MathUtil::add, MathUtil::add, null, 1d),
+    CRITICAL_RATE_SKILL("rCritSkill", Stat::defaultValue, MathUtil::add, MathUtil::add, null, 1d),
     MAGIC_CRITICAL_RATE("mCritRate", new MCritRateFinalizer()),
     BLOW_RATE("blowRate"),
     DEFENCE_CRITICAL_RATE("defCritRate"),
@@ -267,17 +267,17 @@ public enum Stats {
     private final Double _resetMulValue;
     private boolean hasDefaultFinalizer ;
 
-    Stats(String xmlString) {
-        this(xmlString, Stats::defaultValue, MathUtil::add, MathUtil::mul, null, null);
+    Stat(String xmlString) {
+        this(xmlString, Stat::defaultValue, MathUtil::add, MathUtil::mul, null, null);
         hasDefaultFinalizer = true;
     }
 
-    Stats(String xmlString, IStatsFunction valueFinalizer) {
+    Stat(String xmlString, IStatsFunction valueFinalizer) {
         this(xmlString, valueFinalizer, MathUtil::add, MathUtil::mul, null, null);
 
     }
 
-    Stats(String xmlString, IStatsFunction valueFinalizer, BiFunction<Double, Double, Double> addFunction, BiFunction<Double, Double, Double> mulFunction, Double resetAddValue, Double resetMulValue) {
+    Stat(String xmlString, IStatsFunction valueFinalizer, BiFunction<Double, Double, Double> addFunction, BiFunction<Double, Double, Double> mulFunction, Double resetAddValue, Double resetMulValue) {
         _value = xmlString;
         _valueFinalizer = valueFinalizer;
         _addFunction = addFunction;
@@ -286,31 +286,31 @@ public enum Stats {
         _resetMulValue = resetMulValue;
     }
 
-    public static Stats valueOfXml(String name) {
+    public static Stat valueOfXml(String name) {
         name = name.intern();
-        for (Stats s : values()) {
+        for (Stat s : values()) {
             if (s.getValue().equals(name)) {
                 return s;
             }
         }
 
-        throw new NoSuchElementException("Unknown name '" + name + "' for enum " + Stats.class.getSimpleName());
+        throw new NoSuchElementException("Unknown name '" + name + "' for enum " + Stat.class.getSimpleName());
     }
 
-    public static double weaponBaseValue(Creature creature, Stats stat) {
+    public static double weaponBaseValue(Creature creature, Stat stat) {
         return stat._valueFinalizer.calcWeaponBaseValue(creature, stat);
     }
 
-    public static double defaultValue(Creature creature, Optional<Double> base, Stats stat) {
-        final double mul = creature.getStat().getMul(stat);
-        final double add = creature.getStat().getAdd(stat);
-        return base.isPresent() ? defaultValue(creature, stat, base.get()) : mul * (add + creature.getStat().getMoveTypeValue(stat, creature.getMoveType()));
+    public static double defaultValue(Creature creature, Optional<Double> base, Stat stat) {
+        final double mul = creature.getStats().getMul(stat);
+        final double add = creature.getStats().getAdd(stat);
+        return base.isPresent() ? defaultValue(creature, stat, base.get()) : mul * (add + creature.getStats().getMoveTypeValue(stat, creature.getMoveType()));
     }
 
-    public static double defaultValue(Creature creature, Stats stat, double baseValue) {
-        final double mul = creature.getStat().getMul(stat);
-        final double add = creature.getStat().getAdd(stat);
-        return (baseValue * mul) + add + creature.getStat().getMoveTypeValue(stat, creature.getMoveType());
+    public static double defaultValue(Creature creature, Stat stat, double baseValue) {
+        final double mul = creature.getStats().getMul(stat);
+        final double add = creature.getStats().getAdd(stat);
+        return (baseValue * mul) + add + creature.getStats().getMoveTypeValue(stat, creature.getMoveType());
     }
 
     public String getValue() {

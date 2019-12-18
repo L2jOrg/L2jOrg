@@ -54,7 +54,7 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType> {
             addComponentType(NpcInfoType.HEADING);
         }
 
-        if ((summon.getStat().getPAtkSpd() > 0) || (summon.getStat().getMAtkSpd() > 0)) {
+        if ((summon.getStats().getPAtkSpd() > 0) || (summon.getStats().getMAtkSpd() > 0)) {
             addComponentType(NpcInfoType.ATK_CAST_SPEED);
         }
 
@@ -219,8 +219,8 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType> {
             writeInt(_summon.getMAtkSpd());
         }
         if (containsMask(NpcInfoType.SPEED_MULTIPLIER)) {
-            writeFloat((float) _summon.getStat().getMovementSpeedMultiplier());
-            writeFloat((float) _summon.getStat().getAttackSpeedMultiplier());
+            writeFloat((float) _summon.getStats().getMovementSpeedMultiplier());
+            writeFloat((float) _summon.getStats().getAttackSpeedMultiplier());
         }
         if (containsMask(NpcInfoType.EQUIPPED)) {
             writeInt(_summon.getWeapon());

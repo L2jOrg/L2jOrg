@@ -15,7 +15,7 @@ import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.DropHolder;
 import org.l2j.gameserver.model.items.ItemTemplate;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.HtmlUtil;
@@ -226,7 +226,7 @@ public class NpcViewMod implements IBypassHandler
         }
 
         html.replace("%atktype%", CommonUtil.capitalizeFirst(npc.getAttackType().name().toLowerCase()));
-        html.replace("%atkrange%", npc.getStat().getPhysicalAttackRange());
+        html.replace("%atkrange%", npc.getStats().getPhysicalAttackRange());
 
         html.replace("%patk%", npc.getPAtk());
         html.replace("%pdef%", npc.getPDef());
@@ -237,20 +237,20 @@ public class NpcViewMod implements IBypassHandler
         html.replace("%atkspd%", npc.getPAtkSpd());
         html.replace("%castspd%", npc.getMAtkSpd());
 
-        html.replace("%critrate%", npc.getStat().getCriticalHit());
+        html.replace("%critrate%", npc.getStats().getCriticalHit());
         html.replace("%evasion%", npc.getEvasionRate());
 
-        html.replace("%accuracy%", npc.getStat().getAccuracy());
-        html.replace("%speed%", (int) npc.getStat().getMoveSpeed());
+        html.replace("%accuracy%", npc.getStats().getAccuracy());
+        html.replace("%speed%", (int) npc.getStats().getMoveSpeed());
 
-        html.replace("%attributeatktype%", npc.getStat().getAttackElement().name());
-        html.replace("%attributeatkvalue%", npc.getStat().getAttackElementValue(npc.getStat().getAttackElement()));
-        html.replace("%attributefire%", npc.getStat().getDefenseElementValue(AttributeType.FIRE));
-        html.replace("%attributewater%", npc.getStat().getDefenseElementValue(AttributeType.WATER));
-        html.replace("%attributewind%", npc.getStat().getDefenseElementValue(AttributeType.WIND));
-        html.replace("%attributeearth%", npc.getStat().getDefenseElementValue(AttributeType.EARTH));
-        html.replace("%attributedark%", npc.getStat().getDefenseElementValue(AttributeType.DARK));
-        html.replace("%attributeholy%", npc.getStat().getDefenseElementValue(AttributeType.HOLY));
+        html.replace("%attributeatktype%", npc.getStats().getAttackElement().name());
+        html.replace("%attributeatkvalue%", npc.getStats().getAttackElementValue(npc.getStats().getAttackElement()));
+        html.replace("%attributefire%", npc.getStats().getDefenseElementValue(AttributeType.FIRE));
+        html.replace("%attributewater%", npc.getStats().getDefenseElementValue(AttributeType.WATER));
+        html.replace("%attributewind%", npc.getStats().getDefenseElementValue(AttributeType.WIND));
+        html.replace("%attributeearth%", npc.getStats().getDefenseElementValue(AttributeType.EARTH));
+        html.replace("%attributedark%", npc.getStats().getDefenseElementValue(AttributeType.DARK));
+        html.replace("%attributeholy%", npc.getStats().getDefenseElementValue(AttributeType.HOLY));
 
         html.replace("%dropListButtons%", getDropListButtons(npc));
 
@@ -387,9 +387,9 @@ public class NpcViewMod implements IBypassHandler
 
         int leftHeight = 0;
         int rightHeight = 0;
-        final double dropAmountEffectBonus = activeChar.getStat().getValue(Stats.BONUS_DROP_AMOUNT, 1);
-        final double dropRateEffectBonus = activeChar.getStat().getValue(Stats.BONUS_DROP_RATE, 1);
-        final double spoilRateEffectBonus = activeChar.getStat().getValue(Stats.BONUS_SPOIL_RATE, 1);
+        final double dropAmountEffectBonus = activeChar.getStats().getValue(Stat.BONUS_DROP_AMOUNT, 1);
+        final double dropRateEffectBonus = activeChar.getStats().getValue(Stat.BONUS_DROP_RATE, 1);
+        final double spoilRateEffectBonus = activeChar.getStats().getValue(Stat.BONUS_SPOIL_RATE, 1);
         final StringBuilder leftSb = new StringBuilder();
         final StringBuilder rightSb = new StringBuilder();
         String limitReachedMsg = "";

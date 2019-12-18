@@ -15,7 +15,7 @@ import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.util.GameUtils;
 
 import java.util.*;
@@ -217,46 +217,46 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
         {
             switch (_type) {
                 case "L2Monster": {
-                    _baseValues.put(Stats.MAX_HP, getBaseHpMax() * Config.MONSTER_HP_MULTIPLIER);
-                    _baseValues.put(Stats.MAX_MP, getBaseMpMax() * Config.MONSTER_MP_MULTIPLIER);
-                    _baseValues.put(Stats.PHYSICAL_ATTACK, getBasePAtk() * Config.MONSTER_PATK_MULTIPLIER);
-                    _baseValues.put(Stats.MAGIC_ATTACK, getBaseMAtk() * Config.MONSTER_MATK_MULTIPLIER);
-                    _baseValues.put(Stats.PHYSICAL_DEFENCE, getBasePDef() * Config.MONSTER_PDEF_MULTIPLIER);
-                    _baseValues.put(Stats.MAGICAL_DEFENCE, getBaseMDef() * Config.MONSTER_MDEF_MULTIPLIER);
+                    _baseValues.put(Stat.MAX_HP, getBaseHpMax() * Config.MONSTER_HP_MULTIPLIER);
+                    _baseValues.put(Stat.MAX_MP, getBaseMpMax() * Config.MONSTER_MP_MULTIPLIER);
+                    _baseValues.put(Stat.PHYSICAL_ATTACK, getBasePAtk() * Config.MONSTER_PATK_MULTIPLIER);
+                    _baseValues.put(Stat.MAGIC_ATTACK, getBaseMAtk() * Config.MONSTER_MATK_MULTIPLIER);
+                    _baseValues.put(Stat.PHYSICAL_DEFENCE, getBasePDef() * Config.MONSTER_PDEF_MULTIPLIER);
+                    _baseValues.put(Stat.MAGICAL_DEFENCE, getBaseMDef() * Config.MONSTER_MDEF_MULTIPLIER);
                     _aggroRange *= Config.MONSTER_AGRRO_RANGE_MULTIPLIER;
                     _clanHelpRange *= Config.MONSTER_CLAN_HELP_RANGE_MULTIPLIER;
                     break;
                 }
                 case "L2RaidBoss":
                 case "L2GrandBoss": {
-                    _baseValues.put(Stats.MAX_HP, getBaseHpMax() * Config.RAIDBOSS_HP_MULTIPLIER);
-                    _baseValues.put(Stats.MAX_MP, getBaseMpMax() * Config.RAIDBOSS_MP_MULTIPLIER);
-                    _baseValues.put(Stats.PHYSICAL_ATTACK, getBasePAtk() * Config.RAIDBOSS_PATK_MULTIPLIER);
-                    _baseValues.put(Stats.MAGIC_ATTACK, getBaseMAtk() * Config.RAIDBOSS_MATK_MULTIPLIER);
-                    _baseValues.put(Stats.PHYSICAL_DEFENCE, getBasePDef() * Config.RAIDBOSS_PDEF_MULTIPLIER);
-                    _baseValues.put(Stats.MAGICAL_DEFENCE, getBaseMDef() * Config.RAIDBOSS_MDEF_MULTIPLIER);
+                    _baseValues.put(Stat.MAX_HP, getBaseHpMax() * Config.RAIDBOSS_HP_MULTIPLIER);
+                    _baseValues.put(Stat.MAX_MP, getBaseMpMax() * Config.RAIDBOSS_MP_MULTIPLIER);
+                    _baseValues.put(Stat.PHYSICAL_ATTACK, getBasePAtk() * Config.RAIDBOSS_PATK_MULTIPLIER);
+                    _baseValues.put(Stat.MAGIC_ATTACK, getBaseMAtk() * Config.RAIDBOSS_MATK_MULTIPLIER);
+                    _baseValues.put(Stat.PHYSICAL_DEFENCE, getBasePDef() * Config.RAIDBOSS_PDEF_MULTIPLIER);
+                    _baseValues.put(Stat.MAGICAL_DEFENCE, getBaseMDef() * Config.RAIDBOSS_MDEF_MULTIPLIER);
                     _aggroRange *= Config.RAIDBOSS_AGRRO_RANGE_MULTIPLIER;
                     _clanHelpRange *= Config.RAIDBOSS_CLAN_HELP_RANGE_MULTIPLIER;
                     break;
                 }
                 case "L2Guard": {
-                    _baseValues.put(Stats.MAX_HP, getBaseHpMax() * Config.GUARD_HP_MULTIPLIER);
-                    _baseValues.put(Stats.MAX_MP, getBaseMpMax() * Config.GUARD_MP_MULTIPLIER);
-                    _baseValues.put(Stats.PHYSICAL_ATTACK, getBasePAtk() * Config.GUARD_PATK_MULTIPLIER);
-                    _baseValues.put(Stats.MAGIC_ATTACK, getBaseMAtk() * Config.GUARD_MATK_MULTIPLIER);
-                    _baseValues.put(Stats.PHYSICAL_DEFENCE, getBasePDef() * Config.GUARD_PDEF_MULTIPLIER);
-                    _baseValues.put(Stats.MAGICAL_DEFENCE, getBaseMDef() * Config.GUARD_MDEF_MULTIPLIER);
+                    _baseValues.put(Stat.MAX_HP, getBaseHpMax() * Config.GUARD_HP_MULTIPLIER);
+                    _baseValues.put(Stat.MAX_MP, getBaseMpMax() * Config.GUARD_MP_MULTIPLIER);
+                    _baseValues.put(Stat.PHYSICAL_ATTACK, getBasePAtk() * Config.GUARD_PATK_MULTIPLIER);
+                    _baseValues.put(Stat.MAGIC_ATTACK, getBaseMAtk() * Config.GUARD_MATK_MULTIPLIER);
+                    _baseValues.put(Stat.PHYSICAL_DEFENCE, getBasePDef() * Config.GUARD_PDEF_MULTIPLIER);
+                    _baseValues.put(Stat.MAGICAL_DEFENCE, getBaseMDef() * Config.GUARD_MDEF_MULTIPLIER);
                     _aggroRange *= Config.GUARD_AGRRO_RANGE_MULTIPLIER;
                     _clanHelpRange *= Config.GUARD_CLAN_HELP_RANGE_MULTIPLIER;
                     break;
                 }
                 case "L2Defender": {
-                    _baseValues.put(Stats.MAX_HP, getBaseHpMax() * Config.DEFENDER_HP_MULTIPLIER);
-                    _baseValues.put(Stats.MAX_MP, getBaseMpMax() * Config.DEFENDER_MP_MULTIPLIER);
-                    _baseValues.put(Stats.PHYSICAL_ATTACK, getBasePAtk() * Config.DEFENDER_PATK_MULTIPLIER);
-                    _baseValues.put(Stats.MAGIC_ATTACK, getBaseMAtk() * Config.DEFENDER_MATK_MULTIPLIER);
-                    _baseValues.put(Stats.PHYSICAL_DEFENCE, getBasePDef() * Config.DEFENDER_PDEF_MULTIPLIER);
-                    _baseValues.put(Stats.MAGICAL_DEFENCE, getBaseMDef() * Config.DEFENDER_MDEF_MULTIPLIER);
+                    _baseValues.put(Stat.MAX_HP, getBaseHpMax() * Config.DEFENDER_HP_MULTIPLIER);
+                    _baseValues.put(Stat.MAX_MP, getBaseMpMax() * Config.DEFENDER_MP_MULTIPLIER);
+                    _baseValues.put(Stat.PHYSICAL_ATTACK, getBasePAtk() * Config.DEFENDER_PATK_MULTIPLIER);
+                    _baseValues.put(Stat.MAGIC_ATTACK, getBaseMAtk() * Config.DEFENDER_MATK_MULTIPLIER);
+                    _baseValues.put(Stat.PHYSICAL_DEFENCE, getBasePDef() * Config.DEFENDER_PDEF_MULTIPLIER);
+                    _baseValues.put(Stat.MAGICAL_DEFENCE, getBaseMDef() * Config.DEFENDER_MDEF_MULTIPLIER);
                     _aggroRange *= Config.DEFENDER_AGRRO_RANGE_MULTIPLIER;
                     _clanHelpRange *= Config.DEFENDER_CLAN_HELP_RANGE_MULTIPLIER;
                     break;
@@ -729,7 +729,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
                 }
 
                 // bonus drop rate effect
-                rateChance *= killer.getStat().getValue(Stats.BONUS_DROP_RATE, 1);
+                rateChance *= killer.getStats().getValue(Stat.BONUS_DROP_RATE, 1);
 
                 // calculate if item will drop
                 if ((Rnd.nextDouble() * 100) < (dropItem.getChance() * rateChance)) {
@@ -751,7 +751,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
                     }
 
                     // bonus drop amount effect
-                    rateAmount *= killer.getStat().getValue(Stats.BONUS_DROP_AMOUNT, 1);
+                    rateAmount *= killer.getStats().getValue(Stat.BONUS_DROP_AMOUNT, 1);
 
                     // finally
                     return new ItemHolder(itemId, (long) (Rnd.get(dropItem.getMin(), dropItem.getMax()) * rateAmount));
@@ -763,7 +763,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
                 double rateChance = Config.RATE_SPOIL_DROP_CHANCE_MULTIPLIER;
 
                 // bonus drop rate effect
-                rateChance *= killer.getStat().getValue(Stats.BONUS_SPOIL_RATE, 1);
+                rateChance *= killer.getStats().getValue(Stat.BONUS_SPOIL_RATE, 1);
 
                 // calculate if item will be rewarded
                 if ((Rnd.nextDouble() * 100) < (dropItem.getChance() * rateChance)) {

@@ -26,7 +26,7 @@ import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.items.*;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.*;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.model.stats.functions.FuncTemplate;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -127,7 +127,7 @@ public final class ItemEngine extends GameXmlReader {
     private void parseItemStats(ItemTemplate item, Node node) {
         forEach(node, "stat", statNode -> {
             var attr = statNode.getAttributes();
-            var type = Stats.valueOfXml(parseString(attr, "type"));
+            var type = Stat.valueOfXml(parseString(attr, "type"));
             var value = parseDouble(attr, "value");
             item.addFunctionTemplate(new FuncTemplate(null, null, "add", 0x00, type, value));
         });

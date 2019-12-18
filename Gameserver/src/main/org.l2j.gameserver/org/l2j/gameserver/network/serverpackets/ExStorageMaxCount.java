@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -30,7 +30,7 @@ public class ExStorageMaxCount extends ServerPacket {
         _clan = Config.WAREHOUSE_SLOTS_CLAN;
         _receipeD = activeChar.getDwarfRecipeLimit();
         _recipe = activeChar.getCommonRecipeLimit();
-        _inventoryExtraSlots = (int) activeChar.getStat().getValue(Stats.INVENTORY_NORMAL, 0);
+        _inventoryExtraSlots = (int) activeChar.getStats().getValue(Stat.INVENTORY_NORMAL, 0);
         _inventoryQuestItems = Config.INVENTORY_MAXIMUM_QUEST_ITEMS;
     }
 

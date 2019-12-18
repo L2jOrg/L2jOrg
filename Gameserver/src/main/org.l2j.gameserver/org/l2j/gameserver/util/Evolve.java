@@ -47,7 +47,7 @@ public final class Evolve {
         }
 
         Item item = null;
-        long petexp = currentPet.getStat().getExp();
+        long petexp = currentPet.getStats().getExp();
         final String oldname = currentPet.getName();
         final int oldX = currentPet.getX();
         final int oldY = currentPet.getY();
@@ -61,7 +61,7 @@ public final class Evolve {
 
         final int oldnpcID = oldData.getNpcId();
 
-        if ((currentPet.getStat().getLevel() < petminlvl) || (currentPet.getId() != oldnpcID)) {
+        if ((currentPet.getStats().getLevel() < petminlvl) || (currentPet.getId() != oldnpcID)) {
             return false;
         }
 
@@ -94,12 +94,12 @@ public final class Evolve {
         }
 
         // Fix for non-linear baby pet exp
-        final long _minimumexp = petSummon.getStat().getExpForLevel(petminlvl);
+        final long _minimumexp = petSummon.getStats().getExpForLevel(petminlvl);
         if (petexp < _minimumexp) {
             petexp = _minimumexp;
         }
 
-        petSummon.getStat().addExp(petexp);
+        petSummon.getStats().addExp(petexp);
         petSummon.setCurrentHp(petSummon.getMaxHp());
         petSummon.setCurrentMp(petSummon.getMaxMp());
         petSummon.setCurrentFed(petSummon.getMaxFed());
@@ -174,9 +174,9 @@ public final class Evolve {
             return false;
         }
 
-        final long _maxexp = petSummon.getStat().getExpForLevel(oldpetlvl);
+        final long _maxexp = petSummon.getStats().getExpForLevel(oldpetlvl);
 
-        petSummon.getStat().addExp(_maxexp);
+        petSummon.getStats().addExp(_maxexp);
         petSummon.setCurrentHp(petSummon.getMaxHp());
         petSummon.setCurrentMp(petSummon.getMaxMp());
         petSummon.setCurrentFed(petSummon.getMaxFed());

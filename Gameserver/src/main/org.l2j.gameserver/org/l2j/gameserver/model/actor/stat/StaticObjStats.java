@@ -18,8 +18,8 @@ package org.l2j.gameserver.model.actor.stat;
 
 import org.l2j.gameserver.model.actor.instance.StaticWorldObject;
 
-public class StaticObjStat extends CharStat {
-    public StaticObjStat(StaticWorldObject activeChar) {
+public class StaticObjStats extends CreatureStats {
+    public StaticObjStats(StaticWorldObject activeChar) {
         super(activeChar);
     }
 

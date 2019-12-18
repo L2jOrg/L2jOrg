@@ -8,21 +8,21 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
+import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * Give XP and SP effect implementation.
  * @author quangnguyen
  */
-public final class GiveExpAndSp extends AbstractEffect
-{
-    private final int _xp;
-    private final int _sp;
+public final class GiveExpAndSp extends AbstractEffect {
 
-    public GiveExpAndSp(StatsSet params)
-    {
-        _xp = params.getInt("xp", 0);
-        _sp = params.getInt("sp", 0);
+    private final int xp;
+    private final int sp;
+
+    public GiveExpAndSp(StatsSet params) {
+        xp = params.getInt("xp", 0);
+        sp = params.getInt("sp", 0);
     }
 
     @Override
@@ -32,25 +32,15 @@ public final class GiveExpAndSp extends AbstractEffect
     }
 
     @Override
-    public void instant(Creature effector, Creature effected, Skill skill, Item item)
-    {
-        if (!isPlayer(effector) || !isPlayer(effected) || effected.isAlikeDead())
-        {
+    public void instant(Creature effector, Creature effected, Skill skill, Item item) {
+        if (!isPlayer(effector) || !isPlayer(effected) || effected.isAlikeDead()) {
             return;
         }
 
-        if ((_sp != 0) && (_xp != 0))
-        {
-            effector.getActingPlayer().getStat().addExp(_xp);
-            effector.getActingPlayer().getStat().addSp(_sp);
-
-            SystemMessage sm = null;
-            sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_XP_BONUS_S2_AND_S3_SP_BONUS_S4);
-            sm.addLong(_xp);
-            sm.addLong(0);
-            sm.addLong(_sp);
-            sm.addLong(0);
-            effector.sendPacket(sm);
+        if (sp != 0 && xp != 0) {
+            effector.getActingPlayer().getStats().addExp(xp);
+            effector.getActingPlayer().getStats().addSp(sp);
+            effector.sendPacket(getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_XP_BONUS_S2_AND_S3_SP_BONUS_S4).addLong(xp).addLong(0).addLong(sp).addLong(0));
         }
     }
 }

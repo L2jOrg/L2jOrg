@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.model.StatsSet;
@@ -23,42 +7,30 @@ import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 
+import static java.lang.Math.max;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * Modify vital effect implementation.
  * @author malyelfik
  */
-public final class ModifyVital extends AbstractEffect
-{
-	// Modify types
-	private enum ModifyType
-	{
-		DIFF,
-		SET,
-		PER;
-	}
+public final class ModifyVital extends AbstractEffect {
+
+	private final ModifyType type;
+	private final int hp;
+	private final int mp;
+	private final int cp;
 	
-	// Effect parameters
-	private final ModifyType _type;
-	private final int _hp;
-	private final int _mp;
-	private final int _cp;
-	
-	public ModifyVital(StatsSet params)
-	{
-		_type = params.getEnum("type", ModifyType.class);
-		if (_type != ModifyType.SET)
-		{
-			_hp = params.getInt("hp", 0);
-			_mp = params.getInt("mp", 0);
-			_cp = params.getInt("cp", 0);
-		}
-		else
-		{
-			_hp = params.getInt("hp", -1);
-			_mp = params.getInt("mp", -1);
-			_cp = params.getInt("cp", -1);
+	public ModifyVital(StatsSet params) {
+		type = params.getEnum("type", ModifyType.class);
+		if (type != ModifyType.SET) {
+			hp = params.getInt("hp", 0);
+			mp = params.getInt("mp", 0);
+			cp = params.getInt("cp", 0);
+		} else {
+			hp = params.getInt("hp", -1);
+			mp = params.getInt("mp", -1);
+			cp = params.getInt("cp", -1);
 		}
 	}
 	
@@ -69,50 +41,38 @@ public final class ModifyVital extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, Item item)
-	{
-		if (effected.isDead())
-		{
+	public void instant(Creature effector, Creature effected, Skill skill, Item item) {
+		if (effected.isDead()) {
 			return;
 		}
 		
-		if (isPlayer(effector) && isPlayer(effected) && effected.isAffected(EffectFlag.DUELIST_FURY) && !effector.isAffected(EffectFlag.DUELIST_FURY))
-		{
+		if (isPlayer(effector) && isPlayer(effected) && effected.isAffected(EffectFlag.DUELIST_FURY) && !effector.isAffected(EffectFlag.DUELIST_FURY)) {
 			return;
 		}
-		
-		switch (_type)
-		{
-			case DIFF:
-			{
-				effected.setCurrentCp(effected.getCurrentCp() + _cp);
-				effected.setCurrentHp(effected.getCurrentHp() + _hp);
-				effected.setCurrentMp(effected.getCurrentMp() + _mp);
-				break;
+
+		switch (type) {
+			case DIFF -> {
+				effected.setCurrentCp(effected.getCurrentCp() + cp);
+				effected.setCurrentHp(effected.getCurrentHp() + hp);
+				effected.setCurrentMp(effected.getCurrentMp() + mp);
 			}
-			case SET:
-			{
-				if (_cp >= 0)
-				{
-					effected.setCurrentCp(_cp);
-				}
-				if (_hp >= 0)
-				{
-					effected.setCurrentHp(_hp);
-				}
-				if (_mp >= 0)
-				{
-					effected.setCurrentMp(_mp);
-				}
-				break;
+			case SET -> {
+				effected.setCurrentCp(max(cp, 0));
+				effected.setCurrentHp(max(hp, 0));
+				effected.setCurrentMp(max(mp, 0));
 			}
-			case PER:
-			{
-				effected.setCurrentCp(effected.getCurrentCp() + (effected.getMaxCp() * (_cp / 100)));
-				effected.setCurrentHp(effected.getCurrentHp() + (effected.getMaxHp() * (_hp / 100)));
-				effected.setCurrentMp(effected.getCurrentMp() + (effected.getMaxMp() * (_mp / 100)));
-				break;
+			case PER -> {
+				effected.setCurrentCp(effected.getCurrentCp() + (effected.getMaxCp() * (cp / 100.)));
+				effected.setCurrentHp(effected.getCurrentHp() + (effected.getMaxHp() * (hp / 100.)));
+				effected.setCurrentMp(effected.getCurrentMp() + (effected.getMaxMp() * (mp / 100.)));
 			}
 		}
 	}
+
+	private enum ModifyType {
+		DIFF,
+		SET,
+		PER
+	}
+
 }

@@ -2,8 +2,8 @@ package org.l2j.gameserver.model.actor.stat;
 
 import org.l2j.gameserver.model.actor.Npc;
 
-public class NpcStat extends CharStat {
-    public NpcStat(Npc activeChar) {
+public class NpcStats extends CreatureStats {
+    public NpcStats(Npc activeChar) {
         super(activeChar);
     }
 

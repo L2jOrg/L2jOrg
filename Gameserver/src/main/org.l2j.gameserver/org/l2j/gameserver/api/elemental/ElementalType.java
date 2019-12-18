@@ -1,6 +1,6 @@
 package org.l2j.gameserver.api.elemental;
 
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 
 /**
  * @author JoeAlisson
@@ -42,22 +42,22 @@ public enum ElementalType {
         };
     }
 
-    public Stats getAttackStat() {
+    public Stat getAttackStat() {
         return switch (this) {
-            case EARTH -> Stats.ELEMENTAL_SPIRIT_EARTH_ATTACK;
-            case WIND -> Stats.ELEMENTAL_SPIRIT_WIND_ATTACK;
-            case FIRE -> Stats.ELEMENTAL_SPIRIT_FIRE_ATTACK;
-            case WATER -> Stats.ELEMENTAL_SPIRIT_WATER_ATTACK;
+            case EARTH -> Stat.ELEMENTAL_SPIRIT_EARTH_ATTACK;
+            case WIND -> Stat.ELEMENTAL_SPIRIT_WIND_ATTACK;
+            case FIRE -> Stat.ELEMENTAL_SPIRIT_FIRE_ATTACK;
+            case WATER -> Stat.ELEMENTAL_SPIRIT_WATER_ATTACK;
             default -> null;
         };
     }
 
-    public Stats getDefenseStat() {
+    public Stat getDefenseStat() {
         return switch (this) {
-            case EARTH -> Stats.ELEMENTAL_SPIRIT_EARTH_DEFENSE;
-            case WIND -> Stats.ELEMENTAL_SPIRIT_WIND_DEFENSE;
-            case FIRE -> Stats.ELEMENTAL_SPIRIT_FIRE_DEFENSE;
-            case WATER -> Stats.ELEMENTAL_SPIRIT_WATER_DEFENSE;
+            case EARTH -> Stat.ELEMENTAL_SPIRIT_EARTH_DEFENSE;
+            case WIND -> Stat.ELEMENTAL_SPIRIT_WIND_DEFENSE;
+            case FIRE -> Stat.ELEMENTAL_SPIRIT_FIRE_DEFENSE;
+            case WATER -> Stat.ELEMENTAL_SPIRIT_WATER_DEFENSE;
             default -> null;
         };
     }

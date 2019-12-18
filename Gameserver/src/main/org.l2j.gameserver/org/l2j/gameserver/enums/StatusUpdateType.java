@@ -27,7 +27,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public enum StatusUpdateType {
     LEVEL(0x01, Creature::getLevel),
-    EXP(0x02, creature -> (int) creature.getStat().getExp()),
+    EXP(0x02, creature -> (int) creature.getStats().getExp()),
     STR(0x03, Creature::getSTR),
     DEX(0x04, Creature::getDEX),
     CON(0x05, Creature::getCON),

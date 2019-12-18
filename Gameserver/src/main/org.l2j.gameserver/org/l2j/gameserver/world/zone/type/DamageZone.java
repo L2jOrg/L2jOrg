@@ -6,7 +6,7 @@ import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.world.zone.AbstractZoneSettings;
 import org.l2j.gameserver.world.zone.TaskZoneSettings;
 import org.l2j.gameserver.world.zone.Zone;
@@ -130,7 +130,7 @@ public class DamageZone extends Zone {
         }
 
         private void doDamage(Creature creature) {
-            final double multiplier = 1 + (creature.getStat().getValue(Stats.DAMAGE_ZONE_VULN, 0) / 100);
+            final double multiplier = 1 + (creature.getStats().getValue(Stat.DAMAGE_ZONE_VULN, 0) / 100);
 
             if (damageHPPerSec != 0) {
                 creature.reduceCurrentHp(damageHPPerSec * multiplier, creature, null);

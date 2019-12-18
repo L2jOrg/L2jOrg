@@ -19,10 +19,10 @@ import static org.l2j.gameserver.util.GameUtils.isPet;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 
-public class PlayableStat extends CharStat {
-    protected static final Logger LOGGER = LoggerFactory.getLogger(PlayableStat.class);
+public class PlayableStats extends CreatureStats {
+    protected static final Logger LOGGER = LoggerFactory.getLogger(PlayableStats.class);
 
-    public PlayableStat(Playable activeChar) {
+    public PlayableStats(Playable activeChar) {
         super(activeChar);
     }
 
@@ -143,8 +143,8 @@ public class PlayableStat extends CharStat {
             return false;
         }
 
-        getCreature().getStatus().setCurrentHp(getCreature().getStat().getMaxHp());
-        getCreature().getStatus().setCurrentMp(getCreature().getStat().getMaxMp());
+        getCreature().getStatus().setCurrentHp(getCreature().getStats().getMaxHp());
+        getCreature().getStatus().setCurrentMp(getCreature().getStats().getMaxMp());
 
         return true;
     }

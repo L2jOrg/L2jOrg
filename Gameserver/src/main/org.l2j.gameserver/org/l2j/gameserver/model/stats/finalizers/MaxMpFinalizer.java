@@ -21,7 +21,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 
 import java.util.Optional;
 
@@ -33,10 +33,10 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public class MaxMpFinalizer implements IStatsFunction {
     @Override
-    public double calc(Creature creature, Optional<Double> base, Stats stat) {
+    public double calc(Creature creature, Optional<Double> base, Stat stat) {
         throwIfPresent(base);
 
-        double baseValue = creature.getStat().getValue(stat, calcWeaponPlusBaseValue(creature, stat));
+        double baseValue = creature.getStats().getValue(stat, calcWeaponPlusBaseValue(creature, stat));
         if (isPet(creature)) {
             final Pet pet = (Pet) creature;
             baseValue += pet.getPetLevelData().getPetMaxMP();
@@ -48,6 +48,6 @@ public class MaxMpFinalizer implements IStatsFunction {
         }
         final double menBonus = creature.getMEN() > 0 ? BaseStats.MEN.calcBonus(creature) : 1.;
         baseValue *= menBonus;
-        return Stats.defaultValue(creature, stat, baseValue);
+        return Stat.defaultValue(creature, stat, baseValue);
     }
 }

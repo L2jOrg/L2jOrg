@@ -80,8 +80,8 @@ public class PetInfo extends ServerPacket {
         writeInt(_summon.getZ());
         writeInt(_summon.getHeading());
 
-        writeInt(_summon.getStat().getMAtkSpd());
-        writeInt(_summon.getStat().getPAtkSpd());
+        writeInt(_summon.getStats().getMAtkSpd());
+        writeInt(_summon.getStats().getPAtkSpd());
 
         writeShort((short) _runSpd);
         writeShort((short) _walkSpd);
@@ -121,12 +121,12 @@ public class PetInfo extends ServerPacket {
         writeInt((int) _summon.getCurrentMp()); // current mp
         writeInt(_summon.getMaxMp()); // max mp
 
-        writeLong(_summon.getStat().getSp()); // sp
+        writeLong(_summon.getStats().getSp()); // sp
         writeByte((byte) _summon.getLevel()); // lvl
-        writeLong(_summon.getStat().getExp());
+        writeLong(_summon.getStats().getExp());
 
-        if (_summon.getExpForThisLevel() > _summon.getStat().getExp()) {
-            writeLong(_summon.getStat().getExp()); // 0% absolute value
+        if (_summon.getExpForThisLevel() > _summon.getStats().getExp()) {
+            writeLong(_summon.getStats().getExp()); // 0% absolute value
         } else {
             writeLong(_summon.getExpForThisLevel()); // 0% absolute value
         }
@@ -145,7 +145,7 @@ public class PetInfo extends ServerPacket {
         writeInt(_summon.getMagicAccuracy()); // magic accuracy
         writeInt(_summon.getMagicEvasionRate()); // magic evasion
         writeInt(_summon.getMCriticalHit()); // mcritical
-        writeInt((int) _summon.getStat().getMoveSpeed()); // speed
+        writeInt((int) _summon.getStats().getMoveSpeed()); // speed
         writeInt(_summon.getPAtkSpd()); // atkspeed
         writeInt(_summon.getMAtkSpd()); // casting speed
 

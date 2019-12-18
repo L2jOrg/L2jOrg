@@ -38,7 +38,7 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.ExMagicAttackInfo;
@@ -421,8 +421,8 @@ public class Attackable extends Npc {
 
                             // Distribute the Exp and SP between the Player and its Summon
                             if (!attacker.isDead()) {
-                                exp = attacker.getStat().getValue(Stats.EXPSP_RATE, exp);
-                                sp = attacker.getStat().getValue(Stats.EXPSP_RATE, sp);
+                                exp = attacker.getStats().getValue(Stat.EXPSP_RATE, exp);
+                                sp = attacker.getStats().getValue(Stat.EXPSP_RATE, sp);
 
                                 attacker.addExpAndSp(exp, sp, useVitalityRate());
                                 if (exp > 0) {
@@ -430,7 +430,7 @@ public class Attackable extends Npc {
                                     if (clan != null) {
                                         double finalExp = exp;
                                         if (useVitalityRate()) {
-                                            finalExp *= attacker.getStat().getExpBonusMultiplier();
+                                            finalExp *= attacker.getStats().getExpBonusMultiplier();
                                         }
                                         clan.addHuntingPoints(attacker, this, finalExp);
                                     }
@@ -573,7 +573,7 @@ public class Attackable extends Npc {
                 double hateValue = (damage * 100) / (getLevel() + 7);
 
                 if (skill == null) {
-                    hateValue *= attacker.getStat().getValue(Stats.HATE_ATTACK, 1);
+                    hateValue *= attacker.getStats().getValue(Stat.HATE_ATTACK, 1);
                 }
 
                 addDamageHate(attacker, damage, (int) hateValue);

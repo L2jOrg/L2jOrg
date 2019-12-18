@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.holders.AdditionalItemHolder;
 import org.l2j.gameserver.model.holders.AdditionalSkillHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.items.type.WeaponType;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.serverpackets.ExBasicActionList;
 
 import java.util.ArrayList;
@@ -43,61 +43,61 @@ public final class TransformTemplate {
         baseAttackType = set.getEnum("attackType", WeaponType.class, null);
 
         if (set.contains("range")) {
-            addStats(Stats.PHYSICAL_ATTACK_RANGE, set.getDouble("range", 0));
+            addStats(Stat.PHYSICAL_ATTACK_RANGE, set.getDouble("range", 0));
         }
         if (set.contains("randomDamage")) {
-            addStats(Stats.RANDOM_DAMAGE, set.getDouble("randomDamage", 0));
+            addStats(Stat.RANDOM_DAMAGE, set.getDouble("randomDamage", 0));
         }
         if (set.contains("walk")) {
-            addStats(Stats.WALK_SPEED, set.getDouble("walk", 0));
+            addStats(Stat.WALK_SPEED, set.getDouble("walk", 0));
         }
         if (set.contains("run")) {
-            addStats(Stats.RUN_SPEED, set.getDouble("run", 0));
+            addStats(Stat.RUN_SPEED, set.getDouble("run", 0));
         }
         if (set.contains("waterWalk")) {
-            addStats(Stats.SWIM_WALK_SPEED, set.getDouble("waterWalk", 0));
+            addStats(Stat.SWIM_WALK_SPEED, set.getDouble("waterWalk", 0));
         }
         if (set.contains("waterRun")) {
-            addStats(Stats.SWIM_RUN_SPEED, set.getDouble("waterRun", 0));
+            addStats(Stat.SWIM_RUN_SPEED, set.getDouble("waterRun", 0));
         }
         if (set.contains("flyWalk")) {
-            addStats(Stats.FLY_WALK_SPEED, set.getDouble("flyWalk", 0));
+            addStats(Stat.FLY_WALK_SPEED, set.getDouble("flyWalk", 0));
         }
         if (set.contains("flyRun")) {
-            addStats(Stats.FLY_RUN_SPEED, set.getDouble("flyRun", 0));
+            addStats(Stat.FLY_RUN_SPEED, set.getDouble("flyRun", 0));
         }
         if (set.contains("pAtk")) {
-            addStats(Stats.PHYSICAL_ATTACK, set.getDouble("pAtk", 0));
+            addStats(Stat.PHYSICAL_ATTACK, set.getDouble("pAtk", 0));
         }
         if (set.contains("mAtk")) {
-            addStats(Stats.MAGIC_ATTACK, set.getDouble("mAtk", 0));
+            addStats(Stat.MAGIC_ATTACK, set.getDouble("mAtk", 0));
         }
         if (set.contains("range")) {
-            addStats(Stats.PHYSICAL_ATTACK_RANGE, set.getInt("range", 0));
+            addStats(Stat.PHYSICAL_ATTACK_RANGE, set.getInt("range", 0));
         }
         if (set.contains("attackSpeed")) {
-            addStats(Stats.PHYSICAL_ATTACK_SPEED, set.getInt("attackSpeed", 0));
+            addStats(Stat.PHYSICAL_ATTACK_SPEED, set.getInt("attackSpeed", 0));
         }
         if (set.contains("critRate")) {
-            addStats(Stats.CRITICAL_RATE, set.getInt("critRate", 0));
+            addStats(Stat.CRITICAL_RATE, set.getInt("critRate", 0));
         }
         if (set.contains("str")) {
-            addStats(Stats.STAT_STR, set.getInt("str", 0));
+            addStats(Stat.STAT_STR, set.getInt("str", 0));
         }
         if (set.contains("int")) {
-            addStats(Stats.STAT_INT, set.getInt("int", 0));
+            addStats(Stat.STAT_INT, set.getInt("int", 0));
         }
         if (set.contains("con")) {
-            addStats(Stats.STAT_CON, set.getInt("con", 0));
+            addStats(Stat.STAT_CON, set.getInt("con", 0));
         }
         if (set.contains("dex")) {
-            addStats(Stats.STAT_DEX, set.getInt("dex", 0));
+            addStats(Stat.STAT_DEX, set.getInt("dex", 0));
         }
         if (set.contains("wit")) {
-            addStats(Stats.STAT_WIT, set.getInt("wit", 0));
+            addStats(Stat.STAT_WIT, set.getInt("wit", 0));
         }
         if (set.contains("men")) {
-            addStats(Stats.STAT_MEN, set.getInt("men", 0));
+            addStats(Stat.STAT_MEN, set.getInt("men", 0));
         }
 
         if (set.contains("chest")) {
@@ -154,20 +154,20 @@ public final class TransformTemplate {
         return isNull(baseDefense) ? defaultValue : baseDefense.getOrDefault(slot, defaultValue);
     }
 
-    private void addStats(Stats stats, double val) {
+    private void addStats(Stat stat, double val) {
         if (baseStats == null) {
             baseStats = new HashIntMap<>();
         }
-        baseStats.put(stats.ordinal(), val);
+        baseStats.put(stat.ordinal(), val);
     }
 
     /**
-     * @param stats        the stat value to search for.
+     * @param stat        the stat value to search for.
      * @param defaultValue value to be used if no such stat is found.
      * @return altered stat if its present, or {@code defaultValue} if no such stat is assigned to this template.
      */
-    public double getStats(Stats stats, double defaultValue) {
-        return baseStats == null ? defaultValue : baseStats.getOrDefault(stats.ordinal(), defaultValue);
+    public double getStats(Stat stat, double defaultValue) {
+        return baseStats == null ? defaultValue : baseStats.getOrDefault(stat.ordinal(), defaultValue);
     }
 
     /**

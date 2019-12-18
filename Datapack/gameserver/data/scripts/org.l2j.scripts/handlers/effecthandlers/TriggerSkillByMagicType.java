@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.effecthandlers;
 
 import org.l2j.commons.util.Rnd;
@@ -40,66 +24,54 @@ import static org.l2j.gameserver.util.GameUtils.isCreature;
  * Trigger skill by isMagic type.
  * @author Nik
  */
-public final class TriggerSkillByMagicType extends AbstractEffect
-{
-	private final int[] _magicTypes;
-	private final int _chance;
-	private final int _skillLevelScaleTo;
-	private final SkillHolder _skill;
-	private final TargetType _targetType;
-	
-	/**
-	 * @param params
-	 */
-	
-	public TriggerSkillByMagicType(StatsSet params)
-	{
-		_chance = params.getInt("chance", 100);
-		_magicTypes = params.getIntArray("magicTypes", ";");
-		_skill = new SkillHolder(params.getInt("skillId", 0), params.getInt("skillLevel", 0));
-		_skillLevelScaleTo = params.getInt("skillLevelScaleTo", 0);
-		_targetType = params.getEnum("targetType", TargetType.class, TargetType.TARGET);
+public final class TriggerSkillByMagicType extends AbstractEffect {
+	private final int[] magicTypes;
+	private final int chance;
+	private final int skillLevelScaleTo;
+	private final SkillHolder skill;
+	private final TargetType targetType;
+
+	public TriggerSkillByMagicType(StatsSet params) {
+		chance = params.getInt("chance", 100);
+		magicTypes = params.getIntArray("magicTypes", ";");
+		skill = new SkillHolder(params.getInt("skillId", 0), params.getInt("skillLevel", 0));
+		skillLevelScaleTo = params.getInt("skillLevelScaleTo", 0);
+		targetType = params.getEnum("targetType", TargetType.class, TargetType.TARGET);
 	}
 	
-	private void onSkillUseEvent(OnCreatureSkillFinishCast event)
-	{
-		if (!isCreature(event.getTarget()))
-		{
+	private void onSkillUseEvent(OnCreatureSkillFinishCast event) {
+		if (!isCreature(event.getTarget())) {
 			return;
 		}
 		
-		if (!Util.contains(_magicTypes, event.getSkill().getMagicType()))
-		{
+		if (!Util.contains(magicTypes, event.getSkill().getMagicType())) {
 			return;
 		}
 		
-		if ((_chance < 100) && (Rnd.get(100) > _chance))
-		{
+		if ((chance < 100) && (Rnd.get(100) > chance)) {
 			return;
 		}
 		
 		final Skill triggerSkill;
-		if (_skillLevelScaleTo <= 0)
-		{
-			triggerSkill = _skill.getSkill();
+		if (skillLevelScaleTo <= 0) {
+			triggerSkill = skill.getSkill();
 		}
-		else
-		{
-			final BuffInfo buffInfo = ((Creature) event.getTarget()).getEffectList().getBuffInfoBySkillId(_skill.getSkillId());
+		else {
+			final BuffInfo buffInfo = ((Creature) event.getTarget()).getEffectList().getBuffInfoBySkillId(skill.getSkillId());
 			if (buffInfo != null)
 			{
-				triggerSkill = SkillData.getInstance().getSkill(_skill.getSkillId(), Math.min(_skillLevelScaleTo, buffInfo.getSkill().getLevel() + 1));
+				triggerSkill = SkillData.getInstance().getSkill(skill.getSkillId(), Math.min(skillLevelScaleTo, buffInfo.getSkill().getLevel() + 1));
 			}
 			else
 			{
-				triggerSkill = _skill.getSkill();
+				triggerSkill = skill.getSkill();
 			}
 		}
 		
 		WorldObject target = null;
 		try
 		{
-			target = TargetHandler.getInstance().getHandler(_targetType).getTarget(event.getCaster(), event.getTarget(), triggerSkill, false, false, false);
+			target = TargetHandler.getInstance().getHandler(targetType).getTarget(event.getCaster(), event.getTarget(), triggerSkill, false, false, false);
 		}
 		catch (Exception e)
 		{
@@ -115,7 +87,7 @@ public final class TriggerSkillByMagicType extends AbstractEffect
 	@Override
 	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if ((_chance == 0) || (_skill.getSkillId() == 0) || (_skill.getSkillLevel() == 0) || (_magicTypes.length == 0))
+		if ((chance == 0) || (this.skill.getSkillId() == 0) || (this.skill.getLevel() == 0) || (magicTypes.length == 0))
 		{
 			return;
 		}

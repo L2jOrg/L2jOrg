@@ -476,7 +476,7 @@ public final class Castle extends AbstractResidence {
 
     private void removeDoorUpgrade() {
         for (Door door : _doors) {
-            door.getStat().setUpgradeHpRatio(1);
+            door.getStats().setUpgradeHpRatio(1);
             door.setCurrentHp(door.getCurrentHp());
         }
 
@@ -495,7 +495,7 @@ public final class Castle extends AbstractResidence {
             return;
         }
 
-        door.getStat().setUpgradeHpRatio(ratio);
+        door.getStats().setUpgradeHpRatio(ratio);
         door.setCurrentHp(door.getMaxHp());
 
         if (save) {

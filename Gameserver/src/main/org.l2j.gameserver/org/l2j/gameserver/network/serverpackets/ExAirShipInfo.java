@@ -22,8 +22,8 @@ public class ExAirShipInfo extends ServerPacket {
         _y = ship.getY();
         _z = ship.getZ();
         _heading = ship.getHeading();
-        _moveSpeed = (int) ship.getStat().getMoveSpeed();
-        _rotationSpeed = (int) ship.getStat().getRotationSpeed();
+        _moveSpeed = (int) ship.getStats().getMoveSpeed();
+        _rotationSpeed = (int) ship.getStats().getRotationSpeed();
         _captain = ship.getCaptainId();
         _helm = ship.getHelmObjectId();
     }

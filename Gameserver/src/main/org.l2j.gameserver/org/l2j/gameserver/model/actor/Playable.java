@@ -8,7 +8,7 @@ import org.l2j.gameserver.model.ClanWar;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.stat.PlayableStat;
+import org.l2j.gameserver.model.actor.stat.PlayableStats;
 import org.l2j.gameserver.model.actor.status.PlayableStatus;
 import org.l2j.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2j.gameserver.model.effects.EffectFlag;
@@ -57,13 +57,13 @@ public abstract class Playable extends Creature {
     }
 
     @Override
-    public PlayableStat getStat() {
-        return (PlayableStat) super.getStat();
+    public PlayableStats getStats() {
+        return (PlayableStats) super.getStats();
     }
 
     @Override
     public void initCharStat() {
-        setStat(new PlayableStat(this));
+        setStat(new PlayableStats(this));
     }
 
     @Override

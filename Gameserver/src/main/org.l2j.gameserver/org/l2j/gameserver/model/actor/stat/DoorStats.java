@@ -16,23 +16,33 @@
  */
 package org.l2j.gameserver.model.actor.stat;
 
-import org.l2j.gameserver.model.actor.instance.ControllableAirShip;
+import org.l2j.gameserver.model.actor.instance.Door;
 
-public class ControllableAirShipStat extends VehicleStat {
-    public ControllableAirShipStat(ControllableAirShip activeChar) {
+/**
+ * @author malyelfik
+ */
+public class DoorStats extends CreatureStats {
+    private int _upgradeHpRatio = 1;
+
+    public DoorStats(Door activeChar) {
         super(activeChar);
     }
 
     @Override
-    public ControllableAirShip getCreature() {
-        return (ControllableAirShip) super.getCreature();
+    public Door getCreature() {
+        return (Door) super.getCreature();
     }
 
     @Override
-    public double getMoveSpeed() {
-        if (getCreature().isInDock() || (getCreature().getFuel() > 0)) {
-            return super.getMoveSpeed();
-        }
-        return super.getMoveSpeed() * 0.05f;
+    public int getMaxHp() {
+        return super.getMaxHp() * _upgradeHpRatio;
+    }
+
+    public int getUpgradeHpRatio() {
+        return _upgradeHpRatio;
+    }
+
+    public void setUpgradeHpRatio(int ratio) {
+        _upgradeHpRatio = ratio;
     }
 }

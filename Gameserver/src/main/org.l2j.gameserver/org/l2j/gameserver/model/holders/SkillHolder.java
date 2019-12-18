@@ -38,7 +38,7 @@ public class SkillHolder {
         return _skillId;
     }
 
-    public final int getSkillLevel() {
+    public final int getLevel() {
         return _skillLevel;
     }
 
@@ -64,7 +64,7 @@ public class SkillHolder {
         }
 
         final SkillHolder holder = (SkillHolder) obj;
-        return (holder.getSkillId() == _skillId) && (holder.getSkillLevel() == _skillLevel) && (holder.getSkillSubLevel() == _skillSubLevel);
+        return (holder.getSkillId() == _skillId) && (holder.getLevel() == _skillLevel) && (holder.getSkillSubLevel() == _skillSubLevel);
     }
 
     @Override

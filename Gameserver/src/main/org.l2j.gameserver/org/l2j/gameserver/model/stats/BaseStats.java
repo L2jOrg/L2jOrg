@@ -20,12 +20,12 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  * @author DS, Sdw, UnAfraid
  */
 public enum BaseStats {
-    STR(Stats.STAT_STR),
-    INT(Stats.STAT_INT),
-    DEX(Stats.STAT_DEX),
-    WIT(Stats.STAT_WIT),
-    CON(Stats.STAT_CON),
-    MEN(Stats.STAT_MEN);
+    STR(Stat.STAT_STR),
+    INT(Stat.STAT_INT),
+    DEX(Stat.STAT_DEX),
+    WIT(Stat.STAT_WIT),
+    CON(Stat.STAT_CON),
+    MEN(Stat.STAT_MEN);
 
     public static final int MAX_STAT_VALUE = 201;
 
@@ -68,13 +68,13 @@ public enum BaseStats {
     }
 
     private final double[] _bonus = new double[MAX_STAT_VALUE];
-    private final Stats _stat;
+    private final Stat _stat;
 
-    BaseStats(Stats stat) {
+    BaseStats(Stat stat) {
         _stat = stat;
     }
 
-    public static BaseStats valueOf(Stats stat) {
+    public static BaseStats valueOf(Stat stat) {
         for (BaseStats baseStat : values()) {
             if (baseStat.getStat() == stat) {
                 return baseStat;
@@ -83,14 +83,14 @@ public enum BaseStats {
         throw new NoSuchElementException("Unknown base stat '" + stat + "' for enum BaseStats");
     }
 
-    public Stats getStat() {
+    public Stat getStat() {
         return _stat;
     }
 
     public int calcValue(Creature creature) {
         if ((creature != null) && (_stat != null)) {
             // return (int) Math.min(_stat.finalize(creature, Optional.empty()), MAX_STAT_VALUE - 1);
-            return (int) creature.getStat().getValue(_stat);
+            return (int) creature.getStats().getValue(_stat);
         }
         return 0;
     }

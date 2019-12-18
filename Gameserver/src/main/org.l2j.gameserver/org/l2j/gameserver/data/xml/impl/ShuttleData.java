@@ -132,8 +132,8 @@ public final class ShuttleData extends GameXmlReader {
             shuttle.setHeading(data.getLocation().getHeading());
             shuttle.setLocationInvisible(data.getLocation());
             shuttle.spawnMe();
-            shuttle.getStat().setMoveSpeed(300);
-            shuttle.getStat().setRotationSpeed(0);
+            shuttle.getStats().setMoveSpeed(300);
+            shuttle.getStats().setRotationSpeed(0);
             shuttle.registerEngine(new ShuttleEngine(data, shuttle));
             shuttle.runEngine(1000);
             _shuttleInstances.put(shuttle.getObjectId(), shuttle);

@@ -99,8 +99,8 @@ public class AirShipManager {
         airShip.setHeading(heading);
         airShip.setXYZInvisible(x, y, z);
         airShip.spawnMe();
-        airShip.getStat().setMoveSpeed(280);
-        airShip.getStat().setRotationSpeed(2000);
+        airShip.getStats().setMoveSpeed(280);
+        airShip.getStats().setRotationSpeed(2000);
         return airShip;
     }
 
@@ -120,8 +120,8 @@ public class AirShipManager {
 
             airShip.setMaxFuel(600);
             airShip.setFuel(info.getInt("fuel"));
-            airShip.getStat().setMoveSpeed(280);
-            airShip.getStat().setRotationSpeed(2000);
+            airShip.getStats().setMoveSpeed(280);
+            airShip.getStats().setRotationSpeed(2000);
         }
 
         airShip.setHeading(heading);

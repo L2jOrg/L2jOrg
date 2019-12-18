@@ -4,7 +4,7 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.BaseStats;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -60,7 +60,7 @@ public class Henna {
         return _dyeItemId;
     }
 
-    public int getBaseStats(Stats stat) {
+    public int getBaseStats(Stat stat) {
         return _baseStats.getOrDefault(stat, 0);
     }
 

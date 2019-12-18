@@ -56,7 +56,7 @@ public enum CommonSkill {
     }
 
     public int getLevel() {
-        return _holder.getSkillLevel();
+        return _holder.getLevel();
     }
 
     public Skill getSkill() {

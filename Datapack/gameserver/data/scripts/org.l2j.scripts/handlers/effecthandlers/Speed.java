@@ -1,23 +1,4 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.effecthandlers;
-
-import java.util.Arrays;
-import java.util.List;
 
 import org.l2j.gameserver.enums.SpeedType;
 import org.l2j.gameserver.enums.StatModifierType;
@@ -25,132 +6,75 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
+
+import java.util.Collections;
+import java.util.List;
+
+import static java.util.Objects.isNull;
 
 /**
  * @author Sdw
+ * @author JoeAlisson
  */
-public final class Speed extends AbstractEffect
-{
-	private final double _amount;
-	private final StatModifierType _mode;
-	private List<SpeedType> _speedType;
+public final class Speed extends AbstractEffect {
+
+	private final double amount;
+	private final StatModifierType mode;
+	private List<SpeedType> speedType;
 	
-	public Speed(StatsSet params)
-	{
-		_amount = params.getDouble("amount", 0);
-		_mode = params.getEnum("mode", StatModifierType.class, StatModifierType.DIFF);
-		_speedType = params.getEnumList("weaponType", SpeedType.class);
-		if (_speedType == null)
-		{
-			_speedType = Arrays.asList(SpeedType.ALL);
+	public Speed(StatsSet params) {
+		amount = params.getDouble("amount", 0);
+		mode = params.getEnum("mode", StatModifierType.class, StatModifierType.DIFF);
+		speedType = params.getEnumList("weaponType", SpeedType.class);
+
+		if (isNull(speedType)) {
+			speedType = Collections.singletonList(SpeedType.ALL);
 		}
 	}
 	
 	@Override
-	public void pump(Creature effected, Skill skill)
-	{
-		switch (_mode)
-		{
-			case DIFF:
-			{
-				for (SpeedType type : _speedType)
-				{
-					switch (type)
-					{
-						case RUN:
-						{
-							effected.getStat().mergeAdd(Stats.RUN_SPEED, _amount);
-							break;
-						}
-						case WALK:
-						{
-							effected.getStat().mergeAdd(Stats.WALK_SPEED, _amount);
-							break;
-						}
-						case SWIM_RUN:
-						{
-							effected.getStat().mergeAdd(Stats.SWIM_RUN_SPEED, _amount);
-							break;
-						}
-						case SWIM_WALK:
-						{
-							effected.getStat().mergeAdd(Stats.SWIM_WALK_SPEED, _amount);
-							break;
-						}
-						case FLY_RUN:
-						{
-							effected.getStat().mergeAdd(Stats.FLY_RUN_SPEED, _amount);
-							break;
-						}
-						case FLY_WALK:
-						{
-							effected.getStat().mergeAdd(Stats.FLY_WALK_SPEED, _amount);
-							break;
-						}
-						default:
-						{
-							effected.getStat().mergeAdd(Stats.RUN_SPEED, _amount);
-							effected.getStat().mergeAdd(Stats.WALK_SPEED, _amount);
-							effected.getStat().mergeAdd(Stats.SWIM_RUN_SPEED, _amount);
-							effected.getStat().mergeAdd(Stats.SWIM_WALK_SPEED, _amount);
-							effected.getStat().mergeAdd(Stats.FLY_RUN_SPEED, _amount);
-							effected.getStat().mergeAdd(Stats.FLY_WALK_SPEED, _amount);
-							break;
+	public void pump(Creature effected, Skill skill) {
+		switch (mode) {
+			case DIFF -> {
+				for (SpeedType type : speedType) {
+					switch (type) {
+						case RUN -> effected.getStats().mergeAdd(Stat.RUN_SPEED, amount);
+						case WALK -> effected.getStats().mergeAdd(Stat.WALK_SPEED, amount);
+						case SWIM_RUN -> effected.getStats().mergeAdd(Stat.SWIM_RUN_SPEED, amount);
+						case SWIM_WALK -> effected.getStats().mergeAdd(Stat.SWIM_WALK_SPEED, amount);
+						case FLY_RUN -> effected.getStats().mergeAdd(Stat.FLY_RUN_SPEED, amount);
+						case FLY_WALK -> effected.getStats().mergeAdd(Stat.FLY_WALK_SPEED, amount);
+						default -> {
+							effected.getStats().mergeAdd(Stat.RUN_SPEED, amount);
+							effected.getStats().mergeAdd(Stat.WALK_SPEED, amount);
+							effected.getStats().mergeAdd(Stat.SWIM_RUN_SPEED, amount);
+							effected.getStats().mergeAdd(Stat.SWIM_WALK_SPEED, amount);
+							effected.getStats().mergeAdd(Stat.FLY_RUN_SPEED, amount);
+							effected.getStats().mergeAdd(Stat.FLY_WALK_SPEED, amount);
 						}
 					}
 				}
-				break;
 			}
-			case PER:
-			{
-				for (SpeedType type : _speedType)
-				{
-					switch (type)
-					{
-						case RUN:
-						{
-							effected.getStat().mergeMul(Stats.RUN_SPEED, (_amount / 100) + 1);
-							break;
-						}
-						case WALK:
-						{
-							effected.getStat().mergeMul(Stats.WALK_SPEED, (_amount / 100) + 1);
-							break;
-						}
-						case SWIM_RUN:
-						{
-							effected.getStat().mergeMul(Stats.SWIM_RUN_SPEED, (_amount / 100) + 1);
-							break;
-						}
-						case SWIM_WALK:
-						{
-							effected.getStat().mergeMul(Stats.SWIM_WALK_SPEED, (_amount / 100) + 1);
-							break;
-						}
-						case FLY_RUN:
-						{
-							effected.getStat().mergeMul(Stats.FLY_RUN_SPEED, (_amount / 100) + 1);
-							break;
-						}
-						case FLY_WALK:
-						{
-							effected.getStat().mergeMul(Stats.FLY_WALK_SPEED, (_amount / 100) + 1);
-							break;
-						}
-						default:
-						{
-							effected.getStat().mergeMul(Stats.RUN_SPEED, (_amount / 100) + 1);
-							effected.getStat().mergeMul(Stats.WALK_SPEED, (_amount / 100) + 1);
-							effected.getStat().mergeMul(Stats.SWIM_RUN_SPEED, (_amount / 100) + 1);
-							effected.getStat().mergeMul(Stats.SWIM_WALK_SPEED, (_amount / 100) + 1);
-							effected.getStat().mergeMul(Stats.FLY_RUN_SPEED, (_amount / 100) + 1);
-							effected.getStat().mergeMul(Stats.FLY_WALK_SPEED, (_amount / 100) + 1);
-							break;
+			case PER -> {
+				for (SpeedType type : speedType) {
+					switch (type) {
+						case RUN -> effected.getStats().mergeMul(Stat.RUN_SPEED, (amount / 100) + 1);
+						case WALK -> effected.getStats().mergeMul(Stat.WALK_SPEED, (amount / 100) + 1);
+						case SWIM_RUN -> effected.getStats().mergeMul(Stat.SWIM_RUN_SPEED, (amount / 100) + 1);
+						case SWIM_WALK -> effected.getStats().mergeMul(Stat.SWIM_WALK_SPEED, (amount / 100) + 1);
+						case FLY_RUN -> effected.getStats().mergeMul(Stat.FLY_RUN_SPEED, (amount / 100) + 1);
+						case FLY_WALK -> effected.getStats().mergeMul(Stat.FLY_WALK_SPEED, (amount / 100) + 1);
+						default -> {
+							effected.getStats().mergeMul(Stat.RUN_SPEED, (amount / 100) + 1);
+							effected.getStats().mergeMul(Stat.WALK_SPEED, (amount / 100) + 1);
+							effected.getStats().mergeMul(Stat.SWIM_RUN_SPEED, (amount / 100) + 1);
+							effected.getStats().mergeMul(Stat.SWIM_WALK_SPEED, (amount / 100) + 1);
+							effected.getStats().mergeMul(Stat.FLY_RUN_SPEED, (amount / 100) + 1);
+							effected.getStats().mergeMul(Stat.FLY_WALK_SPEED, (amount / 100) + 1);
 						}
 					}
 				}
-				break;
 			}
 		}
 	}

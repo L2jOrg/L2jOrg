@@ -65,7 +65,7 @@ public class ExSubjobInfo extends ServerPacket {
         public SubInfo(Player player) {
             _index = 0;
             _classId = player.getBaseClass();
-            _level = player.getStat().getBaseLevel();
+            _level = player.getStats().getBaseLevel();
             _type = SubclassType.BASECLASS.ordinal();
         }
 

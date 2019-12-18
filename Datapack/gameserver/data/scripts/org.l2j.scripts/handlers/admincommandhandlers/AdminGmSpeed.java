@@ -7,7 +7,7 @@ import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.util.BuilderUtil;
 
 import java.util.EnumSet;
@@ -28,7 +28,7 @@ public final class AdminGmSpeed implements IAdminCommandHandler
 		"admin_gmspeed",
 	};
 	
-	private static final Set<Stats> SPEED_STATS = EnumSet.of(Stats.RUN_SPEED, Stats.WALK_SPEED, Stats.SWIM_RUN_SPEED, Stats.SWIM_WALK_SPEED, Stats.FLY_RUN_SPEED, Stats.FLY_WALK_SPEED);
+	private static final Set<Stat> SPEED_STATS = EnumSet.of(Stat.RUN_SPEED, Stat.WALK_SPEED, Stat.SWIM_RUN_SPEED, Stat.SWIM_WALK_SPEED, Stat.FLY_RUN_SPEED, Stat.FLY_WALK_SPEED);
 	
 	@Override
 	public boolean useAdminCommand(String command, Player player)
@@ -77,13 +77,13 @@ public final class AdminGmSpeed implements IAdminCommandHandler
 				targetCharacter = player;
 			}
 			
-			SPEED_STATS.forEach(speedStat -> targetCharacter.getStat().removeFixedValue(speedStat));
+			SPEED_STATS.forEach(speedStat -> targetCharacter.getStats().removeFixedValue(speedStat));
 			if (runSpeedBoost > 0)
 			{
-				SPEED_STATS.forEach(speedStat -> targetCharacter.getStat().addFixedValue(speedStat, targetCharacter.getTemplate().getBaseValue(speedStat, 120) * runSpeedBoost));
+				SPEED_STATS.forEach(speedStat -> targetCharacter.getStats().addFixedValue(speedStat, targetCharacter.getTemplate().getBaseValue(speedStat, 120) * runSpeedBoost));
 			}
 			
-			targetCharacter.getStat().recalculateStats(false);
+			targetCharacter.getStats().recalculateStats(false);
 			if (isPlayer(targetCharacter))
 			{
 				((Player) targetCharacter).broadcastUserInfo();

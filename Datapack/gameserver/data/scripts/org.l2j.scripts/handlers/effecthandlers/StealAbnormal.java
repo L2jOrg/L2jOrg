@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.enums.DispelSlotType;
@@ -35,17 +19,16 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * Steal Abnormal effect implementation.
  * @author Adry_85, Zoey76
  */
-public final class StealAbnormal extends AbstractEffect
-{
-	private final DispelSlotType _slot;
-	private final int _rate;
-	private final int _max;
+public final class StealAbnormal extends AbstractEffect {
+
+	private final DispelSlotType slot;
+	private final int rate;
+	private final int max;
 	
-	public StealAbnormal(StatsSet params)
-	{
-		_slot = params.getEnum("slot", DispelSlotType.class, DispelSlotType.BUFF);
-		_rate = params.getInt("rate", 0);
-		_max = params.getInt("max", 0);
+	public StealAbnormal(StatsSet params) {
+		slot = params.getEnum("slot", DispelSlotType.class, DispelSlotType.BUFF);
+		rate = params.getInt("rate", 0);
+		max = params.getInt("max", 0);
 	}
 	
 	@Override
@@ -61,18 +44,14 @@ public final class StealAbnormal extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, Item item)
-	{
-		if (isPlayer(effected) && (effector != effected))
-		{
-			final List<BuffInfo> toSteal = Formulas.calcCancelStealEffects(effector, effected, skill, _slot, _rate, _max);
-			if (toSteal.isEmpty())
-			{
+	public void instant(Creature effector, Creature effected, Skill skill, Item item) {
+		if (isPlayer(effected) && effector != effected) {
+			final List<BuffInfo> toSteal = Formulas.calcCancelStealEffects(effector, effected, skill, slot, rate, max);
+			if (toSteal.isEmpty()) {
 				return;
 			}
 			
-			for (BuffInfo infoToSteal : toSteal)
-			{
+			for (BuffInfo infoToSteal : toSteal) {
 				// Invert effected and effector.
 				final BuffInfo stolen = new BuffInfo(effected, effector, infoToSteal.getSkill(), false, null, null);
 				stolen.setAbnormalTime(infoToSteal.getTime()); // Copy the remaining time.

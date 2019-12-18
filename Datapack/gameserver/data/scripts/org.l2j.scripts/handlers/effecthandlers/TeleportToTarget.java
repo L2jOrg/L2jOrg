@@ -19,10 +19,8 @@ import static org.l2j.gameserver.util.MathUtil.convertHeadingToDegree;
  * Teleport To Target effect implementation.
  * @author Didldak, Adry_85
  */
-public final class TeleportToTarget extends AbstractEffect
-{
-	public TeleportToTarget(StatsSet params)
-	{
+public final class TeleportToTarget extends AbstractEffect {
+	public TeleportToTarget(StatsSet params) {
 	}
 	
 	@Override
@@ -44,15 +42,13 @@ public final class TeleportToTarget extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, Item item)
-	{
+	public void instant(Creature effector, Creature effected, Skill skill, Item item) {
 		final int px = effected.getX();
 		final int py = effected.getY();
 		double ph = convertHeadingToDegree(effected.getHeading());
 		
 		ph += 180;
-		if (ph > 360)
-		{
+		if (ph > 360) {
 			ph -= 360;
 		}
 		

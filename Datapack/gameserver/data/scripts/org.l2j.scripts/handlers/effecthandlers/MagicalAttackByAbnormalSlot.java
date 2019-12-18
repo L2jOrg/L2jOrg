@@ -1,21 +1,6 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.effecthandlers;
 
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -36,27 +21,21 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * Magical Attack By Abnormal Slot effect implementation.
  * @author Sdw
  */
-public final class MagicalAttackByAbnormalSlot extends AbstractEffect
-{
-	private final double _power;
-	private final Set<AbnormalType> _abnormals;
+public final class MagicalAttackByAbnormalSlot extends AbstractEffect {
+	private final double power;
+	private final Set<AbnormalType> abnormals;
 	
-	public MagicalAttackByAbnormalSlot(StatsSet params)
-	{
-		_power = params.getDouble("power", 0);
+	public MagicalAttackByAbnormalSlot(StatsSet params) {
+		power = params.getDouble("power", 0);
 		
 		final String abnormals = params.getString("abnormalType", null);
-		if ((abnormals != null) && !abnormals.isEmpty())
-		{
-			_abnormals = new HashSet<>();
-			for (String slot : abnormals.split(";"))
-			{
-				_abnormals.add(AbnormalType.getAbnormalType(slot));
+		if (Util.isNotEmpty(abnormals)) {
+			this.abnormals = new HashSet<>();
+			for (String slot : abnormals.split(";")) {
+				this.abnormals.add(AbnormalType.getAbnormalType(slot));
 			}
-		}
-		else
-		{
-			_abnormals = Collections.<AbnormalType> emptySet();
+		} else {
+			this.abnormals = Collections.<AbnormalType> emptySet();
 		}
 	}
 	
@@ -73,22 +52,19 @@ public final class MagicalAttackByAbnormalSlot extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, Item item)
-	{
-		if (effector.isAlikeDead() || _abnormals.stream().noneMatch(effected::hasAbnormalType))
-		{
+	public void instant(Creature effector, Creature effected, Skill skill, Item item) {
+		if (effector.isAlikeDead() || abnormals.stream().noneMatch(effected::hasAbnormalType)) {
 			return;
 		}
 		
-		if (isPlayer(effected) && effected.getActingPlayer().isFakeDeath())
-		{
+		if (isPlayer(effected) && effected.getActingPlayer().isFakeDeath()) {
 			effected.stopFakeDeath(true);
 		}
 		
 		final boolean sps = skill.useSpiritShot() && effector.isChargedShot(ShotType.SPIRITSHOTS);
 		final boolean bss = skill.useSpiritShot() && effector.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
 		final boolean mcrit = Formulas.calcCrit(skill.getMagicCriticalRate(), effector, effected, skill);
-		final double damage = Formulas.calcMagicDam(effector, effected, skill, effector.getMAtk(), _power, effected.getMDef(), sps, bss, mcrit);
+		final double damage = Formulas.calcMagicDam(effector, effected, skill, effector.getMAtk(), power, effected.getMDef(), sps, bss, mcrit);
 		
 		effector.doAttack(damage, effected, skill, false, false, mcrit, false);
 	}

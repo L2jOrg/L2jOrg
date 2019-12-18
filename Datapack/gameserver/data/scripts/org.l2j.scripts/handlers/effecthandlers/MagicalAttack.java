@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.enums.ShotType;
@@ -33,17 +17,15 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * Magical Attack effect implementation.
  * @author Adry_85
  */
-public final class MagicalAttack extends AbstractEffect
-{
-	private final double _power;
-	private final boolean _overHit;
-	private final double _debuffModifier;
+public final class MagicalAttack extends AbstractEffect {
+	private final double power;
+	private final boolean overHit;
+	private final double debuffModifier;
 	
-	public MagicalAttack(StatsSet params)
-	{
-		_power = params.getDouble("power", 0);
-		_overHit = params.getBoolean("overHit", false);
-		_debuffModifier = params.getDouble("debuffModifier", 1);
+	public MagicalAttack(StatsSet params) {
+		power = params.getDouble("power", 0);
+		overHit = params.getBoolean("overHit", false);
+		debuffModifier = params.getDouble("debuffModifier", 1);
 	}
 	
 	@Override
@@ -59,32 +41,27 @@ public final class MagicalAttack extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, Item item)
-	{
-		if (effector.isAlikeDead())
-		{
+	public void instant(Creature effector, Creature effected, Skill skill, Item item) {
+		if (effector.isAlikeDead()) {
 			return;
 		}
 		
-		if (isPlayer(effected) && effected.getActingPlayer().isFakeDeath())
-		{
+		if (isPlayer(effected) && effected.getActingPlayer().isFakeDeath()) {
 			effected.stopFakeDeath(true);
 		}
 		
-		if (_overHit && isAttackable(effected))
-		{
+		if (overHit && isAttackable(effected)) {
 			((Attackable) effected).overhitEnabled(true);
 		}
 		
 		final boolean sps = skill.useSpiritShot() && effector.isChargedShot(ShotType.SPIRITSHOTS);
 		final boolean bss = skill.useSpiritShot() && effector.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
 		final boolean mcrit = Formulas.calcCrit(skill.getMagicCriticalRate(), effector, effected, skill);
-		double damage = Formulas.calcMagicDam(effector, effected, skill, effector.getMAtk(), _power, effected.getMDef(), sps, bss, mcrit);
+		double damage = Formulas.calcMagicDam(effector, effected, skill, effector.getMAtk(), power, effected.getMDef(), sps, bss, mcrit);
 		
 		// Apply debuff mod
-		if (effected.getEffectList().getDebuffCount() > 0)
-		{
-			damage *= _debuffModifier;
+		if (effected.getEffectList().getDebuffCount() > 0) {
+			damage *= debuffModifier;
 		}
 		
 		effector.doAttack(damage, effected, skill, false, false, mcrit, false);

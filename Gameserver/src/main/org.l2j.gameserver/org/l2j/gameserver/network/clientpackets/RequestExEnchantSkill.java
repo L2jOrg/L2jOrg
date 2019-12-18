@@ -122,7 +122,7 @@ public final class RequestExEnchantSkill extends ClientPacket {
             return;
         }
 
-        player.getStat().removeExpAndSp(0, enchantSkillHolder.getSp(_type), false);
+        player.getStats().removeExpAndSp(0, enchantSkillHolder.getSp(_type), false);
 
         switch (_type) {
             case BLESSED:

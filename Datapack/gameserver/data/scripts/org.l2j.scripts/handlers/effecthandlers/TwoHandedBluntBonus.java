@@ -26,7 +26,7 @@ import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.BodyPart;
 import org.l2j.gameserver.model.items.type.WeaponType;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
@@ -60,12 +60,12 @@ public class TwoHandedBluntBonus extends AbstractEffect
 			{
 				case DIFF:
 				{
-					effected.getStat().mergeAdd(Stats.PHYSICAL_ATTACK, _pAtkAmount);
+					effected.getStats().mergeAdd(Stat.PHYSICAL_ATTACK, _pAtkAmount);
 					break;
 				}
 				case PER:
 				{
-					effected.getStat().mergeMul(Stats.PHYSICAL_ATTACK, (_pAtkAmount / 100) + 1);
+					effected.getStats().mergeMul(Stat.PHYSICAL_ATTACK, (_pAtkAmount / 100) + 1);
 					break;
 				}
 			}
@@ -74,12 +74,12 @@ public class TwoHandedBluntBonus extends AbstractEffect
 			{
 				case DIFF:
 				{
-					effected.getStat().mergeAdd(Stats.ACCURACY_COMBAT, _accuracyAmount);
+					effected.getStats().mergeAdd(Stat.ACCURACY_COMBAT, _accuracyAmount);
 					break;
 				}
 				case PER:
 				{
-					effected.getStat().mergeMul(Stats.ACCURACY_COMBAT, (_accuracyAmount / 100) + 1);
+					effected.getStats().mergeMul(Stat.ACCURACY_COMBAT, (_accuracyAmount / 100) + 1);
 					break;
 				}
 			}

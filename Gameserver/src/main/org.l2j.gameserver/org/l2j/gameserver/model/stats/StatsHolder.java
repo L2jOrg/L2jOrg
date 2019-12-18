@@ -8,21 +8,21 @@ import java.util.function.BiPredicate;
  * @author UnAfraid
  */
 public class StatsHolder {
-    private final Stats _stat;
+    private final Stat _stat;
     private final double _value;
     private final BiPredicate<Creature, StatsHolder> _condition;
 
-    public StatsHolder(Stats stat, double value, BiPredicate<Creature, StatsHolder> condition) {
+    public StatsHolder(Stat stat, double value, BiPredicate<Creature, StatsHolder> condition) {
         _stat = stat;
         _value = value;
         _condition = condition;
     }
 
-    public StatsHolder(Stats stat, double value) {
+    public StatsHolder(Stat stat, double value) {
         this(stat, value, null);
     }
 
-    public Stats getStat() {
+    public Stat getStat() {
         return _stat;
     }
 

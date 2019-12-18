@@ -21,7 +21,7 @@ public class VehicleDeparture extends ServerPacket {
         _y = boat.getYdestination();
         _z = boat.getZdestination();
         _moveSpeed = (int) boat.getMoveSpeed();
-        _rotationSpeed = (int) boat.getStat().getRotationSpeed();
+        _rotationSpeed = (int) boat.getStats().getRotationSpeed();
     }
 
     @Override

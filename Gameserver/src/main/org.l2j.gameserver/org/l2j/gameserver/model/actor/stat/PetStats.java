@@ -23,8 +23,8 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SocialAction;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
-public class PetStat extends SummonStat {
-    public PetStat(Pet activeChar) {
+public class PetStats extends SummonStats {
+    public PetStats(Pet activeChar) {
         super(activeChar);
     }
 

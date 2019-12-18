@@ -4,7 +4,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Duel;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.util.GameUtils;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayable;
@@ -33,7 +33,7 @@ public class SummonStatus extends PlayableStatus {
         final Player caster = getActiveChar().getTransferingDamageTo();
         if (getActiveChar().getOwner().getParty() != null) {
             if ((caster != null) && GameUtils.checkIfInRange(1000, getActiveChar(), caster, true) && !caster.isDead() && getActiveChar().getParty().getMembers().contains(caster)) {
-                int transferDmg = ((int) value * (int) getActiveChar().getStat().getValue(Stats.TRANSFER_DAMAGE_TO_PLAYER, 0)) / 100;
+                int transferDmg = ((int) value * (int) getActiveChar().getStats().getValue(Stat.TRANSFER_DAMAGE_TO_PLAYER, 0)) / 100;
                 transferDmg = Math.min((int) caster.getCurrentHp() - 1, transferDmg);
                 if (transferDmg > 0) {
                     int membersInRange = 0;
@@ -58,7 +58,7 @@ public class SummonStatus extends PlayableStatus {
             }
         } else if ((caster != null) && (caster == getActiveChar().getOwner()) && GameUtils.checkIfInRange(1000, getActiveChar(), caster, true) && !caster.isDead()) // when no party, transfer only to owner (caster)
         {
-            int transferDmg = ((int) value * (int) getActiveChar().getStat().getValue(Stats.TRANSFER_DAMAGE_TO_PLAYER, 0)) / 100;
+            int transferDmg = ((int) value * (int) getActiveChar().getStats().getValue(Stat.TRANSFER_DAMAGE_TO_PLAYER, 0)) / 100;
             transferDmg = Math.min((int) caster.getCurrentHp() - 1, transferDmg);
             if (transferDmg > 0) {
                 if (isPlayable(attacker) && (caster.getCurrentCp() > 0)) {

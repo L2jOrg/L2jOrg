@@ -15,52 +15,38 @@ import java.util.Map.Entry;
  * Defence Trait effect implementation.
  * @author NosBit
  */
-public final class DefenceTrait extends AbstractEffect
-{
-	private final Map<TraitType, Float> _defenceTraits = new HashMap<>();
+public final class DefenceTrait extends AbstractEffect {
+	private final Map<TraitType, Float> defenceTraits = new HashMap<>();
 	
-	public DefenceTrait(StatsSet params)
-	{
-		if (params.isEmpty())
-		{
+	public DefenceTrait(StatsSet params) {
+		if (params.isEmpty()) {
 			LOGGER.warn("must have parameters.");
 			return;
 		}
 		
-		for (Entry<String, Object> param : params.getSet().entrySet())
-		{
-			_defenceTraits.put(TraitType.valueOf(param.getKey()), Float.parseFloat((String) param.getValue()) / 100);
+		for (Entry<String, Object> param : params.getSet().entrySet()) {
+			defenceTraits.put(TraitType.valueOf(param.getKey()), Float.parseFloat((String) param.getValue()) / 100);
 		}
 	}
 	
 	@Override
-	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
-		{
-			for (Entry<TraitType, Float> trait : _defenceTraits.entrySet())
-			{
-				if (trait.getValue() < 1.0f)
-				{
-				effected.getStat().mergeDefenceTrait(trait.getKey(), trait.getValue());
-				}
-				else
-				{
-				effected.getStat().mergeInvulnerableTrait(trait.getKey());
+	public void onStart(Creature effector, Creature effected, Skill skill, Item item) {
+		for (var trait : defenceTraits.entrySet()) {
+			if (trait.getValue() < 1.0f) {
+				effected.getStats().mergeDefenceTrait(trait.getKey(), trait.getValue());
+			} else {
+				effected.getStats().mergeInvulnerableTrait(trait.getKey());
 			}
 		}
 	}
 
 	@Override
-	public void onExit(Creature effector, Creature effected, Skill skill)
-	{
-		for (Entry<TraitType, Float> trait : _defenceTraits.entrySet())
-		{
-			if (trait.getValue() < 1.0f)
-			{
-				effected.getStat().removeDefenceTrait(trait.getKey(), trait.getValue());
-			}
-			else
-			{
-				effected.getStat().removeInvulnerableTrait(trait.getKey());
+	public void onExit(Creature effector, Creature effected, Skill skill) {
+		for (var trait : defenceTraits.entrySet()) {
+			if (trait.getValue() < 1.0f) {
+				effected.getStats().removeDefenceTrait(trait.getKey(), trait.getValue());
+			} else {
+				effected.getStats().removeInvulnerableTrait(trait.getKey());
 			}
 		}
 	}

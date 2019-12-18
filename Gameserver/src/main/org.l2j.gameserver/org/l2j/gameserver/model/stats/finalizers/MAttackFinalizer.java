@@ -21,7 +21,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.items.BodyPart;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 
 import java.util.Optional;
 
@@ -32,7 +32,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public class MAttackFinalizer implements IStatsFunction {
     @Override
-    public double calc(Creature creature, Optional<Double> base, Stats stat) {
+    public double calc(Creature creature, Optional<Double> base, Stat stat) {
         throwIfPresent(base);
 
         double baseValue = calcWeaponBaseValue(creature, stat);
@@ -52,7 +52,7 @@ public class MAttackFinalizer implements IStatsFunction {
         // Calculate modifiers Magic Attack
         final double intBonus = BaseStats.INT.calcBonus(creature);
         baseValue *= Math.pow(intBonus, 2) * Math.pow(creature.getLevelMod(), 2);
-        return Math.min(Stats.defaultValue(creature, stat, baseValue), Config.MAX_MATK);
+        return Math.min(Stat.defaultValue(creature, stat, baseValue), Config.MAX_MATK);
     }
 
     @Override

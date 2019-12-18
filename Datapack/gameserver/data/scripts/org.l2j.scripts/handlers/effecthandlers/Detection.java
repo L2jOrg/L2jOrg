@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.model.StatsSet;
@@ -30,10 +14,8 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * Detection effect implementation.
  * @author UnAfraid
  */
-public final class Detection extends AbstractEffect
-{
-	public Detection(StatsSet params)
-	{
+public final class Detection extends AbstractEffect {
+	public Detection(StatsSet params) {
 	}
 	
 	@Override
@@ -43,10 +25,8 @@ public final class Detection extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, Item item)
-	{
-		if (!isPlayer(effector) || !isPlayer(effected))
-		{
+	public void instant(Creature effector, Creature effected, Skill skill, Item item) {
+		if (!isPlayer(effector) || !isPlayer(effected)) {
 			return;
 		}
 		
@@ -56,18 +36,13 @@ public final class Detection extends AbstractEffect
 		final boolean hasClan = player.getClanId() > 0;
 		final boolean hasAlly = player.getAllyId() > 0;
 		
-		if (target.isInvisible())
-		{
-			if (hasParty && (target.isInParty()) && (player.getParty().getLeaderObjectId() == target.getParty().getLeaderObjectId()))
-			{
+		if (target.isInvisible()) {
+			if (hasParty && (target.isInParty()) && (player.getParty().getLeaderObjectId() == target.getParty().getLeaderObjectId())) {
 				return;
 			}
-			else if (hasClan && (player.getClanId() == target.getClanId()))
-			{
+			else if (hasClan && (player.getClanId() == target.getClanId())) {
 				return;
-			}
-			else if (hasAlly && (player.getAllyId() == target.getAllyId()))
-			{
+			} else if (hasAlly && (player.getAllyId() == target.getAllyId())) {
 				return;
 			}
 			

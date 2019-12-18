@@ -1,21 +1,6 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.effecthandlers;
 
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Attackable;
@@ -37,42 +22,36 @@ import static org.l2j.gameserver.util.GameUtils.isAttackable;
  * Fatal Blow effect implementation.
  * @author Adry_85
  */
-public final class FatalBlow extends AbstractEffect
-{
-	private final double _power;
-	private final double _chanceBoost;
-	private final double _criticalChance;
-	private final Set<AbnormalType> _abnormals;
-	private final double _abnormalPower;
-	private final boolean _overHit;
+public final class FatalBlow extends AbstractEffect {
+	private final double power;
+	private final double chanceBoost;
+	private final double criticalChance;
+	private final Set<AbnormalType> abnormals;
+	private final double abnormalPower;
+	private final boolean overHit;
 	
-	public FatalBlow(StatsSet params)
-	{
-		_power = params.getDouble("power");
-		_chanceBoost = params.getDouble("chanceBoost");
-		_criticalChance = params.getDouble("criticalChance", 0);
-		_overHit = params.getBoolean("overHit", false);
+	public FatalBlow(StatsSet params) {
+		power = params.getDouble("power");
+		chanceBoost = params.getDouble("chanceBoost");
+		criticalChance = params.getDouble("criticalChance", 0);
+		overHit = params.getBoolean("overHit", false);
 		
 		String abnormals = params.getString("abnormalType", null);
-		if ((abnormals != null) && !abnormals.isEmpty())
-		{
-			_abnormals = new HashSet<>();
-			for (String slot : abnormals.split(";"))
-			{
-				_abnormals.add(Enum.valueOf(AbnormalType.class, slot));
+		if (Util.isNotEmpty(abnormals)) {
+			this.abnormals = new HashSet<>();
+			for (String slot : abnormals.split(";")) {
+				this.abnormals.add(Enum.valueOf(AbnormalType.class, slot));
 			}
+		} else {
+			this.abnormals = Collections.emptySet();
 		}
-		else
-		{
-			_abnormals = Collections.<AbnormalType> emptySet();
-		}
-		_abnormalPower = params.getDouble("abnormalPower", 1);
+		abnormalPower = params.getDouble("abnormalPower", 1);
 	}
 	
 	@Override
 	public boolean calcSuccess(Creature effector, Creature effected, Skill skill)
 	{
-		return !Formulas.calcPhysicalSkillEvasion(effector, effected, skill) && Formulas.calcBlowSuccess(effector, effected, skill, _chanceBoost);
+		return !Formulas.calcPhysicalSkillEvasion(effector, effected, skill) && Formulas.calcBlowSuccess(effector, effected, skill, chanceBoost);
 	}
 	
 	@Override
@@ -88,33 +67,28 @@ public final class FatalBlow extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, Item item)
-	{
-		if (effector.isAlikeDead())
-		{
+	public void instant(Creature effector, Creature effected, Skill skill, Item item) {
+		if (effector.isAlikeDead()) {
 			return;
 		}
 
-		if (_overHit && isAttackable(effected))
-		{
+		if (overHit && isAttackable(effected)) {
 			((Attackable) effected).overhitEnabled(true);
 		}
 		
-		double power = _power;
+		double power = this.power;
 		
 		// Check if we apply an abnormal modifier
-		if (_abnormals.stream().anyMatch(effected::hasAbnormalType))
-		{
-			power += _abnormalPower;
+		if (abnormals.stream().anyMatch(effected::hasAbnormalType)) {
+			power += abnormalPower;
 		}
 		
 		final boolean ss = skill.useSoulShot() && (effector.isChargedShot(ShotType.SOULSHOTS) || effector.isChargedShot(ShotType.BLESSED_SOULSHOTS));
 		final byte shld = Formulas.calcShldUse(effector, effected);
 		double damage = Formulas.calcBlowDamage(effector, effected, skill, false, power, shld, ss);
-		final boolean crit = Formulas.calcCrit(_criticalChance, effector, effected, skill);
+		final boolean crit = Formulas.calcCrit(criticalChance, effector, effected, skill);
 		
-		if (crit)
-		{
+		if (crit) {
 			damage *= 2;
 		}
 		

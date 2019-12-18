@@ -16,30 +16,23 @@
  */
 package org.l2j.gameserver.model.actor.stat;
 
-import org.l2j.gameserver.model.actor.Vehicle;
+import org.l2j.gameserver.model.actor.instance.ControllableAirShip;
 
-public class VehicleStat extends CharStat {
-    private float _moveSpeed = 0;
-    private int _rotationSpeed = 0;
-
-    public VehicleStat(Vehicle activeChar) {
+public class ControllableAirShipStats extends VehicleStats {
+    public ControllableAirShipStats(ControllableAirShip activeChar) {
         super(activeChar);
     }
 
     @Override
+    public ControllableAirShip getCreature() {
+        return (ControllableAirShip) super.getCreature();
+    }
+
+    @Override
     public double getMoveSpeed() {
-        return _moveSpeed;
-    }
-
-    public final void setMoveSpeed(float speed) {
-        _moveSpeed = speed;
-    }
-
-    public final double getRotationSpeed() {
-        return _rotationSpeed;
-    }
-
-    public final void setRotationSpeed(int speed) {
-        _rotationSpeed = speed;
+        if (getCreature().isInDock() || (getCreature().getFuel() > 0)) {
+            return super.getMoveSpeed();
+        }
+        return super.getMoveSpeed() * 0.05f;
     }
 }

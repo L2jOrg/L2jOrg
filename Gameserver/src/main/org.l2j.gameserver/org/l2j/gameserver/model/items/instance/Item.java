@@ -39,7 +39,7 @@ import org.l2j.gameserver.model.items.type.ItemType;
 import org.l2j.gameserver.model.options.EnchantOptions;
 import org.l2j.gameserver.model.options.Options;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.settings.GeneralSettings;
@@ -1752,7 +1752,7 @@ public final class Item extends WorldObject {
         template.forEachSkill(type, action);
     }
 
-    public double getStats(Stats stat, int defaultValue) {
+    public double getStats(Stat stat, int defaultValue) {
         return template.getStats(stat, defaultValue);
     }
 

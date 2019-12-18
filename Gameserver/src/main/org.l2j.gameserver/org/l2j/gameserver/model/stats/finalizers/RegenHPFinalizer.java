@@ -5,6 +5,7 @@ import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
+import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.model.SiegeClan;
 import org.l2j.gameserver.model.actor.Creature;
@@ -20,7 +21,6 @@ import org.l2j.gameserver.model.residences.ResidenceFunction;
 import org.l2j.gameserver.model.residences.ResidenceFunctionType;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
-import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.*;
 import org.l2j.gameserver.world.zone.type.CastleZone;
@@ -55,7 +55,7 @@ public class RegenHPFinalizer implements IStatsFunction {
     }
 
     @Override
-    public double calc(Creature creature, Optional<Double> base, Stats stat) {
+    public double calc(Creature creature, Optional<Double> base, Stat stat) {
         throwIfPresent(base);
 
         double baseValue = isPlayer(creature) ? creature.getActingPlayer().getTemplate().getBaseHpRegen(creature.getLevel()) : creature.getTemplate().getBaseHpReg();
@@ -140,6 +140,6 @@ public class RegenHPFinalizer implements IStatsFunction {
             baseValue = ((Pet) creature).getPetLevelData().getPetRegenHP() * Config.PET_HP_REGEN_MULTIPLIER;
         }
 
-        return Stats.defaultValue(creature, stat, baseValue);
+        return Stat.defaultValue(creature, stat, baseValue);
     }
 }

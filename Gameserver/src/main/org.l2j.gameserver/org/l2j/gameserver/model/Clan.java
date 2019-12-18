@@ -1241,17 +1241,11 @@ public class Clan implements IIdentifiable, INamable {
     }
 
     public void broadcastToOnlineAllyMembers(ServerPacket packet) {
-        for (Clan clan : ClanTable.getInstance().getClanAllies(getAllyId())) {
-            clan.broadcastToOnlineMembers(packet);
-        }
+        ClanTable.getInstance().getClanAllies(getAllyId()).forEach(c -> c.broadcastToOnlineMembers(packet));
     }
 
     public void broadcastToOnlineMembers(ServerPacket packet) {
-        for (ClanMember member : members.values()) {
-            if ((member != null) && member.isOnline()) {
-                member.getPlayerInstance().sendPacket(packet);
-            }
-        }
+        members.values().stream().filter(ClanMember::isOnline).map(ClanMember::getPlayerInstance).forEach(packet::sendTo);
     }
 
     public void broadcastCSToOnlineMembers(CreatureSay packet, Player broadcaster) {
