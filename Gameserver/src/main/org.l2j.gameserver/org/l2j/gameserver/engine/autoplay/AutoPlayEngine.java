@@ -200,7 +200,7 @@ public final class AutoPlayEngine {
                 }
 
                 if(shortcuts.isEmpty()) {
-                    entryIt.remove();;
+                    entryIt.remove();
                 }
             }
         }

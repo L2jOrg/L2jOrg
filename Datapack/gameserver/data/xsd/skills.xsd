@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-	<!--<xs:include schemaLocation="common.xsd"/>-->
+	<xs:include schemaLocation="common.xsd"/>
 
 	<xs:element name="list">
 		<xs:complexType>
 			<xs:sequence>
+				<xs:element maxOccurs="unbounded"  minOccurs="0" name="skil" type="Skill"/>
 				<xs:element maxOccurs="unbounded" name="skill">
 					<xs:complexType>
 						<xs:sequence>
@@ -2028,7 +2029,7 @@
 		</xs:complexType>
 	</xs:element>
 
-<!--
+
 	<xs:complexType name="Skill">
 		<xs:sequence>
 			<xs:element name="icon" type="MappedLevelToken" maxOccurs="unbounded"/>
@@ -2073,6 +2074,11 @@
 	<xs:element name="physic-attack" type="PhysicalAttackEffect" substitutionGroup="effect"/>
 	<xs:element name="physic-defense" type="PhysicalDefenseEffect" substitutionGroup="effect"/>
 	<xs:element name="randomizeHate" type="RandomizeHateEffect" substitutionGroup="effect"/>
+	<xs:element name="speed" type="SpeedEffect" substitutionGroup="effect"/>
+
+	<xs:complexType name="SpeedEffect">
+
+	</xs:complexType>
 
 	<xs:complexType name="RandomizeHateEffect">
 		<xs:complexContent>
@@ -2178,7 +2184,7 @@
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
--->
+
 
 	<xs:simpleType name="AbnormalType">
 		<xs:restriction base="xs:token">

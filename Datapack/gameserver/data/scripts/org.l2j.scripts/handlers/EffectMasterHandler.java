@@ -1,6 +1,7 @@
 package handlers;
 
 import handlers.effecthandlers.*;
+import handlers.effecthandlers.stat.*;
 import org.l2j.gameserver.handler.EffectHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

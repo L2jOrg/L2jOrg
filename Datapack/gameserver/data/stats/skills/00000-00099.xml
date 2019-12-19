@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-    <!--<skil id="1" name="Triple Slash" max-level="45" debuff="true" action="A2">
-        &lt;!&ndash; Quickly strikes the target three times with $s1 Power. For $s2, enemy's P. Def. -$s3. Requires dual swords. Ignores shield block. Over-hit. &ndash;&gt;
+    <skil id="1" name="Triple Slash" max-level="45" debuff="true" action="A2">
+        <!-- Quickly strikes the target three times with $s1 Power. For $s2, enemy's P. Def. -$s3. Requires dual swords. Ignores shield block. Over-hit. -->
         <icon initial="icon.skill0001"/>
         <attributes next-action="ATTACK" property="PHYSIC" reuse="3000" magic-critical-rate="5">
             <magic-level>
@@ -312,7 +312,37 @@
                 </power>
             </physic-attack>
         </effects>
-    </skil>-->
+    </skil>
+    <skil id="4" name="Dash" max-level="2" action="A2">
+        <icon>icon.skill0004</icon>
+        <attributes reuse="30000" magic-critical-rate="5" >
+            <magic-level initial="20">
+                <value level="2">46</value>
+            </magic-level>
+            <mana-consume initial="10">
+                <value level="2">21</value>
+            </mana-consume>
+            <cast-range/>
+            <cool-time/>
+            <effect-point initial="204">
+                <value level="2">438</value>
+            </effect-point>
+            <effect-range/>
+            <hit-time initial="1000"/>
+        </attributes>
+        <target/>
+        <abnormal type="SPEED_UP_SPECIAL">
+            <level>
+                <value>1</value>
+                <value level="2">2</value>
+            </level>
+            <time initial="15"/>
+            <chance/>
+        </abnormal>
+        <effects >
+
+        </effects>
+    </skil>
     <skill id="1" toLevel="45" name="Triple Slash">
         <!-- Quickly strikes the target three times with $s1 Power. For $s2, enemy's P. Def. -$s3. Requires dual swords. Ignores shield block. Over-hit. -->
         <icon>icon.skill0001</icon>

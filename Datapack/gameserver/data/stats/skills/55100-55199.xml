@@ -1701,7 +1701,6 @@
             </effect>
             <effect name="BonusDropRate">
                 <amount>50</amount>
-                <mode>PER</mode>
             </effect>
         </effects>
     </skill>
@@ -1720,7 +1719,6 @@
             </effect>
             <effect name="BonusDropRate">
                 <amount>150</amount>
-                <mode>PER</mode>
             </effect>
             <effect name="WorldChatPoints">
                 <amount>10</amount>
@@ -1743,7 +1741,6 @@
             </effect>
             <effect name="BonusDropRate">
                 <amount>200</amount>
-                <mode>PER</mode>
             </effect>
             <effect name="ReduceDropPenalty">
                 <exp>-10</exp>
@@ -1772,7 +1769,6 @@
             </effect>
             <effect name="BonusDropRate">
                 <amount>250</amount>
-                <mode>PER</mode>
             </effect>
             <effect name="ReduceDropPenalty">
                 <exp>-15</exp>
@@ -1805,7 +1801,6 @@
             </effect>
             <effect name="BonusDropRate">
                 <amount>250</amount>
-                <mode>PER</mode>
             </effect>
             <effect name="ReduceDropPenalty">
                 <exp>-20</exp>
@@ -1870,7 +1865,6 @@
             </effect>
             <effect name="BonusDropRate">
                 <amount>250</amount>
-                <mode>PER</mode>
             </effect>
             <effect name="ReduceDropPenalty">
                 <exp>-20</exp>
@@ -1935,7 +1929,6 @@
             </effect>
             <effect name="BonusDropRate">
                 <amount>250</amount>
-                <mode>PER</mode>
             </effect>
             <effect name="ReduceDropPenalty">
                 <exp>-20</exp>
