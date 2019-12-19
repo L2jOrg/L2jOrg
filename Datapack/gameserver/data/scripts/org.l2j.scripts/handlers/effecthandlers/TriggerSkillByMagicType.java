@@ -18,6 +18,9 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.skills.targets.TargetType;
 
+import java.util.function.Consumer;
+
+import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.util.GameUtils.isCreature;
 
 /**
@@ -48,7 +51,7 @@ public final class TriggerSkillByMagicType extends AbstractEffect {
 			return;
 		}
 		
-		if ((chance < 100) && (Rnd.get(100) > chance)) {
+		if (Rnd.chance(chance)) {
 			return;
 		}
 		
@@ -58,41 +61,32 @@ public final class TriggerSkillByMagicType extends AbstractEffect {
 		}
 		else {
 			final BuffInfo buffInfo = ((Creature) event.getTarget()).getEffectList().getBuffInfoBySkillId(skill.getSkillId());
-			if (buffInfo != null)
-			{
+			if (nonNull(buffInfo)) {
 				triggerSkill = SkillData.getInstance().getSkill(skill.getSkillId(), Math.min(skillLevelScaleTo, buffInfo.getSkill().getLevel() + 1));
-			}
-			else
-			{
+			} else {
 				triggerSkill = skill.getSkill();
 			}
 		}
 		
 		WorldObject target = null;
-		try
-		{
+		try {
 			target = TargetHandler.getInstance().getHandler(targetType).getTarget(event.getCaster(), event.getTarget(), triggerSkill, false, false, false);
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			LOGGER.warn("Exception in ITargetTypeHandler.getTarget(): " + e.getMessage(), e);
 		}
 		
-		if (isCreature(target))
-		{
+		if (isCreature(target)) {
 			SkillCaster.triggerCast(event.getCaster(), (Creature) target, triggerSkill);
 		}
 	}
 	
 	@Override
-	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
-	{
-		if ((chance == 0) || (this.skill.getSkillId() == 0) || (this.skill.getLevel() == 0) || (magicTypes.length == 0))
-		{
+	public void onStart(Creature effector, Creature effected, Skill skill, Item item) {
+		if (chance == 0|| this.skill.getSkillId() == 0 || this.skill.getLevel() == 0 || magicTypes.length == 0) {
 			return;
 		}
 		
-		effected.addListener(new ConsumerEventListener(effected, EventType.ON_CREATURE_SKILL_FINISH_CAST, (OnCreatureSkillFinishCast event) -> onSkillUseEvent(event), this));
+		effected.addListener(new ConsumerEventListener(effected, EventType.ON_CREATURE_SKILL_FINISH_CAST, (Consumer<OnCreatureSkillFinishCast>) this::onSkillUseEvent, this));
 	}
 	
 	@Override

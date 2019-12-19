@@ -108,9 +108,8 @@ public class Rnd
 	 * <li> If chance> = 100, returns true
 	 * Translated by Google.
 	 */
-	public static boolean chance(double chance)
-	{
-		return rnd().nextDouble() <= chance / 100.;
+	public static boolean chance(double chance) {
+		return chance >= 100 || rnd().nextDouble() <= chance / 100.;
 	}
 
 	public static <E> E get(E[] list)

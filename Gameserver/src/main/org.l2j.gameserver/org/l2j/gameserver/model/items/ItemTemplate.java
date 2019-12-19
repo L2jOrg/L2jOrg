@@ -93,7 +93,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     protected boolean exImmediateEffect;
     protected ActionType _defaultAction = ActionType.NONE;
     private Map<AttributeType, AttributeHolder> _elementals = null;
-    private List<ItemSkillHolder> _skills;
+    private List<ItemSkillHolder> skills;
 
     private int reuseDelay;
     private int reuseGroup;
@@ -489,7 +489,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      * @return Skills linked to this item as SkillHolder[]
      */
     public final List<ItemSkillHolder> getAllSkills() {
-        return _skills;
+        return skills;
     }
 
     /**
@@ -497,7 +497,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      * @return {@code List} of {@link ItemSkillHolder} if item has skills and matches the condition, {@code null} otherwise
      */
     public final List<ItemSkillHolder> getSkills(Predicate<ItemSkillHolder> condition) {
-        return _skills != null ? _skills.stream().filter(condition).collect(Collectors.toList()) : null;
+        return skills != null ? skills.stream().filter(condition).collect(Collectors.toList()) : null;
     }
 
     /**
@@ -505,7 +505,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      * @return {@code List} of {@link ItemSkillHolder} if item has skills, {@code null} otherwise
      */
     public final List<ItemSkillHolder> getSkills(ItemSkillType type) {
-        return nonNull(_skills) ? _skills.stream().filter(sk -> sk.getType() == type).collect(Collectors.toList()) : Collections.emptyList();
+        return nonNull(skills) ? skills.stream().filter(sk -> sk.getType() == type).collect(Collectors.toList()) : Collections.emptyList();
     }
 
     /**
@@ -515,16 +515,24 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      * @param action
      */
     public final void forEachSkill(ItemSkillType type, Consumer<ItemSkillHolder> action) {
-        if (_skills != null) {
-            _skills.stream().filter(sk -> sk.getType() == type).forEach(action);
+        if (skills != null) {
+            skills.stream().filter(sk -> sk.getType() == type).forEach(action);
         }
     }
 
-    public void addSkill(ItemSkillHolder holder) {
-        if (_skills == null) {
-            _skills = new ArrayList<>();
+    public boolean checkAnySkill(ItemSkillType type, Predicate<ItemSkillHolder> predicate) {
+        if(nonNull(skills)) {
+            return skills.stream().filter(sk -> sk.getType() == type).anyMatch(predicate);
         }
-        _skills.add(holder);
+        return false;
+    }
+
+
+    public void addSkill(ItemSkillHolder holder) {
+        if (skills == null) {
+            skills = new ArrayList<>();
+        }
+        skills.add(holder);
     }
 
     public boolean checkCondition(Creature activeChar, WorldObject object, boolean sendMessage) {

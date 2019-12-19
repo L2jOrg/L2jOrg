@@ -5,6 +5,7 @@ import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.engine.geo.GeoEngine;
+import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.model.Shortcut;
 import org.l2j.gameserver.model.actor.instance.Monster;
@@ -20,6 +21,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
+import java.util.function.Predicate;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
@@ -189,7 +191,9 @@ public final class AutoPlayEngine {
                     var shortcut = player.getShortCut(shortcutIt.next());
                     if(nonNull(shortcut)) {
                         var item = player.getInventory().getItemByObjectId(shortcut.getId());
-                        useItem(player, item);
+                        if(item.getTemplate().checkAnySkill(ItemSkillType.NORMAL, Predicate.not(player::isAffectedBySkill))) {
+                            useItem(player, item);
+                        }
                     }  else {
                         shortcutIt.remove();
                     }

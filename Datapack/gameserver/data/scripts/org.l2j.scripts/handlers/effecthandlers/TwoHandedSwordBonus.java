@@ -16,57 +16,35 @@ import org.l2j.gameserver.model.stats.Stat;
  * @author Sdw
  * @author JoeAlisson
  */
-public class TwoHandedSwordBonus extends AbstractEffect
-{
-	private static final Condition _weaponTypeCondition = new ConditionUsingItemType(WeaponType.SWORD.mask());
-	private static final Condition _slotCondition = new ConditionUsingSlotType(BodyPart.TWO_HAND.getId());
+public class TwoHandedSwordBonus extends AbstractEffect {
+	private static final Condition weaponTypeCondition = new ConditionUsingItemType(WeaponType.SWORD.mask());
+	private static final Condition slotCondition = new ConditionUsingSlotType(BodyPart.TWO_HAND.getId());
 	
-	private final double _pAtkAmount;
-	private final StatModifierType _pAtkmode;
+	private final double pAtkAmount;
+	private final StatModifierType pAtkmode;
 	
-	private final double _accuracyAmount;
-	private final StatModifierType _accuracyMode;
+	private final double accuracyAmount;
+	private final StatModifierType accuracyMode;
 	
-	public TwoHandedSwordBonus(StatsSet params)
-	{
-		_pAtkAmount = params.getDouble("pAtkAmount", 0);
-		_pAtkmode = params.getEnum("pAtkmode", StatModifierType.class, StatModifierType.DIFF);
+	public TwoHandedSwordBonus(StatsSet params) {
+		pAtkAmount = params.getDouble("pAtkAmount", 0);
+		pAtkmode = params.getEnum("pAtkmode", StatModifierType.class, StatModifierType.DIFF);
 		
-		_accuracyAmount = params.getDouble("accuracyAmount", 0);
-		_accuracyMode = params.getEnum("accuracyMode", StatModifierType.class, StatModifierType.DIFF);
+		accuracyAmount = params.getDouble("accuracyAmount", 0);
+		accuracyMode = params.getEnum("accuracyMode", StatModifierType.class, StatModifierType.DIFF);
 	}
 	
 	@Override
-	public void pump(Creature effected, Skill skill)
-	{
-		if (((_weaponTypeCondition == null) || _weaponTypeCondition.test(effected, effected, skill)) && ((_slotCondition == null) || _slotCondition.test(effected, effected, skill)))
-		{
-			switch (_pAtkmode)
-			{
-				case DIFF:
-				{
-					effected.getStats().mergeAdd(Stat.PHYSICAL_ATTACK, _pAtkAmount);
-					break;
-				}
-				case PER:
-				{
-					effected.getStats().mergeMul(Stat.PHYSICAL_ATTACK, (_pAtkAmount / 100) + 1);
-					break;
-				}
+	public void pump(Creature effected, Skill skill) {
+		if (weaponTypeCondition.test(effected, effected, skill) && slotCondition.test(effected, effected, skill)) {
+			switch (pAtkmode) {
+				case DIFF -> effected.getStats().mergeAdd(Stat.PHYSICAL_ATTACK, pAtkAmount);
+				case PER -> effected.getStats().mergeMul(Stat.PHYSICAL_ATTACK, (pAtkAmount / 100) + 1);
 			}
-			
-			switch (_accuracyMode)
-			{
-				case DIFF:
-				{
-					effected.getStats().mergeAdd(Stat.ACCURACY_COMBAT, _accuracyAmount);
-					break;
-				}
-				case PER:
-				{
-					effected.getStats().mergeMul(Stat.ACCURACY_COMBAT, (_accuracyAmount / 100) + 1);
-					break;
-				}
+
+			switch (accuracyMode) {
+				case DIFF -> effected.getStats().mergeAdd(Stat.ACCURACY_COMBAT, accuracyAmount);
+				case PER -> effected.getStats().mergeMul(Stat.ACCURACY_COMBAT, (accuracyAmount / 100) + 1);
 			}
 		}
 	}

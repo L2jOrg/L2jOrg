@@ -10,6 +10,9 @@ import org.l2j.gameserver.model.skills.Skill;
 import java.util.Arrays;
 import java.util.Objects;
 
+/**
+ * @author JoeAlisson
+ */
 public class VisualEffect extends AbstractEffect {
 
     private final AbnormalVisualEffect[] effects;
@@ -29,7 +32,7 @@ public class VisualEffect extends AbstractEffect {
 
     @Override
     public void instant(Creature effector, Creature effected, Skill skill, Item item) {
-            if(start) {
+        if(start) {
             effected.getEffectList().startAbnormalVisualEffect(effects);
         } else {
             effected.getEffectList().stopAbnormalVisualEffect(effects);

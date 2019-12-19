@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.enums.StatModifierType;
@@ -31,57 +15,36 @@ import org.l2j.gameserver.model.stats.Stat;
 /**
  * @author Sdw
  */
-public class TwoHandedBluntBonus extends AbstractEffect
-{
-	private static final Condition _weaponTypeCondition = new ConditionUsingItemType(WeaponType.BLUNT.mask());
-	private static final Condition _slotCondition = new ConditionUsingSlotType(BodyPart.TWO_HAND.getId());
+public class TwoHandedBluntBonus extends AbstractEffect {
+
+	private static final Condition weaponTypeCondition = new ConditionUsingItemType(WeaponType.BLUNT.mask());
+	private static final Condition slotCondition = new ConditionUsingSlotType(BodyPart.TWO_HAND.getId());
 	
-	private final double _pAtkAmount;
-	private final StatModifierType _pAtkmode;
+	private final double pAtkAmount;
+	private final StatModifierType pAtkmode;
 	
-	private final double _accuracyAmount;
-	private final StatModifierType _accuracyMode;
+	private final double accuracyAmount;
+	private final StatModifierType accuracyMode;
 	
-	public TwoHandedBluntBonus(StatsSet params)
-	{
-		_pAtkAmount = params.getDouble("pAtkAmount", 0);
-		_pAtkmode = params.getEnum("pAtkmode", StatModifierType.class, StatModifierType.DIFF);
+	public TwoHandedBluntBonus(StatsSet params) {
+		pAtkAmount = params.getDouble("pAtkAmount", 0);
+		pAtkmode = params.getEnum("pAtkmode", StatModifierType.class, StatModifierType.DIFF);
 		
-		_accuracyAmount = params.getDouble("accuracyAmount", 0);
-		_accuracyMode = params.getEnum("accuracyMode", StatModifierType.class, StatModifierType.DIFF);
+		accuracyAmount = params.getDouble("accuracyAmount", 0);
+		accuracyMode = params.getEnum("accuracyMode", StatModifierType.class, StatModifierType.DIFF);
 	}
 	
 	@Override
-	public void pump(Creature effected, Skill skill)
-	{
-		if (((_weaponTypeCondition == null) || _weaponTypeCondition.test(effected, effected, skill)) && ((_slotCondition == null) || _slotCondition.test(effected, effected, skill)))
-		{
-			switch (_pAtkmode)
-			{
-				case DIFF:
-				{
-					effected.getStats().mergeAdd(Stat.PHYSICAL_ATTACK, _pAtkAmount);
-					break;
-				}
-				case PER:
-				{
-					effected.getStats().mergeMul(Stat.PHYSICAL_ATTACK, (_pAtkAmount / 100) + 1);
-					break;
-				}
+	public void pump(Creature effected, Skill skill) {
+		if (weaponTypeCondition.test(effected, effected, skill) && slotCondition.test(effected, effected, skill)) {
+			switch (pAtkmode) {
+				case DIFF -> effected.getStats().mergeAdd(Stat.PHYSICAL_ATTACK, pAtkAmount);
+				case PER -> effected.getStats().mergeMul(Stat.PHYSICAL_ATTACK, (pAtkAmount / 100) + 1);
 			}
-			
-			switch (_accuracyMode)
-			{
-				case DIFF:
-				{
-					effected.getStats().mergeAdd(Stat.ACCURACY_COMBAT, _accuracyAmount);
-					break;
-				}
-				case PER:
-				{
-					effected.getStats().mergeMul(Stat.ACCURACY_COMBAT, (_accuracyAmount / 100) + 1);
-					break;
-				}
+
+			switch (accuracyMode) {
+				case DIFF -> effected.getStats().mergeAdd(Stat.ACCURACY_COMBAT, accuracyAmount);
+				case PER -> effected.getStats().mergeMul(Stat.ACCURACY_COMBAT, (accuracyAmount / 100) + 1);
 			}
 		}
 	}
