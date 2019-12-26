@@ -2087,7 +2087,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             for (Stat stat : changed) {
                 if (info != null) {
                     switch (stat) {
-                        case MOVE_SPEED:
+                        case SPEED:
                         case RUN_SPEED:
                         case WALK_SPEED:
                         case SWIM_RUN_SPEED:

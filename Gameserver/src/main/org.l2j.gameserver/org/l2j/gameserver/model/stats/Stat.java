@@ -115,7 +115,7 @@ public enum Stat {
     HIT_AT_NIGHT("hitAtNight"),
 
     // Run speed, walk & escape speed are calculated proportionally, magic speed is a buff
-    MOVE_SPEED("moveSpeed"),
+    SPEED("Speed"),
     RUN_SPEED("runSpd", new SpeedFinalizer()),
     WALK_SPEED("walkSpd", new SpeedFinalizer()),
     SWIM_RUN_SPEED("fastSwimSpd", new SpeedFinalizer()),
