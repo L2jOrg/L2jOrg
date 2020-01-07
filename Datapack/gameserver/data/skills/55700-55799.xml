@@ -1,0 +1,900 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
+    <skill id="55700" toLevel="1" name="Scroll: Dance of Fire">
+        <!-- For 10 min., P. Critical Damage +35%. -->
+        <icon>icon.skill0274</icon>
+        <abnormalLvl>4</abnormalLvl>
+        <abnormalTime>600</abnormalTime>
+        <abnormalType>CRITICAL_DMG_UP</abnormalType>
+        <itemConsumeCount>1</itemConsumeCount>
+        <itemConsumeId>29014</itemConsumeId>
+        <hitTime>2500</hitTime>
+        <reuseDelay>3000</reuseDelay>
+        <isMagic>2</isMagic> <!-- Static Skill -->
+        <magicLvl>1</magicLvl>
+        <operateType>A2</operateType>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>5</magicCriticalRate>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="CriticalDamage">
+                <amount>35</amount>
+                <mode>PER</mode>
+            </effect>
+        </effects>
+    </skill>
+	<skill id="55701" toLevel="1" name="Summon Agathion - Sin Eater">
+        <!-- Summon Sin Eater Agathion. -->
+        <icon>icon.etc_summon_aga_agit_i00</icon>
+        <operateType>A1</operateType>
+        <isMagic>2</isMagic> <!-- Static Skill -->
+        <hitTime>3000</hitTime>
+        <magicCriticalRate>5</magicCriticalRate>
+        <hitCancelTime>0</hitCancelTime>
+        <magicLvl>1</magicLvl>
+        <reuseDelay>5000</reuseDelay>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <conditions>
+            <condition name="OpMainjob"/>
+        </conditions>
+        <effects>
+            <effect name="SummonAgathion">
+                <npcId>9021</npcId> <!-- Sin Eater -->
+            </effect>
+        </effects>
+    </skill>
+    <skill id="55702" toLevel="1" name="Hour of Penitence">
+        <!-- Hour of Penitence - 1 h. Within this time monsters must be defeated and Crumbs of Penitence must be collected (Monsters that are 5 lvl lower than the character are not counted). Activates when Sin Eater is summoned. <Warning!> Removing the bracelet will end the Hour of Penitence. Crumbs of Penitence can not be obtained when belonging to the union. Effect remains after death. -->
+        <icon>icon.etc_leash_i00</icon>
+        <operateType>A2</operateType>
+        <hitTime>1000</hitTime>
+        <coolTime>500</coolTime>
+        <reuseDelay>60000</reuseDelay>
+        <abnormalType>EXP_BOTTLE</abnormalType>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>-5</magicCriticalRate>
+        <specialLevel>-1</specialLevel>
+        <hitCancelTime>0</hitCancelTime>
+        <magicLvl>1</magicLvl>
+        <abnormalLvl>1</abnormalLvl>
+        <abnormalTime>300</abnormalTime>
+        <irreplacableBuff>true</irreplacableBuff>
+        <isMagic>4</isMagic>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+    </skill>
+    <skill id="55703" toLevel="1" name="Blessed Scroll: Enchant Weapon (A-grade)">
+        <operateType>A1</operateType>
+    </skill>
+    <skill id="55704" toLevel="1" name="Blessed Scroll: Enchant Armor (A-grade)">
+        <operateType>A1</operateType>
+    </skill>
+    <skill id="55705" toLevel="10" name="Red Cat's Eye">
+        <!-- P. Critical Damage +$s1. -->
+        <icon>
+            <value level="1">icon.bm_jewel_red_catseye</value>
+            <value level="2">icon.bm_jewel_red_catseye</value>
+            <value level="3">icon.bm_jewel_red_catseye</value>
+            <value level="4">icon.bm_jewel_red_catseye</value>
+            <value level="5">icon.bm_jewel_red_catseye</value>
+            <value level="6">icon.bm_jewel_red_catseye_high_lv1_lavianrose</value>
+            <value level="7">icon.bm_jewel_red_catseye_high_lv1_lavianrose</value>
+            <value level="8">icon.bm_jewel_red_catseye_high_lv1_lavianrose</value>
+            <value level="9">icon.bm_jewel_red_catseye_high_lv1_lavianrose</value>
+            <value level="10">icon.bm_jewel_red_catseye_high_lv1_lavianrose</value>
+        </icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55706" toLevel="10" name="Blue Cat's Eye">
+        <!-- M. Critical Power +$s1. -->
+        <icon>
+            <value level="1">Icon.bm_jewel_blue_catseye</value>
+            <value level="2">Icon.bm_jewel_blue_catseye</value>
+            <value level="3">Icon.bm_jewel_blue_catseye</value>
+            <value level="4">Icon.bm_jewel_blue_catseye</value>
+            <value level="5">Icon.bm_jewel_blue_catseye</value>
+            <value level="6">icon.bm_jewel_blue_catseye_high_lv1_lavianrose</value>
+            <value level="7">icon.bm_jewel_blue_catseye_high_lv1_lavianrose</value>
+            <value level="8">icon.bm_jewel_blue_catseye_high_lv1_lavianrose</value>
+            <value level="9">icon.bm_jewel_blue_catseye_high_lv1_lavianrose</value>
+            <value level="10">icon.bm_jewel_blue_catseye_high_lv1_lavianrose</value>
+        </icon>
+        <operateType>P</operateType>
+    </skill>
+	<skill id="55707" toLevel="1" name="Fortune Red Cat's Eye Box">
+        <operateType>A1</operateType>
+        <hitTime>500</hitTime>
+        <coolTime>500</coolTime>
+        <reuseDelay>1000</reuseDelay>
+    </skill>
+	<skill id="55708" toLevel="1" name="Fortune Blue Cat's Eye Box">
+        <operateType>A1</operateType>
+        <hitTime>500</hitTime>
+        <coolTime>500</coolTime>
+        <reuseDelay>1000</reuseDelay>
+    </skill>
+    <skill id="55709" toLevel="1" name="Shining Jewelry Box">
+        <operateType>A1</operateType>
+        <hitTime>500</hitTime>
+        <coolTime>500</coolTime>
+        <reuseDelay>1000</reuseDelay>
+    </skill>
+    <skill id="55710" toLevel="1" name="Put on Lv. 4 Brooch">
+        <!-- Brooch radiates bright light. -->
+        <icon>icon.etc_bm_brooch_lavianrose_i03</icon>
+        <operateType>A1</operateType>
+		<effects>
+			<effect name="AbnormalVisualEffect">
+				<type>AVE_BROOCH</type>
+			</effect>
+		</effects>
+    </skill>
+    <skill id="55711" toLevel="1" name="Remove Lv. 4 Brooch">
+        <!-- Bright light fades. -->
+        <operateType>A1</operateType>
+        <effects>
+			<effect name="DispelBySlot">
+				<dispel>AVE_BROOCH,10</dispel>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="55712" toLevel="1" name="Lv. 4 Brooch">
+        <!-- Activates 5 jewel slots. -->
+        <icon>icon.etc_bm_brooch_lavianrose_i03</icon>
+        <operateType>P</operateType>
+        <effects>
+            <effect name="JewelSlot">
+                <amount>5</amount>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="55713" toLevel="1" name="Lv. 4 Brooch - Additional Effect">
+        <!-- Inventory Slot +12. -->
+        <icon>icon.etc_bm_brooch_lavianrose_i03</icon>
+        <operateType>P</operateType>
+        <effects>
+            <effect name="EnlargeSlot">
+                <amount>12</amount>
+                <type>INVENTORY_NORMAL</type>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="55714" toLevel="1" name="Shining Golden Boot">
+        <icon>icon.card_event_blue_box</icon>
+        <operateType>A1</operateType>
+        <hitTime>500</hitTime>
+        <coolTime>500</coolTime>
+    </skill>
+    <skill id="55715" toLevel="1" name="Chef's Fish Stew Box">
+        <icon>BranchSys.icon.br_silver_box_i00</icon>
+        <isMagic>2</isMagic> <!-- Static Skill -->
+        <itemConsumeCount>1</itemConsumeCount>
+        <itemConsumeId>90793</itemConsumeId> <!-- Chef's Fish Stew Box -->
+        <magicLvl>1</magicLvl>
+        <operateType>A1</operateType>
+        <hitTime>500</hitTime>
+        <coolTime>500</coolTime>
+        <reuseDelay>1000</reuseDelay>
+        <magicCriticalRate>5</magicCriticalRate>
+        <hitCancelTime>0</hitCancelTime>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <conditions>
+            <condition name="OpEncumbered">
+                <weightPercent>10</weightPercent>
+                <slotsPercent>10</slotsPercent>
+            </condition>
+        </conditions>
+        <effects>
+            <effect name="RestorationRandom">
+                <items>
+                    <item chance="100">
+                        <item id="90407" count="1"/> <!-- Chef's Fish Stew - Victory - Event -->
+                    </item>
+                </items>
+            </effect>
+            <effect name="RestorationRandom">
+                <items>
+                    <item chance="100">
+                        <item id="90408" count="1"/> <!-- Chef's Fish Stew - Fire - Event -->
+                    </item>
+                </items>
+            </effect>
+            <effect name="RestorationRandom">
+                <items>
+                    <item chance="100">
+                        <item id="90409" count="1"/> <!-- Chef's Fish Stew - Water - Event -->
+                    </item>
+                </items>
+            </effect>
+            <effect name="RestorationRandom">
+                <items>
+                    <item chance="100">
+                        <item id="90410" count="1"/> <!-- Chef's Fish Stew - Wind - Event -->
+                    </item>
+                </items>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="55716" toLevel="1" name="Letter Collector Spell">
+        <!-- Grants the power of the Letter Collector. For 1 h., Max. HP +5%, Max. MP +5%, Max. CP +5%, Speed +10, P. Atk. +8%, M. Atk. +10%. -->
+        <icon>icon.etc_candle_yellow_i00</icon>
+        <operateType>A1</operateType>
+        <effectPoint>1</effectPoint>
+    </skill>
+    <skill id="55717" toLevel="1" name="Shilen's Treasure Chest">
+        <operateType>A1</operateType>
+        <hitTime>500</hitTime>
+        <coolTime>500</coolTime>
+    </skill>
+	<skill id="55718" toLevel="1" name="XP and SP Rune 50%">
+        <!-- Acquired XP/ SP +50%. -->
+        <icon>icon.skill19226</icon>
+		<operateType>P</operateType>
+    </skill>
+    <skill id="55719" toLevel="1" name="Feather Rune">
+        <!-- Weight limit +20%. -->
+        <icon>br_cashtex.item.br_cash_rune_of_feather_i00</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55720" toLevel="1" name="Irene's Hourglass - 1 Hour">
+        <!-- Acquired XP/ SP +50% for the duration of the effect -->
+        <icon>icon.etc_dragons_blood_i03</icon>
+        <operateType>A1</operateType>
+        <isMagic>4</isMagic>
+    </skill>
+    <skill id="55721" toLevel="1" name="Storm Power">
+        <!-- Acquired XP/ SP +50% for 2 h. Cooldown: 2 h. Effect remains after death. -->
+        <icon>icon.power_of_storm</icon>
+        <operateType>A1</operateType>
+        <isMagic>4</isMagic>
+        <reuseDelay>7200000</reuseDelay>
+    </skill>
+    <skill id="55722" toLevel="1" name="Facelifting Potion">
+        <operateType>A1</operateType>
+        <hitTime>500</hitTime>
+    </skill>
+    <skill id="55723" toLevel="1" name="Facelifting Potion">
+        <operateType>A1</operateType>
+        <hitTime>500</hitTime>
+    </skill>
+    <skill id="55724" toLevel="1" name="Facelifting Potion">
+        <operateType>A1</operateType>
+        <hitTime>500</hitTime>
+    </skill>
+    <skill id="55725" toLevel="1" name="Dye Potion">
+        <operateType>A1</operateType>
+        <hitTime>500</hitTime>
+    </skill>
+    <skill id="55726" toLevel="1" name="Dye Potion">
+        <operateType>A1</operateType>
+        <hitTime>500</hitTime>
+    </skill>
+    <skill id="55727" toLevel="1" name="Dye Potion">
+        <operateType>A1</operateType>
+        <hitTime>500</hitTime>
+    </skill>
+    <skill id="55728" toLevel="1" name="Dye Potion">
+        <operateType>A1</operateType>
+        <hitTime>500</hitTime>
+    </skill>
+    <skill id="55729" toLevel="1" name="Hair Style Change Potion">
+        <operateType>A1</operateType>
+        <hitTime>500</hitTime>
+    </skill>
+    <skill id="55730" toLevel="1" name="Hair Style Change Potion">
+        <operateType>A1</operateType>
+        <hitTime>500</hitTime>
+    </skill>
+    <skill id="55731" toLevel="1" name="Hair Style Change Potion">
+        <operateType>A1</operateType>
+        <hitTime>500</hitTime>
+    </skill>
+    <skill id="55732" toLevel="1" name="Hair Style Change Potion">
+        <operateType>A1</operateType>
+        <hitTime>500</hitTime>
+    </skill>
+    <skill id="55733" toLevel="1" name="Hair Style Change Potion">
+        <operateType>A1</operateType>
+        <hitTime>500</hitTime>
+    </skill>
+    <skill id="55734" toLevel="1" name="Hair Style Change Potion">
+        <operateType>A1</operateType>
+        <hitTime>500</hitTime>
+    </skill>
+    <skill id="55735" toLevel="1" name="Hair Style Change Potion">
+        <operateType>A1</operateType>
+        <hitTime>500</hitTime>
+    </skill>
+    <skill id="55736" toLevel="1" name="Elmoreden Cloak Basic Effect">
+        <!-- Increases PvP Attack Damage when enchanted and bestows various passive and active skills. -->
+        <icon>BranchIcon.icon.g_bm_elmoreden_cloak_normal</icon>
+        <operateType>P</operateType>
+        <effects>
+            <effect name="PvpPhysicalAttackDamageBonus">
+                <amount>0.1</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="PvpPhysicalSkillDamageBonus">
+                <amount>0.1</amount>
+                <mode>PER</mode>
+            </effect>
+        </effects>
+    </skill>
+	<skill id="55737" toLevel="20" name="Enchantment Effect: Elmoreden Cloak">
+        <!-- PvP Attack Damage +$s1. -->
+        <icon>BranchIcon.icon.g_bm_elmoreden_cloak_normal</icon>
+        <operateType>P</operateType>
+        <effects>
+            <effect name="PvpPhysicalAttackDamageBonus">
+                <amount>
+                    <value level="1">0.3</value>
+                    <value level="2">0.5</value>
+                    <value level="3">0.8</value>
+                    <value level="4">1</value>
+                    <value level="5">1.3</value>
+                    <value level="6">1.5</value>
+                    <value level="7">1.8</value>
+                    <value level="8">2</value>
+                    <value level="9">2.3</value>
+                    <value level="10">2.5</value>
+                    <value level="11">2.8</value>
+                    <value level="12">3</value>
+                    <value level="13">3.3</value>
+                    <value level="14">3.5</value>
+                    <value level="15">3.8</value>
+                    <value level="16">4</value>
+                    <value level="17">4.3</value>
+                    <value level="18">4.5</value>
+                    <value level="19">4.8</value>
+                    <value level="20">5</value>
+                </amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="PvpPhysicalSkillDamageBonus">
+                <amount>
+                    <value level="1">0.3</value>
+                    <value level="2">0.5</value>
+                    <value level="3">0.8</value>
+                    <value level="4">1</value>
+                    <value level="5">1.3</value>
+                    <value level="6">1.5</value>
+                    <value level="7">1.8</value>
+                    <value level="8">2</value>
+                    <value level="9">2.3</value>
+                    <value level="10">2.5</value>
+                    <value level="11">2.8</value>
+                    <value level="12">3</value>
+                    <value level="13">3.3</value>
+                    <value level="14">3.5</value>
+                    <value level="15">3.8</value>
+                    <value level="16">4</value>
+                    <value level="17">4.3</value>
+                    <value level="18">4.5</value>
+                    <value level="19">4.8</value>
+                    <value level="20">5</value>
+                </amount>
+                <mode>PER</mode>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="55738" toLevel="1" name="Aden Cloak Basic Effect">
+        <!-- Increases Magic Attack PvE Damage when enchanted and bestows various passive and active skills. -->
+        <icon>BranchIcon.icon.g_bm_aden_cloak_normal</icon>
+        <operateType>P</operateType>
+        <effects>
+            <effect name="PveMagicalSkillDamageBonus">
+                <amount>0.1</amount>
+                <mode>PER</mode>
+            </effect>
+        </effects>
+    </skill>
+	<skill id="55739" toLevel="20" name="Enchantment Effect: Aden Cloak">
+        <!-- Magic PvE Damage to normal monsters +$s1. -->
+        <icon>BranchIcon.icon.g_bm_aden_cloak_normal</icon>
+        <operateType>P</operateType>
+        <effects>
+            <effect name="PveMagicalSkillDamageBonus">
+                <amount>
+                    <value level="1">0.3</value>
+                    <value level="2">0.5</value>
+                    <value level="3">0.8</value>
+                    <value level="4">1</value>
+                    <value level="5">1.3</value>
+                    <value level="6">1.5</value>
+                    <value level="7">1.8</value>
+                    <value level="8">2</value>
+                    <value level="9">2.3</value>
+                    <value level="10">2.5</value>
+                    <value level="11">2.8</value>
+                    <value level="12">3</value>
+                    <value level="13">3.3</value>
+                    <value level="14">3.5</value>
+                    <value level="15">3.8</value>
+                    <value level="16">4</value>
+                    <value level="17">4.3</value>
+                    <value level="18">4.5</value>
+                    <value level="19">4.8</value>
+                    <value level="20">5</value>
+                </amount>
+                <mode>PER</mode>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="55740" toLevel="1" name="Elmore Cloak Basic Effect">
+        <!-- Increases Physical Attack PvE Damage when enchanted and bestows various passive and active skills. -->
+        <icon>BranchIcon.icon.g_bm_elmore_cloak_normal</icon>
+        <operateType>P</operateType>
+        <effects>
+            <effect name="PvePhysicalAttackDamageBonus">
+                <amount>0.1</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="PvePhysicalSkillDamageBonus">
+                <amount>0.1</amount>
+                <mode>PER</mode>
+            </effect>
+        </effects>
+    </skill>
+	<skill id="55741" toLevel="20" name="Enchantment Effect: Elmore Cloak">
+        <!-- Physical PvE Damage to normal monsters +$s1. -->
+        <icon>BranchIcon.icon.g_bm_elmore_cloak_normal</icon>
+        <operateType>P</operateType>
+        <effects>
+            <effect name="PvePhysicalAttackDamageBonus">
+                <amount>
+                    <value level="1">0.3</value>
+                    <value level="2">0.5</value>
+                    <value level="3">0.8</value>
+                    <value level="4">1</value>
+                    <value level="5">1.3</value>
+                    <value level="6">1.5</value>
+                    <value level="7">1.8</value>
+                    <value level="8">2</value>
+                    <value level="9">2.3</value>
+                    <value level="10">2.5</value>
+                    <value level="11">2.8</value>
+                    <value level="12">3</value>
+                    <value level="13">3.3</value>
+                    <value level="14">3.5</value>
+                    <value level="15">3.8</value>
+                    <value level="16">4</value>
+                    <value level="17">4.3</value>
+                    <value level="18">4.5</value>
+                    <value level="19">4.8</value>
+                    <value level="20">5</value>
+                </amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="PvePhysicalSkillDamageBonus">
+                <amount>
+                    <value level="1">0.3</value>
+                    <value level="2">0.5</value>
+                    <value level="3">0.8</value>
+                    <value level="4">1</value>
+                    <value level="5">1.3</value>
+                    <value level="6">1.5</value>
+                    <value level="7">1.8</value>
+                    <value level="8">2</value>
+                    <value level="9">2.3</value>
+                    <value level="10">2.5</value>
+                    <value level="11">2.8</value>
+                    <value level="12">3</value>
+                    <value level="13">3.3</value>
+                    <value level="14">3.5</value>
+                    <value level="15">3.8</value>
+                    <value level="16">4</value>
+                    <value level="17">4.3</value>
+                    <value level="18">4.5</value>
+                    <value level="19">4.8</value>
+                    <value level="20">5</value>
+                </amount>
+                <mode>PER</mode>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="55742" toLevel="1" name="Ferios Cloak Basic Effect">
+        <!-- Decreases received damage when enchanted and bestows various passive and active skills. -->
+        <icon>BranchIcon.icon.g_bm_perios_cloak_normal</icon>
+        <operateType>P</operateType>
+        <magicCriticalRate>5</magicCriticalRate>
+        <effects>
+            <effect name="DamageByAttack">
+                <amount>-0.5</amount>
+                <type>PK</type>
+                <mode>DIFF</mode>
+            </effect>
+            <effect name="DamageByAttack">
+                <amount>-0.5</amount>
+                <type>ENEMY_ALL</type>
+                <mode>DIFF</mode>
+            </effect>
+        </effects>
+    </skill>
+	<skill id="55743" toLevel="20" name="Enchantment Effect: Ferios Cloak">
+        <!-- Damage Received -$s1. -->
+        <icon>BranchIcon.icon.g_bm_perios_cloak_normal</icon>
+        <operateType>P</operateType>
+        <magicCriticalRate>5</magicCriticalRate>
+        <effects>
+            <effect name="DamageByAttack">
+                <amount>
+                    <value level="1">-1</value>
+                    <value level="2">-2</value>
+                    <value level="3">-3</value>
+                    <value level="4">-4</value>
+                    <value level="5">-5</value>
+                    <value level="6">-6</value>
+                    <value level="7">-7</value>
+                    <value level="8">-8</value>
+                    <value level="9">-9</value>
+                    <value level="10">-10</value>
+                    <value level="11">-11</value>
+                    <value level="12">-12</value>
+                    <value level="13">-13</value>
+                    <value level="14">-14</value>
+                    <value level="15">-15</value>
+                    <value level="16">-16</value>
+                    <value level="17">-17</value>
+                    <value level="18">-18</value>
+                    <value level="19">-19</value>
+                    <value level="20">-20</value>
+                </amount>
+                <type>PK</type>
+                <mode>DIFF</mode>
+            </effect>
+            <effect name="DamageByAttack">
+                <amount>
+                    <value level="1">-1</value>
+                    <value level="2">-2</value>
+                    <value level="3">-3</value>
+                    <value level="4">-4</value>
+                    <value level="5">-5</value>
+                    <value level="6">-6</value>
+                    <value level="7">-7</value>
+                    <value level="8">-8</value>
+                    <value level="9">-9</value>
+                    <value level="10">-10</value>
+                    <value level="11">-11</value>
+                    <value level="12">-12</value>
+                    <value level="13">-13</value>
+                    <value level="14">-14</value>
+                    <value level="15">-15</value>
+                    <value level="16">-16</value>
+                    <value level="17">-17</value>
+                    <value level="18">-18</value>
+                    <value level="19">-19</value>
+                    <value level="20">-20</value>
+                </amount>
+                <type>ENEMY_ALL</type>
+                <mode>DIFF</mode>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="55744" toLevel="1" name="Blessing of Elmoreden">
+        <!-- Makes you invincible for 10 sec and Speed +100. -->
+        <icon>BranchIcon.icon.g_bm_elmoreden_cloak_normal</icon>
+        <operateType>A1</operateType>
+        <hitTime>500</hitTime>
+        <reuseDelay>600000</reuseDelay>
+        <effectPoint>867</effectPoint>
+    </skill>
+    <skill id="55745" toLevel="1" name="Spirit of Aden">
+        <!-- PvE Damage +100% when dealing magic attack. -->
+        <icon>BranchIcon.icon.g_bm_aden_cloak_normal</icon>
+        <operateType>A1</operateType>
+        <hitTime>500</hitTime>
+        <coolTime>300</coolTime>
+        <reuseDelay>1200000</reuseDelay>
+        <effectPoint>867</effectPoint>
+    </skill>
+    <skill id="55746" toLevel="1" name="Spirit of Elmore">
+        <!-- PvE Damage +100% when dealing physical attack. -->
+        <icon>BranchIcon.icon.g_bm_elmore_cloak_normal</icon>
+        <operateType>A1</operateType>
+        <hitTime>500</hitTime>
+        <coolTime>300</coolTime>
+        <reuseDelay>1200000</reuseDelay>
+        <effectPoint>867</effectPoint>
+    </skill>
+    <skill id="55747" toLevel="1" name="Blessing of Ferios">
+        <!-- Makes you invincible for 20 sec. -->
+        <icon>BranchIcon.icon.g_bm_perios_cloak_normal</icon>
+        <operateType>A1</operateType>
+        <hitTime>500</hitTime>
+        <reuseDelay>600000</reuseDelay>
+        <effectPoint>867</effectPoint>
+    </skill>
+    <skill id="55748" toLevel="4" name="Elmoreden Spirit Shot">
+        <!-- Ignores CP in PvP, and deals $s1 fixed damage. -->
+        <icon>icon.skill0049</icon>
+        <operateType>A1</operateType>
+        <castRange>600</castRange>
+        <hitTime>1000</hitTime>
+        <coolTime>500</coolTime>
+        <reuseDelay>180000</reuseDelay>
+        <effectPoint>-1000</effectPoint>
+    </skill>
+    <skill id="55749" toLevel="9" name="Wrath of Elmoreden">
+        <!-- Target's CP -$s1. -->
+        <icon>icon.skill0049</icon>
+        <operateType>A1</operateType>
+        <castRange>600</castRange>
+        <hitTime>500</hitTime>
+        <coolTime>500</coolTime>
+        <reuseDelay>180000</reuseDelay>
+        <effectPoint>-1000</effectPoint>
+    </skill>
+    <skill id="55750" toLevel="14" name="Wrath of Aden">
+        <!-- For $s1, PvE Damage +$s2 when dealing magic attacks. -->
+        <icon>BranchIcon.icon.g_bm_aden_cloak_normal</icon>
+        <operateType>A1</operateType>
+        <isMagic>4</isMagic>
+        <hitTime>500</hitTime>
+        <reuseDelay>600000</reuseDelay>
+        <effectPoint>867</effectPoint>
+    </skill>
+    <skill id="55751" toLevel="14" name="Wrath of Elmore">
+        <!-- For $s1, PvE Damage +$s2 when dealing physical attacks. -->
+        <icon>icon.skill0917</icon>
+        <operateType>A1</operateType>
+        <isMagic>4</isMagic>
+        <hitTime>500</hitTime>
+        <reuseDelay>600000</reuseDelay>
+        <effectPoint>867</effectPoint>
+    </skill>
+    <skill id="55752" toLevel="9" name="Recovery of Ferios">
+        <!-- CP +$s1. -->
+        <icon>icon.etc_bm_jewel_tanzanite</icon>
+        <operateType>A1</operateType>
+        <hitTime>300</hitTime>
+        <coolTime>500</coolTime>
+        <reuseDelay>180000</reuseDelay>
+        <effectPoint>867</effectPoint>
+    </skill>
+    <skill id="55753" toLevel="3" name="Defense of Ferios">
+        <!-- For $s1, P./ M. Def. +$s2. -->
+        <icon>BranchIcon.icon.g_bm_perios_cloak_normal</icon>
+        <operateType>A1</operateType>
+        <isMagic>4</isMagic>
+        <hitTime>300</hitTime>
+        <coolTime>500</coolTime>
+        <reuseDelay>600000</reuseDelay>
+        <effectPoint>689</effectPoint>
+    </skill>
+    <skill id="55754" toLevel="8" name="Recovery of Elmoreden">
+        <!-- CP +$s1. -->
+        <icon>icon.skill0049</icon>
+        <operateType>A1</operateType>
+        <hitTime>300</hitTime>
+        <coolTime>500</coolTime>
+        <reuseDelay>120000</reuseDelay>
+        <effectPoint>689</effectPoint>
+    </skill>
+    <skill id="55755" toLevel="10" name="Empire Cloak Augmentation">
+		<!-- P. Atk. +$s1. -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55756" toLevel="10" name="Empire Cloak Augmentation">
+		<!-- M. Atk. +$s1. -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55757" toLevel="10" name="Empire Cloak Augmentation">
+        <!-- Atk. Spd.+$s1 -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55758" toLevel="10" name="Empire Cloak Augmentation">
+        <!-- Casting Spd.+$s1 -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55759" toLevel="3" name="Empire Cloak Augmentation">
+		<!-- P. Accuracy +$s1. -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55760" toLevel="3" name="Empire Cloak Augmentation">
+        <!-- M. Accuracy +$s1 -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55761" toLevel="10" name="Empire Cloak Augmentation">
+        <!-- Max HP +$s1 -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+        <effectPoint>1</effectPoint>
+    </skill>
+    <skill id="55762" toLevel="10" name="Empire Cloak Augmentation">
+        <!-- Max MP +$s1 -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55763" toLevel="10" name="Empire Cloak Augmentation">
+        <!-- Max CP +$s1 -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55764" toLevel="2" name="Empire Cloak Augmentation">
+        <!-- STR +$s1 -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55765" toLevel="2" name="Empire Cloak Augmentation">
+        <!-- CON +$s1 -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55766" toLevel="2" name="Empire Cloak Augmentation">
+        <!-- MEN +$s1 -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55767" toLevel="2" name="Empire Cloak Augmentation">
+        <!-- DEX +$s1 -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55768" toLevel="2" name="Empire Cloak Augmentation">
+        <!-- WIT +$s1 -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55769" toLevel="2" name="Empire Cloak Augmentation">
+        <!-- INT +$s1 -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55770" toLevel="10" name="Empire Cloak Augmentation">
+        <!-- P. Critical Rate +$s1 -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55771" toLevel="10" name="Empire Cloak Augmentation">
+        <!-- P. Skill Critical Rate +$s1 -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55772" toLevel="10" name="Empire Cloak Augmentation">
+        <!-- M. Skill Critical Rate +$s1 -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55773" toLevel="10" name="Empire Cloak Augmentation">
+        <!-- P. Critical Damage +$s1. -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55774" toLevel="10" name="Empire Cloak Augmentation">
+        <!-- P. Skill Critical Damage +$s1. -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55775" toLevel="10" name="Empire Cloak Augmentation">
+        <!-- M. Critical Damage +$s1. -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55776" toLevel="9" name="Empire Cloak Augmentation">
+		<!-- Stun Atk. Rate +$s1 -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55777" toLevel="9" name="Empire Cloak Augmentation">
+        <!-- Hold Attack Success Rate +$s1 -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55778" toLevel="9" name="Empire Cloak Augmentation">
+        <!-- Bleeding Attack Success Rate +$s1 -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55779" toLevel="9" name="Empire Cloak Augmentation">
+        <!-- Paralysis Attack Success Rate +$s1 -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55780" toLevel="9" name="Empire Cloak Augmentation">
+        <!-- Mind Attack Success Rate +$s1 -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55781" toLevel="9" name="Empire Cloak Augmentation">
+        <!-- Sleep Attack Success Rate +$s1 -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55782" toLevel="9" name="Empire Cloak Augmentation">
+        <!-- Poison Attack Success Rate +$s1 -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55784" toLevel="9" name="Empire Cloak Augmentation">
+        <!-- Pull Attack Success Rate +$s1 -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55785" toLevel="9" name="Empire Cloak Augmentation">
+        <!-- Petrification Attack Success Rate +$s1 -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55786" toLevel="3" name="Empire Cloak Augmentation">
+        <!-- Max HP +$s1 -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+        <effectPoint>1</effectPoint>
+    </skill>
+    <skill id="55787" toLevel="3" name="Empire Cloak Augmentation">
+		<!-- Max MP +$s1. -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+        <effectPoint>1</effectPoint>
+    </skill>
+    <skill id="55788" toLevel="3" name="Empire Cloak Augmentation">
+        <!-- Max CP +$s1 -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+        <effectPoint>1</effectPoint>
+    </skill>
+    <skill id="55789" toLevel="3" name="Empire Cloak Augmentation">
+		<!-- P. Atk. +$s1. -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55790" toLevel="3" name="Empire Cloak Augmentation">
+		<!-- P. Def. +$s1. -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55791" toLevel="3" name="Empire Cloak Augmentation">
+        <!-- Atk. Spd.+$s1 -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55792" toLevel="3" name="Empire Cloak Augmentation">
+        <!-- Speed +$s1 -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55793" toLevel="3" name="Empire Cloak Augmentation">
+		<!-- M. Atk. +$s1. -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55794" toLevel="3" name="Empire Cloak Augmentation">
+        <!-- M. Def. +$s1 -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55795" toLevel="3" name="Empire Cloak Augmentation">
+        <!-- Casting Spd.+$s1 -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55796" toLevel="3" name="Empire Cloak Augmentation">
+        <!-- PvP Damage +$s1 -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55797" toLevel="3" name="Empire Cloak Augmentation">
+        <!-- Received PvP Damage +$s1 -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55798" toLevel="3" name="Empire Cloak Augmentation">
+        <!-- PvE Damage +$s1 -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="55799" toLevel="3" name="Empire Cloak Augmentation">
+        <!-- Received PvE Damage +$s1 -->
+        <icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
+        <operateType>P</operateType>
+    </skill>
+</list>

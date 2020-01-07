@@ -1,0 +1,1436 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
+    <skill id="45000" toLevel="20" name="Item Skill: Stun">
+        <!-- In case of success: Momentarily inflicts Stun on the target during a normal physical attack. -->
+        <icon>icon.skill3080</icon>
+        <operateType>A1</operateType>
+        <isDebuff>true</isDebuff>
+        <castRange>100</castRange>
+    </skill>
+    <skill id="45001" toLevel="25" name="Tyrr Critical Stun">
+        <!-- Has a 9% chance to cast Stun on the target upon a critical attack. Requires a polearm. -->
+        <icon>
+            <value level="1">BranchIcon.Icon.g_rune_tir_lv00</value>
+            <value level="2">BranchIcon.Icon.g_rune_tir_lv00</value>
+			<value level="3">BranchIcon.Icon.g_rune_tir_lv00</value>
+			<value level="4">BranchIcon.Icon.g_rune_tir_lv00</value>
+			<value level="5">BranchIcon.Icon.g_rune_tir_lv00</value>
+			<value level="6">BranchIcon.Icon.g_rune_tir_lv00</value>
+			<value level="7">BranchIcon.Icon.g_rune_tir_lv00</value>
+			<value level="8">BranchIcon.Icon.g_rune_tir_lv01</value>
+            <value level="9">BranchIcon.Icon.g_rune_tir_lv01</value>
+            <value level="10">BranchIcon.Icon.g_rune_tir_lv01</value>
+            <value level="11">BranchIcon.Icon.g_rune_tir_lv02</value>
+            <value level="12">BranchIcon.Icon.g_rune_tir_lv02</value>
+            <value level="13">BranchIcon.Icon.g_rune_tir_lv02</value>
+			<value level="14">BranchIcon.Icon.g_rune_tir_lv01</value>
+			<value level="15">BranchIcon.Icon.g_rune_tir_lv01</value>
+			<value level="16">BranchIcon.Icon.g_rune_tir_lv02</value>
+			<value level="17">BranchIcon.Icon.g_rune_tir_lv02</value>
+			<value level="18">BranchIcon.Icon.g_rune_tir_lv02</value>
+            <value level="19">icon.ensoul_big_p</value>
+            <value level="20">icon.ensoul_big_p</value>
+			<value level="21">icon.ensoul_big_p</value>
+			<value level="22">icon.ensoul_big_p</value>
+			<value level="23">icon.ensoul_big_p</value>
+			<value level="24">icon.ensoul_big_p</value>
+			<value level="25">icon.ensoul_big_p</value>
+        </icon>
+        <operateType>P</operateType>
+        <passiveConditions>
+            <condition name="EquipWeapon">
+                <weaponType>
+                    <item>SPEAR</item>
+                </weaponType>
+            </condition>
+        </passiveConditions>
+    </skill>
+    <skill id="45002" toLevel="25" name="Sigel's Protection">
+		<!-- P. Def. +$s1. -->
+        <icon>
+            <value level="1">BranchIcon.Icon.g_rune_sigel_lv00</value>
+            <value level="2">BranchIcon.Icon.g_rune_sigel_lv00</value>
+			<value level="3">BranchIcon.Icon.g_rune_sigel_lv00</value>
+			<value level="4">BranchIcon.Icon.g_rune_sigel_lv00</value>
+			<value level="5">BranchIcon.Icon.g_rune_sigel_lv00</value>
+			<value level="6">BranchIcon.Icon.g_rune_sigel_lv00</value>
+			<value level="7">BranchIcon.Icon.g_rune_sigel_lv00</value>
+			<value level="8">BranchIcon.Icon.g_rune_sigel_lv01</value>
+            <value level="9">BranchIcon.Icon.g_rune_sigel_lv01</value>
+            <value level="10">BranchIcon.Icon.g_rune_sigel_lv01</value>
+            <value level="11">BranchIcon.Icon.g_rune_sigel_lv02</value>
+            <value level="12">BranchIcon.Icon.g_rune_sigel_lv02</value>
+            <value level="13">BranchIcon.Icon.g_rune_sigel_lv02</value>
+			<value level="14">BranchIcon.Icon.g_rune_sigel_lv01</value>
+			<value level="15">BranchIcon.Icon.g_rune_sigel_lv01</value>
+			<value level="16">BranchIcon.Icon.g_rune_sigel_lv02</value>
+			<value level="17">BranchIcon.Icon.g_rune_sigel_lv02</value>
+			<value level="18">BranchIcon.Icon.g_rune_sigel_lv02</value>
+            <value level="19">icon.ensoul_big_p</value>
+            <value level="20">icon.ensoul_big_p</value>
+			<value level="21">icon.ensoul_big_p</value>
+			<value level="22">icon.ensoul_big_p</value>
+			<value level="23">icon.ensoul_big_p</value>
+			<value level="24">icon.ensoul_big_p</value>
+			<value level="25">icon.ensoul_big_p</value>
+        </icon>
+        <operateType>P</operateType>
+        <effects>
+            <effect name="PhysicalDefence">
+                <amount>
+                    <value level="1">56</value>
+                    <value level="2">68</value>
+                    <value level="3">80</value>
+                    <value level="4">92</value>
+                    <value level="5">104</value>
+                    <value level="6">116</value>
+                    <value level="7">128</value>
+                    <value level="8">80</value>
+                    <value level="9">92</value>
+                    <value level="10">104</value>
+                    <value level="11">116</value>
+                    <value level="12">128</value>
+                    <value level="13">140</value>
+                    <value level="14">9</value>
+                    <value level="15">9</value>
+                    <value level="16">9</value>
+                    <value level="17">9</value>
+                    <value level="18">9</value>
+                    <value level="19">9</value>
+                    <value level="20">9</value>
+                    <value level="21">9</value>
+                    <value level="22">9</value>
+                    <value level="23">9</value>
+                    <value level="24">9</value>
+                    <value level="25">9</value>
+                </amount>
+                <mode>DIFF</mode>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="45003" toLevel="25" name="Sigel Protection">
+        <!-- Max HP +$s1 -->
+        <icon>
+            <value level="1">BranchIcon.Icon.g_rune_sigel_lv00</value>
+            <value level="2">BranchIcon.Icon.g_rune_sigel_lv00</value>
+			<value level="3">BranchIcon.Icon.g_rune_sigel_lv00</value>
+			<value level="4">BranchIcon.Icon.g_rune_sigel_lv00</value>
+			<value level="5">BranchIcon.Icon.g_rune_sigel_lv00</value>
+			<value level="6">BranchIcon.Icon.g_rune_sigel_lv00</value>
+			<value level="7">BranchIcon.Icon.g_rune_sigel_lv00</value>
+			<value level="8">BranchIcon.Icon.g_rune_sigel_lv01</value>
+            <value level="9">BranchIcon.Icon.g_rune_sigel_lv01</value>
+            <value level="10">BranchIcon.Icon.g_rune_sigel_lv01</value>
+            <value level="11">BranchIcon.Icon.g_rune_sigel_lv02</value>
+            <value level="12">BranchIcon.Icon.g_rune_sigel_lv02</value>
+            <value level="13">BranchIcon.Icon.g_rune_sigel_lv02</value>
+			<value level="14">BranchIcon.Icon.g_rune_sigel_lv01</value>
+			<value level="15">BranchIcon.Icon.g_rune_sigel_lv01</value>
+			<value level="16">BranchIcon.Icon.g_rune_sigel_lv02</value>
+			<value level="17">BranchIcon.Icon.g_rune_sigel_lv02</value>
+			<value level="18">BranchIcon.Icon.g_rune_sigel_lv02</value>
+            <value level="19">icon.ensoul_big_p</value>
+            <value level="20">icon.ensoul_big_p</value>
+			<value level="21">icon.ensoul_big_p</value>
+			<value level="22">icon.ensoul_big_p</value>
+			<value level="23">icon.ensoul_big_p</value>
+			<value level="24">icon.ensoul_big_p</value>
+			<value level="25">icon.ensoul_big_p</value>
+        </icon>
+        <operateType>P</operateType>
+        <effects>
+            <effect name="MaxHp">
+                <amount>
+                    <value level="1">0.04</value>
+                    <value level="2">0.05</value>
+                    <value level="3">0.06</value>
+                    <value level="4">0.07</value>
+                    <value level="5">0.08</value>
+                    <value level="6">0.09</value>
+                    <value level="7">0.1</value>
+                    <value level="8">6</value>
+                    <value level="9">7</value>
+                    <value level="10">8</value>
+                    <value level="11">9</value>
+                    <value level="12">10</value>
+                    <value level="13">12</value>
+                    <value level="14">0.17</value>
+                    <value level="15">0.18</value>
+                    <value level="16">0.19</value>
+                    <value level="17">0.2</value>
+                    <value level="18">0.21</value>
+                    <value level="19">0.22</value>
+                    <value level="20">0.23</value>
+                    <value level="21">0.23</value>
+                    <value level="22">0.23</value>
+                    <value level="23">0.23</value>
+                    <value level="24">0.23</value>
+                    <value level="25">0.23</value>
+                </amount>
+                <mode>PER</mode>
+            </effect>
+        </effects>
+    </skill>
+	<skill id="45004" toLevel="25" name="Tyrr's Haste">
+        <!-- Atk. Spd. +$s1 -->
+        <icon>
+            <value level="1">BranchIcon.Icon.g_rune_tir_lv00</value>
+            <value level="2">BranchIcon.Icon.g_rune_tir_lv00</value>
+			<value level="3">BranchIcon.Icon.g_rune_tir_lv00</value>
+			<value level="4">BranchIcon.Icon.g_rune_tir_lv00</value>
+			<value level="5">BranchIcon.Icon.g_rune_tir_lv00</value>
+			<value level="6">BranchIcon.Icon.g_rune_tir_lv00</value>
+			<value level="7">BranchIcon.Icon.g_rune_tir_lv00</value>
+			<value level="8">BranchIcon.Icon.g_rune_tir_lv01</value>
+            <value level="9">BranchIcon.Icon.g_rune_tir_lv01</value>
+            <value level="10">BranchIcon.Icon.g_rune_tir_lv01</value>
+            <value level="11">BranchIcon.Icon.g_rune_tir_lv02</value>
+            <value level="12">BranchIcon.Icon.g_rune_tir_lv02</value>
+            <value level="13">BranchIcon.Icon.g_rune_tir_lv02</value>
+			<value level="14">BranchIcon.Icon.g_rune_tir_lv01</value>
+			<value level="15">BranchIcon.Icon.g_rune_tir_lv01</value>
+			<value level="16">BranchIcon.Icon.g_rune_tir_lv02</value>
+			<value level="17">BranchIcon.Icon.g_rune_tir_lv02</value>
+			<value level="18">BranchIcon.Icon.g_rune_tir_lv02</value>
+            <value level="19">icon.ensoul_big_p</value>
+            <value level="20">icon.ensoul_big_p</value>
+			<value level="21">icon.ensoul_big_p</value>
+			<value level="22">icon.ensoul_big_p</value>
+			<value level="23">icon.ensoul_big_p</value>
+			<value level="24">icon.ensoul_big_p</value>
+			<value level="25">icon.ensoul_big_p</value>
+        </icon>
+        <operateType>P</operateType>
+        <effects>
+            <effect name="PhysicalAttackSpeed">
+                <amount>
+                    <value level="1">0.03</value>
+                    <value level="2">0.04</value>
+                    <value level="3">0.05</value>
+                    <value level="4">0.06</value>
+                    <value level="5">0.065</value>
+                    <value level="6">0.07</value>
+                    <value level="7">0.075</value>
+                    <value level="8">5</value>
+                    <value level="9">6</value>
+                    <value level="10">6.5</value>
+                    <value level="11">7</value>
+                    <value level="12">7.5</value>
+                    <value level="13">8</value>
+                    <value level="14">0.1</value>
+                    <value level="15">0.1</value>
+                    <value level="16">0.1</value>
+                    <value level="17">0.1</value>
+                    <value level="18">0.1</value>
+                    <value level="19">0.1</value>
+                    <value level="20">0.1</value>
+                    <value level="21">0.1</value>
+                    <value level="22">0.1</value>
+                    <value level="23">0.1</value>
+                    <value level="24">0.1</value>
+                    <value level="25">0.1</value>
+                </amount>
+                <mode>PER</mode>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="45005" toLevel="25" name="Othell's Focus">
+		<!-- P. Critical Rate +$s1. -->
+        <icon>
+            <value level="1">BranchIcon.Icon.g_rune_othel_lv01</value>
+            <value level="2">BranchIcon.Icon.g_rune_othel_lv01</value>
+			<value level="3">BranchIcon.Icon.g_rune_othel_lv01</value>
+			<value level="4">BranchIcon.Icon.g_rune_othel_lv01</value>
+			<value level="5">BranchIcon.Icon.g_rune_othel_lv01</value>
+			<value level="6">BranchIcon.Icon.g_rune_othel_lv01</value>
+			<value level="7">BranchIcon.Icon.g_rune_othel_lv01</value>
+			<value level="8">BranchIcon.Icon.g_rune_othel_lv02</value>
+            <value level="9">BranchIcon.Icon.g_rune_othel_lv02</value>
+            <value level="10">BranchIcon.Icon.g_rune_othel_lv02</value>
+            <value level="11">BranchIcon.Icon.g_rune_othel_lv03</value>
+            <value level="12">BranchIcon.Icon.g_rune_othel_lv03</value>
+            <value level="13">BranchIcon.Icon.g_rune_othel_lv03</value>
+			<value level="14">BranchIcon.Icon.g_rune_othel_lv02</value>
+			<value level="15">BranchIcon.Icon.g_rune_othel_lv02</value>
+			<value level="16">BranchIcon.Icon.g_rune_othel_lv03</value>
+			<value level="17">BranchIcon.Icon.g_rune_othel_lv03</value>
+			<value level="18">BranchIcon.Icon.g_rune_othel_lv03</value>
+            <value level="19">icon.ensoul_big_p</value>
+            <value level="20">icon.ensoul_big_p</value>
+			<value level="21">icon.ensoul_big_p</value>
+			<value level="22">icon.ensoul_big_p</value>
+			<value level="23">icon.ensoul_big_p</value>
+			<value level="24">icon.ensoul_big_p</value>
+			<value level="25">icon.ensoul_big_p</value>
+        </icon>
+        <operateType>P</operateType>
+        <effects>
+            <effect name="CriticalRate">
+                <amount>
+                    <value level="1">25</value>
+                    <value level="2">31</value>
+                    <value level="3">269</value>
+                    <value level="4">297</value>
+                    <value level="5">325</value>
+                    <value level="6">352</value>
+                    <value level="7">380</value>
+                    <value level="8">269</value>
+                    <value level="9">297</value>
+                    <value level="10">325</value>
+                    <value level="11">352</value>
+                    <value level="12">380</value>
+                    <value level="13">407</value>
+                    <value level="14">80</value>
+                    <value level="15">80</value>
+                    <value level="16">80</value>
+                    <value level="17">80</value>
+                    <value level="18">80</value>
+                    <value level="19">80</value>
+                    <value level="20">80</value>
+                    <value level="21">80</value>
+                    <value level="22">80</value>
+                    <value level="23">80</value>
+                    <value level="24">80</value>
+                    <value level="25">80</value>
+                </amount>
+                <mode>DIFF</mode>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="45006" toLevel="25" name="Othell's Mortal Strike">
+		<!-- Vital Point Attack Rate +$s1. -->
+        <icon>
+            <value level="1">BranchIcon.Icon.g_rune_othel_lv01</value>
+            <value level="2">BranchIcon.Icon.g_rune_othel_lv01</value>
+			<value level="3">BranchIcon.Icon.g_rune_othel_lv01</value>
+			<value level="4">BranchIcon.Icon.g_rune_othel_lv01</value>
+			<value level="5">BranchIcon.Icon.g_rune_othel_lv01</value>
+			<value level="6">BranchIcon.Icon.g_rune_othel_lv01</value>
+			<value level="7">BranchIcon.Icon.g_rune_othel_lv01</value>
+			<value level="8">BranchIcon.Icon.g_rune_othel_lv02</value>
+            <value level="9">BranchIcon.Icon.g_rune_othel_lv02</value>
+            <value level="10">BranchIcon.Icon.g_rune_othel_lv02</value>
+            <value level="11">BranchIcon.Icon.g_rune_othel_lv03</value>
+            <value level="12">BranchIcon.Icon.g_rune_othel_lv03</value>
+            <value level="13">BranchIcon.Icon.g_rune_othel_lv03</value>
+			<value level="14">BranchIcon.Icon.g_rune_othel_lv02</value>
+			<value level="15">BranchIcon.Icon.g_rune_othel_lv02</value>
+			<value level="16">BranchIcon.Icon.g_rune_othel_lv03</value>
+			<value level="17">BranchIcon.Icon.g_rune_othel_lv03</value>
+			<value level="18">BranchIcon.Icon.g_rune_othel_lv03</value>
+            <value level="19">icon.ensoul_big_p</value>
+            <value level="20">icon.ensoul_big_p</value>
+			<value level="21">icon.ensoul_big_p</value>
+			<value level="22">icon.ensoul_big_p</value>
+			<value level="23">icon.ensoul_big_p</value>
+			<value level="24">icon.ensoul_big_p</value>
+			<value level="25">icon.ensoul_big_p</value>
+        </icon>
+        <operateType>P</operateType>
+        <effects>
+            <effect name="FatalBlowRate">
+                <amount>
+                    <value level="1">0.14</value>
+                    <value level="2">0.18</value>
+                    <value level="3">0.22</value>
+                    <value level="4">0.25</value>
+                    <value level="5">0.28</value>
+                    <value level="6">0.31</value>
+                    <value level="7">0.34</value>
+                    <value level="8">22</value>
+                    <value level="9">25</value>
+                    <value level="10">28</value>
+                    <value level="11">31</value>
+                    <value level="12">34</value>
+                    <value level="13">37</value>
+                    <value level="14">0.49</value>
+                    <value level="15">0.49</value>
+                    <value level="16">0.49</value>
+                    <value level="17">0.49</value>
+                    <value level="18">0.49</value>
+                    <value level="19">0.49</value>
+                    <value level="20">0.49</value>
+                    <value level="21">0.49</value>
+                    <value level="22">0.49</value>
+                    <value level="23">0.49</value>
+                    <value level="24">0.49</value>
+                    <value level="25">0.49</value>
+                </amount>
+                <mode>PER</mode>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="45007" toLevel="22" name="Yul's Critical Damage">
+        <!-- P. Critical Damage +$s1. -->
+        <icon>
+            <value level="1">BranchIcon.Icon.g_rune_yr_lv01</value>
+            <value level="2">BranchIcon.Icon.g_rune_yr_lv01</value>
+            <value level="3">BranchIcon.Icon.g_rune_yr_lv01</value>
+            <value level="4">BranchIcon.Icon.g_rune_yr_lv01</value>
+            <value level="5">BranchIcon.Icon.g_rune_yr_lv01</value>
+			<value level="6">BranchIcon.Icon.g_rune_yr_lv01</value>
+			<value level="7">BranchIcon.Icon.g_rune_yr_lv01</value>
+            <value level="8">BranchIcon.Icon.g_rune_yr_lv02</value>
+			<value level="9">BranchIcon.Icon.g_rune_yr_lv02</value>
+			<value level="10">BranchIcon.Icon.g_rune_yr_lv02</value>
+            <value level="11">BranchIcon.Icon.g_rune_yr_lv03</value>
+            <value level="12">BranchIcon.Icon.g_rune_yr_lv03</value>
+            <value level="13">BranchIcon.Icon.g_rune_yr_lv03</value>
+			<value level="14">BranchIcon.Icon.g_rune_yr_lv03</value>
+			<value level="15">BranchIcon.Icon.g_rune_yr_lv03</value>
+            <value level="16">icon.ensoul_big_p</value>
+            <value level="17">icon.ensoul_big_p</value>
+            <value level="18">icon.ensoul_big_p</value>
+            <value level="19">icon.ensoul_big_p</value>
+            <value level="20">icon.ensoul_big_p</value>
+			<value level="21">icon.ensoul_big_p</value>
+			<value level="22">icon.ensoul_big_p</value>
+        </icon>
+        <operateType>P</operateType>
+        <effects>
+            <effect name="FatalBlowRate">
+                <amount>
+                    <value level="1">92</value>
+                    <value level="2">113</value>
+                    <value level="3">134</value>
+                    <value level="4">155</value>
+                    <value level="5">176</value>
+                    <value level="6">196</value>
+                    <value level="7">216</value>
+                    <value level="8">196</value>
+                    <value level="9">216</value>
+                    <value level="10">236</value>
+                    <value level="11">256</value>
+                    <value level="12">276</value>
+                    <value level="13">286</value>
+                    <value level="14">20</value>
+                    <value level="15">20</value>
+                    <value level="16">20</value>
+                    <value level="17">20</value>
+                    <value level="18">20</value>
+                    <value level="19">20</value>
+                    <value level="20">20</value>
+                    <value level="21">20</value>
+                    <value level="22">20</value>
+                </amount>
+                <mode>DIFF</mode>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="45008" toLevel="22" name="Yul Guidance">
+		<!-- P. Accuracy +$s1. -->
+        <icon>
+            <value level="1">BranchIcon.Icon.g_rune_yr_lv01</value>
+            <value level="2">BranchIcon.Icon.g_rune_yr_lv01</value>
+            <value level="3">BranchIcon.Icon.g_rune_yr_lv01</value>
+            <value level="4">BranchIcon.Icon.g_rune_yr_lv01</value>
+            <value level="5">BranchIcon.Icon.g_rune_yr_lv01</value>
+			<value level="6">BranchIcon.Icon.g_rune_yr_lv01</value>
+			<value level="7">BranchIcon.Icon.g_rune_yr_lv01</value>
+            <value level="8">BranchIcon.Icon.g_rune_yr_lv02</value>
+			<value level="9">BranchIcon.Icon.g_rune_yr_lv02</value>
+			<value level="10">BranchIcon.Icon.g_rune_yr_lv02</value>
+            <value level="11">BranchIcon.Icon.g_rune_yr_lv03</value>
+            <value level="12">BranchIcon.Icon.g_rune_yr_lv03</value>
+            <value level="13">BranchIcon.Icon.g_rune_yr_lv03</value>
+			<value level="14">BranchIcon.Icon.g_rune_yr_lv03</value>
+			<value level="15">BranchIcon.Icon.g_rune_yr_lv03</value>
+            <value level="16">icon.ensoul_big_p</value>
+            <value level="17">icon.ensoul_big_p</value>
+            <value level="18">icon.ensoul_big_p</value>
+            <value level="19">icon.ensoul_big_p</value>
+            <value level="20">icon.ensoul_big_p</value>
+			<value level="21">icon.ensoul_big_p</value>
+			<value level="22">icon.ensoul_big_p</value>
+        </icon>
+        <operateType>P</operateType>
+        <effects>
+            <effect name="Accuracy">
+                <amount>
+                    <value level="1">2</value>
+                    <value level="2">2.4</value>
+                    <value level="3">2.8</value>
+                    <value level="4">3.2</value>
+                    <value level="5">3.6</value>
+                    <value level="6">4</value>
+                    <value level="7">4.4</value>
+                    <value level="8">4</value>
+                    <value level="9">4.4</value>
+                    <value level="10">4.8</value>
+                    <value level="11">5.2</value>
+                    <value level="12">5.6</value>
+                    <value level="13">6</value>
+                    <value level="14">1</value>
+                    <value level="15">1</value>
+                    <value level="16">1</value>
+                    <value level="17">1</value>
+                    <value level="18">1</value>
+                    <value level="19">1</value>
+                    <value level="20">1</value>
+                    <value level="21">1</value>
+                    <value level="22">1</value>
+                </amount>
+                <mode>DIFF</mode>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="45009" toLevel="20" name="Feoh Magic Focus">
+		<!-- M. Critical Rate +$s1. -->
+        <icon>
+            <value level="1">BranchIcon.Icon.g_rune_feoh_lv01</value>
+            <value level="2">BranchIcon.Icon.g_rune_feoh_lv01</value>
+            <value level="3">BranchIcon.Icon.g_rune_feoh_lv01</value>
+            <value level="4">BranchIcon.Icon.g_rune_feoh_lv01</value>
+            <value level="5">BranchIcon.Icon.g_rune_feoh_lv01</value>
+            <value level="6">BranchIcon.Icon.g_rune_feoh_lv02</value>
+            <value level="7">BranchIcon.Icon.g_rune_feoh_lv02</value>
+            <value level="8">BranchIcon.Icon.g_rune_feoh_lv02</value>
+            <value level="9">BranchIcon.Icon.g_rune_feoh_lv02</value>
+            <value level="10">BranchIcon.Icon.g_rune_feoh_lv02</value>
+            <value level="11">BranchIcon.Icon.g_rune_feoh_lv03</value>
+            <value level="12">BranchIcon.Icon.g_rune_feoh_lv03</value>
+            <value level="13">BranchIcon.Icon.g_rune_feoh_lv03</value>
+            <value level="14">icon.ensoul_big_p</value>
+            <value level="15">icon.ensoul_big_p</value>
+            <value level="16">icon.ensoul_big_p</value>
+            <value level="17">icon.ensoul_big_p</value>
+            <value level="18">icon.ensoul_big_p</value>
+            <value level="19">icon.ensoul_big_p</value>
+            <value level="20">icon.ensoul_big_p</value>
+        </icon>
+        <operateType>P</operateType>
+        <effects>
+            <effect name="MagicCriticalRate">
+                <amount>
+                    <value level="1">0.03</value>
+                    <value level="2">0.04</value>
+                    <value level="3">0.05</value>
+                    <value level="4">0.06</value>
+                    <value level="5">0.07</value>
+                    <value level="6">0.08</value>
+                    <value level="7">0.09</value>
+                    <value level="8">10</value>
+                    <value level="9">11</value>
+                    <value level="10">12</value>
+                    <value level="11">13</value>
+                    <value level="12">14</value>
+                    <value level="13">15</value>
+                    <value level="14">0.15</value>
+                    <value level="15">0.15</value>
+                    <value level="16">0.15</value>
+                    <value level="17">0.15</value>
+                    <value level="18">0.15</value>
+                    <value level="19">0.15</value>
+                    <value level="20">0.15</value>
+                </amount>
+                <mode>PER</mode>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="45010" toLevel="20" name="Feoh's Empower">
+        <!-- M. Atk. +$s1. -->
+        <icon>
+            <value level="1">BranchIcon.Icon.g_rune_feoh_lv01</value>
+            <value level="2">BranchIcon.Icon.g_rune_feoh_lv01</value>
+            <value level="3">BranchIcon.Icon.g_rune_feoh_lv01</value>
+            <value level="4">BranchIcon.Icon.g_rune_feoh_lv01</value>
+            <value level="5">BranchIcon.Icon.g_rune_feoh_lv01</value>
+            <value level="6">BranchIcon.Icon.g_rune_feoh_lv02</value>
+            <value level="7">BranchIcon.Icon.g_rune_feoh_lv02</value>
+            <value level="8">BranchIcon.Icon.g_rune_feoh_lv02</value>
+            <value level="9">BranchIcon.Icon.g_rune_feoh_lv02</value>
+            <value level="10">BranchIcon.Icon.g_rune_feoh_lv02</value>
+            <value level="11">BranchIcon.Icon.g_rune_feoh_lv03</value>
+            <value level="12">BranchIcon.Icon.g_rune_feoh_lv03</value>
+            <value level="13">BranchIcon.Icon.g_rune_feoh_lv03</value>
+            <value level="14">icon.ensoul_big_p</value>
+            <value level="15">icon.ensoul_big_p</value>
+            <value level="16">icon.ensoul_big_p</value>
+            <value level="17">icon.ensoul_big_p</value>
+            <value level="18">icon.ensoul_big_p</value>
+            <value level="19">icon.ensoul_big_p</value>
+            <value level="20">icon.ensoul_big_p</value>
+        </icon>
+        <operateType>P</operateType>
+        <effects>
+            <effect name="MAtk">
+                <amount>
+                    <value level="1">28</value>
+                    <value level="2">36</value>
+                    <value level="3">44</value>
+                    <value level="4">52</value>
+                    <value level="5">60</value>
+                    <value level="6">68</value>
+                    <value level="7">76</value>
+                    <value level="8">84</value>
+                    <value level="9">92</value>
+                    <value level="10">100</value>
+                    <value level="11">104</value>
+                    <value level="12">108</value>
+                    <value level="13">112</value>
+                    <value level="14">112</value>
+                    <value level="15">112</value>
+                    <value level="16">112</value>
+                    <value level="17">112</value>
+                    <value level="18">112</value>
+                    <value level="19">112</value>
+                    <value level="20">112</value>
+                </amount>
+                <mode>DIFF</mode>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="45011" toLevel="25" name="Iss Acumen">
+		<!-- Casting Spd. +$s1. -->
+        <icon>
+            <value level="1">BranchIcon.Icon.g_rune_is_lv01</value>
+            <value level="2">BranchIcon.Icon.g_rune_is_lv01</value>
+			<value level="3">BranchIcon.Icon.g_rune_is_lv01</value>
+			<value level="4">BranchIcon.Icon.g_rune_is_lv01</value>
+			<value level="5">BranchIcon.Icon.g_rune_is_lv01</value>
+			<value level="6">BranchIcon.Icon.g_rune_is_lv01</value>
+			<value level="7">BranchIcon.Icon.g_rune_is_lv01</value>
+			<value level="8">BranchIcon.Icon.g_rune_is_lv02</value>
+            <value level="9">BranchIcon.Icon.g_rune_is_lv02</value>
+            <value level="10">BranchIcon.Icon.g_rune_is_lv02</value>
+            <value level="11">BranchIcon.Icon.g_rune_is_lv03</value>
+            <value level="12">BranchIcon.Icon.g_rune_is_lv03</value>
+            <value level="13">BranchIcon.Icon.g_rune_is_lv03</value>
+			<value level="14">BranchIcon.Icon.g_rune_is_lv02</value>
+			<value level="15">BranchIcon.Icon.g_rune_is_lv02</value>
+			<value level="16">BranchIcon.Icon.g_rune_is_lv03</value>
+			<value level="17">BranchIcon.Icon.g_rune_is_lv03</value>
+			<value level="18">BranchIcon.Icon.g_rune_is_lv03</value>
+            <value level="19">icon.ensoul_big_p</value>
+            <value level="20">icon.ensoul_big_p</value>
+			<value level="21">icon.ensoul_big_p</value>
+			<value level="22">icon.ensoul_big_p</value>
+			<value level="23">icon.ensoul_big_p</value>
+			<value level="24">icon.ensoul_big_p</value>
+			<value level="25">icon.ensoul_big_p</value>
+        </icon>
+        <operateType>P</operateType>
+        <effects>
+            <effect name="MagicalAttackSpeed">
+                <amount>
+                    <value level="1">0.03</value>
+                    <value level="2">0.04</value>
+                    <value level="3">0.05</value>
+                    <value level="4">0.06</value>
+                    <value level="5">0.07</value>
+                    <value level="6">0.08</value>
+                    <value level="7">0.09</value>
+                    <value level="8">5</value>
+                    <value level="9">6</value>
+                    <value level="10">7</value>
+                    <value level="11">8</value>
+                    <value level="12">9</value>
+                    <value level="13">10</value>
+                    <value level="14">0.13</value>
+                    <value level="15">20</value>
+                    <value level="16">20</value>
+                    <value level="17">20</value>
+                    <value level="18">20</value>
+                    <value level="19">20</value>
+                    <value level="20">20</value>
+                    <value level="21">20</value>
+                    <value level="22">20</value>
+                    <value level="23">20</value>
+                    <value level="24">20</value>
+                    <value level="25">20</value>
+                </amount>
+                <mode>DIFF</mode>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="45012" toLevel="25" name="Iss Wind Walk">
+        <!-- Speed +$s1. -->
+        <icon>
+            <value level="1">BranchIcon.Icon.g_rune_is_lv01</value>
+            <value level="2">BranchIcon.Icon.g_rune_is_lv01</value>
+			<value level="3">BranchIcon.Icon.g_rune_is_lv01</value>
+			<value level="4">BranchIcon.Icon.g_rune_is_lv01</value>
+			<value level="5">BranchIcon.Icon.g_rune_is_lv01</value>
+			<value level="6">BranchIcon.Icon.g_rune_is_lv01</value>
+			<value level="7">BranchIcon.Icon.g_rune_is_lv01</value>
+			<value level="8">BranchIcon.Icon.g_rune_is_lv02</value>
+            <value level="9">BranchIcon.Icon.g_rune_is_lv02</value>
+            <value level="10">BranchIcon.Icon.g_rune_is_lv02</value>
+            <value level="11">BranchIcon.Icon.g_rune_is_lv03</value>
+            <value level="12">BranchIcon.Icon.g_rune_is_lv03</value>
+            <value level="13">BranchIcon.Icon.g_rune_is_lv03</value>
+			<value level="14">BranchIcon.Icon.g_rune_is_lv02</value>
+			<value level="15">BranchIcon.Icon.g_rune_is_lv02</value>
+			<value level="16">BranchIcon.Icon.g_rune_is_lv03</value>
+			<value level="17">BranchIcon.Icon.g_rune_is_lv03</value>
+			<value level="18">BranchIcon.Icon.g_rune_is_lv03</value>
+            <value level="19">icon.ensoul_big_p</value>
+            <value level="20">icon.ensoul_big_p</value>
+			<value level="21">icon.ensoul_big_p</value>
+			<value level="22">icon.ensoul_big_p</value>
+			<value level="23">icon.ensoul_big_p</value>
+			<value level="24">icon.ensoul_big_p</value>
+			<value level="25">icon.ensoul_big_p</value>
+        </icon>
+        <operateType>P</operateType>
+        <effects>
+            <effect name="Speed">
+                <amount>
+                    <value level="1">4</value>
+                    <value level="2">4.5</value>
+                    <value level="3">5</value>
+                    <value level="4">5.5</value>
+                    <value level="5">6</value>
+                    <value level="6">6.5</value>
+                    <value level="7">7</value>
+                    <value level="8">5</value>
+                    <value level="9">5.5</value>
+                    <value level="10">6</value>
+                    <value level="11">6.5</value>
+                    <value level="12">7</value>
+                    <value level="13">7.5</value>
+                    <value level="14">10</value>
+                    <value level="15">10</value>
+                    <value level="16">10</value>
+                    <value level="17">10</value>
+                    <value level="18">10</value>
+                    <value level="19">10</value>
+                    <value level="20">10</value>
+                    <value level="21">10</value>
+                    <value level="22">10</value>
+                    <value level="23">10</value>
+                    <value level="24">10</value>
+                    <value level="25">10</value>
+                </amount>
+                <mode>DIFF</mode>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="45013" toLevel="20" name="Wynn Boost Mana">
+        <!-- Max MP +$s1 -->
+        <icon>
+            <value level="1">BranchIcon.Icon.g_rune_wynn_lv01</value>
+            <value level="2">BranchIcon.Icon.g_rune_wynn_lv01</value>
+            <value level="3">BranchIcon.Icon.g_rune_wynn_lv01</value>
+            <value level="4">BranchIcon.Icon.g_rune_wynn_lv01</value>
+            <value level="5">BranchIcon.Icon.g_rune_wynn_lv01</value>
+            <value level="6">BranchIcon.Icon.g_rune_wynn_lv02</value>
+            <value level="7">BranchIcon.Icon.g_rune_wynn_lv02</value>
+            <value level="8">BranchIcon.Icon.g_rune_wynn_lv02</value>
+            <value level="9">BranchIcon.Icon.g_rune_wynn_lv02</value>
+            <value level="10">BranchIcon.Icon.g_rune_wynn_lv02</value>
+            <value level="11">BranchIcon.Icon.g_rune_wynn_lv03</value>
+            <value level="12">BranchIcon.Icon.g_rune_wynn_lv03</value>
+            <value level="13">BranchIcon.Icon.g_rune_wynn_lv03</value>
+            <value level="14">icon.ensoul_big_p</value>
+            <value level="15">icon.ensoul_big_p</value>
+            <value level="16">icon.ensoul_big_p</value>
+            <value level="17">icon.ensoul_big_p</value>
+            <value level="18">icon.ensoul_big_p</value>
+            <value level="19">icon.ensoul_big_p</value>
+            <value level="20">icon.ensoul_big_p</value>
+        </icon>
+        <operateType>P</operateType>
+        <effects>
+            <effect name="MaxMp">
+                <amount>
+                    <value level="1">0.04</value>
+                    <value level="2">0.05</value>
+                    <value level="3">0.06</value>
+                    <value level="4">0.07</value>
+                    <value level="5">0.08</value>
+                    <value level="6">0.09</value>
+                    <value level="7">0.1</value>
+                    <value level="8">12</value>
+                    <value level="9">14</value>
+                    <value level="10">16</value>
+                    <value level="11">18</value>
+                    <value level="12">20</value>
+                    <value level="13">22</value>
+                    <value level="14">0.22</value>
+                    <value level="15">0.22</value>
+                    <value level="16">0.22</value>
+                    <value level="17">0.22</value>
+                    <value level="18">0.22</value>
+                    <value level="19">0.22</value>
+                    <value level="20">0.22</value>
+                </amount>
+                <mode>PER</mode>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="45014" toLevel="20" name="Wynn's Lightness">
+        <!-- Weight limit +$s1. -->
+        <icon>
+            <value level="1">BranchIcon.Icon.g_rune_wynn_lv01</value>
+            <value level="2">BranchIcon.Icon.g_rune_wynn_lv01</value>
+            <value level="3">BranchIcon.Icon.g_rune_wynn_lv01</value>
+            <value level="4">BranchIcon.Icon.g_rune_wynn_lv01</value>
+            <value level="5">BranchIcon.Icon.g_rune_wynn_lv01</value>
+            <value level="6">BranchIcon.Icon.g_rune_wynn_lv02</value>
+            <value level="7">BranchIcon.Icon.g_rune_wynn_lv02</value>
+            <value level="8">BranchIcon.Icon.g_rune_wynn_lv02</value>
+            <value level="9">BranchIcon.Icon.g_rune_wynn_lv02</value>
+            <value level="10">BranchIcon.Icon.g_rune_wynn_lv02</value>
+            <value level="11">BranchIcon.Icon.g_rune_wynn_lv03</value>
+            <value level="12">BranchIcon.Icon.g_rune_wynn_lv03</value>
+            <value level="13">BranchIcon.Icon.g_rune_wynn_lv03</value>
+            <value level="14">icon.ensoul_big_p</value>
+            <value level="15">icon.ensoul_big_p</value>
+            <value level="16">icon.ensoul_big_p</value>
+            <value level="17">icon.ensoul_big_p</value>
+            <value level="18">icon.ensoul_big_p</value>
+            <value level="19">icon.ensoul_big_p</value>
+            <value level="20">icon.ensoul_big_p</value>
+        </icon>
+        <operateType>P</operateType>
+        <effects>
+            <effect name="WeightLimit">
+                <amount>
+                    <value level="1">1000</value>
+                    <value level="2">1400</value>
+                    <value level="3">1800</value>
+                    <value level="4">2200</value>
+                    <value level="5">2600</value>
+                    <value level="6">3000</value>
+                    <value level="7">3400</value>
+                    <value level="8">4100</value>
+                    <value level="9">4500</value>
+                    <value level="10">4900</value>
+                    <value level="11">5200</value>
+                    <value level="12">5800</value>
+                    <value level="13">6400</value>
+                    <value level="14">6400</value>
+                    <value level="15">6400</value>
+                    <value level="16">6400</value>
+                    <value level="17">6400</value>
+                    <value level="18">6400</value>
+                    <value level="19">6400</value>
+                    <value level="20">6400</value>
+                </amount>
+                <mode>DIFF</mode>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="45015" toLevel="25" name="Aeore Magic Regeneration">
+        <!-- MP Recovery Bonus +$s1. -->
+        <icon>
+            <value level="1">BranchIcon.Icon.g_rune_eolh_lv01</value>
+            <value level="2">BranchIcon.Icon.g_rune_eolh_lv01</value>
+			<value level="3">BranchIcon.Icon.g_rune_eolh_lv01</value>
+			<value level="4">BranchIcon.Icon.g_rune_eolh_lv01</value>
+			<value level="5">BranchIcon.Icon.g_rune_eolh_lv01</value>
+			<value level="6">BranchIcon.Icon.g_rune_eolh_lv01</value>
+			<value level="7">BranchIcon.Icon.g_rune_eolh_lv01</value>
+			<value level="8">BranchIcon.Icon.g_rune_eolh_lv02</value>
+            <value level="9">BranchIcon.Icon.g_rune_eolh_lv02</value>
+            <value level="10">BranchIcon.Icon.g_rune_eolh_lv02</value>
+            <value level="11">BranchIcon.Icon.g_rune_eolh_lv03</value>
+            <value level="12">BranchIcon.Icon.g_rune_eolh_lv03</value>
+            <value level="13">BranchIcon.Icon.g_rune_eolh_lv03</value>
+			<value level="14">BranchIcon.Icon.g_rune_eolh_lv02</value>
+			<value level="15">BranchIcon.Icon.g_rune_eolh_lv02</value>
+			<value level="16">BranchIcon.Icon.g_rune_eolh_lv03</value>
+			<value level="17">BranchIcon.Icon.g_rune_eolh_lv03</value>
+			<value level="18">BranchIcon.Icon.g_rune_eolh_lv03</value>
+            <value level="19">icon.ensoul_big_p</value>
+            <value level="20">icon.ensoul_big_p</value>
+			<value level="21">icon.ensoul_big_p</value>
+			<value level="22">icon.ensoul_big_p</value>
+			<value level="23">icon.ensoul_big_p</value>
+			<value level="24">icon.ensoul_big_p</value>
+			<value level="25">icon.ensoul_big_p</value>
+        </icon>
+        <operateType>P</operateType>
+        <effects>
+            <effect name="MpRegen">
+                <amount>
+                    <value level="1">0.065</value>
+                    <value level="2">0.08</value>
+                    <value level="3">0.095</value>
+                    <value level="4">0.11</value>
+                    <value level="5">0.125</value>
+                    <value level="6">0.14</value>
+                    <value level="7">0.155</value>
+                    <value level="8">9.5</value>
+                    <value level="9">11</value>
+                    <value level="10">12.5</value>
+                    <value level="11">14</value>
+                    <value level="12">15.5</value>
+                    <value level="13">17</value>
+                    <value level="14">1</value>
+                    <value level="15">1</value>
+                    <value level="16">1</value>
+                    <value level="17">1</value>
+                    <value level="18">1</value>
+                    <value level="19">1</value>
+                    <value level="20">1</value>
+                    <value level="21">1</value>
+                    <value level="22">1</value>
+                    <value level="23">1</value>
+                    <value level="24">1</value>
+                    <value level="25">1</value>
+                </amount>
+                <mode>PER</mode>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="45016" toLevel="25" name="Aeore's Heal">
+		<!-- Healing Power +$s1. -->
+        <icon>
+            <value level="1">BranchIcon.Icon.g_rune_eolh_lv01</value>
+            <value level="2">BranchIcon.Icon.g_rune_eolh_lv01</value>
+			<value level="3">BranchIcon.Icon.g_rune_eolh_lv01</value>
+			<value level="4">BranchIcon.Icon.g_rune_eolh_lv01</value>
+			<value level="5">BranchIcon.Icon.g_rune_eolh_lv01</value>
+			<value level="6">BranchIcon.Icon.g_rune_eolh_lv01</value>
+			<value level="7">BranchIcon.Icon.g_rune_eolh_lv01</value>
+			<value level="8">BranchIcon.Icon.g_rune_eolh_lv02</value>
+            <value level="9">BranchIcon.Icon.g_rune_eolh_lv02</value>
+            <value level="10">BranchIcon.Icon.g_rune_eolh_lv02</value>
+            <value level="11">BranchIcon.Icon.g_rune_eolh_lv03</value>
+            <value level="12">BranchIcon.Icon.g_rune_eolh_lv03</value>
+            <value level="13">BranchIcon.Icon.g_rune_eolh_lv03</value>
+			<value level="14">BranchIcon.Icon.g_rune_eolh_lv02</value>
+			<value level="15">BranchIcon.Icon.g_rune_eolh_lv02</value>
+			<value level="16">BranchIcon.Icon.g_rune_eolh_lv03</value>
+			<value level="17">BranchIcon.Icon.g_rune_eolh_lv03</value>
+			<value level="18">BranchIcon.Icon.g_rune_eolh_lv03</value>
+            <value level="19">icon.ensoul_big_p</value>
+            <value level="20">icon.ensoul_big_p</value>
+			<value level="21">icon.ensoul_big_p</value>
+			<value level="22">icon.ensoul_big_p</value>
+			<value level="23">icon.ensoul_big_p</value>
+			<value level="24">icon.ensoul_big_p</value>
+			<value level="25">icon.ensoul_big_p</value>
+        </icon>
+        <operateType>P</operateType>
+        <effects>
+            <effect name="HealEffect">
+                <amount>
+                    <value level="1">30</value>
+                    <value level="2">38</value>
+                    <value level="3">46</value>
+                    <value level="4">54</value>
+                    <value level="5">62</value>
+                    <value level="6">70</value>
+                    <value level="7">78</value>
+                    <value level="8">46</value>
+                    <value level="9">54</value>
+                    <value level="10">62</value>
+                    <value level="11">70</value>
+                    <value level="12">78</value>
+                    <value level="13">86</value>
+                    <value level="14">126</value>
+                    <value level="15">126</value>
+                    <value level="16">126</value>
+                    <value level="17">126</value>
+                    <value level="18">126</value>
+                    <value level="19">126</value>
+                    <value level="20">126</value>
+                    <value level="21">126</value>
+                    <value level="22">126</value>
+                    <value level="23">126</value>
+                    <value level="24">126</value>
+                    <value level="25">126</value>
+                </amount>
+                <mode>DIFF</mode>
+            </effect>
+        </effects>
+    </skill>
+	<skill id="45017" toLevel="1" name="Orfen's Earring - Special Ability">
+        <!-- Target's MP -10% in PvP. -->
+        <icon>icon.accessory_earring_of_orfen_i04</icon>
+        <magicLvl>75</magicLvl>
+        <operateType>P</operateType>
+        <castRange>600</castRange>
+        <hitTime>1000</hitTime>
+        <reuseDelay>120000</reuseDelay>
+        <effectPoint>-679</effectPoint>
+        <magicCriticalRate>5</magicCriticalRate>
+        <effects>
+            <effect name="VampiricAttack">
+                <amount>
+                    <value level="1">0</value>
+                </amount>
+                <chance>30</chance>
+            </effect>
+            <effect name="AttackTrait">
+                <SHOCK>
+                    <value level="1">5</value>
+                </SHOCK>
+                <BLEED>
+                    <value level="1">10</value>
+                </BLEED>
+                <DERANGEMENT>
+                    <value level="1">5</value>
+                </DERANGEMENT>
+            </effect>
+            <effect name="DefenceTrait">
+                <SHOCK>
+                    <value level="1">5</value>
+                </SHOCK>
+                <BLEED>
+                    <value level="1">10</value>
+                </BLEED>
+                <DERANGEMENT>
+                    <value level="1">5</value>
+                </DERANGEMENT>
+            </effect>
+            <effect name="HpRegen">
+                <amount>
+                    <value level="1">10</value>
+                </amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="HealEffect">
+                <amount>
+                    <value level="1">4</value>
+                </amount>
+                <mode>PER</mode>
+            </effect>
+        </effects>
+    </skill>
+	<skill id="45018" toLevel="1" name="Zaken's Earring - Special Ability">
+        <!-- During PvP, limits the CP, HP, and MP recovery of the target to maximum 80% for 30 sec. -->
+        <icon>icon.accessory_earring_of_zaken_i04</icon>
+        <operateType>A1</operateType>
+        <isDebuff>true</isDebuff>
+        <castRange>600</castRange>
+        <hitTime>1000</hitTime>
+        <reuseDelay>120000</reuseDelay>
+        <effectPoint>-679</effectPoint>
+    </skill>
+	<skill id="45019" toLevel="1" name="Antharas' Earring - Special Abilities">
+        <!-- Blocks all the enemy's physical and magical skills for 24 sec. -->
+        <icon>icon.accessory_earring_of_antaras_i04</icon>
+        <operateType>A1</operateType>
+        <isDebuff>true</isDebuff>
+        <castRange>600</castRange>
+        <hitTime>1000</hitTime>
+        <reuseDelay>120000</reuseDelay>
+        <effectPoint>-666</effectPoint>
+    </skill>
+    <skill id="45020" toLevel="1" name="Zaken's Cloak">
+        <!-- Max. HP +5%. -->
+        <icon>BranchSys2.Icon.br_zaken_cloak_i00</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="45021" toLevel="1" name="White Uniform Hat (STR+1 INT+1)">
+        <!-- STR+1, INT+1. -->
+        <icon>BranchSys2.icon.br_navy_cap_i00</icon>
+        <operateType>P</operateType>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>5</magicCriticalRate>
+        <hitCancelTime>0</hitCancelTime>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>STR</stat>
+            </effect>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>INT</stat>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="45022" toLevel="1" name="White Uniform Hat (DEX +1 WIT +1)">
+        <!-- DEX +1, and WIT +1. -->
+        <icon>BranchSys2.icon.br_navy_cap_i00</icon>
+        <operateType>P</operateType>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>5</magicCriticalRate>
+        <hitCancelTime>0</hitCancelTime>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>DEX</stat>
+            </effect>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>WIT</stat>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="45023" toLevel="1" name="White Uniform Hat (CON+1 MEN+1)">
+        <!-- CON +1, MEN +1. -->
+        <icon>BranchSys2.icon.br_navy_cap_i00</icon>
+        <operateType>P</operateType>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>5</magicCriticalRate>
+        <hitCancelTime>0</hitCancelTime>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>CON</stat>
+            </effect>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>MEN</stat>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="45024" toLevel="1" name="Napoleon Hat (STR+1 INT+1)">
+        <!-- STR+1, INT+1. -->
+        <icon>BranchSys.icon.br_napoleonic_cap_i00</icon>
+        <operateType>P</operateType>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>5</magicCriticalRate>
+        <hitCancelTime>0</hitCancelTime>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>STR</stat>
+            </effect>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>INT</stat>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="45025" toLevel="1" name="Napoleon Hat (DEX +1 WIT +1)">
+        <!-- DEX +1, and WIT +1. -->
+        <icon>BranchSys.icon.br_napoleonic_cap_i00</icon>
+        <operateType>P</operateType>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>5</magicCriticalRate>
+        <hitCancelTime>0</hitCancelTime>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>DEX</stat>
+            </effect>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>WIT</stat>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="45026" toLevel="1" name="Napoleon Hat (CON +1 MEN +1)">
+        <!-- CON +1, MEN +1. -->
+        <icon>BranchSys.icon.br_napoleonic_cap_i00</icon>
+        <operateType>P</operateType>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>5</magicCriticalRate>
+        <hitCancelTime>0</hitCancelTime>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>CON</stat>
+            </effect>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>MEN</stat>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="45027" toLevel="1" name="Ninja Hair Accessory (STR+1 INT+1)">
+        <!-- STR+1, INT+1. -->
+        <icon>BranchSys3.icon1.g_co_ninja_hair</icon>
+        <operateType>P</operateType>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>5</magicCriticalRate>
+        <hitCancelTime>0</hitCancelTime>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>STR</stat>
+            </effect>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>INT</stat>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="45028" toLevel="1" name="Ninja Hair Accessory (DEX +1 WIT +1)">
+        <!-- DEX +1, and WIT +1. -->
+        <icon>BranchSys3.icon1.g_co_ninja_hair</icon>
+        <operateType>P</operateType>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>5</magicCriticalRate>
+        <hitCancelTime>0</hitCancelTime>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>DEX</stat>
+            </effect>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>WIT</stat>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="45029" toLevel="1" name="Ninja Hair Accessory (CON+1 MEN+1)">
+        <!-- CON +1, MEN +1. -->
+        <icon>BranchSys3.icon1.g_co_ninja_hair</icon>
+        <operateType>P</operateType>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>5</magicCriticalRate>
+        <hitCancelTime>0</hitCancelTime>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>CON</stat>
+            </effect>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>MEN</stat>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="45030" toLevel="1" name="Warrior's Helmet (STR+1 INT+1)">
+        <!-- STR+1, INT+1. -->
+        <icon>BranchSys2.icon.br_close_helmet_i00</icon>
+        <operateType>P</operateType>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>5</magicCriticalRate>
+        <hitCancelTime>0</hitCancelTime>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>STR</stat>
+            </effect>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>INT</stat>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="45031" toLevel="1" name="Warrior's Helmet (DEX +1 WIT +1)">
+        <!-- DEX +1, and WIT +1. -->
+        <icon>BranchSys2.icon.br_close_helmet_i00</icon>
+        <operateType>P</operateType>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>5</magicCriticalRate>
+        <hitCancelTime>0</hitCancelTime>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>DEX</stat>
+            </effect>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>WIT</stat>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="45032" toLevel="1" name="Warrior's Helmet (CON+1 MEN+1)">
+        <!-- CON +1, MEN +1. -->
+        <icon>BranchSys2.icon.br_close_helmet_i00</icon>
+        <operateType>P</operateType>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>5</magicCriticalRate>
+        <hitCancelTime>0</hitCancelTime>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>CON</stat>
+            </effect>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>MEN</stat>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="45033" toLevel="1" name="First Mate Hat (STR+1 INT+1)">
+        <!-- STR+1, INT+1. -->
+        <icon>icon.Accessary_middle_ages_i01</icon>
+        <operateType>P</operateType>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>5</magicCriticalRate>
+        <hitCancelTime>0</hitCancelTime>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>STR</stat>
+            </effect>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>INT</stat>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="45034" toLevel="1" name="First Mate Hat (DEX +1 WIT +1)">
+        <!-- DEX +1, and WIT +1. -->
+        <icon>icon.Accessary_middle_ages_i01</icon>
+        <operateType>P</operateType>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>5</magicCriticalRate>
+        <hitCancelTime>0</hitCancelTime>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>DEX</stat>
+            </effect>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>WIT</stat>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="45035" toLevel="1" name="First Mate Hat (CON+1 MEN+1)">
+        <!-- CON +1, MEN +1. -->
+        <icon>icon.Accessary_middle_ages_i01</icon>
+        <operateType>P</operateType>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>5</magicCriticalRate>
+        <hitCancelTime>0</hitCancelTime>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>CON</stat>
+            </effect>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>MEN</stat>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="45036" toLevel="1" name="Artisan's Goggles (STR+1 INT+1)">
+        <!-- STR+1, INT+1. -->
+        <icon>icon.accessory_dwarf_goggle_i00</icon>
+        <operateType>P</operateType>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>5</magicCriticalRate>
+        <hitCancelTime>0</hitCancelTime>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>STR</stat>
+            </effect>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>INT</stat>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="45037" toLevel="1" name="Artisan's Goggles (DEX +1 WIT +1)">
+        <!-- DEX +1, and WIT +1. -->
+        <icon>icon.accessory_dwarf_goggle_i00</icon>
+        <operateType>P</operateType>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>5</magicCriticalRate>
+        <hitCancelTime>0</hitCancelTime>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>DEX</stat>
+            </effect>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>WIT</stat>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="45038" toLevel="1" name="Artisan's Goggles (CON+1 MEN+1)">
+        <!-- CON +1, MEN +1. -->
+        <icon>icon.accessory_dwarf_goggle_i00</icon>
+        <operateType>P</operateType>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>5</magicCriticalRate>
+        <hitCancelTime>0</hitCancelTime>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>CON</stat>
+            </effect>
+            <effect name="StatUp">
+                <amount>1</amount>
+                <stat>MEN</stat>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="45039" toLevel="1" name="Fire Dragon Belt">
+		<!-- Inventory Slots +6, Weight Limit +7000, STR +1, INT +1, HP Recovery Bonus +2.31, MP Recovery Bonus +1.54, CP Recovery Bonus +3.07, Max HP/ MP/ CP +10%, HP Recovery Potions' Effect +100, P./ M. Critical Damage +4%. -->
+        <icon>icon.bm_vallakas_belt</icon>
+        <operateType>P</operateType>
+    </skill>
+	<skill id="45040" toLevel="6" name="Dragon Pendant Effect Lv. 1">
+        <!-- M. Def. +$s1. -->
+        <icon>icon.bm_pendant_dragon_i00</icon>
+        <operateType>P</operateType>
+    </skill>
+	<skill id="45041" toLevel="6" name="Dragon Pendant Effect Lv. 2">
+        <!-- M. Def. +$s1, Acquired XP/ SP +$s2, P./ M. Damage Received -$s3, Atk. Spd./ Casting Spd. +$s4. -->
+        <icon>icon.bm_pendant_dragon_i00</icon>
+        <operateType>P</operateType>
+    </skill>
+	<skill id="45042" toLevel="6" name="Dragon Pendant Effect Lv. 3">
+        <!-- M. Def. +$s1, Acquired XP/ SP +$s2, P./ M. Damage Received -$s3, Atk. Spd./ Casting Spd. +$s4, P./ M. Critical Damage +$s5. -->
+        <icon>icon.bm_pendant_dragon_i00</icon>
+        <operateType>P</operateType>
+    </skill>
+	<skill id="45043" toLevel="6" name="Dragon Pendant Effect Lv. 4">
+        <!-- M. Def. +$s1, Acquired XP/ SP +$s2, P./ M. Damage Received -$s3, Atk. Spd./ Casting Spd. +$s4, P./ M. Critical Damage +$s5, P./M. Atk. +$s6. -->
+        <icon>icon.bm_pendant_dragon_i00</icon>
+        <operateType>P</operateType>
+    </skill>
+	<skill id="45044" toLevel="1" name="Blessed Dragon Pendant">
+        <!-- M. Def. +50, Acquired XP/ SP +30%, P./ M. Damage Received -30%, Atk. Spd./ Casting Spd. +10%, P./ M. Critical Damage +15%, P./M. Atk. +20%, Damage Reflection Resistance +20%. -->
+        <icon>icon.bm_pendant_dragon_i01</icon>
+        <operateType>P</operateType>
+    </skill>
+    <skill id="45045" toLevel="1" name="Dragon Meditation">
+        <!-- For 15 sec., HP Recovery Bonus +100, MP Recovery Bonus +50, Received Healing +33. -->
+        <icon>icon.dragon_invocation</icon>
+        <operateType>A1</operateType>
+        <hitTime>1000</hitTime>
+        <reuseDelay>600000</reuseDelay>
+        <effectPoint>673</effectPoint>
+    </skill>
+    <skill id="45046" toLevel="1" name="Dragon Barrier">
+        <!-- For 10 sec. creates temporary defensive barrier that reflects normal attacks, skills and debuffs. -->
+        <icon>icon.dragon_barrier</icon>
+        <operateType>A1</operateType>
+        <hitTime>2000</hitTime>
+        <reuseDelay>600000</reuseDelay>
+        <effectPoint>673</effectPoint>
+    </skill>
+    <skill id="45047" toLevel="1" name="Dragon Evasion">
+        <!-- For 5 sec., you cannot be targeted. -->
+        <icon>icon.dragon_evasion</icon>
+        <operateType>A1</operateType>
+        <reuseDelay>600000</reuseDelay>
+    </skill>
+    <skill id="45048" toLevel="1" name="Glorious Cloak">
+        <!-- Max HP/ MP/ CP +10%, P. Def. +5%, M. Def. +10%, all weapon resistance +5, M./ P. Critical Rate +20, received PvP damage -10%. Reflects 4% of the damage received back to the enemy. -->
+        <icon>icon.vesper_cloack_i00</icon>
+        <operateType>P</operateType>
+    </skill>
+</list>

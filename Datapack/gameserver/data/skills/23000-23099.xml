@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
+    <skill id="23087" toLevel="1" name="Uthanka Agathion Skill">
+        <!-- See Agathion's cute trick. -->
+        <icon>icon.skill_agathion_cute</icon>
+        <hitTime>3000</hitTime>
+        <isMagic>2</isMagic> <!-- Static Skill -->
+        <magicLvl>85</magicLvl>
+        <operateType>A1</operateType>
+        <magicCriticalRate>-5</magicCriticalRate>
+        <hitCancelTime>0</hitCancelTime>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <conditions>
+            <condition name="OpNeedAgathion"/>
+        </conditions>
+    </skill>
+    <skill id="23088" toLevel="1" name="Synge the Cat's affection">
+        <!-- For 2 h., acquired XP/ SP +40%. -->
+        <icon>icon.skill_sing</icon>
+        <abnormalLvl>26</abnormalLvl>
+        <abnormalTime>300</abnormalTime>
+        <abnormalType>MULTI_BUFF</abnormalType>
+        <blockedInOlympiad>true</blockedInOlympiad>
+        <isMagic>2</isMagic> <!-- Static Skill -->
+        <magicLvl>-1</magicLvl>
+        <operateType>A2</operateType>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>-5</magicCriticalRate>
+        <specialLevel>-1</specialLevel>
+        <irreplacableBuff>true</irreplacableBuff>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="PAtk">
+                <amount>10</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="PhysicalDefence">
+                <amount>20</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="PhysicalAttackSpeed">
+                <amount>20</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="CriticalDamage">
+                <amount>20</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="CriticalRate">
+                <amount>20</amount>
+                <mode>PER</mode>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="23089" toLevel="1" name="Synge the Cat's Blessing">
+        <!-- For 2 h., acquired XP/ SP +20%. -->
+        <icon>icon.skill_sing</icon>
+        <isMagic>2</isMagic> <!-- Static Skill -->
+        <magicLvl>85</magicLvl>
+        <operateType>A1</operateType>
+        <magicCriticalRate>-5</magicCriticalRate>
+        <hitCancelTime>0</hitCancelTime>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+    </skill>
+</list>

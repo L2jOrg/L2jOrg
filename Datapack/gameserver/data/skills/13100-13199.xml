@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
+    <skill id="13136" toLevel="1" name="Hero's Cloak">
+        <!-- Max HP/ MP/ CP +10%, P. Def. +5%, M. Def. +10%, all weapon resistance +5, M./ P. Critical Rate +20, received PvP damage -10%. Reflects 4% of the damage received back to the enemy. -->
+        <icon>icon.vesper_cloack_i00</icon>
+        <operateType>P</operateType>
+        <magicCriticalRate>5</magicCriticalRate>
+        <magicLvl>55</magicLvl>
+        <effects>
+            <effect name="MaxHp">
+                <amount>10</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="MaxMp">
+                <amount>10</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="MaxCp">
+                <amount>10</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="PhysicalDefence">
+                <amount>5</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="MagicalDefence">
+                <amount>10</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="DefenceTrait">
+                <BLUNT>5</BLUNT>
+                <SWORD>5</SWORD>
+                <DUAL>5</DUAL>
+                <BOW>5</BOW>
+                <SPEAR>5</SPEAR>
+                <DAGGER>5</DAGGER>
+                <DUALFIST>5</DUALFIST>
+                <DUAL_DAGGER>5</DUAL_DAGGER>
+            </effect>
+            <effect name="MagicCriticalRate">
+                <amount>20</amount>
+                <mode>DIFF</mode>
+            </effect>
+            <effect name="CriticalRate">
+                <amount>20</amount>
+                <mode>DIFF</mode>
+            </effect>
+            <effect name="PvpMagicalSkillDefenceBonus">
+                <amount>10</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="PvpPhysicalAttackDefenceBonus">
+                <amount>10</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="PvpPhysicalSkillDefenceBonus">
+                <amount>10</amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="DamageShield">
+                <amount>4</amount>
+            </effect>
+        </effects>
+    </skill>
+</list>

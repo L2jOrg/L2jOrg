@@ -40,7 +40,7 @@ public class SkillData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/skills.xsd");
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/skills/skills.xsd");
     }
 
     /**
@@ -131,8 +131,8 @@ public class SkillData extends GameXmlReader {
     public synchronized void load() {
         _skills.clear();
         _skillsMaxLevel.clear();
-        parseDatapackDirectory("data/stats/skills/", true);
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _skills.size() + " Skills.");
+        parseDatapackDirectory("data/skills/", true);
+        LOGGER.info("Loaded {} Skills.", _skills.size());
     }
 
     public void reload() {
