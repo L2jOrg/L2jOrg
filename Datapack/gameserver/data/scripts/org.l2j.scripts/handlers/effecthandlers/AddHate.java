@@ -16,8 +16,8 @@ import static org.l2j.gameserver.util.GameUtils.isAttackable;
  */
 public final class AddHate extends AbstractEffect {
 
-	private final double power;
-	private final boolean affectSummoner;
+	public final double power;
+	public final boolean affectSummoner;
 	
 	public AddHate(StatsSet params) {
 		power = params.getDouble("power", 0);

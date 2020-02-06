@@ -17,9 +17,9 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 public final class ModifyVital extends AbstractEffect {
 
 	private final ModifyType type;
-	private final int hp;
-	private final int mp;
-	private final int cp;
+	public final int hp;
+	public final int mp;
+	public final int cp;
 	
 	public ModifyVital(StatsSet params) {
 		type = params.getEnum("type", ModifyType.class);

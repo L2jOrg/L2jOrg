@@ -24,10 +24,10 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public final class PhysicalSoulAttack extends AbstractEffect {
 
-	private final double power;
-	private final double criticalChance;
-	private final boolean ignoreShieldDefence;
-	private final boolean overHit;
+	public final double power;
+	public final double criticalChance;
+	public final boolean ignoreShieldDefence;
+	public final boolean overHit;
 	
 	public PhysicalSoulAttack(StatsSet params) {
 		power = params.getDouble("power", 0);

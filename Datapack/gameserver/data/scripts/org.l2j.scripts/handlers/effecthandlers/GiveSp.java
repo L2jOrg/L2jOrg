@@ -13,7 +13,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author Adry_85
  */
 public final class GiveSp extends AbstractEffect {
-	private final int sp;
+	public final int sp;
 	
 	public GiveSp(StatsSet params)
 	{

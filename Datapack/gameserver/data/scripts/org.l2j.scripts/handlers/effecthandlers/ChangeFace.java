@@ -14,7 +14,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author Zoey76
  */
 public final class ChangeFace extends AbstractEffect {
-	private final int value;
+	public final int value;
 	
 	public ChangeFace(StatsSet params)
 	{

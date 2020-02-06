@@ -17,7 +17,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public final class ChameleonRest extends AbstractEffect {
 
-	private final double power;
+	public final double power;
 	
 	public ChameleonRest(StatsSet params) {
 		power = params.getDouble("power", 0);

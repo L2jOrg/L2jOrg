@@ -200,6 +200,4 @@ public class Util {
     public static boolean isBetween(int number, int min, int max) {
         return  number >= min && number <= max;
     }
-
-
 }

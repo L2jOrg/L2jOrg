@@ -15,7 +15,7 @@ import org.l2j.gameserver.util.GameUtils;
  * @author Adry_85
  */
 public final class TransferHate extends AbstractEffect {
-	private final int chance;
+	public final int chance;
 	
 	public TransferHate(StatsSet params)
 	{

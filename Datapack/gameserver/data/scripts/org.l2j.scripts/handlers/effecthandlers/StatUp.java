@@ -10,8 +10,8 @@ import org.l2j.gameserver.model.stats.BaseStats;
  * @author Sdw
  */
 public class StatUp extends AbstractEffect {
-	private final BaseStats stat;
-	private final double amount;
+	public final BaseStats stat;
+	public final double amount;
 	
 	public StatUp(StatsSet params) {
 		amount = params.getDouble("amount", 0);

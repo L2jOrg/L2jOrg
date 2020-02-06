@@ -22,7 +22,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public final class BlockAction extends AbstractEffect {
 
-	private final IntSet blockedActions = new HashIntSet();
+	public final IntSet blockedActions = new HashIntSet();
 	
 	public BlockAction(StatsSet params) {
 		final String[] actions = params.getString("blockedActions").split(",");

@@ -13,8 +13,8 @@ import java.util.Collections;
  * @author Sdw
  */
 public class DefenceAttribute extends AbstractEffect {
-	private final AttributeType attribute;
-	private final double amount;
+	public final AttributeType attribute;
+	public final double amount;
 	
 	public DefenceAttribute(StatsSet params) {
 		amount = params.getDouble("amount", 0);
@@ -23,14 +23,6 @@ public class DefenceAttribute extends AbstractEffect {
 	
 	@Override
 	public void pump(Creature effected, Skill skill) {
-		Stat stat = switch (attribute) {
-			case WATER -> Stat.WATER_RES;
-			case WIND ->  Stat.WIND_RES;
-			case EARTH -> Stat.EARTH_RES;
-			case HOLY ->  Stat.HOLY_RES;
-			case DARK ->  Stat.DARK_RES;
-			default -> Stat.FIRE_RES;
-		};
-		effected.getStats().mergeAdd(stat, amount);
+		effected.getStats().mergeAdd(attribute.toStatResist(), amount);
 	}
 }

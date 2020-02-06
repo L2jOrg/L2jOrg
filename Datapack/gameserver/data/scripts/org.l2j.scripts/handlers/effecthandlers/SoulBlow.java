@@ -18,9 +18,9 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author Adry_85
  */
 public final class SoulBlow extends AbstractEffect {
-	private final double power;
-	private final double chanceBoost;
-	private final boolean overHit;
+	public final double power;
+	public final double chanceBoost;
+	public final boolean overHit;
 	
 	public SoulBlow(StatsSet params) {
 		power = params.getDouble("power");

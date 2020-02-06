@@ -17,7 +17,7 @@ import java.util.function.Function;
  * @author Sdw
  */
 public class ReduceDamage extends AbstractEffect {
-	private final double amount;
+	public final double amount;
 	
 	public ReduceDamage(StatsSet params)
 	{

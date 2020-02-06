@@ -12,7 +12,7 @@ import org.l2j.gameserver.network.SystemMessageId;
  */
 public final class ManaDamOverTime extends AbstractEffect {
 
-	private final double power;
+	public final double power;
 	
 	public ManaDamOverTime(StatsSet params) {
 		power = params.getDouble("power", 0);

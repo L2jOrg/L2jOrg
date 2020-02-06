@@ -15,7 +15,7 @@ import org.l2j.gameserver.network.serverpackets.StopRotation;
  */
 public final class Bluff extends AbstractEffect {
 
-	private final int chance;
+	public final int chance;
 	
 	public Bluff(StatsSet params)
 	{

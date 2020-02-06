@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://l2j.org"
+           xmlns="http://l2j.org"
+           elementFormDefault="qualified">
+
+    <xs:include schemaLocation="../xsd/common.xsd"/>
+
+    <xs:element name="cond" type="Condition" abstract="true"/>
+    <xs:element name="condition" type="NamedCondition" substitutionGroup="cond"/>
+    <xs:element name="weapon" type="WeaponCondition" substitutionGroup="cond"/>
+    <xs:element name="can-add-bookmark-slot" type="AddBookmarkSlotCondition" substitutionGroup="cond"/>
+    <xs:element name="non-transformed" type="NonTransformedCondition" substitutionGroup="cond"/>
+    <xs:element name="level" type="LevelCondition" substitutionGroup="cond"/>
+    <xs:element name="energy-saved" type="EnergySavedCondition" substitutionGroup="cond"/>
+    <xs:element name="armor" type="ArmorCondition" substitutionGroup="cond"/>
+    <xs:element name="abnormal" type="AbnormalCondition" substitutionGroup="cond"/>
+    <xs:element name="class" type="ClassCondition" substitutionGroup="cond"/>
+    <xs:element name="check-residence" type="CheckResidenceCondition" substitutionGroup="cond"/>
+    <xs:element name="energy-max" type="EnergyMaxCondition" substitutionGroup="cond"/>
+    <xs:element name="encumbered" type="EncumberedCondition" substitutionGroup="cond"/>
+    <xs:element name="exists-npc" type="ExistsNpcCondition" substitutionGroup="cond"/>
+    <xs:element name="residence" type="ResidenceCondition" substitutionGroup="cond"/>
+    <xs:element name="clan" type="ClanCondition" substitutionGroup="cond"/>
+    <xs:element name="skill" type="SkillCondition" substitutionGroup="cond"/>
+    <xs:element name="target" type="TargetCondition" substitutionGroup="cond"/>
+    <xs:element name="remain-status" type="RemainStatusCondition" substitutionGroup="cond"/>
+    <xs:element name="soul" type="SoulCondition" substitutionGroup="cond"/>
+
+    <xs:complexType name="Conditions">
+        <xs:sequence>
+            <xs:element ref="cond" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="NamedCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+                <xs:attribute name="name" type="xs:token" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="SoulCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+                <xs:attribute name="amount" type="xs:int" default="1"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="RemainStatusCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+                <xs:attribute name="amount" type="xs:int" use="required"/>
+                <xs:attribute name="lower" type="xs:boolean" default="true"/>
+                <xs:attribute name="stat" type="StatusType" use="required"/>
+                <xs:attribute name="affect" type="ConditionAffectType" default="CASTER"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="TargetCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+                <xs:sequence>
+                    <xs:element ref="target-type"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="SkillCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+                <xs:attribute name="id" type="xs:int" use="required"/>
+                <xs:attribute name="learned" type="xs:boolean" default="false"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ClanCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+                <xs:attribute name="level" type="xs:int" default="1"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ResidenceCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+                <xs:attribute name="type" type="ResidenceType" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ExistsNpcCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+                <xs:sequence>
+                    <xs:element name="npcs" type="intList"/>
+                </xs:sequence>
+                <xs:attribute name="range" type="xs:int" use="required"/>
+                <xs:attribute name="around" type="xs:boolean" default="false"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="EncumberedCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+                <xs:attribute name="slots" type="xs:int" default="0"/>
+                <xs:attribute name="weight" type="xs:int" default="0"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="EnergyMaxCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+                <xs:attribute name="charges" type="xs:int" default="1"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="CheckResidenceCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+                <xs:sequence>
+                    <xs:element name="ids" type="intList"/>
+                </xs:sequence>
+                <xs:attribute name="is-within" type="xs:boolean" default="true"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ClassCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+                <xs:sequence>
+                    <xs:element name="list" type="ClassNameList"/>
+                </xs:sequence>
+                <xs:attribute name="affect" type="ConditionAffectType" default="CASTER"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="AbnormalCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+                <xs:attribute name="type" type="AbnormalType" use="required"/>
+                <xs:attribute name="level" type="xs:int" default="-1"/>
+                <xs:attribute name="affected" type="xs:boolean" use="required"/>
+                <xs:attribute name="affect" type="ConditionAffectType" default="CASTER"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ArmorCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+                <xs:sequence>
+                    <xs:element name="type" type="ArmorTypeList"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="EnergySavedCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+                <xs:attribute name="charges" type="xs:int" default="1"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="WeaponCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+                <xs:sequence>
+                    <xs:element name="type" type="WeaponTypeList"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="AddBookmarkSlotCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+                <xs:attribute name="slots" type="xs:int" default="1"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="NonTransformedCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+                <xs:attribute name="id" type="xs:int" default="-1"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="LevelCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+                <xs:attribute name="affect" type="ConditionAffectType" default="CASTER"/>
+                <xs:attribute name="min-level" type="xs:positiveInteger" default="1"/>
+                <xs:attribute name="max-level" type="xs:positiveInteger" default="99"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="Condition" abstract="true"/>
+
+    <xs:simpleType name="ConditionAffectType">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="BOTH"/>
+            <xs:enumeration value="CASTER"/>
+            <xs:enumeration value="TARGET"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="TargetConditionType" abstract="true"/>
+
+    <xs:complexType name="TargetNpc">
+        <xs:complexContent>
+            <xs:extension base="TargetConditionType">
+                <xs:sequence>
+                    <xs:element name="ids" type="intList"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="TargetDoor">
+        <xs:complexContent>
+            <xs:extension base="TargetConditionType">
+                <xs:sequence>
+                    <xs:element name="ids" type="intList"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="TargetParty">
+        <xs:complexContent>
+            <xs:extension base="TargetConditionType">
+                <xs:attribute name="include-caster" type="xs:boolean" default="true"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="TargetRace">
+        <xs:complexContent>
+            <xs:extension base="TargetConditionType">
+                <xs:attribute name="name" type="Race" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="target-type" type="TargetConditionType" abstract="true"/>
+    <xs:element name="npc" type="TargetNpc" substitutionGroup="target-type"/>
+    <xs:element name="door" type="TargetDoor" substitutionGroup="target-type"/>
+    <xs:element name="party" type="TargetParty" substitutionGroup="target-type"/>
+    <xs:element name="race" type="TargetRace" substitutionGroup="target-type"/>
+
+    <xs:simpleType name="StatusType">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="CP"/>
+            <xs:enumeration value="HP"/>
+            <xs:enumeration value="MP"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

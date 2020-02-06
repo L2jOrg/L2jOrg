@@ -104,7 +104,7 @@ public enum Stat {
     ATTACK_CANCEL("cancel"),
 
     // ACCURACY & RANGE
-    ACCURACY_COMBAT("accCombat", new PAccuracyFinalizer()),
+    ACCURACY("accCombat", new PAccuracyFinalizer()),
     ACCURACY_MAGIC("accMagic", new MAccuracyFinalizer()),
     EVASION_RATE("rEvas", new PEvasionRateFinalizer()),
     MAGIC_EVASION_RATE("mEvas", new MEvasionRateFinalizer()),

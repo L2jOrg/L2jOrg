@@ -16,7 +16,7 @@ import java.util.Map.Entry;
  * @author NosBit
  */
 public final class DefenceTrait extends AbstractEffect {
-	private final Map<TraitType, Float> defenceTraits = new HashMap<>();
+	public final Map<TraitType, Float> defenceTraits = new HashMap<>();
 	
 	public DefenceTrait(StatsSet params) {
 		if (params.isEmpty()) {

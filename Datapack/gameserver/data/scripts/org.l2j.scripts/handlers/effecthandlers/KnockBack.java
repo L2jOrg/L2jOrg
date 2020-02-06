@@ -25,11 +25,11 @@ import static org.l2j.gameserver.util.MathUtil.calculateHeadingFrom;
  * @author UnAfraid
  */
 public final class KnockBack extends AbstractEffect {
-	private final int distance;
-	private final int speed;
+	public final int distance;
+	public final int speed;
 	private final int delay;
 	private final int animationSpeed;
-	private final boolean knockDown;
+	public final boolean knockDown;
 	private final FlyType type;
 	
 	public KnockBack(StatsSet params)

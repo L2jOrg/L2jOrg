@@ -14,7 +14,7 @@ import org.l2j.gameserver.model.skills.Skill;
  */
 public final class AbnormalShield extends AbstractEffect {
 
-	private final int times;
+	public final int times;
 	
 	public AbnormalShield(StatsSet params)
 	{

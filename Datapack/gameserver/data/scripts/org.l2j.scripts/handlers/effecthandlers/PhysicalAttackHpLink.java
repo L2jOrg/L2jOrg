@@ -19,9 +19,9 @@ import static org.l2j.gameserver.util.GameUtils.isAttackable;
  * @author Adry_85, Nik
  */
 public final class PhysicalAttackHpLink extends AbstractEffect {
-	private final double power;
-	private final double criticalChance;
-	private final boolean overHit;
+	public final double power;
+	public final double criticalChance;
+	public final boolean overHit;
 	
 	public PhysicalAttackHpLink(StatsSet params) {
 		power = params.getDouble("power", 0);

@@ -20,9 +20,9 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author Adry_85
  */
 public final class MagicalAttackMp extends AbstractEffect {
-	private final double power;
-	private final boolean critical;
-	private final double criticalLimit;
+	public final double power;
+	public final boolean critical;
+	public final double criticalLimit;
 	
 	public MagicalAttackMp(StatsSet params) {
 		power = params.getDouble("power");

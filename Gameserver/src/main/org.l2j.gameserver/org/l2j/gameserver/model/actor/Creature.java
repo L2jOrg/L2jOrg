@@ -2104,7 +2104,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                         case PHYSICAL_ATTACK:
                         case PHYSICAL_DEFENCE:
                         case EVASION_RATE:
-                        case ACCURACY_COMBAT:
+                        case ACCURACY:
                         case CRITICAL_RATE:
                         case MAGIC_CRITICAL_RATE:
                         case MAGIC_EVASION_RATE:

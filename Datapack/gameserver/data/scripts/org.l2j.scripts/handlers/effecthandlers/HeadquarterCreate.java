@@ -17,7 +17,7 @@ import static java.util.Objects.isNull;
  */
 public final class HeadquarterCreate extends AbstractEffect {
 	private static final int HQ_NPC_ID = 35062;
-	private final boolean isAdvanced;
+	public final boolean isAdvanced;
 	
 	public HeadquarterCreate(StatsSet params)
 	{

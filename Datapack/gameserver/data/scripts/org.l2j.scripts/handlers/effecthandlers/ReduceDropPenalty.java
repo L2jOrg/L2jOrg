@@ -11,9 +11,9 @@ import org.l2j.gameserver.model.stats.Stat;
  * @author Sdw
  */
 public class ReduceDropPenalty extends AbstractEffect {
-    private final double exp;
-    private final double deathPenalty;
-    private final ReduceDropType type;
+    public final double exp;
+    public final double deathPenalty;
+    public final ReduceDropType type;
 
     public ReduceDropPenalty(StatsSet params)
     {

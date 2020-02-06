@@ -14,7 +14,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author Zoey76
  */
 public final class ChangeHairStyle extends AbstractEffect {
-	private final int value;
+	public final int value;
 	
 	public ChangeHairStyle(StatsSet params)
 	{

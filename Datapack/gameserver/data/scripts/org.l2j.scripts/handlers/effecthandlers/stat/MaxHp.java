@@ -11,7 +11,7 @@ import org.l2j.gameserver.model.stats.Stat;
  * @author NosBit
  */
 public class MaxHp extends AbstractStatEffect {
-    private final boolean heal;
+    public final boolean heal;
 
     public MaxHp(StatsSet params) {
         super(params, Stat.MAX_HP);

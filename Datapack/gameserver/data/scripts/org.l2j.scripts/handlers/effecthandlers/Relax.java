@@ -16,7 +16,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * Relax effect implementation.
  */
 public final class Relax extends AbstractEffect {
-	private final double power;
+	public final double power;
 	
 	public Relax(StatsSet params) {
 		power = params.getDouble("power", 0);

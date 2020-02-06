@@ -13,7 +13,7 @@ import static java.util.Objects.nonNull;
  * Mana Heal Over Time effect implementation.
  */
 public final class ManaHealOverTime extends AbstractEffect {
-	private final double power;
+	public final double power;
 	
 	public ManaHealOverTime(StatsSet params) {
 		power = params.getDouble("power", 0);

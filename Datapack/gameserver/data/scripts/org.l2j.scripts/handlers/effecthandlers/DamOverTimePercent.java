@@ -13,8 +13,8 @@ import org.l2j.gameserver.network.SystemMessageId;
  * @author Adry_85
  */
 public final class DamOverTimePercent extends AbstractEffect {
-	private final boolean canKill;
-	private final double power;
+	public final boolean canKill;
+	public final double power;
 	
 	public DamOverTimePercent(StatsSet params) {
 		canKill = params.getBoolean("canKill", false);

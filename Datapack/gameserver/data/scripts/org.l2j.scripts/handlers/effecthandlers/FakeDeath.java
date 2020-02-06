@@ -17,7 +17,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author mkizub
  */
 public final class FakeDeath extends AbstractEffect {
-	private final double power;
+	public final double power;
 	
 	public FakeDeath(StatsSet params) {
 		power = params.getDouble("power", 0);

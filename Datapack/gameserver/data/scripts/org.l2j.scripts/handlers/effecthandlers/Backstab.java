@@ -18,10 +18,10 @@ import static org.l2j.gameserver.util.GameUtils.isAttackable;
  */
 public final class Backstab extends AbstractEffect {
 
-	private final double power;
-	private final double chanceBoost;
-	private final double criticalChance;
-	private final boolean overHit;
+	public final double power;
+	public final double chanceBoost;
+	public final double criticalChance;
+	public final boolean overHit;
 	
 	public Backstab(StatsSet params) {
 		power = params.getDouble("power");

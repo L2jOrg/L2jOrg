@@ -16,7 +16,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author Adry_85
  */
 public final class DeathLink extends AbstractEffect {
-	private final double power;
+	public final double power;
 	
 	public DeathLink(StatsSet params)
 	{

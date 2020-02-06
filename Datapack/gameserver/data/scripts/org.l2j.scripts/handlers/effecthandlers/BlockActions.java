@@ -28,7 +28,7 @@ import static org.l2j.gameserver.util.GameUtils.isSummon;
  */
 public final class BlockActions extends AbstractEffect {
 
-	private final IntSet allowedSkills;
+	public final IntSet allowedSkills;
 	
 	public BlockActions(StatsSet params) {
 		final String[] allowedSkills = params.getString("allowedSkills", "").split(";");

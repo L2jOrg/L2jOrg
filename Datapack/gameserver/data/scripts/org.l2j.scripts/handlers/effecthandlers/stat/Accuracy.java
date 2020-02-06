@@ -9,6 +9,6 @@ import org.l2j.gameserver.model.stats.Stat;
 public class Accuracy extends AbstractStatEffect {
 
     public Accuracy(StatsSet params) {
-        super(params, Stat.ACCURACY_COMBAT);
+        super(params, Stat.ACCURACY);
     }
 }

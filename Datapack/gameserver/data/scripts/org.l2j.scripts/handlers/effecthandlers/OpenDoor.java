@@ -16,7 +16,7 @@ import static org.l2j.gameserver.util.GameUtils.isDoor;
  * @author Adry_85
  */
 public final class OpenDoor extends AbstractEffect {
-	private final int chance;
+	public final int chance;
 	private final boolean isItem;
 	
 	public OpenDoor(StatsSet params) {

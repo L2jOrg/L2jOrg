@@ -19,7 +19,7 @@ import static org.l2j.gameserver.util.GameUtils.isDoor;
  * @author nBd
  */
 public final class Transformation extends AbstractEffect {
-	private final List<Integer> id;
+	public final List<Integer> id;
 	
 	public Transformation(StatsSet params) {
 		final String ids = params.getString("transformationId", null);

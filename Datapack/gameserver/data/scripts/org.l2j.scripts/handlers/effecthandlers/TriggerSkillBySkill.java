@@ -27,11 +27,11 @@ import static org.l2j.gameserver.util.GameUtils.isCreature;
  * @author Zealar
  */
 public final class TriggerSkillBySkill extends AbstractEffect {
-	private final int castSkillId;
-	private final int chance;
-	private final SkillHolder skill;
+	public final int castSkillId;
+	public final int chance;
+	public final SkillHolder skill;
 	private final int skillLevelScaleTo;
-	private final TargetType targetType;
+	public final TargetType targetType;
 	
 	public TriggerSkillBySkill(StatsSet params) {
 		castSkillId = params.getInt("castSkillId");

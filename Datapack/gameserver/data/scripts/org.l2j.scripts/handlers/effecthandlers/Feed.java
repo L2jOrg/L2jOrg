@@ -17,9 +17,9 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author Sdw
  */
 public class Feed extends AbstractEffect {
-	private final int normal;
-	private final int ride;
-	private final int wyvern;
+	public final int normal;
+	public final int ride;
+	public final int wyvern;
 	
 	public Feed(StatsSet params) {
 		normal = params.getInt("normal", 0);

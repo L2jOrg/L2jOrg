@@ -13,8 +13,8 @@ import org.l2j.gameserver.util.MathUtil;
  * @author Sdw
  */
 public class CriticalRatePositionBonus extends AbstractEffect {
-	private final double amount;
-	private final Position position;
+	public final double amount;
+	public final Position position;
 	
 	public CriticalRatePositionBonus(StatsSet params) {
 		amount = params.getDouble("amount", 0);

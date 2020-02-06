@@ -32,7 +32,7 @@ import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMe
  */
 public final class RestorationRandom extends AbstractEffect {
 
-	private final List<ExtractableProductItem> products = new ArrayList<>();
+	public final List<ExtractableProductItem> products = new ArrayList<>();
 	
 	public RestorationRandom(StatsSet params) {
 		for (StatsSet group : params.getList("items", StatsSet.class)) {

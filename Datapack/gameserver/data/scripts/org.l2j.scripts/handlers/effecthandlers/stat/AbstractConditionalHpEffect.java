@@ -21,7 +21,7 @@ import static java.util.Objects.isNull;
  */
 abstract class AbstractConditionalHpEffect extends AbstractStatEffect {
 
-    private final int hpPercent;
+    public final int hpPercent;
     private final Map<Creature, AtomicBoolean> updates = new ConcurrentHashMap<>();
 
     protected AbstractConditionalHpEffect(StatsSet params, Stat stat) {

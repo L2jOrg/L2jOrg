@@ -18,9 +18,9 @@ import static org.l2j.gameserver.util.GameUtils.*;
  */
 public final class Restoration extends AbstractEffect {
 
-	private final int itemId;
-	private final int itemCount;
-	private final int itemEnchantmentLevel;
+	public final int itemId;
+	public final int itemCount;
+	public final int itemEnchantmentLevel;
 	
 	public Restoration(StatsSet params) {
 		itemId = params.getInt("itemId", 0);

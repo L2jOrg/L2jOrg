@@ -11,8 +11,8 @@ import org.l2j.gameserver.model.stats.Stat;
  * @author Sdw
  */
 public class ReflectSkill extends AbstractEffect {
-	private final Stat stat;
-	private final double amount;
+	public final Stat stat;
+	public final double amount;
 	
 	public ReflectSkill(StatsSet params) {
 		stat = params.getEnum("type", BasicProperty.class, BasicProperty.PHYSICAL) == BasicProperty.PHYSICAL ? Stat.REFLECT_SKILL_PHYSIC : Stat.REFLECT_SKILL_MAGIC;

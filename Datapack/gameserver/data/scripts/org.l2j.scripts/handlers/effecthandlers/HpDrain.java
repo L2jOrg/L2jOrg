@@ -14,8 +14,8 @@ import org.l2j.gameserver.model.stats.Formulas;
  * @author Adry_85
  */
 public final class HpDrain extends AbstractEffect {
-	private final double power;
-	private final double percentage;
+	public final double power;
+	public final double percentage;
 	
 	public HpDrain(StatsSet params) {
 		power = params.getDouble("power", 0);

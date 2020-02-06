@@ -22,11 +22,11 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author UnAfraid
  */
 public final class Summon extends AbstractEffect {
-	private final int npcId;
-	private final float expMultiplier;
-	private final ItemHolder consumeItem;
-	private final int lifeTime;
-	private final int consumeItemInterval;
+	public final int npcId;
+	public final float expMultiplier;
+	public final ItemHolder consumeItem;
+	public final int lifeTime;
+	public final int consumeItemInterval;
 	
 	public Summon(StatsSet params) {
 		if (params.isEmpty()) {

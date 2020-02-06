@@ -17,8 +17,8 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public final class GiveExpAndSp extends AbstractEffect {
 
-    private final int xp;
-    private final int sp;
+    public final int xp;
+    public final int sp;
 
     public GiveExpAndSp(StatsSet params) {
         xp = params.getInt("xp", 0);

@@ -17,7 +17,7 @@ import static org.l2j.gameserver.util.GameUtils.isAttackable;
  * @author Adry_85
  */
 public final class DeleteHate extends AbstractEffect {
-	private final int chance;
+	public final int chance;
 	
 	public DeleteHate(StatsSet params)
 	{

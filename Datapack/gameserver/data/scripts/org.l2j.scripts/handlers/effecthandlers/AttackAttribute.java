@@ -12,8 +12,8 @@ import org.l2j.gameserver.model.stats.Stat;
  */
 public class AttackAttribute extends AbstractEffect {
 
-	private final AttributeType attribute;
-	private final double amount;
+	public final AttributeType attribute;
+	public final double amount;
 	
 	public AttackAttribute(StatsSet params) {
 		amount = params.getDouble("amount", 0);
@@ -22,14 +22,6 @@ public class AttackAttribute extends AbstractEffect {
 	
 	@Override
 	public void pump(Creature effected, Skill skill) {
-		Stat stat = switch (attribute) {
-						case WATER -> Stat.WATER_POWER;
-						case WIND ->  Stat.WIND_POWER;
-						case EARTH -> Stat.EARTH_POWER;
-						case HOLY -> Stat.HOLY_POWER;
-						case DARK -> Stat.DARK_POWER;
-						default ->   Stat.FIRE_POWER;
-		};
-		effected.getStats().mergeAdd(stat, amount);
+		effected.getStats().mergeAdd(attribute.toStat(), amount);
 	}
 }

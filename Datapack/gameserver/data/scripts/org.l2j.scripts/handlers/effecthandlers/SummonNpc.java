@@ -26,9 +26,9 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author Zoey76
  */
 public final class SummonNpc extends AbstractEffect {
-	private int despawnDelay;
-	private final int npcId;
-	private final int npcCount;
+	public int despawnDelay;
+	public final int npcId;
+	public final int npcCount;
 	private final boolean randomOffset;
 	private final boolean isSummonSpawn;
 	private final boolean singleInstance; // Only one instance of this NPC is allowed.

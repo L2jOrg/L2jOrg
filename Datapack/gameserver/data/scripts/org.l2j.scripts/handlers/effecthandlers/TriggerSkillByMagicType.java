@@ -28,11 +28,11 @@ import static org.l2j.gameserver.util.GameUtils.isCreature;
  * @author Nik
  */
 public final class TriggerSkillByMagicType extends AbstractEffect {
-	private final int[] magicTypes;
-	private final int chance;
+	public final int[] magicTypes;
+	public final int chance;
 	private final int skillLevelScaleTo;
-	private final SkillHolder skill;
-	private final TargetType targetType;
+	public final SkillHolder skill;
+	public final TargetType targetType;
 
 	public TriggerSkillByMagicType(StatsSet params) {
 		chance = params.getInt("chance", 100);

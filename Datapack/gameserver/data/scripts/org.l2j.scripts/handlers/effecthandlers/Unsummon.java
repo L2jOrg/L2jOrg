@@ -18,7 +18,7 @@ import static org.l2j.gameserver.util.GameUtils.isSummon;
  * @author Adry_85
  */
 public final class Unsummon extends AbstractEffect {
-	private final int chance;
+	public final int chance;
 	
 	public Unsummon(StatsSet params)
 	{

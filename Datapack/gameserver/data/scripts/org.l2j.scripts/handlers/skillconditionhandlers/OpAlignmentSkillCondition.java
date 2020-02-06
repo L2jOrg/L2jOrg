@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.skillconditionhandlers;
 
 import org.l2j.gameserver.enums.SkillConditionAffectType;
@@ -28,36 +12,24 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * @author Sdw
+ * @author JoeAlisson
  */
-public class OpAlignmentSkillCondition implements ISkillCondition
-{
-	private final SkillConditionAffectType _affectType;
-	private final SkillConditionAlignment _alignment;
+public class OpAlignmentSkillCondition implements ISkillCondition {
+
+	private final SkillConditionAffectType affectType;
+	private final SkillConditionAlignment alignment;
 	
-	public OpAlignmentSkillCondition(StatsSet params)
-	{
-		_affectType = params.getEnum("affectType", SkillConditionAffectType.class);
-		_alignment = params.getEnum("alignment", SkillConditionAlignment.class);
+	public OpAlignmentSkillCondition(StatsSet params) {
+		affectType = params.getEnum("affectType", SkillConditionAffectType.class);
+		alignment = params.getEnum("alignment", SkillConditionAlignment.class);
 	}
 	
 	@Override
-	public boolean canUse(Creature caster, Skill skill, WorldObject target)
-	{
-		switch (_affectType)
-		{
-			case CASTER:
-			{
-				return _alignment.test(caster.getActingPlayer());
-			}
-			case TARGET:
-			{
-				if (isPlayer(target))
-				{
-					return _alignment.test(target.getActingPlayer());
-				}
-				break;
-			}
-		}
-		return false;
+	public boolean canUse(Creature caster, Skill skill, WorldObject target) {
+		return switch (affectType) {
+			case CASTER -> alignment.test(caster.getActingPlayer());
+			case TARGET -> isPlayer(target) && alignment.test(target.getActingPlayer());
+			default -> false;
+		};
 	}
 }

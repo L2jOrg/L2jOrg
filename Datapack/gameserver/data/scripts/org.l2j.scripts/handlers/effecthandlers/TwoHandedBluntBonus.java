@@ -20,11 +20,11 @@ public class TwoHandedBluntBonus extends AbstractEffect {
 	private static final Condition weaponTypeCondition = new ConditionUsingItemType(WeaponType.BLUNT.mask());
 	private static final Condition slotCondition = new ConditionUsingSlotType(BodyPart.TWO_HAND.getId());
 	
-	private final double pAtkAmount;
-	private final StatModifierType pAtkmode;
+	public final double pAtkAmount;
+	public final StatModifierType pAtkmode;
 	
-	private final double accuracyAmount;
-	private final StatModifierType accuracyMode;
+	public final double accuracyAmount;
+	public final StatModifierType accuracyMode;
 	
 	public TwoHandedBluntBonus(StatsSet params) {
 		pAtkAmount = params.getDouble("pAtkAmount", 0);
@@ -43,8 +43,8 @@ public class TwoHandedBluntBonus extends AbstractEffect {
 			}
 
 			switch (accuracyMode) {
-				case DIFF -> effected.getStats().mergeAdd(Stat.ACCURACY_COMBAT, accuracyAmount);
-				case PER -> effected.getStats().mergeMul(Stat.ACCURACY_COMBAT, (accuracyAmount / 100) + 1);
+				case DIFF -> effected.getStats().mergeAdd(Stat.ACCURACY, accuracyAmount);
+				case PER -> effected.getStats().mergeMul(Stat.ACCURACY, (accuracyAmount / 100) + 1);
 			}
 		}
 	}

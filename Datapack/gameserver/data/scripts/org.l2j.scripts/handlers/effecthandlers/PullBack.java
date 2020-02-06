@@ -22,8 +22,8 @@ import static org.l2j.gameserver.util.GameUtils.isPlayable;
  */
 public final class PullBack extends AbstractEffect {
 
-	private final int speed;
-	private final int delay;
+	public final int speed;
+	public final int delay;
 	private final int animationSpeed;
 	private final FlyType type;
 	

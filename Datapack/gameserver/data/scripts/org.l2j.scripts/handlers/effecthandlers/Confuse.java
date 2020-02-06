@@ -23,7 +23,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  */
 public final class Confuse extends AbstractEffect {
 
-	private final int chance;
+	public final int chance;
 	
 	public Confuse(StatsSet params)
 	{

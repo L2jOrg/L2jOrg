@@ -18,8 +18,8 @@ import static org.l2j.gameserver.util.GameUtils.isDoor;
  * @author Nik
  */
 public final class Mp extends AbstractEffect {
-	private final int amount;
-	private final StatModifierType mode;
+	public final int amount;
+	public final StatModifierType mode;
 
 	public Mp(StatsSet params) {
 		amount = params.getInt("amount", 0);

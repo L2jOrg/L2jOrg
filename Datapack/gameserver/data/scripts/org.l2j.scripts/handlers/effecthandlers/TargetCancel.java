@@ -13,7 +13,7 @@ import org.l2j.gameserver.model.stats.Formulas;
  * @author -Nemesiss-, Adry_85
  */
 public final class TargetCancel extends AbstractEffect {
-	private final int chance;
+	public final int chance;
 	
 	public TargetCancel(StatsSet params)
 	{

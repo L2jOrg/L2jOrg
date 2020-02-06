@@ -22,8 +22,8 @@ import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMe
  */
 public final class CallPc extends AbstractEffect {
 
-	private final int itemId;
-	private final int itemCount;
+	public final int itemId;
+	public final int itemCount;
 	
 	public CallPc(StatsSet params) {
 		itemId = params.getInt("itemId", 0);

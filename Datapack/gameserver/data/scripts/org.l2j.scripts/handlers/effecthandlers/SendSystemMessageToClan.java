@@ -13,12 +13,11 @@ import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 
 /**
- * Item Effect: Increase/decrease PK count permanently.
  * @author Nik
  */
 public class SendSystemMessageToClan extends AbstractEffect {
 
-	private final SystemMessage message;
+	public final SystemMessage message;
 	
 	public SendSystemMessageToClan(StatsSet params) {
 		final int id = params.getInt("id", 0);

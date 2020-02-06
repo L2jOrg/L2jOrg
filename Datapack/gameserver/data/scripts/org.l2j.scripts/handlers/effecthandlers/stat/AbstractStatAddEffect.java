@@ -11,8 +11,8 @@ import org.l2j.gameserver.model.stats.Stat;
  */
 public class AbstractStatAddEffect extends AbstractEffect {
 
-    private final Stat stat;
-    protected final double amount;
+    public final Stat stat;
+    public final double amount;
 
     public AbstractStatAddEffect(StatsSet params, Stat stat) {
         this.stat = stat;

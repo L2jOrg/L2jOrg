@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.skillconditionhandlers;
 
 import org.l2j.gameserver.enums.SkillConditionAffectType;
@@ -29,38 +13,25 @@ import static org.l2j.gameserver.util.GameUtils.isCreature;
 /**
  * @author UnAfraid
  */
-public class OpCheckAbnormalSkillCondition implements ISkillCondition
-{
-	private final AbnormalType _type;
-	private final int _level;
-	private final boolean _hasAbnormal;
-	private final SkillConditionAffectType _affectType;
+public class OpCheckAbnormalSkillCondition implements ISkillCondition {
+	public final AbnormalType type;
+	public final int level;
+	public final boolean hasAbnormal;
+	public final SkillConditionAffectType affectType;
 	
-	public OpCheckAbnormalSkillCondition(StatsSet params)
-	{
-		_type = params.getEnum("type", AbnormalType.class);
-		_level = params.getInt("level");
-		_hasAbnormal = params.getBoolean("hasAbnormal");
-		_affectType = params.getEnum("affectType", SkillConditionAffectType.class, SkillConditionAffectType.TARGET);
+	public OpCheckAbnormalSkillCondition(StatsSet params) {
+		type = params.getEnum("type", AbnormalType.class);
+		level = params.getInt("level");
+		hasAbnormal = params.getBoolean("hasAbnormal");
+		affectType = params.getEnum("affectType", SkillConditionAffectType.class, SkillConditionAffectType.TARGET);
 	}
 	
 	@Override
-	public boolean canUse(Creature caster, Skill skill, WorldObject target)
-	{
-		switch (_affectType)
-		{
-			case CASTER:
-			{
-				return caster.getEffectList().hasAbnormalType(_type, info -> (info.getSkill().getAbnormalLvl() >= _level)) == _hasAbnormal;
-			}
-			case TARGET:
-			{
-				if (isCreature(target))
-				{
-					return ((Creature) target).getEffectList().hasAbnormalType(_type, info -> (info.getSkill().getAbnormalLvl() >= _level)) == _hasAbnormal;
-				}
-			}
-		}
-		return false;
+	public boolean canUse(Creature caster, Skill skill, WorldObject target) {
+		return switch (affectType) {
+			case CASTER -> caster.getEffectList().hasAbnormalType(type, info -> (info.getSkill().getAbnormalLvl() >= level)) == hasAbnormal;
+			case TARGET -> isCreature(target) && ((Creature) target).getEffectList().hasAbnormalType(type, info -> (info.getSkill().getAbnormalLvl() >= level)) == hasAbnormal;
+			default -> false;
+		};
 	}
 }

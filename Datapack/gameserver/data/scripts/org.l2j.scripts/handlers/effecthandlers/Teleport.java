@@ -13,7 +13,7 @@ import org.l2j.gameserver.model.skills.Skill;
  * @author Adry_85
  */
 public final class Teleport extends AbstractEffect {
-	private final Location loc;
+	public final Location loc;
 	
 	public Teleport(StatsSet params)
 	{

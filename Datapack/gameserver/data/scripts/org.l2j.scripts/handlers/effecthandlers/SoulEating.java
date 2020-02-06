@@ -23,8 +23,8 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author UnAfraid
  */
 public final class SoulEating extends AbstractEffect {
-	private final int expNeeded;
-	private final int maxSouls;
+	public final int expNeeded;
+	public final int maxSouls;
 	
 	public SoulEating(StatsSet params) {
 		expNeeded = params.getInt("expNeeded");

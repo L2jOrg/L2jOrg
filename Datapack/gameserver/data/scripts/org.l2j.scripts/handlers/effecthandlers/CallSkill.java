@@ -18,8 +18,8 @@ import static java.util.Objects.nonNull;
  */
 public final class CallSkill extends AbstractEffect {
 
-	private final SkillHolder skill;
-	private final int skillLevelScaleTo;
+	public final SkillHolder skill;
+	public final int skillLevelScaleTo;
 	
 	public CallSkill(StatsSet params) {
 		skill = new SkillHolder(params.getInt("skillId"), params.getInt("skillLevel", 1), params.getInt("skillSubLevel", 0));

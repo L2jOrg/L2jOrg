@@ -17,7 +17,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * Heal Over Time effect implementation.
  */
 public final class HealOverTime extends AbstractEffect {
-	private final double power;
+	public final double power;
 	
 	public HealOverTime(StatsSet params) {
 		power = params.getDouble("power", 0);

@@ -23,12 +23,12 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public final class EnergyAttack extends AbstractEffect {
 
-	private final double power;
-	private final int chargeConsume;
-	private final int criticalChance;
-	private final boolean ignoreShieldDefence;
-	private final boolean overHit;
-	private final double pDefMod;
+	public final double power;
+	public final int chargeConsume;
+	public final int criticalChance;
+	public final boolean ignoreShieldDefence;
+	public final boolean overHit;
+	public final double pDefMod;
 	
 	public EnergyAttack(StatsSet params) {
 		power = params.getDouble("power", 0);

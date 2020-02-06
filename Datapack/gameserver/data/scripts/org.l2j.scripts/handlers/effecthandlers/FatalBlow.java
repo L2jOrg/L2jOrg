@@ -23,12 +23,12 @@ import static org.l2j.gameserver.util.GameUtils.isAttackable;
  * @author Adry_85
  */
 public final class FatalBlow extends AbstractEffect {
-	private final double power;
-	private final double chanceBoost;
-	private final double criticalChance;
+	public final double power;
+	public final double chanceBoost;
+	public final double criticalChance;
 	private final Set<AbnormalType> abnormals;
 	private final double abnormalPower;
-	private final boolean overHit;
+	public final boolean overHit;
 	
 	public FatalBlow(StatsSet params) {
 		power = params.getDouble("power");

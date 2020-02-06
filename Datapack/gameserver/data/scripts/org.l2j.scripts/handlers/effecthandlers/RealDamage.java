@@ -13,7 +13,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public class RealDamage extends AbstractEffect {
 
-	private final double power;
+	public final double power;
 	
 	public RealDamage(StatsSet params)
 	{

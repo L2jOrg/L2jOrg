@@ -30,21 +30,17 @@ import static org.l2j.gameserver.util.GameUtils.isCreature;
 public final class TriggerSkillByAttack extends AbstractEffect {
 	private final int minAttackerLevel;
 	private final int maxAttackerLevel;
-	private final int minDamage;
-	private final int chance;
-	private final SkillHolder skill;
-	private final TargetType targetType;
+	public final int minDamage;
+	public final int chance;
+	public final SkillHolder skill;
+	public final TargetType targetType;
 	private final InstanceType instanceType;
-	private int allowWeapons;
-	private final Boolean isCritical;
+	public int allowWeapons;
+	public final Boolean isCritical;
 	private final boolean allowNormalAttack;
 	private final boolean allowSkillAttack;
 	private final boolean allowReflect;
-	
-	/**
-	 * @param params
-	 */
-	
+
 	public TriggerSkillByAttack(StatsSet params) {
 		minAttackerLevel = params.getInt("minAttackerLevel", 1);
 		maxAttackerLevel = params.getInt("maxAttackerLevel", 127);

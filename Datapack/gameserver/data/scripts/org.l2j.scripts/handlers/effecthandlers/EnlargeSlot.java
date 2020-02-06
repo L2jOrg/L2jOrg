@@ -17,8 +17,8 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public class EnlargeSlot extends AbstractEffect {
 
-	private final StorageType type;
-	private final double amount;
+	public final StorageType type;
+	public final double amount;
 	
 	public EnlargeSlot(StatsSet params) {
 		amount = params.getDouble("amount", 0);

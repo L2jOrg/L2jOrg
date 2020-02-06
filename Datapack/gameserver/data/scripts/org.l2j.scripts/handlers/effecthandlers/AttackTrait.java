@@ -17,7 +17,7 @@ import java.util.Map.Entry;
  */
 public final class AttackTrait extends AbstractEffect {
 
-	private final Map<TraitType, Float> attackTraits = new HashMap<>();
+	public final Map<TraitType, Float> attackTraits = new HashMap<>();
 	
 	public AttackTrait(StatsSet params) {
 

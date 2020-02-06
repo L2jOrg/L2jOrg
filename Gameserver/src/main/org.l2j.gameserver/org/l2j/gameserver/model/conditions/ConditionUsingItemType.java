@@ -33,8 +33,8 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author mkizub
  */
 public final class ConditionUsingItemType extends Condition {
-    private final boolean _armor;
-    private final int _mask;
+    public final boolean _armor;
+    public final int _mask;
 
     /**
      * Instantiates a new condition using item type.

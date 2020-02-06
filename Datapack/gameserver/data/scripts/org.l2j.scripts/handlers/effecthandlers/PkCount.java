@@ -15,7 +15,7 @@ import static java.util.Objects.isNull;
  * @author Nik
  */
 public class PkCount extends AbstractEffect {
-	private final int amount;
+	public final int amount;
 	
 	public PkCount(StatsSet params)
 	{

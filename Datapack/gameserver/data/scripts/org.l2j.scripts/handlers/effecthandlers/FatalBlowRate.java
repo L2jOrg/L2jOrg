@@ -13,8 +13,8 @@ import org.l2j.gameserver.model.stats.Stat;
  * @author JoeAlisson
  */
 public class FatalBlowRate extends AbstractEffect {
-	private final double amount;
-	private final StatModifierType mode;
+	public final double amount;
+	public final StatModifierType mode;
 	
 	public FatalBlowRate(StatsSet params) {
 		amount = params.getDouble("amount", 0);

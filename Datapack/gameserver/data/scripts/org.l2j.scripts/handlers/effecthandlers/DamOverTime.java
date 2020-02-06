@@ -13,8 +13,8 @@ import org.l2j.gameserver.network.SystemMessageId;
  * Dam Over Time effect implementation.
  */
 public final class DamOverTime extends AbstractEffect {
-	private final boolean canKill;
-	private final double power;
+	public final boolean canKill;
+	public final double power;
 	
 	public DamOverTime(StatsSet params) {
 		canKill = params.getBoolean("canKill", false);

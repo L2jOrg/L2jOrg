@@ -11,8 +11,8 @@ import org.l2j.gameserver.model.stats.Stat;
  * @author Sdw
  */
 public class ResistAbnormalByCategory extends AbstractEffect {
-	private final DispelSlotType slot;
-	private final double amount;
+	public final DispelSlotType slot;
+	public final double amount;
 	
 	public ResistAbnormalByCategory(StatsSet params) {
 		amount = params.getDouble("amount", 0);

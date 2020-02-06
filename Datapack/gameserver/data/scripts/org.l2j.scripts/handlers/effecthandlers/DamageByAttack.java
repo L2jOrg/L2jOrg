@@ -14,13 +14,14 @@ import org.l2j.gameserver.model.stats.Stat;
  * As for example in retail this effect does reduce reflected damage taken (because it is received damage), as well as it does not decrease reflected damage done,<br>
  * because reflected damage is being calculated with the original attack damage and not this altered one.<br>
  * Multiple values of this effect add-up to each other rather than multiplying with each other. Be careful, there were cases in retail where damage is deacreased to 0.
+ *
  * @author Nik
  * @author JoeAlisson
  */
 public class DamageByAttack extends AbstractEffect {
 
-	private final double value;
-	private final DamageByAttackType type;
+	public final double value;
+	public final DamageByAttackType type;
 	
 	public DamageByAttack(StatsSet params) {
 		value = params.getDouble("amount");

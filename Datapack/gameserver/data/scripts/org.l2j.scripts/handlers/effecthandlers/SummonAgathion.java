@@ -17,7 +17,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author Zoey76
  */
 public final class SummonAgathion extends AbstractEffect {
-	private final int npcId;
+	public final int npcId;
 	
 	public SummonAgathion(StatsSet params) {
 		if (params.isEmpty()) {

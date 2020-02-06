@@ -13,9 +13,9 @@ import org.l2j.gameserver.model.stats.Stat;
  * @author UnAfraid
  */
 public class StatByMoveType extends AbstractEffect {
-	private final Stat stat;
-	private final MoveType type;
-	private final double value;
+	public final Stat stat;
+	public final MoveType type;
+	public final double value;
 	
 	public StatByMoveType(StatsSet params) {
 		stat = params.getEnum("stat", Stat.class);

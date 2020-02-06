@@ -28,12 +28,12 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author Nik
  */
 public final class PhysicalAttack extends AbstractEffect {
-	private final double power;
-	private final double pAtkMod;
-	private final double pDefMod;
-	private final double criticalChance;
-	private final boolean ignoreShieldDefence;
-	private final boolean overHit;
+	public final double power;
+	public final double pAtkMod;
+	public final double pDefMod;
+	public final double criticalChance;
+	public final boolean ignoreShieldDefence;
+	public final boolean overHit;
 	
 	private final Set<AbnormalType> abnormals;
 	private final double abnormalPowerMod;

@@ -12,8 +12,8 @@ import org.l2j.gameserver.util.MathUtil;
  * @author Sdw
  */
 public class MagicMpCost extends AbstractEffect {
-	private final int magicType;
-	private final double amount;
+	public final int magicType;
+	public final double amount;
 	
 	public MagicMpCost(StatsSet params) {
 		magicType = params.getInt("magicType", 0);

@@ -11,7 +11,7 @@ import org.l2j.gameserver.model.stats.Stat;
  * @author Sdw
  */
 public class MaxMp extends AbstractStatEffect {
-    private final boolean heal;
+    public final boolean heal;
 
     public MaxMp(StatsSet params) {
         super(params, Stat.MAX_MP);

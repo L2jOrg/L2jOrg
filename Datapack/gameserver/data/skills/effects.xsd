@@ -1,0 +1,1103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://l2j.org"
+           xmlns="http://l2j.org"
+           elementFormDefault="qualified">
+
+    <xs:include schemaLocation="../xsd/common.xsd"/>
+
+    <xs:element name="abstractEffect" type="Effect" abstract="true"/>
+    <xs:element name="effect" type="NamedEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="physical-attack" type="PhysicalAttackEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="physic-defense" type="PhysicalDefenseEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="randomize-hate" type="RandomizeHateEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="stat-modify" type="StatModifyEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="stat-hp-based" type="StatHpBasedEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="stat-position-based" type="StatPositionBasedEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="attack-trait" type="AttackTraitEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="backstab" type="BackstabEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="block-abnormal" type="BlockAbnormalEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="block-action" type="BlockActionEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="block-all-actions" type="BlockAllActionsEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="block-skill" type="BlockSkillEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="call-pc" type="CallPcEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="call-skill" type="CallSkillEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="cp" type="CpEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="damage-block" type="DamageBlockEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="damage-by-attack" type="DamageByAttackEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="damage-over-time" type="DamageOverTimeEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="defence-trait" type="DefenceTraitEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="dispel-by-category" type="DispelByCategoryEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="dispel" type="DispelEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="dispel-myself" type="DispelMyselfEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="dispel-probability" type="DispelProbabilityEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="energy-attack" type="EnergyAttackEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="enlarge-slot" type="EnlargeSlotEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="escape" type="EscapeEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="fatal-blow" type="FatalBlowEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="feed" type="FeedEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="acquire-xp-sp" type="AcquireXpAndSpEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="headquarter" type="HeadquarterEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="hp" type="HpEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="hp-drain" type="HpDrainEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="knockback" type="KnockbackEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="lethal" type="LethalEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="magical-attack" type="MagicalAttackEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="magical-attack-by-abnormal" type="MagicalAttackByAbnormalEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="magical-attack-mp" type="MagicalAttackMpEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="magical-attack-range" type="MagicalAttackRangeEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="magic-cost" type="MagicCostEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="vital-stat-modify" type="VitalStatModifyEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="vital-modify" type="VitalModifyEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="mp" type="MpEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="physical-attack-hp-link" type="PhysicalAttackHpLinkEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="physical-soul-attack" type="PhysicalSoulAttackEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="pull-back" type="PullBackEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="reduce-drop-penalty" type="ReduceDropPenaltyEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="resist-abnormal-by-category" type="ResistAbnormalByCategoryEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="resist-dispel-by-category" type="ResistDispelByCategoryEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="restoration" type="RestorationEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="random-restoration" type="RandomRestorationEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="reuse" type="ReuseEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="reuse-skill" type="ReuseSkillEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="clan-system-message" type="ClanSystemMessageEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="servitor-share" type="ServitorShareEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="skill-critical" type="SkillCriticalEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="skill-evasion" type="SkillEvasionEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="soul-blow" type="SoulBlowEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="soul-eating" type="SoulEatingEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="speed" type="SpeedEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="stat-by-move-type" type="StatByMoveType" substitutionGroup="abstractEffect"/>
+    <xs:element name="stat" type="StatEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="steal-abnormal" type="StealAbnormalEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="summon" type="SummonEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="summon-agathion" type="SummonAgathionEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="summon-cubic" type="SummonCubicEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="summon-npc" type="SummonNpcEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="take-castle" type="TakeCastleEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="teleport" type="TeleportEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="transformation" type="TransformationEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="trigger-skill-by-attack" type="TriggerSkillByAttackEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="trigger-skill-by-avoid" type="TriggerSkillByAvoidEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="trigger-skill-by-damage" type="TriggerSkillByDamageEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="trigger-skill-by-magic" type="TriggerSkillByMagicEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="trigger-skill-by-skill" type="TriggerSkillBySkillEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="two-hand-blunt-bonus" type="TwoHandBluntBonusEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="two-hand-sword-bonus" type="TwoHandSwordBonusEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="vampiric-attack" type="VampiricAttackEffect" substitutionGroup="abstractEffect"/>
+
+    <xs:complexType name="VampiricAttackEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="chance" type="xs:int" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="TwoHandSwordBonusEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:sequence>
+                    <xs:element name="accuracy" type="MappedLevelValue"/>
+                </xs:sequence>
+                <xs:attribute name="mode" type="ChangeMode" default="DIFF"/>
+                <xs:attribute name="accuracy-mode" type="ChangeMode" default="DIFF"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="TwoHandBluntBonusEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:sequence>
+                    <xs:element name="accuracy" type="MappedLevelValue"/>
+                </xs:sequence>
+                <xs:attribute name="mode" type="ChangeMode" default="DIFF"/>
+                <xs:attribute name="accuracy-mode" type="ChangeMode" default="DIFF"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="TriggerSkillBySkillEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="skill" type="xs:int" use="required"/>
+                <xs:attribute name="skill-trigger" type="xs:int" use="required"/>
+                <xs:attribute name="chance" type="xs:int" use="required"/>
+                <xs:attribute name="target" type="TargetType" default="TARGET"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="TriggerSkillByMagicEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:sequence>
+                    <xs:element name="types" type="intList"/>
+                </xs:sequence>
+                <xs:attribute name="skill" type="xs:int" use="required"/>
+                <xs:attribute name="chance" type="xs:int" use="required"/>
+                <xs:attribute name="target" type="TargetType" default="TARGET"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="TriggerSkillByDamageEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:sequence>
+                    <xs:element name="chance" type="MappedLevelValue"/>
+                </xs:sequence>
+                <xs:attribute name="skill" type="xs:int" use="required"/>
+                <xs:attribute name="attacker" type="InstanceType" default="Creature"/>
+                <xs:attribute name="min-damage" type="xs:int" default="1"/>
+                <xs:attribute name="target" type="TargetType" default="SELF"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="TriggerSkillByAvoidEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="skill" type="xs:int" use="required"/>
+                <xs:attribute name="chance" type="xs:int" use="required"/>
+                <xs:attribute name="target" type="TargetType" default="TARGET"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="TriggerSkillByAttackEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:sequence>
+                    <xs:element name="chance" type="MappedLevelValue"/>
+                    <xs:element name="min-damage" type="MappedLevelValue"/>
+                    <xs:element name="weapons" type="WeaponTypeList"/>
+                </xs:sequence>
+                <xs:attribute name="skill" type="xs:int" use="required"/>
+                <xs:attribute name="target" type="TargetType" default="SELF"/>
+                <xs:attribute name="critical" type="xs:boolean" default="false"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="TransformationEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="id" type="xs:int" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="TeleportEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:sequence>
+                    <xs:element name="location" type="LeveledLocation" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="LeveledLocation">
+        <xs:complexContent>
+            <xs:extension base="Location">
+                <xs:attribute name="level" type="xs:int" default="1"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="TakeCastleEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="side" type="CastleSide" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="SummonNpcEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:sequence>
+                    <xs:element name="npc" type="MappedLevelValue"/>
+                </xs:sequence>
+                <xs:attribute name="despawn-delay" type="xs:int" default="20000"/>
+                <xs:attribute name="count" type="xs:int" default="1"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="SummonCubicEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="id" type="xs:int" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="SummonAgathionEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="id" type="xs:int" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="SummonEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:sequence>
+                    <xs:element name="npc" type="MappedLevelValue"/>
+                    <xs:element name="consume-count" type="MappedLevelValue"/>
+                </xs:sequence>
+                <xs:attribute name="experience-multiplier" type="xs:float" default="1.0"/>
+                <xs:attribute name="consume-item" type="xs:int" use="required"/>
+                <xs:attribute name="life-time" type="xs:int" default="0"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="StealAbnormalEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="category" type="AbnormalCategory" use="required"/>
+                <xs:attribute name="rate" type="xs:int" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="StatEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="type" type="BaseStat" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="StatByMoveType">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="stat" type="StatName" use="required"/>
+                <xs:attribute name="type" type="MoveType" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="SpeedEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="mode" type="ChangeMode" default="DIFF"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="SoulEatingEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:sequence>
+                    <xs:element name="experience" type="MappedLevelValue"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="SoulBlowEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="over-hit" type="xs:boolean" default="false"/>
+                <xs:attribute name="chance-boost" type="xs:int" default="0"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="SkillEvasionEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="type" type="xs:int" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="SkillCriticalEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="stat" type="BaseStat" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ServitorShareEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:sequence>
+                    <xs:element name="stat" type="MappedLevelStat" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="MappedLevelStat">
+        <xs:sequence>
+            <xs:element name="power" type="MappedLevelValue"/>
+        </xs:sequence>
+        <xs:attribute name="type" type="StatName" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="ClanSystemMessageEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="id" type="xs:int" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ReuseSkillEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="id" type="xs:int" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ReuseEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="type" type="xs:int" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="RandomRestorationEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:sequence>
+                    <xs:element name="item" type="ChancedItem" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ChancedItem">
+        <xs:complexContent>
+            <xs:extension base="ItemInfo">
+                <xs:attribute name="chance" type="xs:float" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="RestorationEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="item" type="xs:int" use="required"/>
+                <xs:attribute name="count" type="xs:int" default="1"/>
+                <xs:attribute name="enchant" type="xs:short" default="0"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ResistDispelByCategoryEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="category" type="AbnormalCategory" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ResistAbnormalByCategoryEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="category" type="AbnormalCategory" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ReduceDropPenaltyEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:sequence>
+                    <xs:element name="experience" type="MappedLevelValue"/>
+                    <xs:element name="death-penalty" type="MappedLevelValue"/>
+                </xs:sequence>
+                <xs:attribute name="type" type="ReduceDropType" default="ANY"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="ReduceDropType">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="MOB"/>
+            <xs:enumeration value="PK"/>
+            <xs:enumeration value="RAID"/>
+            <xs:enumeration value="ANY"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="PullBackEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="delay" type="xs:int" default="-1"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="PhysicalSoulAttackEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="over-hit" type="xs:boolean" default="false"/>
+                <xs:attribute name="critical-chance" type="xs:int" default="0"/>
+                <xs:attribute name="ignore-shield" type="xs:boolean" default="false"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="PhysicalAttackHpLinkEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="over-hit" type="xs:boolean" default="false"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="MpEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="mode" type="ChangeMode" default="DIFF"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="VitalModifyEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="hp" type="xs:int" default="-1"/>
+                <xs:attribute name="cp" type="xs:int" default="-1"/>
+                <xs:attribute name="mp" type="xs:int" default="-1"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="VitalStatModifyEffect">
+        <xs:complexContent>
+            <xs:extension base="StatModifyEffect">
+                <xs:attribute name="heal" type="xs:boolean" default="false"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="MagicCostEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="type" type="xs:int" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="MagicalAttackRangeEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="shield-defense" type="xs:int" default="0"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="MagicalAttackMpEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="critical" type="xs:boolean" use="required"/>
+                <xs:attribute name="critical-limit" type="xs:int" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="MagicalAttackByAbnormalEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="abnormals" type="AbnormalTypeList"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="MagicalAttackEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="over-hit" type="xs:boolean" default="false"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="LethalEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:sequence>
+                    <xs:element name="half-power" type="MappedLevelValue"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="KnockbackEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="speed" type="xs:int" use="required"/>
+                <xs:attribute name="knock-down" type="xs:boolean" default="false"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="HpDrainEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="percentage" type="xs:int" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="HpEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="mode" type="ChangeMode" default="DIFF"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="HeadquarterEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="advanced" type="xs:boolean" default="false"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="AcquireXpAndSpEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="xp" type="xs:long" use="required"/>
+                <xs:attribute name="sp" type="xs:long" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="FeedEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="normal" type="xs:int" default="0"/>
+                <xs:attribute name="ride" type="xs:int" default="0"/>
+                <xs:attribute name="wyvern" type="xs:int" default="0"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="FatalBlowEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="chance-boost" type="xs:float"/>
+                <xs:attribute name="critical-chance" type="xs:int" default="0"/>
+                <xs:attribute name="over-hit" type="xs:boolean"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="EscapeEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="location" type="TeleportLocation" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="EnlargeSlotEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="type" type="StorageType" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="EnergyAttackEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="critical-chance" type="xs:int" default="0"/>
+                <xs:attribute name="ignore-shield" type="xs:boolean" default="false"/>
+                <xs:attribute name="over-hit" type="xs:boolean" default="false"/>
+                <xs:attribute name="consume-charges" type="xs:int" use="required"/>
+                <xs:attribute name="physical-defense-mod" type="xs:float" default="1"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="DispelProbabilityEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="abnormals" type="AbnormalTypeList" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="DispelMyselfEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="abnormals" type="AbnormalTypeList" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="DispelEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:sequence>
+                    <xs:element name="abnormal" type="DispelAbnormal" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="DispelAbnormal">
+        <xs:sequence>
+            <xs:element name="power" type="MappedLevelValue"/>
+        </xs:sequence>
+        <xs:attribute name="type" type="AbnormalType"/>
+    </xs:complexType>
+
+    <xs:complexType name="DispelByCategoryEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="category" type="AbnormalCategory"/>
+                <xs:attribute name="max" type="xs:int" default="-1"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="AbnormalCategory">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="ALL"/>
+            <xs:enumeration value="BUFF"/>
+            <xs:enumeration value="DEBUFF"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="DefenceTraitEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:sequence>
+                    <xs:element name="trait" type="TraitEffect" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="DamageOverTimeEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="can-kill" type="xs:boolean" default="false"/>
+                <xs:attribute name="mode" type="ChangeMode" default="DIFF"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="DamageByAttackEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="type" type="DamageByAttackType" default="NONE"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="DamageByAttackType">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="NONE"/>
+            <xs:enumeration value="PK"/>
+            <xs:enumeration value="MOB"/>
+            <xs:enumeration value="BOSS"/>
+            <xs:enumeration value="ENEMY_ALL"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="DamageBlockEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="block-hp" type="xs:boolean" default="false"/>
+                <xs:attribute name="block-mp" type="xs:boolean" default="false"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="StatPositionBasedEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="position" type="POSITION" use="required"/>
+                <xs:attribute name="stat" type="StatName" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="CpEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="mode" type="ChangeMode" default="DIFF"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="CallSkillEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="skill" type="xs:int"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="CallPcEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="item" type="xs:int"/>
+                <xs:attribute name="item-count" type="xs:int"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="BlockSkillEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:sequence>
+                    <xs:element name="magic-types" type="intList"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="BlockAllActionsEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:sequence>
+                    <xs:element name="allowed-skills" type="intList" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="BlockActionEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:sequence>
+                    <xs:element name="actions" type="intList"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="BlockAbnormalEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:sequence>
+                    <xs:element name="abnormals" type="AbnormalTypeList"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="NamedEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="name" type="xs:token" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="BackstabEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:sequence>
+                    <xs:element name="critical-chance" type="MappedLevelValue"/>
+                </xs:sequence>
+                <xs:attribute name="over-hit" type="xs:boolean" default="false"/>
+                <xs:attribute name="chance-boost" type="xs:float" default="0"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="AttackTraitEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:sequence>
+                    <xs:element name="trait" type="TraitEffect" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="TraitEffect">
+        <xs:sequence>
+            <xs:element name="power" type="MappedLevelValue"/>
+        </xs:sequence>
+        <xs:attribute name="type" type="Trait" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="StatHpBasedEffect">
+        <xs:complexContent>
+            <xs:extension base="StatModifyEffect">
+                <xs:attribute name="hp-percent" type="xs:int" default="-1"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="StatModifyEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:sequence>
+                    <xs:element name="weapon-type" type="WeaponTypeList" minOccurs="0"/>
+                    <xs:element name="armor-type" type="ArmorTypeList" minOccurs="0"/>
+                </xs:sequence>
+                <xs:attribute name="stat" type="StatName" use="required"/>
+                <xs:attribute name="stat-add" type="StatName"/>
+                <xs:attribute name="mode" type="ChangeMode" default="DIFF"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="RandomizeHateEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="chance" type="xs:int"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="PhysicalAttackEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="ignore-shield" type="xs:boolean" default="false"/>
+                <xs:attribute name="critical-chance" type="xs:float" default="0"/>
+                <xs:attribute name="over-hit" type="xs:boolean" default="false"/>
+                <xs:attribute name="attack-mod" type="xs:float" default="1.0"/>
+                <xs:attribute name="defense-mod" type="xs:float" default="1.0"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="PhysicalDefenseEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="amount" type="xs:int" use="required"/>
+                <xs:attribute name="mode" type="ChangeMode" default="DIFF"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="ChangeMode">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="DIFF"/>
+            <xs:enumeration value="PER"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="Effect" abstract="true">
+        <xs:sequence>
+            <xs:element name="power" type="MappedLevelValue" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="ticks" type="xs:int" default="0"/>
+        <xs:attribute name="scope" type="EffectScope" default="GENERAL"/>
+        <xs:attribute name="start-level" type="xs:int" default="1"/>
+        <xs:attribute name="stop-level" type="xs:int" default="-1"/>
+    </xs:complexType>
+
+    <xs:complexType name="Effects">
+        <xs:sequence>
+            <xs:element ref="abstractEffect" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="EffectScope">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="GENERAL"/>
+            <xs:enumeration value="START"/>
+            <xs:enumeration value="SELF"/>
+            <xs:enumeration value="CHANNELING"/>
+            <xs:enumeration value="PVP"/>
+            <xs:enumeration value="PVE"/>
+            <xs:enumeration value="END"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- TODO use Stats. Change the Stats simpleType on commons.xsd -->
+    <xs:simpleType name="StatName">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="MAX_HP"/>
+            <xs:enumeration value="MAX_MP"/>
+            <xs:enumeration value="MAX_CP"/>
+            <xs:enumeration value="MAX_RECOVERABLE_HP"/>
+            <xs:enumeration value="MAX_RECOVERABLE_MP"/>
+            <xs:enumeration value="MAX_RECOVERABLE_CP"/>
+            <xs:enumeration value="REGENERATE_HP_RATE"/>
+            <xs:enumeration value="REGENERATE_CP_RATE"/>
+            <xs:enumeration value="REGENERATE_MP_RATE"/>
+            <xs:enumeration value="ADDITIONAL_POTION_HP"/>
+            <xs:enumeration value="ADDITIONAL_POTION_MP"/>
+            <xs:enumeration value="ADDITIONAL_POTION_CP"/>
+            <xs:enumeration value="MANA_CHARGE"/>
+            <xs:enumeration value="HEAL_EFFECT"/>
+            <xs:enumeration value="HEAL_EFFECT_ADD"/>
+            <xs:enumeration value="PHYSICAL_DEFENCE"/>
+            <xs:enumeration value="MAGICAL_DEFENCE"/>
+            <xs:enumeration value="PHYSICAL_ATTACK"/>
+            <xs:enumeration value="MAGIC_ATTACK"/>
+            <xs:enumeration value="PHYSICAL_ATTACK_SPEED"/>
+            <xs:enumeration value="MAGIC_ATTACK_SPEED"/>
+            <xs:enumeration value="ATK_REUSE"/>
+            <xs:enumeration value="SHIELD_DEFENCE"/>
+            <xs:enumeration value="CRITICAL_DAMAGE"/>
+            <xs:enumeration value="CRITICAL_DAMAGE_ADD"/>
+            <xs:enumeration value="HATE_ATTACK"/>
+            <xs:enumeration value="REAR_DAMAGE_RATE"/>
+            <xs:enumeration value="PVP_PHYSICAL_ATTACK_DAMAGE"/>
+            <xs:enumeration value="PVP_MAGICAL_SKILL_DAMAGE"/>
+            <xs:enumeration value="PVP_PHYSICAL_SKILL_DAMAGE"/>
+            <xs:enumeration value="PVP_PHYSICAL_ATTACK_DEFENCE"/>
+            <xs:enumeration value="PVP_MAGICAL_SKILL_DEFENCE"/>
+            <xs:enumeration value="PVP_PHYSICAL_SKILL_DEFENCE"/>
+            <xs:enumeration value="PVE_PHYSICAL_ATTACK_DAMAGE"/>
+            <xs:enumeration value="PVE_PHYSICAL_SKILL_DAMAGE"/>
+            <xs:enumeration value="PVE_MAGICAL_SKILL_DAMAGE"/>
+            <xs:enumeration value="PVE_PHYSICAL_ATTACK_DEFENCE"/>
+            <xs:enumeration value="PVE_PHYSICAL_SKILL_DEFENCE"/>
+            <xs:enumeration value="PVE_MAGICAL_SKILL_DEFENCE"/>
+            <xs:enumeration value="PVE_RAID_PHYSICAL_ATTACK_DEFENCE"/>
+            <xs:enumeration value="PVE_RAID_PHYSICAL_SKILL_DEFENCE"/>
+            <xs:enumeration value="PVE_RAID_MAGICAL_SKILL_DEFENCE"/>
+            <xs:enumeration value="PVP_DAMAGE_TAKEN"/>
+            <xs:enumeration value="PVE_DAMAGE_TAKEN"/>
+            <xs:enumeration value="MAGIC_CRITICAL_DAMAGE"/>
+            <xs:enumeration value="PHYSICAL_SKILL_POWER"/>
+            <xs:enumeration value="MAGICAL_SKILL_POWER"/>
+            <xs:enumeration value="SKILL_POWER_ADD"/>
+            <xs:enumeration value="CRITICAL_DAMAGE_SKILL"/>
+            <xs:enumeration value="CRITICAL_DAMAGE_SKILL_ADD"/>
+            <xs:enumeration value="MAGIC_CRITICAL_DAMAGE_ADD"/>
+            <xs:enumeration value="SHIELD_DEFENCE_RATE"/>
+            <xs:enumeration value="CRITICAL_RATE"/>
+            <xs:enumeration value="CRITICAL_RATE_SKILL"/>
+            <xs:enumeration value="MAGIC_CRITICAL_RATE"/>
+            <xs:enumeration value="BLOW_RATE"/>
+            <xs:enumeration value="DEFENCE_CRITICAL_RATE"/>
+            <xs:enumeration value="DEFENCE_CRITICAL_RATE_ADD"/>
+            <xs:enumeration value="DEFENCE_MAGIC_CRITICAL_RATE"/>
+            <xs:enumeration value="DEFENCE_MAGIC_CRITICAL_RATE_ADD"/>
+            <xs:enumeration value="DEFENCE_CRITICAL_DAMAGE"/>
+            <xs:enumeration value="DEFENCE_MAGIC_CRITICAL_DAMAGE"/>
+            <xs:enumeration value="DEFENCE_MAGIC_CRITICAL_DAMAGE_ADD"/>
+            <xs:enumeration value="DEFENCE_CRITICAL_DAMAGE_ADD"/>
+            <xs:enumeration value="DEFENCE_CRITICAL_DAMAGE_SKILL"/>
+            <xs:enumeration value="DEFENCE_CRITICAL_DAMAGE_SKILL_ADD"/>
+            <xs:enumeration value="INSTANT_KILL_RESIST"/>
+            <xs:enumeration value="EXPSP_RATE"/>
+            <xs:enumeration value="BONUS_EXP"/>
+            <xs:enumeration value="BONUS_SP"/>
+            <xs:enumeration value="BONUS_DROP_AMOUNT"/>
+            <xs:enumeration value="BONUS_DROP_RATE"/>
+            <xs:enumeration value="BONUS_SPOIL_RATE"/>
+            <xs:enumeration value="ATTACK_CANCEL"/>
+            <xs:enumeration value="ACCURACY"/>
+            <xs:enumeration value="ACCURACY_MAGIC"/>
+            <xs:enumeration value="EVASION_RATE"/>
+            <xs:enumeration value="MAGIC_EVASION_RATE"/>
+            <xs:enumeration value="PHYSICAL_ATTACK_RANGE"/>
+            <xs:enumeration value="MAGIC_ATTACK_RANGE"/>
+            <xs:enumeration value="ATTACK_COUNT_MAX"/>
+            <xs:enumeration value="PHYSICAL_POLEARM_TARGET_SINGLE"/>
+            <xs:enumeration value="HIT_AT_NIGHT"/>
+            <xs:enumeration value="SPEED"/>
+            <xs:enumeration value="RUN_SPEED"/>
+            <xs:enumeration value="WALK_SPEED"/>
+            <xs:enumeration value="SWIM_RUN_SPEED"/>
+            <xs:enumeration value="SWIM_WALK_SPEED"/>
+            <xs:enumeration value="FLY_RUN_SPEED"/>
+            <xs:enumeration value="FLY_WALK_SPEED"/>
+            <xs:enumeration value="STAT_STR"/>
+            <xs:enumeration value="STAT_CON"/>
+            <xs:enumeration value="STAT_DEX"/>
+            <xs:enumeration value="STAT_INT"/>
+            <xs:enumeration value="STAT_WIT"/>
+            <xs:enumeration value="STAT_MEN"/>
+            <xs:enumeration value="BREATH"/>
+            <xs:enumeration value="FALL"/>
+            <xs:enumeration value="FISHING_EXP_SP_BONUS"/>
+            <xs:enumeration value="DAMAGE_ZONE_VULN"/>
+            <xs:enumeration value="RESIST_DISPEL_BUFF"/>
+            <xs:enumeration value="RESIST_ABNORMAL_DEBUFF"/>
+            <xs:enumeration value="FIRE_RES"/>
+            <xs:enumeration value="WIND_RES"/>
+            <xs:enumeration value="WATER_RES"/>
+            <xs:enumeration value="EARTH_RES"/>
+            <xs:enumeration value="HOLY_RES"/>
+            <xs:enumeration value="DARK_RES"/>
+            <xs:enumeration value="BASE_ATTRIBUTE_RES"/>
+            <xs:enumeration value="MAGIC_SUCCESS_RES"/>
+            <xs:enumeration value="ABNORMAL_RESIST_PHYSICAL"/>
+            <xs:enumeration value="ABNORMAL_RESIST_MAGICAL"/>
+            <xs:enumeration value="FIRE_POWER"/>
+            <xs:enumeration value="WATER_POWER"/>
+            <xs:enumeration value="WIND_POWER"/>
+            <xs:enumeration value="EARTH_POWER"/>
+            <xs:enumeration value="HOLY_POWER"/>
+            <xs:enumeration value="DARK_POWER"/>
+            <xs:enumeration value="REFLECT_DAMAGE_PERCENT"/>
+            <xs:enumeration value="REFLECT_DAMAGE_PERCENT_DEFENSE"/>
+            <xs:enumeration value="REFLECT_SKILL_MAGIC"/>
+            <xs:enumeration value="REFLECT_SKILL_PHYSIC"/>
+            <xs:enumeration value="VENGEANCE_SKILL_MAGIC_DAMAGE"/>
+            <xs:enumeration value="VENGEANCE_SKILL_PHYSICAL_DAMAGE"/>
+            <xs:enumeration value="ABSORB_DAMAGE_PERCENT"/>
+            <xs:enumeration value="ABSORB_DAMAGE_CHANCE"/>
+            <xs:enumeration value="ABSORB_DAMAGE_DEFENCE"/>
+            <xs:enumeration value="TRANSFER_DAMAGE_SUMMON_PERCENT"/>
+            <xs:enumeration value="MANA_SHIELD_PERCENT"/>
+            <xs:enumeration value="TRANSFER_DAMAGE_TO_PLAYER"/>
+            <xs:enumeration value="ABSORB_MANA_DAMAGE_PERCENT"/>
+            <xs:enumeration value="WEIGHT_LIMIT"/>
+            <xs:enumeration value="WEIGHT_PENALTY"/>
+            <xs:enumeration value="INVENTORY_NORMAL"/>
+            <xs:enumeration value="STORAGE_PRIVATE"/>
+            <xs:enumeration value="TRADE_SELL"/>
+            <xs:enumeration value="TRADE_BUY"/>
+            <xs:enumeration value="RECIPE_DWARVEN"/>
+            <xs:enumeration value="RECIPE_COMMON"/>
+            <xs:enumeration value="SKILL_CRITICAL"/>
+            <xs:enumeration value="SKILL_CRITICAL_PROBABILITY"/>
+            <xs:enumeration value="VITALITY_CONSUME_RATE"/>
+            <xs:enumeration value="VITALITY_EXP_RATE"/>
+            <xs:enumeration value="MAX_SOULS"/>
+            <xs:enumeration value="REDUCE_EXP_LOST_BY_PVP"/>
+            <xs:enumeration value="REDUCE_EXP_LOST_BY_MOB"/>
+            <xs:enumeration value="REDUCE_EXP_LOST_BY_RAID"/>
+            <xs:enumeration value="REDUCE_DEATH_PENALTY_BY_PVP"/>
+            <xs:enumeration value="REDUCE_DEATH_PENALTY_BY_MOB"/>
+            <xs:enumeration value="REDUCE_DEATH_PENALTY_BY_RAID"/>
+            <xs:enumeration value="BROOCH_JEWELS"/>
+            <xs:enumeration value="AGATHION_SLOTS"/>
+            <xs:enumeration value="ARTIFACT_SLOTS"/>
+            <xs:enumeration value="MAX_SUMMON_POINTS"/>
+            <xs:enumeration value="MAX_CUBIC"/>
+            <xs:enumeration value="SPHERIC_BARRIER_RANGE"/>
+            <xs:enumeration value="DEBUFF_BLOCK"/>
+            <xs:enumeration value="RANDOM_DAMAGE"/>
+            <xs:enumeration value="DAMAGE_LIMIT"/>
+            <xs:enumeration value="MAX_MOMENTUM"/>
+            <xs:enumeration value="STAT_BONUS_SKILL_CRITICAL"/>
+            <xs:enumeration value="STAT_BONUS_SPEED"/>
+            <xs:enumeration value="SHOTS_BONUS"/>
+            <xs:enumeration value="WORLD_CHAT_POINTS"/>
+            <xs:enumeration value="ATTACK_DAMAGE"/>
+            <xs:enumeration value="ELEMENTAL_SPIRIT_BONUS_XP"/>
+            <xs:enumeration value="ELEMENTAL_SPIRIT_FIRE_ATTACK"/>
+            <xs:enumeration value="ELEMENTAL_SPIRIT_FIRE_DEFENSE"/>
+            <xs:enumeration value="ELEMENTAL_SPIRIT_WATER_ATTACK"/>
+            <xs:enumeration value="ELEMENTAL_SPIRIT_WATER_DEFENSE"/>
+            <xs:enumeration value="ELEMENTAL_SPIRIT_WIND_ATTACK"/>
+            <xs:enumeration value="ELEMENTAL_SPIRIT_WIND_DEFENSE"/>
+            <xs:enumeration value="ELEMENTAL_SPIRIT_EARTH_ATTACK"/>
+            <xs:enumeration value="ELEMENTAL_SPIRIT_EARTH_DEFENSE"/>
+            <xs:enumeration value="ELEMENTAL_SPIRIT_CRITICAL_RATE"/>
+            <xs:enumeration value="ELEMENTAL_SPIRIT_CRITICAL_DAMAGE"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

@@ -17,7 +17,7 @@ import org.l2j.gameserver.model.skills.Skill;
  * @author Gnacik, Zoey76, Adry_85
  */
 public final class DispelBySlotMyself extends AbstractEffect {
-	private final Set<AbnormalType> dispelAbnormals;
+	public final Set<AbnormalType> dispelAbnormals;
 	
 	public DispelBySlotMyself(StatsSet params) {
 		String dispel = params.getString("dispel");

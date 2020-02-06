@@ -21,9 +21,9 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public final class StealAbnormal extends AbstractEffect {
 
-	private final DispelSlotType slot;
-	private final int rate;
-	private final int max;
+	public final DispelSlotType slot;
+	public final int rate;
+	public final int max;
 	
 	public StealAbnormal(StatsSet params) {
 		slot = params.getEnum("slot", DispelSlotType.class, DispelSlotType.BUFF);

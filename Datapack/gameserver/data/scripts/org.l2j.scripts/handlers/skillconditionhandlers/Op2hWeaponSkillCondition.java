@@ -19,7 +19,7 @@ import static org.l2j.gameserver.model.items.BodyPart.TWO_HAND;
  */
 public class Op2hWeaponSkillCondition implements ISkillCondition {
 
-    private final List<WeaponType> _weaponTypes = new ArrayList<>();
+    public final List<WeaponType> _weaponTypes = new ArrayList<>();
 
     public Op2hWeaponSkillCondition(StatsSet params) {
         final List<String> weaponTypes = params.getList("weaponType", String.class);

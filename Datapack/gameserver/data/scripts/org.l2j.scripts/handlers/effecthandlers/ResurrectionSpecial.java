@@ -24,7 +24,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author Zealar
  */
 public final class ResurrectionSpecial extends AbstractEffect {
-	private final int power;
+	public final int power;
 	private final IntSet instanceIds;
 	
 	public ResurrectionSpecial(StatsSet params) {

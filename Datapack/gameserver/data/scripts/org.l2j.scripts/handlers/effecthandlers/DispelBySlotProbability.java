@@ -20,8 +20,8 @@ import static java.util.Objects.isNull;
  */
 public final class DispelBySlotProbability extends AbstractEffect {
 
-	private final Set<AbnormalType> dispelAbnormals;
-	private final int rate;
+	public final Set<AbnormalType> dispelAbnormals;
+	public final int rate;
 	
 	public DispelBySlotProbability(StatsSet params) {
 		final String[] dispelEffects = params.getString("dispel").split(";");

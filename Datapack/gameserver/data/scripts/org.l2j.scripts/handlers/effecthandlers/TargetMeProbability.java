@@ -14,7 +14,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayable;
  * @author Adry_85
  */
 public final class TargetMeProbability extends AbstractEffect {
-	private final int chance;
+	public final int chance;
 	
 	public TargetMeProbability(StatsSet params)
 	{

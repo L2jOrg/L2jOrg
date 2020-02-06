@@ -13,7 +13,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author Adry_85
  */
 public final class TalismanSlot extends AbstractEffect {
-	private final int slots;
+	public final int slots;
 	
 	public TalismanSlot(StatsSet params)
 	{

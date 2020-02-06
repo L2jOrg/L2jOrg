@@ -15,7 +15,7 @@ import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMe
  * @author Zoey76
  */
 public final class HpByLevel extends AbstractEffect {
-	private final double power;
+	public final double power;
 	
 	public HpByLevel(StatsSet params)
 	{

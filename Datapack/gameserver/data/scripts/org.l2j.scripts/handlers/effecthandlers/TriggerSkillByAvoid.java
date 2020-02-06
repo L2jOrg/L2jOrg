@@ -26,9 +26,9 @@ import static org.l2j.gameserver.util.GameUtils.isCreature;
  * @author Zealar
  */
 public final class TriggerSkillByAvoid extends AbstractEffect {
-	private final int chance;
-	private final SkillHolder skill;
-	private final TargetType targetType;
+	public final int chance;
+	public final SkillHolder skill;
+	public final TargetType targetType;
 
 	public TriggerSkillByAvoid(StatsSet params) {
 		chance = params.getInt("chance", 100);

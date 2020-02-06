@@ -21,8 +21,8 @@ import static java.util.Objects.nonNull;
  */
 public final class DispelBySlot extends AbstractEffect {
 
-	private final String dispel;
-	private final Map<AbnormalType, Short> dispelAbnormals;
+	public final String dispel;
+	public final Map<AbnormalType, Short> dispelAbnormals;
 	
 	public DispelBySlot(StatsSet params) {
 		dispel = params.getString("dispel");

@@ -18,7 +18,7 @@ import static org.l2j.gameserver.util.GameUtils.isSummon;
  * Servitor Share effect implementation.
  */
 public final class ServitorShare extends AbstractEffect {
-	private final Map<Stat, Float> sharedStats = new HashMap<>();
+	public final Map<Stat, Float> sharedStats = new HashMap<>();
 	
 	public ServitorShare(StatsSet params) {
 		if (params.isEmpty()) {

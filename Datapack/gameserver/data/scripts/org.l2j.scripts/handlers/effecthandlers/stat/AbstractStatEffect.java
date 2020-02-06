@@ -22,11 +22,11 @@ import static java.util.Objects.nonNull;
  */
 public abstract class AbstractStatEffect extends AbstractEffect {
 
-    protected final Stat addStat;
-    protected final Stat mulStat;
-    protected final double amount;
-    protected final StatModifierType mode;
-    protected final List<Condition> conditions = new ArrayList<>();
+    public final Stat addStat;
+    public final Stat mulStat;
+    public final double amount;
+    public final StatModifierType mode;
+    public final List<Condition> conditions = new ArrayList<>();
 
     public AbstractStatEffect(StatsSet params, Stat stat) {
         this(params, stat, stat);

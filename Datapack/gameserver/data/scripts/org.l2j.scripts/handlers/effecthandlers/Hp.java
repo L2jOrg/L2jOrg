@@ -20,8 +20,8 @@ import static org.l2j.gameserver.util.GameUtils.isDoor;
  * @author JoeAlisson
  */
 public final class Hp extends AbstractEffect {
-	private final int amount;
-	private final StatModifierType mode;
+	public final int amount;
+	public final StatModifierType mode;
 	
 	public Hp(StatsSet params) {
 		amount = params.getInt("amount", 0);

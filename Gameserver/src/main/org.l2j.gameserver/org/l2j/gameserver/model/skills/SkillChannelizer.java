@@ -54,7 +54,7 @@ public class SkillChannelizer implements Runnable {
     public void startChanneling(Skill skill) {
         // Verify for same status.
         if (isChanneling()) {
-            LOGGER.warn("Character: " + toString() + " is attempting to channel skill but he already does!");
+            LOGGER.warn("Character: {} is attempting to channel skill but he already does!", _channelizer);
             return;
         }
 

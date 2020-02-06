@@ -11,7 +11,7 @@ import org.l2j.gameserver.model.stats.Stat;
  * @author Sdw
  */
 public class SkillCritical extends AbstractEffect {
-	private final BaseStats stat;
+	public final BaseStats stat;
 	
 	public SkillCritical(StatsSet params)
 	{

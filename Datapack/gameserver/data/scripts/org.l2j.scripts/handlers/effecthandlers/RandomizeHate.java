@@ -17,7 +17,7 @@ import static org.l2j.gameserver.util.GameUtils.isAttackable;
  * Randomize Hate effect implementation.
  */
 public final class RandomizeHate extends AbstractEffect {
-	private final int chance;
+	public final int chance;
 	
 	public RandomizeHate(StatsSet params)
 	{

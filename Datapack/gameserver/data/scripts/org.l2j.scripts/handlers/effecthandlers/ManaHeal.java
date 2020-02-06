@@ -18,7 +18,7 @@ import static org.l2j.gameserver.util.GameUtils.isDoor;
  * @author UnAfraid
  */
 public final class ManaHeal extends AbstractEffect {
-	private final double power;
+	public final double power;
 	
 	public ManaHeal(StatsSet params)
 	{

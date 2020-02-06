@@ -18,7 +18,7 @@ import static org.l2j.gameserver.util.GameUtils.isDoor;
  * @author UnAfraid
  */
 public final class CpHealPercent extends AbstractEffect {
-	private final double power;
+	public final double power;
 	
 	public CpHealPercent(StatsSet params)
 	{

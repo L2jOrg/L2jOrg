@@ -10,8 +10,8 @@ import org.l2j.gameserver.model.stats.Stat;
  * @author Sdw
  */
 public class VampiricAttack extends AbstractEffect {
-	private final double amount;
-	private final double sum;
+	public final double amount;
+	public final double sum;
 	
 	public VampiricAttack(StatsSet params) {
 		amount = params.getDouble("amount");

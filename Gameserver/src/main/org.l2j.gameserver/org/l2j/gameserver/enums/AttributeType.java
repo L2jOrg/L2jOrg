@@ -1,5 +1,7 @@
 package org.l2j.gameserver.enums;
 
+import org.l2j.gameserver.model.stats.Stat;
+
 /**
  * An enum representing all attribute types.
  *
@@ -77,5 +79,27 @@ public enum AttributeType {
      */
     public AttributeType getOpposite() {
         return ATTRIBUTE_TYPES[((_clientId % 2) == 0) ? (_clientId + 1) : (_clientId - 1)];
+    }
+
+    public Stat toStat() {
+        return switch (this) {
+            case WATER -> Stat.WATER_POWER;
+            case WIND ->  Stat.WIND_POWER;
+            case EARTH -> Stat.EARTH_POWER;
+            case HOLY -> Stat.HOLY_POWER;
+            case DARK -> Stat.DARK_POWER;
+            default ->   Stat.FIRE_POWER;
+        };
+    }
+
+    public Stat toStatResist() {
+        return switch (this) {
+            case WATER -> Stat.WATER_RES;
+            case WIND ->  Stat.WIND_RES;
+            case EARTH -> Stat.EARTH_RES;
+            case HOLY ->  Stat.HOLY_RES;
+            case DARK ->  Stat.DARK_RES;
+            default -> Stat.FIRE_RES;
+        };
     }
 }

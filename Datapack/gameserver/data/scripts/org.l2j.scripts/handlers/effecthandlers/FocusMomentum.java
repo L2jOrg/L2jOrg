@@ -19,8 +19,8 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author DS
  */
 public final class FocusMomentum extends AbstractEffect {
-    private final int amount;
-    private final int maxCharges;
+    public final int amount;
+    public final int maxCharges;
 
     public FocusMomentum(StatsSet params) {
         amount = params.getInt("amount", 1);

@@ -11,7 +11,7 @@ import org.l2j.gameserver.network.SystemMessageId;
  * Mp Consume Per Level effect implementation.
  */
 public final class MpConsumePerLevel extends AbstractEffect {
-	private final double power;
+	public final double power;
 	
 	public MpConsumePerLevel(StatsSet params) {
 		power = params.getDouble("power", 0);

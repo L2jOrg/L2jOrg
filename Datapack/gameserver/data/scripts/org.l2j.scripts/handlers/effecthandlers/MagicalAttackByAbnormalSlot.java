@@ -22,8 +22,8 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author Sdw
  */
 public final class MagicalAttackByAbnormalSlot extends AbstractEffect {
-	private final double power;
-	private final Set<AbnormalType> abnormals;
+	public final double power;
+	public final Set<AbnormalType> abnormals;
 	
 	public MagicalAttackByAbnormalSlot(StatsSet params) {
 		power = params.getDouble("power", 0);

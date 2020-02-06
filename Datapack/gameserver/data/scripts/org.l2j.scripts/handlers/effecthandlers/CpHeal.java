@@ -20,7 +20,7 @@ import static org.l2j.gameserver.util.GameUtils.isDoor;
  * @author JoeAlisson
  */
 public final class CpHeal extends AbstractEffect {
-	private final double power;
+	public final double power;
 	
 	public CpHeal(StatsSet params)
 	{

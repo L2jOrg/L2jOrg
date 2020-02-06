@@ -16,7 +16,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author Adry_85, St3eT
  */
 public final class TakeCastle extends AbstractEffect {
-	private final CastleSide side;
+	public final CastleSide side;
 	
 	public TakeCastle(StatsSet params)
 	{

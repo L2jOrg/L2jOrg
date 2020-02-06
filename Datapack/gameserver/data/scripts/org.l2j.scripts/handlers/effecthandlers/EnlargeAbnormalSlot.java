@@ -13,7 +13,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author Zoey76
  */
 public final class EnlargeAbnormalSlot extends AbstractEffect {
-	private final int slots;
+	public final int slots;
 	
 	public EnlargeAbnormalSlot(StatsSet params)
 	{

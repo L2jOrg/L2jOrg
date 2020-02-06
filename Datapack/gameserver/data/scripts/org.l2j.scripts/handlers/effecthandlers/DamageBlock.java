@@ -10,8 +10,8 @@ import org.l2j.gameserver.model.effects.EffectFlag;
  * @author Nik
  */
 public final class DamageBlock extends AbstractEffect {
-	private final boolean blockHp;
-	private final boolean blockMp;
+	public final boolean blockHp;
+	public final boolean blockMp;
 	
 	public DamageBlock(StatsSet params) {
 		final String type = params.getString("type", null);

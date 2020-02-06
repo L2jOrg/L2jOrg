@@ -27,8 +27,8 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 public final class SummonCubic extends AbstractEffect {
 	private static final Logger LOGGER = LoggerFactory.getLogger(SummonCubic.class);
 	
-	private final int cubicId;
-	private final int cubicLvl;
+	public final int cubicId;
+	public final int cubicLvl;
 	
 	public SummonCubic(StatsSet params) {
 		cubicId = params.getInt("cubicId", -1);

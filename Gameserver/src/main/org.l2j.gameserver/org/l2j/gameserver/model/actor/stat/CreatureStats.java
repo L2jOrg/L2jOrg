@@ -71,7 +71,7 @@ public class CreatureStats {
      * @return the Accuracy (base+modifier) of the Creature in function of the Weapon Expertise Penalty.
      */
     public int getAccuracy() {
-        return (int) getValue(Stat.ACCURACY_COMBAT);
+        return (int) getValue(Stat.ACCURACY);
     }
 
     /**

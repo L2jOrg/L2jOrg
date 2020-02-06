@@ -18,8 +18,8 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author Adry_85
  */
 public final class MagicalAttack extends AbstractEffect {
-	private final double power;
-	private final boolean overHit;
+	public final double power;
+	public final boolean overHit;
 	private final double debuffModifier;
 	
 	public MagicalAttack(StatsSet params) {

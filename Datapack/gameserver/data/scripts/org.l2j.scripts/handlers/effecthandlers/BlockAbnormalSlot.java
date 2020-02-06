@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
  */
 public final class BlockAbnormalSlot extends AbstractEffect {
 
-	private final Set<AbnormalType> blockAbnormalSlots;
+	public final Set<AbnormalType> blockAbnormalSlots;
 	
 	public BlockAbnormalSlot(StatsSet params)
 	{

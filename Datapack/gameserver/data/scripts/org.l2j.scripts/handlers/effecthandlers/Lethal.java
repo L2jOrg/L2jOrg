@@ -21,8 +21,8 @@ import static org.l2j.gameserver.util.GameUtils.*;
  * @author Adry_85
  */
 public final class Lethal extends AbstractEffect {
-	private final double fullLethal;
-	private final double halfLethal;
+	public final double fullLethal;
+	public final double halfLethal;
 	
 	public Lethal(StatsSet params) {
 		fullLethal = params.getDouble("fullLethal", 0);

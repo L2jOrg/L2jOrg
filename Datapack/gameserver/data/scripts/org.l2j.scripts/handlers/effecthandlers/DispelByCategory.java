@@ -17,9 +17,9 @@ import org.l2j.gameserver.model.stats.Formulas;
  * @author DS, Adry_85
  */
 public final class DispelByCategory extends AbstractEffect {
-	private final DispelSlotType slot;
-	private final int rate;
-	private final int max;
+	public final DispelSlotType slot;
+	public final int rate;
+	public final int max;
 	
 	public DispelByCategory(StatsSet params) {
 		slot = params.getEnum("slot", DispelSlotType.class, DispelSlotType.BUFF);

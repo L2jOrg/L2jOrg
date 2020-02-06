@@ -17,7 +17,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author nBd, Adry_85
  */
 public final class FocusSouls extends AbstractEffect {
-    private final int charge;
+    public final int charge;
 
     public FocusSouls(StatsSet params) {
         charge = params.getInt("charge", 0);

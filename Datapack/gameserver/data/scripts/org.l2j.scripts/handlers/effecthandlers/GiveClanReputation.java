@@ -19,7 +19,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author Mobius
  */
 public final class GiveClanReputation extends AbstractEffect {
-	private final int reputation;
+	public final int reputation;
 	
 	public GiveClanReputation(StatsSet params)
 	{

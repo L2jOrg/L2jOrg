@@ -23,7 +23,7 @@ import static org.l2j.gameserver.util.GameUtils.*;
  * @author UnAfraid
  */
 public final class Heal extends AbstractEffect {
-	private final double power;
+	public final double power;
 	
 	public Heal(StatsSet params)
 	{

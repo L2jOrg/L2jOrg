@@ -15,7 +15,7 @@ import static java.util.Objects.nonNull;
  * @author Adry_85
  */
 public final class Escape extends AbstractEffect {
-	private final TeleportWhereType escapeType;
+	public final TeleportWhereType escapeType;
 	
 	public Escape(StatsSet params)
 	{

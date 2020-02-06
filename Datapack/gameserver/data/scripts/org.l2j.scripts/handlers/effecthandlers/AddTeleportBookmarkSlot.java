@@ -16,7 +16,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public final class AddTeleportBookmarkSlot extends AbstractEffect {
 
-	private final int amount;
+	public final int amount;
 	
 	public AddTeleportBookmarkSlot(StatsSet params)
 	{

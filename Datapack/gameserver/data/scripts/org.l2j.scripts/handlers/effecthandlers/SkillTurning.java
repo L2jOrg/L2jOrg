@@ -12,7 +12,7 @@ import org.l2j.gameserver.model.stats.Formulas;
  * Skill Turning effect implementation.
  */
 public final class SkillTurning extends AbstractEffect {
-	private final int chance;
+	public final int chance;
 	private final boolean staticChance;
 	
 	public SkillTurning(StatsSet params) {

@@ -18,7 +18,7 @@ import static org.l2j.gameserver.util.GameUtils.isDoor;
  * @author UnAfraid
  */
 public final class HealPercent extends AbstractEffect {
-	private final int power;
+	public final int power;
 	
 	public HealPercent(StatsSet params)
 	{

@@ -14,7 +14,7 @@ import static java.util.Objects.nonNull;
  * @author Mobius
  */
 public class ReuseSkillById extends AbstractEffect {
-	private final int skillId;
+	public final int skillId;
 	
 	public ReuseSkillById(StatsSet params)
 	{

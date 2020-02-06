@@ -28,7 +28,6 @@ import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.model.votereward.VoteSystem;
 import org.l2j.gameserver.network.ClientPacketHandler;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.taskmanager.TaskManager;
 import org.l2j.gameserver.util.Broadcast;
@@ -39,6 +38,7 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.lang.management.ManagementFactory;
 import java.net.InetSocketAddress;
+import java.nio.file.Paths;
 import java.time.Duration;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
@@ -269,13 +269,14 @@ public class GameServer {
 
         printSection("Scripting Engine");
         ScriptEngineManager.init();
+        ScriptEngineManager.getInstance().executeScript(Paths.get(getSettings(ServerSettings.class).dataPackDirectory().resolve("data/scripts").toString(), "org.l2j.scripts", "ai", "SkillChecker.java"));
 
-        var settings = getSettings(ServerSettings.class);
+       /* var settings = getSettings(ServerSettings.class);
         ThreadPool.init(settings.threadPoolSize() ,settings.scheduledPoolSize());
 
         INSTANCE = new GameServer();
 
-        ThreadPool.execute(AuthServerCommunication.getInstance());
+        ThreadPool.execute(AuthServerCommunication.getInstance());*/
     }
 
     private static void configureCache() {

@@ -20,7 +20,7 @@ import java.util.function.Function;
  */
 public final class BlockSkill extends AbstractEffect {
 
-	private final int[] magicTypes;
+	public final int[] magicTypes;
 	
 	public BlockSkill(StatsSet params)
 	{

@@ -161,7 +161,8 @@ public final class Skill implements IIdentifiable {
     private final AffectObject _affectObject;
     private final int _affectRange;
     private final int[] _fanRange = new int[4]; // unk;startDegree;fanAffectRange;fanAffectAngle
-    private final int[] _affectLimit = new int[3]; // TODO: Third value is unknown... find it out!
+    public final int[] _affectLimit = new int[3]; // TODO: Third value is unknown... find it out!
+    @Deprecated
     private final int[] _affectHeight = new int[2];
     private final NextActionType _nextAction;
     private final boolean _removedOnAnyActionExceptMove;
@@ -175,8 +176,8 @@ public final class Skill implements IIdentifiable {
     private final int _chargeConsume;
     private final boolean _isTriggeredSkill; // If true the skill will take activation buff slot instead of a normal buff slot
     private final int _effectPoint;
-    private final Map<SkillConditionScope, List<ISkillCondition>> _conditionLists = new EnumMap<>(SkillConditionScope.class);
-    private final Map<EffectScope, List<AbstractEffect>> _effectLists = new EnumMap<>(EffectScope.class);
+    public final Map<SkillConditionScope, List<ISkillCondition>> _conditionLists = new EnumMap<>(SkillConditionScope.class);
+    public final Map<EffectScope, List<AbstractEffect>> _effectLists = new EnumMap<>(EffectScope.class);
     private final boolean _isDebuff;
     private final boolean _isSuicideAttack;
     private final boolean _canBeDispelled;
@@ -242,7 +243,7 @@ public final class Skill implements IIdentifiable {
         if (Config.ENABLE_MODIFY_SKILL_DURATION && Config.SKILL_DURATION_LIST.containsKey(_id)) {
             if ((_level < 100) || (_level > 140)) {
                 abnormalTime = Config.SKILL_DURATION_LIST.get(_id);
-            } else if ((_level >= 100) && (_level < 140)) {
+            } else if (_level < 140) {
                 abnormalTime += Config.SKILL_DURATION_LIST.get(_id);
             }
         }
@@ -826,14 +827,6 @@ public final class Skill implements IIdentifiable {
         }
 
         return 0;
-    }
-
-    public int getAffectHeightMin() {
-        return _affectHeight[0];
-    }
-
-    public int getAffectHeightMax() {
-        return _affectHeight[1];
     }
 
     public boolean isActive() {
