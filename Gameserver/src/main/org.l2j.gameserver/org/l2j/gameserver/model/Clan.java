@@ -28,7 +28,7 @@ import org.l2j.gameserver.model.itemcontainer.ClanWarehouse;
 import org.l2j.gameserver.model.itemcontainer.ItemContainer;
 import org.l2j.gameserver.model.pledge.ClanRewardBonus;
 import org.l2j.gameserver.model.skills.CommonSkill;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.variables.ClanVariables;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;

@@ -27,7 +27,7 @@ import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.olympiad.OlympiadGameManager;
 import org.l2j.gameserver.model.skills.BuffInfo;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;

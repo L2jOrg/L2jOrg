@@ -3,7 +3,7 @@ package handlers.effecthandlers.stat;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.stats.Stat;
 
 /**

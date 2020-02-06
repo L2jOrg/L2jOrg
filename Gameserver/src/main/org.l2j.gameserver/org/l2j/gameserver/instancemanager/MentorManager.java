@@ -6,7 +6,7 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.model.Mentee;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.BuffInfo;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.variables.PlayerVariables;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;

@@ -7,7 +7,7 @@ import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MinionList;
 

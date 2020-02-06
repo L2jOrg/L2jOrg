@@ -356,11 +356,26 @@
         </xs:simpleContent>
     </xs:complexType>
 
+    <xs:complexType name="MappedLevelInt">
+        <xs:sequence>
+            <xs:element name="value" type="IntLeveled" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="initial" type="xs:int" default="0"/>
+    </xs:complexType>
+
+    <xs:complexType name="IntLeveled">
+        <xs:simpleContent>
+            <xs:extension base="xs:int">
+                <xs:attribute name="level" type="xs:positiveInteger" default="1"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
     <xs:complexType name="MappedLevelValue">
         <xs:sequence>
             <xs:element name="value" type="FloatLeveled" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
-        <xs:attribute name="initial" type="xs:float" default="0"/>
+        <xs:attribute name="initial" type="xs:float" default="0.0"/>
     </xs:complexType>
 
     <xs:complexType name="FloatLeveled">

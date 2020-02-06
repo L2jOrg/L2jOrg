@@ -15,6 +15,7 @@ import org.l2j.gameserver.data.xml.impl.TransformData;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.geo.SyncMode;
 import org.l2j.gameserver.engine.geo.settings.GeoEngineSettings;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.TimersManager;

@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.conditions.ConditionUsingItemType;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.type.ArmorType;
 import org.l2j.gameserver.model.items.type.WeaponType;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.stats.Stat;
 
 import java.util.ArrayList;

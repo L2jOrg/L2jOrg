@@ -18,7 +18,7 @@ import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.quest.QuestState;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.serverpackets.EtcStatusUpdate;
 import org.l2j.gameserver.util.GameUtils;
 

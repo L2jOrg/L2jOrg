@@ -30,7 +30,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.AbstractScript;
 import org.l2j.gameserver.model.holders.SellBuffHolder;
 import org.l2j.gameserver.model.items.ItemTemplate;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.util.GameUtils;
 
 import java.util.StringTokenizer;

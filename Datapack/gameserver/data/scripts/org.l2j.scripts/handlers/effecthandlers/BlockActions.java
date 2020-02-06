@@ -12,10 +12,9 @@ import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 
 import java.util.Arrays;
-import java.util.function.Predicate;
 
 import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.util.GameUtils.isPlayable;

@@ -15,7 +15,7 @@ import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.entity.FortSiege;
 import org.l2j.gameserver.model.entity.Siegable;
 import org.l2j.gameserver.model.skills.BuffInfo;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.world.zone.AbstractZoneSettings;
 import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.world.zone.ZoneType;

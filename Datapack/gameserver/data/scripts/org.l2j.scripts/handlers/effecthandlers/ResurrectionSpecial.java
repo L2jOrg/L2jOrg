@@ -11,10 +11,7 @@ import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.instancezone.Instance;
-import org.l2j.gameserver.model.skills.Skill;
-
-import java.util.Collections;
-import java.util.HashSet;
+import org.l2j.gameserver.engine.skill.api.Skill;
 
 import static org.l2j.gameserver.util.GameUtils.isPet;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;

@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.actor.status.StaticObjStatus;
 import org.l2j.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.serverpackets.ShowTownMap;
 import org.l2j.gameserver.network.serverpackets.StaticObject;
 

@@ -20,7 +20,7 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 
 /**

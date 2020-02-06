@@ -30,7 +30,7 @@ import org.l2j.gameserver.model.html.PageResult;
 import org.l2j.gameserver.model.html.styles.ButtonsStyle;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.BuffInfo;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.SkillCoolTime;

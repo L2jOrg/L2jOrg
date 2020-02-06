@@ -34,7 +34,7 @@ import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.olympiad.CompetitionType;
 import org.l2j.gameserver.model.olympiad.Participant;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.serverpackets.QuestList;
 import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.network.NpcStringId;

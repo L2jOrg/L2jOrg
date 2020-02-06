@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.events.listeners.FunctionEventListener;
 import org.l2j.gameserver.model.events.returns.AbstractEventReturn;
 import org.l2j.gameserver.model.events.returns.DamageReturn;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 
 import java.util.function.Function;
 

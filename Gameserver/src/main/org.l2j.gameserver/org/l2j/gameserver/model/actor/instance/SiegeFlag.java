@@ -12,7 +12,7 @@ import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.status.SiegeFlagStatus;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.entity.Siegable;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;

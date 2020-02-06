@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.events.impl.character;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 
 /**
  * Executed when the caster Creature tries to use a skill.

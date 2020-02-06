@@ -6,7 +6,7 @@ import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.OnCreatureHpChange;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.stats.Stat;
 
 import java.util.Map;

@@ -3,13 +3,11 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.model.TimeStamp;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Skill Cool Time server packet implementation.

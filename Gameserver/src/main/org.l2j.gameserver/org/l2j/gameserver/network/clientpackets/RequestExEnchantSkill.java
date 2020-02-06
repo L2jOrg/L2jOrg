@@ -9,7 +9,7 @@ import org.l2j.gameserver.enums.SkillEnchantType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.EnchantSkillHolder;
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExEnchantSkillInfo;

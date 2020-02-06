@@ -2056,8 +2056,8 @@
 
 	<xs:complexType name="Consume">
 		<xs:sequence>
-			<xs:element name="mana-init" type="MappedLevelValue" minOccurs="0"/>
-			<xs:element name="mana" type="MappedLevelValue"/>
+			<xs:element name="mana-init" type="MappedLevelInt" minOccurs="0"/>
+			<xs:element name="mana" type="MappedLevelValue" minOccurs="0"/>
 			<xs:element name="hp" type="MappedLevelValue" minOccurs="0"/>
 			<xs:element name="item" type="MappedLevelValue" minOccurs="0"/>
 			<xs:element name="item-count" type="MappedLevelValue" minOccurs="0"/>
@@ -2069,8 +2069,8 @@
 	<xs:complexType name="Channeling">
 		<xs:attribute name="skill" type="xs:int" use="required"/>
 		<xs:attribute name="mp-consume" type="xs:int" default="0"/>
-		<xs:attribute name="initial-delay" type="xs:float" default="0"/>
-		<xs:attribute name="interval" type="xs:float" default="2000"/>
+		<xs:attribute name="initial-delay" type="xs:int" default="0"/>
+		<xs:attribute name="interval" type="xs:int" default="2000"/>
 	</xs:complexType>
 
 	<xs:complexType name="SkillTarget">
@@ -2093,14 +2093,14 @@
 
 	<xs:complexType name="SkillAttributes">
 		<xs:sequence>
-			<xs:element name="magic-level" type="MappedLevelValue" minOccurs="0"/>
-			<xs:element name="cast-range" type="MappedLevelValue"/>
-			<xs:element name="reuse" type="MappedLevelValue"/>
-			<xs:element name="cool-time" type="MappedLevelValue"/>
-			<xs:element name="effect-point" type="MappedLevelValue"/>
-			<xs:element name="effect-range" type="MappedLevelValue" minOccurs="0"/>
-			<xs:element name="hit-time" type="MappedLevelValue"/>
-			<xs:element name="activate-rate" type="MappedLevelValue" minOccurs="0"/>
+			<xs:element name="magic-level" type="MappedLevelInt" minOccurs="0"/>
+			<xs:element name="cast-range" type="MappedLevelInt"/>
+			<xs:element name="reuse" type="MappedLevelInt" minOccurs="0"/>
+			<xs:element name="cool-time" type="MappedLevelInt" minOccurs="0"/>
+			<xs:element name="effect-point" type="MappedLevelInt" minOccurs="0"/>
+			<xs:element name="effect-range" type="MappedLevelInt" minOccurs="0"/>
+			<xs:element name="hit-time" type="MappedLevelInt" minOccurs="0"/>
+			<xs:element name="activate-rate" type="MappedLevelInt" minOccurs="0"/>
 			<xs:element name="element" type="ElementType" minOccurs="0"/>
 		</xs:sequence>
 		<xs:attribute name="trait" type="TraitType" default="NONE"/>
@@ -2109,7 +2109,7 @@
 		<xs:attribute name="static-reuse" type="xs:boolean" default="false"/>
 		<xs:attribute name="magic-critical-rate" type="xs:float" default="0"/>
 		<xs:attribute name="stay-after-death" type="xs:boolean" default="false"/>
-		<xs:attribute name="display-id" type="xs:int" default="-1"/>
+		<xs:attribute name="display-id" type="xs:int"/>
 		<xs:attribute name="hit-cancel-time" type="xs:float" default="0"/>
 		<xs:attribute name="level-bonus-rate" type="xs:int" default="0"/>
 		<xs:attribute name="remove-on-action" type="xs:boolean" default="false"/>
@@ -2135,9 +2135,9 @@
 
 	<xs:complexType name="Abnormal">
 		<xs:sequence>
-			<xs:element name="level" type="MappedLevelValue"/>
+			<xs:element name="level" type="MappedLevelInt" minOccurs="0"/>
 			<xs:element name="time" type="MappedLevelValue"/>
-			<xs:element name="chance" type="MappedLevelValue"/>
+			<xs:element name="chance" type="MappedLevelValue" minOccurs="0"/>
 		</xs:sequence>
 		<xs:attribute name="type" type="AbnormalType" default="NONE"/>
 		<xs:attribute name="visual" type="AbnormalVisualEffect" default="NONE"/>

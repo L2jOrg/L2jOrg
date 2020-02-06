@@ -23,7 +23,7 @@ import org.l2j.gameserver.model.items.BodyPart;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.ArmorType;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 

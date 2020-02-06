@@ -18,7 +18,7 @@ import org.l2j.gameserver.model.punishment.PunishmentAffect;
 import org.l2j.gameserver.model.punishment.PunishmentTask;
 import org.l2j.gameserver.model.punishment.PunishmentType;
 import org.l2j.gameserver.model.skills.CommonSkill;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;

@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.data.xml.impl.EnchantSkillGroupsData;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.serverpackets.ExEnchantSkillInfo;
 
 import java.util.Set;

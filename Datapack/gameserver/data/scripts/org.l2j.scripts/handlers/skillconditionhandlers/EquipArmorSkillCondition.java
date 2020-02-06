@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.items.BodyPart;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.ArmorType;
 import org.l2j.gameserver.model.skills.ISkillCondition;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 
 import java.util.List;
 

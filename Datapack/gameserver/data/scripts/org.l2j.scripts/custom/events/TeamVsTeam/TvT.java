@@ -42,7 +42,7 @@ import org.l2j.gameserver.model.olympiad.OlympiadManager;
 import org.l2j.gameserver.model.quest.Event;
 import org.l2j.gameserver.model.quest.QuestTimer;
 import org.l2j.gameserver.model.skills.CommonSkill;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.world.zone.ZoneType;

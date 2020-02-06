@@ -2,6 +2,7 @@ package org.l2j.gameserver.model.skills;
 
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.model.WorldObject;

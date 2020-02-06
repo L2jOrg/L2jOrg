@@ -12,7 +12,7 @@ import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.instancezone.Instance;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.OlympiadStadiumZone;
 import org.l2j.gameserver.network.SystemMessageId;

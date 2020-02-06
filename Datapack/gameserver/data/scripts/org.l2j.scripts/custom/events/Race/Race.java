@@ -10,7 +10,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Event;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.skills.AbnormalType;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.Broadcast;

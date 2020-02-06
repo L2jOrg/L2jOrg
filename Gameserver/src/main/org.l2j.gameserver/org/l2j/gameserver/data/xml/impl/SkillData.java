@@ -1,5 +1,6 @@
 package org.l2j.gameserver.data.xml.impl;
 
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.handler.EffectHandler;
 import org.l2j.gameserver.handler.SkillConditionHandler;
 import org.l2j.gameserver.model.StatsSet;

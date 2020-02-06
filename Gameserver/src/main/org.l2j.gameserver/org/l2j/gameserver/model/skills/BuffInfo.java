@@ -2,6 +2,7 @@ package org.l2j.gameserver.model.skills;
 
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.model.EffectList;
 import org.l2j.gameserver.model.actor.Creature;

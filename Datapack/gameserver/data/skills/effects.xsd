@@ -897,7 +897,7 @@
         <xs:attribute name="ticks" type="xs:int" default="0"/>
         <xs:attribute name="scope" type="EffectScope" default="GENERAL"/>
         <xs:attribute name="start-level" type="xs:int" default="1"/>
-        <xs:attribute name="stop-level" type="xs:int" default="-1"/>
+        <xs:attribute name="stop-level" type="xs:int"/>
     </xs:complexType>
 
     <xs:complexType name="Effects">

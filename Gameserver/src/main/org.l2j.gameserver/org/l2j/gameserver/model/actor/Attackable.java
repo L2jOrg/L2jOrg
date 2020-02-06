@@ -36,7 +36,7 @@ import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.CommonSkill;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.SystemMessageId;

@@ -25,7 +25,7 @@ import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Defender;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 

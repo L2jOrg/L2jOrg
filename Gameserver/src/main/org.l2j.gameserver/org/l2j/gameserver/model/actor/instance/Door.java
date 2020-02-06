@@ -21,7 +21,7 @@ import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.DoorStatusUpdate;
 import org.l2j.gameserver.network.serverpackets.OnEventTrigger;

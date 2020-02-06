@@ -4,7 +4,7 @@ import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 

@@ -8,7 +8,7 @@ import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.quest.Event;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.util.Broadcast;
 
 import java.util.ArrayList;

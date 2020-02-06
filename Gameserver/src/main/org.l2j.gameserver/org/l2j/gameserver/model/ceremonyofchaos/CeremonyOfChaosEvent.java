@@ -24,7 +24,7 @@ import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.instancezone.InstanceTemplate;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.variables.PlayerVariables;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;

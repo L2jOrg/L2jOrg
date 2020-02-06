@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.holders.ArmorsetSkillHolder;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.BodyPart;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.skills.SkillConditionScope;
 import org.l2j.gameserver.network.serverpackets.SkillCoolTime;
 import org.slf4j.Logger;
@@ -17,8 +17,6 @@ import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.function.Function;
-import java.util.function.IntFunction;
 import java.util.function.ToIntFunction;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;

@@ -7,6 +7,7 @@ import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.ActionManager;
 import org.l2j.gameserver.engine.geo.GeoEngine;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.enums.NextActionType;
 import org.l2j.gameserver.enums.StatusUpdateType;

@@ -4,7 +4,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.skills.BuffInfo;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.serverpackets.SkillCoolTime;
 
 import java.util.ArrayList;

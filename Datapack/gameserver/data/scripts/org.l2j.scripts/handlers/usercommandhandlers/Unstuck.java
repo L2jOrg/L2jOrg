@@ -22,7 +22,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.handler.IUserCommandHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.skills.SkillCastingType;
 import org.l2j.gameserver.network.SystemMessageId;

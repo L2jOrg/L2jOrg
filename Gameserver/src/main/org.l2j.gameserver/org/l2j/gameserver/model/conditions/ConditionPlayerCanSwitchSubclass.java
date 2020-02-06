@@ -21,7 +21,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.items.ItemTemplate;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 

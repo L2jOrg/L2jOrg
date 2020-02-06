@@ -211,7 +211,18 @@
         </xs:complexContent>
     </xs:complexType>
 
-    <xs:complexType name="Condition" abstract="true"/>
+    <xs:complexType name="Condition" abstract="true">
+        <xs:attribute name="scope" type="ConditionScope" default="GENERAL"/>
+    </xs:complexType>
+
+    <xs:simpleType name="ConditionScope">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="GENERAL"/>
+            <xs:enumeration value="TARGET"/>
+            <xs:enumeration value="PASSIVE"/>
+        </xs:restriction>
+
+    </xs:simpleType>
 
     <xs:simpleType name="ConditionAffectType">
         <xs:restriction base="xs:token">

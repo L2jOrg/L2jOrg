@@ -22,7 +22,7 @@ import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableFactionCal
 import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableHate;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.util.GameUtils;

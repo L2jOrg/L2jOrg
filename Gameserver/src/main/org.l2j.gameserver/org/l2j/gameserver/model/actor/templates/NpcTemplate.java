@@ -14,7 +14,7 @@ import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.items.ItemTemplate;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.util.GameUtils;
 

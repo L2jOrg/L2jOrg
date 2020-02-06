@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.interfaces;
 
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 
 import java.util.Map;
 

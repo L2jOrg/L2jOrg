@@ -8,7 +8,7 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcSkillSee;
 import org.l2j.gameserver.model.items.type.CrystalType;
 import org.l2j.gameserver.model.items.type.WeaponType;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;

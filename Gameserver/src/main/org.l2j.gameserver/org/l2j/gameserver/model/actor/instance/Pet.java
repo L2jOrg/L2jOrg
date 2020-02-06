@@ -37,7 +37,7 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.model.skills.EffectScope;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;

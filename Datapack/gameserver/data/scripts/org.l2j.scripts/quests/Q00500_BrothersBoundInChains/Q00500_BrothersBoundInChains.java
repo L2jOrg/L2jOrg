@@ -17,7 +17,7 @@ import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.quest.State;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 
 /**
  * Brothers Bound in Chains (500)

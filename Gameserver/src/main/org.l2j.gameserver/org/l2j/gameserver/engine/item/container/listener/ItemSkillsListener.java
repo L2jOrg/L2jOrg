@@ -8,7 +8,7 @@ import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.skills.SkillConditionScope;
 import org.l2j.gameserver.network.serverpackets.SkillCoolTime;
 import org.slf4j.Logger;

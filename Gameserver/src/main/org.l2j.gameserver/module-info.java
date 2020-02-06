@@ -108,6 +108,7 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.model.events.impl.character;
     exports org.l2j.gameserver.engine.item;
     exports org.l2j.gameserver.api.elemental;
+    exports org.l2j.gameserver.engine.skill.api;
 
     uses org.l2j.gameserver.engine.scripting.IScriptingEngine;
     provides org.l2j.gameserver.engine.scripting.IScriptingEngine

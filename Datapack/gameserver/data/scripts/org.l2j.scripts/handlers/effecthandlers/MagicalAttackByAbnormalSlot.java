@@ -8,7 +8,7 @@ import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.AbnormalType;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.stats.Formulas;
 
 import java.util.Collections;

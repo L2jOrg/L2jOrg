@@ -58,7 +58,7 @@ import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.enchant.attribute.AttributeHolder;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.olympiad.Olympiad;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.spawns.SpawnGroup;
 import org.l2j.gameserver.model.spawns.SpawnTemplate;
 import org.l2j.gameserver.world.zone.Zone;

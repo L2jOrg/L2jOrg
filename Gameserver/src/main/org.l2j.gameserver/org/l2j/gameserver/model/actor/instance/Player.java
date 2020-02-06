@@ -30,6 +30,7 @@ import org.l2j.gameserver.data.sql.impl.CharSummonTable;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.xml.impl.*;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.handler.IItemHandler;

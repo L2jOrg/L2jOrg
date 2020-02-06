@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.holders;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.interfaces.ISkillsHolder;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 
 import java.util.HashMap;
 import java.util.Map;

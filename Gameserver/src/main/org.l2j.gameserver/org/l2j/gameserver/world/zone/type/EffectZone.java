@@ -5,7 +5,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.holders.SkillHolder;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.serverpackets.EtcStatusUpdate;
 import org.l2j.gameserver.world.zone.*;
 import org.slf4j.Logger;

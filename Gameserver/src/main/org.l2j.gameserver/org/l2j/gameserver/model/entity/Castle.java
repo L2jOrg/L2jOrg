@@ -20,7 +20,7 @@ import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.residences.AbstractResidence;
 import org.l2j.gameserver.model.skills.CommonSkill;
-import org.l2j.gameserver.model.skills.Skill;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.world.zone.type.CastleZone;
 import org.l2j.gameserver.world.zone.type.ResidenceTeleportZone;
 import org.l2j.gameserver.world.zone.type.SiegeZone;
