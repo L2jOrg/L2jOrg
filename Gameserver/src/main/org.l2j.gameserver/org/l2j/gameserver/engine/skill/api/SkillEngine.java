@@ -1,17 +1,15 @@
 package org.l2j.gameserver.engine.skill.api;
 
-import io.github.joealisson.primitive.HashIntIntMap;
-import io.github.joealisson.primitive.HashLongMap;
-import io.github.joealisson.primitive.IntIntMap;
-import io.github.joealisson.primitive.LongMap;
+import io.github.joealisson.primitive.*;
 import io.github.joealisson.primitive.function.IntBiConsumer;
-import org.l2j.commons.util.Util;
+import org.l2j.gameserver.engine.skill.SkillAutoUseType;
 import org.l2j.gameserver.engine.skill.SkillType;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.BasicProperty;
 import org.l2j.gameserver.enums.NextActionType;
 import org.l2j.gameserver.handler.EffectHandler;
 import org.l2j.gameserver.handler.SkillConditionHandler;
+import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.skills.*;
 import org.l2j.gameserver.model.skills.targets.AffectObject;
@@ -30,12 +28,12 @@ import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.Objects;
 import java.util.function.IntConsumer;
-import java.util.function.IntFunction;
 import java.util.stream.Collectors;
 
+import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
-import static org.l2j.commons.util.Util.*;
+import static org.l2j.commons.util.Util.SPACE;
 import static org.l2j.commons.util.Util.computeIfNonNull;
 
 /**
@@ -58,6 +56,7 @@ public class SkillEngine extends GameXmlReader {
     private static long skillHashCode(int id, int level) {
         return id * 65536L + level;
     }
+
 
     @Override
     protected Path getSchemaFilePath() {
@@ -104,23 +103,39 @@ public class SkillEngine extends GameXmlReader {
 
     private void parseSkillEffects(Node node, Skill skill, int maxLevel) {
         for(var child = node.getFirstChild(); nonNull(node); node = node.getNextSibling()) {
-            var effect = switch (child.getNodeName()) {
-                case "effect" -> parseNamedEffect(node, skill, maxLevel);
-                default ->  null;
-            };
-
-            var attr = child.getAttributes();
-            var scope = parseEnum(attr, EffectScope.class, "scope");
-            var startLevel = parseInt(attr, "start-level");
-            var stopLevel = parseInt(attr, "stop-level", maxLevel);
-            // TODO check levels
-            skill.addEffect(scope, effect);
+            if("effect".equals(child.getNodeName())) {
+                parseNamedEffect(node, skill, maxLevel);
+            } else {
+                parseEffect(node, skill, maxLevel);
+            }
         }
     }
 
-    private AbstractEffect parseNamedEffect(Node node, Skill skill, int maxLevel) {
-        var factory = EffectHandler.getInstance().getHandlerFactory(parseString(node.getAttributes(), "name"));
-        return computeIfNonNull(factory, f -> f.apply(null/*node*/));
+    private void parseEffect(Node node, Skill skill, int maxLevel) {
+        var factory = EffectHandler.getInstance().getHandlerFactory(node.getNodeName());
+        if(isNull(factory)) {
+            LOGGER.error("could not parse skill's {} effect {}", skill, node.getNodeName());
+            return;
+        }
+    }
+
+    private void parseNamedEffect(Node node, Skill skill, int maxLevel) {
+        var attr = node.getAttributes();
+        var effectName = parseString(attr, "name");
+        var factory = EffectHandler.getInstance().getHandlerFactory(effectName);
+
+
+        if(isNull(factory)) {
+            LOGGER.error("could not parse skill's {} effect {}", skill, effectName);
+            return;
+        }
+
+        var startLevel = parseInt(attr, "start-level");
+        var stopLevel = parseInt(attr, "stop-level");
+        var scope = parseEnum(attr, EffectScope.class, "scope");
+
+        IntMap<StatsSet> levelInfo = new HashIntMap<>();
+
     }
 
     private void parseSkillAbnormal(Node node, Skill skill, int maxLevel) throws CloneNotSupportedException {
@@ -252,7 +267,7 @@ public class SkillEngine extends GameXmlReader {
         skill.setRemoveAbnormalOnLeave(parseBoolean(attr, "remove-abnormal-on-leave"));
         skill.setIrreplacable(parseBoolean(attr, "irreplacable"));
         skill.setBlockActionSkill(parseBoolean(attr, "block-action-skill"));
-        skill.setAutoUse(parseBoolean(attr, "auto-use"));
+        skill.setAutoUse(parseEnum(attr, SkillAutoUseType.class,"auto-use"));
 
         forEach(nodeAttributes, "element", elementNode -> {
             skill.setAttributeType(parseEnum(elementNode.getAttributes(), AttributeType.class, "type"));
@@ -292,10 +307,6 @@ public class SkillEngine extends GameXmlReader {
                 }
             }
         }
-    }
-
-    private void parseMagicLevel(Node node, Skill skill, int maxLevel) throws CloneNotSupportedException {
-
     }
 
     private void parseIcon(Node iconNode, Skill skill, int maxLevel) throws CloneNotSupportedException {

@@ -2057,10 +2057,10 @@
 	<xs:complexType name="Consume">
 		<xs:sequence>
 			<xs:element name="mana-init" type="MappedLevelInt" minOccurs="0"/>
-			<xs:element name="mana" type="MappedLevelValue" minOccurs="0"/>
-			<xs:element name="hp" type="MappedLevelValue" minOccurs="0"/>
-			<xs:element name="item" type="MappedLevelValue" minOccurs="0"/>
-			<xs:element name="item-count" type="MappedLevelValue" minOccurs="0"/>
+			<xs:element name="mana" type="MappedLevelInt" minOccurs="0"/>
+			<xs:element name="hp" type="MappedLevelInt" minOccurs="0"/>
+			<xs:element name="item" type="MappedLevelInt" minOccurs="0"/>
+			<xs:element name="item-count" type="MappedLevelInt" minOccurs="0"/>
 		</xs:sequence>
 		<xs:attribute name="soul" type="xs:int" default="0"/>
 		<xs:attribute name="charge" type="xs:int" default="0"/>
@@ -2094,7 +2094,7 @@
 	<xs:complexType name="SkillAttributes">
 		<xs:sequence>
 			<xs:element name="magic-level" type="MappedLevelInt" minOccurs="0"/>
-			<xs:element name="cast-range" type="MappedLevelInt"/>
+			<xs:element name="cast-range" type="MappedLevelInt" minOccurs="0"/>
 			<xs:element name="reuse" type="MappedLevelInt" minOccurs="0"/>
 			<xs:element name="cool-time" type="MappedLevelInt" minOccurs="0"/>
 			<xs:element name="effect-point" type="MappedLevelInt" minOccurs="0"/>
@@ -2125,8 +2125,17 @@
 		<xs:attribute name="remove-abnormal-on-leave" type="xs:boolean" default="false"/>
 		<xs:attribute name="irreplacable" type="xs:boolean" default="false"/>
 		<xs:attribute name="block-action-skill" type="xs:boolean" default="false"/>
-		<xs:attribute name="auto-use" type="xs:boolean" default="false"/>
+		<xs:attribute name="auto-use" type="SkillAutoUseType" default="NONE"/>
 	</xs:complexType>
+
+	<xs:simpleType name="SkillAutoUseType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="NONE"/>
+			<xs:enumeration value="BUFF"/>
+			<xs:enumeration value="ACTIVE"/>
+			<xs:enumeration value="TRANSFORM"/>
+		</xs:restriction>
+	</xs:simpleType>
 
 	<xs:complexType name="ElementType">
 		<xs:attribute name="type"  type="Element" default="NONE"/>
@@ -2136,8 +2145,8 @@
 	<xs:complexType name="Abnormal">
 		<xs:sequence>
 			<xs:element name="level" type="MappedLevelInt" minOccurs="0"/>
-			<xs:element name="time" type="MappedLevelValue"/>
-			<xs:element name="chance" type="MappedLevelValue" minOccurs="0"/>
+			<xs:element name="time" type="MappedLevelInt"/>
+			<xs:element name="chance" type="MappedLevelInt" minOccurs="0"/>
 		</xs:sequence>
 		<xs:attribute name="type" type="AbnormalType" default="NONE"/>
 		<xs:attribute name="visual" type="AbnormalVisualEffect" default="NONE"/>

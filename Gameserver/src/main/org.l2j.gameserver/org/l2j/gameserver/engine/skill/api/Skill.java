@@ -5,6 +5,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.EnchantSkillGroupsData;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
+import org.l2j.gameserver.engine.skill.SkillAutoUseType;
 import org.l2j.gameserver.engine.skill.SkillType;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.BasicProperty;
@@ -24,6 +25,7 @@ import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.holders.AttachSkillHolder;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
+import org.l2j.gameserver.model.items.AutoUseType;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.*;
 import org.l2j.gameserver.model.skills.targets.AffectObject;
@@ -181,7 +183,7 @@ public final class Skill implements IIdentifiable, Cloneable {
     private  double magicCriticalRate;
     private  SkillBuffType _buffType;
     private  boolean _displayInList;
-    private boolean autoUse;
+    private SkillAutoUseType autoUse;
 
     @Deprecated // Chance to instance
     private Set<AbnormalVisualEffect> abnormalVisualEffects;
@@ -1704,7 +1706,7 @@ public final class Skill implements IIdentifiable, Cloneable {
         this.blockActionUseSkill = block;
     }
 
-    public void setAutoUse(boolean autoUse) {
+    public void setAutoUse(SkillAutoUseType autoUse) {
         this.autoUse = autoUse;
     }
 
