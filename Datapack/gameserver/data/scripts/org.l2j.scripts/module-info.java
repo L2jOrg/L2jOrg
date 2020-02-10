@@ -1,9 +1,9 @@
+import handlers.skillconditionhandlers.SkillConditionTargetFactory;
 import handlers.actionhandlers.*;
 import handlers.actionshifthandlers.*;
 import handlers.admincommandhandlers.AdminCoins;
 import handlers.bypasshandlers.EquipmentUpgrade;
 import handlers.skillconditionhandlers.*;
-import org.l2j.gameserver.engine.skill.api.SkillConditionFactory;
 import quests.Q10960_Tutorial.Q10960_Tutorial;
 
 open module org.l2j.scripts {
@@ -63,7 +63,22 @@ open module org.l2j.scripts {
                 OpChangeWeaponSkillCondition.Factory,
                 OpCheckAbnormalSkillCondition.Factory,
                 OpCheckClassListSkillCondition.Factory,
-                OpCheckResidenceSkillCondition.Factory
+                OpCheckResidenceSkillCondition.Factory,
+                OpEnergyMaxSkillCondition.Factory,
+                OpEncumberedSkillCondition.Factory,
+                OpExistNpcSkillCondition.Factory,
+                OpHaveSummonSkillCondition.Factory,
+                OpHomeSkillCondition.Factory,
+                OpMainjobSkillCondition.Factory,
+                OpNeedAgathionSkillCondition.Factory,
+                OpNotCursedSkillCondition.Factory,
+                KillerSkillCondition.Factory,
+                OpPledgeSkillCondition.Factory,
+                OpResurrectionSkillCondition.Factory,
+                OpSkillAcquireSkillCondition.Factory,
+                OpSoulMaxSkillCondition.Factory,
+                OpSweeperSkillCondition.Factory,
+                SkillConditionTargetFactory
             ;
 
     provides instances.AbstractInstance

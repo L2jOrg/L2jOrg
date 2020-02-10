@@ -1,12 +1,12 @@
 package handlers.skillconditionhandlers;
 
-import org.l2j.gameserver.model.StatsSet;
+import io.github.joealisson.primitive.IntSet;
+import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.engine.skill.api.SkillCondition;
+import org.l2j.gameserver.engine.skill.api.SkillConditionFactory;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.engine.skill.api.SkillCondition;
-import org.l2j.gameserver.engine.skill.api.Skill;
-
-import java.util.List;
+import org.w3c.dom.Node;
 
 import static org.l2j.gameserver.util.GameUtils.isDoor;
 
@@ -15,14 +15,15 @@ import static org.l2j.gameserver.util.GameUtils.isDoor;
  */
 public class OpTargetDoorSkillCondition implements SkillCondition {
 
-	public final List<Integer> doorIds;
-	
-	public OpTargetDoorSkillCondition(StatsSet params) {
-		doorIds = params.getList("doorIds", Integer.class);
+	public final IntSet doorIds;
+
+	protected OpTargetDoorSkillCondition(IntSet doors) {
+		this.doorIds = doors;
 	}
-	
+
 	@Override
 	public boolean canUse(Creature caster, Skill skill, WorldObject target) {
 		return isDoor(target) && doorIds.contains(target.getId());
 	}
+
 }
