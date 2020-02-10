@@ -22,7 +22,7 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.skills.ISkillCondition;
+import org.l2j.gameserver.engine.skill.api.SkillCondition;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 
@@ -33,7 +33,7 @@ import static org.l2j.gameserver.util.GameUtils.isAttackable;
 /**
  * @author Sdw
  */
-public class OpSweeperSkillCondition implements ISkillCondition
+public class OpSweeperSkillCondition implements SkillCondition
 {
 	public OpSweeperSkillCondition(StatsSet params)
 	{

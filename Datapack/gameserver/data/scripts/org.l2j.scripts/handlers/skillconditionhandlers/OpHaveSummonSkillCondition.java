@@ -19,13 +19,13 @@ package handlers.skillconditionhandlers;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.skills.ISkillCondition;
+import org.l2j.gameserver.engine.skill.api.SkillCondition;
 import org.l2j.gameserver.engine.skill.api.Skill;
 
 /**
  * @author UnAfraid
  */
-public class OpHaveSummonSkillCondition implements ISkillCondition
+public class OpHaveSummonSkillCondition implements SkillCondition
 {
 	public OpHaveSummonSkillCondition(StatsSet params)
 	{

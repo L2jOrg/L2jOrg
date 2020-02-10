@@ -4,7 +4,7 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.skills.ISkillCondition;
+import org.l2j.gameserver.engine.skill.api.SkillCondition;
 import org.l2j.gameserver.engine.skill.api.Skill;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
@@ -13,7 +13,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * TODO: Verify me, also should Quest items be counted?
  * @author UnAfraid
  */
-public class OpEncumberedSkillCondition implements ISkillCondition {
+public class OpEncumberedSkillCondition implements SkillCondition {
 
 	public final int slotsPercent;
 	public final int weightPercent;

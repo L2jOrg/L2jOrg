@@ -5,7 +5,7 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.model.items.type.WeaponType;
-import org.l2j.gameserver.model.skills.ISkillCondition;
+import org.l2j.gameserver.engine.skill.api.SkillCondition;
 import org.l2j.gameserver.engine.skill.api.Skill;
 
 import java.util.ArrayList;
@@ -17,7 +17,7 @@ import static org.l2j.gameserver.model.items.BodyPart.TWO_HAND;
 /**
  * @author UnAfraid
  */
-public class Op2hWeaponSkillCondition implements ISkillCondition {
+public class Op2hWeaponSkillCondition implements SkillCondition {
 
     public final List<WeaponType> _weaponTypes = new ArrayList<>();
 

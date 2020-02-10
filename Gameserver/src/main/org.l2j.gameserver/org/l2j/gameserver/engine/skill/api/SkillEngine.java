@@ -2,6 +2,9 @@ package org.l2j.gameserver.engine.skill.api;
 
 import io.github.joealisson.primitive.*;
 import io.github.joealisson.primitive.function.IntBiConsumer;
+import org.l2j.gameserver.data.xml.impl.EnchantSkillGroupsData;
+import org.l2j.gameserver.data.xml.impl.PetSkillData;
+import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.engine.skill.SkillAutoUseType;
 import org.l2j.gameserver.engine.skill.SkillType;
 import org.l2j.gameserver.enums.AttributeType;
@@ -27,6 +30,7 @@ import java.io.File;
 import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.Objects;
+import java.util.function.Function;
 import java.util.function.IntConsumer;
 import java.util.stream.Collectors;
 
@@ -56,7 +60,6 @@ public class SkillEngine extends GameXmlReader {
     private static long skillHashCode(int id, int level) {
         return id * 65536L + level;
     }
-
 
     @Override
     protected Path getSchemaFilePath() {
@@ -94,14 +97,13 @@ public class SkillEngine extends GameXmlReader {
                     case "abnormal" -> parseSkillAbnormal(node, skill, maxLevel);
                     case "effects" -> parseSkillEffects(node, skill, maxLevel);
                 }
-
             }
         } catch (CloneNotSupportedException e) {
             LOGGER.error("Could not parse skill info {}", skill);
         }
     }
 
-    private void parseSkillEffects(Node node, Skill skill, int maxLevel) {
+    private void parseSkillEffects(Node node, Skill skill, int maxLevel) throws CloneNotSupportedException {
         for(var child = node.getFirstChild(); nonNull(node); node = node.getNextSibling()) {
             if("effect".equals(child.getNodeName())) {
                 parseNamedEffect(node, skill, maxLevel);
@@ -111,31 +113,116 @@ public class SkillEngine extends GameXmlReader {
         }
     }
 
-    private void parseEffect(Node node, Skill skill, int maxLevel) {
+    private void parseEffect(Node node, Skill skill, int maxLevel) throws CloneNotSupportedException {
         var factory = EffectHandler.getInstance().getHandlerFactory(node.getNodeName());
         if(isNull(factory)) {
             LOGGER.error("could not parse skill's {} effect {}", skill, node.getNodeName());
             return;
         }
+        createEffect(factory, node, skill, maxLevel);
     }
 
-    private void parseNamedEffect(Node node, Skill skill, int maxLevel) {
-        var attr = node.getAttributes();
-        var effectName = parseString(attr, "name");
+    private void parseNamedEffect(Node node, Skill skill, int maxLevel) throws CloneNotSupportedException {
+        var effectName = parseString(node.getAttributes(), "name");
         var factory = EffectHandler.getInstance().getHandlerFactory(effectName);
-
 
         if(isNull(factory)) {
             LOGGER.error("could not parse skill's {} effect {}", skill, effectName);
             return;
         }
 
+        createEffect(factory, node, skill, maxLevel);
+    }
+
+    void createEffect(Function<StatsSet, AbstractEffect> factory, Node node, Skill skill, int maxLevel) throws CloneNotSupportedException {
+        var attr = node.getAttributes();
         var startLevel = parseInt(attr, "start-level");
-        var stopLevel = parseInt(attr, "stop-level");
+        var stopLevel = parseInt(attr, "stop-level", maxLevel);
         var scope = parseEnum(attr, EffectScope.class, "scope");
 
-        IntMap<StatsSet> levelInfo = new HashIntMap<>();
+        var staticStatSet = new StatsSet(parseAttributes(node));
 
+        if(node.hasChildNodes()) {
+            IntMap<StatsSet> levelInfo = new HashIntMap<>();
+
+            for(var child = node.getFirstChild(); nonNull(child); child = child.getNextSibling()) {
+                parseEffectNode(child, levelInfo, startLevel, staticStatSet, false);
+            }
+
+            if(levelInfo.isEmpty()) {
+                addStaticEffect(factory, skill, startLevel, stopLevel, scope, staticStatSet);
+            } else {
+                for (var i = startLevel; i <= stopLevel; i++) {
+                    var sk = getOrCloneSkillBasedOnLast(skill.getId(), i);
+                    var statsSet = levelInfo.computeIfAbsent(i, level -> {
+                        for (int j = level; j > 0; j--) {
+                            if(levelInfo.containsKey(j)) {
+                                return levelInfo.get(j);
+                            }
+                        }
+                        return new StatsSet();
+                    });
+                    statsSet.merge(staticStatSet);
+                    sk.addEffect(scope, factory.apply(statsSet));
+                }
+            }
+        } else {
+            addStaticEffect(factory, skill, startLevel, stopLevel, scope, staticStatSet);
+        }
+    }
+
+    private void addStaticEffect(Function<StatsSet, AbstractEffect> factory, Skill skill, int startLevel, int stopLevel, EffectScope scope, StatsSet staticStatSet) throws CloneNotSupportedException {
+        var effect = factory.apply(staticStatSet);
+        for (int i = startLevel; i < stopLevel ; i++) {
+            var sk = getOrCloneSkillBasedOnLast(skill.getId(), i);
+            sk.addEffect(scope, effect);
+        }
+    }
+
+    private void parseEffectNode(Node node, IntMap<StatsSet> levelInfo, int startLevel, StatsSet staticStatSet, boolean forceLevel) {
+        var attr = node.getAttributes();
+        if(nonNull(attr.getNamedItem("initial"))) {
+            levelInfo.computeIfAbsent(startLevel, l -> new StatsSet()).set(node.getNodeName(), parseString(attr, "initial"));
+            for (var child = node.getFirstChild(); nonNull(child); child = child.getNextSibling()) {
+                parseEffectNode(child, levelInfo, startLevel, staticStatSet, forceLevel);
+            }
+
+        } else if("value".equals(node.getNodeName())) {
+            var level = parseInt(node.getAttributes(), "level");
+            levelInfo.computeIfAbsent(level, l -> new StatsSet()).set(node.getParentNode().getNodeName(), node.getNodeValue());
+
+        } else if(nonNull(attr.getNamedItem("level"))) {
+            var level = parseInt(attr, "level");
+            levelInfo.computeIfAbsent(level, l -> new StatsSet()).merge(parseAttributes(node));
+            if(node.hasChildNodes()) {
+                for (var child = node.getFirstChild(); nonNull(child); child = child.getNextSibling()) {
+                    parseEffectNode(child, levelInfo, level, staticStatSet, true);
+                }
+            } else {
+                levelInfo.computeIfAbsent(level, l -> new StatsSet()).set(node.getNodeName(), node.getNodeValue());
+            }
+
+        } else  {
+            if(node.hasAttributes()) {
+                var parsedAttr = parseAttributes(node);
+                if(forceLevel) {
+                    levelInfo.computeIfAbsent(startLevel, l -> new StatsSet()).merge(parsedAttr);
+                } else {
+                    staticStatSet.merge(parsedAttr);
+                }
+            }
+            if(node.hasChildNodes()) {
+                for (var child = node.getFirstChild(); nonNull(child); child = child.getNextSibling()) {
+                    parseEffectNode(child, levelInfo, startLevel, staticStatSet, forceLevel);
+                }
+            } else {
+                if(forceLevel) {
+                    levelInfo.computeIfAbsent(startLevel, l -> new StatsSet()).set(node.getNodeName(), node.getNodeValue());
+                } else {
+                    staticStatSet.set(node.getNodeName(), node.getNodeValue());
+                }
+            }
+        }
     }
 
     private void parseSkillAbnormal(Node node, Skill skill, int maxLevel) throws CloneNotSupportedException {
@@ -177,7 +264,7 @@ public class SkillEngine extends GameXmlReader {
     private void parseConditions(Node conditionsNode, Skill skill) {
         for (var node = conditionsNode.getFirstChild(); nonNull(node); node = node.getNextSibling()) {
 
-            ISkillCondition cond = "condition".equals(node.getNodeName()) ? parseNamedCondition(node) : parseCondition(node);
+            SkillCondition cond = "condition".equals(node.getNodeName()) ? parseNamedCondition(node) : parseCondition(node);
             if(nonNull(cond)) {
                 var scope = parseEnum(node.getAttributes(), SkillConditionScope.class, "scope");
                 skill.addCondition(scope, cond);
@@ -187,12 +274,12 @@ public class SkillEngine extends GameXmlReader {
         }
     }
 
-    private ISkillCondition parseCondition(Node node) {
+    private SkillCondition parseCondition(Node node) {
         var factory = SkillConditionHandler.getInstance().getHandlerFactory(node.getNodeName());
         return computeIfNonNull(factory, f -> f.apply(null /*node*/));
     }
 
-    private ISkillCondition parseNamedCondition(Node node) {
+    private SkillCondition parseNamedCondition(Node node) {
         var factory = SkillConditionHandler.getInstance().getHandlerFactory(parseString(node.getAttributes(), "name"));
         return computeIfNonNull(factory, f -> f.apply(null));
     }
@@ -301,7 +388,7 @@ public class SkillEngine extends GameXmlReader {
                     lastValue = value;
                     var level = parseInt(child.getAttributes(), "level");
                     if(level <= maxLevel) {
-                        var newSkill = cloneBasedOnLast(skill.getId(), level);
+                        var newSkill = getOrCloneSkillBasedOnLast(skill.getId(), level);
                         skillSetter.accept(lastValue, newSkill);
                     }
                 }
@@ -320,7 +407,7 @@ public class SkillEngine extends GameXmlReader {
                     lastValue = value;
                     var level = parseInt(node.getAttributes(), "level");
                     if(level <= maxLevel) {
-                        var newSkill = cloneBasedOnLast(skill.getId(), level);
+                        var newSkill = getOrCloneSkillBasedOnLast(skill.getId(), level);
                         newSkill.setIcon(lastValue);
                     }
                 }
@@ -328,7 +415,7 @@ public class SkillEngine extends GameXmlReader {
         }
     }
 
-    private Skill cloneBasedOnLast(int id, int level) throws CloneNotSupportedException {
+    private Skill getOrCloneSkillBasedOnLast(int id, int level) throws CloneNotSupportedException {
         Skill skill = null;
         var hash = skillHashCode(id, level);
         int currentLevel = level;
@@ -350,7 +437,12 @@ public class SkillEngine extends GameXmlReader {
     }
 
     public static void init() {
+        SkillConditionHandler.getInstance().executeScript();
+        EffectHandler.getInstance().executeScript();
+        EnchantSkillGroupsData.getInstance();
+        SkillTreesData.getInstance();
         getInstance().load();
+        PetSkillData.getInstance();
     }
 
     public static SkillEngine getInstance() {
@@ -360,5 +452,4 @@ public class SkillEngine extends GameXmlReader {
     private static final class Singleton {
         private static final SkillEngine INSTANCE = new SkillEngine();
     }
-
 }

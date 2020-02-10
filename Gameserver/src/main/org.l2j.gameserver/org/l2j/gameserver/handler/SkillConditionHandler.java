@@ -1,8 +1,10 @@
 package org.l2j.gameserver.handler;
 
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.skills.ISkillCondition;
+import org.l2j.gameserver.engine.skill.api.SkillCondition;
 import org.l2j.gameserver.engine.scripting.ScriptEngineManager;
+import org.w3c.dom.Node;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,16 +14,20 @@ import java.util.function.Function;
  * @author NosBit
  */
 public final class SkillConditionHandler {
-    private final Map<String, Function<StatsSet, ISkillCondition>> _skillConditionHandlerFactories = new HashMap<>();
+    private final Map<String, Function<StatsSet, SkillCondition>> _skillConditionHandlerFactories = new HashMap<>();
 
     private SkillConditionHandler() {
     }
 
-    public void registerHandler(String name, Function<StatsSet, ISkillCondition> handlerFactory) {
+    public void registerConditionFactory(String name, Function<Node, SkillCondition> handlerFactory) {
+
+    }
+
+    public void registerHandler(String name, Function<StatsSet, SkillCondition> handlerFactory) {
         _skillConditionHandlerFactories.put(name, handlerFactory);
     }
 
-    public Function<StatsSet, ISkillCondition> getHandlerFactory(String name) {
+    public Function<StatsSet, SkillCondition> getHandlerFactory(String name) {
         return _skillConditionHandlerFactories.get(name);
     }
 

@@ -3,7 +3,7 @@ package handlers.skillconditionhandlers;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.skills.ISkillCondition;
+import org.l2j.gameserver.engine.skill.api.SkillCondition;
 import org.l2j.gameserver.engine.skill.api.Skill;
 
 import static org.l2j.gameserver.util.GameUtils.isCreature;
@@ -11,7 +11,7 @@ import static org.l2j.gameserver.util.GameUtils.isCreature;
 /**
  * @author Sdw
  */
-public class OpSkillAcquireSkillCondition implements ISkillCondition {
+public class OpSkillAcquireSkillCondition implements SkillCondition {
 
 	public final int skillId;
 	public final boolean hasLearned;

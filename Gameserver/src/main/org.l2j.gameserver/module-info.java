@@ -127,6 +127,4 @@ module org.l2j.gameserver {
     uses org.l2j.gameserver.api.item.InventoryListener;
     provides org.l2j.gameserver.api.item.InventoryListener
         with org.l2j.gameserver.engine.item.container.listener.StatsListener;
-
-
 }

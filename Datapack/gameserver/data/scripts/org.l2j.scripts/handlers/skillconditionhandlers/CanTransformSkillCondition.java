@@ -1,21 +1,23 @@
 package handlers.skillconditionhandlers;
 
+import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.engine.skill.api.SkillCondition;
+import org.l2j.gameserver.engine.skill.api.SkillConditionFactory;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.skills.ISkillCondition;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.w3c.dom.Node;
 
 import static java.util.Objects.isNull;
 
 /**
  * @author Sdw
+ * @author JoeAlisson
  */
-public class CanTransformSkillCondition implements ISkillCondition {
+public class CanTransformSkillCondition implements SkillCondition {
 
-	public CanTransformSkillCondition(StatsSet params) {
+	private CanTransformSkillCondition() {
 	}
 	
 	@Override
@@ -39,5 +41,18 @@ public class CanTransformSkillCondition implements ISkillCondition {
 			canTransform = false;
 		}
 		return canTransform;
+	}
+
+	public static final class Factory extends SkillConditionFactory {
+		private static final CanTransformSkillCondition INSTANCE = new CanTransformSkillCondition();
+		@Override
+		public SkillCondition create(Node xmlNode) {
+			return INSTANCE;
+		}
+
+		@Override
+		public String conditionName() {
+			return "CanTransform";
+		}
 	}
 }

@@ -41,6 +41,11 @@ public class StatsSet implements IParserAdvUtils {
         _set = map;
     }
 
+    public StatsSet(StatsSet other) {
+        this();
+        merge(other);
+    }
+
     public static StatsSet valueOf(String key, Object value) {
         final StatsSet set = new StatsSet();
         set.set(key, value);
@@ -63,6 +68,10 @@ public class StatsSet implements IParserAdvUtils {
      */
     public void merge(StatsSet newSet) {
         _set.putAll(newSet.getSet());
+    }
+
+    public void merge(Map<String, Object> map) {
+        _set.putAll(map);
     }
 
     /**
@@ -89,7 +98,7 @@ public class StatsSet implements IParserAdvUtils {
             throw new IllegalArgumentException("Boolean value required, but not specified");
         }
         if (val instanceof Boolean) {
-            return ((Boolean) val).booleanValue();
+            return (Boolean) val;
         }
         try {
             return Boolean.parseBoolean((String) val);

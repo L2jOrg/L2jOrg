@@ -5,7 +5,7 @@ import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
-import org.l2j.gameserver.model.skills.ISkillCondition;
+import org.l2j.gameserver.engine.skill.api.SkillCondition;
 import org.l2j.gameserver.engine.skill.api.Skill;
 
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * @author UnAfraid
  */
-public class OpExistNpcSkillCondition implements ISkillCondition {
+public class OpExistNpcSkillCondition implements SkillCondition {
 
 	public final List<Integer> npcIds;
 	public final int range;

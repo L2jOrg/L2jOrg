@@ -1,5 +1,6 @@
 package org.l2j.gameserver.data.xml.impl;
 
+import org.l2j.gameserver.engine.skill.api.SkillCondition;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.handler.EffectHandler;
 import org.l2j.gameserver.handler.SkillConditionHandler;
@@ -286,7 +287,7 @@ public class SkillData extends GameXmlReader {
                                     final String conditionName = params.getString(".name");
                                     params.remove(".name");
                                     try {
-                                        final Function<StatsSet, ISkillCondition> conditionFunction = SkillConditionHandler.getInstance().getHandlerFactory(conditionName);
+                                        final Function<StatsSet, SkillCondition> conditionFunction = SkillConditionHandler.getInstance().getHandlerFactory(conditionName);
                                         if (conditionFunction != null) {
                                             skill.addCondition(skillConditionScope, conditionFunction.apply(params));
                                         } else {

@@ -5,7 +5,7 @@ import org.l2j.gameserver.enums.SkillConditionPercentType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.skills.ISkillCondition;
+import org.l2j.gameserver.engine.skill.api.SkillCondition;
 import org.l2j.gameserver.engine.skill.api.Skill;
 
 import static org.l2j.gameserver.util.GameUtils.isCreature;
@@ -13,7 +13,7 @@ import static org.l2j.gameserver.util.GameUtils.isCreature;
 /**
  * @author UnAfraid
  */
-public class RemainHpPerSkillCondition implements ISkillCondition {
+public class RemainHpPerSkillCondition implements SkillCondition {
 
 	public final int _amount;
 	public final SkillConditionPercentType _percentType;

@@ -8,7 +8,7 @@ import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.skills.ISkillCondition;
+import org.l2j.gameserver.engine.skill.api.SkillCondition;
 import org.l2j.gameserver.engine.skill.api.Skill;
 
 import static java.util.Objects.nonNull;
@@ -18,7 +18,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author Sdw
  * @author JoeAlisson
  */
-public class OpHomeSkillCondition implements ISkillCondition {
+public class OpHomeSkillCondition implements SkillCondition {
 
 	public final ResidenceType type;
 

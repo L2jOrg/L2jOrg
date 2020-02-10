@@ -25,7 +25,6 @@ import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.holders.AttachSkillHolder;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
-import org.l2j.gameserver.model.items.AutoUseType;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.*;
 import org.l2j.gameserver.model.skills.targets.AffectObject;
@@ -153,7 +152,7 @@ public final class Skill implements IIdentifiable, Cloneable {
     private  int chargeConsume;
     private  boolean isTriggeredSkill; // If true the skill will take activation buff slot instead of a normal buff slot
     private  int effectPoint;
-    public final Map<SkillConditionScope, List<ISkillCondition>> _conditionLists = new EnumMap<>(SkillConditionScope.class);
+    public final Map<SkillConditionScope, List<SkillCondition>> _conditionLists = new EnumMap<>(SkillConditionScope.class);
     public final Map<EffectScope, List<AbstractEffect>> _effectLists = new EnumMap<>(EffectScope.class);
     private final boolean debuff;
     private  boolean isSuicideAttack;
@@ -1336,7 +1335,7 @@ public final class Skill implements IIdentifiable, Cloneable {
      * @param skillConditionScope the condition scope
      * @param skillCondition      the condition
      */
-    public void addCondition(SkillConditionScope skillConditionScope, ISkillCondition skillCondition) {
+    public void addCondition(SkillConditionScope skillConditionScope, SkillCondition skillCondition) {
         _conditionLists.computeIfAbsent(skillConditionScope, k -> new ArrayList<>()).add(skillCondition);
     }
 

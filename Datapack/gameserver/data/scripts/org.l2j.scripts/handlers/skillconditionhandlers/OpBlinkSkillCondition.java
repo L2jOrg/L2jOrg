@@ -1,32 +1,34 @@
 package handlers.skillconditionhandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillConditionFactory;
 import org.l2j.gameserver.enums.Position;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.skills.ISkillCondition;
+import org.l2j.gameserver.engine.skill.api.SkillCondition;
 import org.l2j.gameserver.engine.skill.api.Skill;
+import org.w3c.dom.Node;
 
 import static org.l2j.gameserver.util.MathUtil.convertHeadingToDegree;
 
 /**
  * @author Sdw
  */
-public class OpBlinkSkillCondition implements ISkillCondition {
+public class OpBlinkSkillCondition implements SkillCondition {
 	private final int angle;
 	private final int range;
-	
-	public OpBlinkSkillCondition(StatsSet params) {
-		angle = switch (params.getEnum("direction", Position.class)) {
+
+	private OpBlinkSkillCondition(Position direction, int range) {
+		angle = switch (direction) {
 			case BACK -> 0;
 			case FRONT -> 180;
 			default -> -1;
 		};
-		
-		range = params.getInt("range");
+		this.range = range;
+
 	}
-	
+
 	@Override
 	public boolean canUse(Creature caster, Skill skill, WorldObject target) {
 
@@ -41,5 +43,19 @@ public class OpBlinkSkillCondition implements ISkillCondition {
 		final int z = caster.getZ();
 		
 		return GeoEngine.getInstance().canMoveToTarget(caster.getX(), caster.getY(), caster.getZ(), x, y, z, caster.getInstanceWorld());
+	}
+
+	public static final class Factory extends SkillConditionFactory {
+
+		@Override
+		public SkillCondition create(Node xmlNode) {
+			var attr = xmlNode.getAttributes();
+			return new OpBlinkSkillCondition(parseEnum(attr, Position.class, "direction"), parseInt(attr, "range"));
+		}
+
+		@Override
+		public String conditionName() {
+			return "blink";
+		}
 	}
 }

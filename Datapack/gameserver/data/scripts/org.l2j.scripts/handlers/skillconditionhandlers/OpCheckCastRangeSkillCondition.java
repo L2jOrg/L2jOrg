@@ -20,14 +20,14 @@ import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.skills.ISkillCondition;
+import org.l2j.gameserver.engine.skill.api.SkillCondition;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.util.MathUtil;
 
 /**
  * @author Mobius
  */
-public class OpCheckCastRangeSkillCondition implements ISkillCondition
+public class OpCheckCastRangeSkillCondition implements SkillCondition
 {
 	private final int _distance;
 	

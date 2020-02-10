@@ -807,7 +807,7 @@
         <xs:complexContent>
             <xs:extension base="Effect">
                 <xs:sequence>
-                    <xs:element name="critical-chance" type="MappedLevelValue"/>
+                    <xs:element name="critical-chance" type="MappedLevelInt"/>
                 </xs:sequence>
                 <xs:attribute name="over-hit" type="xs:boolean" default="false"/>
                 <xs:attribute name="chance-boost" type="xs:float" default="0"/>

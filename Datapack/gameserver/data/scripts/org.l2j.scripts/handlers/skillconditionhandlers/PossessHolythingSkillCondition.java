@@ -6,7 +6,7 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
-import org.l2j.gameserver.model.skills.ISkillCondition;
+import org.l2j.gameserver.engine.skill.api.SkillCondition;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -17,7 +17,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 /**
  * @author UnAfraid
  */
-public class PossessHolythingSkillCondition implements ISkillCondition
+public class PossessHolythingSkillCondition implements SkillCondition
 {
 	public PossessHolythingSkillCondition(StatsSet params)
 	{

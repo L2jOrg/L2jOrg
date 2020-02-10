@@ -5,28 +5,23 @@ import org.l2j.gameserver.engine.skill.api.SkillCondition;
 import org.l2j.gameserver.engine.skill.api.SkillConditionFactory;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.effects.EffectFlag;
 import org.w3c.dom.Node;
 
-import static org.l2j.gameserver.util.GameUtils.isCreature;
-
 /**
- * @author Mobius
+ * @author JoeAlisson
  */
-public class NotFearedSkillCondition implements SkillCondition {
+public class NonChaoticSkillCondition implements SkillCondition {
 
-    private NotFearedSkillCondition() {
+    private NonChaoticSkillCondition() {
     }
 
     @Override
-    public boolean canUse(Creature caster, Skill skill, WorldObject target)
-    {
-        return isCreature(target) && !((Creature) target).isAffected(EffectFlag.FEAR);
+    public boolean canUse(Creature caster, Skill skill, WorldObject target) {
+        return caster.getActingPlayer().getReputation() >= 0;
     }
 
     public static final class Factory extends SkillConditionFactory {
-
-        private static final NotFearedSkillCondition INSTANCE = new NotFearedSkillCondition();
+        private static final NonChaoticSkillCondition INSTANCE = new NonChaoticSkillCondition();
 
         @Override
         public SkillCondition create(Node xmlNode) {
@@ -35,7 +30,7 @@ public class NotFearedSkillCondition implements SkillCondition {
 
         @Override
         public String conditionName() {
-            return "NotFeared";
+            return "NonChaotic";
         }
     }
 }

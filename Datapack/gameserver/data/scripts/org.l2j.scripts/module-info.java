@@ -2,6 +2,8 @@ import handlers.actionhandlers.*;
 import handlers.actionshifthandlers.*;
 import handlers.admincommandhandlers.AdminCoins;
 import handlers.bypasshandlers.EquipmentUpgrade;
+import handlers.skillconditionhandlers.*;
+import org.l2j.gameserver.engine.skill.api.SkillConditionFactory;
 import quests.Q10960_Tutorial.Q10960_Tutorial;
 
 open module org.l2j.scripts {
@@ -32,6 +34,37 @@ open module org.l2j.scripts {
     uses org.l2j.gameserver.handler.IAffectScopeHandler;
     uses org.l2j.gameserver.handler.IPlayerActionHandler;
     uses org.l2j.gameserver.model.quest.Quest;
+    uses org.l2j.gameserver.engine.skill.api.SkillConditionFactory;
+
+    provides org.l2j.gameserver.engine.skill.api.SkillConditionFactory
+            with BuildAdvanceBaseSkillCondition.Factory,
+                BuildCampSkillCondition.Factory,
+                CanBookmarkAddSlotSkillCondition.Factory,
+                CannotUseInTransformSkillCondition.Factory,
+                CanSummonSkillCondition.Factory,
+                CanSummonPetSkillCondition.Factory,
+                CanSummonSiegeGolemSkillCondition.Factory,
+                CanTransformSkillCondition.Factory,
+                CanUntransformSkillCondition.Factory,
+                CanUseInBattlefieldSkillCondition.Factory,
+                CheckLevelSkillCondition.Factory,
+                FemaleSkillCondition.Factory,
+                ConsumeBodySkillCondition.Factory,
+                EnergySavedSkillCondition.Factory,
+                EquipArmorSkillCondition.Factory,
+                EquipShieldSkillCondition.Factory,
+                EquipWeaponSkillCondition.Factory,
+                NotFearedSkillCondition.Factory,
+                NotInUnderwaterSkillCondition.Factory,
+                NonChaoticSkillCondition.Factory,
+                OpBlinkSkillCondition.Factory,
+                OpCallPcSkillCondition.Factory,
+                OpCanNotUseAirshipSkillCondition.Factory,
+                OpChangeWeaponSkillCondition.Factory,
+                OpCheckAbnormalSkillCondition.Factory,
+                OpCheckClassListSkillCondition.Factory,
+                OpCheckResidenceSkillCondition.Factory
+            ;
 
     provides instances.AbstractInstance
         with  instances.MonsterArena.MonsterArena,
