@@ -4,9 +4,9 @@ import org.l2j.gameserver.model.quest.Quest;
 
 import java.util.ServiceLoader;
 
-public class Init {
+public class Loader {
 
 	public static void main(String[] args) {
-		ServiceLoader.load(Quest.class, Init.class.getClassLoader()).forEach( (q) -> { });
+		ServiceLoader.load(Quest.class, Loader.class.getClassLoader()).forEach( (q) -> { });
 	}
 }

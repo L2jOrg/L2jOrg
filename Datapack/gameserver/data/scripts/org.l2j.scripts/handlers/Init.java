@@ -17,7 +17,6 @@ public class Init {
         ServiceLoader.load(IAdminCommandHandler.class, loader).forEach(AdminCommandHandler.getInstance()::registerHandler);
         ServiceLoader.load(IBypassHandler.class, loader).forEach(BypassHandler.getInstance()::registerHandler);
         ServiceLoader.load(IChatHandler.class, loader).forEach(ChatHandler.getInstance()::registerHandler);
-        ServiceLoader.load(IParseBoardHandler.class, loader).forEach(CommunityBoardHandler.getInstance()::registerHandler);
         ServiceLoader.load(IItemHandler.class, loader).forEach(ItemHandler.getInstance()::registerHandler);
         ServiceLoader.load(IPunishmentHandler.class, loader).forEach(PunishmentHandler.getInstance()::registerHandler);
         ServiceLoader.load(IUserCommandHandler.class, loader).forEach(UserCommandHandler.getInstance()::registerHandler);
@@ -26,7 +25,7 @@ public class Init {
         ServiceLoader.load(IAffectObjectHandler.class, loader).forEach(AffectObjectHandler.getInstance()::registerHandler);
         ServiceLoader.load(IAffectScopeHandler.class, loader).forEach(AffectScopeHandler.getInstance()::registerHandler);
         ServiceLoader.load(IPlayerActionHandler.class, loader).forEach(PlayerActionHandler.getInstance()::registerHandler);
-        ServiceLoader.load(SkillConditionFactory.class).forEach(SkillConditionHandler.getInstance()::registerFactory);
+        ServiceLoader.load(SkillConditionFactory.class, loader).forEach(SkillConditionHandler.getInstance()::registerFactory);
 
     }
 }

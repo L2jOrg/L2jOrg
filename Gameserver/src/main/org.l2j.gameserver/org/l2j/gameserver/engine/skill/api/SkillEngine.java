@@ -30,6 +30,7 @@ import java.io.File;
 import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.Objects;
+import java.util.ServiceLoader;
 import java.util.function.Function;
 import java.util.function.IntConsumer;
 import java.util.stream.Collectors;
@@ -106,9 +107,9 @@ public class SkillEngine extends GameXmlReader {
     private void parseSkillEffects(Node node, Skill skill, int maxLevel) throws CloneNotSupportedException {
         for(var child = node.getFirstChild(); nonNull(node); node = node.getNextSibling()) {
             if("effect".equals(child.getNodeName())) {
-                parseNamedEffect(node, skill, maxLevel);
+                parseNamedEffect(child, skill, maxLevel);
             } else {
-                parseEffect(node, skill, maxLevel);
+                parseEffect(child, skill, maxLevel);
             }
         }
     }
@@ -383,7 +384,7 @@ public class SkillEngine extends GameXmlReader {
         setter.accept(lastValue);
         for (var child = node.getFirstChild(); nonNull(child); child = child.getNextSibling()) {
             if ("value".equals(child.getNodeName())) {
-                var value = parseInt(child);
+                var value = Integer.parseInt(child.getTextContent());
                 if (lastValue != value) {
                     lastValue = value;
                     var level = parseInt(child.getAttributes(), "level");
@@ -402,7 +403,7 @@ public class SkillEngine extends GameXmlReader {
         for (var node = iconNode.getFirstChild(); nonNull(node); node = node.getNextSibling()) {
             if ("value".equals(node.getNodeName())) {
 
-                var value = node.getNodeValue();
+                var value = node.getTextContent();
                 if (!Objects.equals(lastValue, value)) {
                     lastValue = value;
                     var level = parseInt(node.getAttributes(), "level");
@@ -439,8 +440,8 @@ public class SkillEngine extends GameXmlReader {
     public static void init() {
         EffectHandler.getInstance().executeScript();
         EnchantSkillGroupsData.getInstance();
-        SkillTreesData.getInstance();
         getInstance().load();
+        SkillTreesData.getInstance();
         PetSkillData.getInstance();
     }
 

@@ -1186,7 +1186,7 @@ public final class Formulas {
 
     public static double getAbnormalResist(BasicProperty basicProperty, Creature target) {
         switch (basicProperty) {
-            case PHYSICAL: {
+            case PHYSIC: {
                 return target.getStats().getValue(Stat.ABNORMAL_RESIST_PHYSICAL);
             }
             case MAGIC: {

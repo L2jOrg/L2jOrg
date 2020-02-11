@@ -1,12 +1,12 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.gameserver.engine.skill.api.SkillCondition;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.handler.EffectHandler;
-import org.l2j.gameserver.handler.SkillConditionHandler;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.effects.AbstractEffect;
-import org.l2j.gameserver.model.skills.*;
+import org.l2j.gameserver.model.skills.CommonSkill;
+import org.l2j.gameserver.model.skills.EffectScope;
+import org.l2j.gameserver.model.skills.SkillConditionScope;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.util.exp4j.ExpressionBuilder;
@@ -37,7 +37,7 @@ public class SkillData extends GameXmlReader {
     private final Map<Integer, Integer> _skillsMaxLevel = new HashMap<>();
 
     private SkillData() {
-        load();
+        //load();
     }
 
     @Override

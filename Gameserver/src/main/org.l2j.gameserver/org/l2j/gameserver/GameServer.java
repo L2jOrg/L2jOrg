@@ -18,11 +18,8 @@ import org.l2j.gameserver.engine.elemental.ElementalSpiritEngine;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.mission.MissionEngine;
 import org.l2j.gameserver.engine.scripting.ScriptEngineManager;
-import org.l2j.gameserver.engine.skill.api.SkillConditionFactory;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.engine.vip.VipEngine;
-import org.l2j.gameserver.handler.EffectHandler;
-import org.l2j.gameserver.handler.SkillConditionHandler;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.*;
 import org.l2j.gameserver.model.entity.Hero;
@@ -45,7 +42,6 @@ import java.time.Duration;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.Properties;
-import java.util.ServiceLoader;
 import java.util.concurrent.TimeUnit;
 
 import static java.util.Objects.nonNull;
@@ -174,7 +170,7 @@ public class GameServer {
 
         try {
             LOGGER.info("Loading server scripts:");
-            ScriptEngineManager.getInstance().executeScriptInitList();
+            ScriptEngineManager.getInstance().executeScriptLoader();
         } catch (Exception e) {
             LOGGER.warn("Failed to execute script list!", e);
         }

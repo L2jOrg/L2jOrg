@@ -15,7 +15,7 @@ public class ReflectSkill extends AbstractEffect {
 	public final double amount;
 	
 	public ReflectSkill(StatsSet params) {
-		stat = params.getEnum("type", BasicProperty.class, BasicProperty.PHYSICAL) == BasicProperty.PHYSICAL ? Stat.REFLECT_SKILL_PHYSIC : Stat.REFLECT_SKILL_MAGIC;
+		stat = params.getEnum("type", BasicProperty.class, BasicProperty.PHYSIC) == BasicProperty.PHYSIC ? Stat.REFLECT_SKILL_PHYSIC : Stat.REFLECT_SKILL_MAGIC;
 		amount = params.getDouble("amount", 0);
 	}
 	
