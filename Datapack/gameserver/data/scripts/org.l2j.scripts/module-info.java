@@ -78,8 +78,13 @@ open module org.l2j.scripts {
                 OpSkillAcquireSkillCondition.Factory,
                 OpSoulMaxSkillCondition.Factory,
                 OpSweeperSkillCondition.Factory,
-                SkillConditionTargetFactory
-            ;
+                SkillConditionTargetFactory,
+                OpUnlockSkillCondition.Factory,
+                OpWyvernSkillCondition.Factory,
+                PossessHolythingSkillCondition.Factory,
+                RemainStatusSkillCondition.Factory,
+                SoulSavedSkillCondition.Factory,
+                TargetMyPledgeSkillCondition.Factory;
 
     provides instances.AbstractInstance
         with  instances.MonsterArena.MonsterArena,

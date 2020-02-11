@@ -12,6 +12,9 @@ import java.util.*;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 
+/**
+ * @author JoeAlisson
+ */
 final class ScriptingFileManager extends ForwardingJavaFileManager<StandardJavaFileManager> {
 
     private final Map<Path, ScriptingFileInfo> scriptsFileInfo = new HashMap<>();

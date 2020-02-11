@@ -276,12 +276,12 @@ public class SkillEngine extends GameXmlReader {
 
     private SkillCondition parseCondition(Node node) {
         var factory = SkillConditionHandler.getInstance().getHandlerFactory(node.getNodeName());
-        return computeIfNonNull(factory, f -> f.apply(null /*node*/));
+        return computeIfNonNull(factory, f -> f.apply(node));
     }
 
     private SkillCondition parseNamedCondition(Node node) {
         var factory = SkillConditionHandler.getInstance().getHandlerFactory(parseString(node.getAttributes(), "name"));
-        return computeIfNonNull(factory, f -> f.apply(null));
+        return computeIfNonNull(factory, f -> f.apply(node));
     }
 
     private void parseConstantsChanneling(Node node, Skill skill) {
@@ -437,7 +437,6 @@ public class SkillEngine extends GameXmlReader {
     }
 
     public static void init() {
-        SkillConditionHandler.getInstance().executeScript();
         EffectHandler.getInstance().executeScript();
         EnchantSkillGroupsData.getInstance();
         SkillTreesData.getInstance();

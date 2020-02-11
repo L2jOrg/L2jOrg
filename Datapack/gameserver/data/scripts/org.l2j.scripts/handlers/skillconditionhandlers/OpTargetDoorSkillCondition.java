@@ -12,6 +12,7 @@ import static org.l2j.gameserver.util.GameUtils.isDoor;
 
 /**
  * @author Mobius
+ * @author JoeAlisson
  */
 public class OpTargetDoorSkillCondition implements SkillCondition {
 

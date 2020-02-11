@@ -29,6 +29,9 @@ import java.util.stream.Collectors;
 import static java.util.Objects.*;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
+/**
+ * @author JoeAlisson
+ */
 public final class JavaExecutionContext extends AbstractExecutionContext<JavaScriptingEngine> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(JavaExecutionContext.class);

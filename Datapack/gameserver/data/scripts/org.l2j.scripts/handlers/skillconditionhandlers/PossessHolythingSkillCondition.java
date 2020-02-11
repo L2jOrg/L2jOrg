@@ -1,26 +1,26 @@
 package handlers.skillconditionhandlers;
 
+import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.engine.skill.api.SkillCondition;
+import org.l2j.gameserver.engine.skill.api.SkillConditionFactory;
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
-import org.l2j.gameserver.engine.skill.api.SkillCondition;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.GameUtils;
+import org.w3c.dom.Node;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * @author UnAfraid
+ * @author JoeAlisson
  */
-public class PossessHolythingSkillCondition implements SkillCondition
-{
-	public PossessHolythingSkillCondition(StatsSet params)
-	{
+public class PossessHolythingSkillCondition implements SkillCondition {
+	private PossessHolythingSkillCondition() {
 	}
 	
 	@Override
@@ -58,5 +58,19 @@ public class PossessHolythingSkillCondition implements SkillCondition
 			canTakeCastle = false;
 		}
 		return canTakeCastle;
+	}
+
+	public static final class Factory extends SkillConditionFactory {
+		private static final PossessHolythingSkillCondition INSTANCE = new PossessHolythingSkillCondition();
+
+		@Override
+		public SkillCondition create(Node xmlNode) {
+			return INSTANCE;
+		}
+
+		@Override
+		public String conditionName() {
+			return "PossessHolything";
+		}
 	}
 }

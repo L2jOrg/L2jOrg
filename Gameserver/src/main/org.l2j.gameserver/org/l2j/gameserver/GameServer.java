@@ -18,6 +18,7 @@ import org.l2j.gameserver.engine.elemental.ElementalSpiritEngine;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.mission.MissionEngine;
 import org.l2j.gameserver.engine.scripting.ScriptEngineManager;
+import org.l2j.gameserver.engine.skill.api.SkillConditionFactory;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.engine.vip.VipEngine;
 import org.l2j.gameserver.handler.EffectHandler;
@@ -44,6 +45,7 @@ import java.time.Duration;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.Properties;
+import java.util.ServiceLoader;
 import java.util.concurrent.TimeUnit;
 
 import static java.util.Objects.nonNull;
@@ -265,7 +267,6 @@ public class GameServer {
 
         printSection("Scripting Engine");
         ScriptEngineManager.init();
-        /*ScriptEngineManager.getInstance().executeScript(Paths.get(getSettings(ServerSettings.class).dataPackDirectory().resolve("data/scripts").toString(), "org.l2j.scripts", "ai", "SkillChecker.java"));*/
 
         var settings = getSettings(ServerSettings.class);
         ThreadPool.init(settings.threadPoolSize() ,settings.scheduledPoolSize());

@@ -10,6 +10,9 @@ import java.sql.SQLException;
 
 import static java.util.Objects.isNull;
 
+/**
+ * @author JoeAlisson
+ */
 public class DatabaseFactory {
     private static Logger LOGGER = LoggerFactory.getLogger(DatabaseFactory.class);
 

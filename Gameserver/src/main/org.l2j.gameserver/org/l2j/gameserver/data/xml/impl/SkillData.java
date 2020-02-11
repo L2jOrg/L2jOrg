@@ -286,7 +286,7 @@ public class SkillData extends GameXmlReader {
                                 {
                                     final String conditionName = params.getString(".name");
                                     params.remove(".name");
-                                    try {
+                                   /* try {
                                         final Function<StatsSet, SkillCondition> conditionFunction = SkillConditionHandler.getInstance().getHandlerFactory(conditionName);
                                         if (conditionFunction != null) {
                                             skill.addCondition(skillConditionScope, conditionFunction.apply(params));
@@ -295,7 +295,7 @@ public class SkillData extends GameXmlReader {
                                         }
                                     } catch (Exception e) {
                                         LOGGER.warn(": Failed loading condition for Skill Id[" + statsSet.getInt(".id") + "] Level[" + level + "] SubLevel[" + subLevel + "] Condition Scope[" + skillConditionScope + "] Condition Name[" + conditionName + "]", e);
-                                    }
+                                    }*/
                                 }));
 
                                 _skills.put(getSkillHashCode(skill), skill);

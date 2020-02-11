@@ -27,7 +27,6 @@ public final class ScriptEngineManager  {
     public static final Path SCRIPT_FOLDER = getSettings(ServerSettings.class).dataPackDirectory().resolve("data/scripts");
     private static final Path MASTER_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "org.l2j.scripts", "handlers", "MasterHandler.java");
     private static final Path EFFECT_MASTER_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "org.l2j.scripts", "handlers", "EffectMasterHandler.java");
-    private static final Path SKILL_CONDITION_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "org.l2j.scripts", "handlers", "SkillConditionMasterHandler.java");
     private static final Path CONDITION_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "org.l2j.scripts", "handlers", "ConditionMasterHandler.java");
 
     private final Map<String, IExecutionContext> extEngines = new HashMap<>();
@@ -114,10 +113,6 @@ public final class ScriptEngineManager  {
 
     public void executeEffectMasterHandler() throws Exception {
         executeScript(EFFECT_MASTER_HANDLER_FILE);
-    }
-
-    public void executeSkillConditionMasterHandler() throws Exception {
-        executeScript(SKILL_CONDITION_HANDLER_FILE);
     }
 
     public void executeConditionMasterHandler() throws Exception {

@@ -11,16 +11,16 @@ import static org.l2j.gameserver.util.GameUtils.isCreature;
 
 /**
  * @author UnAfraid
+ * @author JoeAlisson
  */
 public class TargetRaceSkillCondition implements SkillCondition {
 
 	public final Race race;
-	
-	public TargetRaceSkillCondition(StatsSet params)
-	{
-		race = params.getEnum("race", Race.class);
+
+	protected TargetRaceSkillCondition(Race race) {
+		this.race = race;
 	}
-	
+
 	@Override
 	public boolean canUse(Creature caster, Skill skill, WorldObject target) {
 		if (!isCreature(target)) {
