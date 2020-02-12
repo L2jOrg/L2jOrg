@@ -1,24 +1,23 @@
 package handlers.effecthandlers.stat;
 
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.StatModifierType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.conditions.Condition;
-import org.l2j.gameserver.model.conditions.ConditionPlayerIsInCombat;
 import org.l2j.gameserver.model.conditions.ConditionUsingItemType;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.type.ArmorType;
 import org.l2j.gameserver.model.items.type.WeaponType;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.stats.Stat;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-
-import static java.util.Objects.nonNull;
 
 /**
  * @author Sdw
+ * @author JoeAlisson
  */
 public abstract class AbstractStatEffect extends AbstractEffect {
 
@@ -35,37 +34,15 @@ public abstract class AbstractStatEffect extends AbstractEffect {
     public AbstractStatEffect(StatsSet params, Stat mulStat, Stat addStat) {
         this.addStat = addStat;
         this.mulStat = mulStat;
-        amount = params.getDouble("amount", 0);
+        amount = params.getDouble("power", 0);
         mode = params.getEnum("mode", StatModifierType.class, StatModifierType.DIFF);
 
-        int weaponTypesMask = 0;
-        final List<String> weaponTypes = params.getList("weaponType", String.class);
+        int weaponTypesMask = Arrays.stream(params.getString("weapon-type").trim().split(" "))
+                .mapToInt(w -> WeaponType.valueOf(w).mask()).reduce(0, (a, b) -> a | b);
 
-        if (nonNull(weaponTypes)) {
-            for (String weaponType : weaponTypes) {
-                try {
-                    weaponTypesMask |= WeaponType.valueOf(weaponType).mask();
-                } catch (IllegalArgumentException e) {
-                    final IllegalArgumentException exception = new IllegalArgumentException("weaponType should contain WeaponType enum value but found " + weaponType);
-                    exception.addSuppressed(e);
-                    throw exception;
-                }
-            }
-        }
+        int armorTypesMask = Arrays.stream(params.getString("armor-type").trim().split(" "))
+                .mapToInt(armor -> ArmorType.valueOf(armor).mask()).reduce(0, (a, b) -> a | b);
 
-        int armorTypesMask = 0;
-        final List<String> armorTypes = params.getList("armorType", String.class);
-        if (nonNull(armorTypes)) {
-            for (String armorType : armorTypes) {
-                try {
-                    armorTypesMask |= ArmorType.valueOf(armorType).mask();
-                } catch (IllegalArgumentException e) {
-                    final IllegalArgumentException exception = new IllegalArgumentException("armorTypes should contain ArmorType enum value but found " + armorType);
-                    exception.addSuppressed(e);
-                    throw exception;
-                }
-            }
-        }
 
         if (weaponTypesMask != 0) {
             conditions.add(new ConditionUsingItemType(weaponTypesMask));
@@ -73,10 +50,6 @@ public abstract class AbstractStatEffect extends AbstractEffect {
 
         if (armorTypesMask != 0) {
             conditions.add(new ConditionUsingItemType(armorTypesMask));
-        }
-
-        if (params.contains("inCombat")) {
-            conditions.add(new ConditionPlayerIsInCombat(params.getBoolean("inCombat")));
         }
     }
 

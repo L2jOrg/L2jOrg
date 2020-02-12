@@ -25,9 +25,9 @@ public final class Backstab extends AbstractEffect {
 	
 	public Backstab(StatsSet params) {
 		power = params.getDouble("power");
-		chanceBoost = params.getDouble("chanceBoost");
-		criticalChance = params.getDouble("criticalChance", 0);
-		overHit = params.getBoolean("overHit", false);
+		chanceBoost = params.getDouble("chance-boost");
+		criticalChance = params.getDouble("critical-chance", 0);
+		overHit = params.getBoolean("over-hit", false);
 	}
 	
 	@Override

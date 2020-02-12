@@ -399,7 +399,7 @@ public class XmlParser {
      * @param defaultValue the default value
      * @return if the node is not null, the value of the parsed node, otherwise the default value
      */
-    protected String parseString(Node node, String defaultValue)
+    private String parseString(Node node, String defaultValue)
     {
         return node != null ? node.getNodeValue() : defaultValue;
     }
@@ -409,8 +409,7 @@ public class XmlParser {
      * @param node the node to parse
      * @return if the node is not null, the value of the parsed node, otherwise null
      */
-    protected String parseString(Node node)
-    {
+    protected String parseString(Node node) {
         return parseString(node, null);
     }
 
@@ -420,8 +419,7 @@ public class XmlParser {
      * @param name the name of the attribute to parse
      * @return if the node is not null, the value of the parsed node, otherwise null
      */
-    protected String parseString(NamedNodeMap attrs, String name)
-    {
+    protected String parseString(NamedNodeMap attrs, String name) {
         return parseString(attrs.getNamedItem(name));
     }
 

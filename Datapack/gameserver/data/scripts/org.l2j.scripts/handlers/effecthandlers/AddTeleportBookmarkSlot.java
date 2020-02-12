@@ -16,27 +16,27 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public final class AddTeleportBookmarkSlot extends AbstractEffect {
 
-	public final int amount;
-	
-	public AddTeleportBookmarkSlot(StatsSet params)
-	{
-		amount = params.getInt("amount", 0);
-	}
-	
-	@Override
-	public boolean isInstant()
-	{
-		return true;
-	}
-	
-	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, Item item) {
-		if (!isPlayer(effected)) {
-			return;
-		}
-		
-		final Player player = effected.getActingPlayer();
-		player.setBookMarkSlot(player.getBookMarkSlot() + amount);
-		player.sendPacket(SystemMessageId.THE_NUMBER_OF_MY_TELEPORTS_SLOTS_HAS_BEEN_INCREASED);
-	}
+    public final int power;
+
+    public AddTeleportBookmarkSlot(StatsSet params)
+    {
+        power = params.getInt("power", 0);
+    }
+
+    @Override
+    public boolean isInstant()
+    {
+        return true;
+    }
+
+    @Override
+    public void instant(Creature effector, Creature effected, Skill skill, Item item) {
+        if (!isPlayer(effected)) {
+            return;
+        }
+
+        final Player player = effected.getActingPlayer();
+        player.setBookMarkSlot(player.getBookMarkSlot() + power);
+        player.sendPacket(SystemMessageId.THE_NUMBER_OF_MY_TELEPORTS_SLOTS_HAS_BEEN_INCREASED);
+    }
 }

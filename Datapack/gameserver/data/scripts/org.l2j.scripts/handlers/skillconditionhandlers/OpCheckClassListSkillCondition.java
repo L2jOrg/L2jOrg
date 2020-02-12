@@ -50,7 +50,7 @@ public class OpCheckClassListSkillCondition implements SkillCondition {
 			var listNode = xmlNode.getFirstChild();
 			Set<ClassId> classIds = Collections.emptySet();
 			if(nonNull(listNode)) {
-				classIds = Arrays.stream(parseString(listNode).split(" ")).map(ClassId::valueOf).collect(Collectors.toSet());
+				classIds = Arrays.stream(listNode.getTextContent().split(" ")).map(ClassId::valueOf).collect(Collectors.toSet());
 			}
 			return new OpCheckClassListSkillCondition(classIds, affect);
 		}

@@ -37,7 +37,7 @@ public class EquipWeaponSkillCondition implements SkillCondition {
 
 		@Override
 		public SkillCondition create(Node xmlNode) {
-			int mask = Arrays.stream(parseString(xmlNode, "type").split(Util.SPACE))
+			int mask = Arrays.stream(xmlNode.getFirstChild().getTextContent().split(Util.SPACE))
 					.mapToInt(s -> WeaponType.valueOf(s).mask()).reduce(0, (a, b) -> a | b);
 			return new EquipWeaponSkillCondition(mask);
 		}

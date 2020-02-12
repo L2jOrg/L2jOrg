@@ -10,22 +10,18 @@ import org.slf4j.LoggerFactory;
  * Effect Master handler.
  * @author NosBit
  */
-public final class EffectMasterHandler
-{
-    private static final Logger LOGGER = LoggerFactory.getLogger(EffectMasterHandler.class.getName());
+public final class EffectMasterHandler {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(EffectMasterHandler.class);
 
     public static void main(String[] args) {
         var handler = EffectHandler.getInstance();
         handler.registerFactory("AbnormalShield", AbnormalShield::new);
-        handler.registerFactory("AbnormalVisualEffect", VisualEffect::new);
-        handler.registerFactory("Accuracy", Accuracy::new);
         handler.registerFactory("AddHate", AddHate::new);
         handler.registerFactory("AddTeleportBookmarkSlot", AddTeleportBookmarkSlot::new);
-        handler.registerFactory("AgathionSlot", AgathionSlot::new);
-        handler.registerFactory("AreaDamage", AreaDamage::new);
-        handler.registerFactory("AttackAttribute", AttackAttribute::new);
-        handler.registerFactory("AttackTrait", AttackTrait::new);
-        handler.registerFactory("Backstab", Backstab::new);
+        handler.registerFactory("stat-modify", StatModify::new);
+        handler.registerFactory("attack-trait", AttackTrait::new); // TODO
+        handler.registerFactory("backstab", Backstab::new);
         handler.registerFactory("Betray", Betray::new);
         handler.registerFactory("BlockAbnormalSlot", BlockAbnormalSlot::new);
         handler.registerFactory("BlockAction", BlockAction::new);
