@@ -30,9 +30,9 @@ public final class PhysicalSoulAttack extends AbstractEffect {
 	
 	public PhysicalSoulAttack(StatsSet params) {
 		power = params.getDouble("power", 0);
-		criticalChance = params.getDouble("criticalChance", 0);
-		ignoreShieldDefence = params.getBoolean("ignoreShieldDefence", false);
-		overHit = params.getBoolean("overHit", false);
+		criticalChance = params.getDouble(" critical-chance", 0);
+		ignoreShieldDefence = params.getBoolean("ignore-shield", false);
+		overHit = params.getBoolean("over-hit", false);
 	}
 	
 	@Override

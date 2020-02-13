@@ -24,11 +24,11 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public final class SoulEating extends AbstractEffect {
 	public final int expNeeded;
-	public final int maxSouls;
+	public final int power;
 	
 	public SoulEating(StatsSet params) {
-		expNeeded = params.getInt("expNeeded");
-		maxSouls = params.getInt("maxSouls");
+		expNeeded = params.getInt("experience");
+		power = params.getInt("power");
 	}
 	
 	@Override
@@ -48,7 +48,7 @@ public final class SoulEating extends AbstractEffect {
 	@Override
 	public void pump(Creature effected, Skill skill)
 	{
-		effected.getStats().mergeAdd(Stat.MAX_SOULS, maxSouls);
+		effected.getStats().mergeAdd(Stat.MAX_SOULS, power);
 	}
 	
 	private void onExperienceReceived(Playable playable, long exp) {

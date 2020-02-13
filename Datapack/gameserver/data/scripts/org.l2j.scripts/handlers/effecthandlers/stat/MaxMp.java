@@ -23,8 +23,8 @@ public class MaxMp extends AbstractStatEffect {
         if (heal) {
             ThreadPool.schedule(() -> {
                 switch (mode) {
-                    case DIFF -> effected.setCurrentMp(effected.getCurrentMp() + amount);
-                    case PER -> effected.setCurrentMp(effected.getCurrentMp() + (effected.getMaxMp() * (amount / 100)));
+                    case DIFF -> effected.setCurrentMp(effected.getCurrentMp() + power);
+                    case PER -> effected.setCurrentMp(effected.getCurrentMp() + (effected.getMaxMp() * (power / 100)));
                 }
             }, 100);
         }

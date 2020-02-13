@@ -15,11 +15,11 @@ import static java.util.Objects.isNull;
  * @author Nik
  */
 public class PkCount extends AbstractEffect {
-	public final int amount;
+	public final int power;
 	
 	public PkCount(StatsSet params)
 	{
-		amount = params.getInt("amount", 0);
+		power = params.getInt("power", 0);
 	}
 	
 	@Override
@@ -37,7 +37,7 @@ public class PkCount extends AbstractEffect {
 		}
 		
 		if (player.getPkKills() > 0) {
-			final int newPkCount = Math.max(player.getPkKills() + amount, 0);
+			final int newPkCount = Math.max(player.getPkKills() + power, 0);
 			player.setPkKills(newPkCount);
 			player.sendPacket(new UserInfo(player));
 		}

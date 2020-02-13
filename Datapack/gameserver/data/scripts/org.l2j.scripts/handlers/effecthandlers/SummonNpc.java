@@ -24,23 +24,16 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 /**
  * Summon Npc effect implementation.
  * @author Zoey76
+ * @author JoeAlisson
  */
 public final class SummonNpc extends AbstractEffect {
 	public int despawnDelay;
 	public final int npcId;
-	public final int npcCount;
-	private final boolean randomOffset;
-	private final boolean isSummonSpawn;
-	private final boolean singleInstance; // Only one instance of this NPC is allowed.
 	
 	public SummonNpc(StatsSet params)
 	{
-		despawnDelay = params.getInt("despawnDelay", 20000);
-		npcId = params.getInt("npcId", 0);
-		npcCount = params.getInt("npcCount", 1);
-		randomOffset = params.getBoolean("randomOffset", false);
-		isSummonSpawn = params.getBoolean("isSummonSpawn", false);
-		singleInstance = params.getBoolean("singleInstance", false);
+		despawnDelay = params.getInt("despawn-delay", 20000);
+		npcId = params.getInt("npc", 0);
 	}
 	
 	@Override
@@ -61,7 +54,7 @@ public final class SummonNpc extends AbstractEffect {
 			return;
 		}
 		
-		if (npcId <= 0 || npcCount <= 0) {
+		if (npcId <= 0) {
 			LOGGER.warn(SummonNpc.class.getSimpleName() + ": Invalid NPC ID or count skill ID: " + skill.getId());
 			return;
 		}
@@ -92,11 +85,6 @@ public final class SummonNpc extends AbstractEffect {
 			x = effected.getX();
 			y = effected.getY();
 			z = effected.getZ();
-		}
-		
-		if (randomOffset) {
-			x += (Rnd.nextBoolean() ? Rnd.get(20, 50) : Rnd.get(-50, -20));
-			y += (Rnd.nextBoolean() ? Rnd.get(20, 50) : Rnd.get(-50, -20));
 		}
 
 		switch (npcTemplate.getType()) {
@@ -136,12 +124,8 @@ public final class SummonNpc extends AbstractEffect {
 				spawn.setHeading(player.getHeading());
 				spawn.stopRespawn();
 
-				// If only single instance is allowed, delete previous NPCs.
-				if (singleInstance) {
-					player.getSummonedNpcs().stream().filter(npc -> npc.getId() == npcId).forEach(Npc::deleteMe);
-				}
 
-				final Npc npc = spawn.doSpawn(isSummonSpawn);
+				final Npc npc = spawn.doSpawn(false);
 				player.addSummonedNpc(npc); // npc.setSummoner(player);
 				npc.setName(npcTemplate.getName());
 				npc.setTitle(npcTemplate.getName());

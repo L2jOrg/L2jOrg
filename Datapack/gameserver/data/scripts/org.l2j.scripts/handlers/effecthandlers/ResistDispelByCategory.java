@@ -11,19 +11,19 @@ import org.l2j.gameserver.model.stats.Stat;
  * @author Sdw
  */
 public class ResistDispelByCategory extends AbstractEffect {
-	public final DispelSlotType slot;
-	public final double amount;
-	
-	public ResistDispelByCategory(StatsSet params) {
-		amount = params.getDouble("amount", 0);
-		slot = params.getEnum("slot", DispelSlotType.class, DispelSlotType.BUFF);
-	}
-	
-	@Override
-	public void pump(Creature effected, Skill skill) {
-		// Only this one is in use it seems
-		if (slot == DispelSlotType.BUFF) {
-			effected.getStats().mergeMul(Stat.RESIST_DISPEL_BUFF, 1 + (amount / 100));
-		}
-	}
+    public final DispelSlotType slot;
+    public final double power;
+
+    public ResistDispelByCategory(StatsSet params) {
+        power = params.getDouble("power", 0);
+        slot = params.getEnum("category", DispelSlotType.class, DispelSlotType.BUFF);
+    }
+
+    @Override
+    public void pump(Creature effected, Skill skill) {
+        // Only this one is in use it seems
+        if (slot == DispelSlotType.BUFF) {
+            effected.getStats().mergeMul(Stat.RESIST_DISPEL_BUFF, 1 + (power / 100));
+        }
+    }
 }

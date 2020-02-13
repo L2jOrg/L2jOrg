@@ -24,8 +24,8 @@ public class MaxCp extends AbstractStatEffect {
         if (heal) {
             ThreadPool.schedule(() -> {
                 switch (mode) {
-                    case DIFF -> effected.setCurrentCp(effected.getCurrentCp() + amount);
-                    case PER -> effected.setCurrentCp(effected.getCurrentCp() + (effected.getMaxCp() * (amount / 100)));
+                    case DIFF -> effected.setCurrentCp(effected.getCurrentCp() + power);
+                    case PER -> effected.setCurrentCp(effected.getCurrentCp() + (effected.getMaxCp() * (power / 100)));
                 }
             }, 100);
         }

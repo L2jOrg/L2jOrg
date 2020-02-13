@@ -23,9 +23,9 @@ public final class Restoration extends AbstractEffect {
 	public final int itemEnchantmentLevel;
 	
 	public Restoration(StatsSet params) {
-		itemId = params.getInt("itemId", 0);
-		itemCount = params.getInt("itemCount", 0);
-		itemEnchantmentLevel = params.getInt("itemEnchantmentLevel", 0);
+		itemId = params.getInt("item", 0);
+		itemCount = params.getInt("count", 0);
+		itemEnchantmentLevel = params.getInt("enchant", 0);
 	}
 	
 	@Override

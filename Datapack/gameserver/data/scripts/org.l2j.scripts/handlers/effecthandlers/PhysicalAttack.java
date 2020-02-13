@@ -1,6 +1,6 @@
 package handlers.effecthandlers;
 
-import org.l2j.commons.util.Util;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Attackable;
@@ -8,14 +8,8 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.model.skills.AbnormalType;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.model.stats.Stat;
-
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
 
 import static org.l2j.gameserver.util.GameUtils.isAttackable;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
@@ -26,6 +20,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * For melee skills: 70 * graciaSkillBonus1.10113 * (patk * lvlmod + power) * crit * ss * skillpowerbonus / pdef <br>
  * For ranged skills: 70 * (patk * lvlmod + power + patk + power) * crit * ss * skillpower / pdef <br>
  * @author Nik
+ * @author JoeAlisson
  */
 public final class PhysicalAttack extends AbstractEffect {
 	public final double power;
@@ -34,28 +29,14 @@ public final class PhysicalAttack extends AbstractEffect {
 	public final double criticalChance;
 	public final boolean ignoreShieldDefence;
 	public final boolean overHit;
-	
-	private final Set<AbnormalType> abnormals;
-	private final double abnormalPowerMod;
-	
+
 	public PhysicalAttack(StatsSet params) {
 		power = params.getDouble("power", 0);
-		pAtkMod = params.getDouble("pAtkMod", 1.0);
-		pDefMod = params.getDouble("pDefMod", 1.0);
-		criticalChance = params.getDouble("criticalChance", 0);
-		ignoreShieldDefence = params.getBoolean("ignoreShieldDefence", false);
-		overHit = params.getBoolean("overHit", false);
-		
-		final String abnormals = params.getString("abnormalType", null);
-		if (Util.isNotEmpty(abnormals)) {
-			this.abnormals = new HashSet<>();
-			for (String slot : abnormals.split(";")) {
-				this.abnormals.add(AbnormalType.getAbnormalType(slot));
-			}
-		}else {
-			this.abnormals = Collections.emptySet();
-		}
-		abnormalPowerMod = params.getDouble("damageModifier", 1);
+		pAtkMod = params.getDouble("attack-mod", 1.0);
+		pDefMod = params.getDouble("defense-mod", 1.0);
+		criticalChance = params.getDouble("critical-chance", 0);
+		ignoreShieldDefence = params.getBoolean("ignore-shield", false);
+		overHit = params.getBoolean("over-hit", false);
 	}
 	
 	@Override
@@ -116,7 +97,6 @@ public final class PhysicalAttack extends AbstractEffect {
 			final double weaponMod = effector.getAttackType().isRanged() ? 70 : 77;
 			final double power = this.power + effector.getStats().getValue(Stat.SKILL_POWER_ADD, 0);
 			final double rangedBonus = effector.getAttackType().isRanged() ? attack + power : 0;
-			final double abnormalMod = abnormals.stream().anyMatch(effected::hasAbnormalType) ? abnormalPowerMod : 1;
 			final double critMod = critical ? Formulas.calcCritDamage(effector, effected, skill) : 1;
 			double ssmod = 1;
 			if (skill.useSoulShot()) {
@@ -134,7 +114,7 @@ public final class PhysicalAttack extends AbstractEffect {
 			// ATTACK CALCULATION 77 * ((pAtk * lvlMod) + power) / pdef            RANGED ATTACK CALCULATION 70 * ((pAtk * lvlMod) + power + patk + power) / pdef
 			// ```````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^``````````````````````````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 			final double baseMod = (weaponMod * ((attack * effector.getLevelMod()) + power + rangedBonus)) / defence;
-			damage = baseMod * abnormalMod * ssmod * critMod * weaponTraitMod * generalTraitMod * weaknessMod * attributeMod * pvpPveMod * randomMod;
+			damage = baseMod  * ssmod * critMod * weaponTraitMod * generalTraitMod * weaknessMod * attributeMod * pvpPveMod * randomMod;
 			damage *= effector.getStats().getValue(Stat.PHYSICAL_SKILL_POWER, 1);
 		}
 		

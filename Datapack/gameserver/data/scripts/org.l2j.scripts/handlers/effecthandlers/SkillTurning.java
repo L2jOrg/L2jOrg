@@ -10,20 +10,18 @@ import org.l2j.gameserver.model.stats.Formulas;
 
 /**
  * Skill Turning effect implementation.
+ * @author JoeAlisson
  */
 public final class SkillTurning extends AbstractEffect {
-	public final int chance;
-	private final boolean staticChance;
+	public final int power;
 	
 	public SkillTurning(StatsSet params) {
-		chance = params.getInt("chance", 100);
-		staticChance = params.getBoolean("staticChance", false);
+		power = params.getInt("power", 100);
 	}
 	
 	@Override
-	public boolean calcSuccess(Creature effector, Creature effected, Skill skill)
-	{
-		return staticChance ? Formulas.calcProbability(chance, effector, effected, skill) : (Rnd.get(100) < chance);
+	public boolean calcSuccess(Creature effector, Creature effected, Skill skill) {
+		return Rnd.chance(power);
 	}
 	
 	@Override

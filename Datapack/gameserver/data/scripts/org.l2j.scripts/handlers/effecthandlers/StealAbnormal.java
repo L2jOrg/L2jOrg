@@ -23,12 +23,12 @@ public final class StealAbnormal extends AbstractEffect {
 
 	public final DispelSlotType slot;
 	public final int rate;
-	public final int max;
+	public final int power;
 	
 	public StealAbnormal(StatsSet params) {
-		slot = params.getEnum("slot", DispelSlotType.class, DispelSlotType.BUFF);
+		slot = params.getEnum("category", DispelSlotType.class, DispelSlotType.BUFF);
 		rate = params.getInt("rate", 0);
-		max = params.getInt("max", 0);
+		power = params.getInt("power", 0);
 	}
 	
 	@Override
@@ -46,7 +46,7 @@ public final class StealAbnormal extends AbstractEffect {
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item) {
 		if (isPlayer(effected) && effector != effected) {
-			final List<BuffInfo> toSteal = Formulas.calcCancelStealEffects(effector, effected, skill, slot, rate, max);
+			final List<BuffInfo> toSteal = Formulas.calcCancelStealEffects(effector, effected, skill, slot, rate, power);
 			if (toSteal.isEmpty()) {
 				return;
 			}

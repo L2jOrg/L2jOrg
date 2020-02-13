@@ -19,8 +19,8 @@ public class CriticalRate extends AbstractConditionalHpEffect {
     public void pump(Creature effected, Skill skill) {
         if (conditions.isEmpty() || conditions.stream().allMatch(cond -> cond.test(effected, effected, skill))) {
             switch (mode) {
-                case DIFF -> effected.getStats().mergeAdd(addStat, amount);
-                case PER -> effected.getStats().mergeMul(mulStat, (amount / 100));
+                case DIFF -> effected.getStats().mergeAdd(addStat, power);
+                case PER -> effected.getStats().mergeMul(mulStat, (power / 100));
             }
         }
     }

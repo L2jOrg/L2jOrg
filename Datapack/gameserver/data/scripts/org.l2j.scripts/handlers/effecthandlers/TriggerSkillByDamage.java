@@ -23,10 +23,9 @@ import static org.l2j.gameserver.util.GameUtils.isCreature;
 /**
  * Trigger Skill By Damage effect implementation.
  * @author UnAfraid
+ * @author JoeAlisson
  */
 public final class TriggerSkillByDamage extends AbstractEffect {
-	private final int minAttackerLevel;
-	private final int maxAttackerLevel;
 	public final int minDamage;
 	public final int chance;
 	public final SkillHolder skill;
@@ -34,13 +33,11 @@ public final class TriggerSkillByDamage extends AbstractEffect {
 	public final InstanceType attackerType;
 	
 	public TriggerSkillByDamage(StatsSet params) {
-		minAttackerLevel = params.getInt("minAttackerLevel", 1);
-		maxAttackerLevel = params.getInt("maxAttackerLevel", 127);
-		minDamage = params.getInt("minDamage", 1);
+		minDamage = params.getInt("min-damage", 1);
 		chance = params.getInt("chance", 100);
-		skill = new SkillHolder(params.getInt("skillId"), params.getInt("skillLevel", 1));
-		targetType = params.getEnum("targetType", TargetType.class, TargetType.SELF);
-		attackerType = params.getEnum("attackerType", InstanceType.class, InstanceType.Creature);
+		skill = new SkillHolder(params.getInt("skill"), params.getInt("power", 1));
+		targetType = params.getEnum("target", TargetType.class, TargetType.SELF);
+		attackerType = params.getEnum("attacker", InstanceType.class, InstanceType.Creature);
 	}
 	
 	private void onDamageReceivedEvent(OnCreatureDamageReceived event) {
@@ -49,10 +46,6 @@ public final class TriggerSkillByDamage extends AbstractEffect {
 		}
 		
 		if (event.getAttacker() == event.getTarget()) {
-			return;
-		}
-		
-		if ((event.getAttacker().getLevel() < minAttackerLevel) || (event.getAttacker().getLevel() > maxAttackerLevel)) {
 			return;
 		}
 		

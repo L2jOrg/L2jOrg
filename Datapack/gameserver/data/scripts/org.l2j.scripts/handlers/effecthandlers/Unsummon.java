@@ -18,23 +18,23 @@ import static org.l2j.gameserver.util.GameUtils.isSummon;
  * @author Adry_85
  */
 public final class Unsummon extends AbstractEffect {
-	public final int chance;
+	public final int power;
 	
 	public Unsummon(StatsSet params)
 	{
-		chance = params.getInt("chance", -1);
+		power = params.getInt("power", -1);
 	}
 	
 	@Override
 	public boolean calcSuccess(Creature effector, Creature effected, Skill skill) {
-		if (chance < 0) {
+		if (power < 0) {
 			return true;
 		}
 		
 		final int magicLevel = skill.getMagicLevel();
 		if ((magicLevel <= 0) || ((effected.getLevel() - 9) <= magicLevel))
 		{
-			final double chance = this.chance * Formulas.calcAttributeBonus(effector, effected, skill) * Formulas.calcGeneralTraitBonus(effector, effected, skill.getTraitType(), false);
+			final double chance = this.power * Formulas.calcAttributeBonus(effector, effected, skill) * Formulas.calcGeneralTraitBonus(effector, effected, skill.getTraitType(), false);
 			return Rnd.chance(chance);
 		}
 		

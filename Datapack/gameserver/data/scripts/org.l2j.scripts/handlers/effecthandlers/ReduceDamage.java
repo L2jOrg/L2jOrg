@@ -17,11 +17,11 @@ import java.util.function.Function;
  * @author Sdw
  */
 public class ReduceDamage extends AbstractEffect {
-	public final double amount;
+	public final double power;
 	
 	public ReduceDamage(StatsSet params)
 	{
-		amount = params.getDouble("amount");
+		power = params.getDouble("power");
 	}
 	
 	private DamageReturn onDamageReceivedEvent(OnCreatureDamageReceived event) {
@@ -30,7 +30,7 @@ public class ReduceDamage extends AbstractEffect {
 			return null;
 		}
 		
-		final double newDamage = event.getDamage() * (amount / 100);
+		final double newDamage = event.getDamage() * (power / 100);
 		return new DamageReturn(false, true, false, newDamage);
 	}
 	

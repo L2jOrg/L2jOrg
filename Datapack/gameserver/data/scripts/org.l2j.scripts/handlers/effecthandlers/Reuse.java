@@ -11,23 +11,23 @@ import org.l2j.gameserver.util.MathUtil;
  * @author Sdw
  */
 public class Reuse extends AbstractEffect {
-	public final int magicType;
-	public final double amount;
-	
-	public Reuse(StatsSet params) {
-		magicType = params.getInt("magicType", 0);
-		amount = params.getDouble("amount", 0);
-	}
-	
-	@Override
-	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
-	{
-		effected.getStats().mergeReuseTypeValue(magicType, (amount / 100) + 1, MathUtil::mul);
-	}
-	
-	@Override
-	public void onExit(Creature effector, Creature effected, Skill skill)
-	{
-		effected.getStats().mergeReuseTypeValue(magicType, (amount / 100) + 1, MathUtil::div);
-	}
+    public final int magicType;
+    public final double power;
+
+    public Reuse(StatsSet params) {
+        magicType = params.getInt("type", 0);
+        power = params.getDouble("power", 0);
+    }
+
+    @Override
+    public void onStart(Creature effector, Creature effected, Skill skill, Item item)
+    {
+        effected.getStats().mergeReuseTypeValue(magicType, (power / 100) + 1, MathUtil::mul);
+    }
+
+    @Override
+    public void onExit(Creature effector, Creature effected, Skill skill)
+    {
+        effected.getStats().mergeReuseTypeValue(magicType, (power / 100) + 1, MathUtil::div);
+    }
 }

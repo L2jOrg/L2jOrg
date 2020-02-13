@@ -12,22 +12,22 @@ import org.l2j.gameserver.engine.skill.api.Skill;
  */
 public class SkillEvasion extends AbstractEffect {
 	public final int magicType;
-	public final double amount;
+	public final double power;
 	
 	public SkillEvasion(StatsSet params){
-		magicType = params.getInt("magicType", 0);
-		amount = params.getDouble("amount", 0);
+		magicType = params.getInt("type", 0);
+		power = params.getDouble("power", 0);
 	}
 	
 	@Override
 	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		effected.getStats().addSkillEvasionTypeValue(magicType, amount);
+		effected.getStats().addSkillEvasionTypeValue(magicType, power);
 	}
 	
 	@Override
 	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
-		effected.getStats().removeSkillEvasionTypeValue(magicType, amount);
+		effected.getStats().removeSkillEvasionTypeValue(magicType, power);
 	}
 }

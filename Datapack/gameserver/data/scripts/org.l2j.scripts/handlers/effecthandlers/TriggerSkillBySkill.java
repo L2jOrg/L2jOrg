@@ -1,7 +1,7 @@
 package handlers.effecthandlers;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.handler.TargetHandler;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.WorldObject;
@@ -12,14 +12,11 @@ import org.l2j.gameserver.model.events.impl.character.OnCreatureSkillFinishCast;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.model.skills.BuffInfo;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.skills.targets.TargetType;
 
 import java.util.function.Consumer;
 
-import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.util.GameUtils.isCreature;
 
 /**
@@ -30,15 +27,13 @@ public final class TriggerSkillBySkill extends AbstractEffect {
 	public final int castSkillId;
 	public final int chance;
 	public final SkillHolder skill;
-	private final int skillLevelScaleTo;
 	public final TargetType targetType;
 	
 	public TriggerSkillBySkill(StatsSet params) {
-		castSkillId = params.getInt("castSkillId");
+		castSkillId = params.getInt("skill-trigger");
 		chance = params.getInt("chance", 100);
-		skill = new SkillHolder(params.getInt("skillId"), params.getInt("skillLevel"));
-		skillLevelScaleTo = params.getInt("skillLevelScaleTo", 0);
-		targetType = params.getEnum("targetType", TargetType.class, TargetType.TARGET);
+		skill = new SkillHolder(params.getInt("skill"), params.getInt("power"));
+		targetType = params.getEnum("target", TargetType.class, TargetType.TARGET);
 	}
 	
 	@Override
@@ -69,17 +64,7 @@ public final class TriggerSkillBySkill extends AbstractEffect {
 			return;
 		}
 		
-		final Skill triggerSkill;
-		if (skillLevelScaleTo <= 0) {
-			triggerSkill = skill.getSkill();
-		} else {
-			final BuffInfo buffInfo = ((Creature) event.getTarget()).getEffectList().getBuffInfoBySkillId(skill.getSkillId());
-			if (nonNull(buffInfo)) {
-				triggerSkill = SkillData.getInstance().getSkill(skill.getSkillId(), Math.min(skillLevelScaleTo, buffInfo.getSkill().getLevel() + 1));
-			} else {
-				triggerSkill = skill.getSkill();
-			}
-		}
+		final Skill triggerSkill = skill.getSkill();
 		
 		WorldObject target = null;
 		try {

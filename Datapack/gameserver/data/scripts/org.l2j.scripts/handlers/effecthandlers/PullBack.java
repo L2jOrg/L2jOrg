@@ -27,7 +27,7 @@ public final class PullBack extends AbstractEffect {
 	private final FlyType type;
 	
 	public PullBack(StatsSet params) {
-		speed = params.getInt("speed", 0);
+		speed = params.getInt("power", 0);
 		delay = params.getInt("delay", speed);
 		animationSpeed = params.getInt("animationSpeed", 0);
 		type = params.getEnum("type", FlyType.class, FlyType.WARP_FORWARD); // type 9

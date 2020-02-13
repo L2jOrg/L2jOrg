@@ -25,8 +25,8 @@ public final class PhysicalAttackHpLink extends AbstractEffect {
 	
 	public PhysicalAttackHpLink(StatsSet params) {
 		power = params.getDouble("power", 0);
-		criticalChance = params.getDouble("criticalChance", 0);
-		overHit = params.getBoolean("overHit", false);
+		criticalChance = params.getDouble("critical-chance", 0);
+		overHit = params.getBoolean("over-hit", false);
 	}
 	
 	@Override

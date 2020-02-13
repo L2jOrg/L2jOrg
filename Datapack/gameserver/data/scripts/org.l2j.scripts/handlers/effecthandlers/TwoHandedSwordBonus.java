@@ -27,11 +27,11 @@ public class TwoHandedSwordBonus extends AbstractEffect {
 	public final StatModifierType accuracyMode;
 	
 	public TwoHandedSwordBonus(StatsSet params) {
-		pAtkAmount = params.getDouble("pAtkAmount", 0);
-		pAtkmode = params.getEnum("pAtkmode", StatModifierType.class, StatModifierType.DIFF);
+		pAtkAmount = params.getDouble("power", 0);
+		pAtkmode = params.getEnum("mode", StatModifierType.class, StatModifierType.DIFF);
 		
-		accuracyAmount = params.getDouble("accuracyAmount", 0);
-		accuracyMode = params.getEnum("accuracyMode", StatModifierType.class, StatModifierType.DIFF);
+		accuracyAmount = params.getDouble("accuracy", 0);
+		accuracyMode = params.getEnum("accuracy-mode", StatModifierType.class, StatModifierType.DIFF);
 	}
 	
 	@Override

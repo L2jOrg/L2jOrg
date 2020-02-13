@@ -28,8 +28,6 @@ import static org.l2j.gameserver.util.GameUtils.isCreature;
  * @author Zealar
  */
 public final class TriggerSkillByAttack extends AbstractEffect {
-	private final int minAttackerLevel;
-	private final int maxAttackerLevel;
 	public final int minDamage;
 	public final int chance;
 	public final SkillHolder skill;
@@ -42,22 +40,20 @@ public final class TriggerSkillByAttack extends AbstractEffect {
 	private final boolean allowReflect;
 
 	public TriggerSkillByAttack(StatsSet params) {
-		minAttackerLevel = params.getInt("minAttackerLevel", 1);
-		maxAttackerLevel = params.getInt("maxAttackerLevel", 127);
-		minDamage = params.getInt("minDamage", 1);
+		minDamage = params.getInt("min-damage", 1);
 		chance = params.getInt("chance", 100);
-		skill = new SkillHolder(params.getInt("skillId"), params.getInt("skillLevel", 1));
-		targetType = params.getEnum("targetType", TargetType.class, TargetType.SELF);
+		skill = new SkillHolder(params.getInt("skill"), params.getInt("power", 1));
+		targetType = params.getEnum("target", TargetType.class, TargetType.SELF);
 		instanceType = params.getEnum("attackerType", InstanceType.class, InstanceType.Creature);
-		isCritical = params.getObject("isCritical", Boolean.class);
+		isCritical = params.getBoolean("critical");
 		allowNormalAttack = params.getBoolean("allowNormalAttack", true);
 		allowSkillAttack = params.getBoolean("allowSkillAttack", false);
 		allowReflect = params.getBoolean("allowReflect", false);
 		
-		if (params.getString("allowWeapons", "ALL").equalsIgnoreCase("ALL")) {
+		if (params.getString("weapons", "ALL").equalsIgnoreCase("ALL")) {
 			allowWeapons = 0;
 		} else {
-			for (String s : params.getString("allowWeapons").split(",")) {
+			for (String s : params.getString("weapons").split(" ")) {
 				allowWeapons |= WeaponType.valueOf(s).mask();
 			}
 		}
@@ -88,10 +84,6 @@ public final class TriggerSkillByAttack extends AbstractEffect {
 		}
 		
 		if (event.getAttacker() == event.getTarget()) {
-			return;
-		}
-		
-		if ((event.getAttacker().getLevel() < minAttackerLevel) || (event.getAttacker().getLevel() > maxAttackerLevel)) {
 			return;
 		}
 		

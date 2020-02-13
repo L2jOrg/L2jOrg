@@ -26,18 +26,16 @@ public final class Summon extends AbstractEffect {
 	public final float expMultiplier;
 	public final ItemHolder consumeItem;
 	public final int lifeTime;
-	public final int consumeItemInterval;
 	
 	public Summon(StatsSet params) {
 		if (params.isEmpty()) {
 			throw new IllegalArgumentException("Summon effect without parameters!");
 		}
 		
-		npcId = params.getInt("npcId");
-		expMultiplier = params.getFloat("expMultiplier", 1);
-		consumeItem = new ItemHolder(params.getInt("consumeItemId", 0), params.getInt("consumeItemCount", 1));
-		consumeItemInterval = params.getInt("consumeItemInterval", 0);
-		lifeTime = params.getInt("lifeTime", 0) > 0 ? params.getInt("lifeTime") * 1000 : -1; // Classic change.
+		npcId = params.getInt("npc");
+		expMultiplier = params.getFloat("experience-multiplier", 1);
+		consumeItem = new ItemHolder(params.getInt("consume-item", 0), params.getInt("consume-count", 1));
+		lifeTime = params.getInt("life-time", 0) > 0 ? params.getInt("life-time") * 1000 : -1; // Classic change.
 	}
 	
 	@Override
@@ -64,7 +62,7 @@ public final class Summon extends AbstractEffect {
 		}
 		final NpcTemplate template = NpcData.getInstance().getTemplate(npcId);
 		final Servitor summon = new Servitor(template, player);
-		final int consumeItemInterval = (this.consumeItemInterval > 0 ? this.consumeItemInterval : (template.getRace() != Race.SIEGE_WEAPON ? 240 : 60)) * 1000;
+		final int consumeItemInterval =(template.getRace() != Race.SIEGE_WEAPON ? 240 : 60) * 1000;
 		
 		summon.setName(template.getName());
 		summon.setTitle(effected.getName());

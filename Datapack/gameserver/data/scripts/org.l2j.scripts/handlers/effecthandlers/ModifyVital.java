@@ -13,25 +13,18 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 /**
  * Modify vital effect implementation.
  * @author malyelfik
+ * @author JoeAlisson
  */
 public final class ModifyVital extends AbstractEffect {
 
-	private final ModifyType type;
 	public final int hp;
 	public final int mp;
 	public final int cp;
 	
 	public ModifyVital(StatsSet params) {
-		type = params.getEnum("type", ModifyType.class);
-		if (type != ModifyType.SET) {
-			hp = params.getInt("hp", 0);
-			mp = params.getInt("mp", 0);
-			cp = params.getInt("cp", 0);
-		} else {
-			hp = params.getInt("hp", -1);
-			mp = params.getInt("mp", -1);
-			cp = params.getInt("cp", -1);
-		}
+		hp = params.getInt("hp", 0);
+		mp = params.getInt("mp", 0);
+		cp = params.getInt("cp", 0);
 	}
 	
 	@Override
@@ -45,34 +38,13 @@ public final class ModifyVital extends AbstractEffect {
 		if (effected.isDead()) {
 			return;
 		}
-		
+
 		if (isPlayer(effector) && isPlayer(effected) && effected.isAffected(EffectFlag.DUELIST_FURY) && !effector.isAffected(EffectFlag.DUELIST_FURY)) {
 			return;
 		}
 
-		switch (type) {
-			case DIFF -> {
-				effected.setCurrentCp(effected.getCurrentCp() + cp);
-				effected.setCurrentHp(effected.getCurrentHp() + hp);
-				effected.setCurrentMp(effected.getCurrentMp() + mp);
-			}
-			case SET -> {
-				effected.setCurrentCp(max(cp, 0));
-				effected.setCurrentHp(max(hp, 0));
-				effected.setCurrentMp(max(mp, 0));
-			}
-			case PER -> {
-				effected.setCurrentCp(effected.getCurrentCp() + (effected.getMaxCp() * (cp / 100.)));
-				effected.setCurrentHp(effected.getCurrentHp() + (effected.getMaxHp() * (hp / 100.)));
-				effected.setCurrentMp(effected.getCurrentMp() + (effected.getMaxMp() * (mp / 100.)));
-			}
-		}
+		effected.setCurrentCp(max(cp, 0));
+		effected.setCurrentHp(max(hp, 0));
+		effected.setCurrentMp(max(mp, 0));
 	}
-
-	private enum ModifyType {
-		DIFF,
-		SET,
-		PER
-	}
-
 }

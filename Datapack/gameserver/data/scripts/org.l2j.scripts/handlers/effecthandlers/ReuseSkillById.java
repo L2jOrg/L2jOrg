@@ -18,7 +18,7 @@ public class ReuseSkillById extends AbstractEffect {
 	
 	public ReuseSkillById(StatsSet params)
 	{
-		skillId = params.getInt("skillId", 0);
+		skillId = params.getInt("id", 0);
 	}
 	
 	@Override

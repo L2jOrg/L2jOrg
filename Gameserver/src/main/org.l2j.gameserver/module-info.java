@@ -125,6 +125,7 @@ module org.l2j.gameserver {
             org.l2j.gameserver.engine.item.container.listener.BroochListener;
 
     uses org.l2j.gameserver.api.item.InventoryListener;
+    uses org.l2j.gameserver.engine.skill.api.SkillConditionFactory;
     provides org.l2j.gameserver.api.item.InventoryListener
         with org.l2j.gameserver.engine.item.container.listener.StatsListener;
 }

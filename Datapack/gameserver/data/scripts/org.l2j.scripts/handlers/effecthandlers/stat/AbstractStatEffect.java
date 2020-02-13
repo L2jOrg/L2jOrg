@@ -23,7 +23,7 @@ public abstract class AbstractStatEffect extends AbstractEffect {
 
     public final Stat addStat;
     public final Stat mulStat;
-    public final double amount;
+    public final double power;
     public final StatModifierType mode;
     public final List<Condition> conditions = new ArrayList<>();
 
@@ -34,7 +34,7 @@ public abstract class AbstractStatEffect extends AbstractEffect {
     public AbstractStatEffect(StatsSet params, Stat mulStat, Stat addStat) {
         this.addStat = addStat;
         this.mulStat = mulStat;
-        amount = params.getDouble("power", 0);
+        power = params.getDouble("power", 0);
         mode = params.getEnum("mode", StatModifierType.class, StatModifierType.DIFF);
 
         int weaponTypesMask = Arrays.stream(params.getString("weapon-type").trim().split(" "))
@@ -57,8 +57,8 @@ public abstract class AbstractStatEffect extends AbstractEffect {
     public void pump(Creature effected, Skill skill) {
         if (conditions.isEmpty() || conditions.stream().allMatch(cond -> cond.test(effected, effected, skill))) {
             switch (mode) {
-                case DIFF -> effected.getStats().mergeAdd(addStat, amount);
-                case PER -> effected.getStats().mergeMul(mulStat, amount / 100 + 1);
+                case DIFF -> effected.getStats().mergeAdd(addStat, power);
+                case PER -> effected.getStats().mergeMul(mulStat, power / 100 + 1);
             }
         }
     }

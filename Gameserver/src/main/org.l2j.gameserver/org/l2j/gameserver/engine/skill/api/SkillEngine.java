@@ -202,7 +202,6 @@ public class SkillEngine extends GameXmlReader {
             } else {
                 levelInfo.computeIfAbsent(level, l -> new StatsSet()).set(node.getNodeName(), node.getNodeValue());
             }
-
         } else  {
             if(node.hasAttributes()) {
                 var parsedAttr = parseAttributes(node);

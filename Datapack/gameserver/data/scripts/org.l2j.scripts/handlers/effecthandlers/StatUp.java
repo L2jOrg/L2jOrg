@@ -11,15 +11,15 @@ import org.l2j.gameserver.model.stats.BaseStats;
  */
 public class StatUp extends AbstractEffect {
 	public final BaseStats stat;
-	public final double amount;
+	public final double power;
 	
 	public StatUp(StatsSet params) {
-		amount = params.getDouble("amount", 0);
-		stat = params.getEnum("stat", BaseStats.class, BaseStats.STR);
+		power = params.getDouble("power", 0);
+		stat = params.getEnum("type", BaseStats.class, BaseStats.STR);
 	}
 	
 	@Override
 	public void pump(Creature effected, Skill skill) {
-		effected.getStats().mergeAdd(stat.getStat(), amount);
+		effected.getStats().mergeAdd(stat.getStat(), power);
 	}
 }

@@ -2,7 +2,7 @@ package handlers.effecthandlers;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.commons.util.Util;
-import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.handler.TargetHandler;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.WorldObject;
@@ -13,14 +13,11 @@ import org.l2j.gameserver.model.events.impl.character.OnCreatureSkillFinishCast;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.model.skills.BuffInfo;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.skills.targets.TargetType;
 
 import java.util.function.Consumer;
 
-import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.util.GameUtils.isCreature;
 
 /**
@@ -30,16 +27,14 @@ import static org.l2j.gameserver.util.GameUtils.isCreature;
 public final class TriggerSkillByMagicType extends AbstractEffect {
 	public final int[] magicTypes;
 	public final int chance;
-	private final int skillLevelScaleTo;
 	public final SkillHolder skill;
 	public final TargetType targetType;
 
 	public TriggerSkillByMagicType(StatsSet params) {
 		chance = params.getInt("chance", 100);
-		magicTypes = params.getIntArray("magicTypes", ";");
-		skill = new SkillHolder(params.getInt("skillId", 0), params.getInt("skillLevel", 0));
-		skillLevelScaleTo = params.getInt("skillLevelScaleTo", 0);
-		targetType = params.getEnum("targetType", TargetType.class, TargetType.TARGET);
+		magicTypes = params.getIntArray("types", " ");
+		skill = new SkillHolder(params.getInt("skill", 0), params.getInt("power", 0));
+		targetType = params.getEnum("target", TargetType.class, TargetType.TARGET);
 	}
 	
 	private void onSkillUseEvent(OnCreatureSkillFinishCast event) {
@@ -55,18 +50,7 @@ public final class TriggerSkillByMagicType extends AbstractEffect {
 			return;
 		}
 		
-		final Skill triggerSkill;
-		if (skillLevelScaleTo <= 0) {
-			triggerSkill = skill.getSkill();
-		}
-		else {
-			final BuffInfo buffInfo = ((Creature) event.getTarget()).getEffectList().getBuffInfoBySkillId(skill.getSkillId());
-			if (nonNull(buffInfo)) {
-				triggerSkill = SkillData.getInstance().getSkill(skill.getSkillId(), Math.min(skillLevelScaleTo, buffInfo.getSkill().getLevel() + 1));
-			} else {
-				triggerSkill = skill.getSkill();
-			}
-		}
+		final Skill triggerSkill = skill.getSkill();
 		
 		WorldObject target = null;
 		try {

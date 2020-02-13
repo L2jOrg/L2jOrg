@@ -13,11 +13,11 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author Adry_85
  */
 public final class TalismanSlot extends AbstractEffect {
-	public final int slots;
+	public final int power;
 	
 	public TalismanSlot(StatsSet params)
 	{
-		slots = params.getInt("slots", 0);
+		power = params.getInt("power", 0);
 	}
 	
 	@Override
@@ -29,12 +29,12 @@ public final class TalismanSlot extends AbstractEffect {
 	@Override
 	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		effected.getActingPlayer().getStats().addTalismanSlots(slots);
+		effected.getActingPlayer().getStats().addTalismanSlots(power);
 	}
 	
 	@Override
 	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
-		effected.getActingPlayer().getStats().addTalismanSlots(-slots);
+		effected.getActingPlayer().getStats().addTalismanSlots(-power);
 	}
 }

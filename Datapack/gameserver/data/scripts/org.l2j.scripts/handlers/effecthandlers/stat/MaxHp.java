@@ -25,8 +25,8 @@ public class MaxHp extends AbstractStatEffect {
             ThreadPool.schedule(() -> {
                 if (!effected.isHpBlocked()) {
                     switch (mode) {
-                        case DIFF -> effected.setCurrentHp(effected.getCurrentHp() + amount);
-                        case PER -> effected.setCurrentHp(effected.getCurrentHp() + (effected.getMaxHp() * (amount / 100)));
+                        case DIFF -> effected.setCurrentHp(effected.getCurrentHp() + power);
+                        case PER -> effected.setCurrentHp(effected.getCurrentHp() + (effected.getMaxHp() * (power / 100)));
                     }
                 }
             }, 100);

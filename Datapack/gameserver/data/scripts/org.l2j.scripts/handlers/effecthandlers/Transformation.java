@@ -19,18 +19,10 @@ import static org.l2j.gameserver.util.GameUtils.isDoor;
  * @author nBd
  */
 public final class Transformation extends AbstractEffect {
-	public final List<Integer> id;
+	public final int[] id;
 	
 	public Transformation(StatsSet params) {
-		final String ids = params.getString("transformationId", null);
-		if (Util.isNotEmpty(ids)) {
-			id = new ArrayList<>();
-			for (String id : ids.split(";")) {
-				this.id.add(Integer.parseInt(id));
-			}
-		} else {
-			id = Collections.emptyList();
-		}
+		id = params.getIntArray("id", " ");
 	}
 	
 	@Override
@@ -41,8 +33,8 @@ public final class Transformation extends AbstractEffect {
 	
 	@Override
 	public void onStart(Creature effector, Creature effected, Skill skill, Item item) {
-		if (!id.isEmpty()) {
-			effected.transform(id.get(Rnd.get(id.size())), true);
+		if (id.length > 0) {
+			effected.transform(Rnd.get(id), true);
 		}
 	}
 	

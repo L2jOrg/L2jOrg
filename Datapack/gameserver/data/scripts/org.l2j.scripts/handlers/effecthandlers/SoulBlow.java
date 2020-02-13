@@ -24,8 +24,8 @@ public final class SoulBlow extends AbstractEffect {
 	
 	public SoulBlow(StatsSet params) {
 		power = params.getDouble("power");
-		chanceBoost = params.getDouble("chanceBoost");
-		overHit = params.getBoolean("overHit", false);
+		chanceBoost = params.getDouble("chance-boost");
+		overHit = params.getBoolean("over-hit", false);
 	}
 	
 	/**

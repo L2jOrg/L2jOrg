@@ -13,17 +13,17 @@ import org.l2j.gameserver.model.stats.Formulas;
  * @author -Nemesiss-, Adry_85
  */
 public final class TargetCancel extends AbstractEffect {
-	public final int chance;
+	public final int power;
 	
 	public TargetCancel(StatsSet params)
 	{
-		chance = params.getInt("chance", 100);
+		power = params.getInt("power", 100);
 	}
 	
 	@Override
 	public boolean calcSuccess(Creature effector, Creature effected, Skill skill)
 	{
-		return Formulas.calcProbability(chance, effector, effected, skill);
+		return Formulas.calcProbability(power, effector, effected, skill);
 	}
 	
 	@Override

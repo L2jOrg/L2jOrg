@@ -17,17 +17,17 @@ import static org.l2j.gameserver.util.GameUtils.isAttackable;
  * Randomize Hate effect implementation.
  */
 public final class RandomizeHate extends AbstractEffect {
-	public final int chance;
+	public final int power;
 	
 	public RandomizeHate(StatsSet params)
 	{
-		chance = params.getInt("chance", 100);
+		power = params.getInt("power", 100);
 	}
 	
 	@Override
 	public boolean calcSuccess(Creature effector, Creature effected, Skill skill)
 	{
-		return Formulas.calcProbability(chance, effector, effected, skill);
+		return Formulas.calcProbability(power, effector, effected, skill);
 	}
 	
 	@Override

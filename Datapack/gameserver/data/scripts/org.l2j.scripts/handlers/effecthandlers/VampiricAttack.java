@@ -14,7 +14,7 @@ public class VampiricAttack extends AbstractEffect {
 	public final double sum;
 	
 	public VampiricAttack(StatsSet params) {
-		amount = params.getDouble("amount");
+		amount = params.getDouble("power");
 		sum = amount * params.getDouble("chance");
 	}
 	

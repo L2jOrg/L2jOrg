@@ -16,12 +16,10 @@ import static org.l2j.gameserver.util.GameUtils.isDoor;
  * @author Adry_85
  */
 public final class OpenDoor extends AbstractEffect {
-	public final int chance;
-	private final boolean isItem;
+	public final int power;
 	
 	public OpenDoor(StatsSet params) {
-		chance = params.getInt("chance", 0);
-		isItem = params.getBoolean("isItem", false);
+		power = params.getInt("power", 0);
 	}
 	
 	@Override
@@ -37,12 +35,12 @@ public final class OpenDoor extends AbstractEffect {
 		}
 		
 		final Door door = (Door) effected;
-		if ((!door.isOpenableBySkill() && !isItem) || (door.getFort() != null)) {
+		if (!door.isOpenableBySkill() || (door.getFort() != null)) {
 			effector.sendPacket(SystemMessageId.THIS_DOOR_CANNOT_BE_UNLOCKED);
 			return;
 		}
 		
-		if (Rnd.get(100) < chance && !door.isOpen()) {
+		if (!door.isOpen() && Rnd.chance(power)) {
 			door.openMe();
 		} else {
 			effector.sendPacket(SystemMessageId.YOU_HAVE_FAILED_TO_UNLOCK_THE_DOOR);
