@@ -15,15 +15,14 @@ import static java.util.Objects.nonNull;
 /**
  * Call Skill effect implementation.
  * @author NosBit
+ * @author JoeAlisson
  */
 public final class CallSkill extends AbstractEffect {
 
 	public final SkillHolder skill;
-	public final int skillLevelScaleTo;
 	
 	public CallSkill(StatsSet params) {
-		skill = new SkillHolder(params.getInt("skillId"), params.getInt("skillLevel", 1), params.getInt("skillSubLevel", 0));
-		skillLevelScaleTo = params.getInt("skillLevelScaleTo", 0);
+		skill = new SkillHolder(params.getInt("skill"), params.getInt("power", 1));
 	}
 	
 	@Override
@@ -35,26 +34,17 @@ public final class CallSkill extends AbstractEffect {
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item) {
 		Skill triggerSkill = null;
-		if (skillLevelScaleTo <= 0) {
-			// Mobius: Use 0 to trigger max effector learned skill level.
-			if (this.skill.getLevel() == 0) {
-				final int knownLevel = effector.getSkillLevel(this.skill.getSkillId());
+		// Mobius: Use 0 to trigger max effector learned skill level.
+		if (this.skill.getLevel() == 0) {
+			final int knownLevel = effector.getSkillLevel(this.skill.getSkillId());
 
-				if (knownLevel > 0) {
-					triggerSkill = SkillData.getInstance().getSkill(this.skill.getSkillId(), knownLevel, this.skill.getSkillSubLevel());
-				} else {
-					LOGGER.warn("Player {} called unknown skill {} triggered by {} CallSkill.", effector, this.skill, skill);
-				}
+			if (knownLevel > 0) {
+				triggerSkill = SkillData.getInstance().getSkill(this.skill.getSkillId(), knownLevel, this.skill.getSkillSubLevel());
 			} else {
-				triggerSkill = this.skill.getSkill();
+				LOGGER.warn("Player {} called unknown skill {} triggered by {} CallSkill.", effector, this.skill, skill);
 			}
 		} else {
-			final BuffInfo buffInfo = effected.getEffectList().getBuffInfoBySkillId(this.skill.getSkillId());
-			if (nonNull(buffInfo)) {
-				triggerSkill = SkillData.getInstance().getSkill(this.skill.getSkillId(), Math.min(skillLevelScaleTo, buffInfo.getSkill().getLevel() + 1));
-			} else {
-				triggerSkill = this.skill.getSkill();
-			}
+			triggerSkill = this.skill.getSkill();
 		}
 		
 		if (nonNull(triggerSkill)) {

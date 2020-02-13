@@ -21,7 +21,7 @@ public final class HeadquarterCreate extends AbstractEffect {
 	
 	public HeadquarterCreate(StatsSet params)
 	{
-		isAdvanced = params.getBoolean("isAdvanced", false);
+		isAdvanced = params.getBoolean("advanced", false);
 	}
 	
 	@Override

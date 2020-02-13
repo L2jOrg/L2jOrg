@@ -32,11 +32,11 @@ public final class EnergyAttack extends AbstractEffect {
 	
 	public EnergyAttack(StatsSet params) {
 		power = params.getDouble("power", 0);
-		criticalChance = params.getInt("criticalChance", 0);
-		ignoreShieldDefence = params.getBoolean("ignoreShieldDefence", false);
-		overHit = params.getBoolean("overHit", false);
-		chargeConsume = params.getInt("chargeConsume", 0);
-		pDefMod = params.getDouble("pDefMod", 1.0);
+		criticalChance = params.getInt("critical-chance", 0);
+		ignoreShieldDefence = params.getBoolean("ignore-shield", false);
+		overHit = params.getBoolean("over-hit", false);
+		chargeConsume = params.getInt("consume-charges", 0);
+		pDefMod = params.getDouble("physical-defense-mod", 1.0);
 	}
 	
 	@Override

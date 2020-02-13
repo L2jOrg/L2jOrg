@@ -26,7 +26,7 @@ public final class MagicalAttackMp extends AbstractEffect {
 	public MagicalAttackMp(StatsSet params) {
 		power = params.getDouble("power");
 		critical = params.getBoolean("critical");
-		criticalLimit = params.getDouble("criticalLimit");
+		criticalLimit = params.getDouble("critical-limit");
 	}
 	
 	@Override

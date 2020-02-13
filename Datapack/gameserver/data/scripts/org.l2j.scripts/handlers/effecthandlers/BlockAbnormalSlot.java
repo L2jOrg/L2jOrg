@@ -14,14 +14,14 @@ import java.util.stream.Collectors;
 /**
  * Block Buff Slot effect implementation.
  * @author Zoey76
+ * @author JoeAlisson
  */
 public final class BlockAbnormalSlot extends AbstractEffect {
 
 	public final Set<AbnormalType> blockAbnormalSlots;
 	
-	public BlockAbnormalSlot(StatsSet params)
-	{
-		blockAbnormalSlots = Arrays.stream(params.getString("slot").split(";")).map(slot -> Enum.valueOf(AbnormalType.class, slot)).collect(Collectors.toSet());
+	public BlockAbnormalSlot(StatsSet params) {
+		blockAbnormalSlots = Arrays.stream(params.getString("abnormals").split(" ")).map(AbnormalType::valueOf).collect(Collectors.toSet());
 	}
 	
 	@Override

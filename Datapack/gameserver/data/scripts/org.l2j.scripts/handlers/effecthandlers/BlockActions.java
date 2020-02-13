@@ -30,7 +30,7 @@ public final class BlockActions extends AbstractEffect {
 	public final IntSet allowedSkills;
 	
 	public BlockActions(StatsSet params) {
-		final String[] allowedSkills = params.getString("allowedSkills", "").split(";");
+		final String[] allowedSkills = params.getString("allowed-skills", "").split(" ");
 		this.allowedSkills = StreamUtil.collectToSet(Arrays.stream(allowedSkills).filter(Util::isInteger).mapToInt(Integer::parseInt));
 	}
 	

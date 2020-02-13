@@ -1,8 +1,10 @@
 package handlers.effecthandlers;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -20,15 +22,7 @@ public final class DispelBySlotMyself extends AbstractEffect {
 	public final Set<AbnormalType> dispelAbnormals;
 	
 	public DispelBySlotMyself(StatsSet params) {
-		String dispel = params.getString("dispel");
-		if ((dispel != null) && !dispel.isEmpty()) {
-			dispelAbnormals = new HashSet<>();
-			for (String slot : dispel.split(";")) {
-				dispelAbnormals.add(AbnormalType.getAbnormalType(slot));
-			}
-		} else {
-			dispelAbnormals = Collections.emptySet();
-		}
+		dispelAbnormals = Arrays.stream(params.getString("abnormals").split(" ")).map(AbnormalType::valueOf).collect(Collectors.toSet());;
 	}
 	
 	@Override

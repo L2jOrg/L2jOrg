@@ -18,7 +18,7 @@ public final class ChangeHairColor extends AbstractEffect {
 	
 	public ChangeHairColor(StatsSet params)
 	{
-		value = params.getInt("value", 0);
+		value = params.getInt("power", 0);
 	}
 	
 	@Override

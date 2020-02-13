@@ -21,7 +21,7 @@ public final class MagicalAttackRange extends AbstractEffect {
 	
 	public MagicalAttackRange(StatsSet params) {
 		power = params.getDouble("power");
-		shieldDefPercent = params.getDouble("shieldDefPercent", 0);
+		shieldDefPercent = params.getDouble("shield-defense", 0);
 	}
 	
 	@Override

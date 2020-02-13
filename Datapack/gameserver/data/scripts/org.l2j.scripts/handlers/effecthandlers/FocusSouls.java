@@ -17,10 +17,10 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author nBd, Adry_85
  */
 public final class FocusSouls extends AbstractEffect {
-    public final int charge;
+    public final int power;
 
     public FocusSouls(StatsSet params) {
-        charge = params.getInt("charge", 0);
+        power = params.getInt("power", 0);
     }
 
     @Override
@@ -37,7 +37,7 @@ public final class FocusSouls extends AbstractEffect {
         final Player target = effected.getActingPlayer();
         final int maxSouls = (int) target.getStats().getValue(Stat.MAX_SOULS, 0);
         if (maxSouls > 0) {
-            final int amount = charge;
+            final int amount = power;
             if (target.getChargedSouls() < maxSouls) {
                 final int count = target.getChargedSouls() + amount <= maxSouls ? amount : maxSouls - target.getChargedSouls();
                 target.increaseSouls(count);

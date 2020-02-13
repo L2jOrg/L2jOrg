@@ -20,11 +20,11 @@ import static org.l2j.gameserver.util.GameUtils.isDoor;
  * @author JoeAlisson
  */
 public final class Hp extends AbstractEffect {
-	public final int amount;
+	public final int power;
 	public final StatModifierType mode;
 	
 	public Hp(StatsSet params) {
-		amount = params.getInt("amount", 0);
+		power = params.getInt("power", 0);
 		mode = params.getEnum("mode", StatModifierType.class, StatModifierType.DIFF);
 	}
 	
@@ -40,7 +40,7 @@ public final class Hp extends AbstractEffect {
 			return;
 		}
 
-		int basicAmount = amount;
+		int basicAmount = power;
 		if (nonNull(item) && (item.isPotion() || item.isElixir())) {
 			basicAmount += effected.getStats().getValue(Stat.ADDITIONAL_POTION_HP, 0);
 		}

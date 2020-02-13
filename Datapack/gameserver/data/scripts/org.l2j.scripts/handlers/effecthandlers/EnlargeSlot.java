@@ -18,10 +18,10 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 public class EnlargeSlot extends AbstractEffect {
 
 	public final StorageType type;
-	public final double amount;
+	public final double power;
 	
 	public EnlargeSlot(StatsSet params) {
-		amount = params.getDouble("amount", 0);
+		power = params.getDouble("power", 0);
 		type = params.getEnum("type", StorageType.class, StorageType.INVENTORY_NORMAL);
 	}
 	
@@ -36,7 +36,7 @@ public class EnlargeSlot extends AbstractEffect {
 			default -> Stat.INVENTORY_NORMAL;
 		};
 
-		effected.getStats().mergeAdd(stat, amount);
+		effected.getStats().mergeAdd(stat, power);
 		if (isPlayer(effected)) {
 			effected.sendPacket(new ExStorageMaxCount((Player) effected));
 		}

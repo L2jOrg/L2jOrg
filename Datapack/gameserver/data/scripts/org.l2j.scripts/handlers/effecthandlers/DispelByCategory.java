@@ -17,35 +17,35 @@ import org.l2j.gameserver.model.stats.Formulas;
  * @author DS, Adry_85
  */
 public final class DispelByCategory extends AbstractEffect {
-	public final DispelSlotType slot;
-	public final int rate;
-	public final int max;
-	
-	public DispelByCategory(StatsSet params) {
-		slot = params.getEnum("slot", DispelSlotType.class, DispelSlotType.BUFF);
-		rate = params.getInt("rate", 0);
-		max = params.getInt("max", 0);
-	}
-	
-	@Override
-	public EffectType getEffectType()
-	{
-		return EffectType.DISPEL;
-	}
-	
-	@Override
-	public boolean isInstant()
-	{
-		return true;
-	}
-	
-	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, Item item) {
-		if (effected.isDead()) {
-			return;
-		}
-		
-		final List<BuffInfo> canceled = Formulas.calcCancelStealEffects(effector, effected, skill, slot, rate, max);
-		canceled.forEach(b -> effected.getEffectList().stopSkillEffects(true, b.getSkill()));
-	}
+    public final DispelSlotType category;
+    public final int power;
+    public final int max;
+
+    public DispelByCategory(StatsSet params) {
+        category = params.getEnum("category", DispelSlotType.class, DispelSlotType.BUFF);
+        power = params.getInt("power", 0);
+        max = params.getInt("max", 0);
+    }
+
+    @Override
+    public EffectType getEffectType()
+    {
+        return EffectType.DISPEL;
+    }
+
+    @Override
+    public boolean isInstant()
+    {
+        return true;
+    }
+
+    @Override
+    public void instant(Creature effector, Creature effected, Skill skill, Item item) {
+        if (effected.isDead()) {
+            return;
+        }
+
+        final List<BuffInfo> canceled = Formulas.calcCancelStealEffects(effector, effected, skill, category, power, max);
+        canceled.forEach(b -> effected.getEffectList().stopSkillEffects(true, b.getSkill()));
+    }
 }

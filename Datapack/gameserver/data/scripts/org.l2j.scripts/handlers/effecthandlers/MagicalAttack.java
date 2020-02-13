@@ -20,12 +20,10 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 public final class MagicalAttack extends AbstractEffect {
 	public final double power;
 	public final boolean overHit;
-	private final double debuffModifier;
 	
 	public MagicalAttack(StatsSet params) {
 		power = params.getDouble("power", 0);
-		overHit = params.getBoolean("overHit", false);
-		debuffModifier = params.getDouble("debuffModifier", 1);
+		overHit = params.getBoolean("over-hit", false);
 	}
 	
 	@Override
@@ -58,11 +56,6 @@ public final class MagicalAttack extends AbstractEffect {
 		final boolean bss = skill.useSpiritShot() && effector.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
 		final boolean mcrit = Formulas.calcCrit(skill.getMagicCriticalRate(), effector, effected, skill);
 		double damage = Formulas.calcMagicDam(effector, effected, skill, effector.getMAtk(), power, effected.getMDef(), sps, bss, mcrit);
-		
-		// Apply debuff mod
-		if (effected.getEffectList().getDebuffCount() > 0) {
-			damage *= debuffModifier;
-		}
 		
 		effector.doAttack(damage, effected, skill, false, false, mcrit, false);
 	}

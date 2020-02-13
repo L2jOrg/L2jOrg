@@ -15,11 +15,11 @@ import static java.util.Objects.nonNull;
  * @author Adry_85
  */
 public final class Escape extends AbstractEffect {
-	public final TeleportWhereType escapeType;
+	public final TeleportWhereType location;
 	
 	public Escape(StatsSet params)
 	{
-		escapeType = params.getEnum("escapeType", TeleportWhereType.class, null);
+		location = params.getEnum("location", TeleportWhereType.class, null);
 	}
 	
 	@Override
@@ -42,8 +42,8 @@ public final class Escape extends AbstractEffect {
 	
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item) {
-		if (nonNull(escapeType)) {
-			effected.teleToLocation(escapeType, null);
+		if (nonNull(location)) {
+			effected.teleToLocation(location, null);
 		}
 	}
 }

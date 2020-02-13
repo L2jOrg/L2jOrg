@@ -25,7 +25,7 @@ import static org.l2j.gameserver.util.MathUtil.calculateHeadingFrom;
  * @author UnAfraid
  */
 public final class KnockBack extends AbstractEffect {
-	public final int distance;
+	public final int power;
 	public final int speed;
 	private final int delay;
 	private final int animationSpeed;
@@ -34,11 +34,11 @@ public final class KnockBack extends AbstractEffect {
 	
 	public KnockBack(StatsSet params)
 	{
-		distance = params.getInt("distance", 50);
+		power = params.getInt("power", 50);
 		speed = params.getInt("speed", 0);
 		delay = params.getInt("delay", 0);
 		animationSpeed = params.getInt("animationSpeed", 0);
-		knockDown = params.getBoolean("knockDown", false);
+		knockDown = params.getBoolean("knock-down", false);
 		type = params.getEnum("type", FlyType.class, knockDown ? FlyType.PUSH_DOWN_HORIZONTAL : FlyType.PUSH_HORIZONTAL);
 	}
 	
@@ -87,8 +87,8 @@ public final class KnockBack extends AbstractEffect {
 		}
 
 		final double radians = Math.toRadians(calculateAngleFrom(effector, effected));
-		final int x = (int) (effected.getX() + (distance * Math.cos(radians)));
-		final int y = (int) (effected.getY() + (distance * Math.sin(radians)));
+		final int x = (int) (effected.getX() + (power * Math.cos(radians)));
+		final int y = (int) (effected.getY() + (power * Math.sin(radians)));
 		final int z = effected.getZ();
 		final Location loc = GeoEngine.getInstance().canMoveToTargetLoc(effected.getX(), effected.getY(), effected.getZ(), x, y, z, effected.getInstanceWorld());
 		

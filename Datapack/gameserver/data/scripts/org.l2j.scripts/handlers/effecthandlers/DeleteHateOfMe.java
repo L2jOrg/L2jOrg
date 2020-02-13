@@ -17,40 +17,40 @@ import static org.l2j.gameserver.util.GameUtils.isAttackable;
  * @author Adry_85
  */
 public final class DeleteHateOfMe extends AbstractEffect {
-	public final int chance;
-	
-	public DeleteHateOfMe(StatsSet params)
-	{
-		chance = params.getInt("chance", 100);
-	}
-	
-	@Override
-	public boolean calcSuccess(Creature effector, Creature effected, Skill skill)
-	{
-		return Formulas.calcProbability(chance, effector, effected, skill);
-	}
-	
-	@Override
-	public EffectType getEffectType()
-	{
-		return EffectType.HATE;
-	}
-	
-	@Override
-	public boolean isInstant()
-	{
-		return true;
-	}
-	
-	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, Item item) {
-		if (!isAttackable(effected)) {
-			return;
-		}
-		
-		final Attackable target = (Attackable) effected;
-		target.stopHating(effector);
-		target.setWalking();
-		target.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-	}
+    public final int power;
+
+    public DeleteHateOfMe(StatsSet params)
+    {
+        power = params.getInt("power", 100);
+    }
+
+    @Override
+    public boolean calcSuccess(Creature effector, Creature effected, Skill skill)
+    {
+        return Formulas.calcProbability(power, effector, effected, skill);
+    }
+
+    @Override
+    public EffectType getEffectType()
+    {
+        return EffectType.HATE;
+    }
+
+    @Override
+    public boolean isInstant()
+    {
+        return true;
+    }
+
+    @Override
+    public void instant(Creature effector, Creature effected, Skill skill, Item item) {
+        if (!isAttackable(effected)) {
+            return;
+        }
+
+        final Attackable target = (Attackable) effected;
+        target.stopHating(effector);
+        target.setWalking();
+        target.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+    }
 }

@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.enums.StatModifierType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -15,10 +16,12 @@ import org.l2j.gameserver.network.SystemMessageId;
 public final class DamOverTime extends AbstractEffect {
 	public final boolean canKill;
 	public final double power;
-	
+	private final StatModifierType mode;
+
 	public DamOverTime(StatsSet params) {
-		canKill = params.getBoolean("canKill", false);
+		canKill = params.getBoolean("can-kill", false);
 		power = params.getDouble("power");
+		mode = params.getEnum("mode", StatModifierType.class);
 		setTicks(params.getInt("ticks"));
 	}
 	
@@ -51,7 +54,7 @@ public final class DamOverTime extends AbstractEffect {
 			return false;
 		}
 		
-		double damage = power * getTicksMultiplier();
+		double damage = power * getTicksMultiplier() * (mode == StatModifierType.PER ? effected.getCurrentHp() : 1);
 		if (damage >= effected.getCurrentHp() - 1) {
 			if (skill.isToggle()) {
 				effected.sendPacket(SystemMessageId.YOUR_SKILL_HAS_BEEN_CANCELED_DUE_TO_LACK_OF_HP);

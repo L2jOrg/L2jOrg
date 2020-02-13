@@ -1,11 +1,11 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.EtcStatusUpdate;
@@ -19,12 +19,10 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author DS
  */
 public final class FocusMomentum extends AbstractEffect {
-    public final int amount;
     public final int maxCharges;
 
     public FocusMomentum(StatsSet params) {
-        amount = params.getInt("amount", 1);
-        maxCharges = params.getInt("maxCharges", 0);
+        maxCharges = params.getInt("power", 0);
     }
 
     @Override
@@ -49,7 +47,7 @@ public final class FocusMomentum extends AbstractEffect {
             return;
         }
 
-        final int newCharge = Math.min(currentCharges + amount, maxCharges);
+        final int newCharge = Math.min(currentCharges + 1, maxCharges);
 
         player.setCharges(newCharge);
 

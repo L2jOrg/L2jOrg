@@ -1,6 +1,6 @@
 package handlers.effecthandlers;
 
-import org.l2j.commons.util.Util;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Attackable;
@@ -8,13 +8,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.model.skills.AbnormalType;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.stats.Formulas;
-
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
 
 import static org.l2j.gameserver.util.GameUtils.isAttackable;
 
@@ -26,26 +20,13 @@ public final class FatalBlow extends AbstractEffect {
 	public final double power;
 	public final double chanceBoost;
 	public final double criticalChance;
-	private final Set<AbnormalType> abnormals;
-	private final double abnormalPower;
 	public final boolean overHit;
 	
 	public FatalBlow(StatsSet params) {
 		power = params.getDouble("power");
-		chanceBoost = params.getDouble("chanceBoost");
-		criticalChance = params.getDouble("criticalChance", 0);
-		overHit = params.getBoolean("overHit", false);
-		
-		String abnormals = params.getString("abnormalType", null);
-		if (Util.isNotEmpty(abnormals)) {
-			this.abnormals = new HashSet<>();
-			for (String slot : abnormals.split(";")) {
-				this.abnormals.add(Enum.valueOf(AbnormalType.class, slot));
-			}
-		} else {
-			this.abnormals = Collections.emptySet();
-		}
-		abnormalPower = params.getDouble("abnormalPower", 1);
+		chanceBoost = params.getDouble("chance-boost");
+		criticalChance = params.getDouble("critical-chance", 0);
+		overHit = params.getBoolean("over-hit", false);
 	}
 	
 	@Override
@@ -77,11 +58,7 @@ public final class FatalBlow extends AbstractEffect {
 		}
 		
 		double power = this.power;
-		
-		// Check if we apply an abnormal modifier
-		if (abnormals.stream().anyMatch(effected::hasAbnormalType)) {
-			power += abnormalPower;
-		}
+
 		
 		final boolean ss = skill.useSoulShot() && (effector.isChargedShot(ShotType.SOULSHOTS) || effector.isChargedShot(ShotType.BLESSED_SOULSHOTS));
 		final byte shld = Formulas.calcShldUse(effector, effected);

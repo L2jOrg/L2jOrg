@@ -13,11 +13,11 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author Mobius
  */
 public final class GiveXp extends AbstractEffect {
-	public final int xp;
+	public final int power;
 	
 	public GiveXp(StatsSet params)
 	{
-		xp = params.getInt("xp", 0);
+		power = params.getInt("power", 0);
 	}
 	
 	@Override
@@ -32,6 +32,6 @@ public final class GiveXp extends AbstractEffect {
 			return;
 		}
 		
-		effector.getActingPlayer().addExpAndSp(xp, 0);
+		effector.getActingPlayer().addExpAndSp(power, 0);
 	}
 }

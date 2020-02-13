@@ -26,7 +26,7 @@ abstract class AbstractConditionalHpEffect extends AbstractStatEffect {
 
     protected AbstractConditionalHpEffect(StatsSet params, Stat stat) {
         super(params, stat);
-        hpPercent = params.getInt("hpPercent", 0);
+        hpPercent = params.getInt("hp-percent", 0);
     }
 
     @Override

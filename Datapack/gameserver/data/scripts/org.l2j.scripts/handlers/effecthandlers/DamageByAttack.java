@@ -20,19 +20,19 @@ import org.l2j.gameserver.model.stats.Stat;
  */
 public class DamageByAttack extends AbstractEffect {
 
-	public final double value;
+	public final double power;
 	public final DamageByAttackType type;
 	
 	public DamageByAttack(StatsSet params) {
-		value = params.getDouble("amount");
+		power = params.getDouble("power");
 		type = params.getEnum("type", DamageByAttackType.class, DamageByAttackType.NONE);
 	}
 	
 	@Override
 	public void pump(Creature target, Skill skill) {
 		switch (type) {
-			case PK -> target.getStats().mergeAdd(Stat.PVP_DAMAGE_TAKEN, value);
-			case ENEMY_ALL -> target.getStats().mergeAdd(Stat.PVE_DAMAGE_TAKEN, value);
+			case PK -> target.getStats().mergeAdd(Stat.PVP_DAMAGE_TAKEN, power);
+			case ENEMY_ALL -> target.getStats().mergeAdd(Stat.PVE_DAMAGE_TAKEN, power);
 		}
 	}
 }

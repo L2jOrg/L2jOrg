@@ -27,7 +27,7 @@ public final class Confuse extends AbstractEffect {
 	
 	public Confuse(StatsSet params)
 	{
-		chance = params.getInt("chance", 100);
+		chance = params.getInt("power", 100);
 	}
 	
 	@Override

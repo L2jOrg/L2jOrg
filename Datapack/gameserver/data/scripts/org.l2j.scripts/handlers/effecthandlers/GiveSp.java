@@ -13,11 +13,11 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author Adry_85
  */
 public final class GiveSp extends AbstractEffect {
-	public final int sp;
+	public final int power;
 	
 	public GiveSp(StatsSet params)
 	{
-		sp = params.getInt("sp", 0);
+		power = params.getInt("power", 0);
 	}
 	
 	@Override
@@ -32,6 +32,6 @@ public final class GiveSp extends AbstractEffect {
 			return;
 		}
 		
-		effector.getActingPlayer().addExpAndSp(0, sp);
+		effector.getActingPlayer().addExpAndSp(0, power);
 	}
 }

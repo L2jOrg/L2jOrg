@@ -14,11 +14,11 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author Zoey76
  */
 public final class ChangeFace extends AbstractEffect {
-	public final int value;
+	public final int power;
 	
 	public ChangeFace(StatsSet params)
 	{
-		value = params.getInt("value", 0);
+		power = params.getInt("power", 0);
 	}
 	
 	@Override
@@ -34,7 +34,7 @@ public final class ChangeFace extends AbstractEffect {
 		}
 		
 		final Player player = effected.getActingPlayer();
-		player.getAppearance().setFace(value);
+		player.getAppearance().setFace(power);
 		player.broadcastUserInfo();
 	}
 }

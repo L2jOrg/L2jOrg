@@ -17,30 +17,30 @@ import static org.l2j.gameserver.util.GameUtils.isSummon;
  */
 public final class Betray extends AbstractEffect {
 
-	public Betray(StatsSet params) {
-	}
-	
-	@Override
-	public boolean canStart(Creature effector, Creature effected, Skill skill)
-	{
-		return isPlayer(effector) && isSummon(effected);
-	}
-	
-	@Override
-	public long getEffectFlags()
-	{
-		return EffectFlag.BETRAYED.getMask();
-	}
-	
-	@Override
-	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
-	{
-		effected.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, effected.getActingPlayer());
-	}
-	
-	@Override
-	public void onExit(Creature effector, Creature effected, Skill skill)
-	{
-		effected.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-	}
+    public Betray(StatsSet params) {
+    }
+
+    @Override
+    public boolean canStart(Creature effector, Creature effected, Skill skill)
+    {
+        return isPlayer(effector) && isSummon(effected);
+    }
+
+    @Override
+    public long getEffectFlags()
+    {
+        return EffectFlag.BETRAYED.getMask();
+    }
+
+    @Override
+    public void onStart(Creature effector, Creature effected, Skill skill, Item item)
+    {
+        effected.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, effected.getActingPlayer());
+    }
+
+    @Override
+    public void onExit(Creature effector, Creature effected, Skill skill)
+    {
+        effected.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+    }
 }

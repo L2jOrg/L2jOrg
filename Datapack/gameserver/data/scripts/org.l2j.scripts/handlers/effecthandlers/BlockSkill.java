@@ -24,7 +24,7 @@ public final class BlockSkill extends AbstractEffect {
 	
 	public BlockSkill(StatsSet params)
 	{
-		magicTypes = params.getIntArray("magicTypes", ";");
+		magicTypes = params.getIntArray("magic-types", " ");
 	}
 	
 	private TerminateReturn onSkillUseEvent(OnCreatureSkillUse event) {

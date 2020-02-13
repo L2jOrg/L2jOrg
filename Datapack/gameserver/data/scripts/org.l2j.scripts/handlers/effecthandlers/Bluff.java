@@ -15,17 +15,16 @@ import org.l2j.gameserver.network.serverpackets.StopRotation;
  */
 public final class Bluff extends AbstractEffect {
 
-	public final int chance;
+	public final int power;
 	
-	public Bluff(StatsSet params)
-	{
-		chance = params.getInt("chance", 100);
+	public Bluff(StatsSet params) {
+		power = params.getInt("power", 100);
 	}
 	
 	@Override
 	public boolean calcSuccess(Creature effector, Creature effected, Skill skill)
 	{
-		return Formulas.calcProbability(chance, effector, effected, skill);
+		return Formulas.calcProbability(power, effector, effected, skill);
 	}
 	
 	@Override

@@ -8,20 +8,26 @@ import org.l2j.gameserver.model.effects.EffectFlag;
  * Effect that blocks damage and heals to HP/MP. <BR>
  * Regeneration or DOT shouldn't be blocked, Vampiric Rage and Balance Life as well.
  * @author Nik
+ * @author JoeAlisson
  */
 public final class DamageBlock extends AbstractEffect {
 	public final boolean blockHp;
 	public final boolean blockMp;
 	
 	public DamageBlock(StatsSet params) {
-		final String type = params.getString("type", null);
-		blockHp = type.equalsIgnoreCase("BLOCK_HP");
-		blockMp = type.equalsIgnoreCase("BLOCK_MP");
+		blockHp = params.getBoolean("block-hp");
+		blockMp = params.getBoolean("block-mp");
 	}
 	
 	@Override
-	public long getEffectFlags()
-	{
-		return blockHp ? EffectFlag.HP_BLOCK.getMask() : (blockMp ? EffectFlag.MP_BLOCK.getMask() : EffectFlag.NONE.getMask());
+	public long getEffectFlags() {
+		int mask =0;
+		if(blockHp) {
+			mask |= EffectFlag.HP_BLOCK.getMask();
+		}
+		if(blockMp) {
+			mask |= EffectFlag.MP_BLOCK.getMask();
+		}
+		return mask;
 	}
 }

@@ -26,8 +26,8 @@ public final class CallPc extends AbstractEffect {
 	public final int itemCount;
 	
 	public CallPc(StatsSet params) {
-		itemId = params.getInt("itemId", 0);
-		itemCount = params.getInt("itemCount", 0);
+		itemId = params.getInt("item", 0);
+		itemCount = params.getInt("item-count", 0);
 	}
 	
 	@Override
