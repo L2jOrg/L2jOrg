@@ -99,8 +99,8 @@ public class SkillEngine extends GameXmlReader {
                     case "effects" -> parseSkillEffects(node, skill, maxLevel);
                 }
             }
-        } catch (CloneNotSupportedException e) {
-            LOGGER.error("Could not parse skill info {}", skill);
+        } catch (Exception e) {
+            LOGGER.error("Could not parse skill info {}", skill, e);
         }
     }
 
@@ -147,7 +147,11 @@ public class SkillEngine extends GameXmlReader {
             IntMap<StatsSet> levelInfo = new HashIntMap<>();
 
             for(var child = node.getFirstChild(); nonNull(child); child = child.getNextSibling()) {
-                parseEffectNode(child, levelInfo, startLevel, staticStatSet, false);
+                if((nonNull(child.getNextSibling()) && child.getNextSibling().getNodeName().equals(child.getNodeName())) || ( nonNull(child.getPreviousSibling()) && !child.getPreviousSibling().equals(child) && child.getPreviousSibling().getNodeName().equals(child.getNodeName()) )) {
+                    parseNodeList(startLevel, staticStatSet, levelInfo, child);
+                } else {
+                    parseEffectNode(child, levelInfo, startLevel, staticStatSet, false);
+                }
             }
 
             if(levelInfo.isEmpty()) {
@@ -172,6 +176,38 @@ public class SkillEngine extends GameXmlReader {
         }
     }
 
+    private void parseNodeList(int startLevel, StatsSet staticStatSet, IntMap<StatsSet> levelInfo, Node child) {
+        var childStats = new StatsSet(parseAttributes(child));
+
+        var forceLevel = childStats.contains("level");
+        var childLevel = childStats.getInt("level", startLevel);
+
+        if(child.hasChildNodes()) {
+            IntMap<StatsSet> childLevelInfo = new HashIntMap<>();
+
+            for (var n = child.getFirstChild(); nonNull(n); n = n.getNextSibling()) {
+                parseEffectNode(n, childLevelInfo, childLevel, childStats, false);
+            }
+
+            if(!childLevelInfo.isEmpty()) {
+                for (var entry : childLevelInfo.entrySet()) {
+                    var stats = entry.getValue();
+                    var level = entry.getKey();
+                    stats.merge(childStats);
+                    levelInfo.computeIfAbsent(level, i -> new StatsSet()).set(child.getNodeName() + child.hashCode(), stats);
+                }
+            } else if(forceLevel) {
+                levelInfo.computeIfAbsent(childLevel, i -> new StatsSet()).set(child.getNodeName() + child.hashCode(), childStats);
+            } else {
+                staticStatSet.set(child.getNodeName() + child.hashCode(), childStats);
+            }
+        } else if(forceLevel){
+            levelInfo.computeIfAbsent(childLevel, i -> new StatsSet()).set(child.getNodeName() + child.hashCode(), childStats);
+        } else {
+            staticStatSet.set(child.getNodeName() + child.hashCode(), childStats);
+        }
+    }
+
     private void addStaticEffect(Function<StatsSet, AbstractEffect> factory, Skill skill, int startLevel, int stopLevel, EffectScope scope, StatsSet staticStatSet) throws CloneNotSupportedException {
         var effect = factory.apply(staticStatSet);
         for (int i = startLevel; i < stopLevel ; i++) {
@@ -190,7 +226,7 @@ public class SkillEngine extends GameXmlReader {
 
         } else if("value".equals(node.getNodeName())) {
             var level = parseInt(node.getAttributes(), "level");
-            levelInfo.computeIfAbsent(level, l -> new StatsSet()).set(node.getParentNode().getNodeName(), node.getNodeValue());
+            levelInfo.computeIfAbsent(level, l -> new StatsSet()).set(node.getParentNode().getNodeName(), node.getTextContent());
 
         } else if(nonNull(attr.getNamedItem("level"))) {
             var level = parseInt(attr, "level");
@@ -200,7 +236,7 @@ public class SkillEngine extends GameXmlReader {
                     parseEffectNode(child, levelInfo, level, staticStatSet, true);
                 }
             } else {
-                levelInfo.computeIfAbsent(level, l -> new StatsSet()).set(node.getNodeName(), node.getNodeValue());
+                levelInfo.computeIfAbsent(level, l -> new StatsSet()).set(node.getNodeName(), node.getTextContent());
             }
         } else  {
             if(node.hasAttributes()) {
@@ -217,9 +253,9 @@ public class SkillEngine extends GameXmlReader {
                 }
             } else {
                 if(forceLevel) {
-                    levelInfo.computeIfAbsent(startLevel, l -> new StatsSet()).set(node.getNodeName(), node.getNodeValue());
+                    levelInfo.computeIfAbsent(startLevel, l -> new StatsSet()).set(node.getNodeName(), node.getTextContent());
                 } else {
-                    staticStatSet.set(node.getNodeName(), node.getNodeValue());
+                    staticStatSet.set(node.getNodeName(), node.getTextContent());
                 }
             }
         }

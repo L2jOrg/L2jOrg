@@ -15,6 +15,9 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import static org.l2j.commons.util.Util.isFloat;
+import static org.l2j.commons.util.Util.isInteger;
+
 /**
  * This class is meant to hold a set of (key,value) pairs.<br>
  * They are stored as object but can be retrieved in any type wanted. As long as cast is available.<br>
@@ -267,15 +270,26 @@ public class StatsSet implements IParserAdvUtils {
             throw new IllegalArgumentException("Integer value required, but not specified: " + key + "!");
         }
 
+        return parseInt(val);
+    }
+
+    private int parseInt(Object val) {
         if (val instanceof Number) {
             return ((Number) val).intValue();
         }
 
-        try {
-            return Integer.parseInt((String) val);
-        } catch (Exception e) {
-            throw new IllegalArgumentException("Integer value required, but found: " + val + "!");
+        if (val instanceof String) {
+            var stringVal = (String) val;
+
+            if (isInteger(stringVal)) {
+                return Integer.parseInt(stringVal);
+            }
+
+            if (isFloat(stringVal)) {
+                return Integer.parseInt(stringVal.substring(0, stringVal.indexOf(".")));
+            }
         }
+        throw new IllegalArgumentException("Integer value required, but found: " + val);
     }
 
     @Override
@@ -285,14 +299,7 @@ public class StatsSet implements IParserAdvUtils {
         if (val == null) {
             return defaultValue;
         }
-        if (val instanceof Number) {
-            return ((Number) val).intValue();
-        }
-        try {
-            return Integer.parseInt((String) val);
-        } catch (Exception e) {
-            throw new IllegalArgumentException("Integer value required, but found: " + val);
-        }
+        return parseInt(val);
     }
 
     public int increaseInt(String key, int increaseWith) {

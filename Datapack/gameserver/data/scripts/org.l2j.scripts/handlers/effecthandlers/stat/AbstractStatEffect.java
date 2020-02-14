@@ -15,6 +15,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static org.l2j.commons.util.Util.SPACE;
+
 /**
  * @author Sdw
  * @author JoeAlisson
@@ -37,18 +39,13 @@ public abstract class AbstractStatEffect extends AbstractEffect {
         power = params.getDouble("power", 0);
         mode = params.getEnum("mode", StatModifierType.class, StatModifierType.DIFF);
 
-        int weaponTypesMask = Arrays.stream(params.getString("weapon-type").trim().split(" "))
-                .mapToInt(w -> WeaponType.valueOf(w).mask()).reduce(0, (a, b) -> a | b);
-
-        int armorTypesMask = Arrays.stream(params.getString("armor-type").trim().split(" "))
-                .mapToInt(armor -> ArmorType.valueOf(armor).mask()).reduce(0, (a, b) -> a | b);
-
-
-        if (weaponTypesMask != 0) {
+        if(params.contains("weapon-type")) {
+            int weaponTypesMask = Arrays.stream(params.getString("weapon-type").trim().split(SPACE)).mapToInt(w -> WeaponType.valueOf(w).mask()).reduce(0, (a, b) -> a | b);
             conditions.add(new ConditionUsingItemType(weaponTypesMask));
         }
 
-        if (armorTypesMask != 0) {
+        if(params.contains("armor-type")) {
+            int armorTypesMask = Arrays.stream(params.getString("armor-type").trim().split(SPACE)).mapToInt(armor -> ArmorType.valueOf(armor).mask()).reduce(0, (a, b) -> a | b);
             conditions.add(new ConditionUsingItemType(armorTypesMask));
         }
     }

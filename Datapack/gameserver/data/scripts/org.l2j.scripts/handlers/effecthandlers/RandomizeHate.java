@@ -17,11 +17,10 @@ import static org.l2j.gameserver.util.GameUtils.isAttackable;
  * Randomize Hate effect implementation.
  */
 public final class RandomizeHate extends AbstractEffect {
-	public final int power;
+	public final double power;
 	
-	public RandomizeHate(StatsSet params)
-	{
-		power = params.getInt("power", 100);
+	public RandomizeHate(StatsSet params) {
+		power = params.getDouble("power", 100);
 	}
 	
 	@Override

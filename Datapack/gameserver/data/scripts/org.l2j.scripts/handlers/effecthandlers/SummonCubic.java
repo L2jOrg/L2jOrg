@@ -32,7 +32,7 @@ public final class SummonCubic extends AbstractEffect {
 	
 	public SummonCubic(StatsSet params) {
 		cubicId = params.getInt("id", -1);
-		cubicLvl = params.getInt("power", 0);
+		cubicLvl = (int) params.getDouble("power", 0);
 	}
 	
 	@Override
