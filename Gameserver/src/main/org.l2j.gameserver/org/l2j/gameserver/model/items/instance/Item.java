@@ -5,7 +5,7 @@ import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.EnchantItemOptionsData;
 import org.l2j.gameserver.data.xml.impl.EnsoulData;
-import org.l2j.gameserver.data.xml.impl.OptionData;
+import org.l2j.gameserver.data.xml.impl.AugmentationEngine;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.*;
@@ -1719,7 +1719,7 @@ public final class Item extends WorldObject {
         }
 
         for (int id : getEnchantOptions()) {
-            final Options options = OptionData.getInstance().getOptions(id);
+            final Options options = AugmentationEngine.getInstance().getOptions(id);
             if (options != null) {
                 options.apply(player);
                 _enchantOptions.add(options);

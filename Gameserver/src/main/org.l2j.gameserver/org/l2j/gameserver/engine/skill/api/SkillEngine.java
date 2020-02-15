@@ -24,7 +24,7 @@ import org.l2j.gameserver.model.skills.targets.AffectScope;
 import org.l2j.gameserver.model.skills.targets.TargetType;
 import org.l2j.gameserver.model.stats.TraitType;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.GameXmlReader;
+import org.l2j.gameserver.util.EffectParser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -46,7 +46,7 @@ import static org.l2j.commons.util.Util.*;
 /**
  * @author JoeAlisson
  */
-public class SkillEngine extends GameXmlReader {
+public class SkillEngine extends EffectParser {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(SkillEngine.class);
 
@@ -174,15 +174,7 @@ public class SkillEngine extends GameXmlReader {
         var staticStatSet = new StatsSet(parseAttributes(node));
 
         if(node.hasChildNodes()) {
-            IntMap<StatsSet> levelInfo = new HashIntMap<>();
-
-            for(var child = node.getFirstChild(); nonNull(child); child = child.getNextSibling()) {
-                if(isUnboundNode(child)) {
-                    parseNodeList(startLevel, staticStatSet, levelInfo, child);
-                } else {
-                    parseEffectNode(child, levelInfo, startLevel, staticStatSet, false);
-                }
-            }
+            IntMap<StatsSet> levelInfo = parseEffectChildNodes(node, startLevel, staticStatSet);
 
             if(levelInfo.isEmpty()) {
                 addStaticEffect(factory, skill, startLevel, stopLevel, scope, staticStatSet);
@@ -206,100 +198,11 @@ public class SkillEngine extends GameXmlReader {
         }
     }
 
-    private boolean isUnboundNode(Node child) {
-        return (nonNull(child.getNextSibling()) && child.getNextSibling().getNodeName().equals(child.getNodeName())) || ( nonNull(child.getPreviousSibling()) && !child.getPreviousSibling().equals(child) && child.getPreviousSibling().getNodeName().equals(child.getNodeName()) );
-    }
-
-    private void parseNodeList(int startLevel, StatsSet staticStatSet, IntMap<StatsSet> levelInfo, Node child) {
-        var childStats = new StatsSet(parseAttributes(child));
-
-        var forceLevel = childStats.contains("level");
-        var childLevel = childStats.getInt("level", startLevel);
-
-        if(child.hasChildNodes()) {
-            IntMap<StatsSet> childLevelInfo = new HashIntMap<>();
-
-            for (var n = child.getFirstChild(); nonNull(n); n = n.getNextSibling()) {
-                parseEffectNode(n, childLevelInfo, childLevel, childStats, false);
-            }
-
-            if(!childLevelInfo.isEmpty()) {
-                for (var entry : childLevelInfo.entrySet()) {
-                    var stats = entry.getValue();
-                    var level = entry.getKey();
-                    stats.merge(childStats);
-                    levelInfo.computeIfAbsent(level, i -> new StatsSet()).set(child.getNodeName() + child.hashCode(), stats);
-                }
-            } else if(forceLevel) {
-                levelInfo.computeIfAbsent(childLevel, i -> new StatsSet()).set(child.getNodeName() + child.hashCode(), childStats);
-            } else {
-                staticStatSet.set(child.getNodeName() + child.hashCode(), childStats);
-            }
-        } else if(forceLevel){
-            levelInfo.computeIfAbsent(childLevel, i -> new StatsSet()).set(child.getNodeName() + child.hashCode(), childStats);
-        } else {
-            staticStatSet.set(child.getNodeName() + child.hashCode(), childStats);
-        }
-    }
-
     private void addStaticEffect(Function<StatsSet, AbstractEffect> factory, Skill skill, int startLevel, int stopLevel, EffectScope scope, StatsSet staticStatSet) throws CloneNotSupportedException {
         var effect = factory.apply(staticStatSet);
         for (int i = startLevel; i <= stopLevel ; i++) {
             var sk = getOrCloneSkillBasedOnLast(skill.getId(), i);
             sk.addEffect(scope, effect);
-        }
-    }
-
-    private void parseEffectNode(Node node, IntMap<StatsSet> levelInfo, int startLevel, StatsSet staticStatSet, boolean forceLevel) {
-        var attr = node.getAttributes();
-        if(nonNull(attr) && nonNull(attr.getNamedItem("initial"))) {
-            levelInfo.computeIfAbsent(startLevel, l -> new StatsSet()).set(node.getNodeName(), parseString(attr, "initial"));
-            for (var child = node.getFirstChild(); nonNull(child); child = child.getNextSibling()) {
-                parseEffectNode(child, levelInfo, startLevel, staticStatSet, forceLevel);
-            }
-
-        } else if("value".equals(node.getNodeName())) {
-            var level = parseInt(node.getAttributes(), "level");
-            levelInfo.computeIfAbsent(level, l -> new StatsSet()).set(node.getParentNode().getNodeName(), node.getTextContent());
-
-        } else if(nonNull(attr) && nonNull(attr.getNamedItem("level"))) {
-            var level = parseInt(attr, "level");
-            levelInfo.computeIfAbsent(level, l -> new StatsSet()).merge(parseAttributes(node));
-            if(node.hasChildNodes()) {
-                for (var child = node.getFirstChild(); nonNull(child); child = child.getNextSibling()) {
-                    parseEffectNode(child, levelInfo, level, staticStatSet, true);
-                }
-            } else {
-                levelInfo.computeIfAbsent(level, l -> new StatsSet()).set(node.getNodeName(), node.getTextContent());
-            }
-        } else  {
-            if(node.hasAttributes()) {
-                var parsedAttr = parseAttributes(node);
-                if(forceLevel) {
-                    levelInfo.computeIfAbsent(startLevel, l -> new StatsSet()).merge(parsedAttr);
-                } else {
-                    staticStatSet.merge(parsedAttr);
-                }
-            }
-            if(node.hasChildNodes()) {
-                for (var child = node.getFirstChild(); nonNull(child); child = child.getNextSibling()) {
-                    if("#text".equals(child.getNodeName())) {
-                        if(forceLevel) {
-                            levelInfo.computeIfAbsent(startLevel, l -> new StatsSet()).set(node.getNodeName(), child.getNodeValue());
-                        } else {
-                            staticStatSet.set(node.getNodeName(), child.getNodeValue());
-                        }
-                    } else {
-                        parseEffectNode(child, levelInfo, startLevel, staticStatSet, forceLevel);
-                    }
-                }
-            } else {
-                if(forceLevel) {
-                    levelInfo.computeIfAbsent(startLevel, l -> new StatsSet()).set(node.getNodeName(), node.getTextContent());
-                } else {
-                    staticStatSet.set(node.getNodeName(), node.getTextContent());
-                }
-            }
         }
     }
 

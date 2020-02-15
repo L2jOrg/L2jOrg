@@ -18,9 +18,10 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Pere
+ * @author JoeAlisson
  */
 public class VariationData extends GameXmlReader {
-    private static final Logger LOGGER = LoggerFactory.getLogger(VariationData.class.getSimpleName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(VariationData.class);
 
     private final Map<Integer, Variation> _variations = new HashMap<>();
     private final Map<Integer, Map<Integer, VariationFee>> _fees = new HashMap<>();
@@ -31,14 +32,14 @@ public class VariationData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/Variations.xsd");
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/augmentation/Variations.xsd");
     }
 
     @Override
     public void load() {
         _variations.clear();
         _fees.clear();
-        parseDatapackFile("data/stats/augmentation/Variations.xml");
+        parseDatapackFile("data/augmentation/Variations.xml");
         LOGGER.info("Loaded {} Variations.", _variations.size() );
         LOGGER.info("Loaded {} Fees.", _fees.size());
     }
@@ -72,7 +73,7 @@ public class VariationData extends GameXmlReader {
                             {
                                 final double optionChance = parseDouble(optionNode.getAttributes(), "chance");
                                 final int optionId = parseInteger(optionNode.getAttributes(), "id");
-                                final Options opt = OptionData.getInstance().getOptions(optionId);
+                                final Options opt = AugmentationEngine.getInstance().getOptions(optionId);
                                 if (opt == null) {
                                     LOGGER.warn(": Null option for id " + optionId);
                                     return;
@@ -85,7 +86,7 @@ public class VariationData extends GameXmlReader {
                                 final int fromId = parseInteger(optionNode.getAttributes(), "from");
                                 final int toId = parseInteger(optionNode.getAttributes(), "to");
                                 for (int id = fromId; id <= toId; id++) {
-                                    final Options op = OptionData.getInstance().getOptions(id);
+                                    final Options op = AugmentationEngine.getInstance().getOptions(id);
                                     if (op == null) {
                                         LOGGER.warn(": Null option for id " + id);
                                         return;

@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model;
 
-import org.l2j.gameserver.data.xml.impl.OptionData;
+import org.l2j.gameserver.data.xml.impl.AugmentationEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.options.Options;
 
@@ -18,8 +18,8 @@ public final class VariationInstance {
 
     public VariationInstance(int mineralId, int option1Id, int option2Id) {
         _mineralId = mineralId;
-        _option1 = OptionData.getInstance().getOptions(option1Id);
-        _option2 = OptionData.getInstance().getOptions(option2Id);
+        _option1 = AugmentationEngine.getInstance().getOptions(option1Id);
+        _option2 = AugmentationEngine.getInstance().getOptions(option2Id);
         if ((_option1 == null) || (_option2 == null)) {
             throw new IllegalArgumentException("Couldn't find option for id: " + option1Id + " or id: " + option1Id);
         }
