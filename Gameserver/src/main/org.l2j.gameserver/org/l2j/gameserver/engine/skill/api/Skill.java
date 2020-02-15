@@ -63,7 +63,7 @@ public final class Skill implements IIdentifiable, Cloneable {
     private int displayId;
     private int _displayLevel;
     private int _magic;
-    private TraitType traitType;
+    private TraitType traitType = TraitType.NONE;
     private boolean staticReuse;
     private int manaConsume;
     private int manaInitialConsume;
@@ -96,11 +96,11 @@ public final class Skill implements IIdentifiable, Cloneable {
     /**
      * Abnormal type: global effect "group".
      */
-    private  AbnormalType abnormalType;
+    private  AbnormalType abnormalType = AbnormalType.NONE;
     /**
      * Abnormal type: local effect "group".
      */
-    private  AbnormalType subordinationAbnormalType;
+    private  AbnormalType subordinationAbnormalType = AbnormalType.NONE;
     /**
      * Abnormal time: global effect duration time.
      */
@@ -118,14 +118,14 @@ public final class Skill implements IIdentifiable, Cloneable {
     private  int hitTime;
     private  double hitCancelTime;
     private  int coolTime;
-    private  long _reuseHashCode;
+    private  long reuseHashCode;
     private  int reuseDelay;
-    private  int _reuseDelayGroup;
+    private  int reuseDelayGroup = -1;
     private  int magicLevel;
     private  int levelBonusRate;
     private  int activateRate;
-    private  int _minChance;
-    private  int _maxChance;
+    private  int minChance;
+    private  int maxChance;
     // Effecting area of the skill, in radius.
     // The radius center varies according to the _targetType:
     // "caster" if targetType = AURA/PARTY/CLAN or "target" if targetType = AREA
@@ -140,11 +140,11 @@ public final class Skill implements IIdentifiable, Cloneable {
     public final int[] _affectLimit = new int[3]; // TODO: Third value is unknown... find it out!
     @Deprecated
     private final int[] _affectHeight = new int[2];
-    private  NextActionType nextAction;
+    private  NextActionType nextAction = NextActionType.NONE;
     private  boolean removedOnAnyActionExceptMove;
     private  boolean removedOnDamage;
     private  boolean blockedInOlympiad;
-    private  AttributeType attributeType;
+    private  AttributeType attributeType = AttributeType.NONE;
     private  int attributeValue;
     private  BasicProperty basicProperty;
     private  int _minPledgeClass;
@@ -177,10 +177,10 @@ public final class Skill implements IIdentifiable, Cloneable {
     private  boolean blockActionUseSkill; // Blocks the use skill client action and is not showed on skill list.
     private  int _toggleGroupId;
     private  int _attachToggleGroupId;
-    private  List<AttachSkillHolder> _attachSkills;
+    private  List<AttachSkillHolder> _attachSkills = Collections.emptyList();
     private  Set<AbnormalType> abnormalResists;
     private  double magicCriticalRate;
-    private  SkillBuffType _buffType;
+    private  SkillBuffType buffType;
     private  boolean _displayInList;
     private SkillAutoUseType autoUse;
 
@@ -247,8 +247,8 @@ public final class Skill implements IIdentifiable, Cloneable {
             reuseDelay = set.getInt("reuseDelay", 0);
         }
 
-        _reuseDelayGroup = set.getInt("reuseDelayGroup", -1);
-        _reuseHashCode = SkillEngine.skillHashCode(_reuseDelayGroup > 0 ? _reuseDelayGroup : id, level);
+        reuseDelayGroup = set.getInt("reuseDelayGroup", -1);
+        reuseHashCode = SkillEngine.skillHashCode(reuseDelayGroup > 0 ? reuseDelayGroup : id, level);
 
         targetType = set.getEnum("targetType", TargetType.class, TargetType.SELF);
         affectScope = set.getEnum("affectScope", AffectScope.class, AffectScope.SINGLE);
@@ -300,8 +300,8 @@ public final class Skill implements IIdentifiable, Cloneable {
         magicLevel = set.getInt("magicLvl", 0);
         levelBonusRate = set.getInt("lvlBonusRate", 0);
         activateRate = set.getInt("activateRate", -1);
-        _minChance = set.getInt("minChance", Config.MIN_ABNORMAL_STATE_SUCCESS_RATE);
-        _maxChance = set.getInt("maxChance", Config.MAX_ABNORMAL_STATE_SUCCESS_RATE);
+        minChance = set.getInt("minChance", Config.MIN_ABNORMAL_STATE_SUCCESS_RATE);
+        maxChance = set.getInt("maxChance", Config.MAX_ABNORMAL_STATE_SUCCESS_RATE);
 
         nextAction = set.getEnum("nextAction", NextActionType.class, NextActionType.NONE);
 
@@ -373,7 +373,7 @@ public final class Skill implements IIdentifiable, Cloneable {
         }
 
         magicCriticalRate = set.getDouble("magicCriticalRate", 0);
-        _buffType = isTriggeredSkill ? SkillBuffType.TRIGGER : isToggle() ? SkillBuffType.TOGGLE : isDance() ? SkillBuffType.DANCE : debuff ? SkillBuffType.DEBUFF : !isHealingPotionSkill() ? SkillBuffType.BUFF : SkillBuffType.NONE;
+        buffType = isTriggeredSkill ? SkillBuffType.TRIGGER : isToggle() ? SkillBuffType.TOGGLE : isDance() ? SkillBuffType.DANCE : debuff ? SkillBuffType.DEBUFF : !isHealingPotionSkill() ? SkillBuffType.BUFF : SkillBuffType.NONE;
         _displayInList = set.getBoolean("displayInList", true);
     }
 
@@ -385,6 +385,27 @@ public final class Skill implements IIdentifiable, Cloneable {
         this.debuff = debuff;
         operateType = action;
         this.type = type;
+    }
+
+    void computeSkillAttributes() {
+        buffType = isTriggeredSkill ? SkillBuffType.TRIGGER : isToggle() ? SkillBuffType.TOGGLE : isDance() ? SkillBuffType.DANCE : debuff ? SkillBuffType.DEBUFF : !isHealingPotionSkill() ? SkillBuffType.BUFF : SkillBuffType.NONE;
+
+        if (Config.ENABLE_MODIFY_SKILL_REUSE && Config.SKILL_REUSE_LIST.containsKey(id)) {
+            reuseDelay = Config.SKILL_REUSE_LIST.get(id);
+        }
+
+        if (Config.ENABLE_MODIFY_SKILL_DURATION && Config.SKILL_DURATION_LIST.containsKey(id)) {
+            if ((level < 100) || (level > 140)) {
+                abnormalTime = Config.SKILL_DURATION_LIST.get(id);
+            } else if (level < 140) {
+                abnormalTime += Config.SKILL_DURATION_LIST.get(id);
+            }
+        }
+
+        reuseHashCode = SkillEngine.skillHashCode(reuseDelayGroup > 0 ? reuseDelayGroup : id, level);
+
+        minChance = Config.MIN_ABNORMAL_STATE_SUCCESS_RATE;
+        maxChance = Config.MAX_ABNORMAL_STATE_SUCCESS_RATE;
     }
 
     public int getMaxLevel() {
@@ -514,7 +535,7 @@ public final class Skill implements IIdentifiable, Cloneable {
      * @return
      */
     public int getMinChance() {
-        return _minChance;
+        return minChance;
     }
 
     /**
@@ -523,7 +544,7 @@ public final class Skill implements IIdentifiable, Cloneable {
      * @return
      */
     public int getMaxChance() {
-        return _maxChance;
+        return maxChance;
     }
 
     /**
@@ -670,6 +691,7 @@ public final class Skill implements IIdentifiable, Cloneable {
 
     /**
      * @return Returns the sub level.
+     * TODO remove
      */
     public int getSubLevel() {
         return _subLevel;
@@ -677,6 +699,7 @@ public final class Skill implements IIdentifiable, Cloneable {
 
     /**
      * @return isMagic integer value from the XML.
+     * TODO change to Type
      */
     public int getMagicType() {
         return _magic;
@@ -686,28 +709,28 @@ public final class Skill implements IIdentifiable, Cloneable {
      * @return Returns true to set physical skills.
      */
     public boolean isPhysical() {
-        return _magic == 0;
+        return type == SkillType.PHYSIC;
     }
 
     /**
      * @return Returns true to set magic skills.
      */
     public boolean isMagic() {
-        return _magic == 1;
+        return type == SkillType.MAGIC;
     }
 
     /**
      * @return Returns true to set static skills.
      */
     public boolean isStatic() {
-        return _magic == 2;
+        return type == SkillType.STATIC;
     }
 
     /**
      * @return Returns true to set dance skills.
      */
     public boolean isDance() {
-        return _magic == 3;
+        return type == SkillType.DANCE;
     }
 
     /**
@@ -756,11 +779,11 @@ public final class Skill implements IIdentifiable, Cloneable {
      * @return the skill ID from which the reuse delay should be taken.
      */
     public int getReuseDelayGroup() {
-        return _reuseDelayGroup;
+        return reuseDelayGroup;
     }
 
     public long getReuseHashCode() {
-        return _reuseHashCode;
+        return reuseHashCode;
     }
 
     public int getHitTime() {
@@ -1602,7 +1625,7 @@ public final class Skill implements IIdentifiable, Cloneable {
     }
 
     public SkillBuffType getBuffType() {
-        return _buffType;
+        return buffType;
     }
 
     public boolean isEnchantable() {
@@ -1861,10 +1884,16 @@ public final class Skill implements IIdentifiable, Cloneable {
         activateRate = chance;
     }
 
+    public Skill clone(boolean mantainAttributes) throws CloneNotSupportedException {
+        var clone = clone();
+        if(!mantainAttributes) {
+            clone._effectLists = new EnumMap<>(EffectScope.class);
+        }
+        return clone;
+    }
+
     @Override
     protected Skill clone() throws CloneNotSupportedException {
-        var clone = (Skill) super.clone();
-        clone._effectLists = new EnumMap<>(EffectScope.class);
-        return clone;
+        return (Skill) super.clone();
     }
 }

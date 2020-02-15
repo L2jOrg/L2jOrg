@@ -1,6 +1,5 @@
 package org.l2j.gameserver.engine.skill.api;
 
-import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.HashLongMap;
 import io.github.joealisson.primitive.IntMap;
 import io.github.joealisson.primitive.LongMap;
@@ -50,7 +49,7 @@ public class SkillEngine extends EffectParser {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(SkillEngine.class);
 
-    private final LongMap<Skill> skills = new HashLongMap<>(36700);
+    private final LongMap<Skill> skills = new HashLongMap<>(36800);
 
     private SkillEngine() {
     }
@@ -120,6 +119,8 @@ public class SkillEngine extends EffectParser {
 
             parseSkillConstants(skill, skillNode);
 
+            skill.computeSkillAttributes();
+
             for (var node = skillNode.getFirstChild(); nonNull(node); node = node.getNextSibling()) {
                 switch (node.getNodeName()) {
                     case "icon" -> parseIcon(node, skill, maxLevel);
@@ -129,6 +130,7 @@ public class SkillEngine extends EffectParser {
                     case "effects" -> parseSkillEffects(node, skill, maxLevel);
                 }
             }
+            getOrCloneSkillBasedOnLast(id, maxLevel, true);
         } catch (Exception e) {
             LOGGER.error("Could not parse skill info {}", skill, e);
         }
@@ -396,6 +398,10 @@ public class SkillEngine extends EffectParser {
     }
 
     private Skill getOrCloneSkillBasedOnLast(int id, int level) throws CloneNotSupportedException {
+        return getOrCloneSkillBasedOnLast(id, level, false);
+    }
+
+    private Skill getOrCloneSkillBasedOnLast(int id, int level, boolean mantainAttributes) throws CloneNotSupportedException {
         Skill skill = null;
         var hash = skillHashCode(id, level);
         int currentLevel = level;
@@ -409,7 +415,7 @@ public class SkillEngine extends EffectParser {
         }
 
         while (nonNull(skill) && currentLevel < level) {
-            skill = skill.clone();
+            skill = skill.clone(mantainAttributes);
             skill.setLevel(++currentLevel);
             skills.put(++hash, skill);
         }

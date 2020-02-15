@@ -26,7 +26,7 @@
 							<xs:element name="teleport" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:sequence>
-										<xs:element name="location"  type="TeleportLocation" maxOccurs="unbounded" minOccurs="0"/>
+										<xs:element name="location" type="TeleportLocation" maxOccurs="unbounded" minOccurs="0"/>
 									</xs:sequence>
 									<xs:attribute name="name" type="xs:string"/>
 									<xs:attribute name="type" type="TeleportType">

@@ -600,7 +600,7 @@
     <xs:complexType name="EscapeEffect">
         <xs:complexContent>
             <xs:extension base="Effect">
-                <xs:attribute name="location" type="TeleportLocation" use="required"/>
+                <xs:attribute name="location" type="TeleportLocationType" use="required"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>

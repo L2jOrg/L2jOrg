@@ -411,7 +411,7 @@
         </xs:restriction>
     </xs:simpleType>
 
-    <xs:simpleType name="TeleportLocation">
+    <xs:simpleType name="TeleportLocationType">
         <xs:restriction base="xs:token">
             <xs:enumeration value="CASTLE"/>
             <xs:enumeration value="CLANHALL"/>
