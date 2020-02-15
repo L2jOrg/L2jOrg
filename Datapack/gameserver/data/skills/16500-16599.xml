@@ -1,7 +1,13 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
-    <skill id="16518" toLevel="1" name="Event Invincibility">
-        <!-- TODO Invincible against normal attacks, skills and debuffs. Unable to recover HP. -->
-        <operateType>P</operateType>
-    </skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
+	<skill id="16518" name="Event Invincibility" max-level="1" >
+	<!-- Invincible against normal attacks, skills, and debuffs. Unable to recover HP. -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
 </list>

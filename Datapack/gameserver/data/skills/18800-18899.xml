@@ -1,54 +1,95 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
-    <skill id="18804" toLevel="1" name="Breeze">
-        <!-- Causes a gentle breeze, caressing your face. Only applies damage to the Magic Woodpile and the Large Magic Woodpile. -->
-        <icon>icon.ev_magic_flame_game_wind1</icon>
-        <operateType>A1</operateType>
-        <castRange>40</castRange>
-        <hitTime>1000</hitTime>
-        <coolTime>500</coolTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>-1000</effectPoint>
-    </skill>
-    <skill id="18805" toLevel="1" name="Gust">
-        <!-- Calls forth a powerful wind that makes you stagger. The wind makes you unable to control your body for 3 sec. Only applies damage to the Magic Woodpile and the Large Magic Woodpile. -->
-        <icon>icon.ev_magic_flame_game_wind2</icon>
-        <operateType>A1</operateType>
-        <castRange>40</castRange>
-        <hitTime>1000</hitTime>
-        <coolTime>500</coolTime>
-        <reuseDelay>12000</reuseDelay>
-        <effectPoint>-1000</effectPoint>
-    </skill>
-    <skill id="18806" toLevel="1" name="Magic Woodpile">
-        <operateType>A1</operateType>
-        <hitTime>1500</hitTime>
-        <coolTime>500</coolTime>
-        <reuseDelay>10000</reuseDelay>
-        <effectPoint>1</effectPoint>
-    </skill>
-    <skill id="18807" toLevel="1" name="Large Magic Woodpile">
-        <operateType>A1</operateType>
-        <hitTime>1500</hitTime>
-        <coolTime>500</coolTime>
-        <reuseDelay>10000</reuseDelay>
-        <effectPoint>1</effectPoint>
-    </skill>
-    <skill id="18808" toLevel="1" name="Flame Games">
-        <!-- 1st Flame Games skill after a successful raid. -->
-        <operateType>A1</operateType>
-        <effectPoint>1</effectPoint>
-    </skill>
-    <skill id="18809" toLevel="1" name="Magic Flame Festival">
-        <!-- 2nd Magic Flame Festival skill after a successful raid. -->
-        <operateType>A1</operateType>
-        <effectPoint>1</effectPoint>
-    </skill>
-    <skill id="18816" toLevel="1" name="Gust - Dance">
-        <!-- The gust makes you dance a cheerful dance. -->
-        <icon>icon.ev_magic_flame_game_wind3</icon>
-        <operateType>A1</operateType>
-        <isDebuff>true</isDebuff>
-        <effectPoint>1</effectPoint>
-    </skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
+	<skill id="18804" name="Breeze" max-level="1" action="A1">
+	<!-- Causes a gentle breeze, caressing your face. Only applies damage to the Magic Woodpile and the Large Magic Woodpile. -->
+		<icon initial="icon.ev_magic_flame_game_wind1"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="40"/>
+			<reuse initial="2000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="-1000"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-1000000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="18805" name="Gust" max-level="1" action="A1">
+	<!-- Calls forth a powerful wind that makes you stagger. The wind makes you unable to control your body for 3 seconds. Only applies damage to the Magic Woodpile and the Large Magic Woodpile. -->
+		<icon initial="icon.ev_magic_flame_game_wind2"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="40"/>
+			<reuse initial="12000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="-1000"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-1000000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="18806" name="Magic Woodpile" max-level="1" action="A1">
+	<!-- Calls forth a powerful wind that makes you stagger. The wind makes you unable to control your body for 3 seconds. Only applies damage to the Magic Woodpile and the Large Magic Woodpile. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="10000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="18807" name="Large Magic Woodpile" max-level="1" action="A1">
+	<!-- Calls forth a powerful wind that makes you stagger. The wind makes you unable to control your body for 3 seconds. Only applies damage to the Magic Woodpile and the Large Magic Woodpile. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="10000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="18808" name="Flame Games" max-level="1" action="A1">
+	<!-- 1st Flame Games skill after a successful raid. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-point initial="1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="18809" name="Magic Flame Festival" max-level="1" action="A1">
+	<!-- 2nd Magic Flame Festival skill after a successful raid. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-point initial="1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="18816" name="Gust - Dance" max-level="1" debuff="true" action="A1">
+	<!-- The gust makes you dance a cheerful dance. -->
+		<icon initial="icon.ev_magic_flame_game_wind3"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="-1"/>
+			<effect-point initial="1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
 </list>

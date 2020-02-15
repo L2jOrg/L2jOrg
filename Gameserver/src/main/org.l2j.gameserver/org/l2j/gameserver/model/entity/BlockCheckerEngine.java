@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.entity;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.data.xml.impl.NpcData;
-import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.enums.Team;
 import org.l2j.gameserver.instancemanager.HandysBlockCheckerManager;
@@ -283,9 +283,9 @@ public final class BlockCheckerEngine {
 
         public StartEvent() {
             // Initialize all used skills
-            _freeze = SkillData.getInstance().getSkill(6034, 1);
-            _transformationRed = SkillData.getInstance().getSkill(6035, 1);
-            _transformationBlue = SkillData.getInstance().getSkill(6036, 1);
+            _freeze = SkillEngine.getInstance().getSkill(6034, 1);
+            _transformationRed = SkillEngine.getInstance().getSkill(6035, 1);
+            _transformationBlue = SkillEngine.getInstance().getSkill(6036, 1);
         }
 
         /**

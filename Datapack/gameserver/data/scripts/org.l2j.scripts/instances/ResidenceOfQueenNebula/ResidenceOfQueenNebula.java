@@ -1,7 +1,7 @@
 package instances.ResidenceOfQueenNebula;
 
 import instances.AbstractInstance;
-import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SkillHolder;
@@ -176,7 +176,7 @@ public class ResidenceOfQueenNebula extends AbstractInstance
                     if (getRandom(100) < 50)
                     {
                         player.stopSkillEffects(AQUA_RAGE_2.getSkill());
-                        final Skill skill = SkillData.getInstance().getSkill(AQUA_RAGE, 1);
+                        final Skill skill = SkillEngine.getInstance().getSkill(AQUA_RAGE, 1);
                         skill.applyEffects(player, player);
                     }
                 }
@@ -185,7 +185,7 @@ public class ResidenceOfQueenNebula extends AbstractInstance
                     if (getRandom(100) < 50)
                     {
                         player.stopSkillEffects(AQUA_RAGE_3.getSkill());
-                        final Skill skill = SkillData.getInstance().getSkill(AQUA_RAGE, 2);
+                        final Skill skill = SkillEngine.getInstance().getSkill(AQUA_RAGE, 2);
                         skill.applyEffects(player, player);
                     }
                 }
@@ -194,7 +194,7 @@ public class ResidenceOfQueenNebula extends AbstractInstance
                     if (getRandom(100) < 50)
                     {
                         player.stopSkillEffects(AQUA_RAGE_4.getSkill());
-                        final Skill skill = SkillData.getInstance().getSkill(AQUA_RAGE, 3);
+                        final Skill skill = SkillEngine.getInstance().getSkill(AQUA_RAGE, 3);
                         skill.applyEffects(player, player);
                     }
                 }

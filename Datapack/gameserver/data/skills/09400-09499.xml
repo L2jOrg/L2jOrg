@@ -1,43 +1,38 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
-    <skill id="9487" toLevel="1" name="Angel Cat's Blessing">
-        <!-- For 30 min., Max. HP/ MP +5%, and acquired XP/ SP +20%. Effect remains after death. -->
-        <icon>icon.skilltransform4</icon>
-        <operateType>A2</operateType>
-        <effectPoint>1</effectPoint>
-        <abnormalType>BR_EVENT_BUF1</abnormalType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>5</magicCriticalRate>
-        <magicLvl>-3</magicLvl>
-        <abnormalLvl>2</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <irreplacableBuff>true</irreplacableBuff>
-        <stayAfterDeath>true</stayAfterDeath>
-        <isMagic>4</isMagic>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <passiveConditions>
-            <condition name="CheckLevel">
-                <minLevel>1</minLevel>
-                <maxLevel>85</maxLevel>
-                <affectType>CASTER</affectType>
-            </condition>
-        </passiveConditions>
-        <effects>
-            <effect name="MaxHp">
-                <amount>5</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MaxMp">
-                <amount>5</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="ExpModify">
-                <amount>20</amount>
-            </effect>
-            <effect name="SpModify">
-                <amount>20</amount>
-            </effect>
-        </effects>
-    </skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
+	<skill id="9487" name="Angel Cat's Blessing" max-level="1" action="A2">
+	<!-- For 60 minutes, Max HP/Max MP +5%% and Hunting XP/SP Gain +20%%. Effect remains even after death. -->
+		<icon initial="icon.skilltransform4"/>
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" >
+			<magic-level initial="-3"/>
+			<cast-range initial="-1"/>
+			<effect-point initial="1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<abnormal type="BR_EVENT_BUF1" >
+			<level initial="2"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<conditions>
+			<level affect="CASTER" min-level="1" max-level="85" scope="PASSIVE"/>
+		</conditions>
+		<effects>
+			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+				<power initial="5.0"/>
+			</vital-stat-modify>
+			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+				<power initial="5.0"/>
+			</vital-stat-modify>
+			<stat-modify stat="BONUS_EXP" mode="DIFF">
+				<power initial="20.0"/>
+			</stat-modify>
+			<stat-modify stat="BONUS_SP" mode="DIFF">
+				<power initial="20.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
 </list>

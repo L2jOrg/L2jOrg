@@ -10,7 +10,7 @@ import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.data.xml.CategoryManager;
-import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.data.xml.impl.TransformData;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.geo.SyncMode;
@@ -3287,7 +3287,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             // Mobius: Keep sublevel on skill level increase.
             final Skill existingSkill = _skills.get(newSkill.getId());
             if ((existingSkill != null) && (existingSkill.getSubLevel() > 0) && (newSkill.getSubLevel() == 0) && (existingSkill.getLevel() < newSkill.getLevel())) {
-                newSkill = SkillData.getInstance().getSkill(newSkill.getId(), newSkill.getLevel(), existingSkill.getSubLevel());
+                newSkill = SkillEngine.getInstance().getSkill(newSkill.getId(), newSkill.getLevel());
             }
 
             // Replace oldSkill by newSkill or Add the newSkill

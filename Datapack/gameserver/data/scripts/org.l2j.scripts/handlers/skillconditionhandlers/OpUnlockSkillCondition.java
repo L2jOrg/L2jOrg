@@ -35,7 +35,7 @@ public class OpUnlockSkillCondition implements SkillCondition {
 
 		@Override
 		public String conditionName() {
-			return "OpUnlockSkill";
+			return "OpUnlock";
 		}
 	}
 }

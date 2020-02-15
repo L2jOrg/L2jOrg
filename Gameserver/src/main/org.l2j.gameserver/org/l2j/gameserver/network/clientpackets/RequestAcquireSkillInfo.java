@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.SkillLearn;
@@ -50,7 +50,7 @@ public final class RequestAcquireSkillInfo extends ClientPacket {
             return;
         }
 
-        final Skill skill = SkillData.getInstance().getSkill(_id, _level);
+        final Skill skill = SkillEngine.getInstance().getSkill(_id, _level);
         if (skill == null) {
             LOGGER.warn("Skill Id: " + _id + " level: " + _level + " is undefined. " + RequestAcquireSkillInfo.class.getName() + " failed.");
             return;

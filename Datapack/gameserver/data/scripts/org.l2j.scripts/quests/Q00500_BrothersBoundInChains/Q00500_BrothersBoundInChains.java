@@ -1,6 +1,6 @@
 package quests.Q00500_BrothersBoundInChains;
 
-import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.QuestType;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Npc;
@@ -65,7 +65,7 @@ public class Q00500_BrothersBoundInChains extends Quest
 			{
 				if ((player != null) && (player.getAgathionId() == SIN_EATER))
 				{
-					final Skill skill = SkillData.getInstance().getSkill(HOUR_OF_PENITENCE, 1); // Hour of Penitence
+					final Skill skill = SkillEngine.getInstance().getSkill(HOUR_OF_PENITENCE, 1); // Hour of Penitence
 					skill.activateSkill(player, player);
 					startQuestTimer("buff", 270000, null, player); // Rebuff every 4min30 (retail like)
 				}

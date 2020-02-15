@@ -1,33 +1,36 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
-    <skill id="9300" toLevel="1" name="Mysterious Blessed No-grade Spiritshot">
-        <icon>icon.etc_spell_shot_white_i01</icon>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>1</magicLvl>
-        <operateType>A1</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="9301" toLevel="1" name="Mysterious Blessed Spiritshot (D-grade)">
-        <icon>icon.etc_spell_shot_blue_i01</icon>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>1</magicLvl>
-        <operateType>A1</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="9302" toLevel="1" name="Mysterious Blessed Spiritshot (C-grade)">
-        <icon>icon.etc_spell_shot_green_i01</icon>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>1</magicLvl>
-        <operateType>A1</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
+	<skill id="9300" name="Blessed Mysterious Spiritshot (No-grade)" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.etc_spell_shot_white_i01"/>
+		<attributes magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="9301" name="Blessed Mysterious Spiritshot (D-grade)" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.etc_spell_shot_blue_i01"/>
+		<attributes magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="9302" name="Blessed Mysterious Spiritshot (C-grade)" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.etc_spell_shot_green_i01"/>
+		<attributes magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
 </list>

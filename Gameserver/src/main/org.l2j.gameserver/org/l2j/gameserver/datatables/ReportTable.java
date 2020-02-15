@@ -7,7 +7,7 @@ import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.BotReportDAO;
 import org.l2j.gameserver.data.database.data.BotReportData;
-import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.engine.captcha.CaptchaEngine;
 import org.l2j.gameserver.instancemanager.PunishmentManager;
 import org.l2j.gameserver.model.Clan;
@@ -297,7 +297,7 @@ public final class ReportTable {
      * @param sysMsg        (id of a system message to send when applying the punish)
      */
     private void addPunishment(int neededReports, int skillId, int skillLevel, int sysMsg) {
-        final Skill sk = SkillData.getInstance().getSkill(skillId, skillLevel);
+        final Skill sk = SkillEngine.getInstance().getSkill(skillId, skillLevel);
         if (nonNull(sk)) {
             _punishments.put(neededReports, new PunishHolder(sk, sysMsg));
         } else {

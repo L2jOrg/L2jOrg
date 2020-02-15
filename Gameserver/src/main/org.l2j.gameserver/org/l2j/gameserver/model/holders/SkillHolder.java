@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.holders;
 
-import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
 
 import static java.util.Objects.isNull;
@@ -46,9 +46,13 @@ public class SkillHolder {
         return _skillSubLevel;
     }
 
+    public final int getMaxLevel() {
+        return SkillEngine.getInstance().getMaxLevel(_skillId);
+    }
+
     public final Skill getSkill() {
         if(isNull(skill)) {
-            skill = SkillData.getInstance().getSkill(_skillId, Math.max(_skillLevel, 1), _skillSubLevel);
+            skill = SkillEngine.getInstance().getSkill(_skillId, Math.max(_skillLevel, 1));
         }
         return skill;
     }

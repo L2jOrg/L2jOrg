@@ -226,11 +226,16 @@ public class StatsSet implements IParserAdvUtils {
         if (val instanceof Number) {
             return ((Number) val).shortValue();
         }
-        try {
-            return Short.parseShort((String) val);
-        } catch (Exception e) {
-            throw new IllegalArgumentException("Short value required, but found: " + val);
+        if(val instanceof String) {
+            var stringVal =  (String) val;
+            if(stringVal.contains(".")) {
+                stringVal = stringVal.substring(0, stringVal.indexOf("."));
+            }
+            if(isInteger(stringVal)) {
+                return Short.parseShort(stringVal);
+            }
         }
+        throw new IllegalArgumentException("Short value required, but found: " + val);
     }
 
     @Override
@@ -280,13 +285,12 @@ public class StatsSet implements IParserAdvUtils {
 
         if (val instanceof String) {
             var stringVal = (String) val;
+            if(stringVal.contains(".")) {
+                stringVal = stringVal.substring(0, stringVal.indexOf("."));
+            }
 
             if (isInteger(stringVal)) {
                 return Integer.parseInt(stringVal);
-            }
-
-            if (isFloat(stringVal)) {
-                return Integer.parseInt(stringVal.substring(0, stringVal.indexOf(".")));
             }
         }
         throw new IllegalArgumentException("Integer value required, but found: " + val);

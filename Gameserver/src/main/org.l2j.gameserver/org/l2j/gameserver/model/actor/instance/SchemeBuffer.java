@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
@@ -82,7 +82,7 @@ public class SchemeBuffer extends Npc {
     }
 
     private static long getCountOf(List<Integer> skills, boolean dances) {
-        return skills.stream().filter(sId -> SkillData.getInstance().getSkill(sId, 1).isDance() == dances).count();
+        return skills.stream().filter(sId -> SkillEngine.getInstance().getSkill(sId, 1).isDance() == dances).count();
     }
 
     @Override
@@ -141,7 +141,7 @@ public class SchemeBuffer extends Npc {
                 player.sendPacket(YOU_DO_NOT_HAVE_A_PET);
             } else if ((cost == 0) || player.reduceAdena("NPC Buffer", cost, this, true)) {
                 for (int skillId : SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName)) {
-                    SkillData.getInstance().getSkill(skillId, SkillData.getInstance().getMaxLevel(skillId)).applyEffects(this, target);
+                    SkillEngine.getInstance().getSkill(skillId, SkillEngine.getInstance().getMaxLevel(skillId)).applyEffects(this, target);
                 }
             }
         } else if (currentCommand.startsWith("editschemes")) {
@@ -156,7 +156,7 @@ public class SchemeBuffer extends Npc {
             final List<Integer> skills = SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName);
 
             if (currentCommand.startsWith("skillselect") && !schemeName.equalsIgnoreCase("none")) {
-                final Skill skill = SkillData.getInstance().getSkill(skillId, SkillData.getInstance().getMaxLevel(skillId));
+                final Skill skill = SkillEngine.getInstance().getSkill(skillId, SkillEngine.getInstance().getMaxLevel(skillId));
                 if (skill.isDance()) {
                     if (getCountOf(skills, true) < Config.DANCES_MAX_AMOUNT) {
                         skills.add(skillId);
@@ -312,7 +312,7 @@ public class SchemeBuffer extends Npc {
 
         int row = 0;
         for (int skillId : skills) {
-            final Skill skill = SkillData.getInstance().getSkill(skillId, 1);
+            final Skill skill = SkillEngine.getInstance().getSkill(skillId, 1);
             sb.append(row++ % 2 == 0 ? "<table width=\"280\" bgcolor=\"000000\"><tr>" : "<table width=\"280\"><tr>")
                 .append("<td height=40 width=40><img src=\"").append(skill.getIcon()).append("\" width=32 height=32></td><td width=190>").append(skill.getName())
                 .append("<br1><font color=\"B09878\">").append(SchemeBufferTable.getInstance().getAvailableBuff(skillId).getDescription())

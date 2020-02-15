@@ -1,311 +1,313 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
-    <skill id="19009" toLevel="1" name="Clan Advent">
-        <!-- When the clan leader logs in, clan members' P./ M. Atk. +2%. -->
-        <icon>icon.skill19009</icon>
-        <operateType>A2</operateType>
-        <effectPoint>100</effectPoint>
-        <abnormalType>CLAN_ADVENT</abnormalType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>5</magicCriticalRate>
-        <specialLevel>-2</specialLevel>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>-2</magicLvl>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>-1</abnormalTime>
-        <irreplacableBuff>true</irreplacableBuff>
-        <canBeDispelled>false</canBeDispelled>
-        <affectRange>1000</affectRange>
-        <affectLimit>50-50</affectLimit>
-        <isMagic>2</isMagic>
-        <targetType>SELF</targetType>
-        <affectScope>PLEDGE</affectScope>
-        <affectObject>FRIEND</affectObject>
-        <effects>
-            <effect name="PAtk">
-                <amount>2</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MAtk">
-                <amount>2</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="19032" toLevel="1" name="Ability of Light">
-        <!-- Imbued with the Ability of Light. Max CP +2000. Effects do not apply when in Chaotic state. -->
-        <icon>icon.skill19008</icon>
-        <magicLvl>85</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <passiveConditions>
-            <condition name="OpAlignment">
-                <alignment>LAWFUL</alignment>
-                <affectType>CASTER</affectType>
-            </condition>
-        </passiveConditions>
-        <effects>
-            <effect name="MaxCp">
-                <amount>3000</amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="PvpPhysicalAttackDamageBonus">
-                <amount>10</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PvpMagicalSkillDamageBonus">
-                <amount>10</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PvpPhysicalSkillDamageBonus">
-                <amount>10</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="19033" toLevel="1" name="Ability of Darkness">
-        <!-- Imbued with the Ability of Darkness. Max CP +1000. -->
-        <icon>icon.skill19008</icon>
-        <magicLvl>85</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <effects>
-            <effect name="MaxCp">
-                <amount>3000</amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="PvpPhysicalAttackDamageBonus">
-                <amount>10</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PvpMagicalSkillDamageBonus">
-                <amount>10</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PvpPhysicalSkillDamageBonus">
-                <amount>10</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="19034" toLevel="1" name="Imprint of Light">
-        <!-- Engraves the Imprint of Light on the ancient relic that guards the castle. -->
-        <icon>icon.skill0246</icon>
-        <castRange>85</castRange>
-        <effectRange>400</effectRange>
-        <hitTime>120000</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>85</magicLvl>
-        <operateType>A1</operateType>
-        <mpConsume>50</mpConsume>
-        <reuseDelay>5000</reuseDelay>
-        <magicCriticalRate>5</magicCriticalRate>
-        <targetType>HOLYTHING</targetType>
-        <affectScope>SINGLE</affectScope>
-        <startEffects>
-            <effect name="TakeCastleStart"/>
-        </startEffects>
-        <conditions>
-            <condition name="PossessHolything"/>
-        </conditions>
-        <effects>
-            <effect name="TakeCastle">
-                <side>LIGHT</side>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="19035" toLevel="1" name="Imprint of Darkness">
-        <!-- Engraves the Imprint of Darkness on the ancient relic that guards the castle. -->
-        <icon>icon.skill0246</icon>
-        <castRange>85</castRange>
-        <effectRange>400</effectRange>
-        <hitTime>120000</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>85</magicLvl>
-        <operateType>A1</operateType>
-        <mpConsume>50</mpConsume>
-        <reuseDelay>5000</reuseDelay>
-        <magicCriticalRate>5</magicCriticalRate>
-        <targetType>HOLYTHING</targetType>
-        <affectScope>SINGLE</affectScope>
-        <startEffects>
-            <effect name="TakeCastleStart"/>
-        </startEffects>
-        <conditions>
-            <condition name="PossessHolything"/>
-        </conditions>
-        <effects>
-            <effect name="TakeCastle">
-                <side>DARK</side>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="19036" toLevel="1" name="Blessing of Light">
-        <!-- Acquires 3% additional XP and SP through the blessing of the Guardian of Light. -->
-        <icon>icon.etc_pi_gift_box_i04</icon>
-        <operateType>A2</operateType>
-        <isMagic>4</isMagic>
-        <abnormalType>BRIGHTNESS_BLESS</abnormalType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>5</magicCriticalRate>
-        <magicLvl>85</magicLvl>
-        <abnormalLvl>1</abnormalLvl>
-        <irreplacableBuff>true</irreplacableBuff>
-        <staticReuse>true</staticReuse>
-        <abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>
-        <abnormalTime>3600</abnormalTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="ExpModify">
-                <amount>3</amount>
-            </effect>
-            <effect name="SpModify">
-                <amount>3</amount>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="19039" toLevel="1" name="Cloak of Light">
-        <!-- Max HP/ MP/ CP +5%, P. Def. +3%, M. Def. +5%, all kinds of Weapon Resistance +3%, P./ M. Critical Rate +10, damage reflection +3%. Not available in a chaotic state. -->
-        <icon>icon.amor_goodness_cloak</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <passiveConditions>
-            <condition name="OpAlignment">
-                <alignment>LAWFUL</alignment>
-                <affectType>CASTER</affectType>
-            </condition>
-        </passiveConditions>
-        <effects>
-            <effect name="MaxHp">
-                <amount>5</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MaxMp">
-                <amount>5</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MaxCp">
-                <amount>5</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PhysicalDefence">
-                <amount>3</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MagicalDefence">
-                <amount>5</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="DefenceTrait">
-                <BLUNT>3</BLUNT>
-                <SWORD>3</SWORD>
-                <DUAL>3</DUAL>
-                <BOW>3</BOW>
-                <SPEAR>3</SPEAR>
-                <DAGGER>3</DAGGER>
-                <DUALFIST>3</DUALFIST>
-                <DUAL_DAGGER>3</DUAL_DAGGER>
-            </effect>
-            <effect name="CriticalRate">
-                <amount>10</amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="MagicCriticalRate">
-                <amount>10</amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="DamageShield">
-                <amount>3</amount>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="19040" toLevel="1" name="Cloak of Darkness">
-        <!-- Max HP/ MP/ CP +5%, P. Def. +3%, M. Def. +5%, all kinds of Weapon Resistance +3%, P./ M. Critical Rate +10, damage reflection +3%. -->
-        <icon>icon.amor_evilness_cloak</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <effects>
-            <effect name="MaxHp">
-                <amount>5</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MaxMp">
-                <amount>5</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MaxCp">
-                <amount>5</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PhysicalDefence">
-                <amount>3</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MagicalDefence">
-                <amount>5</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="DefenceTrait">
-                <BLUNT>3</BLUNT>
-                <SWORD>3</SWORD>
-                <DUAL>3</DUAL>
-                <BOW>3</BOW>
-                <SPEAR>3</SPEAR>
-                <DAGGER>3</DAGGER>
-                <DUALFIST>3</DUALFIST>
-                <DUAL_DAGGER>3</DUAL_DAGGER>
-            </effect>
-            <effect name="CriticalRate">
-                <amount>10</amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="MagicCriticalRate">
-                <amount>10</amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="DamageShield">
-                <amount>3</amount>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="19041" toLevel="1" name="Escape: Castle">
-        <!-- Return to Castle. -->
-        <hitTime>20000</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>1</magicLvl>
-        <operateType>A1</operateType>
-        <reuseDelay>3600000</reuseDelay>
-        <magicCriticalRate>5</magicCriticalRate>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpCanEscape"/>
-        </conditions>
-        <effects>
-            <effect name="Escape">
-                <escapeType>CASTLE</escapeType>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="19042" toLevel="1" name="Blessed Scroll of Escape: Castle">
-        <!-- Return to Castle. -->
-        <operateType>A1</operateType>
-        <hitTime>200</hitTime>
-        <magicCriticalRate>5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>1</magicLvl>
-        <isMagic>2</isMagic>
-        <reuseDelay>3600000</reuseDelay>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpCanEscape"/>
-            <condition name="OpHome">
-                <type>CASTLE</type>
-            </condition>
-        </conditions>
-    </skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
+	<skill id="19009" name="Clan Advent" max-level="1" action="A2">
+	<!-- When the clan leader logs in, clan members' P./M. Atk. + 2%%. -->
+		<icon initial="icon.skill19009"/>
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" dispellable="false" irreplacable="true" >
+			<magic-level initial="-2"/>
+			<cast-range initial="-1"/>
+			<effect-point initial="100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target scope="PLEDGE" object="FRIEND" range="1000" affect-min="50" affect-random="50" />
+		<abnormal type="CLAN_ADVENT" >
+			<level initial="1"/>
+			<time initial="-1"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_ATTACK" mode="PER">
+				<power initial="2.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="19032" name="Ability of Light" max-level="1" >
+	<!-- Imbued with the Ability of Light. Increases Max CP by 2000. Effects do not apply when in Chaotic state. -->
+		<icon initial="icon.skill19008"/>
+		<attributes property="MAGIC" magic-critical-rate="5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<conditions>
+			<condition name="NonChaotic" scope="PASSIVE"/>
+		</conditions>
+		<effects>
+			<vital-stat-modify stat="MAX_CP" mode="DIFF" heal="false">
+				<power initial="3000.0"/>
+			</vital-stat-modify>
+			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
+				<power initial="10.0"/>
+			</stat-modify>
+			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER">
+				<power initial="10.0"/>
+			</stat-modify>
+			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER">
+				<power initial="10.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="19033" name="Ability of Darkness" max-level="1" >
+	<!-- Imbued with the Ability of Darkness. Increases Max CP by 1000. -->
+		<icon initial="icon.skill19008"/>
+		<attributes property="MAGIC" magic-critical-rate="5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<vital-stat-modify stat="MAX_CP" mode="DIFF" heal="false">
+				<power initial="3000.0"/>
+			</vital-stat-modify>
+			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
+				<power initial="10.0"/>
+			</stat-modify>
+			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER">
+				<power initial="10.0"/>
+			</stat-modify>
+			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER">
+				<power initial="10.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="19034" name="Seal of Ruler" max-level="1" action="A1">
+	<!-- Engraves the Imprint of Light on the ancient relic that guards the castle. -->
+		<icon initial="icon.skill0246"/>
+		<attributes magic-critical-rate="5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="85"/>
+			<reuse initial="5000"/>
+			<effect-range initial="400"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="50"/>
+		</consume>
+		<target type="HOLYTHING" />
+		<conditions>
+			<condition name="PossessHolything"/>
+		</conditions>
+		<effects>
+			<take-castle side="LIGHT"/>
+			<effect name="TakeCastleStart" scope="START"/>
+		</effects>
+	</skill>
+	<skill id="19035" name="Imprint of Darkness" max-level="1" action="A1">
+	<!-- Engraves the Imprint of Darkness on the ancient relic that guards the castle. -->
+		<icon initial="icon.skill0246"/>
+		<attributes magic-critical-rate="5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="85"/>
+			<reuse initial="5000"/>
+			<effect-range initial="400"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="50"/>
+		</consume>
+		<target type="HOLYTHING" />
+		<conditions>
+			<condition name="PossessHolything"/>
+		</conditions>
+		<effects>
+			<take-castle side="DARK"/>
+			<effect name="TakeCastleStart" scope="START"/>
+		</effects>
+	</skill>
+	<skill id="19036" name="Blessing of Light" max-level="1" action="A2">
+	<!-- Acquires 3%% additional XP and SP through the blessing of the Guardian of Light. -->
+		<icon initial="icon.etc_pi_gift_box_i04"/>
+		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" >
+			<magic-level initial="85"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<abnormal type="BRIGHTNESS_BLESS" visual="VP_KEEP" >
+			<level initial="1"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="BONUS_EXP" mode="DIFF">
+				<power initial="3.0"/>
+			</stat-modify>
+			<stat-modify stat="BONUS_SP" mode="DIFF">
+				<power initial="3.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="19039" name="Cloak of Light" max-level="1" >
+	<!-- Max HP/Max MP/Max CP +5%%, P. Def. +3%%, M. Def. +5%%, Weapon Resistance +3, P. Critical Rate/M. Critical Rate +10 and damage reflection +3%%. Not available in a chaotic state. -->
+		<icon initial="icon.amor_goodness_cloak"/>
+		<attributes property="MAGIC" magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<conditions>
+			<condition name="NonChaotic" scope="PASSIVE"/>
+		</conditions>
+		<effects>
+			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+				<power initial="5.0"/>
+			</vital-stat-modify>
+			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+				<power initial="5.0"/>
+			</vital-stat-modify>
+			<vital-stat-modify stat="MAX_CP" mode="PER" heal="false">
+				<power initial="5.0"/>
+			</vital-stat-modify>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+				<power initial="3.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+				<power initial="5.0"/>
+			</stat-modify>
+			<defence-trait>
+				<trait type="BOW">
+					<power initial="0.029999999329447746"/>
+				</trait>
+				<trait type="DUAL">
+					<power initial="0.029999999329447746"/>
+				</trait>
+				<trait type="SWORD">
+					<power initial="0.029999999329447746"/>
+				</trait>
+				<trait type="DAGGER">
+					<power initial="0.029999999329447746"/>
+				</trait>
+				<trait type="DUALFIST">
+					<power initial="0.029999999329447746"/>
+				</trait>
+				<trait type="BLUNT">
+					<power initial="0.029999999329447746"/>
+				</trait>
+				<trait type="DUAL_DAGGER">
+					<power initial="0.029999999329447746"/>
+				</trait>
+				<trait type="SPEAR">
+					<power initial="0.029999999329447746"/>
+				</trait>
+			</defence-trait>
+			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="DIFF">
+				<power initial="10.0"/>
+			</stat-hp-based>
+			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+				<power initial="10.0"/>
+			</stat-modify>
+			<stat-modify stat="REFLECT_DAMAGE_PERCENT">
+				<power initial="3.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="19040" name="Cloak of Darkness" max-level="1" >
+	<!-- Max HP/Max MP/Max CP +5%%, P. Def. +3%%, M. Def. +5%%, Weapon Resistance +3, P. Critical Rate/M. Critical Rate +10 and damage reflection +3%%. -->
+		<icon initial="icon.amor_evilness_cloak"/>
+		<attributes property="MAGIC" magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+				<power initial="5.0"/>
+			</vital-stat-modify>
+			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+				<power initial="5.0"/>
+			</vital-stat-modify>
+			<vital-stat-modify stat="MAX_CP" mode="PER" heal="false">
+				<power initial="5.0"/>
+			</vital-stat-modify>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+				<power initial="3.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+				<power initial="5.0"/>
+			</stat-modify>
+			<defence-trait>
+				<trait type="BOW">
+					<power initial="0.029999999329447746"/>
+				</trait>
+				<trait type="DUAL">
+					<power initial="0.029999999329447746"/>
+				</trait>
+				<trait type="SWORD">
+					<power initial="0.029999999329447746"/>
+				</trait>
+				<trait type="DAGGER">
+					<power initial="0.029999999329447746"/>
+				</trait>
+				<trait type="DUALFIST">
+					<power initial="0.029999999329447746"/>
+				</trait>
+				<trait type="BLUNT">
+					<power initial="0.029999999329447746"/>
+				</trait>
+				<trait type="DUAL_DAGGER">
+					<power initial="0.029999999329447746"/>
+				</trait>
+				<trait type="SPEAR">
+					<power initial="0.029999999329447746"/>
+				</trait>
+			</defence-trait>
+			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="DIFF">
+				<power initial="10.0"/>
+			</stat-hp-based>
+			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+				<power initial="10.0"/>
+			</stat-modify>
+			<stat-modify stat="REFLECT_DAMAGE_PERCENT">
+				<power initial="3.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="19041" name="Escape: Castle" max-level="1" action="A1">
+	<!-- Return to Castle. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<reuse initial="3600000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<conditions>
+			<condition name="OpCanEscape"/>
+		</conditions>
+		<effects>
+			<escape location="CASTLE"/>
+		</effects>
+	</skill>
+	<skill id="19042" name="Blessed Scroll of Escape: Castle" max-level="1" action="A1">
+	<!-- Return to Castle. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<reuse initial="3600000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<conditions>
+			<condition name="OpCanEscape"/>
+			<residence type="CASTLE"/>
+		</conditions>
+	</skill>
 </list>

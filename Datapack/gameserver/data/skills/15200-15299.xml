@@ -1,1389 +1,1455 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
-    <skill id="15206" toLevel="1" name="Detonate">
-        <operateType>A1</operateType>
-        <effectPoint>-574</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>99</magicLvl>
-        <affectRange>100</affectRange>
-        <affectLimit>10-10</affectLimit>
-        <isMagic>1</isMagic>
-        <targetType>SELF</targetType>
-        <affectScope>POINT_BLANK</affectScope>
-    </skill>
-    <skill id="15207" toLevel="1" name="Debuff Immunity">
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <magicLvl>99</magicLvl>
-    </skill>
-    <skill id="15208" toLevel="9" name="Weakened Chaos Shield">
-        <!-- Lethal Strike Resistance is weakened through the armor destruction skill. -->
-        <icon>
-            <value level="1">icon.skill0035</value>
-            <value level="2">icon.skill0035</value>
-            <value level="3">icon.skill0035</value>
-            <value level="4">icon.skill0035</value>
-            <value level="5">icon.skill0035</value>
-            <value level="6">icon.skill0035</value>
-            <value level="7">icon.skill0035</value>
-            <value level="8">icon.skill0035</value>
-            <value level="9">icon.skill1418</value>
-        </icon>
-        <operateType>A2</operateType>
-        <effectPoint>1</effectPoint>
-        <abnormalType>MP_SHIELD</abnormalType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <specialLevel>-1</specialLevel>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>99</magicLvl>
-        <abnormalLvl>
-            <value level="1">99</value>
-            <value level="2">98</value>
-            <value level="3">97</value>
-            <value level="4">96</value>
-            <value level="5">95</value>
-            <value level="6">94</value>
-            <value level="7">93</value>
-            <value level="8">92</value>
-            <value level="9">91</value>
-        </abnormalLvl>
-        <abnormalTime>-1</abnormalTime>
-        <irreplacableBuff>true</irreplacableBuff>
-        <isMagic>1</isMagic>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15214" toLevel="1" name="Tauti">
-        <!-- Tauti is the lord who rules over the Seed of Hellfire. It is one of the 9 seeds sown in Gracia by Shilen's command. It is one of Bremnon's weapons that has the appearance of an enormous axe. It uses the conflict between the classes in order to carry out Shilen's command and to grow its own power. It does not personally appear while ruling over the Seed of Hellfire. No one knows the extent of its hidden power. -->
-        <icon>icon.skillboss</icon>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <magicLvl>1</magicLvl>
-    </skill>
-    <skill id="15215" toLevel="1" name="Raid Boss (Lv. 97)">
-        <!-- The Guillotine was once an executioner. After drinking the blood of Shilen that permeated the Execution Grounds, it became the "Guillotine of Death" that kills to bring about the resurrection of Shilen. It is trapped in the illusion of the blood. It manages the criminals near the guillotine and it sends the blood that they have gathered to the spirit world of darkness. -->
-        <icon>icon.skillraid</icon>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <magicLvl>1</magicLvl>
-    </skill>
-    <skill id="15216" toLevel="1" name="Raid Boss (Lv. 97)">
-        <!-- This is an undead monster that was created through the blood of Shilen from the corpse of a criminal who went insane from the torture in the fortress. It is trapped in the illusion of the blood. It seeks to bring about the resurrection of Shilen by killing everything, thereby taking sacrifices for the darkness. -->
-        <icon>icon.skillraid</icon>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <magicLvl>1</magicLvl>
-    </skill>
-    <skill id="15217" toLevel="1" name="Raid Boss (Lv. 97)">
-        <!-- The master criminal who resurrected after drinking the blood of Shilen that seeped into the Execution Grounds. It is trapped in the madness of blood. It is a warden who manages the monsters in the Guillotine Fortress. -->
-        <icon>icon.skillraid</icon>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <magicLvl>1</magicLvl>
-    </skill>
-    <skill id="15218" toLevel="1" name="Clear Target">
-        <!-- Cancels the enemy's target. -->
-        <operateType>A1</operateType>
-        <mpConsume>10</mpConsume>
-        <castRange>250</castRange>
-        <hitTime>1500</hitTime>
-        <reuseDelay>5000</reuseDelay>
-        <effectPoint>-100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>460</effectRange>
-        <magicLvl>93</magicLvl>
-        <isMagic>1</isMagic>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="TargetCancel">
-                <chance>50</chance>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="15219" toLevel="1" name="Double Strike">
-        <!-- Powerful attack on enemies near target. -->
-        <icon>icon.skill0036</icon>
-        <operateType>A1</operateType>
-        <mpConsume>10</mpConsume>
-        <castRange>150</castRange>
-        <hitTime>2000</hitTime>
-        <effectPoint>-2</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>270</effectRange>
-        <magicLvl>94</magicLvl>
-        <affectRange>100</affectRange>
-        <reuseDelay>5000</reuseDelay>
-        <targetType>TARGET</targetType>
-        <affectScope>RANGE</affectScope>
-        <affectObject>NOT_FRIEND</affectObject>
-        <effects>
-            <effect name="PhysicalAttack">
-                <power>40000</power>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="15220" toLevel="1" name="Detonate">
-        <!-- Inflicts damage upon monsters around you and inflicts Bleed for 5 sec. -->
-        <operateType>A2</operateType>
-        <mpConsume>10</mpConsume>
-        <hitTime>2000</hitTime>
-        <effectPoint>-100</effectPoint>
-        <subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
-        <abnormalType>BLEEDING</abnormalType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <lvlBonusRate>2</lvlBonusRate>
-        <magicLvl>93</magicLvl>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>5</abnormalTime>
-        <trait>BLEED</trait>
-        <affectRange>150</affectRange>
-        <abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
-        <isDebuff>true</isDebuff>
-        <isSuicideAttack>true</isSuicideAttack>
-        <targetType>SELF</targetType>
-        <affectScope>POINT_BLANK</affectScope>
-        <affectObject>FRIEND</affectObject>
-        <effects>
-            <effect name="PhysicalAttack">
-                <power>40000</power>
-            </effect>
-            <effect name="DamOverTime">
-                <power>1000</power>
-                <ticks>5</ticks>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="15221" toLevel="3" name="Blood Spear">
-        <!-- Attacks the target with an arrow of darkness. -->
-        <icon>icon.skill0122</icon>
-        <operateType>A1</operateType>
-        <mpConsume>10</mpConsume>
-        <castRange>250</castRange>
-        <hitTime>2000</hitTime>
-        <reuseDelay>5000</reuseDelay>
-        <effectPoint>-100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>460</effectRange>
-        <magicLvl>
-            <value level="1">93</value>
-            <value level="2">94</value>
-            <value level="3">95</value>
-        </magicLvl>
-        <isMagic>1</isMagic>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="MagicalAttack">
-                <power>
-                    <value level="1">1000</value>
-                    <value level="2">1500</value>
-                    <value level="3">2000</value>
-                </power>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="15222" toLevel="3" name="Home Thrust">
-        <!-- Launches a powerful attack on the target. -->
-        <icon>icon.skill0003</icon>
-        <operateType>A1</operateType>
-        <mpConsume>10</mpConsume>
-        <castRange>100</castRange>
-        <effectPoint>-2</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>400</effectRange>
-        <magicLvl>
-            <value level="1">93</value>
-            <value level="2">94</value>
-            <value level="3">95</value>
-        </magicLvl>
-        <hitTime>2000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="PhysicalAttack">
-                <power>
-                    <value level="1">30000</value>
-                    <value level="2">40000</value>
-                    <value level="3">50000</value>
-                </power>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="15223" toLevel="1" name="Body Slice">
-        <!-- Launches a powerful attack on enemies within a 120 degree radius. -->
-        <icon>icon.skill0003</icon>
-        <operateType>A1</operateType>
-        <mpConsume>10</mpConsume>
-        <castRange>100</castRange>
-        <effectPoint>-2</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>400</effectRange>
-        <magicLvl>94</magicLvl>
-        <fanRange>0;0;100;120</fanRange>
-        <hitTime>2000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>FAN</affectScope>
-        <affectObject>NOT_FRIEND</affectObject>
-        <effects>
-            <effect name="PhysicalAttack">
-                <power>40000</power>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="15224" toLevel="1" name="Bloody Breath">
-        <!-- Your soul is sucked away, and your P. Def. and M. Def. is decreased. -->
-        <icon>icon.skill11769</icon>
-        <operateType>A2</operateType>
-        <mpConsume>10</mpConsume>
-        <castRange>250</castRange>
-        <hitTime>2000</hitTime>
-        <reuseDelay>5000</reuseDelay>
-        <isMagic>1</isMagic>
-        <effectPoint>-100</effectPoint>
-        <abnormalType>PD_DOWN</abnormalType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>460</effectRange>
-        <activateRate>200</activateRate>
-        <magicLvl>95</magicLvl>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>5</abnormalTime>
-        <affectRange>200</affectRange>
-        <isDebuff>true</isDebuff>
-        <targetType>ENEMY</targetType>
-        <affectScope>RANGE</affectScope>
-        <affectObject>NOT_FRIEND</affectObject>
-        <effects>
-            <effect name="MagicalDefence">
-                <amount>-10</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PhysicalDefence">
-                <amount>-10</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="15225" toLevel="1" name="Sword Wave">
-        <!-- Strikes down with the sword to inflict powerful damage on enemies within 200 grids of you. -->
-        <icon>icon.skill0003</icon>
-        <operateType>A1</operateType>
-        <mpConsume>10</mpConsume>
-        <castRange>250</castRange>
-        <hitTime>3000</hitTime>
-        <effectPoint>-100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>460</effectRange>
-        <magicLvl>95</magicLvl>
-        <affectRange>200</affectRange>
-        <reuseDelay>5000</reuseDelay>
-        <targetType>SELF</targetType>
-        <affectScope>POINT_BLANK</affectScope>
-        <affectObject>NOT_FRIEND</affectObject>
-        <effects>
-            <effect name="PhysicalAttack">
-                <power>40000</power>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="15226" toLevel="1" name="Sword Wave">
-        <!-- Strikes down with the sword to inflict powerful damage on enemies within 200 grids of you. Additional damage on targets debuffed with Soul Drain. -->
-        <icon>icon.skill0003</icon>
-        <operateType>A1</operateType>
-        <mpConsume>10</mpConsume>
-        <castRange>250</castRange>
-        <hitTime>3000</hitTime>
-        <effectPoint>-100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>460</effectRange>
-        <magicLvl>96</magicLvl>
-        <affectRange>200</affectRange>
-        <reuseDelay>5000</reuseDelay>
-        <targetType>SELF</targetType>
-        <affectScope>POINT_BLANK</affectScope>
-        <affectObject>NOT_FRIEND</affectObject>
-        <effects>
-            <effect name="PhysicalAttack">
-                <power>40000</power>
-            </effect>
-            <effect name="MagicalAttackByAbnormalSlot">
-                <power>500</power>
-                <abnormalType>PD_DOWN</abnormalType>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="15227" toLevel="1" name="Heavy Hit">
-        <!-- Additional damage received when debuffed with Soul Drain. -->
-        <operateType>A1</operateType>
-        <mpConsume>5</mpConsume>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>94</magicLvl>
-        <reuseDelay>5000</reuseDelay>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="PhysicalAttack">
-                <power>30000</power>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="15228" toLevel="1" name="Soul Wave">
-        <!-- Uses the absorbed soul to send a powerful shock wave within a 120 degree radius. Only damages targets debuffed with Soul Drain. -->
-        <icon>icon.skill0003</icon>
-        <operateType>A1</operateType>
-        <mpConsume>10</mpConsume>
-        <hitTime>2500</hitTime>
-        <effectPoint>-2</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>94</magicLvl>
-        <fanRange>0;0;150;120</fanRange>
-        <reuseDelay>5000</reuseDelay>
-        <targetType>SELF</targetType>
-        <affectScope>FAN_PB</affectScope>
-        <affectObject>NOT_FRIEND</affectObject>
-        <effects>
-            <effect name="MagicalAttackByAbnormalSlot">
-                <abnormalType>PD_DOWN</abnormalType>
-                <power>500</power>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="15229" toLevel="1" name="Soul Wave">
-        <!-- Uses the absorbed soul to send a powerful shock wave within a 120 degree radius. Only damages targets debuffed with Soul Drain. -->
-        <icon>icon.skill0003</icon>
-        <operateType>A1</operateType>
-        <mpConsume>10</mpConsume>
-        <hitTime>2500</hitTime>
-        <effectPoint>-2</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>94</magicLvl>
-        <fanRange>0;0;150;120</fanRange>
-        <reuseDelay>5000</reuseDelay>
-        <targetType>SELF</targetType>
-        <affectScope>FAN_PB</affectScope>
-        <affectObject>NOT_FRIEND</affectObject>
-        <effects>
-            <effect name="PhysicalAttack">
-                <power>40000</power>
-            </effect>
-            <effect name="MagicalAttackByAbnormalSlot">
-                <power>500</power>
-                <abnormalType>PD_DOWN</abnormalType>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="15230" toLevel="1" name="Heavy Hit">
-        <!-- Additional damage received when debuffed with Soul Drain. -->
-        <operateType>A1</operateType>
-        <mpConsume>5</mpConsume>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>94</magicLvl>
-        <reuseDelay>5000</reuseDelay>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="MagicalAttackByAbnormalSlot">
-                <abnormalType>PD_DOWN</abnormalType>
-                <power>500</power>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="15231" toLevel="1" name="Quick Thrust">
-        <!-- Inflicts a powerful attack on the target. -->
-        <icon>icon.skill11508</icon>
-        <operateType>DA2</operateType>
-        <mpConsume>10</mpConsume>
-        <castRange>400</castRange>
-        <hitTime>1000</hitTime>
-        <coolTime>200</coolTime>
-        <effectPoint>-100</effectPoint>
-        <abnormalType>STUN</abnormalType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <effectRange>460</effectRange>
-        <activateRate>200</activateRate>
-        <magicLvl>95</magicLvl>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>1</abnormalTime>
-        <trait>SHOCK</trait>
-        <reuseDelay>5000</reuseDelay>
-        <targetType>ENEMY</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15232" toLevel="1" name="Speed Up">
-        <!-- Atk. Spd. +200%. -->
-        <icon>icon.skill1086</icon>
-        <operateType>A2</operateType>
-        <mpConsume>10</mpConsume>
-        <abnormalType>ATTACK_TIME_DOWN</abnormalType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <specialLevel>-1</specialLevel>
-        <hitCancelTime>0</hitCancelTime>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>30</abnormalTime>
-        <isMagic>1</isMagic>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="PhysicalAttackSpeed">
-                <amount>100</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="15233" toLevel="1" name="Full Swing">
-        <!-- Swing your sword to launch a powerful attack on nearby enemies. -->
-        <icon>icon.skill0036</icon>
-        <operateType>A1</operateType>
-        <mpConsume>10</mpConsume>
-        <hitTime>2000</hitTime>
-        <effectPoint>-2</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>95</magicLvl>
-        <affectRange>200</affectRange>
-        <reuseDelay>5000</reuseDelay>
-        <targetType>SELF</targetType>
-        <affectScope>POINT_BLANK</affectScope>
-        <affectObject>NOT_FRIEND</affectObject>
-        <effects>
-            <effect name="PhysicalAttack">
-                <power>40000</power>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="15234" toLevel="1" name="Dark Spheres">
-        <!-- Shoot dark red spheres toward enemies within 120 degrees of you. Additional damage on PCs debuffed with Soul Drain. -->
-        <icon>icon.skill0003</icon>
-        <operateType>A1</operateType>
-        <mpConsume>10</mpConsume>
-        <castRange>200</castRange>
-        <hitTime>5000</hitTime>
-        <effectPoint>-2</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>400</effectRange>
-        <magicLvl>96</magicLvl>
-        <fanRange>0;0;200;120</fanRange>
-        <reuseDelay>10000</reuseDelay>
-        <targetType>TARGET</targetType>
-        <affectScope>FAN</affectScope>
-        <affectObject>NOT_FRIEND</affectObject>
-        <effects>
-            <effect name="PhysicalAttack">
-                <power>200000</power>
-            </effect>
-            <effect name="MagicalAttackByAbnormalSlot">
-                <power>500</power>
-                <abnormalType>PD_DOWN</abnormalType>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="15235" toLevel="2" name="Wind of Darkness">
-        <!-- Creates a powerful wind around a character, throwing back enemies. -->
-        <icon>icon.skill4107</icon>
-        <operateType>A2</operateType>
-        <mpConsume>10</mpConsume>
-        <hitTime>1000</hitTime>
-        <coolTime>3000</coolTime>
-        <effectPoint>
-            <value level="1">-200</value>
-            <value level="2">-250</value>
-        </effectPoint>
-        <abnormalType>KNOCKDOWN</abnormalType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <activateRate>80</activateRate>
-        <magicLvl>96</magicLvl>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>1</abnormalTime>
-        <affectRange>250</affectRange>
-        <affectLimit>10-10</affectLimit>
-        <reuseDelay>10000</reuseDelay>
-        <targetType>SELF</targetType>
-        <affectScope>POINT_BLANK</affectScope>
-        <affectObject>NOT_FRIEND</affectObject>
-        <effects>
-            <effect name="PhysicalAttack">
-                <power>180000</power>
-            </effect>
-            <effect name="MagicalAttackByAbnormalSlot">
-                <power>500</power>
-                <abnormalType>PD_DOWN</abnormalType>
-            </effect>
-            <effect name="KnockBack">
-                <distance>200</distance>
-                <speed>400</speed>
-                <knockDown>true</knockDown>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="15236" toLevel="2" name="Dark Thrust">
-        <!-- Launches a powerful attack on the target. -->
-        <icon>icon.skill0003</icon>
-        <operateType>A1</operateType>
-        <mpConsume>10</mpConsume>
-        <castRange>100</castRange>
-        <effectPoint>
-            <value level="1">-200</value>
-            <value level="2">-250</value>
-        </effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>400</effectRange>
-        <magicLvl>96</magicLvl>
-        <hitTime>2000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="PhysicalAttack">
-                <power>200000</power>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="15237" toLevel="2" name="Dark Buster">
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <coolTime>800</coolTime>
-        <reuseDelay>3000</reuseDelay>
-        <mpConsume>10</mpConsume>
-        <effectPoint>
-            <value level="1">-300</value>
-            <value level="2">-400</value>
-        </effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>400</effectRange>
-        <magicLvl>96</magicLvl>
-        <affectRange>200</affectRange>
-        <hitTime>2000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>RANGE</affectScope>
-        <affectObject>NOT_FRIEND</affectObject>
-        <effects>
-            <effect name="PhysicalAttack">
-                <power>200000</power>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="15238" toLevel="1" name="Dark Breath">
-        <!-- Absorb the souls of enemies within 180 degrees of you and their P. Def. and M. Def. -30%. -->
-        <icon>icon.skill11769</icon>
-        <operateType>A2</operateType>
-        <mpConsume>10</mpConsume>
-        <castRange>250</castRange>
-        <hitTime>3000</hitTime>
-        <isMagic>1</isMagic>
-        <effectPoint>-100</effectPoint>
-        <abnormalType>PD_DOWN</abnormalType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>460</effectRange>
-        <activateRate>200</activateRate>
-        <magicLvl>96</magicLvl>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>15</abnormalTime>
-        <fanRange>0;0;200;180</fanRange>
-        <isDebuff>true</isDebuff>
-        <targetType>ENEMY</targetType>
-        <affectScope>FAN</affectScope>
-        <affectObject>NOT_FRIEND</affectObject>
-    </skill>
-    <skill id="15239" toLevel="1" name="Heavy Hit">
-        <!-- Additional damage received when debuffed with Soul Drain. -->
-        <operateType>A1</operateType>
-        <mpConsume>5</mpConsume>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>93</magicLvl>
-        <reuseDelay>5000</reuseDelay>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15241" toLevel="1" name="">
-        <operateType>A1</operateType>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <castRange>600</castRange>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15242" toLevel="1" name="Presentation - Summon Attack Robot">
-        <!-- Summons an Attack Robot that attacks nearby Helper Robots. -->
-        <operateType>A1</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>99</magicLvl>
-        <hitTime>1500</hitTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15243" toLevel="1" name="Presentation - Summon Stone Gathering Robot">
-        <!-- Summons a Zombie Robot that attacks nearby Stone Gathering Robots. -->
-        <operateType>A1</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>99</magicLvl>
-        <hitTime>1500</hitTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15244" toLevel="1" name="Presentation - Destroy Dark Summon Circle">
-        <!-- Activate the Gathering Device to make the Dark Summon Circle disappear. -->
-        <operateType>A1</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>99</magicLvl>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15245" toLevel="1" name="Presentation - Summon Robot">
-        <!-- Summon Device summons either a Repair Robot, or one of the two Destroyer Robots. -->
-        <operateType>A1</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>99</magicLvl>
-        <hitTime>1500</hitTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15246" toLevel="1" name="Nurka Blow">
-        <!-- Inflicts powerful damage on target and nearby enemies. -->
-        <icon>icon.skill0036</icon>
-        <operateType>A1</operateType>
-        <mpConsume>10</mpConsume>
-        <castRange>100</castRange>
-        <hitTime>2500</hitTime>
-        <effectPoint>-2</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>400</effectRange>
-        <magicLvl>95</magicLvl>
-        <affectRange>100</affectRange>
-        <reuseDelay>5000</reuseDelay>
-        <targetType>TARGET</targetType>
-        <affectScope>RANGE</affectScope>
-        <affectObject>NOT_FRIEND</affectObject>
-    </skill>
-    <skill id="15248" toLevel="1" name="Nurka Howl">
-        <!-- Nurka's P. Atk. and Atk. Spd. increased and P. Def. decreased. -->
-        <icon>icon.skill1068</icon>
-        <operateType>A2</operateType>
-        <mpConsume>10</mpConsume>
-        <hitTime>2000</hitTime>
-        <reuseDelay>5000</reuseDelay>
-        <effectPoint>121</effectPoint>
-        <abnormalType>PA_UP_SPECIAL</abnormalType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <magicLvl>95</magicLvl>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>30</abnormalTime>
-        <isMagic>1</isMagic>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15249" toLevel="1" name="Nurka Fireball">
-        <!-- Inflicts powerful magical damage on the target. -->
-        <icon>icon.skill0003</icon>
-        <operateType>A1</operateType>
-        <mpConsume>10</mpConsume>
-        <castRange>500</castRange>
-        <hitTime>2500</hitTime>
-        <reuseDelay>5000</reuseDelay>
-        <effectPoint>-2</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>900</effectRange>
-        <magicLvl>95</magicLvl>
-        <attributeType>FIRE</attributeType>
-        <attributeValue>50</attributeValue>
-        <isMagic>1</isMagic>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15250" toLevel="1" name="Nurka's Cold Shoulders">
-        <!-- Binds all enemies who surround your character. -->
-        <icon>icon.skill1042</icon>
-        <operateType>A2</operateType>
-        <mpConsume>10</mpConsume>
-        <hitTime>2500</hitTime>
-        <reuseDelay>5000</reuseDelay>
-        <isMagic>1</isMagic>
-        <effectPoint>-707</effectPoint>
-        <abnormalType>AIRBIND</abnormalType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <activateRate>100</activateRate>
-        <magicLvl>95</magicLvl>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>3</abnormalTime>
-        <trait>AIRBIND</trait>
-        <affectRange>150</affectRange>
-        <abnormalVisualEffect>AIRBIND</abnormalVisualEffect>
-        <isDebuff>true</isDebuff>
-        <targetType>SELF</targetType>
-        <affectScope>POINT_BLANK</affectScope>
-        <affectObject>NOT_FRIEND</affectObject>
-    </skill>
-    <skill id="15251" toLevel="1" name="Invincible Nurka">
-        <!-- Nurka won't attack. -->
-        <icon>icon.skill11758</icon>
-        <operateType>A2</operateType>
-        <mpConsume>10</mpConsume>
-        <hitTime>2000</hitTime>
-        <reuseDelay>5000</reuseDelay>
-        <effectPoint>867</effectPoint>
-        <abnormalType>INVINCIBILITY_SPECIAL</abnormalType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <magicLvl>95</magicLvl>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>10</abnormalTime>
-        <staticReuse>true</staticReuse>
-        <abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
-        <isMagic>1</isMagic>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <affectObject>FRIEND</affectObject>
-    </skill>
-    <skill id="15253" toLevel="1" name="Earth-rumbling Nurka">
-        <!-- Inflicts damage to target and nearby enemies, decreases Speed. -->
-        <icon>icon.skill11509</icon>
-        <operateType>A2</operateType>
-        <mpConsume>10</mpConsume>
-        <hitTime>3000</hitTime>
-        <coolTime>300</coolTime>
-        <reuseDelay>5000</reuseDelay>
-        <effectPoint>-687</effectPoint>
-        <abnormalType>SPEED_DOWN</abnormalType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <activateRate>150</activateRate>
-        <magicLvl>95</magicLvl>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>5</abnormalTime>
-        <attributeType>EARTH</attributeType>
-        <attributeValue>50</attributeValue>
-        <affectRange>100</affectRange>
-        <isDebuff>true</isDebuff>
-        <targetType>SELF</targetType>
-        <affectScope>POINT_BLANK</affectScope>
-        <affectObject>NOT_FRIEND</affectObject>
-    </skill>
-    <skill id="15254" toLevel="1" name="Nurka's Healing">
-        <!-- Restores your HP and allies' HP. -->
-        <operateType>A1</operateType>
-        <mpConsume>10</mpConsume>
-        <hitTime>1500</hitTime>
-        <reuseDelay>5000</reuseDelay>
-        <effectPoint>1</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>95</magicLvl>
-        <affectRange>200</affectRange>
-        <isMagic>1</isMagic>
-        <targetType>SELF</targetType>
-        <affectScope>RANGE</affectScope>
-        <affectObject>NOT_FRIEND</affectObject>
-    </skill>
-    <skill id="15255" toLevel="1" name="Defensive Nurka">
-        <!-- Nurka's P. Def. +50%. -->
-        <icon>icon.skill11252</icon>
-        <operateType>A2</operateType>
-        <mpConsume>10</mpConsume>
-        <hitTime>1000</hitTime>
-        <reuseDelay>5000</reuseDelay>
-        <effectPoint>1</effectPoint>
-        <abnormalType>PD_UP</abnormalType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>95</magicLvl>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>7200</abnormalTime>
-        <isMagic>1</isMagic>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15256" toLevel="1" name="Aggressive Nurka">
-        <!-- Nurka's P. Atk. +50%. -->
-        <icon>icon.skill10252</icon>
-        <operateType>A2</operateType>
-        <mpConsume>10</mpConsume>
-        <hitTime>1000</hitTime>
-        <reuseDelay>5000</reuseDelay>
-        <effectPoint>1</effectPoint>
-        <abnormalType>PA_UP</abnormalType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>95</magicLvl>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>7200</abnormalTime>
-        <isMagic>1</isMagic>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15257" toLevel="1" name="Resistance Blaze">
-        <!-- Speed decreased. -->
-        <icon>icon.skill0003</icon>
-        <operateType>A2</operateType>
-        <mpConsume>10</mpConsume>
-        <castRange>300</castRange>
-        <hitTime>1500</hitTime>
-        <reuseDelay>5000</reuseDelay>
-        <isMagic>1</isMagic>
-        <effectPoint>-2</effectPoint>
-        <abnormalType>SPEED_DOWN</abnormalType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>540</effectRange>
-        <magicLvl>95</magicLvl>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>10</abnormalTime>
-        <attributeType>FIRE</attributeType>
-        <attributeValue>50</attributeValue>
-        <isDebuff>true</isDebuff>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15258" toLevel="1" name="Resistance Treatment">
-        <!-- Restores allies' HP. -->
-        <operateType>A1</operateType>
-        <mpConsume>10</mpConsume>
-        <castRange>300</castRange>
-        <hitTime>1500</hitTime>
-        <reuseDelay>5000</reuseDelay>
-        <effectPoint>1</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>540</effectRange>
-        <magicLvl>95</magicLvl>
-        <isMagic>1</isMagic>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15259" toLevel="1" name="Fireworks">
-        <!-- Congratulations! You have broken the record! -->
-        <operateType>A1</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>85</magicLvl>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15260" toLevel="1" name="Time Up">
-        <!-- Enough for Now. -->
-        <operateType>A1</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>85</magicLvl>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15261" toLevel="1" name="Lindvior's Skill 1">
-        <!-- Lindvior's Wave Skill Presentation -->
-        <operateType>A1</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>99</magicLvl>
-        <hitTime>17000</hitTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15262" toLevel="1" name="Lindvior's Skill 2">
-        <!-- Lindvior's Wave Skill Range -->
-        <operateType>A1</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>99</magicLvl>
-        <hitTime>17000</hitTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15264" toLevel="1" name="Lindvior's Skill 4">
-        <!-- Lindvior's AoE Skill Presentation -->
-        <operateType>A1</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>99</magicLvl>
-        <hitTime>17000</hitTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15265" toLevel="1" name="Lindvior's AoE 2">
-        <!-- Lindvior's AoE Skill Range -->
-        <operateType>A1</operateType>
-        <castRange>1000</castRange>
-        <effectPoint>-686</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>99</magicLvl>
-        <hitTime>4200</hitTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15266" toLevel="1" name="Lindvior's Skill 6">
-        <!-- Lindvior's AoE Skill Damage -->
-        <operateType>A1</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>99</magicLvl>
-        <hitTime>17000</hitTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15269" toLevel="1" name="Lindvior's Wrath">
-        <!-- Lindvior's Aerial Yoke for All Skill Presentation -->
-        <operateType>A1</operateType>
-        <hitTime>15000</hitTime>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>99</magicLvl>
-        <coolTime>8000</coolTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15270" toLevel="1" name="Lindvior's Mass Yoke">
-        <!-- Lindvior's Aerial Yoke for All Skill Presentation -->
-        <icon>icon.skill1042</icon>
-        <operateType>A2</operateType>
-        <hitTime>2000</hitTime>
-        <isMagic>1</isMagic>
-        <effectPoint>-707</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>99</magicLvl>
-        <isDebuff>true</isDebuff>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15271" toLevel="1" name="Body Slam">
-        <!-- Lindvior's stun -->
-        <icon>icon.skill0100</icon>
-        <operateType>A2</operateType>
-        <castRange>400</castRange>
-        <hitTime>2500</hitTime>
-        <coolTime>1000</coolTime>
-        <effectPoint>-574</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>99</magicLvl>
-        <isDebuff>true</isDebuff>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15273" toLevel="1" name="Tail Swipe">
-        <!-- Lindvior's Landing Range -->
-        <operateType>A1</operateType>
-        <hitTime>2500</hitTime>
-        <effectPoint>-574</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>99</magicLvl>
-        <coolTime>1500</coolTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15274" toLevel="1" name="Mighty Wind Strike">
-        <!-- Ranged projectile. -->
-        <operateType>A1</operateType>
-        <castRange>1800</castRange>
-        <hitTime>2500</hitTime>
-        <effectPoint>-707</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>99</magicLvl>
-        <isMagic>1</isMagic>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15276" toLevel="1" name="Bleed">
-        <!-- Bleeding -->
-        <icon>icon.skill0096</icon>
-        <operateType>A2</operateType>
-        <castRange>600</castRange>
-        <hitTime>1500</hitTime>
-        <coolTime>500</coolTime>
-        <effectPoint>-574</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>99</magicLvl>
-        <isDebuff>true</isDebuff>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15278" toLevel="1" name="Hold">
-        <!-- Lindvior's aerial yoke -->
-        <icon>icon.skill1042</icon>
-        <operateType>A2</operateType>
-        <castRange>1100</castRange>
-        <hitTime>2000</hitTime>
-        <coolTime>500</coolTime>
-        <isMagic>1</isMagic>
-        <effectPoint>-574</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>99</magicLvl>
-        <isDebuff>true</isDebuff>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15279" toLevel="1" name="Soar">
-        <!-- Lindvior Raid's PC Chain Skill -->
-        <operateType>A1</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>99</magicLvl>
-        <hitTime>5000</hitTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15280" toLevel="1" name="Lindvior's Berserk">
-        <!-- Lindvior Raid's Berserk -->
-        <operateType>A2</operateType>
-        <hitTime>700</hitTime>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>99</magicLvl>
-        <isMagic>4</isMagic>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15281" toLevel="1" name="Lindvior's Skill 21">
-        <!-- Atk. Spd. and Speed +30%. -->
-        <operateType>A2</operateType>
-        <castRange>1100</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>99</magicLvl>
-        <isMagic>1</isMagic>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15282" toLevel="1" name="Lindvior's Skill 22">
-        <!-- Lindvior Raid's Structure Repair Skill -->
-        <operateType>A1</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>99</magicLvl>
-        <hitTime>17000</hitTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15286" toLevel="1" name="Blood Siphon Master">
-        <!-- Steals a large portion of the target's HP. -->
-        <icon>icon.skill1147</icon>
-        <operateType>A1</operateType>
-        <mpConsume>10</mpConsume>
-        <castRange>200</castRange>
-        <hitTime>1000</hitTime>
-        <reuseDelay>5000</reuseDelay>
-        <effectPoint>-143</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <effectRange>400</effectRange>
-        <magicLvl>95</magicLvl>
-        <attributeType>DARK</attributeType>
-        <attributeValue>50</attributeValue>
-        <isMagic>1</isMagic>
-        <targetType>ENEMY</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15287" toLevel="1" name="Twister">
-        <!-- Inflicts magical damage on PCs near the target and immobilizes them. -->
-        <icon>icon.skill0100</icon>
-        <operateType>A2</operateType>
-        <mpConsume>10</mpConsume>
-        <castRange>200</castRange>
-        <hitTime>2500</hitTime>
-        <reuseDelay>5000</reuseDelay>
-        <effectPoint>-100</effectPoint>
-        <abnormalType>STUN</abnormalType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <effectRange>400</effectRange>
-        <lvlBonusRate>1</lvlBonusRate>
-        <activateRate>150</activateRate>
-        <magicLvl>95</magicLvl>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>3</abnormalTime>
-        <trait>SHOCK</trait>
-        <attributeType>WIND</attributeType>
-        <attributeValue>50</attributeValue>
-        <affectRange>100</affectRange>
-        <abnormalVisualEffect>STUN</abnormalVisualEffect>
-        <isDebuff>true</isDebuff>
-        <targetType>ENEMY</targetType>
-        <affectScope>RANGE</affectScope>
-        <affectObject>NOT_FRIEND</affectObject>
-    </skill>
-    <skill id="15288" toLevel="1" name="Increase Recovery Bonus">
-        <!-- Greatly increases Lidia's HP Recovery Bonus. -->
-        <icon>icon.skill1044</icon>
-        <operateType>A2</operateType>
-        <mpConsume>10</mpConsume>
-        <hitTime>1000</hitTime>
-        <abnormalType>HP_REGEN_DOWN</abnormalType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <specialLevel>-1</specialLevel>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>95</magicLvl>
-        <abnormalLvl>11</abnormalLvl>
-        <abnormalTime>15</abnormalTime>
-        <reuseDelay>5000</reuseDelay>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15289" toLevel="1" name="Decrease Atk. Spd.">
-        <!-- Energy that formed in Lidia's room because Giselle von Hellmann and Alfred von Hellmann were not eliminated. Atk. Spd. is decreased. -->
-        <icon>icon.skill11509</icon>
-        <operateType>A2</operateType>
-        <mpConsume>10</mpConsume>
-        <coolTime>300</coolTime>
-        <reuseDelay>5000</reuseDelay>
-        <effectPoint>-687</effectPoint>
-        <abnormalType>SPEED_UP</abnormalType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <magicLvl>95</magicLvl>
-        <abnormalLvl>5</abnormalLvl>
-        <abnormalTime>0</abnormalTime>
-        <isDebuff>true</isDebuff>
-        <targetType>ENEMY</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15290" toLevel="1" name="Decrease Casting Spd.">
-        <!-- Energy that formed in Lidia's room because Giselle von Hellmann and Alfred von Hellmann were not eliminated. Casting Spd. is decreased. -->
-        <icon>icon.skill11509</icon>
-        <operateType>A2</operateType>
-        <mpConsume>10</mpConsume>
-        <coolTime>300</coolTime>
-        <reuseDelay>5000</reuseDelay>
-        <effectPoint>-687</effectPoint>
-        <abnormalType>SPEED_DOWN</abnormalType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <magicLvl>95</magicLvl>
-        <abnormalLvl>5</abnormalLvl>
-        <abnormalTime>0</abnormalTime>
-        <isDebuff>true</isDebuff>
-        <targetType>ENEMY</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15291" toLevel="1" name="Bleed">
-        <!-- Energy that formed in Lidia's room because Giselle von Hellmann and Alfred von Hellmann were not eliminated. HP continues to decrease. -->
-        <icon>icon.skill0096</icon>
-        <abnormalLvl>2</abnormalLvl>
-        <abnormalTime>20</abnormalTime>
-        <abnormalType>BLEEDING</abnormalType>
-        <subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
-        <abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
-        <operateType>A2</operateType>
-        <mpConsume>10</mpConsume>
-        <reuseDelay>5000</reuseDelay>
-        <isMagic>1</isMagic>
-        <effectPoint>-100</effectPoint>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <lvlBonusRate>2</lvlBonusRate>
-        <activateRate>100</activateRate>
-        <magicLvl>95</magicLvl>
-        <trait>BLEED</trait>
-        <isDebuff>true</isDebuff>
-        <targetType>ENEMY_ONLY</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="DamOverTime">
-                <power>900</power>
-                <ticks>5</ticks>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="15292" toLevel="1" name="Logan's Revenge">
-        <!-- Logan's revenge left in his dying breath. Lidia's Atk. Spd. is greatly increased. -->
-        <icon>icon.skill0168</icon>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>180</abnormalTime>
-        <abnormalType>SPEED_UP</abnormalType>
-        <operateType>A2</operateType>
-        <mpConsume>10</mpConsume>
-        <reuseDelay>5000</reuseDelay>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>95</magicLvl>
-        <isMagic>1</isMagic>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="PhysicalAttackSpeed">
-                <amount>30</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="15293" toLevel="1" name="Logan's Revenge">
-        <!-- Logan's revenge left in his dying breath. Momentarily invincible. -->
-        <icon>icon.skill11758</icon>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>40</abnormalTime>
-        <abnormalType>INVINCIBILITY_SPECIAL</abnormalType>
-        <abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
-        <operateType>A2</operateType>
-        <mpConsume>10</mpConsume>
-        <reuseDelay>5000</reuseDelay>
-        <effectPoint>867</effectPoint>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <magicLvl>95</magicLvl>
-        <staticReuse>true</staticReuse>
-        <isMagic>1</isMagic>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="DamageBlock">
-                <type>BLOCK_HP</type>
-            </effect>
-            <effect name="DamageBlock">
-                <type>BLOCK_MP</type>
-            </effect>
-            <effect name="DebuffBlock"/>
-            <effect name="ResistDispelByCategory">
-                <amount>-100</amount>
-                <slot>ALL</slot>
-            </effect>
-            <effect name="BlockAbnormalSlot">
-                <slot>INVINCIBILITY_SPECIAL</slot>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="15294" toLevel="1" name="Logan's Revenge">
-        <!-- Logan's revenge left in his dying breath. Lidia's Atk. Spd. is greatly increased (Presentation). -->
-        <operateType>A1</operateType>
-        <mpConsume>10</mpConsume>
-        <hitTime>1000</hitTime>
-        <reuseDelay>5000</reuseDelay>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>95</magicLvl>
-        <isMagic>1</isMagic>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15295" toLevel="1" name="Logan's Revenge">
-        <!-- Logan's mistake left in his escape. Lidia's Atk. Spd. is great increased. -->
-        <icon>icon.skill0168</icon>
-        <operateType>A2</operateType>
-        <mpConsume>10</mpConsume>
-        <reuseDelay>5000</reuseDelay>
-        <abnormalType>SPEED_UP</abnormalType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>95</magicLvl>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>180</abnormalTime>
-        <isMagic>1</isMagic>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15296" toLevel="1" name="Logan's Revenge">
-        <!-- Logan's mistake left in his escape. Momentarily invincible. -->
-        <icon>icon.skill11758</icon>
-        <operateType>A2</operateType>
-        <mpConsume>10</mpConsume>
-        <reuseDelay>5000</reuseDelay>
-        <effectPoint>867</effectPoint>
-        <abnormalType>INVINCIBILITY_SPECIAL</abnormalType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <magicLvl>95</magicLvl>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>40</abnormalTime>
-        <staticReuse>true</staticReuse>
-        <abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
-        <isMagic>1</isMagic>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15297" toLevel="1" name="Logan's Revenge">
-        <!-- Logan's mistake left in his escape. Lidia's Atk. Spd. is great increased (Presentation). -->
-        <operateType>A1</operateType>
-        <mpConsume>10</mpConsume>
-        <hitTime>1000</hitTime>
-        <reuseDelay>5000</reuseDelay>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>95</magicLvl>
-        <isMagic>1</isMagic>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="15298" toLevel="1" name="Logan's Revenge">
-        <!-- Logan's token of gratitude left in his escape. Character's HP Recovery Rate is greatly increased temporarily. -->
-        <icon>icon.skill1044</icon>
-        <operateType>A2</operateType>
-        <mpConsume>10</mpConsume>
-        <hitTime>1000</hitTime>
-        <reuseDelay>5000</reuseDelay>
-        <abnormalType>HP_REGEN_UP</abnormalType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <specialLevel>-1</specialLevel>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>95</magicLvl>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>60</abnormalTime>
-        <affectRange>500</affectRange>
-        <isMagic>1</isMagic>
-        <targetType>SELF</targetType>
-        <affectScope>POINT_BLANK</affectScope>
-        <affectObject>NOT_FRIEND</affectObject>
-    </skill>
-    <skill id="15299" toLevel="1" name="Blood Siphon Energy">
-        <!-- Giselle von Hellmann attacks to recover her own HP. -->
-        <icon>icon.skill1268</icon>
-        <operateType>A2</operateType>
-        <mpConsume>10</mpConsume>
-        <hitTime>1000</hitTime>
-        <reuseDelay>5000</reuseDelay>
-        <effectPoint>285</effectPoint>
-        <abnormalType>VAMPIRIC_ATTACK</abnormalType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <magicLvl>95</magicLvl>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>60</abnormalTime>
-        <isMagic>1</isMagic>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
+	<skill id="15206" name="Explosion" max-level="1" action="A1" type="MAGIC">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="99"/>
+			<cast-range initial="-1"/>
+			<effect-point initial="-574"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-574000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target scope="POINT_BLANK" range="100" affect-min="10" affect-random="10" />
+	</skill>
+	<skill id="15207" name="Debuff Immunity" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="99"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="15208" name="Weakened Chaos Shield" max-level="9" action="A2" type="MAGIC">
+	<!-- 
+		level 1: Lethal Strike Resistance is weakened through the armor destruction skill.
+		level 9: P. Def. and M. Def. increased.
+	 -->
+		<icon initial="icon.skill0035">
+			<value level="9">icon.skill1418</value>
+		</icon>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
+			<magic-level initial="99"/>
+			<cast-range initial="-1"/>
+			<effect-point initial="1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<abnormal type="MP_SHIELD" >
+			<level initial="99">
+				<value level="2">98</value>
+				<value level="3">97</value>
+				<value level="4">96</value>
+				<value level="5">95</value>
+				<value level="6">94</value>
+				<value level="7">93</value>
+				<value level="8">92</value>
+				<value level="9">91</value>
+			</level>
+			<time initial="-1"/>
+			<chance initial="-1"/>
+		</abnormal>
+	</skill>
+	<skill id="15214" name="Tauti" max-level="1" >
+	<!-- Tauti is the lord who rules over the Seed of Hellfire. It is one of the 9 seeds sown in Gracia by Shilen's command. It is one of Bremnon's weapons that has the appearance of an enormous axe. It uses the conflict between the classes in order to carry out Shilen's command and to grow its own power. It does not personally appear while ruling over the Seed of Hellfire. No one knows the extent of its hidden power. -->
+		<icon initial="icon.skillboss"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="15215" name="Lv. 97 Raid Boss" max-level="1" >
+	<!-- The Guillotine was once an executioner. After drinking the blood of Shilen that permeated the Execution Grounds, it became the "Guillotine of Death" that kills to bring about the resurrection of Shilen. It is trapped in the illusion of the blood. It manages the criminals near the guillotine and it sends the blood that they have gathered to the spirit world of darkness. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="15216" name="Lv. 97 Raid Boss" max-level="1" >
+	<!-- This is an undead monster that was created through the blood of Shilen from the corpse of a criminal who went insane from the torture in the fortress. It is trapped in the illusion of the blood. It seeks to bring about the resurrection of Shilen by killing everything, thereby taking sacrifices for the darkness. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="15217" name="Lv. 97 Raid Boss" max-level="1" >
+	<!-- The master criminal who resurrected after drinking the blood of Shilen that seeped into the Execution Grounds. It is trapped in the madness of blood. It is a warden who manages the monsters in the Guillotine Fortress. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="15218" name="Clear Target" max-level="1" action="A1" type="MAGIC">
+	<!-- Cancels the enemy's target. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="93"/>
+			<cast-range initial="250"/>
+			<reuse initial="5000"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="460"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target type="TARGET" />
+		<effects>
+			<effect name="TargetCancel">
+				<power initial="50.0"/>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="15219" name="Double Strike" max-level="1" action="A1">
+	<!-- Inflicts strong damage upon the enemies near the target. -->
+		<icon initial="icon.skill0036"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="94"/>
+			<cast-range initial="150"/>
+			<reuse initial="5000"/>
+			<effect-point initial="-2"/>
+			<effect-range initial="270"/>
+			<hit-time initial="-2000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target type="TARGET" scope="RANGE" object="NOT_FRIEND" range="100" />
+		<effects>
+			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+				<power initial="40000.0"/>
+			</physical-attack>
+		</effects>
+	</skill>
+	<skill id="15220" name="Explosion" max-level="1" debuff="true" action="A2">
+	<!-- Inflicts damage upon monsters around you and inflicts Bleed for 5 seconds. -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2" suicide="true" >
+			<magic-level initial="93"/>
+			<cast-range initial="-1"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target scope="POINT_BLANK" object="FRIEND" range="150" />
+		<abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING" >
+			<level initial="1"/>
+			<time initial="5"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+				<power initial="40000.0"/>
+			</physical-attack>
+			<damage-over-time ticks="5" can-kill="false">
+				<power initial="1000.0"/>
+			</damage-over-time>
+		</effects>
+	</skill>
+	<skill id="15221" name="Blood Spear" max-level="3" action="A1" type="MAGIC">
+	<!-- Attacks the target with an arrow of darkness. -->
+		<icon initial="icon.skill0122"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="93">
+				<value level="2">94</value>
+				<value level="3">95</value>
+			</magic-level>
+			<cast-range initial="250"/>
+			<reuse initial="5000"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="460"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target type="TARGET" />
+		<effects>
+			<magical-attack over-hit="false">
+				<power initial="1000.0">
+					<value level="2">1500.0</value>
+					<value level="3">2000.0</value>
+				</power>
+			</magical-attack>
+		</effects>
+	</skill>
+	<skill id="15222" name="Home Thrust" max-level="3" action="A1">
+	<!-- Launches a powerful attack on the target. -->
+		<icon initial="icon.skill0003"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="93">
+				<value level="2">94</value>
+				<value level="3">95</value>
+			</magic-level>
+			<cast-range initial="100"/>
+			<effect-point initial="-2"/>
+			<effect-range initial="400"/>
+			<hit-time initial="-2000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target type="TARGET" />
+		<effects>
+			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+				<power initial="30000.0">
+					<value level="2">40000.0</value>
+					<value level="3">50000.0</value>
+				</power>
+			</physical-attack>
+		</effects>
+	</skill>
+	<skill id="15223" name="Body Slice" max-level="1" action="A1">
+	<!-- Launches a powerful attack on enemies within a 120 degree radius. -->
+		<icon initial="icon.skill0003"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="94"/>
+			<cast-range initial="100"/>
+			<effect-point initial="-2"/>
+			<effect-range initial="400"/>
+			<hit-time initial="-2000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target type="TARGET" scope="FAN" object="NOT_FRIEND" >
+			<fan-range start-angle="0" radius="100" angle="120"/>
+		</target>
+		<effects>
+			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+				<power initial="40000.0"/>
+			</physical-attack>
+		</effects>
+	</skill>
+	<skill id="15224" name="Bloody Breath" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<!-- Soul is drained. P. Def./M. Def. are decreased. -->
+		<icon initial="icon.skill11769"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="95"/>
+			<cast-range initial="250"/>
+			<reuse initial="5000"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="460"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="200"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" />
+		<abnormal type="PD_DOWN" >
+			<level initial="1"/>
+			<time initial="5"/>
+			<chance initial="200"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+				<power initial="-10.0"/>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+				<power initial="-10.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="15225" name="Sword Wave" max-level="1" action="A1">
+	<!-- Strikes down with the sword to inflict powerful damage on enemies within 200 grids of you. -->
+		<icon initial="icon.skill0003"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="95"/>
+			<cast-range initial="250"/>
+			<reuse initial="5000"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="460"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
+		<effects>
+			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+				<power initial="40000.0"/>
+			</physical-attack>
+		</effects>
+	</skill>
+	<skill id="15226" name="Sword Wave" max-level="1" action="A1">
+	<!-- Strikes down with the sword to inflict powerful damage on enemies within 200 grids of you. Additional damage on targets debuffed with Soul Drain. -->
+		<icon initial="icon.skill0003"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="96"/>
+			<cast-range initial="250"/>
+			<reuse initial="5000"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="460"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
+		<effects>
+			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+				<power initial="40000.0"/>
+			</physical-attack>
+			<magical-attack-by-abnormal abnormals="PD_DOWN">
+				<power initial="500.0"/>
+			</magical-attack-by-abnormal>
+		</effects>
+	</skill>
+	<skill id="15227" name="Added Blow" max-level="1" action="A1">
+	<!-- Additional damage received when debuffed with Soul Drain. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="94"/>
+			<cast-range initial="-1"/>
+			<reuse initial="5000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="5"/>
+		</consume>
+		<target />
+		<effects>
+			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+				<power initial="30000.0"/>
+			</physical-attack>
+		</effects>
+	</skill>
+	<skill id="15228" name="Soul Wave" max-level="1" action="A1">
+	<!-- Uses the absorbed soul to send a powerful shock wave within a 120 degree radius. Only damages targets debuffed with Soul Drain. -->
+		<icon initial="icon.skill0003"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="94"/>
+			<cast-range initial="-1"/>
+			<reuse initial="5000"/>
+			<effect-point initial="-2"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-2000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target scope="FAN_PB" object="NOT_FRIEND" >
+			<fan-range start-angle="0" radius="150" angle="120"/>
+		</target>
+		<effects>
+			<magical-attack-by-abnormal abnormals="PD_DOWN">
+				<power initial="500.0"/>
+			</magical-attack-by-abnormal>
+		</effects>
+	</skill>
+	<skill id="15229" name="Soul Wave" max-level="1" action="A1">
+	<!-- Uses the absorbed soul to send a powerful shock wave within a 120 degree radius. Additional damage on targets debuffed with Soul Drain. -->
+		<icon initial="icon.skill0003"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="94"/>
+			<cast-range initial="-1"/>
+			<reuse initial="5000"/>
+			<effect-point initial="-2"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-2000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target scope="FAN_PB" object="NOT_FRIEND" >
+			<fan-range start-angle="0" radius="150" angle="120"/>
+		</target>
+		<effects>
+			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+				<power initial="40000.0"/>
+			</physical-attack>
+			<magical-attack-by-abnormal abnormals="PD_DOWN">
+				<power initial="500.0"/>
+			</magical-attack-by-abnormal>
+		</effects>
+	</skill>
+	<skill id="15230" name="Added Blow" max-level="1" action="A1">
+	<!-- Additional damage received when debuffed with Soul Drain. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="94"/>
+			<cast-range initial="-1"/>
+			<reuse initial="5000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="5"/>
+		</consume>
+		<target />
+		<effects>
+			<magical-attack-by-abnormal abnormals="PD_DOWN">
+				<power initial="500.0"/>
+			</magical-attack-by-abnormal>
+		</effects>
+	</skill>
+	<skill id="15231" name="Quick Thrust" max-level="1" action="DA2">
+	<!-- Inflicts a powerful attack on the target. -->
+		<icon initial="icon.skill11508"/>
+		<attributes magic-critical-rate="-5.0" trait="SHOCK" >
+			<magic-level initial="95"/>
+			<cast-range initial="400"/>
+			<reuse initial="5000"/>
+			<cool-time initial="200"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="460"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="200"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target type="ENEMY" />
+		<abnormal type="STUN" >
+			<level initial="1"/>
+			<time initial="1"/>
+			<chance initial="200"/>
+		</abnormal>
+	</skill>
+	<skill id="15232" name="Speed Up" max-level="1" action="A2" type="MAGIC">
+	<!-- Increases your Atk. Spd. by 200%%. -->
+		<icon initial="icon.skill1086"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target />
+		<abnormal type="ATTACK_TIME_DOWN" >
+			<level initial="1"/>
+			<time initial="30"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+				<power initial="100.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="15233" name="Full Swing" max-level="1" action="A1">
+	<!-- Swing your sword to launch a powerful attack on nearby enemies. -->
+		<icon initial="icon.skill0036"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="95"/>
+			<cast-range initial="-1"/>
+			<reuse initial="5000"/>
+			<effect-point initial="-2"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-2000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
+		<effects>
+			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+				<power initial="40000.0"/>
+			</physical-attack>
+		</effects>
+	</skill>
+	<skill id="15234" name="Dark Spheres" max-level="1" action="A1">
+	<!-- Shoot dark red spheres toward enemies within 120 degrees of you. Additional damage on PCs debuffed with Soul Drain. -->
+		<icon initial="icon.skill0003"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="96"/>
+			<cast-range initial="200"/>
+			<reuse initial="10000"/>
+			<effect-point initial="-2"/>
+			<effect-range initial="400"/>
+			<hit-time initial="-2000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target type="TARGET" scope="FAN" object="NOT_FRIEND" >
+			<fan-range start-angle="0" radius="200" angle="120"/>
+		</target>
+		<effects>
+			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+				<power initial="200000.0"/>
+			</physical-attack>
+			<magical-attack-by-abnormal abnormals="PD_DOWN">
+				<power initial="500.0"/>
+			</magical-attack-by-abnormal>
+		</effects>
+	</skill>
+	<skill id="15235" name="Wind of Darkness" max-level="2" action="A2">
+	<!-- Creates a powerful wind around a character, throwing back enemies. -->
+		<icon initial="icon.skill4107"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="96"/>
+			<cast-range initial="-1"/>
+			<reuse initial="10000"/>
+			<cool-time initial="3000"/>
+			<effect-point initial="-200">
+				<value level="2">-250</value>
+			</effect-point>
+			<effect-range initial="-1"/>
+			<hit-time initial="-200000">
+				<value level="2">-250000</value>
+			</hit-time>
+			<activate-rate initial="80"/>
+		</attributes>
+		<consume>
+			<mana initial="60">
+				<value level="2">78</value>
+			</mana>
+		</consume>
+		<target scope="POINT_BLANK" object="NOT_FRIEND" range="250" affect-min="10" affect-random="10" />
+		<abnormal type="KNOCKDOWN" >
+			<level initial="1"/>
+			<time initial="1"/>
+			<chance initial="80"/>
+		</abnormal>
+		<effects>
+			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+				<power initial="180000.0"/>
+			</physical-attack>
+			<magical-attack-by-abnormal abnormals="PD_DOWN">
+				<power initial="500.0"/>
+			</magical-attack-by-abnormal>
+			<knockback speed="400" knock-down="true">
+				<power initial="200.0"/>
+			</knockback>
+		</effects>
+	</skill>
+	<skill id="15236" name="Dark Thrust" max-level="2" action="A1">
+	<!-- Launches a powerful attack on the target. -->
+		<icon initial="icon.skill0003"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="96"/>
+			<cast-range initial="100"/>
+			<effect-point initial="-200">
+				<value level="2">-250</value>
+			</effect-point>
+			<effect-range initial="400"/>
+			<hit-time initial="-200000">
+				<value level="2">-250000</value>
+			</hit-time>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="60">
+				<value level="2">78</value>
+			</mana>
+		</consume>
+		<target type="TARGET" />
+		<effects>
+			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+				<power initial="200000.0"/>
+			</physical-attack>
+		</effects>
+	</skill>
+	<skill id="15237" name="Dark Buster" max-level="2" action="A1" type="MAGIC">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="96"/>
+			<cast-range initial="-1"/>
+			<reuse initial="3000"/>
+			<cool-time initial="800"/>
+			<effect-point initial="-300">
+				<value level="2">-400</value>
+			</effect-point>
+			<effect-range initial="400"/>
+			<hit-time initial="-300000">
+				<value level="2">-400000</value>
+			</hit-time>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="72">
+				<value level="2">94</value>
+			</mana>
+		</consume>
+		<target type="TARGET" scope="RANGE" object="NOT_FRIEND" range="200" />
+		<effects>
+			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+				<power initial="200000.0"/>
+			</physical-attack>
+		</effects>
+	</skill>
+	<skill id="15238" name="Dark Breath" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<!-- Absorb the souls of enemies within 180 degrees of you and decrease their P. Def./M. Def. by 30%%. -->
+		<icon initial="icon.skill11769"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="96"/>
+			<cast-range initial="250"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="460"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="200"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target type="ENEMY" scope="FAN" object="NOT_FRIEND" >
+			<fan-range start-angle="0" radius="200" angle="180"/>
+		</target>
+		<abnormal type="PD_DOWN" >
+			<level initial="1"/>
+			<time initial="15"/>
+			<chance initial="200"/>
+		</abnormal>
+	</skill>
+	<skill id="15239" name="Added Blow" max-level="1" action="A1">
+	<!-- Additional damage received when debuffed with Soul Drain. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="93"/>
+			<cast-range initial="-1"/>
+			<reuse initial="5000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="5"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="15241" name="" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="15242" name="Presentation - Summon Attack Robot" max-level="1" action="A1">
+	<!-- Summons an Attack Robot that attacks nearby Helper Robots. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="99"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="15243" name="Presentation - Summon Stone Gathering Robot" max-level="1" action="A1">
+	<!-- Summons a Zombie Robot that attacks nearby Stone Gathering Robots. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="99"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="15244" name="Presentation - Destroy Dark Summon Circle" max-level="1" action="A1">
+	<!-- Activate the Gathering Device to make the Dark Summon Circle disappear. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="99"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="15245" name="Presentation - Summon Robot" max-level="1" action="A1">
+	<!-- Summon Device summons either a Repair Robot, or one of the two Destroyer Robots. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="99"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="15246" name="Nurka Blow" max-level="1" action="A1">
+	<!-- Inflicts powerful damage on target and nearby enemies. -->
+		<icon initial="icon.skill0036"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="95"/>
+			<cast-range initial="100"/>
+			<reuse initial="5000"/>
+			<effect-point initial="-2"/>
+			<effect-range initial="400"/>
+			<hit-time initial="-2000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target type="TARGET" scope="RANGE" object="NOT_FRIEND" range="100" />
+	</skill>
+	<skill id="15248" name="Nurka Howl" max-level="1" action="A2" type="MAGIC">
+	<!-- Nurka's P. Atk. and Atk. Spd. increased and P. Def. decreased. -->
+		<icon initial="icon.skill1068"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="95"/>
+			<cast-range initial="-1"/>
+			<reuse initial="5000"/>
+			<effect-point initial="121"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="121000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target />
+		<abnormal type="PA_UP_SPECIAL" >
+			<level initial="1"/>
+			<time initial="30"/>
+			<chance initial="-1"/>
+		</abnormal>
+	</skill>
+	<skill id="15249" name="Nurka Fireball" max-level="1" action="A1" type="MAGIC">
+	<!-- Inflicts powerful magical damage on the target. -->
+		<icon initial="icon.skill0003"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="95"/>
+			<cast-range initial="500"/>
+			<reuse initial="5000"/>
+			<effect-point initial="-2"/>
+			<effect-range initial="900"/>
+			<hit-time initial="-2000"/>
+			<activate-rate initial="-1"/>
+
+			<element type="FIRE" value="50"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target type="TARGET" />
+	</skill>
+	<skill id="15250" name="Nurka's Cold Shoulders" max-level="1" action="A2" type="MAGIC">
+	<!-- Inflicts Aerial Yoke on nearby enemies. -->
+		<icon initial="icon.skill1042"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="AIRBIND" >
+			<magic-level initial="95"/>
+			<cast-range initial="-1"/>
+			<reuse initial="5000"/>
+			<effect-point initial="-707"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-707000"/>
+			<activate-rate initial="100"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target scope="POINT_BLANK" object="NOT_FRIEND" range="150" />
+		<abnormal type="AIRBIND" visual="AIRBIND" >
+			<level initial="1"/>
+			<time initial="3"/>
+			<chance initial="100"/>
+		</abnormal>
+	</skill>
+	<skill id="15251" name="Invincible Nurka" max-level="1" action="A2" type="MAGIC">
+	<!-- No attacks are working on Nurka. -->
+		<icon initial="icon.skill11758"/>
+		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="-5.0" >
+			<magic-level initial="95"/>
+			<cast-range initial="-1"/>
+			<reuse initial="5000"/>
+			<effect-point initial="867"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="867000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target object="FRIEND" />
+		<abnormal type="INVINCIBILITY_SPECIAL" visual="ULTIMATE_DEFENCE" >
+			<level initial="1"/>
+			<time initial="10"/>
+			<chance initial="-1"/>
+		</abnormal>
+	</skill>
+	<skill id="15253" name="Earth-rumbling Nurka" max-level="1" debuff="true" action="A2">
+	<!-- Damages nearby enemies and decreases their Spd. -->
+		<icon initial="icon.skill11509"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="95"/>
+			<cast-range initial="-1"/>
+			<reuse initial="5000"/>
+			<cool-time initial="300"/>
+			<effect-point initial="-687"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-687000"/>
+			<activate-rate initial="150"/>
+
+			<element type="EARTH" value="50"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target scope="POINT_BLANK" object="NOT_FRIEND" range="100" />
+		<abnormal type="SPEED_DOWN" >
+			<level initial="1"/>
+			<time initial="5"/>
+			<chance initial="150"/>
+		</abnormal>
+	</skill>
+	<skill id="15254" name="Nurka's Healing" max-level="1" action="A1" type="MAGIC">
+	<!-- Restores your HP and allies' HP. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="95"/>
+			<cast-range initial="-1"/>
+			<reuse initial="5000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target scope="RANGE" object="NOT_FRIEND" range="200" />
+	</skill>
+	<skill id="15255" name="Defensive Nurka" max-level="1" action="A2" type="MAGIC">
+	<!-- Nurka's P. Def. + 50%%. -->
+		<icon initial="icon.skill11252"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="95"/>
+			<cast-range initial="-1"/>
+			<reuse initial="5000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target />
+		<abnormal type="PD_UP" >
+			<level initial="1"/>
+			<time initial="7200"/>
+			<chance initial="-1"/>
+		</abnormal>
+	</skill>
+	<skill id="15256" name="Aggressive Nurka" max-level="1" action="A2" type="MAGIC">
+	<!-- Nurka's P. Atk. + 50%%. -->
+		<icon initial="icon.skill10252"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="95"/>
+			<cast-range initial="-1"/>
+			<reuse initial="5000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target />
+		<abnormal type="PA_UP" >
+			<level initial="1"/>
+			<time initial="7200"/>
+			<chance initial="-1"/>
+		</abnormal>
+	</skill>
+	<skill id="15257" name="Resistance Blaze" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<!-- Movement Speed decreased. -->
+		<icon initial="icon.skill0003"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="95"/>
+			<cast-range initial="300"/>
+			<reuse initial="5000"/>
+			<effect-point initial="-2"/>
+			<effect-range initial="540"/>
+			<hit-time initial="-2000"/>
+			<activate-rate initial="-1"/>
+
+			<element type="FIRE" value="50"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="SPEED_DOWN" >
+			<level initial="1"/>
+			<time initial="10"/>
+			<chance initial="-1"/>
+		</abnormal>
+	</skill>
+	<skill id="15258" name="Resistance Treatment" max-level="1" action="A1" type="MAGIC">
+	<!-- Restores allies' HP. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="95"/>
+			<cast-range initial="300"/>
+			<reuse initial="5000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="540"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target type="TARGET" />
+	</skill>
+	<skill id="15259" name="Fireworks" max-level="1" action="A1">
+	<!-- Congratulations! You have broken the record! -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="15260" name="Time Up" max-level="1" action="A1">
+	<!-- Enough for Now. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="15261" name="Lindvior's Skill 1" max-level="1" action="A1">
+	<!-- Lindvior's Wave Skill Presentation -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="99"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="15262" name="Lindvior's Skill 2" max-level="1" action="A1">
+	<!-- Lindvior's Wave Skill Range -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="99"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="15264" name="Lindvior's Skill 4" max-level="1" action="A1">
+	<!-- Lindvior's AoE Skill Presentation -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="99"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="15265" name="Lindvior's AoE 2" max-level="1" action="A1">
+	<!-- Lindvior's AoE Skill Range -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="99"/>
+			<cast-range initial="1000"/>
+			<effect-point initial="-686"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-686000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="15266" name="Lindvior's Skill 6" max-level="1" action="A1">
+	<!-- Lindvior's AoE Skill Damage -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="99"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="15269" name="Lindvior's Wrath" max-level="1" action="A1">
+	<!-- Lindvior's Aerial Yoke for All Skill Presentation -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="99"/>
+			<cast-range initial="-1"/>
+			<cool-time initial="8000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="15270" name="Lindvior's Mass Yoke" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<!-- Lindvior's Aerial Yoke for All Skill Area Data -->
+		<icon initial="icon.skill1042"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="99"/>
+			<cast-range initial="-1"/>
+			<effect-point initial="-707"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-707000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="15271" name="Body Slam" max-level="1" action="A2">
+	<!-- Lindvior's stun -->
+		<icon initial="icon.skill0100"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="99"/>
+			<cast-range initial="400"/>
+			<cool-time initial="1000"/>
+			<effect-point initial="-574"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-574000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="15273" name="Tail Swipe" max-level="1" action="A1">
+	<!-- Lindvior's Landing Range -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="99"/>
+			<cast-range initial="-1"/>
+			<cool-time initial="1500"/>
+			<effect-point initial="-574"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-574000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="15274" name="Mighty Wind Strike" max-level="1" action="A1" type="MAGIC">
+	<!-- Long-range projectile -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="99"/>
+			<cast-range initial="1800"/>
+			<effect-point initial="-707"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-707000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="15276" name="Bleed" max-level="1" action="A2">
+	<!-- Bleeding -->
+		<icon initial="icon.skill0096"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="99"/>
+			<cast-range initial="600"/>
+			<cool-time initial="500"/>
+			<effect-point initial="-574"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-574000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="15278" name="Yoke" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<!-- Lindvior's aerial yoke -->
+		<icon initial="icon.skill1042"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="99"/>
+			<cast-range initial="1100"/>
+			<cool-time initial="500"/>
+			<effect-point initial="-574"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-574000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="15279" name="Soar" max-level="1" action="A1">
+	<!-- Lindvior Raid's PC Chain Skill -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="99"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="15280" name="Lindvior's Berserk" max-level="1" action="A2">
+	<!-- Lindvior Raid's Berserk -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="99"/>
+			<cast-range initial="-1"/>
+			<effect-point initial="100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="15281" name="Lindvior's Skill 21" max-level="1" action="A2" type="MAGIC">
+	<!-- Atk. Spd. and Speed + 30%%. -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="99"/>
+			<cast-range initial="1100"/>
+			<effect-point initial="100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="15282" name="Lindvior's Skill 22" max-level="1" action="A1">
+	<!-- Lindvior Raid's Structure Repair Skill -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="99"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="15286" name="Blood Siphon Master" max-level="1" action="A1" type="MAGIC">
+	<!-- Steals a large portion of the target's HP. -->
+		<icon initial="icon.skill1147"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="95"/>
+			<cast-range initial="200"/>
+			<reuse initial="5000"/>
+			<effect-point initial="-143"/>
+			<effect-range initial="400"/>
+			<hit-time initial="-143000"/>
+			<activate-rate initial="-1"/>
+
+			<element type="DARK" value="50"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target type="ENEMY" />
+	</skill>
+	<skill id="15287" name="Twister" max-level="1" debuff="true" action="A2">
+	<!-- Inflicts magical damage on PCs near the target and immobilizes them. -->
+		<icon initial="icon.skill0100"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" >
+			<magic-level initial="95"/>
+			<cast-range initial="200"/>
+			<reuse initial="5000"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="400"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="150"/>
+
+			<element type="WIND" value="50"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="100" />
+		<abnormal type="STUN" visual="STUN" >
+			<level initial="1"/>
+			<time initial="3"/>
+			<chance initial="150"/>
+		</abnormal>
+	</skill>
+	<skill id="15288" name="Recovery Bonus Increase" max-level="1" action="A2">
+	<!-- Lidia's HP Recovery Bonus is greatly increased. -->
+		<icon initial="icon.skill1044"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="95"/>
+			<cast-range initial="-1"/>
+			<reuse initial="5000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target />
+		<abnormal type="HP_REGEN_DOWN" >
+			<level initial="11"/>
+			<time initial="15"/>
+			<chance initial="-1"/>
+		</abnormal>
+	</skill>
+	<skill id="15289" name="Decrease Atk. Spd." max-level="1" debuff="true" action="A2">
+	<!-- Energy that formed in Lidia's room because Giselle von Hellmann and Alfred von Hellmann were not eliminated. Atk. Spd. is decreased. -->
+		<icon initial="icon.skill11509"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="95"/>
+			<cast-range initial="-1"/>
+			<reuse initial="5000"/>
+			<cool-time initial="300"/>
+			<effect-point initial="-687"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-687000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target type="ENEMY" />
+	</skill>
+	<skill id="15290" name="Decrease Casting Spd." max-level="1" debuff="true" action="A2">
+	<!-- Energy that formed in Lidia's room because Giselle von Hellmann and Alfred von Hellmann were not eliminated. Casting Spd. is decreased. -->
+		<icon initial="icon.skill11509"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="95"/>
+			<cast-range initial="-1"/>
+			<reuse initial="5000"/>
+			<cool-time initial="300"/>
+			<effect-point initial="-687"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-687000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target type="ENEMY" />
+	</skill>
+	<skill id="15291" name="Bleed" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<!-- Energy that formed in Lidia's room because Giselle von Hellmann and Alfred von Hellmann were not eliminated. HP continues to decrease. -->
+		<icon initial="icon.skill0096"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2" >
+			<magic-level initial="95"/>
+			<cast-range initial="-1"/>
+			<reuse initial="5000"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="100"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target type="ENEMY_ONLY" />
+		<abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING" >
+			<level initial="2"/>
+			<time initial="20"/>
+			<chance initial="100"/>
+		</abnormal>
+		<effects>
+			<damage-over-time ticks="5" can-kill="false">
+				<power initial="900.0"/>
+			</damage-over-time>
+		</effects>
+	</skill>
+	<skill id="15292" name="Logan's Revenge" max-level="1" action="A2" type="MAGIC">
+	<!-- Logan's revenge left in his dying breath. Lidia's Atk. Spd. is greatly increased. -->
+		<icon initial="icon.skill0168"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="95"/>
+			<cast-range initial="-1"/>
+			<reuse initial="5000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target />
+		<abnormal type="SPEED_UP" >
+			<level initial="1"/>
+			<time initial="180"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+				<power initial="30.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="15293" name="Logan's Revenge" max-level="1" action="A2" type="MAGIC">
+	<!-- Logan's revenge left in his dying breath. Momentarily invincible. -->
+		<icon initial="icon.skill11758"/>
+		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="-5.0" >
+			<magic-level initial="95"/>
+			<cast-range initial="-1"/>
+			<reuse initial="5000"/>
+			<effect-point initial="867"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="867000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target />
+		<abnormal type="INVINCIBILITY_SPECIAL" visual="ULTIMATE_DEFENCE" >
+			<level initial="1"/>
+			<time initial="40"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<damage-block block-hp="true" block-mp="false"/>
+			<effect name="DebuffBlock"/>
+			<resist-dispel-by-category category="ALL">
+				<power initial="-100.0"/>
+			</resist-dispel-by-category>
+			<block-abnormal>
+				<abnormals>INVINCIBILITY_SPECIAL</abnormals>
+			</block-abnormal>
+		</effects>
+	</skill>
+	<skill id="15294" name="Logan's Revenge" max-level="1" action="A1" type="MAGIC">
+	<!-- Logan's revenge left in his dying breath. Lidia's Atk. Spd. is greatly increased (Presentation). -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="95"/>
+			<cast-range initial="-1"/>
+			<reuse initial="5000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="15295" name="Logan's Mistake" max-level="1" action="A2" type="MAGIC">
+	<!-- Logan's mistake left in his escape. Lidia's Atk. Spd. is great increased. -->
+		<icon initial="icon.skill0168"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="95"/>
+			<cast-range initial="-1"/>
+			<reuse initial="5000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target />
+		<abnormal type="SPEED_UP" >
+			<level initial="1"/>
+			<time initial="180"/>
+			<chance initial="-1"/>
+		</abnormal>
+	</skill>
+	<skill id="15296" name="Logan's Mistake" max-level="1" action="A2" type="MAGIC">
+	<!-- Logan's mistake left in his escape. Momentarily invincible. -->
+		<icon initial="icon.skill11758"/>
+		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="-5.0" >
+			<magic-level initial="95"/>
+			<cast-range initial="-1"/>
+			<reuse initial="5000"/>
+			<effect-point initial="867"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="867000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target />
+		<abnormal type="INVINCIBILITY_SPECIAL" visual="ULTIMATE_DEFENCE" >
+			<level initial="1"/>
+			<time initial="40"/>
+			<chance initial="-1"/>
+		</abnormal>
+	</skill>
+	<skill id="15297" name="Logan's Mistake" max-level="1" action="A1" type="MAGIC">
+	<!-- Logan's mistake left in his escape. Lidia's Atk. Spd. is great increased (Presentation). -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="95"/>
+			<cast-range initial="-1"/>
+			<reuse initial="5000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="15298" name="Logan's Token of Gratitude" max-level="1" action="A2" type="MAGIC">
+	<!-- Logan's token of gratitude left in his escape. Character's HP Recovery Rate is greatly increased temporarily. -->
+		<icon initial="icon.skill1044"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="95"/>
+			<cast-range initial="-1"/>
+			<reuse initial="5000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target scope="POINT_BLANK" object="NOT_FRIEND" range="500" />
+		<abnormal type="HP_REGEN_UP" >
+			<level initial="1"/>
+			<time initial="60"/>
+			<chance initial="-1"/>
+		</abnormal>
+	</skill>
+	<skill id="15299" name="Blood Siphon Energy" max-level="1" action="A2" type="MAGIC">
+	<!-- Giselle von Hellmann attacks to recover her own HP. -->
+		<icon initial="icon.skill1268"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="95"/>
+			<cast-range initial="-1"/>
+			<reuse initial="5000"/>
+			<effect-point initial="285"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="285000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target />
+		<abnormal type="VAMPIRIC_ATTACK" >
+			<level initial="1"/>
+			<time initial="60"/>
+			<chance initial="-1"/>
+		</abnormal>
+	</skill>
 </list>

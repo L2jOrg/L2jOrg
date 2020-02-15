@@ -1,18 +1,27 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
-	<skill id="39465" toLevel="1" name="Anniversary Celebration Transformation">
-		<!-- For 60 min. transforms into a White Dog. Speed +20.\nThe effect can be removed with Alt+Mouse Left Click. -->
-		<icon>icon.skill11540</icon>
-		<operateType>A1</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<hitTime>1500</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>600000</reuseDelay>
-		<effectPoint>1</effectPoint>
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
+	<skill id="39465" name="15th Anniversary Transformation" max-level="1" action="A1" type="MAGIC">
+	<!-- Transforms you into White Dog for 60 minutes and increases Movement Speed by20. \n<Alt + left click> to delete the buff. -->
+		<icon initial="icon.skill11540"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="-1"/>
+			<reuse initial="600000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="39466" toLevel="1" name="15th Anniversary Talisman">
-		<!-- Acquired XP/ SP +15%. -->
-		<icon>icon.ev_L2_soul_ore</icon>
-		<operateType>P</operateType>
+	<skill id="39466" name="15th Anniversary Talisman" max-level="1" >
+	<!-- The energy celebrating the 15th anniversary, which increases XP/SP bonus by 15%. -->
+		<icon initial="icon.ev_L2_soul_ore"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
 </list>

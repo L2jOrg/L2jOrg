@@ -1,184 +1,225 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
-    <skill id="17814" toLevel="4" name="Ruby">
-        <!-- Damage received from Soulshots +$s1. -->
-        <icon>icon.etc_bm_jewel_ruby_i00</icon>
-        <operateType>A1</operateType>
-    </skill>
-    <skill id="17815" toLevel="2" name="Ruby">
-        <!-- Soulshot Damage +$s1. -->
-        <icon>icon.etc_bm_jewel_ruby_i00</icon>
-        <operateType>A1</operateType>
-    </skill>
-    <skill id="17816" toLevel="2" name="Ruby">
-        <!-- Soulshot Damage +$s1. -->
-        <icon>icon.etc_bm_jewel_ruby_i00</icon>
-        <operateType>A1</operateType>
-    </skill>
-    <skill id="17817" toLevel="10" name="Ruby">
-        <!-- Soulshot Damage +$s1.
-            1 - 16
-            3 - 17
-            5 - 18
-            7 - 19
-            9 - 20
-
-            Blessed Soushot Damage
-            2 - 16
-            4 - 17
-            6 - 18
-            8 - 19
-            10 - 20
-        -->
-        <icon>
-            <value level="1">icon.etc_bm_jewel_ruby_i00</value>
-            <value level="2">icon.etc_bm_jewel_ruby_i00</value>
-            <value level="3">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
-            <value level="4">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
-            <value level="5">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
-            <value level="6">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
-            <value level="7">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
-            <value level="8">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
-            <value level="9">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
-            <value level="10">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
-        </icon>
-        <operateType>A1</operateType>
-    </skill>
-    <skill id="17818" toLevel="4" name="Sapphire">
-        <!-- Damage received from Spiritshots +$s1. -->
-        <icon>icon.etc_bm_jewel_sapphire_i00</icon>
-        <operateType>A1</operateType>
-    </skill>
-    <skill id="17819" toLevel="2" name="Sapphire">
-        <!-- Spiritshot Damage +$s1. -->
-        <icon>icon.etc_bm_jewel_sapphire_i00</icon>
-        <operateType>A1</operateType>
-    </skill>
-    <skill id="17820" toLevel="2" name="Sapphire">
-        <!-- Spiritshot Damage +$s1. -->
-        <icon>icon.etc_bm_jewel_sapphire_i00</icon>
-        <operateType>A1</operateType>
-    </skill>
-    <skill id="17821" toLevel="10" name="Sapphire">
-        <!-- Spiritshot Damage +$s1.
-
-               1 - 16
-               2 - 16
-               3 - 17
-               4 - 17
-               5 - 18
-               6 - 18
-               7 - 19
-               8 - 19
-               9 - 20
-               10 - 20
-
-         -->
-        <icon>
-            <value level="1">icon.etc_bm_jewel_sapphire_i00</value>
-            <value level="2">icon.etc_bm_jewel_sapphire_i00</value>
-            <value level="3">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
-            <value level="4">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
-            <value level="5">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
-            <value level="6">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
-            <value level="7">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
-            <value level="8">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
-            <value level="9">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
-            <value level="10">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
-        </icon>
-        <operateType>A1</operateType>
-    </skill>
-    <skill id="17823" toLevel="10" name="Aquamarine">
-        <!--
-            Has a $s1 chance to recover $s3 MP
-            1 - 10% 12
-            2 - 10% 16
-            3 - 10% 20
-            4 - 10% 30
-            5 - 10% 50
-
-            Has a $s1 chance to recover $s3 MP and Max MP +$s2 upon using a skill
-            6 - 10% 60 2
-            7 - 10% 80 5
-            8 - 10% 100 8
-            9 - 10% 130 12
-
-            Has a $s1 chance to recover $s2 MP and Max MP +$s3 upon using a skill. Enables a special skill that recovers $s4 MP when equipped
-            10 - 10% 200 20% 10%
-
-         -->
-        <icon>
-            <value level="1">icon.etc_bm_jewel_aquamarine_i00</value>
-            <value level="2">icon.etc_bm_jewel_aquamarine_i00</value>
-            <value level="3">icon.etc_bm_jewel_aquamarine_i00</value>
-            <value level="4">icon.etc_bm_jewel_aquamarine_i00</value>
-            <value level="5">icon.etc_bm_jewel_aquamarine_i00</value>
-            <value level="6">icon.bm_jewel_castmpup_high_lv1_lavianrose</value>
-            <value level="7">icon.bm_jewel_castmpup_high_lv1_lavianrose</value>
-            <value level="8">icon.bm_jewel_castmpup_high_lv1_lavianrose</value>
-            <value level="9">icon.bm_jewel_castmpup_high_lv1_lavianrose</value>
-            <value level="10">icon.bm_jewel_castmpup_high_lv1_lavianrose</value>
-        </icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="17824" toLevel="10" name="Aquamarine - Mana Drain">
-        <icon>
-            <value level="1">icon.skill0000</value>
-            <value level="2">icon.skill0000</value>
-            <value level="3">icon.skill0000</value>
-            <value level="4">icon.skill0000</value>
-            <value level="5">icon.skill0000</value>
-            <value level="6">icon.bm_jewel_castmpup_high_lv1_lavianrose</value>
-            <value level="7">icon.bm_jewel_castmpup_high_lv1_lavianrose</value>
-            <value level="8">icon.bm_jewel_castmpup_high_lv1_lavianrose</value>
-            <value level="9">icon.bm_jewel_castmpup_high_lv1_lavianrose</value>
-            <value level="10">icon.bm_jewel_castmpup_high_lv1_lavianrose</value>
-        </icon>
-        <operateType>A1</operateType>
-        <reuseDelay>3000</reuseDelay>
-    </skill>
-    <skill id="17825" toLevel="1" name="Greater Aquamarine - Special Ability">
-        <!-- When using a special skill immediately recovers 10% MP. -->
-        <icon>icon.bm_jewel_castmpup_high_lv1_lavianrose</icon>
-        <operateType>A1</operateType>
-        <reuseDelay>300000</reuseDelay>
-    </skill>
-    <skill id="17888" toLevel="2" name="Ruby">
-        <!-- Beast Soulshot Damage +$s1. -->
-        <icon>icon.etc_bm_jewel_ruby_i00</icon>
-        <operateType>A1</operateType>
-    </skill>
-    <skill id="17889" toLevel="1" name="Ruby">
-        <!-- Beast Soulshot Damage +5%. -->
-        <icon>icon.etc_bm_jewel_ruby_i00</icon>
-        <operateType>A1</operateType>
-    </skill>
-    <skill id="17890" toLevel="1" name="Ruby">
-        <!-- Beast Soulshot Damage +8%. -->
-        <icon>icon.etc_bm_jewel_ruby_i00</icon>
-        <operateType>A1</operateType>
-    </skill>
-    <skill id="17891" toLevel="5" name="Ruby">
-        <!-- Beast Soulshot Damage +$s1.
-            1 - 16%
-            2 - 17%
-            3 - 18%
-            4 - 19%
-            5 - 20%
-        -->
-        <icon>
-            <value level="1">icon.etc_bm_jewel_ruby_i00</value>
-            <value level="2">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
-            <value level="3">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
-            <value level="4">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
-            <value level="5">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
-        </icon>
-        <operateType>A1</operateType>
-    </skill>
-    <skill id="17896" toLevel="1" name="Aquamarine - Mana Drain">
-        <!-- No HP recovery. -->
-        <operateType>P</operateType>
-        <hitTime>2000</hitTime>
-        <reuseDelay>8000</reuseDelay>
-    </skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
+	<skill id="17814" name="Ruby" max-level="4" action="A1">
+	<!-- 
+		level 1: Increases Soulshot Damage +2%.
+		level 2: Soulshot damage +3%.
+		level 3: Increases Blessed Soulshot's Damage 2%.
+		level 4: Blessed Soulshot damage +3%.
+	 -->
+		<icon initial="icon.etc_bm_jewel_ruby_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="17815" name="Ruby" max-level="2" action="A1">
+	<!-- 
+		level 1: Soulshot damage +5%.
+		level 2: Blessed Soulshot damage +5%.
+	 -->
+		<icon initial="icon.etc_bm_jewel_ruby_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="17816" name="Ruby" max-level="2" action="A1">
+	<!-- 
+		level 1: Soulshot damage +8%.
+		level 2: Blessed Soulshot damage +8%.
+	 -->
+		<icon initial="icon.etc_bm_jewel_ruby_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="17817" name="Ruby" max-level="10" action="A1">
+	<!-- 
+		level 1: Soulshot damage +16%.
+		level 2: Blessed Soulshot damage +16%.
+		level 3: Soulshot damage +17%.
+		level 4: Blessed Soulshot damage +17%.
+		level 5: Soulshot damage +18%.
+		level 6: Blessed Soulshot damage +18%.
+		level 7: Soulshot damage +19%.
+		level 8: Blessed Soulshot damage +19%.
+		level 9: Soulshot damage +20%.
+		level 10: Blessed Soulshot damage +20%.
+	 -->
+		<icon initial="icon.etc_bm_jewel_ruby_i00">
+			<value level="3">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
+		</icon>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="17818" name="Sapphire" max-level="4" action="A1">
+	<!-- 
+		level 1: Damage received from Spiritshots +2%.
+		level 2: Spiritshot damage +3%.
+		level 3: Damage received from Blessed Spiritshots +2%.
+		level 4: Spiritshot damage +3%.
+	 -->
+		<icon initial="icon.etc_bm_jewel_sapphire_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="17819" name="Sapphire" max-level="2" action="A1">
+	<!-- Spiritshot damage +5%. -->
+		<icon initial="icon.etc_bm_jewel_sapphire_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="17820" name="Sapphire" max-level="2" action="A1">
+	<!-- Spiritshot damage +8%. -->
+		<icon initial="icon.etc_bm_jewel_sapphire_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="17821" name="Sapphire" max-level="10" action="A1">
+	<!-- 
+		level 1: Spiritshot damage +16%.
+		level 3: Spiritshot damage +17%.
+		level 5: Spiritshot damage +18%.
+		level 7: Spiritshot damage +19%.
+		level 9: Spiritshot damage +20%.
+	 -->
+		<icon initial="icon.etc_bm_jewel_sapphire_i00">
+			<value level="3">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
+		</icon>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="17823" name="Aquamarine" max-level="10" >
+	<!-- 
+		level 1: Increases Blessed Spiritshot Damage +16%%.
+		level 6: Has a 10% chance to recover 2% MP and Max MP +60 upon using a skill.
+		level 7: Has a 10% chance to recover 5% MP and Max MP +80 upon using a skill.
+		level 8: Has a 10% chance to recover 8% MP and Max MP +100 upon using a skill.
+		level 9: Has a 10% chance to recover 12% MP and Max MP +130 upon using a skill.
+		level 10: Has a 10% chance to recover 200 MP and Max MP +20% upon using a skill. Enables a special skill that recovers 10% MP when equipped.
+	 -->
+		<icon initial="icon.etc_bm_jewel_aquamarine_i00">
+			<value level="6">icon.bm_jewel_castmpup_high_lv1_lavianrose</value>
+		</icon>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="17824" name="Aquamarine - Mana Drain" max-level="10" action="A1">
+	<!-- Has a $s1 chance to recover $s2 MP and Max MP +$s3 upon using a skill. Enables a special skill that recovers $s4 MP when equipped. -->
+		<icon initial="icon.etc_bm_jewel_aquamarine_i00">
+			<value level="6">icon.bm_jewel_castmpup_high_lv1_lavianrose</value>
+		</icon>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="3000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="17825" name="Greater Aquamarine - Special Ability" max-level="1" action="A1">
+	<!-- Recovers 10%% MP upon using a skill. -->
+		<icon initial="icon.bm_jewel_castmpup_high_lv1_lavianrose"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="300000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="17888" name="Ruby" max-level="2" action="A1">
+	<!-- 
+		level 1: Beast Soulshot damage +2%
+		level 2: Beast Soulshot damage +3%
+	 -->
+		<icon initial="icon.etc_bm_jewel_ruby_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="17889" name="Ruby" max-level="1" action="A1">
+	<!-- Beast Soulshot damage +5% -->
+		<icon initial="icon.etc_bm_jewel_ruby_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="17890" name="Ruby" max-level="1" action="A1">
+	<!-- Beast Soulshot damage +8% -->
+		<icon initial="icon.etc_bm_jewel_ruby_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="17891" name="Ruby" max-level="5" action="A1">
+	<!-- 
+		level 1: Beast Soulshot damage +16%
+		level 2: Beast Soulshot damage +17%
+		level 3: Beast Soulshot damage +18%
+		level 4: Beast Soulshot damage +19%
+		level 5: Beast Soulshot damage +20%
+	 -->
+		<icon initial="icon.etc_bm_jewel_ruby_i00">
+			<value level="2">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
+		</icon>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="17896" name="Aquamarine - Mana Drain" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<reuse initial="8000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
 </list>

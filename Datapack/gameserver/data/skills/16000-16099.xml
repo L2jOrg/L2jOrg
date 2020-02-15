@@ -1,1219 +1,1315 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
-    <skill id="16001" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16002" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16003" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16004" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <castRange>600</castRange>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16005" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <castRange>600</castRange>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16006" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <castRange>600</castRange>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16007" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <castRange>600</castRange>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16008" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>1000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16009" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <castRange>600</castRange>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16010" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <castRange>600</castRange>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16011" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <castRange>600</castRange>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16012" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <castRange>600</castRange>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16013" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <castRange>600</castRange>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16014" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <castRange>600</castRange>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16015" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>60000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16016" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>60000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16017" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <castRange>600</castRange>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16018" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>5000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16019" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16020" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>3300</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16021" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16022" toLevel="1" name="Ground Shaker">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <hitTime>4600</hitTime>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <isMagic>2</isMagic>
-        <coolTime>3000</coolTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16023" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <hitTime>10000</hitTime>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <isMagic>2</isMagic>
-        <coolTime>10000</coolTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16024" toLevel="1" name="Seeds Buster">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <hitTime>4800</hitTime>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <isMagic>2</isMagic>
-        <coolTime>3000</coolTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16025" toLevel="1" name="Whistle">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>7700</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16026" toLevel="1" name="Chat">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <hitTime>1000</hitTime>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <coolTime>500</coolTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16027" toLevel="1" name="Chat">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <hitTime>1000</hitTime>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <coolTime>500</coolTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16028" toLevel="1" name="Ball Kicking">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <hitTime>1000</hitTime>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <coolTime>500</coolTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16029" toLevel="1" name="Jump">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <hitTime>1000</hitTime>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <coolTime>500</coolTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16030" toLevel="1" name="Sheep Herding">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <hitTime>1000</hitTime>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <coolTime>500</coolTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16032" toLevel="1" name="Gi-Sung Bae's Lineage II">
-        <operateType>A1</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>85</magicLvl>
-        <isMagic>2</isMagic>
-        <reuseDelay>50000</reuseDelay>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16033" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16034" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16035" toLevel="1" name="Presentation">
-        <operateType>CA1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <channelingStart>1</channelingStart>
-        <channelingTickInterval>0</channelingTickInterval>
-        <isMagic>2</isMagic>
-        <hitTime>10000</hitTime>
-        <targetType>OTHERS</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16036" toLevel="1" name="Tauti Leap Attack">
-        <!-- Takes hold of Tauti and throws him up. Uses falling damage to inflict tremendous harm. -->
-        <icon>icon.skill3080</icon>
-        <operateType>A2</operateType>
-        <castRange>2000</castRange>
-        <hitTime>7000</hitTime>
-        <coolTime>500</coolTime>
-        <effectPoint>-1</effectPoint>
-        <abnormalType>BLEEDING</abnormalType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>6.5</hitCancelTime>
-        <effectRange>3000</effectRange>
-        <magicLvl>99</magicLvl>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>3</abnormalTime>
-        <trait>SHOCK</trait>
-        <affectRange>300</affectRange>
-        <affectLimit>10-10</affectLimit>
-        <abnormalVisualEffect>STUN</abnormalVisualEffect>
-        <isMagic>2</isMagic>
-        <isDebuff>true</isDebuff>
-        <targetType>TARGET</targetType>
-        <affectScope>POINT_BLANK</affectScope>
-        <affectObject>NOT_FRIEND</affectObject>
-        <effects>
-            <effect name="PhysicalAttack">
-                <amount>350000</amount>
-            </effect>
-            <effect name="DamOverTime">
-                <power>250</power>
-                <ticks>5</ticks>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="16037" toLevel="1" name="Tauti Leap Attack">
-        <!-- Takes hold of Tauti and throws him up. Uses falling damage to inflict tremendous harm. -->
-        <icon>icon.skill3080</icon>
-        <operateType>A2</operateType>
-        <castRange>2000</castRange>
-        <hitTime>6000</hitTime>
-        <coolTime>500</coolTime>
-        <effectPoint>-1</effectPoint>
-        <abnormalType>STUN</abnormalType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>5.5</hitCancelTime>
-        <effectRange>3000</effectRange>
-        <magicLvl>99</magicLvl>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>3</abnormalTime>
-        <trait>SHOCK</trait>
-        <affectRange>200</affectRange>
-        <abnormalVisualEffect>STUN</abnormalVisualEffect>
-        <isMagic>2</isMagic>
-        <isDebuff>true</isDebuff>
-        <targetType>SELF</targetType>
-        <affectScope>POINT_BLANK</affectScope>
-        <affectObject>NOT_FRIEND</affectObject>
-        <effects>
-            <effect name="RealDamage">
-                <power>100000</power>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="16038" toLevel="1" name="Idle Effect">
-        <icon>icon.skill11062</icon>
-        <operateType>A2</operateType>
-        <effectPoint>692</effectPoint>
-        <abnormalType>SPEED_UP_SPECIAL</abnormalType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>99</magicLvl>
-        <abnormalLvl>99</abnormalLvl>
-        <abnormalTime>-1</abnormalTime>
-        <abnormalVisualEffect>MP_SHIELD</abnormalVisualEffect>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16039" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>6000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16040" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16041" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16042" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16043" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16044" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16045" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16046" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16047" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16048" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16049" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16050" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16051" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16052" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16053" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16054" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16055" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16056" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16057" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16058" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16059" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16060" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16061" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16062" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16063" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16064" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16065" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16066" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16067" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16068" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16069" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16070" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16071" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16072" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16073" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16074" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16075" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16076" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16077" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16078" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16079" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16080" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16081" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16082" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16083" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16084" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16085" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16086" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16087" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16088" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16089" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16090" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16091" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16092" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16093" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16094" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16095" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16096" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16097" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16098" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="16099" toLevel="1" name="Presentation">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <effectPoint>100</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <hitTime>10000</hitTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
+	<skill id="16001" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16002" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16003" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16004" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16005" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16006" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16007" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16008" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16009" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16010" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16011" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16012" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16013" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16014" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16015" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16016" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16017" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16018" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16019" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16020" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16021" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16022" name="Ground Slam" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<cool-time initial="3000"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16023" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<cool-time initial="10000"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16024" name="Seeds Buster" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<cool-time initial="3000"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16025" name="Whistle" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16026" name="Chat" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<cool-time initial="500"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16027" name="Chat" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<cool-time initial="500"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16028" name="Ball Kicking" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<cool-time initial="500"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16029" name="Jump" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<cool-time initial="500"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16030" name="Sheep Herding" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<cool-time initial="500"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16032" name="Gi-Sung Bae's Lineage II" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="-1"/>
+			<reuse initial="50000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16033" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16034" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16035" name="Presentation" max-level="1" action="CA1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="OTHERS" />
+		<channeling skill="0" mp-consume="0" initial-delay="1000" interval="0"/>
+	</skill>
+	<skill id="16036" name="Tauti Leap Attack" max-level="1" debuff="true" action="A2">
+	<!-- Takes hold of Tauti and throws him up. Uses falling damage to inflict tremendous harm. -->
+		<icon initial="icon.skill3080"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" hit-cancel-time="6.5" >
+			<magic-level initial="99"/>
+			<cast-range initial="2000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="-1"/>
+			<effect-range initial="3000"/>
+			<hit-time initial="-1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" scope="POINT_BLANK" object="NOT_FRIEND" range="300" affect-min="10" affect-random="10" />
+		<abnormal type="BLEEDING" visual="STUN" >
+			<level initial="1"/>
+			<time initial="3"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+				<power initial="0.0"/>
+			</physical-attack>
+			<damage-over-time ticks="5" can-kill="false">
+				<power initial="250.0"/>
+			</damage-over-time>
+		</effects>
+	</skill>
+	<skill id="16037" name="Tauti Leap Attack" max-level="1" debuff="true" action="A2">
+	<!-- Takes hold of Tauti and throws him up. Uses falling damage to inflict tremendous harm. -->
+		<icon initial="icon.skill3080"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" hit-cancel-time="5.5" >
+			<magic-level initial="99"/>
+			<cast-range initial="2000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="-1"/>
+			<effect-range initial="3000"/>
+			<hit-time initial="-1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
+		<abnormal type="STUN" visual="STUN" >
+			<level initial="1"/>
+			<time initial="3"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<effect name="RealDamage">
+				<power initial="100000.0"/>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="16038" name="Idle Effect" max-level="1" action="A2">
+	<!-- Dangerous state right before the explosion. -->
+		<icon initial="icon.skill11062"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="99"/>
+			<cast-range initial="-1"/>
+			<effect-point initial="692"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="692000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<abnormal type="SPEED_UP_SPECIAL" visual="MP_SHIELD" >
+			<level initial="99"/>
+			<time initial="-1"/>
+			<chance initial="-1"/>
+		</abnormal>
+	</skill>
+	<skill id="16039" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16040" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16041" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16042" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16043" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16044" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16045" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16046" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16047" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16048" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16049" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16050" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16051" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16052" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16053" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16054" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16055" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16056" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16057" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16058" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16059" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16060" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16061" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16062" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16063" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16064" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16065" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16066" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16067" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16068" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16069" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16070" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16071" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16072" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16073" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16074" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16075" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16076" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16077" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16078" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16079" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16080" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16081" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16082" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16083" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16084" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16085" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16086" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16087" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16088" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16089" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16090" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16091" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16092" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16093" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16094" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16095" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16096" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16097" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16098" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="16099" name="Presentation" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="600"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
 </list>

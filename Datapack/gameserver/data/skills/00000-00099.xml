@@ -317,7 +317,7 @@
 		<target type="ENEMY_ONLY" />
 		<effects>
 			<effect name="RandomizeHate">
-				<power initial="80.0"/>
+				<power initial="80"/>
 			</effect>
 		</effects>
 	</skill>
@@ -1102,7 +1102,7 @@
 			<energy-max charges="1"/>
 		</conditions>
 		<effects>
-			<effect  name="FocusMomentum">
+			<effect name="FocusMomentum">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -1533,7 +1533,7 @@
 		<target type="ENEMY_ONLY" />
 		<effects>
 			<effect name="RandomizeHate">
-				<power initial="80.0"/>
+				<power initial="80"/>
 			</effect>
 			<effect name="TargetCancel">
 				<power initial="80.0"/>
@@ -2641,9 +2641,9 @@
 			<dispel>
 				<abnormal type="POISON">
 					<power initial="3.0">
-					<value level="2">7.0</value>
-					<value level="3">9.0</value>
-				</power>
+						<value level="2">7.0</value>
+						<value level="3">9.0</value>
+					</power>
 				</abnormal>
 			</dispel>
 		</effects>

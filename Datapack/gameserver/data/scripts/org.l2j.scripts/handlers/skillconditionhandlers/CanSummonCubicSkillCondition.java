@@ -15,28 +15,32 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author JoeAlisson
  */
 public class CanSummonCubicSkillCondition implements SkillCondition {
-	
-	@Override
-	public boolean canUse(Creature caster, Skill skill, WorldObject target)
-	{
-		if (!isPlayer(caster) || caster.isAlikeDead() || caster.getActingPlayer().inObserverMode()) {
-			return false;
-		}
-		
-		final Player player = caster.getActingPlayer();
-		return !player.inObserverMode() && !player.isMounted() && !player.isSpawnProtected() && !player.isTeleportProtected();
-	}
 
-	public static final class Factory extends SkillConditionFactory {
+    private CanSummonCubicSkillCondition() {
+    }
 
-		@Override
-		public SkillCondition create(Node xmlNode) {
-			return new CanSummonCubicSkillCondition();
-		}
+    @Override
+    public boolean canUse(Creature caster, Skill skill, WorldObject target)
+    {
+        if (!isPlayer(caster) || caster.isAlikeDead() || caster.getActingPlayer().inObserverMode()) {
+            return false;
+        }
 
-		@Override
-		public String conditionName() {
-			return "CanSummonCubic";
-		}
-	}
+        final Player player = caster.getActingPlayer();
+        return !player.inObserverMode() && !player.isMounted() && !player.isSpawnProtected() && !player.isTeleportProtected();
+    }
+
+    public static final class Factory extends SkillConditionFactory {
+        private static final CanSummonCubicSkillCondition INSTANCE = new CanSummonCubicSkillCondition();
+
+        @Override
+        public SkillCondition create(Node xmlNode) {
+            return INSTANCE;
+        }
+
+        @Override
+        public String conditionName() {
+            return "CanSummonCubic";
+        }
+    }
 }

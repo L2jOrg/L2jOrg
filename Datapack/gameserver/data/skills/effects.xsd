@@ -172,7 +172,7 @@
                 <xs:sequence>
                     <xs:element name="chance" type="MappedLevelValue"/>
                     <xs:element name="min-damage" type="MappedLevelValue"/>
-                    <xs:element name="weapons" type="WeaponTypeList"/>
+                    <xs:element name="weapons" type="WeaponTypeList" minOccurs="0"/>
                 </xs:sequence>
                 <xs:attribute name="skill" type="xs:int" use="required"/>
                 <xs:attribute name="target" type="TargetType" default="SELF"/>

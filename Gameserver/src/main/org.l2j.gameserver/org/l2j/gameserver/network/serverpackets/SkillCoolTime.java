@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.TimeStamp;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
@@ -22,7 +22,7 @@ public class SkillCoolTime extends ServerPacket {
         _currentTime = System.currentTimeMillis();
         for (TimeStamp ts : player.getSkillReuseTimeStamps().values())
         {
-            if ((_currentTime < ts.getStamp()) && !SkillData.getInstance().getSkill(ts.getSkillId(), ts.getSkillLvl(), ts.getSkillSubLvl()).isNotBroadcastable())
+            if ((_currentTime < ts.getStamp()) && !SkillEngine.getInstance().getSkill(ts.getSkillId(), ts.getSkillLvl(), ts.getSkillSubLvl()).isNotBroadcastable())
             {
                 _skillReuseTimeStamps.add(ts);
             }

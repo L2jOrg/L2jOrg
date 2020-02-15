@@ -1,728 +1,1157 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
-    <skill id="16300" toLevel="1" name="98Lv. Raid Boss">
-        <!-- Nemis manipulated the vengeance embedded in the weapons of the Giants, turning the Weiss into puppets called Vengeful Lerazia, who since then have taken a place in the magic circle within Kamael Village and the Isle of Souls. -->
-        <icon>icon.skillraid</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="16301" toLevel="1" name="98Lv. Raid Boss">
-        <!-- Nemis manipulated the vengeance embedded in the weapons of the Giants, turning the Krakia into puppets called Vengeful Oretross, who since then have taken a place in the magic circle within Kamael Village and the Isle of Souls. -->
-        <icon>icon.skillraid</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="16302" toLevel="1" name="98Lv. Raid Boss">
-        <!-- Nemis manipulated the vengeance embedded in the weapons of the Giants, turning the Bamonti into puppets called Vengeful Edaire, who since then have taken a place in the magic circle within Kamael Village and the Isle of Souls. -->
-        <icon>icon.skillraid</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="16303" toLevel="1" name="98Lv. Raid Boss">
-        <!-- Nemis manipulated the vengeance embedded in the weapons of the Giants, turning the Weiss into puppets called Vengeful Agonia, who since then have taken a place in the magic circle within Kamael Village and the Isle of Souls. -->
-        <icon>icon.skillraid</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="16304" toLevel="1" name="98Lv. Raid Boss">
-        <!-- A wizard of Aden buried in the Cemetary, Afjak was forcefully awakened by Shilen's Disciple Lavidos as Dark Messenger Afjak. -->
-        <icon>icon.skillraid</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="16305" toLevel="1" name="98Lv. Raid Boss">
-        <!-- A knight of Aden buried in the Cemetary, Feilnor was forcefully awakened by Shilen's Disciple Lavidos as a Dusk Knight, and now brings around a follower of Shilen's army previously sealed away in the nearby Seal of Shilen area. -->
-        <icon>icon.skillraid</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="16306" toLevel="1" name="98Lv. Raid Boss">
-        <!-- A wizard of Aden buried in the Cemetary, Amormio was forcefully awakened by Shilen's Disciple Lavidos as a Chaos Wizard, and now brings around a follower of Shilen's army previously sealed away in the nearby Seal of Shilen area. -->
-        <icon>icon.skillraid</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="16307" toLevel="1" name="98Lv. Raid Boss">
-        <!-- A knight of Aden buried in the Cemetary, Lahav was forcefully awakened by Shilen's Disciple Lavidos as an Insolence Knight, and now brings around a follower of Shilen's army previously sealed away in the nearby Seal of Shilen area. -->
-        <icon>icon.skillraid</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="16308" toLevel="1" name="98Lv. Raid Boss">
-        <!-- A priest of Aden buried in the Cemetary, Borhunt was forcefully awakened by Shilen's Disciple Lavidos as a Death Priest, and now brings around a follower of Shilen's army previously sealed away in the nearby Seal of Shilen area. -->
-        <icon>icon.skillraid</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="16309" toLevel="1" name="98Lv. Raid Boss">
-        <!-- Once a famous knight of Aden, Zeruel was forcefully awakened from the Cemetary by Shilen's Disciple Lavidos as a Destruction Knight, and now brings around a follower of Shilen's army previously sealed away in the nearby Seal of Shilen area. -->
-        <icon>icon.skillraid</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="16310" toLevel="1" name="98Lv. Raid Boss">
-        <!-- Weary from the battle with the gods, Light Dragon Auracia continues to sleep - but the dragon's power was taken by Shilen's Disciples and forcefully infused into a small dinosaur in Primeval Isle, which grew tremendous in size and power, becoming the Megaloprepis of today. In order to complete the giant magic circle, Shilen's Disciples placed Megaloprepis at the Immortal Plateau as Auracia's Herald, along with the heralds of the other dragons. -->
-        <icon>icon.skillraid</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="16311" toLevel="1" name="98Lv. Raid Boss">
-        <!-- To aid the resurrection of its mother Shilen, Antharas accepted her Disciples' plea and sent its herald Komabor to the Immortal Plateau to complete the monster magic circle. Komabor commands a circle of Minos, otherwise known as Dragon Fragments, and possesses earth-attribute powers as great as those of Antharas. -->
-        <icon>icon.skillraid</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="16312" toLevel="1" name="98Lv. Raid Boss">
-        <!-- To aid the resurrection of its mother Shilen, Skellrus accepted her Disciples' plea and sent its herald Iskios to the Immortal Plateau to complete the monster magic circle. Iskios commands a circle of Minos, otherwise known as Dragon Fragments, and possesses dark-attribute powers as great as those of Skellrus. -->
-        <icon>icon.skillraid</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="16313" toLevel="1" name="98Lv. Raid Boss">
-        <!-- To aid the resurrection of its mother Shilen, Valakas accepted her Disciples' plea and sent its herald Potigia to the Immortal Plateau to complete the monster magic circle. Potigia commands a circle of Minos, otherwise known as Dragon Fragments, and possesses fire-attribute powers as great as those of Valakas. -->
-        <icon>icon.skillraid</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="16314" toLevel="1" name="98Lv. Raid Boss">
-        <!-- To aid the resurrection of its mother Shilen, Lindvior accepted her Disciples' plea and sent its herald Numa to the Immortal Plateau to complete the monster magic circle. Numa commands a circle of Minos, otherwise known as Dragon Fragments, and possesses wind-attribute powers as great as those of Lindvior. -->
-        <icon>icon.skillraid</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="16315" toLevel="1" name="98Lv. Raid Boss">
-        <!-- To aid the resurrection of its mother Shilen, Fafurion accepted her Disciples' plea and sent its herald Aquarion to the Immortal Plateau to complete the monster magic circle. Unlike other dragons' heralds, Aquarion is able to summon countless Nephos from the water, and possesses water-attribute powers as great as those of Fafurion. -->
-        <icon>icon.skillraid</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="16316" toLevel="1" name="98Lv. Raid Boss">
-        <!-- One of the 3 Hell Weapons created by the 5 Hell Lords of Avarice, Flaming Ladar is a voracious eater of souls, regardless of alliance. Though originally of no color or attribute, it absorbed a part of Valakas' soul and was reborn with the power of fire. Flaming Ladar can be summoned through Apparition Stones made of fake souls. -->
-        <icon>icon.skillraid</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="16317" toLevel="10" name="Pull Resistance">
-        <!-- Resistance to Pull. -->
-        <icon>icon.skill10015</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="16318" toLevel="2" name="Damage 1">
-        <!-- Maximum Damage is $s1. -->
-        <icon>icon.skillboss</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="16319" toLevel="1" name="Dance Time">
-        <!-- Presentation skill -->
-        <operateType>A1</operateType>
-        <effectPoint>100</effectPoint>
-        <hitTime>5000</hitTime>
-    </skill>
-    <skill id="16320" toLevel="1" name="Dance Time">
-        <!-- For 10 sec., dance against your will to Frintezza's music. -->
-        <operateType>A2</operateType>
-        <effectPoint>100</effectPoint>
-        <hitTime>1000</hitTime>
-    </skill>
-    <skill id="16321" toLevel="1" name="Orc Cyclone">
-        <!-- Blown away. -->
-        <icon>icon.skill4107</icon>
-        <operateType>A1</operateType>
-        <hitTime>10000</hitTime>
-        <coolTime>500</coolTime>
-        <effectPoint>-1</effectPoint>
-        <isDebuff>true</isDebuff>
-    </skill>
-    <skill id="16323" toLevel="1" name="Orc Typhoon">
-        <!-- Blown away. -->
-        <icon>icon.skill3080</icon>
-        <operateType>A1</operateType>
-        <hitTime>10000</hitTime>
-        <coolTime>500</coolTime>
-        <effectPoint>-1</effectPoint>
-        <isDebuff>true</isDebuff>
-    </skill>
-    <skill id="16325" toLevel="1" name="Aerial Yoke">
-        <!-- Thrown to the air and rendered immobile due to magic. -->
-        <icon>icon.skill1072</icon>
-        <operateType>A2</operateType>
-        <castRange>500</castRange>
-        <hitTime>2000</hitTime>
-        <isMagic>1</isMagic>
-        <effectPoint>-2</effectPoint>
-        <isDebuff>true</isDebuff>
-    </skill>
-    <skill id="16326" toLevel="1" name="Phoenix Rush">
-        <!-- Charges the enemy and inflicts damage. -->
-        <icon>icon.skill6041</icon>
-        <operateType>A2</operateType>
-        <castRange>500</castRange>
-        <hitTime>800</hitTime>
-        <coolTime>200</coolTime>
-        <effectPoint>-679</effectPoint>
-        <reuseDelay>5000</reuseDelay>
-    </skill>
-    <skill id="16327" toLevel="1" name="Evil Fragment's Power">
-        <!-- Event presentation skill. -->
-        <operateType>A1</operateType>
-        <castRange>500</castRange>
-        <hitTime>500</hitTime>
-    </skill>
-    <skill id="16328" toLevel="1" name="Explosive Light">
-        <!-- Event presentation skill. -->
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic>
-    </skill>
-    <skill id="16329" toLevel="1" name="Spirit Sendoff">
-        <!-- Event presentation skill. -->
-        <icon>icon.skill0922</icon>
-        <operateType>A2</operateType>
-    </skill>
-    <skill id="16330" toLevel="1" name="Wind Loyalty">
-        <!-- Event presentation skill. -->
-        <operateType>A1</operateType>
-        <castRange>500</castRange>
-        <hitTime>500</hitTime>
-    </skill>
-    <skill id="16331" toLevel="1" name="Power Strike">
-        <operateType>A1</operateType>
-        <mpConsume>25</mpConsume>
-        <castRange>40</castRange>
-        <hitTime>1000</hitTime>
-        <coolTime>800</coolTime>
-        <effectPoint>-100</effectPoint>
-        <reuseDelay>5000</reuseDelay>
-    </skill>
-    <skill id="16332" toLevel="1" name="Double Strike">
-        <operateType>A1</operateType>
-        <mpConsume>25</mpConsume>
-        <castRange>40</castRange>
-        <hitTime>1000</hitTime>
-        <coolTime>800</coolTime>
-        <effectPoint>-100</effectPoint>
-        <reuseDelay>5000</reuseDelay>
-    </skill>
-    <skill id="16333" toLevel="1" name="Long Attack">
-        <operateType>A1</operateType>
-        <mpConsume>25</mpConsume>
-        <castRange>700</castRange>
-        <hitTime>2000</hitTime>
-        <coolTime>800</coolTime>
-        <effectPoint>-100</effectPoint>
-        <reuseDelay>10000</reuseDelay>
-    </skill>
-    <skill id="16334" toLevel="3" name="Disarm">
-        <!-- Disarms equipment. -->
-        <icon>icon.skill0485</icon>
-        <operateType>A2</operateType>
-        <trait>DISARM</trait>
-        <mpConsume>13</mpConsume>
-        <castRange>40</castRange>
-        <hitTime>1500</hitTime>
-        <coolTime>800</coolTime>
-        <reuseDelay>15000</reuseDelay>
-        <effectPoint>-100</effectPoint>
-        <isDebuff>true</isDebuff>
-    </skill>
-    <skill id="16335" toLevel="1" name="Fear">
-        <!-- Afflicted with Fear and moving against own will momentarily. -->
-        <icon>icon.skill1092</icon>
-        <operateType>A2</operateType>
-        <castRange>600</castRange>
-        <hitTime>2000</hitTime>
-        <isMagic>1</isMagic>
-        <effectPoint>-1</effectPoint>
-        <isDebuff>true</isDebuff>
-    </skill>
-    <skill id="16336" toLevel="1" name="Physical Decrease">
-        <!-- Cursed to momentarily decrease P./ M. Atk. -->
-        <icon>icon.skill1333</icon>
-        <operateType>A2</operateType>
-        <castRange>400</castRange>
-        <hitTime>2000</hitTime>
-        <reuseDelay>8000</reuseDelay>
-        <isMagic>1</isMagic>
-        <effectPoint>-100</effectPoint>
-        <isDebuff>true</isDebuff>
-    </skill>
-    <skill id="16337" toLevel="3" name="Magic Blast">
-        <operateType>A1</operateType>
-        <mpConsume>25</mpConsume>
-        <castRange>500</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>8000</reuseDelay>
-        <effectPoint>-100</effectPoint>
-        <isMagic>1</isMagic>
-    </skill>
-    <skill id="16338" toLevel="2" name="Stiff Charge">
-        <!-- Petrify status. -->
-        <icon>icon.skill4111</icon>
-        <operateType>A2</operateType>
-        <mpConsume>15</mpConsume>
-        <hitTime>1000</hitTime>
-        <isMagic>1</isMagic>
-    </skill>
-    <skill id="16340" toLevel="1" name="Reaper's Seal">
-        <!-- Branded with a seal and targeted by the Undead of Dragon Valley. -->
-        <operateType>A2</operateType>
-        <mpConsume>42</mpConsume>
-        <isDebuff>true</isDebuff>
-    </skill>
-    <skill id="16341" toLevel="1" name="Spell of Light">
-        <!-- Cursed to momentarily decrease M. Def. -->
-        <icon>icon.skill1333</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="16342" toLevel="1" name="Lift Target">
-        <!-- Inflicts damage while removing target. -->
-        <operateType>A1</operateType>
-        <mpConsume>25</mpConsume>
-        <castRange>40</castRange>
-        <hitTime>2000</hitTime>
-        <coolTime>1000</coolTime>
-        <effectPoint>-150</effectPoint>
-        <reuseDelay>5000</reuseDelay>
-    </skill>
-    <skill id="16343" toLevel="1" name="Fire Breath">
-        <operateType>A1</operateType>
-        <mpConsume>25</mpConsume>
-        <castRange>40</castRange>
-        <coolTime>1000</coolTime>
-        <effectPoint>-150</effectPoint>
-        <reuseDelay>3000</reuseDelay>
-    </skill>
-    <skill id="16344" toLevel="1" name="Death's Bolt">
-        <operateType>A1</operateType>
-        <mpConsume>25</mpConsume>
-        <castRange>600</castRange>
-        <hitTime>3000</hitTime>
-        <effectPoint>-100</effectPoint>
-        <isMagic>1</isMagic>
-    </skill>
-    <skill id="16345" toLevel="2" name="Fire Flare">
-        <!-- HP decreases from bleeding. -->
-        <icon>icon.skill0096</icon>
-        <operateType>A2</operateType>
-        <mpConsume>25</mpConsume>
-        <hitTime>500</hitTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>-100</effectPoint>
-        <isDebuff>true</isDebuff>
-    </skill>
-    <skill id="16346" toLevel="1" name="Deadly Fear">
-        <operateType>A1</operateType>
-        <mpConsume>5</mpConsume>
-        <castRange>40</castRange>
-        <hitTime>3000</hitTime>
-        <coolTime>800</coolTime>
-        <effectPoint>-100</effectPoint>
-        <reuseDelay>5000</reuseDelay>
-    </skill>
-    <skill id="16347" toLevel="3" name="Breeze Shell">
-        <!-- Momentarily decreases Atk. Spd., Casting Spd., and Speed. -->
-        <operateType>A2</operateType>
-        <mpConsume>5</mpConsume>
-        <castRange>600</castRange>
-        <hitTime>3000</hitTime>
-        <reuseDelay>8000</reuseDelay>
-        <isMagic>1</isMagic>
-        <effectPoint>-100</effectPoint>
-        <isDebuff>true</isDebuff>
-    </skill>
-    <skill id="16348" toLevel="3" name="Breeze Point">
-        <operateType>A1</operateType>
-        <mpConsume>5</mpConsume>
-        <castRange>600</castRange>
-        <hitTime>3000</hitTime>
-        <reuseDelay>8000</reuseDelay>
-        <effectPoint>-100</effectPoint>
-        <isMagic>1</isMagic>
-    </skill>
-    <skill id="16349" toLevel="1" name="Blot Pierce">
-        <operateType>A1</operateType>
-        <mpConsume>5</mpConsume>
-        <castRange>40</castRange>
-        <hitTime>3000</hitTime>
-        <coolTime>800</coolTime>
-        <effectPoint>-100</effectPoint>
-        <reuseDelay>5000</reuseDelay>
-    </skill>
-    <skill id="16350" toLevel="3" name="Blot Hail">
-        <operateType>A1</operateType>
-        <mpConsume>10</mpConsume>
-        <castRange>500</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>8000</reuseDelay>
-        <effectPoint>-100</effectPoint>
-        <isMagic>1</isMagic>
-    </skill>
-    <skill id="16352" toLevel="1" name="Kain's Sonic Storm">
-        <icon>icon.skill0007</icon>
-        <operateType>A1</operateType>
-        <mpConsume>50</mpConsume>
-        <castRange>500</castRange>
-        <hitTime>1790</hitTime>
-        <coolTime>300</coolTime>
-        <effectPoint>-709</effectPoint>
-        <reuseDelay>10000</reuseDelay>
-    </skill>
-    <skill id="16353" toLevel="1" name="Kain's Triple Sonic Slash">
-        <icon>icon.skill0261</icon>
-        <operateType>A1</operateType>
-        <mpConsume>25</mpConsume>
-        <castRange>40</castRange>
-        <hitTime>1667</hitTime>
-        <coolTime>500</coolTime>
-        <effectPoint>-213</effectPoint>
-        <reuseDelay>10000</reuseDelay>
-    </skill>
-    <skill id="16354" toLevel="1" name="Sacred Assault">
-        <operateType>A1</operateType>
-        <mpConsume>5</mpConsume>
-        <castRange>40</castRange>
-        <hitTime>3000</hitTime>
-        <coolTime>800</coolTime>
-        <effectPoint>-100</effectPoint>
-        <reuseDelay>5000</reuseDelay>
-    </skill>
-    <skill id="16356" toLevel="1" name="Sacred Sphere">
-        <operateType>A1</operateType>
-        <mpConsume>30</mpConsume>
-        <castRange>900</castRange>
-        <hitTime>1200</hitTime>
-        <coolTime>500</coolTime>
-        <effectPoint>-100</effectPoint>
-        <isMagic>1</isMagic>
-    </skill>
-    <skill id="16357" toLevel="2" name="Dimensional Barrier">
-        <!-- Monster's P./ M. Atk. and P./ M. Def. increase. -->
-        <icon>icon.skill0335</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="16358" toLevel="3" name="Dimensional Armor">
-        <!-- Half-kill Resistance +$s1, and Received P. Critical Damage +$s2. -->
-        <icon>icon.skill0329</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="16359" toLevel="1" name="Dimensional Warp Hold">
-        <!-- Resistance to Hold. -->
-        <icon>icon.skill0387</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="16360" toLevel="1" name="Dimensional Warp Paralysis">
-        <!-- Resistance to Paralysis. -->
-        <icon>icon.skill19005</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="16361" toLevel="1" name="Dimensional Warp Stun">
-        <!-- Resistance to Stun. -->
-        <icon>icon.skill19004</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="16362" toLevel="1" name="Dimensional Warp Knock Back / Knock Down">
-        <!-- Resistance to Knock Back/ Knock Down. -->
-        <icon>icon.skill_tough_spirit</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="16363" toLevel="1" name="Dimensioal Warp Aerial Yoke">
-        <!-- Resistance to Aerial Yoke. -->
-        <icon>icon.skill_heavy_heart</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="16364" toLevel="1" name="Dimensional Warp Pull">
-        <!-- Resistance to Pull. -->
-        <icon>icon.skill0388</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="16365" toLevel="1" name="Dimensional Defense Decrease">
-        <!-- P. Def. -30%. -->
-        <icon>icon.skill0122</icon>
-        <operateType>A2</operateType>
-        <castRange>600</castRange>
-        <hitTime>1000</hitTime>
-        <coolTime>500</coolTime>
-        <reuseDelay>3000</reuseDelay>
-        <effectPoint>-100</effectPoint>
-        <isDebuff>true</isDebuff>
-    </skill>
-    <skill id="16366" toLevel="1" name="Dimensional Resistance Decrease">
-        <!-- M. Def. -30%. -->
-        <icon>icon.skill1263</icon>
-        <operateType>A2</operateType>
-        <castRange>600</castRange>
-        <hitTime>1000</hitTime>
-        <coolTime>500</coolTime>
-        <reuseDelay>3000</reuseDelay>
-        <isMagic>1</isMagic>
-        <effectPoint>-100</effectPoint>
-        <isDebuff>true</isDebuff>
-    </skill>
-    <skill id="16367" toLevel="1" name="Dimensional Speed Decrease">
-        <!-- Speed -50. -->
-        <icon>icon.skill1160</icon>
-        <operateType>A2</operateType>
-        <castRange>600</castRange>
-        <hitTime>1000</hitTime>
-        <coolTime>500</coolTime>
-        <reuseDelay>3000</reuseDelay>
-        <effectPoint>-100</effectPoint>
-        <isDebuff>true</isDebuff>
-    </skill>
-    <skill id="16368" toLevel="1" name="Dimensional Strike">
-        <!-- Attacks target with 150% of P. Atk. power. -->
-        <operateType>A1</operateType>
-        <castRange>40</castRange>
-        <hitTime>1500</hitTime>
-        <coolTime>500</coolTime>
-        <effectPoint>-100</effectPoint>
-        <reuseDelay>3000</reuseDelay>
-    </skill>
-    <skill id="16369" toLevel="1" name="Dimensional Crush">
-        <!-- Attacks target with 200% of P. Atk. power. -->
-        <operateType>A1</operateType>
-        <castRange>40</castRange>
-        <hitTime>1500</hitTime>
-        <coolTime>500</coolTime>
-        <effectPoint>-100</effectPoint>
-        <reuseDelay>3000</reuseDelay>
-    </skill>
-    <skill id="16370" toLevel="1" name="Dimensional Slasher">
-        <!-- Attacks target with 250% of P. Atk. power. -->
-        <operateType>A1</operateType>
-        <castRange>40</castRange>
-        <hitTime>1500</hitTime>
-        <coolTime>500</coolTime>
-        <effectPoint>-100</effectPoint>
-        <reuseDelay>3000</reuseDelay>
-    </skill>
-    <skill id="16371" toLevel="1" name="Dimension Storm">
-        <!-- Attacks nearby enemies with 200% of P. Atk. power. -->
-        <operateType>A1</operateType>
-        <castRange>40</castRange>
-        <hitTime>1500</hitTime>
-        <coolTime>500</coolTime>
-        <effectPoint>-100</effectPoint>
-        <reuseDelay>3000</reuseDelay>
-    </skill>
-    <skill id="16372" toLevel="1" name="Dimensional Spike">
-        <!-- Attacks target with 200 Power added to M. Atk. -->
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <hitTime>2000</hitTime>
-        <coolTime>500</coolTime>
-        <reuseDelay>1000</reuseDelay>
-        <effectPoint>-100</effectPoint>
-        <isMagic>1</isMagic>
-    </skill>
-    <skill id="16373" toLevel="1" name="Dimensional Crash">
-        <!-- Attacks target with 250 Power added to M. Atk. -->
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <hitTime>2000</hitTime>
-        <coolTime>500</coolTime>
-        <reuseDelay>1000</reuseDelay>
-        <effectPoint>-100</effectPoint>
-        <isMagic>1</isMagic>
-    </skill>
-    <skill id="16374" toLevel="1" name="Dimensional Destruction">
-        <!-- Attacks target with 300 Power added to M. Atk. -->
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <hitTime>2000</hitTime>
-        <coolTime>500</coolTime>
-        <reuseDelay>1000</reuseDelay>
-        <effectPoint>-100</effectPoint>
-        <isMagic>1</isMagic>
-    </skill>
-    <skill id="16376" toLevel="1" name="Dimensional Bind">
-        <!-- Attacks target with 100% of P. Atk. power and inflicts Hold for 5 sec. -->
-        <icon>icon.skill4047</icon>
-        <operateType>A2</operateType>
-        <castRange>40</castRange>
-        <hitTime>2500</hitTime>
-        <reuseDelay>3000</reuseDelay>
-        <effectPoint>-100</effectPoint>
-        <isDebuff>true</isDebuff>
-    </skill>
-    <skill id="16378" toLevel="1" name="Dimensional Eruption">
-        <!-- Attacks nearby enemies with 100% of P. Atk. power and inflicts Stun for 5 sec. -->
-        <icon>icon.skill10265</icon>
-        <operateType>A2</operateType>
-        <hitTime>2500</hitTime>
-        <reuseDelay>3000</reuseDelay>
-        <effectPoint>-100</effectPoint>
-        <isDebuff>true</isDebuff>
-    </skill>
-    <skill id="16379" toLevel="1" name="Dimensional Remedy">
-        <!-- Recover 40% of Max HP. -->
-        <operateType>A1</operateType>
-        <hitTime>2500</hitTime>
-        <effectPoint>-100</effectPoint>
-        <reuseDelay>3000</reuseDelay>
-    </skill>
-    <skill id="16381" toLevel="1" name="Dimensional Shield">
-        <!-- Allied monsters nearby have P./ M. Def. +100%. -->
-        <icon>icon.skill1503</icon>
-        <operateType>A2</operateType>
-        <hitTime>2500</hitTime>
-        <reuseDelay>3000</reuseDelay>
-    </skill>
-    <skill id="16382" toLevel="1" name="Dimensional Death Ring">
-        <!-- Attacks target's nearby enemies with 250 Power added to M. Atk. Damage increases as number of enemies affected increases. -->
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <hitTime>3000</hitTime>
-        <reuseDelay>3000</reuseDelay>
-        <effectPoint>-100</effectPoint>
-        <isMagic>1</isMagic>
-    </skill>
-    <skill id="16383" toLevel="1" name="Dimensional Silence">
-        <!-- Attacks target's nearby enemies with 250 Power added to M. Atk. and block their P./ M. Skills for 5 sec. -->
-        <icon>icon.skill1064</icon>
-        <operateType>A2</operateType>
-        <castRange>600</castRange>
-        <hitTime>2000</hitTime>
-        <reuseDelay>3000</reuseDelay>
-        <isMagic>1</isMagic>
-        <effectPoint>-100</effectPoint>
-        <isDebuff>true</isDebuff>
-    </skill>
-    <skill id="16384" toLevel="1" name="Dimensional Bleed">
-        <!-- Inflict Bleed on target's nearby enemies and cause them to lose 1,000 HP per sec. -->
-        <icon>icon.skill0223</icon>
-        <operateType>A2</operateType>
-        <castRange>40</castRange>
-        <hitTime>2500</hitTime>
-        <reuseDelay>3000</reuseDelay>
-        <effectPoint>-100</effectPoint>
-        <isDebuff>true</isDebuff>
-    </skill>
-    <skill id="16385" toLevel="1" name="Dimesional Devil">
-        <!-- Attacks target's nearby enemies with 300% of P. Atk. power. Damage decreases as number of enemies affected increases. -->
-        <operateType>A1</operateType>
-        <castRange>40</castRange>
-        <hitTime>2500</hitTime>
-        <effectPoint>-100</effectPoint>
-        <reuseDelay>3000</reuseDelay>
-    </skill>
-    <skill id="16388" toLevel="1" name="Kain's Wrath">
-        <!-- Consumed by vengeful fury toward all who harm Giselle. -->
-        <operateType>A2</operateType>
-        <mpConsume>10</mpConsume>
-        <coolTime>1000</coolTime>
-        <reuseDelay>5000</reuseDelay>
-        <isDebuff>true</isDebuff>
-    </skill>
-    <skill id="16389" toLevel="1" name="Absorb Wind">
-        <!-- PC's CP/ HP/ MP all drop to 1. -->
-        <operateType>A1</operateType>
-        <targetType>ENEMY</targetType>
-        <affectScope>SINGLE</affectScope>
-        <castRange>600</castRange>
-        <hitTime>3000</hitTime>
-        <coolTime>500</coolTime>
-        <reuseDelay>2000</reuseDelay>
-        <isMagic>1</isMagic>
-        <effects>
-            <effect name="ModifyVital">
-                <type>SET</type>
-                <hp>1</hp>
-                <mp>1</mp>
-                <cp>1</cp>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="16390" toLevel="1" name="Wynn Summoner's Power">
-        <!-- Wynn Summoner's power is infused into Atelia. -->
-        <operateType>A1</operateType>
-        <targetType>ENEMY</targetType>
-        <affectScope>SINGLE</affectScope>
-        <castRange>600</castRange>
-        <hitTime>3000</hitTime>
-        <coolTime>500</coolTime>
-        <reuseDelay>2000</reuseDelay>
-        <isMagic>1</isMagic>
-    </skill>
-    <skill id="16391" toLevel="1" name="Feoh Wizard's Power">
-        <!-- Feoh Wizard's power is infused into Atelia. -->
-        <operateType>A1</operateType>
-        <targetType>ENEMY</targetType>
-        <affectScope>SINGLE</affectScope>
-        <castRange>600</castRange>
-        <hitTime>3000</hitTime>
-        <coolTime>500</coolTime>
-        <reuseDelay>2000</reuseDelay>
-        <isMagic>1</isMagic>
-    </skill>
-    <skill id="16392" toLevel="1" name="Tyrr Warrior's Power">
-        <!-- Tyrr Warrior's power is infused into Atelia. -->
-        <operateType>A1</operateType>
-        <targetType>ENEMY</targetType>
-        <affectScope>SINGLE</affectScope>
-        <castRange>600</castRange>
-        <hitTime>3000</hitTime>
-        <coolTime>500</coolTime>
-        <reuseDelay>2000</reuseDelay>
-        <isMagic>1</isMagic>
-    </skill>
-    <skill id="16393" toLevel="1" name="Othell Rogue's Power">
-        <!-- Othell Rogue's power is infused into Atelia. -->
-        <operateType>A1</operateType>
-        <targetType>ENEMY</targetType>
-        <affectScope>SINGLE</affectScope>
-        <castRange>600</castRange>
-        <hitTime>3000</hitTime>
-        <coolTime>500</coolTime>
-        <reuseDelay>2000</reuseDelay>
-        <isMagic>1</isMagic>
-    </skill>
-    <skill id="16394" toLevel="1" name="Iss Enchanter's Power">
-        <!-- Iss Enchanter's power is infused into Atelia. -->
-        <operateType>A1</operateType>
-        <targetType>ENEMY</targetType>
-        <affectScope>SINGLE</affectScope>
-        <castRange>600</castRange>
-        <hitTime>3000</hitTime>
-        <coolTime>500</coolTime>
-        <reuseDelay>2000</reuseDelay>
-        <isMagic>1</isMagic>
-    </skill>
-    <skill id="16395" toLevel="1" name="Yul Archer's Power">
-        <!-- Yul Archer's power is infused into Atelia. -->
-        <operateType>A1</operateType>
-        <targetType>ENEMY</targetType>
-        <affectScope>SINGLE</affectScope>
-        <castRange>600</castRange>
-        <hitTime>3000</hitTime>
-        <coolTime>500</coolTime>
-        <reuseDelay>2000</reuseDelay>
-        <isMagic>1</isMagic>
-    </skill>
-    <skill id="16396" toLevel="1" name="Sigel Knight's Power">
-        <!-- Sigel Knight's power is infused into Atelia. -->
-        <operateType>A1</operateType>
-        <targetType>ENEMY</targetType>
-        <affectScope>SINGLE</affectScope>
-        <castRange>600</castRange>
-        <hitTime>3000</hitTime>
-        <coolTime>500</coolTime>
-        <reuseDelay>2000</reuseDelay>
-        <isMagic>1</isMagic>
-    </skill>
-    <skill id="16397" toLevel="1" name="Aeore Healer's Power">
-        <!-- Aeore Healer's power is infused into Atelia. -->
-        <operateType>A1</operateType>
-        <targetType>ENEMY</targetType>
-        <affectScope>SINGLE</affectScope>
-        <castRange>600</castRange>
-        <hitTime>3000</hitTime>
-        <coolTime>500</coolTime>
-        <reuseDelay>2000</reuseDelay>
-        <isMagic>1</isMagic>
-    </skill>
-    <skill id="16398" toLevel="1" name="Atelia Energy">
-        <!-- Counterfeit Atelia fragment is lodged in the body. -->
-        <icon>icon.skill4035</icon>
-        <operateType>A2</operateType>
-        <castRange>600</castRange>
-        <coolTime>500</coolTime>
-        <reuseDelay>2000</reuseDelay>
-        <isMagic>1</isMagic>
-        <effectPoint>-150</effectPoint>
-        <isDebuff>true</isDebuff>
-    </skill>
-    <skill id="16399" toLevel="1" name="Ferin's Cure">
-        <!-- Heals target with 1488 Power added to M. Atk. If HP is full, CP is restored. -->
-        <icon>icon.skill11756</icon>
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <hitTime>1500</hitTime>
-        <coolTime>500</coolTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>867</effectPoint>
-        <isMagic>1</isMagic>
-    </skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
+	<skill id="16300" name="98Lv. Raid Boss" max-level="1" >
+	<!-- Nemis manipulated the vengeance embedded in the weapons of the Giants, turning the Weiss into puppets called Vengeful Lerazia, who since then have taken a place in the magic circle within Kamael Village and the Isle of Souls. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16301" name="98Lv. Raid Boss" max-level="1" >
+	<!-- Nemis manipulated the vengeance embedded in the weapons of the Giants, turning the Krakia into puppets called Vengeful Oretross, who since then have taken a place in the magic circle within Kamael Village and the Isle of Souls. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16302" name="98Lv. Raid Boss" max-level="1" >
+	<!-- Nemis manipulated the vengeance embedded in the weapons of the Giants, turning the Bamonti into puppets called Vengeful Edaire, who since then have taken a place in the magic circle within Kamael Village and the Isle of Souls. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16303" name="98Lv. Raid Boss" max-level="1" >
+	<!-- Nemis manipulated the vengeance embedded in the weapons of the Giants, turning the Weiss into puppets called Vengeful Agonia, who since then have taken a place in the magic circle within Kamael Village and the Isle of Souls. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16304" name="98Lv. Raid Boss" max-level="1" >
+	<!-- A wizard of Aden buried in the Cemetary, Afjak was forcefully awakened by Shilen's Disciple Lavidos as Dark Messenger Afjak. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16305" name="98Lv. Raid Boss" max-level="1" >
+	<!-- A knight of Aden buried in the Cemetary, Feilnor was forcefully awakened by Shilen's Disciple Lavidos as a Dusk Knight, and now brings around a follower of Shilen's army previously sealed away in the nearby Seal of Shilen area. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16306" name="98Lv. Raid Boss" max-level="1" >
+	<!-- A wizard of Aden buried in the Cemetary, Amormio was forcefully awakened by Shilen's Disciple Lavidos as a Chaos Wizard, and now brings around a follower of Shilen's army previously sealed away in the nearby Seal of Shilen area. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16307" name="98Lv. Raid Boss" max-level="1" >
+	<!-- A knight of Aden buried in the Cemetary, Lahav was forcefully awakened by Shilen's Disciple Lavidos as an Insolence Knight, and now brings around a follower of Shilen's army previously sealed away in the nearby Seal of Shilen area. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16308" name="98Lv. Raid Boss" max-level="1" >
+	<!-- A priest of Aden buried in the Cemetary, Borhunt was forcefully awakened by Shilen's Disciple Lavidos as a Death Priest, and now brings around a follower of Shilen's army previously sealed away in the nearby Seal of Shilen area. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16309" name="98Lv. Raid Boss" max-level="1" >
+	<!-- Once a famous knight of Aden, Zeruel was forcefully awakened from the Cemetary by Shilen's Disciple Lavidos as a Destruction Knight, and now brings around a follower of Shilen's army previously sealed away in the nearby Seal of Shilen area. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16310" name="98Lv. Raid Boss" max-level="1" >
+	<!-- Weary from the battle with the gods, Light Dragon Auracia continues to sleep - but the dragon's power was taken by Shilen's Disciples and forcefully infused into a small dinosaur in Primeval Isle, which grew tremendous in size and power, becoming the Megaloprepis of today. In order to complete the giant magic circle, Shilen's Disciples placed Megaloprepis at the Immortal Plateau as Auracia's Herald, along with the heralds of the other dragons. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16311" name="98Lv. Raid Boss" max-level="1" >
+	<!-- To aid the resurrection of its mother Shilen, Antharas accepted her Disciples' plea and sent its herald Komabor to the Immortal Plateau to complete the monster magic circle. Komabor commands a circle of Minos, otherwise known as Dragon Fragments, and possesses earth-attribute powers as great as those of Antharas. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16312" name="98Lv. Raid Boss" max-level="1" >
+	<!-- To aid the resurrection of its mother Shilen, Skellrus accepted her Disciples' plea and sent its herald Iskios to the Immortal Plateau to complete the monster magic circle. Iskios commands a circle of Minos, otherwise known as Dragon Fragments, and possesses dark-attribute powers as great as those of Skellrus. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16313" name="98Lv. Raid Boss" max-level="1" >
+	<!-- To aid the resurrection of its mother Shilen, Valakas accepted her Disciples' plea and sent its herald Potigia to the Immortal Plateau to complete the monster magic circle. Potigia commands a circle of Minos, otherwise known as Dragon Fragments, and possesses fire-attribute powers as great as those of Valakas. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16314" name="98Lv. Raid Boss" max-level="1" >
+	<!-- To aid the resurrection of its mother Shilen, Lindvior accepted her Disciples' plea and sent its herald Numa to the Immortal Plateau to complete the monster magic circle. Numa commands a circle of Minos, otherwise known as Dragon Fragments, and possesses wind-attribute powers as great as those of Lindvior. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16315" name="98Lv. Raid Boss" max-level="1" >
+	<!-- To aid the resurrection of its mother Shilen, Fafurion accepted her Disciples' plea and sent its herald Aquarion to the Immortal Plateau to complete the monster magic circle. Unlike other dragons' heralds, Aquarion is able to summon countless Nephos from the water, and possesses water-attribute powers as great as those of Fafurion. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16316" name="98Lv. Raid Boss" max-level="1" >
+	<!-- One of the 3 Hell Weapons created by the 5 Hell Lords of Avarice, Flaming Ladar is a voracious eater of souls, regardless of alliance. Though originally of no color or attribute, it absorbed a part of Valakas' soul and was reborn with the power of fire. Flaming Ladar can be summoned through Apparition Stones made of fake souls. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16317" name="Pull Resistance" max-level="10" >
+	<!-- 
+		level 1: Slightly strong Pull attack resistance.
+		level 3: Strong Pull attack resistance.
+		level 5: Very strong Pull attack resistance.
+		level 7: Extremely strong Pull attack resistance.
+		level 10: Ultimately strong Pull attack resistance.
+	 -->
+		<icon initial="icon.skill10015"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16318" name="Damage 1" max-level="2" >
+	<!-- 
+		level 1: Maximum Damage is 1.
+		level 2: Maximum Damage is 10.
+	 -->
+		<icon initial="icon.skillboss"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16319" name="Dance Time" max-level="1" action="A1">
+	<!-- Presentation skill -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-point initial="100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16320" name="Dance Time" max-level="1" action="A2">
+	<!-- For 10 sec., dance against your will to Frintezza's music. -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="-1"/>
+			<effect-point initial="100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16321" name="Orc Cyclone" max-level="1" debuff="true" action="A1">
+	<!-- Blown away. -->
+		<icon initial="icon.skill4107"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<cool-time initial="500"/>
+			<effect-point initial="-1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16323" name="Orc Typhoon" max-level="1" debuff="true" action="A1">
+	<!-- Blown away. -->
+		<icon initial="icon.skill3080"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<cool-time initial="500"/>
+			<effect-point initial="-1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16325" name="Aerial Yoke" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<!-- Thrown to the air and rendered immobile due to magic. -->
+		<icon initial="icon.skill1072"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="500"/>
+			<effect-point initial="-2"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-2000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16326" name="Phoenix Rush" max-level="1" action="A2">
+	<!-- Rush toward enemy and inflict damage. -->
+		<icon initial="icon.skill6041"/>
+		<attributes >
+			<cast-range initial="500"/>
+			<reuse initial="5000"/>
+			<cool-time initial="200"/>
+			<effect-point initial="-679"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-679000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16327" name="Evil Fragment's Power" max-level="1" action="A1">
+	<!-- Event presentation skill. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16328" name="Explosive Light" max-level="1" action="A1" type="MAGIC">
+	<!-- Event presentation skill. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16329" name="Spirit Sendoff" max-level="1" action="A2">
+	<!-- Event presentation skill. -->
+		<icon initial="icon.skill0922"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16330" name="Wind Loyalty" max-level="1" action="A1">
+	<!-- Event presentation skill. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16331" name="Power Strike" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="40"/>
+			<reuse initial="5000"/>
+			<cool-time initial="800"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="25"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="16332" name="Double Strike" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="40"/>
+			<reuse initial="5000"/>
+			<cool-time initial="800"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="25"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="16333" name="Long Attack" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="700"/>
+			<reuse initial="10000"/>
+			<cool-time initial="800"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="25"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="16334" name="Disarm" max-level="3" debuff="true" action="A2">
+	<!-- Disarmed. -->
+		<icon initial="icon.skill0485"/>
+		<attributes property="PHYSIC" trait="DISARM" >
+			<cast-range initial="40"/>
+			<reuse initial="15000"/>
+			<cool-time initial="800"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="13"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="16335" name="Fear" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<!-- Moving against your will due to Fear. -->
+		<icon initial="icon.skill1092"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="600"/>
+			<effect-point initial="-1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16336" name="Physical Decrease" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<!-- Cursed to momentarily decrease P./M. Atk. -->
+		<icon initial="icon.skill1333"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="8000"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16337" name="Magical Blast" max-level="3" action="A1" type="MAGIC">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="500"/>
+			<reuse initial="8000"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="25"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="16338" name="Stiff Charge" max-level="2" action="A2" type="MAGIC">
+	<!-- Petrified. -->
+		<icon initial="icon.skill4111"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="15"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="16340" name="Reaper's Seal" max-level="1" debuff="true" action="A2">
+	<!-- Branded with a seal and targeted by the Undead of Dragon Valley. -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="42"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="16341" name="Spell of Light" max-level="1" >
+	<!-- Cursed to momentarily decrease M. Def. -->
+		<icon initial="icon.skill1333"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16342" name="Lift Target" max-level="1" action="A1">
+	<!-- Inflicts damage while removing target. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="40"/>
+			<reuse initial="5000"/>
+			<cool-time initial="1000"/>
+			<effect-point initial="-150"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-150000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="25"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="16343" name="Fire Breath" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="40"/>
+			<reuse initial="3000"/>
+			<cool-time initial="1000"/>
+			<effect-point initial="-150"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-150000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="25"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="16344" name="Death's Bolt" max-level="1" action="A1" type="MAGIC">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="600"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="25"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="16345" name="Fire Spike" max-level="2" debuff="true" action="A2">
+	<!-- HP has been momentarily decreased due to Bleed. -->
+		<icon initial="icon.skill0096"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="-1"/>
+			<reuse initial="2000"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="25"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="16346" name="Deadly Fear" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="40"/>
+			<reuse initial="5000"/>
+			<cool-time initial="800"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="5"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="16347" name="Breeze Shell" max-level="3" debuff="true" action="A2" type="MAGIC">
+	<!-- Momentarily decreases Atk. Spd., Casting Spd., and Movement Speed. -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="600"/>
+			<reuse initial="8000"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="5"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="16348" name="Breeze Point" max-level="3" action="A1" type="MAGIC">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="600"/>
+			<reuse initial="8000"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="5"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="16349" name="Blot Pierce" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="40"/>
+			<reuse initial="5000"/>
+			<cool-time initial="800"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="5"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="16350" name="Blot Hail" max-level="3" action="A1" type="MAGIC">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="500"/>
+			<reuse initial="8000"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="16352" name="Kain's Sonic Storm" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0007"/>
+		<attributes >
+			<cast-range initial="500"/>
+			<reuse initial="10000"/>
+			<cool-time initial="300"/>
+			<effect-point initial="-709"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-709000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="50"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="16353" name="Kain's Triple Sonic Slash" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0261"/>
+		<attributes >
+			<cast-range initial="40"/>
+			<reuse initial="10000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="-213"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-213000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="25"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="16354" name="Sacred Assault" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="40"/>
+			<reuse initial="5000"/>
+			<cool-time initial="800"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="5"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="16356" name="Sacred Sphere" max-level="1" action="A1" type="MAGIC">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="900"/>
+			<cool-time initial="500"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="30"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="16357" name="Dimensional Barrier" max-level="2" >
+	<!-- Monster's P./M. Atk. and P./M. Def. increase. -->
+		<icon initial="icon.skill0335"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16358" name="Dimensional Armor" max-level="3" >
+	<!-- 
+		level 1: Half-kill Resistance + 40%, and Received P. Critical Damage + 10%.
+		level 2: Half-kill Resistance + 80%, and Received P. Critical Damage + 20%.
+		level 3: Invincible against Half-kill, and Received P. Critical Damage + 30%.
+	 -->
+		<icon initial="icon.skill0329"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16359" name="Dimensional Warp Hold" max-level="1" >
+	<!-- Resistance to Hold. -->
+		<icon initial="icon.skill0387"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16360" name="Dimensional Warp Paralysis" max-level="1" >
+	<!-- Resistance to Paralysis. -->
+		<icon initial="icon.skill19005"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16361" name="Dimensional Warp Stun" max-level="1" >
+	<!-- Resistance to Stun. -->
+		<icon initial="icon.skill19004"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16362" name="Dimensional Warp Knock Back / Knock Down" max-level="1" >
+	<!-- Resistance to Knock Back / Knock Down. -->
+		<icon initial="icon.skill_tough_spirit"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16363" name="Dimensioal Warp Aerial Yoke" max-level="1" >
+	<!-- Resistance to Aerial Yoke. -->
+		<icon initial="icon.skill_heavy_heart"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16364" name="Dimensional Warp Pull" max-level="1" >
+	<!-- Resistance to Pull. -->
+		<icon initial="icon.skill0388"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16365" name="Dimensional Defense Decrease" max-level="1" debuff="true" action="A2">
+	<!-- P. Def. - 30%%. -->
+		<icon initial="icon.skill0122"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="600"/>
+			<reuse initial="3000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16366" name="Dimensional Resistance Decrease" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<!-- M. Def. - 30%%. -->
+		<icon initial="icon.skill1263"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="600"/>
+			<reuse initial="3000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16367" name="Dimensional Speed Decrease" max-level="1" debuff="true" action="A2">
+	<!-- Decreases Movement Speed by 50. -->
+		<icon initial="icon.skill1160"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="600"/>
+			<reuse initial="3000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16368" name="Dimensional Strike" max-level="1" action="A1">
+	<!-- Attacks target with 150%% of P. Atk. power. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="40"/>
+			<reuse initial="3000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16369" name="Dimensional Crush" max-level="1" action="A1">
+	<!-- Attacks target with 200%% of P. Atk. power. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="40"/>
+			<reuse initial="3000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16370" name="Dimensional Slasher" max-level="1" action="A1">
+	<!-- Attacks target with 250%% of P. Atk. power. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="40"/>
+			<reuse initial="3000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16371" name="Dimensional Storm" max-level="1" action="A1">
+	<!-- Attacks nearby enemies with 200%% of P. Atk. power. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="40"/>
+			<reuse initial="3000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16372" name="Dimensional Spike" max-level="1" action="A1" type="MAGIC">
+	<!-- Attacks target with 200 Power added to M. Atk. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="600"/>
+			<reuse initial="1000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16373" name="Dimensional Crash" max-level="1" action="A1" type="MAGIC">
+	<!-- Attacks target with 250 Power added to M. Atk. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="600"/>
+			<reuse initial="1000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16374" name="Dimensional Destruction" max-level="1" action="A1" type="MAGIC">
+	<!-- Attacks target with 300 Power added to M. Atk. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="600"/>
+			<reuse initial="1000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16376" name="Dimensional Bind" max-level="1" action="A2">
+	<!-- Attacks target with 100%% of P. Atk. power and inflicts Hold for 5 sec. -->
+		<icon initial="icon.skill4047"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="40"/>
+			<reuse initial="3000"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16378" name="Dimensional Eruption" max-level="1" action="A2">
+	<!-- Attacks nearby enemies with 100%% of P. Atk. power and inflicts Stun for 5 sec. -->
+		<icon initial="icon.skill10265"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="-1"/>
+			<reuse initial="3000"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16379" name="Dimensional Remedy" max-level="1" action="A1">
+	<!-- Recover 40%% of Max HP. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="3000"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16381" name="Dimensional Shield" max-level="1" action="A2">
+	<!-- Allied monsters nearby have P./M. Def. + 100%%. -->
+		<icon initial="icon.skill1503"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="-1"/>
+			<reuse initial="3000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16382" name="Dimensional Death Ring" max-level="1" action="A1" type="MAGIC">
+	<!-- Attacks target's nearby enemies with 250 Power added to M. Atk. Damage increases as number of enemies affected increases. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="600"/>
+			<reuse initial="3000"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16383" name="Dimensional Silence" max-level="1" action="A2" type="MAGIC">
+	<!-- Attacks target's nearby enemies with bonus 250 M. Atk. Power. and block their P./M. Skills for 5 seconds. -->
+		<icon initial="icon.skill1064"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="600"/>
+			<reuse initial="3000"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16384" name="Dimensional Bleed" max-level="1" debuff="true" action="A2">
+	<!-- Inflict Bleed on target's nearby enemies and cause them to lose 1,000 HP/second. -->
+		<icon initial="icon.skill0223"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="40"/>
+			<reuse initial="3000"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16385" name="Dimesional Devil" max-level="1" action="A1">
+	<!-- Attacks target's nearby enemies with 300%% of P. Atk. power. Damage decreases as number of enemies affected increases. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="40"/>
+			<reuse initial="3000"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16388" name="Kain's Wrath" max-level="1" debuff="true" action="A2">
+	<!-- Consumed by vengeful fury toward all who harm Giselle. -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="-1"/>
+			<reuse initial="5000"/>
+			<cool-time initial="1000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="10"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="16389" name="Absorb Wind" max-level="1" action="A1" type="MAGIC">
+	<!-- PC's CP/HP/MP all drop to 1. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="600"/>
+			<reuse initial="2000"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="ENEMY" />
+		<effects>
+			<vital-modify hp="1" cp="1" mp="1"/>
+		</effects>
+	</skill>
+	<skill id="16390" name="Wynn Summoner's Power" max-level="1" action="A1" type="MAGIC">
+	<!-- Wynn Summoner's power is infused into Atelia. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="600"/>
+			<reuse initial="2000"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="ENEMY" />
+	</skill>
+	<skill id="16391" name="Feoh Wizard's Power" max-level="1" action="A1" type="MAGIC">
+	<!-- Feoh Wizard's power is infused into Atelia. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="600"/>
+			<reuse initial="2000"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="ENEMY" />
+	</skill>
+	<skill id="16392" name="Tyrr Warrior's Power" max-level="1" action="A1" type="MAGIC">
+	<!-- Tyrr Warrior's power is infused into Atelia. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="600"/>
+			<reuse initial="2000"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="ENEMY" />
+	</skill>
+	<skill id="16393" name="Othell Rogue's Power" max-level="1" action="A1" type="MAGIC">
+	<!-- Othell Rogue's power is infused into Atelia. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="600"/>
+			<reuse initial="2000"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="ENEMY" />
+	</skill>
+	<skill id="16394" name="Iss Enchanter's Power" max-level="1" action="A1" type="MAGIC">
+	<!-- Iss Enchanter's power is infused into Atelia. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="600"/>
+			<reuse initial="2000"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="ENEMY" />
+	</skill>
+	<skill id="16395" name="Yul Archer's Power" max-level="1" action="A1" type="MAGIC">
+	<!-- Yul Archer's power is infused into Atelia. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="600"/>
+			<reuse initial="2000"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="ENEMY" />
+	</skill>
+	<skill id="16396" name="Sigel Knight's Power" max-level="1" action="A1" type="MAGIC">
+	<!-- Sigel Knight's power is infused into Atelia. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="600"/>
+			<reuse initial="2000"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="ENEMY" />
+	</skill>
+	<skill id="16397" name="Aeore Healer's Power" max-level="1" action="A1" type="MAGIC">
+	<!-- Aeore Healer's power is infused into Atelia. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="600"/>
+			<reuse initial="2000"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="ENEMY" />
+	</skill>
+	<skill id="16398" name="Atelia Energy" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<!-- Counterfeit Atelia fragment is lodged in the body. -->
+		<icon initial="icon.skill4035"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="600"/>
+			<reuse initial="2000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="-150"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-150000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16399" name="Ferin's Cure" max-level="1" action="A1" type="MAGIC">
+	<!-- Heals the target with 1488 power. If HP is full, CP is restored with the remaining power. -->
+		<icon initial="icon.skill11756"/>
+		<attributes >
+			<cast-range initial="600"/>
+			<reuse initial="2000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="867"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="867000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
 </list>

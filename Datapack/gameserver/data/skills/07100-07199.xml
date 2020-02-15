@@ -1,320 +1,372 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
-    <skill id="7100" toLevel="1" name="Clan-exclusive Pet Stun">
-        <!-- Stuns for 3 sec. -->
-        <icon>icon.skill5168</icon>
-        <operateType>A2</operateType>
-        <mpConsume>5</mpConsume>
-        <castRange>900</castRange>
-        <hitTime>1000</hitTime>
-        <effectPoint>-700</effectPoint>
-        <abnormalType>STUN</abnormalType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>3</abnormalTime>
-        <trait>SHOCK</trait>
-        <abnormalVisualEffect>STUN</abnormalVisualEffect>
-        <isDebuff>true</isDebuff>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="BlockActions">
-                <allowedSkills>35016</allowedSkills>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7101" toLevel="1" name="Clan-exclusive Pet Aerial Thrust">
-        <!-- Lifts and holds the target in the air for 3 sec. -->
-        <icon>icon.skill11276</icon>
-        <operateType>A2</operateType>
-        <mpConsume>5</mpConsume>
-        <castRange>900</castRange>
-        <hitTime>1500</hitTime>
-        <isMagic>1</isMagic>
-        <effectPoint>-700</effectPoint>
-        <abnormalType>AIRBIND</abnormalType>
-        <abnormalResists>STUN;TURN_FLEE</abnormalResists>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>3</abnormalTime>
-        <trait>AIRBIND</trait>
-        <abnormalVisualEffect>AIRBIND</abnormalVisualEffect>
-        <isDebuff>true</isDebuff>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="BlockActions">
-                <allowedSkills>35016</allowedSkills>
-            </effect>
-            <effect name="DefenceTrait">
-                <HOLD>100</HOLD>
-                <SLEEP>100</SLEEP>
-                <DERANGEMENT>100</DERANGEMENT>
-                <CHANGEBODY>100</CHANGEBODY>
-                <SHOCK>100</SHOCK>
-                <AIRBIND>100</AIRBIND>
-                <KNOCKBACK>100</KNOCKBACK>
-                <KNOCKDOWN>100</KNOCKDOWN>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7102" toLevel="1" name="Summon Clan Pet">
-        <operateType>A1</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <magicLvl>1</magicLvl>
-        <isMagic>2</isMagic>
-        <hitTime>5000</hitTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="CanSummonPet"/>
-            <condition name="OpPledge">
-                <level>5</level>
-            </condition>
-        </conditions>
-        <effects>
-            <effect name="SummonPet"/>
-        </effects>
-    </skill>
-    <skill id="7103" toLevel="1" name="Helping Tree CP Recovery Range">
-        <operateType>A1</operateType>
-        <hitTime>300</hitTime>
-        <effectPoint>635</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>85</magicLvl>
-        <affectRange>1000</affectRange>
-        <affectLimit>5-12</affectLimit>
-        <isMagic>1</isMagic>
-        <targetType>SELF</targetType>
-        <affectScope>RANGE</affectScope>
-        <affectObject>FRIEND</affectObject>
-    </skill>
-    <skill id="7104" toLevel="1" name="Pa'agrio's Hand">
-        <!-- Raise the temperature of the Draco Egg through Pa'agrio's Hand. It raises the temperature by 1 - 10 degrees on a Small Draco Egg and 0.1 - 1.0 degrees on a Large Draco Egg. The Spirit of Flame Agathion must be summoned for it to be used. -->
-        <icon>icon.skill11775</icon>
-        <operateType>A1</operateType>
-        <castRange>100</castRange>
-        <hitTime>1000</hitTime>
-        <coolTime>500</coolTime>
-        <effectPoint>-1</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <effectRange>400</effectRange>
-        <magicLvl>1</magicLvl>
-        <isMagic>2</isMagic>
-        <reuseDelay>2000</reuseDelay>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="7105" toLevel="1" name="Attempt Incubation">
-        <!-- Attempt Incubation -->
-        <operateType>A1</operateType>
-        <castRange>100</castRange>
-        <effectPoint>-1</effectPoint>
-        <abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT
-        </abnormalResists>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <effectRange>700</effectRange>
-        <magicLvl>1</magicLvl>
-        <reuseDelay>2000</reuseDelay>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpTargetNpc">
-                <npcIds>
-                    <item>19257</item>
-                    <item>19258</item>
-                    <item>19449</item>
-                    <item>19450</item>
-                </npcIds>
-            </condition>
-        </conditions>
-    </skill>
-    <skill id="7106" toLevel="1" name="Optimal Temperature Incubation Success">
-        <!-- Optimal Temperature Incubation Success -->
-        <operateType>A1</operateType>
-        <coolTime>800</coolTime>
-        <effectPoint>-1</effectPoint>
-        <abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT
-        </abnormalResists>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <magicLvl>1</magicLvl>
-        <reuseDelay>2000</reuseDelay>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpTargetNpc">
-                <npcIds>
-                    <item>19257</item>
-                    <item>19258</item>
-                    <item>19449</item>
-                    <item>19450</item>
-                </npcIds>
-            </condition>
-        </conditions>
-    </skill>
-    <skill id="7107" toLevel="1" name="Incubation Success">
-        <!-- Incubation Success -->
-        <operateType>A1</operateType>
-        <coolTime>800</coolTime>
-        <effectPoint>-1</effectPoint>
-        <abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT
-        </abnormalResists>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <magicLvl>1</magicLvl>
-        <reuseDelay>2000</reuseDelay>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpTargetNpc">
-                <npcIds>
-                    <item>19257</item>
-                    <item>19258</item>
-                    <item>19449</item>
-                    <item>19450</item>
-                </npcIds>
-            </condition>
-        </conditions>
-    </skill>
-    <skill id="7108" toLevel="1" name="Incubation Failure">
-        <!-- Incubation Failure -->
-        <operateType>A1</operateType>
-        <coolTime>800</coolTime>
-        <effectPoint>-1</effectPoint>
-        <abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT
-        </abnormalResists>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <magicLvl>1</magicLvl>
-        <reuseDelay>2000</reuseDelay>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpTargetNpc">
-                <npcIds>
-                    <item>19257</item>
-                    <item>19258</item>
-                    <item>19449</item>
-                    <item>19450</item>
-                </npcIds>
-            </condition>
-        </conditions>
-    </skill>
-    <skill id="7113" toLevel="1" name="Pet Invincibility Effect">
-        <!-- Invincibility Effect -->
-        <icon>icon.skill0442</icon>
-        <operateType>A2</operateType>
-        <mpConsume>78</mpConsume>
-        <hitTime>500</hitTime>
-        <effectPoint>-100</effectPoint>
-        <abnormalType>INVINCIBILITY</abnormalType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <magicLvl>85</magicLvl>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>5</abnormalTime>
-        <abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
-        <isMagic>1</isMagic>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="DamageBlock">
-                <type>BLOCK_HP</type>
-            </effect>
-            <effect name="DamageBlock">
-                <type>BLOCK_MP</type>
-            </effect>
-            <effect name="DebuffBlock"/>
-        </effects>
-    </skill>
-    <skill id="7115" toLevel="1" name="Energy of Chaos">
-        <!-- Character's hair and cloak have been changed due to participation in the Ceremony of Chaos. -->
-        <icon>icon.skill0810</icon>
-        <abnormalTime>600</abnormalTime>
-        <abnormalVisualEffect>CURIOUS_HOUSE</abnormalVisualEffect>
-        <canBeDispelled>false</canBeDispelled>
-        <operateType>A2</operateType>
-        <effectPoint>1</effectPoint>
-        <abnormalType>CURIOUS_HOUSE</abnormalType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <specialLevel>-2</specialLevel>
-        <magicLvl>85</magicLvl>
-        <abnormalLvl>1</abnormalLvl>
-        <isMagic>2</isMagic>
-        <hitTime>500</hitTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="7122" toLevel="1" name="Raid Boss (Lv. 75)">
-        <!-- Enchanted by Shilen, enshrouded in darkness, Queen Ant's minion is guarding the lands near the Ant Nest. -->
-        <icon>icon.skillraid</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="7123" toLevel="1" name="Raid Boss (Lv. 75)">
-        <!-- Enchanted by Shilen, enshrouded in darkness, Giran is guarding the lands and praying about resurrection. -->
-        <icon>icon.skillraid</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="7124" toLevel="1" name="Raid Boss (Lv. 75)">
-        <!-- Enchanted by Shilen, enshrouded in darkness, minion of Core is guarding the lands around Cruma Tower. -->
-        <icon>icon.skillraid</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="7125" toLevel="1" name="Raid Boss (Lv. 75)">
-        <!-- Enchanted by Shilen, enshrouded in darkness, minion of Orfen is guarding the Plains of the Lizardmen. -->
-        <icon>icon.skillraid</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="7126" toLevel="1" name="Master's Blessing - Holy Weapon">
-        <!-- The GM is always by your side. All party members' Holy Attack damage +20 for 1 h. -->
-        <icon>icon.skill1043</icon>
-        <operateType>A1</operateType>
-        <castRange>900</castRange>
-        <hitTime>500</hitTime>
-        <reuseDelay>1000</reuseDelay>
-        <effectPoint>243</effectPoint>
-    </skill>
-    <skill id="7127" toLevel="1" name="Master's Blessing - Stun Resistance">
-        <!-- The GM is always by your side. Stun Resistance +40% for 1 h. -->
-        <icon>icon.skill1259</icon>
-        <operateType>A1</operateType>
-        <castRange>900</castRange>
-        <hitTime>500</hitTime>
-        <reuseDelay>1000</reuseDelay>
-        <effectPoint>646</effectPoint>
-    </skill>
-    <skill id="7129" toLevel="4" name="Triple Sonic Slash">
-        <operateType>A1</operateType>
-        <castRange>40</castRange>
-        <hitTime>1800</hitTime>
-        <reuseDelay>30000</reuseDelay>
-        <effectPoint>-100</effectPoint>
-        <mpConsume>
-            <value level="1">159</value>
-            <value level="2">165</value>
-            <value level="3">168</value>
-            <value level="4">170</value>
-        </mpConsume>
-    </skill>
-    <skill id="7130" toLevel="4" name="Sonic Blaster">
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <hitTime>1900</hitTime>
-        <reuseDelay>15000</reuseDelay>
-        <effectPoint>-100</effectPoint>
-        <mpConsume>
-            <value level="1">80</value>
-            <value level="2">83</value>
-            <value level="3">84</value>
-            <value level="4">85</value>
-        </mpConsume>
-    </skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
+	<skill id="7100" name="Clan-exclusive Pet Stun" max-level="1" action="A2">
+	<!-- Stuns the target for 3 seconds. -->
+		<icon initial="icon.skill5168"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" >
+			<magic-level initial="85"/>
+			<cast-range initial="900"/>
+			<effect-point initial="-700"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="-700000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="5"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="STUN" visual="STUN" >
+			<level initial="1"/>
+			<time initial="3"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<block-all-actions>
+				<allowed-skills>35016</allowed-skills>
+			</block-all-actions>
+		</effects>
+	</skill>
+	<skill id="7101" name="Clan-exclusive Pet Aerial Thrust" max-level="1" action="A2" type="MAGIC">
+	<!-- Lifts and holds the target in the air for 3 seconds. -->
+		<icon initial="icon.skill11276"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="AIRBIND" >
+			<magic-level initial="85"/>
+			<cast-range initial="900"/>
+			<effect-point initial="-700"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="-700000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="5"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="AIRBIND" visual="AIRBIND" >
+			<level initial="1"/>
+			<time initial="3"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<resist-abnormals>STUN TURN_FLEE</resist-abnormals>
+		<effects>
+			<block-all-actions>
+				<allowed-skills>35016</allowed-skills>
+			</block-all-actions>
+			<defence-trait>
+				<trait type="SHOCK">
+					<power initial="1.0"/>
+				</trait>
+				<trait type="HOLD">
+					<power initial="1.0"/>
+				</trait>
+				<trait type="KNOCKDOWN">
+					<power initial="1.0"/>
+				</trait>
+				<trait type="CHANGEBODY">
+					<power initial="1.0"/>
+				</trait>
+				<trait type="SLEEP">
+					<power initial="1.0"/>
+				</trait>
+				<trait type="DERANGEMENT">
+					<power initial="1.0"/>
+				</trait>
+				<trait type="AIRBIND">
+					<power initial="1.0"/>
+				</trait>
+				<trait type="KNOCKBACK">
+					<power initial="1.0"/>
+				</trait>
+			</defence-trait>
+		</effects>
+	</skill>
+	<skill id="7102" name="Summon Clan Pet" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<conditions>
+			<condition name="CanSummonPet"/>
+			<clan level="5"/>
+		</conditions>
+		<effects>
+			<effect name="SummonPet"/>
+		</effects>
+	</skill>
+	<skill id="7103" name="Helping Tree CP Recovery Range" max-level="1" action="A1" type="MAGIC">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="-1"/>
+			<effect-point initial="635"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="635000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target scope="RANGE" object="FRIEND" range="1000" affect-min="5" affect-random="12" />
+	</skill>
+	<skill id="7104" name="Pa'agrio's Hand" max-level="1" action="A1">
+	<!-- Raise the temperature of the Draco Egg through Pa'agrio's Hand. It raises the temperature by 1 - 10 degrees on a Small Draco Egg and 0.1 - 1.0 degrees on a Large Draco Egg. The Fire Spirit Agathion must be summoned for it to be used. -->
+		<icon initial="icon.skill11775"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="100"/>
+			<reuse initial="2000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="-1"/>
+			<effect-range initial="400"/>
+			<hit-time initial="-1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="7105" name="Incubation Possible" max-level="1" action="A1">
+	<!-- Incubation Possible -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="100"/>
+			<reuse initial="2000"/>
+			<effect-point initial="-1"/>
+			<effect-range initial="700"/>
+			<hit-time initial="-1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
+		<conditions>
+			<target>				<npc>
+					<ids>19257 19258 19449 19450</ids>
+				</npc>
+			</target>
+		</conditions>
+	</skill>
+	<skill id="7106" name="Optimal Temperature Incubation Success" max-level="1" action="A1">
+	<!-- Optimal Temperature Incubation Success -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<reuse initial="2000"/>
+			<cool-time initial="800"/>
+			<effect-point initial="-1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
+		<conditions>
+			<target>				<npc>
+					<ids>19257 19258 19449 19450</ids>
+				</npc>
+			</target>
+		</conditions>
+	</skill>
+	<skill id="7107" name="Incubation Success" max-level="1" action="A1">
+	<!-- Incubation Success -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<reuse initial="2000"/>
+			<cool-time initial="800"/>
+			<effect-point initial="-1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
+		<conditions>
+			<target>				<npc>
+					<ids>19257 19258 19449 19450</ids>
+				</npc>
+			</target>
+		</conditions>
+	</skill>
+	<skill id="7108" name="Incubation Failure" max-level="1" action="A1">
+	<!-- Incubation Failure -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<reuse initial="2000"/>
+			<cool-time initial="800"/>
+			<effect-point initial="-1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
+		<conditions>
+			<target>				<npc>
+					<ids>19257 19258 19449 19450</ids>
+				</npc>
+			</target>
+		</conditions>
+	</skill>
+	<skill id="7113" name="Pet Invincibility Effect" max-level="1" action="A2" type="MAGIC">
+	<!-- Invincibility Effect -->
+		<icon initial="icon.skill0442"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="-1"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="78"/>
+		</consume>
+		<target />
+		<abnormal type="INVINCIBILITY" visual="INVINCIBILITY" >
+			<level initial="1"/>
+			<time initial="5"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<damage-block block-hp="true" block-mp="false"/>
+			<effect name="DebuffBlock"/>
+		</effects>
+	</skill>
+	<skill id="7115" name="Energy of Chaos" max-level="1" action="A2">
+	<!-- Character's hair and cloak have been changed due to participation in the Ceremony of Chaos. -->
+		<icon initial="icon.skill0810"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" dispellable="false" >
+			<magic-level initial="85"/>
+			<cast-range initial="-1"/>
+			<effect-point initial="1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<abnormal type="CURIOUS_HOUSE" visual="CURIOUS_HOUSE" >
+			<level initial="1"/>
+			<time initial="600"/>
+			<chance initial="-1"/>
+		</abnormal>
+	</skill>
+	<skill id="7122" name="Lv. 75 Raid Boss" max-level="1" >
+	<!-- Enchanted by Shilen, enshrouded in darkness, Queen Ant's minion is guarding the lands near the Ant Nest. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="7123" name="Lv. 75 Raid Boss" max-level="1" >
+	<!-- Enchanted by Shilen, enshrouded in darkness, Giran is guarding the lands and praying about resurrection. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="7124" name="Lv. 75 Raid Boss" max-level="1" >
+	<!-- Enchanted by Shilen, enshrouded in darkness, minion of Core is guarding the lands around Cruma Tower. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="7125" name="Lv. 75 Raid Boss" max-level="1" >
+	<!-- Enchanted by Shilen, enshrouded in darkness, minion of Orfen is guarding the Plains of the Lizardmen. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="7126" name="Master's Blessing - Holy Weapon" max-level="3" action="A1">
+	<!-- 
+		level 1: The GM is always by your side. Increases all party members' Holy Attack damage by 20 for 1 hour.
+		level 2: The GM is always by your side. Increases all party members' Holy Attack damage by 20 for 4 hours.
+		level 3: The GM is always by your side. Increases all party members' Holy Attack damage by 20 for 8 hours.
+	 -->
+		<icon initial="icon.skill1043"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="243"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="243000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="7127" name="Master's Blessing - Stun Resistance" max-level="3" action="A1">
+	<!-- 
+		level 1: The GM is always by your side. Stun Resistance +40%% for 1 hour.
+		level 2: The GM is always by your side. Stun Resistance +40%% for 4 hours.
+		level 3: The GM is always by your side. Stun Resistance +40%% for 8 hours.
+	 -->
+		<icon initial="icon.skill1259"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="646"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="646000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="7129" name="Triple Sonic Slash" max-level="4" action="A1">
+	<!-- The GM is always by your side. Stun Resistance +40%% for $s1. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="40"/>
+			<reuse initial="30000"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="159">
+				<value level="2">165</value>
+				<value level="3">168</value>
+				<value level="4">170</value>
+			</mana>
+		</consume>
+		<target />
+	</skill>
+	<skill id="7130" name="Sonic Blaster" max-level="4" action="A1">
+	<!-- The GM is always by your side. Stun Resistance +40%% for $s1. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="600"/>
+			<reuse initial="15000"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="80">
+				<value level="2">83</value>
+				<value level="3">84</value>
+				<value level="4">85</value>
+			</mana>
+		</consume>
+		<target />
+	</skill>
 </list>

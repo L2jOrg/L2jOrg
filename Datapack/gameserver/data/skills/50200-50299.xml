@@ -1,378 +1,1325 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
-	<skill id="50200" toLevel="10" name="Onyx">
-		<!-- Damage from Beast Soulshot +$s1. -->
-		<icon>icon.etc_bm_jewel_onyx_i00</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="50201" toLevel="10" name="Onyx">
-		<!-- Spiritshot Damage +$s1. -->
-		<icon>icon.etc_bm_jewel_onyx_i00</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="50202" toLevel="10" name="Onyx">
-		<!-- Blessed Spiritshot Damage +$s1. -->
-		<icon>icon.etc_bm_jewel_onyx_i00</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="50203" toLevel="10" name="Onyx">
-		<!-- Beast Spiritshot Damage +$s1. -->
-		<icon>icon.etc_bm_jewel_onyx_i00</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="50204" toLevel="10" name="Onyx">
-		<!-- Damage from Soulshot, Spiritshot, Blessed Soulshot, Blessed Spiritshot, Beast Soulshot and Beast Spiritshot +$s1. -->
-		<icon>icon.etc_bm_jewel_onyx_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50205" toLevel="10" name="Spinel - Steal Mana">
-		<icon>icon.etc_bm_jewel_garnet_i00</icon>
-		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
-	</skill>
-	<skill id="50206" toLevel="10" name="Spinel">
-		<!-- P. Def. +$s1, M. Def. +$s2, CON +$s3. With a certain chance, recovers $s4 MP when using skills. -->
-		<icon>icon.etc_bm_jewel_garnet_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50207" toLevel="10" name="Zircon">
-		<!-- P./ M. Critical Damage +$s1. -->
-		<icon>icon.etc_bm_jewel_bloodstone_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50208" toLevel="10" name="Moonstone">
-		<!-- When Sayha's Grace is active Acquired XP/ SP (hunting) +$s1. -->
-		<icon>icon.etc_bm_jewel_moonstone_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50209" toLevel="1" name="Dark Crystal Helmet - Heavy Armor">
-		<!-- A-grade equipment effect\n\nCON +1\nWeight Limit +1500\nM. Def. +10\nP. Atk. +4%\nHP Recovery Rate +5.5%\nMax HP +100 -->
-		<icon>icon.armor_helmet_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50210" toLevel="1" name="Dark Crystal Helmet - Robe">
-		<!-- Effects of wearing A-grade equipment MEN +1 Weight Limit +1500 M. Def. +10 M. Atk. +8% MP Recovery Bonus +5.5% P. Def. +8% -->
-		<icon>icon.armor_helmet_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50211" toLevel="1" name="Dark Crystal Helmet - Light Armor">
-		<!-- A-grade equipment effect\n\nCON +1\nWeight Limit +1500\nM. Def. +10\n P. Atk. +4%\nHP Recovery Bonus +5.5%\nP. Critical Damage +30. -->
-		<icon>icon.armor_helmet_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50212" toLevel="1" name="Majestic Circlet - Heavy Armor">
-		<!-- A-grade equipment effect\n\nCON +1\nWeight Limit +1500\nM. Def. +10\nP. Atk. +4%\nHP Recovery Rate +8% -->
-		<icon>icon.armor_leather_helmet_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50213" toLevel="1" name="Majestic Circlet - Robe">
-		<!-- Effects of wearing A-grade equipment  MEN +1 Weight Limit +1500 M. Def. +10  M. Atk. +8% MP Recovery Bonus +8% Max MP +300 -->
-		<icon>icon.armor_leather_helmet_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50214" toLevel="1" name="Majestic Circlet - Light Armor">
-		<!-- A-grade equipment effect\n\nCON +1\nWeight Limit +1500\nM. Def. +10\nMax P. Atk. +4%\nMP Recovery Bonus +5.5%\nP. Atk. +8% when using a bow. -->
-		<icon>icon.armor_leather_helmet_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50215" toLevel="1" name="Helm of Nightmare - Heavy Armor">
-		<!-- A-grade equipment effect\n\nCON +1\nWeight Limit +1500\nM. Def. +10\nP. Atk. +4%\nHP Recovery Rate +8%\nReceived Damage -5% -->
-		<icon>icon.armor_leather_helmet_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50216" toLevel="1" name="Helm of Nightmare - Robe">
-		<!-- Effects of wearing A-grade equipment\n\nMEN +1\nWeight Limit +1500\nM. Def. +10\nM. Atk. +8%%\nMP Recovery Bonus +8%%\nM. Critical Damage +30. -->
-		<icon>icon.armor_leather_helmet_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50217" toLevel="1" name="Helm of Nightmare - Light Armor">
-		<!-- A-grade equipment effect\n\nCON +1\nWeight Limit +1500\nM. Def. +10\nP. Atk. +4%\nMP Recovery Rate +8% -->
-		<icon>icon.armor_leather_helmet_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50218" toLevel="1" name="Tallum Helmet - Heavy Armor">
-		<!-- A-grade equipment effect\n\nCON +1\nWeight Limit +1500\nM. Def. +10\nP. Atk. +4%\nHP Recovery Rate +5.5%\nMax MP +50 -->
-		<icon>icon.armor_helmet_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50219" toLevel="1" name="Tallum Helmet - Robe">
-		<!-- Effects of wearing A-grade equipment\n\nMEN +1\nWeight Limit +1500\nM. Def. +10\nM. Atk. +8%%\nMP Recovery Bonus +5.5%%\nM. Def. +8%. -->
-		<icon>icon.armor_helmet_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50220" toLevel="1" name="Tallum Helmet - Light Armor">
-		<!-- Effect of A-grade equipment\n\nMEN +1\nWeight Limit +1500\nP. Def. +10\nM. Atk. +8%\nMP Recovery Bonus +8%. -->
-		<icon>icon.armor_helmet_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50221" toLevel="1" name="Dark Crystal Breastplate - Heavy Armor">
-		<!-- A-grade equipment effect\n\nCON +1\nWeight Limit +1500\nM. Def. +15\nParalysis Resistance +50%. -->
-		<icon>icon.armor_t74_u_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50222" toLevel="1" name="Dark Crystal Leather Armor - Light Armor">
-		<!-- A-grade equipment effect\n\nDEX +1\nWeight Limit +1500\nM. Def. +15\nParalysis Resistance +50%. -->
-		<icon>icon.armor_t75_u_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50223" toLevel="1" name="Tallum Tunic - Robe">
-		<!-- Effects of wearing A-grade equipment\n\nWIT +1\nWeight Limit +1500\nM. Def. +15\nMEN Attack Resistance +50%. -->
-		<icon>icon.armor_t79_u_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50224" toLevel="1" name="Dark Crystal Gaiters - Heavy Armor">
-		<!-- A-grade equipment effect\n\nCON +1\nWeight Limit +1000\nM. Def. +10\nMax HP +200 -->
-		<icon>icon.armor_t74_l_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50225" toLevel="1" name="Dark Crystal Leggings - Light Armor">
-		<!-- A-grade equipment effect\n\nDEX +1\nWeight Limit +1000\nM. Def. +10\nMax HP +150\nMax MP +80 -->
-		<icon>icon.armor_t75_l_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50226" toLevel="1" name="Tallum Stockings - Robe">
-		<!-- Effects of wearing A-grade equipment\n\nWIT +1\nWeight Limit +1000\nM. Def. +10\nMax HP +100\nMax MP +120 -->
-		<icon>icon.armor_t79_l_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50227" toLevel="1" name="Dark Crystal Robe - Robe">
-		<!--Effects of wearing A-grade equipment\n\nWIT +2\nWeight Limit +2500\nM. Def. +25\nMax HP +100\nMax MP +120\nParalysis Resistance +50% -->
-		<icon>icon.armor_t76_ul_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50228" toLevel="1" name="Majestic Plate Armor - Heavy Armor">
-		<!-- A-grade equipment effect\n\nCON +2\nWeight Limit +2500\nM. Def. +25\nMax HP +200\nStun Resistance +50% -->
-		<icon>icon.armor_t83_ul_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50229" toLevel="1" name="Majestic Robe - Robe">
-		<!-- Effects of wearing A-grade equipment\n\nWIT +2\nWeight Limit +2500\nM. Def. +25\nMax HP +100\nMax MP +120\nStun Resistance +50% -->
-		<icon>icon.armor_t85_ul_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50230" toLevel="1" name="Majestic Leather Armor - Light Armor">
-		<!-- A-grade equipment effect\n\nDEX +2\nWeight Limit +2500\nM. Def. +25\nMax HP +150\nMax MP +80\nParalysis Resistance +50% -->
-		<icon>icon.armor_t84_ul_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50231" toLevel="1" name="Armor of Nightmare Heavy Armor">
-		<!-- Effects of wearing A-grade equipment\n\nCON +2\nWeight Limit +2500\nM. Def. +25\nMax HP +200\nSleep Resistance +70%%\nHold Resistance +70%. -->
-		<icon>icon.armor_t80_ul_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50232" toLevel="1" name="Robe of Nightmare - Robe">
-		<!-- Effects of wearing A-grade equipment\n\nWIT +2\nWeight Limit +2500\nM. Def. +25\nMax HP +100\nMax MP +120\nSleep Resistance +70%%\nHold Resistance +70%. -->
-		<icon>icon.armor_t82_ul_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50233" toLevel="1" name="Leather Armor of Nightmare - Light Armor">
-		<!-- A-grade equipment effect\n\nDEX +2\nWeight Limit +2500\nM. Def. +25\nMax HP +150\nMax MP +80\nSleep Resistance +70%\nHold Resistance +70%. -->
-		<icon>icon.armor_t81_ul_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50234" toLevel="1" name="Tallum Plate Armor - Heavy Armor">
-		<!-- A-grade equipment effect\n\nCON +2\nWeight Limit +2500\nM. Def. +25\nMax HP +200\nMental Resistance +50%. -->
-		<icon>icon.armor_t77_ul_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50235" toLevel="1" name="Tallum Leather Armor - Light Armor">
-		<!-- A-grade equipment effect\n\nWIT +2\nWeight Limit +2500\nM. Def. +25\nMax HP +150\nMax MP +80\nMental Resistance +50%. -->
-		<icon>icon.armor_t78_ul_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50236" toLevel="1" name="Dark Crystal Gloves - Heavy Armor">
-		<!-- A-grade equipment effect\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +200\nAtk. Spd. +8%\nReceived Healing +2% -->
-		<icon>icon.armor_t74_g_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50237" toLevel="1" name="Dark Crystal Gloves - Robe">
-		<!-- Effects of wearing A-grade equipment\n\nINT +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nCasting Spd. +15%%\nMagic Cancel Rate -25. -->
-		<icon>icon.armor_t76_g_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50238" toLevel="1" name="Dark Crystal Gloves - Light Armor">
-		<!-- A-grade equipment effect\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nAtk. Spd. +8%\nP. Evasion +2. -->
-		<icon>icon.armor_t75_g_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50239" toLevel="1" name="Majestic Gauntlets - Heavy Armor">
-		<!-- A-grade equipment effect\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nAtk. Spd. +8%\nAtk. Spd. +50. -->
-		<icon>icon.armor_t83_g_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50240" toLevel="1" name="Majestic Gauntlets - Robe">
-		<!-- Effects of wearing A-grade equipment\n\nINT +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nCasting Spd. +15%%\nCasting Spd. +50. -->
-		<icon>icon.armor_t85_g_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50241" toLevel="1" name="Majestic Gauntlets - Light Armor">
-		<!-- A-grade equipment effect\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nAtk. Spd. +8%\nP. Skill Critical Damage +50. -->
-		<icon>icon.armor_t84_g_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50242" toLevel="1" name="Gauntlets of Nightmare - Heavy Armor">
-		<!-- A-grade equipment effect\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nP. Atk. +8%\nP. Atk. +50. -->
-		<icon>icon.armor_t80_g_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50243" toLevel="1" name="Gauntlets of Nightmare - Robe">
-		<!-- Effects of wearing A-grade equipment\n\nINT +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nCasting Spd. +15%%\nM. Atk. +50. -->
-		<icon>icon.armor_t82_g_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50244" toLevel="1" name="Gauntlets of Nightmare - Light Armor">
-		<!-- A-grade equipment effect\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nAtk. Spd. +8%\nRestores 2% of the damage inflicted by the enemy. -->
-		<icon>icon.armor_t81_g_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50245" toLevel="1" name="Tallum Gloves - Heavy Armor">
-		<!-- A-grade equipment effect\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nAtk. Spd. +8%\nP. Def. +10. -->
-		<icon>icon.armor_t77_g_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50246" toLevel="1" name="Tallum Gloves - Robe">
-		<!-- Effects of wearing A-grade equipment\n\nINT +1\nWeight Limit +1000\nM. Def. +20\nMax HP +50\nCasting Spd. +15% -->
-		<icon>icon.armor_t79_g_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50247" toLevel="1" name="Tallum Gloves - Light Armor">
-		<!-- A-grade equipment effect\n\nINT +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nMax MP +120\nCasting Spd. +15% -->
-		<icon>icon.armor_t78_g_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50248" toLevel="1" name="Dark Crystal Boots - Heavy Armor">
-		<!-- Effects of wearing A-grade equipment\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +200\nMovement Speed +4\nHeal Received +2% -->
-		<icon>icon.armor_t74_b_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50249" toLevel="1" name="Dark Crystal Boots - Robe">
-		<!--Effects of wearing A-grade equipment\n\nINT +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nMovement Speed +7\nMagic Cancel Rate -25. -->
-		<icon>icon.armor_t76_b_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50250" toLevel="1" name="Dark Crystal Boots - Light Armor">
-		<!-- Effects of wearing A-grade equipment\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nMovement Speed +4\nP. Evasion +2. -->
-		<icon>icon.armor_t75_b_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50251" toLevel="1" name="Majestic Boots - Heavy Armor">
-		<!-- A-grade equipment effect\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nSpeed +7\nAtk. Spd. +50. -->
-		<icon>icon.armor_t83_b_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50252" toLevel="1" name="Majestic Boots - Robe">
-		<!-- Effects of wearing A-grade equipment\n\nINT +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nMovement Speed +4\nCasting Spd. +50. -->
-		<icon>icon.armor_t85_b_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50253" toLevel="1" name="Majestic Boots - Light Armor">
-		<!-- A-grade equipment effect\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nSpeed +4\nP. Skill Critical Damage +50. -->
-		<icon>icon.armor_t84_b_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50254" toLevel="1" name="Boots of Nightmare - Heavy Armor">
-		<!-- A-grade equipment effect\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nSpeed +4\nP. Atk. +50. -->
-		<icon>icon.armor_t80_b_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50255" toLevel="1" name="Boots of Nightmare - Robe">
-		<!-- Effects of wearing A-grade equipment\n\nINT +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nMovement Speed +4\nM. Atk. +50. -->
-		<icon>icon.armor_t82_b_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50256" toLevel="1" name="Boots of Nightmare - Light Armor">
-		<!-- A-grade equipment effect\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nSpeed +4\nRestores 2% of the damage inflicted by the enemy. -->
-		<icon>icon.armor_t81_b_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50257" toLevel="1" name="Tallum Boots - Heavy Armor">
-		<!-- A-grade equipment effect\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nSpeed +4\nP. Def. +10. -->
-		<icon>icon.armor_t77_b_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50258" toLevel="1" name="Tallum Boots - Robe">
-		<!-- Effects of wearing A-grade equipment\n\nINT +1\nWeight Limit +1000\nM. Def. +20\nMax HP +50\nMovement Speed +4 -->
-		<icon>icon.armor_t79_b_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50259" toLevel="1" name="Tallum Boots - Light Armor">
-		<!-- A-grade equipment effect\n\nINT +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nMax MP +120\nSpeed +4 -->
-		<icon>icon.armor_t78_b_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50260" toLevel="10" name="Enchantment Effect: A-grade Top and Lower Body">
-		<!-- Enchantment effect of top and bottom parts of A-grade equipment\n\nHP Recovery Bonus +$s1\nMP Recovery Bonus +$s2.
-			5 - 5, 3
-			6 -	10, 6
-			7 - 11, 7
-			8 - 12, 8
-			9 - 13, 9
-			10 - 15, 10
-		-->
-		<icon>icon.armor_t89_ul_i02</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50261" toLevel="10" name="Enchantment Effect: A-grade Top">
-		<!-- Enchantment effect of A-grade top parts\n\nHP Recovery Bonus +$s1.
-		 	5 - 5
-		 	6 - 10
-		 	7 - 11
-		 	8 - 12
-		 	9 - 13
-		 	10 - 15
-		 -->
-		<icon>icon.armor_t601_u_i01</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50262" toLevel="10" name="Enchantment Effect: A-grade Lower Body">
-		<!-- Enchantment effect of A-grade bottom parts\n\nMP Recovery Bonus +$s1.
-		 	5 - 3
-		 	6 - 6
-		 	7 - 7
-		 	8 - 8
-		 	9 - 9
-		 	10 - 10
-		 -->
-		<icon>icon.armor_t601_l_i01</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50263" toLevel="10" name="Enchantment Effect: A-Grade Gloves (Physical)">
-		<!-- Enchantment effect of A-grade gloves\n\nP. Skill Power +$s1. -->
-		<icon>icon.armor_t601_g_i01</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50264" toLevel="10" name="Enchantment Effect: A-Grade Gloves (Magic)">
-		<!-- Enchantment effect of A-grade gloves\n\nM. Skill Power +$s1. -->
-		<icon>icon.armor_t601_g_i01</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50265" toLevel="10" name="Enchantment Effect: A-grade Shoes (Physical)">
-		<!-- Enchantment effect of A-grade boots\n\nP. Skill Cooldown -$s1.
-			5 - 1%
-			6 - 2%
-			7 - 3%
-			8 - 5%
-			9 - 7%
-			10 - 10%
-		-->
-		<icon>icon.armor_t601_b_i01</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50266" toLevel="10" name="Enchantment Effect: A-grade Shoes (Magic)">
-		<!-- Enchantment effect of A-grade boots\n\nM. Skill Cooldown -$s1.
-			5 - 1%
-			6 - 2%
-			7 - 3%
-			8 - 5%
-			9 - 7%
-			10 - 10%
-		-->
-		<icon>icon.armor_t601_b_i01</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="50267" toLevel="10" name="Enchantment Effect: A-Grade Helmet">
-		<!-- A-grade helmet enchantment effect\n\nMax HP +$s1. -->
-		<icon>icon.armor_helmet_i02</icon>
-		<operateType>P</operateType>
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
+	<skill id="50200" name="Onyx" max-level="10" action="A1">
+	<!-- 
+		level 1: Beast Soulshot Damage +2%.
+		level 2: Beast Soulshot Damage +3%.
+		level 3: Beast Soulshot Damage +5%.
+		level 4: Beast Soulshot Damage +8%.
+		level 5: Beast Soulshot Damage +16%.
+		level 6: Beast Soulshot Damage +17%.
+		level 7: Beast Soulshot Damage +18%.
+		level 8: Beast Soulshot Damage +19%.
+		level 9: Beast Soulshot Damage +20%.
+		level 10: Beast Soulshot Damage +21%.
+	 -->
+		<icon initial="icon.etc_bm_jewel_onyx_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50201" name="Onyx" max-level="10" action="A1">
+	<!-- 
+		level 1: Spiritshot damage +2%.
+		level 2: Spiritshot damage +3%.
+		level 3: Spiritshot damage +5%.
+		level 4: Spiritshot damage +8%.
+		level 5: Spiritshot damage +16%.
+		level 6: Spiritshot damage +17%.
+		level 7: Spiritshot damage +18%.
+		level 8: Spiritshot damage +19%.
+		level 9: Spiritshot damage +20%.
+		level 10: Spiritshot damage +21%.
+	 -->
+		<icon initial="icon.etc_bm_jewel_onyx_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50202" name="Onyx" max-level="10" action="A1">
+	<!-- 
+		level 1: Blessed Spiritshot damage +2%.
+		level 2: Blessed Spiritshot damage +3%.
+		level 3: Blessed Spiritshot damage +5%.
+		level 4: Blessed Spiritshot damage +8%.
+		level 5: Blessed Spiritshot damage +16%.
+		level 6: Blessed Spiritshot damage +17%.
+		level 7: Blessed Spiritshot damage +18%.
+		level 8: Blessed Spiritshot damage +19%.
+		level 9: Blessed Spiritshot damage +20%.
+		level 10: Blessed Spiritshot damage +21%.
+	 -->
+		<icon initial="icon.etc_bm_jewel_onyx_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50203" name="Onyx" max-level="10" action="A1">
+	<!-- 
+		level 1: Beast Spiritshot Damage +2%.
+		level 2: Beast Spiritshot Damage +3%.
+		level 3: Beast Spiritshot Damage +5%.
+		level 4: Beast Spiritshot Damage +8%.
+		level 5: Beast Spiritshot Damage +16%.
+		level 6: Beast Spiritshot Damage +17%.
+		level 7: Beast Spiritshot Damage +18%.
+		level 8: Beast Spiritshot Damage +19%.
+		level 9: Beast Spiritshot Damage +20%.
+		level 10: Beast Spiritshot Damage +21%.
+	 -->
+		<icon initial="icon.etc_bm_jewel_onyx_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50204" name="Onyx" max-level="10" >
+	<!-- 
+		level 1: 2% bonus damage to Soulshot, Spiritshot, Blessed Soulshot, Blessed Spiritshot, Beast Soulshot, and Beast Spiritshot.
+		level 2: 3% bonus damage to Soulshot, Spiritshot, Blessed Soulshot, Blessed Spiritshot, Beast Soulshot, and Beast Spiritshot.
+		level 3: 5% bonus damage to Soulshot, Spiritshot, Blessed Soulshot, Blessed Spiritshot, Beast Soulshot, and Beast Spiritshot.
+		level 4: 8% bonus damage to Soulshot, Spiritshot, Blessed Soulshot, Blessed Spiritshot, Beast Soulshot, and Beast Spiritshot.
+		level 5: 16% bonus damage to Soulshot, Spiritshot, Blessed Soulshot, Blessed Spiritshot, Beast Soulshot, and Beast Spiritshot.
+		level 6: 17% bonus damage to Soulshot, Spiritshot, Blessed Soulshot, Blessed Spiritshot, Beast Soulshot, and Beast Spiritshot. P. Atk. +100, M. Atk. +200.
+		level 7: 18% bonus damage to Soulshot, Spiritshot, Blessed Soulshot, Blessed Spiritshot, Beast Soulshot, and Beast Spiritshot. P. Atk. +200, M. Atk. +300.
+		level 8: 19% bonus damage to Soulshot, Spiritshot, Blessed Soulshot, Blessed Spiritshot, Beast Soulshot, and Beast Spiritshot. P. Atk. +300, M. Atk. +400.
+		level 9: 20% bonus damage to Soulshot, Spiritshot, Blessed Soulshot, Blessed Spiritshot, Beast Soulshot, and Beast Spiritshot. P. Atk. +400, M. Atk. +500.
+		level 10: 21% bonus damage to Soulshot, Spiritshot, Blessed Soulshot, Blessed Spiritshot, Beast Soulshot, and Beast Spiritshot. P. Atk. +500, M. Atk. +600, P. Critical Rate +5%, M. Critical Rate +10%.
+	 -->
+		<icon initial="icon.etc_bm_jewel_onyx_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50205" name="Spinel - Steal Mana" max-level="10" action="A1">
+	<!-- $s1 bonus damage to Soulshot, Spiritshot, Blessed Soulshot, Blessed Spiritshot, Beast Soulshot, and Beast Spiritshot. P. Atk. +$s2, M. Atk. +$s3, P. Critical Rate +$s4, M. Critical Rate +$s5. -->
+		<icon initial="icon.etc_bm_jewel_garnet_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="3000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50206" name="Spinel" max-level="10" >
+	<!-- 
+		level 1: P. Def. +20, M. Def. +10, CON +1, and has a chance to recover MP by 12 upon using a skill.
+		level 2: P. Def. +30, M. Def. +20, CON/MEN +1, and procs to recover MP by 16 upon using a skill.
+		level 3: P. Def. +60, M. Def. +30, CON/MEN/DEX +1, and procs to recover MP by 20 upon using a skill.
+		level 4: P. Def. +100, M. Def. +60, CON/MEN/DEX/WIT +1, P./M. Critical Damage Received -4%, and procs to recover MP by 30 upon using a skill
+		level 5: P. Def. +150, M. Def. +80, CON/MEN/DEX/WIT/STR/INT +1, P./M. Critical Damage Received -10%, and procs to recover MP by 50 upon using a skill.
+		level 6: P. Def. +170, M. Def. +100, CON +2, MEN/DEX/WIT/STR/INT +1, P./M. Critical Damage Received -11%, and procs to recover MP by 60 upon using a skill.
+		level 7: P. Def. +200, M. Def. +120, CON/MEN +2, DEX/WIT/STR/INT +1, P./M. Critical Damage Received -12%, and procs to recover MP by 70 upon using a skill.
+		level 8: P. Def. +220, M. Def. +140, CON/MEN/DEX +2, WIT/STR/INT +1, P./M. Critical Damage Received -14%, and procs to recover MP by 80 upon using a skill.
+		level 9: P. Def. +250, M. Def. +160, CON/MEN/DEX/WIT +2, STR/INT +1, P./M. Critical Damage Received -16%, and procs to recover MP by 90 upon using a skill.
+		level 10: P. Def. +300, M. Def. +200, CON/MEN/DEX/WIT/STR/INT +2, P./M. Critical Damage Received -20%, and procs to recover MP by 100 upon using a skill.
+	 -->
+		<icon initial="icon.etc_bm_jewel_garnet_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50207" name="Zircon" max-level="10" >
+	<!-- 
+		level 1: P./M. Critical Damage +2%.
+		level 2: P./M. Critical Damage +4%.
+		level 3: P./M. Critical Damage +6%.
+		level 4: P./M. Critical Damage +8%.
+		level 5: P./M. Critical Damage +15%.
+		level 6: P./M. Critical Damage +16%, P./M. Skill Power +1%.
+		level 7: P./M. Critical Damage +17%, P./M. Skill Power +2%.
+		level 8: P./M. Critical Damage +18%, P./M. Skill Power +3%.
+		level 9: P./M. Critical Damage +19%, P./M. Skill Power +5%.
+		level 10: P./M. Critical Damage +20%, P./M. Skill Power +7%.
+	 -->
+		<icon initial="icon.etc_bm_jewel_bloodstone_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50208" name="Moonstone" max-level="10" >
+	<!-- 
+		level 1: Hunting XP/SP Gain +3% during Sayha's Grace.
+		level 2: Hunting XP/SP Gain +4% during Sayha's Grace.
+		level 3: Hunting XP/SP Gain +6% during Sayha's Grace.
+		level 4: XP/SP gain +8%, Sayha's Grace Consumption -10% while hunting during Sayha's Grace effect.
+		level 5: XP/SP gain +15%, Sayha's Grace Consumption -30% while hunting during Sayha's Grace effect.
+		level 6: XP/SP gain +18%, Sayha's Grace Consumption -30% while hunting during Sayha's Grace effect.
+		level 7: XP/SP gain +21%, Sayha's Grace Consumption -30% while hunting during Sayha's Grace effect.
+		level 8: XP/SP gain +24%, Sayha's Grace Consumption -30% while hunting during Sayha's Grace effect.
+		level 9: XP/SP gain +27%, Sayha's Grace Consumption -30% while hunting during Sayha's Grace effect.
+		level 10: XP/SP gain +30%, Sayha's Grace Consumption -30% while hunting during Sayha's Grace effect.
+	 -->
+		<icon initial="icon.etc_bm_jewel_moonstone_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50209" name="Dark Crystal Helmet - Heavy Armor" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nCON +1\nWeight Limit +1500\nM. Def. +10\nP. Atk. +4%%\nHP Recovery Bonus +5.5%%\nMax HP +100 -->
+		<icon initial="icon.armor_helmet_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50210" name="Dark Crystal Helmet - Robe" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nMEN +1\nWeight Limit +1500\nM. Def. +10\nM. Atk. +8%%\nMP Recovery Bonus +5.5%%\nP. Def. +8%% -->
+		<icon initial="icon.armor_helmet_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50211" name="Dark Crystal Helmet - Light Armor" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nCON +1\nWeight Limit +1500\nM. Def. +10\nP. Atk. +4%%\nMP Recovery Bonus +5.5%%\nP. Critical Damage +30 -->
+		<icon initial="icon.armor_helmet_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50212" name="Majestic Circlet - Heavy Armor" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nCON +1\nWeight Limit +1500\nM. Def. +10\nP. Atk. +4%%\nHP Recovery Bonus +8%% -->
+		<icon initial="icon.armor_leather_helmet_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50213" name="Majestic Circlet - Robe" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nMEN +1\nWeight Limit +1500\nM. Def. +10\nM. Atk. +8%%\nMP Recovery Bonus +8%%\nMax MP +300 -->
+		<icon initial="icon.armor_leather_helmet_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50214" name="Majestic Circlet - Light Armor" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nCON +1\nWeight Limit +1500\nM. Def. +10\nP. Atk. +4%%\nMP Recovery Bonus +5.5%%\nBow Attack Power +8%% -->
+		<icon initial="icon.armor_leather_helmet_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50215" name="Helm of Nightmare - Heavy Armor" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nCON +1\nWeight Limit +1500\nM. Def. +10\nP. Atk. +4%%\nHP Recovery Bonus +8%%\nReflect 5%% of Damage Received -->
+		<icon initial="icon.armor_leather_helmet_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50216" name="Helm of Nightmare - Robe" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nMEN +1\nWeight Limit +1500\nM. Def. +10\nM. Atk. +8%%\nMP Recovery Bonus +8%%\nM. Critical Damage +30 -->
+		<icon initial="icon.armor_leather_helmet_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50217" name="Helm of Nightmare - Light Armor" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nCON +1\nWeight Limit +1500\nM. Def. +10\nP. Atk. +4%%\nMP Recovery Bonus +8%% -->
+		<icon initial="icon.armor_leather_helmet_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50218" name="Tallum Helmet - Heavy Armor" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nCON +1\nWeight Limit +1500\nM. Def. +10\nP. Atk. +4%%\nHP Recovery Bonus +5.5%%\nMax MP +50 -->
+		<icon initial="icon.armor_helmet_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50219" name="Tallum Helmet - Robe" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nMEN +1\nWeight Limit +1500\nM. Def. +10\nM. Atk. +8%%\nMP Recovery Bonus +5.5%%\nM. Def. +8%% -->
+		<icon initial="icon.armor_helmet_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50220" name="Tallum Helmet - Light Armor" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nMEN +1\nWeight Limit +1500\nM. Def. +10\nM. Atk. +8%%\nMP Recovery Bonus +8%% -->
+		<icon initial="icon.armor_helmet_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50221" name="Dark Crystal Breastplate - Heavy Armor" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nCON +1\nWeight Limit +1500\nM. Def. +15\nParalysis Resistance +50%% -->
+		<icon initial="icon.armor_t74_u_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50222" name="Dark Crystal Leather Armor - Light Armor" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nDEX +1\nWeight Limit +1500\nM. Def. +15\nParalysis Resistance +50%% -->
+		<icon initial="icon.armor_t75_u_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50223" name="Tallum Tunic - Robe" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nWIT +1\nWeight Limit +1500\nM. Def. +15\nMEN Attack Resistance +50%% -->
+		<icon initial="icon.armor_t79_u_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50224" name="Dark Crystal Gaiters - Heavy Armor" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nCON +1\nWeight Limit +1000\nM. Def. +10\nMax HP +200 -->
+		<icon initial="icon.armor_t74_l_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50225" name="Dark Crystal Leggings - Light Armor" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nDEX +1\nWeight Limit +1000\nM. Def. +10\nMax HP +150\nMax MP +80 -->
+		<icon initial="icon.armor_t75_l_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50226" name="Tallum Stockings - Robe" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nWIT +1\nWeight Limit +1000\nM. Def. +10\nMax HP +100\nMax MP +120 -->
+		<icon initial="icon.armor_t79_l_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50227" name="Dark Crystal Robe - Robe" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nWIT +2\nWeight Limit +2500\nM. Def. +25\nMax HP +100\nMax MP +120\nParalysis Resistance +50%% -->
+		<icon initial="icon.armor_t76_ul_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50228" name="Majestic Plate Armor - Heavy Armor" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nCON +2\nWeight Limit +2500\nM. Def. +25\nMax HP +200\nStun Resistance +50%% -->
+		<icon initial="icon.armor_t83_ul_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50229" name="Majestic Robe - Robe" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nWIT +2\nWeight Limit +2500\nM. Def. +25\nMax HP +100\nMax MP +120\nStun Resistance +50%% -->
+		<icon initial="icon.armor_t85_ul_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50230" name="Majestic Leather Armor - Light Armor" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nDEX +2\nWeight Limit +2500\nM. Def. +25\nMax HP +150\nMax MP +80\nStun Resistance +50%% -->
+		<icon initial="icon.armor_t84_ul_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50231" name="Armor of Nightmare Heavy Armor" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nCON +2\nWeight Limit +2500\nM. Def. +25\nMax HP +200\nSleep Resistance +70%%\nHold Resistance +70%% -->
+		<icon initial="icon.armor_t80_ul_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50232" name="Robe of Nightmare - Robe" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nWIT +2\nWeight Limit +2500\nM. Def. +25\nMax HP +100\nMax MP +120\nSleep Resistance +70%%\nHold Resistance +70%% -->
+		<icon initial="icon.armor_t82_ul_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50233" name="Leather Armor of Nightmare - Light Armor" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nDEX +2\nWeight Limit +2500\nM. Def. +25\nMax HP +150\nMax MP +80\nSleep Resistance +70%%\nHold Resistance +70%% -->
+		<icon initial="icon.armor_t81_ul_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50234" name="Tallum Plate Armor -Heavy Armor" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nCON +2\nWeight Limit +2500\nM. Def. +25\nMax HP +200\nMEN Attack Resistance +50%% -->
+		<icon initial="icon.armor_t77_ul_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50235" name="Tallum Leather Armor - Light Armor" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nMEN +2\nWeight Limit +2500\nM. Def. +25\nMax HP +150\nMax MP +80\nMEN Attack Resistance +50%% -->
+		<icon initial="icon.armor_t78_ul_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50236" name="Dark Crystal Gloves - Heavy Armor" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +200\nAtk. Spd. +8%%\nHeal Received +2%% -->
+		<icon initial="icon.armor_t74_g_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50237" name="Dark Crystal Gloves - Robe" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nINT +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nCasting Spd. +15%%\nMagic Cancel Rate -25 -->
+		<icon initial="icon.armor_t76_g_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50238" name="Dark Crystal Gloves - Light Armor" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nAtk. Spd. +8%%\nP. Evasion +2 -->
+		<icon initial="icon.armor_t75_g_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50239" name="Majestic Gauntlets - Heavy Armor" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nAtk. Spd. +8%%\nAtk. Spd. +50 -->
+		<icon initial="icon.armor_t83_g_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50240" name="Majestic Gauntlets - Robe" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nINT +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nCasting Spd. +15%%\nCasting Spd. +50 -->
+		<icon initial="icon.armor_t85_g_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50241" name="Majestic Gauntlets - Light Armor" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nAtk. Spd. +8%%\nP. Skill Critical Damage +50 -->
+		<icon initial="icon.armor_t84_g_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50242" name="Gauntlets of Nightmare - Heavy Armor" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nAtk. Spd. +8%%\nP. Atk. +50 -->
+		<icon initial="icon.armor_t80_g_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50243" name="Gauntlets of Nightmare - Robe" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nINT +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nCasting Spd. +15%%\nM. Atk. +50 -->
+		<icon initial="icon.armor_t82_g_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50244" name="Gauntlets of Nightmare - Light Armor" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nAtk. Spd. +8%%\nRecover CON by 2%% of damage dealt -->
+		<icon initial="icon.armor_t81_g_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50245" name="Tallum Gloves - Heavy Armor" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nAtk. Spd. +8%%\nP. Def. +10 -->
+		<icon initial="icon.armor_t77_g_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50246" name="Tallum Gloves - Robe" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nINT +1\nWeight Limit +1000\nM. Def. +20\nMax HP +50\nCasting Spd. +15%% -->
+		<icon initial="icon.armor_t79_g_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50247" name="Tallum Gloves - Light Armor" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nINT +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nMax MP +120\nCasting Spd. +15%% -->
+		<icon initial="icon.armor_t78_g_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50248" name="Dark Crystal Boots - Heavy Armor" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +200\nMovement Speed +4\nHeal Received +2%% -->
+		<icon initial="icon.armor_t74_b_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50249" name="Dark Crystal Boots - Robe" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nINT +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nMovement Speed +7\nMagic Cancel Rate -25 -->
+		<icon initial="icon.armor_t76_b_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50250" name="Dark Crystal Boots - Light Armor" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nMovement Speed +4\nP. Evasion +2 -->
+		<icon initial="icon.armor_t75_b_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50251" name="Majestic Boots - Heavy Armor" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nMovement Speed +7\nAtk. Spd. +50 -->
+		<icon initial="icon.armor_t83_b_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50252" name="Majestic Boots - Robe" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nINT +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nMovement Speed +4\nCasting Spd. +50 -->
+		<icon initial="icon.armor_t85_b_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50253" name="Majestic Boots - Light Armor" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nMovement Speed +4\nP. Skill Critical Damage +50 -->
+		<icon initial="icon.armor_t84_b_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50254" name="Boots of Nightmare - Heavy Armor" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nMovement Speed +4\nP. Atk. +50 -->
+		<icon initial="icon.armor_t80_b_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50255" name="Boots of Nightmare - Robe" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nINT +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nMovement Speed +4\nM. Atk. +50 -->
+		<icon initial="icon.armor_t82_b_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50256" name="Boots of Nightmare - Light Armor" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nMovement Speed +4\nRecover CON by 2%% of damage dealt -->
+		<icon initial="icon.armor_t81_b_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50257" name="Tallum Boots -Heavy Armor" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nMovement Speed +4\nP. Def. +10 -->
+		<icon initial="icon.armor_t77_b_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50258" name="Tallum Boots - Robe" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nINT +1\nWeight Limit +1000\nM. Def. +20\nMax HP +50\nMovement Speed +4 -->
+		<icon initial="icon.armor_t79_b_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50259" name="Tallum Boots - Light Armor" max-level="1" >
+	<!-- Effects of wearing A-grade equipment\n\nINT +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nMax MP +120\nMovement Speed +4 -->
+		<icon initial="icon.armor_t78_b_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50260" name="Enchantment Effect: A-grade Top and Lower Body" max-level="10" >
+	<!-- 
+		level 1: Effects of wearing A-grade equipment\n\nINT +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nMax MP +120\nMovement Speed +4
+		level 5: Effects of enchanted A-grade full body outfit\n\nHP Recovery Bonus +5\nMP Recovery Bonus +3
+		level 6: Effects of enchanted A-grade full body outfit\n\nHP Recovery Bonus +10\nMP Recovery Bonus +6
+		level 7: Effects of enchanted A-grade full body outfit\n\nHP Recovery Bonus +11\nMP Recovery Bonus +7
+		level 8: Effects of enchanted A-grade full body outfit\n\nHP Recovery Bonus +12\nMP Recovery Bonus +8
+		level 9: Effects of enchanted A-grade full body outfit\n\nHP Recovery Bonus +13\nMP Recovery Bonus +9
+		level 10: Effects of enchanted A-grade full body outfit\n\nHP Recovery Bonus +15\nMP Recovery Bonus +10
+	 -->
+		<icon initial="icon.armor_t89_ul_i02"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50261" name="Enchantment Effect: A-grade Top" max-level="10" >
+	<!-- 
+		level 1: Effects of enchanted A-grade full body outfit\n\nHP Recovery Bonus +$s1\nMP Recovery Bonus +$s2
+		level 5: Effects of enchanted A-grade Upper Armor\n\nHP Recovery Bonus +5
+		level 6: Effects of enchanted A-grade Upper Armor\n\nHP Recovery Bonus +10
+		level 7: Effects of enchanted A-grade Upper Armor\n\nHP Recovery Bonus +11
+		level 8: Effects of enchanted A-grade Upper Armor\n\nHP Recovery Bonus +12
+		level 9: Effects of enchanted A-grade Upper Armor\n\nHP Recovery Bonus +13
+		level 10: Effects of enchanted A-grade Upper Armor\n\nHP Recovery Bonus +15
+	 -->
+		<icon initial="icon.armor_t601_u_i01"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50262" name="Enchantment Effect: A-grade Lower Body" max-level="10" >
+	<!-- 
+		level 1: Effects of enchanted A-grade Upper Armor\n\nHP Recovery Bonus +$s1
+		level 5: Effects of enchanted A-grade Pants\n\nMP Recovery Bonus +3
+		level 6: Effects of enchanted A-grade Pants\n\nMP Recovery Bonus +6
+		level 7: Effects of enchanted A-grade Pants\n\nMP Recovery Bonus +7
+		level 8: Effects of enchanted A-grade Pants\n\nMP Recovery Bonus +8
+		level 9: Effects of enchanted A-grade Pants\n\nMP Recovery Bonus +9
+		level 10: Effects of enchanted A-grade Pants\n\nMP Recovery Bonus +10
+	 -->
+		<icon initial="icon.armor_t601_l_i01"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50263" name="Enchantment Effect: A-grade Gloves (Physical)" max-level="10" >
+	<!-- 
+		level 1: Effects of enchanted A-grade Pants\n\nMP Recovery Bonus +$s1
+		level 5: Effects of enchanted A-grade gloves\n\nP. Skill Power +2%
+		level 6: Effects of enchanted A-grade gloves\n\nP. Skill Power +3%
+		level 7: Effects of enchanted A-grade gloves\n\nP. Skill Power +5%
+		level 8: Effects of enchanted A-grade gloves\n\nP. Skill Power +7%
+		level 9: Effects of enchanted A-grade gloves\n\nP. Skill Power +10%
+		level 10: Effects of enchanted A-grade gloves\n\nP. Skill Power +15%
+	 -->
+		<icon initial="icon.armor_t601_g_i01"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50264" name="Enchantment Effect: A-grade Gloves (Magic)" max-level="10" >
+	<!-- 
+		level 1: Effects of enchanted A-grade gloves\n\nP. Skill Power +$s1
+		level 5: Effects of enchanted A-grade gloves\n\nM. Skill Power +2%
+		level 6: Effects of enchanted A-grade gloves\n\nM. Skill Power +3%
+		level 7: Effects of enchanted A-grade gloves\n\nM. Skill Power +5%
+		level 8: Effects of enchanted A-grade gloves\n\nM. Skill Power +7%
+		level 9: Effects of enchanted A-grade gloves\n\nM. Skill Power +10%
+		level 10: Effects of enchanted A-grade gloves\n\nM. Skill Power +15%
+	 -->
+		<icon initial="icon.armor_t601_g_i01"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50265" name="Enchantment Effect: A-grade Shoes (Physical)" max-level="10" >
+	<!-- 
+		level 1: Effects of enchanted A-grade gloves\n\nM. Skill Power +$s1
+		level 5: Effects of enchanted A-grade shoes\n\nPhysical skill cooldown MP -1%
+		level 6: Effects of enchanted A-grade shoes\n\nPhysical skill cooldown MP -2%
+		level 7: Effects of enchanted A-grade shoes\n\nPhysical skill cooldown MP -3%
+		level 8: Effects of enchanted A-grade shoes\n\nPhysical skill cooldown MP -5%
+		level 9: Effects of enchanted A-grade shoes\n\nPhysical skill cooldown MP -7%
+		level 10: Effects of enchanted A-grade shoes\n\nPhysical skill cooldown MP -10%
+	 -->
+		<icon initial="icon.armor_t601_b_i01"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50266" name="Enchantment Effect: A-grade Shoes (Magic)" max-level="10" >
+	<!-- 
+		level 1: Effects of enchanted A-grade shoes\n\nPhysical skill cooldown MP -$s1
+		level 5: Effects of enchanted A-grade shoes\n\nM. Skill cooldown MP -1%
+		level 6: Effects of enchanted A-grade shoes\n\nM. Skill cooldown MP -2%
+		level 7: Effects of enchanted A-grade shoes\n\nM. Skill cooldown MP -3%
+		level 8: Effects of enchanted A-grade shoes\n\nM. Skill cooldown MP -5%
+		level 9: Effects of enchanted A-grade shoes\n\nM. Skill cooldown MP -7%
+		level 10: Effects of enchanted A-grade shoes\n\nM. Skill cooldown MP -10%
+	 -->
+		<icon initial="icon.armor_t601_b_i01"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50267" name="Enchantment Effect: A-grade Helmet" max-level="10" >
+	<!-- 
+		level 1: Effects of enchanted A-grade shoes\n\nM. Skill cooldown MP -$s1
+		level 5: Effects of enchanted A-grade Headgear\n\nMax HP +50
+		level 6: Effects of enchanted A-grade Headgear\n\nMax HP +150
+		level 7: Effects of enchanted A-grade Headgear\n\nMax HP +300
+		level 8: Effects of enchanted A-grade Headgear\n\nMax HP +500
+		level 9: Effects of enchanted A-grade Headgear\n\nMax HP +750
+		level 10: Effects of enchanted A-grade Headgear\n\nMax HP +1000
+	 -->
+		<icon initial="icon.armor_helmet_i02"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50268" name="Baium’s Soul" max-level="1" >
+	<!-- Can use Baium’s power by equipping a weapon containing Baium’s soul.\n\n<Active>\nBaium’s Thunderbolt -->
+		<icon initial="icon.skill1469"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50269" name="Baium’s Thunderbolt" max-level="22"  type="MAGIC">
+	<!-- 
+		level 1: Attacks the enemy with bonus 113 Power added to M. Atk.
+		level 2: Attacks the enemy with bonus 115 Power added to M. Atk.
+		level 3: Attacks the enemy with bonus 117 Power added to M. Atk.
+		level 4: Attacks the enemy with bonus 119 Power added to M. Atk.
+		level 5: Attacks the enemy with bonus 123 Power added to M. Atk.
+		level 6: Attacks the enemy with bonus 127 Power added to M. Atk.
+		level 7: Attacks the enemy with bonus 132 Power added to M. Atk.
+		level 8: Attacks the enemy with bonus 136 Power added to M. Atk.
+		level 9: Attacks the enemy with bonus 140 Power added to M. Atk.
+		level 10: Attacks the enemy with bonus 145 Power added to M. Atk.
+		level 11: Attacks the enemy with bonus 149 Power added to M. Atk.
+		level 12: Attacks the enemy with bonus 67 Power added to M. Atk.
+		level 13: Attacks the enemy with bonus 69 Power added to M. Atk.
+		level 14: Attacks the enemy with bonus 70 Power added to M. Atk.
+		level 15: Attacks the enemy with bonus 71 Power added to M. Atk.
+		level 16: Attacks the enemy with bonus 73 Power added to M. Atk.
+		level 17: Attacks the enemy with bonus 76 Power added to M. Atk.
+		level 18: Attacks the enemy with bonus 79 Power added to M. Atk.
+		level 19: Attacks the enemy with bonus 81 Power added to M. Atk.
+		level 20: Attacks the enemy with bonus 84 Power added to M. Atk.
+		level 21: Attacks the enemy with bonus 87 Power added to M. Atk.
+		level 22: Attacks the enemy with bonus 89 Power added to M. Atk.
+	 -->
+		<icon initial="icon.skill1469"/>
+		<attributes >
+			<cast-range initial="900"/>
+			<effect-point initial="-300"/>
+			<hit-time initial="-300000"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50270" name="Baium’s Soul" max-level="10" >
+	<!-- 
+		level 1: Can use Baium’s power by equipping a weapon containing Baium’s soul.\n\n<Active>\nBaium’s Thunderbolt
+		level 5: Can use Baium’s power by equipping a weapon containing Baium’s soul.\n\n<Active>\nBaium’s Thunderbolt\nEnhanced Baium’s Thunderbolt\n\n<Ability Effect>\nSTR +1\nINT +1
+		level 6: Can use Baium’s power by equipping a weapon containing Baium’s soul.\n\n<Active>\nBaium’s Thunderbolt\nEnhanced Baium’s Thunderbolt\n\n<Ability Effect>\nSTR +2\nINT +2
+		level 7: Can use Baium’s power by equipping a weapon containing Baium’s soul.\n\n<Active>\nBaium’s Thunderbolt\nEnhanced Baium’s Thunderbolt\n\n<Ability Effect>\nSTR +3\nINT +3
+		level 8: Can use Baium’s power by equipping a weapon containing Baium’s soul.\n\n<Active>\nBaium’s Thunderbolt\nEnhanced Baium’s Thunderbolt\n\n<Ability Effect>\nSTR +4\nINT +4
+		level 9: Can use Baium’s power by equipping a weapon containing Baium’s soul.\n\n<Active>\nBaium’s Thunderbolt\nEnhanced Baium’s Thunderbolt\n\n<Ability Effect>\nSTR +5\nINT +5
+		level 10: Can use Baium’s power by equipping a weapon containing Baium’s soul.\n\n<Active>\nBaium’s Thunderbolt\nEnhanced Baium’s Thunderbolt\n\n<Ability Effect>\nSTR +6\nINT +6
+	 -->
+		<icon initial="icon.skill1469"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50271" name="Enhanced Baium’s Thunderbolt" max-level="20"  type="MAGIC">
+	<!-- 
+		level 1: Can use Baium’s power by equipping a weapon containing Baium’s soul.\n\n<Active>\nBaium’s Thunderbolt\nEnhanced Baium’s Thunderbolt\n\n<Ability Effect>\nSTR +$s1\nINT +$s2
+		level 5: Attacks the enemy with bonus 191 Power added to M. Atk.
+		level 6: Attacks the enemy with bonus 198 Power added to M. Atk.
+		level 7: Attacks the enemy with bonus 204 Power added to M. Atk.
+		level 8: Attacks the enemy with bonus 211 Power added to M. Atk.
+		level 9: Attacks the enemy with bonus 217 Power added to M. Atk.
+		level 10: Attacks the enemy with bonus 224 Power added to M. Atk.
+		level 11: Attacks the enemy with bonus 0 Power added to M. Atk.
+		level 15: Attacks the enemy with bonus 114 Power added to M. Atk.
+		level 16: Attacks the enemy with bonus 118 Power added to M. Atk.
+		level 17: Attacks the enemy with bonus 122 Power added to M. Atk.
+		level 18: Attacks the enemy with bonus 126 Power added to M. Atk.
+		level 19: Attacks the enemy with bonus 130 Power added to M. Atk.
+		level 20: Attacks the enemy with bonus 134 Power added to M. Atk.
+	 -->
+		<icon initial="icon.skill1469"/>
+		<attributes >
+			<cast-range initial="900"/>
+			<effect-point initial="-300"/>
+			<hit-time initial="-300000"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50273" name="Queen Ant's Soul" max-level="1" >
+	<!-- Can use Queen Ant’s power by equipping a weapon containing Queen Ant’s soul.\n\n<Active>\nQueen Ant’s Stone Shower -->
+		<icon initial="icon.skill4282_new"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50274" name="Queen Ant’s Stone Shower" max-level="22"  type="MAGIC">
+	<!-- 
+		level 1: Attacks the enemy with bonus 72 Power added to M. Atk.
+		level 2: Attacks the enemy with bonus 73 Power added to M. Atk.
+		level 3: Attacks the enemy with bonus 74 Power added to M. Atk.
+		level 4: Attacks the enemy with bonus 76 Power added to M. Atk.
+		level 5: Attacks the enemy with bonus 78 Power added to M. Atk.
+		level 6: Attacks the enemy with bonus 81 Power added to M. Atk.
+		level 7: Attacks the enemy with bonus 84 Power added to M. Atk.
+		level 8: Attacks the enemy with bonus 86 Power added to M. Atk.
+		level 9: Attacks the enemy with bonus 89 Power added to M. Atk.
+		level 10: Attacks the enemy with bonus 92 Power added to M. Atk.
+		level 11: Attacks the enemy with bonus 95 Power added to M. Atk.
+		level 12: Attacks the enemy with bonus 43 Power added to M. Atk.
+		level 13: Attacks the enemy with bonus 44 Power added to M. Atk.
+		level 15: Attacks the enemy with bonus 45 Power added to M. Atk.
+		level 16: Attacks the enemy with bonus 47 Power added to M. Atk.
+		level 17: Attacks the enemy with bonus 48 Power added to M. Atk.
+		level 18: Attacks the enemy with bonus 50 Power added to M. Atk.
+		level 19: Attacks the enemy with bonus 52 Power added to M. Atk.
+		level 20: Attacks the enemy with bonus 53 Power added to M. Atk.
+		level 21: Attacks the enemy with bonus 55 Power added to M. Atk.
+		level 22: Attacks the enemy with bonus 57 Power added to M. Atk.
+	 -->
+		<icon initial="icon.skill4282_new"/>
+		<attributes >
+			<cast-range initial="900"/>
+			<effect-point initial="-300"/>
+			<hit-time initial="-300000"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50275" name="Queen Ant's Soul" max-level="10" >
+	<!-- 
+		level 1: Can use Queen Ant’s power by equipping a weapon containing Queen Ant’s soul.\n\n<Active>\nQueen Ant’s Stone Shower
+		level 5: Can use Queen Ant’s power by equipping a weapon containing Queen Ant’s soul.\n\n<Active>\nQueen Ant’s Stone Shower\nEnhanced Queen Ant’s Stone Shower\n\n<Ability Effect>\nCON +1
+		level 6: Can use Queen Ant’s power by equipping a weapon containing Queen Ant’s soul.\n\n<Active>\nQueen Ant’s Stone Shower\nEnhanced Queen Ant’s Stone Shower\n\n<Ability Effect>\nCON +2
+		level 7: Can use Queen Ant’s power by equipping a weapon containing Queen Ant’s soul.\n\n<Active>\nQueen Ant’s Stone Shower\nEnhanced Queen Ant’s Stone Shower\n\n<Ability Effect>\nCON +3
+		level 8: Can use Queen Ant’s power by equipping a weapon containing Queen Ant’s soul.\n\n<Active>\nQueen Ant’s Stone Shower\nEnhanced Queen Ant’s Stone Shower\n\n<Ability Effect>\nCON +4
+		level 9: Can use Queen Ant’s power by equipping a weapon containing Queen Ant’s soul.\n\n<Active>\nQueen Ant’s Stone Shower\nEnhanced Queen Ant’s Stone Shower\n\n<Ability Effect>\nCON +5
+		level 10: Can use Queen Ant’s power by equipping a weapon containing Queen Ant’s soul.\n\n<Active>\nQueen Ant’s Stone Shower\nEnhanced Queen Ant’s Stone Shower\n\n<Ability Effect>\nCON +6
+	 -->
+		<icon initial="icon.skill4282_new"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50276" name="Enhanced Queen Ant’s Stone Shower" max-level="20"  type="MAGIC">
+	<!-- 
+		level 1: Can use Queen Ant’s power by equipping a weapon containing Queen Ant’s soul.\n\n<Active>\nQueen Ant’s Stone Shower\nEnhanced Queen Ant’s Stone Shower\n\n<Ability Effect>\nCON +$s1
+		level 5: Attacks the enemy with bonus 121 Power added to M. Atk.
+		level 6: Attacks the enemy with bonus 126 Power added to M. Atk.
+		level 7: Attacks the enemy with bonus 130 Power added to M. Atk.
+		level 8: Attacks the enemy with bonus 134 Power added to M. Atk.
+		level 9: Attacks the enemy with bonus 138 Power added to M. Atk.
+		level 10: Attacks the enemy with bonus 142 Power added to M. Atk.
+		level 11: Attacks the enemy with bonus 0 Power added to M. Atk.
+		level 15: Attacks the enemy with bonus 73 Power added to M. Atk.
+		level 16: Attacks the enemy with bonus 75 Power added to M. Atk.
+		level 17: Attacks the enemy with bonus 78 Power added to M. Atk.
+		level 18: Attacks the enemy with bonus 80 Power added to M. Atk.
+		level 19: Attacks the enemy with bonus 83 Power added to M. Atk.
+		level 20: Attacks the enemy with bonus 85 Power added to M. Atk.
+	 -->
+		<icon initial="icon.skill4282_new"/>
+		<attributes >
+			<cast-range initial="900"/>
+			<effect-point initial="-300"/>
+			<hit-time initial="-300000"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50278" name="Zaken's Soul" max-level="1" >
+	<!-- Can use Zaken’s power by equipping a weapon containing Zaken’s soul.\n\n<Active>\nZaken’s Blood Prison -->
+		<icon initial="icon.skill32100"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50279" name="Zaken’s Blood Prison" max-level="22"  type="MAGIC">
+	<!-- 
+		level 1: Attacks the enemy with bonus 103 Power added to M. Atk.
+		level 2: Attacks the enemy with bonus 105 Power added to M. Atk.
+		level 3: Attacks the enemy with bonus 107 Power added to M. Atk.
+		level 4: Attacks the enemy with bonus 109 Power added to M. Atk.
+		level 5: Attacks the enemy with bonus 112 Power added to M. Atk.
+		level 6: Attacks the enemy with bonus 116 Power added to M. Atk.
+		level 7: Attacks the enemy with bonus 120 Power added to M. Atk.
+		level 8: Attacks the enemy with bonus 124 Power added to M. Atk.
+		level 9: Attacks the enemy with bonus 128 Power added to M. Atk.
+		level 10: Attacks the enemy with bonus 132 Power added to M. Atk.
+		level 11: Attacks the enemy with bonus 136 Power added to M. Atk.
+		level 12: Attacks the enemy with bonus 61 Power added to M. Atk.
+		level 13: Attacks the enemy with bonus 63 Power added to M. Atk.
+		level 14: Attacks the enemy with bonus 64 Power added to M. Atk.
+		level 15: Attacks the enemy with bonus 65 Power added to M. Atk.
+		level 16: Attacks the enemy with bonus 67 Power added to M. Atk.
+		level 17: Attacks the enemy with bonus 69 Power added to M. Atk.
+		level 18: Attacks the enemy with bonus 72 Power added to M. Atk.
+		level 19: Attacks the enemy with bonus 74 Power added to M. Atk.
+		level 20: Attacks the enemy with bonus 76 Power added to M. Atk.
+		level 21: Attacks the enemy with bonus 79 Power added to M. Atk.
+		level 22: Attacks the enemy with bonus 81 Power added to M. Atk.
+	 -->
+		<icon initial="icon.skill32100"/>
+		<attributes >
+			<cast-range initial="900"/>
+			<effect-point initial="-300"/>
+			<hit-time initial="-300000"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50280" name="Zaken's Soul" max-level="10" >
+	<!-- 
+		level 1: Can use Zaken’s power by equipping a weapon containing Zaken’s soul.\n\n<Active>\nZaken’s Blood Prison
+		level 5: Can use Zaken’s power by equipping a weapon containing Zaken’s soul.\n\n<Active>\nZaken’s Blood Prison\nEnhanced Zaken’s Blood Prison\n\n<Ability Effect>\nDEX +1
+		level 6: Can use Zaken’s power by equipping a weapon containing Zaken’s soul.\n\n<Active>\nZaken’s Blood Prison\nEnhanced Zaken’s Blood Prison\n\n<Ability Effect>\nDEX +2
+		level 7: Can use Zaken’s power by equipping a weapon containing Zaken’s soul.\n\n<Active>\nZaken’s Blood Prison\nEnhanced Zaken’s Blood Prison\n\n<Ability Effect>\nDEX +3
+		level 8: Can use Zaken’s power by equipping a weapon containing Zaken’s soul.\n\n<Active>\nZaken’s Blood Prison\nEnhanced Zaken’s Blood Prison\n\n<Ability Effect>\nDEX +4
+		level 9: Can use Zaken’s power by equipping a weapon containing Zaken’s soul.\n\n<Active>\nZaken’s Blood Prison\nEnhanced Zaken’s Blood Prison\n\n<Ability Effect>\nDEX +5
+		level 10: Can use Zaken’s power by equipping a weapon containing Zaken’s soul.\n\n<Active>\nZaken’s Blood Prison\nEnhanced Zaken’s Blood Prison\n\n<Ability Effect>\nDEX +6
+	 -->
+		<icon initial="icon.skill32100"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50281" name="Enhanced Zaken’s Blood Prison" max-level="20"  type="MAGIC">
+	<!-- 
+		level 1: Can use Zaken’s power by equipping a weapon containing Zaken’s soul.\n\n<Active>\nZaken’s Blood Prison\nEnhanced Zaken’s Blood Prison\n\n<Ability Effect>\nDEX +$s1
+		level 5: Attacks the enemy with bonus 174 Power added to M. Atk.
+		level 6: Attacks the enemy with bonus 180 Power added to M. Atk.
+		level 7: Attacks the enemy with bonus 186 Power added to M. Atk.
+		level 8: Attacks the enemy with bonus 192 Power added to M. Atk.
+		level 9: Attacks the enemy with bonus 198 Power added to M. Atk.
+		level 10: Attacks the enemy with bonus 204 Power added to M. Atk.
+		level 11: Attacks the enemy with bonus 0 Power added to M. Atk.
+		level 15: Attacks the enemy with bonus 104 Power added to M. Atk.
+		level 16: Attacks the enemy with bonus 108 Power added to M. Atk.
+		level 17: Attacks the enemy with bonus 111 Power added to M. Atk.
+		level 18: Attacks the enemy with bonus 115 Power added to M. Atk.
+		level 19: Attacks the enemy with bonus 118 Power added to M. Atk.
+		level 20: Attacks the enemy with bonus 122 Power added to M. Atk.
+	 -->
+		<icon initial="icon.skill32100"/>
+		<attributes >
+			<cast-range initial="900"/>
+			<effect-point initial="-300"/>
+			<hit-time initial="-300000"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50283" name="Orfen's Soul" max-level="1" >
+	<!-- Can use Orfen’s power by equipping a weapon containing Orfen’s soul.\n\n<Active>\nOrfen’s Poison Tempest -->
+		<icon initial="icon.skill6435"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50284" name="Orphen’s Poison Tempest" max-level="22"  type="MAGIC">
+	<!-- 
+		level 1: Attacks the enemy with bonus 103 Power added to M. Atk.
+		level 2: Attacks the enemy with bonus 105 Power added to M. Atk.
+		level 3: Attacks the enemy with bonus 107 Power added to M. Atk.
+		level 4: Attacks the enemy with bonus 109 Power added to M. Atk.
+		level 5: Attacks the enemy with bonus 112 Power added to M. Atk.
+		level 6: Attacks the enemy with bonus 116 Power added to M. Atk.
+		level 7: Attacks the enemy with bonus 120 Power added to M. Atk.
+		level 8: Attacks the enemy with bonus 124 Power added to M. Atk.
+		level 9: Attacks the enemy with bonus 128 Power added to M. Atk.
+		level 10: Attacks the enemy with bonus 132 Power added to M. Atk.
+		level 11: Attacks the enemy with bonus 136 Power added to M. Atk.
+		level 12: Attacks the enemy with bonus 61 Power added to M. Atk.
+		level 13: Attacks the enemy with bonus 63 Power added to M. Atk.
+		level 14: Attacks the enemy with bonus 64 Power added to M. Atk.
+		level 15: Attacks the enemy with bonus 65 Power added to M. Atk.
+		level 16: Attacks the enemy with bonus 67 Power added to M. Atk.
+		level 17: Attacks the enemy with bonus 69 Power added to M. Atk.
+		level 18: Attacks the enemy with bonus 72 Power added to M. Atk.
+		level 19: Attacks the enemy with bonus 74 Power added to M. Atk.
+		level 20: Attacks the enemy with bonus 76 Power added to M. Atk.
+		level 21: Attacks the enemy with bonus 79 Power added to M. Atk.
+		level 22: Attacks the enemy with bonus 81 Power added to M. Atk.
+	 -->
+		<icon initial="icon.skill6435"/>
+		<attributes >
+			<cast-range initial="900"/>
+			<effect-point initial="-300"/>
+			<hit-time initial="-300000"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50285" name="Orfen's Soul" max-level="10" >
+	<!-- 
+		level 1: Can use Orfen’s power by equipping a weapon containing Orfen’s soul.\n\n<Active>\nOrfen’s Poison Tempest
+		level 5: Can use Orfen’s power by equipping a weapon containing Orfen’s soul.\n\n<Active>\nOrfen’s Poison Tempest\nEnhanced Orfen’s Poison Tempest\n\n<Ability Effect>\nMEN +1
+		level 6: Can use Orfen’s power by equipping a weapon containing Orfen’s soul.\n\n<Active>\nOrfen’s Poison Tempest\nEnhanced Orfen’s Poison Tempest\n\n<Ability Effect>\nMEN +2
+		level 7: Can use Orfen’s power by equipping a weapon containing Orfen’s soul.\n\n<Active>\nOrfen’s Poison Tempest\nEnhanced Orfen’s Poison Tempest\n\n<Ability Effect>\nMEN +3
+		level 8: Can use Orfen’s power by equipping a weapon containing Orfen’s soul.\n\n<Active>\nOrfen’s Poison Tempest\nEnhanced Orfen’s Poison Tempest\n\n<Ability Effect>\nMEN +4
+		level 9: Can use Orfen’s power by equipping a weapon containing Orfen’s soul.\n\n<Active>\nOrfen’s Poison Tempest\nEnhanced Orfen’s Poison Tempest\n\n<Ability Effect>\nMEN +5
+		level 10: Can use Orfen’s power by equipping a weapon containing Orfen’s soul.\n\n<Active>\nOrfen’s Poison Tempest\nEnhanced Orfen’s Poison Tempest\n\n<Ability Effect>\nMEN +6
+	 -->
+		<icon initial="icon.skill6435"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50286" name="Enhanced Orphen’s Poison Tempest" max-level="20"  type="MAGIC">
+	<!-- 
+		level 1: Can use Orfen’s power by equipping a weapon containing Orfen’s soul.\n\n<Active>\nOrfen’s Poison Tempest\nEnhanced Orfen’s Poison Tempest\n\n<Ability Effect>\nMEN +$s1
+		level 5: Attacks the enemy with bonus 174 Power added to M. Atk.
+		level 6: Attacks the enemy with bonus 180 Power added to M. Atk.
+		level 7: Attacks the enemy with bonus 186 Power added to M. Atk.
+		level 8: Attacks the enemy with bonus 192 Power added to M. Atk.
+		level 9: Attacks the enemy with bonus 198 Power added to M. Atk.
+		level 10: Attacks the enemy with bonus 204 Power added to M. Atk.
+		level 11: Attacks the enemy with bonus 0 Power added to M. Atk.
+		level 15: Attacks the enemy with bonus 104 Power added to M. Atk.
+		level 16: Attacks the enemy with bonus 108 Power added to M. Atk.
+		level 17: Attacks the enemy with bonus 111 Power added to M. Atk.
+		level 18: Attacks the enemy with bonus 115 Power added to M. Atk.
+		level 19: Attacks the enemy with bonus 118 Power added to M. Atk.
+		level 20: Attacks the enemy with bonus 122 Power added to M. Atk.
+	 -->
+		<icon initial="icon.skill6435"/>
+		<attributes >
+			<cast-range initial="900"/>
+			<effect-point initial="-300"/>
+			<hit-time initial="-300000"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50288" name="Core's Soul" max-level="1" >
+	<!-- Can use Core’s power by equipping a weapon containing Core’s soul.\n\n<Active>\nCore’s Plasma Shock -->
+		<icon initial="icon.skill32633"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50289" name="Core's Plasma Shock" max-level="22"  type="MAGIC">
+	<!-- 
+		level 1: Attacks the enemy with bonus 72 Power added to M. Atk.
+		level 2: Attacks the enemy with bonus 73 Power added to M. Atk.
+		level 3: Attacks the enemy with bonus 74 Power added to M. Atk.
+		level 4: Attacks the enemy with bonus 76 Power added to M. Atk.
+		level 5: Attacks the enemy with bonus 78 Power added to M. Atk.
+		level 6: Attacks the enemy with bonus 81 Power added to M. Atk.
+		level 7: Attacks the enemy with bonus 84 Power added to M. Atk.
+		level 8: Attacks the enemy with bonus 86 Power added to M. Atk.
+		level 9: Attacks the enemy with bonus 89 Power added to M. Atk.
+		level 10: Attacks the enemy with bonus 92 Power added to M. Atk.
+		level 11: Attacks the enemy with bonus 95 Power added to M. Atk.
+		level 12: Attacks the enemy with bonus 43 Power added to M. Atk.
+		level 13: Attacks the enemy with bonus 44 Power added to M. Atk.
+		level 15: Attacks the enemy with bonus 45 Power added to M. Atk.
+		level 16: Attacks the enemy with bonus 47 Power added to M. Atk.
+		level 17: Attacks the enemy with bonus 48 Power added to M. Atk.
+		level 18: Attacks the enemy with bonus 50 Power added to M. Atk.
+		level 19: Attacks the enemy with bonus 52 Power added to M. Atk.
+		level 20: Attacks the enemy with bonus 53 Power added to M. Atk.
+		level 21: Attacks the enemy with bonus 55 Power added to M. Atk.
+		level 22: Attacks the enemy with bonus 57 Power added to M. Atk.
+	 -->
+		<icon initial="icon.skill32633"/>
+		<attributes >
+			<cast-range initial="900"/>
+			<effect-point initial="-300"/>
+			<hit-time initial="-300000"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50290" name="Core's Soul" max-level="10" >
+	<!-- 
+		level 1: Can use Core’s power by equipping a weapon containing Core’s soul.\n\n<Active>\nCore’s Plasma Shock
+		level 5: Can use Core’s power by equipping a weapon containing Core’s soul.\n\n<Active>\nCore’s Plasma Shock\nEnhanced Core’s Plasma Shock\n\n<Ability Effect>\nWIT +1
+		level 6: Can use Core’s power by equipping a weapon containing Core’s soul.\n\n<Active>\nCore’s Plasma Shock\nEnhanced Core’s Plasma Shock\n\n<Ability Effect>\nWIT +2
+		level 7: Can use Core’s power by equipping a weapon containing Core’s soul.\n\n<Active>\nCore’s Plasma Shock\nEnhanced Core’s Plasma Shock\n\n<Ability Effect>\nWIT +3
+		level 8: Can use Core’s power by equipping a weapon containing Core’s soul.\n\n<Active>\nCore’s Plasma Shock\nEnhanced Core’s Plasma Shock\n\n<Ability Effect>\nWIT +4
+		level 9: Can use Core’s power by equipping a weapon containing Core’s soul.\n\n<Active>\nCore’s Plasma Shock\nEnhanced Core’s Plasma Shock\n\n<Ability Effect>\nWIT +5
+		level 10: Can use Core’s power by equipping a weapon containing Core’s soul.\n\n<Active>\nCore’s Plasma Shock\nEnhanced Core’s Plasma Shock\n\n<Ability Effect>\nWIT +6
+	 -->
+		<icon initial="icon.skill32633"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50291" name="Enhanced Core's Plasma Shock" max-level="20"  type="MAGIC">
+	<!-- 
+		level 1: Can use Core’s power by equipping a weapon containing Core’s soul.\n\n<Active>\nCore’s Plasma Shock\nEnhanced Core’s Plasma Shock\n\n<Ability Effect>\nWIT +$s1
+		level 5: Attacks the enemy with bonus 121 Power added to M. Atk.
+		level 6: Attacks the enemy with bonus 126 Power added to M. Atk.
+		level 7: Attacks the enemy with bonus 130 Power added to M. Atk.
+		level 8: Attacks the enemy with bonus 134 Power added to M. Atk.
+		level 9: Attacks the enemy with bonus 138 Power added to M. Atk.
+		level 10: Attacks the enemy with bonus 142 Power added to M. Atk.
+		level 11: Attacks the enemy with bonus 0 Power added to M. Atk.
+		level 15: Attacks the enemy with bonus 73 Power added to M. Atk.
+		level 16: Attacks the enemy with bonus 75 Power added to M. Atk.
+		level 17: Attacks the enemy with bonus 78 Power added to M. Atk.
+		level 18: Attacks the enemy with bonus 80 Power added to M. Atk.
+		level 19: Attacks the enemy with bonus 83 Power added to M. Atk.
+		level 20: Attacks the enemy with bonus 85 Power added to M. Atk.
+	 -->
+		<icon initial="icon.skill32633"/>
+		<attributes >
+			<cast-range initial="900"/>
+			<effect-point initial="-300"/>
+			<hit-time initial="-300000"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50293" name="Talisman - Speed" max-level="11" >
+	<!-- 
+		level 1: P. Def./M. Def. +5.
+		level 2: P. Def./M. Def. +10, Max HP +30, Speed +1.
+		level 3: P. Def./M. Def. +20, Max HP +80, Speed +1.
+		level 4: P. Def./M. Def. +30, Max HP +150, Speed +1.
+		level 5: P. Def./M. Def. +40, Max HP +230, Speed +1.
+		level 6: P. Def./M. Def. +50, Max HP +300, Speed +1.
+		level 7: P. Def./M. Def. +60, Max HP +500, Speed +2.
+		level 8: P. Def./M. Def. +80, Max HP +1000, Speed +3.
+		level 9: P. Def./M. Def. +200, Max HP +1300, Speed +4.
+		level 10: P. Def./M. Def. +250, Max HP +1800, Speed +6.
+		level 11: P. Def./M. Def. +300, Max HP +2500, Speed +8.
+	 -->
+		<icon initial="icon.tallisman_rapid"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50294" name="Energy of Speed" max-level="11" >
+	<!-- 
+		level 1: Atk. Spd. +5 with the power of speed.
+		level 2: Atk. Spd. +10 with the power of speed.
+		level 3: Atk. Spd. +20 with the power of speed.
+		level 4: Atk. Spd. +30 with the power of speed.
+		level 5: P. Atk. Spd. +40, P. Critical Damage +30, M. Critical Damage +20 with the power of speed.
+		level 6: P. Atk. Spd. +50, P. Critical Damage +60, M. Critical Damage +50 with the power of speed.
+		level 7: P. Atk. Spd. +60, P. Critical Damage +100, M. Critical Damage +80 with the power of speed.
+		level 8: P. Atk. Spd. +80, P. Critical Damage +200, M. Critical Damage +100 with the power of speed.
+		level 9: P. Atk. Spd. +100, P. Critical Damage +500, M. Critical Damage +200 with the power of speed.
+		level 10: P. Atk. Spd. +150, P. Critical Damage +800, M. Critical Damage +500 with the power of speed.
+		level 11: P. Atk. Spd. +300, P. Critical Damage +1200, M. Critical Damage +1000 with the power of speed.
+	 -->
+		<icon initial="icon.skill5662"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="-1"/>
+			<reuse initial="60000"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50295" name="Baium’s Thunder Breaker" max-level="1" >
+	<!-- Dagger containing Baium’s soul. Can use Baium’s power.\nP. Atk. and M. Atk. increase depending on the level. -->
+		<icon initial="icon.weapon_terakan_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50296" name="Queen Ant’s Stone Spear" max-level="1" >
+	<!-- Spear containing Queen Ant’s soul. Can use Queen Ant’s power. -->
+		<icon initial="BranchSys3.Icon.g_melisa_stormer_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50297" name="Zaken’s Blood Sword" max-level="1" >
+	<!-- Sword containing Zaken’s soul. Can use Zaken’s power. -->
+		<icon initial="icon.special_weapon_onehandsword"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50298" name="Orfen’s Poisonous Sword" max-level="1" >
+	<!-- Sword containing Orfen’s soul. Can use Orfen’s power. -->
+		<icon initial="icon.bm_the_two_handed_sword_of_hero_i01"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="50299" name="Core’s Plasma Bow" max-level="1" >
+	<!-- Bow containing Core’s soul. Can use Core’s power. -->
+		<icon initial="icon.weapon_karupis_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
 </list>

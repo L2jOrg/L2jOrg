@@ -3,7 +3,7 @@ package org.l2j.gameserver.engine.vip;
 import io.github.joealisson.primitive.IntMap;
 import io.github.joealisson.primitive.HashIntMap;
 import org.l2j.gameserver.data.xml.impl.PrimeShopData;
-import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.Containers;
 import org.l2j.gameserver.model.events.EventType;
@@ -44,7 +44,7 @@ public final class VipEngine extends GameXmlReader {
                 }
                 var skillId = vipTiers.get(player.getVipTier()).getSkill();
                 if(skillId > 0) {
-                    var skill = SkillData.getInstance().getSkill(skillId, 1);
+                    var skill = SkillEngine.getInstance().getSkill(skillId, 1);
                     if(nonNull(skill)) {
                         player.addSkill(skill);
                     }

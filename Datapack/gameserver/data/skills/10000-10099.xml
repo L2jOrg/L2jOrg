@@ -1,124 +1,125 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
-    <skill id="10015" toLevel="3" name="Chain Strike">
-        <!-- Pulls a selected target to you and attacks. -->
-        <icon>icon.skill10015</icon>
-        <abnormalLvl>
-            <value level="1">1</value>
-            <value level="2">2</value>
-            <value level="3">3</value>
-        </abnormalLvl>
-        <abnormalTime>1</abnormalTime>
-        <abnormalType>STUN</abnormalType>
-        <activateRate>190</activateRate>
-        <lvlBonusRate>30</lvlBonusRate>
-        <basicProperty>PHYSICAL</basicProperty>
-        <magicLvl>
-            <value level="1">76</value>
-            <value level="2">82</value>
-            <value level="3">84</value>
-        </magicLvl>
-        <operateType>A2</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <mpConsume>
-            <value level="1">69</value>
-            <value level="2">73</value>
-            <value level="3">77</value>
-        </mpConsume>
-        <castRange>600</castRange>
-        <hitTime>500</hitTime>
-        <coolTime>1000</coolTime>
-        <reuseDelay>15000</reuseDelay>
-        <effectPoint>
-            <value level="1">-4132</value>
-            <value level="2">-4198</value>
-            <value level="3">-4265</value>
-        </effectPoint>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <trait>PULL</trait>
-        <isDebuff>true</isDebuff>
-        <targetType>ENEMY</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="EquipShield"/>
-        </conditions>
-        <effects>
-            <effect name="PullBack">
-                <speed>600</speed>
-                <delay>600</delay>
-            </effect>
-            <effect name="BlockActions">
-                <allowedSkills>35016</allowedSkills>
-            </effect>
-            <effect name="GetAgro"/>
-        </effects>
-    </skill>
-    <skill id="10094" toLevel="5" name="Mass Lightning Strike">
-        <!-- A lightning strike inflicts damage to the target and nearby enemies. Power $s1. Paralyzes enemies for $s2 Consumes $s3 Soulstone(s). -->
-        <icon>icon.skll10094</icon>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>5</abnormalTime>
-        <abnormalType>PARALYZE</abnormalType>
-        <abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
-        <activateRate>50</activateRate> <!-- Guessed -->
-        <affectLimit>10-10</affectLimit>
-        <affectRange>100</affectRange>
-        <basicProperty>MAGIC</basicProperty> <!-- Guessed -->
-        <itemConsumeId>1785</itemConsumeId> <!-- Soulstone -->
-        <itemConsumeCount>1</itemConsumeCount>
-        <lvlBonusRate>1</lvlBonusRate>
-        <operateType>A2</operateType>
-        <targetType>ENEMY_ONLY</targetType>
-        <affectScope>RANGE</affectScope>
-        <affectObject>NOT_FRIEND</affectObject>
-        <magicLvl>
-            <value level="1">80</value>
-            <value level="2">81</value>
-            <value level="3">82</value>
-            <value level="4">83</value>
-            <value level="5">84</value>
-        </magicLvl>
-        <mpConsume>
-            <value level="1">140</value>
-            <value level="2">146</value>
-            <value level="3">152</value>
-            <value level="4">159</value>
-            <value level="5">166</value>
-        </mpConsume>
-        <nextAction>ATTACK</nextAction>
-        <castRange>400</castRange>
-        <hitTime>1500</hitTime>
-        <coolTime>500</coolTime>
-        <reuseDelay>60000</reuseDelay>
-        <effectPoint>
-            <value level="1">-4140</value>
-            <value level="2">-4240</value>
-            <value level="3">-4340</value>
-            <value level="4">-4440</value>
-            <value level="5">-4540</value>
-        </effectPoint>
-        <isDebuff>true</isDebuff>
-        <trait>PARALYZE</trait>
-        <conditions>
-            <condition name="EquipShield"/>
-        </conditions>
-        <effects>
-            <effect name="PhysicalAttack">
-                <power>
-                    <value level="1">1997</value>
-                    <value level="2">2096</value>
-                    <value level="3">2179</value>
-                    <value level="4">2266</value>
-                    <value level="5">2356</value>
-                </power>
-            </effect>
-            <effect name="BlockActions">
-                <allowedSkills>35016</allowedSkills>
-            </effect>
-            <effect name="DefenceTrait">
-                <PARALYZE>100</PARALYZE>
-            </effect>
-        </effects>
-    </skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
+	<skill id="10015" name="Chain Strike" max-level="3" debuff="true" action="A2">
+	<!-- Pulls the targeted enemy to your position, making them attack you. -->
+		<icon initial="icon.skill10015"/>
+		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="PULL" level-bonus-rate="30" auto-use="ACTIVE">
+			<magic-level initial="76">
+				<value level="2">82</value>
+				<value level="3">84</value>
+			</magic-level>
+			<cast-range initial="600"/>
+			<reuse initial="15000"/>
+			<cool-time initial="1000"/>
+			<effect-point initial="-4132">
+				<value level="2">-4198</value>
+				<value level="3">-4265</value>
+			</effect-point>
+			<effect-range initial="1100"/>
+			<hit-time initial="-4132000">
+				<value level="2">-4198000</value>
+				<value level="3">-4265000</value>
+			</hit-time>
+			<activate-rate initial="190"/>
+		</attributes>
+		<consume>
+			<mana initial="69">
+				<value level="2">73</value>
+				<value level="3">77</value>
+			</mana>
+		</consume>
+		<target type="ENEMY" />
+		<abnormal type="STUN" >
+			<level initial="1">
+				<value level="2">2</value>
+				<value level="3">3</value>
+			</level>
+			<time initial="1"/>
+			<chance initial="190"/>
+		</abnormal>
+		<conditions>
+			<condition name="EquipShield"/>
+		</conditions>
+		<effects>
+			<pull-back delay="600">
+				<power initial="600.0"/>
+			</pull-back>
+			<block-all-actions>
+				<allowed-skills>35016</allowed-skills>
+			</block-all-actions>
+			<effect name="GetAgro"/>
+		</effects>
+	</skill>
+	<skill id="10094" name="Mass Lightning Strike" max-level="5" debuff="true" action="A2">
+	<!-- 
+		level 1: Strikes the enemy with a lightning bolt that inflicts damage with 1997 Power. Paralyzes for 5 seconds. Consumes 1 Soulstones.
+		level 2: Strikes the enemy with a lightning bolt that inflicts damage with 2096 Power. Paralyzes for 5 seconds. Consumes 1 Soulstones.
+		level 3: Strikes the enemy with a lightning bolt that inflicts damage with 2179 Power. Paralyzes for 5 seconds. Consumes 1 Soulstones.
+		level 4: Strikes the enemy with a lightning bolt that inflicts damage with 2266 Power. Paralyzes for 5 seconds. Consumes 1 Soulstones.
+		level 5: Strikes the enemy with a lightning bolt that inflicts damage with 2356 Power. Paralyzes for 5 seconds. Consumes 1 Soulstones.
+	 -->
+		<icon initial="icon.skll10094"/>
+		<attributes property="PHYSIC" next-action="ATTACK" trait="PARALYZE" level-bonus-rate="1" auto-use="ACTIVE">
+			<magic-level initial="80">
+				<value level="2">81</value>
+				<value level="3">82</value>
+				<value level="4">83</value>
+				<value level="5">84</value>
+			</magic-level>
+			<cast-range initial="400"/>
+			<reuse initial="60000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="-4140">
+				<value level="2">-4240</value>
+				<value level="3">-4340</value>
+				<value level="4">-4440</value>
+				<value level="5">-4540</value>
+			</effect-point>
+			<effect-range initial="-1"/>
+			<hit-time initial="-4140000">
+				<value level="2">-4240000</value>
+				<value level="3">-4340000</value>
+				<value level="4">-4440000</value>
+				<value level="5">-4540000</value>
+			</hit-time>
+			<activate-rate initial="50"/>
+		</attributes>
+		<consume>
+			<mana initial="140">
+				<value level="2">146</value>
+				<value level="3">152</value>
+				<value level="4">159</value>
+				<value level="5">166</value>
+			</mana>
+			<item initial="1785"/>
+			<item-count initial="1"/>
+		</consume>
+		<target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="100" affect-min="10" affect-random="10" />
+		<abnormal type="PARALYZE" visual="PARALYZE" >
+			<level initial="1"/>
+			<time initial="5"/>
+			<chance initial="50"/>
+		</abnormal>
+		<conditions>
+			<condition name="EquipShield"/>
+		</conditions>
+		<effects>
+			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+				<power initial="1997.0">
+					<value level="2">2096.0</value>
+					<value level="3">2179.0</value>
+					<value level="4">2266.0</value>
+					<value level="5">2356.0</value>
+				</power>
+			</physical-attack>
+			<block-all-actions>
+				<allowed-skills>35016</allowed-skills>
+			</block-all-actions>
+			<defence-trait>
+				<trait type="PARALYZE">
+					<power initial="1.0"/>
+				</trait>
+			</defence-trait>
+		</effects>
+	</skill>
 </list>

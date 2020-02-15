@@ -19,7 +19,7 @@ package handlers.usercommandhandlers;
 import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.handler.IUserCommandHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.engine.skill.api.Skill;
@@ -60,8 +60,8 @@ public class Unstuck implements IUserCommandHandler
 			return false;
 		}
 		
-		final Skill escape = SkillData.getInstance().getSkill(2099, 1); // 5 minutes escape
-		final Skill GM_escape = SkillData.getInstance().getSkill(2100, 1); // 1 second escape
+		final Skill escape = SkillEngine.getInstance().getSkill(2099, 1); // 5 minutes escape
+		final Skill GM_escape = SkillEngine.getInstance().getSkill(2100, 1); // 1 second escape
 		if (activeChar.getAccessLevel().isGm())
 		{
 			if (GM_escape != null)

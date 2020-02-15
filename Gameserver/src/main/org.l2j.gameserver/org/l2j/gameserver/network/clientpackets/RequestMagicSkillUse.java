@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.engine.skill.api.Skill;
@@ -36,7 +36,7 @@ public final class RequestMagicSkillUse extends ClientPacket {
             if ((_magicId == CommonSkill.HAIR_ACCESSORY_SET.getId()) //
                     || ((_magicId > 1565) && (_magicId < 1570))) // subClass change SkillTree
             {
-                skill = SkillData.getInstance().getSkill(_magicId, 1);
+                skill = SkillEngine.getInstance().getSkill(_magicId, 1);
             } else {
                 player.sendPacket(ActionFailed.STATIC_PACKET);
                 if (_magicId > 0) {

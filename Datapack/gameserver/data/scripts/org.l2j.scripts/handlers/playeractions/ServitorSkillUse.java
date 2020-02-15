@@ -1,7 +1,7 @@
 package handlers.playeractions;
 
 import org.l2j.gameserver.data.xml.impl.PetSkillData;
-import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.handler.IPlayerActionHandler;
 import org.l2j.gameserver.data.xml.model.ActionData;
 import org.l2j.gameserver.model.actor.Summon;
@@ -36,7 +36,7 @@ public final class ServitorSkillUse implements IPlayerActionHandler
 			if (skillLevel > 0)
 			{
 				servitor.setTarget(activeChar.getTarget());
-				servitor.useMagic(SkillData.getInstance().getSkill(data.getOptionId(), skillLevel), null, ctrlPressed, shiftPressed);
+				servitor.useMagic(SkillEngine.getInstance().getSkill(data.getOptionId(), skillLevel), null, ctrlPressed, shiftPressed);
 			}
 		});
 	}

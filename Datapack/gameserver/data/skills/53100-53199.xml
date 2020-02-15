@@ -1,15 +1,24 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
-	<skill id="53100" toLevel="1" name="Heroic Miracle">
-		<!-- Skill of the Olympiad Hero. Max HP +850. During attack Atk. Spd., Casting Spd. and Speed are increased. The buff of continual MP recovery is activated. -->
-		<icon>icon.skill0912</icon>
-		<operateType>P</operateType>
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
+	<skill id="53100" name="Heroic Miracle" max-level="1" >
+	<!-- Skill given to heroes at the Olympiad. Max HP +850. Has a chance to activate Heroes' Power when attacking to receive a buff that increases Atk. Spd. and Casting Spd., and continuously recovers MP. -->
+		<icon initial="icon.skill0912"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="53101" toLevel="1" name="Heroic Miracle">
-		<!-- Atk. Spd. by +100, Casting Spd. +100, Speed +20. Continual MP recovery is activated. -->
-		<icon>icon.skill0912</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
-		<reuseDelay>100000</reuseDelay>
+	<skill id="53101" name="Heroic Miracle" max-level="1" action="A1">
+	<!-- Atk. Spd. +100, Casting Spd. +100, Speed +20, and continuously recovers MP. -->
+		<icon initial="icon.skill0912"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="-1"/>
+			<reuse initial="100000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
 </list>

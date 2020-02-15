@@ -1,16 +1,19 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
-    <skill id="3498" toLevel="1" name="Special Ability: Lightness">
-        <!-- Increases weight Limit. -->
-        <icon>icon.skill0150</icon>
-        <magicLvl>46</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <effects>
-            <effect name="WeightLimit">
-                <amount>20</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
+	<skill id="3498" name="Special Ability: Light" max-level="1" >
+	<!-- Increases weight limit. -->
+		<icon initial="icon.skill0150"/>
+		<attributes property="MAGIC" magic-critical-rate="5.0" >
+			<magic-level initial="46"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<stat-modify stat="WEIGHT_LIMIT" mode="PER">
+				<power initial="20.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
 </list>

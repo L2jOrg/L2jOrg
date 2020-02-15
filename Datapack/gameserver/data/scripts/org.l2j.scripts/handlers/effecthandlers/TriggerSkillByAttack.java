@@ -1,6 +1,7 @@
 package handlers.effecthandlers;
 
 import org.l2j.commons.util.Rnd;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.handler.TargetHandler;
 import org.l2j.gameserver.model.StatsSet;
@@ -26,6 +27,7 @@ import static org.l2j.gameserver.util.GameUtils.isCreature;
 /**
  * Trigger Skill By Attack effect implementation.
  * @author Zealar
+ * @author JoeAlisson
  */
 public final class TriggerSkillByAttack extends AbstractEffect {
 	public final int minDamage;
@@ -49,10 +51,8 @@ public final class TriggerSkillByAttack extends AbstractEffect {
 		allowNormalAttack = params.getBoolean("allowNormalAttack", true);
 		allowSkillAttack = params.getBoolean("allowSkillAttack", false);
 		allowReflect = params.getBoolean("allowReflect", false);
-		
-		if (params.getString("weapons", "ALL").equalsIgnoreCase("ALL")) {
-			allowWeapons = 0;
-		} else {
+
+		if(params.contains("weapons") && Util.isNotEmpty(params.getString("weapons"))) {
 			for (String s : params.getString("weapons").split(" ")) {
 				allowWeapons |= WeaponType.valueOf(s).mask();
 			}

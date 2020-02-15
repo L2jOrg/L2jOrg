@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.world.World;
@@ -34,9 +34,9 @@ public class Decoy extends Creature {
         _totalLifeTime = totalLifeTime;
         _timeRemaining = _totalLifeTime;
         final int hateSpamSkillId = 5272;
-        final int skilllevel = Math.min(getTemplate().getDisplayId() - 13070, SkillData.getInstance().getMaxLevel(hateSpamSkillId));
+        final int skilllevel = Math.min(getTemplate().getDisplayId() - 13070, SkillEngine.getInstance().getMaxLevel(hateSpamSkillId));
         _DecoyLifeTask = ThreadPool.scheduleAtFixedRate(new DecoyLifetime(_owner, this), 1000, 1000);
-        _HateSpam = ThreadPool.scheduleAtFixedRate(new HateSpam(this, SkillData.getInstance().getSkill(hateSpamSkillId, skilllevel)), 2000, 5000);
+        _HateSpam = ThreadPool.scheduleAtFixedRate(new HateSpam(this, SkillEngine.getInstance().getSkill(hateSpamSkillId, skilllevel)), 2000, 5000);
     }
 
     @Override

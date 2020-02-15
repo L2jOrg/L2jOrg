@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.data.xml.impl.EnchantSkillGroupsData;
-import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.serverpackets.ExEnchantSkillInfo;
@@ -37,7 +37,7 @@ public final class RequestExEnchantSkillInfo extends ClientPacket {
             return;
         }
 
-        final Skill skill = SkillData.getInstance().getSkill(_skillId, _skillLvl, _skillSubLvl);
+        final Skill skill = SkillEngine.getInstance().getSkill(_skillId, _skillLvl, _skillSubLvl);
         if ((skill == null) || (skill.getId() != _skillId)) {
             return;
         }

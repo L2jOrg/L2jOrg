@@ -1,7 +1,7 @@
 package org.l2j.gameserver.world.zone.type;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.MountType;
 import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.instancemanager.FortSiegeManager;
@@ -147,7 +147,7 @@ public class SiegeZone extends Zone {
                     lvl = Math.min(lvl + info.getSkill().getLevel(), 5);
                 }
 
-                final Skill skill = SkillData.getInstance().getSkill(5660, lvl);
+                final Skill skill = SkillEngine.getInstance().getSkill(5660, lvl);
                 if (skill != null) {
                     skill.applyEffects(creature, creature);
                 }

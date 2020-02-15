@@ -8,7 +8,7 @@ import org.l2j.gameserver.communitybbs.Manager.ForumsBBSManager;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.sql.impl.CrestTable;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
-import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.enums.ClanRewardType;
 import org.l2j.gameserver.enums.UserInfoType;
@@ -998,7 +998,7 @@ public class Clan implements IIdentifiable, INamable {
                     final int id = rset.getInt("skill_id");
                     final int level = rset.getInt("skill_level");
                     // Create a L2Skill object for each record
-                    final Skill skill = SkillData.getInstance().getSkill(id, level);
+                    final Skill skill = SkillEngine.getInstance().getSkill(id, level);
                     // Add the L2Skill object to the Clan _skills
                     final int subType = rset.getInt("sub_pledge_id");
 

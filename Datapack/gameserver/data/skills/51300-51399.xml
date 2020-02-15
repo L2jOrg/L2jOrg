@@ -1,648 +1,1204 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
-	<skill id="51300" toLevel="1" name="Wind Fist">
-		<operateType>A1</operateType>
-		<castRange>500</castRange>
-		<hitTime>1500</hitTime>
-		<effectPoint>-100</effectPoint>
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
+	<skill id="51300" name="Wind Fist" max-level="1" action="A1">
+	<!-- Wards off danger with the power of dimension. Decreases the chance of being hit with Deadly Stab -$s2 and P. Critical Damage/M. Critical Damage -$s3 and increases Magic Attack Resistance +$s4 for $s1. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="500"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-    <skill id="51301" toLevel="1" name="Mysterious Soulshot (S-grade)">
-        <icon>icon.etc_spirit_bullet_white_i00</icon>
-        <operateType>A1</operateType>
-    </skill>
-    <skill id="51302" toLevel="1" name="Mysterious Blessed Soulshot (S-grade)">
-        <icon>icon.etc_spirit_bullet_white_i00</icon>
-        <operateType>A1</operateType>
-    </skill>
-    <skill id="51303" toLevel="1" name="Mysterious Spiritshot (S-grade)">
-        <icon>icon.etc_spirit_bullet_white_i00</icon>
-        <operateType>A1</operateType>
-    </skill>
-    <skill id="51304" toLevel="1" name="Mysterious Blessed Spiritshot (S-grade)">
-        <icon>icon.etc_spirit_bullet_white_i00</icon>
-        <operateType>A1</operateType>
-    </skill>
-    <skill id="51305" toLevel="1" name="Special Summer Box">
-        <icon>icon.etc_treasure_box_i04</icon>
-        <operateType>A1</operateType>
-        <hitTime>500</hitTime>
-        <coolTime>500</coolTime>
-        <reuseDelay>1000</reuseDelay>
-    </skill>
-    <skill id="51306" toLevel="1" name="Jewel Chest">
-        <icon>icon.etc_treasure_box_i04</icon>
-        <operateType>A1</operateType>
-        <hitTime>500</hitTime>
-        <coolTime>500</coolTime>
-        <reuseDelay>1000</reuseDelay>
-    </skill>
-    <skill id="51307" toLevel="1" name="Life Stone Pack">
-        <icon>icon.etc_treasure_box_i04</icon>
-        <operateType>A1</operateType>
-        <hitTime>500</hitTime>
-        <coolTime>500</coolTime>
-        <reuseDelay>1000</reuseDelay>
-    </skill>
-    <skill id="51308" toLevel="1" name="Solid Scroll: Enchant Box">
-        <icon>icon.etc_treasure_box_i04</icon>
-        <operateType>A1</operateType>
-        <hitTime>500</hitTime>
-        <coolTime>500</coolTime>
-        <reuseDelay>1000</reuseDelay>
-    </skill>
-    <skill id="51309" toLevel="1" name="Solid Scroll: Enchant Large Box">
-        <icon>icon.etc_treasure_box_i04</icon>
-        <operateType>A1</operateType>
-        <hitTime>500</hitTime>
-        <coolTime>500</coolTime>
-        <reuseDelay>1000</reuseDelay>
-    </skill>
-    <skill id="51310" toLevel="1" name="Armor Varnish Box">
-        <icon>icon.etc_treasure_box_i04</icon>
-        <operateType>A1</operateType>
-        <hitTime>500</hitTime>
-        <coolTime>500</coolTime>
-        <reuseDelay>1000</reuseDelay>
-    </skill>
-    <skill id="51311" toLevel="1" name="Weapon Varnish Box">
-        <icon>icon.etc_treasure_box_i04</icon>
-        <operateType>A1</operateType>
-        <hitTime>500</hitTime>
-        <coolTime>500</coolTime>
-        <reuseDelay>1000</reuseDelay>
-    </skill>
-    <skill id="51312" toLevel="1" name="Elite Armor/ Accessories Varnish Box">
-        <icon>icon.etc_treasure_box_i04</icon>
-        <operateType>A1</operateType>
-        <hitTime>500</hitTime>
-        <coolTime>500</coolTime>
-        <reuseDelay>1000</reuseDelay>
-    </skill>
-    <skill id="51313" toLevel="1" name="Elite Weapon Varnish Box">
-        <icon>icon.etc_treasure_box_i04</icon>
-        <operateType>A1</operateType>
-        <hitTime>500</hitTime>
-        <coolTime>500</coolTime>
-        <reuseDelay>1000</reuseDelay>
-    </skill>
-    <skill id="51314" toLevel="1" name="Special Varnish Box">
-        <icon>icon.etc_treasure_box_i04</icon>
-        <operateType>A1</operateType>
-        <hitTime>500</hitTime>
-        <coolTime>500</coolTime>
-        <reuseDelay>1000</reuseDelay>
-    </skill>
-    <skill id="51315" toLevel="1" name="Scroll: Enchant Excalibur">
-        <operateType>A1</operateType>
-    </skill>
-    <skill id="51316" toLevel="1" name="Excalibur Weak Energy">
-        <!-- HP/ MP Recovery Bonus +10%. -->
-        <icon>icon.weapon_plenitas_i00</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="51317" toLevel="1" name="Gran Kain Treasure Chest">
-        <icon>icon.etc_treasure_box_i04</icon>
-        <operateType>A1</operateType>
-    </skill>
-    <skill id="51318" toLevel="1" name="Silver Gran Kain Chest">
-        <icon>icon.etc_treasure_box_i04</icon>
-        <operateType>A1</operateType>
-    </skill>
-    <skill id="51319" toLevel="1" name="Golden Gran Kain Chest">
-        <icon>icon.etc_treasure_box_i04</icon>
-        <operateType>A1</operateType>
-    </skill>
-    <skill id="51320" toLevel="1" name="Special Gran Kain Chest">
-        <icon>icon.etc_treasure_box_i04</icon>
-        <operateType>A1</operateType>
+	<skill id="51301" name="Mysterious Soulshot (S-grade)" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.etc_spirit_bullet_white_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51321" toLevel="1" name="Summon Agathion - Taurus (Fire Dragon)">
-		<!-- Summons Agathion. -->
-		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
+	<skill id="51302" name="Mysterious Blessed Soulshot (S-grade)" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.etc_spirit_bullet_white_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51322" toLevel="1" name="Summon Agathion - Taurus (Land Dragon)">
-		<!-- Summons Agathion. -->
-		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
+	<skill id="51303" name="Mysterious Spiritshot (S-grade)" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.etc_spirit_bullet_white_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51323" toLevel="1" name="Summon Agathion - Leo (Fire Dragon)">
-		<!-- Summons Agathion. -->
-		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
+	<skill id="51304" name="Mysterious Blessed Spiritshot (S-grade)" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.etc_spirit_bullet_white_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51324" toLevel="1" name="Summon Agathion - Leo (Land Dragon)">
-		<!-- Summons Agathion. -->
-		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
+	<skill id="51305" name="Special Summer Box" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.etc_treasure_box_i04"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="1000"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51325" toLevel="1" name="Summon Agathion - Scorpio (Fire Dragon)">
-		<!-- Summons Agathion. -->
-		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
+	<skill id="51306" name="Gemstone Box" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.etc_treasure_box_i04"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="1000"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51326" toLevel="1" name="Summon Agathion - Scorpio (Land Dragon)">
-		<!-- Summons Agathion. -->
-		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
+	<skill id="51307" name="Life Stone Pack" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.etc_treasure_box_i04"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="1000"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51327" toLevel="1" name="Summon Agathion - Sagittarius (Fire Dragon)">
-		<!-- Summons Agathion. -->
-		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
+	<skill id="51308" name="Stable Enchant Scroll Pack" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.etc_treasure_box_i04"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="1000"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51328" toLevel="1" name="Summon Agathion - Sagittarius (Land Dragon)">
-		<!-- Summons Agathion. -->
-		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
+	<skill id="51309" name="Greater Enchant Scroll Pack" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.etc_treasure_box_i04"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="1000"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51329" toLevel="1" name="Summon Agathion - Virgo (Fire Dragon)">
-		<!-- Summons Agathion. -->
-		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
+	<skill id="51310" name="Armor Varnish Box" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.etc_treasure_box_i04"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="1000"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51330" toLevel="1" name="Summon Agathion - Virgo (Land Dragon)">
-		<!-- Summons Agathion. -->
-		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
+	<skill id="51311" name="Weapon Varnish Box" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.etc_treasure_box_i04"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="1000"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51331" toLevel="1" name="Summon Agathion - Aquarius (Fire Dragon)">
-		<!-- Summons Agathion. -->
-		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
+	<skill id="51312" name="High-grade Armor/Accessory Varnish Box" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.etc_treasure_box_i04"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="1000"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51332" toLevel="1" name="Summon Agathion - Aquarius (Land Dragon)">
-		<!-- Summons Agathion. -->
-		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
+	<skill id="51313" name="High-grade Weapon Varnish Box" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.etc_treasure_box_i04"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="1000"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51333" toLevel="1" name="Summon Agathion - Capricorn (Fire Dragon)">
-		<!-- Summons Agathion. -->
-		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
+	<skill id="51314" name="Special Varnish Box" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.etc_treasure_box_i04"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="1000"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51334" toLevel="1" name="Summon Agathion - Capricorn (Land Dragon)">
-		<!-- Summons Agathion. -->
-		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
+	<skill id="51315" name="Scroll: Enchant Excalibur" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51335" toLevel="1" name="Summon Agathion - Libra (Fire Dragon)">
-		<!-- Summons Agathion. -->
-		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
+	<skill id="51316" name="Excalibur's Faint Energy" max-level="1" >
+	<!-- Increases HP Recovery Bonus and MP Recovery Bonus +10%%. -->
+		<icon initial="icon.weapon_plenitas_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51336" toLevel="1" name="Summon Agathion - Libra (Land Dragon)">
-		<!-- Summons Agathion. -->
-		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
+	<skill id="51317" name="Gran Kain's Treasure Chest" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.etc_treasure_box_i04"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51337" toLevel="1" name="Summon Agathion - Gemini (High Quality)">
-		<!-- Summons Agathion. -->
-		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
+	<skill id="51318" name="Gran Kain's Silver Box" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.etc_treasure_box_i04"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51338" toLevel="1" name="Agathion Enchant Scroll">
-		<icon>icon.star_scrl_of_ench_ag</icon>
-		<operateType>A1</operateType>
+	<skill id="51319" name="Gran Kain's Golden Box" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.etc_treasure_box_i04"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51339" toLevel="1" name="Agathion Gift Box">
-		<operateType>A1</operateType>
-		<hitTime>500</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>500</reuseDelay>
+	<skill id="51320" name="Gran Kain's Special Box" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.etc_treasure_box_i04"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51340" toLevel="1" name="Weapon Pack (S-grade)">
-		<operateType>A1</operateType>
-		<hitTime>500</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>500</reuseDelay>
+	<skill id="51321" name="Unseal Agathion - Taurus (Fire Dragon)" max-level="1" action="A1">
+	<!-- Unseals the Agathion. -->
+		<icon initial="icon.etc_summon_aga_agit_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51341" toLevel="1" name="Armor Pack (S-grade)">
-		<operateType>A1</operateType>
-		<hitTime>500</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>500</reuseDelay>
+	<skill id="51322" name="Unseal Agathion - Taurus (Earth Dragon)" max-level="1" action="A1">
+	<!-- Unseals the Agathion. -->
+		<icon initial="icon.etc_summon_aga_agit_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51342" toLevel="1" name="+10 Armor Pack (A-grade)">
-		<operateType>A1</operateType>
-		<hitTime>500</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>500</reuseDelay>
+	<skill id="51323" name="Unseal Agathion - Leo (Fire Dragon)" max-level="1" action="A1">
+	<!-- Unseals the Agathion. -->
+		<icon initial="icon.etc_summon_aga_agit_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51343" toLevel="1" name="+10 Armor Pack (B-grade)">
-		<operateType>A1</operateType>
-		<hitTime>500</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>500</reuseDelay>
+	<skill id="51324" name="Unseal Agathion - Leo (Earth Dragon)" max-level="1" action="A1">
+	<!-- Unseals the Agathion. -->
+		<icon initial="icon.etc_summon_aga_agit_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51344" toLevel="1" name="+10 Accessory Supply Box (A-grade)">
-		<operateType>A1</operateType>
-		<hitTime>500</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>500</reuseDelay>
+	<skill id="51325" name="Unseal Agathion - Scorpio (Fire Dragon)" max-level="1" action="A1">
+	<!-- Unseals the Agathion. -->
+		<icon initial="icon.etc_summon_aga_agit_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51345" toLevel="1" name="+10 Accessory Supply Box (B-grade)">
-		<operateType>A1</operateType>
-		<hitTime>500</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>500</reuseDelay>
+	<skill id="51326" name="Unseal Agathion - Scorpio (Earth Dragon)" max-level="1" action="A1">
+	<!-- Unseals the Agathion. -->
+		<icon initial="icon.etc_summon_aga_agit_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51346" toLevel="5" name="Fire Dragon Power: Virgo">
-		<!-- P. Atk. in PvE +$s1. -->
-		<icon>icon.agathion_virgo_star_1</icon>
-		<operateType>P</operateType>
+	<skill id="51327" name="Unseal Agathion - Sagittarius (Fire Dragon)" max-level="1" action="A1">
+	<!-- Unseals the Agathion. -->
+		<icon initial="icon.etc_summon_aga_agit_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51347" toLevel="5" name="Fire Dragon Power: Capricorn">
-		<!-- P. Atk. in PvE +$s1. -->
-		<icon>icon.agathion_capr_star_1</icon>
-		<operateType>P</operateType>
+	<skill id="51328" name="Unseal Agathion - Sagittarius (Earth Dragon)" max-level="1" action="A1">
+	<!-- Unseals the Agathion. -->
+		<icon initial="icon.etc_summon_aga_agit_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51348" toLevel="5" name="Fire Dragon Power: Libra">
-		<!-- P. Atk. in PvE +$s1. -->
-		<icon>icon.agathion_lib_star_1</icon>
-		<operateType>P</operateType>
+	<skill id="51329" name="Unseal Agathion - Virgo (Fire Dragon)" max-level="1" action="A1">
+	<!-- Unseals the Agathion. -->
+		<icon initial="icon.etc_summon_aga_agit_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51349" toLevel="5" name="Fire Dragon Power: Taurus">
-		<!-- P. Atk. in PvE +$s1. -->
-		<icon>icon.agathion_tau_star_1</icon>
-		<operateType>P</operateType>
+	<skill id="51330" name="Unseal Agathion - Virgo (Earth Dragon)" max-level="1" action="A1">
+	<!-- Unseals the Agathion. -->
+		<icon initial="icon.etc_summon_aga_agit_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51350" toLevel="5" name="Fire Dragon Power: Leo">
-		<!-- P. Atk. in PvE +$s1. -->
-		<icon>icon.agathion_leo_star_1</icon>
-		<operateType>P</operateType>
+	<skill id="51331" name="Unseal Agathion - Aquarius (Fire Dragon)" max-level="1" action="A1">
+	<!-- Unseals the Agathion. -->
+		<icon initial="icon.etc_summon_aga_agit_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51351" toLevel="5" name="Fire Dragon Power: Scorpio">
-		<!-- P. Atk. in PvE +$s1. -->
-		<icon>icon.agathion_sco_star_1</icon>
-		<operateType>P</operateType>
+	<skill id="51332" name="Unseal Agathion - Aquarius (Earth Dragon)" max-level="1" action="A1">
+	<!-- Unseals the Agathion. -->
+		<icon initial="icon.etc_summon_aga_agit_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51352" toLevel="5" name="Fire Dragon Power: Aquarius">
-		<!-- P. Atk. in PvE +$s1. -->
-		<icon>icon.agathion_aqu_star_1</icon>
-		<operateType>P</operateType>
+	<skill id="51333" name="Unseal Agathion - Capricorn (Fire Dragon)" max-level="1" action="A1">
+	<!-- Unseals the Agathion. -->
+		<icon initial="icon.etc_summon_aga_agit_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51353" toLevel="5" name="Fire Dragon Power: Sagittarius">
-		<!-- P. Atk. in PvE +$s1. -->
-		<icon>icon.agathion_sag_star_1</icon>
-		<operateType>P</operateType>
+	<skill id="51334" name="Unseal Agathion - Capricorn (Earth Dragon)" max-level="1" action="A1">
+	<!-- Unseals the Agathion. -->
+		<icon initial="icon.etc_summon_aga_agit_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51354" toLevel="5" name="Land Dragon Power: Virgo">
-		<!-- PvP Damage +$s1. -->
-		<icon>icon.agathion_virgo_star_1</icon>
-		<operateType>P</operateType>
+	<skill id="51335" name="Unseal Agathion - Libra (Fire Dragon)" max-level="1" action="A1">
+	<!-- Unseals the Agathion. -->
+		<icon initial="icon.etc_summon_aga_agit_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51355" toLevel="5" name="Land Dragon Power: Capricorn">
-		<!-- PvP Damage +$s1. -->
-		<icon>icon.agathion_capr_star_1</icon>
-		<operateType>P</operateType>
+	<skill id="51336" name="Unseal Agathion - Libra (Earth Dragon)" max-level="1" action="A1">
+	<!-- Unseals the Agathion. -->
+		<icon initial="icon.etc_summon_aga_agit_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51356" toLevel="5" name="Land Dragon Power: Libra">
-		<!-- PvP Damage +$s1. -->
-		<icon>icon.agathion_lib_star_1</icon>
-		<operateType>P</operateType>
+	<skill id="51337" name="Unseal Agathion - Gemini (Advanced)" max-level="1" action="A1">
+	<!-- Unseals the Agathion. -->
+		<icon initial="icon.etc_summon_aga_agit_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51357" toLevel="5" name="Land Dragon Power: Taurus">
-		<!-- PvP Damage +$s1. -->
-		<icon>icon.agathion_tau_star_1</icon>
-		<operateType>P</operateType>
+	<skill id="51338" name="Agathion Enchant Scroll" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.star_scrl_of_ench_ag"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51358" toLevel="5" name="Land Dragon Power: Leo">
-		<!-- PvP Damage +$s1. -->
-		<icon>icon.agathion_leo_star_1</icon>
-		<operateType>P</operateType>
+	<skill id="51339" name="Agathion Gift Box" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="500"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51359" toLevel="5" name="Land Dragon Power: Scorpio">
-		<!-- PvP Damage +$s1. -->
-		<icon>icon.agathion_sco_star_1</icon>
-		<operateType>P</operateType>
+	<skill id="51340" name="S-grade Weapon Pack" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="500"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51360" toLevel="5" name="Land Dragon Power: Aquarius">
-		<!-- PvP Damage +$s1. -->
-		<icon>icon.agathion_aqu_star_1</icon>
-		<operateType>P</operateType>
+	<skill id="51341" name="S-grade Armor Pack" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="500"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51361" toLevel="5" name="Land Dragon Power: Sagittarius">
-		<!-- PvP Damage +$s1. -->
-		<icon>icon.agathion_sag_star_1</icon>
-		<operateType>P</operateType>
+	<skill id="51342" name="+10 A-grade Armor Pack" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="500"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51363" toLevel="1" name="Master Fisherman's Treasure Chest">
-		<operateType>A1</operateType>
-		<hitTime>500</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>500</reuseDelay>
+	<skill id="51343" name="+10 B-grade Armor Pack" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="500"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51364" toLevel="1" name="Might of the Meow Unit">
-		<!-- For 8 h., P. Atk. +15%. -->
-		<icon>icon.skill1068</icon>
-		<operateType>A2</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<castRange>400</castRange>
-		<hitTime>500</hitTime>
-		<reuseDelay>2000</reuseDelay>
+	<skill id="51344" name="+10 A-grade Accessory Pack" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="500"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51365" toLevel="1" name="Meow Unit's Empower">
-		<!-- For 8 h., M. Atk. +75%. -->
-		<icon>icon.skill1059</icon>
-		<operateType>A2</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<castRange>400</castRange>
-		<hitTime>500</hitTime>
-		<reuseDelay>2000</reuseDelay>
+	<skill id="51345" name="+10 B-grade Accessory Pack" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="500"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51366" toLevel="1" name="Shield of the Meow Unit">
-		<!-- For 8 h., P. Def. +15%. -->
-		<icon>icon.skill1040</icon>
-		<operateType>A2</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<castRange>400</castRange>
-		<hitTime>500</hitTime>
-		<reuseDelay>2000</reuseDelay>
+	<skill id="51346" name="Fire Dragon Power: Virgo" max-level="5" >
+	<!-- 
+		level 1: PVE P. Atk. +1% due to Fire Dragon Power
+		level 2: PVE P. Atk. +2% due to Fire Dragon Power
+		level 3: PVE P. Atk. +3% due to Fire Dragon Power
+		level 4: PVE P. Atk. +4% due to Fire Dragon Power
+		level 5: PVE P. Atk. +5% due to Fire Dragon Power
+	 -->
+		<icon initial="icon.agathion_virgo_star_1"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51367" toLevel="1" name="Magic Barrier of the Meow Unit">
-		<!-- For 8 h., M. Def. +30%. -->
-		<icon>icon.skill1036</icon>
-		<operateType>A2</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<castRange>400</castRange>
-		<hitTime>500</hitTime>
-		<reuseDelay>2000</reuseDelay>
+	<skill id="51347" name="Fire Dragon Power: Capricorn" max-level="5" >
+	<!-- 
+		level 1: PVE P. Atk. +1% due to Fire Dragon Power
+		level 2: PVE P. Atk. +2% due to Fire Dragon Power
+		level 3: PVE P. Atk. +3% due to Fire Dragon Power
+		level 4: PVE P. Atk. +4% due to Fire Dragon Power
+		level 5: PVE P. Atk. +5% due to Fire Dragon Power
+	 -->
+		<icon initial="icon.agathion_capr_star_1"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51368" toLevel="1" name="Focus of the Meow Unit">
-		<!-- For 8 h., P. Critical Rate +30%. -->
-		<icon>icon.skill1077</icon>
-		<operateType>A2</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<castRange>400</castRange>
-		<hitTime>500</hitTime>
-		<reuseDelay>2000</reuseDelay>
+	<skill id="51348" name="Fire Dragon Power: Libra" max-level="5" >
+	<!-- 
+		level 1: PVE P. Atk. +1% due to Fire Dragon Power
+		level 2: PVE P. Atk. +2% due to Fire Dragon Power
+		level 3: PVE P. Atk. +3% due to Fire Dragon Power
+		level 4: PVE P. Atk. +4% due to Fire Dragon Power
+		level 5: PVE P. Atk. +5% due to Fire Dragon Power
+	 -->
+		<icon initial="icon.agathion_lib_star_1"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51369" toLevel="1" name="Meow Unit's Wild Magic">
-		<!-- For 8 h., M. Critical Rate +20. -->
-		<icon>icon.skill1303</icon>
-		<operateType>A2</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<castRange>400</castRange>
-		<hitTime>500</hitTime>
-		<reuseDelay>2000</reuseDelay>
+	<skill id="51349" name="Fire Dragon Power: Taurus" max-level="5" >
+	<!-- 
+		level 1: PVE P. Atk. +1% due to Fire Dragon Power
+		level 2: PVE P. Atk. +2% due to Fire Dragon Power
+		level 3: PVE P. Atk. +3% due to Fire Dragon Power
+		level 4: PVE P. Atk. +4% due to Fire Dragon Power
+		level 5: PVE P. Atk. +5% due to Fire Dragon Power
+	 -->
+		<icon initial="icon.agathion_tau_star_1"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51370" toLevel="1" name="Meow Unit's Haste">
-		<!-- For 8 h., Atk. Spd. +33%. -->
-		<icon>icon.skill1086</icon>
-		<operateType>A2</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<castRange>400</castRange>
-		<hitTime>500</hitTime>
-		<reuseDelay>2000</reuseDelay>
+	<skill id="51350" name="Fire Dragon Power: Leo" max-level="5" >
+	<!-- 
+		level 1: PVE P. Atk. +1% due to Fire Dragon Power
+		level 2: PVE P. Atk. +2% due to Fire Dragon Power
+		level 3: PVE P. Atk. +3% due to Fire Dragon Power
+		level 4: PVE P. Atk. +4% due to Fire Dragon Power
+		level 5: PVE P. Atk. +5% due to Fire Dragon Power
+	 -->
+		<icon initial="icon.agathion_leo_star_1"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51371" toLevel="1" name="Meow Unit's Acumen">
-		<!-- For 8 h., Casting Spd. +30%. -->
-		<icon>icon.skill1085</icon>
-		<operateType>A2</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<castRange>400</castRange>
-		<hitTime>500</hitTime>
-		<reuseDelay>2000</reuseDelay>
+	<skill id="51351" name="Fire Dragon Power: Scorpio" max-level="5" >
+	<!-- 
+		level 1: PVE P. Atk. +1% due to Fire Dragon Power
+		level 2: PVE P. Atk. +2% due to Fire Dragon Power
+		level 3: PVE P. Atk. +3% due to Fire Dragon Power
+		level 4: PVE P. Atk. +4% due to Fire Dragon Power
+		level 5: PVE P. Atk. +5% due to Fire Dragon Power
+	 -->
+		<icon initial="icon.agathion_sco_star_1"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51372" toLevel="1" name="Meow Unit's Death Whisper">
-		<!-- For 8 h., P. Critical Damage +35%. -->
-		<icon>icon.skill1242</icon>
-		<operateType>A2</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<castRange>400</castRange>
-		<hitTime>500</hitTime>
-		<reuseDelay>2000</reuseDelay>
+	<skill id="51352" name="Fire Dragon Power: Aquarius" max-level="5" >
+	<!-- 
+		level 1: PVE P. Atk. +1% due to Fire Dragon Power
+		level 2: PVE P. Atk. +2% due to Fire Dragon Power
+		level 3: PVE P. Atk. +3% due to Fire Dragon Power
+		level 4: PVE P. Atk. +4% due to Fire Dragon Power
+		level 5: PVE P. Atk. +5% due to Fire Dragon Power
+	 -->
+		<icon initial="icon.agathion_aqu_star_1"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51373" toLevel="1" name="Decrease Weight of the Meow Unit">
-		<!-- For 8 h., Weight Limit +9000. -->
-		<icon>icon.skill1257</icon>
-		<operateType>A2</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<castRange>400</castRange>
-		<hitTime>500</hitTime>
-		<reuseDelay>2000</reuseDelay>
+	<skill id="51353" name="Fire Dragon Power: Sagittarius" max-level="5" >
+	<!-- 
+		level 1: PVE P. Atk. +1% due to Fire Dragon Power
+		level 2: PVE P. Atk. +2% due to Fire Dragon Power
+		level 3: PVE P. Atk. +3% due to Fire Dragon Power
+		level 4: PVE P. Atk. +4% due to Fire Dragon Power
+		level 5: PVE P. Atk. +5% due to Fire Dragon Power
+	 -->
+		<icon initial="icon.agathion_sag_star_1"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51374" toLevel="1" name="Meow Unit's Wind Walk">
-		<!-- For 8 h., Speed +33. -->
-		<icon>icon.skill1204</icon>
-		<operateType>A2</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<castRange>400</castRange>
-		<hitTime>500</hitTime>
-		<reuseDelay>2000</reuseDelay>
+	<skill id="51354" name="Earth Dragon Power: Virgo" max-level="5" >
+	<!-- 
+		level 1: PVP P. Atk. +1% due to Earth Dragon Power
+		level 2: PVP P. Atk. +2% due to Earth Dragon Power
+		level 3: PVP P. Atk. +3% due to Earth Dragon Power
+		level 4: PVP P. Atk. +4% due to Earth Dragon Power
+		level 5: PVP P. Atk. +5% due to Earth Dragon Power
+	 -->
+		<icon initial="icon.agathion_virgo_star_1"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51375" toLevel="1" name="Refined Romantic Gold Chapeau Teleport">
-		<!-- Teleports the character to the nearest village. Cooldown: 20 min. -->
-		<operateType>A1</operateType>
-		<hitTime>1000</hitTime>
-		<reuseDelay>1200000</reuseDelay>
+	<skill id="51355" name="Earth Dragon Power: Capricorn" max-level="5" >
+	<!-- 
+		level 1: PVP P. Atk. +1% due to Earth Dragon Power
+		level 2: PVP P. Atk. +2% due to Earth Dragon Power
+		level 3: PVP P. Atk. +3% due to Earth Dragon Power
+		level 4: PVP P. Atk. +4% due to Earth Dragon Power
+		level 5: PVP P. Atk. +5% due to Earth Dragon Power
+	 -->
+		<icon initial="icon.agathion_capr_star_1"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51376" toLevel="1" name="Mysterious Aura">
-		<!-- Temporarily increases your head size. Cooldown: 20 min. -->
-		<icon>icon.skill2513</icon>
-		<operateType>A1</operateType>
-		<reuseDelay>1200000</reuseDelay>
+	<skill id="51356" name="Earth Dragon Power: Libra" max-level="5" >
+	<!-- 
+		level 1: PVP P. Atk. +1% due to Earth Dragon Power
+		level 2: PVP P. Atk. +2% due to Earth Dragon Power
+		level 3: PVP P. Atk. +3% due to Earth Dragon Power
+		level 4: PVP P. Atk. +4% due to Earth Dragon Power
+		level 5: PVP P. Atk. +5% due to Earth Dragon Power
+	 -->
+		<icon initial="icon.agathion_lib_star_1"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51377" toLevel="1" name="Sayha's Blessing (Event)">
-		<operateType>A1</operateType>
+	<skill id="51357" name="Earth Dragon Power: Taurus" max-level="5" >
+	<!-- 
+		level 1: PVP P. Atk. +1% due to Earth Dragon Power
+		level 2: PVP P. Atk. +2% due to Earth Dragon Power
+		level 3: PVP P. Atk. +3% due to Earth Dragon Power
+		level 4: PVP P. Atk. +4% due to Earth Dragon Power
+		level 5: PVP P. Atk. +5% due to Earth Dragon Power
+	 -->
+		<icon initial="icon.agathion_tau_star_1"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51378" toLevel="1" name="15th Anniversary Gift Box">
-		<operateType>A1</operateType>
-		<hitTime>500</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>500</reuseDelay>
+	<skill id="51358" name="Earth Dragon Power: Leo" max-level="5" >
+	<!-- 
+		level 1: PVP P. Atk. +1% due to Earth Dragon Power
+		level 2: PVP P. Atk. +2% due to Earth Dragon Power
+		level 3: PVP P. Atk. +3% due to Earth Dragon Power
+		level 4: PVP P. Atk. +4% due to Earth Dragon Power
+		level 5: PVP P. Atk. +5% due to Earth Dragon Power
+	 -->
+		<icon initial="icon.agathion_leo_star_1"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51379" toLevel="1" name="Chronicle Chest">
-		<operateType>A1</operateType>
-		<hitTime>500</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>500</reuseDelay>
+	<skill id="51359" name="Earth Dragon Power: Scorpio" max-level="5" >
+	<!-- 
+		level 1: PVP P. Atk. +1% due to Earth Dragon Power
+		level 2: PVP P. Atk. +2% due to Earth Dragon Power
+		level 3: PVP P. Atk. +3% due to Earth Dragon Power
+		level 4: PVP P. Atk. +4% due to Earth Dragon Power
+		level 5: PVP P. Atk. +5% due to Earth Dragon Power
+	 -->
+		<icon initial="icon.agathion_sco_star_1"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51380" toLevel="1" name="15th Anniversary Wondrous Fork">
-		<!-- Group gift distribution -->
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
-		<castRange>1500</castRange>
-		<hitTime>1500</hitTime>
-		<reuseDelay>6000</reuseDelay>
+	<skill id="51360" name="Earth Dragon Power: Aquarius" max-level="5" >
+	<!-- 
+		level 1: PVP P. Atk. +1% due to Earth Dragon Power
+		level 2: PVP P. Atk. +2% due to Earth Dragon Power
+		level 3: PVP P. Atk. +3% due to Earth Dragon Power
+		level 4: PVP P. Atk. +4% due to Earth Dragon Power
+		level 5: PVP P. Atk. +5% due to Earth Dragon Power
+	 -->
+		<icon initial="icon.agathion_aqu_star_1"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51381" toLevel="1" name="Scroll of Escape: Unbearable Wolves' Howling">
-		<!-- Magical scroll that relocates you to Jackson in Talking Island Village. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-		<operateType>A1</operateType>
+	<skill id="51361" name="Earth Dragon Power: Sagittarius" max-level="5" >
+	<!-- 
+		level 1: PVP P. Atk. +1% due to Earth Dragon Power
+		level 2: PVP P. Atk. +2% due to Earth Dragon Power
+		level 3: PVP P. Atk. +3% due to Earth Dragon Power
+		level 4: PVP P. Atk. +4% due to Earth Dragon Power
+		level 5: PVP P. Atk. +5% due to Earth Dragon Power
+	 -->
+		<icon initial="icon.agathion_sag_star_1"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51382" toLevel="1" name="Scroll of Escape: Troubled Forest">
-		<!-- A magical scroll that relocates you to Herbiel in Elven Village. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-		<operateType>A1</operateType>
+	<skill id="51363" name="Angler's Treasure Chest" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="500"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51383" toLevel="1" name="Scroll of Escape: Cleaning-up the Grounds">
-		<!-- A magical scroll that relocates you to Vollodos in Dark Elf Village. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-		<hitTime>500</hitTime>
-		<isMagic>2</isMagic> <!-- Static Skill -->
-		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>91648</itemConsumeId>
-		<magicLvl>1</magicLvl>
-		<operateType>A1</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
+	<skill id="51364" name="Meow Unit's Might" max-level="1" action="A2" type="MAGIC">
+	<!-- For 8 hours, P. Atk. +15%% -->
+		<icon initial="icon.skill1068"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="51365" name="Meow Unit's Empower" max-level="1" action="A2" type="MAGIC">
+	<!-- For 8 hours, M. Atk. +75%% -->
+		<icon initial="icon.skill1059"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="51366" name="Meow Unit's Shield" max-level="1" action="A2" type="MAGIC">
+	<!-- For 8 hours, P. Def. +15%% -->
+		<icon initial="icon.skill1040"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="51367" name="Meow Unit's Magic Barrier" max-level="1" action="A2" type="MAGIC">
+	<!-- For 8 hours, M. Def. +30%% -->
+		<icon initial="icon.skill1036"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="51368" name="Meow Unit's Focus" max-level="1" action="A2" type="MAGIC">
+	<!-- For 8 hours, P. Critical Rate +30%% -->
+		<icon initial="icon.skill1077"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="51369" name="Meow Unit's Wild Magic" max-level="1" action="A2" type="MAGIC">
+	<!-- For 8 hours, M. Critical Rate +20 -->
+		<icon initial="icon.skill1303"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="51370" name="Meow Unit's Haste" max-level="1" action="A2" type="MAGIC">
+	<!-- For 8 hours, Atk. Spd. +33%% -->
+		<icon initial="icon.skill1086"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="51371" name="Meow Unit's Acumen" max-level="1" action="A2" type="MAGIC">
+	<!-- For 8 hours, Casting Spd. +30%% -->
+		<icon initial="icon.skill1085"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="51372" name="Meow Unit's Death Whisper" max-level="1" action="A2" type="MAGIC">
+	<!-- For 8 hours, P. Critical Damage +35%% -->
+		<icon initial="icon.skill1242"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="51373" name="Meow Unit's Decrease Weight" max-level="1" action="A2" type="MAGIC">
+	<!-- For 8 hours, Weight Limit +9000 -->
+		<icon initial="icon.skill1257"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="51374" name="Meow Unit's Wind Walk" max-level="1" action="A2" type="MAGIC">
+	<!-- For 8 hours, Movement Speed +33 -->
+		<icon initial="icon.skill1204"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="51375" name="Gold Chapeau's Escape" max-level="1" action="A1">
+	<!-- Teleports you to the nearest village. Cooldown 20 minutes. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="1200000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="51376" name="Mysterious Aura" max-level="1" action="A1">
+	<!-- Chapeau's Power enlarges your head. Cooldown 20 minutes. -->
+		<icon initial="icon.skill2513"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="-1"/>
+			<reuse initial="1200000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="51377" name="Sayha's Blessing - Event" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="51378" name="15th Anniversary Gift Box" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="500"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="51379" name="Chronicle Box" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="500"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="51380" name="15th Anniversary Mysterious Fork" max-level="1" action="A1">
+	<!-- Used to apply for the giveaway -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="1500"/>
+			<reuse initial="6000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="51381" name="Scroll of Escape: Loud Wolves" max-level="1" action="A1">
+	<!-- A magic scroll that teleports you to Jackson in Talking Island Village. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="51382" name="Scroll of Escape: Troublemaker of Forest" max-level="1" action="A1">
+	<!-- A magic scroll that teleports you to Herbiel in Elven Village. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="51383" name="Scroll of Escape: Clean the Yard" max-level="1" action="A1">
+	<!-- A magic scroll that teleports you to Vollodos in Dark Elf Village. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<item initial="91648"/>
+			<item-count initial="1"/>
+		</consume>
+		<target />
 		<conditions>
-			<condition name="OpAlignment">
-				<affectType>CASTER</affectType>
-				<alignment>LAWFUL</alignment>
-			</condition>
-			<condition name="OpCanEscape" />
+			<condition name="NonChaotic"/>
+			<condition name="OpCanEscape"/>
 		</conditions>
 		<effects>
-			<effect name="Teleport">
-				<x>11878</x>
-				<y>15763</y>
-				<z>-4552</z>
-			</effect>
+			<teleport>
+				<location level="1" x="11878" y="15763" z="-4552"/>
+			</teleport>
 		</effects>
 	</skill>
-	<skill id="51384" toLevel="1" name="Scroll of Escape: Plundered Graves">
-		<!-- A magical scroll that relocates you to Uska in Orc Barracks. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<operateType>A1</operateType>
+	<skill id="51384" name="Scroll of Escape: Suspicious Men" max-level="1" action="A1">
+	<!-- A magic scroll that teleports you to Uska in Orc Village. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51385" toLevel="1" name="Scroll of Escape: Dangerous Predators">
-		<!-- A magical scroll that relocates you to Gerald in Dwarven Village. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-		<hitTime>500</hitTime>
-		<isMagic>2</isMagic> <!-- Static Skill -->
-		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>91648</itemConsumeId>
-		<magicLvl>1</magicLvl>
-		<operateType>A1</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
+	<skill id="51385" name="Scroll of Escape: Disruptors" max-level="1" action="A1">
+	<!-- A magic scroll that teleports you to Gerald in Dwarven Village. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<item initial="91648"/>
+			<item-count initial="1"/>
+		</consume>
+		<target />
 		<conditions>
-			<condition name="OpAlignment">
-				<affectType>CASTER</affectType>
-				<alignment>LAWFUL</alignment>
-			</condition>
-			<condition name="OpCanEscape" />
+			<condition name="NonChaotic"/>
+			<condition name="OpCanEscape"/>
 		</conditions>
 		<effects>
-			<effect name="Teleport">
-				<x>115160</x>
-				<y>-177295</y>
-				<z>-864</z>
-			</effect>
+			<teleport>
+				<location level="1" x="115160" y="-177295" z="-864"/>
+			</teleport>
 		</effects>
 	</skill>
-	<skill id="51386" toLevel="1" name="Scroll of Escape: Captain Bathis">
-		<!-- A magical scroll that relocates you to the Captain Bathis in Gludio. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-		<operateType>A1</operateType>
+	<skill id="51386" name="Scroll of Escape: Captain Bathis" max-level="1" action="A1">
+	<!-- A magic scroll that teleports you to Captain Bathis in the Town of Gludio. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51387" toLevel="5" name="Adventurer's Mark">
-		<!-- The effect of Adventurer's Mark Lv. $s1: HP Recovery Bonus +$s2, MP Recovery Bonus +$s3. -->
-		<icon>icon.etc_crest_blue_i00</icon>
-		<operateType>P</operateType>
+	<skill id="51387" name="Mark of Journey" max-level="5" >
+	<!-- 
+		level 1: Triggers the effect of Mark of Journey Stage 1. HP Recovery Bonus +5%, MP Recovery Bonus +10%.
+		level 2: Triggers the effect of Mark of Journey Stage 2. HP Recovery Bonus +10%, MP Recovery Bonus +15%.
+		level 3: Triggers the effect of Mark of Journey Stage 3. HP Recovery Bonus +15%, MP Recovery Bonus +20%.
+		level 4: Triggers the effect of Mark of Journey Stage 4. HP Recovery Bonus +20%, MP Recovery Bonus +25%.
+		level 5: Triggers the effect of Mark of Journey Stage 5. HP Recovery Bonus +25%, MP Recovery Bonus +25%.
+	 -->
+		<icon initial="icon.etc_crest_blue_i00"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51388" toLevel="1" name="Chicken Box">
-		<operateType>A1</operateType>
-		<hitTime>500</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>500</reuseDelay>
+	<skill id="51388" name="Chicken Lucky Box" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="500"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51389" toLevel="1" name="Meow Unit's Energy">
-		<!-- For 8 h. recovers HP. -->
-		<icon>icon.skill0211</icon>
-		<operateType>A2</operateType>
-		<isMagic>4</isMagic>
-		<castRange>400</castRange>
-		<hitTime>500</hitTime>
-		<reuseDelay>2000</reuseDelay>
+	<skill id="51389" name="Meow Unit's Aura" max-level="1" action="A2">
+	<!-- Recovers HP over 8 hours. -->
+		<icon initial="icon.skill0211"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51390" toLevel="1" name="Enchanting Shot">
-		<!-- Sends an arrow filled with special magic to the target. Deals 100 damage. Critical. -->
-		<icon>icon.skill3260</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
-		<castRange>500</castRange>
-		<hitTime>1500</hitTime>
-		<coolTime>800</coolTime>
-		<reuseDelay>1000</reuseDelay>
-		<effectPoint>-1</effectPoint>
+	<skill id="51390" name="Forgiveness" max-level="1" action="A1">
+	<!-- Shoots an arrow of love. -->
+		<icon initial="icon.skill3260"/>
+		<attributes >
+			<cast-range initial="500"/>
+			<reuse initial="1000"/>
+			<cool-time initial="800"/>
+			<effect-point initial="-1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51391" toLevel="1" name="Double Enchanting Shot">
-		<!-- Sends two arrows filled with special magic to the target. Deals 200 damage. -->
-		<icon>icon.skill3260</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
-		<castRange>500</castRange>
-		<hitTime>2000</hitTime>
-		<coolTime>800</coolTime>
-		<reuseDelay>3000</reuseDelay>
-		<effectPoint>-1</effectPoint>
+	<skill id="51391" name="Pardon" max-level="1" action="A1">
+	<!-- Shoots two arrows of love consecutively. -->
+		<icon initial="icon.skill3260"/>
+		<attributes >
+			<cast-range initial="500"/>
+			<reuse initial="3000"/>
+			<cool-time initial="800"/>
+			<effect-point initial="-1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51392" toLevel="1" name="Meow Unit's Gratitude">
-		<!-- For 8 h. recovers MP. -->
-		<icon>icon.skill0213</icon>
-		<operateType>A2</operateType>
-		<isMagic>4</isMagic>
-		<castRange>400</castRange>
-		<hitTime>500</hitTime>
-		<reuseDelay>2000</reuseDelay>
+	<skill id="51392" name="Meow Unit's Cheer" max-level="1" action="A2">
+	<!-- Recovers MP over 8 hours. -->
+		<icon initial="icon.skill0213"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51393" toLevel="1" name="Shining Mood Melody">
-		<!-- For 1 h., grants the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. Cooldown: 1 min. The effect remains after death. -->
-		<icon>icon.bm_magmeld</icon>
-		<operateType>A2</operateType>
-		<reuseDelay>60000</reuseDelay>
-		<effectPoint>1</effectPoint>
+	<skill id="51393" name="Shining Mood Melody" max-level="1" action="A2">
+	<!-- For 1 hour, activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. Cooldown 1 minute. This effect will not be removed after death.\n\n<Warning>\nThe buff from the Shining Scroll of Mood Melody will not be removed after death, and the Shining Scroll of Mood Melody cannot be used while the buff remains. -->
+		<icon initial="icon.bm_magmeld"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="-1"/>
+			<reuse initial="60000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51394" toLevel="1" name="Shining Mood Melody">
-		<!-- For 4 h., grants the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. Cooldown: 1 min. The effect remains after death. -->
-		<icon>icon.bm_magmeld</icon>
-		<operateType>A2</operateType>
-		<reuseDelay>60000</reuseDelay>
-		<effectPoint>1</effectPoint>
+	<skill id="51394" name="Shining Mood Melody" max-level="1" action="A2">
+	<!-- For 4 hours, activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. Cooldown 1 minute. This effect will not be removed after death.\n\n<Warning>\nThe buff from the Shining Scroll of Mood Melody will not be removed after death, and the Shining Scroll of Mood Melody cannot be used while the buff remains. -->
+		<icon initial="icon.bm_magmeld"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="-1"/>
+			<reuse initial="60000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51395" toLevel="1" name="Shining Mood Melody">
-		<!-- For 8 h., grants the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. Cooldown: 1 min. The effect remains after death. -->
-		<icon>icon.bm_magmeld</icon>
-		<operateType>A2</operateType>
-		<reuseDelay>60000</reuseDelay>
-		<effectPoint>1</effectPoint>
+	<skill id="51395" name="Shining Mood Melody" max-level="1" action="A2">
+	<!-- For 8 hours, activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. Cooldown 1 minute. This effect will not be removed after death.\n\n<Warning>\nThe buff from the Shining Scroll of Mood Melody will not be removed after death, and the Shining Scroll of Mood Melody cannot be used while the buff remains. -->
+		<icon initial="icon.bm_magmeld"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="-1"/>
+			<reuse initial="60000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51396" toLevel="1" name="Scroll: 10,000 SP">
-		<operateType>A1</operateType>
-		<reuseDelay>500</reuseDelay>
+	<skill id="51396" name="Scroll: 10,000 SP" max-level="1" action="A1">
+	<!-- For 8 hours, activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. Cooldown 1 minute. This effect will not be removed after death.\n\n<Warning>\nThe buff from the Shining Scroll of Mood Melody will not be removed after death, and the Shining Scroll of Mood Melody cannot be used while the buff remains. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51397" toLevel="1" name="Scroll: 100,000 SP">
-		<operateType>A1</operateType>
-		<reuseDelay>500</reuseDelay>
+	<skill id="51397" name="Scroll: 100,000 SP" max-level="1" action="A1">
+	<!-- For 8 hours, activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. Cooldown 1 minute. This effect will not be removed after death.\n\n<Warning>\nThe buff from the Shining Scroll of Mood Melody will not be removed after death, and the Shining Scroll of Mood Melody cannot be used while the buff remains. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51398" toLevel="1" name="Sayha's Storm Lv. 1 (Event)">
-		<!-- For 20 min., Momentum Consumption +100%, Acquired XP/ SP +100%. Cooldown: 1 min. The effect remains after death. -->
-		<icon>icon.bm_sayha_storm</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
-		<reuseDelay>60000</reuseDelay>
+	<skill id="51398" name="Sayha's Storm Lv. 1 - Event" max-level="1" action="A1">
+	<!-- Sayha's Grace Consumption +100%% and XP/SP Gain +100%% when hunting monsters. The effect remains active even after death. Duration 20 minutes. Cooldown 1 minute. -->
+		<icon initial="icon.bm_sayha_storm"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="-1"/>
+			<reuse initial="60000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="51399" toLevel="1" name="Red Lantern - 1st Place">
-		<!-- A magic lantern given as a reward for the 1st place. Prize: XP +100,000,000, SP +2,700,000. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
-		<icon>icon.etc_holy_grail_i00</icon>
-		<operateType>A1</operateType>
-		<reuseDelay>500</reuseDelay>
-    </skill>
+	<skill id="51399" name="Red Arc - 1st Place" max-level="1" action="A1">
+	<!-- Magic Lamp 1st Place Reward - Recharges 100,000,000 XP and 2,700,000 SP. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<icon initial="icon.etc_holy_grail_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
 </list>

@@ -3,7 +3,7 @@ package org.l2j.gameserver.instancemanager;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.util.PropertiesParser;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Location;
@@ -40,10 +40,9 @@ public final class SiegeManager {
         load();
     }
 
-    public final void addSiegeSkills(Player character) {
-        for (Skill sk : SkillData.getInstance().getSiegeSkills(character.isNoble(), character.getClan().getCastleId() > 0)) {
-            character.addSkill(sk, false);
-        }
+    public final void addSiegeSkills(Player player) {
+        SkillEngine.getInstance().addSiegeSkills(player);
+
     }
 
     /**
@@ -76,10 +75,8 @@ public final class SiegeManager {
         return register;
     }
 
-    public final void removeSiegeSkills(Player character) {
-        for (Skill sk : SkillData.getInstance().getSiegeSkills(character.isNoble(), character.getClan().getCastleId() > 0)) {
-            character.removeSkill(sk);
-        }
+    public final void removeSiegeSkills(Player player) {
+        SkillEngine.getInstance().removeSiegeSkills(player);
     }
 
     private void load() {

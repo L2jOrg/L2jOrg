@@ -4,6 +4,7 @@ import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.api.elemental.ElementalType;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.AISkillScope;
 import org.l2j.gameserver.enums.DropType;
 import org.l2j.gameserver.enums.MpRewardAffectType;
@@ -277,7 +278,7 @@ public class NpcData extends GameXmlReader {
                                             attrs = skillListNode.getAttributes();
                                             final int skillId = parseInteger(attrs, "id");
                                             final int skillLevel = parseInteger(attrs, "level");
-                                            final Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
+                                            final Skill skill = SkillEngine.getInstance().getSkill(skillId, skillLevel);
                                             if (skill != null) {
                                                 skills.put(skill.getId(), skill);
                                             } else {

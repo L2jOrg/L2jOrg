@@ -20,10 +20,11 @@ public class CanUseSwoopCannonSkillCondition implements SkillCondition {
 	}
 
 	public static final class Factory extends SkillConditionFactory {
+		private static final CanUseSwoopCannonSkillCondition INSTANCE = new CanUseSwoopCannonSkillCondition();
 
 		@Override
 		public SkillCondition create(Node xmlNode) {
-			return new CanUseSwoopCannonSkillCondition();
+			return INSTANCE;
 		}
 
 		@Override

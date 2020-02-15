@@ -1,91 +1,99 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
-    <skill id="9029" toLevel="1" name="Watermelon Seed">
-        <hitTime>1500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <itemConsumeCount>1</itemConsumeCount>
-        <itemConsumeId>15366</itemConsumeId> <!-- Watermelon seed -->
-        <magicLvl>1</magicLvl>
-        <operateType>A1</operateType>
-        <reuseDelay>10000</reuseDelay>
-        <magicCriticalRate>5</magicCriticalRate>
-        <hitCancelTime>1.5</hitCancelTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpCanNotUseAirship"/>
-        </conditions>
-        <effects>
-            <effect name="SummonNpc">
-                <npcId>13271</npcId> <!-- Young Watermelon -->
-                <npcCount>1</npcCount>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="9030" toLevel="1" name="Honey Watermelon Seed">
-        <hitTime>1500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <itemConsumeCount>1</itemConsumeCount>
-        <itemConsumeId>15367</itemConsumeId> <!-- Honey Watermelon Seed -->
-        <magicLvl>1</magicLvl>
-        <operateType>A1</operateType>
-        <reuseDelay>10000</reuseDelay>
-        <magicCriticalRate>5</magicCriticalRate>
-        <hitCancelTime>1.5</hitCancelTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpCanNotUseAirship"/>
-        </conditions>
-        <effects>
-            <effect name="SummonNpc">
-                <npcId>13275</npcId> <!-- Young Honey Watermelon -->
-                <npcCount>1</npcCount>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="9031" toLevel="1" name="Copied Watermelon Seed">
-        <hitTime>1500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <itemConsumeCount>1</itemConsumeCount>
-        <itemConsumeId>15368</itemConsumeId> <!-- Copied Watermelon Seed -->
-        <magicLvl>1</magicLvl>
-        <operateType>A1</operateType>
-        <reuseDelay>10000</reuseDelay>
-        <magicCriticalRate>5</magicCriticalRate>
-        <hitCancelTime>1.5</hitCancelTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpCanNotUseAirship"/>
-        </conditions>
-        <effects>
-            <effect name="SummonNpc">
-                <npcId>13271</npcId> <!-- Young Watermelon -->
-                <npcCount>1</npcCount>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="9032" toLevel="1" name="Copied Honey Watermelon Seed">
-        <hitTime>1500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <itemConsumeCount>1</itemConsumeCount>
-        <itemConsumeId>15369</itemConsumeId> <!-- Copied Honey Watermelon Seed -->
-        <magicLvl>1</magicLvl>
-        <operateType>A1</operateType>
-        <reuseDelay>10000</reuseDelay>
-        <magicCriticalRate>5</magicCriticalRate>
-        <hitCancelTime>1.5</hitCancelTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpCanNotUseAirship"/>
-        </conditions>
-        <effects>
-            <effect name="SummonNpc">
-                <npcId>13275</npcId> <!-- Young Honey Watermelon -->
-                <npcCount>1</npcCount>
-            </effect>
-        </effects>
-    </skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
+	<skill id="9029" name="Watermelon Seed" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="5.0" hit-cancel-time="1.5" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<reuse initial="10000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<item initial="15366"/>
+			<item-count initial="1"/>
+		</consume>
+		<target />
+		<conditions>
+			<condition name="OpCanNotUseAirship"/>
+		</conditions>
+		<effects>
+			<summon-npc count="13271" despawn-delay="20000">
+				<npc initial="13271.0"/>
+			</summon-npc>
+		</effects>
+	</skill>
+	<skill id="9030" name="Honey Watermelon Seed" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="5.0" hit-cancel-time="1.5" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<reuse initial="10000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<item initial="15367"/>
+			<item-count initial="1"/>
+		</consume>
+		<target />
+		<conditions>
+			<condition name="OpCanNotUseAirship"/>
+		</conditions>
+		<effects>
+			<summon-npc count="13275" despawn-delay="20000">
+				<npc initial="13275.0"/>
+			</summon-npc>
+		</effects>
+	</skill>
+	<skill id="9031" name="Copied Watermelon Seed" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="5.0" hit-cancel-time="1.5" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<reuse initial="10000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<item initial="15368"/>
+			<item-count initial="1"/>
+		</consume>
+		<target />
+		<conditions>
+			<condition name="OpCanNotUseAirship"/>
+		</conditions>
+		<effects>
+			<summon-npc count="13271" despawn-delay="20000">
+				<npc initial="13271.0"/>
+			</summon-npc>
+		</effects>
+	</skill>
+	<skill id="9032" name="Copied Honey Watermelon Seed" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="5.0" hit-cancel-time="1.5" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<reuse initial="10000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<item initial="15369"/>
+			<item-count initial="1"/>
+		</consume>
+		<target />
+		<conditions>
+			<condition name="OpCanNotUseAirship"/>
+		</conditions>
+		<effects>
+			<summon-npc count="13275" despawn-delay="20000">
+				<npc initial="13275.0"/>
+			</summon-npc>
+		</effects>
+	</skill>
 </list>

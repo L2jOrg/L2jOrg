@@ -1,18 +1,25 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
-    <skill id="13999" toLevel="2" name="Dark Bolt">
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>600</castRange>
-        <hitTime>1000</hitTime>
-        <coolTime>500</coolTime>
-        <effectPoint>
-            <value level="1">-300</value>
-            <value level="2">-400</value>
-        </effectPoint>
-        <mpConsume>
-            <value level="1">72</value>
-            <value level="2">94</value>
-        </mpConsume>
-    </skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
+	<skill id="13999" name="Dark Bolt" max-level="2" action="A1" type="MAGIC">
+	<!-- Max MP +$s1, P. Skill Critical Damage +$s2, and PvP Damage +$s3. -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="600"/>
+			<cool-time initial="500"/>
+			<effect-point initial="-300">
+				<value level="2">-400</value>
+			</effect-point>
+			<effect-range initial="-1"/>
+			<hit-time initial="-300000">
+				<value level="2">-400000</value>
+			</hit-time>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="72">
+				<value level="2">94</value>
+			</mana>
+		</consume>
+		<target />
+	</skill>
 </list>

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.residences;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.model.SkillLearn;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -76,7 +76,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
             for (SkillLearn skill : _residentialSkills) {
                 final SocialClass skillSocialClass = skill.getSocialClass();
                 if ((skillSocialClass == null) || (playerSocialClass >= skillSocialClass.ordinal())) {
-                    player.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), false);
+                    player.addSkill(SkillEngine.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), false);
                 }
             }
         }

@@ -7,7 +7,7 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.sql.impl.CharSummonTable;
 import org.l2j.gameserver.data.sql.impl.SummonEffectsTable;
 import org.l2j.gameserver.data.sql.impl.SummonEffectsTable.SummonEffect;
-import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.WorldObject;
@@ -169,7 +169,7 @@ public class Servitor extends Summon implements Runnable {
             skillLevel = 1;
         }
 
-        final Skill skillToCast = SkillData.getInstance().getSkill(skill.getId(), skillLevel);
+        final Skill skillToCast = SkillEngine.getInstance().getSkill(skill.getId(), skillLevel);
 
         if (skillToCast != null) {
             super.doCast(skillToCast);
@@ -327,7 +327,7 @@ public class Servitor extends Summon implements Runnable {
                         while (rset.next()) {
                             final int effectCurTime = rset.getInt("remaining_time");
 
-                            final Skill skill = SkillData.getInstance().getSkill(rset.getInt("skill_id"), rset.getInt("skill_level"));
+                            final Skill skill = SkillEngine.getInstance().getSkill(rset.getInt("skill_id"), rset.getInt("skill_level"));
                             if (skill == null) {
                                 continue;
                             }

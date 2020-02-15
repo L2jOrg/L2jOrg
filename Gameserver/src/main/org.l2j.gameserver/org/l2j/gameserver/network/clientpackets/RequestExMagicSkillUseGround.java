@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.engine.skill.api.Skill;
@@ -53,7 +53,7 @@ public final class RequestExMagicSkillUseGround extends ClientPacket {
         }
 
         // Get the L2Skill template corresponding to the skillID received from the client
-        final Skill skill = SkillData.getInstance().getSkill(_skillId, level);
+        final Skill skill = SkillEngine.getInstance().getSkill(_skillId, level);
 
         // Check the validity of the skill
         if (skill != null) {

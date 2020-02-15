@@ -1,1370 +1,1576 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
-    <skill id="1800" toLevel="1" name="Pirate Transformation">
-        <!-- For 20 min., Max HP/MP +3%%, P./M. Accuracy +1, P./M. Atk. +2%%, P./M. Def. +2%%, Atk. Spd. +3%%, M. Critical Rate +10, Speed +3. Consumes 1 Elemental Stone.\n\n
-            <Story>\nPirates used to dominate the Giran area. Pirate King Zaken became a vampire and started to kill other pirates. His crew rose in mutiny against Zaken only to lead him to acquire the Power of Darkness. Surviving pirates had no choice but to run away...\n\n<Auto Use Skill> -->
-        <icon>icon.skill1800</icon>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>1200</abnormalTime>
-        <abnormalType>CHANGEBODY</abnormalType>
-        <abnormalVisualEffect>PIRATE_SUIT</abnormalVisualEffect>
-        <blockedInOlympiad>true</blockedInOlympiad>
-        <effectPoint>1</effectPoint>
-        <isMagic>4</isMagic> <!-- Magic Skill -->
-        <magicLvl>56</magicLvl>
-        <operateType>A2</operateType>
-        <reuseDelay>7200000</reuseDelay>
-        <stayAfterDeath>true</stayAfterDeath>
-        <hitTime>3000</hitTime>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <itemConsumeId>49543</itemConsumeId>
-        <itemConsumeCount>1</itemConsumeCount>
-        <effects>
-            <effect name="MaxHp">
-                <amount>3</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MaxMp">
-                <amount>3</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="Speed">
-                <amount>3</amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="PhysicalAttackSpeed">
-                <amount>3</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="Accuracy">
-                <amount>1</amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="MagicAccuracy">
-                <amount>1</amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="MagicCriticalRate">
-                <amount>10</amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="PAtk">
-                <amount>2</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MAtk">
-                <amount>2</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PhysicalDefence">
-                <amount>2</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MagicalDefence">
-                <amount>2</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="1801" toLevel="1" name="Dark Assassin Transformation">
-        <!-- For 20 min., Max HP/MP +5%%, P./M. Accuracy +1, P./M. Atk. +2%%, P./M. Def. +2%%, Atk. Spd. +3%%, M. Critical Rate +10, Speed +4. Consumes 1 Elemental Stones.\n\n<Story>\n
-
-        A clandestine organization founded by Mercenary Captain Sieghardt Ein. Sieghardt Ein joined the Lords of Dawn and disappeared without a trace. However, his organization still leads its shadowy deals…\n\n<Auto Use Skill> -->
-        <icon>icon.skill1801</icon>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>1200</abnormalTime>
-        <abnormalType>CHANGEBODY</abnormalType>
-        <abnormalVisualEffect>DARK_ASSASSIN_SUIT</abnormalVisualEffect>
-        <blockedInOlympiad>true</blockedInOlympiad>
-        <effectPoint>1</effectPoint>
-        <isMagic>4</isMagic> <!-- Magic Skill -->
-        <magicLvl>56</magicLvl>
-        <operateType>A2</operateType>
-        <reuseDelay>7200000</reuseDelay>
-        <hitTime>3000</hitTime>
-        <stayAfterDeath>true</stayAfterDeath>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <itemConsumeId>49543</itemConsumeId>
-        <itemConsumeCount>1</itemConsumeCount>
-        <effects>
-            <effect name="MaxHp">
-                <amount>5</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MaxMp">
-                <amount>5</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="Speed">
-                <amount>4</amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="PhysicalAttackSpeed">
-                <amount>3</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="Accuracy">
-                <amount>1</amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="MagicAccuracy">
-                <amount>1</amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="MagicCriticalRate">
-                <amount>10</amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="PAtk">
-                <amount>2</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MAtk">
-                <amount>2</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PhysicalDefence">
-                <amount>2</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MagicalDefence">
-                <amount>2</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="1802" toLevel="1" name="White Assassin Transformation">
-        <!-- For 20 min., Max HP/MP +7%%, P./M. Accuracy +2, P./M. Atk. +3%%, P./M. Def. +3%%, Atk. Spd. +5%%, M. Critical Rate +20, Speed +5. Consumes 2 Elemental Stones.\n\n<Story>\n
-        A Rune noblewoman, Erica Ken Weber, is the right hand of Sieghardt Ein. She created the White Assassins to distract attention from the Dark Assassins and help it carry out secret missions...\n\n<Auto Use Skill> -->
-        <icon>icon.skill1802</icon>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>1200</abnormalTime>
-        <abnormalType>CHANGEBODY</abnormalType>
-        <abnormalVisualEffect>WHITE_ASSASSIN_SUIT</abnormalVisualEffect>
-        <blockedInOlympiad>true</blockedInOlympiad>
-        <effectPoint>1</effectPoint>
-        <isMagic>4</isMagic> <!-- Magic Skill -->
-        <magicLvl>56</magicLvl>
-        <operateType>A2</operateType>
-        <reuseDelay>3600000</reuseDelay>
-        <hitTime>3000</hitTime>
-        <stayAfterDeath>true</stayAfterDeath>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <itemConsumeId>49543</itemConsumeId>
-        <itemConsumeCount>2</itemConsumeCount>
-        <effects>
-            <effect name="MaxHp">
-                <amount>7</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MaxMp">
-                <amount>7</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="Speed">
-                <amount>5</amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="PhysicalAttackSpeed">
-                <amount>5</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="Accuracy">
-                <amount>2</amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="MagicAccuracy">
-                <amount>2</amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="MagicCriticalRate">
-                <amount>20</amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="PAtk">
-                <amount>3</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MAtk">
-                <amount>3</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PhysicalDefence">
-                <amount>3</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MagicalDefence">
-                <amount>3</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="1810" toLevel="1" name="Cadmus - Might">
-        <!-- Increases P. Atk. by 15%% for 20 minutes -->
-        <icon>icon.skill1068</icon>
-        <abnormalTime>1200</abnormalTime>
-        <operateType>A2</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>379</effectPoint>
-        <mpConsume>12</mpConsume>
-        <targetType>TARGET</targetType>
-        <effects>
-            <effect name="PAtk">
-                <value>15</value>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="1811" toLevel="1" name="Cadmus - Shield">
-        <!-- For 20 min., P. Def. +15%. -->
-        <icon>icon.skill1040</icon>
-        <operateType>A2</operateType>
-        <abnormalTime>1200</abnormalTime>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>418</effectPoint>
-        <mpConsume>12</mpConsume>
-        <targetType>TARGET</targetType>
-        <effects>
-            <effect name="PhysicalDefence">
-                <value>15</value>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="1812" toLevel="1" name="Cadmus - Wind Walk">
-        <!-- For 20 min., Speed +33. -->
-        <icon>icon.skill1204</icon>
-        <operateType>A2</operateType>
-        <abnormalTime>1200</abnormalTime>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>285</effectPoint>
-        <mpConsume>12</mpConsume>
-        <targetType>TARGET</targetType>
-        <effects>
-            <effect name="Speed">
-                <value>33</value>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="1813" toLevel="1" name="Cadmus - Return">
-        <!-- Teleports to a town. Cannot be used in a specially designated place such as the GM Consultation Service. -->
-        <icon>Icon.skill1050</icon>
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <hitTime>1500</hitTime>
-        <reuseDelay>75000</reuseDelay>
-        <mpConsume>12</mpConsume>
-        <effects>
-            <effect name="Escape">
-                <escapeType>TOWN</escapeType>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="1814" toLevel="1" name="Cadmus - Focus">
-        <!-- For 20 minutes, P. Critical Rate +30%. -->
-        <icon>icon.skill1077</icon>
-        <operateType>A2</operateType>
-        <abnormalTime>1200</abnormalTime>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>495</effectPoint>
-        <mpConsume>12</mpConsume>
-        <targetType>TARGET</targetType>
-        <effects>
-            <effect name="CriticalRate">
-                <value>30</value>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="1815" toLevel="1" name="Cadmus - Death Whisper">
-        <!-- For 20 minutes, P. Critical Damage +35%. -->
-        <icon>icon.skill1242</icon>
-        <operateType>A2</operateType>
-        <abnormalTime>1200</abnormalTime>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>532</effectPoint>
-        <mpConsume>12</mpConsume>
-        <targetType>TARGET</targetType>
-        <effects>
-            <effect name="CriticalDamage">
-                <value>35</value>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="1816" toLevel="1" name="Cadmus - Guidance">
-        <!-- For 20 minutes, P. Accuracy +4. -->
-        <icon>icon.skill1240</icon>
-        <operateType>A2</operateType>
-        <abnormalTime>1200</abnormalTime>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>532</effectPoint>
-        <mpConsume>12</mpConsume>
-        <targetType>TARGET</targetType>
-        <effects>
-            <effect name="Accuracy">
-                <value>4</value>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="1817" toLevel="1" name="Cadmus - Heal">
-        <!-- Recovers the target's HP with 301 Power -->
-        <icon>icon.skill1011</icon>
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>600</castRange>
-        <hitTime>5000</hitTime>
-        <reuseDelay>3000</reuseDelay>
-        <effectPoint>301</effectPoint>
-        <mpConsume>52</mpConsume>
-        <targetType>TARGET</targetType>
-        <effects>
-            <effect name="Heal">
-                <power>301</power>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="1818" toLevel="1" name="Cadmus - Haste">
-        <!-- Increases Atk. Spd. by 33%% for 20 minutes. -->
-        <icon>icon.skill1086</icon>
-        <operateType>A2</operateType>
-        <abnormalTime>1200</abnormalTime>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>495</effectPoint>
-        <mpConsume>12</mpConsume>
-        <targetType>TARGET</targetType>
-        <effects>
-            <effect name="PhysicalAttackSpeed">
-                <value>33</value>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="1819" toLevel="1" name="Cadmus - Acumen">
-        <!-- For 20 minutes, Casting Spd. +30% -->
-        <icon>icon.skill1085</icon>
-        <operateType>A2</operateType>
-        <abnormalTime>1200</abnormalTime>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>457</effectPoint>
-        <mpConsume>12</mpConsume>
-        <targetType>TARGET</targetType>
-        <effects>
-            <effect name="MagicalAttackSpeed">
-                <value>30</value>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="1820" toLevel="1" name="Cadmus - Vampiric Rage">
-        <!-- For 20 minutes, recovers as HP 9%% of the physical damage inflicted on the enemy with a certain probability. -->
-        <icon>icon.skill1268</icon>
-        <operateType>A2</operateType>
-        <abnormalTime>1200</abnormalTime>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>646</effectPoint>
-        <mpConsume>12</mpConsume>
-        <targetType>TARGET</targetType>
-        <effects>
-            <effect name="VampiricAttack">
-                <amount>9</amount>
-                <chance>30</chance>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="1821" toLevel="1" name="Cadmus - Empower">
-        <!-- Increases M. Atk. power by 75%% for 20 minutes. -->
-        <icon>icon.skill1059</icon>
-        <operateType>A2</operateType>
-        <abnormalTime>1200</abnormalTime>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>495</effectPoint>
-        <mpConsume>12</mpConsume>
-        <targetType>TARGET</targetType>
-        <effects>
-            <effect name="MAtk">
-                <amount>75</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="1822" toLevel="1" name="Cadmus - Clarity">
-        <!-- For 20 min., MP Consumption for physical skills -20%, MP Consumption for magical skills -10%, and song/ dance skill's MP consumption -20%. -->
-        <icon>icon.skill1397</icon>
-        <operateType>A2</operateType>
-        <abnormalTime>1200</abnormalTime>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>655</effectPoint>
-        <mpConsume>12</mpConsume>
-        <targetType>TARGET</targetType>
-        <effects>
-            <effect name="MagicMpCost">
-                <amount>-10</amount>
-                <magicType>1</magicType>
-            </effect>
-            <effect name="MagicMpCost">
-                <amount>-20</amount>
-                <mode>PER</mode>
-                <magicType>0</magicType>
-            </effect>
-            <effect name="MagicMpCost">
-                <amount>-20</amount>
-                <mode>PER</mode>
-                <magicType>3</magicType>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="1823" toLevel="1" name="Cadmus - Agility">
-        <!-- For 20 minutes, P. Evasion +4 -->
-        <icon>icon.skill1087</icon>
-        <operateType>A2</operateType>
-        <abnormalTime>1200</abnormalTime>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>495</effectPoint>
-        <mpConsume>12</mpConsume>
-        <targetType>TARGET</targetType>
-        <effects>
-            <effect name="PhysicalEvasion">
-                <amount>4</amount>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="1824" toLevel="1" name="Cadmus - Lightness">
-        <!-- Increases weight limit up to 9000 for 20 min. -->
-        <icon>icon.skill1257</icon>
-        <operateType>A2</operateType>
-        <abnormalTime>1200</abnormalTime>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>495</effectPoint>
-        <mpConsume>12</mpConsume>
-        <targetType>TARGET</targetType>
-        <effects>
-            <effect name="WeightLimit">
-                <amount>9000</amount>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="1825" toLevel="1" name="Cadmus - Recharge">
-        <!-- Recovers MP up to 94 power depending on the target's Lv.. -->
-        <icon>icon.skill1013</icon>
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>6000</hitTime>
-        <reuseDelay>3000</reuseDelay>
-        <effectPoint>655</effectPoint>
-        <mpConsume>98</mpConsume>
-        <targetType>TARGET</targetType>
-        <effects>
-            <effect name="ManaHealByLevel">
-                <power>94</power>
-            </effect>
-        </effects>
-
-    </skill>
-    <skill id="1826" toLevel="1" name="Cadmus - Greater Heal">
-        <!-- Immediately restores the target's HP with 506 Power. -->
-        <icon>icon.skill1217</icon>
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>600</castRange>
-        <hitTime>5000</hitTime>
-        <reuseDelay>3000</reuseDelay>
-        <effectPoint>365</effectPoint>
-        <mpConsume>83</mpConsume>
-        <targetType>TARGET</targetType>
-        <effects>
-            <effect name="Heal">
-                <power>506</power>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="1827" toLevel="1" name="Transformation Block">
-        <!-- You cannot attack while transformed. -->
-        <operateType>P</operateType>
-    </skill>
-    <skill id="1828" toLevel="2" name="Transformation Protection">
-        <!-- P. Def. Enhance at Transformation. -->
-        <operateType>P</operateType>
-    </skill>
-    <skill id="1829" toLevel="1" name="Spell Master">
-        <!-- Casting Spd. +10%, M. Critical Rate +10. -->
-        <icon>icon.skill1901</icon>
-        <magicLvl>40</magicLvl>
-        <operateType>P</operateType>
-        <effects>
-            <effect name="MagicalAttackSpeed">
-                <amount>10</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MagicCriticalRate">
-                <amount>10</amount>
-                <mode>DIFF</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="1830" toLevel="1" name="Spell Master">
-        <!-- Casting Spd. +13%, M. Critical Rate +10. -->
-        <icon>icon.skill1908</icon>
-        <magicLvl>40</magicLvl>
-        <operateType>P</operateType>
-        <effects>
-            <effect name="MagicalAttackSpeed">
-                <amount>13</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MagicCriticalRate">
-                <amount>10</amount>
-                <mode>DIFF</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="1831" toLevel="1" name="Spell Master">
-        <!-- Casting Spd. +9%, M. Critical Rate +10. -->
-        <icon>icon.skill1911</icon>
-        <magicLvl>40</magicLvl>
-        <operateType>P</operateType>
-        <effects>
-            <effect name="MagicalAttackSpeed">
-                <amount>9</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MagicCriticalRate">
-                <amount>10</amount>
-                <mode>DIFF</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="1832" toLevel="1" name="Spell Master">
-        <!-- Casting Spd. +5%, M. Critical Rate +10. -->
-        <icon>icon.skill1916</icon>
-        <magicLvl>40</magicLvl>
-        <operateType>P</operateType>
-        <effects>
-            <effect name="MagicalAttackSpeed">
-                <amount>5</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MagicCriticalRate">
-                <amount>10</amount>
-                <mode>DIFF</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="1833" toLevel="1" name="Mount - Gold Maned Lion">
-        <!-- Allows to mount a Golden Lion. -->
-        <icon>icon.skill1833</icon>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>TRANSFORM</abnormalType>
-        <blockedInOlympiad>true</blockedInOlympiad>
-        <operateType>A2</operateType>
-        <effectPoint>1</effectPoint>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>5</magicCriticalRate>
-        <specialLevel>-1</specialLevel>
-        <hitCancelTime>0</hitCancelTime>
-        <irreplacableBuff>true</irreplacableBuff>
-        <isMagic>2</isMagic>
-        <hitTime>1000</hitTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="CanTransform">
-                <transformId>160</transformId>
-            </condition>
-        </conditions>
-        <effects>
-            <effect name="Transformation">
-                <transformationId>160</transformationId>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="1834" toLevel="1" name="Mount Pegasus">
-        <!-- Allows to mount a Pegasus. -->
-        <icon>icon.skill1834</icon>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>TRANSFORM</abnormalType>
-        <blockedInOlympiad>true</blockedInOlympiad>
-        <operateType>A2</operateType>
-        <effectPoint>1</effectPoint>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>5</magicCriticalRate>
-        <specialLevel>-1</specialLevel>
-        <hitCancelTime>0</hitCancelTime>
-        <irreplacableBuff>true</irreplacableBuff>
-        <isMagic>2</isMagic>
-        <hitTime>1000</hitTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="CanTransform">
-                <transformId>161</transformId>
-            </condition>
-        </conditions>
-        <effects>
-            <effect name="Transformation">
-                <transformationId>161</transformationId>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="1835" toLevel="1" name="Mount Saber Tooth Cougar">
-        <!-- Allows to mount a Saber Tooth Cougar. -->
-        <icon>icon.skill1835</icon>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>TRANSFORM</abnormalType>
-        <blockedInOlympiad>true</blockedInOlympiad>
-        <operateType>A2</operateType>
-        <effectPoint>1</effectPoint>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>5</magicCriticalRate>
-        <specialLevel>-1</specialLevel>
-        <hitCancelTime>0</hitCancelTime>
-        <irreplacableBuff>true</irreplacableBuff>
-        <isMagic>2</isMagic>
-        <hitTime>1000</hitTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="CanTransform">
-                <transformId>162</transformId>
-            </condition>
-        </conditions>
-        <effects>
-            <effect name="Transformation">
-                <transformationId>162</transformationId>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="1836" toLevel="1" name="Mount Kukuru">
-        <!-- Mount Kukuru -->
-        <icon>icon.skill1836</icon>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>TRANSFORM</abnormalType>
-        <blockedInOlympiad>true</blockedInOlympiad>
-        <operateType>A2</operateType>
-        <effectPoint>1</effectPoint>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>5</magicCriticalRate>
-        <specialLevel>-1</specialLevel>
-        <hitCancelTime>0</hitCancelTime>
-        <irreplacableBuff>true</irreplacableBuff>
-        <isMagic>2</isMagic>
-        <hitTime>1000</hitTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="CanTransform">
-                <transformId>163</transformId>
-            </condition>
-        </conditions>
-        <effects>
-            <effect name="Transformation">
-                <transformationId>163</transformationId>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="1837" toLevel="1" name="Mount Black Bear">
-        <!-- Allows to mount a Black Bear. -->
-        <icon>icon.skill1837</icon>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>TRANSFORM</abnormalType>
-        <blockedInOlympiad>true</blockedInOlympiad>
-        <operateType>A2</operateType>
-        <effectPoint>1</effectPoint>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>5</magicCriticalRate>
-        <specialLevel>-1</specialLevel>
-        <hitCancelTime>0</hitCancelTime>
-        <irreplacableBuff>true</irreplacableBuff>
-        <isMagic>2</isMagic>
-        <hitTime>1000</hitTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="CanTransform">
-                <transformId>164</transformId>
-            </condition>
-        </conditions>
-        <effects>
-            <effect name="Transformation">
-                <transformationId>164</transformationId>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="1838" toLevel="1" name="PC Cadmus - Prophecy of Water">
-        <!-- PC-exclusive. A party member's MP Recovery bonus +10%%, M. Atk. +10%%, M. Def +10%%, Casting Spd. +5%%, Debuff Resistance +10%%, and Skill MP Consumption -3%% for 10 minutes with the help of a great spirit. Consumes 10 Spirit Ore. -->
-        <icon>icon.skill1355</icon>
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>4000</reuseDelay>
-        <effectPoint>666</effectPoint>
-        <mpConsume>72</mpConsume>
-    </skill>
-    <skill id="1839" toLevel="1" name="PC Cadmus - Prophecy of Fire">
-        <!-- PC-exclusive. A party member's Max HP +10%%, HP Recovery Bonus +10%%, P. Atk. +10%%, P. Def +10%%, Atk. Spd. +5%%, and Debuff Resistance +10%% for 10 minutes with the help of a great spirit. Consumes 10 Spirit Ore. -->
-        <icon>icon.skill1356</icon>
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>4000</reuseDelay>
-        <effectPoint>666</effectPoint>
-        <mpConsume>72</mpConsume>
-    </skill>
-    <skill id="1840" toLevel="1" name="PC Cadmus - Prophecy of Wind">
-        <!-- PC-exclusive. A party member's P. Accuracy/M. Accuracy +3, P. Evasion/M. Evasion +3, P. Critical/M. Critical Rate +10%%, P. Critical/M. Critical Damage +15%%, Movement Speed +10%%, Debuff Resistance +10%%, and P. Atk. against Raid Boss +15%% for 10 minutes with the help of a great spirit. Consumes 10 Spirit Ore. -->
-        <icon>icon.skill1357</icon>
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>4000</reuseDelay>
-        <effectPoint>666</effectPoint>
-        <mpConsume>72</mpConsume>
-    </skill>
-    <skill id="1841" toLevel="1" name="PC Cadmus - Might">
-        <!-- For 20 minutes, P. Atk +15%%. PC-exclusive. -->
-        <icon>icon.skill1068</icon>
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>379</effectPoint>
-        <mpConsume>12</mpConsume>
-    </skill>
-    <skill id="1842" toLevel="1" name="PC Cadmus - Shield">
-        <!-- For 20 minutes, P. Def. +15%%. PC-exclusive. -->
-        <icon>icon.skill1040</icon>
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>418</effectPoint>
-        <mpConsume>12</mpConsume>
-    </skill>
-    <skill id="1843" toLevel="1" name="PC Cadmus - Wind Walk">
-        <!-- For 20 minutes, Movement Speed +33. PC-exclusive. -->
-        <icon>icon.skill1204</icon>
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>285</effectPoint>
-        <mpConsume>12</mpConsume>
-    </skill>
-    <skill id="1844" toLevel="1" name="PC Cadmus - Return">
-        <!-- Teleports to a town. Cannot be used in a special locations such as the GM Consultation Service. PC-exclusive. -->
-        <icon>Icon.skill1050</icon>
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <hitTime>1500</hitTime>
-        <reuseDelay>75000</reuseDelay>
-        <mpConsume>12</mpConsume>
-    </skill>
-    <skill id="1845" toLevel="1" name="PC Cadmus - Focus">
-        <!-- For 20 minutes, P. Critical Rate +30%%. PC-exclusive. -->
-        <icon>icon.skill1077</icon>
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>495</effectPoint>
-        <mpConsume>12</mpConsume>
-    </skill>
-    <skill id="1846" toLevel="1" name="PC Cadmus - Death Whisper">
-        <!-- For 20 minutes, P. Critical Damage +35%%. PC-exclusive. -->
-        <icon>icon.skill1242</icon>
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>532</effectPoint>
-        <mpConsume>12</mpConsume>
-    </skill>
-    <skill id="1847" toLevel="1" name="PC Cadmus - Guidance">
-        <!-- For 20 minutes, P. Accuracy +4. PC-exclusive. -->
-        <icon>icon.skill1240</icon>
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>532</effectPoint>
-        <mpConsume>12</mpConsume>
-    </skill>
-    <skill id="1848" toLevel="1" name="PC Cadmus - Heal">
-        <!-- Recovers the target's HP with 301 Power. PC-exclusive. -->
-        <icon>icon.skill1011</icon>
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>600</castRange>
-        <hitTime>5000</hitTime>
-        <reuseDelay>3000</reuseDelay>
-        <effectPoint>301</effectPoint>
-        <mpConsume>52</mpConsume>
-    </skill>
-    <skill id="1849" toLevel="1" name="PC Cadmus - Haste">
-        <!-- For 20 minutes, Atk. Spd. +33%%. PC-exclusive -->
-        <icon>icon.skill1086</icon>
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>495</effectPoint>
-        <mpConsume>12</mpConsume>
-    </skill>
-    <skill id="1850" toLevel="1" name="PC Cadmus - Acumen">
-        <!-- For 20 minutes, Casting Spd. +30%%. PC-exclusive. -->
-        <icon>icon.skill1085</icon>
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>457</effectPoint>
-        <mpConsume>12</mpConsume>
-    </skill>
-    <skill id="1851" toLevel="1" name="PC Cadmus - Vampiric Rage">
-        <!-- For 20 minutes, has a chance to absorb 9%% of physical damage dealt to enemies as HP. PC-exclusive. -->
-        <icon>icon.skill1268</icon>
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>646</effectPoint>
-        <mpConsume>12</mpConsume>
-    </skill>
-    <skill id="1852" toLevel="1" name="PC Cadmus - Empower">
-        <!-- For 20 minutes, M. Atk +75%%. PC-exclusive. -->
-        <icon>icon.skill1059</icon>
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>495</effectPoint>
-        <mpConsume>12</mpConsume>
-    </skill>
-    <skill id="1853" toLevel="1" name="PC Cadmus - Clarity">
-        <!-- For 20 minutes, P. Skill MP Consumption -20%%, M. Skill MP Consumption -10%%, and song/dance skill MP Consumption -20%%. PC-exclusive. -->
-        <icon>icon.skill1397</icon>
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>655</effectPoint>
-        <mpConsume>12</mpConsume>
-    </skill>
-    <skill id="1854" toLevel="1" name="PC Cadmus - Agility">
-        <!-- For 20 minutes, P. Evasion +4. PC-exclusive. -->
-        <icon>icon.skill1087</icon>
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>495</effectPoint>
-        <mpConsume>12</mpConsume>
-    </skill>
-    <skill id="1855" toLevel="1" name="PC Cadmus - Lightness">
-        <!-- For 20 minutes, Weight Penalty Segment +9000. PC-exclusive. -->
-        <icon>icon.skill1257</icon>
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>495</effectPoint>
-        <mpConsume>12</mpConsume>
-    </skill>
-    <skill id="1856" toLevel="1" name="PC Cadmus - Recharge">
-        <!-- Recovers MP with up to 94 Power depending on the target's level. PC-exclusive. -->
-        <icon>icon.skill1013</icon>
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>6000</hitTime>
-        <reuseDelay>3000</reuseDelay>
-        <effectPoint>655</effectPoint>
-        <mpConsume>98</mpConsume>
-    </skill>
-    <skill id="1857" toLevel="1" name="PC Cadmus - Greater Heal">
-        <!-- Recovers the target's HP with 506 Power. PC-exclusive. -->
-        <icon>icon.skill1217</icon>
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>600</castRange>
-        <hitTime>5000</hitTime>
-        <reuseDelay>3000</reuseDelay>
-        <effectPoint>365</effectPoint>
-        <mpConsume>83</mpConsume>
-    </skill>
-    <skill id="1858" toLevel="1" name="PC Cadmus - Blessed Body">
-        <!-- For 20 minutes, Max HP +25%. PC-exclusive. -->
-        <icon>icon.skill1045</icon>
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>646</effectPoint>
-        <mpConsume>52</mpConsume>
-    </skill>
-    <skill id="1859" toLevel="1" name="PC Cadmus - Blessed Soul">
-        <!-- For 20 minutes, Max MP +25%. PC-exclusive. -->
-        <icon>icon.skill1048</icon>
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>635</effectPoint>
-        <mpConsume>52</mpConsume>
-    </skill>
-    <skill id="1860" toLevel="1" name="PC Cadmus - Stun Resistance">
-        <!-- For 20 minutes, Stun Resistance +15%. PC-exclusive. -->
-        <icon>icon.skill1259</icon>
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>646</effectPoint>
-        <mpConsume>35</mpConsume>
-    </skill>
-    <skill id="1861" toLevel="1" name="PC Cadmus - Advanced Block">
-        <!-- For 20 minutes, Shield Def. +20%. PC-exclusive. -->
-        <icon>icon.skill1304</icon>
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>714</effectPoint>
-        <mpConsume>49</mpConsume>
-    </skill>
-    <skill id="1862" toLevel="1" name="PC Cadmus - Wild Magic">
-        <!-- For 20 minutes, M. Critical Rate +10. PC-exclusive. -->
-        <icon>icon.skill1303</icon>
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>635</effectPoint>
-        <mpConsume>58</mpConsume>
-    </skill>
-    <skill id="1863" toLevel="1" name="PC Cadmus - Stigma of Shilen">
-        <!-- For 30 seconds, Melee Weapon Resistance -24. M. Def. -12. PC-exclusive. -->
-        <icon>icon.skill1539</icon>
-        <operateType>A1</operateType>
-        <isDebuff>true</isDebuff>
-        <castRange>900</castRange>
-        <hitTime>1500</hitTime>
-        <reuseDelay>3000</reuseDelay>
-        <effectPoint>-635</effectPoint>
-        <mpConsume>24</mpConsume>
-    </skill>
-    <skill id="1864" toLevel="1" name="PC Cadmus - Berserker Spirit">
-        <!--  For 20 minutes, a party member's P. Def. -8%, M. Def. -16%, P. Evasion -4, P. Atk. +8%, M. Atk. +16, Atk. Spd. +8%, Casting Spd. +8%, and Movement Speed +8. PC-exclusive -->
-        <icon>icon.skill1062</icon>
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <castRange>400</castRange>
-        <hitTime>4000</hitTime>
-        <reuseDelay>2000</reuseDelay>
-        <effectPoint>495</effectPoint>
-        <mpConsume>48</mpConsume>
-    </skill>
-    <skill id="1865" toLevel="1" name="Transformation Attack">
-        <!-- Increases P. Atk. during Transformation. -->
-        <operateType>P</operateType>
-    </skill>
-    <skill id="1867" toLevel="5" name="Clan Abundant">
-        <!-- Clan member's HP Recovery Bonus/MP Recovery Bonus/CP Recovery Bonus +$s1, XP/SP gain +$s2, Received PVE Damage -$s3, and Sayha's Grace Consumption -$s4
-            1 - 4%, 5%, 3%, 5%
-            2 - 8%, 5%, 5%, 8%
-            3 - 12%, 10%, 7%, 11%
-
-            Clan member's HP Recovery Bonus/MP Recovery Bonus/CP Recovery Bonus +$s1, XP/SP/Attribute XP gain +$s2, Received PVE Damage -$s3, and Sayha's Grace Consumption -$s4.
-            4 - 20%, 15%, 10%, 15%
-
-            Clan member's HP Recovery Bonus/MP Recovery Bonus/CP Recovery Bonus +$s1, XP/SP/Attribute XP gain +$s2, Stun/MEN/Paralysis Attack Success Rate +$s3, Received PVE Damage -$s4, and Sayha's Grace Consumption -$s5.
-            5 - 30%, 20%, 5%, 10%, 15%
-        -->
-        <icon>icon.skill19014</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="1893" toLevel="1" name="Cat's Potential">
-        <!-- Unravels Cat's true potential. Damage to raid bosses +5%, Damage received from raid bosses -10%. -->
-        <icon>icon.skill1406</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="1894" toLevel="1" name="Unicorn's Potential">
-        <!-- Unravels Unicorn's true potential. Damage to raid bosses +10%, Damage received from raid bosses -5%. -->
-        <icon>icon.skill1407</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="1895" toLevel="1" name="Spectral Potential">
-        <!-- Unravels true spectral potential. Damage to raid bosses +15%. -->
-        <icon>icon.skill1408</icon>
-        <operateType>P</operateType>
-    </skill>
-    <skill id="1896" toLevel="4" name="Full Knockdown">
-        <!-- Inflicts a powerful strike on target with $s1 Power added to P. Atk., knocking down for $s2 Requires a sword, blunt weapon, spear, fist weapon, or dual sword. Critical. Ignores Shield Defense. -->
-        <icon>icon.skill1896</icon>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>3</abnormalTime>
-        <abnormalType>KNOCKDOWN</abnormalType>
-        <abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
-        <activateRate>50</activateRate>
-        <castRange>40</castRange>
-        <coolTime>500</coolTime>
-        <effectPoint>
-            <value level="1">-357</value>
-            <value level="2">-359</value>
-            <value level="3">-361</value>
-            <value level="4">-363</value>
-        </effectPoint>
-        <effectRange>400</effectRange>
-        <hitTime>1690</hitTime>
-        <isDebuff>true</isDebuff>
-        <hitCancelTime>0.2</hitCancelTime>
-        <lvlBonusRate>20</lvlBonusRate>
-        <magicLvl>
-            <value level="1">81</value>
-            <value level="2">82</value>
-            <value level="3">83</value>
-            <value level="4">84</value>
-        </magicLvl>
-        <mpConsume>
-            <value level="1">107</value>
-            <value level="2">108</value>
-            <value level="3">109</value>
-            <value level="4">110</value>
-        </mpConsume>
-        <staticReuse>true</staticReuse>
-        <nextAction>ATTACK</nextAction>
-        <operateType>A2</operateType>
-        <reuseDelay>15000</reuseDelay>
-        <magicCriticalRate>5</magicCriticalRate>
-        <trait>KNOCKDOWN</trait>
-        <targetType>ENEMY_ONLY</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="EquipWeapon">
-                <weaponType>
-                    <item>SWORD</item>
-                    <item>BLUNT</item>
-                    <item>SPEAR</item>
-                    <item>FIST</item>
-                    <item>DUAL</item>
-                </weaponType>
-            </condition>
-        </conditions>
-        <effects>
-            <effect name="PhysicalAttack">
-                <power>
-                    <value level="1">4937</value>
-                    <value level="2">5046</value>
-                    <value level="3">5154</value>
-                    <value level="4">5261</value>
-                </power>
-                <ignoreShieldDefence>true</ignoreShieldDefence>
-                <criticalChance>15</criticalChance>
-                <overHit>true</overHit>
-            </effect>
-            <effect name="KnockBack">
-                <distance>50</distance>
-                <speed>400</speed>
-                <knockDown>true</knockDown>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="1897" toLevel="11" name="Shilen's Cursed Field">
-        <!-- For $s1, Melee Weapon Resistance of the target and nearby enemies -$s2. -->
-        <icon>icon.skill1897</icon>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>30</abnormalTime>
-        <abnormalType>PD_DOWN</abnormalType>
-        <abnormalVisualEffect>STIGMA_OF_SILEN</abnormalVisualEffect>
-        <activateRate>80</activateRate>
-        <basicProperty>MAGIC</basicProperty>
-        <castRange>
-            <value level="1">600</value>
-            <value level="2">700</value>
-            <value level="3">800</value>
-            <value level="4">900</value>
-            <value level="5">900</value>
-            <value level="6">900</value>
-            <value level="7">900</value>
-            <value level="8">900</value>
-            <value level="9">900</value>
-            <value level="10">900</value>
-            <value level="11">900</value>
-        </castRange>
-        <effectPoint>
-            <value level="1">-379</value>
-            <value level="2">-495</value>
-            <value level="3">-582</value>
-            <value level="4">-635</value>
-            <value level="5">-639</value>
-            <value level="6">-643</value>
-            <value level="7">-646</value>
-            <value level="8">-649</value>
-            <value level="9">-652</value>
-            <value level="10">-654</value>
-            <value level="11">-656</value>
-        </effectPoint>
-        <effectRange>
-            <value level="1">1100</value>
-            <value level="2">1200</value>
-            <value level="3">1300</value>
-            <value level="4">1400</value>
-            <value level="5">1500</value>
-            <value level="6">1500</value>
-            <value level="7">1500</value>
-            <value level="8">1500</value>
-            <value level="9">1500</value>
-            <value level="10">1500</value>
-            <value level="11">1500</value>
-        </effectRange>
-        <hitTime>1500</hitTime>
-        <isDebuff>true</isDebuff>
-        <lvlBonusRate>20</lvlBonusRate>
-        <magicLvl>
-            <value level="1">40</value>
-            <value level="2">52</value>
-            <value level="3">62</value>
-            <value level="4">70</value>
-            <value level="5">78</value>
-            <value level="6">79</value>
-            <value level="7">80</value>
-            <value level="8">81</value>
-            <value level="9">82</value>
-            <value level="10">83</value>
-            <value level="11">84</value>
-        </magicLvl>
-        <mpConsume>
-            <value level="1">54</value>
-            <value level="2">72</value>
-            <value level="3">87</value>
-            <value level="4">99</value>
-            <value level="5">126</value>
-            <value level="6">129</value>
-            <value level="7">132</value>
-            <value level="8">135</value>
-            <value level="9">138</value>
-            <value level="10">141</value>
-            <value level="11">144</value>
-        </mpConsume>
-        <operateType>A2</operateType>
-        <reuseDelay>3000</reuseDelay>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>5</magicCriticalRate>
-        <targetType>ENEMY_ONLY</targetType>
-        <affectScope>RANGE</affectScope>
-        <effects>
-            <effect name="DefenceTrait">
-                <SWORD>
-                    <value level="1">-16</value>
-                    <value level="2">-24</value>
-                    <value level="3">-32</value>
-                    <value level="4">-40</value>
-                    <value level="5">-48</value>
-                    <value level="6">-49</value>
-                    <value level="7">-50</value>
-                    <value level="8">-51</value>
-                    <value level="9">-52</value>
-                    <value level="10">-53</value>
-                    <value level="11">-54</value>
-                </SWORD>
-                <BLUNT>
-                    <value level="1">-16</value>
-                    <value level="2">-24</value>
-                    <value level="3">-32</value>
-                    <value level="4">-40</value>
-                    <value level="5">-48</value>
-                    <value level="6">-49</value>
-                    <value level="7">-50</value>
-                    <value level="8">-51</value>
-                    <value level="9">-52</value>
-                    <value level="10">-53</value>
-                    <value level="11">-54</value>
-                </BLUNT>
-                <SPEAR>
-                    <value level="1">-16</value>
-                    <value level="2">-24</value>
-                    <value level="3">-32</value>
-                    <value level="4">-40</value>
-                    <value level="5">-48</value>
-                    <value level="6">-49</value>
-                    <value level="7">-50</value>
-                    <value level="8">-51</value>
-                    <value level="9">-52</value>
-                    <value level="10">-53</value>
-                    <value level="11">-54</value>
-                </SPEAR>
-                <DUAL>
-                    <value level="1">-16</value>
-                    <value level="2">-24</value>
-                    <value level="3">-32</value>
-                    <value level="4">-40</value>
-                    <value level="5">-48</value>
-                    <value level="6">-49</value>
-                    <value level="7">-50</value>
-                    <value level="8">-51</value>
-                    <value level="9">-52</value>
-                    <value level="10">-53</value>
-                    <value level="11">-54</value>
-                </DUAL>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="1898" toLevel="9" name="Shield Charge">
-        <!-- Attacks enemies in front of character with $s1 Power added to P. Atk., stunning target for $s2 Requires a shield. Over-hit. -->
-        <icon>icon.skill1898</icon>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>5</abnormalTime>
-        <abnormalType>STUN</abnormalType>
-        <abnormalVisualEffect>STUN</abnormalVisualEffect>
-        <activateRate>80</activateRate>
-        <basicProperty>PHYSICAL</basicProperty>
-        <castRange>40</castRange>
-        <effectPoint>
-            <value level="1">-2130</value>
-            <value level="2">-2190</value>
-            <value level="3">-2250</value>
-            <value level="4">-2310</value>
-            <value level="5">-2370</value>
-            <value level="6">-2420</value>
-            <value level="7">-2480</value>
-            <value level="8">-2540</value>
-            <value level="9">-2600</value>
-        </effectPoint>
-        <effectRange>800</effectRange>
-        <fanRange>0;0;600;60</fanRange>
-        <hitTime>800</hitTime>
-        <coolTime>200</coolTime>
-        <isDebuff>true</isDebuff>
-        <lvlBonusRate>30</lvlBonusRate>
-        <magicLvl>
-            <value level="1">76</value>
-            <value level="2">77</value>
-            <value level="3">78</value>
-            <value level="4">79</value>
-            <value level="5">80</value>
-            <value level="6">81</value>
-            <value level="7">82</value>
-            <value level="8">83</value>
-            <value level="9">84</value>
-        </magicLvl>
-        <mpConsume>
-            <value level="1">110</value>
-            <value level="2">121</value>
-            <value level="3">123</value>
-            <value level="4">125</value>
-            <value level="5">129</value>
-            <value level="6">131</value>
-            <value level="7">133</value>
-            <value level="8">135</value>
-            <value level="9">137</value>
-        </mpConsume>
-        <nextAction>ATTACK</nextAction>
-        <operateType>DA2</operateType>
-        <reuseDelay>30000</reuseDelay>
-        <magicCriticalRate>5</magicCriticalRate>
-        <trait>SHOCK</trait>
-        <targetType>ENEMY_ONLY</targetType>
-        <affectScope>FAN_PB</affectScope>
-        <affectObject>NOT_FRIEND</affectObject>
-        <conditions>
-            <condition name="EquipShield"/>
-        </conditions>
-        <effects>
-            <effect name="BlockActions">
-                <allowedSkills>35016</allowedSkills>
-            </effect>
-            <effect name="PhysicalAttack">
-                <power>
-                    <value level="1">2191</value>
-                    <value level="2">2244</value>
-                    <value level="3">2296</value>
-                    <value level="4">2348</value>
-                    <value level="5">2400</value>
-                    <value level="6">2452</value>
-                    <value level="7">2504</value>
-                    <value level="8">2556</value>
-                    <value level="9">2608</value>
-                </power>
-                <overHit>true</overHit>
-            </effect>
-        </effects>
-    </skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
+	<skill id="1800" name="Pirate Transformation" max-level="1" action="A2">
+	<!-- For 20 min., Max HP/MP +3%%, P./M. Accuracy +1, P./M. Atk./P./M. Def. +2%%, Atk. Spd. +3%%, M. Critical Rate +10, Speed +3.\n\n<Item Consumption>\n1 Elemental Stone.\n\n<Story>\nPirates used to dominate the Giran area. Pirate King Zaken became a vampire and started to kill other pirates. His crew rose in mutiny against Zaken only to lead him to acquire the Power of Darkness. Surviving pirates had no choice but to run away... -->
+		<icon initial="icon.skill1800"/>
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
+			<magic-level initial="56"/>
+			<cast-range initial="-1"/>
+			<reuse initial="7200000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<item initial="49543"/>
+			<item-count initial="1"/>
+		</consume>
+		<target />
+		<abnormal type="CHANGEBODY" visual="PIRATE_SUIT" >
+			<level initial="1"/>
+			<time initial="1200"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+				<power initial="3.0"/>
+			</vital-stat-modify>
+			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+				<power initial="3.0"/>
+			</vital-stat-modify>
+			<speed mode="DIFF">
+				<power initial="3.0"/>
+			</speed>
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+				<power initial="3.0"/>
+			</stat-modify>
+			<stat-modify stat="ACCURACY" mode="DIFF">
+				<power initial="1.0"/>
+			</stat-modify>
+			<stat-modify stat="ACCURACY_MAGIC" mode="DIFF">
+				<power initial="1.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+				<power initial="10.0"/>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_ATTACK" mode="PER">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+				<power initial="2.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="1801" name="Dark Assassin Transformation" max-level="1" action="A2">
+	<!-- For 20 min., Max HP/MP +5%%, P./M. Accuracy +1, P./M. Atk./P./M. Def. +2%%, Atk. Spd. +3%%, M. Critical Rate +10, Speed +4.\n\n<Item Consumption>\n1 Elemental Stone.\n\n<Story>\nA clandestine organization founded by Mercenary Captain Sieghardt Ein. Sieghardt Ein joined the Lords of Dawn and disappeared without a trace. However, his organization still leads its shadowy deals… -->
+		<icon initial="icon.skill1801"/>
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
+			<magic-level initial="56"/>
+			<cast-range initial="-1"/>
+			<reuse initial="7200000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<item initial="49543"/>
+			<item-count initial="1"/>
+		</consume>
+		<target />
+		<abnormal type="CHANGEBODY" visual="DARK_ASSASSIN_SUIT" >
+			<level initial="1"/>
+			<time initial="1200"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+				<power initial="5.0"/>
+			</vital-stat-modify>
+			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+				<power initial="5.0"/>
+			</vital-stat-modify>
+			<speed mode="DIFF">
+				<power initial="4.0"/>
+			</speed>
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+				<power initial="3.0"/>
+			</stat-modify>
+			<stat-modify stat="ACCURACY" mode="DIFF">
+				<power initial="1.0"/>
+			</stat-modify>
+			<stat-modify stat="ACCURACY_MAGIC" mode="DIFF">
+				<power initial="1.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+				<power initial="10.0"/>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_ATTACK" mode="PER">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+				<power initial="2.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="1802" name="White Assassin Transformation" max-level="1" action="A2">
+	<!-- For 20 min., Max HP/MP +7%%, P./M. Accuracy +2, P./M. Atk./P./M. Def. +3%%, Atk. Spd. +5%%, M. Critical Rate +20, Speed +5.\n\n<Item Consumption>\n2 Elemental Stones.\n\n<Story>\nA Rune noblewoman, Erica Ken Weber, is the right hand of Sieghardt Ein. She created the White Assassins to distract attention from the Dark Assassins and help it carry out secret missions... -->
+		<icon initial="icon.skill1802"/>
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
+			<magic-level initial="56"/>
+			<cast-range initial="-1"/>
+			<reuse initial="3600000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<item initial="49543"/>
+			<item-count initial="2"/>
+		</consume>
+		<target />
+		<abnormal type="CHANGEBODY" visual="WHITE_ASSASSIN_SUIT" >
+			<level initial="1"/>
+			<time initial="1200"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+				<power initial="7.0"/>
+			</vital-stat-modify>
+			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+				<power initial="7.0"/>
+			</vital-stat-modify>
+			<speed mode="DIFF">
+				<power initial="5.0"/>
+			</speed>
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+				<power initial="5.0"/>
+			</stat-modify>
+			<stat-modify stat="ACCURACY" mode="DIFF">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify stat="ACCURACY_MAGIC" mode="DIFF">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+				<power initial="20.0"/>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+				<power initial="3.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_ATTACK" mode="PER">
+				<power initial="3.0"/>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+				<power initial="3.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+				<power initial="3.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="1810" name="Cadmus - Might" max-level="1" action="A2" type="MAGIC">
+	<!-- Increases P. Atk. by 15%% for 20 minutes -->
+		<icon initial="icon.skill1068"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-point initial="379"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="379000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="12"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal >
+			<time initial="1200"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+				<power initial="0.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="1811" name="Cadmus - Shield" max-level="1" action="A2" type="MAGIC">
+	<!-- For 20 minutes, P. Def. +15%%. -->
+		<icon initial="icon.skill1040"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-point initial="418"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="418000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="12"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal >
+			<time initial="1200"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+				<power initial="0.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="1812" name="Cadmus - Wind Walk" max-level="1" action="A2" type="MAGIC">
+	<!-- Speed +33 for 20 minutes. -->
+		<icon initial="icon.skill1204"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-point initial="285"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="285000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="12"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal >
+			<time initial="1200"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<speed mode="DIFF">
+				<power initial="0.0"/>
+			</speed>
+		</effects>
+	</skill>
+	<skill id="1813" name="Cadmus - Return" max-level="1" action="A1" type="MAGIC">
+	<!-- Teleports to a town. Cannot be used in a specially designated place such as the GM Consultation Service. -->
+		<icon initial="Icon.skill1050"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="75000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="12"/>
+		</consume>
+		<target />
+		<effects>
+			<escape location="TOWN"/>
+		</effects>
+	</skill>
+	<skill id="1814" name="Cadmus - Focus" max-level="1" action="A2" type="MAGIC">
+	<!-- For 20 minutes, P. Critical Rate +30%%. -->
+		<icon initial="icon.skill1077"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-point initial="495"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="495000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="12"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal >
+			<time initial="1200"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="PER">
+				<power initial="0.0"/>
+			</stat-hp-based>
+		</effects>
+	</skill>
+	<skill id="1815" name="Cadmus - Death Whisper" max-level="1" action="A2" type="MAGIC">
+	<!-- For 20 minutes, P. Critical Damage +35%%. -->
+		<icon initial="icon.skill1242"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-point initial="532"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="532000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="12"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal >
+			<time initial="1200"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+				<power initial="0.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="1816" name="Cadmus - Guidance" max-level="1" action="A2" type="MAGIC">
+	<!-- For 20 minutes, P. Accuracy +4. -->
+		<icon initial="icon.skill1240"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-point initial="532"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="532000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="12"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal >
+			<time initial="1200"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="ACCURACY" mode="DIFF">
+				<power initial="0.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="1817" name="Cadmus - Heal" max-level="1" action="A1" type="MAGIC">
+	<!-- Recovers the target's HP with 301 Power. -->
+		<icon initial="icon.skill1011"/>
+		<attributes auto-use="ACTIVE">
+			<cast-range initial="600"/>
+			<reuse initial="3000"/>
+			<effect-point initial="301"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="301000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="52"/>
+		</consume>
+		<target type="TARGET" />
+		<effects>
+			<effect name="Heal">
+				<power initial="301.0"/>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="1818" name="Cadmus - Haste" max-level="1" action="A2" type="MAGIC">
+	<!-- Increases Atk. Spd. by 33%% for 20 minutes. -->
+		<icon initial="icon.skill1086"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-point initial="495"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="495000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="12"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal >
+			<time initial="1200"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+				<power initial="0.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="1819" name="Cadmus - Acumen" max-level="1" action="A2" type="MAGIC">
+	<!-- For 20 minutes, Casting Spd. +30%%. -->
+		<icon initial="icon.skill1085"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-point initial="457"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="457000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="12"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal >
+			<time initial="1200"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
+				<power initial="0.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="1820" name="Cadmus - Vampiric Rage" max-level="1" action="A2" type="MAGIC">
+	<!-- For 20 minutes, recovers as HP 9%% of the physical damage inflicted on the enemy with a certain probability. -->
+		<icon initial="icon.skill1268"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-point initial="646"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="646000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="12"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal >
+			<time initial="1200"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<vampiric-attack chance="30">
+				<power initial="9.0"/>
+			</vampiric-attack>
+		</effects>
+	</skill>
+	<skill id="1821" name="Cadmus - Empower" max-level="1" action="A2" type="MAGIC">
+	<!-- Increases M. Atk. power by 75%% for 20 minutes. -->
+		<icon initial="icon.skill1059"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-point initial="495"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="495000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="12"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal >
+			<time initial="1200"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="MAGIC_ATTACK" mode="PER">
+				<power initial="75.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="1822" name="Cadmus - Clarity" max-level="1" action="A2" type="MAGIC">
+	<!-- For 20 minutes, P. Skill MP Consumption -20%%, M. Skill MP Consumption -10%%, and song/dance skill MP Consumption -20%%. -->
+		<icon initial="icon.skill1397"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-point initial="655"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="655000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="12"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal >
+			<time initial="1200"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<magic-cost type="1">
+				<power initial="-10.0"/>
+			</magic-cost>
+		</effects>
+	</skill>
+	<skill id="1823" name="Cadmus - Agility" max-level="1" action="A2" type="MAGIC">
+	<!-- For 20 minutes, P. Evasion +4. -->
+		<icon initial="icon.skill1087"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-point initial="495"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="495000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="12"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal >
+			<time initial="1200"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="4.0"/>
+			</stat-hp-based>
+		</effects>
+	</skill>
+	<skill id="1824" name="Cadmus - Lightness" max-level="1" action="A2" type="MAGIC">
+	<!-- For 20 minutes, Weight Penalty Segment +9000 -->
+		<icon initial="icon.skill1257"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-point initial="495"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="495000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="12"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal >
+			<time initial="1200"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="WEIGHT_LIMIT" mode="DIFF">
+				<power initial="9000.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="1825" name="Cadmus - Recharge" max-level="1" action="A1" type="MAGIC">
+	<!-- Recovers MP up to 94 power depending on the target's Lv.. -->
+		<icon initial="icon.skill1013"/>
+		<attributes >
+			<cast-range initial="400"/>
+			<reuse initial="3000"/>
+			<effect-point initial="655"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="655000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="98"/>
+		</consume>
+		<target type="TARGET" />
+		<effects>
+			<effect name="ManaHeal">
+				<power initial="94.0"/>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="1826" name="Cadmus - Greater Heal" max-level="1" action="A1" type="MAGIC">
+	<!-- Immediately restores the target's HP with 506 Power. -->
+		<icon initial="icon.skill1217"/>
+		<attributes auto-use="ACTIVE">
+			<cast-range initial="600"/>
+			<reuse initial="3000"/>
+			<effect-point initial="365"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="365000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="83"/>
+		</consume>
+		<target type="TARGET" />
+		<effects>
+			<effect name="Heal">
+				<power initial="506.0"/>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="1827" name="Transformation Block" max-level="1" >
+	<!-- Transformed state attack unavailable. -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" >
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="1828" name="Transformation Protection" max-level="2" >
+	<!-- 
+		level 1: Transformed state P. Def. Boost.
+		level 2: Transformed state P. Def./M. Def Boost.
+	 -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" >
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="1829" name="Spell Master" max-level="1" >
+	<!-- Casting Spd. +10%%, M. Critical Rate +10. -->
+		<icon initial="icon.skill1901"/>
+		<attributes property="MAGIC" >
+			<magic-level initial="40"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
+				<power initial="10.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+				<power initial="10.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="1830" name="Spell Master" max-level="1" >
+	<!-- Casting Spd. +13%%, M. Critical Rate +10. -->
+		<icon initial="icon.skill1908"/>
+		<attributes property="MAGIC" >
+			<magic-level initial="40"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
+				<power initial="13.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+				<power initial="10.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="1831" name="Spell Master" max-level="1" >
+	<!-- Casting Spd. +9%%, M. Critical Rate +10. -->
+		<icon initial="icon.skill1911"/>
+		<attributes property="MAGIC" >
+			<magic-level initial="40"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
+				<power initial="9.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+				<power initial="10.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="1832" name="Spell Master" max-level="1" >
+	<!-- Casting Spd. +5%%, M. Critical Rate +10. -->
+		<icon initial="icon.skill1916"/>
+		<attributes property="MAGIC" >
+			<magic-level initial="40"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
+				<power initial="5.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+				<power initial="10.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="1833" name="Mount - Gold Maned Lion" max-level="1" action="A2">
+	<!-- Allows to mount a Golden Lion. -->
+		<icon initial="icon.skill1833"/>
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true" >
+			<cast-range initial="-1"/>
+			<effect-point initial="1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<abnormal type="TRANSFORM" >
+			<level initial="1"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<conditions>
+			<condition name="CanTransform"/>
+		</conditions>
+		<effects>
+			<transformation id="160"/>
+		</effects>
+	</skill>
+	<skill id="1834" name="Mount Pegasus" max-level="1" action="A2">
+	<!-- Allows to mount a Pegasus. -->
+		<icon initial="icon.skill1834"/>
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true" >
+			<cast-range initial="-1"/>
+			<effect-point initial="1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<abnormal type="TRANSFORM" >
+			<level initial="1"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<conditions>
+			<condition name="CanTransform"/>
+		</conditions>
+		<effects>
+			<transformation id="161"/>
+		</effects>
+	</skill>
+	<skill id="1835" name="Mount Saber Tooth Cougar" max-level="1" action="A2">
+	<!-- Allows to mount a Saber Tooth Cougar. -->
+		<icon initial="icon.skill1835"/>
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true" >
+			<cast-range initial="-1"/>
+			<effect-point initial="1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<abnormal type="TRANSFORM" >
+			<level initial="1"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<conditions>
+			<condition name="CanTransform"/>
+		</conditions>
+		<effects>
+			<transformation id="162"/>
+		</effects>
+	</skill>
+	<skill id="1836" name="Mount Kukuru" max-level="1" action="A2">
+	<!-- Mount Kukuru -->
+		<icon initial="icon.skill1836"/>
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true" >
+			<cast-range initial="-1"/>
+			<effect-point initial="1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<abnormal type="TRANSFORM" >
+			<level initial="1"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<conditions>
+			<condition name="CanTransform"/>
+		</conditions>
+		<effects>
+			<transformation id="163"/>
+		</effects>
+	</skill>
+	<skill id="1837" name="Mount Black Bear" max-level="1" action="A2">
+	<!-- Allows to mount a Black Bear. -->
+		<icon initial="icon.skill1837"/>
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true" >
+			<cast-range initial="-1"/>
+			<effect-point initial="1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<abnormal type="TRANSFORM" >
+			<level initial="1"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<conditions>
+			<condition name="CanTransform"/>
+		</conditions>
+		<effects>
+			<transformation id="164"/>
+		</effects>
+	</skill>
+	<skill id="1838" name="PC Cadmus - Prophecy of Water" max-level="1" action="A1" type="MAGIC">
+	<!-- PC-exclusive. A party member's MP Recovery bonus +10%%, M. Atk. +10%%, M. Def +10%%, Casting Spd. +5%%, Debuff Resistance +10%%, and Skill MP Consumption -3%% for 10 minutes with the help of a great spirit. Consumes 10 Spirit Ore. -->
+		<icon initial="icon.skill1355"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="4000"/>
+			<effect-point initial="666"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="666000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="72"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="1839" name="PC Cadmus - Prophecy of Fire" max-level="1" action="A1" type="MAGIC">
+	<!-- PC-exclusive. A party member's Max HP +10%%, HP Recovery Bonus +10%%, P. Atk. +10%%, P. Def +10%%, Atk. Spd. +5%%, and Debuff Resistance +10%% for 10 minutes with the help of a great spirit. Consumes 10 Spirit Ore. -->
+		<icon initial="icon.skill1356"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="4000"/>
+			<effect-point initial="666"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="666000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="72"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="1840" name="PC Room Chapa - Prophecy of Wind" max-level="1" action="A1" type="MAGIC">
+	<!-- PC-exclusive. A party member's P. Accuracy/M. Accuracy +3, P. Evasion/M. Evasion +3, P. Critical/M. Critical Rate +10%%, P. Critical/M. Critical Damage +15%%, Movement Speed +10%%, Debuff Resistance +10%%, and P. Atk. against Raid Boss +15%% for 10 minutes with the help of a great spirit. Consumes 10 Spirit Ore. -->
+		<icon initial="icon.skill1357"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="4000"/>
+			<effect-point initial="666"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="666000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="72"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="1841" name="PC Cadmus - Might" max-level="1" action="A1" type="MAGIC">
+	<!-- For 20 minutes, P. Atk +15%%. PC-exclusive. -->
+		<icon initial="icon.skill1068"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-point initial="379"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="379000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="12"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="1842" name="PC Cadmus - Shield" max-level="1" action="A1" type="MAGIC">
+	<!-- For 20 minutes, P. Def. +15%%. PC-exclusive. -->
+		<icon initial="icon.skill1040"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-point initial="418"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="418000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="12"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="1843" name="PC Cadmus - Wind Walk" max-level="1" action="A1" type="MAGIC">
+	<!-- For 20 minutes, Movement Speed +33. PC-exclusive. -->
+		<icon initial="icon.skill1204"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-point initial="285"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="285000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="12"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="1844" name="PC Cadmus - Return" max-level="1" action="A1" type="MAGIC">
+	<!-- Teleports to a town. Cannot be used in a special locations such as the GM Consultation Service. PC-exclusive. -->
+		<icon initial="Icon.skill1050"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="75000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="12"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="1845" name="PC Cadmus - Focus" max-level="1" action="A1" type="MAGIC">
+	<!-- For 20 minutes, P. Critical Rate +30%%. PC-exclusive. -->
+		<icon initial="icon.skill1077"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-point initial="495"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="495000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="12"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="1846" name="PC Cadmus - Death Whisper" max-level="1" action="A1" type="MAGIC">
+	<!-- For 20 minutes, P. Critical Damage +35%%. PC-exclusive. -->
+		<icon initial="icon.skill1242"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-point initial="532"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="532000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="12"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="1847" name="PC Cadmus - Guidance" max-level="1" action="A1" type="MAGIC">
+	<!-- For 20 minutes, P. Accuracy +4. PC-exclusive. -->
+		<icon initial="icon.skill1240"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-point initial="532"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="532000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="12"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="1848" name="PC Cadmus - Heal" max-level="1" action="A1" type="MAGIC">
+	<!-- Recovers the target's HP with 301 Power. PC-exclusive. -->
+		<icon initial="icon.skill1011"/>
+		<attributes >
+			<cast-range initial="600"/>
+			<reuse initial="3000"/>
+			<effect-point initial="301"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="301000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="52"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="1849" name="PC Cadmus - Haste" max-level="1" action="A1" type="MAGIC">
+	<!-- For 20 minutes, Atk. Spd. +33%%. PC-exclusive. -->
+		<icon initial="icon.skill1086"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-point initial="495"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="495000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="12"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="1850" name="PC Cadmus - Acumen" max-level="1" action="A1" type="MAGIC">
+	<!-- For 20 minutes, Casting Spd. +30%%. PC-exclusive. -->
+		<icon initial="icon.skill1085"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-point initial="457"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="457000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="12"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="1851" name="PC Cadmus - Vampiric Rage" max-level="1" action="A1" type="MAGIC">
+	<!-- For 20 minutes, has a chance to absorb 9%% of physical damage dealt to enemies as HP. PC-exclusive. -->
+		<icon initial="icon.skill1268"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-point initial="646"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="646000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="12"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="1852" name="PC Cadmus - Empower" max-level="1" action="A1" type="MAGIC">
+	<!-- For 20 minutes, M. Atk +75%%. PC-exclusive. -->
+		<icon initial="icon.skill1059"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-point initial="495"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="495000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="12"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="1853" name="PC Cadmus - Clarity" max-level="1" action="A1" type="MAGIC">
+	<!-- For 20 minutes, P. Skill MP Consumption -20%%, M. Skill MP Consumption -10%%, and song/dance skill MP Consumption -20%%. PC-exclusive. -->
+		<icon initial="icon.skill1397"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-point initial="655"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="655000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="12"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="1854" name="PC Cadmus - Agility" max-level="1" action="A1" type="MAGIC">
+	<!-- For 20 minutes, P. Evasion +4. PC-exclusive. -->
+		<icon initial="icon.skill1087"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-point initial="495"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="495000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="12"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="1855" name="PC Cadmus - Lightness" max-level="1" action="A1" type="MAGIC">
+	<!-- For 20 minutes, Weight Penalty Segment +9000. PC-exclusive. -->
+		<icon initial="icon.skill1257"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-point initial="495"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="495000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="12"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="1856" name="PC Cadmus - Recharge" max-level="1" action="A1" type="MAGIC">
+	<!-- Recovers MP with up to 94 Power depending on the target's level. PC-exclusive. -->
+		<icon initial="icon.skill1013"/>
+		<attributes >
+			<cast-range initial="400"/>
+			<reuse initial="3000"/>
+			<effect-point initial="655"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="655000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="98"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="1857" name="PC Cadmus - Greater Heal" max-level="1" action="A1" type="MAGIC">
+	<!-- Recovers the target's HP with 506 Power. PC-exclusive. -->
+		<icon initial="icon.skill1217"/>
+		<attributes >
+			<cast-range initial="600"/>
+			<reuse initial="3000"/>
+			<effect-point initial="365"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="365000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="83"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="1858" name="PC Cadmus - Blessed Body" max-level="1" action="A1" type="MAGIC">
+	<!-- For 20 minutes, Max HP +25%. PC-exclusive. -->
+		<icon initial="icon.skill1045"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-point initial="646"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="646000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="52"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="1859" name="PC Cadmus - Blessed Soul" max-level="1" action="A1" type="MAGIC">
+	<!-- For 20 minutes, Max MP +25%. PC-exclusive. -->
+		<icon initial="icon.skill1048"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-point initial="635"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="635000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="52"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="1860" name="PC Cadmus - Stun Resistance" max-level="1" action="A1" type="MAGIC">
+	<!-- For 20 minutes, Stun Resistance +15%. PC-exclusive. -->
+		<icon initial="icon.skill1259"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-point initial="646"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="646000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="35"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="1861" name="PC Cadmus - Advanced Block" max-level="1" action="A1" type="MAGIC">
+	<!-- For 20 minutes, Shield Def. +20%. PC-exclusive. -->
+		<icon initial="icon.skill1304"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-point initial="714"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="714000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="49"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="1862" name="PC Cadmus - Wild Magic" max-level="1" action="A1" type="MAGIC">
+	<!-- For 20 minutes, M. Critical Rate +10. PC-exclusive. -->
+		<icon initial="icon.skill1303"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-point initial="635"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="635000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="58"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="1863" name="PC Cadmus - Stigma of Shilen" max-level="1" debuff="true" action="A1" type="MAGIC">
+	<!-- For 30 seconds, Melee Weapon Resistance -24. M. Def. -12. PC-exclusive. -->
+		<icon initial="icon.skill1539"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="900"/>
+			<reuse initial="3000"/>
+			<effect-point initial="-635"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-635000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="24"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="1864" name="PC Cadmus - Berserker Spirit" max-level="1" action="A1" type="MAGIC">
+	<!-- For 20 minutes, a party member's P. Def. -8%, M. Def. -16%, P. Evasion -4, P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, and Movement Speed +8. PC-exclusive -->
+		<icon initial="icon.skill1062"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="400"/>
+			<reuse initial="2000"/>
+			<effect-point initial="495"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="495000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="48"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="1865" name="Transformation Attack" max-level="1" >
+	<!-- Transformed state P. Atk. Boost. -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" >
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="1867" name="Clan Exuberance" max-level="5" >
+	<!-- 
+		level 1: Clan member's HP Recovery Bonus/MP Recovery Bonus/CP Recovery Bonus +4%, XP/SP gain +5%, Received PVE Damage -3%, and Sayha's Grace Consumption -5%.
+		level 2: Clan member's HP Recovery Bonus/MP Recovery Bonus/CP Recovery Bonus +8%, XP/SP gain +5%, Received PVE Damage -5%, and Sayha's Grace Consumption -8%.
+		level 3: Clan member's HP Recovery Bonus/MP Recovery Bonus/CP Recovery Bonus +12%, XP/SP gain +10%, Received PVE Damage -7%, and Sayha's Grace Consumption -11%.
+		level 4: Clan member's HP Recovery Bonus/MP Recovery Bonus/CP Recovery Bonus +20%, XP/SP/Attribute XP gain +15%, Received PVE Damage -10%, and Sayha's Grace Consumption -15%.
+		level 5: Clan member's HP Recovery Bonus/MP Recovery Bonus/CP Recovery Bonus +30%, XP/SP/Attribute XP gain +20%, Stun/MEN/Paralysis Attack Success Rate +5%, Received PVE Damage -10%, and Sayha's Grace Consumption -15%.
+	 -->
+		<icon initial="icon.skill19014"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="1893" name="Cat's Potential" max-level="1" >
+	<!-- Unravels Cat's true potential. Damage to raid bosses +5%%, Damage received from raid bosses -10%%. -->
+		<icon initial="icon.skill1406"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="1894" name="Unicorn's Potential" max-level="1" >
+	<!-- Unravels Unicorn's true potential. Damage to raid bosses +10%%, Damage received from raid bosses -5%%. -->
+		<icon initial="icon.skill1407"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="1895" name="Spectral Potential" max-level="1" >
+	<!-- Unravels true spectral potential. Damage to raid bosses +15%%. -->
+		<icon initial="icon.skill1408"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="1896" name="Fall Down" max-level="4" debuff="true" action="A2">
+	<!-- 
+		level 1: Powerfully strikes the target with bonus 4937 Power, knocking them down for 3 seconds. Requires a sword, blunt weapon, spear, fist weapon, or dualsword. Critical. Ignores Shield Defense.
+		level 2: Powerfully strikes the target with bonus 5046 Power, knocking them down for 3 seconds. Requires a sword, blunt weapon, spear, fist weapon, or dualsword. Critical. Ignores Shield Defense.
+		level 3: Powerfully strikes the target with bonus 5154 Power, knocking them down for 3 seconds. Requires a sword, blunt weapon, spear, fist weapon, or dualsword. Critical. Ignores Shield Defense.
+		level 4: Powerfully strikes the target with bonus 5261 Power, knocking them down for 3 seconds. Requires a sword, blunt weapon, spear, fist weapon, or dualsword. Critical. Ignores Shield Defense.
+	 -->
+		<icon initial="icon.skill1896"/>
+		<attributes property="PHYSIC" static-reuse="true" next-action="ATTACK" magic-critical-rate="5.0" trait="KNOCKDOWN" hit-cancel-time="0.2" level-bonus-rate="20" auto-use="ACTIVE">
+			<magic-level initial="81">
+				<value level="2">82</value>
+				<value level="3">83</value>
+				<value level="4">84</value>
+			</magic-level>
+			<cast-range initial="40"/>
+			<reuse initial="15000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="-357">
+				<value level="2">-359</value>
+				<value level="3">-361</value>
+				<value level="4">-363</value>
+			</effect-point>
+			<effect-range initial="400"/>
+			<hit-time initial="-357000">
+				<value level="2">-359000</value>
+				<value level="3">-361000</value>
+				<value level="4">-363000</value>
+			</hit-time>
+			<activate-rate initial="50"/>
+		</attributes>
+		<consume>
+			<mana initial="107">
+				<value level="2">108</value>
+				<value level="3">109</value>
+				<value level="4">110</value>
+			</mana>
+		</consume>
+		<target type="ENEMY_ONLY" />
+		<abnormal type="KNOCKDOWN" visual="KNOCKDOWN" >
+			<level initial="1"/>
+			<time initial="3"/>
+			<chance initial="50"/>
+		</abnormal>
+		<conditions>
+			<weapon>
+				<type>SWORD BLUNT SPEAR FIST DUAL</type>
+			</weapon>
+		</conditions>
+		<effects>
+			<physical-attack ignore-shield="true" critical-chance="15.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+				<power initial="4937.0">
+					<value level="2">5046.0</value>
+					<value level="3">5154.0</value>
+					<value level="4">5261.0</value>
+				</power>
+			</physical-attack>
+			<knockback speed="400" knock-down="true">
+				<power initial="50.0"/>
+			</knockback>
+		</effects>
+	</skill>
+	<skill id="1897" name="Curse Field of Shilen" max-level="11" debuff="true" action="A2" type="MAGIC">
+	<!-- 
+		level 1: Decreases Melee Weapon Resistance of the target and nearby enemies by 16 and M. Def. by 10% for 30 seconds.
+		level 2: Decreases Melee Weapon Resistance of the target and nearby enemies by 24 and M. Def. by 12% for 30 seconds.
+		level 3: Decreases Melee Weapon Resistance of the target and nearby enemies by 32 and M. Def. by 14% for 30 seconds.
+		level 4: Decreases Melee Weapon Resistance of the target and nearby enemies by 40 and M. Def. by 16% for 30 seconds.
+		level 5: Decreases Melee Weapon Resistance of the target and nearby enemies by 48 and M. Def. by 17% for 30 seconds.
+		level 6: Decreases Melee Weapon Resistance of the target and nearby enemies by 49 and M. Def. by 18% for 30 seconds.
+		level 7: Decreases Melee Weapon Resistance of the target and nearby enemies by 50 and M. Def. by 19% for 30 seconds.
+		level 8: Decreases Melee Weapon Resistance of the target and nearby enemies by 51 and M. Def. by 20% for 30 seconds.
+		level 9: Decreases Melee Weapon Resistance of the target and nearby enemies by 52 and M. Def. by 21% for 30 seconds.
+		level 10: Decreases Melee Weapon Resistance of the target and nearby enemies by 53 and M. Def. by 22% for 30 seconds.
+		level 11: Decreases Melee Weapon Resistance of the target and nearby enemies by 54 and M. Def. by 23% for 30 seconds.
+	 -->
+		<icon initial="icon.skill1897"/>
+		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="20" auto-use="ACTIVE">
+			<magic-level initial="40">
+				<value level="2">52</value>
+				<value level="3">62</value>
+				<value level="4">70</value>
+				<value level="5">78</value>
+				<value level="6">79</value>
+				<value level="7">80</value>
+				<value level="8">81</value>
+				<value level="9">82</value>
+				<value level="10">83</value>
+				<value level="11">84</value>
+			</magic-level>
+			<cast-range initial="900"/>
+			<reuse initial="3000"/>
+			<effect-point initial="-379">
+				<value level="2">-495</value>
+				<value level="3">-582</value>
+				<value level="4">-635</value>
+				<value level="5">-639</value>
+				<value level="6">-643</value>
+				<value level="7">-646</value>
+				<value level="8">-649</value>
+				<value level="9">-652</value>
+				<value level="10">-654</value>
+				<value level="11">-656</value>
+			</effect-point>
+			<effect-range initial="1100">
+				<value level="2">1200</value>
+				<value level="3">1300</value>
+				<value level="4">1400</value>
+				<value level="5">1500</value>
+			</effect-range>
+			<hit-time initial="-379000">
+				<value level="2">-495000</value>
+				<value level="3">-582000</value>
+				<value level="4">-635000</value>
+				<value level="5">-639000</value>
+				<value level="6">-643000</value>
+				<value level="7">-646000</value>
+				<value level="8">-649000</value>
+				<value level="9">-652000</value>
+				<value level="10">-654000</value>
+				<value level="11">-656000</value>
+			</hit-time>
+			<activate-rate initial="80"/>
+		</attributes>
+		<consume>
+			<mana initial="54">
+				<value level="2">72</value>
+				<value level="3">87</value>
+				<value level="4">99</value>
+				<value level="5">126</value>
+				<value level="6">129</value>
+				<value level="7">132</value>
+				<value level="8">135</value>
+				<value level="9">138</value>
+				<value level="10">141</value>
+				<value level="11">144</value>
+			</mana>
+		</consume>
+		<target type="ENEMY_ONLY" scope="RANGE" />
+		<abnormal type="PD_DOWN" visual="STIGMA_OF_SILEN" >
+			<level initial="1"/>
+			<time initial="30"/>
+			<chance initial="80"/>
+		</abnormal>
+		<effects>
+			<defence-trait>
+				<trait type="DUAL">
+					<power initial="-0.1599999964237213">
+					<value level="2">-0.23999999463558197</value>
+					<value level="3">-0.3199999928474426</value>
+					<value level="4">-0.4000000059604645</value>
+					<value level="5">-0.47999998927116394</value>
+					<value level="6">-0.49000000953674316</value>
+					<value level="7">-0.5</value>
+					<value level="8">-0.5099999904632568</value>
+					<value level="9">-0.5199999809265137</value>
+					<value level="10">-0.5299999713897705</value>
+					<value level="11">-0.5400000214576721</value>
+				</power>
+				</trait>
+				<trait type="SWORD">
+					<power initial="-0.1599999964237213">
+					<value level="2">-0.23999999463558197</value>
+					<value level="3">-0.3199999928474426</value>
+					<value level="4">-0.4000000059604645</value>
+					<value level="5">-0.47999998927116394</value>
+					<value level="6">-0.49000000953674316</value>
+					<value level="7">-0.5</value>
+					<value level="8">-0.5099999904632568</value>
+					<value level="9">-0.5199999809265137</value>
+					<value level="10">-0.5299999713897705</value>
+					<value level="11">-0.5400000214576721</value>
+				</power>
+				</trait>
+				<trait type="BLUNT">
+					<power initial="-0.1599999964237213">
+					<value level="2">-0.23999999463558197</value>
+					<value level="3">-0.3199999928474426</value>
+					<value level="4">-0.4000000059604645</value>
+					<value level="5">-0.47999998927116394</value>
+					<value level="6">-0.49000000953674316</value>
+					<value level="7">-0.5</value>
+					<value level="8">-0.5099999904632568</value>
+					<value level="9">-0.5199999809265137</value>
+					<value level="10">-0.5299999713897705</value>
+					<value level="11">-0.5400000214576721</value>
+				</power>
+				</trait>
+				<trait type="SPEAR">
+					<power initial="-0.1599999964237213">
+					<value level="2">-0.23999999463558197</value>
+					<value level="3">-0.3199999928474426</value>
+					<value level="4">-0.4000000059604645</value>
+					<value level="5">-0.47999998927116394</value>
+					<value level="6">-0.49000000953674316</value>
+					<value level="7">-0.5</value>
+					<value level="8">-0.5099999904632568</value>
+					<value level="9">-0.5199999809265137</value>
+					<value level="10">-0.5299999713897705</value>
+					<value level="11">-0.5400000214576721</value>
+				</power>
+				</trait>
+			</defence-trait>
+		</effects>
+	</skill>
+	<skill id="1898" name="Shield Charge" max-level="9" debuff="true" action="DA2">
+	<!-- 
+		level 1: Hits the enemy with a shield. Attacks frontal enemies with bonus 2191 Power added to P. Atk. Stuns the target for 5 seconds. Requires a shield. Over-hit.
+		level 2: Hits the enemy with a shield. Attacks frontal enemies with bonus 2244 Power added to P. Atk. Stuns the target for 5 seconds. Requires a shield. Over-hit.
+		level 3: Hits the enemy with a shield. Attacks frontal enemies with bonus 2296 Power added to P. Atk. Stuns the target for 5 seconds. Requires a shield. Over-hit.
+		level 4: Hits the enemy with a shield. Attacks frontal enemies with bonus 2348 Power added to P. Atk. Stuns the target for 5 seconds. Requires a shield. Over-hit.
+		level 5: Hits the enemy with a shield. Attacks frontal enemies with bonus 2400 Power added to P. Atk. Stuns the target for 5 seconds. Requires a shield. Over-hit.
+		level 6: Hits the enemy with a shield. Attacks frontal enemies with bonus 2452 Power added to P. Atk. Stuns the target for 5 seconds. Requires a shield. Over-hit.
+		level 7: Hits the enemy with a shield. Attacks frontal enemies with bonus 2504 Power added to P. Atk. Stuns the target for 5 seconds. Requires a shield. Over-hit.
+		level 8: Hits the enemy with a shield. Attacks frontal enemies with bonus 2556 Power added to P. Atk. Stuns the target for 5 seconds. Requires a shield. Over-hit.
+		level 9: Hits the enemy with a shield. Attacks frontal enemies with bonus 2608 Power added to P. Atk. Stuns the target for 5 seconds. Requires a shield. Over-hit.
+	 -->
+		<icon initial="icon.skill1898"/>
+		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="30" auto-use="ACTIVE">
+			<magic-level initial="76">
+				<value level="2">77</value>
+				<value level="3">78</value>
+				<value level="4">79</value>
+				<value level="5">80</value>
+				<value level="6">81</value>
+				<value level="7">82</value>
+				<value level="8">83</value>
+				<value level="9">84</value>
+			</magic-level>
+			<cast-range initial="40"/>
+			<reuse initial="30000"/>
+			<cool-time initial="200"/>
+			<effect-point initial="-2130">
+				<value level="2">-2190</value>
+				<value level="3">-2250</value>
+				<value level="4">-2310</value>
+				<value level="5">-2370</value>
+				<value level="6">-2420</value>
+				<value level="7">-2480</value>
+				<value level="8">-2540</value>
+				<value level="9">-2600</value>
+			</effect-point>
+			<effect-range initial="800"/>
+			<hit-time initial="-2130000">
+				<value level="2">-2190000</value>
+				<value level="3">-2250000</value>
+				<value level="4">-2310000</value>
+				<value level="5">-2370000</value>
+				<value level="6">-2420000</value>
+				<value level="7">-2480000</value>
+				<value level="8">-2540000</value>
+				<value level="9">-2600000</value>
+			</hit-time>
+			<activate-rate initial="80"/>
+		</attributes>
+		<consume>
+			<mana initial="110">
+				<value level="2">121</value>
+				<value level="3">123</value>
+				<value level="4">125</value>
+				<value level="5">129</value>
+				<value level="6">131</value>
+				<value level="7">133</value>
+				<value level="8">135</value>
+				<value level="9">137</value>
+			</mana>
+		</consume>
+		<target type="ENEMY_ONLY" scope="FAN_PB" object="NOT_FRIEND" >
+			<fan-range start-angle="0" radius="600" angle="60"/>
+		</target>
+		<abnormal type="STUN" visual="STUN" >
+			<level initial="1"/>
+			<time initial="5"/>
+			<chance initial="80"/>
+		</abnormal>
+		<conditions>
+			<condition name="EquipShield"/>
+		</conditions>
+		<effects>
+			<block-all-actions>
+				<allowed-skills>35016</allowed-skills>
+			</block-all-actions>
+			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+				<power initial="2191.0">
+					<value level="2">2244.0</value>
+					<value level="3">2296.0</value>
+					<value level="4">2348.0</value>
+					<value level="5">2400.0</value>
+					<value level="6">2452.0</value>
+					<value level="7">2504.0</value>
+					<value level="8">2556.0</value>
+					<value level="9">2608.0</value>
+				</power>
+			</physical-attack>
+		</effects>
+	</skill>
 </list>

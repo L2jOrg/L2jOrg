@@ -1,1423 +1,1140 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
-    <skill id="3600" toLevel="6" name="Special Ability: Anger">
-        <!-- Decreases Max HP and increases P. Atk. Enables the character to attack multiple opponents. -->
-        <icon>icon.skill1062</icon>
-        <magicLvl>
-            <value level="1">46</value>
-            <value level="2">49</value>
-            <value level="3">52</value>
-            <value level="4">55</value>
-            <value level="5">58</value>
-            <value level="6">61</value>
-        </magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <effects>
-            <effect name="PAtk">
-                <amount>
-                    <value level="1">20.44</value>
-                    <value level="2">22.64</value>
-                    <value level="3">24.77</value>
-                    <value level="4">26.78</value>
-                    <value level="5">28.59</value>
-                    <value level="6">30.12</value>
-                </amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="HitNumber">
-                <amount>8</amount>
-                <mode>DIFF</mode>
-                <weaponType>
-                    <item>SPEAR</item>
-                </weaponType>
-            </effect>
-            <effect name="PvpPhysicalAttackDamageBonus">
-                <amount>
-                    <value level="1">0</value>
-                    <value level="2">0</value>
-                    <value level="3">0</value>
-                    <value level="4">0</value>
-                    <value level="5">0</value>
-                    <value level="6">0</value>
-                </amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PvpMagicalSkillDamageBonus">
-                <amount>
-                    <value level="1">0</value>
-                    <value level="2">0</value>
-                    <value level="3">0</value>
-                    <value level="4">0</value>
-                    <value level="5">0</value>
-                    <value level="6">0</value>
-                </amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PvpPhysicalSkillDamageBonus">
-                <amount>
-                    <value level="1">0</value>
-                    <value level="2">0</value>
-                    <value level="3">0</value>
-                    <value level="4">0</value>
-                    <value level="5">0</value>
-                    <value level="6">0</value>
-                </amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MaxHp">
-                <amount>-15</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="3601" toLevel="6" name="Special Ability: Haste">
-        <!-- Increases Atk. Spd. Enables the character to attack multiple opponents. -->
-        <icon>icon.skill1086</icon>
-        <magicLvl>
-            <value level="1">46</value>
-            <value level="2">49</value>
-            <value level="3">52</value>
-            <value level="4">55</value>
-            <value level="5">58</value>
-            <value level="6">61</value>
-        </magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <effects>
-            <effect name="PhysicalAttackSpeed">
-                <amount>
-                    <value level="1">8</value>
-                    <value level="2">7</value>
-                    <value level="3">7</value>
-                    <value level="4">7</value>
-                    <value level="5">6</value>
-                    <value level="6">6</value>
-                </amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="HitNumber">
-                <amount>8</amount>
-                <mode>DIFF</mode>
-                <weaponType>
-                    <item>SPEAR</item>
-                </weaponType>
-            </effect>
-            <effect name="PvpPhysicalAttackDamageBonus">
-                <amount>
-                    <value level="1">0</value>
-                    <value level="2">0</value>
-                    <value level="3">0</value>
-                    <value level="4">0</value>
-                    <value level="5">0</value>
-                    <value level="6">0</value>
-                </amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PvpMagicalSkillDamageBonus">
-                <amount>
-                    <value level="1">0</value>
-                    <value level="2">0</value>
-                    <value level="3">0</value>
-                    <value level="4">0</value>
-                    <value level="5">0</value>
-                    <value level="6">0</value>
-                </amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="3602" toLevel="6" name="Special Ability: Guidance">
-        <!-- Increases P. Accuracy and enables the character to attack multiple opponents. -->
-        <icon>icon.skill1240</icon>
-        <magicLvl>
-            <value level="1">46</value>
-            <value level="2">49</value>
-            <value level="3">52</value>
-            <value level="4">55</value>
-            <value level="5">58</value>
-            <value level="6">61</value>
-        </magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <effects>
-            <effect name="Accuracy">
-                <amount>
-                    <value level="1">6.88</value>
-                    <value level="2">6.07</value>
-                    <value level="3">5.72</value>
-                    <value level="4">5.37</value>
-                    <value level="5">5.02</value>
-                    <value level="6">4.68</value>
-                </amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="HitNumber">
-                <amount>8</amount>
-                <mode>DIFF</mode>
-                <weaponType>
-                    <item>SPEAR</item>
-                </weaponType>
-            </effect>
-            <effect name="PvpPhysicalAttackDamageBonus">
-                <amount>
-                    <value level="1">0</value>
-                    <value level="2">0</value>
-                    <value level="3">0</value>
-                    <value level="4">0</value>
-                    <value level="5">0</value>
-                    <value level="6">0</value>
-                </amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PvpMagicalSkillDamageBonus">
-                <amount>
-                    <value level="1">0</value>
-                    <value level="2">0</value>
-                    <value level="3">0</value>
-                    <value level="4">0</value>
-                    <value level="5">0</value>
-                    <value level="6">0</value>
-                </amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PvpPhysicalSkillDamageBonus">
-                <amount>
-                    <value level="1">0</value>
-                    <value level="2">0</value>
-                    <value level="3">0</value>
-                    <value level="4">0</value>
-                    <value level="5">0</value>
-                    <value level="6">0</value>
-                </amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="3603" toLevel="10" name="Demonic Sword Zariche">
-        <!-- The Demon Bremmnon used this mystical sword to slaughter his enemies. The more blood the sword sheds, the more powerful it becomes. -->
-        <icon>icon.weapon_unique_zariche_i00</icon>
-        <magicLvl>78</magicLvl>
-        <minPledgeClass>2</minPledgeClass>
-        <operateType>P</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <effects>
-            <effect name="VampiricAttack">
-                <amount>
-                    <value level="1">22</value>
-                    <value level="2">24</value>
-                    <value level="3">26</value>
-                    <value level="4">29</value>
-                    <value level="5">32</value>
-                    <value level="6">35</value>
-                    <value level="7">38</value>
-                    <value level="8">42</value>
-                    <value level="9">47</value>
-                    <value level="10">50</value>
-                </amount>
-                <chance>30</chance>
-            </effect>
-            <effect name="PAtk">
-                <amount>
-                    <value level="1">220</value>
-                    <value level="2">242</value>
-                    <value level="3">266</value>
-                    <value level="4">292</value>
-                    <value level="5">322</value>
-                    <value level="6">354</value>
-                    <value level="7">389</value>
-                    <value level="8">428</value>
-                    <value level="9">471</value>
-                    <value level="10">518</value>
-                </amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MAtk">
-                <amount>
-                    <value level="1">210</value>
-                    <value level="2">220</value>
-                    <value level="3">231</value>
-                    <value level="4">243</value>
-                    <value level="5">255</value>
-                    <value level="6">268</value>
-                    <value level="7">281</value>
-                    <value level="8">295</value>
-                    <value level="9">310</value>
-                    <value level="10">325</value>
-                </amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PAtk">
-                <amount>
-                    <value level="1">600</value>
-                    <value level="2">720</value>
-                    <value level="3">864</value>
-                    <value level="4">1036</value>
-                    <value level="5">1244</value>
-                    <value level="6">1492</value>
-                    <value level="7">1791</value>
-                    <value level="8">2149</value>
-                    <value level="9">2579</value>
-                    <value level="10">3095</value>
-                </amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="MAtk">
-                <amount>
-                    <value level="1">600</value>
-                    <value level="2">720</value>
-                    <value level="3">864</value>
-                    <value level="4">1036</value>
-                    <value level="5">1244</value>
-                    <value level="6">1492</value>
-                    <value level="7">1791</value>
-                    <value level="8">2149</value>
-                    <value level="9">2579</value>
-                    <value level="10">3095</value>
-                </amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="Speed">
-                <amount>
-                    <value level="1">2</value>
-                    <value level="2">4</value>
-                    <value level="3">6</value>
-                    <value level="4">8</value>
-                    <value level="5">10</value>
-                    <value level="6">12</value>
-                    <value level="7">14</value>
-                    <value level="8">16</value>
-                    <value level="9">18</value>
-                    <value level="10">20</value>
-                </amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="MagicalDefence">
-                <amount>
-                    <value level="1">206</value>
-                    <value level="2">212</value>
-                    <value level="3">218</value>
-                    <value level="4">225</value>
-                    <value level="5">231</value>
-                    <value level="6">238</value>
-                    <value level="7">245</value>
-                    <value level="8">253</value>
-                    <value level="9">260</value>
-                    <value level="10">268</value>
-                </amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MagicalDefence">
-                <amount>
-                    <value level="1">515</value>
-                    <value level="2">530</value>
-                    <value level="3">546</value>
-                    <value level="4">562</value>
-                    <value level="5">579</value>
-                    <value level="6">597</value>
-                    <value level="7">614</value>
-                    <value level="8">633</value>
-                    <value level="9">652</value>
-                    <value level="10">671</value>
-                </amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="PhysicalDefence">
-                <amount>
-                    <value level="1">204</value>
-                    <value level="2">208</value>
-                    <value level="3">212</value>
-                    <value level="4">216</value>
-                    <value level="5">220</value>
-                    <value level="6">225</value>
-                    <value level="7">229</value>
-                    <value level="8">234</value>
-                    <value level="9">239</value>
-                    <value level="10">243</value>
-                </amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PhysicalDefence">
-                <amount>
-                    <value level="1">510</value>
-                    <value level="2">520</value>
-                    <value level="3">530</value>
-                    <value level="4">541</value>
-                    <value level="5">552</value>
-                    <value level="6">563</value>
-                    <value level="7">574</value>
-                    <value level="8">585</value>
-                    <value level="9">597</value>
-                    <value level="10">609</value>
-                </amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="Accuracy">
-                <amount>
-                    <value level="1">1</value>
-                    <value level="2">4</value>
-                    <value level="3">9</value>
-                    <value level="4">16</value>
-                    <value level="5">25</value>
-                    <value level="6">36</value>
-                    <value level="7">49</value>
-                    <value level="8">64</value>
-                    <value level="9">81</value>
-                    <value level="10">100</value>
-                </amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="MaxCp">
-                <amount>
-                    <value level="1">1050</value>
-                    <value level="2">1102</value>
-                    <value level="3">1157</value>
-                    <value level="4">1215</value>
-                    <value level="5">1276</value>
-                    <value level="6">1340</value>
-                    <value level="7">1407</value>
-                    <value level="8">1477</value>
-                    <value level="9">1551</value>
-                    <value level="10">1628</value>
-                </amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MaxCp">
-                <amount>
-                    <value level="1">1300</value>
-                    <value level="2">1690</value>
-                    <value level="3">2197</value>
-                    <value level="4">2856</value>
-                    <value level="5">3712</value>
-                    <value level="6">4826</value>
-                    <value level="7">6274</value>
-                    <value level="8">8157</value>
-                    <value level="9">10604</value>
-                    <value level="10">13785</value>
-                </amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="CpRegen">
-                <amount>
-                    <value level="1">1100</value>
-                    <value level="2">1210</value>
-                    <value level="3">1331</value>
-                    <value level="4">1464</value>
-                    <value level="5">1610</value>
-                    <value level="6">1771</value>
-                    <value level="7">1948</value>
-                    <value level="8">2143</value>
-                    <value level="9">2357</value>
-                    <value level="10">2593</value>
-                </amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="ResistAbnormalByCategory">
-                <amount>
-                    <value level="1">-85</value>
-                    <value level="2">-86</value>
-                    <value level="3">-87</value>
-                    <value level="4">-88</value>
-                    <value level="5">-89</value>
-                    <value level="6">-90</value>
-                    <value level="7">-91</value>
-                    <value level="8">-92</value>
-                    <value level="9">-93</value>
-                    <value level="10">-94</value>
-                </amount>
-                <slot>DEBUFF</slot>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="3604" toLevel="1" name="Frintezza's Necklace">
-        <!-- Increases Dark Attack/ Poison/ Bleed/ Paralysis/ Stun/ Sleep Resistance, and Poison/ Bleed/ Paralysis/ Stun/ Sleep attack bonus. Decreases skill cooldown. Reflects some of the damage received back to the enemy. -->
-        <icon>icon.accessory_necklace_of_frintessa_i00</icon>
-        <magicLvl>75</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <effects>
-            <effect name="AttackTrait">
-                <POISON>25</POISON>
-                <PARALYZE>15</PARALYZE>
-                <SLEEP>15</SLEEP>
-                <BLEED>25</BLEED>
-                <SHOCK>15</SHOCK>
-            </effect>
-            <effect name="DefenceTrait">
-                <BLEED>25</BLEED>
-                <SHOCK>15</SHOCK>
-                <POISON>25</POISON>
-                <SLEEP>15</SLEEP>
-                <PARALYZE>15</PARALYZE>
-            </effect>
-            <effect name="DamageShield">
-                <amount>4</amount>
-            </effect>
-            <effect name="DefenceAttribute">
-                <amount>15</amount>
-                <attribute>DARK</attribute>
-            </effect>
-            <effect name="Reuse">
-                <amount>-5</amount>
-                <mode>PER</mode>
-                <magicType>0</magicType>
-            </effect>
-            <effect name="Reuse">
-                <amount>-5</amount>
-                <mode>PER</mode>
-                <magicType>1</magicType>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="3605" toLevel="1" name="Set Effect - Moon Heavy Armor, 4-piece">
-        <!-- HP Recovery Bonus +3%, Max HP +25, P. Def. +3%. -->
-        <icon>icon.armor_t1001_ul_i00</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <effects>
-            <effect name="MaxHp">
-                <amount>25</amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="MagicalDefence">
-                <amount>3</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="HpRegen">
-                <amount>3</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="3606" toLevel="1" name="Set Effect - Moon Light Armor, 4-piece">
-        <!-- MP Recovery Bonus +3%, Max MP +10, P. Atk. +2%. -->
-        <icon>icon.armor_t1002_ul_i00</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <effects>
-            <effect name="MaxMp">
-                <amount>10</amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="PAtk">
-                <amount>2</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MpRegen">
-                <amount>3</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="3607" toLevel="1" name="Set Effect - Moon Robe Armor, 4-piece">
-        <!-- MP Recovery Bonus +3%, Max MP +20, M. Atk. +2%. -->
-        <icon>icon.armor_t1003_ul_i00</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <effects>
-            <effect name="MaxMp">
-                <amount>20</amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="MAtk">
-                <amount>2</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MpRegen">
-                <amount>3</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="3608" toLevel="3" name="Set Effect - Apella Heavy Armor">
-        <!-- Increases Max CP/ CP Recovery Bonus, and decreases the skill player's death XP penalty. Increases one's own M. Def. when attacked. Decreases P. Critical Damage success rate. -->
-        <icon>icon.armor_t1004_ul_i00</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <effects>
-            <effect name="TriggerSkillByDamage">
-                <!-- Power of Apella -->
-                <attackerType>Playable</attackerType>
-                <minAttackerLevel>1</minAttackerLevel>
-                <maxAttackerLevel>100</maxAttackerLevel>
-                <chance>10</chance>
-                <targetType>SELF</targetType>
-                <minDamage>50</minDamage>
-                <skillId>5605</skillId> <!-- Power of Apella -->
-                <skillLevel>
-                    <value level="1">1</value>
-                    <value level="2">2</value>
-                    <value level="3">2</value>
-                </skillLevel>
-            </effect>
-            <effect name="MaxCp">
-                <amount>
-                    <value level="1">1035</value>
-                    <value level="2">1116</value>
-                    <value level="3">1116</value>
-                </amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="CpRegen">
-                <amount>40</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MagicMpCost">
-                <amount>
-                    <value level="1">0</value>
-                    <value level="2">-5</value>
-                    <value level="3">-5</value>
-                </amount>
-                <mode>PER</mode>
-                <magicType>1</magicType>
-            </effect>
-            <effect name="MagicMpCost">
-                <amount>
-                    <value level="1">0</value>
-                    <value level="2">-5</value>
-                    <value level="3">-5</value>
-                </amount>
-                <mode>PER</mode>
-                <magicType>0</magicType>
-            </effect>
-            <effect name="MagicMpCost">
-                <amount>
-                    <value level="1">0</value>
-                    <value level="2">-5</value>
-                    <value level="3">-5</value>
-                </amount>
-                <mode>PER</mode>
-                <magicType>3</magicType>
-            </effect>
-            <effect name="ReduceDropPenalty">
-                <exp>
-                    <value level="1">-70</value>
-                    <value level="2">-70</value>
-                    <value level="3">-40</value>
-                </exp>
-                <mode>PER</mode>
-                <type>PK</type>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="3609" toLevel="3" name="Set Effect - Apella Light Armor">
-        <!-- Increases Max CP/ CP Recovery Bonus, decreases the skill player's death XP penalty. Increases one's own P. Evasion when attacked. Decreases Received P. Critical Damage. -->
-        <icon>icon.armor_t1005_ul_i00</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <effects>
-            <effect name="TriggerSkillByDamage">
-                <!-- Power of Apella -->
-                <attackerType>Playable</attackerType>
-                <minAttackerLevel>1</minAttackerLevel>
-                <maxAttackerLevel>100</maxAttackerLevel>
-                <chance>10</chance>
-                <targetType>SELF</targetType>
-                <minDamage>50</minDamage>
-                <skillId>5607</skillId> <!-- Power of Apella -->
-                <skillLevel>
-                    <value level="1">1</value>
-                    <value level="2">2</value>
-                    <value level="3">2</value>
-                </skillLevel>
-            </effect>
-            <effect name="MaxCp">
-                <amount>
-                    <value level="1">1035</value>
-                    <value level="2">1116</value>
-                    <value level="3">1116</value>
-                </amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="CpRegen">
-                <amount>40</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MagicMpCost">
-                <amount>
-                    <value level="1">0</value>
-                    <value level="2">-5</value>
-                    <value level="3">-5</value>
-                </amount>
-                <mode>PER</mode>
-                <magicType>1</magicType>
-            </effect>
-            <effect name="MagicMpCost">
-                <amount>
-                    <value level="1">0</value>
-                    <value level="2">-5</value>
-                    <value level="3">-5</value>
-                </amount>
-                <mode>PER</mode>
-                <magicType>0</magicType>
-            </effect>
-            <effect name="MagicMpCost">
-                <amount>
-                    <value level="1">0</value>
-                    <value level="2">-5</value>
-                    <value level="3">-5</value>
-                </amount>
-                <mode>PER</mode>
-                <magicType>3</magicType>
-            </effect>
-            <effect name="ReduceDropPenalty">
-                <exp>
-                    <value level="1">-70</value>
-                    <value level="2">-70</value>
-                    <value level="3">-40</value>
-                </exp>
-                <mode>PER</mode>
-                <type>PK</type>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="3610" toLevel="3" name="Set Effect - Apella Robe Armor">
-        <!-- Increases Max CP/ CP Recovery Bonus, and decreases death XP penalty. Increases Speed and P. Def. when attacked. -->
-        <icon>icon.armor_t1006_ul_i00</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <effects>
-            <effect name="TriggerSkillByDamage">
-                <!-- Power of Apella -->
-                <attackerType>Playable</attackerType>
-                <minAttackerLevel>1</minAttackerLevel>
-                <maxAttackerLevel>100</maxAttackerLevel>
-                <chance>10</chance>
-                <targetType>SELF</targetType>
-                <minDamage>50</minDamage>
-                <skillId>5608</skillId> <!-- Power of Apella -->
-                <skillLevel>
-                    <value level="1">1</value>
-                    <value level="2">2</value>
-                    <value level="3">2</value>
-                </skillLevel>
-            </effect>
-            <effect name="MaxCp">
-                <amount>
-                    <value level="1">1035</value>
-                    <value level="2">1116</value>
-                    <value level="3">1116</value>
-                </amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="CpRegen">
-                <amount>40</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MagicMpCost">
-                <amount>
-                    <value level="1">0</value>
-                    <value level="2">-5</value>
-                    <value level="3">-5</value>
-                </amount>
-                <mode>PER</mode>
-                <magicType>1</magicType>
-            </effect>
-            <effect name="MagicMpCost">
-                <amount>
-                    <value level="1">0</value>
-                    <value level="2">-5</value>
-                    <value level="3">-5</value>
-                </amount>
-                <mode>PER</mode>
-                <magicType>0</magicType>
-            </effect>
-            <effect name="MagicMpCost">
-                <amount>
-                    <value level="1">0</value>
-                    <value level="2">-5</value>
-                    <value level="3">-5</value>
-                </amount>
-                <mode>PER</mode>
-                <magicType>3</magicType>
-            </effect>
-            <effect name="ReduceDropPenalty">
-                <exp>
-                    <value level="1">-70</value>
-                    <value level="2">-70</value>
-                    <value level="3">-40</value>
-                </exp>
-                <mode>PER</mode>
-                <type>PK</type>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="3611" toLevel="1" name="Enchant Heavy Armor (D-grade)">
-        <!-- Increases P. Def. and MP Recovery Bonus by enchanting set items. -->
-        <icon>icon.skill0231</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <effects>
-            <effect name="StatByMoveType">
-                <stat>REGENERATE_MP_RATE</stat>
-                <type>STANDING</type>
-                <value>1.518</value>
-            </effect>
-            <effect name="StatByMoveType">
-                <stat>REGENERATE_MP_RATE</stat>
-                <type>SITTING</type>
-                <value>1.518</value>
-            </effect>
-            <effect name="PhysicalDefence">
-                <amount>25</amount>
-                <mode>DIFF</mode>
-                <armorType>
-                    <item>HEAVY</item>
-                </armorType>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="3612" toLevel="1" name="Enchant Light Armor (D-grade)">
-        <!-- Increases M. Def. and Evasion by enchanting set items. -->
-        <icon>icon.skill0233</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <effects>
-            <effect name="MagicalDefence">
-                <amount>14</amount>
-                <mode>DIFF</mode>
-                <armorType>
-                    <item>LIGHT</item>
-                </armorType>
-            </effect>
-            <effect name="PhysicalEvasion">
-                <amount>2</amount>
-                <mode>DIFF</mode>
-                <armorType>
-                    <item>LIGHT</item>
-                </armorType>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="3613" toLevel="1" name="Enchant Robe (D-grade)">
-        <!-- Increases M. Def. and weight limit by enchanting set items. -->
-        <icon>icon.skill0234</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <effects>
-            <effect name="PhysicalDefence">
-                <amount>16</amount>
-                <mode>DIFF</mode>
-                <armorType>
-                    <item>MAGIC</item>
-                </armorType>
-            </effect>
-            <effect name="WeightLimit">
-                <amount>30</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="3614" toLevel="1" name="Enchant Heavy Armor (C-grade)">
-        <!-- Increases P. Def. and MP Recovery Bonus by enchanting set items. -->
-        <icon>icon.skill0231</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <effects>
-            <effect name="StatByMoveType">
-                <stat>REGENERATE_MP_RATE</stat>
-                <type>SITTING</type>
-                <value>2.019</value>
-            </effect>
-            <effect name="StatByMoveType">
-                <stat>REGENERATE_MP_RATE</stat>
-                <type>STANDING</type>
-                <value>2.019</value>
-            </effect>
-            <effect name="PhysicalDefence">
-                <amount>38</amount>
-                <mode>DIFF</mode>
-                <armorType>
-                    <item>HEAVY</item>
-                </armorType>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="3615" toLevel="1" name="Enchant Light Armor (C-grade)">
-        <!-- Increases M. Def. and Evasion by enchanting set items. -->
-        <icon>icon.skill0233</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <effects>
-            <effect name="MagicalDefence">
-                <amount>20</amount>
-                <mode>DIFF</mode>
-                <armorType>
-                    <item>LIGHT</item>
-                </armorType>
-            </effect>
-            <effect name="PhysicalEvasion">
-                <amount>2</amount>
-                <mode>DIFF</mode>
-                <armorType>
-                    <item>LIGHT</item>
-                </armorType>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="3616" toLevel="1" name="Enchant Robe (C-grade)">
-        <!-- Increases M. Def. and weight limit by enchanting set items. -->
-        <icon>icon.skill0234</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <effects>
-            <effect name="PhysicalDefence">
-                <amount>24</amount>
-                <mode>DIFF</mode>
-                <armorType>
-                    <item>MAGIC</item>
-                </armorType>
-            </effect>
-            <effect name="WeightLimit">
-                <amount>30</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="3617" toLevel="1" name="Enchant Heavy Armor (B-grade)">
-        <!-- Increases P. Def. and MP Recovery Bonus by enchanting set items. -->
-        <icon>icon.skill0231</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <effects>
-            <effect name="StatByMoveType">
-                <stat>REGENERATE_MP_RATE</stat>
-                <type>SITTING</type>
-                <value>2.25</value>
-            </effect>
-            <effect name="StatByMoveType">
-                <stat>REGENERATE_MP_RATE</stat>
-                <type>STANDING</type>
-                <value>2.25</value>
-            </effect>
-            <effect name="PhysicalDefence">
-                <amount>44</amount>
-                <mode>DIFF</mode>
-                <armorType>
-                    <item>HEAVY</item>
-                </armorType>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="3618" toLevel="1" name="Enchant Light Armor (B-grade)">
-        <!-- Increases M. Def. and Evasion by enchanting set items. -->
-        <icon>icon.skill0233</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <effects>
-            <effect name="MagicalDefence">
-                <amount>24</amount>
-                <mode>DIFF</mode>
-                <armorType>
-                    <item>LIGHT</item>
-                </armorType>
-            </effect>
-            <effect name="PhysicalEvasion">
-                <amount>2</amount>
-                <mode>DIFF</mode>
-                <armorType>
-                    <item>LIGHT</item>
-                </armorType>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="3619" toLevel="1" name="Enchant Robe (B-grade)">
-        <!-- Increases M. Def. and weight limit by enchanting set items. -->
-        <icon>icon.skill0234</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <effects>
-            <effect name="PhysicalDefence">
-                <amount>28</amount>
-                <mode>DIFF</mode>
-                <armorType>
-                    <item>MAGIC</item>
-                </armorType>
-            </effect>
-            <effect name="WeightLimit">
-                <amount>30</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="3620" toLevel="1" name="Enchant Heavy Armor (A-grade)">
-        <!-- Increases P. Def. and MP Recovery Bonus by enchanting set items. -->
-        <icon>icon.skill0231</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <effects>
-            <effect name="StatByMoveType">
-                <stat>REGENERATE_MP_RATE</stat>
-                <type>SITTING</type>
-                <value>2.43</value>
-            </effect>
-            <effect name="StatByMoveType">
-                <stat>REGENERATE_MP_RATE</stat>
-                <type>STANDING</type>
-                <value>2.43</value>
-            </effect>
-            <effect name="PhysicalDefence">
-                <amount>50</amount>
-                <mode>DIFF</mode>
-                <armorType>
-                    <item>HEAVY</item>
-                </armorType>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="3621" toLevel="1" name="Enchant Light Armor (A-grade)">
-        <!-- Increases M. Def. and Evasion by enchanting set items. -->
-        <icon>icon.skill0233</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <effects>
-            <effect name="MagicalDefence">
-                <amount>27</amount>
-                <mode>DIFF</mode>
-                <armorType>
-                    <item>LIGHT</item>
-                </armorType>
-            </effect>
-            <effect name="PhysicalEvasion">
-                <amount>2</amount>
-                <mode>DIFF</mode>
-                <armorType>
-                    <item>LIGHT</item>
-                </armorType>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="3622" toLevel="1" name="Enchant Robe (A-grade)">
-        <!-- Increases M. Def. and weight limit by enchanting set items. -->
-        <icon>icon.skill0234</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <effects>
-            <effect name="PhysicalDefence">
-                <amount>32</amount>
-                <mode>DIFF</mode>
-                <armorType>
-                    <item>MAGIC</item>
-                </armorType>
-            </effect>
-            <effect name="WeightLimit">
-                <amount>30</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="3623" toLevel="3" name="Enchant Heavy Armor (S-grade)">
-        <!-- Increases P. Def. and MP Recovery Bonus by enchanting set items. -->
-        <icon>icon.skill0231</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <effects>
-            <effect name="StatByMoveType">
-                <stat>REGENERATE_MP_RATE</stat>
-                <type>SITTING</type>
-                <value>2.823</value>
-            </effect>
-            <effect name="StatByMoveType">
-                <stat>REGENERATE_MP_RATE</stat>
-                <type>STANDING</type>
-                <value>2.823</value>
-            </effect>
-            <effect name="PhysicalDefence">
-                <amount>59</amount>
-                <mode>DIFF</mode>
-                <armorType>
-                    <item>HEAVY</item>
-                </armorType>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="3624" toLevel="3" name="Enchant Light Armor (S-grade)">
-        <!-- Increases M. Def. and Evasion by enchanting set items. -->
-        <icon>icon.skill0233</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <effects>
-            <effect name="MagicalDefence">
-                <amount>33</amount>
-                <mode>DIFF</mode>
-                <armorType>
-                    <item>LIGHT</item>
-                </armorType>
-            </effect>
-            <effect name="PhysicalEvasion">
-                <amount>2</amount>
-                <mode>DIFF</mode>
-                <armorType>
-                    <item>LIGHT</item>
-                </armorType>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="3625" toLevel="3" name="Enchant Robe (S-grade)">
-        <!-- Increases M. Def. and weight limit by enchanting set items. -->
-        <icon>icon.skill0234</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <effects>
-            <effect name="PhysicalDefence">
-                <amount>38</amount>
-                <mode>DIFF</mode>
-                <armorType>
-                    <item>MAGIC</item>
-                </armorType>
-            </effect>
-            <effect name="WeightLimit">
-                <amount>30</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="3629" toLevel="10" name="Blood Sword Akamanah">
-        <!-- A demonic twin blade forged in blood by Gran Kain, the god of chaos. The blade dies over and over again when it touches the air, and it craves blood to forge it anew. It becomes stronger every time it is supplied with blood. -->
-        <icon>icon.weapon_dual_sword_i00</icon>
-        <magicLvl>78</magicLvl>
-        <minPledgeClass>2</minPledgeClass>
-        <operateType>P</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <effects>
-            <effect name="VampiricAttack">
-                <amount>
-                    <value level="1">22</value>
-                    <value level="2">24</value>
-                    <value level="3">26</value>
-                    <value level="4">29</value>
-                    <value level="5">32</value>
-                    <value level="6">35</value>
-                    <value level="7">38</value>
-                    <value level="8">42</value>
-                    <value level="9">47</value>
-                    <value level="10">50</value>
-                </amount>
-                <chance>30</chance>
-            </effect>
-            <effect name="PAtk">
-                <amount>
-                    <value level="1">220</value>
-                    <value level="2">242</value>
-                    <value level="3">266</value>
-                    <value level="4">292</value>
-                    <value level="5">322</value>
-                    <value level="6">354</value>
-                    <value level="7">389</value>
-                    <value level="8">428</value>
-                    <value level="9">471</value>
-                    <value level="10">518</value>
-                </amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MAtk">
-                <amount>
-                    <value level="1">210</value>
-                    <value level="2">220</value>
-                    <value level="3">231</value>
-                    <value level="4">243</value>
-                    <value level="5">255</value>
-                    <value level="6">268</value>
-                    <value level="7">281</value>
-                    <value level="8">295</value>
-                    <value level="9">310</value>
-                    <value level="10">325</value>
-                </amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PAtk">
-                <amount>
-                    <value level="1">600</value>
-                    <value level="2">720</value>
-                    <value level="3">864</value>
-                    <value level="4">1036</value>
-                    <value level="5">1244</value>
-                    <value level="6">1492</value>
-                    <value level="7">1791</value>
-                    <value level="8">2149</value>
-                    <value level="9">2579</value>
-                    <value level="10">3095</value>
-                </amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="MAtk">
-                <amount>
-                    <value level="1">600</value>
-                    <value level="2">720</value>
-                    <value level="3">864</value>
-                    <value level="4">1036</value>
-                    <value level="5">1244</value>
-                    <value level="6">1492</value>
-                    <value level="7">1791</value>
-                    <value level="8">2149</value>
-                    <value level="9">2579</value>
-                    <value level="10">3095</value>
-                </amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="Speed">
-                <amount>
-                    <value level="1">2</value>
-                    <value level="2">4</value>
-                    <value level="3">6</value>
-                    <value level="4">8</value>
-                    <value level="5">10</value>
-                    <value level="6">12</value>
-                    <value level="7">14</value>
-                    <value level="8">16</value>
-                    <value level="9">18</value>
-                    <value level="10">20</value>
-                </amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="MagicalDefence">
-                <amount>
-                    <value level="1">206</value>
-                    <value level="2">212</value>
-                    <value level="3">218</value>
-                    <value level="4">225</value>
-                    <value level="5">231</value>
-                    <value level="6">238</value>
-                    <value level="7">245</value>
-                    <value level="8">253</value>
-                    <value level="9">260</value>
-                    <value level="10">268</value>
-                </amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MagicalDefence">
-                <amount>
-                    <value level="1">515</value>
-                    <value level="2">530</value>
-                    <value level="3">546</value>
-                    <value level="4">562</value>
-                    <value level="5">579</value>
-                    <value level="6">597</value>
-                    <value level="7">614</value>
-                    <value level="8">633</value>
-                    <value level="9">652</value>
-                    <value level="10">671</value>
-                </amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="PhysicalDefence">
-                <amount>
-                    <value level="1">204</value>
-                    <value level="2">208</value>
-                    <value level="3">212</value>
-                    <value level="4">216</value>
-                    <value level="5">220</value>
-                    <value level="6">225</value>
-                    <value level="7">229</value>
-                    <value level="8">234</value>
-                    <value level="9">239</value>
-                    <value level="10">243</value>
-                </amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PhysicalDefence">
-                <amount>
-                    <value level="1">510</value>
-                    <value level="2">520</value>
-                    <value level="3">530</value>
-                    <value level="4">541</value>
-                    <value level="5">552</value>
-                    <value level="6">563</value>
-                    <value level="7">574</value>
-                    <value level="8">585</value>
-                    <value level="9">597</value>
-                    <value level="10">609</value>
-                </amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="Accuracy">
-                <amount>
-                    <value level="1">1</value>
-                    <value level="2">4</value>
-                    <value level="3">9</value>
-                    <value level="4">16</value>
-                    <value level="5">25</value>
-                    <value level="6">36</value>
-                    <value level="7">49</value>
-                    <value level="8">64</value>
-                    <value level="9">81</value>
-                    <value level="10">100</value>
-                </amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="MaxCp">
-                <amount>
-                    <value level="1">1050</value>
-                    <value level="2">1102</value>
-                    <value level="3">1157</value>
-                    <value level="4">1215</value>
-                    <value level="5">1276</value>
-                    <value level="6">1340</value>
-                    <value level="7">1407</value>
-                    <value level="8">1477</value>
-                    <value level="9">1551</value>
-                    <value level="10">1628</value>
-                </amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MaxCp">
-                <amount>
-                    <value level="1">1300</value>
-                    <value level="2">1690</value>
-                    <value level="3">2197</value>
-                    <value level="4">2856</value>
-                    <value level="5">3712</value>
-                    <value level="6">4826</value>
-                    <value level="7">6274</value>
-                    <value level="8">8157</value>
-                    <value level="9">10604</value>
-                    <value level="10">13785</value>
-                </amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="CpRegen">
-                <amount>
-                    <value level="1">1100</value>
-                    <value level="2">1210</value>
-                    <value level="3">1331</value>
-                    <value level="4">1464</value>
-                    <value level="5">1610</value>
-                    <value level="6">1771</value>
-                    <value level="7">1948</value>
-                    <value level="8">2143</value>
-                    <value level="9">2357</value>
-                    <value level="10">2593</value>
-                </amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="ResistAbnormalByCategory">
-                <amount>
-                    <value level="1">-85</value>
-                    <value level="2">-86</value>
-                    <value level="3">-87</value>
-                    <value level="4">-88</value>
-                    <value level="5">-89</value>
-                    <value level="6">-90</value>
-                    <value level="7">-91</value>
-                    <value level="8">-92</value>
-                    <value level="9">-93</value>
-                    <value level="10">-94</value>
-                </amount>
-                <slot>DEBUFF</slot>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="3630" toLevel="1" name="Void Burst">
-        <!-- Discharges cursed energy to attack nearby enemies. -->
-        <icon>icon.skill3630</icon>
-        <affectLimit>6-12</affectLimit>
-        <affectRange>150</affectRange>
-        <effectPoint>-1</effectPoint>
-        <hitTime>2000</hitTime>
-        <magicLvl>78</magicLvl>
-        <mpConsume>140</mpConsume>
-        <operateType>A1</operateType>
-        <reuseDelay>60000</reuseDelay>
-        <magicCriticalRate>5</magicCriticalRate>
-        <targetType>SELF</targetType>
-        <affectScope>POINT_BLANK</affectScope>
-        <affectObject>ALL</affectObject>
-        <effects>
-            <effect name="PhysicalAttack">
-                <power>11500</power>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="3631" toLevel="1" name="Void Flow">
-        <!-- Emits cursed energy to strike a distant enemy. -->
-        <icon>icon.skill3631</icon>
-        <affectLimit>6-12</affectLimit>
-        <castRange>600</castRange>
-        <effectPoint>-1</effectPoint>
-        <effectRange>1100</effectRange>
-        <hitTime>1900</hitTime>
-        <magicLvl>78</magicLvl>
-        <mpConsume>140</mpConsume>
-        <operateType>A1</operateType>
-        <reuseDelay>60000</reuseDelay>
-        <magicCriticalRate>5</magicCriticalRate>
-        <targetType>ENEMY</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="PhysicalAttack">
-                <power>15000</power>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="3632" toLevel="1" name="Clan Gate">
-        <!-- Active: Creates a gate that summons clan members. You cannot move while this skill is active. -->
-        <icon>icon.accessory_crown_i00</icon>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>120</abnormalTime>
-        <abnormalType>ABNORMAL_ITEM</abnormalType>
-        <abnormalVisualEffect>MAGIC_SQUARE</abnormalVisualEffect>
-        <blockedInOlympiad>true</blockedInOlympiad>
-        <hitTime>10000</hitTime>
-        <magicLvl>60</magicLvl>
-        <operateType>A2</operateType>
-        <reuseDelay>3600000</reuseDelay>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>5</magicCriticalRate>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpCallPc"/>
-        </conditions>
-        <effects>
-            <effect name="SendSystemMessageToClan">
-                <id>1923</id>
-            </effect>
-            <effect name="BlockActions">
-                <allowedSkills>35016</allowedSkills>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="3633" toLevel="2" name="Residential Stun Immunity">
-        <!-- Active: Temporarily increases Stun Resistance. -->
-        <icon>icon.accessory_pledge_cap1_i05</icon>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>7</abnormalTime>
-        <abnormalType>ABNORMAL_ITEM</abnormalType>
-        <magicLvl>60</magicLvl>
-        <operateType>A2</operateType>
-        <reuseDelay>600000</reuseDelay>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>5</magicCriticalRate>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="DefenceTrait">
-                <SHOCK>
-                    <value level="1">80</value>
-                    <value level="2">100</value>
-                </SHOCK>
-            </effect>
-        </effects>
-    </skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
+	<skill id="3600" name="Special Ability: Anger" max-level="6" >
+	<!-- Decreases Max HP and increases P. Atk. Enables the character to attack multiple opponents. -->
+		<icon initial="icon.skill1062"/>
+		<attributes property="MAGIC" magic-critical-rate="5.0" >
+			<magic-level initial="46">
+				<value level="2">49</value>
+				<value level="3">52</value>
+				<value level="4">55</value>
+				<value level="5">58</value>
+				<value level="6">61</value>
+			</magic-level>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+				<power initial="20.44">
+					<value level="2">22.64</value>
+					<value level="3">24.77</value>
+					<value level="4">26.78</value>
+					<value level="5">28.59</value>
+					<value level="6">30.12</value>
+				</power>
+			</stat-modify>
+			<stat-modify stat="ATTACK_COUNT_MAX">
+				<power initial="8.0"/>
+			</stat-modify>
+			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
+				<power initial="0.0"/>
+			</stat-modify>
+			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER">
+				<power initial="0.0"/>
+			</stat-modify>
+			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER">
+				<power initial="0.0"/>
+			</stat-modify>
+			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+				<power initial="-15.0"/>
+			</vital-stat-modify>
+		</effects>
+	</skill>
+	<skill id="3601" name="Special Ability: Haste" max-level="6" >
+	<!-- Increases Atk. Spd. Enables the character to attack multiple opponents. -->
+		<icon initial="icon.skill1086"/>
+		<attributes property="MAGIC" magic-critical-rate="5.0" >
+			<magic-level initial="46">
+				<value level="2">49</value>
+				<value level="3">52</value>
+				<value level="4">55</value>
+				<value level="5">58</value>
+				<value level="6">61</value>
+			</magic-level>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+				<power initial="8.0">
+					<value level="2">7.0</value>
+					<value level="5">6.0</value>
+				</power>
+			</stat-modify>
+			<stat-modify stat="ATTACK_COUNT_MAX">
+				<power initial="8.0"/>
+			</stat-modify>
+			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
+				<power initial="0.0"/>
+			</stat-modify>
+			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER">
+				<power initial="0.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="3602" name="Special Ability: Guidance" max-level="6" >
+	<!-- Increases P. Accuracy. Enables the character to attack multiple opponents. -->
+		<icon initial="icon.skill1240"/>
+		<attributes property="MAGIC" magic-critical-rate="5.0" >
+			<magic-level initial="46">
+				<value level="2">49</value>
+				<value level="3">52</value>
+				<value level="4">55</value>
+				<value level="5">58</value>
+				<value level="6">61</value>
+			</magic-level>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<stat-modify stat="ACCURACY" mode="DIFF">
+				<power initial="6.88">
+					<value level="2">6.07</value>
+					<value level="3">5.72</value>
+					<value level="4">5.37</value>
+					<value level="5">5.02</value>
+					<value level="6">4.68</value>
+				</power>
+			</stat-modify>
+			<stat-modify stat="ATTACK_COUNT_MAX">
+				<power initial="8.0"/>
+			</stat-modify>
+			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
+				<power initial="0.0"/>
+			</stat-modify>
+			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER">
+				<power initial="0.0"/>
+			</stat-modify>
+			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER">
+				<power initial="0.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="3603" name="Demonic Sword Zariche" max-level="10" >
+	<!-- The Demon Bremnon is said to have used this mystical sword to slaughter enemies. The more blood the sword sheds, the more powerful it becomes. -->
+		<icon initial="icon.weapon_unique_zariche_i00"/>
+		<attributes property="MAGIC" magic-critical-rate="5.0" >
+			<magic-level initial="78"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<vampiric-attack chance="30">
+				<power initial="22.0">
+					<value level="2">24.0</value>
+					<value level="3">26.0</value>
+					<value level="4">29.0</value>
+					<value level="5">32.0</value>
+					<value level="6">35.0</value>
+					<value level="7">38.0</value>
+					<value level="8">42.0</value>
+					<value level="9">47.0</value>
+					<value level="10">50.0</value>
+				</power>
+			</vampiric-attack>
+			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+				<power initial="220.0">
+					<value level="2">242.0</value>
+					<value level="2">720.0</value>
+					<value level="3">266.0</value>
+					<value level="3">864.0</value>
+					<value level="4">292.0</value>
+					<value level="4">1036.0</value>
+					<value level="5">322.0</value>
+					<value level="5">1244.0</value>
+					<value level="6">354.0</value>
+					<value level="6">1492.0</value>
+					<value level="7">389.0</value>
+					<value level="7">1791.0</value>
+					<value level="8">428.0</value>
+					<value level="8">2149.0</value>
+					<value level="9">471.0</value>
+					<value level="9">2579.0</value>
+					<value level="10">518.0</value>
+					<value level="10">3095.0</value>
+				</power>
+			</stat-modify>
+			<stat-modify stat="MAGIC_ATTACK" mode="PER">
+				<power initial="210.0">
+					<value level="2">220.0</value>
+					<value level="2">720.0</value>
+					<value level="3">231.0</value>
+					<value level="3">864.0</value>
+					<value level="4">243.0</value>
+					<value level="4">1036.0</value>
+					<value level="5">255.0</value>
+					<value level="5">1244.0</value>
+					<value level="6">268.0</value>
+					<value level="6">1492.0</value>
+					<value level="7">281.0</value>
+					<value level="7">1791.0</value>
+					<value level="8">295.0</value>
+					<value level="8">2149.0</value>
+					<value level="9">310.0</value>
+					<value level="9">2579.0</value>
+					<value level="10">325.0</value>
+					<value level="10">3095.0</value>
+				</power>
+			</stat-modify>
+			<speed mode="DIFF">
+				<power initial="2.0">
+					<value level="2">4.0</value>
+					<value level="3">6.0</value>
+					<value level="4">8.0</value>
+					<value level="5">10.0</value>
+					<value level="6">12.0</value>
+					<value level="7">14.0</value>
+					<value level="8">16.0</value>
+					<value level="9">18.0</value>
+					<value level="10">20.0</value>
+				</power>
+			</speed>
+			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+				<power initial="206.0">
+					<value level="2">212.0</value>
+					<value level="2">530.0</value>
+					<value level="3">218.0</value>
+					<value level="3">546.0</value>
+					<value level="4">225.0</value>
+					<value level="4">562.0</value>
+					<value level="5">231.0</value>
+					<value level="5">579.0</value>
+					<value level="6">238.0</value>
+					<value level="6">597.0</value>
+					<value level="7">245.0</value>
+					<value level="7">614.0</value>
+					<value level="8">253.0</value>
+					<value level="8">633.0</value>
+					<value level="9">260.0</value>
+					<value level="9">652.0</value>
+					<value level="10">268.0</value>
+					<value level="10">671.0</value>
+				</power>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+				<power initial="204.0">
+					<value level="2">208.0</value>
+					<value level="2">520.0</value>
+					<value level="3">212.0</value>
+					<value level="3">530.0</value>
+					<value level="4">216.0</value>
+					<value level="4">541.0</value>
+					<value level="5">220.0</value>
+					<value level="5">552.0</value>
+					<value level="6">225.0</value>
+					<value level="6">563.0</value>
+					<value level="7">229.0</value>
+					<value level="7">574.0</value>
+					<value level="8">234.0</value>
+					<value level="8">585.0</value>
+					<value level="9">239.0</value>
+					<value level="9">597.0</value>
+					<value level="10">243.0</value>
+					<value level="10">609.0</value>
+				</power>
+			</stat-modify>
+			<stat-modify stat="ACCURACY" mode="DIFF">
+				<power initial="1.0">
+					<value level="2">4.0</value>
+					<value level="3">9.0</value>
+					<value level="4">16.0</value>
+					<value level="5">25.0</value>
+					<value level="6">36.0</value>
+					<value level="7">49.0</value>
+					<value level="8">64.0</value>
+					<value level="9">81.0</value>
+					<value level="10">100.0</value>
+				</power>
+			</stat-modify>
+			<vital-stat-modify stat="MAX_CP" mode="PER" heal="false">
+				<power initial="1050.0">
+					<value level="2">1102.0</value>
+					<value level="2">1690.0</value>
+					<value level="3">1157.0</value>
+					<value level="3">2197.0</value>
+					<value level="4">1215.0</value>
+					<value level="4">2856.0</value>
+					<value level="5">1276.0</value>
+					<value level="5">3712.0</value>
+					<value level="6">1340.0</value>
+					<value level="6">4826.0</value>
+					<value level="7">1407.0</value>
+					<value level="7">6274.0</value>
+					<value level="8">1477.0</value>
+					<value level="8">8157.0</value>
+					<value level="9">1551.0</value>
+					<value level="9">10604.0</value>
+					<value level="10">1628.0</value>
+					<value level="10">13785.0</value>
+				</power>
+			</vital-stat-modify>
+			<stat-modify stat="REGENERATE_CP_RATE">
+				<power initial="1100.0">
+					<value level="2">1210.0</value>
+					<value level="3">1331.0</value>
+					<value level="4">1464.0</value>
+					<value level="5">1610.0</value>
+					<value level="6">1771.0</value>
+					<value level="7">1948.0</value>
+					<value level="8">2143.0</value>
+					<value level="9">2357.0</value>
+					<value level="10">2593.0</value>
+				</power>
+			</stat-modify>
+			<resist-abnormal-by-category category="DEBUFF">
+				<power initial="-85.0">
+					<value level="2">-86.0</value>
+					<value level="3">-87.0</value>
+					<value level="4">-88.0</value>
+					<value level="5">-89.0</value>
+					<value level="6">-90.0</value>
+					<value level="7">-91.0</value>
+					<value level="8">-92.0</value>
+					<value level="9">-93.0</value>
+					<value level="10">-94.0</value>
+				</power>
+			</resist-abnormal-by-category>
+		</effects>
+	</skill>
+	<skill id="3604" name="Frintezza's Necklace" max-level="1" >
+	<!-- Increases Dark Attack/Poison/Bleed/Paralysis/Stun/Sleep Resistance, and Poison/Bleed/Paralysis/Stun/Sleep Atk. Rate. Decreases skill cooldown. Reflects some of the damage received back to the enemy. -->
+		<icon initial="icon.accessory_necklace_of_frintessa_i00"/>
+		<attributes property="MAGIC" magic-critical-rate="5.0" >
+			<magic-level initial="75"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<attack-trait>
+				<trait type="SHOCK">
+					<power initial="0.15000000596046448"/>
+				</trait>
+				<trait type="BLEED">
+					<power initial="0.25"/>
+				</trait>
+				<trait type="SLEEP">
+					<power initial="0.15000000596046448"/>
+				</trait>
+				<trait type="PARALYZE">
+					<power initial="0.15000000596046448"/>
+				</trait>
+				<trait type="POISON">
+					<power initial="0.25"/>
+				</trait>
+			</attack-trait>
+			<defence-trait>
+				<trait type="SHOCK">
+					<power initial="0.15000000596046448"/>
+				</trait>
+				<trait type="BLEED">
+					<power initial="0.25"/>
+				</trait>
+				<trait type="SLEEP">
+					<power initial="0.15000000596046448"/>
+				</trait>
+				<trait type="PARALYZE">
+					<power initial="0.15000000596046448"/>
+				</trait>
+				<trait type="POISON">
+					<power initial="0.25"/>
+				</trait>
+			</defence-trait>
+			<stat-modify stat="REFLECT_DAMAGE_PERCENT">
+				<power initial="4.0"/>
+			</stat-modify>
+			<stat-modify stat="DARK_RES">
+				<power initial="15.0"/>
+			</stat-modify>
+			<reuse type="0">
+				<power initial="-5.0"/>
+			</reuse>
+		</effects>
+	</skill>
+	<skill id="3605" name="Set Effect - Moonshadow Heavy Armor, 4-piece" max-level="1" >
+	<!-- HP Recovery Bonus +3%%, Max HP +25, and P. Def. +3%%. -->
+		<icon initial="icon.armor_t1001_ul_i00"/>
+		<attributes property="MAGIC" magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+				<power initial="25.0"/>
+			</vital-stat-modify>
+			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+				<power initial="3.0"/>
+			</stat-modify>
+			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
+				<power initial="3.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="3606" name="Set Effect - Moonshadow Light Armor, 4-piece" max-level="1" >
+	<!-- MP Recovery Bonus +3%%, Max MP +10, and P. Atk. +2%%. -->
+		<icon initial="icon.armor_t1002_ul_i00"/>
+		<attributes property="MAGIC" magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+				<power initial="10.0"/>
+			</vital-stat-modify>
+			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify stat="REGENERATE_MP_RATE" mode="PER">
+				<power initial="3.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="3607" name="Set Effect - Moonshadow Robe, 4-piece" max-level="1" >
+	<!-- MP Recovery Bonus +3%%, Max MP +20, and M. Atk. +2%%. -->
+		<icon initial="icon.armor_t1003_ul_i00"/>
+		<attributes property="MAGIC" magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+				<power initial="20.0"/>
+			</vital-stat-modify>
+			<stat-modify stat="MAGIC_ATTACK" mode="PER">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify stat="REGENERATE_MP_RATE" mode="PER">
+				<power initial="3.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="3608" name="Set Effect - Apella Heavy Armor" max-level="3" >
+	<!-- 
+		level 1: Increases Max CP/CP Recovery Bonus, and decreases the XP penalty for player death. When attacked, increases M. Def. and decreases the chance of receiving P. Critical Damage.
+		level 2: Increases Max CP/CP Recovery Bonus, and decreases Skill MP Consumption and the XP penalty for player death. When attacked, increases M. Def. and P. Critical Rate and decreases the chance of receiving P. Critical Damage.
+	 -->
+		<icon initial="icon.armor_t1004_ul_i00"/>
+		<attributes property="MAGIC" magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<trigger-skill-by-damage skill="5605" attacker="Playable" target="SELF" min-damage="50">
+				<power initial="1.0">
+					<value level="2">2.0</value>
+				</power>
+				<chance initial="10.0"/>
+			</trigger-skill-by-damage>
+			<vital-stat-modify stat="MAX_CP" mode="DIFF" heal="false">
+				<power initial="1035.0">
+					<value level="2">1116.0</value>
+				</power>
+			</vital-stat-modify>
+			<stat-modify stat="REGENERATE_CP_RATE">
+				<power initial="40.0"/>
+			</stat-modify>
+			<magic-cost type="1">
+				<power initial="0.0">
+					<value level="2">-5.0</value>
+				</power>
+			</magic-cost>
+			<reduce-drop-penalty type="PK">
+				<experience initial="-70.0">
+					<value level="3">-40.0</value>
+				</experience>
+				<death-penalty initial="0.0"/>
+			</reduce-drop-penalty>
+		</effects>
+	</skill>
+	<skill id="3609" name="Set Effect - Apella Light Armor" max-level="3" >
+	<!-- 
+		level 1: Increases Max CP/CP Recovery Bonus, and decreases the XP penalty for player death. When attacked, increases P. Evasion and decreases P. Critical Damage received.
+		level 2: Increases Max CP/CP Recovery Bonus, and decreases Skill MP Consumption and the XP penalty for player death. When attacked, increases P. Evasion and Atk. Spd., and decreases P. Critical Damage Received.
+	 -->
+		<icon initial="icon.armor_t1005_ul_i00"/>
+		<attributes property="MAGIC" magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<trigger-skill-by-damage skill="5607" attacker="Playable" target="SELF" min-damage="50">
+				<power initial="1.0">
+					<value level="2">2.0</value>
+				</power>
+				<chance initial="10.0"/>
+			</trigger-skill-by-damage>
+			<vital-stat-modify stat="MAX_CP" mode="DIFF" heal="false">
+				<power initial="1035.0">
+					<value level="2">1116.0</value>
+				</power>
+			</vital-stat-modify>
+			<stat-modify stat="REGENERATE_CP_RATE">
+				<power initial="40.0"/>
+			</stat-modify>
+			<magic-cost type="1">
+				<power initial="0.0">
+					<value level="2">-5.0</value>
+				</power>
+			</magic-cost>
+			<reduce-drop-penalty type="PK">
+				<experience initial="-70.0">
+					<value level="3">-40.0</value>
+				</experience>
+				<death-penalty initial="0.0"/>
+			</reduce-drop-penalty>
+		</effects>
+	</skill>
+	<skill id="3610" name="Set Effect - Apella Robe" max-level="3" >
+	<!-- 
+		level 1: Increases Max CP/CP Recovery Bonus, and decreases the XP penalty for player death. When attacked, increases Movement Speed and P. Def.
+		level 2: Increases Max CP/CP Recovery Bonus, and decreases Skill MP Consumption and the XP penalty for player death. When attacked, increases Movement Speed, P. Def., and M. Atk.
+	 -->
+		<icon initial="icon.armor_t1006_ul_i00"/>
+		<attributes property="MAGIC" magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<trigger-skill-by-damage skill="5608" attacker="Playable" target="SELF" min-damage="50">
+				<power initial="1.0">
+					<value level="2">2.0</value>
+				</power>
+				<chance initial="10.0"/>
+			</trigger-skill-by-damage>
+			<vital-stat-modify stat="MAX_CP" mode="DIFF" heal="false">
+				<power initial="1035.0">
+					<value level="2">1116.0</value>
+				</power>
+			</vital-stat-modify>
+			<stat-modify stat="REGENERATE_CP_RATE">
+				<power initial="40.0"/>
+			</stat-modify>
+			<magic-cost type="1">
+				<power initial="0.0">
+					<value level="2">-5.0</value>
+				</power>
+			</magic-cost>
+			<reduce-drop-penalty type="PK">
+				<experience initial="-70.0">
+					<value level="3">-40.0</value>
+				</experience>
+				<death-penalty initial="0.0"/>
+			</reduce-drop-penalty>
+		</effects>
+	</skill>
+	<skill id="3611" name="Enchant Heavy Armor (D-grade)" max-level="1" >
+	<!-- Increases P. Def. and MP Recovery Bonus through item set enchantment. -->
+		<icon initial="icon.skill0231"/>
+		<attributes property="MAGIC" magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<stat-by-move-type stat="REGENERATE_MP_RATE" type="STANDING">
+				<power initial="1.518"/>
+			</stat-by-move-type>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+				<power initial="25.0"/>
+				<armor-type>HEAVY </armor-type>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="3612" name="Enchant Light Armor (D-grade)" max-level="1" >
+	<!-- Increases M. Def. and P. Evasion through item set enchantment. -->
+		<icon initial="icon.skill0233"/>
+		<attributes property="MAGIC" magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+				<power initial="14.0"/>
+				<armor-type>LIGHT </armor-type>
+			</stat-modify>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="2.0"/>
+				<armor-type>LIGHT </armor-type>
+			</stat-hp-based>
+		</effects>
+	</skill>
+	<skill id="3613" name="Enchant Robe (D-grade)" max-level="1" >
+	<!-- Increases P. Def. and Weight Limit through item set enchantment. -->
+		<icon initial="icon.skill0234"/>
+		<attributes property="MAGIC" magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+				<power initial="16.0"/>
+				<armor-type>MAGIC </armor-type>
+			</stat-modify>
+			<stat-modify stat="WEIGHT_LIMIT" mode="PER">
+				<power initial="30.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="3614" name="Enchant Heavy Armor (C-grade)" max-level="1" >
+	<!-- Increases P. Def. and MP Recovery Bonus through item set enchantment. -->
+		<icon initial="icon.skill0231"/>
+		<attributes property="MAGIC" magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<stat-by-move-type stat="REGENERATE_MP_RATE" type="SITTING">
+				<power initial="2.019"/>
+			</stat-by-move-type>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+				<power initial="38.0"/>
+				<armor-type>HEAVY </armor-type>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="3615" name="Enchant Light Armor (C-grade)" max-level="1" >
+	<!-- Increases M. Def. and P. Evasion through item set enchantment. -->
+		<icon initial="icon.skill0233"/>
+		<attributes property="MAGIC" magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+				<power initial="20.0"/>
+				<armor-type>LIGHT </armor-type>
+			</stat-modify>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="2.0"/>
+				<armor-type>LIGHT </armor-type>
+			</stat-hp-based>
+		</effects>
+	</skill>
+	<skill id="3616" name="Enchant Robe (C-grade)" max-level="1" >
+	<!-- Increases P. Def. and Weight Limit through item set enchantment. -->
+		<icon initial="icon.skill0234"/>
+		<attributes property="MAGIC" magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+				<power initial="24.0"/>
+				<armor-type>MAGIC </armor-type>
+			</stat-modify>
+			<stat-modify stat="WEIGHT_LIMIT" mode="PER">
+				<power initial="30.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="3617" name="Enchant Heavy Armor (B-grade)" max-level="1" >
+	<!-- Increases P. Def. and MP Recovery Bonus through item set enchantment. -->
+		<icon initial="icon.skill0231"/>
+		<attributes property="MAGIC" magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<stat-by-move-type stat="REGENERATE_MP_RATE" type="SITTING">
+				<power initial="2.25"/>
+			</stat-by-move-type>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+				<power initial="44.0"/>
+				<armor-type>HEAVY </armor-type>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="3618" name="Enchant Light Armor (B-grade)" max-level="1" >
+	<!-- Increases M. Def. and P. Evasion through item set enchantment. -->
+		<icon initial="icon.skill0233"/>
+		<attributes property="MAGIC" magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+				<power initial="24.0"/>
+				<armor-type>LIGHT </armor-type>
+			</stat-modify>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="2.0"/>
+				<armor-type>LIGHT </armor-type>
+			</stat-hp-based>
+		</effects>
+	</skill>
+	<skill id="3619" name="Enchant Robe (B-grade)" max-level="1" >
+	<!-- Increases P. Def. and Weight Limit through item set enchantment. -->
+		<icon initial="icon.skill0234"/>
+		<attributes property="MAGIC" magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+				<power initial="28.0"/>
+				<armor-type>MAGIC </armor-type>
+			</stat-modify>
+			<stat-modify stat="WEIGHT_LIMIT" mode="PER">
+				<power initial="30.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="3620" name="Enchant Heavy Armor (A-grade)" max-level="1" >
+	<!-- Increases P. Def. and MP Recovery Bonus through item set enchantment. -->
+		<icon initial="icon.skill0231"/>
+		<attributes property="MAGIC" magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<stat-by-move-type stat="REGENERATE_MP_RATE" type="SITTING">
+				<power initial="2.43"/>
+			</stat-by-move-type>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+				<power initial="50.0"/>
+				<armor-type>HEAVY </armor-type>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="3621" name="Enchant Light Armor (A-grade)" max-level="1" >
+	<!-- Increases M. Def. and P. Evasion through item set enchantment. -->
+		<icon initial="icon.skill0233"/>
+		<attributes property="MAGIC" magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+				<power initial="27.0"/>
+				<armor-type>LIGHT </armor-type>
+			</stat-modify>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="2.0"/>
+				<armor-type>LIGHT </armor-type>
+			</stat-hp-based>
+		</effects>
+	</skill>
+	<skill id="3622" name="Enchant Robe (A-grade)" max-level="1" >
+	<!-- Increases P. Def. and Weight Limit through item set enchantment. -->
+		<icon initial="icon.skill0234"/>
+		<attributes property="MAGIC" magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+				<power initial="32.0"/>
+				<armor-type>MAGIC </armor-type>
+			</stat-modify>
+			<stat-modify stat="WEIGHT_LIMIT" mode="PER">
+				<power initial="30.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="3623" name="Enchant Heavy Armor (S-grade)" max-level="3" >
+	<!-- Increases P. Def. and MP Recovery Bonus through item set enchantment. -->
+		<icon initial="icon.skill0231"/>
+		<attributes property="MAGIC" magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<stat-by-move-type stat="REGENERATE_MP_RATE" type="SITTING">
+				<power initial="2.823"/>
+			</stat-by-move-type>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+				<power initial="59.0"/>
+				<armor-type>HEAVY </armor-type>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="3624" name="Enchant Light Armor (S-grade)" max-level="3" >
+	<!-- Increases M. Def. and P. Evasion through item set enchantment. -->
+		<icon initial="icon.skill0233"/>
+		<attributes property="MAGIC" magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+				<power initial="33.0"/>
+				<armor-type>LIGHT </armor-type>
+			</stat-modify>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="2.0"/>
+				<armor-type>LIGHT </armor-type>
+			</stat-hp-based>
+		</effects>
+	</skill>
+	<skill id="3625" name="Enchant Robe (S-grade)" max-level="3" >
+	<!-- Increases P. Def. and Weight Limit through item set enchantment. -->
+		<icon initial="icon.skill0234"/>
+		<attributes property="MAGIC" magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+				<power initial="38.0"/>
+				<armor-type>MAGIC </armor-type>
+			</stat-modify>
+			<stat-modify stat="WEIGHT_LIMIT" mode="PER">
+				<power initial="30.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="3629" name="Blood Sword Akamanah" max-level="10" >
+	<!-- A demonic twin blade forged in blood by Gran Kain, the god of chaos. The blade dies over and over again when it touches the air, and it craves blood to forge it anew. It becomes stronger every time it is supplied with blood. -->
+		<icon initial="icon.weapon_dual_sword_i00"/>
+		<attributes property="MAGIC" magic-critical-rate="5.0" >
+			<magic-level initial="78"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<vampiric-attack chance="30">
+				<power initial="22.0">
+					<value level="2">24.0</value>
+					<value level="3">26.0</value>
+					<value level="4">29.0</value>
+					<value level="5">32.0</value>
+					<value level="6">35.0</value>
+					<value level="7">38.0</value>
+					<value level="8">42.0</value>
+					<value level="9">47.0</value>
+					<value level="10">50.0</value>
+				</power>
+			</vampiric-attack>
+			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+				<power initial="220.0">
+					<value level="2">242.0</value>
+					<value level="2">720.0</value>
+					<value level="3">266.0</value>
+					<value level="3">864.0</value>
+					<value level="4">292.0</value>
+					<value level="4">1036.0</value>
+					<value level="5">322.0</value>
+					<value level="5">1244.0</value>
+					<value level="6">354.0</value>
+					<value level="6">1492.0</value>
+					<value level="7">389.0</value>
+					<value level="7">1791.0</value>
+					<value level="8">428.0</value>
+					<value level="8">2149.0</value>
+					<value level="9">471.0</value>
+					<value level="9">2579.0</value>
+					<value level="10">518.0</value>
+					<value level="10">3095.0</value>
+				</power>
+			</stat-modify>
+			<stat-modify stat="MAGIC_ATTACK" mode="PER">
+				<power initial="210.0">
+					<value level="2">220.0</value>
+					<value level="2">720.0</value>
+					<value level="3">231.0</value>
+					<value level="3">864.0</value>
+					<value level="4">243.0</value>
+					<value level="4">1036.0</value>
+					<value level="5">255.0</value>
+					<value level="5">1244.0</value>
+					<value level="6">268.0</value>
+					<value level="6">1492.0</value>
+					<value level="7">281.0</value>
+					<value level="7">1791.0</value>
+					<value level="8">295.0</value>
+					<value level="8">2149.0</value>
+					<value level="9">310.0</value>
+					<value level="9">2579.0</value>
+					<value level="10">325.0</value>
+					<value level="10">3095.0</value>
+				</power>
+			</stat-modify>
+			<speed mode="DIFF">
+				<power initial="2.0">
+					<value level="2">4.0</value>
+					<value level="3">6.0</value>
+					<value level="4">8.0</value>
+					<value level="5">10.0</value>
+					<value level="6">12.0</value>
+					<value level="7">14.0</value>
+					<value level="8">16.0</value>
+					<value level="9">18.0</value>
+					<value level="10">20.0</value>
+				</power>
+			</speed>
+			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+				<power initial="206.0">
+					<value level="2">212.0</value>
+					<value level="2">530.0</value>
+					<value level="3">218.0</value>
+					<value level="3">546.0</value>
+					<value level="4">225.0</value>
+					<value level="4">562.0</value>
+					<value level="5">231.0</value>
+					<value level="5">579.0</value>
+					<value level="6">238.0</value>
+					<value level="6">597.0</value>
+					<value level="7">245.0</value>
+					<value level="7">614.0</value>
+					<value level="8">253.0</value>
+					<value level="8">633.0</value>
+					<value level="9">260.0</value>
+					<value level="9">652.0</value>
+					<value level="10">268.0</value>
+					<value level="10">671.0</value>
+				</power>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+				<power initial="204.0">
+					<value level="2">208.0</value>
+					<value level="2">520.0</value>
+					<value level="3">212.0</value>
+					<value level="3">530.0</value>
+					<value level="4">216.0</value>
+					<value level="4">541.0</value>
+					<value level="5">220.0</value>
+					<value level="5">552.0</value>
+					<value level="6">225.0</value>
+					<value level="6">563.0</value>
+					<value level="7">229.0</value>
+					<value level="7">574.0</value>
+					<value level="8">234.0</value>
+					<value level="8">585.0</value>
+					<value level="9">239.0</value>
+					<value level="9">597.0</value>
+					<value level="10">243.0</value>
+					<value level="10">609.0</value>
+				</power>
+			</stat-modify>
+			<stat-modify stat="ACCURACY" mode="DIFF">
+				<power initial="1.0">
+					<value level="2">4.0</value>
+					<value level="3">9.0</value>
+					<value level="4">16.0</value>
+					<value level="5">25.0</value>
+					<value level="6">36.0</value>
+					<value level="7">49.0</value>
+					<value level="8">64.0</value>
+					<value level="9">81.0</value>
+					<value level="10">100.0</value>
+				</power>
+			</stat-modify>
+			<vital-stat-modify stat="MAX_CP" mode="PER" heal="false">
+				<power initial="1050.0">
+					<value level="2">1102.0</value>
+					<value level="2">1690.0</value>
+					<value level="3">1157.0</value>
+					<value level="3">2197.0</value>
+					<value level="4">1215.0</value>
+					<value level="4">2856.0</value>
+					<value level="5">1276.0</value>
+					<value level="5">3712.0</value>
+					<value level="6">1340.0</value>
+					<value level="6">4826.0</value>
+					<value level="7">1407.0</value>
+					<value level="7">6274.0</value>
+					<value level="8">1477.0</value>
+					<value level="8">8157.0</value>
+					<value level="9">1551.0</value>
+					<value level="9">10604.0</value>
+					<value level="10">1628.0</value>
+					<value level="10">13785.0</value>
+				</power>
+			</vital-stat-modify>
+			<stat-modify stat="REGENERATE_CP_RATE">
+				<power initial="1100.0">
+					<value level="2">1210.0</value>
+					<value level="3">1331.0</value>
+					<value level="4">1464.0</value>
+					<value level="5">1610.0</value>
+					<value level="6">1771.0</value>
+					<value level="7">1948.0</value>
+					<value level="8">2143.0</value>
+					<value level="9">2357.0</value>
+					<value level="10">2593.0</value>
+				</power>
+			</stat-modify>
+			<resist-abnormal-by-category category="DEBUFF">
+				<power initial="-85.0">
+					<value level="2">-86.0</value>
+					<value level="3">-87.0</value>
+					<value level="4">-88.0</value>
+					<value level="5">-89.0</value>
+					<value level="6">-90.0</value>
+					<value level="7">-91.0</value>
+					<value level="8">-92.0</value>
+					<value level="9">-93.0</value>
+					<value level="10">-94.0</value>
+				</power>
+			</resist-abnormal-by-category>
+		</effects>
+	</skill>
+	<skill id="3630" name="Void Burst" max-level="1" action="A1">
+	<!-- Discharges cursed energy to attack nearby enemies. -->
+		<icon initial="icon.skill3630"/>
+		<attributes magic-critical-rate="5.0" >
+			<magic-level initial="78"/>
+			<cast-range initial="-1"/>
+			<reuse initial="60000"/>
+			<effect-point initial="-1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="140"/>
+		</consume>
+		<target scope="POINT_BLANK" range="150" affect-min="6" affect-random="12" />
+		<effects>
+			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+				<power initial="11500.0"/>
+			</physical-attack>
+		</effects>
+	</skill>
+	<skill id="3631" name="Void Flow" max-level="1" action="A1">
+	<!-- Emits cursed energy to strike a distant enemy. -->
+		<icon initial="icon.skill3631"/>
+		<attributes magic-critical-rate="5.0" >
+			<magic-level initial="78"/>
+			<cast-range initial="600"/>
+			<reuse initial="60000"/>
+			<effect-point initial="-1"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="-1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="140"/>
+		</consume>
+		<target type="ENEMY" affect-min="6" affect-random="12" />
+		<effects>
+			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+				<power initial="15000.0"/>
+			</physical-attack>
+		</effects>
+	</skill>
+	<skill id="3632" name="Clan Gate" max-level="1" action="A2">
+	<!-- Active: Creates a gate that summons clan members. You cannot move while this skill is active. -->
+		<icon initial="icon.accessory_crown_i00"/>
+		<attributes property="PHYSIC" magic-critical-rate="5.0" blocked-on-olympiad="true" >
+			<magic-level initial="60"/>
+			<cast-range initial="-1"/>
+			<reuse initial="3600000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<abnormal type="ABNORMAL_ITEM" visual="MAGIC_SQUARE" >
+			<level initial="1"/>
+			<time initial="120"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<conditions>
+			<condition name="OpCallPc"/>
+		</conditions>
+		<effects>
+			<clan-system-message id="1923"/>
+			<block-all-actions>
+				<allowed-skills>35016</allowed-skills>
+			</block-all-actions>
+		</effects>
+	</skill>
+	<skill id="3633" name="Residential Stun Immunity" max-level="2" action="A2">
+	<!-- 
+		level 1: Active Skill: Greatly increases Stun Resistance spontaneously.
+		level 2: Active Skill: Spontaneously becomes immune to stun.
+	 -->
+		<icon initial="icon.accessory_pledge_cap1_i05"/>
+		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+			<magic-level initial="60"/>
+			<cast-range initial="-1"/>
+			<reuse initial="600000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<abnormal type="ABNORMAL_ITEM" >
+			<level initial="1"/>
+			<time initial="7"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<defence-trait>
+				<trait type="SHOCK">
+					<power initial="0.800000011920929">
+					<value level="2">1.0</value>
+				</power>
+				</trait>
+			</defence-trait>
+		</effects>
+	</skill>
 </list>

@@ -1,10 +1,15 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
-	<skill id="39561" toLevel="1" name="Effect of Security">
-		<!-- Reward for security service subscribers.\nP. Def. +50, M. Def. +30. -->
-		<icon>icon.security_buff</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
-		<effectPoint>1</effectPoint>
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
+	<skill id="39561" name="Security Buff" max-level="1" action="A1">
+	<!-- A benefit provided for security service subscribers. \nP. Def. +50, M. Def. +30. -->
+		<icon initial="icon.security_buff"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="-1"/>
+			<effect-point initial="1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
 </list>

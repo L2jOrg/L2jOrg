@@ -1,110 +1,112 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
-	<skill id="50912" toLevel="6" name="Talisman Bracelet">
-		<!-- Unlocks 1 talisman slot. -->
-		<icon>
-			<value level="1">icon.dimension_bracelet_i00</value>
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
+	<skill id="50912" name="Talisman Bracelet" max-level="6" >
+	<!-- 
+		level 1: 1 Talisman can be equipped.
+		level 2: 2 Talisman can be equipped.
+		level 3: 3 Talisman can be equipped.
+		level 4: Can equip 4 Talismans.\n\n<Special Effects>\nHP Recovery Bonus/MP Recovery Bonus +7%, P. Accuracy +1, M. Accuracy +1, Weight Limit +7000.
+		level 5: Can equip 5 Talismans.\n\n<Special Effects>\nHP Recovery Bonus/MP Recovery Bonus +15%, P. Accuracy +2, M. Accuracy +2, Weight Limit +10000.
+		level 6: Can equip 6 Talismans.\n\n<Special Effects>\nHP Recovery Bonus/MP Recovery Bonus +15%, P. Accuracy +2, M. Accuracy +2, Weight Limit +10000.
+	 -->
+		<icon initial="icon.dimension_bracelet_i00">
 			<value level="2">icon.dimension_bracelet_i01</value>
 			<value level="3">icon.dimension_bracelet_i02</value>
 			<value level="4">icon.dimension_bracelet_i03</value>
 			<value level="5">icon.dimension_bracelet_i04</value>
 			<value level="6">icon.dimension_bracelet_i05</value>
 		</icon>
-		<operateType>P</operateType>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
-	<skill id="50913" toLevel="11" name="Eva's Talisman ">
-		<!--1 - A talisman imbued with Eva’s energy. M. Def. +$s1, Max MP +$s2.
-			2.. - A talisman imbued with Eva’s energy. M. Def. +$s1, Max MP +$s2, MP Recovery Bonus +$s3, P./M. Critical Damage Received -$s4.
-		-->
-		<icon>icon.giant_item_equip</icon>
-		<operateType>P</operateType>
+	<skill id="50913" name="Eva's Talisman" max-level="11" >
+	<!-- 
+		level 1: A talisman imbued with Eva’s energy. M. Def. +20, Max MP +50.
+		level 2: A talisman imbued with Eva’s energy. M. Def. +30, Max MP +100, MP Recovery Bonus +2, All Critical Damage Received -1%.
+		level 3: A talisman imbued with Eva’s energy. M. Def. +50, Max MP +150, MP Recovery Bonus +3, All Critical Damage Received -2%, Skill MP Consumption -1%.
+		level 4: A talisman imbued with Eva’s energy. M. Def. +80, Max MP +200, MP Recovery Bonus +5, All Critical Damage Received -3%, Skill MP Consumption -2%.
+		level 5: A talisman imbued with Eva’s energy. M. Def. +120, Max MP +300, MP Recovery Bonus +7, All Critical Damage Received -4%, Skill MP Consumption -3%.
+		level 6: A talisman imbued with Eva’s energy. M. Def. +170, Max MP +400, MP Recovery Bonus +10, All Critical Damage Received -5%, Skill MP Consumption -5%.
+		level 7: A talisman imbued with Eva’s energy. M. Def. +230, Max MP +500, MP Recovery Bonus +15, All Critical Damage Received -7%, Skill MP Consumption -7%.
+		level 8: A talisman imbued with Eva’s energy. M. Def. +300, Max MP +600, MP Recovery Bonus +20, All Critical Damage Received -9%, Skill MP Consumption -9%.
+		level 9: A talisman imbued with Eva’s energy. M. Def. +380, Max MP +700, MP Recovery Bonus +25, All Critical Damage Received -11%, Skill MP Consumption -11%.
+		level 10: A talisman imbued with Eva’s energy. M. Def. +470, Max MP +800, MP Recovery Bonus +30, All Critical Damage Received -13%, Skill MP Consumption -13%.
+		level 11: A talisman imbued with Eva’s energy. M. Def. +600, Max MP +1000, MP Recovery Bonus +40, All Critical Damage Received -15%, Skill MP Consumption -15%.
+	 -->
+		<icon initial="icon.bm_eva_talisman"/>
+		<attributes property="MAGIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 		<effects>
-			<effect name="MagicalDefence">
-				<value>
-					<value level="1">20</value>
-					<value level="2">30</value>
-					<value level="3">50</value>
-					<value level="4">80</value>
-					<value level="5">120</value>
-					<value level="6">170</value>
-					<value level="7">230</value>
-					<value level="8">300</value>
-					<value level="9">380</value>
-					<value level="10">470</value>
-					<value level="11">600</value>
-				</value>
-			</effect>
-			<effect name="MaxHp">
-				<value>
-					<value level="1">50</value>
-					<value level="2">100</value>
-					<value level="3">150</value>
-					<value level="4">200</value>
-					<value level="5">300</value>
-					<value level="6">400</value>
-					<value level="7">500</value>
-					<value level="8">600</value>
-					<value level="9">700</value>
-					<value level="10">800</value>
-					<value level="11">1000</value>
-				</value>
-			</effect>
-			<effect name="MpRegen">
-				<value>
-					<value level="1">0</value>
-					<value level="2">1</value>
-					<value level="3">2</value>
-					<value level="4">3</value>
-					<value level="5">5</value>
-					<value level="6">10</value>
-					<value level="7">15</value>
-					<value level="8">20</value>
-					<value level="9">25</value>
-					<value level="10">30</value>
-					<value level="11">40</value>
-				</value>
-			</effect>
-			<effect name="DefenceCriticalDamage">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">1</value>
-					<value level="3">2</value>
-					<value level="4">3</value>
-					<value level="5">4</value>
-					<value level="6">5</value>
-					<value level="7">7</value>
-					<value level="8">9</value>
-					<value level="9">11</value>
-					<value level="10">13</value>
-					<value level="11">15</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="DefenceMagicCriticalDamage">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">1</value>
-					<value level="3">2</value>
-					<value level="4">3</value>
-					<value level="5">4</value>
-					<value level="6">5</value>
-					<value level="7">7</value>
-					<value level="8">9</value>
-					<value level="9">11</value>
-					<value level="10">13</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
+			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+				<power initial="0.0"/>
+			</stat-modify>
+			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+				<power initial="0.0"/>
+			</vital-stat-modify>
+			<stat-modify stat="REGENERATE_MP_RATE" mode="DIFF">
+				<power initial="0.0"/>
+			</stat-modify>
+			<stat-modify stat="DEFENCE_CRITICAL_DAMAGE" stat-add="DEFENCE_CRITICAL_DAMAGE_ADD" mode="PER">
+				<power initial="0.0">
+					<value level="2">1.0</value>
+					<value level="3">2.0</value>
+					<value level="4">3.0</value>
+					<value level="5">4.0</value>
+					<value level="6">5.0</value>
+					<value level="7">7.0</value>
+					<value level="8">9.0</value>
+					<value level="9">11.0</value>
+					<value level="10">13.0</value>
+					<value level="11">15.0</value>
+				</power>
+			</stat-modify>
+			<stat-modify stat="DEFENCE_MAGIC_CRITICAL_DAMAGE" mode="PER">
+				<power initial="0.0">
+					<value level="2">1.0</value>
+					<value level="3">2.0</value>
+					<value level="4">3.0</value>
+					<value level="5">4.0</value>
+					<value level="6">5.0</value>
+					<value level="7">7.0</value>
+					<value level="8">9.0</value>
+					<value level="9">11.0</value>
+					<value level="10">13.0</value>
+					<value level="11">0.0</value>
+				</power>
+			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="50914" toLevel="10" name="Amber">
-		<!-- When used interrupts the target's skill casting. Inflicts fixed PvP damage, ?? is ignored. Power $s1. -->
-		<icon>icon.etc_bm_jewel_amber_i00</icon>
-		<operateType>A1</operateType>
-		<castRange>600</castRange>
-		<hitTime>1000</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>30000</reuseDelay>
-		<effectPoint>-1000</effectPoint>
+	<skill id="50914" name="Amber" max-level="10" action="A1">
+	<!-- 
+		level 1: Interrupts target's skill casting when used. In PvP, ignores CP and inflicts a fixed damage of 475 Power.
+		level 2: Interrupts target's skill casting when used. In PvP, ignores CP and inflicts a fixed damage of 633 Power.
+		level 3: Interrupts target's skill casting when used. In PvP, ignores CP and inflicts a fixed damage of 950 Power.
+		level 4: Interrupts target's skill casting when used. In PvP, ignores CP and inflicts a fixed damage of 1357 Power.
+		level 5: Interrupts target's skill casting when used. In PvP, ignores CP and inflicts a fixed damage of 2375 Power.
+		level 6: Interrupts target's skill casting when used. In PvP, ignores CP and inflicts a fixed damage of 2500 Power.
+		level 7: Interrupts target's skill casting when used. In PvP, ignores CP and inflicts a fixed damage of 2800 Power.
+		level 8: Interrupts target's skill casting when used. In PvP, ignores CP and inflicts a fixed damage of 3400 Power.
+		level 9: Interrupts target's skill casting when used. In PvP, ignores CP and inflicts a fixed damage of 4000 Power.
+		level 10: Interrupts target's skill casting when used. In PvP, ignores CP and inflicts a fixed damage of 5000 Power.
+	 -->
+		<icon initial="icon.etc_bm_jewel_amber_i00"/>
+		<attributes >
+			<cast-range initial="600"/>
+			<reuse initial="30000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="-1000"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-1000000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
 	</skill>
 </list>

@@ -17,7 +17,7 @@
 package handlers.playeractions;
 
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
-import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.handler.IPlayerActionHandler;
 import org.l2j.gameserver.data.xml.model.ActionData;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -62,7 +62,7 @@ public final class PetSkillUse implements IPlayerActionHandler
 			if (skillLevel > 0)
 			{
 				pet.setTarget(activeChar.getTarget());
-				pet.useMagic(SkillData.getInstance().getSkill(data.getOptionId(), skillLevel), null, ctrlPressed, shiftPressed);
+				pet.useMagic(SkillEngine.getInstance().getSkill(data.getOptionId(), skillLevel), null, ctrlPressed, shiftPressed);
 			}
 			
 			if (data.getOptionId() == CommonSkill.PET_SWITCH_STANCE.getId())

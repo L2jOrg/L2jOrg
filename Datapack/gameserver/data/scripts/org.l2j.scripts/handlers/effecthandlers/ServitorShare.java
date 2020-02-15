@@ -6,6 +6,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.stats.Stat;
+import org.l2j.gameserver.model.stats.TraitType;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -16,17 +17,22 @@ import static org.l2j.gameserver.util.GameUtils.isSummon;
 
 /**
  * Servitor Share effect implementation.
+ * @author JoeAlisson
  */
 public final class ServitorShare extends AbstractEffect {
-    public final Map<Stat, Float> sharedStats = new HashMap<>();
+    public final Map<Stat, Float> sharedStats;
 
     public ServitorShare(StatsSet params) {
-        if (params.isEmpty()) {
-            return;
-        }
-
-        for (Entry<String, Object> param : params.getSet().entrySet()) {
-            sharedStats.put(Stat.valueOf(param.getKey()), (Float.parseFloat((String) param.getValue())) / 100);
+        if(params.contains("type")) {
+            sharedStats = Map.of(params.getEnum("type", Stat.class), params.getFloat("power") / 100);
+        } else {
+            sharedStats = new HashMap<>();
+            params.getSet().forEach((key, value) -> {
+                if(key.startsWith("stat")) {
+                    var set = (StatsSet) value;
+                    sharedStats.put(set.getEnum("type", Stat.class), set.getFloat("power") / 100);
+                }
+            });
         }
     }
 

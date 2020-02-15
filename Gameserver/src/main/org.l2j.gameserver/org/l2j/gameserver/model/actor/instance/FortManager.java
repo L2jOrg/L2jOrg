@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.data.xml.impl.TeleportersData;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.ClanPrivilege;
@@ -668,7 +668,7 @@ public class FortManager extends Merchant {
                         if (st.countTokens() >= 1) {
                             skill_lvl = Integer.parseInt(st.nextToken());
                         }
-                        skill = SkillData.getInstance().getSkill(skill_id, skill_lvl);
+                        skill = SkillEngine.getInstance().getSkill(skill_id, skill_lvl);
                         if (skill.hasEffectType(EffectType.SUMMON)) {
                             player.doCast(skill);
                         } else if (!((skill.getMpConsume() + skill.getMpInitialConsume()) > getCurrentMp())) {

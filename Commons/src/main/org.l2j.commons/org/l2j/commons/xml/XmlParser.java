@@ -515,8 +515,8 @@ public class XmlParser {
 
     protected IntSet parseIntSet(Node node) {
         if(nonNull(node)) {
-            var values = node.getNodeValue().split("\\s");
-            return StreamUtil.collectToSet(Arrays.stream(values).filter(Util::isInteger).mapToInt(Integer::parseInt));
+            var value = nonNull(node.getNodeValue()) ? node.getNodeValue() : node.getTextContent();
+            return StreamUtil.collectToSet(Arrays.stream(value.split("\\s")).filter(Util::isInteger).mapToInt(Integer::parseInt));
         }
         return Containers.emptyIntSet();
     }

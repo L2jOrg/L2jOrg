@@ -1,5 +1,6 @@
 package org.l2j.gameserver.data.xml.impl;
 
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.items.Henna;
@@ -111,7 +112,7 @@ public final class HennaData extends GameXmlReader {
                     break;
                 }
                 case "skill": {
-                    skills.add(SkillData.getInstance().getSkill(parseInteger(attrs, "id"), parseInteger(attrs, "level")));
+                    skills.add(SkillEngine.getInstance().getSkill(parseInteger(attrs, "id"), parseInteger(attrs, "level")));
                     break;
                 }
                 case "classId": {

@@ -1,38 +1,59 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
-    <skill id="16994" toLevel="1" name="Lighting up Magical Flame">
-        <!-- Lights up a Bundle of Magical Firewood. -->
-        <icon>icon.skill0094</icon>
-        <operateType>A1</operateType>
-        <isMagic>6</isMagic>
-        <hitTime>5000</hitTime>
-        <reuseDelay>10000</reuseDelay>
-    </skill>
-    <skill id="16995" toLevel="1" name="Paralysis">
-        <!-- Paralyzes the character, preventing them from putting out a burning Bundle of Magical Firewood. -->
-        <icon>icon.skill1170</icon>
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <isDebuff>true</isDebuff>
-        <castRange>700</castRange>
-        <effectPoint>1</effectPoint>
-    </skill>
-    <skill id="16996" toLevel="1" name="Blowing up Magical Flame">
-        <!-- Makes the Bundle of Magical Firewood burn brighter. -->
-        <icon>icon.skill0094</icon>
-        <operateType>A1</operateType>
-    </skill>
-    <skill id="16997" toLevel="1" name="Magical Firewood Jump">
-        <!-- Enables the character to jump over a Bundle of Magical Firewood. -->
-        <operateType>A1</operateType>
-        <effectPoint>2</effectPoint>
-    </skill>
-    <skill id="16998" toLevel="1" name="Lighting up Magical Flame">
-        <!-- Lights up a Big Bundle of Magical Firewood. -->
-        <icon>icon.skill0094</icon>
-        <operateType>A1</operateType>
-        <isMagic>6</isMagic>
-        <hitTime>5000</hitTime>
-        <reuseDelay>10000</reuseDelay>
-    </skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
+	<skill id="16994" name="Lighting up Magical Flame" max-level="1" action="A1">
+	<!-- Lights up a Bundle of Magical Firewood. -->
+		<icon initial="icon.skill0094"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="-1"/>
+			<reuse initial="10000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16995" name="Paralysis" max-level="1" debuff="true" action="A1" type="MAGIC">
+	<!-- Paralyzes the character, preventing them from putting out a burning Bundle of Magical Firewood. -->
+		<icon initial="icon.skill1170"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="700"/>
+			<effect-point initial="1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16996" name="Blowing up Magical Flame" max-level="1" action="A1">
+	<!-- Makes the Bundle of Magical Firewood burn brighter. -->
+		<icon initial="icon.skill0094"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16997" name="Magical Firewood Jump" max-level="1" action="A1">
+	<!-- Enables the character to jump over a Bundle of Magical Firewood. -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="-1"/>
+			<effect-point initial="2"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="2000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="16998" name="Lighting up Magical Flame" max-level="1" action="A1">
+	<!-- Lights up a Big Bundle of Magical Firewood. -->
+		<icon initial="icon.skill0094"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="-1"/>
+			<reuse initial="10000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
 </list>

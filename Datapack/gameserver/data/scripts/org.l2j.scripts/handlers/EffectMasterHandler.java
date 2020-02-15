@@ -1,7 +1,9 @@
 package handlers;
 
 import handlers.effecthandlers.*;
-import handlers.effecthandlers.stat.*;
+import handlers.effecthandlers.stat.StatHpBased;
+import handlers.effecthandlers.stat.TransferDamageToPlayer;
+import handlers.effecthandlers.stat.VitalStatModify;
 import org.l2j.gameserver.handler.EffectHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,7 +22,7 @@ public final class EffectMasterHandler {
         handler.registerFactory("AddHate", AddHate::new);
         handler.registerFactory("AddTeleportBookmarkSlot", AddTeleportBookmarkSlot::new);
         handler.registerFactory("stat-modify", StatModify::new);
-        handler.registerFactory("attack-trait", AttackTrait::new); // TODO
+        handler.registerFactory("attack-trait", AttackTrait::new);
         handler.registerFactory("backstab", Backstab::new);
         handler.registerFactory("Betray", Betray::new);
         handler.registerFactory("block-abnormal", BlockAbnormalSlot::new);
@@ -52,12 +54,12 @@ public final class EffectMasterHandler {
         handler.registerFactory("CpHealPercent", CpHealPercent::new);
         handler.registerFactory("stat-position-based", StatPositionBased::new);
         handler.registerFactory("stat-hp-based", StatHpBased::new);
-        handler.registerFactory("damage-block ", DamageBlock::new);
+        handler.registerFactory("damage-block", DamageBlock::new);
         handler.registerFactory("damage-by-attack", DamageByAttack::new);
         handler.registerFactory("damage-over-time", DamOverTime::new);
         handler.registerFactory("DeathLink", DeathLink::new);
         handler.registerFactory("DebuffBlock", DebuffBlock::new);
-        handler.registerFactory("defence-trait", DefenceTrait::new); // TODO
+        handler.registerFactory("defence-trait", DefenceTrait::new);
         handler.registerFactory("DeleteHate", DeleteHate::new);
         handler.registerFactory("DeleteHateOfMe", DeleteHateOfMe::new);
         handler.registerFactory("Detection", Detection::new);
@@ -65,7 +67,7 @@ public final class EffectMasterHandler {
         handler.registerFactory("Disarm", Disarm::new);
         handler.registerFactory("DispelAll", DispelAll::new);
         handler.registerFactory("dispel-by-category", DispelByCategory::new);
-        handler.registerFactory("DispelBySlot", DispelBySlot::new); // TODO
+        handler.registerFactory("dispel", DispelBySlot::new);
         handler.registerFactory("dispel-myself", DispelBySlotMyself::new);
         handler.registerFactory("dispel-probability", DispelBySlotProbability::new);
         handler.registerFactory("energy-attack", EnergyAttack::new);
@@ -77,7 +79,7 @@ public final class EffectMasterHandler {
         handler.registerFactory("Fear", Fear::new);
         handler.registerFactory("feed", Feed::new);
         handler.registerFactory("Flag", Flag::new);
-        handler.registerFactory("FocusMomentum'", FocusMomentum::new);
+        handler.registerFactory("FocusMomentum", FocusMomentum::new);
         handler.registerFactory("FocusMaxMomentum", FocusMaxMomentum::new);
         handler.registerFactory("FocusSouls", FocusSouls::new);
         handler.registerFactory("GetAgro", GetAgro::new);
@@ -143,14 +145,14 @@ public final class EffectMasterHandler {
         handler.registerFactory("resist-abnormal-by-category", ResistAbnormalByCategory::new);
         handler.registerFactory("resist-dispel-by-category", ResistDispelByCategory::new);
         handler.registerFactory("restoration", Restoration::new);
-        handler.registerFactory("random-restoration", RestorationRandom::new); // TODO
+        handler.registerFactory("random-restoration", RestorationRandom::new);
         handler.registerFactory("Resurrection", Resurrection::new);
         handler.registerFactory("ResurrectionSpecial", ResurrectionSpecial::new);
         handler.registerFactory("reuse", Reuse::new);
         handler.registerFactory("reuse-skill", ReuseSkillById::new);
         handler.registerFactory("Root", Root::new);
         handler.registerFactory("clan-system-message", SendSystemMessageToClan::new);
-        handler.registerFactory("ServitorShare", ServitorShare::new); // TODO
+        handler.registerFactory("servitor-share", ServitorShare::new);
         handler.registerFactory("SilentMove", SilentMove::new);
         handler.registerFactory("skill-critical", SkillCritical::new);
         handler.registerFactory("skill-evasion", SkillEvasion::new);

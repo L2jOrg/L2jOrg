@@ -1,12 +1,16 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
-    <skill id="23174" toLevel="1" name="Life Hazard">
-        <!-- Resurrects and fully restores your Stats. Buff and Debuff effects remain after death. Cooldown - 12 h. -->
-        <icon>icon.skill_agathion_special</icon>
-        <operateType>A1</operateType>
-        <castRange>600</castRange>
-        <hitTime>3000</hitTime>
-        <reuseDelay>43200000</reuseDelay>
-        <effectPoint>1</effectPoint>
-    </skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
+	<skill id="23174" name="Soul Stealth" max-level="1" action="A1">
+	<!-- Resurrects and fully restores your Stats. Buff and debuff effects remain after death. However, Noblesse Blessing and Lucky Charm disappear. Cooldown is 12 hours. -->
+		<icon initial="icon.skill_agathion_special"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="600"/>
+			<reuse initial="43200000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
 </list>

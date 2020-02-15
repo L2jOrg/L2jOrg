@@ -17,7 +17,7 @@
 package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.settings.GeneralSettings;
@@ -84,9 +84,9 @@ public class AdminBuffs implements IAdminCommandHandler
 			try
 			{
 				final int skillId = Integer.parseInt(st.nextToken());
-				final int skillLevel = st.hasMoreTokens() ? Integer.parseInt(st.nextToken()) : SkillData.getInstance().getMaxLevel(skillId);
+				final int skillLevel = st.hasMoreTokens() ? Integer.parseInt(st.nextToken()) : SkillEngine.getInstance().getMaxLevel(skillId);
 				final Creature target = (Creature) activeChar.getTarget();
-				final Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
+				final Skill skill = SkillEngine.getInstance().getSkill(skillId, skillLevel);
 				if (skill == null)
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Skill with id: " + skillId + ", lvl: " + skillLevel + " not found.");

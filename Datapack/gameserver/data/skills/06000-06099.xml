@@ -1,1791 +1,2117 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
-    <skill id="6000" toLevel="1" name="not_used">
-        <magicLvl>83</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6001" toLevel="1" name="not_used">
-        <magicLvl>83</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6002" toLevel="1" name="not_used">
-        <magicLvl>83</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6003" toLevel="1" name="not_used">
-        <magicLvl>83</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6004" toLevel="1" name="not_used">
-        <magicLvl>83</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6005" toLevel="1" name="not_used">
-        <magicLvl>83</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6006" toLevel="1" name="not_used">
-        <magicLvl>83</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6007" toLevel="1" name="not_used">
-        <magicLvl>83</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6008" toLevel="1" name="not_used">
-        <magicLvl>83</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6009" toLevel="1" name="not_used">
-        <magicLvl>83</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6010" toLevel="1" name="not_used">
-        <magicLvl>83</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6011" toLevel="1" name="not_used">
-        <magicLvl>83</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6012" toLevel="1" name="not_used">
-        <magicLvl>83</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6013" toLevel="1" name="not_used">
-        <magicLvl>83</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6014" toLevel="1" name="not_used">
-        <magicLvl>83</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6015" toLevel="1" name="not_used">
-        <magicLvl>83</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6016" toLevel="1" name="not_used">
-        <magicLvl>83</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6017" toLevel="1" name="not_used">
-        <magicLvl>83</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6018" toLevel="1" name="not_used">
-        <magicLvl>83</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6019" toLevel="1" name="Searching Master">
-        <!-- Directly attacks a pet's master or summoner. -->
-        <icon>icon.skill6019</icon>
-        <magicLvl>52</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6020" toLevel="1" name="Soul Retain">
-        <abnormalLvl>2</abnormalLvl>
-        <abnormalTime>10800</abnormalTime>
-        <abnormalType>MA_UP</abnormalType>
-        <activateRate>0</activateRate>
-        <hitTime>1000</hitTime>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <magicLvl>85</magicLvl>
-        <operateType>A2</operateType>
-        <reuseDelay>1000</reuseDelay>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <specialLevel>-1</specialLevel>
-        <hitCancelTime>0</hitCancelTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="MAtk">
-                <amount>6</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MagicalDefence">
-                <amount>-25</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PhysicalDefence">
-                <amount>-25</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="HpRegen">
-                <amount>-25</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="6021" toLevel="1" name="Soul Retain">
-        <abnormalLvl>3</abnormalLvl>
-        <abnormalTime>10800</abnormalTime>
-        <abnormalType>MA_UP</abnormalType>
-        <activateRate>0</activateRate>
-        <hitTime>1000</hitTime>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <magicLvl>85</magicLvl>
-        <operateType>A2</operateType>
-        <reuseDelay>1000</reuseDelay>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <specialLevel>-1</specialLevel>
-        <hitCancelTime>0</hitCancelTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="MAtk">
-                <amount>9</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MagicalDefence">
-                <amount>-50</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PhysicalDefence">
-                <amount>-50</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="HpRegen">
-                <amount>-50</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="6022" toLevel="1" name="Soul Retain">
-        <abnormalLvl>4</abnormalLvl>
-        <abnormalTime>10800</abnormalTime>
-        <abnormalType>MA_UP</abnormalType>
-        <activateRate>0</activateRate>
-        <hitTime>1000</hitTime>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <magicLvl>85</magicLvl>
-        <operateType>A2</operateType>
-        <reuseDelay>1000</reuseDelay>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <specialLevel>-1</specialLevel>
-        <hitCancelTime>0</hitCancelTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="MAtk">
-                <amount>12</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MagicalDefence">
-                <amount>-75</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PhysicalDefence">
-                <amount>-75</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="HpRegen">
-                <amount>-75</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="6023" toLevel="1" name="Soul Retain">
-        <abnormalLvl>5</abnormalLvl>
-        <abnormalTime>10800</abnormalTime>
-        <abnormalType>MA_UP</abnormalType>
-        <activateRate>0</activateRate>
-        <hitTime>1000</hitTime>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <magicLvl>85</magicLvl>
-        <operateType>A2</operateType>
-        <reuseDelay>1000</reuseDelay>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <specialLevel>-1</specialLevel>
-        <hitCancelTime>0</hitCancelTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="MAtk">
-                <amount>15</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MagicalDefence">
-                <amount>-94</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PhysicalDefence">
-                <amount>-94</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="HpRegen">
-                <amount>-94</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="6025" toLevel="1" name="not_used">
-        <magicLvl>83</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6026" toLevel="1" name="not_used">
-        <magicLvl>83</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6027" toLevel="1" name="not_used">
-        <magicLvl>83</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6028" toLevel="1" name="not_used">
-        <magicLvl>83</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6029" toLevel="1" name="not_used">
-        <magicLvl>83</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6030" toLevel="1" name="not_used">
-        <magicLvl>83</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6031" toLevel="1" name="not_used">
-        <magicLvl>83</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6032" toLevel="1" name="not_used">
-        <magicLvl>83</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6033" toLevel="1" name="Treasure Seeker's Betrayal">
-        <!-- Carrying this mark of betrayal makes one the target of nearby monsters. -->
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>1200</abnormalTime>
-        <abnormalType>STIGMA_A</abnormalType>
-        <castRange>1500</castRange>
-        <effectPoint>-671</effectPoint>
-        <effectRange>2000</effectRange>
-        <isDebuff>true</isDebuff>
-        <magicLvl>76</magicLvl>
-        <mpConsume>42</mpConsume>
-        <operateType>A2</operateType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="6034" toLevel="1" name="Freezing">
-        <!-- Target cannot move until the match starts. -->
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>10</abnormalTime>
-        <abnormalType>INVINCIBILITY</abnormalType>
-        <castRange>900</castRange>
-        <effectPoint>100</effectPoint>
-        <effectRange>1400</effectRange>
-        <hitTime>3500</hitTime>
-        <magicLvl>85</magicLvl>
-        <operateType>A2</operateType>
-        <reuseDelay>6000</reuseDelay>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <specialLevel>-1</specialLevel>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="DamageBlock">
-                <type>BLOCK_HP</type>
-            </effect>
-            <effect name="DamageBlock">
-                <type>BLOCK_MP</type>
-            </effect>
-            <effect name="DebuffBlock"/>
-            <effect name="ResistDispelByCategory">
-                <amount>-100</amount>
-                <slot>ALL</slot>
-            </effect>
-            <effect name="BlockMove"/>
-            <effect name="BlockActions">
-                <allowedSkills>35016</allowedSkills>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="6037" toLevel="1" name="Soul Unleash">
-        <magicLvl>80</magicLvl>
-        <operateType>A1</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="6038" toLevel="1" name="Report Status">
-        <!-- You are under suspicion of using this program illegally. Chatting has been blocked. -->
-        <icon>icon.skill6038</icon>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>600</abnormalTime>
-        <abnormalType>BOT_PENALTY</abnormalType>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>-1</magicLvl>
-        <operateType>A2</operateType>
-        <stayAfterDeath>True</stayAfterDeath>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <specialLevel>-1</specialLevel>
-        <hitCancelTime>0</hitCancelTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="BlockChat"/>
-        </effects>
-    </skill>
-    <skill id="6039" toLevel="1" name="Report Status">
-        <!-- You are under suspicion of using this program illegally. Party participation has been blocked. -->
-        <icon>icon.skill6038</icon>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>BOT_PENALTY</abnormalType>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>-1</magicLvl>
-        <operateType>A2</operateType>
-        <stayAfterDeath>True</stayAfterDeath>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <specialLevel>-1</specialLevel>
-        <hitCancelTime>0</hitCancelTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="BlockParty"/>
-        </effects>
-    </skill>
-    <skill id="6040" toLevel="1" name="Report Status">
-        <!-- You are under suspicion of using this program illegally. You can be attacked. -->
-        <icon>icon.skill6038</icon>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>300</abnormalTime>
-        <abnormalType>BOT_PENALTY</abnormalType>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>-1</magicLvl>
-        <operateType>A2</operateType>
-        <stayAfterDeath>True</stayAfterDeath>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <specialLevel>-1</specialLevel>
-        <hitCancelTime>0</hitCancelTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="Flag"/>
-        </effects>
-    </skill>
-    <skill id="6041" toLevel="1" name="Phoenix Rush">
-        <!-- Charges the enemy and inflicts damage. -->
-        <icon>icon.skill6041</icon>
-        <castRange>400</castRange>
-        <coolTime>200</coolTime>
-        <effectPoint>-679</effectPoint>
-        <effectRange>600</effectRange>
-        <hitTime>800</hitTime>
-        <magicLvl>81</magicLvl>
-        <nextAction>ATTACK</nextAction>
-        <operateType>DA1</operateType>
-        <reuseDelay>30000</reuseDelay>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <targetType>ENEMY</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpCheckCastRange">
-                <distance>200</distance>
-            </condition>
-        </conditions>
-        <effects>
-            <effect name="PhysicalAttack">
-                <power>2372</power>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="6042" toLevel="1" name="Phoenix Cleanse">
-        <!-- Cancels the target's de-buff. -->
-        <icon>icon.skill6042</icon>
-        <castRange>600</castRange>
-        <effectPoint>679</effectPoint>
-        <effectRange>1100</effectRange>
-        <hitTime>2500</hitTime>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <magicLvl>81</magicLvl>
-        <mpConsume>47</mpConsume>
-        <mpInitialConsume>12</mpInitialConsume>
-        <operateType>A1</operateType>
-        <reuseDelay>180000</reuseDelay>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="DispelByCategory">
-                <slot>DEBUFF</slot>
-                <rate>100</rate>
-                <max>5</max>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="6043" toLevel="1" name="Phoenix Flame Feather">
-        <!-- Spreads ring-shaped flames. Power 70. -->
-        <icon>icon.skill6043</icon>
-        <affectLimit>6-12</affectLimit>
-        <affectRange>200</affectRange>
-        <effectPoint>-340</effectPoint>
-        <attributeType>FIRE</attributeType>
-        <attributeValue>20</attributeValue>
-        <hitTime>2500</hitTime>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <magicLvl>81</magicLvl>
-        <mpConsume>87</mpConsume>
-        <mpInitialConsume>22</mpInitialConsume>
-        <operateType>A1</operateType>
-        <reuseDelay>15000</reuseDelay>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <targetType>SELF</targetType>
-        <affectScope>POINT_BLANK</affectScope>
-        <affectObject>NOT_FRIEND</affectObject>
-        <effects>
-            <effect name="MagicalAttack">
-                <power>70</power>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="6044" toLevel="1" name="Phoenix Flame Beak">
-        <!-- Attacks the enemy with a powerful beak. Power 2156. -->
-        <icon>icon.skill6044</icon>
-        <castRange>40</castRange>
-        <coolTime>720</coolTime>
-        <effectPoint>-343</effectPoint>
-        <effectRange>400</effectRange>
-        <attributeType>FIRE</attributeType>
-        <attributeValue>20</attributeValue>
-        <hitTime>1080</hitTime>
-        <magicLvl>81</magicLvl>
-        <mpConsume>80</mpConsume>
-        <nextAction>ATTACK</nextAction>
-        <operateType>A1</operateType>
-        <reuseDelay>13000</reuseDelay>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <targetType>ENEMY</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="PhysicalAttack">
-                <power>2156</power>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="6045" toLevel="1" name="Presentation - Fortune Bug">
-        <hitTime>2000</hitTime>
-        <magicLvl>85</magicLvl>
-        <operateType>A1</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="6046" toLevel="14" name="Piercing Attack">
-        <!-- A powerful stab pierces the target. -->
-        <castRange>40</castRange>
-        <effectPoint>
-            <value level="1">-136</value>
-            <value level="2">-202</value>
-            <value level="3">-283</value>
-            <value level="4">-377</value>
-            <value level="5">-475</value>
-            <value level="6">-564</value>
-            <value level="7">-633</value>
-            <value level="8">-644</value>
-            <value level="9">-653</value>
-            <value level="10">-660</value>
-            <value level="11">-664</value>
-            <value level="12">-667</value>
-            <value level="13">-671</value>
-            <value level="14">-674</value>
-        </effectPoint>
-        <effectRange>400</effectRange>
-        <hitTime>1000</hitTime>
-        <magicLvl>
-            <value level="1">10</value>
-            <value level="2">20</value>
-            <value level="3">30</value>
-            <value level="4">40</value>
-            <value level="5">50</value>
-            <value level="6">60</value>
-            <value level="7">70</value>
-            <value level="8">72</value>
-            <value level="9">74</value>
-            <value level="10">76</value>
-            <value level="11">77</value>
-            <value level="12">78</value>
-            <value level="13">79</value>
-            <value level="14">80</value>
-        </magicLvl>
-        <mpConsume>
-            <value level="1">13</value>
-            <value level="2">20</value>
-            <value level="3">28</value>
-            <value level="4">38</value>
-            <value level="5">50</value>
-            <value level="6">61</value>
-            <value level="7">71</value>
-            <value level="8">73</value>
-            <value level="9">75</value>
-            <value level="10">77</value>
-            <value level="11">78</value>
-            <value level="12">78</value>
-            <value level="13">79</value>
-            <value level="14">80</value>
-        </mpConsume>
-        <operateType>A1</operateType>
-        <reuseDelay>1000</reuseDelay>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <targetType>ENEMY</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="PhysicalAttack">
-                <power>
-                    <value level="1">136</value>
-                    <value level="2">313</value>
-                    <value level="3">655</value>
-                    <value level="4">1248</value>
-                    <value level="5">2163</value>
-                    <value level="6">3407</value>
-                    <value level="7">4877</value>
-                    <value level="8">5179</value>
-                    <value level="9">5478</value>
-                    <value level="10">5772</value>
-                    <value level="11">5917</value>
-                    <value level="12">6059</value>
-                    <value level="13">6198</value>
-                    <value level="14">6334</value>
-                </power>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="6047" toLevel="14" name="Whirlwind">
-        <!-- Caster spins rapidly, targeting nearby enemies. -->
-        <affectLimit>5-12</affectLimit>
-        <affectRange>200</affectRange>
-        <effectPoint>
-            <value level="1">-273</value>
-            <value level="2">-405</value>
-            <value level="3">-568</value>
-            <value level="4">-756</value>
-            <value level="5">-951</value>
-            <value level="6">-1130</value>
-            <value level="7">-1268</value>
-            <value level="8">-1289</value>
-            <value level="9">-1307</value>
-            <value level="10">-1322</value>
-            <value level="11">-1330</value>
-            <value level="12">-1336</value>
-            <value level="13">-1343</value>
-            <value level="14">-1349</value>
-        </effectPoint>
-        <hitTime>2000</hitTime>
-        <magicLvl>
-            <value level="1">10</value>
-            <value level="2">20</value>
-            <value level="3">30</value>
-            <value level="4">40</value>
-            <value level="5">50</value>
-            <value level="6">60</value>
-            <value level="7">70</value>
-            <value level="8">72</value>
-            <value level="9">74</value>
-            <value level="10">76</value>
-            <value level="11">77</value>
-            <value level="12">78</value>
-            <value level="13">79</value>
-            <value level="14">80</value>
-        </magicLvl>
-        <mpConsume>
-            <value level="1">25</value>
-            <value level="2">40</value>
-            <value level="3">56</value>
-            <value level="4">76</value>
-            <value level="5">99</value>
-            <value level="6">121</value>
-            <value level="7">142</value>
-            <value level="8">146</value>
-            <value level="9">150</value>
-            <value level="10">153</value>
-            <value level="11">155</value>
-            <value level="12">156</value>
-            <value level="13">158</value>
-            <value level="14">159</value>
-        </mpConsume>
-        <operateType>A1</operateType>
-        <reuseDelay>2000</reuseDelay>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <targetType>SELF</targetType>
-        <affectScope>POINT_BLANK</affectScope>
-        <affectObject>NOT_FRIEND</affectObject>
-        <effects>
-            <effect name="PhysicalAttack">
-                <power>
-                    <value level="1">91</value>
-                    <value level="2">209</value>
-                    <value level="3">437</value>
-                    <value level="4">832</value>
-                    <value level="5">1442</value>
-                    <value level="6">2271</value>
-                    <value level="7">3251</value>
-                    <value level="8">3452</value>
-                    <value level="9">3652</value>
-                    <value level="10">3848</value>
-                    <value level="11">3944</value>
-                    <value level="12">4039</value>
-                    <value level="13">4132</value>
-                    <value level="14">4223</value>
-                </power>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="6048" toLevel="14" name="Lance Smash">
-        <!-- Flourishes a lance and frontally attacks enemies. -->
-        <affectLimit>5-15</affectLimit>
-        <castRange>40</castRange>
-        <effectPoint>
-            <value level="1">-273</value>
-            <value level="2">-405</value>
-            <value level="3">-568</value>
-            <value level="4">-756</value>
-            <value level="5">-951</value>
-            <value level="6">-1130</value>
-            <value level="7">-1268</value>
-            <value level="8">-1289</value>
-            <value level="9">-1307</value>
-            <value level="10">-1322</value>
-            <value level="11">-1330</value>
-            <value level="12">-1336</value>
-            <value level="13">-1343</value>
-            <value level="14">-1349</value>
-        </effectPoint>
-        <effectRange>400</effectRange>
-        <fanRange>0;0;300;90</fanRange>
-        <hitTime>2000</hitTime>
-        <magicLvl>
-            <value level="1">10</value>
-            <value level="2">20</value>
-            <value level="3">30</value>
-            <value level="4">40</value>
-            <value level="5">50</value>
-            <value level="6">60</value>
-            <value level="7">70</value>
-            <value level="8">72</value>
-            <value level="9">74</value>
-            <value level="10">76</value>
-            <value level="11">77</value>
-            <value level="12">78</value>
-            <value level="13">79</value>
-            <value level="14">80</value>
-        </magicLvl>
-        <mpConsume>
-            <value level="1">25</value>
-            <value level="2">40</value>
-            <value level="3">56</value>
-            <value level="4">76</value>
-            <value level="5">99</value>
-            <value level="6">121</value>
-            <value level="7">142</value>
-            <value level="8">146</value>
-            <value level="9">150</value>
-            <value level="10">153</value>
-            <value level="11">155</value>
-            <value level="12">156</value>
-            <value level="13">158</value>
-            <value level="14">159</value>
-        </mpConsume>
-        <operateType>A1</operateType>
-        <reuseDelay>2000</reuseDelay>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <targetType>ENEMY</targetType>
-        <affectScope>FAN</affectScope>
-        <affectObject>NOT_FRIEND</affectObject>
-        <effects>
-            <effect name="PhysicalAttack">
-                <power>
-                    <value level="1">91</value>
-                    <value level="2">209</value>
-                    <value level="3">437</value>
-                    <value level="4">832</value>
-                    <value level="5">1442</value>
-                    <value level="6">2271</value>
-                    <value level="7">3251</value>
-                    <value level="8">3452</value>
-                    <value level="9">3652</value>
-                    <value level="10">3848</value>
-                    <value level="11">3944</value>
-                    <value level="12">4039</value>
-                    <value level="13">4132</value>
-                    <value level="14">4223</value>
-                </power>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="6049" toLevel="4" name="Battle Cry">
-        <!-- Utters a battle cry that increases one's own P. Atk., P. Def. and M. Def. -->
-        <icon>icon.action117</icon>
-        <abnormalLvl>
-            <value level="1">1</value>
-            <value level="2">2</value>
-            <value level="3">3</value>
-            <value level="4">4</value>
-        </abnormalLvl>
-        <abnormalTime>600</abnormalTime>
-        <abnormalType>MULTI_BUFF</abnormalType>
-        <coolTime>500</coolTime>
-        <effectPoint>100</effectPoint>
-        <hitTime>1000</hitTime>
-        <magicLvl>
-            <value level="1">50</value>
-            <value level="2">70</value>
-            <value level="3">75</value>
-            <value level="4">80</value>
-        </magicLvl>
-        <mpConsume>
-            <value level="1">45</value>
-            <value level="2">65</value>
-            <value level="3">69</value>
-            <value level="4">72</value>
-        </mpConsume>
-        <operateType>A2</operateType>
-        <reuseDelay>6000</reuseDelay>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <specialLevel>-1</specialLevel>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="PAtk">
-                <amount>
-                    <value level="1">5</value>
-                    <value level="2">10</value>
-                    <value level="3">20</value>
-                    <value level="4">30</value>
-                </amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MagicalDefence">
-                <amount>
-                    <value level="1">5</value>
-                    <value level="2">10</value>
-                    <value level="3">20</value>
-                    <value level="4">30</value>
-                </amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PhysicalDefence">
-                <amount>
-                    <value level="1">5</value>
-                    <value level="2">10</value>
-                    <value level="3">20</value>
-                    <value level="4">30</value>
-                </amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="6050" toLevel="14" name="Power Smash">
-        <!-- Powerfully strikes a target. -->
-        <castRange>40</castRange>
-        <effectPoint>
-            <value level="1">-136</value>
-            <value level="2">-202</value>
-            <value level="3">-283</value>
-            <value level="4">-377</value>
-            <value level="5">-475</value>
-            <value level="6">-564</value>
-            <value level="7">-633</value>
-            <value level="8">-644</value>
-            <value level="9">-653</value>
-            <value level="10">-660</value>
-            <value level="11">-664</value>
-            <value level="12">-667</value>
-            <value level="13">-671</value>
-            <value level="14">-674</value>
-        </effectPoint>
-        <effectRange>400</effectRange>
-        <hitTime>1000</hitTime>
-        <magicLvl>
-            <value level="1">10</value>
-            <value level="2">20</value>
-            <value level="3">30</value>
-            <value level="4">40</value>
-            <value level="5">50</value>
-            <value level="6">60</value>
-            <value level="7">70</value>
-            <value level="8">72</value>
-            <value level="9">74</value>
-            <value level="10">76</value>
-            <value level="11">77</value>
-            <value level="12">78</value>
-            <value level="13">79</value>
-            <value level="14">80</value>
-        </magicLvl>
-        <mpConsume>
-            <value level="1">13</value>
-            <value level="2">20</value>
-            <value level="3">28</value>
-            <value level="4">38</value>
-            <value level="5">50</value>
-            <value level="6">61</value>
-            <value level="7">71</value>
-            <value level="8">73</value>
-            <value level="9">75</value>
-            <value level="10">77</value>
-            <value level="11">78</value>
-            <value level="12">78</value>
-            <value level="13">79</value>
-            <value level="14">80</value>
-        </mpConsume>
-        <operateType>A1</operateType>
-        <reuseDelay>1000</reuseDelay>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <targetType>ENEMY</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="PhysicalAttack">
-                <power>
-                    <value level="1">136</value>
-                    <value level="2">313</value>
-                    <value level="3">655</value>
-                    <value level="4">1248</value>
-                    <value level="5">2163</value>
-                    <value level="6">3407</value>
-                    <value level="7">4877</value>
-                    <value level="8">5179</value>
-                    <value level="9">5478</value>
-                    <value level="10">5772</value>
-                    <value level="11">5917</value>
-                    <value level="12">6059</value>
-                    <value level="13">6198</value>
-                    <value level="14">6334</value>
-                </power>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="6051" toLevel="14" name="Energy Burst">
-        <!-- Fires energy gathered in one's body at the enemies to the front. -->
-        <affectLimit>5-15</affectLimit>
-        <effectPoint>
-            <value level="1">-273</value>
-            <value level="2">-405</value>
-            <value level="3">-568</value>
-            <value level="4">-756</value>
-            <value level="5">-951</value>
-            <value level="6">-1130</value>
-            <value level="7">-1268</value>
-            <value level="8">-1289</value>
-            <value level="9">-1307</value>
-            <value level="10">-1322</value>
-            <value level="11">-1330</value>
-            <value level="12">-1336</value>
-            <value level="13">-1343</value>
-            <value level="14">-1349</value>
-        </effectPoint>
-        <fanRange>0;180;600;400</fanRange>
-        <hitTime>3000</hitTime>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <magicLvl>
-            <value level="1">10</value>
-            <value level="2">20</value>
-            <value level="3">30</value>
-            <value level="4">40</value>
-            <value level="5">50</value>
-            <value level="6">60</value>
-            <value level="7">70</value>
-            <value level="8">72</value>
-            <value level="9">74</value>
-            <value level="10">76</value>
-            <value level="11">77</value>
-            <value level="12">78</value>
-            <value level="13">79</value>
-            <value level="14">80</value>
-        </magicLvl>
-        <mpConsume>
-            <value level="1">19</value>
-            <value level="2">31</value>
-            <value level="3">42</value>
-            <value level="4">56</value>
-            <value level="5">72</value>
-            <value level="6">88</value>
-            <value level="7">104</value>
-            <value level="8">106</value>
-            <value level="9">109</value>
-            <value level="10">111</value>
-            <value level="11">112</value>
-            <value level="12">114</value>
-            <value level="13">115</value>
-            <value level="14">116</value>
-        </mpConsume>
-        <operateType>A1</operateType>
-        <reuseDelay>5000</reuseDelay>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <targetType>SELF</targetType>
-        <affectScope>SQUARE_PB</affectScope>
-        <affectObject>NOT_FRIEND</affectObject>
-        <effects>
-            <effect name="MagicalAttack">
-                <power>
-                    <value level="1">17</value>
-                    <value level="2">25</value>
-                    <value level="3">37</value>
-                    <value level="4">51</value>
-                    <value level="5">67</value>
-                    <value level="6">84</value>
-                    <value level="7">101</value>
-                    <value level="8">104</value>
-                    <value level="9">107</value>
-                    <value level="10">110</value>
-                    <value level="11">111</value>
-                    <value level="12">113</value>
-                    <value level="13">114</value>
-                    <value level="14">115</value>
-                </power>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="6052" toLevel="14" name="Shock Wave">
-        <!-- Fires energy gathered in one's body at the enemies to the front. -->
-        <castRange>900</castRange>
-        <effectPoint>
-            <value level="1">-273</value>
-            <value level="2">-405</value>
-            <value level="3">-568</value>
-            <value level="4">-756</value>
-            <value level="5">-951</value>
-            <value level="6">-1130</value>
-            <value level="7">-1268</value>
-            <value level="8">-1289</value>
-            <value level="9">-1307</value>
-            <value level="10">-1322</value>
-            <value level="11">-1330</value>
-            <value level="12">-1336</value>
-            <value level="13">-1343</value>
-            <value level="14">-1349</value>
-        </effectPoint>
-        <effectRange>1200</effectRange>
-        <hitTime>3000</hitTime>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <magicLvl>
-            <value level="1">10</value>
-            <value level="2">20</value>
-            <value level="3">30</value>
-            <value level="4">40</value>
-            <value level="5">50</value>
-            <value level="6">60</value>
-            <value level="7">70</value>
-            <value level="8">72</value>
-            <value level="9">74</value>
-            <value level="10">76</value>
-            <value level="11">77</value>
-            <value level="12">78</value>
-            <value level="13">79</value>
-            <value level="14">80</value>
-        </magicLvl>
-        <mpConsume>
-            <value level="1">19</value>
-            <value level="2">31</value>
-            <value level="3">42</value>
-            <value level="4">56</value>
-            <value level="5">72</value>
-            <value level="6">88</value>
-            <value level="7">104</value>
-            <value level="8">106</value>
-            <value level="9">109</value>
-            <value level="10">111</value>
-            <value level="11">112</value>
-            <value level="12">114</value>
-            <value level="13">115</value>
-            <value level="14">116</value>
-        </mpConsume>
-        <operateType>A1</operateType>
-        <reuseDelay>5000</reuseDelay>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <targetType>ENEMY</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="MagicalAttack">
-                <power>
-                    <value level="1">17</value>
-                    <value level="2">25</value>
-                    <value level="3">37</value>
-                    <value level="4">51</value>
-                    <value level="5">67</value>
-                    <value level="6">84</value>
-                    <value level="7">101</value>
-                    <value level="8">104</value>
-                    <value level="9">107</value>
-                    <value level="10">110</value>
-                    <value level="11">111</value>
-                    <value level="12">113</value>
-                    <value level="13">114</value>
-                    <value level="14">115</value>
-                </power>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="6053" toLevel="4" name="Howl">
-        <!-- Amplifies one's own abilities with a loud roar, raising P. Atk., P. Def., M. Atk., and M. Def. -->
-        <icon>icon.action117</icon>
-        <abnormalLvl>
-            <value level="1">1</value>
-            <value level="2">2</value>
-            <value level="3">3</value>
-            <value level="4">4</value>
-        </abnormalLvl>
-        <abnormalTime>600</abnormalTime>
-        <abnormalType>MULTI_BUFF</abnormalType>
-        <coolTime>500</coolTime>
-        <effectPoint>100</effectPoint>
-        <hitTime>1000</hitTime>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <magicLvl>
-            <value level="1">50</value>
-            <value level="2">70</value>
-            <value level="3">75</value>
-            <value level="4">80</value>
-        </magicLvl>
-        <mpConsume>
-            <value level="1">74</value>
-            <value level="2">104</value>
-            <value level="3">109</value>
-            <value level="4">116</value>
-        </mpConsume>
-        <mpInitialConsume>
-            <value level="1">18</value>
-            <value level="2">26</value>
-            <value level="3">28</value>
-            <value level="4">29</value>
-        </mpInitialConsume>
-        <operateType>A2</operateType>
-        <reuseDelay>6000</reuseDelay>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <specialLevel>-1</specialLevel>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="PAtk">
-                <amount>
-                    <value level="1">5</value>
-                    <value level="2">10</value>
-                    <value level="3">20</value>
-                    <value level="4">30</value>
-                </amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MAtk">
-                <amount>
-                    <value level="1">5</value>
-                    <value level="2">10</value>
-                    <value level="3">20</value>
-                    <value level="4">30</value>
-                </amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MagicalDefence">
-                <amount>
-                    <value level="1">5</value>
-                    <value level="2">10</value>
-                    <value level="3">20</value>
-                    <value level="4">30</value>
-                </amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PhysicalDefence">
-                <amount>
-                    <value level="1">5</value>
-                    <value level="2">10</value>
-                    <value level="3">20</value>
-                    <value level="4">30</value>
-                </amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="6054" toLevel="1" name="Switch State">
-        <!-- The pet's condition changes. -->
-        <magicLvl>85</magicLvl>
-        <operateType>T</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <targetType>SELF</targetType>
-    </skill>
-    <skill id="6055" toLevel="1" name="Report Status">
-        <!-- You are under suspicion of using this program illegally. Your actions have been restricted. -->
-        <icon>icon.skill6038</icon>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>7200</abnormalTime>
-        <abnormalType>BOT_PENALTY</abnormalType>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>-1</magicLvl>
-        <operateType>A2</operateType>
-        <stayAfterDeath>True</stayAfterDeath>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <specialLevel>-1</specialLevel>
-        <hitCancelTime>0</hitCancelTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="BlockAction">
-                <blockedActions>-2</blockedActions>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="6056" toLevel="1" name="Report Status">
-        <!-- You are under suspicion of using this program illegally. Your actions have been restricted. -->
-        <icon>icon.skill6038</icon>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>10800</abnormalTime>
-        <abnormalType>BOT_PENALTY</abnormalType>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>-1</magicLvl>
-        <operateType>A2</operateType>
-        <stayAfterDeath>True</stayAfterDeath>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <specialLevel>-1</specialLevel>
-        <hitCancelTime>0</hitCancelTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="BlockAction">
-                <blockedActions>-2</blockedActions>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="6057" toLevel="1" name="Report Status">
-        <!-- You are under suspicion of using this program illegally. You are no longer permitted to move. -->
-        <icon>icon.skill6038</icon>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>7200</abnormalTime>
-        <abnormalType>BOT_PENALTY</abnormalType>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>-1</magicLvl>
-        <operateType>A2</operateType>
-        <stayAfterDeath>True</stayAfterDeath>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <specialLevel>-1</specialLevel>
-        <hitCancelTime>0</hitCancelTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="Speed">
-                <amount>-100</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="6058" toLevel="1" name="Report Status">
-        <!-- You are under suspicion of using this program illegally. You are no longer permitted to move. -->
-        <icon>icon.skill6038</icon>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>7200</abnormalTime>
-        <abnormalType>BOT_PENALTY</abnormalType>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>-1</magicLvl>
-        <operateType>A2</operateType>
-        <stayAfterDeath>True</stayAfterDeath>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <specialLevel>-1</specialLevel>
-        <hitCancelTime>0</hitCancelTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="Speed">
-                <amount>-100</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="6059" toLevel="1" name="Counter Critical">
-        <!-- Increases P. Critical Damage. -->
-        <icon>icon.skill1542</icon>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>8</abnormalTime>
-        <abnormalType>COUNTER_CRITICAL_TRIGGER</abnormalType>
-        <isTriggeredSkill>true</isTriggeredSkill>
-        <magicLvl>80</magicLvl>
-        <operateType>A2</operateType>
-        <reuseDelay>15000</reuseDelay>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <isMagic>4</isMagic>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="CriticalDamage">
-                <amount>100</amount>
-                <mode>PER</mode>
-                <weaponType>
-                    <item>SWORD</item>
-                    <item>BLUNT</item>
-                    <item>DAGGER</item>
-                    <item>DUAL_DAGGER</item>
-                    <item>DUAL</item>
-                    <item>FIST</item>
-                    <item>SPEAR</item>
-                    <item>ANCIENT_SWORD</item>
-                    <item>RAPIER</item>
-                </weaponType>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="6060" toLevel="1" name="Great Fury">
-        <!-- Atk. Spd. +30% for 8 sec. -->
-        <icon>icon.skill1543</icon>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>8</abnormalTime>
-        <abnormalType>ATTACK_TIME_DOWN_SPECIAL</abnormalType>
-        <affectRange>1000</affectRange>
-        <isTriggeredSkill>true</isTriggeredSkill>
-        <magicLvl>80</magicLvl>
-        <operateType>A2</operateType>
-        <reuseDelay>15000</reuseDelay>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <isMagic>4</isMagic>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <affectObject>FRIEND</affectObject>
-        <effects>
-            <effect name="PhysicalAttackSpeed">
-                <amount>50</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="6061" toLevel="1" name="Decrease Weight">
-        <!-- Weight penalty interval +9000, and the number of items an individual can possess increases. -->
-        <icon>icon.skill1257</icon>
-        <magicLvl>52</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6062" toLevel="1" name="Raid Boss (Lv. 99)">
-        <!-- An evil undead version of the elder of twin knights who were famous warriors in Gracia before the fall. -->
-        <icon>icon.skillraid</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6063" toLevel="1" name="Raid Boss (Lv. 99)">
-        <!-- An evil undead version of the younger of twin knights who were famous warriors in Gracia before the fall. -->
-        <icon>icon.skillraid</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6064" toLevel="1" name="Raid Boss (Lv. 81)">
-        <!-- An undead version of a famous healer in Gracia before the fall. It served Ekimus and later aspired to rule the Hall of Erosion. -->
-        <icon>icon.skillraid</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6065" toLevel="1" name="Raid Boss (Lv. 81)">
-        <!-- An undead version of an infamous serial killer infamous throughout Gracia before the fall. He attempted to preserve his life by threatening Cohemenes, but was deceived and became an undead slave. -->
-        <icon>icon.skillraid</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6066" toLevel="1" name="Raid Boss (Lv. 81)">
-        <!-- Steals souls in order to secrete matter from the Seed of Infinity. These Soul Devourers eventually lose all capacity for thought, driven only by their unholy appetite. Thy particularly favor souls that suffered a horrific and agonizing death. -->
-        <icon>icon.skillraid</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6067" toLevel="1" name="Raid Boss (Lv. 81)">
-        <!-- An undead version of the royal astrologer in Gracia before the fall. While alive, his intentionally false prophecy opened the kingdom to the influence of Ekimus and the Seed of Infinity. -->
-        <icon>icon.skillraid</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6068" toLevel="1" name="Raid Boss (Lv. 81)">
-        <!-- An undead version of a former Gracian high priest. Obsessed with attaining eternal life, he played a pivotal role in bringing the Seed of Infinity to the capital. He styled himself the 1st priest of Ekimus. -->
-        <icon>icon.skillraid</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6069" toLevel="1" name="Raid Boss (Lv. 81)">
-        <!-- An exceptionally efficient pre-fall Gracian provincial official infamous for his brutal interrogation methods. He was transformed into undead by the Seed of Infinity. -->
-        <icon>icon.skillraid</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6070" toLevel="1" name="Raid Boss (Lv. 81)">
-        <!-- In his bid for power, he committed atrocities in Gracia rarely seen before the fall. Because of his thirst for violence and bloodshed, he was transformed into undead by the Seed of Infinity. -->
-        <icon>icon.skillraid</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6071" toLevel="1" name="Raid Boss (Lv. 81)">
-        <!-- This undead monster was once a powerful warlord on the frontier of pre-fall Gracia. He believed that the enemy's power was contained in their blood, and so he killed countless prisoners in order to absorb their strength. He was transformed into undead by the Seed of Infinity. -->
-        <icon>icon.skillraid</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6072" toLevel="1" name="Raid Boss (Lv. 81)">
-        <!-- This undead monster was once of the most powerful warlords in Gracia. He gained popularity among the fallen nobles for mercilessly carrying out his missions, whatever the cost. He was also a secret worshipper of the Goddess of Death. -->
-        <icon>icon.skillraid</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6073" toLevel="1" name="Raid Boss (Lv. 81)">
-        <!-- This undead monster was created from the rage and pain of prisoners tortured and killed in ancient Gracia. -->
-        <icon>icon.skillraid</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6074" toLevel="1" name="Raid Boss (Lv. 81)">
-        <!-- This undead monster was created to protect a sacred burial ground for nobles in ancient Gracia. -->
-        <icon>icon.skillraid</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6075" toLevel="1" name="Raid Boss (Lv. 81)">
-        <!-- This undead monster was created to prevent the corpses left on the battlegrounds of ancient Gracia from being raised. -->
-        <icon>icon.skillraid</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6076" toLevel="1" name="Raid Boss (Lv. 81)">
-        <!-- This undead monster fed on the souls of ancient Gracians. It awoke from its long slumber though the magic of Ekimus. -->
-        <icon>icon.skillraid</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6077" toLevel="1" name="Raid Boss (Lv. 81)">
-        <!-- This undead monster fed on the souls of ancient Gracians. It awoke from its long slumber though the magic of Ekimus. -->
-        <icon>icon.skillraid</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6078" toLevel="1" name="Raid Boss (Lv. 81)">
-        <!-- This ancient undead monster awoke through the M. Atk. of the Seed of Infinity. Once it was a powerful Gracian warrior, but now it lacks any vestige of its former self. -->
-        <icon>icon.skillraid</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6079" toLevel="1" name="Raid Boss (Lv. 81)">
-        <!-- This ancient undead monster awoke through the M. Atk. of the Seed of Infinity. Once it was a powerful Gracian warrior, but now it lacks any vestige of its former self. -->
-        <icon>icon.skillraid</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6080" toLevel="1" name="Raid Boss (Lv. 81)">
-        <!-- This ancient undead monster awoke through the M. Atk. of the Seed of Infinity. Once it was a powerful Gracian warrior, but now it lacks any vestige of its former self. -->
-        <icon>icon.skillraid</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6081" toLevel="1" name="Raid Boss (Lv. 81)">
-        <!-- This ancient undead monster awoke through the M. Atk. of the Seed of Infinity. Once it was a powerful Gracian warrior, but now it lacks any vestige of its former self. -->
-        <icon>icon.skillraid</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6082" toLevel="1" name="Raid Boss (Lv. 81)">
-        <!-- This ancient undead monster awoke through the M. Atk. of the Seed of Infinity. Once it was a powerful Gracian warrior, but now it lacks any vestige of its former self. -->
-        <icon>icon.skillraid</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6083" toLevel="1" name="Raid Boss (Lv. 81)">
-        <!-- This ancient undead monster awoke through the M. Atk. of the Seed of Infinity. Once it was a powerful Gracian warrior, but now it lacks any vestige of its former self. -->
-        <icon>icon.skillraid</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6084" toLevel="1" name="Raid Boss (Lv. 80)">
-        <!-- Lord of ancient Hwuh whose hand was imbued with Demon power in return for not taking action while Hwuh was being conquered by the Seed of Infinity. He now has the power to control Aurabirds and has become a Master Rider. -->
-        <icon>icon.skillraid</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6085" toLevel="1" name="Raid Boss (Lv. 80)">
-        <!-- This ill-tempered king of the birds in Gracia has become even more violent after losing its sky nest to the Storm Dragon Lindvior. -->
-        <icon>icon.skillraid</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6086" toLevel="1" name="Raid Boss (Lv. 80)">
-        <!-- One of the ladies-in-waiting of the Banshee Queen, she became close to Ekimus and eventually was transformed into a Banshee Queen herself. -->
-        <icon>icon.skillraid</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6087" toLevel="1" name="Raid Boss (Lv. 80)">
-        <!-- This Drake originally appeared with the Seed of Destruction. Though one of the children of Skellus, the Dragon of Darkness , it does not serve Tiat. Instead, it watches Tiat's actions for Skellus. -->
-        <icon>icon.skillraid</icon>
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6088" toLevel="1" name="Block Buff">
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="6089" toLevel="1" name="Attack Motion">
-        <coolTime>500</coolTime>
-        <hitTime>3500</hitTime>
-        <magicLvl>1</magicLvl>
-        <operateType>A1</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <castRange>600</castRange>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="6090" toLevel="1" name="Lightning Strike">
-        <!-- The target is paralyzed. -->
-        <icon>icon.skill0279</icon>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>10</abnormalTime>
-        <abnormalType>PARALYZE</abnormalType>
-        <abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
-        <effectPoint>1</effectPoint>
-        <isDebuff>true</isDebuff>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <isTriggeredSkill>true</isTriggeredSkill>
-        <magicLvl>58</magicLvl>
-        <nextAction>ATTACK</nextAction>
-        <operateType>A2</operateType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <trait>PARALYZE</trait>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="BlockActions"/>
-        </effects>
-    </skill>
-    <skill id="6091" toLevel="1" name="Anchor">
-        <!-- The target is paralyzed. -->
-        <icon>icon.skill1170</icon>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>5</abnormalTime>
-        <abnormalType>PARALYZE</abnormalType>
-        <abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
-        <effectPoint>1</effectPoint>
-        <isDebuff>true</isDebuff>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <isTriggeredSkill>true</isTriggeredSkill>
-        <magicLvl>44</magicLvl>
-        <operateType>A2</operateType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <trait>PARALYZE</trait>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="BlockActions"/>
-        </effects>
-    </skill>
-    <skill id="6092" toLevel="1" name="Lightning Shock">
-        <!-- The target is paralyzed. -->
-        <icon>icon.skill0791</icon>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>5</abnormalTime>
-        <abnormalType>PARALYZE</abnormalType>
-        <abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
-        <effectPoint>1</effectPoint>
-        <isDebuff>true</isDebuff>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <isTriggeredSkill>true</isTriggeredSkill>
-        <magicLvl>81</magicLvl>
-        <operateType>A2</operateType>
-        <soulMaxConsumeCount>5</soulMaxConsumeCount>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <trait>PARALYZE</trait>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="BlockActions"/>
-        </effects>
-    </skill>
-    <skill id="6093" toLevel="1" name="Panther Hide">
-        <!-- Allows one to stay hidden. Movement speed -10%. The effect is canceled if any action other than movement is initiated. -->
-        <icon>icon.skill0922</icon>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>30</abnormalTime>
-        <abnormalType>HIDE</abnormalType>
-        <abnormalVisualEffect>STEALTH</abnormalVisualEffect>
-        <effectPoint>679</effectPoint>
-        <magicLvl>78</magicLvl>
-        <mpConsume>42</mpConsume>
-        <operateType>A2</operateType>
-        <removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
-        <removedOnDamage>true</removedOnDamage>
-        <reuseDelay>180000</reuseDelay>
-        <staticReuse>true</staticReuse>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="Hide"/>
-            <effect name="Speed">
-                <amount>-10</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="6094" toLevel="11" name="Panther Cancel">
-        <!-- Cancels multiple enemy buffs. -->
-        <icon>icon.skill6094</icon>
-        <castRange>40</castRange>
-        <effectPoint>-475</effectPoint>
-        <effectRange>400</effectRange>
-        <hitTime>1500</hitTime>
-        <magicLvl>
-            <value level="1">68</value>
-            <value level="2">72</value>
-            <value level="3">76</value>
-            <value level="4">78</value>
-            <value level="5">79</value>
-            <value level="6">80</value>
-            <value level="7">81</value>
-            <value level="8">82</value>
-            <value level="9">83</value>
-            <value level="10">84</value>
-            <value level="11">85</value>
-        </magicLvl>
-        <mpConsume>42</mpConsume>
-        <operateType>A1</operateType>
-        <reuseDelay>60000</reuseDelay>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <targetType>ENEMY_ONLY</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="DispelByCategory">
-                <slot>BUFF</slot>
-                <rate>25</rate>
-                <max>2</max>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="6095" toLevel="15" name="Panther Dark Claw">
-        <!-- Damages the target, decreasing Dark Attack Resistance by $s3 for $s2. -->
-        <icon>icon.skill1445</icon>
-        <abnormalLvl>3</abnormalLvl>
-        <abnormalTime>30</abnormalTime>
-        <abnormalType>ARMOR_UNHOLY</abnormalType>
-        <activateRate>80</activateRate>
-        <basicProperty>MAGIC</basicProperty>
-        <castRange>40</castRange>
-        <effectPoint>-475</effectPoint>
-        <effectRange>400</effectRange>
-        <attributeType>DARK</attributeType>
-        <attributeValue>20</attributeValue>
-        <hitTime>1500</hitTime>
-        <isDebuff>true</isDebuff>
-        <lvlBonusRate>2</lvlBonusRate>
-        <magicLvl>
-            <value level="1">42</value>
-            <value level="2">51</value>
-            <value level="3">60</value>
-            <value level="4">64</value>
-            <value level="5">68</value>
-            <value level="6">72</value>
-            <value level="7">76</value>
-            <value level="8">78</value>
-            <value level="9">79</value>
-            <value level="10">80</value>
-            <value level="11">81</value>
-            <value level="12">82</value>
-            <value level="13">83</value>
-            <value level="14">84</value>
-            <value level="15">85</value>
-        </magicLvl>
-        <mpConsume>42</mpConsume>
-        <operateType>A2</operateType>
-        <reuseDelay>10000</reuseDelay>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <targetType>ENEMY_ONLY</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="PhysicalAttack">
-                <power>
-                    <value level="1">469</value>
-                    <value level="2">758</value>
-                    <value level="3">1136</value>
-                    <value level="4">1327</value>
-                    <value level="5">1525</value>
-                    <value level="6">1727</value>
-                    <value level="7">1925</value>
-                    <value level="8">2020</value>
-                    <value level="9">2067</value>
-                    <value level="10">2112</value>
-                    <value level="11">2156</value>
-                    <value level="12">2200</value>
-                    <value level="13">2241</value>
-                    <value level="14">2282</value>
-                    <value level="15">2320</value>
-                </power>
-            </effect>
-            <effect name="DefenceAttribute">
-                <amount>-25</amount>
-                <attribute>DARK</attribute>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="6096" toLevel="13" name="Panther Fatal Claw">
-        <!-- Panther's P. Atk. is supplemented with $s1 Power added to P. Atk., in a deadly attack. -->
-        <icon>icon.skill6096</icon>
-        <castRange>40</castRange>
-        <coolTime>720</coolTime>
-        <effectPoint>-475</effectPoint>
-        <effectRange>400</effectRange>
-        <hitTime>1080</hitTime>
-        <magicLvl>
-            <value level="1">60</value>
-            <value level="2">64</value>
-            <value level="3">68</value>
-            <value level="4">72</value>
-            <value level="5">76</value>
-            <value level="6">78</value>
-            <value level="7">79</value>
-            <value level="8">80</value>
-            <value level="9">81</value>
-            <value level="10">82</value>
-            <value level="11">83</value>
-            <value level="12">84</value>
-            <value level="13">85</value>
-        </magicLvl>
-        <mpConsume>42</mpConsume>
-        <operateType>A1</operateType>
-        <reuseDelay>8000</reuseDelay>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <targetType>ENEMY</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="FatalBlow">
-                <power>
-                    <value level="1">3408</value>
-                    <value level="2">3980</value>
-                    <value level="3">4575</value>
-                    <value level="4">5180</value>
-                    <value level="5">5773</value>
-                    <value level="6">6060</value>
-                    <value level="7">6199</value>
-                    <value level="8">6335</value>
-                    <value level="9">6468</value>
-                    <value level="10">6598</value>
-                    <value level="11">6723</value>
-                    <value level="12">6844</value>
-                    <value level="13">6960</value>
-                </power>
-                <chanceBoost>200</chanceBoost>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="6097" toLevel="1" name="Scissors">
-        <!-- Scissors. -->
-        <icon>icon.xmas_gawi_i00</icon>
-        <effectPoint>-1</effectPoint>
-        <hitTime>2000</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>1</magicLvl>
-        <operateType>A1</operateType>
-        <reuseDelay>1500</reuseDelay>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>500</effectRange>
-        <castRange>400</castRange>
-        <targetType>ENEMY</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="6098" toLevel="1" name="Rock">
-        <!-- Rock. -->
-        <icon>icon.xmas_bawi_i00</icon>
-        <effectPoint>-1</effectPoint>
-        <hitTime>2000</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>1</magicLvl>
-        <operateType>A1</operateType>
-        <reuseDelay>1500</reuseDelay>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>500</effectRange>
-        <castRange>400</castRange>
-        <targetType>ENEMY</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="6099" toLevel="1" name="Paper">
-        <!-- Paper. -->
-        <icon>icon.xmas_bo_i00</icon>
-        <effectPoint>-1</effectPoint>
-        <hitTime>2000</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>1</magicLvl>
-        <operateType>A1</operateType>
-        <reuseDelay>1500</reuseDelay>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>500</effectRange>
-        <castRange>400</castRange>
-        <targetType>ENEMY</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
+	<skill id="6000" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="83"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6001" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="83"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6002" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="83"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6003" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="83"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6004" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="83"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6005" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="83"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6006" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="83"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6007" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="83"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6008" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="83"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6009" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="83"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6010" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="83"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6011" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="83"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6012" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="83"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6013" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="83"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6014" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="83"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6015" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="83"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6016" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="83"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6017" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="83"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6018" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="83"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6019" name="Searching Master" max-level="1" >
+	<!-- Directly attacks a pet's master or summoner. -->
+		<icon initial="icon.skill6019"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="52"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6020" name="Soul Retain" max-level="1" action="A2" type="MAGIC">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="-1"/>
+			<reuse initial="1000"/>
+			<effect-range initial="-1"/>
+		</attributes>
+		<target />
+		<abnormal type="MA_UP" >
+			<level initial="2"/>
+			<time initial="10800"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="MAGIC_ATTACK" mode="PER">
+				<power initial="6.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+				<power initial="-25.0"/>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+				<power initial="-25.0"/>
+			</stat-modify>
+			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
+				<power initial="-25.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="6021" name="Soul Retain" max-level="1" action="A2" type="MAGIC">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="-1"/>
+			<reuse initial="1000"/>
+			<effect-range initial="-1"/>
+		</attributes>
+		<target />
+		<abnormal type="MA_UP" >
+			<level initial="3"/>
+			<time initial="10800"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="MAGIC_ATTACK" mode="PER">
+				<power initial="9.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+				<power initial="-50.0"/>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+				<power initial="-50.0"/>
+			</stat-modify>
+			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
+				<power initial="-50.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="6022" name="Soul Retain" max-level="1" action="A2" type="MAGIC">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="-1"/>
+			<reuse initial="1000"/>
+			<effect-range initial="-1"/>
+		</attributes>
+		<target />
+		<abnormal type="MA_UP" >
+			<level initial="4"/>
+			<time initial="10800"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="MAGIC_ATTACK" mode="PER">
+				<power initial="12.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+				<power initial="-75.0"/>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+				<power initial="-75.0"/>
+			</stat-modify>
+			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
+				<power initial="-75.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="6023" name="Soul Retain" max-level="1" action="A2" type="MAGIC">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="-1"/>
+			<reuse initial="1000"/>
+			<effect-range initial="-1"/>
+		</attributes>
+		<target />
+		<abnormal type="MA_UP" >
+			<level initial="5"/>
+			<time initial="10800"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="MAGIC_ATTACK" mode="PER">
+				<power initial="15.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+				<power initial="-94.0"/>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+				<power initial="-94.0"/>
+			</stat-modify>
+			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
+				<power initial="-94.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="6025" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="83"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6026" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="83"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6027" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="83"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6028" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="83"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6029" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="83"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6030" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="83"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6031" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="83"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6032" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="83"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6033" name="Treasure Seeker's Betrayal" max-level="1" debuff="true" action="A2">
+	<!-- Carrying this mark of betrayal makes one the target of nearby monsters. -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="76"/>
+			<cast-range initial="1500"/>
+			<effect-point initial="-671"/>
+			<effect-range initial="2000"/>
+			<hit-time initial="-671000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="42"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="STIGMA_A" >
+			<level initial="1"/>
+			<time initial="1200"/>
+			<chance initial="-1"/>
+		</abnormal>
+	</skill>
+	<skill id="6034" name="Freeze" max-level="1" action="A2">
+	<!-- Target cannot move until the match starts. -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="900"/>
+			<reuse initial="6000"/>
+			<effect-point initial="100"/>
+			<effect-range initial="1400"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<abnormal type="INVINCIBILITY" >
+			<level initial="1"/>
+			<time initial="10"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<damage-block block-hp="true" block-mp="false"/>
+			<effect name="DebuffBlock"/>
+			<resist-dispel-by-category category="ALL">
+				<power initial="-100.0"/>
+			</resist-dispel-by-category>
+			<effect name="BlockMove"/>
+			<block-all-actions>
+				<allowed-skills>35016</allowed-skills>
+			</block-all-actions>
+		</effects>
+	</skill>
+	<skill id="6037" name="Soul Unleash" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="80"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6038" name="Report Status" max-level="1" action="A2">
+	<!-- You are under suspicion of using this program illegally. Chatting has been blocked. -->
+		<icon initial="icon.skill6038"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" >
+			<magic-level initial="-1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+		<abnormal type="BOT_PENALTY" >
+			<level initial="1"/>
+			<time initial="600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<effect name="BlockChat"/>
+		</effects>
+	</skill>
+	<skill id="6039" name="Report Status" max-level="1" action="A2">
+	<!-- You are under suspicion of using this program illegally. Party participation has been blocked. -->
+		<icon initial="icon.skill6038"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" >
+			<magic-level initial="-1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+		<abnormal type="BOT_PENALTY" >
+			<level initial="1"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<effect name="BlockParty"/>
+		</effects>
+	</skill>
+	<skill id="6040" name="Report Status" max-level="1" action="A2">
+	<!-- You are under suspicion of using this program illegally. You can be attacked. -->
+		<icon initial="icon.skill6038"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" >
+			<magic-level initial="-1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+		<abnormal type="BOT_PENALTY" >
+			<level initial="1"/>
+			<time initial="300"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<effect name="Flag"/>
+		</effects>
+	</skill>
+	<skill id="6041" name="Phoenix Rush" max-level="1" action="DA1">
+	<!-- Charges the enemy and inflicts damage. -->
+		<icon initial="icon.skill6041"/>
+		<attributes next-action="ATTACK" magic-critical-rate="-5.0" >
+			<magic-level initial="81"/>
+			<cast-range initial="400"/>
+			<reuse initial="30000"/>
+			<cool-time initial="200"/>
+			<effect-point initial="-679"/>
+			<effect-range initial="600"/>
+			<hit-time initial="-679000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="ENEMY" />
+		<effects>
+			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+				<power initial="2372.0"/>
+			</physical-attack>
+		</effects>
+	</skill>
+	<skill id="6042" name="Phoenix Cleanse" max-level="1" action="A1" type="MAGIC">
+	<!-- Cancels the target's de-buff. -->
+		<icon initial="icon.skill6042"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="81"/>
+			<cast-range initial="600"/>
+			<reuse initial="180000"/>
+			<effect-point initial="679"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="679000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana-init initial="12"/>
+			<mana initial="59"/>
+		</consume>
+		<target type="TARGET" />
+		<effects>
+			<dispel-by-category category="DEBUFF" max="5">				<power initial="100.0"/>
+			</dispel-by-category>
+		</effects>
+	</skill>
+	<skill id="6043" name="Phoenix Flame Feather" max-level="1" action="A1" type="MAGIC">
+	<!-- Spreads ring-shaped flames. Power 70. -->
+		<icon initial="icon.skill6043"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="81"/>
+			<cast-range initial="-1"/>
+			<reuse initial="15000"/>
+			<effect-point initial="-340"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-340000"/>
+			<activate-rate initial="-1"/>
+
+			<element type="FIRE" value="20"/>
+		</attributes>
+		<consume>
+			<mana-init initial="22"/>
+			<mana initial="109"/>
+		</consume>
+		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12" />
+		<effects>
+			<magical-attack over-hit="false">
+				<power initial="70.0"/>
+			</magical-attack>
+		</effects>
+	</skill>
+	<skill id="6044" name="Phoenix Flame Beak" max-level="1" action="A1">
+	<!-- Attacks the enemy with a powerful beak. Power 2156. -->
+		<icon initial="icon.skill6044"/>
+		<attributes next-action="ATTACK" magic-critical-rate="-5.0" >
+			<magic-level initial="81"/>
+			<cast-range initial="40"/>
+			<reuse initial="13000"/>
+			<cool-time initial="720"/>
+			<effect-point initial="-343"/>
+			<effect-range initial="400"/>
+			<hit-time initial="-343000"/>
+			<activate-rate initial="-1"/>
+
+			<element type="FIRE" value="20"/>
+		</attributes>
+		<consume>
+			<mana initial="80"/>
+		</consume>
+		<target type="ENEMY" />
+		<effects>
+			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+				<power initial="2156.0"/>
+			</physical-attack>
+		</effects>
+	</skill>
+	<skill id="6045" name="Presentation - Fortune Bug" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6046" name="Piercing Attack" max-level="14" action="A1">
+	<!-- A powerful stab pierces the target. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="10">
+				<value level="2">20</value>
+				<value level="3">30</value>
+				<value level="4">40</value>
+				<value level="5">50</value>
+				<value level="6">60</value>
+				<value level="7">70</value>
+				<value level="8">72</value>
+				<value level="9">74</value>
+				<value level="10">76</value>
+				<value level="11">77</value>
+				<value level="12">78</value>
+				<value level="13">79</value>
+				<value level="14">80</value>
+			</magic-level>
+			<cast-range initial="40"/>
+			<reuse initial="1000"/>
+			<effect-point initial="-136">
+				<value level="2">-202</value>
+				<value level="3">-283</value>
+				<value level="4">-377</value>
+				<value level="5">-475</value>
+				<value level="6">-564</value>
+				<value level="7">-633</value>
+				<value level="8">-644</value>
+				<value level="9">-653</value>
+				<value level="10">-660</value>
+				<value level="11">-664</value>
+				<value level="12">-667</value>
+				<value level="13">-671</value>
+				<value level="14">-674</value>
+			</effect-point>
+			<effect-range initial="400"/>
+			<hit-time initial="-136000">
+				<value level="2">-202000</value>
+				<value level="3">-283000</value>
+				<value level="4">-377000</value>
+				<value level="5">-475000</value>
+				<value level="6">-564000</value>
+				<value level="7">-633000</value>
+				<value level="8">-644000</value>
+				<value level="9">-653000</value>
+				<value level="10">-660000</value>
+				<value level="11">-664000</value>
+				<value level="12">-667000</value>
+				<value level="13">-671000</value>
+				<value level="14">-674000</value>
+			</hit-time>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="13">
+				<value level="2">20</value>
+				<value level="3">28</value>
+				<value level="4">38</value>
+				<value level="5">50</value>
+				<value level="6">61</value>
+				<value level="7">71</value>
+				<value level="8">73</value>
+				<value level="9">75</value>
+				<value level="10">77</value>
+				<value level="11">78</value>
+				<value level="13">79</value>
+				<value level="14">80</value>
+			</mana>
+		</consume>
+		<target type="ENEMY" />
+		<effects>
+			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+				<power initial="136.0">
+					<value level="2">313.0</value>
+					<value level="3">655.0</value>
+					<value level="4">1248.0</value>
+					<value level="5">2163.0</value>
+					<value level="6">3407.0</value>
+					<value level="7">4877.0</value>
+					<value level="8">5179.0</value>
+					<value level="9">5478.0</value>
+					<value level="10">5772.0</value>
+					<value level="11">5917.0</value>
+					<value level="12">6059.0</value>
+					<value level="13">6198.0</value>
+					<value level="14">6334.0</value>
+				</power>
+			</physical-attack>
+		</effects>
+	</skill>
+	<skill id="6047" name="Whirlwind" max-level="14" action="A1">
+	<!-- Caster spins rapidly, targeting nearby enemies. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="10">
+				<value level="2">20</value>
+				<value level="3">30</value>
+				<value level="4">40</value>
+				<value level="5">50</value>
+				<value level="6">60</value>
+				<value level="7">70</value>
+				<value level="8">72</value>
+				<value level="9">74</value>
+				<value level="10">76</value>
+				<value level="11">77</value>
+				<value level="12">78</value>
+				<value level="13">79</value>
+				<value level="14">80</value>
+			</magic-level>
+			<cast-range initial="-1"/>
+			<reuse initial="2000"/>
+			<effect-point initial="-273">
+				<value level="2">-405</value>
+				<value level="3">-568</value>
+				<value level="4">-756</value>
+				<value level="5">-951</value>
+				<value level="6">-1130</value>
+				<value level="7">-1268</value>
+				<value level="8">-1289</value>
+				<value level="9">-1307</value>
+				<value level="10">-1322</value>
+				<value level="11">-1330</value>
+				<value level="12">-1336</value>
+				<value level="13">-1343</value>
+				<value level="14">-1349</value>
+			</effect-point>
+			<effect-range initial="-1"/>
+			<hit-time initial="-273000">
+				<value level="2">-405000</value>
+				<value level="3">-568000</value>
+				<value level="4">-756000</value>
+				<value level="5">-951000</value>
+				<value level="6">-1130000</value>
+				<value level="7">-1268000</value>
+				<value level="8">-1289000</value>
+				<value level="9">-1307000</value>
+				<value level="10">-1322000</value>
+				<value level="11">-1330000</value>
+				<value level="12">-1336000</value>
+				<value level="13">-1343000</value>
+				<value level="14">-1349000</value>
+			</hit-time>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="25">
+				<value level="2">40</value>
+				<value level="3">56</value>
+				<value level="4">76</value>
+				<value level="5">99</value>
+				<value level="6">121</value>
+				<value level="7">142</value>
+				<value level="8">146</value>
+				<value level="9">150</value>
+				<value level="10">153</value>
+				<value level="11">155</value>
+				<value level="12">156</value>
+				<value level="13">158</value>
+				<value level="14">159</value>
+			</mana>
+		</consume>
+		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="5" affect-random="12" />
+		<effects>
+			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+				<power initial="91.0">
+					<value level="2">209.0</value>
+					<value level="3">437.0</value>
+					<value level="4">832.0</value>
+					<value level="5">1442.0</value>
+					<value level="6">2271.0</value>
+					<value level="7">3251.0</value>
+					<value level="8">3452.0</value>
+					<value level="9">3652.0</value>
+					<value level="10">3848.0</value>
+					<value level="11">3944.0</value>
+					<value level="12">4039.0</value>
+					<value level="13">4132.0</value>
+					<value level="14">4223.0</value>
+				</power>
+			</physical-attack>
+		</effects>
+	</skill>
+	<skill id="6048" name="Lance Smash" max-level="14" action="A1">
+	<!-- Flourishes a lance and frontally attacks enemies. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="10">
+				<value level="2">20</value>
+				<value level="3">30</value>
+				<value level="4">40</value>
+				<value level="5">50</value>
+				<value level="6">60</value>
+				<value level="7">70</value>
+				<value level="8">72</value>
+				<value level="9">74</value>
+				<value level="10">76</value>
+				<value level="11">77</value>
+				<value level="12">78</value>
+				<value level="13">79</value>
+				<value level="14">80</value>
+			</magic-level>
+			<cast-range initial="40"/>
+			<reuse initial="2000"/>
+			<effect-point initial="-273">
+				<value level="2">-405</value>
+				<value level="3">-568</value>
+				<value level="4">-756</value>
+				<value level="5">-951</value>
+				<value level="6">-1130</value>
+				<value level="7">-1268</value>
+				<value level="8">-1289</value>
+				<value level="9">-1307</value>
+				<value level="10">-1322</value>
+				<value level="11">-1330</value>
+				<value level="12">-1336</value>
+				<value level="13">-1343</value>
+				<value level="14">-1349</value>
+			</effect-point>
+			<effect-range initial="400"/>
+			<hit-time initial="-273000">
+				<value level="2">-405000</value>
+				<value level="3">-568000</value>
+				<value level="4">-756000</value>
+				<value level="5">-951000</value>
+				<value level="6">-1130000</value>
+				<value level="7">-1268000</value>
+				<value level="8">-1289000</value>
+				<value level="9">-1307000</value>
+				<value level="10">-1322000</value>
+				<value level="11">-1330000</value>
+				<value level="12">-1336000</value>
+				<value level="13">-1343000</value>
+				<value level="14">-1349000</value>
+			</hit-time>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="25">
+				<value level="2">40</value>
+				<value level="3">56</value>
+				<value level="4">76</value>
+				<value level="5">99</value>
+				<value level="6">121</value>
+				<value level="7">142</value>
+				<value level="8">146</value>
+				<value level="9">150</value>
+				<value level="10">153</value>
+				<value level="11">155</value>
+				<value level="12">156</value>
+				<value level="13">158</value>
+				<value level="14">159</value>
+			</mana>
+		</consume>
+		<target type="ENEMY" scope="FAN" object="NOT_FRIEND" affect-min="5" affect-random="15" >
+			<fan-range start-angle="0" radius="300" angle="90"/>
+		</target>
+		<effects>
+			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+				<power initial="91.0">
+					<value level="2">209.0</value>
+					<value level="3">437.0</value>
+					<value level="4">832.0</value>
+					<value level="5">1442.0</value>
+					<value level="6">2271.0</value>
+					<value level="7">3251.0</value>
+					<value level="8">3452.0</value>
+					<value level="9">3652.0</value>
+					<value level="10">3848.0</value>
+					<value level="11">3944.0</value>
+					<value level="12">4039.0</value>
+					<value level="13">4132.0</value>
+					<value level="14">4223.0</value>
+				</power>
+			</physical-attack>
+		</effects>
+	</skill>
+	<skill id="6049" name="Battle Cry" max-level="4" action="A2">
+	<!-- Utters a battle cry that increases one's own P. Atk., P. Def. and M. Def. -->
+		<icon initial="icon.action117"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="50">
+				<value level="2">70</value>
+				<value level="3">75</value>
+				<value level="4">80</value>
+			</magic-level>
+			<cast-range initial="-1"/>
+			<reuse initial="6000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="45">
+				<value level="2">65</value>
+				<value level="3">69</value>
+				<value level="4">72</value>
+			</mana>
+		</consume>
+		<target />
+		<abnormal type="MULTI_BUFF" >
+			<level initial="1">
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+			</level>
+			<time initial="600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+				<power initial="5.0">
+					<value level="2">10.0</value>
+					<value level="3">20.0</value>
+					<value level="4">30.0</value>
+				</power>
+			</stat-modify>
+			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+				<power initial="5.0">
+					<value level="2">10.0</value>
+					<value level="3">20.0</value>
+					<value level="4">30.0</value>
+				</power>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+				<power initial="5.0">
+					<value level="2">10.0</value>
+					<value level="3">20.0</value>
+					<value level="4">30.0</value>
+				</power>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="6050" name="Power Smash" max-level="14" action="A1">
+	<!-- Powerfully strikes a target. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="10">
+				<value level="2">20</value>
+				<value level="3">30</value>
+				<value level="4">40</value>
+				<value level="5">50</value>
+				<value level="6">60</value>
+				<value level="7">70</value>
+				<value level="8">72</value>
+				<value level="9">74</value>
+				<value level="10">76</value>
+				<value level="11">77</value>
+				<value level="12">78</value>
+				<value level="13">79</value>
+				<value level="14">80</value>
+			</magic-level>
+			<cast-range initial="40"/>
+			<reuse initial="1000"/>
+			<effect-point initial="-136">
+				<value level="2">-202</value>
+				<value level="3">-283</value>
+				<value level="4">-377</value>
+				<value level="5">-475</value>
+				<value level="6">-564</value>
+				<value level="7">-633</value>
+				<value level="8">-644</value>
+				<value level="9">-653</value>
+				<value level="10">-660</value>
+				<value level="11">-664</value>
+				<value level="12">-667</value>
+				<value level="13">-671</value>
+				<value level="14">-674</value>
+			</effect-point>
+			<effect-range initial="400"/>
+			<hit-time initial="-136000">
+				<value level="2">-202000</value>
+				<value level="3">-283000</value>
+				<value level="4">-377000</value>
+				<value level="5">-475000</value>
+				<value level="6">-564000</value>
+				<value level="7">-633000</value>
+				<value level="8">-644000</value>
+				<value level="9">-653000</value>
+				<value level="10">-660000</value>
+				<value level="11">-664000</value>
+				<value level="12">-667000</value>
+				<value level="13">-671000</value>
+				<value level="14">-674000</value>
+			</hit-time>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="13">
+				<value level="2">20</value>
+				<value level="3">28</value>
+				<value level="4">38</value>
+				<value level="5">50</value>
+				<value level="6">61</value>
+				<value level="7">71</value>
+				<value level="8">73</value>
+				<value level="9">75</value>
+				<value level="10">77</value>
+				<value level="11">78</value>
+				<value level="13">79</value>
+				<value level="14">80</value>
+			</mana>
+		</consume>
+		<target type="ENEMY" />
+		<effects>
+			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+				<power initial="136.0">
+					<value level="2">313.0</value>
+					<value level="3">655.0</value>
+					<value level="4">1248.0</value>
+					<value level="5">2163.0</value>
+					<value level="6">3407.0</value>
+					<value level="7">4877.0</value>
+					<value level="8">5179.0</value>
+					<value level="9">5478.0</value>
+					<value level="10">5772.0</value>
+					<value level="11">5917.0</value>
+					<value level="12">6059.0</value>
+					<value level="13">6198.0</value>
+					<value level="14">6334.0</value>
+				</power>
+			</physical-attack>
+		</effects>
+	</skill>
+	<skill id="6051" name="Energy Burst" max-level="14" action="A1" type="MAGIC">
+	<!-- Fires energy gathered in one's body at the enemies to the front. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="10">
+				<value level="2">20</value>
+				<value level="3">30</value>
+				<value level="4">40</value>
+				<value level="5">50</value>
+				<value level="6">60</value>
+				<value level="7">70</value>
+				<value level="8">72</value>
+				<value level="9">74</value>
+				<value level="10">76</value>
+				<value level="11">77</value>
+				<value level="12">78</value>
+				<value level="13">79</value>
+				<value level="14">80</value>
+			</magic-level>
+			<cast-range initial="-1"/>
+			<reuse initial="5000"/>
+			<effect-point initial="-273">
+				<value level="2">-405</value>
+				<value level="3">-568</value>
+				<value level="4">-756</value>
+				<value level="5">-951</value>
+				<value level="6">-1130</value>
+				<value level="7">-1268</value>
+				<value level="8">-1289</value>
+				<value level="9">-1307</value>
+				<value level="10">-1322</value>
+				<value level="11">-1330</value>
+				<value level="12">-1336</value>
+				<value level="13">-1343</value>
+				<value level="14">-1349</value>
+			</effect-point>
+			<effect-range initial="-1"/>
+			<hit-time initial="-273000">
+				<value level="2">-405000</value>
+				<value level="3">-568000</value>
+				<value level="4">-756000</value>
+				<value level="5">-951000</value>
+				<value level="6">-1130000</value>
+				<value level="7">-1268000</value>
+				<value level="8">-1289000</value>
+				<value level="9">-1307000</value>
+				<value level="10">-1322000</value>
+				<value level="11">-1330000</value>
+				<value level="12">-1336000</value>
+				<value level="13">-1343000</value>
+				<value level="14">-1349000</value>
+			</hit-time>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="24">
+				<value level="2">39</value>
+				<value level="3">53</value>
+				<value level="4">70</value>
+				<value level="5">90</value>
+				<value level="6">110</value>
+				<value level="7">130</value>
+				<value level="8">133</value>
+				<value level="9">137</value>
+				<value level="10">139</value>
+				<value level="11">140</value>
+				<value level="12">143</value>
+				<value level="13">144</value>
+				<value level="14">145</value>
+			</mana>
+		</consume>
+		<target scope="SQUARE_PB" object="NOT_FRIEND" affect-min="5" affect-random="15" >
+			<fan-range start-angle="180" radius="600" angle="400"/>
+		</target>
+		<effects>
+			<magical-attack over-hit="false">
+				<power initial="17.0">
+					<value level="2">25.0</value>
+					<value level="3">37.0</value>
+					<value level="4">51.0</value>
+					<value level="5">67.0</value>
+					<value level="6">84.0</value>
+					<value level="7">101.0</value>
+					<value level="8">104.0</value>
+					<value level="9">107.0</value>
+					<value level="10">110.0</value>
+					<value level="11">111.0</value>
+					<value level="12">113.0</value>
+					<value level="13">114.0</value>
+					<value level="14">115.0</value>
+				</power>
+			</magical-attack>
+		</effects>
+	</skill>
+	<skill id="6052" name="Shock Wave" max-level="14" action="A1" type="MAGIC">
+	<!-- Fires energy gathered in one's body at the enemies to the front. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="10">
+				<value level="2">20</value>
+				<value level="3">30</value>
+				<value level="4">40</value>
+				<value level="5">50</value>
+				<value level="6">60</value>
+				<value level="7">70</value>
+				<value level="8">72</value>
+				<value level="9">74</value>
+				<value level="10">76</value>
+				<value level="11">77</value>
+				<value level="12">78</value>
+				<value level="13">79</value>
+				<value level="14">80</value>
+			</magic-level>
+			<cast-range initial="900"/>
+			<reuse initial="5000"/>
+			<effect-point initial="-273">
+				<value level="2">-405</value>
+				<value level="3">-568</value>
+				<value level="4">-756</value>
+				<value level="5">-951</value>
+				<value level="6">-1130</value>
+				<value level="7">-1268</value>
+				<value level="8">-1289</value>
+				<value level="9">-1307</value>
+				<value level="10">-1322</value>
+				<value level="11">-1330</value>
+				<value level="12">-1336</value>
+				<value level="13">-1343</value>
+				<value level="14">-1349</value>
+			</effect-point>
+			<effect-range initial="1200"/>
+			<hit-time initial="-273000">
+				<value level="2">-405000</value>
+				<value level="3">-568000</value>
+				<value level="4">-756000</value>
+				<value level="5">-951000</value>
+				<value level="6">-1130000</value>
+				<value level="7">-1268000</value>
+				<value level="8">-1289000</value>
+				<value level="9">-1307000</value>
+				<value level="10">-1322000</value>
+				<value level="11">-1330000</value>
+				<value level="12">-1336000</value>
+				<value level="13">-1343000</value>
+				<value level="14">-1349000</value>
+			</hit-time>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="24">
+				<value level="2">39</value>
+				<value level="3">53</value>
+				<value level="4">70</value>
+				<value level="5">90</value>
+				<value level="6">110</value>
+				<value level="7">130</value>
+				<value level="8">133</value>
+				<value level="9">137</value>
+				<value level="10">139</value>
+				<value level="11">140</value>
+				<value level="12">143</value>
+				<value level="13">144</value>
+				<value level="14">145</value>
+			</mana>
+		</consume>
+		<target type="ENEMY" />
+		<effects>
+			<magical-attack over-hit="false">
+				<power initial="17.0">
+					<value level="2">25.0</value>
+					<value level="3">37.0</value>
+					<value level="4">51.0</value>
+					<value level="5">67.0</value>
+					<value level="6">84.0</value>
+					<value level="7">101.0</value>
+					<value level="8">104.0</value>
+					<value level="9">107.0</value>
+					<value level="10">110.0</value>
+					<value level="11">111.0</value>
+					<value level="12">113.0</value>
+					<value level="13">114.0</value>
+					<value level="14">115.0</value>
+				</power>
+			</magical-attack>
+		</effects>
+	</skill>
+	<skill id="6053" name="Howl" max-level="4" action="A2" type="MAGIC">
+	<!-- Amplifies one's own abilities with a loud roar, raising P. Atk., P. Def., M. Atk., and M. Def. -->
+		<icon initial="icon.action117"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="50">
+				<value level="2">70</value>
+				<value level="3">75</value>
+				<value level="4">80</value>
+			</magic-level>
+			<cast-range initial="-1"/>
+			<reuse initial="6000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana-init initial="18">
+				<value level="2">26</value>
+				<value level="3">28</value>
+				<value level="4">29</value>
+			</mana-init>
+			<mana initial="90">
+				<value level="2">130</value>
+				<value level="3">137</value>
+				<value level="4">145</value>
+			</mana>
+		</consume>
+		<target />
+		<abnormal type="MULTI_BUFF" >
+			<level initial="1">
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+			</level>
+			<time initial="600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+				<power initial="5.0">
+					<value level="2">10.0</value>
+					<value level="3">20.0</value>
+					<value level="4">30.0</value>
+				</power>
+			</stat-modify>
+			<stat-modify stat="MAGIC_ATTACK" mode="PER">
+				<power initial="5.0">
+					<value level="2">10.0</value>
+					<value level="3">20.0</value>
+					<value level="4">30.0</value>
+				</power>
+			</stat-modify>
+			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+				<power initial="5.0">
+					<value level="2">10.0</value>
+					<value level="3">20.0</value>
+					<value level="4">30.0</value>
+				</power>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+				<power initial="5.0">
+					<value level="2">10.0</value>
+					<value level="3">20.0</value>
+					<value level="4">30.0</value>
+				</power>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="6054" name="Switch State" max-level="1" action="T">
+	<!-- The pet's condition changes. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6055" name="Report Status" max-level="1" action="A2">
+	<!-- You are under suspicion of using this program illegally. Your actions have been restricted. -->
+		<icon initial="icon.skill6038"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" >
+			<magic-level initial="-1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+		<abnormal type="BOT_PENALTY" >
+			<level initial="1"/>
+			<time initial="7200"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<block-action>
+				<actions>-2</actions>
+			</block-action>
+		</effects>
+	</skill>
+	<skill id="6056" name="Report Status" max-level="1" action="A2">
+	<!-- You are under suspicion of using this program illegally. Your actions have been restricted. -->
+		<icon initial="icon.skill6038"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" >
+			<magic-level initial="-1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+		<abnormal type="BOT_PENALTY" >
+			<level initial="1"/>
+			<time initial="10800"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<block-action>
+				<actions>-2</actions>
+			</block-action>
+		</effects>
+	</skill>
+	<skill id="6057" name="Report Status" max-level="1" action="A2">
+	<!-- You are under suspicion of using this program illegally. You are no longer permitted to move. -->
+		<icon initial="icon.skill6038"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" >
+			<magic-level initial="-1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+		<abnormal type="BOT_PENALTY" >
+			<level initial="1"/>
+			<time initial="7200"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<speed mode="PER">
+				<power initial="-100.0"/>
+			</speed>
+		</effects>
+	</skill>
+	<skill id="6058" name="Report Status" max-level="1" action="A2">
+	<!-- You are under suspicion of using this program illegally. You are no longer permitted to move. -->
+		<icon initial="icon.skill6038"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" >
+			<magic-level initial="-1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+		<abnormal type="BOT_PENALTY" >
+			<level initial="1"/>
+			<time initial="7200"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<speed mode="PER">
+				<power initial="-100.0"/>
+			</speed>
+		</effects>
+	</skill>
+	<skill id="6059" name="Counter Critical" max-level="1" action="A2">
+	<!-- P. Critical Damage is increased by 100%%. -->
+		<icon initial="icon.skill1542"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" triggered="true" >
+			<magic-level initial="80"/>
+			<cast-range initial="-1"/>
+			<reuse initial="15000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<abnormal type="COUNTER_CRITICAL_TRIGGER" >
+			<level initial="1"/>
+			<time initial="8"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+				<power initial="100.0"/>
+				<weapon-type>SWORD BLUNT DAGGER SPEAR FIST DUAL RAPIER ANCIENT_SWORD DUAL_DAGGER </weapon-type>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="6060" name="Great Fury" max-level="1" action="A2">
+	<!-- Increases Atk. Spd. by 30%%. -->
+		<icon initial="icon.skill1543"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" triggered="true" >
+			<magic-level initial="80"/>
+			<cast-range initial="-1"/>
+			<reuse initial="15000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target object="FRIEND" range="1000" />
+		<abnormal type="ATTACK_TIME_DOWN_SPECIAL" >
+			<level initial="1"/>
+			<time initial="8"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+				<power initial="50.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="6061" name="Decrease Weight" max-level="1" >
+	<!-- Weight Penalty Segment +9000, and the number of items an individual can possess increases. -->
+		<icon initial="icon.skill1257"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="52"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6062" name="Lv. 99 Raid Boss" max-level="1" >
+	<!-- An evil undead version of the elder of twin knights who were famous warriors in Gracia before the fall. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6063" name="Lv. 99 Raid Boss" max-level="1" >
+	<!-- An evil undead version of the younger of twin knights who were famous warriors in Gracia before the fall. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6064" name="Lv. 81 Raid Boss" max-level="1" >
+	<!-- An undead version of a famous healer in Gracia before the fall. It served Ekimus and later aspired to rule the Hall of Erosion. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6065" name="Lv. 81 Raid Boss" max-level="1" >
+	<!-- An undead version of an infamous serial killer infamous throughout Gracia before the fall. He attempted to preserve his life by threatening Cohemenes, but was deceived and became an undead slave. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6066" name="Lv. 81 Raid Boss" max-level="1" >
+	<!-- Steals souls in order to secrete matter from the Seed of Infinity. These Soul Devourers eventually lose all capacity for thought, driven only by their unholy appetite. Thy particularly favor souls that suffered a horrific and agonizing death. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6067" name="Lv. 81 Raid Boss" max-level="1" >
+	<!-- An undead version of the royal astrologer in Gracia before the fall. While alive, his intentionally false prophecy opened the kingdom to the influence of Ekimus and the Seed of Infinity. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6068" name="Lv. 81 Raid Boss" max-level="1" >
+	<!-- An undead version of a former Gracian high priest. Obsessed with attaining eternal life, he played a pivotal role in bringing the Seed of Infinity to the capital. He styled himself the 1st priest of Ekimus. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6069" name="Lv. 81 Raid Boss" max-level="1" >
+	<!-- An exceptionally efficient pre-fall Gracian provincial official infamous for his brutal interrogation methods. He was transformed into undead by the Seed of Infinity. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6070" name="Lv. 81 Raid Boss" max-level="1" >
+	<!-- In his bid for power, he committed atrocities in Gracia rarely seen before the fall. Because of his thirst for violence and bloodshed, he was transformed into undead by the Seed of Infinity. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6071" name="Lv. 81 Raid Boss" max-level="1" >
+	<!-- This undead monster was once a powerful warlord on the frontier of pre-fall Gracia. He believed that the enemy's power was contained in their blood, and so he killed countless prisoners in order to absorb their strength. He was transformed into undead by the Seed of Infinity. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6072" name="Lv. 81 Raid Boss" max-level="1" >
+	<!-- This undead monster was once of the most powerful warlords in Gracia. He gained popularity among the fallen nobles for mercilessly carrying out his missions, whatever the cost. He was also a secret worshipper of the Goddess of Death. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6073" name="Lv. 81 Raid Boss" max-level="1" >
+	<!-- This undead monster was created from the rage and pain of prisoners tortured and killed in ancient Gracia. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6074" name="Lv. 81 Raid Boss" max-level="1" >
+	<!-- This undead monster was created to protect a sacred burial ground for nobles in ancient Gracia. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6075" name="Lv. 81 Raid Boss" max-level="1" >
+	<!-- This undead monster was created to prevent the corpses left on the battlegrounds of ancient Gracia from being raised. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6076" name="Lv. 81 Raid Boss" max-level="1" >
+	<!-- This undead monster fed on the souls of ancient Gracians. It awoke from its long slumber though the magic of Ekimus. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6077" name="Lv. 81 Raid Boss" max-level="1" >
+	<!-- This undead monster fed on the souls of ancient Gracians. It awoke from its long slumber though the magic of Ekimus. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6078" name="Lv. 81 Raid Boss" max-level="1" >
+	<!-- This ancient undead monster awoke through the M. Atk. of the Seed of Infinity. Once it was a powerful Gracian warrior, but now it lacks any vestige of its former self. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6079" name="Lv. 81 Raid Boss" max-level="1" >
+	<!-- This ancient undead monster awoke through the M. Atk. of the Seed of Infinity. Once it was a powerful Gracian warrior, but now it lacks any vestige of its former self. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6080" name="Lv. 81 Raid Boss" max-level="1" >
+	<!-- This ancient undead monster awoke through the M. Atk. of the Seed of Infinity. Once it was a powerful Gracian warrior, but now it lacks any vestige of its former self. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6081" name="Lv. 81 Raid Boss" max-level="1" >
+	<!-- This ancient undead monster awoke through the M. Atk. of the Seed of Infinity. Once it was a powerful Gracian warrior, but now it lacks any vestige of its former self. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6082" name="Lv. 81 Raid Boss" max-level="1" >
+	<!-- This ancient undead monster awoke through the M. Atk. of the Seed of Infinity. Once it was a powerful Gracian warrior, but now it lacks any vestige of its former self. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6083" name="Lv. 81 Raid Boss" max-level="1" >
+	<!-- This ancient undead monster awoke through the M. Atk. of the Seed of Infinity. Once it was a powerful Gracian warrior, but now it lacks any vestige of its former self. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6084" name="Lv. 80 Raid Boss" max-level="1" >
+	<!-- Lord of ancient Hwuh whose hand was imbued with Demon power in return for not taking action while Hwuh was being conquered by the Seed of Infinity. He now has the power to control Aurabirds and has become a Master Rider. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6085" name="Lv. 80 Raid Boss" max-level="1" >
+	<!-- This ill-tempered king of the birds in Gracia has become even more violent after losing its sky nest to the Storm Dragon Lindvior. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6086" name="Lv. 80 Raid Boss" max-level="1" >
+	<!-- One of the ladies-in-waiting of the Banshee Queen, she became close to Ekimus and eventually was transformed into a Banshee Queen herself. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6087" name="Lv. 80 Raid Boss" max-level="1" >
+	<!-- This Drake originally appeared with the Seed of Destruction. Though one of the children of Skellus, the Dragon of Darkness , it does not serve Tiat. Instead, it watches Tiat's actions for Skellus. -->
+		<icon initial="icon.skillraid"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6088" name="Block Buff" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="6089" name="Attack Motion" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="600"/>
+			<cool-time initial="500"/>
+			<effect-range initial="1100"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="6090" name="Lightning Strike" max-level="1" debuff="true" action="A2">
+	<!-- The target is paralyzed. -->
+		<icon initial="icon.skill0279"/>
+		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="-5.0" trait="PARALYZE" triggered="true" >
+			<magic-level initial="58"/>
+			<cast-range initial="-1"/>
+			<effect-point initial="1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<abnormal type="PARALYZE" visual="PARALYZE" >
+			<level initial="1"/>
+			<time initial="10"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<block-all-actions/>
+		</effects>
+	</skill>
+	<skill id="6091" name="Anchor" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<!-- The target is paralyzed. -->
+		<icon initial="icon.skill1170"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="PARALYZE" triggered="true" >
+			<magic-level initial="44"/>
+			<cast-range initial="-1"/>
+			<reuse initial="20000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<abnormal type="PARALYZE" visual="PARALYZE" >
+			<level initial="1"/>
+			<time initial="5"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<block-all-actions/>
+		</effects>
+	</skill>
+	<skill id="6092" name="Lightning Shock" max-level="1" debuff="true" action="A2">
+	<!-- The target is paralyzed. -->
+		<icon initial="icon.skill0791"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="PARALYZE" triggered="true" >
+			<magic-level initial="81"/>
+			<cast-range initial="-1"/>
+			<effect-point initial="1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume soul="5"/>
+		<target />
+		<abnormal type="PARALYZE" visual="PARALYZE" >
+			<level initial="1"/>
+			<time initial="5"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<block-all-actions/>
+		</effects>
+	</skill>
+	<skill id="6093" name="Panther Hide" max-level="1" action="A2">
+	<!-- Allows one to stay hidden. Movement speed is decreased by 10%%. The effect is canceled if any action other than movement is initiated. -->
+		<icon initial="icon.skill0922"/>
+		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="-5.0" remove-on-action="true" remove-on-damage="true" >
+			<magic-level initial="78"/>
+			<cast-range initial="-1"/>
+			<reuse initial="180000"/>
+			<effect-point initial="679"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="679000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="42"/>
+		</consume>
+		<target />
+		<abnormal type="HIDE" visual="STEALTH" >
+			<level initial="1"/>
+			<time initial="30"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<effect name="Hide"/>
+			<speed mode="PER">
+				<power initial="-10.0"/>
+			</speed>
+		</effects>
+	</skill>
+	<skill id="6094" name="Panther Cancel" max-level="11" action="A1">
+	<!-- Cancels multiple enemy buffs. -->
+		<icon initial="icon.skill6094"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="68">
+				<value level="2">72</value>
+				<value level="3">76</value>
+				<value level="4">78</value>
+				<value level="5">79</value>
+				<value level="6">80</value>
+				<value level="7">81</value>
+				<value level="8">82</value>
+				<value level="9">83</value>
+				<value level="10">84</value>
+				<value level="11">85</value>
+			</magic-level>
+			<cast-range initial="40"/>
+			<reuse initial="30000">
+				<value level="4">60000</value>
+				<value level="5">30000</value>
+				<value level="6">60000</value>
+				<value level="7">30000</value>
+				<value level="8">60000</value>
+			</reuse>
+			<effect-point initial="-475"/>
+			<effect-range initial="400"/>
+			<hit-time initial="-475000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="42"/>
+		</consume>
+		<target type="ENEMY_ONLY" />
+		<effects>
+			<dispel-by-category category="BUFF" max="2">				<power initial="25.0"/>
+			</dispel-by-category>
+		</effects>
+	</skill>
+	<skill id="6095" name="Panther Dark Claw" max-level="15" debuff="true" action="A2">
+	<!-- 
+		level 1: Attacker's P. Atk. is supplemented with 469 power, decreasing Dark Attack Resistance by 25 for 30 seconds.
+		level 2: Attacker's P. Atk. is supplemented with 758 power, decreasing Dark Attack Resistance by 25 for 30 seconds.
+		level 3: Attacker's P. Atk. is supplemented with 1136 power, decreasing Dark Attack Resistance by 25 for 30 seconds.
+		level 4: Attacker's P. Atk. is supplemented with 1327 power, decreasing Dark Attack Resistance by 25 for 30 seconds.
+		level 5: Attacker's P. Atk. is supplemented with 1525 power, decreasing Dark Attack Resistance by 25 for 30 seconds.
+		level 6: Attacker's P. Atk. is supplemented with 1727 power, decreasing Dark Attack Resistance by 25 for 30 seconds.
+		level 7: Attacker's P. Atk. is supplemented with 1925 power, decreasing Dark Attack Resistance by 25 for 30 seconds.
+		level 8: Attacker's P. Atk. is supplemented with 2020 power, decreasing Dark Attack Resistance by 25 for 30 seconds.
+		level 9: Attacker's P. Atk. is supplemented with 2067 power, decreasing Dark Attack Resistance by 25 for 30 seconds.
+		level 10: Attacker's P. Atk. is supplemented with 2112 power, decreasing Dark Attack Resistance by 25 for 30 seconds.
+		level 11: Attacker's P. Atk. is supplemented with 2156 power, decreasing Dark Attack Resistance by 25 for 30 seconds.
+		level 12: Attacker's P. Atk. is supplemented with 2200 power, decreasing Dark Attack Resistance by 25 for 30 seconds.
+		level 13: Attacker's P. Atk. is supplemented with 2241 power, decreasing Dark Attack Resistance by 25 for 30 seconds.
+		level 14: Attacker's P. Atk. is supplemented with 2282 power, decreasing Dark Attack Resistance by 25 for 30 seconds.
+		level 15: Attacker's P. Atk. is supplemented with 2320 power, decreasing Dark Attack Resistance by 25 for 30 seconds.
+	 -->
+		<icon initial="icon.skill1445"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2" >
+			<magic-level initial="42">
+				<value level="2">51</value>
+				<value level="3">60</value>
+				<value level="4">64</value>
+				<value level="5">68</value>
+				<value level="6">72</value>
+				<value level="7">76</value>
+				<value level="8">78</value>
+				<value level="9">79</value>
+				<value level="10">80</value>
+				<value level="11">81</value>
+				<value level="12">82</value>
+				<value level="13">83</value>
+				<value level="14">84</value>
+				<value level="15">85</value>
+			</magic-level>
+			<cast-range initial="40"/>
+			<reuse initial="1000">
+				<value level="8">10000</value>
+				<value level="9">1000</value>
+				<value level="10">10000</value>
+				<value level="11">1000</value>
+				<value level="12">10000</value>
+			</reuse>
+			<effect-point initial="-475"/>
+			<effect-range initial="400"/>
+			<hit-time initial="-475000"/>
+			<activate-rate initial="80"/>
+
+			<element type="DARK" value="20"/>
+		</attributes>
+		<consume>
+			<mana initial="42"/>
+		</consume>
+		<target type="ENEMY_ONLY" />
+		<abnormal type="ARMOR_UNHOLY" >
+			<level initial="3"/>
+			<time initial="30"/>
+			<chance initial="80"/>
+		</abnormal>
+		<effects>
+			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+				<power initial="469.0">
+					<value level="2">758.0</value>
+					<value level="3">1136.0</value>
+					<value level="4">1327.0</value>
+					<value level="5">1525.0</value>
+					<value level="6">1727.0</value>
+					<value level="7">1925.0</value>
+					<value level="8">2020.0</value>
+					<value level="9">2067.0</value>
+					<value level="10">2112.0</value>
+					<value level="11">2156.0</value>
+					<value level="12">2200.0</value>
+					<value level="13">2241.0</value>
+					<value level="14">2282.0</value>
+					<value level="15">2320.0</value>
+				</power>
+			</physical-attack>
+			<stat-modify stat="DARK_RES">
+				<power initial="-25.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="6096" name="Panther Fatal Claw" max-level="13" action="A1">
+	<!-- 
+		level 1: Panther's P. Atk. is supplemented with 3408 power, in a deadly attack.
+		level 2: Panther's P. Atk. is supplemented with 3980 power, in a deadly attack.
+		level 3: Panther's P. Atk. is supplemented with 4575 power, in a deadly attack.
+		level 4: Panther's P. Atk. is supplemented with 5180 power, in a deadly attack.
+		level 5: Panther's P. Atk. is supplemented with 5773 power, in a deadly attack.
+		level 6: Panther's P. Atk. is supplemented with 6060 power, in a deadly attack.
+		level 7: Panther's P. Atk. is supplemented with 6199 power, in a deadly attack.
+		level 8: Panther's P. Atk. is supplemented with 6335 power, in a deadly attack.
+		level 9: Panther's P. Atk. is supplemented with 6468 power, in a deadly attack.
+		level 10: Panther's P. Atk. is supplemented with 6598 power, in a deadly attack.
+		level 11: Panther's P. Atk. is supplemented with 6723 power, in a deadly attack.
+		level 12: Panther's P. Atk. is supplemented with 6844 power, in a deadly attack.
+		level 13: Panther's P. Atk. is supplemented with 6960 power, in a deadly attack.
+	 -->
+		<icon initial="icon.skill6096"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="60">
+				<value level="2">64</value>
+				<value level="3">68</value>
+				<value level="4">72</value>
+				<value level="5">76</value>
+				<value level="6">78</value>
+				<value level="7">79</value>
+				<value level="8">80</value>
+				<value level="9">81</value>
+				<value level="10">82</value>
+				<value level="11">83</value>
+				<value level="12">84</value>
+				<value level="13">85</value>
+			</magic-level>
+			<cast-range initial="40"/>
+			<reuse initial="5000">
+				<value level="6">8000</value>
+				<value level="7">5000</value>
+				<value level="8">8000</value>
+				<value level="9">5000</value>
+				<value level="10">8000</value>
+			</reuse>
+			<cool-time initial="720"/>
+			<effect-point initial="-475"/>
+			<effect-range initial="400"/>
+			<hit-time initial="-475000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="42"/>
+		</consume>
+		<target type="ENEMY" />
+		<effects>
+			<fatal-blow chance-boost="200.0" critical-chance="0" over-hit="false">
+				<power initial="3408.0">
+					<value level="2">3980.0</value>
+					<value level="3">4575.0</value>
+					<value level="4">5180.0</value>
+					<value level="5">5773.0</value>
+					<value level="6">6060.0</value>
+					<value level="7">6199.0</value>
+					<value level="8">6335.0</value>
+					<value level="9">6468.0</value>
+					<value level="10">6598.0</value>
+					<value level="11">6723.0</value>
+					<value level="12">6844.0</value>
+					<value level="13">6960.0</value>
+				</power>
+			</fatal-blow>
+		</effects>
+	</skill>
+	<skill id="6097" name="Scissors" max-level="1" action="A1">
+	<!-- Scissors. -->
+		<icon initial="icon.xmas_gawi_i00"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="400"/>
+			<reuse initial="1500"/>
+			<effect-point initial="-1"/>
+			<effect-range initial="500"/>
+			<hit-time initial="-1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="ENEMY" />
+	</skill>
+	<skill id="6098" name="Rock" max-level="1" action="A1">
+	<!-- Rock. -->
+		<icon initial="icon.xmas_bawi_i00"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="400"/>
+			<reuse initial="1500"/>
+			<effect-point initial="-1"/>
+			<effect-range initial="500"/>
+			<hit-time initial="-1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="ENEMY" />
+	</skill>
+	<skill id="6099" name="Paper" max-level="1" action="A1">
+	<!-- Paper. -->
+		<icon initial="icon.xmas_bo_i00"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="400"/>
+			<reuse initial="1500"/>
+			<effect-point initial="-1"/>
+			<effect-range initial="500"/>
+			<hit-time initial="-1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="ENEMY" />
+	</skill>
 </list>

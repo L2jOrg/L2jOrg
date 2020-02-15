@@ -10,7 +10,7 @@ import org.l2j.gameserver.data.sql.impl.SummonEffectsTable;
 import org.l2j.gameserver.data.sql.impl.SummonEffectsTable.SummonEffect;
 import org.l2j.gameserver.data.xml.impl.ExperienceData;
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
-import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.InventorySlot;
@@ -810,7 +810,7 @@ public class Pet extends Summon {
                     while (rset.next()) {
                         final int effectCurTime = rset.getInt("remaining_time");
 
-                        final Skill skill = SkillData.getInstance().getSkill(rset.getInt("skill_id"), rset.getInt("skill_level"));
+                        final Skill skill = SkillEngine.getInstance().getSkill(rset.getInt("skill_id"), rset.getInt("skill_level"));
                         if (skill == null) {
                             continue;
                         }
@@ -991,7 +991,7 @@ public class Pet extends Summon {
             if (_curWeightPenalty != newWeightPenalty) {
                 _curWeightPenalty = newWeightPenalty;
                 if (newWeightPenalty > 0) {
-                    addSkill(SkillData.getInstance().getSkill(4270, newWeightPenalty));
+                    addSkill(SkillEngine.getInstance().getSkill(4270, newWeightPenalty));
                     setIsOverloaded(getCurrentLoad() >= maxLoad);
                 } else {
                     removeSkill(getKnownSkill(4270), true);

@@ -4,7 +4,7 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2j.gameserver.model.Party.MessageType;
 import org.l2j.gameserver.model.actor.Attackable;
@@ -60,7 +60,7 @@ public class CursedWeapon implements INamable {
         _name = name;
         _itemId = itemId;
         _skillId = skillId;
-        _skillMaxLevel = SkillData.getInstance().getMaxLevel(_skillId);
+        _skillMaxLevel = SkillEngine.getInstance().getMaxLevel(_skillId);
     }
 
     public void endOfLife() {
@@ -248,7 +248,7 @@ public class CursedWeapon implements INamable {
             level = _skillMaxLevel;
         }
 
-        final Skill skill = SkillData.getInstance().getSkill(_skillId, level);
+        final Skill skill = SkillEngine.getInstance().getSkill(_skillId, level);
         _player.addSkill(skill, false);
 
         // Void Burst, Void Flow

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.skills;
 
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.engine.geo.GeoEngine;
@@ -145,7 +145,7 @@ public class SkillChannelizer implements Runnable {
                 }
 
                 if (skill.getChannelingSkillId() > 0) {
-                    final int maxSkillLevel = SkillData.getInstance().getMaxLevel(skill.getChannelingSkillId());
+                    final int maxSkillLevel = SkillEngine.getInstance().getMaxLevel(skill.getChannelingSkillId());
                     final int skillLevel = Math.min(character.getSkillChannelized().getChannerlizersSize(skill.getChannelingSkillId()), maxSkillLevel);
                     if (skillLevel == 0) {
                         continue;
@@ -153,7 +153,7 @@ public class SkillChannelizer implements Runnable {
                     final BuffInfo info = character.getEffectList().getBuffInfoBySkillId(skill.getChannelingSkillId());
 
                     if ((info == null) || (info.getSkill().getLevel() < skillLevel)) {
-                        final Skill channeledSkill = SkillData.getInstance().getSkill(skill.getChannelingSkillId(), skillLevel);
+                        final Skill channeledSkill = SkillEngine.getInstance().getSkill(skill.getChannelingSkillId(), skillLevel);
                         if (channeledSkill == null) {
                             LOGGER.warn(": Non existent channeling skill requested: " + skill);
                             _channelizer.abortCast();

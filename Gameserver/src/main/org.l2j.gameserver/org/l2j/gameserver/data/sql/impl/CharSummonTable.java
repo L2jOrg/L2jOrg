@@ -4,7 +4,7 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
-import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.PetData;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.Pet;
@@ -151,7 +151,7 @@ public class CharSummonTable {
                     final int curMp = rs.getInt("curMp");
                     final int time = rs.getInt("time");
 
-                    skill = SkillData.getInstance().getSkill(skillId, activeChar.getSkillLevel(skillId));
+                    skill = SkillEngine.getInstance().getSkill(skillId, activeChar.getSkillLevel(skillId));
                     if (skill == null) {
                         removeServitor(activeChar, summonObjId);
                         return;

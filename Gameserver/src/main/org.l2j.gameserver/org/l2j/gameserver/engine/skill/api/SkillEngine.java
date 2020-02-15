@@ -1,6 +1,9 @@
 package org.l2j.gameserver.engine.skill.api;
 
-import io.github.joealisson.primitive.*;
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.HashLongMap;
+import io.github.joealisson.primitive.IntMap;
+import io.github.joealisson.primitive.LongMap;
 import io.github.joealisson.primitive.function.IntBiConsumer;
 import org.l2j.gameserver.data.xml.impl.EnchantSkillGroupsData;
 import org.l2j.gameserver.data.xml.impl.PetSkillData;
@@ -13,6 +16,7 @@ import org.l2j.gameserver.enums.NextActionType;
 import org.l2j.gameserver.handler.EffectHandler;
 import org.l2j.gameserver.handler.SkillConditionHandler;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.skills.*;
 import org.l2j.gameserver.model.skills.targets.AffectObject;
@@ -30,7 +34,6 @@ import java.io.File;
 import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.Objects;
-import java.util.ServiceLoader;
 import java.util.function.Function;
 import java.util.function.IntConsumer;
 import java.util.stream.Collectors;
@@ -38,8 +41,7 @@ import java.util.stream.Collectors;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
-import static org.l2j.commons.util.Util.SPACE;
-import static org.l2j.commons.util.Util.computeIfNonNull;
+import static org.l2j.commons.util.Util.*;
 
 /**
  * @author JoeAlisson
@@ -49,7 +51,6 @@ public class SkillEngine extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(SkillEngine.class);
 
     private final LongMap<Skill> skills = new HashLongMap<>(36700);
-    private final IntIntMap maxLevels = new HashIntIntMap(36700);
 
     private SkillEngine() {
     }
@@ -58,8 +59,37 @@ public class SkillEngine extends GameXmlReader {
         return skills.get(skillHashCode(id, level));
     }
 
-    private static long skillHashCode(int id, int level) {
-        return id * 65536L + level;
+    // TODO Remove skill enchant feature
+    public Skill getSkill(int id, int level, int subLevel) {
+        return getSkill(id, level);
+    }
+
+    public void addSiegeSkills(Player player) {
+        player.addSkill(CommonSkill.IMPRIT_OF_LIGHT.getSkill(), false);
+        player.addSkill(CommonSkill.IMPRIT_OF_DARKNESS.getSkill(), false);
+        player.addSkill(CommonSkill.BUILD_HEADQUARTERS.getSkill(), false);
+
+        if(player.isNoble()) {
+            player.addSkill(CommonSkill.BUILD_ADVANCED_HEADQUARTERS.getSkill(), false);
+        }
+        if(player.getClan().getCastleId() > 0) {
+            player.addSkill(CommonSkill.OUTPOST_CONSTRUCTION.getSkill(), false);
+            player.addSkill(CommonSkill.OUTPOST_DEMOLITION.getSkill(), false);
+        }
+    }
+
+    public void removeSiegeSkills(Player player) {
+        player.removeSkill(CommonSkill.IMPRIT_OF_LIGHT.getSkill());
+        player.removeSkill(CommonSkill.IMPRIT_OF_DARKNESS.getSkill());
+        player.removeSkill(CommonSkill.BUILD_HEADQUARTERS.getSkill());
+        player.removeSkill(CommonSkill.BUILD_ADVANCED_HEADQUARTERS.getSkill());
+        player.removeSkill(CommonSkill.OUTPOST_CONSTRUCTION.getSkill());
+        player.removeSkill(CommonSkill.OUTPOST_DEMOLITION.getSkill());
+    }
+
+
+    public int getMaxLevel(int skillId) {
+        return zeroIfNullOrElse(skills.get(skillId), Skill::getMaxLevel);
     }
 
     @Override
@@ -70,6 +100,7 @@ public class SkillEngine extends GameXmlReader {
     @Override
     public void load() {
         parseDatapackDirectory("data/skills/", true);
+        LOGGER.info("Loaded {} skills", skills.size());
     }
 
     @Override
@@ -77,19 +108,18 @@ public class SkillEngine extends GameXmlReader {
         forEach(doc, "list", list -> forEach(list, "skill", this::parseSkill));
     }
 
-    private void parseSkill(Node skillNode) {
-        var attr = skillNode.getAttributes();
-        var id = parseInt(attr, "id");
-        var maxLevel = parseInt(attr, "max-level");
-
-        maxLevels.put(id, maxLevel);
-
-        Skill skill = new Skill(id, parseString(attr, "name"), parseBoolean(attr, "debuff"), parseEnum(attr, SkillOperateType.class, "action"), parseEnum(attr, SkillType.class, "type"));
-        skills.put(skillHashCode(id, 1), skill);
-
-        parseSkillConstants(skill, skillNode);
-
+    private void parseSkill(Node skillNode)  {
+        Skill skill = null;
         try {
+            var attr = skillNode.getAttributes();
+            var id = parseInt(attr, "id");
+            var maxLevel = parseInt(attr, "max-level");
+
+            skill = new Skill(id, parseString(attr, "name"), maxLevel, parseBoolean(attr, "debuff"), parseEnum(attr, SkillOperateType.class, "action"), parseEnum(attr, SkillType.class, "type"));
+            skills.put(skillHashCode(id, 1), skill);
+
+            parseSkillConstants(skill, skillNode);
+
             for (var node = skillNode.getFirstChild(); nonNull(node); node = node.getNextSibling()) {
                 switch (node.getNodeName()) {
                     case "icon" -> parseIcon(node, skill, maxLevel);
@@ -147,7 +177,7 @@ public class SkillEngine extends GameXmlReader {
             IntMap<StatsSet> levelInfo = new HashIntMap<>();
 
             for(var child = node.getFirstChild(); nonNull(child); child = child.getNextSibling()) {
-                if((nonNull(child.getNextSibling()) && child.getNextSibling().getNodeName().equals(child.getNodeName())) || ( nonNull(child.getPreviousSibling()) && !child.getPreviousSibling().equals(child) && child.getPreviousSibling().getNodeName().equals(child.getNodeName()) )) {
+                if(isUnboundNode(child)) {
                     parseNodeList(startLevel, staticStatSet, levelInfo, child);
                 } else {
                     parseEffectNode(child, levelInfo, startLevel, staticStatSet, false);
@@ -174,6 +204,10 @@ public class SkillEngine extends GameXmlReader {
         } else {
             addStaticEffect(factory, skill, startLevel, stopLevel, scope, staticStatSet);
         }
+    }
+
+    private boolean isUnboundNode(Node child) {
+        return (nonNull(child.getNextSibling()) && child.getNextSibling().getNodeName().equals(child.getNodeName())) || ( nonNull(child.getPreviousSibling()) && !child.getPreviousSibling().equals(child) && child.getPreviousSibling().getNodeName().equals(child.getNodeName()) );
     }
 
     private void parseNodeList(int startLevel, StatsSet staticStatSet, IntMap<StatsSet> levelInfo, Node child) {
@@ -210,7 +244,7 @@ public class SkillEngine extends GameXmlReader {
 
     private void addStaticEffect(Function<StatsSet, AbstractEffect> factory, Skill skill, int startLevel, int stopLevel, EffectScope scope, StatsSet staticStatSet) throws CloneNotSupportedException {
         var effect = factory.apply(staticStatSet);
-        for (int i = startLevel; i < stopLevel ; i++) {
+        for (int i = startLevel; i <= stopLevel ; i++) {
             var sk = getOrCloneSkillBasedOnLast(skill.getId(), i);
             sk.addEffect(scope, effect);
         }
@@ -218,7 +252,7 @@ public class SkillEngine extends GameXmlReader {
 
     private void parseEffectNode(Node node, IntMap<StatsSet> levelInfo, int startLevel, StatsSet staticStatSet, boolean forceLevel) {
         var attr = node.getAttributes();
-        if(nonNull(attr.getNamedItem("initial"))) {
+        if(nonNull(attr) && nonNull(attr.getNamedItem("initial"))) {
             levelInfo.computeIfAbsent(startLevel, l -> new StatsSet()).set(node.getNodeName(), parseString(attr, "initial"));
             for (var child = node.getFirstChild(); nonNull(child); child = child.getNextSibling()) {
                 parseEffectNode(child, levelInfo, startLevel, staticStatSet, forceLevel);
@@ -228,7 +262,7 @@ public class SkillEngine extends GameXmlReader {
             var level = parseInt(node.getAttributes(), "level");
             levelInfo.computeIfAbsent(level, l -> new StatsSet()).set(node.getParentNode().getNodeName(), node.getTextContent());
 
-        } else if(nonNull(attr.getNamedItem("level"))) {
+        } else if(nonNull(attr) && nonNull(attr.getNamedItem("level"))) {
             var level = parseInt(attr, "level");
             levelInfo.computeIfAbsent(level, l -> new StatsSet()).merge(parseAttributes(node));
             if(node.hasChildNodes()) {
@@ -249,7 +283,15 @@ public class SkillEngine extends GameXmlReader {
             }
             if(node.hasChildNodes()) {
                 for (var child = node.getFirstChild(); nonNull(child); child = child.getNextSibling()) {
-                    parseEffectNode(child, levelInfo, startLevel, staticStatSet, forceLevel);
+                    if("#text".equals(child.getNodeName())) {
+                        if(forceLevel) {
+                            levelInfo.computeIfAbsent(startLevel, l -> new StatsSet()).set(node.getNodeName(), child.getNodeValue());
+                        } else {
+                            staticStatSet.set(node.getNodeName(), child.getNodeValue());
+                        }
+                    } else {
+                        parseEffectNode(child, levelInfo, startLevel, staticStatSet, forceLevel);
+                    }
                 }
             } else {
                 if(forceLevel) {
@@ -272,7 +314,7 @@ public class SkillEngine extends GameXmlReader {
     }
 
     private void parseSkillConsume(Node node, Skill skill, int maxLevel) throws CloneNotSupportedException {
-        for(var child = node.getFirstChild(); nonNull(node); node = node.getNextSibling()) {
+        for(var child = node.getFirstChild(); nonNull(child); child = child.getNextSibling()) {
             switch (child.getNodeName()) {
                 case "mana-init" -> parseMappedInt(node, skill, maxLevel, skill::setManaInitConsume, (consume, s) -> s.setManaInitConsume(consume));
                 case "mana" -> parseMappedInt(node, skill, maxLevel, skill::setManaConsume, (consume, s) -> s.setManaConsume(consume));
@@ -299,7 +341,6 @@ public class SkillEngine extends GameXmlReader {
 
     private void parseConditions(Node conditionsNode, Skill skill) {
         for (var node = conditionsNode.getFirstChild(); nonNull(node); node = node.getNextSibling()) {
-
             SkillCondition cond = "condition".equals(node.getNodeName()) ? parseNamedCondition(node) : parseCondition(node);
             if(nonNull(cond)) {
                 var scope = parseEnum(node.getAttributes(), SkillConditionScope.class, "scope");
@@ -329,7 +370,7 @@ public class SkillEngine extends GameXmlReader {
     }
 
     private void parseConstantResistAbnormals(Node node, Skill skill) {
-        skill.setResistAbnormals(Arrays.stream(node.getNodeValue().split(SPACE)).map(AbnormalType::valueOf).collect(Collectors.toSet()));
+        skill.setResistAbnormals(Arrays.stream(node.getTextContent().split(SPACE)).map(AbnormalType::valueOf).collect(Collectors.toSet()));
     }
 
     private void parseConstantAbnormal(Node node, Skill skill) {
@@ -478,6 +519,16 @@ public class SkillEngine extends GameXmlReader {
         getInstance().load();
         SkillTreesData.getInstance();
         PetSkillData.getInstance();
+    }
+
+    public void reload() {
+        skills.clear();
+        load();
+        SkillTreesData.getInstance().load();
+    }
+
+    public static long skillHashCode(int id, int level) {
+        return id * 65536L + level;
     }
 
     public static SkillEngine getInstance() {

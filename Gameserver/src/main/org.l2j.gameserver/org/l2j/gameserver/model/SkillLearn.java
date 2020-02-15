@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model;
 
-import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.base.SocialClass;
 import org.l2j.gameserver.model.holders.ItemHolder;
@@ -237,7 +237,7 @@ public final class SkillLearn {
 
     @Override
     public String toString() {
-        final Skill skill = SkillData.getInstance().getSkill(_skillId, _skillLvl);
+        final Skill skill = SkillEngine.getInstance().getSkill(_skillId, _skillLvl);
         return "[" + skill + " treeId: " + _treeId + " row: " + _row + " column: " + _column + " pointsRequired:" + _pointsRequired + "]";
     }
 }

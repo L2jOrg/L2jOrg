@@ -1,20 +1,17 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
-    <skill id="8522" toLevel="1" name="Summon Agathion - Nevit's Herald Kanna">
-        <!-- Summons Agathion. -->
-        <icon>icon.etc_summon_aga_agit_i00</icon>
-        <hitTime>3000</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>85</magicLvl>
-        <operateType>A1</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="SummonAgathion">
-                <npcId>16078</npcId> <!-- Nevit's Messenger Kanna -->
-            </effect>
-        </effects>
-    </skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
+	<skill id="8522" name="Summon Agathion - Nevit's Herald Kanna" max-level="1" action="A1">
+	<!-- Summons Agathion. -->
+		<icon initial="icon.etc_summon_aga_agit_i00"/>
+		<attributes magic-critical-rate="5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<summon-agathion id="16078"/>
+		</effects>
+	</skill>
 </list>

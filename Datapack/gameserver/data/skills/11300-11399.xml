@@ -1,77 +1,79 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
-    <skill id="11316" toLevel="1" name="Summon Soulshots">
-        <!-- With a 100% probability summons 30 Beast Soulshots. Consumes 4 Soulstone(s). -->
-        <icon>icon.skill11316</icon>
-        <itemConsumeCount>4</itemConsumeCount>
-        <itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
-        <operateType>A1</operateType>
-        <mpInitialConsume>10</mpInitialConsume>
-        <hitTime>1000</hitTime>
-        <reuseDelay>3000</reuseDelay>
-        <magicCriticalRate>5</magicCriticalRate>
-        <magicLvl>40</magicLvl>
-        <isMagic>1</isMagic>
-        <staticReuse>true</staticReuse>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpEncumbered">
-                <weightPercent>10</weightPercent>
-                <slotsPercent>10</slotsPercent>
-            </condition>
-        </conditions>
-        <effects>
-            <effect name="Restoration">
-                <itemId>6645</itemId> <!-- Beast Soulshot -->
-                <itemCount>20</itemCount>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="11317" toLevel="1" name="Mass Summon Soulshots">
-        <!-- With a 100% probability summons 300 Beast Soulshots. Consumes 40 Soulstone(s). -->
-        <icon>BranchIcon.Icon.g_bm_antaras_pocket_i00</icon>
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <hitTime>1000</hitTime>
-        <reuseDelay>3000</reuseDelay>
-        <mpConsume>50</mpConsume>
-    </skill>
-    <skill id="11318" toLevel="1" name="Summon Spiritshots">
-        <!-- With a 100% probability summons 24 Beast Spiritshots. Consumes 4 Spirit Ore. -->
-        <icon>icon.skill11316</icon>
-        <itemConsumeCount>4</itemConsumeCount>
-        <itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
-        <operateType>A1</operateType>
-        <mpInitialConsume>10</mpInitialConsume>
-        <hitTime>1000</hitTime>
-        <reuseDelay>3000</reuseDelay>
-        <magicCriticalRate>5</magicCriticalRate>
-        <magicLvl>40</magicLvl>
-        <isMagic>1</isMagic>
-        <staticReuse>true</staticReuse>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpEncumbered">
-                <weightPercent>10</weightPercent>
-                <slotsPercent>10</slotsPercent>
-            </condition>
-        </conditions>
-        <effects>
-            <effect name="Restoration">
-                <itemId>6646</itemId> <!-- Beast Spiritshot -->
-                <itemCount>16</itemCount>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="11319" toLevel="1" name="Mass Summon Spiritshots">
-        <!-- With a 100% probability summons 240 Beast Spiritshots. Consumes 40 Spirit Ore. -->
-        <icon>BranchIcon.Icon.g_bm_antaras_pocket_i00</icon>
-        <operateType>A1</operateType>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <hitTime>1000</hitTime>
-        <reuseDelay>3000</reuseDelay>
-        <mpConsume>50</mpConsume>
-    </skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
+	<skill id="11316" name="Summon Soulshots" max-level="1" action="A1" type="MAGIC">
+	<!-- With a 100%% probability summons 30 Beast Soulshots. Consumes 4 Soulstone(s). -->
+		<icon initial="icon.skill11316"/>
+		<attributes static-reuse="true" magic-critical-rate="5.0" >
+			<magic-level initial="40"/>
+			<cast-range initial="-1"/>
+			<reuse initial="3000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana-init initial="10"/>
+			<mana initial="10"/>
+			<item initial="3031"/>
+			<item-count initial="4"/>
+		</consume>
+		<target />
+		<conditions>
+			<encumbered slots="10" weight="10"/>
+		</conditions>
+		<effects>
+			<restoration item="6645" count="20" enchant="0"/>
+		</effects>
+	</skill>
+	<skill id="11317" name="Summon Mass Soulshot" max-level="1" action="A1" type="MAGIC">
+	<!-- With a 100%% probability summons 300 Best Soulshots. Consumes 40 Soulstones. -->
+		<icon initial="BranchIcon.Icon.g_bm_antaras_pocket_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="3000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="50"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="11318" name="Summon Spiritshots" max-level="1" action="A1" type="MAGIC">
+	<!-- With a 100%% probability summons 24 Beast Spiritshots. Consumes 4 Spirit Ore. -->
+		<icon initial="icon.skill11316"/>
+		<attributes static-reuse="true" magic-critical-rate="5.0" >
+			<magic-level initial="40"/>
+			<cast-range initial="-1"/>
+			<reuse initial="3000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana-init initial="10"/>
+			<mana initial="10"/>
+			<item initial="3031"/>
+			<item-count initial="4"/>
+		</consume>
+		<target />
+		<conditions>
+			<encumbered slots="10" weight="10"/>
+		</conditions>
+		<effects>
+			<restoration item="6646" count="16" enchant="0"/>
+		</effects>
+	</skill>
+	<skill id="11319" name="Summon Mass Spiritshot" max-level="1" action="A1" type="MAGIC">
+	<!-- With a 100%% probability summons 300 Best Spiritshots. Consumes 40 Spirit Ores. -->
+		<icon initial="BranchIcon.Icon.g_bm_antaras_pocket_i00"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="3000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="50"/>
+		</consume>
+		<target />
+	</skill>
 </list>

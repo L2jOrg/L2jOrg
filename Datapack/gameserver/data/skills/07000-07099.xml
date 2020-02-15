@@ -1,2116 +1,2312 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
-    <skill id="7000" toLevel="1" name="NPC Default">
-        <magicLvl>1</magicLvl>
-        <operateType>A1</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>0</effectRange>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="7001" toLevel="1" name="Dispel Buff">
-        <castRange>400</castRange>
-        <effectPoint>100</effectPoint>
-        <effectRange>900</effectRange>
-        <magicLvl>99</magicLvl>
-        <operateType>A1</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="DispelByCategory">
-                <slot>BUFF</slot>
-                <rate>100</rate>
-                <max>20</max>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7002" toLevel="1" name="Dispel Debuff">
-        <castRange>400</castRange>
-        <effectPoint>100</effectPoint>
-        <effectRange>900</effectRange>
-        <magicLvl>99</magicLvl>
-        <operateType>A1</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="DispelByCategory">
-                <slot>DEBUFF</slot>
-                <rate>100</rate>
-                <max>20</max>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7003" toLevel="1" name="Dispel All">
-        <castRange>400</castRange>
-        <effectPoint>100</effectPoint>
-        <effectRange>900</effectRange>
-        <magicLvl>99</magicLvl>
-        <operateType>A1</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="DispelByCategory">
-                <slot>BUFF</slot>
-                <rate>100</rate>
-                <max>20</max>
-            </effect>
-            <effect name="DispelByCategory">
-                <slot>DEBUFF</slot>
-                <rate>100</rate>
-                <max>20</max>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7004" toLevel="2" name="Dispel Petrification">
-        <!-- Cancels Petrification debuff. -->
-        <effectPoint>566</effectPoint>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <magicLvl>60</magicLvl>
-        <operateType>A1</operateType>
-        <reuseDelay>10000</reuseDelay>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="DispelBySlot">
-                <dispel>TURN_STONE,2</dispel>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7005" toLevel="4" name="Greater Chant of Vampire">
-        <!-- Temporarily for party members increases the ability to restore some HP from the damage inflicted on the enemy temporarily with a certain probability. -->
-        <abnormalLvl>4</abnormalLvl>
-        <abnormalTime>1200</abnormalTime>
-        <abnormalType>VAMPIRIC_ATTACK</abnormalType>
-        <castRange>400</castRange>
-        <effectPoint>655</effectPoint>
-        <effectRange>900</effectRange>
-        <hitTime>2500</hitTime>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <magicLvl>74</magicLvl>
-        <mpConsume>217</mpConsume>
-        <mpInitialConsume>55</mpInitialConsume>
-        <operateType>A2</operateType>
-        <reuseDelay>20000</reuseDelay>
-        <specialLevel>-1</specialLevel>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <basicProperty>NONE</basicProperty>
-        <affectRange>200</affectRange>
-        <targetType>TARGET</targetType>
-        <affectScope>PARTY</affectScope>
-        <affectObject>FRIEND</affectObject>
-        <conditions>
-            <condition name="TargetMyPledge"/>
-        </conditions>
-        <effects>
-            <effect name="VampiricAttack">
-                <amount>9</amount>
-                <chance>30</chance>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7006" toLevel="13" name="The Love of Pa'agrio">
-        <!-- Momentarily increases target's allies HP recovery bonus. -->
-        <abnormalLvl>6</abnormalLvl>
-        <abnormalTime>15</abnormalTime>
-        <abnormalType>LIFE_FORCE_OTHERS</abnormalType>
-        <castRange>400</castRange>
-        <effectPoint>655</effectPoint>
-        <effectRange>900</effectRange>
-        <hitTime>2500</hitTime>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <mpConsume>272</mpConsume>
-        <operateType>A2</operateType>
-        <reuseDelay>20000</reuseDelay>
-        <specialLevel>-1</specialLevel>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <basicProperty>NONE</basicProperty>
-        <affectRange>200</affectRange>
-        <targetType>TARGET</targetType>
-        <affectScope>PLEDGE</affectScope>
-        <affectObject>FRIEND</affectObject>
-        <conditions>
-            <condition name="TargetMyPledge"/>
-        </conditions>
-    </skill>
-    <skill id="7007" toLevel="4" name="Greater Seal of Flame">
-        <!-- Sets the target's allies on fire. Momentarily and continuously decreases the enemies' HP. -->
-        <abnormalLvl>8</abnormalLvl>
-        <abnormalTime>15</abnormalTime>
-        <abnormalType>DOT_ATTR</abnormalType>
-        <activateRate>35</activateRate>
-        <basicProperty>MAGIC</basicProperty> <!-- Guessed -->
-        <castRange>400</castRange>
-        <effectPoint>-409</effectPoint>
-        <effectRange>900</effectRange>
-        <hitTime>4000</hitTime>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <lvlBonusRate>1</lvlBonusRate>
-        <mpConsume>153</mpConsume>
-        <operateType>A2</operateType>
-        <reuseDelay>20000</reuseDelay>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <magicLvl>74</magicLvl>
-        <attributeType>FIRE</attributeType>
-        <attributeValue>20</attributeValue>
-        <affectRange>200</affectRange>
-        <isDebuff>true</isDebuff>
-        <abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
-        <targetType>TARGET</targetType>
-        <affectScope>PLEDGE</affectScope>
-        <affectObject>NOT_FRIEND</affectObject>
-    </skill>
-    <skill id="7008" toLevel="1" name="Feather of Blessing">
-        <!-- Once used, the Feather of Blessing cannot be reused for another 5 min. -->
-        <icon>icon.blessed_feather_i00</icon>
-        <magicLvl>-2</magicLvl>
-        <operateType>A2</operateType>
-        <abnormalType>PUBLIC_SLOT</abnormalType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <specialLevel>-2</specialLevel>
-        <hitCancelTime>0</hitCancelTime>
-        <abnormalLvl>9</abnormalLvl>
-        <abnormalTime>300</abnormalTime>
-        <attributeType>FIRE</attributeType>
-        <attributeValue>20</attributeValue>
-        <isDebuff>true</isDebuff>
-        <isMagic>2</isMagic>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="7009" toLevel="1" name="not_used">
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="7010" toLevel="1" name="not_used">
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="7011" toLevel="1" name="not_used">
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="7012" toLevel="1" name="not_used">
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="7013" toLevel="1" name="not_used">
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="7014" toLevel="1" name="Test - P. Critical Damage Boost">
-        <!-- Received P. Critical Damage +10%. -->
-        <magicLvl>85</magicLvl>
-        <operateType>T</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <targetType>SELF</targetType>
-    </skill>
-    <skill id="7015" toLevel="1" name="Test - P. Critical Damage Weakness">
-        <!-- Received P. Critical Damage -50%. -->
-        <magicLvl>85</magicLvl>
-        <operateType>T</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <targetType>SELF</targetType>
-    </skill>
-    <skill id="7016" toLevel="1" name="Test - P. Critical Damage Boost">
-        <!-- Received P. Critical Damage +100. -->
-        <magicLvl>85</magicLvl>
-        <operateType>T</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <targetType>SELF</targetType>
-    </skill>
-    <skill id="7017" toLevel="1" name="Test - P. Critical Damage Weakness">
-        <!-- Received P. Critical Damage -200. -->
-        <magicLvl>85</magicLvl>
-        <operateType>T</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <targetType>SELF</targetType>
-    </skill>
-    <skill id="7018" toLevel="1" name="Test - P. Critical Rate Boost">
-        <!-- Chance of receiving P. Critical Attack +10%. -->
-        <magicLvl>85</magicLvl>
-        <operateType>T</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <targetType>SELF</targetType>
-    </skill>
-    <skill id="7019" toLevel="1" name="Test - P. Critical Rate Weakness">
-        <!-- Chance of receiving P. Critical Attack -50%. -->
-        <magicLvl>85</magicLvl>
-        <operateType>T</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <targetType>SELF</targetType>
-    </skill>
-    <skill id="7020" toLevel="1" name="Test - P. Critical Rate Boost">
-        <!-- Chance of receiving P. Critical Attack +100. -->
-        <magicLvl>85</magicLvl>
-        <operateType>T</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <targetType>SELF</targetType>
-    </skill>
-    <skill id="7021" toLevel="1" name="Test - P. Critical Rate Weakness">
-        <!-- Chance of receiving P. Critical Attack -200. -->
-        <magicLvl>85</magicLvl>
-        <operateType>T</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <targetType>SELF</targetType>
-    </skill>
-    <skill id="7022" toLevel="1" name="Test - Find Hidden Door">
-        <!-- Look for hidden door. -->
-        <affectLimit>6-12</affectLimit>
-        <hitTime>1000</hitTime>
-        <magicLvl>85</magicLvl>
-        <operateType>A1</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <attributeType>FIRE</attributeType>
-        <attributeValue>20</attributeValue>
-        <affectRange>1000</affectRange>
-        <targetType>SELF</targetType>
-        <affectScope>STATIC_OBJECT_SCOPE</affectScope>
-        <affectObject>HIDDEN_PLACE</affectObject>
-    </skill>
-    <skill id="7023" toLevel="1" name="not_used">
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="7024" toLevel="1" name="not_used">
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="7025" toLevel="1" name="not_used">
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="7026" toLevel="1" name="not_used">
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="7027" toLevel="1" name="not_used">
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="7028" toLevel="1" name="Stationary NPCs">
-        <magicLvl>99</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <effects>
-            <effect name="DefenceTrait">
-                <DERANGEMENT>100</DERANGEMENT>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7029" toLevel="4" name="Super Haste">
-        <!-- Speed is increased greatly. -->
-        <icon>icon.skill7029</icon>
-        <effectPoint>1</effectPoint>
-        <magicLvl>1</magicLvl>
-        <operateType>T</operateType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <specialLevel>-1</specialLevel>
-        <hitCancelTime>0</hitCancelTime>
-        <targetType>NONE</targetType>
-        <effects>
-            <effect name="MpConsumePerLevel">
-                <power>0.0001</power>
-                <ticks>5</ticks>
-            </effect>
-            <effect name="PAtk">
-                <amount>
-                    <value level="1">0</value>
-                    <value level="2">0</value>
-                    <value level="3">999900</value>
-                    <value level="4">999999</value> <!-- Retail value: 0 -->
-                </amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="Speed">
-                <amount>
-                    <value level="1">100</value>
-                    <value level="2">200</value>
-                    <value level="3">200</value>
-                    <value level="4">300</value> <!-- Retail value: 0 -->
-                </amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PhysicalAttackSpeed">
-                <amount>
-                    <value level="1">100</value>
-                    <value level="2">200</value>
-                    <value level="3">200</value>
-                    <value level="4">300</value> <!-- Retail value: 100 -->
-                </amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MagicalAttackSpeed">
-                <amount>
-                    <value level="1">100</value>
-                    <value level="2">200</value>
-                    <value level="3">200</value>
-                    <value level="4">300</value> <!-- Retail value: 100 -->
-                </amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MaxMp">
-                <amount>
-                    <value level="1">0</value>
-                    <value level="2">0</value>
-                    <value level="3">0</value>
-                    <value level="4">100</value>
-                </amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MpRegen">
-                <amount>
-                    <value level="1">0</value>
-                    <value level="2">0</value>
-                    <value level="3">0</value>
-                    <value level="4">100</value>
-                </amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="WeightLimit">
-                <amount>
-                    <value level="1">0</value>
-                    <value level="2">0</value>
-                    <value level="3">0</value>
-                    <value level="4">100</value>
-                </amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="Reuse">
-                <amount>
-                    <value level="1">-99</value>
-                    <value level="2">-99</value>
-                    <value level="3">-99</value>
-                    <value level="4">-99</value> <!-- Retail value: 0 -->
-                </amount>
-                <mode>PER</mode>
-                <magicType>0</magicType>
-            </effect>
-            <effect name="Reuse">
-                <amount>
-                    <value level="1">-99</value>
-                    <value level="2">-99</value>
-                    <value level="3">-99</value>
-                    <value level="4">-99</value> <!-- Retail value: 0 -->
-                </amount>
-                <mode>PER</mode>
-                <magicType>1</magicType>
-            </effect>
-            <effect name="MAtk"> <!-- custom -->
-                <amount>
-                    <value level="1">0</value>
-                    <value level="2">0</value>
-                    <value level="3">999900</value>
-                    <value level="4">999999</value>
-                </amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7030" toLevel="1" name="Summon King Bugbear">
-        <hitTime>4000</hitTime>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <itemConsumeCount>8</itemConsumeCount>
-        <itemConsumeId>1458</itemConsumeId>
-        <magicLvl>1</magicLvl>
-        <mpConsume>3</mpConsume>
-        <operateType>A1</operateType>
-        <reuseDelay>4500</reuseDelay>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="Summon">
-                <npcId>20150</npcId> <!-- King Bugbear -->
-                <lifeTime>1200</lifeTime>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7031" toLevel="1" name="Summon Skeleton Royal Guard">
-        <hitTime>4000</hitTime>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <itemConsumeCount>8</itemConsumeCount>
-        <itemConsumeId>1458</itemConsumeId>
-        <magicLvl>1</magicLvl>
-        <mpConsume>3</mpConsume>
-        <operateType>A1</operateType>
-        <reuseDelay>4500</reuseDelay>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <!--
-        <effects>
-            <effect name="Summon">
-                <npcId>20169</npcId> Skeleton Royal Guard
-                <lifeTime>1200</lifeTime>
-            </effect>
-        </effects>-->
-    </skill>
-    <skill id="7032" toLevel="1" name="Summon Hunter Gargoyle">
-        <hitTime>4000</hitTime>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <itemConsumeCount>8</itemConsumeCount>
-        <itemConsumeId>1458</itemConsumeId>
-        <magicLvl>1</magicLvl>
-        <mpConsume>3</mpConsume>
-        <operateType>A1</operateType>
-        <reuseDelay>4500</reuseDelay>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="Summon">
-                <npcId>20241</npcId> <!-- Hunter Gargoyle -->
-                <lifeTime>1200</lifeTime>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7033" toLevel="1" name="not_used">
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="7034" toLevel="1" name="not_used">
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="7035" toLevel="1" name="not_used">
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="7036" toLevel="1" name="not_used">
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="7037" toLevel="1" name="not_used">
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="7038" toLevel="1" name="not_used">
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="7039" toLevel="1" name="not_used">
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="7040" toLevel="1" name="not_used">
-        <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="7041" toLevel="1" name="Master's Blessing - Focus">
-        <!-- The GM is always by your side. P. Critical Attack Rate +30% for 1 h. -->
-        <icon>icon.skill1077</icon>
-        <abnormalLvl>4</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>CRITICAL_PROB_UP</abnormalType>
-        <castRange>900</castRange>
-        <effectPoint>1</effectPoint>
-        <effectRange>1500</effectRange>
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>52</magicLvl>
-        <mpConsume>2</mpConsume>
-        <operateType>A2</operateType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <reuseDelay>1000</reuseDelay>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="CriticalRate">
-                <amount>30</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7042" toLevel="1" name="Master's Blessing - Death Whisper">
-        <!-- The GM is always by your side. P. Critical Damage +35% for 1 h. -->
-        <icon>icon.skill1242</icon>
-        <abnormalLvl>4</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>CRITICAL_DMG_UP</abnormalType>
-        <castRange>900</castRange>
-        <effectPoint>1</effectPoint>
-        <effectRange>1500</effectRange>
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>56</magicLvl>
-        <mpConsume>2</mpConsume>
-        <operateType>A2</operateType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <reuseDelay>1000</reuseDelay>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="CriticalDamage">
-                <amount>35</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7043" toLevel="1" name="Master's Blessing - Haste">
-        <!-- The GM is always by your side. Atk. Spd. +33% for 1 h. -->
-        <icon>icon.skill1086</icon>
-        <abnormalLvl>3</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>ATTACK_TIME_DOWN</abnormalType>
-        <castRange>900</castRange>
-        <effectPoint>1</effectPoint>
-        <effectRange>1500</effectRange>
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>52</magicLvl>
-        <mpConsume>2</mpConsume>
-        <operateType>A2</operateType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <reuseDelay>1000</reuseDelay>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="PhysicalAttackSpeed">
-                <amount>33</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7044" toLevel="1" name="Master's Blessing - Guidance">
-        <!-- The GM is always by your side. P. Accuracy +4 for 1 h. -->
-        <icon>icon.skill1240</icon>
-        <abnormalLvl>4</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>HIT_UP</abnormalType>
-        <castRange>900</castRange>
-        <effectPoint>1</effectPoint>
-        <effectRange>1500</effectRange>
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>56</magicLvl>
-        <mpConsume>2</mpConsume>
-        <operateType>A2</operateType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <reuseDelay>1000</reuseDelay>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="Accuracy">
-                <amount>4</amount>
-                <mode>DIFF</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7045" toLevel="1" name="Master's Blessing - Blessed Body">
-        <!-- The GM is always by your side. Max HP +35% for 1 h. -->
-        <icon>icon.skill1045</icon>
-        <abnormalLvl>7</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>MAX_HP_UP</abnormalType>
-        <castRange>900</castRange>
-        <effectPoint>1</effectPoint>
-        <effectRange>1500</effectRange>
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>72</magicLvl>
-        <mpConsume>2</mpConsume>
-        <operateType>A2</operateType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <reuseDelay>1000</reuseDelay>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="MaxHp">
-                <amount>35</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7046" toLevel="1" name="Master's Blessing - Blessed Soul">
-        <!-- The GM is always by your side. Max MP +35% for 1 h. -->
-        <icon>icon.skill1048</icon>
-        <abnormalLvl>7</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>MAX_MP_UP</abnormalType>
-        <castRange>900</castRange>
-        <effectPoint>1</effectPoint>
-        <effectRange>1500</effectRange>
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>70</magicLvl>
-        <mpConsume>2</mpConsume>
-        <operateType>A2</operateType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <reuseDelay>1000</reuseDelay>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="MaxMp">
-                <amount>35</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7047" toLevel="1" name="Master's Blessing - Agility">
-        <!-- The GM is always by your side. P. Evasion +4 for 1 h. -->
-        <icon>icon.skill1087</icon>
-        <abnormalLvl>4</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>AVOID_UP</abnormalType>
-        <castRange>900</castRange>
-        <effectPoint>1</effectPoint>
-        <effectRange>1500</effectRange>
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>52</magicLvl>
-        <mpConsume>2</mpConsume>
-        <operateType>A2</operateType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <reuseDelay>1000</reuseDelay>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="PhysicalEvasion">
-                <amount>4</amount>
-                <mode>DIFF</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7048" toLevel="1" name="Master's Blessing - Acumen">
-        <!-- The GM is always by your side. Casting Spd. +30% for 1 h. -->
-        <icon>icon.skill1085</icon>
-        <abnormalLvl>4</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>CASTING_TIME_DOWN</abnormalType>
-        <castRange>900</castRange>
-        <effectPoint>1</effectPoint>
-        <effectRange>1500</effectRange>
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>48</magicLvl>
-        <mpConsume>2</mpConsume>
-        <operateType>A2</operateType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <reuseDelay>1000</reuseDelay>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="MagicalAttackSpeed">
-                <amount>30</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7049" toLevel="1" name="Master's Blessing - Decrease Weight">
-        <!-- The GM is always by your side.Weight penalty interval +9000 for 1 h. -->
-        <icon>icon.skill1257</icon>
-        <abnormalLvl>4</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>DECREASE_WEIGHT_PENALTY</abnormalType>
-        <castRange>900</castRange>
-        <effectPoint>1</effectPoint>
-        <effectRange>1500</effectRange>
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>52</magicLvl>
-        <mpConsume>2</mpConsume>
-        <operateType>A2</operateType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <reuseDelay>1000</reuseDelay>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="WeightPenalty">
-                <amount>9000</amount>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7050" toLevel="1" name="Master's Blessing - Might">
-        <!-- The GM is always by your side. P. Atk. +15% for 1 h. -->
-        <icon>icon.skill1068</icon>
-        <abnormalLvl>4</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>PA_UP</abnormalType>
-        <castRange>900</castRange>
-        <effectPoint>1</effectPoint>
-        <effectRange>1500</effectRange>
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>40</magicLvl>
-        <mpConsume>2</mpConsume>
-        <operateType>A2</operateType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <reuseDelay>1000</reuseDelay>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="PAtk">
-                <amount>15</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7051" toLevel="1" name="Master's Blessing - Shield">
-        <!-- The GM is always by your side. P. Def. +15% for 1 h. -->
-        <icon>icon.skill1040</icon>
-        <abnormalLvl>4</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>PD_UP</abnormalType>
-        <castRange>900</castRange>
-        <effectPoint>1</effectPoint>
-        <effectRange>1500</effectRange>
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>44</magicLvl>
-        <mpConsume>2</mpConsume>
-        <operateType>A2</operateType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <reuseDelay>1000</reuseDelay>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="PhysicalDefence">
-                <amount>15</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7052" toLevel="1" name="Master's Blessing - Magic Barrier">
-        <!-- The GM is always by your side. M. Def. +30% for 1 h. -->
-        <icon>icon.skill1036</icon>
-        <abnormalLvl>4</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>MD_UP</abnormalType>
-        <castRange>900</castRange>
-        <effectPoint>1</effectPoint>
-        <effectRange>1500</effectRange>
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>52</magicLvl>
-        <mpConsume>2</mpConsume>
-        <operateType>A2</operateType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <reuseDelay>1000</reuseDelay>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="MagicalDefence">
-                <amount>30</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7053" toLevel="1" name="Master's Blessing - Vampiric Rage">
-        <!-- The GM is always by your side. For 1 h., with a certain probability recovers as HP 9% of the P. melee damage inflicted. -->
-        <icon>icon.skill1268</icon>
-        <abnormalLvl>4</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>VAMPIRIC_ATTACK</abnormalType>
-        <castRange>900</castRange>
-        <effectPoint>1</effectPoint>
-        <effectRange>1500</effectRange>
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>72</magicLvl>
-        <mpConsume>2</mpConsume>
-        <operateType>A2</operateType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <reuseDelay>1000</reuseDelay>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="VampiricAttack">
-                <amount>9</amount>
-                <chance>80</chance>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7054" toLevel="1" name="Master's Blessing - Empower">
-        <!-- The GM is always by your side. M. Atk. +75% for 1 h. -->
-        <icon>icon.skill1059</icon>
-        <abnormalLvl>4</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>MA_UP</abnormalType>
-        <castRange>900</castRange>
-        <effectPoint>1</effectPoint>
-        <effectRange>1500</effectRange>
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>52</magicLvl>
-        <mpConsume>2</mpConsume>
-        <operateType>A2</operateType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <reuseDelay>1000</reuseDelay>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="MAtk">
-                <amount>75</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7055" toLevel="1" name="Master's Blessing - Wind Walk">
-        <!-- The GM is always by your side. Speed +33 for 1 h. -->
-        <icon>icon.skill1204</icon>
-        <abnormalLvl>3</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>SPEED_UP</abnormalType>
-        <castRange>900</castRange>
-        <effectPoint>1</effectPoint>
-        <effectRange>1500</effectRange>
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>30</magicLvl>
-        <mpConsume>2</mpConsume>
-        <operateType>A2</operateType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <reuseDelay>1000</reuseDelay>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="Speed">
-                <amount>33</amount>
-                <mode>DIFF</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7056" toLevel="1" name="Master's Blessing - Berserker Spirit">
-        <!-- The GM is always by your side. For 1 h., party member's P. Def. -8%, M. Def. -16%, and P. Evasion -4. P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, and Speed +8. -->
-        <icon>icon.skill1062</icon>
-        <abnormalLvl>3</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>BERSERKER</abnormalType>
-        <castRange>900</castRange>
-        <effectPoint>1</effectPoint>
-        <effectRange>1500</effectRange>
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>52</magicLvl>
-        <mpConsume>2</mpConsume>
-        <operateType>A2</operateType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <reuseDelay>1000</reuseDelay>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="PAtk">
-                <amount>8</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MAtk">
-                <amount>16</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="Speed">
-                <amount>8</amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="MagicalDefence">
-                <amount>-16</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PhysicalDefence">
-                <amount>-8</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PhysicalEvasion">
-                <amount>-4</amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="PhysicalAttackSpeed">
-                <amount>8</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MagicalAttackSpeed">
-                <amount>8</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7057" toLevel="1" name="Master's Blessing - Greater Might">
-        <!-- The GM is always by your side. P. Atk. +10% for 1 h. -->
-        <icon>icon.skill1388</icon>
-        <abnormalLvl>4</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>PA_PD_UP</abnormalType>
-        <castRange>900</castRange>
-        <effectPoint>1</effectPoint>
-        <effectRange>1500</effectRange>
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>74</magicLvl>
-        <mpConsume>2</mpConsume>
-        <operateType>A2</operateType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <reuseDelay>1000</reuseDelay>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="PAtk">
-                <amount>10</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7058" toLevel="1" name="Master's Blessing - Greater Shield">
-        <!-- The GM is always by your side. P. Def. +15% for 1 h. -->
-        <icon>icon.skill1389</icon>
-        <abnormalLvl>4</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>PA_PD_UP</abnormalType>
-        <castRange>900</castRange>
-        <effectPoint>1</effectPoint>
-        <effectRange>1500</effectRange>
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>74</magicLvl>
-        <mpConsume>2</mpConsume>
-        <operateType>A2</operateType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <reuseDelay>1000</reuseDelay>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="PhysicalDefence">
-                <amount>15</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7059" toLevel="1" name="Master's Blessing - Wild Magic">
-        <!-- The GM is always by your side. For 1 h., M. Critical Rate +20. -->
-        <icon>icon.skill1303</icon>
-        <abnormalLvl>3</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>MAGIC_CRITICAL_UP</abnormalType>
-        <castRange>900</castRange>
-        <effectPoint>1</effectPoint>
-        <effectRange>1500</effectRange>
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>70</magicLvl>
-        <mpConsume>2</mpConsume>
-        <operateType>A2</operateType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <reuseDelay>1000</reuseDelay>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="MagicCriticalRate">
-                <amount>2</amount>
-                <mode>DIFF</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7060" toLevel="1" name="Master's Blessing - Clarity">
-        <!-- The GM is always by your side. For 1 h., physical skill MP consumption -20%, magic skill's MP consumption -10%, and song/ dance skill's MP consumption -20%. -->
-        <icon>icon.skill1397</icon>
-        <abnormalLvl>4</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>CHEAP_MAGIC</abnormalType>
-        <castRange>900</castRange>
-        <effectPoint>1</effectPoint>
-        <effectRange>1500</effectRange>
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>74</magicLvl>
-        <mpConsume>2</mpConsume>
-        <operateType>A2</operateType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <reuseDelay>1000</reuseDelay>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="MagicMpCost">
-                <amount>-10</amount>
-                <mode>PER</mode>
-                <magicType>1</magicType>
-            </effect>
-            <effect name="MagicMpCost">
-                <amount>-20</amount>
-                <mode>PER</mode>
-                <magicType>0</magicType>
-            </effect>
-            <effect name="MagicMpCost">
-                <amount>-20</amount>
-                <mode>PER</mode>
-                <magicType>3</magicType>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7061" toLevel="1" name="Master's Blessing - Prophecy of Water">
-        <!-- The GM is always by your side. For 1 h., MP Recovery Bonus +20%, M. Atk. +15%, M. Def. +15%, Casting Spd. +10%, Debuff Resistance +10%. Skill MP Consumption -5%. -->
-        <icon>icon.skill1355</icon>
-        <abnormalLvl>2</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>MULTI_BUFF</abnormalType>
-        <castRange>900</castRange>
-        <effectPoint>1</effectPoint>
-        <effectRange>1500</effectRange>
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>78</magicLvl>
-        <mpConsume>1</mpConsume>
-        <mpInitialConsume>1</mpInitialConsume>
-        <operateType>A2</operateType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <reuseDelay>1000</reuseDelay>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="PAtk">
-                <amount>10</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MAtk">
-                <amount>20</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="Speed">
-                <amount>-20</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MagicalDefence">
-                <amount>20</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PhysicalDefence">
-                <amount>20</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PhysicalAttackSpeed">
-                <amount>20</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MagicalAttackSpeed">
-                <amount>20</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MpRegen">
-                <amount>20</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="ResistAbnormalByCategory">
-                <amount>-10</amount>
-                <slot>DEBUFF</slot>
-            </effect>
-            <effect name="MagicCriticalRate">
-                <amount>2</amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="MagicMpCost">
-                <amount>-5</amount>
-                <mode>PER</mode>
-                <magicType>1</magicType>
-            </effect>
-            <effect name="MagicMpCost">
-                <amount>-5</amount>
-                <mode>PER</mode>
-                <magicType>0</magicType>
-            </effect>
-            <effect name="MagicMpCost">
-                <amount>-5</amount>
-                <mode>PER</mode>
-                <magicType>3</magicType>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7062" toLevel="1" name="Master's Blessing - Prophecy of Fire">
-        <!-- The GM is always by your side. For 1 h., Max HP +15%, HP Recovery Bonus +20%, P. Atk. +50%, P. Def. +15%, Atk. Spd. +10%, Debuff Resistance +10%. Cannot be stacked with Prophecy-type buffs. -->
-        <icon>icon.skill1356</icon>
-        <abnormalLvl>2</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>MULTI_BUFF</abnormalType>
-        <castRange>900</castRange>
-        <effectPoint>1</effectPoint>
-        <effectRange>1500</effectRange>
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>78</magicLvl>
-        <mpConsume>2</mpConsume>
-        <operateType>A2</operateType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <reuseDelay>1000</reuseDelay>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="PAtk">
-                <amount>10</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MAtk">
-                <amount>20</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="Speed">
-                <amount>-20</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MagicalDefence">
-                <amount>20</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PhysicalDefence">
-                <amount>20</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="Accuracy">
-                <amount>4</amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="PhysicalAttackSpeed">
-                <amount>20</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MagicalAttackSpeed">
-                <amount>20</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MaxMp">
-                <amount>20</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="CriticalDamage">
-                <amount>20</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="HpRegen">
-                <amount>20</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="ResistAbnormalByCategory">
-                <amount>-10</amount>
-                <slot>DEBUFF</slot>
-            </effect>
-            <effect name="MagicCriticalRate">
-                <amount>2</amount>
-                <mode>DIFF</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7063" toLevel="1" name="Master's Blessing - Prophecy of Wind">
-        <!-- The GM is always by your side. For 1 h., P. Evasion +4, P. Accuracy +4, P. Critical Rate +15%, P. Critical Damage +20%, Speed +15%, Debuff Resistance +10%, damage to Raid Bosses +15%. -->
-        <icon>icon.skill1357</icon>
-        <abnormalLvl>2</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>MULTI_BUFF</abnormalType>
-        <castRange>900</castRange>
-        <effectPoint>1</effectPoint>
-        <effectRange>1500</effectRange>
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>78</magicLvl>
-        <mpConsume>2</mpConsume>
-        <operateType>A2</operateType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <reuseDelay>1000</reuseDelay>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="VampiricAttack">
-                <amount>5</amount>
-                <chance>30</chance>
-            </effect>
-            <effect name="PAtk">
-                <amount>10</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MAtk">
-                <amount>20</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="Speed">
-                <amount>-20</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MagicalDefence">
-                <amount>20</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PhysicalDefence">
-                <amount>20</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PhysicalAttackSpeed">
-                <amount>20</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MagicalAttackSpeed">
-                <amount>20</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="ResistAbnormalByCategory">
-                <amount>-10</amount>
-                <slot>DEBUFF</slot>
-            </effect>
-            <effect name="CriticalRate">
-                <amount>20</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MaxHp">
-                <amount>20</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MagicCriticalDamage">
-                <amount>20</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7064" toLevel="1" name="Master's Blessing - Chant of Victory">
-        <!-- The GM is always by your side. For 1 h., Max CP +12%, CP Recovery Bonus +40%, P. Accuracy +4, P. Evasion +4, P./ M. Atk. +20%, Casting/ Atk. Spd. +10%, P./ M. Critical Rate +20%, P./ M. Critical Damage +15%. -->
-        <icon>icon.skill1363</icon>
-        <abnormalLvl>2</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>MULTI_BUFF</abnormalType>
-        <castRange>900</castRange>
-        <effectPoint>1</effectPoint>
-        <effectRange>1500</effectRange>
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>78</magicLvl>
-        <mpConsume>2</mpConsume>
-        <operateType>A2</operateType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <reuseDelay>1000</reuseDelay>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="MaxHp">
-                <amount>20</amount>
-                <mode>PER</mode>
-                <heal>true</heal>
-            </effect>
-            <effect name="PAtk">
-                <amount>10</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MAtk">
-                <amount>20</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="Speed">
-                <amount>-20</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MagicalDefence">
-                <amount>20</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PhysicalDefence">
-                <amount>20</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="Accuracy">
-                <amount>4</amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="PhysicalAttackSpeed">
-                <amount>20</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MagicalAttackSpeed">
-                <amount>20</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="CriticalDamage">
-                <amount>20</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="ResistAbnormalByCategory">
-                <amount>-10</amount>
-                <slot>DEBUFF</slot>
-            </effect>
-            <effect name="MagicCriticalRate">
-                <amount>2</amount>
-                <mode>DIFF</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7065" toLevel="1" name="Test - Charge">
-        <!-- Charges into the enemy. -->
-        <coolTime>200</coolTime>
-        <hitTime>800</hitTime>
-        <magicLvl>75</magicLvl>
-        <nextAction>ATTACK</nextAction>
-        <operateType>DA1</operateType>
-        <mpConsume>50</mpConsume>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <effectRange>600</effectRange>
-        <castRange>400</castRange>
-        <targetType>ENEMY</targetType>
-        <affectScope>SINGLE</affectScope>
-        <targetConditions>
-            <condition name="OpCheckCastRange">
-                <distance>200</distance>
-            </condition>
-        </targetConditions>
-    </skill>
-    <skill id="7066" toLevel="1" name="Test Stun Charge">
-        <!-- Charges into enemy and Stuns. -->
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>9</abnormalTime>
-        <abnormalType>STUN</abnormalType>
-        <abnormalVisualEffect>STUN</abnormalVisualEffect>
-        <activateRate>50</activateRate>
-        <basicProperty>PHYSICAL</basicProperty>
-        <coolTime>200</coolTime>
-        <hitTime>800</hitTime>
-        <lvlBonusRate>1</lvlBonusRate>
-        <magicLvl>75</magicLvl>
-        <nextAction>ATTACK</nextAction>
-        <operateType>DA2</operateType>
-        <mpConsume>50</mpConsume>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <effectRange>600</effectRange>
-        <isDebuff>true</isDebuff>
-        <castRange>400</castRange>
-        <trait>SHOCK</trait>
-        <targetType>ENEMY</targetType>
-        <affectScope>SINGLE</affectScope>
-        <targetConditions>
-            <condition name="OpCheckCastRange">
-                <distance>200</distance>
-            </condition>
-        </targetConditions>
-        <effects>
-            <effect name="BlockActions">
-                <allowedSkills>35016</allowedSkills>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7067" toLevel="1" name="Test Range Charge">
-        <!-- Charges into enemy and causes bleeding -->
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>20</abnormalTime>
-        <subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
-        <abnormalType>BLEEDING</abnormalType>
-        <abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
-        <activateRate>100</activateRate>
-        <basicProperty>PHYSICAL</basicProperty>
-        <coolTime>200</coolTime>
-        <hitTime>800</hitTime>
-        <lvlBonusRate>2</lvlBonusRate>
-        <magicLvl>75</magicLvl>
-        <nextAction>ATTACK</nextAction>
-        <operateType>DA2</operateType>
-        <mpConsume>50</mpConsume>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <effectRange>600</effectRange>
-        <isDebuff>true</isDebuff>
-        <castRange>400</castRange>
-        <trait>BLEED</trait>
-        <targetType>ENEMY</targetType>
-        <affectScope>SINGLE</affectScope>
-        <targetConditions>
-            <condition name="OpCheckCastRange">
-                <distance>200</distance>
-            </condition>
-        </targetConditions>
-    </skill>
-    <skill id="7068" toLevel="1" name="Test Steal Abnormal State">
-        <!-- Steals enemy's abnormal state. -->
-        <coolTime>200</coolTime>
-        <hitTime>2000</hitTime>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <magicLvl>75</magicLvl>
-        <nextAction>ATTACK</nextAction>
-        <operateType>A1</operateType>
-        <mpConsume>100</mpConsume>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <effectRange>1100</effectRange>
-        <castRange>600</castRange>
-        <targetType>ENEMY</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpCheckCastRange">
-                <distance>200</distance>
-            </condition>
-        </conditions>
-    </skill>
-    <skill id="7069" toLevel="1" name="Test Abnormal State DD">
-        <!-- Inflicts damage according to the enemy's number of abnormal states. -->
-        <coolTime>200</coolTime>
-        <hitTime>2000</hitTime>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <magicLvl>75</magicLvl>
-        <nextAction>ATTACK</nextAction>
-        <operateType>A1</operateType>
-        <mpConsume>100</mpConsume>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <effectRange>1100</effectRange>
-        <castRange>600</castRange>
-        <targetType>ENEMY</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpCheckCastRange">
-                <distance>200</distance>
-            </condition>
-        </conditions>
-    </skill>
-    <skill id="7070" toLevel="1" name="Test - Soul Eating Passive">
-        <!-- Absorbs soul. -->
-        <magicLvl>75</magicLvl>
-        <operateType>P</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-    </skill>
-    <skill id="7071" toLevel="1" name="Test - Soul Transfer">
-        <!-- Transfers soul to party member. -->
-        <hitTime>900</hitTime>
-        <magicLvl>75</magicLvl>
-        <operateType>A1</operateType>
-        <mpConsume>5</mpConsume>
-        <reuseDelay>1000</reuseDelay>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hpConsume>20</hpConsume>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <targetConditions>
-            <condition name="OpCheckCastRange">
-                <distance>200</distance>
-            </condition>
-        </targetConditions>
-    </skill>
-    <skill id="7075" toLevel="1" name="Test - Distance DD">
-        <!-- Magic damage changes by distance. -->
-        <effectPoint>-1</effectPoint>
-        <hitTime>4000</hitTime>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <magicLvl>17</magicLvl>
-        <operateType>A1</operateType>
-        <mpConsume>50</mpConsume>
-        <reuseDelay>6000</reuseDelay>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <effectRange>1100</effectRange>
-        <attributeType>FIRE</attributeType>
-        <attributeValue>20</attributeValue>
-        <castRange>600</castRange>
-        <targetType>ENEMY</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="7076" toLevel="1" name="Test - Delay Debuff">
-        <!-- For 20 sec. inflicts Bleed. -->
-        <abnormalLvl>8</abnormalLvl>
-        <abnormalTime>20</abnormalTime>
-        <subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
-        <abnormalType>BLEEDING</abnormalType>
-        <abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
-        <activateRate>100</activateRate>
-        <basicProperty>PHYSICAL</basicProperty>
-        <coolTime>720</coolTime>
-        <effectPoint>-1</effectPoint>
-        <hitTime>1080</hitTime>
-        <lvlBonusRate>2</lvlBonusRate>
-        <magicLvl>70</magicLvl>
-        <nextAction>ATTACK</nextAction>
-        <operateType>A2</operateType>
-        <mpConsume>30</mpConsume>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <effectRange>400</effectRange>
-        <isDebuff>true</isDebuff>
-        <castRange>40</castRange>
-        <trait>BLEED</trait>
-        <targetType>ENEMY_ONLY</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="7077" toLevel="1" name="Test - Delay Debuff - Call">
-        <!-- Character is tired. -->
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>5</abnormalTime>
-        <abnormalType>STUN</abnormalType>
-        <abnormalVisualEffect>STUN</abnormalVisualEffect>
-        <magicLvl>70</magicLvl>
-        <operateType>A2</operateType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <isDebuff>true</isDebuff>
-        <trait>SHOCK</trait>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="7079" toLevel="1" name="Test - Party Damage Absorb">
-        <!-- Party member's damage transfers to potector. -->
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>1200</abnormalTime>
-        <abnormalType>PUBLIC_SLOT</abnormalType>
-        <effectPoint>1</effectPoint>
-        <hitTime>2500</hitTime>
-        <magicLvl>75</magicLvl>
-        <operateType>A2</operateType>
-        <mpConsume>100</mpConsume>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <specialLevel>-1</specialLevel>
-        <affectRange>1000</affectRange>
-        <targetType>SELF</targetType>
-        <affectScope>POINT_BLANK</affectScope>
-        <affectObject>FRIEND</affectObject>
-    </skill>
-    <skill id="7080" toLevel="1" name="Test - General Attack Prohibited">
-        <!-- Cannot perform general attack. -->
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>40</abnormalTime>
-        <abnormalType>PUBLIC_SLOT</abnormalType>
-        <basicProperty>PHYSICAL</basicProperty>
-        <effectPoint>-1</effectPoint>
-        <hitTime>2500</hitTime>
-        <magicLvl>70</magicLvl>
-        <operateType>A2</operateType>
-        <mpConsume>30</mpConsume>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <effectRange>1100</effectRange>
-        <isDebuff>true</isDebuff>
-        <castRange>600</castRange>
-        <targetType>ENEMY_ONLY</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="7081" toLevel="1" name="Effect Test - Land Shot">
-        <!-- Shoots toward ground. -->
-        <affectLimit>5-12</affectLimit>
-        <coolTime>800</coolTime>
-        <effectPoint>-1</effectPoint>
-        <hitTime>3200</hitTime>
-        <magicLvl>75</magicLvl>
-        <operateType>A1</operateType>
-        <mpConsume>30</mpConsume>
-        <reuseDelay>25000</reuseDelay>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <effectRange>1000</effectRange>
-        <affectRange>200</affectRange>
-        <castRange>500</castRange>
-        <targetType>ENEMY</targetType>
-        <affectScope>RANGE</affectScope>
-        <affectObject>NOT_FRIEND</affectObject>
-    </skill>
-    <skill id="7082" toLevel="1" name="Effect Test - Chain Lightning">
-        <!-- Chain Lightning -->
-        <affectLimit>5-12</affectLimit>
-        <effectPoint>-1</effectPoint>
-        <hitTime>5000</hitTime>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <magicLvl>75</magicLvl>
-        <operateType>A1</operateType>
-        <mpConsume>100</mpConsume>
-        <reuseDelay>20000</reuseDelay>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <effectRange>1000</effectRange>
-        <attributeType>WATER</attributeType>
-        <attributeValue>20</attributeValue>
-        <affectRange>200</affectRange>
-        <castRange>500</castRange>
-        <targetType>ENEMY</targetType>
-        <affectScope>RANGE</affectScope>
-        <affectObject>NOT_FRIEND</affectObject>
-    </skill>
-    <skill id="7083" toLevel="1" name="Test - Trap Skill">
-        <!-- Trap Range Skill -->
-        <affectLimit>6-12</affectLimit>
-        <effectPoint>-1</effectPoint>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <magicLvl>38</magicLvl>
-        <operateType>A1</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <attributeType>FIRE</attributeType>
-        <attributeValue>20</attributeValue>
-        <affectRange>200</affectRange>
-        <targetType>SELF</targetType>
-        <affectScope>POINT_BLANK</affectScope>
-        <affectObject>NOT_FRIEND</affectObject>
-    </skill>
-    <skill id="7084" toLevel="1" name="Test - Trap Skill">
-        <!-- Trap Range Skill -->
-        <affectLimit>6-12</affectLimit>
-        <effectPoint>-1</effectPoint>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <magicLvl>38</magicLvl>
-        <operateType>CA1</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <attributeType>FIRE</attributeType>
-        <attributeValue>20</attributeValue>
-        <affectRange>200</affectRange>
-        <channelingStart>1</channelingStart>
-        <channelingTickInterval>0</channelingTickInterval>
-        <targetType>SELF</targetType>
-        <affectScope>POINT_BLANK</affectScope>
-        <affectObject>NOT_FRIEND</affectObject>
-    </skill>
-    <skill id="7085" toLevel="1" name="Self-Destruct Explosion">
-        <effectPoint>-100</effectPoint>
-        <hitTime>1000</hitTime>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <magicLvl>85</magicLvl>
-        <operateType>A1</operateType>
-        <mpConsume>85</mpConsume>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <attributeType>FIRE</attributeType>
-        <attributeValue>50</attributeValue>
-        <affectRange>300</affectRange>
-        <targetType>SELF</targetType>
-        <affectScope>POINT_BLANK</affectScope>
-        <affectObject>NOT_FRIEND</affectObject>
-    </skill>
-    <skill id="7086" toLevel="1" name="Last Stand_test">
-        <effectPoint>-100</effectPoint>
-        <magicLvl>85</magicLvl>
-        <operateType>A1</operateType>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <targetType>ENEMY</targetType>
-        <affectScope>SINGLE</affectScope>
-    </skill>
-    <skill id="7087" toLevel="1" name="Chain Magic - Dark Explosion_test">
-        <effectPoint>-1063</effectPoint>
-        <hitTime>1000</hitTime>
-        <isMagic>1</isMagic> <!-- Magic Skill -->
-        <magicLvl>85</magicLvl>
-        <operateType>A1</operateType>
-        <mpConsume>85</mpConsume>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <effectRange>900</effectRange>
-        <attributeType>DARK</attributeType>
-        <attributeValue>50</attributeValue>
-        <affectRange>600</affectRange>
-        <castRange>500</castRange>
-        <targetType>ENEMY</targetType>
-        <affectScope>RANGE</affectScope>
-        <affectObject>NOT_FRIEND</affectObject>
-    </skill>
-    <skill id="7088" toLevel="1" name="Master's Blessing - Improve Combat">
-        <!-- The GM is always by your side. Combine P. Atk. increase and P. Def. increase to have more advanced combat power increase effect. For 1 h., P. Atk. +15% and P. Def. +15%. -->
-        <icon>icon.skill1499</icon>
-        <abnormalLvl>2</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>IMPROVE_PA_PD_UP</abnormalType>
-        <castRange>900</castRange>
-        <effectPoint>1</effectPoint>
-        <effectRange>1500</effectRange>
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>70</magicLvl>
-        <mpConsume>1</mpConsume>
-        <mpInitialConsume>1</mpInitialConsume>
-        <operateType>A2</operateType>
-        <reuseDelay>1000</reuseDelay>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="DispelBySlot">
-                <dispel>PA_UP,9;PD_UP,9</dispel>
-            </effect>
-            <effect name="BlockAbnormalSlot">
-                <slot>PA_UP;PD_UP</slot>
-            </effect>
-            <effect name="PAtk">
-                <amount>15</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PhysicalDefence">
-                <amount>15</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7089" toLevel="1" name="Master's Blessing - Improve Magic">
-        <!-- The GM is always by your side. Combine M. Atk. increase and M. Def. increase to have more advanced magic ability increase effect. For 1 h., M. Atk. +75% and M. Def. +30%. -->
-        <icon>icon.skill1500</icon>
-        <abnormalLvl>2</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>IMPROVE_MA_MD_UP</abnormalType>
-        <castRange>900</castRange>
-        <effectPoint>1</effectPoint>
-        <effectRange>1500</effectRange>
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>74</magicLvl>
-        <mpConsume>1</mpConsume>
-        <mpInitialConsume>1</mpInitialConsume>
-        <operateType>A2</operateType>
-        <reuseDelay>1000</reuseDelay>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="DispelBySlot">
-                <dispel>MA_UP,9;MD_UP,9</dispel>
-            </effect>
-            <effect name="BlockAbnormalSlot">
-                <slot>MA_UP;MD_UP</slot>
-            </effect>
-            <effect name="MAtk">
-                <amount>75</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MagicalDefence">
-                <amount>30</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7090" toLevel="1" name="Master's Blessing - Improve Condition">
-        <!-- The GM is always by your side. Combine maximum HP increase and maximum MP increase to have more advanced mental and physical power. For 1 h., Max HP +35% and Max MP +35%. -->
-        <icon>icon.skill1501</icon>
-        <abnormalLvl>2</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>IMPROVE_HP_MP_UP</abnormalType>
-        <castRange>900</castRange>
-        <effectPoint>1</effectPoint>
-        <effectRange>1500</effectRange>
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>72</magicLvl>
-        <mpConsume>1</mpConsume>
-        <mpInitialConsume>1</mpInitialConsume>
-        <operateType>A2</operateType>
-        <reuseDelay>1000</reuseDelay>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="DispelBySlot">
-                <dispel>MAX_HP_UP,9;MAX_MP_UP,9</dispel>
-            </effect>
-            <effect name="BlockAbnormalSlot">
-                <slot>MAX_HP_UP;MAX_MP_UP</slot>
-            </effect>
-            <effect name="MaxMp">
-                <amount>35</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MaxHp">
-                <amount>35</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7091" toLevel="1" name="Master's Blessing - Improve Critical Attack">
-        <!-- The GM is always by your side. Combines P. Critical Rate increase and P. Critical Damage increase to have more advanced critical increase effect. For 1 h., P. Critical Rate +30% and P. Critical Damage +35%. -->
-        <icon>icon.skill1502</icon>
-        <abnormalLvl>2</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>IMPROVE_CRT_RATE_DMG_UP</abnormalType>
-        <castRange>900</castRange>
-        <effectPoint>1</effectPoint>
-        <effectRange>1500</effectRange>
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>74</magicLvl>
-        <mpConsume>1</mpConsume>
-        <mpInitialConsume>1</mpInitialConsume>
-        <operateType>A2</operateType>
-        <reuseDelay>1000</reuseDelay>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="DispelBySlot">
-                <dispel>CRITICAL_PROB_UP,9;CRITICAL_DMG_UP,9</dispel>
-            </effect>
-            <effect name="BlockAbnormalSlot">
-                <slot>CRITICAL_PROB_UP;CRITICAL_DMG_UP</slot>
-            </effect>
-            <effect name="CriticalDamage">
-                <amount>35</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="CriticalRate">
-                <amount>30</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7092" toLevel="1" name="Master's Blessing - Improve Shield Defense">
-        <!-- The GM is always by your side. Combine Shield Defense rate increase and Shield Defense increase to have more advanced shield ability increase effect. For 1 h., shield defense rate +30% and Shield Defense +50%. -->
-        <icon>icon.skill1503</icon>
-        <abnormalLvl>2</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>IMPROVE_SHIELD_RATE_DEFENCE_UP</abnormalType>
-        <castRange>900</castRange>
-        <effectPoint>1</effectPoint>
-        <effectRange>1500</effectRange>
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>70</magicLvl>
-        <mpConsume>1</mpConsume>
-        <mpInitialConsume>1</mpInitialConsume>
-        <operateType>A2</operateType>
-        <reuseDelay>1000</reuseDelay>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="DispelBySlot">
-                <dispel>SHIELD_PROB_UP,9;SHIELD_DEFENCE_UP,9</dispel>
-            </effect>
-            <effect name="BlockAbnormalSlot">
-                <slot>SHIELD_PROB_UP;SHIELD_DEFENCE_UP</slot>
-            </effect>
-            <effect name="ShieldDefenceRate">
-                <amount>30</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="ShieldDefence">
-                <amount>50</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7093" toLevel="1" name="Master's Blessing - Improve Movement">
-        <!-- The GM is always by your side. Combine Speed increase and P. Evasion increase to have more advanced movement increase effect. For 1 h., Speed +33 and P. Evasion +4. -->
-        <icon>icon.skill1504</icon>
-        <abnormalLvl>2</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>IMPROVE_SPEED_AVOID_UP</abnormalType>
-        <castRange>900</castRange>
-        <effectPoint>1</effectPoint>
-        <effectRange>1500</effectRange>
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>72</magicLvl>
-        <mpConsume>1</mpConsume>
-        <mpInitialConsume>1</mpInitialConsume>
-        <operateType>A2</operateType>
-        <reuseDelay>1000</reuseDelay>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="DispelBySlot">
-                <dispel>SPEED_UP,9;AVOID_UP,9</dispel>
-            </effect>
-            <effect name="BlockAbnormalSlot">
-                <slot>SPEED_UP;AVOID_UP</slot>
-            </effect>
-            <effect name="Speed">
-                <amount>33</amount>
-                <mode>DIFF</mode>
-            </effect>
-            <effect name="PhysicalEvasion">
-                <amount>4</amount>
-                <mode>DIFF</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7094" toLevel="1" name="Master's Blessing - Sharpen Edge">
-        <!-- The GM is always by your side. Sharpens a bladed weapon to get P. Atk. +5% and P. Critical Rate +20% for 1 h. -->
-        <icon>icon.skill0825</icon>
-        <abnormalLvl>2</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>DWARF_ATTACK_BUFF</abnormalType>
-        <castRange>900</castRange>
-        <effectPoint>1</effectPoint>
-        <effectRange>1500</effectRange>
-        <hitTime>500</hitTime>
-        <magicLvl>49</magicLvl>
-        <mpConsume>2</mpConsume>
-        <operateType>A2</operateType>
-        <reuseDelay>1000</reuseDelay>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <isMagic>2</isMagic>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="PAtk">
-                <amount>5</amount>
-                <mode>PER</mode>
-                <weaponType>
-                    <item>SWORD</item>
-                    <item>DUAL</item>
-                    <item>ANCIENT_SWORD</item>
-                    <item>RAPIER</item>
-                    <item>DAGGER</item>
-                    <item>DUAL_DAGGER</item>
-                    <item>SPEAR</item>
-                    <item>FIST</item>
-                </weaponType>
-            </effect>
-            <effect name="CriticalRate">
-                <amount>20</amount>
-                <mode>PER</mode>
-                <weaponType>
-                    <item>SWORD</item>
-                    <item>DUAL</item>
-                    <item>ANCIENT_SWORD</item>
-                    <item>RAPIER</item>
-                    <item>DAGGER</item>
-                    <item>DUAL_DAGGER</item>
-                    <item>SPEAR</item>
-                    <item>FIST</item>
-                </weaponType>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7095" toLevel="1" name="Master's Blessing - Encase Armor">
-        <!-- The GM is always by your side. Thickens the surface of heavy armor to get P. Def. +10% for 1 h. -->
-        <icon>icon.skill0828</icon>
-        <abnormalLvl>2</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>DWARF_DEFENCE_BUFF</abnormalType>
-        <castRange>900</castRange>
-        <effectPoint>1</effectPoint>
-        <effectRange>1500</effectRange>
-        <hitTime>500</hitTime>
-        <magicLvl>46</magicLvl>
-        <mpConsume>2</mpConsume>
-        <operateType>A2</operateType>
-        <reuseDelay>1000</reuseDelay>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <isMagic>2</isMagic>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="PhysicalDefence">
-                <amount>10</amount>
-                <mode>PER</mode>
-                <armorType>
-                    <item>HEAVY</item>
-                </armorType>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7096" toLevel="1" name="Master's Blessing - Noblesse Blessing">
-        <!-- The GM is always by your side. The target's buff/ de-buff doesn't disappear at death but is maintained. But the Noblesse Blessing and the Amulet of Luck disappear. -->
-        <icon>icon.skill1323</icon>
-        <abnormalLvl>2</abnormalLvl>
-        <abnormalTime>3600</abnormalTime>
-        <abnormalType>PRESERVE_ABNORMAL</abnormalType>
-        <canBeDispelled>false</canBeDispelled>
-        <castRange>900</castRange>
-        <effectPoint>1</effectPoint>
-        <effectRange>1500</effectRange>
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLvl>1</magicLvl>
-        <mpConsume>2</mpConsume>
-        <operateType>A2</operateType>
-        <reuseDelay>1000</reuseDelay>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="NoblesseBless"/>
-        </effects>
-    </skill>
-    <skill id="7097" toLevel="1" name="Cancel Shadow Move">
-        <icon>icon.skill01702</icon>
-        <operateType>A1</operateType>
-        <effectPoint>709</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <specialLevel>-1</specialLevel>
-        <isTriggeredSkill>true</isTriggeredSkill>
-        <affectRange>2000</affectRange>
-        <isMagic>2</isMagic>
-        <targetType>SELF</targetType>
-        <affectScope>PARTY</affectScope>
-        <affectObject>FRIEND</affectObject>
-        <effects>
-            <effect name="DispelBySlot">
-                <dispel>DANCE_OF_SHADOW,-1;STEALTH,-1</dispel>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7098" toLevel="1" name="Clan-exclusive Pet Heal">
-        <!-- Recovers all of your HP. Power 3000 -->
-        <icon>icon.skill1401</icon>
-        <operateType>A1</operateType>
-        <mpConsume>5</mpConsume>
-        <hitTime>1000</hitTime>
-        <effectPoint>-700</effectPoint>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <magicLvl>85</magicLvl>
-        <isMagic>1</isMagic>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="Heal">
-                <power>3000</power>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="7099" toLevel="1" name="Clan-exclusive Pet Fear">
-        <!-- Inflicts fear on the target for 3 sec. -->
-        <icon>icon.skill4108</icon>
-        <operateType>A2</operateType>
-        <mpConsume>5</mpConsume>
-        <castRange>900</castRange>
-        <hitTime>1500</hitTime>
-        <isMagic>1</isMagic>
-        <effectPoint>-700</effectPoint>
-        <abnormalType>TURN_FLEE</abnormalType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1100</effectRange>
-        <magicLvl>85</magicLvl>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>3</abnormalTime>
-        <trait>DERANGEMENT</trait>
-        <abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
-        <isDebuff>true</isDebuff>
-        <targetType>TARGET</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="BlockControl"/>
-            <effect name="Fear"/>
-        </effects>
-    </skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
+	<skill id="7000" name="NPC Default" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+	</skill>
+	<skill id="7001" name="Dispel Buff" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="99"/>
+			<cast-range initial="400"/>
+			<effect-point initial="100"/>
+			<effect-range initial="900"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+		<effects>
+			<dispel-by-category category="BUFF" max="20">				<power initial="100.0"/>
+			</dispel-by-category>
+		</effects>
+	</skill>
+	<skill id="7002" name="Dispel Debuff" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="99"/>
+			<cast-range initial="400"/>
+			<effect-point initial="100"/>
+			<effect-range initial="900"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+		<effects>
+			<dispel-by-category category="DEBUFF" max="20">				<power initial="100.0"/>
+			</dispel-by-category>
+		</effects>
+	</skill>
+	<skill id="7003" name="Dispel All" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="99"/>
+			<cast-range initial="400"/>
+			<effect-point initial="100"/>
+			<effect-range initial="900"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+		<effects>
+			<dispel-by-category category="BUFF" max="20">				<power initial="100.0"/>
+			</dispel-by-category>
+		</effects>
+	</skill>
+	<skill id="7004" name="Dispel Petrification" max-level="2" action="A1" type="MAGIC">
+	<!-- Cures Petrification. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="60"/>
+			<cast-range initial="-1"/>
+			<reuse initial="10000"/>
+			<effect-point initial="566"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="566000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="TARGET" />
+		<effects>
+			<dispel>
+				<abnormal type="TURN_STONE">
+					<power initial="2.0"/>
+				</abnormal>
+			</dispel>
+		</effects>
+	</skill>
+	<skill id="7005" name="Greater Chant of Vampire" max-level="4" action="A2" type="MAGIC">
+	<!-- 
+		level 1: Grants a party member the ability to have a chance to absorb some of the damage inflicted on the enemy as HP for a set time.
+		level 4: Momentarily allows party members to partially restore HP using damage inflicted upon the enemy with a certain probability.
+	 -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="74"/>
+			<cast-range initial="400"/>
+			<reuse initial="20000"/>
+			<effect-point initial="655"/>
+			<effect-range initial="900"/>
+			<hit-time initial="655000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana-init initial="55"/>
+			<mana initial="272"/>
+		</consume>
+		<target type="TARGET" scope="PARTY" object="FRIEND" range="200" />
+		<abnormal type="VAMPIRIC_ATTACK" >
+			<level initial="4"/>
+			<time initial="1200"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<conditions>
+			<condition name="TargetMyPledge"/>
+		</conditions>
+		<effects>
+			<vampiric-attack chance="30">
+				<power initial="9.0"/>
+			</vampiric-attack>
+		</effects>
+	</skill>
+	<skill id="7006" name="The Love of Pa'agrio" max-level="13" action="A2" type="MAGIC">
+	<!-- Momentarily increases target's allies HP recovery bonus. -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<cast-range initial="400"/>
+			<reuse initial="20000"/>
+			<effect-point initial="655"/>
+			<effect-range initial="900"/>
+			<hit-time initial="655000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="265"/>
+		</consume>
+		<target type="TARGET" scope="PLEDGE" object="FRIEND" range="200" />
+		<abnormal type="LIFE_FORCE_OTHERS" >
+			<level initial="6"/>
+			<time initial="15"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<conditions>
+			<condition name="TargetMyPledge"/>
+		</conditions>
+	</skill>
+	<skill id="7007" name="Greater Seal of Flame" max-level="4" debuff="true" action="A2" type="MAGIC">
+	<!-- 
+		level 1: Sets the target's ally on fire. Continuously decreases enemy HP.
+		level 4: Sets the target's allies on fire. Momentarily and continuously decreases the enemies' HP.
+	 -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" >
+			<magic-level initial="74"/>
+			<cast-range initial="400"/>
+			<reuse initial="20000"/>
+			<effect-point initial="-409"/>
+			<effect-range initial="900"/>
+			<hit-time initial="-409000"/>
+			<activate-rate initial="35"/>
+
+			<element type="FIRE" value="20"/>
+		</attributes>
+		<consume>
+			<mana initial="153"/>
+		</consume>
+		<target type="TARGET" scope="PLEDGE" object="NOT_FRIEND" range="200" />
+		<abnormal type="DOT_ATTR" visual="DOT_BLEEDING" >
+			<level initial="8"/>
+			<time initial="15"/>
+			<chance initial="35"/>
+		</abnormal>
+	</skill>
+	<skill id="7008" name="Feather of Blessing" max-level="1" debuff="true" action="A2">
+	<!-- Once used, the Feather of Blessing cannot be reused for another 5 minutes. -->
+		<icon initial="icon.blessed_feather_i00"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="-2"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+
+			<element type="FIRE" value="20"/>
+		</attributes>
+		<target type="TARGET" />
+		<abnormal type="PUBLIC_SLOT" >
+			<level initial="9"/>
+			<time initial="300"/>
+			<chance initial="-1"/>
+		</abnormal>
+	</skill>
+	<skill id="7009" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="7010" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="7011" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="7012" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="7013" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="7014" name="Test - P. Critical Damage Up" max-level="1" action="T">
+	<!-- Received P. Critical Damage by +10%%. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="7015" name="Test - P. Critical Damage Down" max-level="1" action="T">
+	<!-- Received P. Critical Damage by -50%%. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="7016" name="Test - P. Critical Damage Up" max-level="1" action="T">
+	<!-- Received P. Critical Damage by +100. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="7017" name="Test - P. Critical Damage Down" max-level="1" action="T">
+	<!-- Received P. Critical Damage by +200. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="7018" name="Test - P. Critical Damage Up" max-level="1" action="T">
+	<!-- Received P. Critical Rate +10%%. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="7019" name="Test - P. Critical Down" max-level="1" action="T">
+	<!-- Received P. Critical Rate -50%%. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="7020" name="Test - P. Critical Damage Up" max-level="1" action="T">
+	<!-- Received P. Critical Rate +100. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="7021" name="Test - P. CriticalDown" max-level="1" action="T">
+	<!-- Received P. Critical Rate -200. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="7022" name="Test - Find Hidden Door" max-level="1" action="A1">
+	<!-- Look for hidden door. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+
+			<element type="FIRE" value="20"/>
+		</attributes>
+		<target scope="STATIC_OBJECT_SCOPE" object="HIDDEN_PLACE" range="1000" affect-min="6" affect-random="12" />
+	</skill>
+	<skill id="7023" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="7024" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="7025" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="7026" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="7027" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="7028" name="Stationary NPCs" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="99"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<defence-trait>
+				<trait type="DERANGEMENT">
+					<power initial="1.0"/>
+				</trait>
+			</defence-trait>
+		</effects>
+	</skill>
+	<skill id="7029" name="Super Haste" max-level="4" action="T">
+	<!-- 
+		level 1: Movement Speed is increased.
+		level 2: speed is increased significantly.
+		level 3: Movement Speed is increased dramatically.
+		level 4: Obtains great combat power.
+	 -->
+		<icon initial="icon.skill7029"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-point initial="1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="NONE" />
+		<effects>
+			<effect name="MpConsumePerLevel" ticks="5">
+				<power initial="1.0E-4"/>
+			</effect>
+			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+				<power initial="0.0">
+					<value level="3">999900.0</value>
+					<value level="4">999999.0</value>
+				</power>
+			</stat-modify>
+			<speed mode="PER">
+				<power initial="100.0">
+					<value level="2">200.0</value>
+					<value level="4">300.0</value>
+				</power>
+			</speed>
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+				<power initial="100.0">
+					<value level="2">200.0</value>
+					<value level="4">300.0</value>
+				</power>
+			</stat-modify>
+			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
+				<power initial="100.0">
+					<value level="2">200.0</value>
+					<value level="4">300.0</value>
+				</power>
+			</stat-modify>
+			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+				<power initial="0.0">
+					<value level="4">100.0</value>
+				</power>
+			</vital-stat-modify>
+			<stat-modify stat="REGENERATE_MP_RATE" mode="PER">
+				<power initial="0.0">
+					<value level="4">100.0</value>
+				</power>
+			</stat-modify>
+			<stat-modify stat="WEIGHT_LIMIT" mode="PER">
+				<power initial="0.0">
+					<value level="4">100.0</value>
+				</power>
+			</stat-modify>
+			<reuse type="0">
+				<power initial="-99.0"/>
+			</reuse>
+			<stat-modify stat="MAGIC_ATTACK" mode="PER">
+				<power initial="0.0">
+					<value level="3">999900.0</value>
+					<value level="4">999999.0</value>
+				</power>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="7030" name="Summon King Bugbear" max-level="1" action="A1" type="MAGIC">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<reuse initial="4500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="3"/>
+			<item initial="1458"/>
+			<item-count initial="8"/>
+		</consume>
+		<target />
+		<effects>
+			<summon consume-item="0" experience-multiplier="1.0" life-time="1200000">
+				<npc initial="20150.0"/>
+				<consume-count initial="1.0"/>
+			</summon>
+		</effects>
+	</skill>
+	<skill id="7031" name="Summon Skeleton Royal Guard" max-level="1" action="A1" type="MAGIC">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<reuse initial="4500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="3"/>
+			<item initial="1458"/>
+			<item-count initial="8"/>
+		</consume>
+		<target />
+	</skill>
+	<skill id="7032" name="Summon Hunter Gargoyle" max-level="1" action="A1" type="MAGIC">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<reuse initial="4500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="3"/>
+			<item initial="1458"/>
+			<item-count initial="8"/>
+		</consume>
+		<target />
+		<effects>
+			<summon consume-item="0" experience-multiplier="1.0" life-time="1200000">
+				<npc initial="20241.0"/>
+				<consume-count initial="1.0"/>
+			</summon>
+		</effects>
+	</skill>
+	<skill id="7033" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="7034" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="7035" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="7036" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="7037" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="7038" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="7039" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="7040" name="not_used" max-level="1" >
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="7041" name="Master's Blessing - Focus" max-level="3" action="A2">
+	<!-- 
+		level 1: The GM is always by your side. Increases P. Critical Rate +30%% for 1 hour.
+		level 2: The GM is always by your side. Increases P. Critical Rate +30%% for 4 hours.
+		level 3: The GM is always by your side. Increases P. Critical Rate +30%% for 8 hours.
+	 -->
+		<icon initial="icon.skill1077"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="52"/>
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="1500"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="1"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="CRITICAL_PROB_UP" >
+			<level initial="4"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="PER">
+				<power initial="30.0"/>
+			</stat-hp-based>
+		</effects>
+	</skill>
+	<skill id="7042" name="Master's Blessing - Death Whisper" max-level="3" action="A2">
+	<!-- 
+		level 1: The GM is always by your side. Increases P. Critical Damage +35%% for 1 hour.
+		level 2: The GM is always by your side. Increases P. Critical Damage +35%% for 4 hours.
+		level 3: The GM is always by your side. Increases P. Critical Damage +35%% for 8 hours.
+	 -->
+		<icon initial="icon.skill1242"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="56"/>
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="1500"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="1"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="CRITICAL_DMG_UP" >
+			<level initial="4"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+				<power initial="35.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="7043" name="Master's Blessing - Haste" max-level="3" action="A2">
+	<!-- 
+		level 1: The GM is always by your side. Increases Atk. Spd. by 33%% for 1 hour.
+		level 2: The GM is always by your side. Increases Atk. Spd. by 33%% for 4 hours.
+		level 3: The GM is always by your side. Increases Atk. Spd. by 33%% for 8 hours.
+	 -->
+		<icon initial="icon.skill1086"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="52"/>
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="1500"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="1"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="ATTACK_TIME_DOWN" >
+			<level initial="3"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+				<power initial="33.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="7044" name="Master's Blessing - Guidance" max-level="3" action="A2">
+	<!-- 
+		level 1: The GM is always by your side. Increases P. Accuracy +4 for 1 hour.
+		level 2: The GM is always by your side. Increases P. Accuracy +4 for 4 hours.
+		level 3: The GM is always by your side. Increases P. Accuracy +4 for 8 hours.
+	 -->
+		<icon initial="icon.skill1240"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="56"/>
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="1500"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="1"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="HIT_UP" >
+			<level initial="4"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="ACCURACY" mode="DIFF">
+				<power initial="4.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="7045" name="Master's Blessing - Blessed Body" max-level="3" action="A2">
+	<!-- 
+		level 1: The GM is always by your side. Increases Max HP by 35%% for 1 hour.
+		level 2: The GM is always by your side. Increases Max HP by 35%% for 4 hours.
+		level 3: The GM is always by your side. Increases Max HP by 35%% for 8 hours.
+	 -->
+		<icon initial="icon.skill1045"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="72"/>
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="1500"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="1"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="MAX_HP_UP" >
+			<level initial="7"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+				<power initial="35.0"/>
+			</vital-stat-modify>
+		</effects>
+	</skill>
+	<skill id="7046" name="Master's Blessing - Blessed Soul" max-level="3" action="A2">
+	<!-- 
+		level 1: The GM is always by your side. Increases Max MP by 35%% for 1 hour.
+		level 2: The GM is always by your side. Increases Max MP by 35%% for 4 hours.
+		level 3: The GM is always by your side. Increases Max MP by 35%% for 8 hours.
+	 -->
+		<icon initial="icon.skill1048"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="70"/>
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="1500"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="1"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="MAX_MP_UP" >
+			<level initial="7"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+				<power initial="35.0"/>
+			</vital-stat-modify>
+		</effects>
+	</skill>
+	<skill id="7047" name="Master's Blessing - Agility" max-level="3" action="A2">
+	<!-- 
+		level 1: The GM is always by your side. Increase P. Evasion by 4 for 1 hour.
+		level 2: The GM is always by your side. Increase P. Evasion by 4 for 4 hours.
+		level 3: The GM is always by your side. Increase P. Evasion by 4 for 8 hours.
+	 -->
+		<icon initial="icon.skill1087"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="52"/>
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="1500"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="1"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="AVOID_UP" >
+			<level initial="4"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="4.0"/>
+			</stat-hp-based>
+		</effects>
+	</skill>
+	<skill id="7048" name="Master's Blessing - Acumen" max-level="3" action="A2">
+	<!-- 
+		level 1: The GM is always by your side. Increases Casting Spd. +30%% for 1 hour.
+		level 2: The GM is always by your side. Increases Casting Spd. +30%% for 4 hours.
+		level 3: The GM is always by your side. Increases Casting Spd. +30%% for 8 hours.
+	 -->
+		<icon initial="icon.skill1085"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="48"/>
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="1500"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="1"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="CASTING_TIME_DOWN" >
+			<level initial="4"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
+				<power initial="30.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="7049" name="Master's Blessing - Decrease Weight" max-level="3" action="A2">
+	<!-- 
+		level 1: The GM is always by your side. Weight Penalty Segment +9000 for 1 hour.
+		level 2: The GM is always by your side. Weight Penalty Segment +9000 for 4 hours.
+		level 3: The GM is always by your side. Weight Penalty Segment +9000 for 8 hours.
+	 -->
+		<icon initial="icon.skill1257"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="52"/>
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="1500"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="1"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="DECREASE_WEIGHT_PENALTY" >
+			<level initial="4"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="WEIGHT_PENALTY">
+				<power initial="9000.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="7050" name="Master's Blessing - Might" max-level="3" action="A2">
+	<!-- 
+		level 1: The GM is always by your side. Increases P. Atk. by 15%% for 1 hour.
+		level 2: The GM is always by your side. Increases P. Atk. by 15%% for 4 hours.
+		level 3: The GM is always by your side. Increases P. Atk. by 15%% for 8 hours.
+	 -->
+		<icon initial="icon.skill1068"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="40"/>
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="1500"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="1"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="PA_UP" >
+			<level initial="4"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+				<power initial="15.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="7051" name="Master's Blessing - Shield" max-level="3" action="A2">
+	<!-- 
+		level 1: The GM is always by your side. Increases P. Def. by 15%% for 1 hour.
+		level 2: The GM is always by your side. Increases P. Def. by 15%% for 4 hours.
+		level 3: The GM is always by your side. Increases P. Def. by 15%% for 8 hours.
+	 -->
+		<icon initial="icon.skill1040"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="44"/>
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="1500"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="1"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="PD_UP" >
+			<level initial="4"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+				<power initial="15.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="7052" name="Master's Blessing - Magic Barrier" max-level="3" action="A2">
+	<!-- 
+		level 1: The GM is always by your side. Increases M. Def. by 30%% for 1 hour.
+		level 2: The GM is always by your side. Increases M. Def. by 30%% for 4 hours.
+		level 3: The GM is always by your side. Increases M. Def. by 30%% for 8 hours.
+	 -->
+		<icon initial="icon.skill1036"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="52"/>
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="1500"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="1"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="MD_UP" >
+			<level initial="4"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+				<power initial="30.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="7053" name="Master's Blessing - Vampiric Rage" max-level="3" action="A2">
+	<!-- 
+		level 1: The GM is always by your side. For 1 hour, 9%% of the physical damage inflicted on the enemy is recovered as HP with a certain probability.
+		level 2: The GM is always by your side. For 4 hours, 9%% of the physical damage inflicted on the enemy is recovered as HP with a certain probability.
+		level 3: The GM is always by your side. For 8 hours, 9%% of the physical damage inflicted on the enemy is recovered as HP with a certain probability.
+	 -->
+		<icon initial="icon.skill1268"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="72"/>
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="1500"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="1"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="VAMPIRIC_ATTACK" >
+			<level initial="4"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<vampiric-attack chance="80">
+				<power initial="9.0"/>
+			</vampiric-attack>
+		</effects>
+	</skill>
+	<skill id="7054" name="Master's Blessing - Empower" max-level="3" action="A2">
+	<!-- 
+		level 1: The GM is always by your side. Increases M. Atk. by 75%% for 1 hour.
+		level 2: The GM is always by your side. Increases M. Atk. by 75%% for 4 hours.
+		level 3: The GM is always by your side. Increases M. Atk. by 75%% for 8 hours.
+	 -->
+		<icon initial="icon.skill1059"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="52"/>
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="1500"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="1"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="MA_UP" >
+			<level initial="4"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="MAGIC_ATTACK" mode="PER">
+				<power initial="75.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="7055" name="Master's Blessing - Wind Walk" max-level="3" action="A2">
+	<!-- 
+		level 1: The GM is always by your side. Increases Speed by 33 for 1 hour.
+		level 2: The GM is always by your side. Increases Speed by 33 for 4 hours.
+		level 3: The GM is always by your side. Increases Speed by 33 for 8 hours.
+	 -->
+		<icon initial="icon.skill1204"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="30"/>
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="1500"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="1"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="SPEED_UP" >
+			<level initial="3"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<speed mode="DIFF">
+				<power initial="33.0"/>
+			</speed>
+		</effects>
+	</skill>
+	<skill id="7056" name="Master's Blessing - Berserker Spirit" max-level="3" action="A2">
+	<!-- 
+		level 1: The GM is always by your side. For 1 hour, decreases a party member's P. Def. -8%%, M. Def. -16%%, and P. evasion -4. Increases P. Atk. +8%%, M. Atk. +16%%, Atk. Spd. +8%%, Casting Spd. +8%%, and Movement Speed +8.
+		level 2: The GM is always by your side. For 4 hours, decreases a party member's P. Def. -8%%, M. Def. -16%%, and P. evasion -4. Increases P. Atk. +8%%, M. Atk. +16%%, Atk. Spd. +8%%, Casting Spd. +8%%, and Movement Speed +8.
+		level 3: The GM is always by your side. For 8 hours, decreases a party member's P. Def. -8%%, M. Def. -16%%, and P. evasion -4. Increases P. Atk. +8%%, M. Atk. +16%%, Atk. Spd. +8%%, Casting Spd. +8%%, and Movement Speed +8.
+	 -->
+		<icon initial="icon.skill1062"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="52"/>
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="1500"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="1"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="BERSERKER" >
+			<level initial="3"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+				<power initial="8.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_ATTACK" mode="PER">
+				<power initial="16.0"/>
+			</stat-modify>
+			<speed mode="DIFF">
+				<power initial="8.0"/>
+			</speed>
+			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+				<power initial="-16.0"/>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+				<power initial="-8.0"/>
+			</stat-modify>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="-4.0"/>
+			</stat-hp-based>
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+				<power initial="8.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
+				<power initial="8.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="7057" name="Master's Blessing - Greater Might" max-level="3" action="A2">
+	<!-- 
+		level 1: The GM is always by your side. Increases P. Atk. by 10%% for 1 hour.
+		level 2: The GM is always by your side. Increases P. Atk. by 10%% for 4 hours.
+		level 3: The GM is always by your side. Increases P. Atk. by 10%% for 8 hours.
+	 -->
+		<icon initial="icon.skill1388"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="74"/>
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="1500"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="1"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="PA_PD_UP" >
+			<level initial="4"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+				<power initial="10.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="7058" name="Master's Blessing - Greater Shield" max-level="3" action="A2">
+	<!-- 
+		level 1: The GM is always by your side. Increases P. Def. by 15%% for 1 hour.
+		level 2: The GM is always by your side. Increases P. Def. by 15%% for 4 hours.
+		level 3: The GM is always by your side. Increases P. Def. by 15%% for 8 hours.
+	 -->
+		<icon initial="icon.skill1389"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="74"/>
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="1500"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="1"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="PA_PD_UP" >
+			<level initial="4"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+				<power initial="15.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="7059" name="Master's Blessing - Wild Magic" max-level="3" action="A2">
+	<!-- 
+		level 1: The GM is always by your side. Increases M. Critical Rate +20 for 1 hour.
+		level 2: The GM is always by your side. Increases M. Critical Rate +20 for 4 hours.
+		level 3: The GM is always by your side. Increases M. Critical Rate +20 for 8 hours.
+	 -->
+		<icon initial="icon.skill1303"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="70"/>
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="1500"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="1"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="MAGIC_CRITICAL_UP" >
+			<level initial="3"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+				<power initial="2.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="7060" name="Master's Blessing - Clarity" max-level="3" action="A2">
+	<!-- 
+		level 1: The GM is always by your side. For 1 hour, decreases physical skill MP consumption by 20%%, magic skill's MP consumption by 10%%, and song/dance skill's MP consumption by 20%%.
+		level 2: The GM is always by your side. For 4 hours, decreases physical skill MP consumption by 20%%, magic skill's MP consumption by 10%%, and song/dance skill's MP consumption by 20%%.
+		level 3: The GM is always by your side. For 8 hours, decreases physical skill MP consumption by 20%%, magic skill's MP consumption by 10%%, and song/dance skill's MP consumption by 20%%.
+	 -->
+		<icon initial="icon.skill1397"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="74"/>
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="1500"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="1"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="CHEAP_MAGIC" >
+			<level initial="4"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<magic-cost type="1">
+				<power initial="-10.0"/>
+			</magic-cost>
+		</effects>
+	</skill>
+	<skill id="7061" name="Master's Blessing - Prophecy of Water" max-level="3" action="A2">
+	<!-- 
+		level 1: The GM is always by your side. MP Recovery Bonus +20%%, M. Atk. +15%%, M. Def. +15%%, Casting Spd. +10%%, Debuff Resistance +10%%, and Skill MP Consumption -5%% for 1 hour with the help of a great spirit.
+		level 2: The GM is always by your side. MP Recovery Bonus +20%%, M. Atk. +15%%, M. Def. +15%%, Casting Spd. +10%%, Debuff Resistance +10%%, and Skill MP Consumption -5%% for 4 hours with the help of a great spirit.
+		level 3: The GM is always by your side. MP Recovery Bonus +20%%, M. Atk. +15%%, M. Def. +15%%, Casting Spd. +10%%, Debuff Resistance +10%%, and Skill MP Consumption -5%% for 8 hours with the help of a great spirit.
+	 -->
+		<icon initial="icon.skill1355"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="78"/>
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="1500"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana-init initial="1"/>
+			<mana initial="1"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="MULTI_BUFF" >
+			<level initial="2"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+				<power initial="10.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_ATTACK" mode="PER">
+				<power initial="20.0"/>
+			</stat-modify>
+			<speed mode="PER">
+				<power initial="-20.0"/>
+			</speed>
+			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+				<power initial="20.0"/>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+				<power initial="20.0"/>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+				<power initial="20.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
+				<power initial="20.0"/>
+			</stat-modify>
+			<stat-modify stat="REGENERATE_MP_RATE" mode="PER">
+				<power initial="20.0"/>
+			</stat-modify>
+			<resist-abnormal-by-category category="DEBUFF">
+				<power initial="-10.0"/>
+			</resist-abnormal-by-category>
+			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+				<power initial="2.0"/>
+			</stat-modify>
+			<magic-cost type="1">
+				<power initial="-5.0"/>
+			</magic-cost>
+		</effects>
+	</skill>
+	<skill id="7062" name="Master's Blessing - Prophecy of Fire" max-level="3" action="A2">
+	<!-- 
+		level 1: The GM is always by your side. Max HP +15%%, HP Recovery Bonus +20%%, P. Atk. +50%%, P. Def. +15%%, Atk. Spd. +10%%, and Debuff Resistance +10%% for 1 hour with the help of a great spirit.
+		level 2: The GM is always by your side. Max HP +15%%, HP Recovery Bonus +20%%, P. Atk. +50%%, P. Def. +15%%, Atk. Spd. +10%%, and Debuff Resistance +10%% for 4 hours with the help of a great spirit.
+		level 3: The GM is always by your side. Max HP +15%%, HP Recovery Bonus +20%%, P. Atk. +50%%, P. Def. +15%%, Atk. Spd. +10%%, and Debuff Resistance +10%% for 8 hours with the help of a great spirit.
+	 -->
+		<icon initial="icon.skill1356"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="78"/>
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="1500"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="1"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="MULTI_BUFF" >
+			<level initial="2"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+				<power initial="10.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_ATTACK" mode="PER">
+				<power initial="20.0"/>
+			</stat-modify>
+			<speed mode="PER">
+				<power initial="-20.0"/>
+			</speed>
+			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+				<power initial="20.0"/>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+				<power initial="20.0"/>
+			</stat-modify>
+			<stat-modify stat="ACCURACY" mode="DIFF">
+				<power initial="4.0"/>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+				<power initial="20.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
+				<power initial="20.0"/>
+			</stat-modify>
+			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+				<power initial="20.0"/>
+			</vital-stat-modify>
+			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+				<power initial="20.0"/>
+			</stat-modify>
+			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
+				<power initial="20.0"/>
+			</stat-modify>
+			<resist-abnormal-by-category category="DEBUFF">
+				<power initial="-10.0"/>
+			</resist-abnormal-by-category>
+			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+				<power initial="2.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="7063" name="Master's Blessing - Prophecy of Wind" max-level="3" action="A2">
+	<!-- 
+		level 1: GM is always by your side. For 1 hour, party members' P./M. Accuracy +3, P./M. Evasion +3, P./M. Critical Rate +10%%, P./M. Critical Damage +15%%, Movement Speed +10%%, Debuff Resistance +10%%, P. Atk. against Raid Boss +15%%.
+		level 2: GM is always by your side. For 4 hours, party members' P./M. Accuracy +3, P./M. Evasion +3, P./M. Critical Rate +10%%, P./M. Critical Damage +15%%, Movement Speed +10%%, Debuff Resistance +10%%, P. Atk. against Raid Boss +15%%.
+		level 3: GM is always by your side. For 8 hours, party members' P./M. Accuracy +3, P./M. Evasion +3, P./M. Critical Rate +10%%, P./M. Critical Damage +15%%, Movement Speed +10%%, Debuff Resistance +10%%, P. Atk. against Raid Boss +15%%.
+	 -->
+		<icon initial="icon.skill1357"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="78"/>
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="1500"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="1"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="MULTI_BUFF" >
+			<level initial="2"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<vampiric-attack chance="30">
+				<power initial="5.0"/>
+			</vampiric-attack>
+			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+				<power initial="10.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_ATTACK" mode="PER">
+				<power initial="20.0"/>
+			</stat-modify>
+			<speed mode="PER">
+				<power initial="-20.0"/>
+			</speed>
+			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+				<power initial="20.0"/>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+				<power initial="20.0"/>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+				<power initial="20.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
+				<power initial="20.0"/>
+			</stat-modify>
+			<resist-abnormal-by-category category="DEBUFF">
+				<power initial="-10.0"/>
+			</resist-abnormal-by-category>
+			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="PER">
+				<power initial="20.0"/>
+			</stat-hp-based>
+			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+				<power initial="20.0"/>
+			</vital-stat-modify>
+			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD" mode="PER">
+				<power initial="20.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="7064" name="Master's Blessing - Chant of Victory" max-level="3" action="A2">
+	<!-- 
+		level 1: The GM is always by your side. Max CP +15%%, CP Recovery Bonus +40%%, P. Accuracy +4, P. Evasion +4, P. Atk./M. Atk. +20%%, Atk. Spd./Casting Spd. +10%%, P. Critical/M. Critical Rate +20%%, and P. Critical Damage/M. Critical Damage +15%% for 1 hour with the help of a great spirit.
+		level 2: The GM is always by your side. Max CP +15%%, CP Recovery Bonus +40%%, P. Accuracy +4, P. Evasion +4, P. Atk./M. Atk. +20%%, Atk. Spd./Casting Spd. +10%%, P. Critical/M. Critical Rate +20%%, and P. Critical Damage/M. Critical Damage +15%% for 4 hours with the help of a great spirit.
+		level 3: The GM is always by your side. Max CP +15%%, CP Recovery Bonus +40%%, P. Accuracy +4, P. Evasion +4, P. Atk./M. Atk. +20%%, Atk. Spd./Casting Spd. +10%%, P. Critical/M. Critical Rate +20%%, and P. Critical Damage/M. Critical Damage +15%% for 8 hours with the help of a great spirit.
+	 -->
+		<icon initial="icon.skill1363"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="78"/>
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="1500"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="1"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="MULTI_BUFF" >
+			<level initial="2"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<vital-stat-modify stat="MAX_HP" mode="PER" heal="true">
+				<power initial="20.0"/>
+			</vital-stat-modify>
+			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+				<power initial="10.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_ATTACK" mode="PER">
+				<power initial="20.0"/>
+			</stat-modify>
+			<speed mode="PER">
+				<power initial="-20.0"/>
+			</speed>
+			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+				<power initial="20.0"/>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+				<power initial="20.0"/>
+			</stat-modify>
+			<stat-modify stat="ACCURACY" mode="DIFF">
+				<power initial="4.0"/>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+				<power initial="20.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
+				<power initial="20.0"/>
+			</stat-modify>
+			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+				<power initial="20.0"/>
+			</stat-modify>
+			<resist-abnormal-by-category category="DEBUFF">
+				<power initial="-10.0"/>
+			</resist-abnormal-by-category>
+			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+				<power initial="2.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="7065" name="Test - Charge" max-level="1" action="DA1">
+	<!-- Charges into the enemy. -->
+		<icon initial="icon.skill0000"/>
+		<attributes next-action="ATTACK" magic-critical-rate="-5.0" >
+			<magic-level initial="75"/>
+			<cast-range initial="400"/>
+			<cool-time initial="200"/>
+			<effect-range initial="600"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="50"/>
+		</consume>
+		<target type="ENEMY" />
+	</skill>
+	<skill id="7066" name="Test Stun Charge" max-level="1" debuff="true" action="DA2">
+	<!-- Charges into enemy and Stuns. -->
+		<icon initial="icon.skill0000"/>
+		<attributes next-action="ATTACK" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" >
+			<magic-level initial="75"/>
+			<cast-range initial="400"/>
+			<cool-time initial="200"/>
+			<effect-range initial="600"/>
+			<activate-rate initial="50"/>
+		</attributes>
+		<consume>
+			<mana initial="50"/>
+		</consume>
+		<target type="ENEMY" />
+		<abnormal type="STUN" visual="STUN" >
+			<level initial="1"/>
+			<time initial="9"/>
+			<chance initial="50"/>
+		</abnormal>
+
+		<effects>
+			<block-all-actions>
+				<allowed-skills>35016</allowed-skills>
+			</block-all-actions>
+		</effects>
+	</skill>
+	<skill id="7067" name="Test Range Charge" max-level="1" debuff="true" action="DA2">
+	<!-- Charges into enemy and causes bleeding -->
+		<icon initial="icon.skill0000"/>
+		<attributes next-action="ATTACK" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2" >
+			<magic-level initial="75"/>
+			<cast-range initial="400"/>
+			<cool-time initial="200"/>
+			<effect-range initial="600"/>
+			<activate-rate initial="100"/>
+		</attributes>
+		<consume>
+			<mana initial="50"/>
+		</consume>
+		<target type="ENEMY" />
+		<abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING" >
+			<level initial="1"/>
+			<time initial="20"/>
+			<chance initial="100"/>
+		</abnormal>
+
+	</skill>
+	<skill id="7068" name="Test Steal Abnormal State" max-level="1" action="A1" type="MAGIC">
+	<!-- Steals enemy's abnormal state. -->
+		<icon initial="icon.skill0000"/>
+		<attributes next-action="ATTACK" magic-critical-rate="-5.0" >
+			<magic-level initial="75"/>
+			<cast-range initial="600"/>
+			<cool-time initial="200"/>
+			<effect-range initial="1100"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="100"/>
+		</consume>
+		<target type="ENEMY" />
+
+	</skill>
+	<skill id="7069" name="Test Abnormal State DD" max-level="1" action="A1" type="MAGIC">
+	<!-- Inflicts damage according to the enemy's number of abnormal states. -->
+		<icon initial="icon.skill0000"/>
+		<attributes next-action="ATTACK" magic-critical-rate="-5.0" >
+			<magic-level initial="75"/>
+			<cast-range initial="600"/>
+			<cool-time initial="200"/>
+			<effect-range initial="1100"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="100"/>
+		</consume>
+		<target type="ENEMY" />
+
+	</skill>
+	<skill id="7070" name="Test - Soul Eating Passive" max-level="1" >
+	<!-- Absorbs soul. -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+			<magic-level initial="75"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="7071" name="Test - Soul Transfer" max-level="1" action="A1">
+	<!-- Transfers soul to party member. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="75"/>
+			<cast-range initial="-1"/>
+			<reuse initial="1000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="5"/>
+			<hp initial="20"/>
+		</consume>
+		<target type="TARGET" />
+
+	</skill>
+	<skill id="7075" name="Test - Distance DD" max-level="1" action="A1" type="MAGIC">
+	<!-- Magic damage changes by distance. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="17"/>
+			<cast-range initial="600"/>
+			<reuse initial="6000"/>
+			<effect-point initial="-1"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="-1000"/>
+			<activate-rate initial="-1"/>
+
+			<element type="FIRE" value="20"/>
+		</attributes>
+		<consume>
+			<mana initial="50"/>
+		</consume>
+		<target type="ENEMY" />
+	</skill>
+	<skill id="7076" name="Test - Delay Debuff" max-level="1" debuff="true" action="A2">
+	<!-- Bleeds for 20 seconds and gets Stunned. -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2" >
+			<magic-level initial="70"/>
+			<cast-range initial="40"/>
+			<cool-time initial="720"/>
+			<effect-point initial="-1"/>
+			<effect-range initial="400"/>
+			<hit-time initial="-1000"/>
+			<activate-rate initial="100"/>
+		</attributes>
+		<consume>
+			<mana initial="30"/>
+		</consume>
+		<target type="ENEMY_ONLY" />
+		<abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING" >
+			<level initial="8"/>
+			<time initial="20"/>
+			<chance initial="100"/>
+		</abnormal>
+	</skill>
+	<skill id="7077" name="Test - Delay Debuff - Call" max-level="1" debuff="true" action="A2">
+	<!-- Currently stunned. -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" >
+			<magic-level initial="70"/>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<abnormal type="STUN" visual="STUN" >
+			<level initial="1"/>
+			<time initial="5"/>
+			<chance initial="-1"/>
+		</abnormal>
+	</skill>
+	<skill id="7079" name="Test - Party Damage Absorb" max-level="1" action="A2">
+	<!-- Transfers party damage to tanker. -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="75"/>
+			<cast-range initial="-1"/>
+			<effect-point initial="1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="100"/>
+		</consume>
+		<target scope="POINT_BLANK" object="FRIEND" range="1000" />
+		<abnormal type="PUBLIC_SLOT" >
+			<level initial="1"/>
+			<time initial="1200"/>
+			<chance initial="-1"/>
+		</abnormal>
+	</skill>
+	<skill id="7080" name="Test - General Attack Prohibited" max-level="1" debuff="true" action="A2">
+	<!-- Cannot perform general attack. -->
+		<icon initial="icon.skill0000"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="70"/>
+			<cast-range initial="600"/>
+			<effect-point initial="-1"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="-1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="30"/>
+		</consume>
+		<target type="ENEMY_ONLY" />
+		<abnormal type="PUBLIC_SLOT" >
+			<level initial="1"/>
+			<time initial="40"/>
+			<chance initial="-1"/>
+		</abnormal>
+	</skill>
+	<skill id="7081" name="Effect Test - Land Shot" max-level="1" action="A1">
+	<!-- Shoots toward ground. -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="75"/>
+			<cast-range initial="500"/>
+			<reuse initial="25000"/>
+			<cool-time initial="800"/>
+			<effect-point initial="-1"/>
+			<effect-range initial="1000"/>
+			<hit-time initial="-1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="30"/>
+		</consume>
+		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="5" affect-random="12" />
+	</skill>
+	<skill id="7082" name="Effect Test - Chain Lightning" max-level="1" action="A1" type="MAGIC">
+	<!-- Chain Lightning -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="75"/>
+			<cast-range initial="500"/>
+			<reuse initial="20000"/>
+			<effect-point initial="-1"/>
+			<effect-range initial="1000"/>
+			<hit-time initial="-1000"/>
+			<activate-rate initial="-1"/>
+
+			<element type="WATER" value="20"/>
+		</attributes>
+		<consume>
+			<mana initial="100"/>
+		</consume>
+		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="5" affect-random="12" />
+	</skill>
+	<skill id="7083" name="Test - Trap Skill" max-level="1" action="A1" type="MAGIC">
+	<!-- Trap Range Skill -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="38"/>
+			<cast-range initial="-1"/>
+			<effect-point initial="-1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-1000"/>
+			<activate-rate initial="-1"/>
+
+			<element type="FIRE" value="20"/>
+		</attributes>
+		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12" />
+	</skill>
+	<skill id="7084" name="Test - Trap Skill" max-level="1" action="CA1" type="MAGIC">
+	<!-- Trap Range Skill -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="38"/>
+			<cast-range initial="-1"/>
+			<effect-point initial="-1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-1000"/>
+			<activate-rate initial="-1"/>
+
+			<element type="FIRE" value="20"/>
+		</attributes>
+		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12" />
+		<channeling skill="0" mp-consume="0" initial-delay="1000" interval="0"/>
+	</skill>
+	<skill id="7085" name="Self-Destruct Explosion" max-level="1" action="A1" type="MAGIC">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="-1"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+
+			<element type="FIRE" value="50"/>
+		</attributes>
+		<consume>
+			<mana initial="85"/>
+		</consume>
+		<target scope="POINT_BLANK" object="NOT_FRIEND" range="300" />
+	</skill>
+	<skill id="7086" name="Last Stand_test" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="-1"/>
+			<effect-point initial="-100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="ENEMY" />
+	</skill>
+	<skill id="7087" name="Chain Magic - Dark Explosion_test" max-level="1" action="A1" type="MAGIC">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="500"/>
+			<effect-point initial="-1063"/>
+			<effect-range initial="900"/>
+			<hit-time initial="-1063000"/>
+			<activate-rate initial="-1"/>
+
+			<element type="DARK" value="50"/>
+		</attributes>
+		<consume>
+			<mana initial="85"/>
+		</consume>
+		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="600" />
+	</skill>
+	<skill id="7088" name="Master's Blessing - Improve Combat" max-level="3" action="A2">
+	<!-- 
+		level 1: The GM is always by your side. Combine P. Atk. increase and P. Def. increase to have more advanced combat power increase effect. For 1 hour, increases P. Atk. by 15%% and P. Def. by 15%%.
+		level 2: The GM is always by your side. Combine P. Atk. increase and P. Def. increase to have more advanced combat power increase effect. For 4 hours, increases P. Atk. by 15%% and P. Def. by 15%%.
+		level 3: The GM is always by your side. Combine P. Atk. increase and P. Def. increase to have more advanced combat power increase effect. For 8 hours, increases P. Atk. by 15%% and P. Def. by 15%%.
+	 -->
+		<icon initial="icon.skill1499"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="70"/>
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="1500"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana-init initial="1"/>
+			<mana initial="1"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="IMPROVE_PA_PD_UP" >
+			<level initial="2"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<dispel>
+				<abnormal type="PD_UP">
+					<power initial="9.0"/>
+				</abnormal>
+				<abnormal type="PA_UP">
+					<power initial="9.0"/>
+				</abnormal>
+			</dispel>
+			<block-abnormal>
+				<abnormals>PD_UP PA_UP</abnormals>
+			</block-abnormal>
+			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+				<power initial="15.0"/>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+				<power initial="15.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="7089" name="Master's Blessing - Improve Magic" max-level="3" action="A2">
+	<!-- 
+		level 1: The GM is always by your side. Combines the M. Atk. Boost and M. Def. Boost to create a more advanced magic ability boost effect. For 1 hour, M. Atk. +75%% and M. Def. +30%%.
+		level 2: The GM is always by your side. Combines the M. Atk. Boost and M. Def. Boost to create a more advanced magic ability boost effect. For 4 hours, M. Atk. +75%% and M. Def. +30%%.
+		level 3: The GM is always by your side. Combines the M. Atk. Boost and M. Def. Boost to create a more advanced magic ability boost effect. For 8 hours, M. Atk. +75%% and M. Def. +30%%.
+	 -->
+		<icon initial="icon.skill1500"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="74"/>
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="1500"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana-init initial="1"/>
+			<mana initial="1"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="IMPROVE_MA_MD_UP" >
+			<level initial="2"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<dispel>
+				<abnormal type="MA_UP">
+					<power initial="9.0"/>
+				</abnormal>
+				<abnormal type="MD_UP">
+					<power initial="9.0"/>
+				</abnormal>
+			</dispel>
+			<block-abnormal>
+				<abnormals>MA_UP MD_UP</abnormals>
+			</block-abnormal>
+			<stat-modify stat="MAGIC_ATTACK" mode="PER">
+				<power initial="75.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+				<power initial="30.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="7090" name="Master's Blessing - Improve Condition" max-level="3" action="A2">
+	<!-- 
+		level 1: The GM is always by your side. Combine maximum HP increase and maximum MP increase to have more advanced mental and physical power. For 1 hour, increases Max HP by 35%% and Max MP by 35%%.
+		level 2: The GM is always by your side. Combine maximum HP increase and maximum MP increase to have more advanced mental and physical power. For 4 hours, increases Max HP by 35%% and Max MP by 35%%.
+		level 3: The GM is always by your side. Combine maximum HP increase and maximum MP increase to have more advanced mental and physical power. For 8 hours, increases Max HP by 35%% and Max MP by 35%%.
+	 -->
+		<icon initial="icon.skill1501"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="72"/>
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="1500"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana-init initial="1"/>
+			<mana initial="1"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="IMPROVE_HP_MP_UP" >
+			<level initial="2"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<dispel>
+				<abnormal type="MAX_HP_UP">
+					<power initial="9.0"/>
+				</abnormal>
+				<abnormal type="MAX_MP_UP">
+					<power initial="9.0"/>
+				</abnormal>
+			</dispel>
+			<block-abnormal>
+				<abnormals>MAX_HP_UP MAX_MP_UP</abnormals>
+			</block-abnormal>
+			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+				<power initial="35.0"/>
+			</vital-stat-modify>
+			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+				<power initial="35.0"/>
+			</vital-stat-modify>
+		</effects>
+	</skill>
+	<skill id="7091" name="Master's Blessing - Improve Critical Attack" max-level="3" action="A2">
+	<!-- 
+		level 1: The GM is always by your side. Combines the P. Critical Rate Boost and P. Critical Damage Boost to create a more advanced P. Critical boost effect. For 1 hour, P. Critical Rate +30%% and P. Critical Damage +35%%.
+		level 2: The GM is always by your side. Combines the P. Critical Rate Boost and P. Critical Damage Boost to create a more advanced P. Critical boost effect. For 4 hours, P. Critical Rate +30%% and P. Critical Damage +35%%.
+		level 3: The GM is always by your side. Combines the P. Critical Rate Boost and P. Critical Damage Boost to create a more advanced P. Critical boost effect. For 8 hours, P. Critical Rate +30%% and P. Critical Damage +35%%.
+	 -->
+		<icon initial="icon.skill1502"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="74"/>
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="1500"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana-init initial="1"/>
+			<mana initial="1"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="IMPROVE_CRT_RATE_DMG_UP" >
+			<level initial="2"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<dispel>
+				<abnormal type="CRITICAL_PROB_UP">
+					<power initial="9.0"/>
+				</abnormal>
+				<abnormal type="CRITICAL_DMG_UP">
+					<power initial="9.0"/>
+				</abnormal>
+			</dispel>
+			<block-abnormal>
+				<abnormals>CRITICAL_PROB_UP CRITICAL_DMG_UP</abnormals>
+			</block-abnormal>
+			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+				<power initial="35.0"/>
+			</stat-modify>
+			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="PER">
+				<power initial="30.0"/>
+			</stat-hp-based>
+		</effects>
+	</skill>
+	<skill id="7092" name="Master's Blessing - Improve Shield Defense" max-level="3" action="A2">
+	<!-- 
+		level 1: The GM is always by your side. Combine Shield Defense rate increase and Shield Defense increase to have more advanced shield ability increase effect. For 1 hour, increases shield defense rate by 30%% and Shield Defense by 50%%.
+		level 2: The GM is always by your side. Combine Shield Defense rate increase and Shield Defense increase to have more advanced shield ability increase effect. For 4 hours, increases shield defense rate by 30%% and Shield Defense by 50%%.
+		level 3: The GM is always by your side. Combine Shield Defense rate increase and Shield Defense increase to have more advanced shield ability increase effect. For 8 hours, increases shield defense rate by 30%% and Shield Defense by 50%%.
+	 -->
+		<icon initial="icon.skill1503"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="70"/>
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="1500"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana-init initial="1"/>
+			<mana initial="1"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="IMPROVE_SHIELD_RATE_DEFENCE_UP" >
+			<level initial="2"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<dispel>
+				<abnormal type="SHIELD_PROB_UP">
+					<power initial="9.0"/>
+				</abnormal>
+				<abnormal type="SHIELD_DEFENCE_UP">
+					<power initial="9.0"/>
+				</abnormal>
+			</dispel>
+			<block-abnormal>
+				<abnormals>SHIELD_PROB_UP SHIELD_DEFENCE_UP</abnormals>
+			</block-abnormal>
+			<stat-modify stat="SHIELD_DEFENCE_RATE" mode="PER">
+				<power initial="30.0"/>
+			</stat-modify>
+			<stat-modify stat="SHIELD_DEFENCE" mode="PER">
+				<power initial="50.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="7093" name="Master's Blessing - Improve Movement" max-level="3" action="A2">
+	<!-- 
+		level 1: The GM is always by your side. Combines the Movement Speed Boost and P. Evasion Boost to create a more advanced movement boost effect. For 1 hour, Movement Speed +33 and P. Evasion +4.
+		level 2: The GM is always by your side. Combines the Movement Speed Boost and P. Evasion Boost to create a more advanced movement boost effect. For 4 hours, Movement Speed +33 and P. Evasion +4.
+		level 3: The GM is always by your side. Combines the Movement Speed Boost and P. Evasion Boost to create a more advanced movement boost effect. For 8 hours, Movement Speed +33 and P. Evasion +4.
+	 -->
+		<icon initial="icon.skill1504"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="72"/>
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="1500"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana-init initial="1"/>
+			<mana initial="1"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="IMPROVE_SPEED_AVOID_UP" >
+			<level initial="2"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<dispel>
+				<abnormal type="SPEED_UP">
+					<power initial="9.0"/>
+				</abnormal>
+				<abnormal type="AVOID_UP">
+					<power initial="9.0"/>
+				</abnormal>
+			</dispel>
+			<block-abnormal>
+				<abnormals>SPEED_UP AVOID_UP</abnormals>
+			</block-abnormal>
+			<speed mode="DIFF">
+				<power initial="33.0"/>
+			</speed>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="4.0"/>
+			</stat-hp-based>
+		</effects>
+	</skill>
+	<skill id="7094" name="Master's Blessing - Sharpen Edge" max-level="3" action="A2">
+	<!-- 
+		level 1: The GM is always by your side. Sharpens a bladed weapon to increase P. Atk. by 5%% and P. Critical Rate by 20%% for 1 hour.
+		level 2: The GM is always by your side. Sharpens a bladed weapon to increase P. Atk. by 5%% and P. Critical Rate by 20%% for 4 hours.
+		level 3: The GM is always by your side. Sharpens a bladed weapon to increase P. Atk. by 5%% and P. Critical Rate by 20%% for 8 hours.
+	 -->
+		<icon initial="icon.skill0825"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="49"/>
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="1500"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="1"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="DWARF_ATTACK_BUFF" >
+			<level initial="2"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+				<power initial="5.0"/>
+				<weapon-type>SWORD DAGGER SPEAR FIST DUAL RAPIER ANCIENT_SWORD DUAL_DAGGER </weapon-type>
+			</stat-modify>
+			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="PER">
+				<power initial="20.0"/>
+				<weapon-type>SWORD DAGGER SPEAR FIST DUAL RAPIER ANCIENT_SWORD DUAL_DAGGER </weapon-type>
+			</stat-hp-based>
+		</effects>
+	</skill>
+	<skill id="7095" name="Master's Blessing - Encase Armor" max-level="3" action="A2">
+	<!-- 
+		level 1: The GM is always by your side. Thickens the surface of heavy armor to increase P. Def. by 10%% for 1 hour.
+		level 2: The GM is always by your side. Thickens the surface of heavy armor to increase P. Def. by 10%% for 4 hours.
+		level 3: The GM is always by your side. Thickens the surface of heavy armor to increase P. Def. by 10%% for 8 hours.
+	 -->
+		<icon initial="icon.skill0828"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="46"/>
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="1500"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="1"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="DWARF_DEFENCE_BUFF" >
+			<level initial="2"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+				<power initial="10.0"/>
+				<armor-type>HEAVY </armor-type>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="7096" name="Master's Blessing - Blessing of Fire Dragon" max-level="3" action="A2">
+	<!-- 
+		level 1: The GM is always by your side. You feel the Fire Dragon's energy for 1 hour.\n\nBlessing of Fire Dragon: Buff/debuff effects remain after death, but Blessing of Fire Dragon disappears.
+		level 2: The GM is always by your side. You feel the Fire Dragon's energy for 4 hours.\n\nBlessing of Fire Dragon: Buff/debuff effects remain after death, but Blessing of Fire Dragon disappears.
+		level 3: The GM is always by your side. You feel the Fire Dragon's energy for 8 hours.\n\nBlessing of Fire Dragon: Buff/debuff effects remain after death, but Blessing of Fire Dragon disappears.
+	 -->
+		<icon initial="icon.bm_blessing_dragon"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" dispellable="false" >
+			<magic-level initial="1"/>
+			<cast-range initial="900"/>
+			<reuse initial="1000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="1500"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="1"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="PRESERVE_ABNORMAL" >
+			<level initial="2"/>
+			<time initial="3600"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<effect name="NoblesseBless"/>
+		</effects>
+	</skill>
+	<skill id="7097" name="Cancel Shadow Move" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill01702"/>
+		<attributes magic-critical-rate="-5.0" triggered="true" auto-use="ACTIVE">
+			<cast-range initial="-1"/>
+			<effect-point initial="709"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="709000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target scope="PARTY" object="FRIEND" range="2000" />
+		<effects>
+			<dispel>
+				<abnormal type="DANCE_OF_SHADOW">
+					<power initial="-1.0"/>
+				</abnormal>
+				<abnormal type="STEALTH">
+					<power initial="-1.0"/>
+				</abnormal>
+			</dispel>
+		</effects>
+	</skill>
+	<skill id="7098" name="Clan-exclusive Pet Heal" max-level="1" action="A1" type="MAGIC">
+	<!-- Recovers all of your HP. Power 3000 -->
+		<icon initial="icon.skill1401"/>
+		<attributes magic-critical-rate="-5.0" >
+			<magic-level initial="85"/>
+			<cast-range initial="-1"/>
+			<effect-point initial="-700"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-700000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="5"/>
+		</consume>
+		<target />
+		<effects>
+			<effect name="Heal">
+				<power initial="3000.0"/>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7099" name="Clan-exclusive Pet Fear" max-level="1" action="A2" type="MAGIC">
+	<!-- Inflicts fear on the target for 3 seconds. -->
+		<icon initial="icon.skill4108"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="DERANGEMENT" >
+			<magic-level initial="85"/>
+			<cast-range initial="900"/>
+			<effect-point initial="-700"/>
+			<effect-range initial="1100"/>
+			<hit-time initial="-700000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<mana initial="5"/>
+		</consume>
+		<target type="TARGET" />
+		<abnormal type="TURN_FLEE" visual="TURN_FLEE" >
+			<level initial="1"/>
+			<time initial="3"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<effect name="BlockControl"/>
+			<effect name="Fear"/>
+		</effects>
+	</skill>
 </list>

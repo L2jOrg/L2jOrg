@@ -1,35 +1,36 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
-    <skill id="14509" toLevel="2" name="HP Transfer">
-        <!-- Connects souls and recovers HP. -->
-        <icon>icon.skill1042</icon>
-        <operateType>A1</operateType>
-        <castRange>900</castRange>
-        <hitTime>600000</hitTime>
-    </skill>
-    <skill id="14559" toLevel="1" name="Soul Drain Status">
-        <!-- HP is being absorbed. -->
-        <icon>icon.skill1042</icon>
-        <operateType>A2</operateType>
-        <castRange>500</castRange>
-        <effectPoint>-2</effectPoint>
-        <abnormalType>PHYSICAL_STANCE</abnormalType>
-        <basicProperty>NONE</basicProperty>
-        <magicCriticalRate>-5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <effectRange>1000</effectRange>
-        <magicLvl>90</magicLvl>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>10</abnormalTime>
-        <abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
-        <isDebuff>true</isDebuff>
-        <targetType>ENEMY</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="DamOverTime">
-                <power>1</power>
-                <ticks>1</ticks>
-            </effect>
-        </effects>
-    </skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
+	<skill id="14509" name="Life Force Transfer" max-level="2" action="A1">
+	<!-- Connects to Spirit King. Instant HP Recovery. -->
+		<icon initial="icon.skill1042"/>
+		<attributes >
+			<cast-range initial="900"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="14559" name="Soul Drain Status" max-level="1" action="A2">
+	<!-- HP is being absorbed. -->
+		<icon initial="icon.skill1042"/>
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+			<magic-level initial="90"/>
+			<cast-range initial="500"/>
+			<effect-point initial="-2"/>
+			<effect-range initial="1000"/>
+			<hit-time initial="-2000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target type="ENEMY" />
+		<abnormal type="PHYSICAL_STANCE" visual="DOT_POISON" >
+			<level initial="1"/>
+			<time initial="10"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<damage-over-time ticks="1" can-kill="false">
+				<power initial="1.0"/>
+			</damage-over-time>
+		</effects>
+	</skill>
 </list>

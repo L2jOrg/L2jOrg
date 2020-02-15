@@ -3,7 +3,6 @@ package org.l2j.gameserver.engine.skill.api;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.EnchantSkillGroupsData;
-import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.engine.skill.SkillAutoUseType;
 import org.l2j.gameserver.engine.skill.SkillType;
@@ -54,6 +53,7 @@ public final class Skill implements IIdentifiable, Cloneable {
     private final int id;
     private final String name;
     private final SkillOperateType operateType;
+    private int maxLevel;
     private SkillType type;
 
     private int level;
@@ -153,7 +153,7 @@ public final class Skill implements IIdentifiable, Cloneable {
     private  boolean isTriggeredSkill; // If true the skill will take activation buff slot instead of a normal buff slot
     private  int effectPoint;
     public final Map<SkillConditionScope, List<SkillCondition>> _conditionLists = new EnumMap<>(SkillConditionScope.class);
-    public final Map<EffectScope, List<AbstractEffect>> _effectLists = new EnumMap<>(EffectScope.class);
+    public Map<EffectScope, List<AbstractEffect>> _effectLists = new EnumMap<>(EffectScope.class);
     private final boolean debuff;
     private  boolean isSuicideAttack;
     private  boolean canBeDispelled;
@@ -248,7 +248,7 @@ public final class Skill implements IIdentifiable, Cloneable {
         }
 
         _reuseDelayGroup = set.getInt("reuseDelayGroup", -1);
-        _reuseHashCode = SkillData.getSkillHashCode(_reuseDelayGroup > 0 ? _reuseDelayGroup : id, level, _subLevel);
+        _reuseHashCode = SkillEngine.skillHashCode(_reuseDelayGroup > 0 ? _reuseDelayGroup : id, level);
 
         targetType = set.getEnum("targetType", TargetType.class, TargetType.SELF);
         affectScope = set.getEnum("affectScope", AffectScope.class, AffectScope.SINGLE);
@@ -377,13 +377,18 @@ public final class Skill implements IIdentifiable, Cloneable {
         _displayInList = set.getBoolean("displayInList", true);
     }
 
-    public Skill(int id, String name, boolean debuff, SkillOperateType action, SkillType type) {
+    Skill(int id, String name, int maxLevel, boolean debuff, SkillOperateType action, SkillType type) {
         this.id = id;
         this.level = 1;
         this.name = name;
+        this.maxLevel = maxLevel;
         this.debuff = debuff;
         operateType = action;
         this.type = type;
+    }
+
+    public int getMaxLevel() {
+        return maxLevel;
     }
 
     public TraitType getTraitType() {
@@ -1503,7 +1508,7 @@ public final class Skill implements IIdentifiable, Cloneable {
     public Skill getAttachedSkill(Creature activeChar) {
         // If character is double casting, return double cast skill.
         if ((_doubleCastSkill > 0) && activeChar.isAffected(EffectFlag.DOUBLE_CAST)) {
-            return SkillData.getInstance().getSkill(getDoubleCastSkill(), getLevel(), getSubLevel());
+            return SkillEngine.getInstance().getSkill(getDoubleCastSkill(), getLevel());
         }
 
         // Default toggle group ID, assume nothing attached.
@@ -1530,7 +1535,7 @@ public final class Skill implements IIdentifiable, Cloneable {
             return null;
         }
 
-        return SkillData.getInstance().getSkill(attachedSkill.getSkillId(), getLevel(), getSubLevel());
+        return SkillEngine.getInstance().getSkill(attachedSkill.getSkillId(), getLevel());
     }
 
     public boolean canDoubleCast() {
@@ -1646,11 +1651,6 @@ public final class Skill implements IIdentifiable, Cloneable {
 
     public void setLevelBonusRate(int rate) {
         levelBonusRate = rate;
-    }
-
-    @Override
-    protected Skill clone() throws CloneNotSupportedException {
-        return (Skill) super.clone();
     }
 
     public void setRemoveOnAction(boolean removeOnAction) {
@@ -1859,5 +1859,12 @@ public final class Skill implements IIdentifiable, Cloneable {
 
     public void setAbnormalChance(int chance) {
         activateRate = chance;
+    }
+
+    @Override
+    protected Skill clone() throws CloneNotSupportedException {
+        var clone = (Skill) super.clone();
+        clone._effectLists = new EnumMap<>(EffectScope.class);
+        return clone;
     }
 }

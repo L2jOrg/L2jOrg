@@ -1,99 +1,107 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
-    <skill id="9504" toLevel="1" name="Scroll: PK">
-        <operateType>A1</operateType>
-        <hitTime>2000</hitTime>
-        <coolTime>200</coolTime>
-        <itemConsumeId>35751</itemConsumeId>
-        <itemConsumeCount>1</itemConsumeCount>
-        <magicCriticalRate>5</magicCriticalRate>
-        <magicLvl>1</magicLvl>
-        <isMagic>2</isMagic>
-        <reuseDelay>3000</reuseDelay>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpNotCursed"/>
-            <condition name="OpPkcount">
-                <affectType>CASTER</affectType>
-            </condition>
-        </conditions>
-        <effects>
-            <effect name="PkCount">
-                <amount>-1</amount>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="9505" toLevel="1" name="Scroll: PK (Mid-grade)">
-        <operateType>A1</operateType>
-        <hitTime>2000</hitTime>
-        <coolTime>200</coolTime>
-        <itemConsumeId>35752</itemConsumeId>
-        <itemConsumeCount>1</itemConsumeCount>
-        <magicCriticalRate>5</magicCriticalRate>
-        <magicLvl>1</magicLvl>
-        <isMagic>2</isMagic>
-        <reuseDelay>3000</reuseDelay>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpNotCursed"/>
-            <condition name="OpPkcount">
-                <affectType>CASTER</affectType>
-            </condition>
-        </conditions>
-        <effects>
-            <effect name="PkCount">
-                <amount>-3</amount>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="9506" toLevel="1" name="Scroll: PK (High-grade)">
-        <operateType>A1</operateType>
-        <hitTime>2000</hitTime>
-        <coolTime>200</coolTime>
-        <itemConsumeId>35753</itemConsumeId>
-        <itemConsumeCount>1</itemConsumeCount>
-        <magicCriticalRate>5</magicCriticalRate>
-        <magicLvl>1</magicLvl>
-        <isMagic>2</isMagic>
-        <reuseDelay>3000</reuseDelay>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpNotCursed"/>
-            <condition name="OpPkcount">
-                <affectType>CASTER</affectType>
-            </condition>
-        </conditions>
-        <effects>
-            <effect name="PkCount">
-                <amount>-5</amount>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="9507" toLevel="1" name="Scroll: PK (Top-grade)">
-        <operateType>A1</operateType>
-        <hitTime>2000</hitTime>
-        <coolTime>200</coolTime>
-        <itemConsumeId>35754</itemConsumeId>
-        <itemConsumeCount>1</itemConsumeCount>
-        <magicCriticalRate>5</magicCriticalRate>
-        <magicLvl>1</magicLvl>
-        <isMagic>2</isMagic>
-        <reuseDelay>3000</reuseDelay>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpNotCursed"/>
-            <condition name="OpPkcount">
-                <affectType>CASTER</affectType>
-            </condition>
-        </conditions>
-        <effects>
-            <effect name="PkCount">
-                <amount>-10</amount>
-            </effect>
-        </effects>
-    </skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
+	<skill id="9504" name="Scroll: PK (Low-grade)" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<reuse initial="3000"/>
+			<cool-time initial="200"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<item initial="35751"/>
+			<item-count initial="1"/>
+		</consume>
+		<target />
+		<conditions>
+			<condition name="OpNotCursed"/>
+			<condition name="Killer"/>
+		</conditions>
+		<effects>
+			<effect name="PkCount">
+				<power initial="-1.0"/>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="9505" name="Scroll: PK (Mid-grade)" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<reuse initial="3000"/>
+			<cool-time initial="200"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<item initial="35752"/>
+			<item-count initial="1"/>
+		</consume>
+		<target />
+		<conditions>
+			<condition name="OpNotCursed"/>
+			<condition name="Killer"/>
+		</conditions>
+		<effects>
+			<effect name="PkCount">
+				<power initial="-3.0"/>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="9506" name="Scroll: PK (High-grade)" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<reuse initial="3000"/>
+			<cool-time initial="200"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<item initial="35753"/>
+			<item-count initial="1"/>
+		</consume>
+		<target />
+		<conditions>
+			<condition name="OpNotCursed"/>
+			<condition name="Killer"/>
+		</conditions>
+		<effects>
+			<effect name="PkCount">
+				<power initial="-5.0"/>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="9507" name="Scroll: PK (Top-grade)" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<reuse initial="3000"/>
+			<cool-time initial="200"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<item initial="35754"/>
+			<item-count initial="1"/>
+		</consume>
+		<target />
+		<conditions>
+			<condition name="OpNotCursed"/>
+			<condition name="Killer"/>
+		</conditions>
+		<effects>
+			<effect name="PkCount">
+				<power initial="-10.0"/>
+			</effect>
+		</effects>
+	</skill>
 </list>

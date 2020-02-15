@@ -17,7 +17,7 @@
 package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.data.xml.impl.ClassListData;
-import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.Clan;
@@ -202,7 +202,7 @@ public class AdminSkill implements IAdminCommandHandler
 			final String[] split = command.split(" ");
 			final int id = Integer.parseInt(split[1]);
 			final int lvl = Integer.parseInt(split[2]);
-			final Skill skill = SkillData.getInstance().getSkill(id, lvl);
+			final Skill skill = SkillEngine.getInstance().getSkill(id, lvl);
 			if (skill != null)
 			{
 				activeChar.addSkill(skill);
@@ -229,8 +229,8 @@ public class AdminSkill implements IAdminCommandHandler
 			try
 			{
 				final int skillId = Integer.parseInt(st.nextToken());
-				final int skillLevel = st.hasMoreTokens() ? Integer.parseInt(st.nextToken()) : SkillData.getInstance().getMaxLevel(skillId);
-				final Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
+				final int skillLevel = st.hasMoreTokens() ? Integer.parseInt(st.nextToken()) : SkillEngine.getInstance().getMaxLevel(skillId);
+				final Skill skill = SkillEngine.getInstance().getSkill(skillId, skillLevel);
 				if (skill == null)
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Skill with id: " + skillId + ", lvl: " + skillLevel + " not found.");
@@ -324,7 +324,7 @@ public class AdminSkill implements IAdminCommandHandler
 		final Map<Integer, SkillLearn> skills = SkillTreesData.getInstance().getMaxPledgeSkills(clan, includeSquad);
 		for (SkillLearn s : skills.values())
 		{
-			clan.addNewSkill(SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel()));
+			clan.addNewSkill(SkillEngine.getInstance().getSkill(s.getSkillId(), s.getSkillLevel()));
 		}
 		
 		// Notify target and active char
@@ -522,7 +522,7 @@ public class AdminSkill implements IAdminCommandHandler
 				final String level = st.countTokens() == 1 ? st.nextToken() : null;
 				final int idval = Integer.parseInt(id);
 				final int levelval = level == null ? 1 : Integer.parseInt(level);
-				skill = SkillData.getInstance().getSkill(idval, levelval);
+				skill = SkillEngine.getInstance().getSkill(idval, levelval);
 			}
 			catch (Exception e)
 			{
@@ -560,7 +560,7 @@ public class AdminSkill implements IAdminCommandHandler
 			return;
 		}
 		final Player player = target.getActingPlayer();
-		final Skill skill = SkillData.getInstance().getSkill(idval, player.getSkillLevel(idval));
+		final Skill skill = SkillEngine.getInstance().getSkill(idval, player.getSkillLevel(idval));
 		if (skill != null)
 		{
 			final String skillname = skill.getName();
@@ -607,7 +607,7 @@ public class AdminSkill implements IAdminCommandHandler
 			return;
 		}
 		
-		final Skill skill = SkillData.getInstance().getSkill(id, level);
+		final Skill skill = SkillEngine.getInstance().getSkill(id, level);
 		if (skill == null)
 		{
 			BuilderUtil.sendSysMessage(activeChar, "Error: there is no such skill.");

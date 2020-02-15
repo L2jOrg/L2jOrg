@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.model.ClanPrivilege;
@@ -109,7 +109,7 @@ public final class RequestAcquireSkill extends ClientPacket {
         }
 
         final Skill existingSkill = activeChar.getKnownSkill(_id); // Mobius: Keep existing sublevel.
-        final Skill skill = SkillData.getInstance().getSkill(_id, _level, existingSkill == null ? 0 : existingSkill.getSubLevel());
+        final Skill skill = SkillEngine.getInstance().getSkill(_id, _level);
         if (skill == null) {
             LOGGER.warn(RequestAcquireSkill.class.getSimpleName() + ": Player " + activeChar.getName() + " is trying to learn a null skill Id: " + _id + " level: " + _level + "!");
             return;

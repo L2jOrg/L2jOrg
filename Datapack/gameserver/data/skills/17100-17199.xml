@@ -1,148 +1,169 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd" >
-    <skill id="17107" toLevel="1" name="Snowman's Buff">
-        <!-- Snowman's present. Once debuffed, no more debuffs can be applied. -->
-        <icon>icon.weapon_snowman_stick_i00</icon>
-        <operateType>A2</operateType>
-        <isMagic>1</isMagic>
-        <effectPoint>-2</effectPoint>
-        <isDebuff>true</isDebuff>
-    </skill>
-    <skill id="17108" toLevel="1" name="Christmas Blessing">
-        <!-- Restores energy when in a peaceful zone. -->
-        <icon>icon.weapon_snowman_stick_i00</icon>
-        <operateType>A2</operateType>
-        <reuseDelay>30000</reuseDelay>
-        <effectPoint>100</effectPoint>
-        <isMagic>4</isMagic>
-    </skill>
-    <skill id="17109" toLevel="1" name="-">
-        <operateType>A1</operateType>
-    </skill>
-    <skill id="17110" toLevel="1" name="Snowy Squash Nectar">
-        <operateType>A1</operateType>
-        <castRange>200</castRange>
-        <effectPoint>-150</effectPoint>
-        <reuseDelay>2000</reuseDelay>
-        <effectRange>300</effectRange>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <itemConsumeCount>1</itemConsumeCount>
-        <itemConsumeId>37543</itemConsumeId> <!-- Snowy Squash Nectar -->
-        <magicLvl>1</magicLvl>
-        <magicCriticalRate>5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <targetType>OTHERS</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpCanNotUseAirship"/>
-            <condition name="OpTargetNpc">
-                <npcIds>
-                    <item>13399</item>
-                    <item>13400</item>
-                    <item>13401</item>
-                    <item>13402</item>
-                    <item>13403</item>
-                    <item>13404</item>
-                    <item>13405</item>
-                    <item>13406</item>
-                </npcIds>
-            </condition>
-        </conditions>
-    </skill>
-    <skill id="17111" toLevel="1" name="Snowy Squash Seed">
-        <operateType>A1</operateType>
-        <hitTime>1500</hitTime>
-        <reuseDelay>10000</reuseDelay>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <itemConsumeCount>1</itemConsumeCount>
-        <itemConsumeId>38923</itemConsumeId> <!-- Snowy Squash Seed -->
-        <magicLvl>1</magicLvl>
-        <magicCriticalRate>5</magicCriticalRate>
-        <hitCancelTime>1.5</hitCancelTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpCanNotUseAirship"/>
-        </conditions>
-        <effects>
-            <effect name="SummonNpc">
-                <npcId>13399</npcId> <!-- Snowy Young Squash -->
-                <npcCount>1</npcCount>
-                <despawnDelay>180000</despawnDelay>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="17112" toLevel="1" name="Large Snowy Squash Seed">
-        <operateType>A1</operateType>
-        <hitTime>1500</hitTime>
-        <reuseDelay>10000</reuseDelay>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <itemConsumeCount>1</itemConsumeCount>
-        <itemConsumeId>38924</itemConsumeId> <!-- Snowy Large Squash Seed -->
-        <magicLvl>1</magicLvl>
-        <magicCriticalRate>5</magicCriticalRate>
-        <hitCancelTime>1.5</hitCancelTime>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpCanNotUseAirship"/>
-        </conditions>
-        <effects>
-            <effect name="SummonNpc">
-                <npcId>13403</npcId> <!-- Snowy Large Young Squash -->
-                <npcCount>1</npcCount>
-                <despawnDelay>180000</despawnDelay>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="17113" toLevel="1" name="Christmas Buff Set 2015">
-        <operateType>A1</operateType>
-    </skill>
-    <skill id="17154" toLevel="1" name="Elixir of Life">
-        <!-- Your body is filled with mysterious sweet energy. Your soul stands still, but your heart is beating like a hammer. For 2 min., P. Atk./ M. Atk. +15%, P. Def./ M. Def. +15%. Equipped weapon changes shape. The effect disappears upon logout. -->
-        <icon>icon.etc_whiteday_herb</icon>
-        <abnormalLvl>2</abnormalLvl>
-        <abnormalLvl>5</abnormalLvl>
-        <abnormalTime>120</abnormalTime>
-        <abnormalType>RHAPSODY</abnormalType>
-        <abnormalVisualEffect>CHANGE_VALENTINE</abnormalVisualEffect>
-        <operateType>A2</operateType>
-        <hitTime>100</hitTime>
-        <effectPoint>100</effectPoint>
-        <reuseDelay>2000</reuseDelay>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <deleteAbnormalOnLeave>true</deleteAbnormalOnLeave>
-        <effects>
-            <effect name="PAtk">
-                <amount>15</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MAtk">
-                <amount>15</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PhysicalDefence">
-                <amount>15</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MagicalDefence">
-                <amount>15</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="17192" toLevel="1" name="Change Hair Accessory">
-        <!-- Switch hair accessories. -->
-        <icon>icon.skill0810</icon>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <operateType>A1</operateType>
-        <reuseDelay>180000</reuseDelay>
-        <effectPoint>1</effectPoint>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <effects>
-            <effect name="HairAccessorySet"/>
-        </effects>
-    </skill>
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
+	<skill id="17107" name="Snowman's Buff" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<!-- Snowman's present. Once debuffed, no more debuffs can be applied. -->
+		<icon initial="icon.weapon_snowman_stick_i00"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="-1"/>
+			<effect-point initial="-2"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="-2000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="17108" name="Christmas Blessing" max-level="1" action="A2">
+	<!-- Restores energy when in a peaceful zone. -->
+		<icon initial="icon.weapon_snowman_stick_i00"/>
+		<attributes property="PHYSIC" >
+			<cast-range initial="-1"/>
+			<reuse initial="30000"/>
+			<effect-point initial="100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="17109" name="-" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="17110" name="Snowy Squash Nectar" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="5.0" >
+			<magic-level initial="1"/>
+			<cast-range initial="200"/>
+			<reuse initial="2000"/>
+			<effect-point initial="-150"/>
+			<effect-range initial="300"/>
+			<hit-time initial="-150000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<item initial="37543"/>
+			<item-count initial="1"/>
+		</consume>
+		<target type="OTHERS" />
+		<conditions>
+			<condition name="OpCanNotUseAirship"/>
+			<target>				<npc>
+					<ids>13399 13400 13401 13402 13403 13404 13405 13406</ids>
+				</npc>
+			</target>
+		</conditions>
+	</skill>
+	<skill id="17111" name="Snowy Squash Seed" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="5.0" hit-cancel-time="1.5" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<reuse initial="10000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<item initial="38923"/>
+			<item-count initial="1"/>
+		</consume>
+		<target />
+		<conditions>
+			<condition name="OpCanNotUseAirship"/>
+		</conditions>
+		<effects>
+			<summon-npc count="13399" despawn-delay="180000">
+				<npc initial="13399.0"/>
+			</summon-npc>
+		</effects>
+	</skill>
+	<skill id="17112" name="Large Snowy Squash Seed" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes magic-critical-rate="5.0" hit-cancel-time="1.5" >
+			<magic-level initial="1"/>
+			<cast-range initial="-1"/>
+			<reuse initial="10000"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<consume>
+			<item initial="38924"/>
+			<item-count initial="1"/>
+		</consume>
+		<target />
+		<conditions>
+			<condition name="OpCanNotUseAirship"/>
+		</conditions>
+		<effects>
+			<summon-npc count="13403" despawn-delay="180000">
+				<npc initial="13403.0"/>
+			</summon-npc>
+		</effects>
+	</skill>
+	<skill id="17113" name="Christmas Buff Set 2015" max-level="1" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="17154" name="Elixir of Life" max-level="1" action="A2">
+	<!-- none -->
+		<icon initial="icon.etc_whiteday_herb"/>
+		<attributes property="PHYSIC" remove-abnormal-on-leave="true" >
+			<cast-range initial="-1"/>
+			<reuse initial="2000"/>
+			<effect-point initial="100"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="100000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<abnormal type="RHAPSODY" visual="CHANGE_VALENTINE" >
+			<level initial="5"/>
+			<time initial="120"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+				<power initial="15.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_ATTACK" mode="PER">
+				<power initial="15.0"/>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+				<power initial="15.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+				<power initial="15.0"/>
+			</stat-modify>
+		</effects>
+	</skill>
+	<skill id="17192" name="Change Hair Accessory" max-level="1" action="A1">
+	<!-- Change hair accessories. -->
+		<icon initial="icon.skill0810"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="180000"/>
+			<effect-point initial="1"/>
+			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+		<effects>
+			<effect name="HairAccessorySet"/>
+		</effects>
+	</skill>
 </list>

@@ -1,7 +1,7 @@
 package handlers.itemhandlers;
 
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
-import org.l2j.gameserver.data.xml.impl.SkillData;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.model.actor.Playable;
@@ -43,7 +43,7 @@ public class PetFood implements IItemHandler
 	
 	private boolean useFood(Playable activeChar, int skillId, int skillLevel, Item item)
 	{
-		final Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
+		final Skill skill = SkillEngine.getInstance().getSkill(skillId, skillLevel);
 		if (skill != null)
 		{
 			if (isPet(activeChar))

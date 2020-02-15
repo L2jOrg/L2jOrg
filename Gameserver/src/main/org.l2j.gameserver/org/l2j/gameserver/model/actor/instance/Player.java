@@ -31,6 +31,7 @@ import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.handler.IItemHandler;
@@ -1898,7 +1899,7 @@ public final class Player extends Playable {
             if (_curWeightPenalty != newWeightPenalty) {
                 _curWeightPenalty = newWeightPenalty;
                 if ((newWeightPenalty > 0) && !_dietMode) {
-                    addSkill(SkillData.getInstance().getSkill(CommonSkill.WEIGHT_PENALTY.getId(), newWeightPenalty));
+                    addSkill(SkillEngine.getInstance().getSkill(CommonSkill.WEIGHT_PENALTY.getId(), newWeightPenalty));
                     setIsOverloaded(getCurrentLoad() > maxLoad);
                 } else {
                     removeSkill(getKnownSkill(4270), false, true);
@@ -2271,7 +2272,7 @@ public final class Player extends Playable {
 
             // Mobius: Keep sublevel on skill level increase.
             if ((oldSkill != null) && (oldSkill.getSubLevel() > 0) && (skill.getSubLevel() == 0) && (oldSkill.getLevel() < skill.getLevel())) {
-                skill = SkillData.getInstance().getSkill(skill.getId(), skill.getLevel(), oldSkill.getSubLevel());
+                skill = SkillEngine.getInstance().getSkill(skill.getId(), skill.getLevel());
             }
 
             addSkill(skill, false);
@@ -2290,7 +2291,7 @@ public final class Player extends Playable {
     public void giveAvailableAutoGetSkills() {
         // Get available skills
         final List<SkillLearn> autoGetSkills = SkillTreesData.getInstance().getAvailableAutoGetSkills(this);
-        final SkillData st = SkillData.getInstance();
+        final SkillEngine st = SkillEngine.getInstance();
         Skill skill;
         for (SkillLearn s : autoGetSkills) {
             skill = st.getSkill(s.getSkillId(), s.getSkillLevel());
@@ -6067,7 +6068,7 @@ public final class Player extends Playable {
                     final int subLevel = rset.getInt("skill_sub_level");
 
                     // Create a L2Skill object for each record
-                    final Skill skill = SkillData.getInstance().getSkill(id, level, subLevel);
+                    final Skill skill = SkillEngine.getInstance().getSkill(id, level);
 
                     if (skill == null) {
                         LOGGER.warn("Skipped null skill Id: " + id + " Level: " + level + " while restoring player skills for playerObjId: " + getObjectId());
@@ -6109,7 +6110,7 @@ public final class Player extends Playable {
                     final long systime = rset.getLong("systime");
                     final int restoreType = rset.getInt("restore_type");
 
-                    final Skill skill = SkillData.getInstance().getSkill(rset.getInt("skill_id"), rset.getInt("skill_level"), rset.getInt("skill_sub_level"));
+                    final Skill skill = SkillEngine.getInstance().getSkill(rset.getInt("skill_id"), rset.getInt("skill_level"));
                     if (skill == null) {
                         continue;
                     }
@@ -7704,7 +7705,7 @@ public final class Player extends Playable {
             for (SkillLearn skillInfo : skillTree.values()) {
                 if (skillInfo.getGetLevel() <= newClass.getLevel()) {
                     final Skill prevSkill = prevSkillList.get(skillInfo.getSkillId());
-                    final Skill newSkill = SkillData.getInstance().getSkill(skillInfo.getSkillId(), skillInfo.getSkillLevel());
+                    final Skill newSkill = SkillEngine.getInstance().getSkill(skillInfo.getSkillId(), skillInfo.getSkillLevel());
 
                     if (((prevSkill != null) && (prevSkill.getLevel() > newSkill.getLevel())) || SkillTreesData.getInstance().isRemoveSkill(subTemplate, skillInfo.getSkillId())) {
                         continue;
@@ -8670,7 +8671,7 @@ public final class Player extends Playable {
 
         try {
             if (isFlying()) {
-                removeSkill(SkillData.getInstance().getSkill(CommonSkill.WYVERN_BREATH.getId(), 1));
+                removeSkill(SkillEngine.getInstance().getSkill(CommonSkill.WYVERN_BREATH.getId(), 1));
             }
         } catch (Exception e) {
             LOGGER.error("deleteMe()", e);
@@ -9319,12 +9320,12 @@ public final class Player extends Playable {
                     int revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_1_DUAL_CLASS, 0);
                     if (revelationSkill != 0)
                     {
-                        addSkill(SkillData.getInstance().getSkill(revelationSkill, 1), false);
+                        addSkill(SkillEngine.getInstance().getSkill(revelationSkill, 1), false);
                     }
                     revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_2_DUAL_CLASS, 0);
                     if (revelationSkill != 0)
                     {
-                        addSkill(SkillData.getInstance().getSkill(revelationSkill, 1), false);
+                        addSkill(SkillEngine.getInstance().getSkill(revelationSkill, 1), false);
                     }
                 }
                 else if (!isSubClassActive())
@@ -9332,12 +9333,12 @@ public final class Player extends Playable {
                     int revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_1_MAIN_CLASS, 0);
                     if (revelationSkill != 0)
                     {
-                        addSkill(SkillData.getInstance().getSkill(revelationSkill, 1), false);
+                        addSkill(SkillEngine.getInstance().getSkill(revelationSkill, 1), false);
                     }
                     revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_2_MAIN_CLASS, 0);
                     if (revelationSkill != 0)
                     {
-                        addSkill(SkillData.getInstance().getSkill(revelationSkill, 1), false);
+                        addSkill(SkillEngine.getInstance().getSkill(revelationSkill, 1), false);
                     }
                 }
                 // Include transformation skills.
@@ -10177,7 +10178,7 @@ public final class Player extends Playable {
             removeSkill(skill, true); // there is no lower skill
         } else {
             LOGGER.info("Decreasing skill " + skill + " to " + nextLevel + " for player " + toString());
-            addSkill(SkillData.getInstance().getSkill(skill.getId(), nextLevel), true); // replace with lower one
+            addSkill(SkillEngine.getInstance().getSkill(skill.getId(), nextLevel), true); // replace with lower one
         }
     }
 
