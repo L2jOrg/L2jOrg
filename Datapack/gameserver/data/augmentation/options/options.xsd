@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   targetNamespace="http://l2j.org"
+		   xmlns="http://l2j.org"
+		   elementFormDefault="qualified">
+
+	<xs:include schemaLocation="../../skills/effects.xsd"/>
+
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="option" type="Option" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="Option">
+		<xs:sequence>
+			<xs:element name="effects" type="Effects" minOccurs="0"/>
+			<xs:element name="skill" type="OptionSkill" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+		<xs:attribute type="xs:token" name="name" use="required" />
+	</xs:complexType>
+
+	<xs:complexType name="OptionSkill">
+		<xs:complexContent>
+			<xs:extension base="ChancedSkillInfo">
+				<xs:attribute name="type" type="OptionSkillType" default="ACTIVE"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:simpleType name="OptionSkillType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="ATTACK"/>
+			<xs:enumeration value="MAGIC"/>
+			<xs:enumeration value="CRITICAL"/>
+			<xs:enumeration value="ACTIVE"/>
+			<xs:enumeration value="PASSIVE"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

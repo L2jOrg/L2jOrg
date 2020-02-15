@@ -33,6 +33,19 @@
         <xs:attribute type="xs:int" name="count" default="1"/>
     </xs:complexType>
 
+    <xs:complexType name="ChancedSkillInfo">
+        <xs:complexContent>
+            <xs:extension base="SkillInfo">
+                <xs:attribute name="chance" type="xs:float" default="100"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="SkillInfo">
+        <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+        <xs:attribute name="level" type="xs:int" default="1"/>
+    </xs:complexType>
+
     <xs:simpleType name="BaseStat">
         <xs:restriction base="xs:token">
             <xs:enumeration value="STR"/>

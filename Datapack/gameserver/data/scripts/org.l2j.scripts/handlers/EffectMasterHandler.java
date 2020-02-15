@@ -12,7 +12,8 @@ import org.slf4j.LoggerFactory;
  * Effect Master handler.
  * @author NosBit
  */
-public final class EffectMasterHandler {
+public final class
+EffectMasterHandler {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(EffectMasterHandler.class);
 

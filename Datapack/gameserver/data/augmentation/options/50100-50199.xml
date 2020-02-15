@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org options.xsd">
+    <option id="50161" name="o_s_cl_hg_str">
+        <effects>
+            <stat type="STR">
+                <power initial="1"/>
+            </stat>
+        </effects>
+    </option>
+    <option id="50162" name="o_s_cl_hg_dex">
+        <effects>
+            <stat type="DEX">
+                <power initial="1"/>
+            </stat>
+        </effects>
+    </option>
+    <option id="50163" name="o_s_cl_hg_con">
+        <effects>
+            <stat type="CON">
+                <power initial="1"/>
+            </stat>
+        </effects>
+    </option>
+    <option id="50164" name="o_s_cl_hg_int">
+        <effects>
+            <stat type="INT">
+                <power initial="1"/>
+            </stat>
+        </effects>
+    </option>
+    <option id="50165" name="o_s_cl_hg_wit">
+        <effects>
+            <stat type="WIT">
+                <power initial="1"/>
+            </stat>
+        </effects>
+    </option>
+    <option id="50166" name="o_s_cl_hg_men">
+        <effects>
+            <stat type="MEN">
+                <power initial="1"/>
+            </stat>
+        </effects>
+    </option>
+</list>

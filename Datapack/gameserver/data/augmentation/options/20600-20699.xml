@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org options.xsd">
+    <option id="20600" name="o_f_80_2g_84">
+        <!-- MP Regen increases by 0.07. Accuracy increases by 0.68. -->
+        <effects>
+            <stat-modify stat="REGENERATE_MP_RATE" mode="DIFF">
+                <power initial="0.067"/>
+            </stat-modify>
+            <stat-modify stat="ACCURACY" mode="DIFF">
+                <power initial="0.677"/>
+            </stat-modify>
+        </effects>
+    </option>
+    <option id="20601" name="o_f_80_2g_85">
+        <!-- MP Regen increases by 0.07. Critical increases by 5.3. -->
+        <effects>
+            <stat-modify stat="REGENERATE_MP_RATE" mode="DIFF">
+                <power initial="0.067"/>
+            </stat-modify>
+            <stat-modify stat="CRITICAL_RATE" mode="DIFF">
+                <power initial="5.28"/>
+            </stat-modify>
+        </effects>
+    </option>
+    <option id="20602" name="o_f_80_2g_86">
+        <!-- CP Regen increases by 0.16. Evasion increases by 0.68. -->
+        <effects>
+            <stat-modify stat="REGENERATE_CP_RATE" mode="DIFF">
+                <power initial="0.158"/>
+            </stat-modify>
+            <stat-modify stat="EVASION_RATE" mode="DIFF">
+                <power initial="0.677"/>
+            </stat-modify>
+        </effects>
+    </option>
+    <option id="20603" name="o_f_80_2g_87">
+        <!-- CP Regen increases by 0.16. Accuracy increases by 0.68. -->
+        <effects>
+            <stat-modify stat="REGENERATE_CP_RATE" mode="DIFF">
+                <power initial="0.158"/>
+            </stat-modify>
+            <stat-modify stat="ACCURACY" mode="DIFF">
+                <power initial="0.677"/>
+            </stat-modify>
+        </effects>
+    </option>
+    <option id="20604" name="o_f_80_2g_88">
+        <!-- CP Regen increases by 0.16. Critical increases by 5.28. -->
+        <effects>
+            <stat-modify stat="REGENERATE_CP_RATE" mode="DIFF">
+                <power initial="0.158"/>
+            </stat-modify>
+            <stat-modify stat="CRITICAL_RATE" mode="DIFF">
+                <power initial="5.28"/>
+            </stat-modify>
+        </effects>
+    </option>
+    <option id="20605" name="o_f_80_2g_89">
+        <!-- Evasion increases by 0.79. Accuracy increases by 0.68. -->
+        <effects>
+            <stat-modify stat="EVASION_RATE" mode="DIFF">
+                <power initial="0.79"/>
+            </stat-modify>
+            <stat-modify stat="ACCURACY" mode="DIFF">
+                <power initial="0.677"/>
+            </stat-modify>
+        </effects>
+    </option>
+    <option id="20606" name="o_f_80_2g_90">
+        <!-- Evasion increases by 0.79. Critical increases by 5.28. -->
+        <effects>
+            <stat-modify stat="EVASION_RATE" mode="DIFF">
+                <power initial="0.79"/>
+            </stat-modify>
+            <stat-modify stat="CRITICAL_RATE" mode="DIFF">
+                <power initial="5.28"/>
+            </stat-modify>
+        </effects>
+    </option>
+    <option id="20607" name="o_f_80_2g_91">
+        <!-- Accuracy increases by 0.79. Critical increases by 5.28. -->
+        <effects>
+            <stat-modify stat="ACCURACY" mode="DIFF">
+                <power initial="0.79"/>
+            </stat-modify>
+            <stat-modify stat="CRITICAL_RATE" mode="DIFF">
+                <power initial="5.28"/>
+            </stat-modify>
+        </effects>
+    </option>
+</list>

@@ -237,7 +237,7 @@ public class AdminReload implements IAdminCommandHandler
 				}
 				case "options":
 				{
-					OptionData.getInstance().load();
+					AugmentationEngine.getInstance().load();
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Options data.");
 					break;
 				}
