@@ -58,6 +58,9 @@ public final class Skill implements IIdentifiable, Cloneable {
     private TraitType traitType = TraitType.NONE;
     private AbnormalType abnormalType = AbnormalType.NONE;
     private AbnormalType subordinationAbnormalType = AbnormalType.NONE;
+    private NextActionType nextAction = NextActionType.NONE;
+    private AttributeType attributeType = AttributeType.NONE;
+
     private int level;
     private int castRange;
     private int displayId;
@@ -84,36 +87,28 @@ public final class Skill implements IIdentifiable, Cloneable {
     private int activateRate;
     private int minChance;
     private int maxChance;
-    // Effecting area of the skill, in radius.
-    // The radius center varies according to the _targetType:
-    // "caster" if targetType = AURA/PARTY/CLAN or "target" if targetType = AREA
     private TargetType targetType;
     private AffectScope affectScope;
     private AffectObject affectObject;
     private int affectRange;
-    private NextActionType nextAction = NextActionType.NONE;
     private boolean removedOnAnyActionExceptMove;
     private boolean removedOnDamage;
     private boolean blockedInOlympiad;
-    private AttributeType attributeType = AttributeType.NONE;
     private int attributeValue;
     private BasicProperty basicProperty;
-    private int _minPledgeClass;
     private int soulMaxConsume;
     private int chargeConsume;
-    private boolean isTriggeredSkill; // If true the skill will take activation buff slot instead of a normal buff slot
+    private boolean isTriggeredSkill;
     private int effectPoint;
     private boolean isSuicideAttack;
     private boolean canBeDispelled;
     private boolean excludedFromCheck;
     private boolean withoutAction;
     private String icon;
-    // Channeling data
     private int channelingSkillId;
     private long channelingStart;
     private long channelingTickInterval;
-    // Mentoring
-    private boolean _isMentoring;
+
     // Stance skill IDs
     private int _doubleCastSkill;
     private boolean _canDoubleCast;
@@ -729,10 +724,6 @@ public final class Skill implements IIdentifiable, Cloneable {
 
     public boolean useSpiritShot() {
         return type == SkillType.MAGIC;
-    }
-
-    public int getMinPledgeClass() {
-        return _minPledgeClass;
     }
 
     public boolean isHeroSkill() {
@@ -1356,10 +1347,6 @@ public final class Skill implements IIdentifiable, Cloneable {
 
     public long getChannelingTickInitialDelay() {
         return channelingStart;
-    }
-
-    public boolean isMentoring() {
-        return _isMentoring;
     }
 
     public boolean canDoubleCast() {

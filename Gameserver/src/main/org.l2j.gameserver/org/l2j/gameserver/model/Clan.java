@@ -1103,7 +1103,7 @@ public class Clan implements IIdentifiable, INamable {
                     }
                 }
             } catch (Exception e) {
-                LOGGER.warn("Error could not store clan skills: " + e.getMessage(), e);
+                LOGGER.warn("Error could not store clan skills", e);
             }
 
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_SKILL_S1_HAS_BEEN_ADDED);
@@ -1112,12 +1112,10 @@ public class Clan implements IIdentifiable, INamable {
             for (ClanMember temp : members.values()) {
                 if ((temp != null) && (temp.getPlayerInstance() != null) && temp.isOnline()) {
                     if (subType == -2) {
-                        if (newSkill.getMinPledgeClass() <= temp.getPlayerInstance().getPledgeClass()) {
-                            temp.getPlayerInstance().addSkill(newSkill, false); // Skill is not saved to player DB
-                            temp.getPlayerInstance().sendPacket(new PledgeSkillListAdd(newSkill.getId(), newSkill.getLevel()));
-                            temp.getPlayerInstance().sendPacket(sm);
-                            temp.getPlayerInstance().sendSkillList();
-                        }
+                        temp.getPlayerInstance().addSkill(newSkill, false); // Skill is not saved to player DB
+                        temp.getPlayerInstance().sendPacket(new PledgeSkillListAdd(newSkill.getId(), newSkill.getLevel()));
+                        temp.getPlayerInstance().sendPacket(sm);
+                        temp.getPlayerInstance().sendSkillList();
                     } else if (temp.getPledgeType() == subType) {
                         temp.getPlayerInstance().addSkill(newSkill, false); // Skill is not saved to player DB
                         temp.getPlayerInstance().sendPacket(new ExSubPledgeSkillAdd(subType, newSkill.getId(), newSkill.getLevel()));
@@ -1129,22 +1127,6 @@ public class Clan implements IIdentifiable, INamable {
         }
 
         return oldSkill;
-    }
-
-    public void addSkillEffects() {
-        for (Skill skill : _skills.values()) {
-            for (ClanMember temp : members.values()) {
-                try {
-                    if ((temp != null) && temp.isOnline()) {
-                        if (skill.getMinPledgeClass() <= temp.getPlayerInstance().getPledgeClass()) {
-                            temp.getPlayerInstance().addSkill(skill, false); // Skill is not saved to player DB
-                        }
-                    }
-                } catch (NullPointerException e) {
-                    LOGGER.warn(e.getMessage(), e);
-                }
-            }
-        }
     }
 
     public void addSkillEffects(Player player) {

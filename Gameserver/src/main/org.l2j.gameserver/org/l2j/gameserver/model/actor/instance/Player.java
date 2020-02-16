@@ -5794,10 +5794,6 @@ public final class Player extends Playable {
                             continue;
                         }
 
-                        if (skill.isMentoring()) {
-                            continue;
-                        }
-
                         // Dances and songs are not kept in retail.
                         if (skill.isDance() && !Config.ALT_STORE_DANCES) {
                             continue;

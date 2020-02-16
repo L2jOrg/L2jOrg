@@ -95,7 +95,6 @@ public class MentorManager {
         player.getEffectList().getEffects()
                 .stream()
                 .map(BuffInfo::getSkill)
-                .filter(Skill::isMentoring)
                 .forEach(player::stopSkillEffects);
         //@formatter:on
     }
