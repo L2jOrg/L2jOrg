@@ -3,11 +3,11 @@
     <!-- Enchant Items Options Fire Dragon Pendant Lv. 1 -->
     <option id="60000" name="f_d_p_b_e_1_0">
         <!-- Increases P. Atk. +4. -->
-        <skill id="55090" level="1" type="PASSIVE"/>
+        <skill id="55090" type="PASSIVE"/>
     </option>
     <option id="60001" name="f_d_p_e_1_1">
         <!-- Increases P. Atk. +6. -->
-        <skill id="55091" level="1" type="PASSIVE"/>
+        <skill id="55091" type="PASSIVE"/>
     </option>
     <option id="60002" name="f_d_p_e_1_2">
         <!-- Increases P. Atk. +8. -->
@@ -48,11 +48,11 @@
     <!-- Enchant Items Options Fire Dragon Pendant Lv. 2 -->
     <option id="60011" name="f_d_p_b_e_2_0">
         <!-- Increases P. Atk. +4. Critical Damage +26 -->
-        <skill id="55092" level="1" type="PASSIVE"/>
+        <skill id="55092" type="PASSIVE"/>
     </option>
     <option id="60012" name="f_d_p_e_2_1">
         <!-- Increases P. Atk. +6. Critical Damage +38 -->
-        <skill id="55093" level="1" type="PASSIVE"/>
+        <skill id="55093" type="PASSIVE"/>
     </option>
     <option id="60013" name="f_d_p_e_2_2">
         <!-- Increases P. Atk. +8. Critical Damage +56 -->
@@ -69,7 +69,7 @@
     <option id="60016" name="f_d_p_e_2_5">
         <!-- Increases P. Atk. +28. Critical Damage +185. XP/SP gain +5%. -->
         <skill id="55093" level="5" type="PASSIVE"/>
-        <skill id="55133" level="1" type="PASSIVE"/>
+        <skill id="55133" type="PASSIVE"/>
     </option>
     <option id="60017" name="f_d_p_e_2_6">
         <!-- Increases P. Atk. +35. Critical Damage +250. XP/SP gain +10%. -->
@@ -99,11 +99,11 @@
     <!-- Enchant Items Options Fire Dragon Pendant Lv. 3 -->
     <option id="60022" name="f_d_p_b_e_3_0">
         <!-- Increases P. Atk. +4. Critical Damage +26. P. Critical Rate +1% -->
-        <skill id="55094" level="1" type="PASSIVE"/>
+        <skill id="55094" type="PASSIVE"/>
     </option>
     <option id="60023" name="f_d_p_e_3_1">
         <!-- Increases P. Atk. +6. Critical Damage +38. P. Critical Rate +2% -->
-        <skill id="55095" level="1" type="PASSIVE"/>
+        <skill id="55095" type="PASSIVE"/>
     </option>
     <option id="60024" name="f_d_p_e_3_2">
         <!-- Increases P. Atk. +8. Critical Damage +56. P. Critical Rate +3% -->
@@ -144,11 +144,11 @@
     <!-- Enchant Items Options Fire Dragon Pendant Lv. 4 -->
     <option id="60033" name="f_d_p_b_e_4_0">
         <!-- Increases P. Atk. +4. Critical Damage +26. P. Critical Rate +1%. P. Atk +1% -->
-        <skill id="55096" level="1" type="PASSIVE"/>
+        <skill id="55096" type="PASSIVE"/>
     </option>
     <option id="60034" name="f_d_p_e_4_1">
         <!-- Increases P. Atk. +6. Critical Damage +38. P. Critical Rate +2%. P. Atk +1.5% -->
-        <skill id="55097" level="1" type="PASSIVE"/>
+        <skill id="55097" type="PASSIVE"/>
     </option>
     <option id="60035" name="f_d_p_e_4_2">
         <!-- Increases P. Atk. +8. Critical Damage +56. P. Critical Rate +3%. P. Atk +2% -->
@@ -189,11 +189,11 @@
     <!-- Enchant Items Options Fire Dragon Pendant Lv. 5 -->
     <option id="60044" name="f_d_p_b_e_5_0">
         <!-- Increases P. Atk. +4. Critical Damage +26. P. Critical Rate +1%. P. Atk +1%. P. Critical Damage +1% -->
-        <skill id="55098" level="1" type="PASSIVE"/>
+        <skill id="55098" type="PASSIVE"/>
     </option>
     <option id="60045" name="f_d_p_e_5_1">
         <!-- Increases P. Atk. +6. Critical Damage +38. P. Critical Rate +2%. P. Atk +1.5%. P. Critical Damage +2% -->
-        <skill id="55099" level="1" type="PASSIVE"/>
+        <skill id="55099" type="PASSIVE"/>
     </option>
     <option id="60046" name="f_d_p_e_5_2">
         <!-- Increases P. Atk. +8. Critical Damage +56. P. Critical Rate +3%. P. Atk +2%. P. Critical Damage +3% -->
@@ -236,11 +236,11 @@
     <!-- Enchant Items Options Water Dragon Pendant Lv. 1 -->
     <option id="60055" name="w_d_p_b_e_1_0">
         <!-- Increases M. Atk. +9. -->
-        <skill id="55100" level="1" type="PASSIVE"/>
+        <skill id="55100" type="PASSIVE"/>
     </option>
     <option id="60056" name="w_d_p_e_1_1">
         <!-- Increases M. Atk. +13. -->
-        <skill id="55101" level="1" type="PASSIVE"/>
+        <skill id="55101" type="PASSIVE"/>
     </option>
     <option id="60057" name="w_d_p_e_1_2">
         <!-- Increases M. Atk. +20. -->
@@ -281,11 +281,11 @@
     <!-- Enchant Items Options Water Dragon Pendant Lv. 2 -->
     <option id="60066" name="w_d_p_b_e_2_0">
         <!-- Increases M. Atk. +9. M. Critical Damage +62 -->
-        <skill id="55102" level="1" type="PASSIVE"/>
+        <skill id="55102" type="PASSIVE"/>
     </option>
     <option id="60067" name="w_d_p_e_2_1">
         <!-- Increases M. Atk. +13. M. Critical Damage +89 -->
-        <skill id="55103" level="1" type="PASSIVE"/>
+        <skill id="55103" type="PASSIVE"/>
     </option>
     <option id="60068" name="w_d_p_e_2_2">
         <!-- Increases M. Atk. +20. M. Critical Damage +134 -->
@@ -326,11 +326,11 @@
     <!-- Enchant Items Options Water Dragon Pendant Lv. 3 -->
     <option id="60077" name="w_d_p_b_e_3_0">
         <!-- Increases M. Atk. +9. M. Critical Damage +62. M. Critical Rate +1% -->
-        <skill id="55104" level="1" type="PASSIVE"/>
+        <skill id="55104" type="PASSIVE"/>
     </option>
     <option id="60078" name="w_d_p_e_3_1">
         <!-- Increases M. Atk. +13. M. Critical Damage +89. M. Critical Rate +2% -->
-        <skill id="55105" level="1" type="PASSIVE"/>
+        <skill id="55105" type="PASSIVE"/>
     </option>
     <option id="60079" name="w_d_p_e_3_2">
         <!-- Increases M. Atk. +20. M. Critical Damage +134. M. Critical Rate +3% -->
@@ -371,11 +371,11 @@
     <!-- Enchant Items Options Water Dragon Pendant Lv. 4 -->
     <option id="60088" name="w_d_p_b_e_4_0">
         <!-- Increases M. Atk. +9. M. Critical Damage +62. M. Critical Rate +1%. M. Atk +1% -->
-        <skill id="55106" level="1" type="PASSIVE"/>
+        <skill id="55106" type="PASSIVE"/>
     </option>
     <option id="60089" name="w_d_p_e_4_1">
         <!-- Increases M. Atk. +13. M. Critical Damage +89. M. Critical Rate +2%. M. Atk +1.5% -->
-        <skill id="55107" level="1" type="PASSIVE"/>
+        <skill id="55107" type="PASSIVE"/>
     </option>
     <option id="60090" name="w_d_p_e_4_2">
         <!-- Increases M. Atk. +20. M. Critical Damage +134. M. Critical Rate +3%. M. Atk +2% -->
@@ -416,6 +416,6 @@
     <!-- Enchant Items Options Water Dragon Pendant Lv. 5 -->
     <option id="60099" name="w_d_p_b_e_5_0">
         <!-- Increases M. Atk. +9. M. Critical Damage +62. M. Critical Rate +1%. M. Atk +1%. M. Critical Damage +1% -->
-        <skill id="55108" level="1" type="PASSIVE"/>
+        <skill id="55108" type="PASSIVE"/>
     </option>
 </list>

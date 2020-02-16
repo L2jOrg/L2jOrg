@@ -39,7 +39,7 @@
 		</attributes>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="150" affect-min="6" affect-random="12" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="831.0">
 					<value level="2">8287.0</value>
 					<value level="3">400.0</value>
@@ -77,7 +77,7 @@
 		</attributes>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="5" affect-random="12" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="50.0">
 					<value level="2">120.0</value>
 					<value level="3">39.0</value>
@@ -115,7 +115,7 @@
 		</attributes>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="150" affect-min="6" affect-random="12" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="985.0">
 					<value level="2">9861.0</value>
 					<value level="3">473.0</value>
@@ -163,7 +163,7 @@
 		</attributes>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="5" affect-random="12" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="55.0">
 					<value level="2">133.0</value>
 					<value level="3">43.0</value>

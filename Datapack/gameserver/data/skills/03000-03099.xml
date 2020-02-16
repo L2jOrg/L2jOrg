@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="3001" name="int_1" max-level="1" >
+	<skill id="3001" name="int_1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -10,7 +10,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="3002" name="int_2" max-level="1" >
+	<skill id="3002" name="int_2">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -20,7 +20,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="3003" name="str_2" max-level="1" >
+	<skill id="3003" name="str_2">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -30,7 +30,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="3004" name="maxmp_5" max-level="1" >
+	<skill id="3004" name="maxmp_5">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -40,7 +40,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="3005" name="Bleed" max-level="1" debuff="true" action="A2">
+	<skill id="3005" name="Bleed" debuff="true" action="A2">
 	<!-- HP continuously decreases. -->
 		<icon initial="icon.skill0223"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1" >
@@ -56,12 +56,12 @@
 			<chance initial="50"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="3" can-kill="false">
+			<damage-over-time ticks="3">
 				<power initial="44.0"/>
 			</damage-over-time>
 		</effects>
 	</skill>
-	<skill id="3006" name="Equip Set Items" max-level="1" >
+	<skill id="3006" name="Equip Set Items">
 	<!-- Equipping set items additionally increases stats. -->
 		<icon initial="icon.skill0042"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -88,7 +88,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="6.88">
 					<value level="2">6.07</value>
 					<value level="3">5.72</value>
@@ -116,7 +116,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="5.42">
 					<value level="2">5.12</value>
 					<value level="3">4.82</value>
@@ -145,7 +145,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="2.95">
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="2.95">
 					<value level="2">2.82</value>
 					<value level="3">2.68</value>
 					<value level="4">2.55</value>
@@ -174,7 +174,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="DIFF">
+			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0">
 				<power initial="86.7">
 					<value level="2">82.2</value>
 					<value level="3">77.8</value>
@@ -202,7 +202,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="DIFF">
+			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0">
 				<power initial="90.5">
 					<value level="2">85.9</value>
 					<value level="3">81.2</value>
@@ -230,10 +230,10 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="-15.0"/>
 			</vital-stat-modify>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK">
 				<power initial="20.44">
 					<value level="2">22.64</value>
 					<value level="3">24.77</value>
@@ -258,26 +258,26 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="25.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="ATTACK_COUNT_MAX">
-				<power initial="0.0">
+				<power>
 					<value level="2">4.0</value>
 				</power>
 			</stat-modify>
 			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
 			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
 			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="3014" name="Special Ability: Mana Up" max-level="1" >
+	<skill id="3014" name="Special Ability: Mana Up">
 	<!-- Increases Max MP. -->
 		<icon initial="icon.skill0213"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -288,17 +288,17 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="30.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
 			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
 			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
 		</effects>
 	</skill>
@@ -450,7 +450,7 @@
 			</chance>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="3" can-kill="false">
+			<damage-over-time ticks="3">
 				<power initial="128.0">
 					<value level="3">190.0</value>
 					<value level="6">256.0</value>
@@ -488,7 +488,7 @@
 			</chance>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="3" can-kill="false">
+			<damage-over-time ticks="3">
 				<power initial="43.0">
 					<value level="3">64.0</value>
 					<value level="5">65.0</value>
@@ -614,7 +614,7 @@
 			</chance>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="3" can-kill="false">
+			<damage-over-time ticks="3">
 				<power initial="191.0">
 					<value level="3">291.0</value>
 					<value level="6">403.0</value>
@@ -685,7 +685,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="60" mode="DIFF">
+			<stat-hp-based stat="CRITICAL_RATE" hp-percent="60">
 				<power initial="138.7">
 					<value level="2">130.9</value>
 					<value level="3">123.1</value>
@@ -696,17 +696,17 @@
 				</power>
 			</stat-hp-based>
 			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="7">5.0</value>
 				</power>
 			</stat-modify>
 			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="7">5.0</value>
 				</power>
 			</stat-modify>
 			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="7">5.0</value>
 				</power>
 			</stat-modify>
@@ -729,7 +729,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="60" mode="DIFF">				<power initial="7.63">
+			<stat-hp-based stat="EVASION_RATE" hp-percent="60">				<power initial="7.63">
 					<value level="2">7.29</value>
 					<value level="3">6.95</value>
 					<value level="4">6.6</value>
@@ -756,7 +756,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="60" mode="DIFF">				<power initial="4.44">
+			<stat-hp-based stat="EVASION_RATE" hp-percent="60">				<power initial="4.44">
 					<value level="2">4.24</value>
 					<value level="3">4.04</value>
 					<value level="4">3.84</value>
@@ -783,7 +783,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="60" mode="DIFF">				<power initial="7.63">
+			<stat-hp-based stat="EVASION_RATE" hp-percent="60">				<power initial="7.63">
 					<value level="2">7.29</value>
 					<value level="3">6.95</value>
 					<value level="4">6.6</value>
@@ -810,7 +810,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="60" mode="DIFF">				<power initial="7.63">
+			<stat-hp-based stat="EVASION_RATE" hp-percent="60">				<power initial="7.63">
 					<value level="2">7.29</value>
 					<value level="3">6.95</value>
 					<value level="4">6.6</value>
@@ -900,13 +900,13 @@
 				</power>
 			</stat-modify>
 			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
 			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
 			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
 		</effects>
 	</skill>
@@ -1052,7 +1052,7 @@
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
-			<mana initial="0">
+			<mana>
 				<value level="4">12</value>
 				<value level="5">0</value>
 			</mana>
@@ -1115,7 +1115,7 @@
 			</chance>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="3" can-kill="false">
+			<damage-over-time ticks="3">
 				<power initial="168.0">
 					<value level="3">249.0</value>
 					<value level="6">336.0</value>
@@ -1168,7 +1168,7 @@
 			</chance>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="3" can-kill="false">
+			<damage-over-time ticks="3">
 				<power initial="317.0">
 					<value level="3">498.0</value>
 					<value level="6">671.0</value>
@@ -1226,13 +1226,13 @@
 				</power>
 			</stat-modify>
 			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
 			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
 			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
 		</effects>
 	</skill>
@@ -1292,15 +1292,15 @@
 		<target />
 		<effects>
 			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
 			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
 			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="DIFF">
+			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0">
 				<power initial="53.6">
 					<value level="2">38.5</value>
 					<value level="3">50.4</value>
@@ -1409,7 +1409,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="3.9">
 					<value level="2">2.8</value>
 					<value level="3">3.7</value>
@@ -1428,13 +1428,13 @@
 				</power>
 			</stat-modify>
 			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
 			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
 			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
 		</effects>
 	</skill>
@@ -1453,23 +1453,23 @@
 				<power initial="15.0"/>
 			</stat-modify>
 			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="2">5.0</value>
 				</power>
 			</stat-modify>
 			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="2">5.0</value>
 				</power>
 			</stat-modify>
 			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="2">5.0</value>
 				</power>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="3048" name="Special Ability: Conversion" max-level="1" >
+	<skill id="3048" name="Special Ability: Conversion">
 	<!-- Decreases Max HP and increases Max MP. -->
 		<icon initial="icon.skill1048"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1480,20 +1480,20 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="-40.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="60.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
 			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
 			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
 		</effects>
 	</skill>
@@ -1512,7 +1512,7 @@
 		</attributes>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="8.39"/>
 			</magical-attack>
 		</effects>
@@ -1535,7 +1535,7 @@
 			<chance initial="42"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="3" can-kill="false">
+			<damage-over-time ticks="3">
 				<power initial="74.0"/>
 			</damage-over-time>
 		</effects>
@@ -1558,7 +1558,7 @@
 			<chance initial="35"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="3" can-kill="false">
+			<damage-over-time ticks="3">
 				<power initial="88.0"/>
 			</damage-over-time>
 			<speed mode="PER">
@@ -1584,7 +1584,7 @@
 			<chance initial="12"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="3" can-kill="false">
+			<damage-over-time ticks="3">
 				<power initial="256.0"/>
 			</damage-over-time>
 			<speed mode="PER">
@@ -1610,7 +1610,7 @@
 			<chance initial="24"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="3" can-kill="false">
+			<damage-over-time ticks="3">
 				<power initial="128.0"/>
 			</damage-over-time>
 			<speed mode="PER">
@@ -1618,7 +1618,7 @@
 			</speed>
 		</effects>
 	</skill>
-	<skill id="3056" name="Special Ability: Risk Haste" max-level="1" >
+	<skill id="3056" name="Special Ability: Risk Haste">
 	<!-- Increases Atk. Spd. when in danger. -->
 		<icon initial="icon.skill1086"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1633,13 +1633,13 @@
 				<power initial="11.0"/>
 			</stat-modify>
 			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
 			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
 			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
 		</effects>
 	</skill>
@@ -1702,7 +1702,7 @@
 			<chance initial="10"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="3" can-kill="false">
+			<damage-over-time ticks="3">
 				<power initial="403.0">
 					<value level="3">439.0</value>
 				</power>
@@ -1727,12 +1727,12 @@
 			<chance initial="18"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="3" can-kill="false">
+			<damage-over-time ticks="3">
 				<power initial="224.0"/>
 			</damage-over-time>
 		</effects>
 	</skill>
-	<skill id="3068" name="Special Ability: Haste" max-level="1" >
+	<skill id="3068" name="Special Ability: Haste">
 	<!-- Increases Atk. Spd. -->
 		<icon initial="icon.skill1086"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1747,17 +1747,17 @@
 				<power initial="6.0"/>
 			</stat-modify>
 			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
 			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
 			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="3069" name="Special Ability: Risk Evasion" max-level="1" >
+	<skill id="3069" name="Special Ability: Risk Evasion">
 	<!-- Increases P. Evasion when in danger. -->
 		<icon initial="icon.skill0198"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1768,7 +1768,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="60" mode="DIFF">				<power initial="6.8"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="60">				<power initial="6.8"/>
 			</stat-hp-based>
 		</effects>
 	</skill>
@@ -1801,7 +1801,7 @@
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="3071" name="Special Ability: Risk Focus" max-level="1" >
+	<skill id="3071" name="Special Ability: Risk Focus">
 	<!-- Increases P. Critical Rate when in danger. -->
 		<icon initial="icon.skill1077"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1812,17 +1812,17 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="60" mode="DIFF">
+			<stat-hp-based stat="CRITICAL_RATE" hp-percent="60">
 				<power initial="130.0"/>
 			</stat-hp-based>
 			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
 			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
 			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
 		</effects>
 	</skill>
@@ -1900,7 +1900,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK">
 				<power initial="20.36">
 					<value level="2">22.51</value>
 					<value level="3">24.59</value>
@@ -1928,7 +1928,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK">
 				<power initial="75.86">
 					<value level="2">87.22</value>
 					<value level="3">99.39</value>
@@ -2497,7 +2497,7 @@
 			<chance initial="40"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="41.0">
 					<value level="3">50.0</value>
 					<value level="6">58.0</value>
@@ -2545,7 +2545,7 @@
 			<chance initial="40"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="44.0">
 					<value level="3">54.0</value>
 					<value level="6">62.0</value>

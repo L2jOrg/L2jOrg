@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org options.xsd">
     <option id="24521" name="o_s_84_2s_1">
         <!-- Active: Head size increases temporarily. Increase. -->
-        <skill id="3203" level="1"/> <!-- Item Skill: Mystery Skill -->
+        <skill id="3203"/> <!-- Item Skill: Mystery Skill -->
     </option>
     <option id="24522" name="o_s_84_2s_2">
         <!-- Active: Temporarily increases lung capacity. -->
@@ -18,15 +18,15 @@
     </option>
     <option id="24525" name="o_s_84_2s_5">
         <!-- Active: Ignites a firecracker. -->
-        <skill id="3156" level="1"/> <!-- Item Skill: Firework -->
+        <skill id="3156"/> <!-- Item Skill: Firework -->
     </option>
     <option id="24526" name="o_s_84_2s_6">
         <!-- Active: Temporarily plays music. -->
-        <skill id="3206" level="1"/> <!-- Item Skill: Music -->
+        <skill id="3206"/> <!-- Item Skill: Music -->
     </option>
     <option id="24527" name="o_s_84_2s_7">
         <!-- Active: Ignites a large firecracker. -->
-        <skill id="3157" level="1"/> <!-- Item Skill: Large Firework -->
+        <skill id="3157"/> <!-- Item Skill: Large Firework -->
     </option>
     <option id="24528" name="o_s_84_2s_8">
         <!-- Chance: During a physical attack, temporarily decreases the target's attacking desire for oneself. -->
@@ -198,7 +198,7 @@
     </option>
     <option id="24570" name="o_s_84_2r_33">
         <!-- Active: Teleports to a town. Cannot be used in special areas such as the GM info center. -->
-        <skill id="3146" level="1"/> <!-- Item Skill: Recall -->
+        <skill id="3146"/> <!-- Item Skill: Recall -->
     </option>
     <option id="24571" name="o_s_84_2r_34">
         <!-- Active: Resurrects a corpse. -->

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="50300" name="Queen Ant’s Stone Crasher" max-level="1" >
+	<skill id="50300" name="Queen Ant’s Stone Crasher">
 	<!-- Blunt Weapon containing Queen Ant’s soul. Can use Queen Ant’s power. -->
 		<icon initial="icon.special_weapon_onehandblunt"/>
 		<attributes property="MAGIC" >
@@ -8,7 +8,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50301" name="Adventurer’s Belt" max-level="1" >
+	<skill id="50301" name="Adventurer’s Belt">
 	<!-- Inventory slots +2, Weight Limit +1000. -->
 		<icon initial="icon.belt_i00"/>
 		<attributes property="MAGIC" >
@@ -16,7 +16,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50302" name="Adventurer’s Cloak" max-level="1" >
+	<skill id="50302" name="Adventurer’s Cloak">
 	<!-- Max HP/Max MP +1%. -->
 		<icon initial="icon.amor_goodness_cloak"/>
 		<attributes property="MAGIC" >
@@ -24,7 +24,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50303" name="Enchanted Adventurer’s Cloak" max-level="1" >
+	<skill id="50303" name="Enchanted Adventurer’s Cloak">
 	<!-- Max HP/Max MP +2%. -->
 		<icon initial="icon.amor_goodness_cloak"/>
 		<attributes property="MAGIC" >
@@ -32,7 +32,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50304" name="Chapeau of Glory" max-level="1" >
+	<skill id="50304" name="Chapeau of Glory">
 	<!-- STR +1, INT +1, HP +300. -->
 		<icon initial="icon.accessory_archer_hat_i00"/>
 		<attributes property="MAGIC" >
@@ -40,7 +40,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50305" name="Gloves of Silence" max-level="1" >
+	<skill id="50305" name="Gloves of Silence">
 	<!-- Gloves containing the power of Silence. \n\nSTR +1, INT +1, Max HP +150, Atk. Spd. +8%%, Casting Spd. +15%%. -->
 		<icon initial="icon.armor_t94_g_i01"/>
 		<attributes property="MAGIC" >
@@ -48,7 +48,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50306" name="Silence Gloves Enchantment Effect" max-level="1" >
+	<skill id="50306" name="Silence Gloves Enchantment Effect">
 	<!-- Gloves containing the power of Silence. \n\nSilences all targets to prevent them from using any skills for 4 seconds. -->
 		<icon initial="icon.armor_t94_g_i01"/>
 		<attributes property="MAGIC" >
@@ -72,7 +72,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50308" name="Power of Silence" max-level="1" debuff="true"  type="MAGIC">
+	<skill id="50308" name="Power of Silence" debuff="true" type="MAGIC">
 	<!-- Can’t use any skills for 4 seconds. -->
 		<icon initial="icon.armor_t94_g_i01"/>
 		<attributes property="PHYSIC" >
@@ -99,7 +99,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50310" name="Shield Effect" max-level="1" >
+	<skill id="50310" name="Shield Effect">
 	<!-- Shield Def. +10, Shield Def. Rate +1%, Max HP +10. -->
 		<icon initial="icon.shield_shield_of_nightmare_i00"/>
 		<attributes property="MAGIC" >
@@ -126,7 +126,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50312" name="Sigil Effect" max-level="1" >
+	<skill id="50312" name="Sigil Effect">
 	<!-- P./M. Evasion +1, Max MP +10. -->
 		<icon initial="icon.dynasty_sigil_i00"/>
 		<attributes property="MAGIC" >
@@ -153,7 +153,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50339" name="Cloak of Protection" max-level="1" >
+	<skill id="50339" name="Cloak of Protection">
 	<!-- <Cloak of Protection>\nMax HP +3%\n, Max MP +3%\nBow Resistance +1% -->
 		<icon initial="icon.bm_2018_sayha_cloak_back_i01"/>
 		<attributes property="MAGIC" >

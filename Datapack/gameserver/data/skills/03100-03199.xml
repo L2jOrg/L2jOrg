@@ -185,7 +185,7 @@
 			<chance initial="40"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="41.0">
 					<value level="3">50.0</value>
 					<value level="6">58.0</value>
@@ -235,7 +235,7 @@
 			<chance initial="40"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="44.0">
 					<value level="3">54.0</value>
 					<value level="6">62.0</value>
@@ -786,7 +786,7 @@
 			<chance initial="40"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="41.0">
 					<value level="3">50.0</value>
 					<value level="6">58.0</value>
@@ -825,7 +825,7 @@
 			<chance initial="40"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="44.0">
 					<value level="3">54.0</value>
 					<value level="6">62.0</value>
@@ -1069,7 +1069,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="30.0">
 					<value level="2">60.0</value>
 					<value level="3">90.0</value>
@@ -1414,7 +1414,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="20.0">
 					<value level="2">40.0</value>
 					<value level="3">60.0</value>
@@ -1607,7 +1607,7 @@
 		</consume>
 		<target />
 		<effects>
-			<cp mode="DIFF">
+			<cp>
 				<power initial="264.0">
 					<value level="2">289.0</value>
 					<value level="3">313.0</value>
@@ -1704,7 +1704,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_CP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_CP">
 				<power initial="30.0">
 					<value level="2">60.0</value>
 					<value level="3">90.0</value>
@@ -1795,7 +1795,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK">
 				<power initial="23.64">
 					<value level="2">27.96</value>
 					<value level="3">32.76</value>
@@ -1891,7 +1891,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK">
 				<power initial="15.9">
 					<value level="2">18.65</value>
 					<value level="3">21.6</value>
@@ -2066,7 +2066,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="30.2">
 					<value level="2">33.72</value>
 					<value level="3">37.4</value>
@@ -2162,7 +2162,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="37.0">
 					<value level="2">40.0</value>
 					<value level="3">44.0</value>
@@ -2423,7 +2423,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="1.0">
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="1.0">
 					<value level="4">2.0</value>
 					<value level="7">3.0</value>
 					<value level="10">4.0</value>
@@ -2508,7 +2508,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="1.0">
 					<value level="4">2.0</value>
 					<value level="7">3.0</value>
@@ -2669,7 +2669,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
 				<power initial="1.0">
 					<value level="4">2.0</value>
 					<value level="7">3.0</value>
@@ -2825,7 +2825,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="FALL" mode="DIFF">
+			<stat-modify stat="FALL">
 				<power initial="-100.0"/>
 			</stat-modify>
 		</effects>
@@ -2916,7 +2916,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="3146" name="Item Skill: Return" max-level="1" action="A1">
+	<skill id="3146" name="Item Skill: Return" action="A1">
 	<!-- Active: Teleports the caster to a village. Cannot be used in special areas, such as the GM Consultation Room. -->
 		<icon initial="icon.skill3123"/>
 		<attributes magic-critical-rate="5.0" blocked-on-olympiad="true" >
@@ -2938,7 +2938,7 @@
 			<escape location="TOWN"/>
 		</effects>
 	</skill>
-	<skill id="3147" name="Item Skill: Quick Return" max-level="1" action="A1">
+	<skill id="3147" name="Item Skill: Quick Return" action="A1">
 	<!-- Active: Teleports the caster to a village. Cannot be used in special areas, such as the GM Consultation Room. -->
 		<icon initial="icon.skill3123"/>
 		<attributes magic-critical-rate="5.0" blocked-on-olympiad="true" >
@@ -3575,7 +3575,7 @@
 			<effect name="OpenChest"/>
 		</effects>
 	</skill>
-	<skill id="3156" name="Item Skill: Firecracker" max-level="1" action="A1">
+	<skill id="3156" name="Item Skill: Firecracker" action="A1">
 	<!-- Active: Ignites a Firecracker. -->
 		<icon initial="icon.skill3123"/>
 		<attributes magic-critical-rate="5.0" >
@@ -3590,7 +3590,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="3157" name="Item Skill: Large Firecracker" max-level="1" action="A1">
+	<skill id="3157" name="Item Skill: Large Firecracker" action="A1">
 	<!-- Active: Ignites a Large Firecracker. -->
 		<icon initial="icon.skill3123"/>
 		<attributes magic-critical-rate="5.0" >
@@ -3605,7 +3605,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="3158" name="Item Skill: Celestial Shield" max-level="1" action="A2">
+	<skill id="3158" name="Item Skill: Celestial Shield" action="A2">
 	<!-- Active: Instantly becomes invincible. -->
 		<icon initial="icon.skill3123"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" remove-on-action="true" >
@@ -3628,7 +3628,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<damage-block block-hp="true" block-mp="false"/>
+			<damage-block block-hp="true"/>
 		</effects>
 	</skill>
 	<skill id="3159" name="Item Skill: Stealth" max-level="3" action="A2">
@@ -3681,12 +3681,12 @@
 					<value level="3">-15.0</value>
 				</power>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="-12.0">
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="-12.0">
 					<value level="2">-8.0</value>
 					<value level="3">-4.0</value>
 				</power>
 			</stat-hp-based>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="-12.0"/>
 			</stat-modify>
 		</effects>
@@ -3766,7 +3766,7 @@
 		</conditions>
 		<effects>
 			<effect name="Resurrection">
-				<power initial="0.0">
+				<power>
 					<value level="2">20.0</value>
 					<value level="3">30.0</value>
 					<value level="4">40.0</value>
@@ -4056,7 +4056,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="61.0">
 					<value level="2">66.0</value>
 					<value level="3">72.0</value>
@@ -4148,7 +4148,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="61.0">
 					<value level="2">66.0</value>
 					<value level="3">72.0</value>
@@ -4240,7 +4240,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="61.0">
 					<value level="2">66.0</value>
 					<value level="3">72.0</value>
@@ -4332,7 +4332,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="61.0">
 					<value level="2">66.0</value>
 					<value level="3">72.0</value>
@@ -4424,7 +4424,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="61.0">
 					<value level="2">66.0</value>
 					<value level="3">72.0</value>
@@ -4516,7 +4516,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="61.0">
 					<value level="2">66.0</value>
 					<value level="3">72.0</value>
@@ -4606,7 +4606,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="61.0">
 					<value level="2">66.0</value>
 					<value level="3">72.0</value>
@@ -4698,7 +4698,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="31.0">
 					<value level="2">33.0</value>
 					<value level="3">36.0</value>
@@ -4790,7 +4790,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="31.0">
 					<value level="2">33.0</value>
 					<value level="3">36.0</value>
@@ -4882,7 +4882,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="31.0">
 					<value level="2">33.0</value>
 					<value level="3">36.0</value>
@@ -4974,7 +4974,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="31.0">
 					<value level="2">33.0</value>
 					<value level="3">36.0</value>
@@ -5066,7 +5066,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="31.0">
 					<value level="2">33.0</value>
 					<value level="3">36.0</value>
@@ -5158,7 +5158,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="31.0">
 					<value level="2">33.0</value>
 					<value level="3">36.0</value>
@@ -5248,7 +5248,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="31.0">
 					<value level="2">33.0</value>
 					<value level="3">36.0</value>
@@ -5340,7 +5340,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="31.0">
 					<value level="2">33.0</value>
 					<value level="3">36.0</value>
@@ -5432,7 +5432,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="31.0">
 					<value level="2">33.0</value>
 					<value level="3">36.0</value>
@@ -5524,7 +5524,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="31.0">
 					<value level="2">33.0</value>
 					<value level="3">36.0</value>
@@ -5616,7 +5616,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="31.0">
 					<value level="2">33.0</value>
 					<value level="3">36.0</value>
@@ -5708,7 +5708,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="31.0">
 					<value level="2">33.0</value>
 					<value level="3">36.0</value>
@@ -5800,7 +5800,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="31.0">
 					<value level="2">33.0</value>
 					<value level="3">36.0</value>
@@ -5890,7 +5890,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="31.0">
 					<value level="2">33.0</value>
 					<value level="3">36.0</value>
@@ -6600,7 +6600,7 @@
 			<chance initial="40"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="3" can-kill="false">
+			<damage-over-time ticks="3">
 				<power initial="41.0">
 					<value level="3">50.0</value>
 					<value level="6">58.0</value>
@@ -6690,7 +6690,7 @@
 			<chance initial="40"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="3" can-kill="false">
+			<damage-over-time ticks="3">
 				<power initial="44.0">
 					<value level="3">54.0</value>
 					<value level="6">62.0</value>

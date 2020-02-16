@@ -53,7 +53,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -74,7 +74,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -674,18 +674,18 @@
 	<item id="1374" name="Greater Wind Walk Potion" type="POTION" icon="icon.etc_lesser_potion_green_i00">
 	<!-- Magical potion that increases movement Speed dramatically for 5 minutes. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" price="3000" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2034" level="1" value="-1"/>  <!-- Greater Wind Walk Potion -->
+		<attributes weight="20" price="3000" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="2034" value="-1"/>  <!-- Greater Wind Walk Potion -->
 		</skill-reducer>
 	</item>
 
 	<item id="1375" name="Greater Haste Potion" type="POTION" icon="icon.etc_lesser_potion_purple_i00">
 	<!-- Magical potion that increases Atk. Spd. Dramatically for 5 minutes. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" price="3400" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2035" level="1" value="-1"/>  <!-- Greater Haste Potion -->
+		<attributes weight="20" price="3400" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="2035" value="-1"/>  <!-- Greater Haste Potion -->
 		</skill-reducer>
 	</item>
 
@@ -706,7 +706,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 

@@ -63,13 +63,13 @@
 	<item id="92409" name="Special Dragon's Fruit Lv. 2" type="SCROLL" icon="icon.bm_dragon_fruit">
 	<!-- For 20 minutes, P./M. Atk. +15%, P./M. Def. +20%, Max. HP/CP/MP +30%, P./M. Critical Rate +20, P./M. Critical Damage +7%, HP/MP Recovery Bonus +40%. At a certain chance absorbs 7% of the damage inflicted on target as HP. XP and SP gained through hunting +15%. Cooldown is 1 minute. Buff remains after death. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="92410" name="Dragon's Special Elixir Lv. 2" type="SCROLL" icon="icon.bm_dragon_posion">
 	<!-- When used, XP/SP Gain +50%, P. Atk. +300, M. Atk. +450, P. Def. +400, M. Def. +550, P/M. Critical Rate +40, P./M. Critical Damage +12%, Atk. Spd./Casting Spd. +70, HP +3000, MP +2000, CP +3000, HP/MP Recovery Bonus +12, Sayha's Grace Consumption Speed -25% for 20 minutes. Has a chance to recover 7% of damage dealt to enemy as HP.\n<Caution>When Dragon's Special Elixir is used while having Dragon's Miracle Potion applied, the effect will change to that of the Dragon's Special Elixir. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="92411" name="Sealed Treasure Chest" type="NONE" icon="icon.etc_readybox_gold">

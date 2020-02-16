@@ -130,7 +130,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK">
 				<power initial="4.5">
 					<value level="2">7.3</value>
 					<value level="2">5.3</value>
@@ -302,7 +302,7 @@
 				</power>
 				<weapon-type>SWORD BLUNT </weapon-type>
 			</stat-modify>
-			<trigger-skill-by-attack skill="5604" target="SELF" critical="false" start-level="9" stop-level="54">
+			<trigger-skill-by-attack skill="5604" start-level="9" stop-level="54">
 				<power initial="1.0"/>
 				<chance initial="50.0"/>
 				<min-damage initial="1.0"/>
@@ -449,7 +449,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK">
 				<power initial="10.3">
 					<value level="2">11.4</value>
 					<value level="3">27.6</value>
@@ -641,7 +641,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK">
 				<power initial="3.6">
 					<value level="2">6.0</value>
 					<value level="3">7.4</value>
@@ -699,7 +699,7 @@
 				</power>
 				<weapon-type>DAGGER DUAL_DAGGER </weapon-type>
 			</stat-modify>
-			<trigger-skill-by-attack skill="5603" target="SELF" critical="false" start-level="9" stop-level="54">
+			<trigger-skill-by-attack skill="5603" start-level="9" stop-level="54">
 				<power initial="1.0"/>
 				<chance initial="33.0"/>
 				<min-damage initial="1.0"/>
@@ -832,7 +832,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK">
 				<power initial="4.5">
 					<value level="2">7.3</value>
 					<value level="3">8.9</value>
@@ -924,7 +924,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="60.0">
 					<value level="2">100.0</value>
 					<value level="3">150.0</value>
@@ -967,7 +967,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="REGENERATE_HP_RATE" mode="DIFF">
+			<stat-modify stat="REGENERATE_HP_RATE">
 				<power initial="1.1">
 					<value level="2">1.6</value>
 					<value level="3">1.7</value>
@@ -1008,7 +1008,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="30.0">
 					<value level="2">50.0</value>
 					<value level="3">70.0</value>
@@ -1021,7 +1021,7 @@
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="214" name="Mana Recovery" max-level="1" >
+	<skill id="214" name="Mana Recovery">
 	<!-- Increases MP Recovery Bonus when equipped with a robe upper armor and pants. -->
 		<icon initial="icon.skill0214"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1163,7 +1163,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK">
 				<power initial="4.5">
 					<value level="2">7.3</value>
 					<value level="3">8.9</value>
@@ -1351,7 +1351,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK">
 				<power initial="1.5">
 					<value level="2">3.1</value>
 					<value level="3">4.1</value>
@@ -1411,7 +1411,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="221" name="Silent Move" max-level="1" action="T">
+	<skill id="221" name="Silent Move" action="T">
 	<!-- Disables preemptive attacks from enemies. Decreases Speed by 40%% and continuously consumes MP. -->
 		<icon initial="icon.skill0221"/>
 		<attributes magic-critical-rate="5.0" >
@@ -1751,7 +1751,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="82.0">
 					<value level="2">88.0</value>
 					<value level="3">95.0</value>
@@ -1806,7 +1806,7 @@
 					<value level="52">1311.0</value>
 				</power>
 			</physical-attack>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="25.0">
 					<value level="7">34.0</value>
 					<value level="15">44.0</value>
@@ -1848,7 +1848,7 @@
 			</defence-trait>
 		</effects>
 	</skill>
-	<skill id="226" name="Relax" max-level="1" action="T">
+	<skill id="226" name="Relax" action="T">
 	<!-- Increases HP Recovery Bonus by 5. While sitting, 1 MP is consumed per second. -->
 		<icon initial="icon.skill0226"/>
 		<attributes magic-critical-rate="5.0" >
@@ -1865,7 +1865,7 @@
 			<effect name="Relax" ticks="3">
 				<power initial="1.0"/>
 			</effect>
-			<stat-modify stat="REGENERATE_HP_RATE" mode="DIFF">
+			<stat-modify stat="REGENERATE_HP_RATE">
 				<power initial="5.0"/>
 			</stat-modify>
 		</effects>
@@ -2005,7 +2005,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="4.2">
 					<value level="2">5.3</value>
 					<value level="3">6.5</value>
@@ -2068,7 +2068,7 @@
 				</power>
 				<armor-type>LIGHT </armor-type>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="3.0">
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="3.0">
 					<value level="3">5.0</value>
 					<value level="5">6.0</value>
 				</power>
@@ -2128,7 +2128,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="REGENERATE_MP_RATE" mode="DIFF">
+			<stat-modify stat="REGENERATE_MP_RATE">
 				<power initial="1.1">
 					<value level="2">1.5</value>
 					<value level="3">1.9</value>
@@ -2178,7 +2178,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="22.0">
 					<value level="2">33.0</value>
 				</power>
@@ -2317,7 +2317,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="1.9">
 					<value level="2">3.3</value>
 					<value level="3">4.8</value>
@@ -2520,7 +2520,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="17.7">
 					<value level="2">19.1</value>
 					<value level="3">20.5</value>
@@ -2720,7 +2720,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="1.3">
 					<value level="2">2.2</value>
 					<value level="3">3.2</value>
@@ -2780,7 +2780,7 @@
 				</power>
 				<armor-type>LIGHT </armor-type>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="7.0">
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="7.0">
 					<value level="11">9.0</value>
 					<value level="48">12.0</value>
 				</power>
@@ -2909,7 +2909,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="1.7">
 					<value level="2">2.7</value>
 					<value level="3">4.3</value>
@@ -2963,7 +2963,7 @@
 				</power>
 				<armor-type>MAGIC </armor-type>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="30.0">
 					<value level="4">35.0</value>
 					<value level="6">40.0</value>
@@ -3132,7 +3132,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="7.2">
 					<value level="2">8.6</value>
 					<value level="3">11.0</value>
@@ -3305,7 +3305,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="5.4">
 					<value level="2">6.3</value>
 					<value level="3">7.8</value>
@@ -3390,7 +3390,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="6.7">
 					<value level="2">8.0</value>
 					<value level="3">9.2</value>
@@ -3497,7 +3497,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="108.0">
 					<value level="2">117.0</value>
 					<value level="3">126.0</value>
@@ -3517,7 +3517,7 @@
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="246" name="Seal of Ruler" max-level="1" action="A1">
+	<skill id="246" name="Seal of Ruler" action="A1">
 	<!-- Engraves the Seal of Ruler on the holy artifact which guards the castle. -->
 		<icon initial="icon.skill0246"/>
 		<attributes magic-critical-rate="5.0" >
@@ -3539,7 +3539,7 @@
 			<take-castle side="NEUTRAL"/>
 		</effects>
 	</skill>
-	<skill id="247" name="Build Headquarters" max-level="1" action="A1">
+	<skill id="247" name="Build Headquarters" action="A1">
 	<!-- Establishes a headquarters during a siege that aids in recovery and reinforcement of forces. Consumes 500 D-grade Crystals. -->
 		<icon initial="icon.skill0247"/>
 		<attributes magic-critical-rate="5.0" hit-cancel-time="4.0" >
@@ -3561,7 +3561,7 @@
 			<condition name="NotInUnderwater"/>
 		</conditions>
 		<effects>
-			<headquarter advanced="false"/>
+			<headquarter/>
 		</effects>
 	</skill>
 	<skill id="248" name="Crystallize" max-level="6" >
@@ -3707,7 +3707,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK">
 				<power initial="1.5">
 					<value level="2">2.8</value>
 					<value level="3">4.5</value>
@@ -3761,7 +3761,7 @@
 					<value level="51">110.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK">
 				<power initial="1.9">
 					<value level="2">3.5</value>
 					<value level="3">5.7</value>
@@ -3936,7 +3936,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK">
 				<power initial="1.5">
 					<value level="2">2.8</value>
 					<value level="3">4.5</value>
@@ -3990,7 +3990,7 @@
 					<value level="51">107.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK">
 				<power initial="1.9">
 					<value level="2">3.5</value>
 					<value level="3">5.7</value>
@@ -4045,7 +4045,7 @@
 				</power>
 			</stat-modify>
 			<vampiric-attack chance="0">
-				<power initial="0.0">
+				<power>
 					<value level="43">10.0</value>
 				</power>
 			</vampiric-attack>
@@ -4176,7 +4176,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="11.6">
 					<value level="2">13.4</value>
 					<value level="3">16.1</value>
@@ -4361,7 +4361,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="12.6">
 					<value level="2">14.5</value>
 					<value level="3">17.5</value>
@@ -4554,7 +4554,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="11.6">
 					<value level="2">13.3</value>
 					<value level="3">15.2</value>
@@ -4804,7 +4804,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="90.0">
 					<value level="2">97.0</value>
 					<value level="3">105.0</value>
@@ -4824,7 +4824,7 @@
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="256" name="Accuracy" max-level="1" action="T">
+	<skill id="256" name="Accuracy" action="T">
 	<!-- P. Accuracy +3. Consumes MP over time depending on your level. -->
 		<icon initial="icon.skill0256"/>
 		<attributes magic-critical-rate="5.0" >
@@ -4841,7 +4841,7 @@
 			<effect name="MpConsumePerLevel" ticks="5">
 				<power initial="0.4"/>
 			</effect>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="3.0"/>
 			</stat-modify>
 		</effects>
@@ -4971,7 +4971,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK">
 				<power initial="4.5">
 					<value level="2">7.3</value>
 					<value level="3">8.9</value>
@@ -5132,7 +5132,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="11.1">
 					<value level="2">11.8</value>
 					<value level="3">12.5</value>
@@ -5293,7 +5293,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="14.8">
 					<value level="2">15.6</value>
 					<value level="3">16.5</value>
@@ -5602,7 +5602,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="true" critical-chance="15.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack ignore-shield="true" critical-chance="15.0" over-hit="true">
 				<power initial="487.0">
 					<value level="2">518.0</value>
 					<value level="3">550.0</value>
@@ -6349,7 +6349,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<fatal-blow chance-boost="300.0" critical-chance="0" over-hit="true">
+			<fatal-blow chance-boost="300.0" over-hit="true">
 				<power initial="1107.0">
 					<value level="2">1176.0</value>
 					<value level="3">1249.0</value>
@@ -6398,7 +6398,7 @@
 				</power>
 			</fatal-blow>
 			<lethal>
-				<power initial="0.0"/>
+				<power/>
 				<half-power initial="10.0"/>
 			</lethal>
 		</effects>
@@ -6443,7 +6443,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="265" name="Song of Life" max-level="1" action="A2" type="DANCE">
+	<skill id="265" name="Song of Life" action="A2" type="DANCE">
 	<!-- For 5 minutes, HP Recovery Bonus +20% for all party members. Also increases MP Consumption when singing while song/dance is in effect. -->
 		<icon initial="icon.skill0265"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -6503,7 +6503,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="5.0">
 					<value level="2">10.0</value>
 				</power>
@@ -6590,7 +6590,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="20.0">
 					<value level="2">25.0</value>
 				</power>
@@ -6729,7 +6729,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="272" name="Dance of Inspiration" max-level="1" action="A2" type="DANCE">
+	<skill id="272" name="Dance of Inspiration" action="A2" type="DANCE">
 	<!-- For 5 minutes, P. Accuracy +4 for all party members. Also increases MP Consumption when dancing while song/dance is in effect. Requires a dualsword. -->
 		<icon initial="icon.skill0272"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -6756,7 +6756,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="4.0"/>
 			</stat-modify>
 		</effects>
@@ -6941,14 +6941,14 @@
 					<value level="2">50.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="ATTACK_CANCEL" mode="DIFF">
+			<stat-modify stat="ATTACK_CANCEL">
 				<power initial="-30.0">
 					<value level="2">-35.0</value>
 				</power>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="277" name="Dance of Light" max-level="1" action="A2" type="DANCE">
+	<skill id="277" name="Dance of Light" action="A2" type="DANCE">
 	<!-- For 5 minutes, Holy Attack +20 for all party members. Also increases MP Consumption when dancing while song/dance is in effect. Requires a dualsword. -->
 		<icon initial="icon.skill0277"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -6960,7 +6960,7 @@
 			<hit-time initial="408000"/>
 			<activate-rate initial="-1"/>
 
-			<element type="HOLY" value="0"/>
+			<element type="HOLY"/>
 		</attributes>
 		<consume>
 			<mana initial="66"/>
@@ -7123,7 +7123,7 @@
 			<chance initial="50"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="2927.0">
 					<value level="2">3444.0</value>
 					<value level="3">3990.0</value>
@@ -7398,7 +7398,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="true" critical-chance="15.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack ignore-shield="true" critical-chance="15.0" over-hit="true">
 				<power initial="517.0">
 					<value level="2">549.0</value>
 					<value level="3">583.0</value>
@@ -7704,7 +7704,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="true" critical-chance="15.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack ignore-shield="true" critical-chance="15.0" over-hit="true">
 				<power initial="487.0">
 					<value level="2">518.0</value>
 					<value level="3">550.0</value>
@@ -7755,7 +7755,7 @@
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="282" name="Puma Spirit Totem" max-level="1" action="A2">
+	<skill id="282" name="Puma Spirit Totem" action="A2">
 	<!-- Possessed by a Puma's soul. P. Accuracy +6 and Atk. Spd./Movement Speed +20%% for 20 minutes. Requires a fist weapon. -->
 		<icon initial="icon.skill0282"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
@@ -7789,7 +7789,7 @@
 				<power initial="20.0"/>
 				<weapon-type>FIST </weapon-type>
 			</stat-modify>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="6.0"/>
 				<weapon-type>FIST </weapon-type>
 			</stat-modify>
@@ -8479,7 +8479,7 @@
 			<effect name="MpConsumePerLevel" ticks="5">
 				<power initial="2.0"/>
 			</effect>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="182.7">
 					<value level="2">241.6</value>
 					<value level="3">318.1</value>
@@ -8668,7 +8668,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK">
 				<power initial="32.9">
 					<value level="2">39.4</value>
 					<value level="3">46.6</value>
@@ -8746,7 +8746,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="116.875">
 					<value level="2">129.0</value>
 					<value level="3">141.625</value>
@@ -8772,7 +8772,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="292" name="Bison Spirit Totem" max-level="1" action="A2">
+	<skill id="292" name="Bison Spirit Totem" action="A2">
 	<!-- Possessed by a Bison's Spirit. For 1 minute, P. Accuracy +6, P. Atk +10%%, P. Def. +10%%, Atk Spd. +5%%, P. Critical Rate +50 when using a fist weapon. If HP is at 60%% or below, P. Evasion +4, P. Atk +20%%, P. Def +15%%, Atk. Spd. +10%%, P. Critical Rate +100. If HP is at 30%% or below, P. Evasion +6, P. Atk. +30%%, P. Def. +20%%, Atk. Spd. +10%%, P. Critical Rate +200. Requires a fist weapon. -->
 		<icon initial="icon.skill0292"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
@@ -8799,7 +8799,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="6.0"/>
 				<weapon-type>FIST </weapon-type>
 			</stat-modify>
@@ -8880,7 +8880,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<two-hand-blunt-bonus mode="DIFF" accuracy-mode="DIFF">
+			<two-hand-blunt-bonus>
 				<power initial="4.5">
 					<value level="2">7.3</value>
 					<value level="3">10.7</value>
@@ -8913,7 +8913,7 @@
 				</power>
 				<accuracy initial="3.0"/>
 			</two-hand-blunt-bonus>
-			<two-hand-sword-bonus mode="DIFF" accuracy-mode="DIFF">
+			<two-hand-sword-bonus>
 				<power initial="4.5">
 					<value level="2">7.3</value>
 					<value level="3">10.7</value>
@@ -8948,7 +8948,7 @@
 			</two-hand-sword-bonus>
 		</effects>
 	</skill>
-	<skill id="294" name="Shadow Sense" max-level="1" >
+	<skill id="294" name="Shadow Sense">
 	<!-- P. Accuracy +3 at night. -->
 		<icon initial="icon.skill0294"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -8964,7 +8964,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="295" name="Iron Body" max-level="1" >
+	<skill id="295" name="Iron Body">
 	<!-- Environment-related damage is decreased by 40%%. -->
 		<icon initial="icon.skill0295"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -8980,7 +8980,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="296" name="Chameleon Rest" max-level="1" action="T">
+	<skill id="296" name="Chameleon Rest" action="T">
 	<!-- Allows you to sit and rest while being protected from a monster's pre-emptive attack. MP will be consumed continuously. -->
 		<icon initial="icon.skill0296"/>
 		<attributes magic-critical-rate="5.0" >
@@ -9050,7 +9050,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="298" name="Rabbit Spirit Totem" max-level="1" action="A2">
+	<skill id="298" name="Rabbit Spirit Totem" action="A2">
 	<!-- Becomes possessed by a Rabbit's soul. For 20 minutes, Atk. Spd. +30%%, Movement Speed +30%%, P. Evasion +6, and P. Accuracy +6. Requires a fist weapon. -->
 		<icon initial="icon.skill0298"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
@@ -9084,16 +9084,16 @@
 				<power initial="30.0"/>
 				<weapon-type>FIST </weapon-type>
 			</stat-modify>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="6.0"/>
 				<weapon-type>FIST </weapon-type>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="6.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="6.0"/>
 				<weapon-type>FIST </weapon-type>
 			</stat-hp-based>
 		</effects>
 	</skill>
-	<skill id="299" name="Summon Wild Hog Cannon" max-level="1" action="A1">
+	<skill id="299" name="Summon Wild Hog Cannon" action="A1">
 	<!-- Summons a siege weapon. Can only move in normal mode. During siege mode, it can inflict ranged attacks while immobile. Switching modes takes 30 seconds. Consumes 70 B-grade Crystals when summoned. -->
 		<icon initial="icon.skill0299"/>
 		<attributes magic-critical-rate="5.0" >
@@ -9115,7 +9115,7 @@
 			<condition name="CanSummon"/>
 		</conditions>
 		<effects>
-			<summon consume-item="2132" experience-multiplier="1.0" life-time="-1">
+			<summon consume-item="2132" life-time="-1">
 				<npc initial="14768.0"/>
 				<consume-count initial="20.0"/>
 			</summon>

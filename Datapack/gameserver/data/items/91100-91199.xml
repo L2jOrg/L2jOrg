@@ -61,18 +61,18 @@
 	<item id="91109" name="Blue Dynasty Scroll" type="POTION" icon="icon.scroll_of_verification_i01">
 	<!-- Transforms you into Blue Dynasty for 15 min. Effect remains after death. \n Blue Dynasty's Power: Max HP/MP +20%. When Sayha's Grace applies, XP/ SP gain +20%. Effect remains after death. \n<Warning>\n If used when Teddy Bear/Cat the Cat/Cat/Panda Buff is applied, existing buff will be replaced. Cooldown 1 min. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55693" level="1" value="-1"/>  <!-- Blue Dynasty Transformation Scroll -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55693" value="-1"/>  <!-- Blue Dynasty Transformation Scroll -->
 		</skill-reducer>
 	</item>
 
 	<item id="91110" name="Cat the Cat Scroll" type="POTION" icon="icon.scroll_of_verification_i03">
 	<!-- Transforms you into Kat the Cat for 15 minutes. Effect remains even after death. Cannot be dropped or sold at an NCP's store. \nKat the Cat's Energy: Max HP/MP +20%. XP/SP gain +20% during Sayha's Grace. Effect remains even after death. \n<Warning>\nIf used during Teddy Bear/Blue Dynasty/Cat/Panda Buff, the existing buff will be replaced. Cooldown is 1 minute. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51148" level="1" value="-1"/>  <!-- Cat Transformation -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51148" value="-1"/>  <!-- Cat Transformation -->
 		</skill-reducer>
 	</item>
 
@@ -265,9 +265,9 @@
 		<attributes weight="50" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51101" level="1" value="-1"/>  <!-- Summon Ignis Agathion -->
-			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
-			<skill id="51093" level="1" value="-1"/>  <!-- Fire Attack Strength -->
+			<skill id="51101" value="-1"/>  <!-- Summon Ignis Agathion -->
+			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
+			<skill id="51093" value="-1"/>  <!-- Fire Attack Strength -->
 		</skills>
 	</armor>
 
@@ -277,9 +277,9 @@
 		<attributes weight="50" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51102" level="1" value="-1"/>  <!-- Summon Nebula Agathion -->
-			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
-			<skill id="51094" level="1" value="-1"/>  <!-- Water Attack Strength -->
+			<skill id="51102" value="-1"/>  <!-- Summon Nebula Agathion -->
+			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
+			<skill id="51094" value="-1"/>  <!-- Water Attack Strength -->
 		</skills>
 	</armor>
 
@@ -289,9 +289,9 @@
 		<attributes weight="50" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51103" level="1" value="-1"/>  <!-- Summon Procella Agathion -->
-			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
-			<skill id="51095" level="1" value="-1"/>  <!-- Wind Attack Strength -->
+			<skill id="51103" value="-1"/>  <!-- Summon Procella Agathion -->
+			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
+			<skill id="51095" value="-1"/>  <!-- Wind Attack Strength -->
 		</skills>
 	</armor>
 
@@ -301,9 +301,9 @@
 		<attributes weight="50" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51101" level="1" value="-1"/>  <!-- Summon Ignis Agathion -->
-			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
-			<skill id="51096" level="1" value="-1"/>  <!-- Earth Attack Strength -->
+			<skill id="51101" value="-1"/>  <!-- Summon Ignis Agathion -->
+			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
+			<skill id="51096" value="-1"/>  <!-- Earth Attack Strength -->
 		</skills>
 	</armor>
 
@@ -328,9 +328,9 @@
 	<item id="91136" name="Dandy's Golden Ball" type="SCROLL" icon="BranchIcon.icon.g_ev_goldenball">
 	<!-- Golden Ball gifted by Dandy that crossed dimensions. Double-click to increase 1-hour XP and SP 100% and recharge Sayha's Grace max. Flanchard changes to appearance of NC Dinos Uniform. -->
 		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51108" level="1" value="-1"/>  <!-- Dandy's Golden Ball -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51108" value="-1"/>  <!-- Dandy's Golden Ball -->
 		</skill-reducer>
 	</item>
 
@@ -526,8 +526,8 @@
 		<crystal />
 		<skills>
 			<skill id="51025" level="4" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
-			<skill id="55885" level="1" value="-1"/>  <!-- Agathion Bracelet Stats Increase -->
-			<skill id="55886" level="1" value="-1"/>  <!-- Agathion Bracelet Resistance Increase -->
+			<skill id="55885" value="-1"/>  <!-- Agathion Bracelet Stats Increase -->
+			<skill id="55886" value="-1"/>  <!-- Agathion Bracelet Resistance Increase -->
 		</skills>
 	</armor>
 
@@ -678,26 +678,26 @@
 	<!-- Quick MP Recovery.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes weight="5" commission-type="POTION" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51125" level="1" value="-1"/>  <!-- Quick MP Potion -->
+		<skill-reducer>
+			<skill id="51125" value="-1"/>  <!-- Quick MP Potion -->
 		</skill-reducer>
 	</item>
 
 	<item id="91185" name="Intermediate Spirit's Blessing" type="NONE" icon="icon.elemental_bless_scrl_i00">
 	<!-- Activates a buff when the item is used. Attribute XP gain +30% for 20 minutes when hunting attribute monsters.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51126" level="1" value="-1"/>  <!-- Intermediate Spirit's Blessing -->
+		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51126" value="-1"/>  <!-- Intermediate Spirit's Blessing -->
 		</skill-reducer>
 	</item>
 
 	<item id="91186" name="High-grade Spirit's Blessing" type="NONE" icon="icon.elemental_bless_scrl_i00">
 	<!-- Activates a buff when the item is used. Attribute XP gain +50% for 20 minutes when hunting attribute monsters.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51127" level="1" value="-1"/>  <!-- High-grade Spirit's Blessing -->
+		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51127" value="-1"/>  <!-- High-grade Spirit's Blessing -->
 		</skill-reducer>
 	</item>
 
@@ -716,36 +716,36 @@
 	<item id="91189" name="Fire Attack Potion" type="POTION" icon="icon.etc_fire_potion_i00">
 	<!-- Increases Fire Attack +50 for 20 min.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51130" level="1" value="-1"/>  <!-- Fire Attack Potion -->
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51130" value="-1"/>  <!-- Fire Attack Potion -->
 		</skill-reducer>
 	</item>
 
 	<item id="91190" name="Water Attack Potion" type="POTION" icon="icon.etc_water_potion_i00">
 	<!-- Increases Water Attack +50 for 20 min.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51131" level="1" value="-1"/>  <!-- Water Attack Potion -->
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51131" value="-1"/>  <!-- Water Attack Potion -->
 		</skill-reducer>
 	</item>
 
 	<item id="91191" name="Wind Attack Potion" type="POTION" icon="icon.etc_wind_potion_i00">
 	<!-- Increases Wind Attack +50 for 20 min.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51132" level="1" value="-1"/>  <!-- Wind Attack Potion -->
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51132" value="-1"/>  <!-- Wind Attack Potion -->
 		</skill-reducer>
 	</item>
 
 	<item id="91192" name="Earth Attack Potion" type="POTION" icon="icon.etc_earth_potion_i00">
 	<!-- Increases Earth Attack +50 for 20 min.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51133" level="1" value="-1"/>  <!-- Earth Attack Potion -->
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51133" value="-1"/>  <!-- Earth Attack Potion -->
 		</skill-reducer>
 	</item>
 

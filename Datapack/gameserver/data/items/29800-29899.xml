@@ -156,9 +156,9 @@
 	<item id="29817" name="Special Fruit Buff" type="SCROLL" icon="icon.etc_codran_i09">
 	<!-- For 20 minutes, P./M. Atk. +7%, P./M. Def. +10%, Max. HP/CP/MP +15%, HP/MP Regeneration +20%. At a certain chance absorbs 3% of the damage inflicted on target as HP. Increases XP/SP gain by +5%. Cooldown is 1 minute. Buff remains after death. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes reuse-delay="60000" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39085" level="1" value="-1"/>  <!-- Pirates' Special Fruit -->
+		<attributes reuse-delay="60000" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39085" value="-1"/>  <!-- Pirates' Special Fruit -->
 		</skill-reducer>
 	</item>
 

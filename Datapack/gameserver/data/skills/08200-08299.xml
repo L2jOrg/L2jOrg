@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="8256" name="Release Agathion's Seal - Shiny" max-level="1" action="A1">
+	<skill id="8256" name="Release Agathion's Seal - Shiny" action="A1">
 	<!-- Releases the Agathion's seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -14,7 +14,7 @@
 			<summon-agathion id="16056"/>
 		</effects>
 	</skill>
-	<skill id="8292" name="Olympiad Warrior's Ring" max-level="1" >
+	<skill id="8292" name="Olympiad Warrior's Ring">
 	<!-- Hold Resistance +30%%, Hold Atk. Rate +30%%, P. Critical Damage +15%%, and P. Accuracy +2. -->
 		<icon initial="icon.accessory_tateossian_ring_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -35,7 +35,7 @@
 					<power initial="0.30000001192092896"/>
 				</trait>
 			</defence-trait>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="2.0"/>
 			</stat-modify>
 			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
@@ -43,7 +43,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="8293" name="Olympiad Warrior's Earring" max-level="1" >
+	<skill id="8293" name="Olympiad Warrior's Earring">
 	<!-- Stun/MEN Attack Resistance +20%%, Stun/MEN Atk. Rate +20%%, and procs to recover HP by 4%% of damage dealt. -->
 		<icon initial="icon.accessory_tateossian_earring_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -75,7 +75,7 @@
 			</vampiric-attack>
 		</effects>
 	</skill>
-	<skill id="8294" name="Olympiad Warrior's Necklace" max-level="1" >
+	<skill id="8294" name="Olympiad Warrior's Necklace">
 	<!-- Paralysis/Stun/Sleep Resistance +15%%, Paralysis/Stun/Sleep Atk. Rate +15%%, Skill Cooldown -5%%. Reflects 4%% of received damage back to the enemy. -->
 		<icon initial="icon.accessory_tateossian_necklace_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >

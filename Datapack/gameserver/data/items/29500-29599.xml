@@ -175,8 +175,8 @@
 	<item id="29519" name="XP/SP Boost Scroll (Mid-grade)" type="POTION" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- XP/SP Gain + 40% for 20 minutes. Effect remains even after death. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
 			<skill id="55000" level="2" value="-1"/>  <!-- XP/SP Boost -->
 		</skill-reducer>
 	</item>
@@ -455,17 +455,17 @@
 	<item id="29552" name="1st Class Transfer Buff Scroll" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- For 20 min., Shield Lv. 2, Might Lv. 2, Concentration Lv. 2, Acumen Lv. 1, Wind Walk Lv. 1, Focus Lv. 1, Agility Lv. 1, Empower Lv. 1. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55035" level="1" value="-1"/>  <!-- 1st Class Transfer Buff Scroll -->
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55035" value="-1"/>  <!-- 1st Class Transfer Buff Scroll -->
 		</skill-reducer>
 	</item>
 
 	<item id="29553" name="2nd Class Transfer Buff Scroll" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- For 20 min., Shield Lv. 3, Might Lv. 3, Acumen Lv. 2, Wind Walk Lv. 2, Focus Lv. 2, Regeneration Lv. 1, Guidance Lv. 1, Death Whisper Lv. 1, Magic Barrier Lv. 1, Blessed Body Lv. 1, Blessed Soul Lv. 1, Haste Lv. 1, Agility Lv. 2, Empower Lv. 2. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
 			<skill id="55036" level="2" value="-1"/>  <!-- 2nd Class Transfer Buff Scroll -->
 		</skill-reducer>
 	</item>
@@ -474,8 +474,8 @@
 	<!-- Magic potion that instantly restores HP. Instant effect with no duration. Cannot be used when HP is full. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55037" level="1" value="-1"/>  <!-- Quick Healing Potion -->
+		<skill-reducer>
+			<skill id="55037" value="-1"/>  <!-- Quick Healing Potion -->
 		</skill-reducer>
 	</item>
 
@@ -483,8 +483,8 @@
 	<!-- Magic potion that instantly restores HP. Instant effect with no duration. Cannot be used when HP is full. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55038" level="1" value="-1"/>  <!-- Greater Quick Healing Potion -->
+		<skill-reducer>
+			<skill id="55038" value="-1"/>  <!-- Greater Quick Healing Potion -->
 		</skill-reducer>
 	</item>
 
@@ -545,9 +545,9 @@
 	<item id="29565" name="XP/SP Boost Scroll" type="POTION" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- Increases XP/SP from hunting by 20% for 60 minutes. Effect remains even after death. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55041" level="1" value="-1"/>  <!-- XP/SP Boost -->
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55041" value="-1"/>  <!-- XP/SP Boost -->
 		</skill-reducer>
 	</item>
 
@@ -555,8 +555,8 @@
 	<!-- If stored in the inventory, acquired XP/ SP + 10%. 7-day. -->
 		<restriction freightable="false" olympiad-restricted="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080" immediate-effect="true"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55042" level="1" value="-1"/>  <!-- Attendance Reward XP Rune. -->
+		<skill-reducer>
+			<skill id="55042" value="-1"/>  <!-- Attendance Reward XP Rune. -->
 		</skill-reducer>
 	</item>
 
@@ -618,7 +618,7 @@
 			<stat type="maxMp" value="9.0"/>
 		</stats>
 		<skills>
-			<skill id="3562" level="1" value="-1"/>  <!-- Queen Ant's Ring -->
+			<skill id="3562" value="-1"/>  <!-- Queen Ant's Ring -->
 		</skills>
 	</armor>
 
@@ -632,7 +632,7 @@
 			<stat type="maxMp" value="19.0"/>
 		</stats>
 		<skills>
-			<skill id="3560" level="1" value="-1"/>  <!-- Orfen's Earring -->
+			<skill id="3560" value="-1"/>  <!-- Orfen's Earring -->
 		</skills>
 	</armor>
 
@@ -646,7 +646,7 @@
 			<stat type="maxMp" value="9.0"/>
 		</stats>
 		<skills>
-			<skill id="3563" level="1" value="-1"/>  <!-- Ring of Core -->
+			<skill id="3563" value="-1"/>  <!-- Ring of Core -->
 		</skills>
 	</armor>
 
@@ -654,8 +654,8 @@
 	<!-- Double-click to receive one of the following items: Queen Ant's Ring Lv. 1 (30-day), Orfen's Earring Lv. 1 (30-day), Ring of Core Lv. 1 (30-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39058" level="1" value="-1"/>  <!-- Rare Accessory Box -->
+		<skill-reducer>
+			<skill id="39058" value="-1"/>  <!-- Rare Accessory Box -->
 		</skill-reducer>
 	</item>
 
@@ -665,7 +665,7 @@
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="39025" level="1" value="-1"/>  <!-- Adventurer's Scroll of Escape -->
+			<skill id="39025" value="-1"/>  <!-- Adventurer's Scroll of Escape -->
 		</skills>
 	</armor>
 
@@ -679,8 +679,8 @@
 	<!-- Reward box for collecting all the Lineage II letters. You can get weapon recipes and ingredients. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55044" level="1" value="-1"/>  <!-- LineageII Box -->
+		<skill-reducer>
+			<skill id="55044" value="-1"/>  <!-- LineageII Box -->
 		</skill-reducer>
 	</item>
 
@@ -688,8 +688,8 @@
 	<!-- Reward box for collecting all the Chronicle letters. You can get no-grade weapons and ingredients. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55045" level="1" value="-1"/>  <!-- Chronicle Box -->
+		<skill-reducer>
+			<skill id="55045" value="-1"/>  <!-- Chronicle Box -->
 		</skill-reducer>
 	</item>
 
@@ -697,8 +697,8 @@
 	<!-- Reward box for collecting all the Memories letters. You can get no-grade armor and ingredients. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55046" level="1" value="-1"/>  <!-- Memories Box -->
+		<skill-reducer>
+			<skill id="55046" value="-1"/>  <!-- Memories Box -->
 		</skill-reducer>
 	</item>
 
@@ -717,8 +717,8 @@
 		<attributes weight="10" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55047" level="1" value="-1"/>  <!-- Romantic Bless the Body -->
-			<skill id="55048" level="1" value="-1"/>  <!-- Romantic Wind Walk -->
+			<skill id="55047" value="-1"/>  <!-- Romantic Bless the Body -->
+			<skill id="55048" value="-1"/>  <!-- Romantic Wind Walk -->
 		</skills>
 	</armor>
 
@@ -734,12 +734,12 @@
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="21233" level="1" value="-1"/>  <!-- Release Agathion - Uthanka -->
-			<skill id="23234" level="1" value="-1"/>  <!-- Singer and Dancer Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
-			<skill id="55270" level="1" value="-1"/>  <!-- Agathion - Dance of Fury -->
-			<skill id="55271" level="1" value="-1"/>  <!-- Agathion - Dance of Concentration -->
-			<skill id="55272" level="1" value="-1"/>  <!-- Agathion - Song of Wind -->
+			<skill id="21233" value="-1"/>  <!-- Release Agathion - Uthanka -->
+			<skill id="23234" value="-1"/>  <!-- Singer and Dancer Agathion Cute Trick -->
+			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
+			<skill id="55270" value="-1"/>  <!-- Agathion - Dance of Fury -->
+			<skill id="55271" value="-1"/>  <!-- Agathion - Dance of Concentration -->
+			<skill id="55272" value="-1"/>  <!-- Agathion - Song of Wind -->
 		</skills>
 	</armor>
 

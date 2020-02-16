@@ -102,7 +102,7 @@
 					<value level="3">10.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="2.0">
 					<value level="3">3.0</value>
 				</power>
@@ -954,7 +954,7 @@
 			<chance initial="50"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="1046.0">
 					<value level="2">1230.0</value>
 					<value level="3">1425.0</value>
@@ -1154,7 +1154,7 @@
 			<chance initial="15"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="16.0">
 					<value level="2">35.0</value>
 					<value level="3">73.0</value>
@@ -1334,7 +1334,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="6.0">
 					<value level="2">9.0</value>
 					<value level="3">13.0</value>
@@ -1445,7 +1445,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4714" name="Twilight Dragon" max-level="1" >
+	<skill id="4714" name="Twilight Dragon">
 	<!-- An active dragon with fast moving feet. -->
 		<icon initial="icon.skill1373"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -1456,7 +1456,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4715" name="Wind Dragon" max-level="1" >
+	<skill id="4715" name="Wind Dragon">
 	<!-- A warrior type dragon that possesses great power. When it is equipped with a weapon, its P. Atk increases greatly. When it is equipped with armor, P. Def. increases greatly and M. Def. also increases. -->
 		<icon initial="icon.skill1373"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -1467,7 +1467,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4716" name="Star Dragon" max-level="1" >
+	<skill id="4716" name="Star Dragon">
 	<!-- A mystic type dragon that possesses powerful magic capability. When it is equipped with a weapon, its M. Atk. increases greatly. When equipped with armor, its M. Def. increases greatly and P. Def. also increases. -->
 		<icon initial="icon.skill1373"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -1555,7 +1555,7 @@
 		<target type="OWNER_PET" />
 		<effects>
 			<effect name="Heal">
-				<power initial="0.0"/>
+				<power/>
 			</effect>
 		</effects>
 	</skill>
@@ -1637,7 +1637,7 @@
 		<target type="OWNER_PET" />
 		<effects>
 			<effect name="Heal">
-				<power initial="0.0"/>
+				<power/>
 			</effect>
 		</effects>
 	</skill>
@@ -1682,7 +1682,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="112.0">
 					<value level="2">302.0</value>
 					<value level="3">834.0</value>
@@ -1740,7 +1740,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="95.0">
 					<value level="2">255.0</value>
 					<value level="3">705.0</value>
@@ -1798,7 +1798,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="51.0">
 					<value level="2">136.0</value>
 					<value level="3">375.0</value>
@@ -1856,7 +1856,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="48.0">
 					<value level="2">128.0</value>
 					<value level="3">352.0</value>
@@ -1914,7 +1914,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="45.0">
 					<value level="2">120.0</value>
 					<value level="3">330.0</value>
@@ -1979,7 +1979,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="56.0">
 					<value level="2">151.0</value>
 					<value level="3">417.0</value>
@@ -2045,7 +2045,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="48.0">
 					<value level="2">128.0</value>
 					<value level="3">352.0</value>
@@ -2111,7 +2111,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="26.0">
 					<value level="2">68.0</value>
 					<value level="3">188.0</value>
@@ -2177,7 +2177,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="24.0">
 					<value level="2">64.0</value>
 					<value level="3">176.0</value>
@@ -2243,7 +2243,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="23.0">
 					<value level="2">60.0</value>
 					<value level="3">165.0</value>
@@ -2302,7 +2302,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<fatal-blow chance-boost="1150.0" critical-chance="0" over-hit="false">
+			<fatal-blow chance-boost="1150.0" over-hit="false">
 				<power initial="168.0">
 					<value level="2">453.0</value>
 					<value level="3">1251.0</value>
@@ -2360,7 +2360,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<fatal-blow chance-boost="1150.0" critical-chance="0" over-hit="false">
+			<fatal-blow chance-boost="1150.0" over-hit="false">
 				<power initial="142.0">
 					<value level="2">382.0</value>
 					<value level="3">1056.0</value>
@@ -2418,7 +2418,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<fatal-blow chance-boost="1150.0" critical-chance="0" over-hit="false">
+			<fatal-blow chance-boost="1150.0" over-hit="false">
 				<power initial="76.0">
 					<value level="2">204.0</value>
 					<value level="3">563.0</value>
@@ -2476,7 +2476,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<fatal-blow chance-boost="1150.0" critical-chance="0" over-hit="false">
+			<fatal-blow chance-boost="1150.0" over-hit="false">
 				<power initial="71.0">
 					<value level="2">191.0</value>
 					<value level="3">528.0</value>
@@ -2534,7 +2534,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<fatal-blow chance-boost="1150.0" critical-chance="0" over-hit="false">
+			<fatal-blow chance-boost="1150.0" over-hit="false">
 				<power initial="67.0">
 					<value level="2">179.0</value>
 					<value level="3">494.0</value>
@@ -2592,7 +2592,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="56.0">
 					<value level="2">151.0</value>
 					<value level="3">417.0</value>
@@ -2650,7 +2650,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="48.0">
 					<value level="2">128.0</value>
 					<value level="3">352.0</value>
@@ -2708,7 +2708,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="26.0">
 					<value level="2">68.0</value>
 					<value level="3">188.0</value>
@@ -2766,7 +2766,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="24.0">
 					<value level="2">64.0</value>
 					<value level="3">176.0</value>
@@ -2824,7 +2824,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="23.0">
 					<value level="2">60.0</value>
 					<value level="3">165.0</value>
@@ -2882,7 +2882,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="112.0">
 					<value level="2">302.0</value>
 					<value level="3">834.0</value>
@@ -2940,7 +2940,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="95.0">
 					<value level="2">255.0</value>
 					<value level="3">705.0</value>
@@ -2998,7 +2998,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="51.0">
 					<value level="2">136.0</value>
 					<value level="3">375.0</value>
@@ -3056,7 +3056,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="48.0">
 					<value level="2">128.0</value>
 					<value level="3">352.0</value>
@@ -3114,7 +3114,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="45.0">
 					<value level="2">120.0</value>
 					<value level="3">330.0</value>
@@ -3179,7 +3179,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="56.0">
 					<value level="2">151.0</value>
 					<value level="3">417.0</value>
@@ -3245,7 +3245,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="48.0">
 					<value level="2">128.0</value>
 					<value level="3">352.0</value>
@@ -3311,7 +3311,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="26.0">
 					<value level="2">68.0</value>
 					<value level="3">188.0</value>
@@ -3377,7 +3377,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="24.0">
 					<value level="2">64.0</value>
 					<value level="3">176.0</value>
@@ -3443,7 +3443,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="23.0">
 					<value level="2">60.0</value>
 					<value level="3">165.0</value>
@@ -3502,7 +3502,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<fatal-blow chance-boost="670.0" critical-chance="0" over-hit="false">
+			<fatal-blow chance-boost="670.0" over-hit="false">
 				<power initial="280.0">
 					<value level="2">755.0</value>
 					<value level="3">2084.0</value>
@@ -3560,7 +3560,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<fatal-blow chance-boost="670.0" critical-chance="0" over-hit="false">
+			<fatal-blow chance-boost="670.0" over-hit="false">
 				<power initial="236.0">
 					<value level="2">637.0</value>
 					<value level="3">1761.0</value>
@@ -3618,7 +3618,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<fatal-blow chance-boost="670.0" critical-chance="0" over-hit="false">
+			<fatal-blow chance-boost="670.0" over-hit="false">
 				<power initial="126.0">
 					<value level="2">339.0</value>
 					<value level="3">937.0</value>
@@ -3676,7 +3676,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<fatal-blow chance-boost="670.0" critical-chance="0" over-hit="false">
+			<fatal-blow chance-boost="670.0" over-hit="false">
 				<power initial="118.0">
 					<value level="2">319.0</value>
 					<value level="3">879.0</value>
@@ -3734,7 +3734,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<fatal-blow chance-boost="670.0" critical-chance="0" over-hit="false">
+			<fatal-blow chance-boost="670.0" over-hit="false">
 				<power initial="111.0">
 					<value level="2">298.0</value>
 					<value level="3">824.0</value>
@@ -3791,7 +3791,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="327.0">
 					<value level="2">882.0</value>
 					<value level="3">2435.0</value>
@@ -3848,7 +3848,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="275.0">
 					<value level="2">744.0</value>
 					<value level="3">2057.0</value>
@@ -3905,7 +3905,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="147.0">
 					<value level="2">396.0</value>
 					<value level="3">1095.0</value>
@@ -3962,7 +3962,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="138.0">
 					<value level="2">372.0</value>
 					<value level="3">1027.0</value>
@@ -4019,7 +4019,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="129.0">
 					<value level="2">348.0</value>
 					<value level="3">962.0</value>
@@ -4083,7 +4083,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="164.0">
 					<value level="2">441.0</value>
 					<value level="3">1218.0</value>
@@ -4148,7 +4148,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="138.0">
 					<value level="2">372.0</value>
 					<value level="3">1029.0</value>
@@ -4213,7 +4213,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="74.0">
 					<value level="2">198.0</value>
 					<value level="3">548.0</value>
@@ -4278,7 +4278,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="69.0">
 					<value level="2">186.0</value>
 					<value level="3">514.0</value>
@@ -4343,7 +4343,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="65.0">
 					<value level="2">174.0</value>
 					<value level="3">481.0</value>
@@ -4401,7 +4401,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="327.0">
 					<value level="2">882.0</value>
 					<value level="3">2435.0</value>
@@ -4458,7 +4458,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="275.0">
 					<value level="2">744.0</value>
 					<value level="3">2057.0</value>
@@ -4515,7 +4515,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="147.0">
 					<value level="2">396.0</value>
 					<value level="3">1095.0</value>
@@ -4572,7 +4572,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="138.0">
 					<value level="2">372.0</value>
 					<value level="3">1027.0</value>
@@ -4629,7 +4629,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="129.0">
 					<value level="2">348.0</value>
 					<value level="3">962.0</value>
@@ -4693,7 +4693,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="164.0">
 					<value level="2">441.0</value>
 					<value level="3">1218.0</value>
@@ -4758,7 +4758,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="138.0">
 					<value level="2">372.0</value>
 					<value level="3">1029.0</value>
@@ -4823,7 +4823,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="74.0">
 					<value level="2">198.0</value>
 					<value level="3">548.0</value>
@@ -4888,7 +4888,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="69.0">
 					<value level="2">186.0</value>
 					<value level="3">514.0</value>
@@ -4953,7 +4953,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="65.0">
 					<value level="2">174.0</value>
 					<value level="3">481.0</value>
@@ -5011,7 +5011,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="352.0">
 					<value level="2">949.0</value>
 					<value level="3">2607.0</value>
@@ -5068,7 +5068,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="352.0">
 					<value level="2">949.0</value>
 					<value level="3">2607.0</value>
@@ -5125,7 +5125,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="352.0">
 					<value level="2">949.0</value>
 					<value level="3">2607.0</value>
@@ -5182,7 +5182,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="352.0">
 					<value level="2">949.0</value>
 					<value level="3">2607.0</value>
@@ -5239,7 +5239,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="352.0">
 					<value level="2">949.0</value>
 					<value level="3">2607.0</value>
@@ -5920,7 +5920,7 @@
 					<value level="10">30.0</value>
 				</power>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="1.0">
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
 					<value level="4">4.0</value>
@@ -5934,7 +5934,7 @@
 			</stat-hp-based>
 		</effects>
 	</skill>
-	<skill id="4790" name="Lv. 23 Raid Boss" max-level="1" >
+	<skill id="4790" name="Lv. 23 Raid Boss">
 	<!-- A soldier of the Convict Mercenaries, who were famous for their bravery during the Aden-Gracia War. Currently, he is the Commander of the Gracian Convict Mercenaries, the surviving remnants of the company left in Aden Kingdom. His soldiers are based in Gludio. He waits for an opportunity to return to his country. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -5945,7 +5945,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4791" name="Lv. 30 Raid Boss" max-level="1" >
+	<skill id="4791" name="Lv. 30 Raid Boss">
 	<!-- The commander of the Katu Mercenaries. Prone to violent outbursts at any cause, he takes special joy in battling both elves and dark elves. He has no care for personal appearance or common courtesies, and some claim him touched by madness. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -5956,7 +5956,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4792" name="Lv. 42 Raid Boss" max-level="1" >
+	<skill id="4792" name="Lv. 42 Raid Boss">
 	<!-- A wicked Spider that once lived in the Wastelands while Beleth was free. After Beleth was sealed away, the Spider was chased away by a colony of Ants, empowered by M. Atk. of the Wastelands. The Spider was forced to retreat to this place. It swears that someday it will feed on the Ants and destroy them. It quietly grows in power while sharpening its fangs for vengeance. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -5967,7 +5967,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4793" name="Lv. 55 Raid Boss" max-level="1" >
+	<skill id="4793" name="Lv. 55 Raid Boss">
 	<!-- A Treant who used to live south of Gludio, he loved trees and nature. After the war with Beleth, his beautiful forest home was destroyed, and his friends were slain. Deeply affected by that traumatic loss he is now trapped in a haze of hatred, madness, and the desire for revenge. Gripped by his anger, he is still at war against all humans and mystics. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -5978,7 +5978,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4794" name="Lv. 50 Raid Boss" max-level="1" >
+	<skill id="4794" name="Lv. 50 Raid Boss">
 	<!-- One of the leaders of the peasants who resisted the merciless rule of Lord Ashton. He was ultimately captured and brutally executed by Ashton's cruel soldiers. Yet even that did not stop him. To overthrow Ashton, he made a contract with a devil and came back to life. But the devil's bargain turned his once noble ideals towards loathing, turning him into a monster with the power of evil magic. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -5989,7 +5989,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4795" name="Lv. 60 Raid Boss" max-level="1" >
+	<skill id="4795" name="Lv. 60 Raid Boss">
 	<!-- A mechanical golem owned by the Lord of Innadril Castle. The lord's family has been protected by Eva for generations. This golem was created to protect the Garden of Eva, made by a dwarven master artisan. It is a guard to fend off the Water Dragon Fafurion's troops, or invaders threatening the garden. The dwarven master made two other golems, but this third version was the strongest and became the last one remaining. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -6000,7 +6000,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4796" name="Lv. 25 Raid Boss" max-level="1" >
+	<skill id="4796" name="Lv. 25 Raid Boss">
 	<!-- A Pan who was once a long-time friend of the Elves, and guarded the ancient Elven Forest. The Pans stayed neutral during the tragic war between the Elves and the Dark Elves, and both sides turned against them. The other Pans retreated into hiding after suffering cruel attacks from both sides, but Pay Dryad still remains here waiting for the golden age of peace to return. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -6011,7 +6011,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4797" name="Lv. 34 Raid Boss" max-level="1" >
+	<skill id="4797" name="Lv. 34 Raid Boss">
 	<!-- An Orc Dark Mage with superior talent. He was once known as "the Hope of the Breka Orc tribe," but he was tricked into plotting against his leader, and exiled. Now, he dreams of the day he will take vengeance on those who betrayed and exiled him. He grows in power, and uses summoning magic learned from the Dark Elves to harness powerful servitors and minions. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -6022,7 +6022,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4798" name="Lv. 34 Raid Boss" max-level="1" >
+	<skill id="4798" name="Lv. 34 Raid Boss">
 	<!-- She is the Ruthless Queen of Marsh Stakatos, deep in the Cruma Marshlands. The Queen is notorious for mercilessness and cruelty to both her own forces and enemies alike. She has ordered the deaths of any and all who oppose her, including subordinates and even her own children. The Queen yearns to build a kingdom for Marsh Stakatos someday. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -6033,7 +6033,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4799" name="Lv. 49 Raid Boss" max-level="1" >
+	<skill id="4799" name="Lv. 49 Raid Boss">
 	<!-- He is the Commander of the advance forces of the powerful Ketra Orc tribe, who hail from the Goddard Territory of Elmore Kingdom. He believes completely in the superiority of his tribe. He was dispatched to expand their influence upon Aden Kingdom. He greatly detests the Silenos as well as humans, and is a formidable enemy. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >

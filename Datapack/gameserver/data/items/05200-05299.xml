@@ -4,7 +4,7 @@
 	<!-- Opens a level 30 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="10" price="1900" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="2065" level="4" value="-1"/>  <!-- Box Key -->
 		</skill-reducer>
 	</item>
@@ -13,7 +13,7 @@
 	<!-- Opens a level 40 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="10" price="3200" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="2065" level="5" value="-1"/>  <!-- Box Key -->
 		</skill-reducer>
 	</item>
@@ -22,7 +22,7 @@
 	<!-- Opens a level 50 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="10" price="5100" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="2065" level="6" value="-1"/>  <!-- Box Key -->
 		</skill-reducer>
 	</item>
@@ -31,7 +31,7 @@
 	<!-- Opens a level 60 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="10" price="7400" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="2065" level="7" value="-1"/>  <!-- Box Key -->
 		</skill-reducer>
 	</item>
@@ -40,7 +40,7 @@
 	<!-- Opens a level 70 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="10" price="10000" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="2065" level="8" value="-1"/>  <!-- Box Key -->
 		</skill-reducer>
 	</item>
@@ -186,8 +186,8 @@
 	<!-- Legend says that if you drink this potion your head will grow larger! Believe it if you will! -->
 		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="50" price="10000" commission-type="SCROLL_OTHER" reuse-delay="500" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2103" level="1" value="-1"/>  <!-- Mysterious Potion -->
+		<skill-reducer>
+			<skill id="2103" value="-1"/>  <!-- Mysterious Potion -->
 		</skill-reducer>
 	</item>
 
@@ -195,8 +195,8 @@
 	<!-- Beauty potion that changes one's facial appearance to Type A. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
 		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2122" level="1" value="-1"/>  <!-- Facelifting Potion -->
+		<skill-reducer>
+			<skill id="2122" value="-1"/>  <!-- Facelifting Potion -->
 		</skill-reducer>
 	</item>
 
@@ -204,8 +204,8 @@
 	<!-- Beauty potion that changes one's facial appearance to Type B. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
 		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2123" level="1" value="-1"/>  <!-- Facelifting Potion -->
+		<skill-reducer>
+			<skill id="2123" value="-1"/>  <!-- Facelifting Potion -->
 		</skill-reducer>
 	</item>
 
@@ -213,8 +213,8 @@
 	<!-- Beauty potion that changes one's facial appearance to Type C. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
 		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2124" level="1" value="-1"/>  <!-- Facelifting Potion -->
+		<skill-reducer>
+			<skill id="2124" value="-1"/>  <!-- Facelifting Potion -->
 		</skill-reducer>
 	</item>
 
@@ -222,8 +222,8 @@
 	<!-- Beauty potion that changes one's hair color to Type A. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
 		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2125" level="1" value="-1"/>  <!-- Dye Potion -->
+		<skill-reducer>
+			<skill id="2125" value="-1"/>  <!-- Dye Potion -->
 		</skill-reducer>
 	</item>
 
@@ -231,8 +231,8 @@
 	<!-- Beauty potion that changes one's hair color to Type B. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
 		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2126" level="1" value="-1"/>  <!-- Dye Potion -->
+		<skill-reducer>
+			<skill id="2126" value="-1"/>  <!-- Dye Potion -->
 		</skill-reducer>
 	</item>
 
@@ -240,8 +240,8 @@
 	<!-- Beauty potion that changes one's hair color to Type C. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
 		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2127" level="1" value="-1"/>  <!-- Dye Potion -->
+		<skill-reducer>
+			<skill id="2127" value="-1"/>  <!-- Dye Potion -->
 		</skill-reducer>
 	</item>
 
@@ -249,8 +249,8 @@
 	<!-- Beauty potion that changes one's hair color to Type D. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
 		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2128" level="1" value="-1"/>  <!-- Dye Potion -->
+		<skill-reducer>
+			<skill id="2128" value="-1"/>  <!-- Dye Potion -->
 		</skill-reducer>
 	</item>
 
@@ -258,8 +258,8 @@
 	<!-- Beauty potion that changes one's hair style to Type A. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2129" level="1" value="-1"/>  <!-- Hair Style Change Potion -->
+		<skill-reducer>
+			<skill id="2129" value="-1"/>  <!-- Hair Style Change Potion -->
 		</skill-reducer>
 	</item>
 
@@ -267,8 +267,8 @@
 	<!-- Beauty potion that changes one's hair style to Type B. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2130" level="1" value="-1"/>  <!-- Hair Style Change Potion -->
+		<skill-reducer>
+			<skill id="2130" value="-1"/>  <!-- Hair Style Change Potion -->
 		</skill-reducer>
 	</item>
 
@@ -276,8 +276,8 @@
 	<!-- Beauty potion that changes one's hair style to Type C. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2131" level="1" value="-1"/>  <!-- Hair Style Change Potion -->
+		<skill-reducer>
+			<skill id="2131" value="-1"/>  <!-- Hair Style Change Potion -->
 		</skill-reducer>
 	</item>
 
@@ -285,8 +285,8 @@
 	<!-- Beauty potion that changes one's hair style to Type D. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2132" level="1" value="-1"/>  <!-- Hair Style Change Potion -->
+		<skill-reducer>
+			<skill id="2132" value="-1"/>  <!-- Hair Style Change Potion -->
 		</skill-reducer>
 	</item>
 
@@ -294,8 +294,8 @@
 	<!-- Beauty potion that changes one's hair style to Type E. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2133" level="1" value="-1"/>  <!-- Hair Style Change Potion -->
+		<skill-reducer>
+			<skill id="2133" value="-1"/>  <!-- Hair Style Change Potion -->
 		</skill-reducer>
 	</item>
 
@@ -303,8 +303,8 @@
 	<!-- Beauty potion that changes one's hair style to Type F. May be used only by female characters. The results may be viewed on the Character Creation Screen. -->
 		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2134" level="1" value="-1"/>  <!-- Hair Style Change Potion -->
+		<skill-reducer>
+			<skill id="2134" value="-1"/>  <!-- Hair Style Change Potion -->
 		</skill-reducer>
 	</item>
 
@@ -312,8 +312,8 @@
 	<!-- Beauty potion that changes one's hair style to Type G. May be used only by female characters. The results may be viewed on the Character Creation Screen. -->
 		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="50" price="20000" commission-type="SCROLL_OTHER" reuse-delay="500" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2135" level="1" value="-1"/>  <!-- Hair Style Change Potion -->
+		<skill-reducer>
+			<skill id="2135" value="-1"/>  <!-- Hair Style Change Potion -->
 		</skill-reducer>
 	</item>
 
@@ -321,8 +321,8 @@
 	<!-- Small package of compressed soulshots. Upon use, changes into a 1,000 No-grade soulshots. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="600" price="7700" commission-type="SOULSHOT" immediate-effect="true" action="CAPSULE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2104" level="1" value="-1"/>  <!-- Greater Soulshot Compressed Package (No-grade) -->
+		<skill-reducer>
+			<skill id="2104" value="-1"/>  <!-- Greater Soulshot Compressed Package (No-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -330,8 +330,8 @@
 	<!-- Small package of compressed soulshots. Upon use, changes into a 1,000 D-grade soulshots. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="450" price="11000" commission-type="SOULSHOT" immediate-effect="true" action="CAPSULE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2105" level="1" value="-1"/>  <!-- Greater Soulshot Compressed Package (D-grade) -->
+		<skill-reducer>
+			<skill id="2105" value="-1"/>  <!-- Greater Soulshot Compressed Package (D-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -339,8 +339,8 @@
 	<!-- Small package of compressed soulshots. Upon use, changes into a 1,000 C-grade soulshots. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="450" price="16500" commission-type="SOULSHOT" immediate-effect="true" action="CAPSULE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2106" level="1" value="-1"/>  <!-- Greater Soulshot Compressed Package (C-grade) -->
+		<skill-reducer>
+			<skill id="2106" value="-1"/>  <!-- Greater Soulshot Compressed Package (C-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -348,8 +348,8 @@
 	<!-- Small package of compressed soulshots. Upon use, changes into a 1,000 B-grade soulshots. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="300" price="55000" commission-type="SOULSHOT" immediate-effect="true" action="CAPSULE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2107" level="1" value="-1"/>  <!-- Greater Soulshot Compressed Package (B-grade) -->
+		<skill-reducer>
+			<skill id="2107" value="-1"/>  <!-- Greater Soulshot Compressed Package (B-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -357,8 +357,8 @@
 	<!-- Small package of compressed Soulshots. Upon use, changes into a 1,000 A-grade Soulshots. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="300" price="88000" commission-type="SOULSHOT" immediate-effect="true" action="CAPSULE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2108" level="1" value="-1"/>  <!-- Greater Soulshot Compressed Package (A-grade) -->
+		<skill-reducer>
+			<skill id="2108" value="-1"/>  <!-- Greater Soulshot Compressed Package (A-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -366,8 +366,8 @@
 	<!-- Small package of compressed spiritshots. Upon use, changes into a 1,000 No-grade spiritshots. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="750" price="16500" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2110" level="1" value="-1"/>  <!-- Greater Spiritshot Compressed Package (No-grade) -->
+		<skill-reducer>
+			<skill id="2110" value="-1"/>  <!-- Greater Spiritshot Compressed Package (No-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -375,8 +375,8 @@
 	<!-- Small package of compressed spiritshots. Upon use, changes into a 1,000 D-grade spiritshots. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="750" price="19800" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2111" level="1" value="-1"/>  <!-- Greater Spiritshot Compressed Package (D-grade) -->
+		<skill-reducer>
+			<skill id="2111" value="-1"/>  <!-- Greater Spiritshot Compressed Package (D-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -384,8 +384,8 @@
 	<!-- Small package of compressed spiritshots. Upon use, changes into a 1,000 C-grade spiritshots. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="450" price="38500" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2112" level="1" value="-1"/>  <!-- Greater Spiritshot Compressed Package (C-grade) -->
+		<skill-reducer>
+			<skill id="2112" value="-1"/>  <!-- Greater Spiritshot Compressed Package (C-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -393,8 +393,8 @@
 	<!-- Small package of compressed spiritshots. Upon use, changes into a 1,000 B-grade spiritshots. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="450" price="110000" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2113" level="1" value="-1"/>  <!-- Greater Spiritshot Compressed Package (B-grade) -->
+		<skill-reducer>
+			<skill id="2113" value="-1"/>  <!-- Greater Spiritshot Compressed Package (B-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -402,8 +402,8 @@
 	<!-- Small package of compressed spiritshots. Upon use, changes into a 1,000 A-grade spiritshots. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="300" price="132000" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2114" level="1" value="-1"/>  <!-- Greater Spiritshot Compressed Package (A-grade) -->
+		<skill-reducer>
+			<skill id="2114" value="-1"/>  <!-- Greater Spiritshot Compressed Package (A-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -411,8 +411,8 @@
 	<!-- Small package of compressed blessed spiritshots. Upon use, changes into a 1,000 No-grade blessed spiritshots. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="750" price="38500" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2116" level="1" value="-1"/>  <!-- Greater Blessed Spiritshot Compressed Package (No-grade) -->
+		<skill-reducer>
+			<skill id="2116" value="-1"/>  <!-- Greater Blessed Spiritshot Compressed Package (No-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -420,8 +420,8 @@
 	<!-- Small package of compressed blessed spiritshots. Upon use, changes into a 1,000 D-grade blessed spiritshots. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="750" price="49500" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2117" level="1" value="-1"/>  <!-- Greater Blessed Spiritshot Compressed Package (D-grade) -->
+		<skill-reducer>
+			<skill id="2117" value="-1"/>  <!-- Greater Blessed Spiritshot Compressed Package (D-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -429,8 +429,8 @@
 	<!-- Small package of compressed blessed spiritshots. Upon use, changes into a 1,000 C-grade blessed spiritshots. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="450" price="99000" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2118" level="1" value="-1"/>  <!-- Greater Blessed Spiritshot Compressed Package (C-grade) -->
+		<skill-reducer>
+			<skill id="2118" value="-1"/>  <!-- Greater Blessed Spiritshot Compressed Package (C-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -438,8 +438,8 @@
 	<!-- Small package of compressed blessed spiritshots. Upon use, changes into a 1,000 B-grade blessed spiritshots. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="450" price="269500" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2119" level="1" value="-1"/>  <!-- Greater Blessed Spiritshot Compressed Package (B-grade) -->
+		<skill-reducer>
+			<skill id="2119" value="-1"/>  <!-- Greater Blessed Spiritshot Compressed Package (B-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -447,8 +447,8 @@
 	<!-- Small package of compressed blessed spiritshots. Upon use, changes into a 1,000 A-grade blessed spiritshots. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="300" price="319000" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2120" level="1" value="-1"/>  <!-- Greater Blessed Spiritshot Compressed Package (A-grade) -->
+		<skill-reducer>
+			<skill id="2120" value="-1"/>  <!-- Greater Blessed Spiritshot Compressed Package (A-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -540,8 +540,8 @@
 	<!-- Rice cake that restores one's HP and MP. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2136" level="1" value="-1"/>  <!-- Rice Cake -->
+		<skill-reducer>
+			<skill id="2136" value="-1"/>  <!-- Rice Cake -->
 		</skill-reducer>
 	</item>
 

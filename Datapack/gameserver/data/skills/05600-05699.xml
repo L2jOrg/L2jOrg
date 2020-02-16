@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="5600" name="Rush Impact" max-level="1" debuff="true" action="A1">
+	<skill id="5600" name="Rush Impact" debuff="true" action="A1">
 	<!-- Cannot move due to Stun for 3 seconds. -->
 		<icon initial="icon.skill0793"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" triggered="true" auto-use="ACTIVE">
@@ -14,7 +14,7 @@
 		</attributes>
 		<target object="FRIEND" range="1000" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="47.0"/>
 			</magical-attack>
 		</effects>
@@ -166,10 +166,10 @@
 			</defence-trait>
 		</effects>
 	</skill>
-	<skill id="5602" name="Transform Sacrifice" max-level="1" debuff="true" action="A2">
+	<skill id="5602" name="Transform Sacrifice" debuff="true" action="A2">
 	<!-- Sacrifice. A state in which HP cannot be recovered. -->
 		<icon initial="icon.skill4036"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" triggered="true" dispellable="false" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" triggered="true">
 			<magic-level initial="-1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -190,7 +190,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5603" name="Dagger Mastery" max-level="1" action="A2">
+	<skill id="5603" name="Dagger Mastery" action="A2">
 	<!-- A state in which MP consumption of skills is greatly decreased, and the probability of a vital spot jab is increased. -->
 		<icon initial="icon.skill0209"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" triggered="true" >
@@ -215,7 +215,7 @@
 			</magic-cost>
 		</effects>
 	</skill>
-	<skill id="5604" name="Sword/Blunt Weapon Mastery" max-level="1" action="A2">
+	<skill id="5604" name="Sword/Blunt Weapon Mastery" action="A2">
 	<!-- A state in which MP consumption of skills is greatly decreased, and the success rate of stun attack is increased. -->
 		<icon initial="icon.skill0217"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" triggered="true" >
@@ -268,12 +268,12 @@
 				<power initial="5.0"/>
 				<armor-type>HEAVY </armor-type>
 			</stat-modify>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="DIFF">
-				<power initial="0.0">
+			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0">
+				<power>
 					<value level="2">30.0</value>
 				</power>
 			</stat-hp-based>
-			<stat-modify stat="DEFENCE_CRITICAL_RATE" stat-add="DEFENCE_CRITICAL_RATE_ADD" mode="DIFF">
+			<stat-modify stat="DEFENCE_CRITICAL_RATE" stat-add="DEFENCE_CRITICAL_RATE_ADD">
 				<power initial="-30.0"/>
 				<armor-type>HEAVY </armor-type>
 			</stat-modify>
@@ -298,15 +298,15 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="2.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="2.0"/>
 				<armor-type>LIGHT </armor-type>
 			</stat-hp-based>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="2">2.5</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="DEFENCE_CRITICAL_DAMAGE" stat-add="DEFENCE_CRITICAL_DAMAGE_ADD" mode="DIFF">
+			<stat-modify stat="DEFENCE_CRITICAL_DAMAGE" stat-add="DEFENCE_CRITICAL_DAMAGE_ADD">
 				<power initial="-86.0"/>
 				<armor-type>LIGHT </armor-type>
 			</stat-modify>
@@ -335,11 +335,11 @@
 		</abnormal>
 		<effects>
 			<stat-modify stat="MAGIC_ATTACK" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="2">6.25</value>
 				</power>
 			</stat-modify>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="10.0"/>
 			</speed>
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
@@ -348,7 +348,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5609" name="Sound 1" max-level="1" action="A1">
+	<skill id="5609" name="Sound 1" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -359,7 +359,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="5610" name="Sound 2" max-level="1" action="A1">
+	<skill id="5610" name="Sound 2" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -370,7 +370,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="5611" name="Sound 3" max-level="1" action="A1">
+	<skill id="5611" name="Sound 3" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -381,7 +381,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="5612" name="Sound 4" max-level="1" action="A1">
+	<skill id="5612" name="Sound 4" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -411,7 +411,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="5614" name="Lv. 87 Raid Boss" max-level="1" >
+	<skill id="5614" name="Lv. 87 Raid Boss">
 	<!-- He was one of the Devil's retainers from Asmodae, and Beleth placed him among the people in order to rule Hellbound. Although he took over the power and turned Hellbound into the devil's territory after Beleth disappeared for magic experiments. Beleth does not really care about it. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -422,7 +422,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="5615" name="Lv. 87 Raid Boss" max-level="1" >
+	<skill id="5615" name="Lv. 87 Raid Boss">
 	<!-- He was created when a large number of elemental spirits that were constrained in the basement of Tower of Naia were transformed after being affected by Beleth' magic and Core Naia. Although it is a monster with an unstable shape and mind, which is about to be destroyed, it is still slightly conscious as a nature spirit. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -433,7 +433,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="5616" name="Lv. 87 Raid Boss" max-level="1" >
+	<skill id="5616" name="Lv. 87 Raid Boss">
 	<!-- He was created when a large number of elemental spirits that were constrained in the basement of Tower of Naia were transformed after being affected by Beleth' magic and Core Naia. Although it is a monster with an unstable shape and mind, which is about to be destroyed, it is still slightly conscious as a nature spirit. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -444,7 +444,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="5617" name="Lv. 87 Raid Boss" max-level="1" >
+	<skill id="5617" name="Lv. 87 Raid Boss">
 	<!-- He was created when a large number of elemental spirits that were constrained in the basement of Tower of Naia were transformed after being affected by Beleth' magic and Core Naia. Although it is a monster with an unstable shape and mind, which is about to be destroyed, it is still slightly conscious as a nature spirit. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -455,7 +455,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="5618" name="Lv. 87 Raid Boss" max-level="1" >
+	<skill id="5618" name="Lv. 87 Raid Boss">
 	<!-- He was created when a large number of elemental spirits that were constrained in the basement of Tower of Naia were transformed after being affected by Beleth' magic and Core Naia. Although it is a monster with an unstable shape and mind, which is about to be destroyed, it is still slightly conscious as a nature spirit. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -466,7 +466,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="5619" name="Presentation - Super Giant Mutated Animal Union" max-level="1" action="A1">
+	<skill id="5619" name="Presentation - Super Giant Mutated Animal Union" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -649,7 +649,7 @@
 		</attributes>
 		<target type="TARGET" />
 		<effects>
-			<mp mode="DIFF">
+			<mp>
 				<power initial="6.0">
 					<value level="2">10.0</value>
 					<value level="3">13.0</value>
@@ -676,7 +676,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="5623" name="Weakened Magic Circle" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="5623" name="Weakened Magic Circle" debuff="true" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0122"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -694,7 +694,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="5624" name="Soul Confinement" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="5624" name="Soul Confinement" debuff="true" action="A2" type="MAGIC">
 	<!-- The soul is confined, making it impossible to move, but in addition, damage is not incurred. -->
 		<icon initial="icon.skill1201"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -712,7 +712,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="5625" name="Soul Confinement" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="5625" name="Soul Confinement" debuff="true" action="A2" type="MAGIC">
 	<!-- The soul is confined, making it impossible to move, but in addition, damage is not incurred. -->
 		<icon initial="icon.skill1201"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -730,7 +730,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="5626" name="Raid Boss" max-level="1" >
+	<skill id="5626" name="Raid Boss">
 	<!-- Mutants that suddenly appeared in Aden world. They often possess great strength and special abilities, but their activity is limited, so they seem unable to directly walk around on Aden's ground. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -741,7 +741,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="5627" name="Adventurer's Wind Walk" max-level="1" action="A2" type="MAGIC">
+	<skill id="5627" name="Adventurer's Wind Walk" action="A2" type="MAGIC">
 	<!-- For 60 minutes, Spd. increases by 33. -->
 		<icon initial="icon.skill1204"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -757,12 +757,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="33.0"/>
 			</speed>
 		</effects>
 	</skill>
-	<skill id="5628" name="Adventurer's Shield" max-level="1" action="A2" type="MAGIC">
+	<skill id="5628" name="Adventurer's Shield" action="A2" type="MAGIC">
 	<!-- For 60 minutes P. Def. increases by 15%% -->
 		<icon initial="icon.skill1040"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -783,7 +783,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5629" name="Adventurer's Blessed Body" max-level="1" action="A2" type="MAGIC">
+	<skill id="5629" name="Adventurer's Blessed Body" action="A2" type="MAGIC">
 	<!-- For 60 minutes, Max HP increases by 35%%. -->
 		<icon initial="icon.skill1045"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -799,12 +799,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="35.0"/>
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="5630" name="Adventurer's Vampiric Rage" max-level="1" action="A2" type="MAGIC">
+	<skill id="5630" name="Adventurer's Vampiric Rage" action="A2" type="MAGIC">
 	<!-- For 60 minutes, 9%% of the physical damage inflicted on the enemy is recovered as HP with a certain probability. -->
 		<icon initial="icon.skill1268"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -825,7 +825,7 @@
 			</vampiric-attack>
 		</effects>
 	</skill>
-	<skill id="5631" name="Adventurer's Regeneration" max-level="1" action="A2" type="MAGIC">
+	<skill id="5631" name="Adventurer's Regeneration" action="A2" type="MAGIC">
 	<!-- For 60 minutes, HP Recovery Rate increases by 20%%. -->
 		<icon initial="icon.skill1044"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -846,7 +846,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5632" name="Adventurer's Haste" max-level="1" action="A2" type="MAGIC">
+	<skill id="5632" name="Adventurer's Haste" action="A2" type="MAGIC">
 	<!-- Increases Atk. Spd. by 33%% for 60 minutes. -->
 		<icon initial="icon.skill1086"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -867,7 +867,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5633" name="Adventurer's Blessed Soul" max-level="1" action="A2" type="MAGIC">
+	<skill id="5633" name="Adventurer's Blessed Soul" action="A2" type="MAGIC">
 	<!-- For 60 minutes, Max HP is increased by 35%%. -->
 		<icon initial="icon.skill1048"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -883,12 +883,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="35.0"/>
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="5634" name="Adventurer's Acumen" max-level="1" action="A2" type="MAGIC">
+	<skill id="5634" name="Adventurer's Acumen" action="A2" type="MAGIC">
 	<!-- Increases Casting Spd. +30%% for 60 minutes. -->
 		<icon initial="icon.skill1085"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -909,7 +909,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5635" name="Adventurer's Concentration" max-level="1" action="A2" type="MAGIC">
+	<skill id="5635" name="Adventurer's Concentration" action="A2" type="MAGIC">
 	<!-- For 60 minutes, decreases magic cancel rate by 18. -->
 		<icon initial="icon.skill1078"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -925,12 +925,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ATTACK_CANCEL" mode="DIFF">
+			<stat-modify stat="ATTACK_CANCEL">
 				<power initial="-18.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5636" name="Adventurer's Empower" max-level="1" action="A2" type="MAGIC">
+	<skill id="5636" name="Adventurer's Empower" action="A2" type="MAGIC">
 	<!-- For 60 minutes, M. Atk. increases by 55%%. -->
 		<icon initial="icon.skill1059"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -951,7 +951,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5637" name="Adventurer's Magic Barrier" max-level="1" action="A2" type="MAGIC">
+	<skill id="5637" name="Adventurer's Magic Barrier" action="A2" type="MAGIC">
 	<!-- Increases M. Def. by 30%% for 60 minutes. -->
 		<icon initial="icon.skill1036"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -1019,7 +1019,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="20.0">
 					<value level="2">25.0</value>
 					<value level="3">30.0</value>
@@ -1075,7 +1075,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="20.0">
 					<value level="2">25.0</value>
 					<value level="3">30.0</value>
@@ -1126,7 +1126,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5641" name="not_used" max-level="1" action="A2" type="MAGIC">
+	<skill id="5641" name="not_used" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill1086"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -1190,7 +1190,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="5643" name="Seraphim the Unicorn - Acumen" max-level="1" action="A2" type="MAGIC">
+	<skill id="5643" name="Seraphim the Unicorn - Acumen" action="A2" type="MAGIC">
 	<!-- Increases Casting Spd. for a certain amount of time. -->
 		<icon initial="icon.skill1085"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -1218,7 +1218,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5644" name="not_used" max-level="1" action="A2" type="MAGIC">
+	<skill id="5644" name="not_used" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill1204"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -1345,7 +1345,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
 				<power initial="2.0">
 					<value level="2">3.0</value>
 					<value level="3">4.0</value>
@@ -1524,7 +1524,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="5651" name="not_used" max-level="1" action="A2" type="MAGIC">
+	<skill id="5651" name="not_used" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill1068"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -1678,7 +1678,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="2.0">
 					<value level="2">3.0</value>
 					<value level="3">4.0</value>
@@ -2100,7 +2100,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false" scope="PVP">
+			<magical-attack scope="PVP">
 				<power initial="60.0">
 					<value level="2">64.0</value>
 					<value level="3">68.0</value>
@@ -2188,7 +2188,7 @@
 					<value level="85">1024.0</value>
 				</power>
 			</magical-attack>
-			<magical-attack over-hit="false" scope="PVE">
+			<magical-attack scope="PVE">
 				<power initial="75.0">
 					<value level="2">80.0</value>
 					<value level="3">85.0</value>
@@ -2711,7 +2711,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="5" affect-random="12" />
 		<effects>
-			<magical-attack over-hit="false" scope="PVP">
+			<magical-attack scope="PVP">
 				<power initial="30.0">
 					<value level="2">32.0</value>
 					<value level="3">34.0</value>
@@ -2799,7 +2799,7 @@
 					<value level="85">512.0</value>
 				</power>
 			</magical-attack>
-			<magical-attack over-hit="false" scope="PVE">
+			<magical-attack scope="PVE">
 				<power initial="38.0">
 					<value level="2">40.0</value>
 					<value level="3">43.0</value>
@@ -2934,7 +2934,7 @@
 					<value level="2">16.0</value>
 				</power>
 			</stat-modify>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="5.0">
 					<value level="2">8.0</value>
 				</power>
@@ -2949,7 +2949,7 @@
 					<value level="2">-8.0</value>
 				</power>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="-2.0">
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="-2.0">
 					<value level="2">-4.0</value>
 				</power>
 			</stat-hp-based>
@@ -2968,7 +2968,7 @@
 	<skill id="5660" name="Battleground Death Syndrome" max-level="5" debuff="true" action="A2">
 	<!-- Combat power is decreased after death on the battleground. Condition is removed at the end of the war. -->
 		<icon initial="icon.skill5076_a"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" dispellable="false" irreplacable="true" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
 			<magic-level initial="-2"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -2997,14 +2997,14 @@
 					<value level="5">-40.0</value>
 				</power>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="-5.0">
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="-5.0">
 					<value level="2">-9.0</value>
 					<value level="3">-13.0</value>
 					<value level="4">-17.0</value>
 					<value level="5">-21.0</value>
 				</power>
 			</stat-hp-based>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="-5.0">
 					<value level="2">-9.0</value>
 					<value level="3">-13.0</value>
@@ -3030,7 +3030,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5661" name="Match Participation" max-level="1" debuff="true" action="A2">
+	<skill id="5661" name="Match Participation" debuff="true" action="A2">
 	<!-- You have already participated in a match and cannot participate in the next match. -->
 		<icon initial="icon.skill5661"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -3045,7 +3045,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="5662" name="Presentation - Resurrection Possible" max-level="1" action="A1">
+	<skill id="5662" name="Presentation - Resurrection Possible" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill5662"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -3104,7 +3104,7 @@
 			</defence-trait>
 		</effects>
 	</skill>
-	<skill id="5665" name="Stun" max-level="1" debuff="true" action="A2">
+	<skill id="5665" name="Stun" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0100"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" triggered="true" >
@@ -3125,7 +3125,7 @@
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="5666" name="Stun" max-level="1" debuff="true" action="A2">
+	<skill id="5666" name="Stun" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0100"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" triggered="true" >
@@ -3146,7 +3146,7 @@
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="5667" name="Stun" max-level="1" debuff="true" action="A2">
+	<skill id="5667" name="Stun" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0100"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" triggered="true" >
@@ -3167,7 +3167,7 @@
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="5668" name="Poison" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="5668" name="Poison" debuff="true" action="A2" type="MAGIC">
 	<!-- HP has been momentarily decreased due to Poison. -->
 		<icon initial="icon.skill4035"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1" triggered="true" >
@@ -3185,12 +3185,12 @@
 			<chance initial="70"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="63.0"/>
 			</damage-over-time>
 		</effects>
 	</skill>
-	<skill id="5669" name="Stun" max-level="1" debuff="true" action="A2">
+	<skill id="5669" name="Stun" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0100"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" triggered="true" >
@@ -3211,7 +3211,7 @@
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="5670" name="Stun" max-level="1" debuff="true" action="A2">
+	<skill id="5670" name="Stun" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0100"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" triggered="true" >
@@ -3232,7 +3232,7 @@
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="5671" name="Stun" max-level="1" debuff="true" action="A2">
+	<skill id="5671" name="Stun" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0100"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" triggered="true" >
@@ -3253,7 +3253,7 @@
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="5672" name="Stun" max-level="1" debuff="true" action="A2">
+	<skill id="5672" name="Stun" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0100"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" triggered="true" >
@@ -3295,14 +3295,14 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<trigger-skill-by-attack skill="5680" target="SELF" critical="false">
+			<trigger-skill-by-attack skill="5680">
 				<power initial="1.0"/>
 				<chance initial="60.0"/>
 				<min-damage initial="1.0"/>
 			</trigger-skill-by-attack>
 		</effects>
 	</skill>
-	<skill id="5680" name="Oblivion Trap" max-level="1" action="A1">
+	<skill id="5680" name="Oblivion Trap" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" triggered="true" >
@@ -3318,7 +3318,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5681" name="PvP Weapon - CP Drain" max-level="1" action="A1">
+	<skill id="5681" name="PvP Weapon - CP Drain" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill1306"/>
 		<attributes static-reuse="true" magic-critical-rate="-5.0" triggered="true" >
@@ -3332,12 +3332,12 @@
 		</attributes>
 		<target type="TARGET" />
 		<effects>
-			<cp mode="DIFF">
+			<cp>
 				<power initial="200.0"/>
 			</cp>
 		</effects>
 	</skill>
-	<skill id="5682" name="PvP Weapon - Cancel" max-level="1" action="A1">
+	<skill id="5682" name="PvP Weapon - Cancel" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill1056"/>
 		<attributes static-reuse="true" magic-critical-rate="-5.0" triggered="true" >
@@ -3355,7 +3355,7 @@
 			</dispel-by-category>
 		</effects>
 	</skill>
-	<skill id="5683" name="PvP Weapon - Ignore Shield Defense" max-level="1" debuff="true" action="A2">
+	<skill id="5683" name="PvP Weapon - Ignore Shield Defense" debuff="true" action="A2">
 	<!-- Shield Def. significantly decreased momentarily. -->
 		<icon initial="icon.skill1304"/>
 		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="-5.0" triggered="true" >
@@ -3379,7 +3379,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5684" name="PvP Weapon - Attack Rate" max-level="1" action="A1">
+	<skill id="5684" name="PvP Weapon - Attack Rate" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0005"/>
 		<attributes static-reuse="true" next-action="ATTACK" magic-critical-rate="-5.0" triggered="true" >
@@ -3393,12 +3393,12 @@
 		</attributes>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="1.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="5685" name="PvP Weapon - Casting" max-level="1" action="A2">
+	<skill id="5685" name="PvP Weapon - Casting" action="A2">
 	<!-- Casting Spd. decreased momentarily. -->
 		<icon initial="icon.skill0228"/>
 		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="-5.0" triggered="true" >
@@ -3420,7 +3420,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5686" name="PvP Weapon - Rapid Fire" max-level="1" action="A2">
+	<skill id="5686" name="PvP Weapon - Rapid Fire" action="A2">
 	<!-- Bow Atk. Spd. decreased momentarily. -->
 		<icon initial="icon.skill0413"/>
 		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="-5.0" triggered="true" >
@@ -3444,7 +3444,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5687" name="PvP Weapon - Decrease Range" max-level="1" debuff="true" action="A2">
+	<skill id="5687" name="PvP Weapon - Decrease Range" debuff="true" action="A2">
 	<!-- Bow Range decreased momentarily. -->
 		<icon initial="icon.skill0486"/>
 		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="-5.0" triggered="true" >
@@ -3463,13 +3463,13 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_RANGE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK_RANGE">
 				<power initial="-200.0"/>
 				<weapon-type>BOW CROSSBOW </weapon-type>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5688" name="PvP Weapon - Decrease Resist" max-level="1" debuff="true" action="A2">
+	<skill id="5688" name="PvP Weapon - Decrease Resist" debuff="true" action="A2">
 	<!-- Resistance against all attributes decreases momentarily. -->
 		<icon initial="icon.skill0756"/>
 		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="-5.0" triggered="true" >
@@ -3493,7 +3493,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5689" name="PvP Shield - Reflect Damage" max-level="1" action="A2">
+	<skill id="5689" name="PvP Shield - Reflect Damage" action="A2">
 	<!-- Able to return some of the received damage back to the enemy momentarily. -->
 		<icon initial="icon.skill0086"/>
 		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="-5.0" triggered="true" >
@@ -3517,7 +3517,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5695" name="Talisman - Increase Momentum" max-level="1" action="A1">
+	<skill id="5695" name="Talisman - Increase Momentum" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" triggered="true" >
@@ -3539,7 +3539,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5696" name="Dizziness" max-level="1" debuff="true" action="A2">
+	<skill id="5696" name="Dizziness" debuff="true" action="A2">
 	<!-- Speed and Atk. Spd. decreases temporarily due to the side effect of poisoning. -->
 		<icon initial="icon.skill0837"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >

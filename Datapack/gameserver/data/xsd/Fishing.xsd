@@ -24,10 +24,10 @@
 				<xs:element name="baits">
 					<xs:complexType>
 						<xs:sequence>
-							<xs:element name="bait" maxOccurs="unbounded" minOccurs="1">
+							<xs:element name="bait" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:sequence>
-										<xs:element name="catch" maxOccurs="unbounded" minOccurs="1">
+										<xs:element name="catch" maxOccurs="unbounded">
 											<xs:complexType>
 												<xs:attribute type="xs:positiveInteger" name="itemId" use="required" />
 												<xs:attribute type="xs:double" name="chance" />
@@ -53,7 +53,7 @@
 				<xs:element name="rods">
 					<xs:complexType>
 						<xs:sequence>
-							<xs:element name="rod" maxOccurs="unbounded" minOccurs="1">
+							<xs:element name="rod" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:attribute type="xs:positiveInteger" name="itemId" use="required" />
 									<xs:attribute type="xs:positiveInteger" name="reduceFishingTime" />

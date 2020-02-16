@@ -73,8 +73,8 @@
 	<!-- Echo crystal that plays the theme music of victory. Will work once and then disappear. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="10" price="100" reuse-delay="3000" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2066" level="1" value="-1"/>  <!-- Item - Fight Song Crystal -->
+		<skill-reducer>
+			<skill id="2066" value="-1"/>  <!-- Item - Fight Song Crystal -->
 		</skill-reducer>
 	</item>
 

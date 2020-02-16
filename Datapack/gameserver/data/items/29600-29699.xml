@@ -6,7 +6,7 @@
 		<attributes weight="10" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55057" level="1" value="-1"/>  <!-- Wind Walk -->
+			<skill id="55057" value="-1"/>  <!-- Wind Walk -->
 		</skills>
 	</armor>
 
@@ -177,7 +177,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -427,7 +427,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -645,26 +645,26 @@
 	<item id="29647" name="Scroll: Low-grade XP/SP Boost" type="POTION" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- For 20 min., XP/SP gain + 30% when hunting. Effect remains even after death. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55000" level="1" value="-1"/>  <!-- XP/SP Boost -->
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55000" value="-1"/>  <!-- XP/SP Boost -->
 		</skill-reducer>
 	</item>
 
 	<item id="29648" name="Scroll: Regular XP/SP Boost" type="POTION" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- For 20 min., XP/SP gain + 30% when hunting. Effect remains even after death. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55000" level="1" value="-1"/>  <!-- XP/SP Boost -->
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55000" value="-1"/>  <!-- XP/SP Boost -->
 		</skill-reducer>
 	</item>
 
 	<item id="29649" name="Scroll: Mid-grade XP/SP Boost" type="POTION" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- For 20 min., XP/SP gain + 40% when hunting. Effect remains even after death. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
 			<skill id="55000" level="2" value="-1"/>  <!-- XP/SP Boost -->
 		</skill-reducer>
 	</item>
@@ -672,8 +672,8 @@
 	<item id="29650" name="Scroll: High-grade XP/SP Boost" type="POTION" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- For 20 min., XP/SP gain + 100% when hunting. Effect remains even after death. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
 			<skill id="55000" level="4" value="-1"/>  <!-- XP/SP Boost -->
 		</skill-reducer>
 	</item>
@@ -682,8 +682,8 @@
 	<!-- Magical potion that slowly restores HP. Lasts 15 sec. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" commission-type="POTION" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2031" level="1" value="-1"/>  <!-- HP Potion -->
+		<skill-reducer>
+			<skill id="2031" value="-1"/>  <!-- HP Potion -->
 		</skill-reducer>
 	</item>
 
@@ -691,8 +691,8 @@
 	<!-- Magical potion that slowly restores HP. Lasts 15 sec. -->
 		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" commission-type="POTION" reuse-delay="10000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2032" level="1" value="-1"/>  <!-- Greater HP Potion -->
+		<skill-reducer>
+			<skill id="2032" value="-1"/>  <!-- Greater HP Potion -->
 		</skill-reducer>
 	</item>
 
@@ -700,25 +700,25 @@
 	<!-- Magical potion that increases Atk. Spd. -->
 		<restriction freightable="false" coc-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="20" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2012" level="1" value="-1"/>  <!-- Haste Potion -->
+		<skill-reducer>
+			<skill id="2012" value="-1"/>  <!-- Haste Potion -->
 		</skill-reducer>
 	</item>
 
 	<item id="29654" name="1st Class Transfer Buff Scroll" type="SCROLL" icon="BranchIcon.Icon.etc_g_bm_buff_scroll_i00">
 	<!-- Bestows the following effects for 20 min.: Shield Lv. 2, Might Lv. 2, Concentration Lv. 2, Acumen Lv. 1, Wind Walk Lv. 1, Focus Lv. 1, Agility Lv. 1, Empower Lv. 1. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="5" commission-type="SCROLL_OTHER" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55055" level="1" value="-1"/>  <!-- 1st Class Transfer Buff Scroll -->
+		<attributes weight="5" commission-type="SCROLL_OTHER" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55055" value="-1"/>  <!-- 1st Class Transfer Buff Scroll -->
 		</skill-reducer>
 	</item>
 
 	<item id="29655" name="2nd Class Transfer Buff Scroll" type="SCROLL" icon="BranchIcon.Icon.etc_g_bm_buff_scroll_i01">
 	<!-- Bestows the following effects for 20 min.: Shield Lv. 3, Might Lv. 3, Acumen Lv. 2, Wind Walk Lv. 2, Focus Lv. 2, Regeneration Lv. 1, Guidance Lv. 1, Death Whisper Lv. 1, Magic Barrier Lv. 1, Blessed Body Lv. 1, Blessed Soul Lv. 1, Haste Lv. 1, Agility Lv. 2, Empower Lv. 2. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="5" commission-type="SCROLL_OTHER" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
+		<attributes weight="5" commission-type="SCROLL_OTHER" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
 			<skill id="55056" level="2" value="-1"/>  <!-- 2nd Class Transfer Buff Scroll -->
 		</skill-reducer>
 	</item>
@@ -861,9 +861,9 @@
 		<attributes weight="150" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55059" level="1" value="-1"/>  <!-- Release Agathion's Seal - Griffin -->
-			<skill id="55060" level="1" value="-1"/>  <!-- Griffin's Blessing -->
-			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
+			<skill id="55059" value="-1"/>  <!-- Release Agathion's Seal - Griffin -->
+			<skill id="55060" value="-1"/>  <!-- Griffin's Blessing -->
+			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 		</skills>
 	</armor>
 
@@ -876,8 +876,8 @@
 	<item id="29669" name="Castle Scroll: Regular XP/SP Boost" type="POTION" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- For 20 min., XP/SP gain + 35%. Effect remains even after death. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
 			<skill id="55061" level="2" value="-1"/>  <!-- TODO Skill not found -->
 		</skill-reducer>
 	</item>
@@ -885,8 +885,8 @@
 	<item id="29670" name="Castle Scroll: Mid-grade XP/SP Boost" type="POTION" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- For 20 min., XP/SP gain + 45%. Effect remains even after death. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
 			<skill id="55062" level="2" value="-1"/>  <!-- TODO Skill not found -->
 		</skill-reducer>
 	</item>
@@ -895,8 +895,8 @@
 	<!-- Magic potion that instantly restores HP. Instant effect with no duration. Cannot be used when HP is full. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55063" level="1" value="-1"/>  <!-- Castle Quick Healing Potion -->
+		<skill-reducer>
+			<skill id="55063" value="-1"/>  <!-- Castle Quick Healing Potion -->
 		</skill-reducer>
 	</item>
 
@@ -904,26 +904,26 @@
 	<!-- Magic potion that instantly restores HP. Instant effect with no duration. Cannot be used when HP is full.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55064" level="1" value="-1"/>  <!-- Castle Greater Quick Healing Potion -->
+		<skill-reducer>
+			<skill id="55064" value="-1"/>  <!-- Castle Greater Quick Healing Potion -->
 		</skill-reducer>
 	</item>
 
 	<item id="29673" name="Castle Scroll: Berserker Spirit" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- For 20 min., P. Atk. + 5%, M. Atk. + 10%, Atk. Spd. + 5%, Casting Spd. + 5%, and Speed + 5. P. Def. - 5%, M. Def. - 10%, and Evasion - 2. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" commission-type="SCROLL_OTHER" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55065" level="1" value="-1"/>  <!-- Castle Scroll: Berserker Spirit -->
+		<attributes weight="120" commission-type="SCROLL_OTHER" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55065" value="-1"/>  <!-- Castle Scroll: Berserker Spirit -->
 		</skill-reducer>
 	</item>
 
 	<item id="29674" name="Castle Scroll: Death Whisper" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- P. Critical Damage + 25% for 20 minutes. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" commission-type="SCROLL_OTHER" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55066" level="1" value="-1"/>  <!-- Castle Scroll: Death Whisper -->
+		<attributes weight="120" commission-type="SCROLL_OTHER" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55066" value="-1"/>  <!-- Castle Scroll: Death Whisper -->
 		</skill-reducer>
 	</item>
 
@@ -931,17 +931,17 @@
 	<!-- Magical scroll that relocates user to the nearest village. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" commission-type="SCROLL_OTHER" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55067" level="1" value="-1"/>  <!-- Castle Blessed Scroll of Escape -->
+		<skill-reducer>
+			<skill id="55067" value="-1"/>  <!-- Castle Blessed Scroll of Escape -->
 		</skill-reducer>
 	</item>
 
 	<item id="29676" name="Scroll: Blessing of Castle" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Maintain's target's buff/de-buff condition even following death. The Nobless Blessing and the Amulet of Luck disappear, however. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" commission-type="SCROLL_OTHER" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55068" level="1" value="-1"/>  <!-- Scroll: Blessing of Castle -->
+		<attributes weight="120" commission-type="SCROLL_OTHER" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55068" value="-1"/>  <!-- Scroll: Blessing of Castle -->
 		</skill-reducer>
 	</item>
 
@@ -954,7 +954,7 @@
 			<stat type="mDef" value="32.0"/>
 		</stats>
 		<skills>
-			<skill id="55069" level="1" value="-1"/>  <!-- Castle Ring -->
+			<skill id="55069" value="-1"/>  <!-- Castle Ring -->
 		</skills>
 	</armor>
 
@@ -967,7 +967,7 @@
 			<stat type="mDef" value="32.0"/>
 		</stats>
 		<skills>
-			<skill id="55069" level="1" value="-1"/>  <!-- Castle Ring -->
+			<skill id="55069" value="-1"/>  <!-- Castle Ring -->
 		</skills>
 	</armor>
 
@@ -981,7 +981,7 @@
 			<stat type="maxMp" value="10.0"/>
 		</stats>
 		<skills>
-			<skill id="55070" level="1" value="-1"/>  <!-- Castle Earrings -->
+			<skill id="55070" value="-1"/>  <!-- Castle Earrings -->
 		</skills>
 	</armor>
 
@@ -995,7 +995,7 @@
 			<stat type="maxMp" value="10.0"/>
 		</stats>
 		<skills>
-			<skill id="55070" level="1" value="-1"/>  <!-- Castle Earrings -->
+			<skill id="55070" value="-1"/>  <!-- Castle Earrings -->
 		</skills>
 	</armor>
 
@@ -1009,7 +1009,7 @@
 			<stat type="maxMp" value="20.0"/>
 		</stats>
 		<skills>
-			<skill id="55071" level="1" value="-1"/>  <!-- Castle Necklace -->
+			<skill id="55071" value="-1"/>  <!-- Castle Necklace -->
 		</skills>
 	</armor>
 
@@ -1023,7 +1023,7 @@
 			<stat type="maxMp" value="20.0"/>
 		</stats>
 		<skills>
-			<skill id="55071" level="1" value="-1"/>  <!-- Castle Necklace -->
+			<skill id="55071" value="-1"/>  <!-- Castle Necklace -->
 		</skills>
 	</armor>
 
@@ -1039,72 +1039,72 @@
 	<item id="29684" name="Scroll: Shield" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Increases P. Def. by 12% for 20 minutes. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39015" level="1" value="-1"/>  <!-- Scroll: Shield -->
+		<attributes weight="120" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39015" value="-1"/>  <!-- Scroll: Shield -->
 		</skill-reducer>
 	</item>
 
 	<item id="29685" name="Scroll: Might" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Increases P. Atk. By 12% for 20 minutes. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39014" level="1" value="-1"/>  <!-- Scroll: Might -->
+		<attributes weight="120" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39014" value="-1"/>  <!-- Scroll: Might -->
 		</skill-reducer>
 	</item>
 
 	<item id="29686" name="Scroll: Concentration" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Decreases damage that is cancelled by magic by 25 for 20 minutes. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55077" level="1" value="-1"/>  <!-- Concentration -->
+		<attributes weight="120" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55077" value="-1"/>  <!-- Concentration -->
 		</skill-reducer>
 	</item>
 
 	<item id="29687" name="Scroll: Agility" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Increases Evasion rate by 2 for 20 minutes. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2055" level="1" value="-1"/>  <!-- Scroll: Agility -->
+		<attributes weight="120" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="2055" value="-1"/>  <!-- Scroll: Agility -->
 		</skill-reducer>
 	</item>
 
 	<item id="29688" name="Scroll: Regeneration" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Increases HP Recovery Rate by 10% for 20 minutes. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="1044" level="1" value="-1"/>  <!-- Regeneration -->
+		<attributes weight="120" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="1044" value="-1"/>  <!-- Regeneration -->
 		</skill-reducer>
 	</item>
 
 	<item id="29689" name="Scroll: Magic Barrier" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Increases M. Def. by 23% for 20 minutes. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55080" level="1" value="-1"/>  <!-- Magic Barrier -->
+		<attributes weight="120" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55080" value="-1"/>  <!-- Magic Barrier -->
 		</skill-reducer>
 	</item>
 
 	<item id="29690" name="Scroll: Blessed Body" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Increases Max HP by 10% for 20 minutes. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55081" level="1" value="-1"/>  <!-- Blessed Body -->
+		<attributes weight="120" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55081" value="-1"/>  <!-- Blessed Body -->
 		</skill-reducer>
 	</item>
 
 	<item id="29691" name="Scroll: Blessed Soul" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Increases Max MP by 10% for 20 minutes. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="4395" level="1" value="-1"/>  <!-- Blessed Soul -->
+		<attributes weight="120" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="4395" value="-1"/>  <!-- Blessed Soul -->
 		</skill-reducer>
 	</item>
 
@@ -1112,8 +1112,8 @@
 	<!-- Reward box for collecting all the Lineage II letters. You can get weapon recipes and ingredients. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55072" level="1" value="-1"/>  <!-- LineageII Box -->
+		<skill-reducer>
+			<skill id="55072" value="-1"/>  <!-- LineageII Box -->
 		</skill-reducer>
 	</item>
 
@@ -1121,8 +1121,8 @@
 	<!-- Reward box for collecting all the Chronicle letters. You can get armor recipes or ingredients. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55073" level="1" value="-1"/>  <!-- Chronicle Box -->
+		<skill-reducer>
+			<skill id="55073" value="-1"/>  <!-- Chronicle Box -->
 		</skill-reducer>
 	</item>
 
@@ -1130,8 +1130,8 @@
 	<!-- Reward box for collecting all the Memories letters. You can get Morale Bean Cake, XP Boost Scroll, Blessed Scroll of Escape, Blessed Scroll of Resurrection, Buff Scrolls, or crafting ingredients. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55074" level="1" value="-1"/>  <!-- Memories Box -->
+		<skill-reducer>
+			<skill id="55074" value="-1"/>  <!-- Memories Box -->
 		</skill-reducer>
 	</item>
 
@@ -1139,8 +1139,8 @@
 	<!-- Magic potion that instantly restores a little HP. Instant effect with no duration. Cannot be used when HP is full. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55083" level="1" value="-1"/>  <!-- Quick Healing Potion -->
+		<skill-reducer>
+			<skill id="55083" value="-1"/>  <!-- Quick Healing Potion -->
 		</skill-reducer>
 	</item>
 
@@ -1148,25 +1148,25 @@
 	<!-- Magic potion that instantly restores a lot of HP. Instant effect with no duration. Cannot be used when HP is full. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55084" level="1" value="-1"/>  <!-- Greater Quick Healing Potion -->
+		<skill-reducer>
+			<skill id="55084" value="-1"/>  <!-- Greater Quick Healing Potion -->
 		</skill-reducer>
 	</item>
 
 	<item id="29697" name="1st Class Transfer Buff Scroll" type="SCROLL" icon="BranchIcon.Icon.etc_g_bm_buff_scroll_i00">
 	<!-- Bestows the following effects for 10 min.: Shield Lv. 2, Might Lv. 2, Concentration Lv. 2, Acumen Lv. 1, Wind Walk Lv. 1, Focus Lv. 1, Agility Lv. 1, Empower Lv. 1. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55085" level="1" value="-1"/>  <!-- 1st Class Transfer Buff Scroll -->
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55085" value="-1"/>  <!-- 1st Class Transfer Buff Scroll -->
 		</skill-reducer>
 	</item>
 
 	<item id="29698" name="2nd Class Transfer Buff Scroll" type="SCROLL" icon="BranchIcon.Icon.etc_g_bm_buff_scroll_i01">
 	<!-- Bestows the following effects for 10 min.: Shield Lv. 3, Might Lv. 3, Acumen Lv. 2, Wind Walk Lv. 2, Focus Lv. 2, Regeneration Lv. 1, Guidance Lv. 1, Death Whisper Lv. 1, Magic Barrier Lv. 1, Blessed Body Lv. 1, Blessed Soul Lv. 1, Haste Lv. 1, Agility Lv. 2, Empower Lv. 2. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
 			<skill id="55086" level="2" value="-1"/>  <!-- 2nd Class Transfer Buff Scroll -->
 		</skill-reducer>
 	</item>

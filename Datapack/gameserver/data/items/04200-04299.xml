@@ -122,9 +122,9 @@
 	<item id="4218" name="L2 Day - Scroll: Mana Regeneration" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Increases MP Recovery Rate. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2064" level="1" value="-1"/>  <!-- Scroll: Mana Regeneration -->
+		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="2064" value="-1"/>  <!-- Scroll: Mana Regeneration -->
 		</skill-reducer>
 	</item>
 

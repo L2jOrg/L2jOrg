@@ -10,7 +10,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="14559" name="Soul Drain Status" max-level="1" action="A2">
+	<skill id="14559" name="Soul Drain Status" action="A2">
 	<!-- HP is being absorbed. -->
 		<icon initial="icon.skill1042"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -28,7 +28,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="1" can-kill="false">
+			<damage-over-time ticks="1">
 				<power initial="1.0"/>
 			</damage-over-time>
 		</effects>

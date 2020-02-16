@@ -110,7 +110,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="53005" name="Detect Darkness" max-level="1" debuff="true" action="A1">
+	<skill id="53005" name="Detect Darkness" debuff="true" action="A1">
 	<!-- Cancels all Hide around you. The target cannot Hide for 2 seconds and this debuff cannot be removed. Requires a bow. -->
 		<icon initial="icon.skill53005"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -199,7 +199,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="53009" name="Sharpness" max-level="1" >
+	<skill id="53009" name="Sharpness">
 	<!-- Increases the success rate of Stab by 10%. -->
 		<icon initial="icon.skill0409"/>
 		<attributes property="MAGIC" >

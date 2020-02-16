@@ -9,9 +9,9 @@
 	<item id="91301" name="Sayha's Spring Breeze" type="NONE" icon="icon.ev_magic_flame_game_wind1">
 	<!-- An item containing a fresh spring breeze. Sayha's Grace Consumption +100% and XP/SP gain +150% when hunting monsters. Remains active after death. Duration is 20 minutes. Cooldown is 20 minutes. Available only when there is at least 1 slot left for Sayha's Grace. \n\n<Note>\nCannot be used with Sayha's Storm or Sayha's Gust.\n\n -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51228" level="1" value="-1"/>  <!-- Sayha's Spring Breeze -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51228" value="-1"/>  <!-- Sayha's Spring Breeze -->
 		</skill-reducer>
 	</item>
 
@@ -645,8 +645,8 @@
 	<item id="91391" name="Fish Stew - Guildsman's Gratitude Lv. 2 - Tradable" type="SCROLL" icon="icon.ev_invasion_buff_box">
 	<!-- XP/SP gain +30% while hunting for 20 minutes when used. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
 			<skill id="39076" level="2" value="-1"/>  <!-- Fish Stew- Guildsman's Gratitude -->
 		</skill-reducer>
 	</item>

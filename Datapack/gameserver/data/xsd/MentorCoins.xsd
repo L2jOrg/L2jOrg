@@ -5,8 +5,8 @@
 			<xs:sequence>
 				<xs:element name="mentee" maxOccurs="unbounded" minOccurs="0">
 					<xs:complexType>
-						<xs:attribute type="xs:byte" name="level" use="optional" />
-						<xs:attribute type="xs:short" name="coins" use="optional" />
+						<xs:attribute type="xs:byte" name="level"/>
+						<xs:attribute type="xs:short" name="coins"/>
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="35000" name="Blessing of Fire Dragon" max-level="1" action="A1">
+	<skill id="35000" name="Blessing of Fire Dragon" action="A1">
 	<!-- Buff/debuff effects remain after death, but Blessing of Fire Dragon is consumed. -->
 		<icon initial="icon.bm_blessing_dragon"/>
 		<attributes property="PHYSIC" >
@@ -13,7 +13,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="35001" name="Fire Dragon's Protection" max-level="1" action="A1">
+	<skill id="35001" name="Fire Dragon's Protection" action="A1">
 	<!-- Fully restores a dying character. Buff/ debuff effects remain after death, but Blessing of Fire Dragon is consumed. -->
 		<icon initial="icon.bm_salvation_dragon"/>
 		<attributes property="PHYSIC" >
@@ -26,7 +26,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="35002" name="Earth Dragon Breath" max-level="1" debuff="true" action="A1">
+	<skill id="35002" name="Earth Dragon Breath" debuff="true" action="A1">
 	<!-- For 15 seconds, Atk. Spd. is decreased by 50%% and Casting Spd. is decreased by 50%%. -->
 		<icon initial="icon.bm_dragon_breath"/>
 		<attributes property="PHYSIC" >
@@ -39,7 +39,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="35003" name="Earth Dragon Defense" max-level="1" action="A1">
+	<skill id="35003" name="Earth Dragon Defense" action="A1">
 	<!-- For 15 sec., increases P. Def. by 3600, M. Def. by 3240, and Buff-canceling Attack Resistance by 80%%, and restricts movement. -->
 		<icon initial="icon.bm_dragon_defence"/>
 		<attributes property="PHYSIC" >
@@ -52,7 +52,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="35004" name="Earth Dragon Pendant" max-level="1" >
+	<skill id="35004" name="Earth Dragon Pendant">
 	<!-- M. Def. +9. -->
 		<icon initial="icon.bm_pendant_pvp"/>
 		<attributes property="MAGIC" >
@@ -84,7 +84,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="35006" name="Fire Dragon Pendant" max-level="1" >
+	<skill id="35006" name="Fire Dragon Pendant">
 	<!-- M. Def. +9. -->
 		<icon initial="icon.bm_pendant_pve"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -95,7 +95,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="9.0"/>
 			</stat-modify>
 		</effects>
@@ -123,7 +123,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="10.0">
 					<value level="2">12.0</value>
 					<value level="2">0.0</value>
@@ -147,8 +147,8 @@
 					<value level="11">60.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="BONUS_EXP" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="BONUS_EXP">
+				<power>
 					<value level="4">2.0</value>
 					<value level="5">5.0</value>
 					<value level="6">10.0</value>
@@ -157,8 +157,8 @@
 					<value level="9">30.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="BONUS_SP" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="BONUS_SP">
+				<power>
 					<value level="4">2.0</value>
 					<value level="5">5.0</value>
 					<value level="6">10.0</value>
@@ -167,8 +167,8 @@
 					<value level="9">30.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="PHYSICAL_DEFENCE">
+				<power>
 					<value level="5">10.0</value>
 					<value level="6">20.0</value>
 					<value level="7">30.0</value>
@@ -177,19 +177,19 @@
 					<value level="10">60.0</value>
 				</power>
 			</stat-modify>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="DIFF">
-				<power initial="0.0">
+			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0">
+				<power>
 					<value level="8">5.0</value>
 				</power>
 			</stat-hp-based>
-			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
+				<power>
 					<value level="8">5.0</value>
 				</power>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="35008" name="Fire Dragon Resistance" max-level="1" action="A1" type="MAGIC">
+	<skill id="35008" name="Fire Dragon Resistance" action="A1" type="MAGIC">
 	<!-- Debuff Resistance +50%% for 5 seconds. -->
 		<icon initial="icon.bm_salvation_dragon"/>
 		<attributes property="PHYSIC" >
@@ -202,7 +202,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="35009" name="Black Mask Power" max-level="1" >
+	<skill id="35009" name="Black Mask Power">
 	<!-- STR +1 and INT +1 -->
 		<icon initial="icon.accessory_jjoro_masj_i00"/>
 		<attributes property="MAGIC" >
@@ -212,7 +212,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="35010" name="Refined Romantic Chapeau" max-level="1" action="A2">
+	<skill id="35010" name="Refined Romantic Chapeau" action="A2">
 	<!-- STR +1 and INT +1 -->
 		<icon initial="icon.accessory_archer_hat2_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -228,12 +228,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="35.0"/>
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="35011" name="Return of the Refined Romantic Chapeau" max-level="1" action="A1">
+	<skill id="35011" name="Return of the Refined Romantic Chapeau" action="A1">
 	<!-- Teleports you to a close village. Cooldown: 2 hours -->
 		<icon initial="icon.skill0000"/>
 		<attributes static-reuse="true" magic-critical-rate="5.0" blocked-on-olympiad="true" >
@@ -251,7 +251,7 @@
 			<escape location="TOWN"/>
 		</effects>
 	</skill>
-	<skill id="35012" name="Pirate King Hat" max-level="1" >
+	<skill id="35012" name="Pirate King Hat">
 	<!-- STR +1 and INT +1 -->
 		<icon initial="BranchSys2.icon.zaken_hair_accessary"/>
 		<attributes property="MAGIC" >
@@ -261,7 +261,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="35013" name="Return of the Pirate King Hat" max-level="1" action="A1">
+	<skill id="35013" name="Return of the Pirate King Hat" action="A1">
 	<!-- Teleports you to a close village. Cooldown: 2 hours -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -272,7 +272,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="35014" name="Demon's Circlet" max-level="1" >
+	<skill id="35014" name="Demon's Circlet">
 	<!-- STR +1 and INT +1 -->
 		<icon initial="icon.Accessary_demon_circlet_i00"/>
 		<attributes property="MAGIC" >
@@ -282,7 +282,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="35015" name="Return of the Demon's Circlet" max-level="1" action="A1">
+	<skill id="35015" name="Return of the Demon's Circlet" action="A1">
 	<!-- Teleports you to a close village. Cooldown: 2 hours -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -293,7 +293,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="35016" name="Ring of Core - Special Ability" max-level="1" action="A1">
+	<skill id="35016" name="Ring of Core - Special Ability" action="A1">
 	<!-- Removes all debuffs. Not available during Fear/Silence. -->
 		<icon initial="icon.accessory_ring_of_core_i03"/>
 		<attributes cast-disabled="true">
@@ -333,7 +333,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK">
 				<power initial="14.0">
 					<value level="2">27.0</value>
 					<value level="3">41.0</value>
@@ -343,7 +343,7 @@
 					<value level="7">135.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK">
 				<power initial="22.0">
 					<value level="2">44.0</value>
 					<value level="3">66.0</value>
@@ -354,7 +354,7 @@
 				</power>
 			</stat-modify>
 			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="2">2.0</value>
 					<value level="3">4.0</value>
 					<value level="4">6.0</value>
@@ -364,7 +364,7 @@
 				</power>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="3">1.0</value>
 					<value level="4">2.0</value>
 					<value level="6">3.0</value>
@@ -373,7 +373,7 @@
 			</stat-modify>
 			<defence-trait>
 				<trait type="BOW">
-					<power initial="0.0">
+					<power>
 					<value level="3">0.009999999776482582</value>
 					<value level="4">0.019999999552965164</value>
 					<value level="6">0.029999999329447746</value>
@@ -381,7 +381,7 @@
 				</power>
 				</trait>
 				<trait type="DUAL">
-					<power initial="0.0">
+					<power>
 					<value level="3">0.009999999776482582</value>
 					<value level="4">0.019999999552965164</value>
 					<value level="6">0.029999999329447746</value>
@@ -389,7 +389,7 @@
 				</power>
 				</trait>
 				<trait type="SWORD">
-					<power initial="0.0">
+					<power>
 					<value level="3">0.009999999776482582</value>
 					<value level="4">0.019999999552965164</value>
 					<value level="6">0.029999999329447746</value>
@@ -397,7 +397,7 @@
 				</power>
 				</trait>
 				<trait type="DAGGER">
-					<power initial="0.0">
+					<power>
 					<value level="3">0.009999999776482582</value>
 					<value level="4">0.019999999552965164</value>
 					<value level="6">0.029999999329447746</value>
@@ -405,7 +405,7 @@
 				</power>
 				</trait>
 				<trait type="DUALFIST">
-					<power initial="0.0">
+					<power>
 					<value level="3">0.009999999776482582</value>
 					<value level="4">0.019999999552965164</value>
 					<value level="6">0.029999999329447746</value>
@@ -413,7 +413,7 @@
 				</power>
 				</trait>
 				<trait type="BLUNT">
-					<power initial="0.0">
+					<power>
 					<value level="3">0.009999999776482582</value>
 					<value level="4">0.019999999552965164</value>
 					<value level="6">0.029999999329447746</value>
@@ -421,7 +421,7 @@
 				</power>
 				</trait>
 				<trait type="DUAL_DAGGER">
-					<power initial="0.0">
+					<power>
 					<value level="3">0.009999999776482582</value>
 					<value level="4">0.019999999552965164</value>
 					<value level="6">0.029999999329447746</value>
@@ -429,7 +429,7 @@
 				</power>
 				</trait>
 				<trait type="SPEAR">
-					<power initial="0.0">
+					<power>
 					<value level="3">0.009999999776482582</value>
 					<value level="4">0.019999999552965164</value>
 					<value level="6">0.029999999329447746</value>
@@ -438,37 +438,37 @@
 				</trait>
 			</defence-trait>
 			<stat type="CON">
-				<power initial="0.0">
+				<power>
 					<value level="4">1.0</value>
 				</power>
 			</stat>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
+				<power>
 					<value level="6">10.0</value>
 					<value level="7">20.0</value>
 				</power>
 			</stat-modify>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="DIFF">
-				<power initial="0.0">
+			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0">
+				<power>
 					<value level="6">10.0</value>
 					<value level="7">20.0</value>
 				</power>
 			</stat-hp-based>
 			<magic-cost type="1">
-				<power initial="0.0">
+				<power>
 					<value level="5">-2.0</value>
 					<value level="6">-4.0</value>
 					<value level="7">-5.0</value>
 				</power>
 			</magic-cost>
 			<reuse type="0">
-				<power initial="0.0">
+				<power>
 					<value level="7">-3.0</value>
 				</power>
 			</reuse>
 		</effects>
 	</skill>
-	<skill id="35018" name="Equip Talisman of Insolence Lv. 6" max-level="1" action="A2">
+	<skill id="35018" name="Equip Talisman of Insolence Lv. 6" action="A2">
 	<!-- Imbues with Talisman of Insolence VI power. -->
 		<icon initial="icon.oman_tallisman_new_i01"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" block-action-skill="true" >
@@ -484,7 +484,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="35019" name="Unequip Talisman of Insolence Lv. 6" max-level="1" action="A1">
+	<skill id="35019" name="Unequip Talisman of Insolence Lv. 6" action="A1">
 	<!-- The effect of Talisman of Insolence VI weakens. -->
 		<icon initial="icon.oman_tallisman_new_i01"/>
 		<attributes magic-critical-rate="5.0" trait="HOLD" >
@@ -504,7 +504,7 @@
 			</dispel>
 		</effects>
 	</skill>
-	<skill id="35020" name="Talisman of Baium" max-level="1" action="A2">
+	<skill id="35020" name="Talisman of Baium" action="A2">
 	<!-- Imbues with Talisman of Baium power. -->
 		<icon initial="icon.baium_talisman_new"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" block-action-skill="true" >
@@ -520,7 +520,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="35021" name="Talisman of Baium - Removal" max-level="1" action="A1">
+	<skill id="35021" name="Talisman of Baium - Removal" action="A1">
 	<!-- The effect of Talisman of Baium weakens. -->
 		<icon initial="icon.baium_talisman_new"/>
 		<attributes magic-critical-rate="5.0" trait="HOLD" >
@@ -540,7 +540,7 @@
 			</dispel>
 		</effects>
 	</skill>
-	<skill id="35022" name="Chic Silver Chapeau" max-level="1" >
+	<skill id="35022" name="Chic Silver Chapeau">
 	<!-- STR +1 and INT +1 -->
 		<icon initial="BranchSys2.icon2.pi_silverchaperon"/>
 		<attributes property="MAGIC" >
@@ -550,7 +550,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="35023" name="Chic Silver Chapeau Teleport" max-level="1" action="A1">
+	<skill id="35023" name="Chic Silver Chapeau Teleport" action="A1">
 	<!-- Teleports you to the nearest village. Cooldown is 2 hours. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -597,7 +597,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="12.0">
 					<value level="2">14.0</value>
 					<value level="3">17.0</value>
@@ -611,7 +611,7 @@
 					<value level="11">48.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="12.0">
 					<value level="2">14.0</value>
 					<value level="3">17.0</value>
@@ -625,19 +625,19 @@
 					<value level="11">48.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="MAGIC_EVASION_RATE" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="MAGIC_EVASION_RATE">
+				<power>
 					<value level="2">1.0</value>
 					<value level="6">2.0</value>
 				</power>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="PER">				<power initial="0.0">
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="PER">				<power>
 					<value level="2">1.0</value>
 					<value level="6">2.0</value>
 				</power>
 			</stat-hp-based>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
-				<power initial="0.0">
+			<vital-stat-modify stat="MAX_HP">
+				<power>
 					<value level="3">80.0</value>
 					<value level="5">120.0</value>
 					<value level="6">160.0</value>
@@ -647,8 +647,8 @@
 					<value level="11">320.0</value>
 				</power>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
-				<power initial="0.0">
+			<vital-stat-modify stat="MAX_MP">
+				<power>
 					<value level="3">80.0</value>
 					<value level="5">120.0</value>
 					<value level="6">160.0</value>
@@ -658,8 +658,8 @@
 					<value level="11">320.0</value>
 				</power>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_CP" mode="DIFF" heal="false">
-				<power initial="0.0">
+			<vital-stat-modify stat="MAX_CP">
+				<power>
 					<value level="3">80.0</value>
 					<value level="5">120.0</value>
 					<value level="6">160.0</value>
@@ -669,16 +669,16 @@
 					<value level="11">320.0</value>
 				</power>
 			</vital-stat-modify>
-			<speed mode="DIFF">
-				<power initial="0.0">
+			<speed>
+				<power>
 					<value level="3">3.0</value>
 					<value level="5">5.0</value>
 					<value level="7">7.0</value>
 					<value level="9">8.0</value>
 				</power>
 			</speed>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED">
+				<power>
 					<value level="4">7.0</value>
 					<value level="5">10.0</value>
 					<value level="6">15.0</value>
@@ -686,8 +686,8 @@
 					<value level="11">30.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="MAGIC_ATTACK_SPEED">
+				<power>
 					<value level="4">7.0</value>
 					<value level="5">10.0</value>
 					<value level="6">15.0</value>
@@ -695,43 +695,43 @@
 					<value level="11">30.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="BONUS_EXP" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="BONUS_EXP">
+				<power>
 					<value level="3">3.0</value>
 					<value level="5">4.0</value>
 					<value level="7">5.0</value>
 				</power>
 			</stat-modify>
 			<stat-modify stat="BONUS_SP" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="3">3.0</value>
 					<value level="5">4.0</value>
 					<value level="7">5.0</value>
 				</power>
 			</stat-modify>
 			<stat-modify stat="REFLECT_DAMAGE_PERCENT">
-				<power initial="0.0">
+				<power>
 					<value level="9">4.0</value>
 					<value level="10">6.0</value>
 					<value level="11">8.0</value>
 				</power>
 			</stat-modify>
 			<stat-modify stat="REFLECT_SKILL_PHYSIC">
-				<power initial="0.0">
+				<power>
 					<value level="9">4.0</value>
 					<value level="10">6.0</value>
 					<value level="11">8.0</value>
 				</power>
 			</stat-modify>
 			<stat-modify stat="VENGEANCE_SKILL_MAGIC_DAMAGE">
-				<power initial="0.0">
+				<power>
 					<value level="9">4.0</value>
 					<value level="10">6.0</value>
 					<value level="11">8.0</value>
 				</power>
 			</stat-modify>
-			<trigger-skill-by-damage skill="35027" attacker="Playable" target="SELF" min-damage="1">
-				<power initial="0.0">
+			<trigger-skill-by-damage skill="35027" attacker="Playable">
+				<power>
 					<value level="7">1.0</value>
 					<value level="8">2.0</value>
 					<value level="10">3.0</value>
@@ -741,7 +741,7 @@
 			</trigger-skill-by-damage>
 		</effects>
 	</skill>
-	<skill id="35025" name="Fate Purification" max-level="1" action="A1" type="MAGIC">
+	<skill id="35025" name="Fate Purification" action="A1" type="MAGIC">
 	<!-- Cancels paralysis and petrification and cures severe poison/ bleed condition. -->
 		<icon initial="icon.skill10036"/>
 		<attributes hit-cancel-time="500.0" >
@@ -761,7 +761,7 @@
 			</dispel>
 		</effects>
 	</skill>
-	<skill id="35026" name="Blessing of Fate" max-level="1" action="A1" type="MAGIC">
+	<skill id="35026" name="Blessing of Fate" action="A1" type="MAGIC">
 	<!-- Restores 50%% HP/ MP/ CP. -->
 		<icon initial="icon.skill10034"/>
 		<attributes >
@@ -830,7 +830,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="35028" name="Bracelet of Fate" max-level="1" >
+	<skill id="35028" name="Bracelet of Fate">
 	<!-- HP Recovery Bonus/MP Recovery Bonus +7%%, P. Accuracy +1, M. Accuracy +1, and Weight Limit +7000. -->
 		<icon initial="icon.dimension_bracelet_i05"/>
 		<attributes property="MAGIC" >
@@ -945,7 +945,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="35035" name="Item Skill: Cleanse" max-level="1" action="A1">
+	<skill id="35035" name="Item Skill: Cleanse" action="A1">
 	<!-- Skill: Cancels debuffs. -->
 		<icon initial="icon.skill3123"/>
 		<attributes >
@@ -961,7 +961,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="35036" name="Warrior's Talisman - Attack" max-level="1" >
+	<skill id="35036" name="Warrior's Talisman - Attack">
 	<!-- PvE Damage +3%%, P. Critical Damage/M. Critical Damage +20, P. Skill Power/M. Skill Power +2%%, and P. Accuracy/M. Accuracy +1. -->
 		<icon initial="icon.r90_sp_talisman_dr_mp_active"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" >
@@ -984,7 +984,7 @@
 			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
 				<power initial="20.0"/>
 			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
 				<power initial="20.0"/>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD" mode="PER">
@@ -993,18 +993,18 @@
 			<stat-modify stat="MAGICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD" mode="PER">
 				<power initial="2.0"/>
 			</stat-modify>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="1.0"/>
 			</stat-modify>
-			<stat-modify stat="ACCURACY_MAGIC" mode="DIFF">
+			<stat-modify stat="ACCURACY_MAGIC">
 				<power initial="1.0"/>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="5.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="35037" name="Warrior's Talisman - Defense" max-level="1" >
+	<skill id="35037" name="Warrior's Talisman - Defense">
 	<!-- PvE Defense +3%%, Magic Attack Resistance +2%%, P. Skill Evasion +4%%, M. Skill Evasion +4%%, Debuff Resistance +3%%, and Pull Resistance +10%%. -->
 		<icon initial="icon.r99_talisman_pd_up_passive"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" >
@@ -1042,7 +1042,7 @@
 			</defence-trait>
 		</effects>
 	</skill>
-	<skill id="35038" name="Hero's Talisman - Attack" max-level="1" >
+	<skill id="35038" name="Hero's Talisman - Attack">
 	<!-- PvP Damage +3%%, P. Critical Damage/M. Critical Damage +20, P. Skill Power/M. Skill Power +2%%, and P. Accuracy/M. Accuracy +1. -->
 		<icon initial="icon.r90_sp_talisman_dr_hp_active"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" >
@@ -1065,21 +1065,21 @@
 			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
 				<power initial="20.0"/>
 			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
 				<power initial="20.0"/>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD" mode="PER">
 				<power initial="2.0"/>
 			</stat-modify>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="1.0"/>
 			</stat-modify>
-			<stat-modify stat="ACCURACY_MAGIC" mode="DIFF">
+			<stat-modify stat="ACCURACY_MAGIC">
 				<power initial="1.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="35039" name="Hero's Talisman - Defense" max-level="1" >
+	<skill id="35039" name="Hero's Talisman - Defense">
 	<!-- PvP Defense +3%%, Magic Attack Resistance +2%%, P. Skill Evasion +4%%, M. Skill Evasion +4%%, and Debuff Resistance. -->
 		<icon initial="icon.r95_talisman_ca_down_active"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" >
@@ -1112,7 +1112,7 @@
 			</resist-abnormal-by-category>
 		</effects>
 	</skill>
-	<skill id="35040" name="Belt" max-level="1" >
+	<skill id="35040" name="Belt">
 	<!-- Inventory Slot +2 and Weight Limit +1000 when equipped with a belt. Can be upgraded to a Cloth Belt using a magic pin. -->
 		<icon initial="icon.belt_i00"/>
 		<attributes property="MAGIC" >
@@ -1122,14 +1122,14 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="WEIGHT_LIMIT" mode="DIFF">
+			<stat-modify stat="WEIGHT_LIMIT">
 				<power initial="1000.0"/>
 			</stat-modify>
 			<enlarge-slot type="INVENTORY_NORMAL">				<power initial="2.0"/>
 			</enlarge-slot>
 		</effects>
 	</skill>
-	<skill id="35041" name="Rag Belt" max-level="1" >
+	<skill id="35041" name="Rag Belt">
 	<!-- Inventory Slot +2, Weight Limit +2000, HP Recovery Bonus +1.24, MP Recovery Bonus +0.83, and CP Recovery Bonus +1.66 when equipped with a belt. Can be upgraded to a Leather Belt using a mid-grade magic pin. -->
 		<icon initial="icon.belt_i01"/>
 		<attributes property="MAGIC" >
@@ -1139,7 +1139,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="WEIGHT_LIMIT" mode="DIFF">
+			<stat-modify stat="WEIGHT_LIMIT">
 				<power initial="2000.0"/>
 			</stat-modify>
 			<enlarge-slot type="INVENTORY_NORMAL">				<power initial="2.0"/>
@@ -1155,7 +1155,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="35042" name="Leather Belt" max-level="1" >
+	<skill id="35042" name="Leather Belt">
 	<!-- Inventory Slot +3, Weight limit +3000, HP Recovery Bonus +1.47, MP Recovery Bonus +0.98, CP Recovery Bonus +1.96, and Max HP/Max MP/Max CP +100 when equipped with a belt. Can be upgraded to an Iron Belt using a high-grade magic pin. -->
 		<icon initial="icon.belt_i02"/>
 		<attributes property="MAGIC" >
@@ -1165,7 +1165,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="WEIGHT_LIMIT" mode="DIFF">
+			<stat-modify stat="WEIGHT_LIMIT">
 				<power initial="3000.0"/>
 			</stat-modify>
 			<enlarge-slot type="INVENTORY_NORMAL">				<power initial="3.0"/>
@@ -1179,18 +1179,18 @@
 			<stat-modify stat="REGENERATE_CP_RATE">
 				<power initial="1.96"/>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="100.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="100.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_CP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_CP">
 				<power initial="100.0"/>
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="35043" name="Iron Belt" max-level="1" >
+	<skill id="35043" name="Iron Belt">
 	<!-- Inventory Slot +4, Weight limit +4000, HP Recovery Bonus +1.70, MP Recovery Bonus +1.13, CP Recovery Bonus +2.26, and Max HP/Max MP/Max CP +150 when equipped with a belt. Can be upgraded to an Mithril Belt using a top-grade magic pin. -->
 		<icon initial="icon.belt_i03"/>
 		<attributes property="MAGIC" >
@@ -1200,7 +1200,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="WEIGHT_LIMIT" mode="DIFF">
+			<stat-modify stat="WEIGHT_LIMIT">
 				<power initial="4000.0"/>
 			</stat-modify>
 			<enlarge-slot type="INVENTORY_NORMAL">				<power initial="4.0"/>
@@ -1214,18 +1214,18 @@
 			<stat-modify stat="REGENERATE_CP_RATE">
 				<power initial="2.26"/>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="150.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="150.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_CP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_CP">
 				<power initial="150.0"/>
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="35044" name="Mithril Belt" max-level="1" >
+	<skill id="35044" name="Mithril Belt">
 	<!-- Inventory Slot +5, Weight limit +5000, HP Recovery Bonus +1.92, MP Recovery Bonus +1.28, CP Recovery Bonus +2.56, and Max HP/Max MP/Max CP +200 when equipped with a belt. -->
 		<icon initial="icon.belt_i04"/>
 		<attributes property="MAGIC" >
@@ -1235,7 +1235,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="WEIGHT_LIMIT" mode="DIFF">
+			<stat-modify stat="WEIGHT_LIMIT">
 				<power initial="5000.0"/>
 			</stat-modify>
 			<enlarge-slot type="INVENTORY_NORMAL">				<power initial="5.0"/>
@@ -1249,18 +1249,18 @@
 			<stat-modify stat="REGENERATE_CP_RATE">
 				<power initial="2.56"/>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="200.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="200.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_CP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_CP">
 				<power initial="200.0"/>
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="35045" name="Talisman of Battle - Liberate" max-level="1" action="A1">
+	<skill id="35045" name="Talisman of Battle - Liberate" action="A1">
 	<!-- Clears all abnormal states and debuffs. Cooldown: 10 min. -->
 		<icon initial="icon.etc_talisman_i03"/>
 		<attributes static-reuse="true" magic-critical-rate="5.0" >
@@ -1277,7 +1277,7 @@
 			</dispel-by-category>
 		</effects>
 	</skill>
-	<skill id="35046" name="Earth Dragon Belt" max-level="1" >
+	<skill id="35046" name="Earth Dragon Belt">
 	<!-- When belt is equipped. CON +1, MEN +1, HP Recovery Bonus +2.31, Max MP Recovery Bonus +1.54, CP Recovery Bonus +3.07, Max HP/MP/CP +15%%, Inventory Slots +6, Weight Gauge +7,000, HP Potions Effect +100, Incoming Damage -6%%. -->
 		<icon initial="icon.bm_antaras_belt"/>
 		<attributes property="MAGIC" >
@@ -1290,7 +1290,7 @@
 			<stat type="CON">
 				<power initial="1.0"/>
 			</stat>
-			<stat-modify stat="WEIGHT_LIMIT" mode="DIFF">
+			<stat-modify stat="WEIGHT_LIMIT">
 				<power initial="7000.0"/>
 			</stat-modify>
 			<enlarge-slot type="INVENTORY_NORMAL">				<power initial="6.0"/>
@@ -1304,13 +1304,13 @@
 			<stat-modify stat="REGENERATE_CP_RATE">
 				<power initial="3.07"/>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="15.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="15.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_CP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_CP" mode="PER">
 				<power initial="15.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="REFLECT_DAMAGE_PERCENT">
@@ -1318,7 +1318,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="35047" name="Fire Dragon Belt" max-level="1" >
+	<skill id="35047" name="Fire Dragon Belt">
 	<!-- When belt is equipped. STR +1, INT +1, HP Recovery Bonus +2.31, Max MP Recovery Bonus +1.54, CP Recovery Bonus +3.07, Max HP/MP/CP +10%%, Inventory Slots +6, Weight Gauge +7,000, P./M. Critical Damage +4%%, HP Potions Effect +100. -->
 		<icon initial="icon.bm_vallakas_belt"/>
 		<attributes property="MAGIC" >
@@ -1331,7 +1331,7 @@
 			<stat type="STR">
 				<power initial="1.0"/>
 			</stat>
-			<stat-modify stat="WEIGHT_LIMIT" mode="DIFF">
+			<stat-modify stat="WEIGHT_LIMIT">
 				<power initial="7000.0"/>
 			</stat-modify>
 			<enlarge-slot type="INVENTORY_NORMAL">				<power initial="6.0"/>
@@ -1345,13 +1345,13 @@
 			<stat-modify stat="REGENERATE_CP_RATE">
 				<power initial="3.07"/>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="10.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="10.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_CP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_CP" mode="PER">
 				<power initial="10.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="PER">

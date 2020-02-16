@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="4300" name="Race" max-level="1" >
+	<skill id="4300" name="Race">
 	<!-- Giant -->
 		<icon initial="icon.skill4300"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -11,7 +11,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4301" name="Race" max-level="1" >
+	<skill id="4301" name="Race">
 	<!-- Bug -->
 		<icon initial="icon.skill4301"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -22,7 +22,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4302" name="Race" max-level="1" >
+	<skill id="4302" name="Race">
 	<!-- Fairy -->
 		<icon initial="icon.skill4302"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -33,7 +33,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4303" name="Enchant Type" max-level="1" >
+	<skill id="4303" name="Enchant Type">
 	<!-- Monster whose HP is 2 times higher than normal. -->
 		<icon initial="icon.skill4303"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -44,7 +44,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4304" name="Enchant Type" max-level="1" >
+	<skill id="4304" name="Enchant Type">
 	<!-- Monster whose HP is 3 times higher than normal. -->
 		<icon initial="icon.skill4304"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -55,7 +55,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4305" name="Enchant Type" max-level="1" >
+	<skill id="4305" name="Enchant Type">
 	<!-- Monster whose HP is 4 times higher than normal. -->
 		<icon initial="icon.skill4305"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -66,7 +66,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4306" name="Enchant Type" max-level="1" >
+	<skill id="4306" name="Enchant Type">
 	<!-- Monster whose HP is 5 times higher than normal. -->
 		<icon initial="icon.skill4306"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -77,7 +77,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4307" name="Enchant Type" max-level="1" >
+	<skill id="4307" name="Enchant Type">
 	<!-- Monster whose HP is 6 times higher than normal. -->
 		<icon initial="icon.skill4307"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -88,7 +88,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4308" name="Enchant Type" max-level="1" >
+	<skill id="4308" name="Enchant Type">
 	<!-- Monster whose HP is 7 times higher than normal. -->
 		<icon initial="icon.skill4308"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -99,7 +99,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4309" name="Enchant Type" max-level="1" >
+	<skill id="4309" name="Enchant Type">
 	<!-- Monster whose HP is 8 times higher than normal. -->
 		<icon initial="icon.skill4309"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -110,7 +110,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4310" name="Enchant Type" max-level="1" >
+	<skill id="4310" name="Enchant Type">
 	<!-- Monster whose HP is 9 times higher than normal. -->
 		<icon initial="icon.skill4310"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -121,7 +121,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4311" name="Week Type" max-level="1" >
+	<skill id="4311" name="Week Type">
 	<!-- Monster with 1/2 the normal HP. -->
 		<icon initial="icon.skill4311"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -132,7 +132,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4312" name="Defense Type" max-level="1" >
+	<skill id="4312" name="Defense Type">
 	<!-- Monster equipped with heavy armor. -->
 		<icon initial="icon.skill4312"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -143,7 +143,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4313" name="Defense Type" max-level="1" >
+	<skill id="4313" name="Defense Type">
 	<!-- Monster equipped with light armor. -->
 		<icon initial="icon.skill4313"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -196,7 +196,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="21.0">
 					<value level="2">31.0</value>
 					<value level="3">43.0</value>
@@ -392,9 +392,9 @@
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="83.0"/>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="4.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="4.0"/>
 			</stat-hp-based>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="4.0"/>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
@@ -411,7 +411,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4319" name="Paralysis" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="4319" name="Paralysis" debuff="true" action="A2" type="MAGIC">
 	<!-- Paralyzed and unable to move momentarily. -->
 		<icon initial="icon.skill1170"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="PARALYZE" >
@@ -489,7 +489,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="16.0">
 					<value level="2">24.0</value>
 					<value level="3">32.0</value>
@@ -503,7 +503,7 @@
 			</damage-over-time>
 		</effects>
 	</skill>
-	<skill id="4321" name="Decrease P. Def." max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="4321" name="Decrease P. Def." debuff="true" action="A2" type="MAGIC">
 	<!-- P. Def. greatly decreases temporarily. -->
 		<icon initial="icon.skill0122"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -529,7 +529,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4322" name="Adventurer's Wind Walk" max-level="1" action="A2" type="MAGIC">
+	<skill id="4322" name="Adventurer's Wind Walk" action="A2" type="MAGIC">
 	<!-- Increases movement speed by 33 for 60 minutes. -->
 		<icon initial="icon.skill1204"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -545,12 +545,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="33.0"/>
 			</speed>
 		</effects>
 	</skill>
-	<skill id="4323" name="Adventurer's Shield" max-level="1" action="A2" type="MAGIC">
+	<skill id="4323" name="Adventurer's Shield" action="A2" type="MAGIC">
 	<!-- Increases P. Def. by 15%% for 60 minutes. -->
 		<icon initial="icon.skill1040"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -571,7 +571,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4324" name="Adventurer's Blessed Body" max-level="1" action="A2" type="MAGIC">
+	<skill id="4324" name="Adventurer's Blessed Body" action="A2" type="MAGIC">
 	<!-- Increases Max HP by 35%% for 60 minutes. -->
 		<icon initial="icon.skill1045"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -587,12 +587,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="35.0"/>
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="4325" name="Adventurer's Vampiric Rage" max-level="1" action="A2" type="MAGIC">
+	<skill id="4325" name="Adventurer's Vampiric Rage" action="A2" type="MAGIC">
 	<!-- For 60 minutes, 9%% of the physical damage inflicted on the enemy is recovered as HP with a certain probability. -->
 		<icon initial="icon.skill1268"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -613,7 +613,7 @@
 			</vampiric-attack>
 		</effects>
 	</skill>
-	<skill id="4326" name="Adventurer's Regeneration" max-level="1" action="A2" type="MAGIC">
+	<skill id="4326" name="Adventurer's Regeneration" action="A2" type="MAGIC">
 	<!-- Increases HP regeneration bonus by 20%% for 60 minutes. -->
 		<icon initial="icon.skill1044"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -634,7 +634,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4327" name="Adventurer's Haste" max-level="1" action="A2" type="MAGIC">
+	<skill id="4327" name="Adventurer's Haste" action="A2" type="MAGIC">
 	<!-- Increases Atk. Spd. by 15%% for 60 minutes. -->
 		<icon initial="icon.skill1086"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -655,7 +655,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4328" name="Adventurer's Blessed Soul" max-level="1" action="A2" type="MAGIC">
+	<skill id="4328" name="Adventurer's Blessed Soul" action="A2" type="MAGIC">
 	<!-- Increases Max MP by 35%% for 60 minutes. -->
 		<icon initial="icon.skill1048"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -671,12 +671,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="35.0"/>
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="4329" name="Adventurer's Acumen" max-level="1" action="A2" type="MAGIC">
+	<skill id="4329" name="Adventurer's Acumen" action="A2" type="MAGIC">
 	<!-- Increases Casting Spd. +30%% for 60 minutes. -->
 		<icon initial="icon.skill1085"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -697,7 +697,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4330" name="Adventurer's Concentration" max-level="1" action="A2" type="MAGIC">
+	<skill id="4330" name="Adventurer's Concentration" action="A2" type="MAGIC">
 	<!-- Decreases magic cancel damage by 18 for 60 minutes. -->
 		<icon initial="icon.skill1078"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -713,12 +713,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ATTACK_CANCEL" mode="DIFF">
+			<stat-modify stat="ATTACK_CANCEL">
 				<power initial="-18.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4331" name="Adventurer's Empower" max-level="1" action="A2" type="MAGIC">
+	<skill id="4331" name="Adventurer's Empower" action="A2" type="MAGIC">
 	<!-- Increases M. Atk. by 55%% for 60 minutes. -->
 		<icon initial="icon.skill1059"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -739,7 +739,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4332" name="Mental Aegis" max-level="1" >
+	<skill id="4332" name="Mental Aegis">
 	<!-- Provides powerful Hold/Sleep/Fear/Silence Resistance. -->
 		<icon initial="icon.skill1035"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -784,7 +784,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4334" name="SSQ Cancel" max-level="1" action="A1">
+	<skill id="4334" name="SSQ Cancel" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -798,7 +798,7 @@
 			<effect name="DispelAll"/>
 		</effects>
 	</skill>
-	<skill id="4335" name="Holy Attack" max-level="1" >
+	<skill id="4335" name="Holy Attack">
 	<!-- Unleashes a holy attack. -->
 		<icon initial="icon.skill1043"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -856,7 +856,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4339" name="Mimir's Elixir" max-level="1" action="A1">
+	<skill id="4339" name="Mimir's Elixir" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -867,7 +867,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="4340" name="Ultimate Buff" max-level="1" action="A2">
+	<skill id="4340" name="Ultimate Buff" action="A2">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -894,7 +894,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4341" name="Ultimate Buff" max-level="1" action="A2">
+	<skill id="4341" name="Ultimate Buff" action="A2">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -947,7 +947,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="20.0">
 					<value level="2">33.0</value>
 				</power>
@@ -1117,7 +1117,7 @@
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
-			<mana initial="0">
+			<mana>
 				<value level="2">150</value>
 				<value level="3">0</value>
 				<value level="6">300</value>
@@ -1136,7 +1136,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="10.0">
 					<value level="2">15.0</value>
 					<value level="3">20.0</value>
@@ -1157,7 +1157,7 @@
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
-			<mana initial="0">
+			<mana>
 				<value level="2">150</value>
 				<value level="3">0</value>
 				<value level="6">300</value>
@@ -1176,7 +1176,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="10.0">
 					<value level="2">15.0</value>
 					<value level="3">20.0</value>
@@ -1264,7 +1264,7 @@
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
-			<mana initial="0">
+			<mana>
 				<value level="2">200</value>
 				<value level="3">0</value>
 				<value level="6">400</value>
@@ -1283,7 +1283,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ATTACK_CANCEL" mode="DIFF">
+			<stat-modify stat="ATTACK_CANCEL">
 				<power initial="-18.0">
 					<value level="2">-25.0</value>
 					<value level="3">-36.0</value>
@@ -1327,7 +1327,7 @@
 					<value level="2">16.0</value>
 				</power>
 			</stat-modify>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="5.0">
 					<value level="2">8.0</value>
 				</power>
@@ -1342,7 +1342,7 @@
 					<value level="2">-8.0</value>
 				</power>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="-2.0">
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="-2.0">
 					<value level="2">-4.0</value>
 				</power>
 			</stat-hp-based>
@@ -1368,7 +1368,7 @@
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
-			<mana initial="0">
+			<mana>
 				<value level="2">200</value>
 				<value level="3">0</value>
 				<value level="6">400</value>
@@ -1554,7 +1554,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="2.0">
 					<value level="2">3.0</value>
 					<value level="3">4.0</value>
@@ -1634,7 +1634,7 @@
 		level 2: Curse of the Preacher of Doom. Temporarily P. Accuracy decreased by 12 and Sleep/Hold/Stun Resistance decreased by 50.
 	 -->
 		<icon initial="icon.skill0046"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" dispellable="false" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="-1"/>
 			<cast-range initial="600"/>
 			<effect-range initial="1100"/>
@@ -1651,22 +1651,22 @@
 		<effects>
 			<defence-trait>
 				<trait type="SHOCK">
-					<power initial="0.0">
+					<power>
 					<value level="2">0.5</value>
 				</power>
 				</trait>
 				<trait type="HOLD">
-					<power initial="0.0">
+					<power>
 					<value level="2">0.5</value>
 				</power>
 				</trait>
 				<trait type="SLEEP">
-					<power initial="0.0">
+					<power>
 					<value level="2">0.5</value>
 				</power>
 				</trait>
 			</defence-trait>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="-12.0"/>
 			</stat-modify>
 		</effects>
@@ -1677,7 +1677,7 @@
 		level 2: Curse of the Preacher of Doom. Temporarily Casting Spd. decreased by 30%% and Sleep/Hold/Stun Resistance decreased by 50.
 	 -->
 		<icon initial="icon.skill0046"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" dispellable="false" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="-1"/>
 			<cast-range initial="600"/>
 			<effect-range initial="1100"/>
@@ -1694,17 +1694,17 @@
 		<effects>
 			<defence-trait>
 				<trait type="SHOCK">
-					<power initial="0.0">
+					<power>
 					<value level="2">0.5</value>
 				</power>
 				</trait>
 				<trait type="HOLD">
-					<power initial="0.0">
+					<power>
 					<value level="2">0.5</value>
 				</power>
 				</trait>
 				<trait type="SLEEP">
-					<power initial="0.0">
+					<power>
 					<value level="2">0.5</value>
 				</power>
 				</trait>
@@ -1714,7 +1714,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4363" name="Curse of Destruction" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="4363" name="Curse of Destruction" debuff="true" action="A2" type="MAGIC">
 	<!-- Curse of the Preacher of Doom. P. Accuracy temporarily decreased by 12. -->
 		<icon initial="icon.skill0046"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -1730,7 +1730,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="-12.0"/>
 			</stat-modify>
 		</effects>
@@ -1741,7 +1741,7 @@
 		level 2: Blessing of the Orator of Revelations. Temporarily body weight decreased and Poison/Bleed Hold/Stun/Paralysis Resistance increased by 25.
 	 -->
 		<icon initial="icon.skill1044"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" dispellable="false" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="-1"/>
 			<cast-range initial="400"/>
 			<effect-range initial="900"/>
@@ -1758,12 +1758,12 @@
 		<effects>
 			<defence-trait>
 				<trait type="SHOCK">
-					<power initial="0.0">
+					<power>
 					<value level="2">0.25</value>
 				</power>
 				</trait>
 				<trait type="HOLD">
-					<power initial="0.0">
+					<power>
 					<value level="2">0.25</value>
 				</power>
 				</trait>
@@ -1771,7 +1771,7 @@
 					<power initial="0.25"/>
 				</trait>
 				<trait type="PARALYZE">
-					<power initial="0.0">
+					<power>
 					<value level="2">0.25</value>
 				</power>
 				</trait>
@@ -1787,7 +1787,7 @@
 	<skill id="4365" name="Blessing of Revelations" max-level="2" action="A2" type="MAGIC">
 	<!-- Blessing of the Orator of Revelations. Momentarily increases your Hold/MEN Attack Resistance and lessens the probability of magic cancellation due to damage. -->
 		<icon initial="icon.skill1044"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" dispellable="false" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="-1"/>
 			<cast-range initial="400"/>
 			<effect-range initial="900"/>
@@ -1804,7 +1804,7 @@
 		<effects>
 			<defence-trait>
 				<trait type="SHOCK">
-					<power initial="0.0">
+					<power>
 					<value level="2">0.25</value>
 				</power>
 				</trait>
@@ -1815,20 +1815,20 @@
 					<power initial="0.25"/>
 				</trait>
 				<trait type="PARALYZE">
-					<power initial="0.0">
+					<power>
 					<value level="2">0.25</value>
 				</power>
 				</trait>
 			</defence-trait>
-			<stat-modify stat="ATTACK_CANCEL" mode="DIFF">
+			<stat-modify stat="ATTACK_CANCEL">
 				<power initial="-25.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4366" name="Blessing of Revelations" max-level="1" action="A2" type="MAGIC">
+	<skill id="4366" name="Blessing of Revelations" action="A2" type="MAGIC">
 	<!-- Blessing of the Orator of Revelations. Temporarily body weight decreased and Poison/Bleed Resistance increased by 25. -->
 		<icon initial="icon.skill1044"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" dispellable="false" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="-1"/>
 			<cast-range initial="400"/>
 			<effect-range initial="900"/>
@@ -1854,7 +1854,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4367" name="Clan Hall Blessing" max-level="1" action="A2">
+	<skill id="4367" name="Clan Hall Blessing" action="A2">
 	<!-- Receiving the fortress blessing. -->
 		<icon initial="icon.skill11756"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -1875,7 +1875,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4368" name="Clan Hall Blessing" max-level="1" action="A2">
+	<skill id="4368" name="Clan Hall Blessing" action="A2">
 	<!-- Receiving the fortress blessing. -->
 		<icon initial="icon.skill11756"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -1894,12 +1894,12 @@
 			<effect name="ManaHealOverTime" ticks="5">
 				<power initial="18.52"/>
 			</effect>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="5000.0"/>
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="4369" name="Clan Hall Blessing" max-level="1" action="A2">
+	<skill id="4369" name="Clan Hall Blessing" action="A2">
 	<!-- Receiving the fortress blessing. -->
 		<icon initial="icon.skill11756"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -1918,12 +1918,12 @@
 			<effect name="ManaHealOverTime" ticks="5">
 				<power initial="27.78"/>
 			</effect>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="10000.0"/>
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="4370" name="Clan Hall Blessing" max-level="1" action="A2">
+	<skill id="4370" name="Clan Hall Blessing" action="A2">
 	<!-- Receiving the fortress blessing. -->
 		<icon initial="icon.skill11756"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -1942,12 +1942,12 @@
 			<effect name="ManaHealOverTime" ticks="5">
 				<power initial="61.11"/>
 			</effect>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="28000.0"/>
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="4371" name="Clan Hall Blessing" max-level="1" action="A2">
+	<skill id="4371" name="Clan Hall Blessing" action="A2">
 	<!-- Receiving the fortress blessing. -->
 		<icon initial="icon.skill11756"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -1966,12 +1966,12 @@
 			<effect name="ManaHealOverTime" ticks="5">
 				<power initial="116.7"/>
 			</effect>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="58000.0"/>
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="4372" name="Clan Hall Blessing" max-level="1" action="A2">
+	<skill id="4372" name="Clan Hall Blessing" action="A2">
 	<!-- Receiving the fortress blessing. -->
 		<icon initial="icon.skill11756"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -1990,12 +1990,12 @@
 			<effect name="ManaHealOverTime" ticks="5">
 				<power initial="200.0"/>
 			</effect>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="103000.0"/>
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="4373" name="Clan Hall Blessing" max-level="1" action="A2">
+	<skill id="4373" name="Clan Hall Blessing" action="A2">
 	<!-- Receiving the fortress blessing. -->
 		<icon initial="icon.skill11756"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -2014,12 +2014,12 @@
 			<effect name="ManaHealOverTime" ticks="5">
 				<power initial="205.6"/>
 			</effect>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="106000.0"/>
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="4374" name="Clan Hall Blessing" max-level="1" action="A2">
+	<skill id="4374" name="Clan Hall Blessing" action="A2">
 	<!-- Receiving the fortress blessing. -->
 		<icon initial="icon.skill11756"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -2038,12 +2038,12 @@
 			<effect name="ManaHealOverTime" ticks="5">
 				<power initial="288.9"/>
 			</effect>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="151000.0"/>
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="4375" name="Clan Hall Blessing" max-level="1" action="A2">
+	<skill id="4375" name="Clan Hall Blessing" action="A2">
 	<!-- Receiving the fortress blessing. -->
 		<icon initial="icon.skill11756"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -2062,12 +2062,12 @@
 			<effect name="ManaHealOverTime" ticks="5">
 				<power initial="372.2"/>
 			</effect>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="196000.0"/>
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="4376" name="Greater Physical Attack Resistance" max-level="1" >
+	<skill id="4376" name="Greater Physical Attack Resistance">
 	<!-- Provides very strong resistance against P. Atk. -->
 		<icon initial="icon.skill4376"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -2125,7 +2125,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="46.0">
 					<value level="2">105.0</value>
 					<value level="3">219.0</value>
@@ -2219,7 +2219,7 @@
 			</defence-trait>
 		</effects>
 	</skill>
-	<skill id="4380" name="Arena CP Recovery" max-level="1" action="A1" type="MAGIC">
+	<skill id="4380" name="Arena CP Recovery" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2230,12 +2230,12 @@
 		</attributes>
 		<target type="TARGET" />
 		<effects>
-			<cp mode="DIFF">
+			<cp>
 				<power initial="5000.0"/>
 			</cp>
 		</effects>
 	</skill>
-	<skill id="4381" name="Week Type" max-level="1" >
+	<skill id="4381" name="Week Type">
 	<!-- Monster with 1/4 the normal HP. -->
 		<icon initial="icon.skill4381"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -2292,7 +2292,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="46.0">
 					<value level="2">105.0</value>
 					<value level="3">219.0</value>
@@ -2309,7 +2309,7 @@
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="4383" name="Aggression Stone" max-level="1" action="A3">
+	<skill id="4383" name="Aggression Stone" action="A3">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -2335,7 +2335,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4384" name="Scapegoat's Grace" max-level="1" action="A2">
+	<skill id="4384" name="Scapegoat's Grace" action="A2">
 	<!-- Scapegoat's Grace. Temporarily protects against any debuff that lowers P. Def. -->
 		<icon initial="icon.skill0122"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -2353,7 +2353,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="4385" name="Scapegoat's Grace" max-level="1" action="A2">
+	<skill id="4385" name="Scapegoat's Grace" action="A2">
 	<!-- Scapegoat's Grace. Temporarily protects against any debuff that lowers P. Atk. -->
 		<icon initial="icon.skill4037"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -2371,7 +2371,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="4386" name="Scapegoat's Grace" max-level="1" debuff="true" action="A2">
+	<skill id="4386" name="Scapegoat's Grace" debuff="true" action="A2">
 	<!-- Scapegoat's Grace. Temporarily protects against poison. -->
 		<icon initial="icon.skill4036"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -2389,7 +2389,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="4387" name="Scapegoat's Grace" max-level="1" action="A2">
+	<skill id="4387" name="Scapegoat's Grace" action="A2">
 	<!-- Scapegoat's Grace. Temporarily protected against any debuff that lowers HP Recovery. -->
 		<icon initial="icon.skill1269"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -2486,7 +2486,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="20.0">
 					<value level="2">33.0</value>
 				</power>
@@ -2569,7 +2569,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="10.0">
 					<value level="2">15.0</value>
 					<value level="3">20.0</value>
@@ -2602,7 +2602,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="10.0">
 					<value level="2">15.0</value>
 					<value level="3">20.0</value>
@@ -2666,7 +2666,7 @@
 					<value level="2">16.0</value>
 				</power>
 			</stat-modify>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="5.0">
 					<value level="2">8.0</value>
 				</power>
@@ -2681,7 +2681,7 @@
 					<value level="2">-8.0</value>
 				</power>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="-2.0">
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="-2.0">
 					<value level="2">-4.0</value>
 				</power>
 			</stat-hp-based>

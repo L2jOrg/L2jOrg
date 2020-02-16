@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org options.xsd">
     <option id="15095" name="o_s_55_2s_1">
         <!-- Passive: Increases the recovery rate when MP is being recovered by recharge. -->
-        <skill id="3203" level="1"/> <!-- Item Skill: Mystery Skill -->
+        <skill id="3203"/> <!-- Item Skill: Mystery Skill -->
     </option>
     <option id="15096" name="o_s_55_2s_2">
         <!-- Active: Temporarily increases lung capacity. -->
@@ -18,6 +18,6 @@
     </option>
     <option id="15099" name="o_s_55_2s_5">
         <!-- Active: Ignites a firecracker. -->
-        <skill id="3156" level="1"/> <!-- Item Skill: Firework -->
+        <skill id="3156"/> <!-- Item Skill: Firework -->
     </option>
 </list>

@@ -270,9 +270,9 @@
 	<item id="91641" name="Sayha's Blessing" type="POTION" icon="icon.etc_wind_potion_i00">
 	<!-- Recharges 35,000 Sayha's Grace Points. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39191" level="1" value="-1"/>  <!-- Sayha's Blessing -->
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39191" value="-1"/>  <!-- Sayha's Blessing -->
 		</skill-reducer>
 	</item>
 
@@ -316,8 +316,8 @@
 	<!-- A magic scroll that teleports you to Vollodos in Dark Elf Village. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51383" level="1" value="-1"/>  <!-- Scroll of Escape: Clean the Yard -->
+		<skill-reducer>
+			<skill id="51383" value="-1"/>  <!-- Scroll of Escape: Clean the Yard -->
 		</skill-reducer>
 	</item>
 
@@ -337,8 +337,8 @@
 	<!-- A magic scroll that teleports you to Captain Bathis in the Town of Gludio. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51385" level="1" value="-1"/>  <!-- Scroll of Escape: Disruptors -->
+		<skill-reducer>
+			<skill id="51385" value="-1"/>  <!-- Scroll of Escape: Disruptors -->
 		</skill-reducer>
 	</item>
 
@@ -393,27 +393,27 @@
 	<item id="91660" name="Shining Scroll of Mood Melody - 1-hour" type="SCROLL" icon="icon.bm_magmeld">
 	<!-- Activates Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration effects for 1 hour. The buff effect doesn't disappear upon death\n\n<Note>\n1. Shining Scroll of Mood Melody cannot be stacked with Scroll of Mood Melody.\n\n2. Its duration is equal to that of the last used item. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes duration="60" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39298" level="1" value="-1"/>  <!-- Shining Mood Melody -->
+		<attributes duration="60" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39298" value="-1"/>  <!-- Shining Mood Melody -->
 		</skill-reducer>
 	</item>
 
 	<item id="91661" name="Shining Scroll of Mood Melody - 4-hour" type="SCROLL" icon="icon.bm_magmeld">
 	<!-- Activates Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration effects for 4 hours. The buff effect doesn't disappear upon death\n\n<Note>\n1. Shining Scroll of Mood Melody cannot be stacked with Scroll of Mood Melody.\n\n2. Its duration is equal to that of the last used item. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes duration="240" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="32298" level="1" value="-1"/>  <!-- TODO Skill not found -->
+		<attributes duration="240" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="32298" value="-1"/>  <!-- TODO Skill not found -->
 		</skill-reducer>
 	</item>
 
 	<item id="91662" name="Shining Scroll of Mood Melody - 8-hour" type="SCROLL" icon="icon.bm_magmeld">
 	<!-- Activates Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration effects for 8 hours. The buff effect doesn't disappear upon death\n\n<Note>\n1. Shining Scroll of Mood Melody cannot be stacked with Scroll of Mood Melody.\n\n2. Its duration is equal to that of the last used item. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes duration="480" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="32298" level="1" value="-1"/>  <!-- TODO Skill not found -->
+		<attributes duration="480" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="32298" value="-1"/>  <!-- TODO Skill not found -->
 		</skill-reducer>
 	</item>
 
@@ -438,9 +438,9 @@
 	<item id="91666" name="Sayha's Storm Lv. 1" type="NONE" icon="icon.bm_sayha_storm">
 	<!-- Sayha's Grace Consumption +100% and XP/SP Gain +100% while hunting monsters. The effect remains active even after death. Duration 20 minutes. Cooldown 1 minute. Available only when Sayha's Grace is 35,000 or higher. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51398" level="1" value="-1"/>  <!-- Sayha's Storm Lv. 1 - Event -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51398" value="-1"/>  <!-- Sayha's Storm Lv. 1 - Event -->
 		</skill-reducer>
 	</item>
 
@@ -532,7 +532,7 @@
 			<stat type="randomDamage" value="20.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -568,7 +568,7 @@
 			<stat type="randomDamage" value="20.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -683,9 +683,9 @@
 	<item id="91690" name="Special HP Potion" type="POTION" icon="BranchSys.icon.br_vitality_potion_i01">
 	<!-- After instant 500 HP Recovery, CP Recovery with remaining points. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="HEALING"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39123" level="1" value="-1"/>  <!-- Special HP Potion -->
+		<attributes action="SKILL_REDUCE" auto-use="HEALING"/>
+		<skill-reducer>
+			<skill id="39123" value="-1"/>  <!-- Special HP Potion -->
 		</skill-reducer>
 	</item>
 

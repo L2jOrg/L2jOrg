@@ -2,8 +2,8 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<xs:element name="merchantPriceConfig">
 		<xs:complexType>
-			<xs:sequence minOccurs="1" maxOccurs="1">
-				<xs:element name="priceConfig" minOccurs="1" maxOccurs="unbounded">
+			<xs:sequence>
+				<xs:element name="priceConfig" maxOccurs="unbounded">
 					<xs:complexType>
 						<xs:attribute name="baseTax" type="xs:positiveInteger" use="required" />
 						<xs:attribute name="castleId">

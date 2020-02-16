@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="55400" name="Commemorative Olympiad Bracelet" max-level="1" >
+	<skill id="55400" name="Commemorative Olympiad Bracelet">
 	<!-- Activates 2 Talisman slots, Max. HP/ MP/ CP +3%%. -->
 		<icon initial="icon.dimension_bracelet_i05"/>
 		<attributes property="MAGIC" >
@@ -10,7 +10,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55401" name="Olympiad Warrior's Talisman" max-level="1" >
+	<skill id="55401" name="Olympiad Warrior's Talisman">
 	<!-- P./ M. Skill Critical Damage +7%%. -->
 		<icon initial="icon.npoint_talisman_stat"/>
 		<attributes property="MAGIC" >
@@ -20,7 +20,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55402" name="Olympiad Warrior's Belt" max-level="1" >
+	<skill id="55402" name="Olympiad Warrior's Belt">
 	<!-- P. Def. +15, weight limit +2000. -->
 		<icon initial="icon.belt_i03"/>
 		<attributes property="MAGIC" >
@@ -30,7 +30,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55403" name="Summon Agathion - Cheerleader Mae" max-level="1" action="A1">
+	<skill id="55403" name="Summon Agathion - Cheerleader Mae" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -40,7 +40,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55404" name="Agathion Cute Trick - Cheerleader Mae" max-level="1" action="A1">
+	<skill id="55404" name="Agathion Cute Trick - Cheerleader Mae" action="A1">
 	<!-- See Agathion's cute trick. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes >
@@ -50,7 +50,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55405" name="Cheerleader Mae's Support" max-level="1" >
+	<skill id="55405" name="Cheerleader Mae's Support">
 	<!-- P./ M. Atk. +5%%, Atk. Spd./ Casting Spd. +5%%, Skill MP Consumption -10%%, P./ M. Critical Damage +3%%. -->
 		<icon initial="BranchSys.icon.br_aga_local2009_g_i00"/>
 		<attributes property="MAGIC" >
@@ -60,7 +60,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55406" name="For victory in Tryout - XP/SP" max-level="1" action="A1">
+	<skill id="55406" name="For victory in Tryout - XP/SP" action="A1">
 	<!-- Buff, given to the server, to which belongs a warrior, gained the greatest number of victories during the Tryout. XP/ SP +30%%. Cannot be stacked with Blessing of Light. -->
 		<icon initial="icon.etc_trophy_i00"/>
 		<attributes property="PHYSIC" >
@@ -70,7 +70,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55407" name="For victory in Tryout - 2nd class transfer effect" max-level="1" action="A1">
+	<skill id="55407" name="For victory in Tryout - 2nd class transfer effect" action="A1">
 	<!-- For 20 minutes,  Shield Lv. 3, Might Lv. 3, Acumen Lv. 2, Wind Walk Lv. 2, Focus Lv. 2, Regeneration Lv. 1, Guidance Lv. 1, Death Whisper Lv. 1, Magic Barrier Lv. 1, Blessed Body Lv. 1, Blessed Soul Lv. 1, Haste Lv. 1, Agility Lv. 2, Empower Lv. 2. -->
 		<icon initial="icon.etc_trophy_i00"/>
 		<attributes property="PHYSIC" >
@@ -81,7 +81,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55408" name="Expertise Rune (A-grade)" max-level="1" >
+	<skill id="55408" name="Expertise Rune (A-grade)">
 	<!-- When possessed, you get Expertise A skill -->
 		<icon initial="br_cashtex.item.br_cash_rune_of_feather_i00"/>
 		<attributes property="MAGIC" >
@@ -91,7 +91,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55409" name="Kusto's Support Box: Enhance Weapon (A-grade)" max-level="1" action="A1">
+	<skill id="55409" name="Kusto's Support Box: Enhance Weapon (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -103,7 +103,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55410" name="Kusto's Support Box: Enhance Weapon (B-grade)" max-level="1" action="A1">
+	<skill id="55410" name="Kusto's Support Box: Enhance Weapon (B-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -115,7 +115,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55411" name="Kusto's Support Box: Enhance Weapon (C-grade)" max-level="1" action="A1">
+	<skill id="55411" name="Kusto's Support Box: Enhance Weapon (C-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -127,7 +127,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55412" name="Transformation Scroll: Pirate" max-level="1" action="A1">
+	<skill id="55412" name="Transformation Scroll: Pirate" action="A1">
 	<!-- Transformation to Pirate. Combat stats are increased. This effect doesn't disappear after death. -->
 		<icon initial="icon.etc_charm_of_courage_i03"/>
 		<attributes property="PHYSIC" auto-use="BUFF">
@@ -139,7 +139,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55413" name="Transformation Scroll: Dark Assassin" max-level="1" action="A1">
+	<skill id="55413" name="Transformation Scroll: Dark Assassin" action="A1">
 	<!-- Transformation to Dark Assassin. Combat stats are increased. This effect doesn't disappear after death. -->
 		<icon initial="icon.etc_charm_of_courage_i05"/>
 		<attributes property="PHYSIC" auto-use="BUFF">
@@ -151,7 +151,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55414" name="White Assassin Transformation Scroll" max-level="1" action="A1">
+	<skill id="55414" name="White Assassin Transformation Scroll" action="A1">
 	<!-- Transformation to White Assassin. Combat stats are increased. This effect doesn't disappear after death. -->
 		<icon initial="icon.etc_charm_of_courage_i00"/>
 		<attributes property="PHYSIC" auto-use="BUFF">
@@ -163,7 +163,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55415" name="Scroll: Enchant Armor (A-grade)" max-level="1" action="A1">
+	<skill id="55415" name="Scroll: Enchant Armor (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -173,7 +173,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55416" name="Summon Agathion - One-eyed Bat Drove" max-level="1" action="A1">
+	<skill id="55416" name="Summon Agathion - One-eyed Bat Drove" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -187,7 +187,7 @@
 			<summon-agathion id="1513"/>
 		</effects>
 	</skill>
-	<skill id="55417" name="Summon Agathion - Zaken's Spirit Swords" max-level="1" action="A1">
+	<skill id="55417" name="Summon Agathion - Zaken's Spirit Swords" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -201,7 +201,7 @@
 			<summon-agathion id="1595"/>
 		</effects>
 	</skill>
-	<skill id="55418" name="Summon Agathion - Pegasus" max-level="1" action="A1">
+	<skill id="55418" name="Summon Agathion - Pegasus" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -215,7 +215,7 @@
 			<summon-agathion id="1514"/>
 		</effects>
 	</skill>
-	<skill id="55419" name="Summon Agathion - Guangong" max-level="1" action="A1">
+	<skill id="55419" name="Summon Agathion - Guangong" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -229,7 +229,7 @@
 			<summon-agathion id="1551"/>
 		</effects>
 	</skill>
-	<skill id="55420" name="Summon Agathion - Mr. Lucky" max-level="1" action="A1">
+	<skill id="55420" name="Summon Agathion - Mr. Lucky" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -243,7 +243,7 @@
 			<summon-agathion id="1523"/>
 		</effects>
 	</skill>
-	<skill id="55421" name="Summon Agathion - Phoenix" max-level="1" action="A1">
+	<skill id="55421" name="Summon Agathion - Phoenix" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -257,7 +257,7 @@
 			<summon-agathion id="1574"/>
 		</effects>
 	</skill>
-	<skill id="55422" name="Summon Agathion - Saerom" max-level="1" action="A1">
+	<skill id="55422" name="Summon Agathion - Saerom" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -271,7 +271,7 @@
 			<summon-agathion id="16063"/>
 		</effects>
 	</skill>
-	<skill id="55423" name="Summon Agathion - Gwanseum Nyang" max-level="1" action="A1">
+	<skill id="55423" name="Summon Agathion - Gwanseum Nyang" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -285,7 +285,7 @@
 			<summon-agathion id="1552"/>
 		</effects>
 	</skill>
-	<skill id="55424" name="Summon Agathion - Blue Opera" max-level="1" action="A1">
+	<skill id="55424" name="Summon Agathion - Blue Opera" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -299,7 +299,7 @@
 			<summon-agathion id="1553"/>
 		</effects>
 	</skill>
-	<skill id="55425" name="Summon Agathion - Red Opera" max-level="1" action="A1">
+	<skill id="55425" name="Summon Agathion - Red Opera" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -313,7 +313,7 @@
 			<summon-agathion id="1554"/>
 		</effects>
 	</skill>
-	<skill id="55426" name="Summon Agathion - Miss Chipao" max-level="1" action="A1">
+	<skill id="55426" name="Summon Agathion - Miss Chipao" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -327,7 +327,7 @@
 			<summon-agathion id="1556"/>
 		</effects>
 	</skill>
-	<skill id="55427" name="Summon Agathion - Flower Fairy Spirit" max-level="1" action="A1">
+	<skill id="55427" name="Summon Agathion - Flower Fairy Spirit" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -341,7 +341,7 @@
 			<summon-agathion id="1586"/>
 		</effects>
 	</skill>
-	<skill id="55428" name="Summon Agathion - Lancet" max-level="1" action="A1">
+	<skill id="55428" name="Summon Agathion - Lancet" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -355,7 +355,7 @@
 			<summon-agathion id="1539"/>
 		</effects>
 	</skill>
-	<skill id="55429" name="Summon Agathion - Liposa" max-level="1" action="A1">
+	<skill id="55429" name="Summon Agathion - Liposa" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -369,7 +369,7 @@
 			<summon-agathion id="1540"/>
 		</effects>
 	</skill>
-	<skill id="55430" name="Summon Agathion - Velarin" max-level="1" action="A1">
+	<skill id="55430" name="Summon Agathion - Velarin" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -383,7 +383,7 @@
 			<summon-agathion id="1541"/>
 		</effects>
 	</skill>
-	<skill id="55431" name="Summon Agathion - Dulcinel" max-level="1" action="A1">
+	<skill id="55431" name="Summon Agathion - Dulcinel" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -397,7 +397,7 @@
 			<summon-agathion id="1542"/>
 		</effects>
 	</skill>
-	<skill id="55432" name="Summon Agathion - Chimeros" max-level="1" action="A1">
+	<skill id="55432" name="Summon Agathion - Chimeros" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -411,7 +411,7 @@
 			<summon-agathion id="1543"/>
 		</effects>
 	</skill>
-	<skill id="55433" name="Summon Agathion - Niveri" max-level="1" action="A1">
+	<skill id="55433" name="Summon Agathion - Niveri" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -425,7 +425,7 @@
 			<summon-agathion id="1544"/>
 		</effects>
 	</skill>
-	<skill id="55434" name="Summon Agathion - Hamell" max-level="1" action="A1">
+	<skill id="55434" name="Summon Agathion - Hamell" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -439,7 +439,7 @@
 			<summon-agathion id="1545"/>
 		</effects>
 	</skill>
-	<skill id="55435" name="Summon Agathion - Joriya" max-level="1" action="A1">
+	<skill id="55435" name="Summon Agathion - Joriya" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -453,7 +453,7 @@
 			<summon-agathion id="1546"/>
 		</effects>
 	</skill>
-	<skill id="55436" name="Summon Agathion - Ralmak" max-level="1" action="A1">
+	<skill id="55436" name="Summon Agathion - Ralmak" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -467,7 +467,7 @@
 			<summon-agathion id="1547"/>
 		</effects>
 	</skill>
-	<skill id="55437" name="Summon Agathion - Goras" max-level="1" action="A1">
+	<skill id="55437" name="Summon Agathion - Goras" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -481,7 +481,7 @@
 			<summon-agathion id="1548"/>
 		</effects>
 	</skill>
-	<skill id="55438" name="Summon Agathion - Vensar" max-level="1" action="A1">
+	<skill id="55438" name="Summon Agathion - Vensar" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -495,7 +495,7 @@
 			<summon-agathion id="1549"/>
 		</effects>
 	</skill>
-	<skill id="55439" name="Summon Agathion - Kiela" max-level="1" action="A1">
+	<skill id="55439" name="Summon Agathion - Kiela" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -509,7 +509,7 @@
 			<summon-agathion id="1550"/>
 		</effects>
 	</skill>
-	<skill id="55440" name="One-eyed Bat Drove Agathion Cute Trick" max-level="1" action="A1">
+	<skill id="55440" name="One-eyed Bat Drove Agathion Cute Trick" action="A1">
 	<!-- See Agathion's cute trick. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -523,7 +523,7 @@
 			<condition name="OpNeedAgathion"/>
 		</conditions>
 	</skill>
-	<skill id="55441" name="Zaken's Spirit Swords Agathion Cute Trick" max-level="1" action="A1">
+	<skill id="55441" name="Zaken's Spirit Swords Agathion Cute Trick" action="A1">
 	<!-- See Agathion's cute trick. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -537,7 +537,7 @@
 			<condition name="OpNeedAgathion"/>
 		</conditions>
 	</skill>
-	<skill id="55442" name="Pegasus Agathion Cute Trick" max-level="1" action="A1">
+	<skill id="55442" name="Pegasus Agathion Cute Trick" action="A1">
 	<!-- See Agathion's cute trick. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -551,7 +551,7 @@
 			<condition name="OpNeedAgathion"/>
 		</conditions>
 	</skill>
-	<skill id="55443" name="Guangong Agathion Cute Trick" max-level="1" action="A1">
+	<skill id="55443" name="Guangong Agathion Cute Trick" action="A1">
 	<!-- See Agathion's cute trick. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -565,7 +565,7 @@
 			<condition name="OpNeedAgathion"/>
 		</conditions>
 	</skill>
-	<skill id="55444" name="Mr. Lucky Agathion Cute Trick" max-level="1" action="A1">
+	<skill id="55444" name="Mr. Lucky Agathion Cute Trick" action="A1">
 	<!-- See Agathion's cute trick. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -579,7 +579,7 @@
 			<condition name="OpNeedAgathion"/>
 		</conditions>
 	</skill>
-	<skill id="55445" name="Phoenix Agathion Cute Trick" max-level="1" action="A1">
+	<skill id="55445" name="Phoenix Agathion Cute Trick" action="A1">
 	<!-- See Agathion's cute trick. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -593,7 +593,7 @@
 			<condition name="OpNeedAgathion"/>
 		</conditions>
 	</skill>
-	<skill id="55446" name="Saerom Agathion Cute Trick" max-level="1" action="A1">
+	<skill id="55446" name="Saerom Agathion Cute Trick" action="A1">
 	<!-- See Agathion's cute trick. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -607,7 +607,7 @@
 			<condition name="OpNeedAgathion"/>
 		</conditions>
 	</skill>
-	<skill id="55447" name="Gwanseum Nyang Agathion Cute Trick" max-level="1" action="A1">
+	<skill id="55447" name="Gwanseum Nyang Agathion Cute Trick" action="A1">
 	<!-- See Agathion's cute trick. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -621,7 +621,7 @@
 			<condition name="OpNeedAgathion"/>
 		</conditions>
 	</skill>
-	<skill id="55448" name="Blue Opera Agathion Cute Trick" max-level="1" action="A1">
+	<skill id="55448" name="Blue Opera Agathion Cute Trick" action="A1">
 	<!-- See Agathion's cute trick. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -635,7 +635,7 @@
 			<condition name="OpNeedAgathion"/>
 		</conditions>
 	</skill>
-	<skill id="55449" name="Red Opera Agathion Cute Trick" max-level="1" action="A1">
+	<skill id="55449" name="Red Opera Agathion Cute Trick" action="A1">
 	<!-- See Agathion's cute trick. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -649,7 +649,7 @@
 			<condition name="OpNeedAgathion"/>
 		</conditions>
 	</skill>
-	<skill id="55450" name="Miss Chipao Agathion Cute Trick" max-level="1" action="A1">
+	<skill id="55450" name="Miss Chipao Agathion Cute Trick" action="A1">
 	<!-- See Agathion's cute trick. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -663,7 +663,7 @@
 			<condition name="OpNeedAgathion"/>
 		</conditions>
 	</skill>
-	<skill id="55451" name="Flower Fairy Spirit Agathion Cute Trick" max-level="1" action="A1">
+	<skill id="55451" name="Flower Fairy Spirit Agathion Cute Trick" action="A1">
 	<!-- See Agathion's cute trick. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -677,7 +677,7 @@
 			<condition name="OpNeedAgathion"/>
 		</conditions>
 	</skill>
-	<skill id="55452" name="Lancet Agathion Cute Trick" max-level="1" action="A1">
+	<skill id="55452" name="Lancet Agathion Cute Trick" action="A1">
 	<!-- See Agathion's cute trick. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -691,7 +691,7 @@
 			<condition name="OpNeedAgathion"/>
 		</conditions>
 	</skill>
-	<skill id="55453" name="Liposa Agathion Cute Trick" max-level="1" action="A1">
+	<skill id="55453" name="Liposa Agathion Cute Trick" action="A1">
 	<!-- See Agathion's cute trick. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -705,7 +705,7 @@
 			<condition name="OpNeedAgathion"/>
 		</conditions>
 	</skill>
-	<skill id="55454" name="Velarin Agathion Cute Trick" max-level="1" action="A1">
+	<skill id="55454" name="Velarin Agathion Cute Trick" action="A1">
 	<!-- See Agathion's cute trick. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -719,7 +719,7 @@
 			<condition name="OpNeedAgathion"/>
 		</conditions>
 	</skill>
-	<skill id="55455" name="Dulcinel Agathion Cute Trick" max-level="1" action="A1">
+	<skill id="55455" name="Dulcinel Agathion Cute Trick" action="A1">
 	<!-- See Agathion's cute trick. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -733,7 +733,7 @@
 			<condition name="OpNeedAgathion"/>
 		</conditions>
 	</skill>
-	<skill id="55456" name="Chimeros Agathion Cute Trick" max-level="1" action="A1">
+	<skill id="55456" name="Chimeros Agathion Cute Trick" action="A1">
 	<!-- See Agathion's cute trick. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -747,7 +747,7 @@
 			<condition name="OpNeedAgathion"/>
 		</conditions>
 	</skill>
-	<skill id="55457" name="Niveri Agathion Cute Trick" max-level="1" action="A1">
+	<skill id="55457" name="Niveri Agathion Cute Trick" action="A1">
 	<!-- See Agathion's cute trick. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -761,7 +761,7 @@
 			<condition name="OpNeedAgathion"/>
 		</conditions>
 	</skill>
-	<skill id="55458" name="Hamell Agathion Cute Trick" max-level="1" action="A1">
+	<skill id="55458" name="Hamell Agathion Cute Trick" action="A1">
 	<!-- See Agathion's cute trick. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -775,7 +775,7 @@
 			<condition name="OpNeedAgathion"/>
 		</conditions>
 	</skill>
-	<skill id="55459" name="Joriya Agathion Cute Trick" max-level="1" action="A1">
+	<skill id="55459" name="Joriya Agathion Cute Trick" action="A1">
 	<!-- See Agathion's cute trick. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -789,7 +789,7 @@
 			<condition name="OpNeedAgathion"/>
 		</conditions>
 	</skill>
-	<skill id="55460" name="Ralmak Agathion Cute Trick" max-level="1" action="A1">
+	<skill id="55460" name="Ralmak Agathion Cute Trick" action="A1">
 	<!-- See Agathion's cute trick. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -803,7 +803,7 @@
 			<condition name="OpNeedAgathion"/>
 		</conditions>
 	</skill>
-	<skill id="55461" name="Goras Agathion Cute Trick" max-level="1" action="A1">
+	<skill id="55461" name="Goras Agathion Cute Trick" action="A1">
 	<!-- See Agathion's cute trick. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -817,7 +817,7 @@
 			<condition name="OpNeedAgathion"/>
 		</conditions>
 	</skill>
-	<skill id="55462" name="Vensar Agathion Cute Trick" max-level="1" action="A1">
+	<skill id="55462" name="Vensar Agathion Cute Trick" action="A1">
 	<!-- See Agathion's cute trick. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -831,7 +831,7 @@
 			<condition name="OpNeedAgathion"/>
 		</conditions>
 	</skill>
-	<skill id="55463" name="Kiela Agathion Cute Trick" max-level="1" action="A1">
+	<skill id="55463" name="Kiela Agathion Cute Trick" action="A1">
 	<!-- See Agathion's cute trick. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -845,7 +845,7 @@
 			<condition name="OpNeedAgathion"/>
 		</conditions>
 	</skill>
-	<skill id="55464" name="Energy of Protection" max-level="1" action="A1">
+	<skill id="55464" name="Energy of Protection" action="A1">
 	<!-- For 20 min. Max HP/ MP +5%%, Paralysis Resistance +15, Mental Attack Resistance +10, XP/ SP +30%%. -->
 		<icon initial="icon.general_energy_condense_i01"/>
 		<attributes property="PHYSIC" auto-use="BUFF">
@@ -858,7 +858,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55465" name="Shaft with Antharas treasures" max-level="1" action="A1">
+	<skill id="55465" name="Shaft with Antharas treasures" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_bm_antaras_pocket_i00"/>
 		<attributes >
@@ -869,7 +869,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55466" name="Put on Lv. 2 Brooch" max-level="1" action="A1">
+	<skill id="55466" name="Put on Lv. 2 Brooch" action="A1">
 	<!-- Brooch radiates bright light. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i01"/>
 		<attributes property="PHYSIC" >
@@ -879,7 +879,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55467" name="Remove Lv. 2 Brooch" max-level="1" action="A1">
+	<skill id="55467" name="Remove Lv. 2 Brooch" action="A1">
 	<!-- Bright light fades. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -891,7 +891,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55468" name="Lv. 1 Brooch" max-level="1" >
+	<skill id="55468" name="Lv. 1 Brooch">
 	<!-- Activates 2 jewel slots. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i00"/>
 		<attributes property="MAGIC" >
@@ -906,7 +906,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55469" name="Lv. 2 Brooch" max-level="1" >
+	<skill id="55469" name="Lv. 2 Brooch">
 	<!-- Activates 3 jewel slots. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i01"/>
 		<attributes property="MAGIC" >
@@ -1257,7 +1257,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55495" name="Fortune Brooch" max-level="1" action="A1">
+	<skill id="55495" name="Fortune Brooch" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1269,7 +1269,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55496" name="Topaz Jewelry Box" max-level="1" action="A1">
+	<skill id="55496" name="Topaz Jewelry Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1281,7 +1281,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55497" name="Garnet Jewelry Box" max-level="1" action="A1">
+	<skill id="55497" name="Garnet Jewelry Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1293,7 +1293,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55498" name="Jade Jewelry Box" max-level="1" action="A1">
+	<skill id="55498" name="Jade Jewelry Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1305,7 +1305,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55499" name="Ruby Jewelry Box" max-level="1" action="A1">
+	<skill id="55499" name="Ruby Jewelry Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >

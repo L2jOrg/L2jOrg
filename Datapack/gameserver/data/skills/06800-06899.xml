@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="6800" name="Presentation - Yellow Portal Ray" max-level="1" action="A1">
+	<skill id="6800" name="Presentation - Yellow Portal Ray" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -11,7 +11,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6801" name="Presentation - Yellow-Green Portal Ray" max-level="1" action="A1">
+	<skill id="6801" name="Presentation - Yellow-Green Portal Ray" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -22,7 +22,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6802" name="Presentation - SSQ2 General Purpose 6" max-level="1" action="A2">
+	<skill id="6802" name="Presentation - SSQ2 General Purpose 6" action="A2">
 	<!-- none -->
 		<icon initial="icon.skill0922"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -40,7 +40,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6803" name="Arena Haste" max-level="1" action="A2">
+	<skill id="6803" name="Arena Haste" action="A2">
 	<!-- Increases Atk. Spd. by 33%% for 5 minutes. -->
 		<icon initial="icon.skill1086"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -63,7 +63,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6804" name="Arena Wind Walk" max-level="1" action="A2">
+	<skill id="6804" name="Arena Wind Walk" action="A2">
 	<!-- Increases Speed by 33 for 5 minutes. -->
 		<icon initial="icon.skill1204"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -81,12 +81,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="33.0"/>
 			</speed>
 		</effects>
 	</skill>
-	<skill id="6805" name="Arena Empower" max-level="1" action="A2">
+	<skill id="6805" name="Arena Empower" action="A2">
 	<!-- Increases M. Atk. by 75%% for 5 minutes. -->
 		<icon initial="icon.skill1059"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -109,7 +109,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6806" name="Arena Acumen" max-level="1" action="A2">
+	<skill id="6806" name="Arena Acumen" action="A2">
 	<!-- Increases Casting Spd. +30%% for 5 minutes. -->
 		<icon initial="icon.skill1085"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -132,7 +132,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6807" name="Arena Concentration" max-level="1" action="A2">
+	<skill id="6807" name="Arena Concentration" action="A2">
 	<!-- Decreases magic cancel damage by 53 for 5 minutes. -->
 		<icon initial="icon.skill1078"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -150,12 +150,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ATTACK_CANCEL" mode="DIFF">
+			<stat-modify stat="ATTACK_CANCEL">
 				<power initial="-53.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6808" name="Arena Might" max-level="1" action="A2">
+	<skill id="6808" name="Arena Might" action="A2">
 	<!-- Increases P. Atk. by 15%% for 5 minutes. -->
 		<icon initial="icon.skill1068"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -178,7 +178,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6809" name="Arena Guidance" max-level="1" action="A2">
+	<skill id="6809" name="Arena Guidance" action="A2">
 	<!-- Increases P. Accuracy +4 for 5 minutes. -->
 		<icon initial="icon.skill1240"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -196,12 +196,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="4.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6810" name="Arena Focus" max-level="1" action="A2">
+	<skill id="6810" name="Arena Focus" action="A2">
 	<!-- Increases P. Critical Rate +30%% for 5 minutes. -->
 		<icon initial="icon.skill1077"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -224,7 +224,7 @@
 			</stat-hp-based>
 		</effects>
 	</skill>
-	<skill id="6811" name="Arena Death Whisper" max-level="1" action="A2">
+	<skill id="6811" name="Arena Death Whisper" action="A2">
 	<!-- Increases P. Critical Damage +35%% for 5 minutes. -->
 		<icon initial="icon.skill1242"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -247,7 +247,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6812" name="Arena Berserker Spirit" max-level="1" action="A2">
+	<skill id="6812" name="Arena Berserker Spirit" action="A2">
 	<!-- P. Def. decreases momentarily. -8%%, M. Def. -16%%, P. Evasion -4 and increases P. Atk. +8%%, M. Atk. +16%%, Atk. Spd. +8%%, Casting Spd. +8%%, and Movement Speed. +8 for 5 minutes. -->
 		<icon initial="icon.skill1062"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -271,7 +271,7 @@
 			<stat-modify stat="MAGIC_ATTACK" mode="PER">
 				<power initial="16.0"/>
 			</stat-modify>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="8.0"/>
 			</speed>
 			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
@@ -280,7 +280,7 @@
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="-8.0"/>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="-4.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="-4.0"/>
 			</stat-hp-based>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="8.0"/>
@@ -313,7 +313,7 @@
 			<weapon>
 				<type>SWORD BLUNT DUAL</type>
 			</weapon>
-			<energy-max charges="1"/>
+			<energy-max/>
 		</conditions>
 		<effects>
 			<effect  name="FocusMomentum">
@@ -352,7 +352,7 @@
 			<weapon>
 				<type>FIST</type>
 			</weapon>
-			<energy-max charges="1"/>
+			<energy-max/>
 		</conditions>
 		<effects>
 			<effect  name="FocusMomentum">
@@ -462,7 +462,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6817" name="Arena HP Recovery" max-level="1" action="A1">
+	<skill id="6817" name="Arena HP Recovery" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -478,7 +478,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6818" name="Powerful Rage" max-level="1" action="A2" type="MAGIC">
+	<skill id="6818" name="Powerful Rage" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -514,7 +514,7 @@
 			</stat-hp-based>
 		</effects>
 	</skill>
-	<skill id="6819" name="Banshee's Curse" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="6819" name="Banshee's Curse" debuff="true" action="A2" type="MAGIC">
 	<!-- For 15 seconds, Atk. Spd. is decreased by 20%%. -->
 		<icon initial="icon.skill4038"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" >
@@ -536,7 +536,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6820" name="P. Def. Enhance" max-level="1" action="A2">
+	<skill id="6820" name="P. Def. Enhance" action="A2">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -563,7 +563,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6821" name="Decrease P. Def." max-level="1" debuff="true" action="A2">
+	<skill id="6821" name="Decrease P. Def." debuff="true" action="A2">
 	<!-- For 4 seconds, P. Def. decreases by 23%%. -->
 		<icon initial="icon.skill0122"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="4" >
@@ -582,7 +582,7 @@
 			<chance initial="80"/>
 		</abnormal>
 	</skill>
-	<skill id="6822" name="Decrease P. Def." max-level="1" debuff="true" action="A2">
+	<skill id="6822" name="Decrease P. Def." debuff="true" action="A2">
 	<!-- For 4 seconds, P. Def. decreases by 40%%. -->
 		<icon initial="icon.skill0122"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="4" >
@@ -601,7 +601,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6823" name="Reflect Attack" max-level="1" action="A2" type="MAGIC">
+	<skill id="6823" name="Reflect Attack" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0086"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -619,7 +619,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6824" name="Piercing Storm" max-level="1" action="A1" type="MAGIC">
+	<skill id="6824" name="Piercing Storm" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -655,7 +655,7 @@
 			<chance initial="100"/>
 		</abnormal>
 	</skill>
-	<skill id="6826" name="Critical Strike" max-level="1" action="A1">
+	<skill id="6826" name="Critical Strike" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -669,7 +669,7 @@
 		</attributes>
 		<target type="ENEMY" />
 	</skill>
-	<skill id="6827" name="Petrify" max-level="1" debuff="true" action="A2">
+	<skill id="6827" name="Petrify" debuff="true" action="A2">
 	<!-- Petrified and unable to move for 30 seconds. -->
 		<icon initial="icon.skill4111"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -688,7 +688,7 @@
 			<chance initial="80"/>
 		</abnormal>
 	</skill>
-	<skill id="6828" name="Dust Storm" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="6828" name="Dust Storm" debuff="true" action="A2" type="MAGIC">
 	<!-- For 30 seconds, Atk. Spd. is decreased by 50%% and Casting Spd. is decreased by 50%%. -->
 		<icon initial="icon.skill1386"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2" >
@@ -706,7 +706,7 @@
 			<chance initial="80"/>
 		</abnormal>
 	</skill>
-	<skill id="6829" name="Vampiric Attack" max-level="1" action="A1" type="MAGIC">
+	<skill id="6829" name="Vampiric Attack" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill1234"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -720,7 +720,7 @@
 		</attributes>
 		<target type="ENEMY" />
 	</skill>
-	<skill id="6830" name="Bleed" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="6830" name="Bleed" debuff="true" action="A2" type="MAGIC">
 	<!-- For 5 seconds, inflicts bleed and decreases 100 HP per second and Heal Received by 600%%. -->
 		<icon initial="icon.skill0096"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2" >
@@ -739,7 +739,7 @@
 			<chance initial="80"/>
 		</abnormal>
 	</skill>
-	<skill id="6831" name="Blood Burst" max-level="1" action="A1" type="MAGIC">
+	<skill id="6831" name="Blood Burst" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -753,7 +753,7 @@
 		</attributes>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" />
 	</skill>
-	<skill id="6832" name="Summon Parasitic Leech" max-level="1" action="A1">
+	<skill id="6832" name="Summon Parasitic Leech" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -764,7 +764,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6833" name="Power Strike" max-level="1" action="A1">
+	<skill id="6833" name="Power Strike" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -778,7 +778,7 @@
 		</attributes>
 		<target type="ENEMY" />
 	</skill>
-	<skill id="6834" name="Range Magic Attack" max-level="1" action="A1" type="MAGIC">
+	<skill id="6834" name="Range Magic Attack" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -791,7 +791,7 @@
 		</attributes>
 		<target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="1000" />
 	</skill>
-	<skill id="6835" name="Summon Skeleton" max-level="1" action="A1">
+	<skill id="6835" name="Summon Skeleton" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -802,7 +802,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6836" name="Silence" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="6836" name="Silence" debuff="true" action="A2" type="MAGIC">
 	<!-- Magic skills are blocked. -->
 		<icon initial="icon.skill1064"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="DERANGEMENT" level-bonus-rate="2" >
@@ -820,7 +820,7 @@
 			<chance initial="80"/>
 		</abnormal>
 	</skill>
-	<skill id="6837" name="Range Magic Attack" max-level="1" action="A1" type="MAGIC">
+	<skill id="6837" name="Range Magic Attack" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -833,7 +833,7 @@
 		</attributes>
 		<target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="1000" />
 	</skill>
-	<skill id="6838" name="Self-destruction" max-level="1" action="A1">
+	<skill id="6838" name="Self-destruction" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -859,7 +859,7 @@
 		</attributes>
 		<target type="ENEMY" />
 	</skill>
-	<skill id="6840" name="Paralysis" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="6840" name="Paralysis" debuff="true" action="A2" type="MAGIC">
 	<!-- Paralyzed and unable to move momentarily. -->
 		<icon initial="icon.skill1170"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="PARALYZE" level-bonus-rate="1" >
@@ -877,7 +877,7 @@
 			<chance initial="50"/>
 		</abnormal>
 	</skill>
-	<skill id="6841" name="Summon Subordinate" max-level="1" action="A1">
+	<skill id="6841" name="Summon Subordinate" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -921,7 +921,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6843" name="Enhance" max-level="1" action="A2" type="MAGIC">
+	<skill id="6843" name="Enhance" action="A2" type="MAGIC">
 	<!-- Atk. Spd. is increased by 33%%. -->
 		<icon initial="icon.skill1086"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2" >
@@ -936,7 +936,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6844" name="Power Strike" max-level="1" action="A1">
+	<skill id="6844" name="Power Strike" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -953,12 +953,12 @@
 			<fan-range start-angle="0" radius="300" angle="60"/>
 		</target>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="20.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="20.0">
 				<power initial="15000.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6845" name="Power Strike" max-level="1" action="A1">
+	<skill id="6845" name="Power Strike" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -976,12 +976,12 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="20.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="20.0">
 				<power initial="3000.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6846" name="Vampiric Claw" max-level="1" action="A1" type="MAGIC">
+	<skill id="6846" name="Vampiric Claw" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1004,7 +1004,7 @@
 			</hp-drain>
 		</effects>
 	</skill>
-	<skill id="6847" name="Self Heal" max-level="1" action="A1" type="MAGIC">
+	<skill id="6847" name="Self Heal" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1021,7 +1021,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="6848" name="Summoner Appearance" max-level="1" action="A1">
+	<skill id="6848" name="Summoner Appearance" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1035,7 +1035,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6849" name="Summoner Strike" max-level="1" action="A1">
+	<skill id="6849" name="Summoner Strike" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1053,12 +1053,12 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="20.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="20.0">
 				<power initial="3000.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6850" name="Self-destruction" max-level="1" action="A1">
+	<skill id="6850" name="Self-destruction" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1071,12 +1071,12 @@
 		</attributes>
 		<target type="ENEMY" scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="3000.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6851" name="Power Strike" max-level="1" action="A1">
+	<skill id="6851" name="Power Strike" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1094,12 +1094,12 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="20.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="20.0">
 				<power initial="3000.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6852" name="Magic Strike" max-level="1" action="A1" type="MAGIC">
+	<skill id="6852" name="Magic Strike" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1117,12 +1117,12 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="100.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="6853" name="Sleep" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="6853" name="Sleep" debuff="true" action="A2" type="MAGIC">
 	<!-- Sleep state for 6 seconds. -->
 		<icon initial="icon.skill1069"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SLEEP" level-bonus-rate="2" remove-on-damage="true" >
@@ -1146,7 +1146,7 @@
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="6854" name="Hold" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="6854" name="Hold" debuff="true" action="A2" type="MAGIC">
 	<!-- Afflicted with Hold and unable to move temporarily. -->
 		<icon initial="icon.skill4047"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="HOLD" level-bonus-rate="2" >
@@ -1170,7 +1170,7 @@
 			<effect name="Root"/>
 		</effects>
 	</skill>
-	<skill id="6855" name="Magic Strike" max-level="1" action="A1" type="MAGIC">
+	<skill id="6855" name="Magic Strike" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1185,12 +1185,12 @@
 		</attributes>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="150.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="6856" name="Heal" max-level="1" action="A1" type="MAGIC">
+	<skill id="6856" name="Heal" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1204,7 +1204,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6857" name="Power Strike" max-level="1" action="A1">
+	<skill id="6857" name="Power Strike" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1222,12 +1222,12 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="20.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="20.0">
 				<power initial="15000.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6858" name="Summon" max-level="1" action="A1">
+	<skill id="6858" name="Summon" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1240,7 +1240,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6859" name="Power Strike" max-level="1" action="A1">
+	<skill id="6859" name="Power Strike" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1258,12 +1258,12 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="20.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="20.0">
 				<power initial="15000.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6860" name="Power Strike" max-level="1" action="A1">
+	<skill id="6860" name="Power Strike" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1281,12 +1281,12 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="20.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="20.0">
 				<power initial="15000.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6861" name="Enhance" max-level="1" action="A2" type="MAGIC">
+	<skill id="6861" name="Enhance" action="A2" type="MAGIC">
 	<!-- Increases P. Atk. +20%% and Atk. Spd. +30%%. -->
 		<icon initial="icon.skill1086"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2" >
@@ -1313,7 +1313,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6862" name="Poison" max-level="1" debuff="true" action="A2">
+	<skill id="6862" name="Poison" debuff="true" action="A2">
 	<!-- For 6 seconds, inflicts poison and decreases 100 HP every second. -->
 		<icon initial="icon.skill0129"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="2" >
@@ -1334,12 +1334,12 @@
 			<chance initial="70"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="1" can-kill="false">
+			<damage-over-time ticks="1">
 				<power initial="100.0"/>
 			</damage-over-time>
 		</effects>
 	</skill>
-	<skill id="6863" name="Poison" max-level="1" debuff="true" action="A2">
+	<skill id="6863" name="Poison" debuff="true" action="A2">
 	<!-- For 10 seconds, inflicts poison and decreases 120 HP every second. -->
 		<icon initial="icon.skill0129"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="2" >
@@ -1360,12 +1360,12 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="1" can-kill="false">
+			<damage-over-time ticks="1">
 				<power initial="120.0"/>
 			</damage-over-time>
 		</effects>
 	</skill>
-	<skill id="6864" name="Summon" max-level="1" action="A1">
+	<skill id="6864" name="Summon" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1378,7 +1378,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6865" name="Poison" max-level="1" debuff="true" action="A2">
+	<skill id="6865" name="Poison" debuff="true" action="A2">
 	<!-- For 8 seconds, inflicts bleed and decreases 100 HP every second. -->
 		<icon initial="icon.skill0129"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="2" >
@@ -1399,12 +1399,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="1" can-kill="false">
+			<damage-over-time ticks="1">
 				<power initial="100.0"/>
 			</damage-over-time>
 		</effects>
 	</skill>
-	<skill id="6866" name="Vampiric Claw" max-level="1" action="A1" type="MAGIC">
+	<skill id="6866" name="Vampiric Claw" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1424,7 +1424,7 @@
 			</hp-drain>
 		</effects>
 	</skill>
-	<skill id="6867" name="Magic Strike" max-level="1" action="A1" type="MAGIC">
+	<skill id="6867" name="Magic Strike" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1439,12 +1439,12 @@
 		</attributes>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="1000" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="150.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="6868" name="Summon" max-level="1" action="A1">
+	<skill id="6868" name="Summon" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1457,7 +1457,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6869" name="Detonate" max-level="1" action="A1" type="MAGIC">
+	<skill id="6869" name="Detonate" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" suicide="true" >
@@ -1472,12 +1472,12 @@
 		</attributes>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="1000" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="300.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="6870" name="Vampiric Claw" max-level="1" action="A1" type="MAGIC">
+	<skill id="6870" name="Vampiric Claw" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1500,7 +1500,7 @@
 			</hp-drain>
 		</effects>
 	</skill>
-	<skill id="6871" name="Range Magic Attack" max-level="1" action="A1" type="MAGIC">
+	<skill id="6871" name="Range Magic Attack" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1518,12 +1518,12 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="100.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="6872" name="Self-destruction" max-level="1" action="A1">
+	<skill id="6872" name="Self-destruction" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" suicide="true" >
@@ -1541,7 +1541,7 @@
 		</consume>
 		<target type="ENEMY" scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="300.0"/>
 			</magical-attack>
 		</effects>
@@ -1576,7 +1576,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6874" name="Range Magic Attack" max-level="1" action="A1" type="MAGIC">
+	<skill id="6874" name="Range Magic Attack" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1591,7 +1591,7 @@
 		</attributes>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="150.0"/>
 			</magical-attack>
 		</effects>
@@ -1617,14 +1617,14 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="1" can-kill="false">
+			<damage-over-time ticks="1">
 				<power initial="120.0">
 					<value level="2">140.0</value>
 				</power>
 			</damage-over-time>
 		</effects>
 	</skill>
-	<skill id="6876" name="Power Strike" max-level="1" action="A1">
+	<skill id="6876" name="Power Strike" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1642,12 +1642,12 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="20.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="20.0">
 				<power initial="15000.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6877" name="Power Strike" max-level="1" action="A1">
+	<skill id="6877" name="Power Strike" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1665,12 +1665,12 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="20.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="20.0">
 				<power initial="15000.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6878" name="Paralysis" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="6878" name="Paralysis" debuff="true" action="A2" type="MAGIC">
 	<!-- Paralyzed and unable to move momentarily. -->
 		<icon initial="icon.skill1170"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="PARALYZE" level-bonus-rate="1" >
@@ -1694,7 +1694,7 @@
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="6879" name="Vampiric Claw" max-level="1" action="A1" type="MAGIC">
+	<skill id="6879" name="Vampiric Claw" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1714,7 +1714,7 @@
 			</hp-drain>
 		</effects>
 	</skill>
-	<skill id="6880" name="Silence" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="6880" name="Silence" debuff="true" action="A2" type="MAGIC">
 	<!-- Magic skills are blocked. -->
 		<icon initial="icon.skill1064"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="DERANGEMENT" level-bonus-rate="2" >
@@ -1735,7 +1735,7 @@
 			<effect name="Mute"/>
 		</effects>
 	</skill>
-	<skill id="6881" name="Critical Strike" max-level="1" action="A1">
+	<skill id="6881" name="Critical Strike" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1754,12 +1754,12 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="20.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="20.0">
 				<power initial="15000.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6882" name="Petrify" max-level="1" debuff="true" action="A2">
+	<skill id="6882" name="Petrify" debuff="true" action="A2">
 	<!-- Petrified and unable to move momentarily. -->
 		<icon initial="icon.skill4111"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" >
@@ -1784,7 +1784,7 @@
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="6884" name="Morale Boost" max-level="1" action="A1">
+	<skill id="6884" name="Morale Boost" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1851,22 +1851,22 @@
 				</trait>
 			</defence-trait>
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="2">15.0</value>
 				</power>
 			</stat-modify>
 			<stat-modify stat="MAGIC_ATTACK" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="2">15.0</value>
 				</power>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="3">15.0</value>
 				</power>
 			</stat-modify>
 			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="3">15.0</value>
 				</power>
 			</stat-modify>
@@ -1881,14 +1881,14 @@
 					<value level="3">50.0</value>
 				</power>
 			</stat-hp-based>
-			<stat-modify stat="BONUS_EXP" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="BONUS_EXP">
+				<power>
 					<value level="3">20.0</value>
 				</power>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6886" name="Full Recovery" max-level="1" action="A1">
+	<skill id="6886" name="Full Recovery" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1904,7 +1904,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6887" name="Fatal Strike" max-level="1" action="A1">
+	<skill id="6887" name="Fatal Strike" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1920,12 +1920,12 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="20.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="20.0">
 				<power initial="15000.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6888" name="Fatal Shot" max-level="1" action="A1">
+	<skill id="6888" name="Fatal Shot" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1941,12 +1941,12 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="300" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="20.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="20.0">
 				<power initial="15000.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6889" name="Range Attack" max-level="1" action="A1">
+	<skill id="6889" name="Range Attack" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1964,12 +1964,12 @@
 			<fan-range start-angle="0" radius="300" angle="60"/>
 		</target>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="20.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="20.0">
 				<power initial="15000.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6890" name="Bleed" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="6890" name="Bleed" debuff="true" action="A2" type="MAGIC">
 	<!-- For 10 seconds, inflicts bleed and decreases 100 HP every second. -->
 		<icon initial="icon.skill0096"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2" >
@@ -1990,7 +1990,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6891" name="Power Attack" max-level="1" action="A1">
+	<skill id="6891" name="Power Attack" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2008,12 +2008,12 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="20.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="20.0">
 				<power initial="15000.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6892" name="Power Shot" max-level="1" action="A1">
+	<skill id="6892" name="Power Shot" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2031,12 +2031,12 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="300" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="20.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="20.0">
 				<power initial="15000.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6893" name="Power Attack" max-level="1" action="A1">
+	<skill id="6893" name="Power Attack" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2054,12 +2054,12 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="20.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="20.0">
 				<power initial="15000.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6894" name="Power Shot" max-level="1" action="A1">
+	<skill id="6894" name="Power Shot" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2077,12 +2077,12 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="300" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="20.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="20.0">
 				<power initial="15000.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6895" name="Power Attack" max-level="1" action="A1">
+	<skill id="6895" name="Power Attack" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2100,12 +2100,12 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="20.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="20.0">
 				<power initial="15000.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6896" name="Power Shot" max-level="1" action="A1">
+	<skill id="6896" name="Power Shot" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2123,7 +2123,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="300" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="20.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="20.0">
 				<power initial="15000.0"/>
 			</physical-attack>
 		</effects>
@@ -2174,7 +2174,7 @@
 			<chance initial="30"/>
 		</abnormal>
 	</skill>
-	<skill id="6898" name="Lv. 84 Raid Boss" max-level="1" >
+	<skill id="6898" name="Lv. 84 Raid Boss">
 	<!-- It was one of the dragons that was born out of the blood that was thrown up by Antharas. After swallowing the Ancient Drake and absorbing its power, it quickly arose as a Commander that rules over the monsters nearby. It has good hearing but its vision is very poor, so it waits in a quiet, dark place, listening to the enemy's heartbeat, before swooping in for an attack. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -2185,7 +2185,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6899" name="Lv. 84 Raid Boss" max-level="1" >
+	<skill id="6899" name="Lv. 84 Raid Boss">
 	<!-- It was one of the dragons that was born out of the blood that was thrown up by Antharas. It swallowed up its brethren and gained a greater power. Antharas, whose heart was filled with innate cruelty and madness of a Dust Rider, appointed him as the Valley's Eradicator and commanded him to build the Tower of Corpses. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >

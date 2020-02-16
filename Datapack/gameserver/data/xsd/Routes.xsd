@@ -2,10 +2,10 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<xs:element name="routes">
 		<xs:complexType>
-			<xs:sequence minOccurs="1" maxOccurs="1">
+			<xs:sequence>
 				<xs:element name="route" minOccurs="0" maxOccurs="unbounded">
 					<xs:complexType>
-						<xs:sequence minOccurs="1" maxOccurs="1">
+						<xs:sequence>
 							<xs:element name="target" minOccurs="0" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:attribute name="id" type="xs:positiveInteger" use="required" />
@@ -14,7 +14,7 @@
 									<xs:attribute name="spawnZ" type="xs:integer" use="required" />
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="point" minOccurs="1" maxOccurs="unbounded">
+							<xs:element name="point" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:attribute name="string" type="xs:normalizedString" />
 									<xs:attribute name="npcString" type="xs:token" />

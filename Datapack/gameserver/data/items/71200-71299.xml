@@ -6,7 +6,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="56041" level="1" value="-1"/>  <!-- Agathion Summon - Gowther -->
+			<skill id="56041" value="-1"/>  <!-- Agathion Summon - Gowther -->
 		</skills>
 	</armor>
 
@@ -16,7 +16,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="56042" level="1" value="-1"/>  <!-- Agathion Summon - Escanor -->
+			<skill id="56042" value="-1"/>  <!-- Agathion Summon - Escanor -->
 		</skills>
 	</armor>
 
@@ -26,7 +26,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="56034" level="1" value="-1"/>  <!-- Agathion Summon - Meliodas -->
+			<skill id="56034" value="-1"/>  <!-- Agathion Summon - Meliodas -->
 		</skills>
 	</armor>
 
@@ -36,7 +36,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="56035" level="1" value="-1"/>  <!-- Agathion Summon - Elizabeth -->
+			<skill id="56035" value="-1"/>  <!-- Agathion Summon - Elizabeth -->
 		</skills>
 	</armor>
 
@@ -46,7 +46,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="56036" level="1" value="-1"/>  <!-- Agathion Summon - Hawk -->
+			<skill id="56036" value="-1"/>  <!-- Agathion Summon - Hawk -->
 		</skills>
 	</armor>
 
@@ -56,7 +56,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="56037" level="1" value="-1"/>  <!-- Agathion Summon - Ban -->
+			<skill id="56037" value="-1"/>  <!-- Agathion Summon - Ban -->
 		</skills>
 	</armor>
 
@@ -66,7 +66,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="56038" level="1" value="-1"/>  <!-- Agathion Summon - Diane -->
+			<skill id="56038" value="-1"/>  <!-- Agathion Summon - Diane -->
 		</skills>
 	</armor>
 
@@ -76,7 +76,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="56039" level="1" value="-1"/>  <!-- Agathion Summon - King -->
+			<skill id="56039" value="-1"/>  <!-- Agathion Summon - King -->
 		</skills>
 	</armor>
 
@@ -86,7 +86,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="56040" level="1" value="-1"/>  <!-- Agathion Summon - Merlin -->
+			<skill id="56040" value="-1"/>  <!-- Agathion Summon - Merlin -->
 		</skills>
 	</armor>
 
@@ -96,7 +96,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="56041" level="1" value="-1"/>  <!-- Agathion Summon - Gowther -->
+			<skill id="56041" value="-1"/>  <!-- Agathion Summon - Gowther -->
 		</skills>
 	</armor>
 
@@ -106,7 +106,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="56042" level="1" value="-1"/>  <!-- Agathion Summon - Escanor -->
+			<skill id="56042" value="-1"/>  <!-- Agathion Summon - Escanor -->
 		</skills>
 	</armor>
 
@@ -128,7 +128,7 @@
 		<attributes weight="150" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51025" level="1" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
+			<skill id="51025" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
 		</skills>
 	</armor>
 
@@ -141,15 +141,15 @@
 	<item id="71215" name="Seven Deadly Sins Special Pie" type="POTION" icon="BranchSys3.icon1.g_torun_gingerbread_pl">
 	<!-- Buff to celebrate the collaboration with Seven Deadly Sins. Might, Haste, Empower, Acument, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration, Blessed Body, Blessed Soul, Magic Barrier applied for 20 minutes.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 	</item>
 
 	<item id="71216" name="Seven Deadly Sins Special Beer" type="SCROLL" icon="BranchSys3.icon1.g_beerfestival_octoberfest_beer">
 	<!-- Buff to celebrate the collaboration with Seven Deadly Sins. Chant of Victory Lv. 1 applied for 20 minutes. \n<Warning>\n Cannot be used with Prophecy type effects. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="56089" level="1" value="-1"/>  <!-- Seven Deadly Sins Special Beer - Victory -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="56089" value="-1"/>  <!-- Seven Deadly Sins Special Beer - Victory -->
 		</skill-reducer>
 	</item>
 

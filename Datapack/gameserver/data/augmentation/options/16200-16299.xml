@@ -50,7 +50,7 @@
     </option>
     <option id="16212" name="o_s_75_2r_33">
         <!-- Active: Teleports to a town. Cannot be used in special areas such as the GM info center. -->
-        <skill id="3146" level="1"/> <!-- Item Skill: Recall -->
+        <skill id="3146"/> <!-- Item Skill: Recall -->
     </option>
     <option id="16213" name="o_s_75_2r_34">
         <!-- Active: Resurrects a corpse. -->
@@ -370,11 +370,11 @@
     </option>
     <option id="16292" name="o_s_75_2u_6">
         <!-- Active: Teleports to a town. Cannot be used in special areas such as the GM info center. -->
-        <skill id="3147" level="1"/> <!-- Item Skill: Recall -->
+        <skill id="3147"/> <!-- Item Skill: Recall -->
     </option>
     <option id="16293" name="o_s_75_2u_7">
         <!-- Active: Becomes invincible momentarily. -->
-        <skill id="3158" level="1"/> <!-- Item Skill: Lesser Celestial Shield -->
+        <skill id="3158"/> <!-- Item Skill: Lesser Celestial Shield -->
     </option>
     <option id="16294" name="o_s_75_2u_8">
         <!-- Active: Increases the Critical Rate of damage attack magic for a fixed time. -->

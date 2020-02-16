@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="55100" name="Lv. 1 Water Dragon's Pendant Basic Effect" max-level="1" >
+	<skill id="55100" name="Lv. 1 Water Dragon's Pendant Basic Effect">
 	<!-- M. Atk. +9. -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pvp_blue"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -11,7 +11,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK">
 				<power initial="9.0"/>
 			</stat-modify>
 		</effects>
@@ -38,7 +38,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK">
 				<power initial="13.0">
 					<value level="2">20.0</value>
 					<value level="3">31.0</value>
@@ -51,8 +51,8 @@
 					<value level="10">202.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="BONUS_EXP" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="BONUS_EXP">
+				<power>
 					<value level="5">5.0</value>
 					<value level="6">10.0</value>
 					<value level="7">15.0</value>
@@ -61,8 +61,8 @@
 					<value level="10">40.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="BONUS_SP" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="BONUS_SP">
+				<power>
 					<value level="5">5.0</value>
 					<value level="6">10.0</value>
 					<value level="7">15.0</value>
@@ -73,7 +73,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55102" name="Lv. 2 Water Dragon's Pendant Basic Effect" max-level="1" >
+	<skill id="55102" name="Lv. 2 Water Dragon's Pendant Basic Effect">
 	<!-- M. Atk. +9, M. Critical Damage +62. -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pvp_blue"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -84,10 +84,10 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK">
 				<power initial="9.0"/>
 			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
 				<power initial="62.0"/>
 			</stat-modify>
 		</effects>
@@ -114,7 +114,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK">
 				<power initial="13.0">
 					<value level="2">20.0</value>
 					<value level="3">31.0</value>
@@ -127,7 +127,7 @@
 					<value level="10">202.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
 				<power initial="89.0">
 					<value level="2">134.0</value>
 					<value level="3">210.0</value>
@@ -140,8 +140,8 @@
 					<value level="10">1344.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="BONUS_EXP" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="BONUS_EXP">
+				<power>
 					<value level="5">5.0</value>
 					<value level="6">10.0</value>
 					<value level="7">15.0</value>
@@ -150,8 +150,8 @@
 					<value level="10">40.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="BONUS_SP" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="BONUS_SP">
+				<power>
 					<value level="5">5.0</value>
 					<value level="6">10.0</value>
 					<value level="7">15.0</value>
@@ -162,7 +162,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55104" name="Lv. 3 Water Dragon's Pendant Basic Effect" max-level="1" >
+	<skill id="55104" name="Lv. 3 Water Dragon's Pendant Basic Effect">
 	<!-- M. Atk. +9, M. Critical Damage +62, M. Critical Rate +1%%. -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pvp_blue"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -173,10 +173,10 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK">
 				<power initial="9.0"/>
 			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
 				<power initial="62.0"/>
 			</stat-modify>
 			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="PER">
@@ -206,7 +206,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK">
 				<power initial="13.0">
 					<value level="2">20.0</value>
 					<value level="3">31.0</value>
@@ -219,7 +219,7 @@
 					<value level="10">202.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
 				<power initial="89.0">
 					<value level="2">134.0</value>
 					<value level="3">210.0</value>
@@ -245,8 +245,8 @@
 					<value level="10">12.0</value>
 				</power>
 			</stat-hp-based>
-			<stat-modify stat="BONUS_EXP" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="BONUS_EXP">
+				<power>
 					<value level="5">5.0</value>
 					<value level="6">10.0</value>
 					<value level="7">15.0</value>
@@ -255,8 +255,8 @@
 					<value level="10">40.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="BONUS_SP" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="BONUS_SP">
+				<power>
 					<value level="5">5.0</value>
 					<value level="6">10.0</value>
 					<value level="7">15.0</value>
@@ -267,7 +267,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55106" name="Lv. 4 Water Dragon's Pendant Basic Effect" max-level="1" >
+	<skill id="55106" name="Lv. 4 Water Dragon's Pendant Basic Effect">
 	<!-- M. Atk. +9, M. Critical Damage +62, M. Critical Rate +1%%, M. Atk. +1%%. -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pvp_blue"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -278,10 +278,10 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK">
 				<power initial="9.0"/>
 			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
 				<power initial="62.0"/>
 			</stat-modify>
 			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="PER">
@@ -311,7 +311,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK">
 				<power initial="13.0">
 					<value level="2">20.0</value>
 					<value level="2">2.0</value>
@@ -333,7 +333,7 @@
 					<value level="10">10.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
 				<power initial="89.0">
 					<value level="2">134.0</value>
 					<value level="3">210.0</value>
@@ -359,8 +359,8 @@
 					<value level="10">12.0</value>
 				</power>
 			</stat-hp-based>
-			<stat-modify stat="BONUS_EXP" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="BONUS_EXP">
+				<power>
 					<value level="5">5.0</value>
 					<value level="6">10.0</value>
 					<value level="7">15.0</value>
@@ -369,8 +369,8 @@
 					<value level="10">40.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="BONUS_SP" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="BONUS_SP">
+				<power>
 					<value level="5">5.0</value>
 					<value level="6">10.0</value>
 					<value level="7">15.0</value>
@@ -381,7 +381,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55108" name="Lv. 5 Water Dragon's Pendant Basic Effect" max-level="1" >
+	<skill id="55108" name="Lv. 5 Water Dragon's Pendant Basic Effect">
 	<!-- M. Atk. +9, M. Critical Damage +62, M. Critical Rate +1%%, M. Atk. +1%% and M. Critical Damage +1%%. -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pvp_blue"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -392,10 +392,10 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK">
 				<power initial="9.0"/>
 			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
 				<power initial="62.0"/>
 			</stat-modify>
 			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="PER">
@@ -425,7 +425,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK">
 				<power initial="13.0">
 					<value level="2">20.0</value>
 					<value level="2">2.0</value>
@@ -447,7 +447,7 @@
 					<value level="10">10.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
 				<power initial="89.0">
 					<value level="2">134.0</value>
 					<value level="2">3.0</value>
@@ -482,8 +482,8 @@
 					<value level="10">12.0</value>
 				</power>
 			</stat-hp-based>
-			<stat-modify stat="BONUS_EXP" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="BONUS_EXP">
+				<power>
 					<value level="5">5.0</value>
 					<value level="6">10.0</value>
 					<value level="7">15.0</value>
@@ -492,8 +492,8 @@
 					<value level="10">40.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="BONUS_SP" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="BONUS_SP">
+				<power>
 					<value level="5">5.0</value>
 					<value level="6">10.0</value>
 					<value level="7">15.0</value>
@@ -504,7 +504,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55110" name="Lv. 1 Wind Dragon's Pendant Basic Effect" max-level="1" >
+	<skill id="55110" name="Lv. 1 Wind Dragon's Pendant Basic Effect">
 	<!-- MP +21 -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pve_white"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -515,7 +515,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="21.0"/>
 			</vital-stat-modify>
 		</effects>
@@ -542,7 +542,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="33.0">
 					<value level="2">42.0</value>
 					<value level="3">52.0</value>
@@ -555,8 +555,8 @@
 					<value level="10">156.0</value>
 				</power>
 			</vital-stat-modify>
-			<stat-modify stat="BONUS_EXP" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="BONUS_EXP">
+				<power>
 					<value level="5">5.0</value>
 					<value level="6">10.0</value>
 					<value level="7">15.0</value>
@@ -565,8 +565,8 @@
 					<value level="10">40.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="BONUS_SP" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="BONUS_SP">
+				<power>
 					<value level="5">5.0</value>
 					<value level="6">10.0</value>
 					<value level="7">15.0</value>
@@ -577,7 +577,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55112" name="Lv. 2 Wind Dragon's Pendant Basic Effect" max-level="1" >
+	<skill id="55112" name="Lv. 2 Wind Dragon's Pendant Basic Effect">
 	<!-- MP +21, HP +31 -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pve_white"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -588,10 +588,10 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="21.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="31.0"/>
 			</vital-stat-modify>
 		</effects>
@@ -618,7 +618,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="33.0">
 					<value level="2">42.0</value>
 					<value level="3">52.0</value>
@@ -631,7 +631,7 @@
 					<value level="10">156.0</value>
 				</power>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="50.0">
 					<value level="2">78.0</value>
 					<value level="3">121.0</value>
@@ -644,8 +644,8 @@
 					<value level="10">316.0</value>
 				</power>
 			</vital-stat-modify>
-			<stat-modify stat="BONUS_EXP" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="BONUS_EXP">
+				<power>
 					<value level="5">5.0</value>
 					<value level="6">10.0</value>
 					<value level="7">15.0</value>
@@ -654,8 +654,8 @@
 					<value level="10">40.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="BONUS_SP" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="BONUS_SP">
+				<power>
 					<value level="5">5.0</value>
 					<value level="6">10.0</value>
 					<value level="7">15.0</value>
@@ -666,7 +666,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55114" name="Lv. 3 Wind Dragon's Pendant Basic Effect" max-level="1" >
+	<skill id="55114" name="Lv. 3 Wind Dragon's Pendant Basic Effect">
 	<!-- MP +21, HP +31, HP Recovery Bonus +1.8, MP Recovery Bonus +0.5 -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pve_white"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -677,16 +677,16 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="21.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="31.0"/>
 			</vital-stat-modify>
-			<stat-modify stat="REGENERATE_HP_RATE" mode="DIFF">
+			<stat-modify stat="REGENERATE_HP_RATE">
 				<power initial="1.8"/>
 			</stat-modify>
-			<stat-modify stat="REGENERATE_MP_RATE" mode="DIFF">
+			<stat-modify stat="REGENERATE_MP_RATE">
 				<power initial="0.5"/>
 			</stat-modify>
 		</effects>
@@ -713,7 +713,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="33.0">
 					<value level="2">42.0</value>
 					<value level="3">52.0</value>
@@ -726,7 +726,7 @@
 					<value level="10">156.0</value>
 				</power>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="50.0">
 					<value level="2">78.0</value>
 					<value level="3">121.0</value>
@@ -739,7 +739,7 @@
 					<value level="10">316.0</value>
 				</power>
 			</vital-stat-modify>
-			<stat-modify stat="REGENERATE_HP_RATE" mode="DIFF">
+			<stat-modify stat="REGENERATE_HP_RATE">
 				<power initial="1.9">
 					<value level="2">2.1</value>
 					<value level="3">2.3</value>
@@ -752,7 +752,7 @@
 					<value level="10">7.4</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="REGENERATE_MP_RATE" mode="DIFF">
+			<stat-modify stat="REGENERATE_MP_RATE">
 				<power initial="0.7">
 					<value level="2">1.0</value>
 					<value level="3">1.1</value>
@@ -765,8 +765,8 @@
 					<value level="10">2.8</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="BONUS_EXP" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="BONUS_EXP">
+				<power>
 					<value level="5">5.0</value>
 					<value level="6">10.0</value>
 					<value level="7">15.0</value>
@@ -775,8 +775,8 @@
 					<value level="10">40.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="BONUS_SP" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="BONUS_SP">
+				<power>
 					<value level="5">5.0</value>
 					<value level="6">10.0</value>
 					<value level="7">15.0</value>
@@ -787,7 +787,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55116" name="Lv. 4 Wind Dragon's Pendant Basic Effect" max-level="1" >
+	<skill id="55116" name="Lv. 4 Wind Dragon's Pendant Basic Effect">
 	<!-- MP +21, HP +31, HP Recovery Bonus +1.8, MP Recovery Bonus +0.5, 1%% chance to recover MP by 12. -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pve_white"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -798,16 +798,16 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="21.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="31.0"/>
 			</vital-stat-modify>
-			<stat-modify stat="REGENERATE_HP_RATE" mode="DIFF">
+			<stat-modify stat="REGENERATE_HP_RATE">
 				<power initial="1.8"/>
 			</stat-modify>
-			<stat-modify stat="REGENERATE_MP_RATE" mode="DIFF">
+			<stat-modify stat="REGENERATE_MP_RATE">
 				<power initial="0.5"/>
 			</stat-modify>
 		</effects>
@@ -834,7 +834,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="33.0">
 					<value level="2">42.0</value>
 					<value level="3">52.0</value>
@@ -847,7 +847,7 @@
 					<value level="10">156.0</value>
 				</power>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="50.0">
 					<value level="2">78.0</value>
 					<value level="3">121.0</value>
@@ -860,7 +860,7 @@
 					<value level="10">316.0</value>
 				</power>
 			</vital-stat-modify>
-			<stat-modify stat="REGENERATE_HP_RATE" mode="DIFF">
+			<stat-modify stat="REGENERATE_HP_RATE">
 				<power initial="1.9">
 					<value level="2">2.1</value>
 					<value level="3">2.3</value>
@@ -873,7 +873,7 @@
 					<value level="10">7.4</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="REGENERATE_MP_RATE" mode="DIFF">
+			<stat-modify stat="REGENERATE_MP_RATE">
 				<power initial="0.7">
 					<value level="2">1.0</value>
 					<value level="3">1.1</value>
@@ -886,8 +886,8 @@
 					<value level="10">2.8</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="BONUS_EXP" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="BONUS_EXP">
+				<power>
 					<value level="5">5.0</value>
 					<value level="6">10.0</value>
 					<value level="7">15.0</value>
@@ -896,8 +896,8 @@
 					<value level="10">40.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="BONUS_SP" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="BONUS_SP">
+				<power>
 					<value level="5">5.0</value>
 					<value level="6">10.0</value>
 					<value level="7">15.0</value>
@@ -908,7 +908,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55118" name="Lv. 5 Wind Dragon's Pendant Basic Effect" max-level="1" >
+	<skill id="55118" name="Lv. 5 Wind Dragon's Pendant Basic Effect">
 	<!-- MP +21, HP +31, HP Recovery Bonus +1.8, MP Recovery Bonus +0.5, 1%% chance to recover MP by 12, M. Skill MP Consumption -3%% -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pve_white"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -919,16 +919,16 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="21.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="31.0"/>
 			</vital-stat-modify>
-			<stat-modify stat="REGENERATE_HP_RATE" mode="DIFF">
+			<stat-modify stat="REGENERATE_HP_RATE">
 				<power initial="1.8"/>
 			</stat-modify>
-			<stat-modify stat="REGENERATE_MP_RATE" mode="DIFF">
+			<stat-modify stat="REGENERATE_MP_RATE">
 				<power initial="0.5"/>
 			</stat-modify>
 			<magic-cost type="0">
@@ -958,7 +958,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="33.0">
 					<value level="2">42.0</value>
 					<value level="3">52.0</value>
@@ -971,7 +971,7 @@
 					<value level="10">156.0</value>
 				</power>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="50.0">
 					<value level="2">78.0</value>
 					<value level="3">121.0</value>
@@ -984,7 +984,7 @@
 					<value level="10">316.0</value>
 				</power>
 			</vital-stat-modify>
-			<stat-modify stat="REGENERATE_HP_RATE" mode="DIFF">
+			<stat-modify stat="REGENERATE_HP_RATE">
 				<power initial="1.9">
 					<value level="2">2.1</value>
 					<value level="3">2.3</value>
@@ -997,7 +997,7 @@
 					<value level="10">7.4</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="REGENERATE_MP_RATE" mode="DIFF">
+			<stat-modify stat="REGENERATE_MP_RATE">
 				<power initial="0.7">
 					<value level="2">1.0</value>
 					<value level="3">1.1</value>
@@ -1023,8 +1023,8 @@
 					<value level="10">40.0</value>
 				</power>
 			</magic-cost>
-			<stat-modify stat="BONUS_EXP" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="BONUS_EXP">
+				<power>
 					<value level="5">5.0</value>
 					<value level="6">10.0</value>
 					<value level="7">15.0</value>
@@ -1033,8 +1033,8 @@
 					<value level="10">40.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="BONUS_SP" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="BONUS_SP">
+				<power>
 					<value level="5">5.0</value>
 					<value level="6">10.0</value>
 					<value level="7">15.0</value>
@@ -1045,7 +1045,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55120" name="Wind Dragon's Pendant MP Increase" max-level="1" action="A1">
+	<skill id="55120" name="Wind Dragon's Pendant MP Increase" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pve_white"/>
 		<attributes >
@@ -1055,7 +1055,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55121" name="Lv. 1 Earth Dragon's Pendant Basic Effect" max-level="1" >
+	<skill id="55121" name="Lv. 1 Earth Dragon's Pendant Basic Effect">
 	<!-- Increases M. Def. +6. -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pvp"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1066,7 +1066,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="6.0"/>
 			</stat-modify>
 		</effects>
@@ -1093,7 +1093,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="8.0">
 					<value level="2">10.0</value>
 					<value level="3">12.0</value>
@@ -1106,8 +1106,8 @@
 					<value level="10">28.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="BONUS_EXP" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="BONUS_EXP">
+				<power>
 					<value level="5">5.0</value>
 					<value level="6">10.0</value>
 					<value level="7">15.0</value>
@@ -1116,8 +1116,8 @@
 					<value level="10">40.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="BONUS_SP" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="BONUS_SP">
+				<power>
 					<value level="5">5.0</value>
 					<value level="6">10.0</value>
 					<value level="7">15.0</value>
@@ -1128,7 +1128,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55123" name="Lv. 2 Earth Dragon's Pendant Basic Effect" max-level="1" >
+	<skill id="55123" name="Lv. 2 Earth Dragon's Pendant Basic Effect">
 	<!-- M. Def. +6, P. Def +11 -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pvp"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1139,10 +1139,10 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="6.0"/>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="11.0"/>
 			</stat-modify>
 		</effects>
@@ -1169,7 +1169,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="8.0">
 					<value level="2">10.0</value>
 					<value level="3">12.0</value>
@@ -1182,7 +1182,7 @@
 					<value level="10">28.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="14.0">
 					<value level="2">18.0</value>
 					<value level="3">24.0</value>
@@ -1195,8 +1195,8 @@
 					<value level="10">71.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="BONUS_EXP" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="BONUS_EXP">
+				<power>
 					<value level="5">5.0</value>
 					<value level="6">10.0</value>
 					<value level="7">15.0</value>
@@ -1205,8 +1205,8 @@
 					<value level="10">40.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="BONUS_SP" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="BONUS_SP">
+				<power>
 					<value level="5">5.0</value>
 					<value level="6">10.0</value>
 					<value level="7">15.0</value>
@@ -1217,7 +1217,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55125" name="Lv. 3 Earth Dragon's Pendant Basic Effect" max-level="1" >
+	<skill id="55125" name="Lv. 3 Earth Dragon's Pendant Basic Effect">
 	<!-- M. Def. +6, P. Def +11, Shield Def. Rate +10%% -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pvp"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1228,10 +1228,10 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="6.0"/>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="11.0"/>
 			</stat-modify>
 			<stat-modify stat="SHIELD_DEFENCE_RATE" mode="PER">
@@ -1261,7 +1261,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="8.0">
 					<value level="2">10.0</value>
 					<value level="3">12.0</value>
@@ -1274,7 +1274,7 @@
 					<value level="10">28.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="14.0">
 					<value level="2">18.0</value>
 					<value level="3">24.0</value>
@@ -1300,8 +1300,8 @@
 					<value level="10">100.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="BONUS_EXP" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="BONUS_EXP">
+				<power>
 					<value level="5">5.0</value>
 					<value level="6">10.0</value>
 					<value level="7">15.0</value>
@@ -1310,8 +1310,8 @@
 					<value level="10">40.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="BONUS_SP" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="BONUS_SP">
+				<power>
 					<value level="5">5.0</value>
 					<value level="6">10.0</value>
 					<value level="7">15.0</value>
@@ -1322,7 +1322,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55127" name="Lv. 4 Earth Dragon's Pendant Basic Effect" max-level="1" >
+	<skill id="55127" name="Lv. 4 Earth Dragon's Pendant Basic Effect">
 	<!-- M. Def. +6, P. Def +11, Shield Def. Rate +10%% and Shield Def. +3%% -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pvp"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1333,10 +1333,10 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="6.0"/>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="11.0"/>
 			</stat-modify>
 			<stat-modify stat="SHIELD_DEFENCE_RATE" mode="PER">
@@ -1369,7 +1369,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="8.0">
 					<value level="2">10.0</value>
 					<value level="3">12.0</value>
@@ -1382,7 +1382,7 @@
 					<value level="10">28.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="14.0">
 					<value level="2">18.0</value>
 					<value level="3">24.0</value>
@@ -1421,8 +1421,8 @@
 					<value level="10">50.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="BONUS_EXP" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="BONUS_EXP">
+				<power>
 					<value level="5">5.0</value>
 					<value level="6">10.0</value>
 					<value level="7">15.0</value>
@@ -1431,8 +1431,8 @@
 					<value level="10">40.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="BONUS_SP" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="BONUS_SP">
+				<power>
 					<value level="5">5.0</value>
 					<value level="6">10.0</value>
 					<value level="7">15.0</value>
@@ -1443,7 +1443,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55129" name="Lv. 5 Earth Dragon's Pendant Basic Effect" max-level="1" >
+	<skill id="55129" name="Lv. 5 Earth Dragon's Pendant Basic Effect">
 	<!-- M. Def. +6, P. Def +11, Shield Def. Rate +10%% and Shield Def. +3%% -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pvp"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1454,10 +1454,10 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="6.0"/>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="11.0"/>
 			</stat-modify>
 			<stat-modify stat="SHIELD_DEFENCE_RATE" mode="PER">
@@ -1490,7 +1490,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="8.0">
 					<value level="2">10.0</value>
 					<value level="3">12.0</value>
@@ -1503,7 +1503,7 @@
 					<value level="10">28.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="14.0">
 					<value level="2">18.0</value>
 					<value level="3">24.0</value>
@@ -1542,8 +1542,8 @@
 					<value level="10">50.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="BONUS_EXP" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="BONUS_EXP">
+				<power>
 					<value level="5">5.0</value>
 					<value level="6">10.0</value>
 					<value level="7">15.0</value>
@@ -1552,8 +1552,8 @@
 					<value level="10">40.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="BONUS_SP" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="BONUS_SP">
+				<power>
 					<value level="5">5.0</value>
 					<value level="6">10.0</value>
 					<value level="7">15.0</value>
@@ -1564,7 +1564,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55131" name="Lv. 5 Earth Dragon's Pendant Defense Effect" max-level="1" action="A1">
+	<skill id="55131" name="Lv. 5 Earth Dragon's Pendant Defense Effect" action="A1">
 	<!-- For 5 seconds, creates a shield that absorbs 202 damage. Cooldown is 90 seconds. -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pvp"/>
 		<attributes property="PHYSIC" >
@@ -1622,7 +1622,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="BONUS_EXP" mode="DIFF">
+			<stat-modify stat="BONUS_EXP">
 				<power initial="5.0">
 					<value level="2">10.0</value>
 					<value level="3">15.0</value>
@@ -1631,7 +1631,7 @@
 					<value level="6">40.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="BONUS_SP" mode="DIFF">
+			<stat-modify stat="BONUS_SP">
 				<power initial="5.0">
 					<value level="2">10.0</value>
 					<value level="3">15.0</value>
@@ -1642,7 +1642,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55134" name="Scroll: Enchant Weapon (B-grade)" max-level="1" action="A1">
+	<skill id="55134" name="Scroll: Enchant Weapon (B-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1652,7 +1652,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55135" name="Scroll: Enchant Armor (B-grade)" max-level="1" action="A1">
+	<skill id="55135" name="Scroll: Enchant Armor (B-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1662,7 +1662,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55136" name="Blessed Scroll: Enchant Weapon (B-grade)" max-level="1" action="A1">
+	<skill id="55136" name="Blessed Scroll: Enchant Weapon (B-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1672,7 +1672,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55137" name="Blessed Scroll: Enchant Armor (B-grade)" max-level="1" action="A1">
+	<skill id="55137" name="Blessed Scroll: Enchant Armor (B-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1682,7 +1682,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55138" name="Earth Dragon Antharas' Treasure Pouch" max-level="1" action="A1">
+	<skill id="55138" name="Earth Dragon Antharas' Treasure Pouch" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_bm_antaras_pocket_i00"/>
 		<attributes >
@@ -1693,7 +1693,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55141" name="Reported" max-level="1" action="A1">
+	<skill id="55141" name="Reported" action="A1">
 	<!-- You are under suspicion of using this program illegally. Your actions have been restricted. -->
 		<icon initial="icon.skill6038"/>
 		<attributes property="PHYSIC" >
@@ -1703,7 +1703,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55142" name="MP Potion" max-level="1" action="A1">
+	<skill id="55142" name="MP Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1713,7 +1713,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55143" name="Elite Fishing Rod of Golden Mermaid" max-level="1" >
+	<skill id="55143" name="Elite Fishing Rod of Golden Mermaid">
 	<!-- Upon fishing, XP/ SP bonus +50%%. -->
 		<icon initial="icon.bm_gold_fishing_pole"/>
 		<attributes property="MAGIC" >
@@ -2139,7 +2139,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55160" name="Special Fruit Buff" max-level="1" action="A2">
+	<skill id="55160" name="Special Fruit Buff" action="A2">
 	<!-- For 20 minutes, Bonus XP/SP Gain +5%%, P. Atk./M. Atk. +7%%, P. Def./M. Def. +10%%, HP/MP/CP +15%%, HP Recovery Bonus/MP Recovery Bonus +20%%, and has a chance to absorb 3%% of damage dealt to enemies as HP. Effect remains even after death. -->
 		<icon initial="icon.etc_codran_i09"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" >
@@ -2174,13 +2174,13 @@
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="10.0"/>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="15.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="15.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_CP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_CP" mode="PER">
 				<power initial="15.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
@@ -2200,7 +2200,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55161" name="VIP Level 1" max-level="1" >
+	<skill id="55161" name="VIP Level 1">
 	<!-- The right to VIP 1st level chest. XP/SP gain +3%%, item drop rate +50%%. -->
 		<icon initial="BranchIcon.Icon.g_skill_vip1"/>
 		<attributes property="MAGIC" >
@@ -2221,7 +2221,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55162" name="VIP Level 2" max-level="1" >
+	<skill id="55162" name="VIP Level 2">
 	<!-- The right to VIP 2nd level chest. XP/SP gain +7%%, item drop rate +150%%. World chat on any level, number of usage attempts +10. -->
 		<icon initial="BranchIcon.Icon.g_skill_vip2"/>
 		<attributes property="MAGIC" >
@@ -2240,12 +2240,12 @@
 			<stat-modify stat="BONUS_DROP_RATE" mode="PER">
 				<power initial="150.0"/>
 			</stat-modify>
-			<stat-modify stat="WORLD_CHAT_POINTS" mode="DIFF">
+			<stat-modify stat="WORLD_CHAT_POINTS">
 				<power initial="10.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55163" name="VIP Level 3" max-level="1" >
+	<skill id="55163" name="VIP Level 3">
 	<!-- The right to VIP 3rd level chest. XP/SP gain +15%%, item drop rate +200%%. Experience loss and chance to lose items upon death is decreased by 10%%. World chat on any level, number of usage attempts +10. -->
 		<icon initial="BranchIcon.Icon.g_skill_vip3"/>
 		<attributes property="MAGIC" >
@@ -2264,16 +2264,16 @@
 			<stat-modify stat="BONUS_DROP_RATE" mode="PER">
 				<power initial="200.0"/>
 			</stat-modify>
-			<reduce-drop-penalty type="ANY">
+			<reduce-drop-penalty>
 				<experience initial="-10.0"/>
 				<death-penalty initial="-10.0"/>
 			</reduce-drop-penalty>
-			<stat-modify stat="WORLD_CHAT_POINTS" mode="DIFF">
+			<stat-modify stat="WORLD_CHAT_POINTS">
 				<power initial="10.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55164" name="VIP Level 4" max-level="1" >
+	<skill id="55164" name="VIP Level 4">
 	<!-- The right to VIP 4th level chest. XP/SP gain +25%%, item drop rate +250%%. Experience loss and chance to lose items upon death is decreased by 15%%. World chat on any level, number of usage attempts +10. XP/SP gain +20%% during fishing. -->
 		<icon initial="BranchIcon.Icon.g_skill_vip4"/>
 		<attributes property="MAGIC" >
@@ -2292,11 +2292,11 @@
 			<stat-modify stat="BONUS_DROP_RATE" mode="PER">
 				<power initial="250.0"/>
 			</stat-modify>
-			<reduce-drop-penalty type="ANY">
+			<reduce-drop-penalty>
 				<experience initial="-15.0"/>
 				<death-penalty initial="-15.0"/>
 			</reduce-drop-penalty>
-			<stat-modify stat="WORLD_CHAT_POINTS" mode="DIFF">
+			<stat-modify stat="WORLD_CHAT_POINTS">
 				<power initial="10.0"/>
 			</stat-modify>
 			<stat-modify stat="FISHING_EXP_SP_BONUS" mode="PER">
@@ -2304,7 +2304,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55165" name="VIP Level 5" max-level="1" >
+	<skill id="55165" name="VIP Level 5">
 	<!-- The right to VIP 5th level chest. XP/SP gain +30%%, item drop rate +250%%. Experience loss and chance to lose items upon death is decreased by 20%%. PvE damage is increased. World chat on any level, number of usage attempts +10. XP/SP gain +20%% during fishing. -->
 		<icon initial="BranchIcon.Icon.g_skill_vip5"/>
 		<attributes property="MAGIC" >
@@ -2323,7 +2323,7 @@
 			<stat-modify stat="BONUS_DROP_RATE" mode="PER">
 				<power initial="250.0"/>
 			</stat-modify>
-			<reduce-drop-penalty type="ANY">
+			<reduce-drop-penalty>
 				<experience initial="-20.0"/>
 				<death-penalty initial="-20.0"/>
 			</reduce-drop-penalty>
@@ -2336,7 +2336,7 @@
 			<stat-modify stat="PVE_PHYSICAL_SKILL_DAMAGE" mode="PER">
 				<power initial="5.0"/>
 			</stat-modify>
-			<stat-modify stat="WORLD_CHAT_POINTS" mode="DIFF">
+			<stat-modify stat="WORLD_CHAT_POINTS">
 				<power initial="10.0"/>
 			</stat-modify>
 			<stat-modify stat="FISHING_EXP_SP_BONUS" mode="PER">
@@ -2344,7 +2344,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55166" name="VIP Level 6" max-level="1" >
+	<skill id="55166" name="VIP Level 6">
 	<!-- The right to VIP 6th level chest. XP/SP gain +30%%, item drop rate +250%%. Experience loss and chance to lose items upon death is decreased by 20%%. PvE damage is increased, STR/DEX/INT/WIT/MEN +2. World chat on any level, number of usage attempts +10. XP/SP gain +20%% during fishing. -->
 		<icon initial="BranchIcon.Icon.g_skill_vip6"/>
 		<attributes property="MAGIC" >
@@ -2366,7 +2366,7 @@
 			<stat-modify stat="BONUS_DROP_RATE" mode="PER">
 				<power initial="250.0"/>
 			</stat-modify>
-			<reduce-drop-penalty type="ANY">
+			<reduce-drop-penalty>
 				<experience initial="-20.0"/>
 				<death-penalty initial="-20.0"/>
 			</reduce-drop-penalty>
@@ -2379,7 +2379,7 @@
 			<stat-modify stat="PVE_PHYSICAL_SKILL_DAMAGE" mode="PER">
 				<power initial="10.0"/>
 			</stat-modify>
-			<stat-modify stat="WORLD_CHAT_POINTS" mode="DIFF">
+			<stat-modify stat="WORLD_CHAT_POINTS">
 				<power initial="10.0"/>
 			</stat-modify>
 			<stat-modify stat="FISHING_EXP_SP_BONUS" mode="PER">
@@ -2387,7 +2387,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55167" name="VIP Level 7" max-level="1" >
+	<skill id="55167" name="VIP Level 7">
 	<!-- The right to VIP 7th level chest. XP/SP gain +30%%, item drop rate +250%%. Experience loss and chance to lose items upon death is decreased by 20%%. PvE/PvP damage is increased, STR/DEX/INT/WIT/MEN +2. World chat on any level, number of usage attempts +20. XP/SP gain +20%% during fishing. -->
 		<icon initial="BranchIcon.Icon.g_skill_vip7"/>
 		<attributes property="MAGIC" >
@@ -2409,7 +2409,7 @@
 			<stat-modify stat="BONUS_DROP_RATE" mode="PER">
 				<power initial="250.0"/>
 			</stat-modify>
-			<reduce-drop-penalty type="ANY">
+			<reduce-drop-penalty>
 				<experience initial="-20.0"/>
 				<death-penalty initial="-20.0"/>
 			</reduce-drop-penalty>
@@ -2431,7 +2431,7 @@
 			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER">
 				<power initial="5.0"/>
 			</stat-modify>
-			<stat-modify stat="WORLD_CHAT_POINTS" mode="DIFF">
+			<stat-modify stat="WORLD_CHAT_POINTS">
 				<power initial="20.0"/>
 			</stat-modify>
 			<stat-modify stat="FISHING_EXP_SP_BONUS" mode="PER">
@@ -2439,7 +2439,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55168" name="Clan Unity - Lv. 1" max-level="1" action="A2">
+	<skill id="55168" name="Clan Unity - Lv. 1" action="A2">
 	<!-- Clan Alliance Buff. For 3 hours, XP/SP bonus +3%%. -->
 		<icon initial="icon.skill19011"/>
 		<attributes property="PHYSIC" >
@@ -2464,7 +2464,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55169" name="Clan Unity - Lv. 2" max-level="1" action="A2">
+	<skill id="55169" name="Clan Unity - Lv. 2" action="A2">
 	<!-- Clan Alliance Buff. For 3 hours, XP/SP bonus +5%%, damage received in PvE -2%%. -->
 		<icon initial="icon.skill19011"/>
 		<attributes property="PHYSIC" >
@@ -2481,10 +2481,10 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="BONUS_EXP" mode="DIFF">
+			<stat-modify stat="BONUS_EXP">
 				<power initial="5.0"/>
 			</stat-modify>
-			<stat-modify stat="BONUS_SP" mode="DIFF">
+			<stat-modify stat="BONUS_SP">
 				<power initial="5.0"/>
 			</stat-modify>
 			<stat-modify stat="PVE_MAGICAL_SKILL_DEFENCE" mode="PER">
@@ -2498,7 +2498,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55170" name="Clan Unity - Lv. 3" max-level="1" action="A2">
+	<skill id="55170" name="Clan Unity - Lv. 3" action="A2">
 	<!-- Clan Alliance Buff. For 3 hours, XP/SP bonus +7%%, damage received in PvE -5%%. -->
 		<icon initial="icon.skill19011"/>
 		<attributes property="PHYSIC" >
@@ -2515,10 +2515,10 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="BONUS_EXP" mode="DIFF">
+			<stat-modify stat="BONUS_EXP">
 				<power initial="7.0"/>
 			</stat-modify>
-			<stat-modify stat="BONUS_SP" mode="DIFF">
+			<stat-modify stat="BONUS_SP">
 				<power initial="7.0"/>
 			</stat-modify>
 			<stat-modify stat="PVE_MAGICAL_SKILL_DEFENCE" mode="PER">
@@ -2532,7 +2532,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55171" name="Clan Unity - Lv. 4" max-level="1" action="A2">
+	<skill id="55171" name="Clan Unity - Lv. 4" action="A2">
 	<!-- Clan Alliance Buff. XP/SP gain +10%%, PvE damage +7%%, damage received in PvE -8%% for 3 hours. -->
 		<icon initial="icon.skill19011"/>
 		<attributes property="PHYSIC" >
@@ -2549,10 +2549,10 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="BONUS_EXP" mode="DIFF">
+			<stat-modify stat="BONUS_EXP">
 				<power initial="10.0"/>
 			</stat-modify>
-			<stat-modify stat="BONUS_SP" mode="DIFF">
+			<stat-modify stat="BONUS_SP">
 				<power initial="10.0"/>
 			</stat-modify>
 			<stat-modify stat="PVE_MAGICAL_SKILL_DEFENCE" mode="PER">
@@ -2575,7 +2575,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55172" name="Clan's Special Supplies" max-level="1" action="A1">
+	<skill id="55172" name="Clan's Special Supplies" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -2593,23 +2593,23 @@
 			<encumbered slots="10" weight="20"/>
 		</conditions>
 		<effects>
-			<random-restoration><item id="1877" count="1" chance="2.0999999046325684"/>
-<item id="1884" count="1" chance="26.399999618530273"/>
-<item id="1881" count="1" chance="5.400000095367432"/>
-<item id="1875" count="1" chance="2.4000000953674316"/>
-<item id="1885" count="1" chance="3.299999952316284"/>
-<item id="1882" count="1" chance="9.600000381469727"/>
-<item id="1879" count="1" chance="6.900000095367432"/>
-<item id="1895" count="1" chance="10.600000381469727"/>
-<item id="1876" count="1" chance="7.699999809265137"/>
-<item id="1874" count="1" chance="2.5999999046325684"/>
-<item id="1878" count="1" chance="19.0"/>
-<item id="1880" count="1" chance="2.700000047683716"/>
-<item id="1883" count="1" chance="1.2999999523162842"/>
+			<random-restoration><item id="1877" chance="2.0999999046325684"/>
+<item id="1884" chance="26.399999618530273"/>
+<item id="1881" chance="5.400000095367432"/>
+<item id="1875" chance="2.4000000953674316"/>
+<item id="1885" chance="3.299999952316284"/>
+<item id="1882" chance="9.600000381469727"/>
+<item id="1879" chance="6.900000095367432"/>
+<item id="1895" chance="10.600000381469727"/>
+<item id="1876" chance="7.699999809265137"/>
+<item id="1874" chance="2.5999999046325684"/>
+<item id="1878" chance="19.0"/>
+<item id="1880" chance="2.700000047683716"/>
+<item id="1883" chance="1.2999999523162842"/>
 			</random-restoration>
 		</effects>
 	</skill>
-	<skill id="55173" name="Clan's Special Supplies" max-level="1" action="A1">
+	<skill id="55173" name="Clan's Special Supplies" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -2627,36 +2627,36 @@
 			<encumbered slots="10" weight="20"/>
 		</conditions>
 		<effects>
-			<random-restoration><item id="1877" count="1" chance="2.0999999046325684"/>
-<item id="1884" count="1" chance="14.800000190734863"/>
-<item id="1894" count="1" chance="0.699999988079071"/>
-<item id="1881" count="1" chance="6.199999809265137"/>
-<item id="70035" count="1" chance="0.5699999928474426"/>
-<item id="70038" count="1" chance="0.5699999928474426"/>
-<item id="70031" count="1" chance="0.5699999928474426"/>
-<item id="70032" count="1" chance="0.5699999928474426"/>
-<item id="70033" count="1" chance="0.5699999928474426"/>
-<item id="70030" count="1" chance="0.5699999928474426"/>
-<item id="70029" count="1" chance="0.5699999928474426"/>
-<item id="70036" count="1" chance="0.5699999928474426"/>
-<item id="70034" count="1" chance="0.5699999928474426"/>
-<item id="70037" count="1" chance="0.5699999928474426"/>
-<item id="1875" count="1" chance="3.299999952316284"/>
-<item id="1885" count="1" chance="5.0"/>
-<item id="1882" count="1" chance="11.5"/>
-<item id="1879" count="1" chance="8.899999618530273"/>
-<item id="1895" count="1" chance="7.599999904632568"/>
-<item id="1876" count="1" chance="9.800000190734863"/>
-<item id="1874" count="1" chance="4.599999904632568"/>
-<item id="1878" count="1" chance="9.0"/>
-<item id="1889" count="1" chance="2.9000000953674316"/>
-<item id="70039" count="1" chance="0.4000000059604645"/>
-<item id="1880" count="1" chance="5.900000095367432"/>
-<item id="1883" count="1" chance="1.600000023841858"/>
+			<random-restoration><item id="1877" chance="2.0999999046325684"/>
+<item id="1884" chance="14.800000190734863"/>
+<item id="1894" chance="0.699999988079071"/>
+<item id="1881" chance="6.199999809265137"/>
+<item id="70035" chance="0.5699999928474426"/>
+<item id="70038" chance="0.5699999928474426"/>
+<item id="70031" chance="0.5699999928474426"/>
+<item id="70032" chance="0.5699999928474426"/>
+<item id="70033" chance="0.5699999928474426"/>
+<item id="70030" chance="0.5699999928474426"/>
+<item id="70029" chance="0.5699999928474426"/>
+<item id="70036" chance="0.5699999928474426"/>
+<item id="70034" chance="0.5699999928474426"/>
+<item id="70037" chance="0.5699999928474426"/>
+<item id="1875" chance="3.299999952316284"/>
+<item id="1885" chance="5.0"/>
+<item id="1882" chance="11.5"/>
+<item id="1879" chance="8.899999618530273"/>
+<item id="1895" chance="7.599999904632568"/>
+<item id="1876" chance="9.800000190734863"/>
+<item id="1874" chance="4.599999904632568"/>
+<item id="1878" chance="9.0"/>
+<item id="1889" chance="2.9000000953674316"/>
+<item id="70039" chance="0.4000000059604645"/>
+<item id="1880" chance="5.900000095367432"/>
+<item id="1883" chance="1.600000023841858"/>
 			</random-restoration>
 		</effects>
 	</skill>
-	<skill id="55174" name="Clan's Special Supplies" max-level="1" action="A1">
+	<skill id="55174" name="Clan's Special Supplies" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -2674,49 +2674,49 @@
 			<encumbered slots="10" weight="20"/>
 		</conditions>
 		<effects>
-			<random-restoration><item id="1877" count="1" chance="2.299999952316284"/>
-<item id="4043" count="1" chance="1.399999976158142"/>
-<item id="1884" count="1" chance="14.25"/>
-<item id="1894" count="1" chance="1.5"/>
-<item id="1881" count="1" chance="6.199999809265137"/>
-<item id="70035" count="1" chance="0.5099999904632568"/>
-<item id="70038" count="1" chance="0.5099999904632568"/>
-<item id="70031" count="1" chance="0.5099999904632568"/>
-<item id="70032" count="1" chance="0.5099999904632568"/>
-<item id="70033" count="1" chance="0.5099999904632568"/>
-<item id="70030" count="1" chance="0.5099999904632568"/>
-<item id="70029" count="1" chance="0.5099999904632568"/>
-<item id="70036" count="1" chance="0.5099999904632568"/>
-<item id="70034" count="1" chance="0.5099999904632568"/>
-<item id="70037" count="1" chance="0.5099999904632568"/>
-<item id="1875" count="1" chance="3.5"/>
-<item id="1885" count="1" chance="3.4000000953674316"/>
-<item id="4039" count="1" chance="1.2999999523162842"/>
-<item id="1882" count="1" chance="9.899999618530273"/>
-<item id="1879" count="1" chance="7.300000190734863"/>
-<item id="1895" count="1" chance="7.300000190734863"/>
-<item id="1876" count="1" chance="8.600000381469727"/>
-<item id="1890" count="1" chance="0.800000011920929"/>
-<item id="1893" count="1" chance="0.30000001192092896"/>
-<item id="1874" count="1" chance="3.200000047683716"/>
-<item id="4041" count="1" chance="0.6000000238418579"/>
-<item id="1887" count="1" chance="0.800000011920929"/>
-<item id="1878" count="1" chance="9.199999809265137"/>
-<item id="1889" count="1" chance="2.5999999046325684"/>
-<item id="956" count="1" chance="0.10000000149011612"/>
-<item id="952" count="1" chance="0.05000000074505806"/>
-<item id="1886" count="1" chance="0.4000000059604645"/>
-<item id="70039" count="1" chance="0.5"/>
-<item id="1888" count="1" chance="1.100000023841858"/>
-<item id="4040" count="1" chance="0.5"/>
-<item id="1880" count="1" chance="3.799999952316284"/>
-<item id="1883" count="1" chance="2.0"/>
-<item id="4044" count="1" chance="1.5"/>
-<item id="4042" count="1" chance="0.5"/>
+			<random-restoration><item id="1877" chance="2.299999952316284"/>
+<item id="4043" chance="1.399999976158142"/>
+<item id="1884" chance="14.25"/>
+<item id="1894" chance="1.5"/>
+<item id="1881" chance="6.199999809265137"/>
+<item id="70035" chance="0.5099999904632568"/>
+<item id="70038" chance="0.5099999904632568"/>
+<item id="70031" chance="0.5099999904632568"/>
+<item id="70032" chance="0.5099999904632568"/>
+<item id="70033" chance="0.5099999904632568"/>
+<item id="70030" chance="0.5099999904632568"/>
+<item id="70029" chance="0.5099999904632568"/>
+<item id="70036" chance="0.5099999904632568"/>
+<item id="70034" chance="0.5099999904632568"/>
+<item id="70037" chance="0.5099999904632568"/>
+<item id="1875" chance="3.5"/>
+<item id="1885" chance="3.4000000953674316"/>
+<item id="4039" chance="1.2999999523162842"/>
+<item id="1882" chance="9.899999618530273"/>
+<item id="1879" chance="7.300000190734863"/>
+<item id="1895" chance="7.300000190734863"/>
+<item id="1876" chance="8.600000381469727"/>
+<item id="1890" chance="0.800000011920929"/>
+<item id="1893" chance="0.30000001192092896"/>
+<item id="1874" chance="3.200000047683716"/>
+<item id="4041" chance="0.6000000238418579"/>
+<item id="1887" chance="0.800000011920929"/>
+<item id="1878" chance="9.199999809265137"/>
+<item id="1889" chance="2.5999999046325684"/>
+<item id="956" chance="0.10000000149011612"/>
+<item id="952" chance="0.05000000074505806"/>
+<item id="1886" chance="0.4000000059604645"/>
+<item id="70039" chance="0.5"/>
+<item id="1888" chance="1.100000023841858"/>
+<item id="4040" chance="0.5"/>
+<item id="1880" chance="3.799999952316284"/>
+<item id="1883" chance="2.0"/>
+<item id="4044" chance="1.5"/>
+<item id="4042" chance="0.5"/>
 			</random-restoration>
 		</effects>
 	</skill>
-	<skill id="55175" name="Clan's Special Supplies" max-level="1" action="A1">
+	<skill id="55175" name="Clan's Special Supplies" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -2734,57 +2734,57 @@
 			<encumbered slots="10" weight="20"/>
 		</conditions>
 		<effects>
-			<random-restoration><item id="1877" count="1" chance="2.200000047683716"/>
-<item id="4043" count="1" chance="1.7999999523162842"/>
-<item id="1884" count="1" chance="5.699999809265137"/>
-<item id="1894" count="1" chance="1.600000023841858"/>
-<item id="1881" count="1" chance="6.900000095367432"/>
-<item id="70035" count="1" chance="0.7200000286102295"/>
-<item id="70038" count="1" chance="0.7200000286102295"/>
-<item id="70031" count="1" chance="0.7200000286102295"/>
-<item id="70032" count="1" chance="0.7200000286102295"/>
-<item id="70033" count="1" chance="0.7200000286102295"/>
-<item id="70030" count="1" chance="0.7200000286102295"/>
-<item id="70029" count="1" chance="0.7200000286102295"/>
-<item id="70036" count="1" chance="0.7200000286102295"/>
-<item id="70034" count="1" chance="0.7200000286102295"/>
-<item id="70037" count="1" chance="0.7200000286102295"/>
-<item id="1892" count="1" chance="0.10000000149011612"/>
-<item id="4048" count="1" chance="0.20000000298023224"/>
-<item id="4047" count="1" chance="0.10000000149011612"/>
-<item id="1891" count="1" chance="0.10000000149011612"/>
-<item id="4046" count="1" chance="0.20000000298023224"/>
-<item id="1875" count="1" chance="4.199999809265137"/>
-<item id="1885" count="1" chance="5.300000190734863"/>
-<item id="4039" count="1" chance="1.899999976158142"/>
-<item id="1882" count="1" chance="11.0"/>
-<item id="1879" count="1" chance="6.599999904632568"/>
-<item id="1895" count="1" chance="5.199999809265137"/>
-<item id="1876" count="1" chance="10.239999771118164"/>
-<item id="1890" count="1" chance="0.6000000238418579"/>
-<item id="1893" count="1" chance="0.5"/>
-<item id="1874" count="1" chance="2.5999999046325684"/>
-<item id="4041" count="1" chance="0.30000001192092896"/>
-<item id="1887" count="1" chance="1.2999999523162842"/>
-<item id="1878" count="1" chance="6.199999809265137"/>
-<item id="1889" count="1" chance="3.0"/>
-<item id="4045" count="1" chance="0.10000000149011612"/>
-<item id="956" count="1" chance="0.20000000298023224"/>
-<item id="952" count="1" chance="0.10000000149011612"/>
-<item id="955" count="1" chance="0.5"/>
-<item id="951" count="1" chance="0.10000000149011612"/>
-<item id="1886" count="1" chance="1.2000000476837158"/>
-<item id="70039" count="1" chance="0.4000000059604645"/>
-<item id="1888" count="1" chance="1.7000000476837158"/>
-<item id="4040" count="1" chance="0.800000011920929"/>
-<item id="1880" count="1" chance="4.699999809265137"/>
-<item id="1883" count="1" chance="2.5999999046325684"/>
-<item id="4044" count="1" chance="2.0999999046325684"/>
-<item id="4042" count="1" chance="1.0"/>
+			<random-restoration><item id="1877" chance="2.200000047683716"/>
+<item id="4043" chance="1.7999999523162842"/>
+<item id="1884" chance="5.699999809265137"/>
+<item id="1894" chance="1.600000023841858"/>
+<item id="1881" chance="6.900000095367432"/>
+<item id="70035" chance="0.7200000286102295"/>
+<item id="70038" chance="0.7200000286102295"/>
+<item id="70031" chance="0.7200000286102295"/>
+<item id="70032" chance="0.7200000286102295"/>
+<item id="70033" chance="0.7200000286102295"/>
+<item id="70030" chance="0.7200000286102295"/>
+<item id="70029" chance="0.7200000286102295"/>
+<item id="70036" chance="0.7200000286102295"/>
+<item id="70034" chance="0.7200000286102295"/>
+<item id="70037" chance="0.7200000286102295"/>
+<item id="1892" chance="0.10000000149011612"/>
+<item id="4048" chance="0.20000000298023224"/>
+<item id="4047" chance="0.10000000149011612"/>
+<item id="1891" chance="0.10000000149011612"/>
+<item id="4046" chance="0.20000000298023224"/>
+<item id="1875" chance="4.199999809265137"/>
+<item id="1885" chance="5.300000190734863"/>
+<item id="4039" chance="1.899999976158142"/>
+<item id="1882" chance="11.0"/>
+<item id="1879" chance="6.599999904632568"/>
+<item id="1895" chance="5.199999809265137"/>
+<item id="1876" chance="10.239999771118164"/>
+<item id="1890" chance="0.6000000238418579"/>
+<item id="1893" chance="0.5"/>
+<item id="1874" chance="2.5999999046325684"/>
+<item id="4041" chance="0.30000001192092896"/>
+<item id="1887" chance="1.2999999523162842"/>
+<item id="1878" chance="6.199999809265137"/>
+<item id="1889" chance="3.0"/>
+<item id="4045" chance="0.10000000149011612"/>
+<item id="956" chance="0.20000000298023224"/>
+<item id="952" chance="0.10000000149011612"/>
+<item id="955" chance="0.5"/>
+<item id="951" chance="0.10000000149011612"/>
+<item id="1886" chance="1.2000000476837158"/>
+<item id="70039" chance="0.4000000059604645"/>
+<item id="1888" chance="1.7000000476837158"/>
+<item id="4040" chance="0.800000011920929"/>
+<item id="1880" chance="4.699999809265137"/>
+<item id="1883" chance="2.5999999046325684"/>
+<item id="4044" chance="2.0999999046325684"/>
+<item id="4042" chance="1.0"/>
 			</random-restoration>
 		</effects>
 	</skill>
-	<skill id="55176" name="Yellow Talisman - P. Atk." max-level="1" >
+	<skill id="55176" name="Yellow Talisman - P. Atk.">
 	<!-- Increases P. Atk. when equipped. -->
 		<icon initial="icon.etc_talisman_i02"/>
 		<attributes property="MAGIC" >
@@ -2799,7 +2799,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55177" name="Yellow Talisman - Atk. Spd." max-level="1" >
+	<skill id="55177" name="Yellow Talisman - Atk. Spd.">
 	<!-- Increases Atk. Spd. when equipped. -->
 		<icon initial="icon.etc_talisman_i02"/>
 		<attributes property="MAGIC" >
@@ -2814,7 +2814,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55178" name="Yellow Talisman - M. Def." max-level="1" >
+	<skill id="55178" name="Yellow Talisman - M. Def.">
 	<!-- Increases M. Def. when equipped. -->
 		<icon initial="icon.etc_talisman_i02"/>
 		<attributes property="MAGIC" >
@@ -2829,7 +2829,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55179" name="Yellow Talisman - M. Atk." max-level="1" >
+	<skill id="55179" name="Yellow Talisman - M. Atk.">
 	<!-- Increases magic power when equipped. -->
 		<icon initial="icon.etc_talisman_i02"/>
 		<attributes property="MAGIC" >
@@ -2844,7 +2844,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55180" name="Yellow Talisman - Casting Spd." max-level="1" >
+	<skill id="55180" name="Yellow Talisman - Casting Spd.">
 	<!-- Increases Casting Spd. when equipped. -->
 		<icon initial="icon.etc_talisman_i02"/>
 		<attributes property="MAGIC" >
@@ -2859,7 +2859,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55181" name="Yellow Talisman - P. Accuracy" max-level="1" >
+	<skill id="55181" name="Yellow Talisman - P. Accuracy">
 	<!-- Increases P. Accuracy when equipped with the Talisman. -->
 		<icon initial="icon.etc_talisman_i02"/>
 		<attributes property="MAGIC" >
@@ -2877,7 +2877,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55182" name="Yellow Talisman - P. Def." max-level="1" >
+	<skill id="55182" name="Yellow Talisman - P. Def.">
 	<!-- Increases P. Def. when equipped. -->
 		<icon initial="icon.etc_talisman_i02"/>
 		<attributes property="MAGIC" >
@@ -2892,7 +2892,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55183" name="Yellow Talisman - Speed" max-level="1" >
+	<skill id="55183" name="Yellow Talisman - Speed">
 	<!-- Increases Speed when equipped. -->
 		<icon initial="icon.etc_talisman_i02"/>
 		<attributes property="MAGIC" >
@@ -2902,12 +2902,12 @@
 		</attributes>
 		<target />
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="10.0"/>
 			</speed>
 		</effects>
 	</skill>
-	<skill id="55184" name="Yellow Talisman - P. Evasion" max-level="1" >
+	<skill id="55184" name="Yellow Talisman - P. Evasion">
 	<!-- Increases P. Evasion when equipped with the Talisman. -->
 		<icon initial="icon.etc_talisman_i02"/>
 		<attributes property="MAGIC" >
@@ -2917,14 +2917,14 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="5.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="5.0"/>
 			</stat-hp-based>
-			<stat-modify stat="MAGIC_EVASION_RATE" mode="DIFF">
+			<stat-modify stat="MAGIC_EVASION_RATE">
 				<power initial="5.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55185" name="Yellow Talisman - Healing" max-level="1" >
+	<skill id="55185" name="Yellow Talisman - Healing">
 	<!-- Increases the amount of Heal given while equipped with the talisman. -->
 		<icon initial="icon.etc_talisman_i02"/>
 		<attributes property="MAGIC" >
@@ -2935,11 +2935,11 @@
 		<target />
 		<effects>
 			<effect name="Heal">
-				<power initial="0.0"/>
+				<power/>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55186" name="Blue Talisman - Invisibility" max-level="1" action="T">
+	<skill id="55186" name="Blue Talisman - Invisibility" action="T">
 	<!-- Protects from preemptive attacks from monsters by making your character invisible. -->
 		<icon initial="icon.etc_talisman_i01"/>
 		<attributes property="PHYSIC" >
@@ -2962,7 +2962,7 @@
 			</speed>
 		</effects>
 	</skill>
-	<skill id="55187" name="Roast Blue Mackerel - STR" max-level="1" action="A2">
+	<skill id="55187" name="Roast Blue Mackerel - STR" action="A2">
 	<!-- For 20 minutes STR +1. -->
 		<icon initial="BranchIcon.Icon.roasted_mackerel_buff"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" >
@@ -2983,7 +2983,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="55188" name="Roast Blue Mackerel - INT" max-level="1" action="A2">
+	<skill id="55188" name="Roast Blue Mackerel - INT" action="A2">
 	<!-- For 20 minutes INT +1. -->
 		<icon initial="BranchIcon.Icon.roasted_mackerel_buff"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" >
@@ -3004,7 +3004,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="55189" name="Roast Blue Mackerel - CON" max-level="1" action="A2">
+	<skill id="55189" name="Roast Blue Mackerel - CON" action="A2">
 	<!-- For 20 minutes CON +1. -->
 		<icon initial="BranchIcon.Icon.roasted_mackerel_buff"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" >
@@ -3025,7 +3025,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="55190" name="Roast Blue Mackerel - DEX" max-level="1" action="A2">
+	<skill id="55190" name="Roast Blue Mackerel - DEX" action="A2">
 	<!-- For 20 minutes DEX +1. -->
 		<icon initial="BranchIcon.Icon.roasted_mackerel_buff"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" >
@@ -3046,7 +3046,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="55191" name="Roast Blue Mackerel - MEN" max-level="1" action="A2">
+	<skill id="55191" name="Roast Blue Mackerel - MEN" action="A2">
 	<!-- For 20 minutes MEN +1. -->
 		<icon initial="BranchIcon.Icon.roasted_mackerel_buff"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" >
@@ -3067,7 +3067,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="55192" name="Roast Blue Mackerel - WIT" max-level="1" action="A2">
+	<skill id="55192" name="Roast Blue Mackerel - WIT" action="A2">
 	<!-- For 20 minutes WIT +1. -->
 		<icon initial="BranchIcon.Icon.roasted_mackerel_buff"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" >
@@ -3088,7 +3088,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="55193" name="Sealed Rune Lvl 1" max-level="1" action="A1">
+	<skill id="55193" name="Sealed Rune Lvl 1" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_green_sealed_rune"/>
 		<attributes magic-critical-rate="5.0" >
@@ -3107,18 +3107,18 @@
 			<encumbered slots="10" weight="20"/>
 		</conditions>
 		<effects>
-			<random-restoration><item id="29818" count="1" chance="12.5"/>
-<item id="29838" count="1" chance="12.5"/>
-<item id="29858" count="1" chance="12.5"/>
-<item id="29878" count="1" chance="12.5"/>
-<item id="29898" count="1" chance="12.5"/>
-<item id="29918" count="1" chance="12.5"/>
-<item id="29938" count="1" chance="12.5"/>
-<item id="29958" count="1" chance="12.5"/>
+			<random-restoration><item id="29818" chance="12.5"/>
+<item id="29838" chance="12.5"/>
+<item id="29858" chance="12.5"/>
+<item id="29878" chance="12.5"/>
+<item id="29898" chance="12.5"/>
+<item id="29918" chance="12.5"/>
+<item id="29938" chance="12.5"/>
+<item id="29958" chance="12.5"/>
 			</random-restoration>
 		</effects>
 	</skill>
-	<skill id="55194" name="Sealed Rune Lvl 2" max-level="1" action="A1">
+	<skill id="55194" name="Sealed Rune Lvl 2" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_green_sealed_rune"/>
 		<attributes magic-critical-rate="5.0" >
@@ -3137,18 +3137,18 @@
 			<encumbered slots="10" weight="20"/>
 		</conditions>
 		<effects>
-			<random-restoration><item id="29819" count="1" chance="12.5"/>
-<item id="29839" count="1" chance="12.5"/>
-<item id="29859" count="1" chance="12.5"/>
-<item id="29879" count="1" chance="12.5"/>
-<item id="29899" count="1" chance="12.5"/>
-<item id="29919" count="1" chance="12.5"/>
-<item id="29939" count="1" chance="12.5"/>
-<item id="29959" count="1" chance="12.5"/>
+			<random-restoration><item id="29819" chance="12.5"/>
+<item id="29839" chance="12.5"/>
+<item id="29859" chance="12.5"/>
+<item id="29879" chance="12.5"/>
+<item id="29899" chance="12.5"/>
+<item id="29919" chance="12.5"/>
+<item id="29939" chance="12.5"/>
+<item id="29959" chance="12.5"/>
 			</random-restoration>
 		</effects>
 	</skill>
-	<skill id="55195" name="Sealed Rune Lvl 3" max-level="1" action="A1">
+	<skill id="55195" name="Sealed Rune Lvl 3" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_green_sealed_rune"/>
 		<attributes magic-critical-rate="5.0" >
@@ -3167,18 +3167,18 @@
 			<encumbered slots="10" weight="20"/>
 		</conditions>
 		<effects>
-			<random-restoration><item id="29820" count="1" chance="12.5"/>
-<item id="29840" count="1" chance="12.5"/>
-<item id="29860" count="1" chance="12.5"/>
-<item id="29880" count="1" chance="12.5"/>
-<item id="29900" count="1" chance="12.5"/>
-<item id="29920" count="1" chance="12.5"/>
-<item id="29940" count="1" chance="12.5"/>
-<item id="29960" count="1" chance="12.5"/>
+			<random-restoration><item id="29820" chance="12.5"/>
+<item id="29840" chance="12.5"/>
+<item id="29860" chance="12.5"/>
+<item id="29880" chance="12.5"/>
+<item id="29900" chance="12.5"/>
+<item id="29920" chance="12.5"/>
+<item id="29940" chance="12.5"/>
+<item id="29960" chance="12.5"/>
 			</random-restoration>
 		</effects>
 	</skill>
-	<skill id="55196" name="Sealed Rune Lvl 4" max-level="1" action="A1">
+	<skill id="55196" name="Sealed Rune Lvl 4" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_green_sealed_rune"/>
 		<attributes magic-critical-rate="5.0" >
@@ -3197,18 +3197,18 @@
 			<encumbered slots="10" weight="20"/>
 		</conditions>
 		<effects>
-			<random-restoration><item id="29821" count="1" chance="12.5"/>
-<item id="29841" count="1" chance="12.5"/>
-<item id="29861" count="1" chance="12.5"/>
-<item id="29881" count="1" chance="12.5"/>
-<item id="29901" count="1" chance="12.5"/>
-<item id="29921" count="1" chance="12.5"/>
-<item id="29941" count="1" chance="12.5"/>
-<item id="29961" count="1" chance="12.5"/>
+			<random-restoration><item id="29821" chance="12.5"/>
+<item id="29841" chance="12.5"/>
+<item id="29861" chance="12.5"/>
+<item id="29881" chance="12.5"/>
+<item id="29901" chance="12.5"/>
+<item id="29921" chance="12.5"/>
+<item id="29941" chance="12.5"/>
+<item id="29961" chance="12.5"/>
 			</random-restoration>
 		</effects>
 	</skill>
-	<skill id="55197" name="Sealed Rune Lvl 5" max-level="1" action="A1">
+	<skill id="55197" name="Sealed Rune Lvl 5" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_green_sealed_rune"/>
 		<attributes magic-critical-rate="5.0" >
@@ -3227,18 +3227,18 @@
 			<encumbered slots="10" weight="20"/>
 		</conditions>
 		<effects>
-			<random-restoration><item id="29822" count="1" chance="12.5"/>
-<item id="29842" count="1" chance="12.5"/>
-<item id="29862" count="1" chance="12.5"/>
-<item id="29882" count="1" chance="12.5"/>
-<item id="29902" count="1" chance="12.5"/>
-<item id="29922" count="1" chance="12.5"/>
-<item id="29942" count="1" chance="12.5"/>
-<item id="29962" count="1" chance="12.5"/>
+			<random-restoration><item id="29822" chance="12.5"/>
+<item id="29842" chance="12.5"/>
+<item id="29862" chance="12.5"/>
+<item id="29882" chance="12.5"/>
+<item id="29902" chance="12.5"/>
+<item id="29922" chance="12.5"/>
+<item id="29942" chance="12.5"/>
+<item id="29962" chance="12.5"/>
 			</random-restoration>
 		</effects>
 	</skill>
-	<skill id="55198" name="Sealed Rune Lvl 6" max-level="1" action="A1">
+	<skill id="55198" name="Sealed Rune Lvl 6" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_blue_sealed_rune"/>
 		<attributes magic-critical-rate="5.0" >
@@ -3257,18 +3257,18 @@
 			<encumbered slots="10" weight="20"/>
 		</conditions>
 		<effects>
-			<random-restoration><item id="29823" count="1" chance="12.5"/>
-<item id="29843" count="1" chance="12.5"/>
-<item id="29863" count="1" chance="12.5"/>
-<item id="29883" count="1" chance="12.5"/>
-<item id="29903" count="1" chance="12.5"/>
-<item id="29923" count="1" chance="12.5"/>
-<item id="29943" count="1" chance="12.5"/>
-<item id="29963" count="1" chance="12.5"/>
+			<random-restoration><item id="29823" chance="12.5"/>
+<item id="29843" chance="12.5"/>
+<item id="29863" chance="12.5"/>
+<item id="29883" chance="12.5"/>
+<item id="29903" chance="12.5"/>
+<item id="29923" chance="12.5"/>
+<item id="29943" chance="12.5"/>
+<item id="29963" chance="12.5"/>
 			</random-restoration>
 		</effects>
 	</skill>
-	<skill id="55199" name="Sealed Rune Lvl 7" max-level="1" action="A1">
+	<skill id="55199" name="Sealed Rune Lvl 7" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_blue_sealed_rune"/>
 		<attributes magic-critical-rate="5.0" >
@@ -3287,14 +3287,14 @@
 			<encumbered slots="10" weight="20"/>
 		</conditions>
 		<effects>
-			<random-restoration><item id="29824" count="1" chance="12.5"/>
-<item id="29844" count="1" chance="12.5"/>
-<item id="29864" count="1" chance="12.5"/>
-<item id="29884" count="1" chance="12.5"/>
-<item id="29904" count="1" chance="12.5"/>
-<item id="29924" count="1" chance="12.5"/>
-<item id="29944" count="1" chance="12.5"/>
-<item id="29964" count="1" chance="12.5"/>
+			<random-restoration><item id="29824" chance="12.5"/>
+<item id="29844" chance="12.5"/>
+<item id="29864" chance="12.5"/>
+<item id="29884" chance="12.5"/>
+<item id="29904" chance="12.5"/>
+<item id="29924" chance="12.5"/>
+<item id="29944" chance="12.5"/>
+<item id="29964" chance="12.5"/>
 			</random-restoration>
 		</effects>
 	</skill>

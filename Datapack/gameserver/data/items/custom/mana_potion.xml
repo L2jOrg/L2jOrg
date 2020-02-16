@@ -7,8 +7,8 @@
             <player flying="false"/>
         </condition>
         <attributes weight="180" price="2000" commission-type="POTION" for-npc="true" immediate-effect="true"/>
-        <skill-reducer type="ItemSkills">
-            <skill id="26030" level="1"/>  <!-- Mana Potion -->
+        <skill-reducer>
+            <skill id="26030"/>  <!-- Mana Potion -->
         </skill-reducer>
     </item>
 </list>

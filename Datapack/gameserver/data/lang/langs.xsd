@@ -2,11 +2,11 @@
 <schema xmlns="http://www.w3.org/2001/XMLSchema">
 	<element name="list">
 		<complexType>
-			<sequence minOccurs="1" maxOccurs="1">
-				<element name="sm" minOccurs="1" maxOccurs="unbounded">
+			<sequence>
+				<element name="sm" maxOccurs="unbounded">
 					<complexType>
-						<attribute name="id" type="nonNegativeInteger" use="optional" />
-						<attribute name="name" type="token" use="optional" />
+						<attribute name="id" type="nonNegativeInteger"/>
+						<attribute name="name" type="token"/>
 						<attribute name="text" type="normalizedString" use="required" />
 					</complexType>
 				</element>

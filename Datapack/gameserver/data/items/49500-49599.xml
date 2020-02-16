@@ -9,9 +9,9 @@
 	<item id="49501" name="Fish Stew - Guildsman's Gratitude Lv. 1 - Tradable" type="SCROLL" icon="icon.ev_invasion_buff_box">
 	<!-- Increases XP and SP obtained from hunting by 10% for 20 min. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39076" level="1" value="-1"/>  <!-- Fish Stew- Guildsman's Gratitude -->
+		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39076" value="-1"/>  <!-- Fish Stew- Guildsman's Gratitude -->
 		</skill-reducer>
 	</item>
 
@@ -19,8 +19,8 @@
 	<!-- Magic scroll that teleports you to Giran Harbor. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39078" level="1" value="-1"/>  <!-- Return: Giran Harbor -->
+		<skill-reducer>
+			<skill id="39078" value="-1"/>  <!-- Return: Giran Harbor -->
 		</skill-reducer>
 	</item>
 
@@ -28,8 +28,8 @@
 	<!-- Magic scroll that teleports you to Gludin Harbor. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39077" level="1" value="-1"/>  <!-- Return: Gludin Harbor -->
+		<skill-reducer>
+			<skill id="39077" value="-1"/>  <!-- Return: Gludin Harbor -->
 		</skill-reducer>
 	</item>
 
@@ -87,7 +87,7 @@
 			<stat type="maxMp" value="9.0"/>
 		</stats>
 		<skills>
-			<skill id="3563" level="1" value="-1"/>  <!-- Ring of Core -->
+			<skill id="3563" value="-1"/>  <!-- Ring of Core -->
 		</skills>
 	</armor>
 
@@ -107,8 +107,8 @@
 	<!-- A 14-day item. When in inventory, you get STR +1, DEX +1, CON +1, INT +1, WIT +1, MEN +1.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="20160" immediate-effect="true"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39082" level="1" value="-1"/>  <!-- Perfect Charm -->
+		<skill-reducer>
+			<skill id="39082" value="-1"/>  <!-- Perfect Charm -->
 		</skill-reducer>
 	</item>
 
@@ -148,9 +148,9 @@
 	<item id="49518" name="Pirate's Special Fruit" type="SCROLL" icon="icon.etc_codran_i09">
 	<!-- For 20 min., P./M. Atk. + 7%, P./M. Def. + 10%, Max HP/CP/MP + 15%, HP/MP Recovery + 20%. Has a chance of recovering 3% of physical damage dealt to enemy as HP. Increase XP/SP gain by 5% when hunting. Cooldown is 1 minute. Effect remains even after death. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes reuse-delay="60000" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39144" level="1" value="-1"/>  <!-- Special Fruit Buff -->
+		<attributes reuse-delay="60000" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39144" value="-1"/>  <!-- Special Fruit Buff -->
 		</skill-reducer>
 	</item>
 
@@ -197,8 +197,8 @@
 	<!-- Double-click to receive one of the following items: Queen Ant's Ring Lv. 1 (15-day), Orfen's Earring Lv. 1(15-day), Ring of Core Lv. 1(15-day). -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55089" level="1" value="-1"/>  <!-- Rare Accessory Pack -->
+		<skill-reducer>
+			<skill id="55089" value="-1"/>  <!-- Rare Accessory Pack -->
 		</skill-reducer>
 	</item>
 
@@ -217,9 +217,9 @@
 	<item id="49528" name="Pirate's HP Potion" type="POTION" icon="icon.etc_potion_red_i00">
 	<!-- After instant 600 HP Recovery, CP Recovery with remaining points. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="1" action="SKILL_REDUCE" auto-use-type="HEALING"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39089" level="1" value="-1"/>  <!-- Pirate's HP Potion -->
+		<attributes weight="1" action="SKILL_REDUCE" auto-use="HEALING"/>
+		<skill-reducer>
+			<skill id="39089" value="-1"/>  <!-- Pirate's HP Potion -->
 		</skill-reducer>
 	</item>
 
@@ -254,9 +254,9 @@
 	<item id="49533" name="Hero’s HP Potion" type="POTION" icon="icon.etc_lesser_potion_red_i00">
 	<!-- After instant 500 HP Recovery, CP Recovery with remaining points. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="1" action="SKILL_REDUCE" auto-use-type="HEALING"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39103" level="1" value="-1"/>  <!-- Hero HP Potion -->
+		<attributes weight="1" action="SKILL_REDUCE" auto-use="HEALING"/>
+		<skill-reducer>
+			<skill id="39103" value="-1"/>  <!-- Hero HP Potion -->
 		</skill-reducer>
 	</item>
 
@@ -306,8 +306,8 @@
 	<!-- Double-click the chest to receive one of the Spellbooks, used after the 2nd Class Transfer.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39059" level="1" value="-1"/>  <!-- Spellbook Box -->
+		<skill-reducer>
+			<skill id="39059" value="-1"/>  <!-- Spellbook Box -->
 		</skill-reducer>
 	</item>
 
@@ -315,8 +315,8 @@
 	<!-- Magic scroll, restoring 50% of XP and resurrecting the character.  -->
 		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39109" level="1" value="-1"/>  <!-- Greater Scroll of Resurrection -->
+		<skill-reducer>
+			<skill id="39109" value="-1"/>  <!-- Greater Scroll of Resurrection -->
 		</skill-reducer>
 	</item>
 
@@ -602,7 +602,7 @@
 		</stats>
 		<skills>
 			<skill id="3563" level="3" value="-1"/>  <!-- Ring of Core -->
-			<skill id="35016" level="1" value="-1"/>  <!-- Ring of Core - Special Ability -->
+			<skill id="35016" value="-1"/>  <!-- Ring of Core - Special Ability -->
 		</skills>
 	</armor>
 
@@ -616,7 +616,7 @@
 			<stat type="maxMp" value="9.0"/>
 		</stats>
 		<skills>
-			<skill id="3561" level="1" value="-1"/>  <!-- Damaged Baium's Ring -->
+			<skill id="3561" value="-1"/>  <!-- Damaged Baium's Ring -->
 		</skills>
 	</armor>
 
@@ -673,8 +673,8 @@
 	<!-- 7-day item. Increases XP/SP gain by 50% for 1 hours. Effect remains after death.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39113" level="1" value="-1"/>  <!-- Golden Mermaid's Tear -->
+		<skill-reducer>
+			<skill id="39113" value="-1"/>  <!-- Golden Mermaid's Tear -->
 		</skill-reducer>
 	</item>
 
@@ -769,7 +769,7 @@
 		</stats>
 		<skills>
 			<skill id="3563" level="3" value="-1"/>  <!-- Ring of Core -->
-			<skill id="35016" level="1" value="-1"/>  <!-- Ring of Core - Special Ability -->
+			<skill id="35016" value="-1"/>  <!-- Ring of Core - Special Ability -->
 		</skills>
 	</armor>
 

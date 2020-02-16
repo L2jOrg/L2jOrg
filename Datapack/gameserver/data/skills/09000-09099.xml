@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="9029" name="Watermelon Seed" max-level="1" action="A1">
+	<skill id="9029" name="Watermelon Seed" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" hit-cancel-time="1.5" >
@@ -19,12 +19,12 @@
 			<condition name="OpCanNotUseAirship"/>
 		</conditions>
 		<effects>
-			<summon-npc count="13271" despawn-delay="20000">
+			<summon-npc count="13271">
 				<npc initial="13271.0"/>
 			</summon-npc>
 		</effects>
 	</skill>
-	<skill id="9030" name="Honey Watermelon Seed" max-level="1" action="A1">
+	<skill id="9030" name="Honey Watermelon Seed" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" hit-cancel-time="1.5" >
@@ -43,12 +43,12 @@
 			<condition name="OpCanNotUseAirship"/>
 		</conditions>
 		<effects>
-			<summon-npc count="13275" despawn-delay="20000">
+			<summon-npc count="13275">
 				<npc initial="13275.0"/>
 			</summon-npc>
 		</effects>
 	</skill>
-	<skill id="9031" name="Copied Watermelon Seed" max-level="1" action="A1">
+	<skill id="9031" name="Copied Watermelon Seed" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" hit-cancel-time="1.5" >
@@ -67,12 +67,12 @@
 			<condition name="OpCanNotUseAirship"/>
 		</conditions>
 		<effects>
-			<summon-npc count="13271" despawn-delay="20000">
+			<summon-npc count="13271">
 				<npc initial="13271.0"/>
 			</summon-npc>
 		</effects>
 	</skill>
-	<skill id="9032" name="Copied Honey Watermelon Seed" max-level="1" action="A1">
+	<skill id="9032" name="Copied Honey Watermelon Seed" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" hit-cancel-time="1.5" >
@@ -91,7 +91,7 @@
 			<condition name="OpCanNotUseAirship"/>
 		</conditions>
 		<effects>
-			<summon-npc count="13275" despawn-delay="20000">
+			<summon-npc count="13275">
 				<npc initial="13275.0"/>
 			</summon-npc>
 		</effects>

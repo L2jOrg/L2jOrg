@@ -298,8 +298,8 @@
 	<!-- Magical scroll that relocates you to Talking Island. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="5" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="32031" level="1" value="-1"/>  <!-- Scroll of Escape: Talking Island Village -->
+		<skill-reducer>
+			<skill id="32031" value="-1"/>  <!-- Scroll of Escape: Talking Island Village -->
 		</skill-reducer>
 	</item>
 
@@ -307,8 +307,8 @@
 	<!-- Magical scroll that relocates you to Elven Village. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="5" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="32032" level="1" value="-1"/>  <!-- Scroll of Escape: Elven Village -->
+		<skill-reducer>
+			<skill id="32032" value="-1"/>  <!-- Scroll of Escape: Elven Village -->
 		</skill-reducer>
 	</item>
 
@@ -316,8 +316,8 @@
 	<!-- Magical scroll that relocates you to Dark Elf Village. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="5" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="32033" level="1" value="-1"/>  <!-- Scroll of Escape: Dark Elf Village -->
+		<skill-reducer>
+			<skill id="32033" value="-1"/>  <!-- Scroll of Escape: Dark Elf Village -->
 		</skill-reducer>
 	</item>
 
@@ -325,8 +325,8 @@
 	<!-- Magical scroll that relocates you to Orc Village. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="5" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="32034" level="1" value="-1"/>  <!-- Scroll of Escape: Orc Village -->
+		<skill-reducer>
+			<skill id="32034" value="-1"/>  <!-- Scroll of Escape: Orc Village -->
 		</skill-reducer>
 	</item>
 
@@ -334,8 +334,8 @@
 	<!-- Magical scroll that relocates you to Dwarven Village. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="5" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="32035" level="1" value="-1"/>  <!-- Scroll of Escape: Dwarven Village -->
+		<skill-reducer>
+			<skill id="32035" value="-1"/>  <!-- Scroll of Escape: Dwarven Village -->
 		</skill-reducer>
 	</item>
 
@@ -343,8 +343,8 @@
 	<!-- Magical scroll that relocates you to Gludin Village. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="5" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="32036" level="1" value="-1"/>  <!-- Scroll of Escape: Gludin Village -->
+		<skill-reducer>
+			<skill id="32036" value="-1"/>  <!-- Scroll of Escape: Gludin Village -->
 		</skill-reducer>
 	</item>
 
@@ -352,8 +352,8 @@
 	<!-- Magical scroll that relocates you to the Town of Gludio. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="5" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="32037" level="1" value="-1"/>  <!-- Scroll of Escape: Town of Gludio -->
+		<skill-reducer>
+			<skill id="32037" value="-1"/>  <!-- Scroll of Escape: Town of Gludio -->
 		</skill-reducer>
 	</item>
 

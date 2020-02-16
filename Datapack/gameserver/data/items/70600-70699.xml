@@ -131,18 +131,18 @@
 	<item id="70621" name="Einhasad's Protection" type="SCROLL" icon="BranchSys2.icon.br_soulavatar_regen_i00">
 	<!-- Einhasad's Protection maintains buffs and debuffs even after death. The item disappears if a character dies.\n -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55576" level="1" value="-1"/>  <!-- Einhasad's Protection -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55576" value="-1"/>  <!-- Einhasad's Protection -->
 		</skill-reducer>
 	</item>
 
 	<item id="70622" name="Einhasad's Salvation" type="SCROLL" icon="BranchSys2.icon.br_soulavatar_active_i00">
 	<!-- Einhasad's Salvation maintains buffs and debuffs even after death, allows to resurrect with full HP. The item disappears if a character dies.\n -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55577" level="1" value="-1"/>  <!-- Einhasad's Salvation -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55577" value="-1"/>  <!-- Einhasad's Salvation -->
 		</skill-reducer>
 	</item>
 
@@ -209,18 +209,18 @@
 	<item id="70633" name="Blue Dynasty Transformation Scroll" type="POTION" icon="icon.etc_charm_of_courage_i01">
 	<!-- Transforms you into Blue Dynasty for 30 min. P./ M. Atk. +3%, P./ M. Def. +3%, Atk. Spd. +5%, Max. HP/MP +7%, Speed +5, P./ M. Accuracy +2, M. Critical Rate +2. Effect remains after death -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55693" level="1" value="-1"/>  <!-- Blue Dynasty Transformation Scroll -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55693" value="-1"/>  <!-- Blue Dynasty Transformation Scroll -->
 		</skill-reducer>
 	</item>
 
 	<item id="70634" name="Red Zubei Transformation Scroll" type="POTION" icon="icon.etc_charm_of_courage_i04">
 	<!-- Transforms you into Red Zubei for 30 minutes. P./ M. Atk. +2%, P./ M. Def. +2%, Atk. Spd. +3%, Max. HP/MP +5%, Speed +4, P./ M. Accuracy +1, M. Critical Rate +1. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55694" level="1" value="-1"/>  <!-- Red Zubei Transformation Scroll -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55694" value="-1"/>  <!-- Red Zubei Transformation Scroll -->
 		</skill-reducer>
 	</item>
 
@@ -228,8 +228,8 @@
 	<!-- Transforms you into Formal Wear for 30 min. Effect remains after death. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55583" level="1" value="-1"/>  <!-- Formal Wear Appearance Scroll -->
+		<skill-reducer>
+			<skill id="55583" value="-1"/>  <!-- Formal Wear Appearance Scroll -->
 		</skill-reducer>
 	</item>
 
@@ -254,7 +254,7 @@
 	<item id="70639" name="Hero's XP/SP Scroll" type="SCROLL" icon="icon.exp_bottle_scroll">
 	<!-- For 20 min. XP/ SP +50%.\n -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="10" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<attributes weight="10" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 	</item>
 
 	<item id="70640" name="Hero's Recovery Potion" type="POTION" icon="icon.etc_potion_scarlet_i00">
@@ -273,8 +273,8 @@
 	<!-- Immediately restores 60 MP.\n -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="10" commission-type="POTION" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39258" level="1" value="-1"/>  <!-- Warrior MP Recovery Potion -->
+		<skill-reducer>
+			<skill id="39258" value="-1"/>  <!-- Warrior MP Recovery Potion -->
 		</skill-reducer>
 	</item>
 
@@ -378,7 +378,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -666,7 +666,7 @@
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55605" level="1" value="-1"/>  <!-- Artisan's Goggles (STR+1 INT+1) -->
+			<skill id="55605" value="-1"/>  <!-- Artisan's Goggles (STR+1 INT+1) -->
 		</skills>
 	</armor>
 
@@ -676,7 +676,7 @@
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55606" level="1" value="-1"/>  <!-- Artisan's Goggles (DEX +1 WIT +1) -->
+			<skill id="55606" value="-1"/>  <!-- Artisan's Goggles (DEX +1 WIT +1) -->
 		</skills>
 	</armor>
 
@@ -686,7 +686,7 @@
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55607" level="1" value="-1"/>  <!-- Artisan's Goggles (CON+1 MEN+1) -->
+			<skill id="55607" value="-1"/>  <!-- Artisan's Goggles (CON+1 MEN+1) -->
 		</skills>
 	</armor>
 
@@ -696,7 +696,7 @@
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55608" level="1" value="-1"/>  <!-- Uniform Hat (STR+1 INT+1) -->
+			<skill id="55608" value="-1"/>  <!-- Uniform Hat (STR+1 INT+1) -->
 		</skills>
 	</armor>
 
@@ -706,7 +706,7 @@
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55609" level="1" value="-1"/>  <!-- Uniform Hat (DEX +1 WIT +1) -->
+			<skill id="55609" value="-1"/>  <!-- Uniform Hat (DEX +1 WIT +1) -->
 		</skills>
 	</armor>
 
@@ -716,7 +716,7 @@
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55610" level="1" value="-1"/>  <!-- Uniform Hat (CON+1 MEN+1) -->
+			<skill id="55610" value="-1"/>  <!-- Uniform Hat (CON+1 MEN+1) -->
 		</skills>
 	</armor>
 
@@ -726,7 +726,7 @@
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55611" level="1" value="-1"/>  <!-- Assassin's Bamboo Hat (STR+1 INT+1) -->
+			<skill id="55611" value="-1"/>  <!-- Assassin's Bamboo Hat (STR+1 INT+1) -->
 		</skills>
 	</armor>
 
@@ -736,7 +736,7 @@
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55612" level="1" value="-1"/>  <!-- Assassin's Bamboo Hat (DEX +1 WIT +1) -->
+			<skill id="55612" value="-1"/>  <!-- Assassin's Bamboo Hat (DEX +1 WIT +1) -->
 		</skills>
 	</armor>
 
@@ -746,7 +746,7 @@
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55613" level="1" value="-1"/>  <!-- Assassin's Bamboo Hat (CON+1 MEN+1) -->
+			<skill id="55613" value="-1"/>  <!-- Assassin's Bamboo Hat (CON+1 MEN+1) -->
 		</skills>
 	</armor>
 
@@ -756,7 +756,7 @@
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55614" level="1" value="-1"/>  <!-- Valkyrie Hat (STR+1 INT+1) -->
+			<skill id="55614" value="-1"/>  <!-- Valkyrie Hat (STR+1 INT+1) -->
 		</skills>
 	</armor>
 
@@ -766,7 +766,7 @@
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55615" level="1" value="-1"/>  <!-- Valkyrie Hat (DEX +1 WIT +1) -->
+			<skill id="55615" value="-1"/>  <!-- Valkyrie Hat (DEX +1 WIT +1) -->
 		</skills>
 	</armor>
 
@@ -776,7 +776,7 @@
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55616" level="1" value="-1"/>  <!-- Valkyrie Hat (CON+1 MEN+1) -->
+			<skill id="55616" value="-1"/>  <!-- Valkyrie Hat (CON+1 MEN+1) -->
 		</skills>
 	</armor>
 
@@ -786,7 +786,7 @@
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55617" level="1" value="-1"/>  <!-- Gatekeeper Hat (STR+1 INT+1) -->
+			<skill id="55617" value="-1"/>  <!-- Gatekeeper Hat (STR+1 INT+1) -->
 		</skills>
 	</armor>
 

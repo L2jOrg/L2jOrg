@@ -82,7 +82,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="56.0">
 					<value level="2">68.0</value>
 					<value level="3">80.0</value>
@@ -138,7 +138,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="0.04">
 					<value level="2">0.05</value>
 					<value level="3">0.06</value>
@@ -243,7 +243,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="DIFF">
+			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0">
 				<power initial="25.0">
 					<value level="2">31.0</value>
 					<value level="3">269.0</value>
@@ -340,7 +340,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="BLOW_RATE" mode="DIFF">
+			<stat-modify stat="BLOW_RATE">
 				<power initial="92.0">
 					<value level="2">113.0</value>
 					<value level="3">134.0</value>
@@ -388,7 +388,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="2.0">
 					<value level="2">2.4</value>
 					<value level="3">2.8</value>
@@ -482,7 +482,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK">
 				<power initial="28.0">
 					<value level="2">36.0</value>
 					<value level="3">44.0</value>
@@ -530,7 +530,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK_SPEED">
 				<power initial="0.03">
 					<value level="2">0.04</value>
 					<value level="3">0.05</value>
@@ -580,7 +580,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="4.0">
 					<value level="2">4.5</value>
 					<value level="3">5.0</value>
@@ -627,7 +627,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="0.04">
 					<value level="2">0.05</value>
 					<value level="3">0.06</value>
@@ -674,7 +674,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="WEIGHT_LIMIT" mode="DIFF">
+			<stat-modify stat="WEIGHT_LIMIT">
 				<power initial="1000.0">
 					<value level="2">1400.0</value>
 					<value level="3">1800.0</value>
@@ -791,7 +791,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="45017" name="Orfen's Earring - Special Ability" max-level="1" >
+	<skill id="45017" name="Orfen's Earring - Special Ability">
 	<!-- Enemy's MP -10% during PvP. -->
 		<icon initial="icon.accessory_earring_of_orfen_i04"/>
 		<attributes magic-critical-rate="5.0" >
@@ -806,7 +806,7 @@
 		<target />
 		<effects>
 			<vampiric-attack chance="0">
-				<power initial="0.0"/>
+				<power/>
 			</vampiric-attack>
 			<attack-trait>
 				<trait type="SHOCK">
@@ -838,7 +838,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="45018" name="Zaken's Earring - Special Ability" max-level="1" debuff="true" action="A1">
+	<skill id="45018" name="Zaken's Earring - Special Ability" debuff="true" action="A1">
 	<!-- For 30 seconds, limits enemy's CP/HP/MP Recovery up to 80% during PvP. -->
 		<icon initial="icon.accessory_earring_of_zaken_i04"/>
 		<attributes property="PHYSIC" >
@@ -851,7 +851,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="45019" name="Antharas' Earring - Special Ability" max-level="1" debuff="true" action="A1">
+	<skill id="45019" name="Antharas' Earring - Special Ability" debuff="true" action="A1">
 	<!-- Blocks all the enemy's P. Skills/M. Skills for 24 seconds. -->
 		<icon initial="icon.accessory_earring_of_antaras_i04"/>
 		<attributes property="PHYSIC" >
@@ -864,7 +864,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="45020" name="Zaken's Cloak" max-level="1" >
+	<skill id="45020" name="Zaken's Cloak">
 	<!-- Max HP +5%%. -->
 		<icon initial="BranchSys2.Icon.br_zaken_cloak_i00"/>
 		<attributes property="MAGIC" >
@@ -874,7 +874,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="45021" name="White Uniform Hat (STR +1 INT +1)" max-level="1" >
+	<skill id="45021" name="White Uniform Hat (STR +1 INT +1)">
 	<!-- STR +1 and INT +1 -->
 		<icon initial="BranchSys2.icon.br_navy_cap_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -889,7 +889,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="45022" name="White Uniform Hat (DEX +1 WIT+1)" max-level="1" >
+	<skill id="45022" name="White Uniform Hat (DEX +1 WIT+1)">
 	<!-- DEX +1 and WIT +1 -->
 		<icon initial="BranchSys2.icon.br_navy_cap_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -904,7 +904,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="45023" name="White Uniform Hat (CON +1 MEN +1)" max-level="1" >
+	<skill id="45023" name="White Uniform Hat (CON +1 MEN +1)">
 	<!-- CON +1 and MEN +1. -->
 		<icon initial="BranchSys2.icon.br_navy_cap_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -919,7 +919,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="45024" name="Napoleon Hat (STR +1, INT +1)" max-level="1" >
+	<skill id="45024" name="Napoleon Hat (STR +1, INT +1)">
 	<!-- STR +1 and INT +1 -->
 		<icon initial="BranchSys.icon.br_napoleonic_cap_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -934,7 +934,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="45025" name="Napoleon Hat (DEX +1 WIT+1)" max-level="1" >
+	<skill id="45025" name="Napoleon Hat (DEX +1 WIT+1)">
 	<!-- DEX +1 and WIT +1 -->
 		<icon initial="BranchSys.icon.br_napoleonic_cap_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -949,7 +949,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="45026" name="Napoleon Hat (CON +1 MEN +1)" max-level="1" >
+	<skill id="45026" name="Napoleon Hat (CON +1 MEN +1)">
 	<!-- CON +1 and MEN +1. -->
 		<icon initial="BranchSys.icon.br_napoleonic_cap_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -964,7 +964,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="45027" name="Ninja Hair Accessory (STR +1 INT +1)" max-level="1" >
+	<skill id="45027" name="Ninja Hair Accessory (STR +1 INT +1)">
 	<!-- STR +1 and INT +1 -->
 		<icon initial="BranchSys3.icon1.g_co_ninja_hair"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -979,7 +979,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="45028" name="Ninja Hair Accessory (DEX +1 WIT+1)" max-level="1" >
+	<skill id="45028" name="Ninja Hair Accessory (DEX +1 WIT+1)">
 	<!-- DEX +1 and WIT +1 -->
 		<icon initial="BranchSys3.icon1.g_co_ninja_hair"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -994,7 +994,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="45029" name="Ninja Hair Accessory (CON +1 MEN +1)" max-level="1" >
+	<skill id="45029" name="Ninja Hair Accessory (CON +1 MEN +1)">
 	<!-- CON +1 and MEN +1. -->
 		<icon initial="BranchSys3.icon1.g_co_ninja_hair"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1009,7 +1009,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="45030" name="Warrior's Helmet (STR +1 INT +1)" max-level="1" >
+	<skill id="45030" name="Warrior's Helmet (STR +1 INT +1)">
 	<!-- STR +1 and INT +1 -->
 		<icon initial="BranchSys2.icon.br_close_helmet_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1024,7 +1024,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="45031" name="Warrior's Helmet (DEX +1 WIT+1)" max-level="1" >
+	<skill id="45031" name="Warrior's Helmet (DEX +1 WIT+1)">
 	<!-- DEX +1 and WIT +1 -->
 		<icon initial="BranchSys2.icon.br_close_helmet_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1039,7 +1039,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="45032" name="Warrior's Helmet (CON +1 MEN +1)" max-level="1" >
+	<skill id="45032" name="Warrior's Helmet (CON +1 MEN +1)">
 	<!-- CON +1 and MEN +1. -->
 		<icon initial="BranchSys2.icon.br_close_helmet_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1054,7 +1054,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="45033" name="First Mate Hat (STR +1 INT +1)" max-level="1" >
+	<skill id="45033" name="First Mate Hat (STR +1 INT +1)">
 	<!-- STR +1 and INT +1 -->
 		<icon initial="icon.Accessary_middle_ages_i01"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1069,7 +1069,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="45034" name="First Mate Hat (DEX +1 WIT+1)" max-level="1" >
+	<skill id="45034" name="First Mate Hat (DEX +1 WIT+1)">
 	<!-- DEX +1 and WIT +1 -->
 		<icon initial="icon.Accessary_middle_ages_i01"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1084,7 +1084,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="45035" name="First Mate Hat (CON +1 MEN +1)" max-level="1" >
+	<skill id="45035" name="First Mate Hat (CON +1 MEN +1)">
 	<!-- CON +1 and MEN +1. -->
 		<icon initial="icon.Accessary_middle_ages_i01"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1099,7 +1099,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="45036" name="Artisan's Goggles (STR +1 INT +1)" max-level="1" >
+	<skill id="45036" name="Artisan's Goggles (STR +1 INT +1)">
 	<!-- STR +1 and INT +1 -->
 		<icon initial="icon.accessory_dwarf_goggle_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1114,7 +1114,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="45037" name="Artisan's Goggles (DEX +1 WIT+1)" max-level="1" >
+	<skill id="45037" name="Artisan's Goggles (DEX +1 WIT+1)">
 	<!-- DEX +1 and WIT +1 -->
 		<icon initial="icon.accessory_dwarf_goggle_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1129,7 +1129,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="45038" name="Artisan's Goggles (CON +1 MEN +1)" max-level="1" >
+	<skill id="45038" name="Artisan's Goggles (CON +1 MEN +1)">
 	<!-- CON +1 and MEN +1. -->
 		<icon initial="icon.accessory_dwarf_goggle_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1144,7 +1144,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="45039" name="Fire Dragon Belt" max-level="1" >
+	<skill id="45039" name="Fire Dragon Belt">
 	<!-- When belt is equipped. STR +1, INT +1, HP Recovery Bonus +2.31, Max MP Recovery Bonus +1.54, CP Recovery Bonus +3.07, Max HP/MP/CP +10%%, Inventory Slots +6, Weight Gauge +7,000, P./M. Critical Damage +4%%, HP Potions Effect +100. -->
 		<icon initial="icon.bm_vallakas_belt"/>
 		<attributes property="MAGIC" >
@@ -1222,7 +1222,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="45044" name="Blessed Dragon Pendant" max-level="1" >
+	<skill id="45044" name="Blessed Dragon Pendant">
 	<!-- M. Def +50, XP/SP Gain +30%, Received P./M. Damage -30%, Atk. Spd./Casting Spd. +10%, P. Critical Damage/M. Critical Damage +15%, P. Atk./M. Atk. +20%, and Damage Reflect Resistance +20%. -->
 		<icon initial="icon.bm_pendant_dragon_i01"/>
 		<attributes property="MAGIC" >
@@ -1232,7 +1232,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="45045" name="Dragon Invocation" max-level="1" action="A1">
+	<skill id="45045" name="Dragon Invocation" action="A1">
 	<!-- Recovers 100 HP and 50 MP per second for 15 seconds and Movement Speed +33. -->
 		<icon initial="icon.dragon_invocation"/>
 		<attributes property="PHYSIC" >
@@ -1245,7 +1245,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="45046" name="Dragon Barrier" max-level="1" action="A1">
+	<skill id="45046" name="Dragon Barrier" action="A1">
 	<!-- Creates a barrier for 10 seconds. Becomes invincible against normal attacks, skills, and debuffs. -->
 		<icon initial="icon.dragon_barrier"/>
 		<attributes property="PHYSIC" >
@@ -1258,7 +1258,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="45047" name="Dragon Evasion" max-level="1" action="A1">
+	<skill id="45047" name="Dragon Evasion" action="A1">
 	<!-- Prevents enemies from targeting you for 5 sec. -->
 		<icon initial="icon.dragon_evasion"/>
 		<attributes property="PHYSIC" >
@@ -1269,7 +1269,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="45048" name="Glorious Cloak" max-level="1" >
+	<skill id="45048" name="Glorious Cloak">
 	<!-- Max HP/Max MP/Max CP +10%%, P. Def. +5%%, M. Def +10%%, Resistance to all weapons +5, P. Critical Rate/M. Critical Rate +20, and PvP Damage Received -10%%. Also returns 4%% of received damage to the enemy. -->
 		<icon initial="icon.vesper_cloack_i00"/>
 		<attributes property="MAGIC" >

@@ -139,7 +139,7 @@
 	<item id="92314" name="Seal of Giran" type="NONE" icon="icon.etc_royal_seal_of_lord_i04">
 	<!-- Increases XP/SP by 20% for 20 min on use and can be exchanged for other Items through the Store Manager. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use-type="SUPPLY"/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
 	</item>
 
 	<item id="92315" name="Luxury Augmentation Box" type="NONE" icon="icon.bm_circlet_upgrade_box">
@@ -669,13 +669,13 @@
 	<item id="92397" name="Sayha's Blessing - Lv. 75 or lower" type="POTION" icon="icon.etc_wind_potion_i00">
 	<!-- Restricted to characters below level 75. Recharges 35,000 Sayha's Grace Points. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="92398" name="Sayha's Blessing - Event" type="POTION" icon="icon.etc_wind_potion_i00">
 	<!-- Recharges 35,000 Sayha's Grace Points. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="92399" name="Primeval Garden Time Recharge Stone - Exchangeable" type="POTION" icon="icon.timezone_refill_3">

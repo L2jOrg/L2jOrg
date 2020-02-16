@@ -719,7 +719,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="45153" name="Shadow Impact" max-level="1" action="A1">
+	<skill id="45153" name="Shadow Impact" action="A1">
 	<!-- Inflicts double the damage of P. Atk. -->
 		<icon initial="icon.skill19187"/>
 		<attributes auto-use="ACTIVE">
@@ -2064,7 +2064,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="45176" name="Restore HP" max-level="1" action="A2">
+	<skill id="45176" name="Restore HP" action="A2">
 	<!-- Recovers HP continuously for 20 minutes. Consumes 3 Spirit Ores. -->
 		<icon initial="icon.skill0211"/>
 		<attributes property="PHYSIC" auto-use="BUFF">
@@ -2075,7 +2075,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="45177" name="Restore MP" max-level="1" action="A2">
+	<skill id="45177" name="Restore MP" action="A2">
 	<!-- Recovers MP continuously for 20 minutes. Consumes 3 Spirit Ores. -->
 		<icon initial="icon.skill0213"/>
 		<attributes property="PHYSIC" auto-use="BUFF">
@@ -2155,7 +2155,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="45183" name="Soul Chase" max-level="1" action="A1">
+	<skill id="45183" name="Soul Chase" action="A1">
 	<!-- Chases the enemy. Can be used when the distance from the enemy is greater than 100. -->
 		<icon initial="icon.skill0479"/>
 		<attributes auto-use="ACTIVE">
@@ -2186,7 +2186,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="45185" name="Fatal Slash" max-level="1" >
+	<skill id="45185" name="Fatal Slash">
 	<!-- Has a chance to make an additional attack. -->
 		<icon initial="icon.skill19435"/>
 		<attributes property="MAGIC" >
@@ -2196,7 +2196,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="45186" name="Fatal Slash" max-level="1" action="A1">
+	<skill id="45186" name="Fatal Slash" action="A1">
 	<!-- Inflicts 1.5 times the damage of P. Atk. on the enemy. -->
 		<icon initial="icon.skill19435"/>
 		<attributes auto-use="ACTIVE">
@@ -2247,7 +2247,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="45188" name="Evolution Defense" max-level="1" >
+	<skill id="45188" name="Evolution Defense">
 	<!-- P. Def. +-1400@0:20, M. Def. +-1050@0:15.\n\n<Level Synch Skill>\nStandard Level: 76\nDepending on the standard level, P. Def. +20, M. Def. +15. -->
 		<icon initial="icon.skill19131"/>
 		<attributes property="MAGIC" >
@@ -2257,7 +2257,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="45189" name="Evolution Power" max-level="1" >
+	<skill id="45189" name="Evolution Power">
 	<!-- P. Def. +-1400@0:20, M. Def. +-1400@0:20.\n\n<Level Synch Skill>\nStandard Level: 80\nDepending on the standard level, P. Def. +20, M. Def. +20. -->
 		<icon initial="icon.skill19132"/>
 		<attributes property="MAGIC" >
@@ -2267,7 +2267,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="45190" name="Detection" max-level="1" debuff="true" action="A1">
+	<skill id="45190" name="Detection" debuff="true" action="A1">
 	<!-- Cancels all Hide around you. The target cannot Hide for 2 seconds and this debuff cannot be removed. Requires a weapon. -->
 		<icon initial="icon.skill19203"/>
 		<attributes property="PHYSIC" >
@@ -2354,7 +2354,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="45197" name="Grand Master’s Transcendence Blessing" max-level="1" >
+	<skill id="45197" name="Grand Master’s Transcendence Blessing">
 	<!-- Breaks the limit of the class with the help of the Grand Master and skills are AoE. -->
 		<icon initial="icon.skill19428"/>
 		<attributes property="PHYSIC" >
@@ -2362,7 +2362,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="45198" name="Grand Master’s Transcendence Blessing" max-level="1" >
+	<skill id="45198" name="Grand Master’s Transcendence Blessing">
 	<!-- Breaks the limit of the class with the help of the Grand Master and skills are AoE.\n\n<Warning>\nIn the current state, Shine/Shadow Souls are not absorbed. -->
 		<icon initial="icon.skill_kamael_shadowside"/>
 		<attributes property="PHYSIC" >

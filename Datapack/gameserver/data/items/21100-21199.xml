@@ -30,8 +30,8 @@
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55417" level="1" value="-1"/>  <!-- Summon Agathion - Zaken's Spirit Swords -->
-			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
+			<skill id="55417" value="-1"/>  <!-- Summon Agathion - Zaken's Spirit Swords -->
+			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 		</skills>
 	</armor>
 

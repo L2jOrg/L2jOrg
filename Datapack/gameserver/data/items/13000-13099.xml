@@ -9,8 +9,8 @@
 	<!-- Adds 3 slots to My Teleport, which can save specific locations. My Teleport can be expanded to up to 48 slots. -->
 		<restriction stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="5" action="CALL_SKILL"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2587" level="1" value="-1"/>  <!-- Increase number of teleport slots -->
+		<skill-reducer>
+			<skill id="2587" value="-1"/>  <!-- Increase number of teleport slots -->
 		</skill-reducer>
 	</item>
 
@@ -33,16 +33,16 @@
 		<attributes weight="30" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="8256" level="1" value="-1"/>  <!-- Release Agathion's Seal - Shiny -->
-			<skill id="5955" level="1" value="-1"/>  <!-- Agathion Cute Trick - Joy -->
-			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
-			<skill id="39056" level="1" value="-1"/>  <!-- Agathion Teleport: Town of Oren -->
-			<skill id="39055" level="1" value="-1"/>  <!-- Agathion Teleport: Town of Giran -->
-			<skill id="39054" level="1" value="-1"/>  <!-- Agathion Teleport: Town of Dion -->
-			<skill id="39053" level="1" value="-1"/>  <!-- Agathion Teleport: Town of Gludio -->
-			<skill id="39100" level="1" value="-1"/>  <!-- Agathion Teleport: Hunter's Village -->
-			<skill id="39101" level="1" value="-1"/>  <!-- Chase Down -->
-			<skill id="39102" level="1" value="-1"/>  <!-- Sneak -->
+			<skill id="8256" value="-1"/>  <!-- Release Agathion's Seal - Shiny -->
+			<skill id="5955" value="-1"/>  <!-- Agathion Cute Trick - Joy -->
+			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
+			<skill id="39056" value="-1"/>  <!-- Agathion Teleport: Town of Oren -->
+			<skill id="39055" value="-1"/>  <!-- Agathion Teleport: Town of Giran -->
+			<skill id="39054" value="-1"/>  <!-- Agathion Teleport: Town of Dion -->
+			<skill id="39053" value="-1"/>  <!-- Agathion Teleport: Town of Gludio -->
+			<skill id="39100" value="-1"/>  <!-- Agathion Teleport: Hunter's Village -->
+			<skill id="39101" value="-1"/>  <!-- Chase Down -->
+			<skill id="39102" value="-1"/>  <!-- Sneak -->
 		</skills>
 	</armor>
 

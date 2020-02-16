@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="806" name="Magic Obstacle" max-level="1" action="A1">
+	<skill id="806" name="Magic Obstacle" action="A1">
 	<!-- Blows away Enhanced Abnormal Conditions of the enemies around the golem. -->
 		<icon initial="icon.skill_transform_etc"/>
 		<attributes magic-critical-rate="5.0" >
@@ -21,7 +21,7 @@
 			</dispel-by-category>
 		</effects>
 	</skill>
-	<skill id="807" name="Over-hit" max-level="1" action="A2">
+	<skill id="807" name="Over-hit" action="A2">
 	<!-- Increases the golem's power more by filling him up with special fuel. -->
 		<icon initial="icon.skill_transform_buff"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -48,7 +48,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="808" name="Golem Punch" max-level="1" debuff="true" action="A2">
+	<skill id="808" name="Golem Punch" debuff="true" action="A2">
 	<!-- Throws a powerful punch with 11205 Power that both stuns and inflicts damage to the enemy. Over-hit. Power: 11205. -->
 		<icon initial="icon.skill_transform_debuff"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="30" >
@@ -71,13 +71,13 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="11205.0"/>
 			</physical-attack>
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="809" name="Golem Tornado Swing" max-level="1" action="A1">
+	<skill id="809" name="Golem Tornado Swing" action="A1">
 	<!-- Spins and swings both arms to attack. Over-hit. Power: 6199. -->
 		<icon initial="icon.skill_transform_s_attack"/>
 		<attributes magic-critical-rate="5.0" >
@@ -95,7 +95,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="6199.0"/>
 			</physical-attack>
 		</effects>
@@ -169,7 +169,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="true" critical-chance="15.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack ignore-shield="true" critical-chance="15.0" over-hit="true">
 				<power initial="2424.0">
 					<value level="2">2485.0</value>
 					<value level="3">2545.0</value>
@@ -377,7 +377,7 @@
 			</target>
 		</conditions>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="5.0">
 					<value level="2">8.0</value>
 					<value level="3">10.0</value>
@@ -391,7 +391,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="826" name="Spike" max-level="1" action="A2">
+	<skill id="826" name="Spike" action="A2">
 	<!-- Adds a spike to a blunt weapon. P. Atk. +10%% and Stun accretion +15%% for 20 minutes. -->
 		<icon initial="icon.skill0826"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -425,7 +425,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="828" name="Encase Armor" max-level="1" action="A2">
+	<skill id="828" name="Encase Armor" action="A2">
 	<!-- Thickens the surface of heavy armor to increase P. Def. by 10%% for 20 minute(s). -->
 		<icon initial="icon.skill0828"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -454,7 +454,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="839" name="Dismount" max-level="1" action="A1">
+	<skill id="839" name="Dismount" action="A1">
 	<!-- Dismounts from a ridable mount. -->
 		<icon initial="icon.skilltransform2"/>
 		<attributes magic-critical-rate="5.0" >
@@ -474,7 +474,7 @@
 			</dispel>
 		</effects>
 	</skill>
-	<skill id="844" name="Outpost Construction" max-level="1" action="A1">
+	<skill id="844" name="Outpost Construction" action="A1">
 	<!-- Constructs an outpost that assists clan member recovery and reinforcement during territory battles. Territory Ward Transport is possible. Consumes 120 B-grade Gemstones. -->
 		<icon initial="icon.skill0247"/>
 		<attributes magic-critical-rate="5.0" hit-cancel-time="4.0" >
@@ -495,7 +495,7 @@
 			<condition name="BuildAdvanceBase"/>
 		</conditions>
 	</skill>
-	<skill id="845" name="Outpost Demolition" max-level="1" action="A1">
+	<skill id="845" name="Outpost Demolition" action="A1">
 	<!-- Demolishes an outpost. After demolition, a new outpost can be constructed. -->
 		<icon initial="icon.skill0247"/>
 		<attributes magic-critical-rate="5.0" hit-cancel-time="4.0" >
@@ -510,7 +510,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="846" name="Possess Ward" max-level="1" >
+	<skill id="846" name="Possess Ward">
 	<!-- Possesses the territory ward, decreasing various battle abilities. -->
 		<icon initial="icon.weapon_fort_flag_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -538,7 +538,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="847" name="Ward Transport" max-level="1" action="CA1">
+	<skill id="847" name="Ward Transport" action="CA1">
 	<!-- With an opposing ward in hand, go back to your outpost and use this skill to move the ward back to your castle. -->
 		<icon initial="icon.weapon_fort_flag_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -549,9 +549,9 @@
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="ADVANCE_BASE" />
-		<channeling skill="0" mp-consume="0" initial-delay="1000" interval="0"/>
+		<channeling skill="0" initial-delay="1000" interval="0"/>
 	</skill>
-	<skill id="848" name="Gludio Territory Benefaction" max-level="1" >
+	<skill id="848" name="Gludio Territory Benefaction">
 	<!-- STR +1/INT +1 -->
 		<icon initial="icon.weapon_fort_flag_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -567,7 +567,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="849" name="Dion Territory Benefaction" max-level="1" >
+	<skill id="849" name="Dion Territory Benefaction">
 	<!-- DEX +1/WIT+1 -->
 		<icon initial="icon.weapon_fort_flag_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -583,7 +583,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="850" name="Giran Territory Benefaction" max-level="1" >
+	<skill id="850" name="Giran Territory Benefaction">
 	<!-- STR +1/MEN +1 -->
 		<icon initial="icon.weapon_fort_flag_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -599,7 +599,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="851" name="Oren Territory Benefaction" max-level="1" >
+	<skill id="851" name="Oren Territory Benefaction">
 	<!-- CON +1/MEN +1 -->
 		<icon initial="icon.weapon_fort_flag_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -615,7 +615,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="852" name="Aden Territory Benefaction" max-level="1" >
+	<skill id="852" name="Aden Territory Benefaction">
 	<!-- DEX +1/MEN +1 -->
 		<icon initial="icon.weapon_fort_flag_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -631,7 +631,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="853" name="Innadril Territory Benefaction" max-level="1" >
+	<skill id="853" name="Innadril Territory Benefaction">
 	<!-- CON +1/INT +1 -->
 		<icon initial="icon.weapon_fort_flag_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -647,7 +647,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="854" name="Goddard Territory Benefaction" max-level="1" >
+	<skill id="854" name="Goddard Territory Benefaction">
 	<!-- DEX +1/INT +1 -->
 		<icon initial="icon.weapon_fort_flag_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -663,7 +663,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="855" name="Rune Territory Benefaction" max-level="1" >
+	<skill id="855" name="Rune Territory Benefaction">
 	<!-- STR +1/WIT+1 -->
 		<icon initial="icon.weapon_fort_flag_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -679,7 +679,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="856" name="Schuttgart Territory Benefaction" max-level="1" >
+	<skill id="856" name="Schuttgart Territory Benefaction">
 	<!-- CON +1/WIT+1 -->
 		<icon initial="icon.weapon_fort_flag_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -732,7 +732,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="2272.0">
 					<value level="2">3252.0</value>
 					<value level="3">4224.0</value>
@@ -797,7 +797,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="3252.0">
 					<value level="2">4224.0</value>
 					<value level="3">4312.0</value>
@@ -810,7 +810,7 @@
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="871" name="Might" max-level="1" action="A2" type="MAGIC">
+	<skill id="871" name="Might" action="A2" type="MAGIC">
 	<!-- Increases P. Atk. by 15%% for 20 minutes -->
 		<icon initial="icon.skill1068"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -889,7 +889,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="4336.0">
 					<value level="2">5632.0</value>
 					<value level="3">5750.0</value>
@@ -902,7 +902,7 @@
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="873" name="Rapid Shot" max-level="1" action="A2">
+	<skill id="873" name="Rapid Shot" action="A2">
 	<!-- Increases your own bow Atk. Spd by 12%% for 20 minutes. -->
 		<icon initial="icon.skill0099"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -981,7 +981,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="5" affect-random="12" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="68.0">
 					<value level="2">78.0</value>
 					<value level="4">79.0</value>
@@ -992,7 +992,7 @@
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="875" name="Empower" max-level="1" action="A2" type="MAGIC">
+	<skill id="875" name="Empower" action="A2" type="MAGIC">
 	<!-- Increases M. Atk. power by 75%% for 20 minutes. -->
 		<icon initial="icon.skill1059"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -1073,7 +1073,7 @@
 			<fan-range start-angle="0" radius="400" angle="90"/>
 		</target>
 		<effects>
-			<physical-soul-attack over-hit="false" critical-chance="0" ignore-shield="false">				<power initial="4878.0">
+			<physical-soul-attack>				<power initial="4878.0">
 					<value level="2">6335.0</value>
 					<value level="3">6468.0</value>
 					<value level="4">6598.0</value>
@@ -1184,7 +1184,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="5068.0">
 					<value level="2">5175.0</value>
 					<value level="3">5278.0</value>
@@ -1230,7 +1230,7 @@
 			<effect name="Fear"/>
 		</effects>
 	</skill>
-	<skill id="880" name="Knight Captain Ultimate Defense" max-level="1" action="A2">
+	<skill id="880" name="Knight Captain Ultimate Defense" action="A2">
 	<!-- For 30 sec., increases P. Def. by 3600, M. Def. by 2700 and Buff-canceling Attack Resistance by 80%%. The player cannot move while the effect lasts. -->
 		<icon initial="icon.skill0110"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -1253,10 +1253,10 @@
 		</abnormal>
 		<effects>
 			<effect name="BlockMove"/>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="2700.0"/>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="3600.0"/>
 			</stat-modify>
 			<resist-dispel-by-category category="BUFF">
@@ -1346,7 +1346,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="116.0">
 					<value level="2">117.0</value>
 					<value level="3">119.0</value>

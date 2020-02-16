@@ -477,7 +477,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -660,12 +660,12 @@
 		<attributes weight="150" duration="21600" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="17619" level="1" value="-1"/>  <!-- Release Agathion's Seal - Pisces -->
-			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
-			<skill id="39053" level="1" value="-1"/>  <!-- Agathion Teleport: Town of Gludio -->
-			<skill id="39054" level="1" value="-1"/>  <!-- Agathion Teleport: Town of Dion -->
-			<skill id="39055" level="1" value="-1"/>  <!-- Agathion Teleport: Town of Giran -->
-			<skill id="39056" level="1" value="-1"/>  <!-- Agathion Teleport: Town of Oren -->
+			<skill id="17619" value="-1"/>  <!-- Release Agathion's Seal - Pisces -->
+			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
+			<skill id="39053" value="-1"/>  <!-- Agathion Teleport: Town of Gludio -->
+			<skill id="39054" value="-1"/>  <!-- Agathion Teleport: Town of Dion -->
+			<skill id="39055" value="-1"/>  <!-- Agathion Teleport: Town of Giran -->
+			<skill id="39056" value="-1"/>  <!-- Agathion Teleport: Town of Oren -->
 		</skills>
 	</armor>
 
@@ -675,57 +675,57 @@
 		<attributes weight="150" duration="21600" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="17621" level="1" value="-1"/>  <!-- Release Agathion's Seal - Cancer -->
-			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
-			<skill id="39053" level="1" value="-1"/>  <!-- Agathion Teleport: Town of Gludio -->
-			<skill id="39054" level="1" value="-1"/>  <!-- Agathion Teleport: Town of Dion -->
-			<skill id="39055" level="1" value="-1"/>  <!-- Agathion Teleport: Town of Giran -->
-			<skill id="39056" level="1" value="-1"/>  <!-- Agathion Teleport: Town of Oren -->
+			<skill id="17621" value="-1"/>  <!-- Release Agathion's Seal - Cancer -->
+			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
+			<skill id="39053" value="-1"/>  <!-- Agathion Teleport: Town of Gludio -->
+			<skill id="39054" value="-1"/>  <!-- Agathion Teleport: Town of Dion -->
+			<skill id="39055" value="-1"/>  <!-- Agathion Teleport: Town of Giran -->
+			<skill id="39056" value="-1"/>  <!-- Agathion Teleport: Town of Oren -->
 		</skills>
 	</armor>
 
 	<item id="49460" name="Fish Stew - Might Lv. 1 - Tradable" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. P. Atk. +8%. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes for-npc="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39047" level="1" value="-1"/>  <!-- Fish Stew - Might -->
+		<attributes for-npc="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39047" value="-1"/>  <!-- Fish Stew - Might -->
 		</skill-reducer>
 	</item>
 
 	<item id="49461" name="Fish Stew - Shield Lv. 1 - Tradable" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. P. Def. +8%. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes for-npc="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39048" level="1" value="-1"/>  <!-- Fish Stew - Shield -->
+		<attributes for-npc="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39048" value="-1"/>  <!-- Fish Stew - Shield -->
 		</skill-reducer>
 	</item>
 
 	<item id="49462" name="Fish Stew - Magic Barrier Lv. 1 - Tradable" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. M. Def. +23%. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes for-npc="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39049" level="1" value="-1"/>  <!-- Fish Stew - Magic Barrier -->
+		<attributes for-npc="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39049" value="-1"/>  <!-- Fish Stew - Magic Barrier -->
 		</skill-reducer>
 	</item>
 
 	<item id="49463" name="Fish Stew - Vampiric Rage Lv. 1 - Tradable" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. recovers as HP 6% of the physical damage inflicted on the enemy with a certain probability. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes for-npc="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39050" level="1" value="-1"/>  <!-- Fish Stew - Vampiric Rage -->
+		<attributes for-npc="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39050" value="-1"/>  <!-- Fish Stew - Vampiric Rage -->
 		</skill-reducer>
 	</item>
 
 	<item id="49464" name="Fish Stew - Empower Lv. 1 - Tradable" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. M. Atk. +55%. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes for-npc="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39051" level="1" value="-1"/>  <!-- Fish Stew - Empower -->
+		<attributes for-npc="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39051" value="-1"/>  <!-- Fish Stew - Empower -->
 		</skill-reducer>
 	</item>
 
@@ -749,8 +749,8 @@
 	<!-- 30-day item. Increases XP and SP gain by 20%.  -->
 		<restriction freightable="false" olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="43200" immediate-effect="true"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39057" level="1" value="-1"/>  <!-- Warrior's XP Rune -->
+		<skill-reducer>
+			<skill id="39057" value="-1"/>  <!-- Warrior's XP Rune -->
 		</skill-reducer>
 	</item>
 
@@ -836,7 +836,7 @@
 			<stat type="maxMp" value="9.0"/>
 		</stats>
 		<skills>
-			<skill id="3562" level="1" value="-1"/>  <!-- Queen Ant's Ring -->
+			<skill id="3562" value="-1"/>  <!-- Queen Ant's Ring -->
 		</skills>
 	</armor>
 
@@ -904,8 +904,8 @@
 	<!-- Magic potion that quickly restores HP. Duration: 15 sec.  -->
 		<restriction olympiad-restricted="true" coc-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" reuse-delay="10000" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39069" level="1" value="-1"/>  <!-- Warrior's Major HP Potion -->
+		<skill-reducer>
+			<skill id="39069" value="-1"/>  <!-- Warrior's Major HP Potion -->
 		</skill-reducer>
 	</item>
 
@@ -943,7 +943,7 @@
 			<stat type="maxMp" value="19.0"/>
 		</stats>
 		<skills>
-			<skill id="3560" level="1" value="-1"/>  <!-- Orfen's Earring -->
+			<skill id="3560" value="-1"/>  <!-- Orfen's Earring -->
 		</skills>
 	</armor>
 
@@ -991,8 +991,8 @@
 	<!-- Increases Max HP/MP by 5% for 30 min and XP and SP gain from hunting by 20%. Not removed on death. -->
 		<restriction freightable="false" olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" reuse-delay="60000" duration="43200" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39074" level="1" value="-1"/>  <!-- Angel Cat's Energy -->
+		<skill-reducer>
+			<skill id="39074" value="-1"/>  <!-- Angel Cat's Energy -->
 		</skill-reducer>
 	</item>
 

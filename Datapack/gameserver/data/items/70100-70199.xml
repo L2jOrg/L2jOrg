@@ -17,45 +17,45 @@
 		<attributes duration="10080" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="39043" level="1" value="-1"/>  <!-- Chapeau's Side Effect -->
-			<skill id="39044" level="1" value="-1"/>  <!-- Holy Chapeau -->
-			<skill id="39045" level="1" value="-1"/>  <!-- Chapeau's Authority -->
+			<skill id="39043" value="-1"/>  <!-- Chapeau's Side Effect -->
+			<skill id="39044" value="-1"/>  <!-- Holy Chapeau -->
+			<skill id="39045" value="-1"/>  <!-- Chapeau's Authority -->
 		</skills>
 	</armor>
 
 	<item id="70102" name="Adventurer’s Potion - Atk. Spd." type="POTION" icon="icon.etc_reagent_green_i00">
 	<!-- Increases Atk. Spd. for 20 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="5" commission-type="POTION" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55235" level="1" value="-1"/>  <!-- Adventurer's Haste Potion -->
+		<attributes weight="5" commission-type="POTION" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55235" value="-1"/>  <!-- Adventurer's Haste Potion -->
 		</skill-reducer>
 	</item>
 
 	<item id="70103" name="Adventurer’s Potion - Casting Spd." type="POTION" icon="icon.etc_potion_of_acumen2_i00">
 	<!-- Increases Casting Spd. for 20 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="5" commission-type="POTION" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55236" level="1" value="-1"/>  <!-- Adventurer's Potion - Casting Spd. -->
+		<attributes weight="5" commission-type="POTION" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55236" value="-1"/>  <!-- Adventurer's Potion - Casting Spd. -->
 		</skill-reducer>
 	</item>
 
 	<item id="70104" name="Scroll: Vampiric Rage" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Recovers 6% HP from the received physical damage for 20 minutes.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="5" commission-type="SCROLL_OTHER" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55237" level="1" value="-1"/>  <!-- Scroll: Vampiric Rage -->
+		<attributes weight="5" commission-type="SCROLL_OTHER" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55237" value="-1"/>  <!-- Scroll: Vampiric Rage -->
 		</skill-reducer>
 	</item>
 
 	<item id="70105" name="Scroll of Mana" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Increases MP Recovery Rate for 20 minutes.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="5" commission-type="SCROLL_OTHER" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55241" level="1" value="-1"/>  <!-- Scroll: Mana Regeneration -->
+		<attributes weight="5" commission-type="SCROLL_OTHER" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55241" value="-1"/>  <!-- Scroll: Mana Regeneration -->
 		</skill-reducer>
 	</item>
 
@@ -63,17 +63,17 @@
 	<!-- A 7-day item. When in inventory, STR +1, INT +1, CON +1, MEN +1, DEX +1, WIT +1.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080" immediate-effect="true"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55246" level="1" value="-1"/>  <!-- Rune of Boost -->
+		<skill-reducer>
+			<skill id="55246" value="-1"/>  <!-- Rune of Boost -->
 		</skill-reducer>
 	</item>
 
 	<item id="70107" name="Scroll: Berserker Spirit" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- When used, P. Def. -5%, M. Def. -10%, Evasion -2; P. Atk. +5%, M. Atk. +10%, Atk. Spd. +5%, Casting Spd. +5%, Speed +5. Duration: 20 minutes.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="5" commission-type="SCROLL_OTHER" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55242" level="1" value="-1"/>  <!-- Scroll: Berserker Spirit -->
+		<attributes weight="5" commission-type="SCROLL_OTHER" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55242" value="-1"/>  <!-- Scroll: Berserker Spirit -->
 		</skill-reducer>
 	</item>
 
@@ -86,7 +86,7 @@
 			<stat type="pDef" value="28.0"/>
 		</stats>
 		<skills>
-			<skill id="55094" level="1" value="-1"/>  <!-- Lv. 3 Fire Dragon's Pendant Basic Effect -->
+			<skill id="55094" value="-1"/>  <!-- Lv. 3 Fire Dragon's Pendant Basic Effect -->
 		</skills>
 	</armor>
 
@@ -99,25 +99,25 @@
 			<stat type="pDef" value="28.0"/>
 		</stats>
 		<skills>
-			<skill id="55104" level="1" value="-1"/>  <!-- Lv. 3 Water Dragon's Pendant Basic Effect -->
+			<skill id="55104" value="-1"/>  <!-- Lv. 3 Water Dragon's Pendant Basic Effect -->
 		</skills>
 	</armor>
 
 	<item id="70110" name="Scroll: Dance of the Warrior" type="SCROLL" icon="BranchIcon.Icon.etc_g_bm_dance_scroll_i00">
 	<!-- Provides Dance of the Warrior effect for 10 minutes.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="5" commission-type="SCROLL_OTHER" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55243" level="1" value="-1"/>  <!-- Scroll: Dance of the Warrior -->
+		<attributes weight="5" commission-type="SCROLL_OTHER" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55243" value="-1"/>  <!-- Scroll: Dance of the Warrior -->
 		</skill-reducer>
 	</item>
 
 	<item id="70111" name="Scroll: Dance of the Mystic" type="SCROLL" icon="BranchIcon.Icon.etc_g_bm_dance_scroll_i00">
 	<!-- Provides Dance of the Mystic effect for 10 minutes.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="5" commission-type="SCROLL_OTHER" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55244" level="1" value="-1"/>  <!-- Scroll: Dance of the Mystic -->
+		<attributes weight="5" commission-type="SCROLL_OTHER" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55244" value="-1"/>  <!-- Scroll: Dance of the Mystic -->
 		</skill-reducer>
 	</item>
 
@@ -127,10 +127,10 @@
 		<attributes commission-type="HAIR_ACCESSORY" duration="10080" />
 		<crystal />
 		<skills>
-			<skill id="35011" level="1" value="-1"/>  <!-- Return of the Refined Romantic Chapeau -->
-			<skill id="55047" level="1" value="-1"/>  <!-- Romantic Bless the Body -->
-			<skill id="55048" level="1" value="-1"/>  <!-- Romantic Wind Walk -->
-			<skill id="55247" level="1" value="-1"/>  <!-- Refined Romantic Chapeau -->
+			<skill id="35011" value="-1"/>  <!-- Return of the Refined Romantic Chapeau -->
+			<skill id="55047" value="-1"/>  <!-- Romantic Bless the Body -->
+			<skill id="55048" value="-1"/>  <!-- Romantic Wind Walk -->
+			<skill id="55247" value="-1"/>  <!-- Refined Romantic Chapeau -->
 		</skills>
 	</armor>
 
@@ -138,7 +138,7 @@
 	<!-- A magical scroll that relocates you to the Town of Aden.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="30" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="2213" level="12" value="-1"/>  <!-- Scroll of Escape: Talking Island Village -->
 		</skill-reducer>
 	</item>
@@ -149,12 +149,12 @@
 		<attributes weight="150" duration="10800" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="21233" level="1" value="-1"/>  <!-- Release Agathion - Uthanka -->
-			<skill id="23234" level="1" value="-1"/>  <!-- Singer and Dancer Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
-			<skill id="55270" level="1" value="-1"/>  <!-- Agathion - Dance of Fury -->
-			<skill id="55271" level="1" value="-1"/>  <!-- Agathion - Dance of Concentration -->
-			<skill id="55272" level="1" value="-1"/>  <!-- Agathion - Song of Wind -->
+			<skill id="21233" value="-1"/>  <!-- Release Agathion - Uthanka -->
+			<skill id="23234" value="-1"/>  <!-- Singer and Dancer Agathion Cute Trick -->
+			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
+			<skill id="55270" value="-1"/>  <!-- Agathion - Dance of Fury -->
+			<skill id="55271" value="-1"/>  <!-- Agathion - Dance of Concentration -->
+			<skill id="55272" value="-1"/>  <!-- Agathion - Song of Wind -->
 		</skills>
 	</armor>
 
@@ -481,8 +481,8 @@
 	<!-- Instantly recovers MP without a continuous effect. Cannot be used when MP is full.  -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="5" price="10000" commission-type="POTION" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="26030" level="1" value="-1"/>  <!-- Mana Potion -->
+		<skill-reducer>
+			<skill id="26030" value="-1"/>  <!-- Mana Potion -->
 		</skill-reducer>
 	</item>
 
@@ -508,8 +508,8 @@
 	<!-- XP/SP gain +5% for 10 minutes. -->
 		<restriction freightable="false" sellable="false" depositable="false"/>
 		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55273" level="1" value="-1"/>  <!-- Energy of Development -->
+		<skill-reducer>
+			<skill id="55273" value="-1"/>  <!-- Energy of Development -->
 		</skill-reducer>
 	</item>
 
@@ -517,7 +517,7 @@
 	<!-- XP/SP gain +7% for 10 minutes. -->
 		<restriction freightable="false" sellable="false" depositable="false"/>
 		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="55273" level="2" value="-1"/>  <!-- Energy of Development -->
 		</skill-reducer>
 	</item>
@@ -526,7 +526,7 @@
 	<!-- XP/SP gain +10% for 10 minutes. -->
 		<restriction freightable="false" sellable="false" depositable="false"/>
 		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="55273" level="3" value="-1"/>  <!-- Energy of Development -->
 		</skill-reducer>
 	</item>
@@ -535,8 +535,8 @@
 	<!-- Speed +2 for 10 minutes. -->
 		<restriction freightable="false" sellable="false" depositable="false"/>
 		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55274" level="1" value="-1"/>  <!-- Energy of Speed -->
+		<skill-reducer>
+			<skill id="55274" value="-1"/>  <!-- Energy of Speed -->
 		</skill-reducer>
 	</item>
 
@@ -544,7 +544,7 @@
 	<!-- Speed +3 for 10 minutes. -->
 		<restriction freightable="false" sellable="false" depositable="false"/>
 		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="55274" level="2" value="-1"/>  <!-- Energy of Speed -->
 		</skill-reducer>
 	</item>
@@ -553,7 +553,7 @@
 	<!-- Speed +5 for 10 minutes. -->
 		<restriction freightable="false" sellable="false" depositable="false"/>
 		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="55274" level="3" value="-1"/>  <!-- Energy of Speed -->
 		</skill-reducer>
 	</item>
@@ -562,8 +562,8 @@
 	<!-- P. Accuracy +1 for 10 minutes. -->
 		<restriction freightable="false" sellable="false" depositable="false"/>
 		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55275" level="1" value="-1"/>  <!-- Energy of Accuracy -->
+		<skill-reducer>
+			<skill id="55275" value="-1"/>  <!-- Energy of Accuracy -->
 		</skill-reducer>
 	</item>
 
@@ -571,7 +571,7 @@
 	<!-- P. Accuracy +2 for 10 minutes. -->
 		<restriction freightable="false" sellable="false" depositable="false"/>
 		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="55275" level="2" value="-1"/>  <!-- Energy of Accuracy -->
 		</skill-reducer>
 	</item>
@@ -580,7 +580,7 @@
 	<!-- P. Accuracy +4 for 10 minutes. -->
 		<restriction freightable="false" sellable="false" depositable="false"/>
 		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="55275" level="3" value="-1"/>  <!-- Energy of Accuracy -->
 		</skill-reducer>
 	</item>
@@ -654,7 +654,7 @@
 			<stat type="mDef" value="20.0"/>
 		</stats>
 		<skills>
-			<skill id="55290" level="1" value="-1"/>  <!-- Devi's Ring -->
+			<skill id="55290" value="-1"/>  <!-- Devi's Ring -->
 		</skills>
 	</armor>
 
@@ -700,7 +700,7 @@
 			<stat type="maxMp" value="20.0"/>
 		</stats>
 		<skills>
-			<skill id="55294" level="1" value="-1"/>  <!-- Devi's Necklace -->
+			<skill id="55294" value="-1"/>  <!-- Devi's Necklace -->
 		</skills>
 	</armor>
 

@@ -4,21 +4,21 @@
 
 	<xs:element name="instance">
 		<xs:complexType>
-			<xs:sequence maxOccurs="1">
-				<xs:element name="time" minOccurs="0" maxOccurs="1">
+			<xs:sequence>
+				<xs:element name="time" minOccurs="0">
 					<xs:complexType>
 						<xs:attribute name="duration" type="xs:positiveInteger" />
 						<xs:attribute name="empty" type="xs:integer" />
 						<xs:attribute name="eject" type="xs:integer" />
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="misc" minOccurs="0" maxOccurs="1">
+				<xs:element name="misc" minOccurs="0">
 					<xs:complexType>
 						<xs:attribute name="allowPlayerSummon" type="xs:boolean" />
 						<xs:attribute name="isPvP" type="xs:boolean" />
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="rates" minOccurs="0" maxOccurs="1">
+				<xs:element name="rates" minOccurs="0">
 					<xs:complexType>
 						<xs:attribute name="exp" type="xs:float" />
 						<xs:attribute name="sp" type="xs:float" />
@@ -26,7 +26,7 @@
 						<xs:attribute name="partySp" type="xs:float" />
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="removeBuffs" minOccurs="0" maxOccurs="1">
+				<xs:element name="removeBuffs" minOccurs="0">
 					<xs:complexType>
 						<xs:sequence>
 							<xs:element name="skill" minOccurs="0">
@@ -46,7 +46,7 @@
 						</xs:attribute>
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="locations" minOccurs="0" maxOccurs="1">
+				<xs:element name="locations" minOccurs="0">
 					<xs:complexType>
 						<xs:sequence>
 							<xs:element name="enter" minOccurs="0">
@@ -57,7 +57,7 @@
 												<xs:attribute name="x" type="xs:integer" use="required" />
 												<xs:attribute name="y" type="xs:integer" use="required" />
 												<xs:attribute name="z" type="xs:integer" use="required" />
-												<xs:attribute name="heading" type="xs:integer" use="optional" />
+												<xs:attribute name="heading" type="xs:integer"/>
 											</xs:complexType>
 										</xs:element>
 									</xs:sequence>
@@ -97,9 +97,9 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="parameters" minOccurs="0" maxOccurs="1">
+				<xs:element name="parameters" minOccurs="0">
 					<xs:complexType>
-						<xs:choice minOccurs="1" maxOccurs="unbounded">
+						<xs:choice maxOccurs="unbounded">
 							<xs:element name="param">
 								<xs:complexType>
 									<xs:attribute name="name" type="xs:token" use="required" />
@@ -119,13 +119,13 @@
 									<xs:attribute name="x" type="xs:integer" use="required" />
 									<xs:attribute name="y" type="xs:integer" use="required" />
 									<xs:attribute name="z" type="xs:integer" use="required" />
-									<xs:attribute name="heading" type="xs:integer" use="optional" />
+									<xs:attribute name="heading" type="xs:integer"/>
 								</xs:complexType>
 							</xs:element>
 						</xs:choice>
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="conditions" minOccurs="0" maxOccurs="1">
+				<xs:element name="conditions" minOccurs="0">
 					<xs:complexType>
 						<xs:sequence maxOccurs="unbounded">
 							<xs:element name="condition">
@@ -164,7 +164,7 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="reenter" minOccurs="0" maxOccurs="1">
+				<xs:element name="reenter" minOccurs="0">
 					<xs:complexType>
 						<xs:sequence>
 							<xs:element name="reset" maxOccurs="unbounded">
@@ -199,14 +199,14 @@
 						</xs:attribute>
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="doorlist" minOccurs="0" maxOccurs="1">
+				<xs:element name="doorlist" minOccurs="0">
 					<xs:complexType>
 						<xs:sequence>
 							<xs:element name="door" maxOccurs="unbounded" type="door" />
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="spawnlist" minOccurs="0" maxOccurs="1" type="spawn" />
+				<xs:element name="spawnlist" minOccurs="0" type="spawn" />
 			</xs:sequence>
 			<xs:attribute name="id" type="xs:positiveInteger" use="required" />
 			<xs:attribute name="name" type="xs:normalizedString" />

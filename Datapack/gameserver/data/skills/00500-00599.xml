@@ -42,8 +42,8 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<magical-attack over-hit="false">
-				<power initial="0.0"/>
+			<magical-attack>
+				<power/>
 			</magical-attack>
 		</effects>
 	</skill>
@@ -148,7 +148,7 @@
 			</defence-trait>
 		</effects>
 	</skill>
-	<skill id="528" name="Shield of Faith" max-level="1" action="A2">
+	<skill id="528" name="Shield of Faith" action="A2">
 	<!-- For 15 seconds, party members' P. Def. + 3600 and M. Def. + 2700. For the duration, absorbs 90%% of any damage received by a party member. -->
 		<icon initial="icon.skill0528"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="ACTIVE">
@@ -173,10 +173,10 @@
 			<effect name="TransferDamageToPlayer">
 				<power initial="90.0"/>
 			</effect>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="2700.0"/>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="3600.0"/>
 			</stat-modify>
 		</effects>
@@ -229,7 +229,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="536" name="Over the Body" max-level="1" action="A2">
+	<skill id="536" name="Over the Body" action="A2">
 	<!-- Expends spirit points so that for 60 seconds, Increases Max HP by 35%%, HP Recovery Bonus by 15%%, P. Atk. by 10%%, P. Def. by 20%%, Atk. Spd. 15%%, and Speed by 20%%. Can be used when CP is more than 80%%. -->
 		<icon initial="icon.skill0536"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
@@ -257,7 +257,7 @@
 			<cp mode="PER">
 				<power initial="-95.0"/>
 			</cp>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="35.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
@@ -318,14 +318,14 @@
 			<chance initial="50"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="900.0">
 					<value level="2">1013.0</value>
 					<value level="3">1129.0</value>
 					<value level="4">1248.0</value>
 				</power>
 			</physical-attack>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="123.0"/>
 			</damage-over-time>
 		</effects>
@@ -370,7 +370,7 @@
 			<fan-range start-angle="0" radius="200" angle="180"/>
 		</target>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="1250.0">
 					<value level="2">1406.0</value>
 					<value level="3">1588.0</value>
@@ -460,7 +460,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="3.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="3.0"/>
 			</stat-hp-based>
 		</effects>
 	</skill>
@@ -503,7 +503,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="1250.0">
 					<value level="2">1406.0</value>
 					<value level="3">1568.0</value>
@@ -605,7 +605,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="938.0">
 					<value level="2">1055.0</value>
 					<value level="3">1176.0</value>
@@ -700,7 +700,7 @@
 			<energy-saved charges="2"/>
 		</conditions>
 		<effects>
-			<energy-attack consume-charges="2" critical-chance="10" ignore-shield="false" over-hit="false" physical-defense-mod="1.0">
+			<energy-attack consume-charges="2" critical-chance="10" physical-defense-mod="1.0">
 				<power initial="1250.0">
 					<value level="2">1406.0</value>
 					<value level="3">1568.0</value>
@@ -750,7 +750,7 @@
 			<energy-saved charges="3"/>
 		</conditions>
 		<effects>
-			<energy-attack consume-charges="3" critical-chance="10" ignore-shield="false" over-hit="false" physical-defense-mod="1.0">
+			<energy-attack consume-charges="3" critical-chance="10" physical-defense-mod="1.0">
 				<power initial="625.0">
 					<value level="2">703.0</value>
 					<value level="3">784.0</value>
@@ -793,7 +793,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="10.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="10.0" over-hit="true">
 				<power initial="1.0"/>
 			</physical-attack>
 			<effect  name="FocusMomentum" scope="SELF">
@@ -849,7 +849,7 @@
 			<chance initial="70"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="58.0"/>
 			</damage-over-time>
 		</effects>
@@ -892,7 +892,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="938.0">
 					<value level="2">1055.0</value>
 					<value level="3">1176.0</value>
@@ -946,7 +946,7 @@
 			<chance initial="50"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="15.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="15.0" over-hit="true">
 				<power initial="625.0">
 					<value level="2">703.0</value>
 					<value level="3">784.0</value>
@@ -995,7 +995,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="1250.0">
 					<value level="2">1406.0</value>
 					<value level="3">1568.0</value>
@@ -1043,7 +1043,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="1250.0">
 					<value level="2">1406.0</value>
 					<value level="3">1568.0</value>
@@ -1095,7 +1095,7 @@
 			<fan-range start-angle="0" radius="250" angle="60"/>
 		</target>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="875.0">
 					<value level="2">984.0</value>
 					<value level="3">1098.0</value>
@@ -1147,14 +1147,14 @@
 			<chance initial="60"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="625.0">
 					<value level="2">703.0</value>
 					<value level="3">784.0</value>
 					<value level="4">867.0</value>
 				</power>
 			</physical-attack>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="27.0">
 					<value level="3">31.0</value>
 				</power>
@@ -1206,14 +1206,14 @@
 		</abnormal>
 		<effects>
 			<effect name="BlockMove"/>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="800.0">
 					<value level="2">900.0</value>
 					<value level="3">1000.0</value>
 					<value level="4">1100.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="1000.0">
 					<value level="2">1100.0</value>
 					<value level="3">1200.0</value>
@@ -1259,7 +1259,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<fatal-blow chance-boost="200.0" critical-chance="0" over-hit="true">
+			<fatal-blow chance-boost="200.0" over-hit="true">
 				<power initial="3749.0">
 					<value level="2">4217.0</value>
 					<value level="3">4703.0</value>
@@ -1267,7 +1267,7 @@
 				</power>
 			</fatal-blow>
 			<lethal>
-				<power initial="0.0"/>
+				<power/>
 				<half-power initial="10.0"/>
 			</lethal>
 		</effects>
@@ -1302,7 +1302,7 @@
 			<chance initial="60"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="-6.0">
 					<value level="2">-7.0</value>
 					<value level="3">-8.0</value>
@@ -1354,14 +1354,14 @@
 			<chance initial="50"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="875.0">
 					<value level="2">984.0</value>
 					<value level="3">1098.0</value>
 					<value level="4">1213.0</value>
 				</power>
 			</physical-attack>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="123.0"/>
 			</damage-over-time>
 		</effects>
@@ -1409,7 +1409,7 @@
 				<power initial="1.0"/>
 				<types>0 1 2 3 4 22</types>
 			</trigger-skill-by-magic>
-			<trigger-skill-by-attack skill="7097" target="MY_PARTY" critical="false">
+			<trigger-skill-by-attack skill="7097" target="MY_PARTY">
 				<power initial="1.0"/>
 				<chance initial="100.0"/>
 				<min-damage initial="1.0"/>
@@ -1417,7 +1417,7 @@
 			</trigger-skill-by-attack>
 		</effects>
 	</skill>
-	<skill id="584" name="Power Claw" max-level="1" action="A1">
+	<skill id="584" name="Power Claw" action="A1">
 	<!-- Attacks the enemy with powerful claws. Over-hit. Power: 1008. -->
 		<icon initial="icon.skill_transform_s_attack"/>
 		<attributes next-action="ATTACK" magic-critical-rate="5.0" >
@@ -1435,12 +1435,12 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="1008.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="585" name="Fast Moving" max-level="1" action="A2">
+	<skill id="585" name="Fast Moving" action="A2">
 	<!-- Spontaenously increases Movement Speed significantly. -->
 		<icon initial="icon.skill_transform_buff"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -1462,7 +1462,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="66.0"/>
 			</speed>
 		</effects>
@@ -1491,7 +1491,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="150" affect-min="5" affect-random="12" />
 		<effects>
-			<physical-attack ignore-shield="true" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack ignore-shield="true" critical-chance="0.0" over-hit="true">
 				<power initial="840.0">
 					<value level="2">984.0</value>
 				</power>
@@ -1526,7 +1526,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="1200.0">
 					<value level="2">1406.0</value>
 				</power>
@@ -1559,7 +1559,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="88.0">
 					<value level="2">101.0</value>
 				</power>
@@ -1596,7 +1596,7 @@
 			<effect name="ConsumeBody"/>
 		</effects>
 	</skill>
-	<skill id="590" name="Residence Body" max-level="1" >
+	<skill id="590" name="Residence Body">
 	<!-- The Max HP of clan members in residence increases by 222. -->
 		<icon initial="icon.skill0370"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1607,12 +1607,12 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="222.0"/>
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="591" name="Residence Spirit" max-level="1" >
+	<skill id="591" name="Residence Spirit">
 	<!-- Max CP of clan members in residence +444. -->
 		<icon initial="icon.skill0371"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1623,12 +1623,12 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_CP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_CP">
 				<power initial="444.0"/>
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="592" name="Residence Soul" max-level="1" >
+	<skill id="592" name="Residence Soul">
 	<!-- The Max MP of clan members in residence increases by 168. -->
 		<icon initial="icon.skill0372"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1639,12 +1639,12 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="168.0"/>
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="593" name="Residence Health" max-level="1" >
+	<skill id="593" name="Residence Health">
 	<!-- HP Recovery Bonus of clan members in residence +1.09. -->
 		<icon initial="icon.skill0373"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1655,12 +1655,12 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="REGENERATE_HP_RATE" mode="DIFF">
+			<stat-modify stat="REGENERATE_HP_RATE">
 				<power initial="1.09"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="594" name="Residence Moral" max-level="1" >
+	<skill id="594" name="Residence Moral">
 	<!-- CP recovery bonus of clan members in residence +1.09. -->
 		<icon initial="icon.skill0374"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1676,7 +1676,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="595" name="Residence Clarity" max-level="1" >
+	<skill id="595" name="Residence Clarity">
 	<!-- MP Recovery Bonus of clan members in residence +0.47. -->
 		<icon initial="icon.skill0375"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1687,12 +1687,12 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="REGENERATE_MP_RATE" mode="DIFF">
+			<stat-modify stat="REGENERATE_MP_RATE">
 				<power initial="0.47"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="596" name="Residence Might" max-level="1" >
+	<skill id="596" name="Residence Might">
 	<!-- P. Atk. of clan members in residence increases by 34.6. -->
 		<icon initial="icon.skill0376"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1703,12 +1703,12 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK">
 				<power initial="34.6"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="597" name="Residence Shield" max-level="1" >
+	<skill id="597" name="Residence Shield">
 	<!-- P. Def. of clan members in residence increases by 54.7. -->
 		<icon initial="icon.skill0377"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1719,12 +1719,12 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="54.7"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="598" name="Residence Empower" max-level="1" >
+	<skill id="598" name="Residence Empower">
 	<!-- M. Atk. of clan members in residence increases by 40.4. -->
 		<icon initial="icon.skill0378"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1735,12 +1735,12 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK">
 				<power initial="40.4"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="599" name="Residence Magic Barrier" max-level="1" >
+	<skill id="599" name="Residence Magic Barrier">
 	<!-- The M. Def. of clan members in residence increases by 44. -->
 		<icon initial="icon.skill0379"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1751,7 +1751,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="44.0"/>
 			</stat-modify>
 		</effects>

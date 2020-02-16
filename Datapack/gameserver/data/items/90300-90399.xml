@@ -78,8 +78,8 @@
 	<!-- Magical MP-recovering potion.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" commission-type="POTION" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39257" level="1" value="-1"/>  <!-- Newbie MP Recovery Potion -->
+		<skill-reducer>
+			<skill id="39257" value="-1"/>  <!-- Newbie MP Recovery Potion -->
 		</skill-reducer>
 	</item>
 
@@ -89,8 +89,8 @@
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55468" level="1" value="-1"/>  <!-- Lv. 1 Brooch -->
-			<skill id="55470" level="1" value="-1"/>  <!-- Lv. 2 Brooch - Additional Effect -->
+			<skill id="55468" value="-1"/>  <!-- Lv. 1 Brooch -->
+			<skill id="55470" value="-1"/>  <!-- Lv. 2 Brooch - Additional Effect -->
 		</skills>
 	</armor>
 
@@ -100,7 +100,7 @@
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55469" level="1" value="-1"/>  <!-- Lv. 2 Brooch -->
+			<skill id="55469" value="-1"/>  <!-- Lv. 2 Brooch -->
 			<skill id="55470" level="2" value="-1"/>  <!-- Lv. 2 Brooch - Additional Effect -->
 		</skills>
 	</armor>

@@ -2,570 +2,570 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org options.xsd">
     <option id="40443" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="PHYSICAL_DEFENCE">
                 <power initial="6.36"/>
             </stat-modify>
-            <stat-modify stat="CRITICAL_DAMAGE" mode="DIFF">
+            <stat-modify stat="CRITICAL_DAMAGE">
                 <power initial="5.59"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40444" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="PHYSICAL_DEFENCE">
                 <power initial="6.36"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_CRITICAL_DAMAGE" mode="DIFF">
+            <stat-modify stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="6.5"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40445" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="PHYSICAL_DEFENCE">
                 <power initial="6.36"/>
             </stat-modify>
-            <stat-modify stat="EVASION_RATE" mode="DIFF">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="0.64"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40446" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="PHYSICAL_DEFENCE">
                 <power initial="6.36"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_EVASION_RATE" mode="DIFF">
+            <stat-modify stat="MAGIC_EVASION_RATE">
                 <power initial="0.64"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40447" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="PHYSICAL_DEFENCE">
                 <power initial="6.36"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
                 <power initial="2.2"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40448" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="MAGICAL_DEFENCE">
                 <power initial="5.13"/>
             </stat-modify>
-            <stat-modify stat="CRITICAL_DAMAGE" mode="DIFF">
+            <stat-modify stat="CRITICAL_DAMAGE">
                 <power initial="5.59"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40449" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="MAGICAL_DEFENCE">
                 <power initial="5.13"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_CRITICAL_DAMAGE" mode="DIFF">
+            <stat-modify stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="6.5"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40450" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="MAGICAL_DEFENCE">
                 <power initial="5.13"/>
             </stat-modify>
-            <stat-modify stat="EVASION_RATE" mode="DIFF">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="0.64"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40451" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="MAGICAL_DEFENCE">
                 <power initial="5.13"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_EVASION_RATE" mode="DIFF">
+            <stat-modify stat="MAGIC_EVASION_RATE">
                 <power initial="0.64"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40452" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="MAGICAL_DEFENCE">
                 <power initial="5.13"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
                 <power initial="2.2"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40453" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="MAX_HP" mode="DIFF">
+            <stat-modify stat="MAX_HP">
                 <power initial="26.04"/>
             </stat-modify>
-            <stat-modify stat="CRITICAL_DAMAGE" mode="DIFF">
+            <stat-modify stat="CRITICAL_DAMAGE">
                 <power initial="5.59"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40454" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="MAX_HP" mode="DIFF">
+            <stat-modify stat="MAX_HP">
                 <power initial="26.04"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_CRITICAL_DAMAGE" mode="DIFF">
+            <stat-modify stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="6.5"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40455" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="MAX_HP" mode="DIFF">
+            <stat-modify stat="MAX_HP">
                 <power initial="26.04"/>
             </stat-modify>
-            <stat-modify stat="EVASION_RATE" mode="DIFF">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="0.64"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40456" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="MAX_HP" mode="DIFF">
+            <stat-modify stat="MAX_HP">
                 <power initial="26.04"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_EVASION_RATE" mode="DIFF">
+            <stat-modify stat="MAGIC_EVASION_RATE">
                 <power initial="0.64"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40457" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="MAX_HP" mode="DIFF">
+            <stat-modify stat="MAX_HP">
                 <power initial="26.04"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
                 <power initial="2.2"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40458" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="MAX_MP" mode="DIFF">
+            <stat-modify stat="MAX_MP">
                 <power initial="8.42"/>
             </stat-modify>
-            <stat-modify stat="CRITICAL_DAMAGE" mode="DIFF">
+            <stat-modify stat="CRITICAL_DAMAGE">
                 <power initial="5.59"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40459" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="MAX_MP" mode="DIFF">
+            <stat-modify stat="MAX_MP">
                 <power initial="8.42"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_CRITICAL_DAMAGE" mode="DIFF">
+            <stat-modify stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="6.5"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40460" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="MAX_MP" mode="DIFF">
+            <stat-modify stat="MAX_MP">
                 <power initial="8.42"/>
             </stat-modify>
-            <stat-modify stat="EVASION_RATE" mode="DIFF">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="0.64"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40461" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="MAX_MP" mode="DIFF">
+            <stat-modify stat="MAX_MP">
                 <power initial="8.42"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_EVASION_RATE" mode="DIFF">
+            <stat-modify stat="MAGIC_EVASION_RATE">
                 <power initial="0.64"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40462" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="MAX_MP" mode="DIFF">
+            <stat-modify stat="MAX_MP">
                 <power initial="8.42"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
                 <power initial="2.2"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40463" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="MAX_CP" mode="DIFF">
+            <stat-modify stat="MAX_CP">
                 <power initial="35.96"/>
             </stat-modify>
-            <stat-modify stat="CRITICAL_DAMAGE" mode="DIFF">
+            <stat-modify stat="CRITICAL_DAMAGE">
                 <power initial="5.59"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40464" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="MAX_CP" mode="DIFF">
+            <stat-modify stat="MAX_CP">
                 <power initial="35.96"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_CRITICAL_DAMAGE" mode="DIFF">
+            <stat-modify stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="6.5"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40465" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="MAX_CP" mode="DIFF">
+            <stat-modify stat="MAX_CP">
                 <power initial="35.96"/>
             </stat-modify>
-            <stat-modify stat="EVASION_RATE" mode="DIFF">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="0.64"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40466" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="MAX_CP" mode="DIFF">
+            <stat-modify stat="MAX_CP">
                 <power initial="35.96"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_EVASION_RATE" mode="DIFF">
+            <stat-modify stat="MAGIC_EVASION_RATE">
                 <power initial="0.64"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40467" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="MAX_CP" mode="DIFF">
+            <stat-modify stat="MAX_CP">
                 <power initial="35.96"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
                 <power initial="2.2"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40468" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+            <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="3.79"/>
             </stat-modify>
-            <stat-modify stat="CRITICAL_DAMAGE" mode="DIFF">
+            <stat-modify stat="CRITICAL_DAMAGE">
                 <power initial="5.59"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40469" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+            <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="3.79"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_CRITICAL_DAMAGE" mode="DIFF">
+            <stat-modify stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="6.5"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40470" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+            <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="3.79"/>
             </stat-modify>
-            <stat-modify stat="EVASION_RATE" mode="DIFF">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="0.64"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40471" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+            <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="3.79"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_EVASION_RATE" mode="DIFF">
+            <stat-modify stat="MAGIC_EVASION_RATE">
                 <power initial="0.64"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40472" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+            <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="3.79"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
                 <power initial="2.2"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40473" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="CRITICAL_DAMAGE" mode="DIFF">
+            <stat-modify stat="CRITICAL_DAMAGE">
                 <power initial="5.69"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_CRITICAL_DAMAGE" mode="DIFF">
+            <stat-modify stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="6.5"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40474" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="CRITICAL_DAMAGE" mode="DIFF">
+            <stat-modify stat="CRITICAL_DAMAGE">
                 <power initial="5.69"/>
             </stat-modify>
-            <stat-modify stat="REGENERATE_HP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_HP_RATE">
                 <power initial="4.45"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40475" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="CRITICAL_DAMAGE" mode="DIFF">
+            <stat-modify stat="CRITICAL_DAMAGE">
                 <power initial="5.69"/>
             </stat-modify>
-            <stat-modify stat="REGENERATE_MP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_MP_RATE">
                 <power initial="4.45"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40476" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="CRITICAL_DAMAGE" mode="DIFF">
+            <stat-modify stat="CRITICAL_DAMAGE">
                 <power initial="5.69"/>
             </stat-modify>
-            <stat-modify stat="REGENERATE_CP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_CP_RATE">
                 <power initial="0.13"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40477" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="CRITICAL_DAMAGE" mode="DIFF">
+            <stat-modify stat="CRITICAL_DAMAGE">
                 <power initial="5.69"/>
             </stat-modify>
-            <stat-modify stat="EVASION_RATE" mode="DIFF">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="0.06"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40478" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="CRITICAL_DAMAGE" mode="DIFF">
+            <stat-modify stat="CRITICAL_DAMAGE">
                 <power initial="5.69"/>
             </stat-modify>
-            <stat-modify stat="ACCURACY" mode="DIFF">
+            <stat-modify stat="ACCURACY">
                 <power initial="0.13"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40479" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="CRITICAL_DAMAGE" mode="DIFF">
+            <stat-modify stat="CRITICAL_DAMAGE">
                 <power initial="5.69"/>
             </stat-modify>
-            <stat-modify stat="CRITICAL_RATE" mode="DIFF">
+            <stat-modify stat="CRITICAL_RATE">
                 <power initial="6.4"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40480" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="CRITICAL_DAMAGE" mode="DIFF">
+            <stat-modify stat="CRITICAL_DAMAGE">
                 <power initial="5.69"/>
             </stat-modify>
-            <stat-modify stat="EVASION_RATE" mode="DIFF">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="0.64"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40481" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="CRITICAL_DAMAGE" mode="DIFF">
+            <stat-modify stat="CRITICAL_DAMAGE">
                 <power initial="5.69"/>
             </stat-modify>
-            <stat-modify stat="ACCURACY_MAGIC" mode="DIFF">
+            <stat-modify stat="ACCURACY_MAGIC">
                 <power initial="0.64"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40482" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="CRITICAL_DAMAGE" mode="DIFF">
+            <stat-modify stat="CRITICAL_DAMAGE">
                 <power initial="5.69"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
                 <power initial="2.2"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40483" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+            <stat-modify stat="MAGIC_ATTACK">
                 <power initial="4.45"/>
             </stat-modify>
-            <stat-modify stat="CRITICAL_DAMAGE" mode="DIFF">
+            <stat-modify stat="CRITICAL_DAMAGE">
                 <power initial="5.59"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40484" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+            <stat-modify stat="MAGIC_ATTACK">
                 <power initial="4.45"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_CRITICAL_DAMAGE" mode="DIFF">
+            <stat-modify stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="6.5"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40485" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+            <stat-modify stat="MAGIC_ATTACK">
                 <power initial="4.45"/>
             </stat-modify>
-            <stat-modify stat="EVASION_RATE" mode="DIFF">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="0.64"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40486" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+            <stat-modify stat="MAGIC_ATTACK">
                 <power initial="4.45"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_EVASION_RATE" mode="DIFF">
+            <stat-modify stat="MAGIC_EVASION_RATE">
                 <power initial="0.64"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40487" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+            <stat-modify stat="MAGIC_ATTACK">
                 <power initial="4.45"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
                 <power initial="2.2"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40488" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="MAGIC_CRITICAL_DAMAGE" mode="DIFF">
+            <stat-modify stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="6.5"/>
             </stat-modify>
-            <stat-modify stat="REGENERATE_HP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_HP_RATE">
                 <power initial="0.13"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40489" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="MAGIC_CRITICAL_DAMAGE" mode="DIFF">
+            <stat-modify stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="6.5"/>
             </stat-modify>
-            <stat-modify stat="REGENERATE_MP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_MP_RATE">
                 <power initial="0.06"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40490" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="MAGIC_CRITICAL_DAMAGE" mode="DIFF">
+            <stat-modify stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="6.5"/>
             </stat-modify>
-            <stat-modify stat="REGENERATE_CP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_CP_RATE">
                 <power initial="0.13"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40491" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="MAGIC_CRITICAL_DAMAGE" mode="DIFF">
+            <stat-modify stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="6.5"/>
             </stat-modify>
-            <stat-modify stat="EVASION_RATE" mode="DIFF">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="0.06"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40492" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="MAGIC_CRITICAL_DAMAGE" mode="DIFF">
+            <stat-modify stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="6.5"/>
             </stat-modify>
-            <stat-modify stat="ACCURACY" mode="DIFF">
+            <stat-modify stat="ACCURACY">
                 <power initial="0.13"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40493" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="MAGIC_CRITICAL_DAMAGE" mode="DIFF">
+            <stat-modify stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="6.5"/>
             </stat-modify>
-            <stat-modify stat="CRITICAL_RATE" mode="DIFF">
+            <stat-modify stat="CRITICAL_RATE">
                 <power initial="6.4"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40494" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="MAGIC_CRITICAL_DAMAGE" mode="DIFF">
+            <stat-modify stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="6.5"/>
             </stat-modify>
-            <stat-modify stat="EVASION_RATE" mode="DIFF">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="0.64"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40495" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="MAGIC_CRITICAL_DAMAGE" mode="DIFF">
+            <stat-modify stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="6.5"/>
             </stat-modify>
-            <stat-modify stat="ACCURACY_MAGIC" mode="DIFF">
+            <stat-modify stat="ACCURACY_MAGIC">
                 <power initial="0.64"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40496" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="MAGIC_CRITICAL_DAMAGE" mode="DIFF">
+            <stat-modify stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="6.5"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
                 <power initial="2.2"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40497" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="REGENERATE_HP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_HP_RATE">
                 <power initial="0.13"/>
             </stat-modify>
-            <stat-modify stat="EVASION_RATE" mode="DIFF">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="0.64"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40498" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="REGENERATE_HP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_HP_RATE">
                 <power initial="0.13"/>
             </stat-modify>
-            <stat-modify stat="ACCURACY_MAGIC" mode="DIFF">
+            <stat-modify stat="ACCURACY_MAGIC">
                 <power initial="0.64"/>
             </stat-modify>
         </effects>
     </option>
     <option id="40499" name="o_s_cl_mg">
         <effects>
-            <stat-modify stat="REGENERATE_HP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_HP_RATE">
                 <power initial="0.13"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
                 <power initial="2.2"/>
             </stat-modify>
         </effects>

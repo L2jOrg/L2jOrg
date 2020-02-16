@@ -78,11 +78,11 @@
     </option>
     <option id="15219" name="o_s_55_2u_1">
         <!-- Active: Temporarily decreases all skill reuse time. -->
-        <skill id="3202" level="1"/> <!-- Item Skill: Refresh -->
+        <skill id="3202"/> <!-- Item Skill: Refresh -->
     </option>
     <option id="15220" name="o_s_55_2u_2">
         <!-- Active: Reduces MP consumption of all skills for a fixed time. -->
-        <skill id="3164" level="1"/> <!-- Item Skill: Clarity -->
+        <skill id="3164"/> <!-- Item Skill: Clarity -->
     </option>
     <option id="15221" name="o_s_55_2u_3">
         <!-- Active: Temporarily increases the probability of critical attack. -->
@@ -90,7 +90,7 @@
     </option>
     <option id="15222" name="o_s_55_2u_4">
         <!-- Active: An ability to reflect a portion of damage received to an enemy is endowed to oneself for a fixed time. -->
-        <skill id="3204" level="1"/> <!-- Item Skill: Reflect Damage -->
+        <skill id="3204"/> <!-- Item Skill: Reflect Damage -->
     </option>
     <option id="15223" name="o_s_55_2u_5">
         <!-- Active: Blocks all of the target's physical/magic skills by a fixed rate. -->
@@ -98,11 +98,11 @@
     </option>
     <option id="15224" name="o_s_55_2u_6">
         <!-- Active: Teleports to a town. Cannot be used in special areas such as the GM info center. -->
-        <skill id="3147" level="1"/> <!-- Item Skill: Recall -->
+        <skill id="3147"/> <!-- Item Skill: Recall -->
     </option>
     <option id="15225" name="o_s_55_2u_7">
         <!-- Active: Becomes invincible momentarily. -->
-        <skill id="3158" level="1"/> <!-- Item Skill: Lesser Celestial Shield -->
+        <skill id="3158"/> <!-- Item Skill: Lesser Celestial Shield -->
     </option>
     <option id="15226" name="o_s_55_2u_8">
         <!-- Active: Increases the Critical Rate of damage attack magic for a fixed time. -->
@@ -110,7 +110,7 @@
     </option>
     <option id="15227" name="o_s_55_2u_9">
         <!-- Active: Teleports party members to a town. Cannot be used in special areas such as the GM info center. -->
-        <skill id="3205" level="1"/> <!-- Item Skill: Party Recall -->
+        <skill id="3205"/> <!-- Item Skill: Party Recall -->
     </option>
     <option id="15228" name="o_s_55_2u_10">
         <!-- Active: Blocks the target's magic skills by a fixed rate. -->
@@ -118,31 +118,31 @@
     </option>
     <option id="15229" name="o_s_55_2u_11">
         <!-- Active: Temporarily decreases skill reuse time. -->
-        <skill id="3199" level="1"/> <!-- Item Skill: Skill Refresh -->
+        <skill id="3199"/> <!-- Item Skill: Skill Refresh -->
     </option>
     <option id="15230" name="o_s_55_2u_12">
         <!-- Active: Reduces MP consumption of a skill for a fixed time. -->
-        <skill id="3161" level="1"/> <!-- Item Skill: Skill Clarity -->
+        <skill id="3161"/> <!-- Item Skill: Skill Clarity -->
     </option>
     <option id="15231" name="o_s_55_2u_13">
         <!-- Active: Temporarily decreases the reuse time of song/dance skills. -->
-        <skill id="3201" level="1"/> <!-- Item Skill: Music Refresh -->
+        <skill id="3201"/> <!-- Item Skill: Music Refresh -->
     </option>
     <option id="15232" name="o_s_55_2u_14">
         <!-- Active: Reduces MP consumption of song/dance skills for a fixed time. -->
-        <skill id="3163" level="1"/> <!-- Item Skill: Music Clarity -->
+        <skill id="3163"/> <!-- Item Skill: Music Clarity -->
     </option>
     <option id="15233" name="o_s_55_2u_15">
         <!-- Active: Temporarily decreases magic reuse time. -->
-        <skill id="3200" level="1"/> <!-- Item Skill: Spell Refresh -->
+        <skill id="3200"/> <!-- Item Skill: Spell Refresh -->
     </option>
     <option id="15234" name="o_s_55_2u_16">
         <!-- Active: Reduces MP consumption of magic for a fixed time. -->
-        <skill id="3162" level="1"/> <!-- Item Skill: Spell Clarity -->
+        <skill id="3162"/> <!-- Item Skill: Spell Clarity -->
     </option>
     <option id="15235" name="o_s_55_2u_17">
         <!-- Active: Reduces MP consumption of magic for a fixed time. -->
-        <skill id="3162" level="1"/> <!-- Item Skill: Spell Clarity -->
+        <skill id="3162"/> <!-- Item Skill: Spell Clarity -->
     </option>
     <option id="15236" name="o_s_55_2u_18">
         <!-- Active: Increases the ability to restore HP as part of the damage inflicted on the enemy for a fixed time. Excludes damage by skill or long-range attacks. -->
@@ -254,7 +254,7 @@
     </option>
     <option id="15263" name="o_s_55_2u_45">
         <!-- Passive: Reduces MP consumption of all skills. -->
-        <skill id="3258" level="1" type="PASSIVE"/> <!-- Item Skill: Clarity -->
+        <skill id="3258" type="PASSIVE"/> <!-- Item Skill: Clarity -->
     </option>
     <option id="15264" name="o_s_55_2u_46">
         <!-- Passive: Increases evasion. -->
@@ -266,7 +266,7 @@
     </option>
     <option id="15266" name="o_s_55_2u_48">
         <!-- Passive : Reflects part of the damage back to the opponent. -->
-        <skill id="3259" level="1" type="PASSIVE"/> <!-- Item Skill: Reflect Damage -->
+        <skill id="3259" type="PASSIVE"/> <!-- Item Skill: Reflect Damage -->
     </option>
     <option id="15267" name="o_s_55_2u_49">
         <!-- Passive: Increases one's own accuracy. -->
@@ -282,14 +282,14 @@
     </option>
     <option id="15270" name="o_s_55_2u_52">
         <!-- Passive: Decreases skill MP consumption. -->
-        <skill id="3255" level="1" type="PASSIVE"/> <!-- Item Skill: Skill Clarity -->
+        <skill id="3255" type="PASSIVE"/> <!-- Item Skill: Skill Clarity -->
     </option>
     <option id="15271" name="o_s_55_2u_53">
         <!-- Passive: Reduces MP consumption of song/dance skills. -->
-        <skill id="3257" level="1" type="PASSIVE"/> <!-- Item Skill: Music Clarity -->
+        <skill id="3257" type="PASSIVE"/> <!-- Item Skill: Music Clarity -->
     </option>
     <option id="15272" name="o_s_55_2u_54">
         <!-- Passive: Reduces MP consumption of magic. -->
-        <skill id="3256" level="1" type="PASSIVE"/> <!-- Item Skill: Spell Clarity -->
+        <skill id="3256" type="PASSIVE"/> <!-- Item Skill: Spell Clarity -->
     </option>
 </list>

@@ -123,27 +123,27 @@
 	<item id="91910" name="Sayha's Blessing - Lv. 75 or lower" type="POTION" icon="icon.etc_wind_potion_i00">
 	<!-- Restricted to characters below level 75. Recharges 35,000 Sayha's Grace Points. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="15678" level="1" value="-1"/>  <!-- Sayha's Blessing -->
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="15678" value="-1"/>  <!-- Sayha's Blessing -->
 		</skill-reducer>
 	</item>
 
 	<item id="91911" name="Sayha's Buff Scroll - Event" type="NONE" icon="icon.etc_ssq_i00">
 	<!-- For 20 minutes, applies the following effects: Sayha's Shield, Sayha's Magic Barrier, Sayha's Decrease Weight, Sayha's Clarity, Sayha's Berserker Spirit, Sayha's Wind Walk, Sayha's Might, Sayha's Focus, Sayha's Haste, Sayha's Death Whisper, Sayha's Empower, Sayha's Wild Magic, Sayha's Acumen, Sayha's Concentration, Sayha's Victory, Sayha's Restore HP, Sayha's Restore MP. If Sayha's Restore MP is in effect, cannot use items right away. Cooldown 1 minute. Caution: Sayha’s Victory buff will not be applied while Battleground Scroll is in effect. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="50150" level="1" value="-1"/>  <!-- Sayha's Buff Scroll - Event -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="50150" value="-1"/>  <!-- Sayha's Buff Scroll - Event -->
 		</skill-reducer>
 	</item>
 
 	<item id="91912" name="HP Potion - Exchangeable" type="POTION" icon="icon.etc_lesser_potion_red_i00">
 	<!-- After instant 50 HP Recovery, CP Recovery with remaining points. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="1" price="30" commission-type="POTION" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="HEALING"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="50151" level="1" value="-1"/>  <!-- HP Potion -->
+		<attributes weight="1" price="30" commission-type="POTION" immediate-effect="true" action="SKILL_REDUCE" auto-use="HEALING"/>
+		<skill-reducer>
+			<skill id="50151" value="-1"/>  <!-- HP Potion -->
 		</skill-reducer>
 	</item>
 
@@ -259,7 +259,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes price="20" commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="SoulShots">
-			<skill id="2154" level="1" value="-1"/>  <!-- Soulshot (S-grade) -->
+			<skill id="2154" value="-1"/>  <!-- Soulshot (S-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -268,7 +268,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes price="30" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="SpiritShot">
-			<skill id="2159" level="1" value="-1"/>  <!-- Spiritshot (S-grade) -->
+			<skill id="2159" value="-1"/>  <!-- Spiritshot (S-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -277,7 +277,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes price="50" commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="BlessedSoulShots">
-			<skill id="8920" level="1" value="-1"/>  <!-- Blessed Soulshot (S-grade) -->
+			<skill id="8920" value="-1"/>  <!-- Blessed Soulshot (S-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -286,7 +286,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes price="75" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="BlessedSpiritShot">
-			<skill id="2164" level="1" value="-1"/>  <!-- Blessed Spiritshot (S-grade) -->
+			<skill id="2164" value="-1"/>  <!-- Blessed Spiritshot (S-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -568,9 +568,9 @@
 	<item id="91971" name="Blessing Star Candy" type="POTION" icon="BranchSys.icon.br_valentine_agathion_pack_i00">
 	<!-- Recharges 10,000 Sayha's Grace Points. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="50163" level="1" value="-1"/>  <!-- Blessing Star Candy -->
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="50163" value="-1"/>  <!-- Blessing Star Candy -->
 		</skill-reducer>
 	</item>
 
@@ -583,27 +583,27 @@
 	<item id="91973" name="Dragon's Special Elixir Lv. 1" type="SCROLL" icon="icon.bm_dragon_posion">
 	<!-- When used, XP/SP Gain +50%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, P/M. Critical Rate +30, P./M. Critical Damage +10%, Atk. Spd./Casting Spd. +50, HP +2500, MP +1500, CP +2500, HP/MP Recovery Bonus +10, Sayha's Grace Consumption Speed -20% for 20 minutes. Has a chance to recover 5% of damage dealt to enemy as HP.\n<Caution>When Dragon's Special Elixir is used while having Dragon's Miracle Potion applied, the effect will change to that of the Dragon's Special Elixir. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="50170" level="1" value="-1"/>  <!-- Dragon's Special Elixir -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="50170" value="-1"/>  <!-- Dragon's Special Elixir -->
 		</skill-reducer>
 	</item>
 
 	<item id="91974" name="HP Potion - Event" type="POTION" icon="icon.etc_lesser_potion_red_i00">
 	<!-- Instantly restores HP by 50 and restores the rest as CP. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="1" price="30" action="SKILL_REDUCE" auto-use-type="HEALING"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="50151" level="1" value="-1"/>  <!-- HP Potion -->
+		<attributes weight="1" price="30" action="SKILL_REDUCE" auto-use="HEALING"/>
+		<skill-reducer>
+			<skill id="50151" value="-1"/>  <!-- HP Potion -->
 		</skill-reducer>
 	</item>
 
 	<item id="91975" name="Battleground Scroll" type="NONE" icon="icon.etc_ssq_i00">
 	<!-- For 20 minutes, Max HP/Max MP/Max CP +300, P. Atk./M. Atk. +200, Atk. Spd./Casting Spd. +60, P. Critical/M. Skill Critical Rate+20, P. Critical Damage/M. Critical Damage +10% with the power of Sayha. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="54116" level="1" value="-1"/>  <!-- Sayha's Victory -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="54116" value="-1"/>  <!-- Sayha's Victory -->
 		</skill-reducer>
 	</item>
 
@@ -616,13 +616,13 @@
 	<item id="91977" name="Tower of Insolence Paralysis Resistance Scroll" type="NONE" icon="icon.scroll_of_verification_i08">
 	<!-- Activates Resistance to Paralysis for 20 minutes. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 	</item>
 
 	<item id="91978" name="Dragon Valley Mental Attack Resistance Scroll" type="NONE" icon="icon.scroll_of_verification_i08">
 	<!-- Activates Resistance to Fear for 20 minutes. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 	</item>
 
 	<item id="91979" name="Giant's Shining Box" type="NONE" icon="icon.bm_sheep_agathion_30d_box">

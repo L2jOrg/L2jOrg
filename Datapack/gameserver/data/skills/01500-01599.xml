@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="1505" name="Sublime Self-Sacrifice" max-level="1" action="A2" type="MAGIC">
+	<skill id="1505" name="Sublime Self-Sacrifice" action="A2" type="MAGIC">
 	<!-- Sacrifices yourself to allow all other allies to fully recover their HP/MP/CP and become invincible for 15 seconds. -->
 		<icon initial="icon.skill1505"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" remove-on-action="true" >
@@ -24,9 +24,9 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<damage-block block-hp="true" block-mp="false"/>
+			<damage-block block-hp="true"/>
 			<effect name="DebuffBlock"/>
-			<cp mode="DIFF">
+			<cp>
 				<power initial="9000.0"/>
 			</cp>
 			<effect name="HealPercent">
@@ -37,7 +37,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1506" name="Blessing of Eva" max-level="1" action="A1" type="MAGIC">
+	<skill id="1506" name="Blessing of Eva" action="A1" type="MAGIC">
 	<!-- Casts Eva's Blessing to fully recover HP/MP/CP and has a chance to remove debuffs. -->
 		<icon initial="icon.skill1506"/>
 		<attributes magic-critical-rate="5.0" >
@@ -68,7 +68,7 @@
 			</dispel-by-category>
 		</effects>
 	</skill>
-	<skill id="1507" name="Lord of Vampires" max-level="1" action="A2" type="MAGIC">
+	<skill id="1507" name="Lord of Vampires" action="A2" type="MAGIC">
 	<!-- For 30 seconds, has a chance to absorb 80%% of physical damage dealt to enemies as HP. -->
 		<icon initial="icon.skill1507"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -170,7 +170,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<trigger-skill-by-damage skill="5592" attacker="Creature" target="TARGET" min-damage="100">
+			<trigger-skill-by-damage skill="5592" target="TARGET" min-damage="100">
 				<power initial="1.0"/>
 				<chance initial="20.0"/>
 			</trigger-skill-by-damage>
@@ -225,7 +225,7 @@
 			</reuse>
 		</effects>
 	</skill>
-	<skill id="1533" name="Enlightenment" max-level="1" action="A2" type="MAGIC">
+	<skill id="1533" name="Enlightenment" action="A2" type="MAGIC">
 	<!-- Receives enlightenment for 20 seconds. M. Atk. +10%%, Heal Received +20%%, Casting Spd. +30%%, M. Critical Rate +50%%, and MP Consumption -70%%. -->
 		<icon initial="icon.skill1532"/>
 		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" auto-use="BUFF">
@@ -305,12 +305,12 @@
 			<block-abnormal>
 				<abnormals>SPEED_UP AVOID_UP</abnormals>
 			</block-abnormal>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="20.0">
 					<value level="2">33.0</value>
 				</power>
 			</speed>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="4.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="4.0"/>
 			</stat-hp-based>
 		</effects>
 	</skill>
@@ -538,7 +538,7 @@
 			</defence-trait>
 		</effects>
 	</skill>
-	<skill id="1540" name="Turn to Stone" max-level="1" action="A2" type="MAGIC">
+	<skill id="1540" name="Turn to Stone" action="A2" type="MAGIC">
 	<!-- Petrifies oneself for 8 seconds to avoid incurring damage. -->
 		<icon initial="icon.skill1540"/>
 		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" auto-use="BUFF">
@@ -560,7 +560,7 @@
 			<block-all-actions>
 				<allowed-skills>35016</allowed-skills>
 			</block-all-actions>
-			<damage-block block-hp="true" block-mp="false"/>
+			<damage-block block-hp="true"/>
 			<effect name="BuffBlock"/>
 			<effect name="DebuffBlock"/>
 			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
@@ -598,7 +598,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<trigger-skill-by-damage skill="6059" attacker="Creature" target="SELF" min-damage="300">
+			<trigger-skill-by-damage skill="6059" min-damage="300">
 				<power initial="1.0"/>
 				<chance initial="80.0"/>
 			</trigger-skill-by-damage>
@@ -609,7 +609,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="1543" name="Great Fury" max-level="1" >
+	<skill id="1543" name="Great Fury">
 	<!-- With a certain probability, party members are seized with Great Fury that increases Atk. Spd. by 30%% after the character's attack. -->
 		<icon initial="icon.skill1543"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -620,7 +620,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<trigger-skill-by-attack skill="6060" target="MY_PARTY" critical="false">
+			<trigger-skill-by-attack skill="6060" target="MY_PARTY">
 				<power initial="1.0"/>
 				<chance initial="30.0"/>
 				<min-damage initial="1.0"/>
@@ -718,14 +718,14 @@
 					<value level="5">15.0</value>
 				</power>
 			</stat-modify>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="DIFF">
+			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0">
 				<power initial="10.0">
 					<value level="2">20.0</value>
 					<value level="3">30.0</value>
 					<value level="4">40.0</value>
 				</power>
 			</stat-hp-based>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
 				<power initial="10.0">
 					<value level="2">20.0</value>
 					<value level="3">30.0</value>
@@ -734,7 +734,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="1550" name="Mass Cure Poison" max-level="1" action="A1" type="MAGIC">
+	<skill id="1550" name="Mass Cure Poison" action="A1" type="MAGIC">
 	<!-- Cures all poisoned party members. -->
 		<icon initial="icon.skill1550"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
@@ -759,7 +759,7 @@
 			</dispel>
 		</effects>
 	</skill>
-	<skill id="1551" name="Mass Purify" max-level="1" action="A1" type="MAGIC">
+	<skill id="1551" name="Mass Purify" action="A1" type="MAGIC">
 	<!-- Cancels paralysis and petrification effects, and also cures poison and bleed condition of all party members. -->
 		<icon initial="icon.skill1551"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
@@ -860,7 +860,7 @@
 				<value level="2">6</value>
 			</item-count>
 		</consume>
-		<target type="ENEMY_NOT" scope="RANGE_SORT_BY_HP" object="FRIEND" range="300" affect-min="9" affect-random="0" />
+		<target type="ENEMY_NOT" scope="RANGE_SORT_BY_HP" object="FRIEND" range="300" affect-min="9"/>
 		<effects>
 			<effect name="HealPercent">
 				<power initial="30.0">
@@ -1027,7 +1027,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="70.0">
 					<value level="2">100.0</value>
 					<value level="3">140.0</value>

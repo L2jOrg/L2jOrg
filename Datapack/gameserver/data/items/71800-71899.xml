@@ -172,7 +172,7 @@
 	<item id="71828" name="Scroll: Summon Storm" type="NONE" icon="icon.scrl_of_storm">
 	<!-- Fills you with Storm Energy, granting +50% XP and SP gain bonus for 2 hours. Cooldown: 2 hours. Storm Energy does not disappear after character's death.  Available for levels 1-60. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 	</item>
 
 	<item id="71829" name="XP/SP Rune - 50% (1-hour) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
@@ -361,7 +361,7 @@
 	<item id="71848" name="Dragon's Special Elixir" type="SCROLL" icon="icon.bm_dragon_posion">
 	<!-- When used, XP/SP Gain +50%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, P/M. Critical Rate +30, P./M. Critical Damage +10%, Atk. Spd./Casting Spd. +50, HP +2500, MP +1500, CP +2500, HP/MP Recovery Bonus +10 for 20 minutes. Has a chance to recover 5% of damage dealt to enemy as HP.\n<Caution> When Dragon's Special Elixir is used while having Dragon's Miracle Potion applied, the effect will change to that of the Dragon's Special Elixir. -->
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="71849" name="Emerald Lv. 3 Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_emerald_i00">
@@ -553,7 +553,7 @@
 	<item id="71880" name="Dragon's Special Elixir" type="SCROLL" icon="icon.bm_dragon_posion">
 	<!-- When used, XP/SP Gain +50%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, P/M. Critical Rate +30, P./M. Critical Damage +10%, Atk. Spd./Casting Spd. +50, HP +2500, MP +1500, CP +2500, HP/MP Recovery Bonus +10 for 20 minutes. Has a chance to recover 5% of damage dealt to enemy as HP.\n<Caution>When Dragon's Special Elixir is used while having Dragon's Miracle Potion applied, the effect will change to that of the Dragon's Special Elixir. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="71881" name="Letter Gift Box - LINEAGEII" type="NONE" icon="BranchSys3.icon.g_cash_fortuna_box_r">
@@ -625,7 +625,7 @@
 	<item id="71892" name="Halloween Candy" type="SCROLL" icon="BranchSys.br_hallowinday_candy_i00">
 	<!-- For 20 min., XP/SP Gain while hunting +20%, P. Atk./M. Atk. +5%, Atk. Spd./Casting Spd. +5%. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="71893" name="Eva’s Treasure Chest" type="NONE" icon="icon.freya_box_i01">
@@ -637,7 +637,7 @@
 	<item id="71894" name="Dragon's Special Elixir Lv. 2" type="SCROLL" icon="icon.bm_dragon_posion">
 	<!-- When used, for 20 min., XP/SP Gain +50%, P. Atk. +300, M. Atk. +450, P. Def. +400, M. Def. +550, P/M. Critical Rate +40, P./M. Critical Damage +12%, Atk. Spd./Casting Spd. +70, HP +3000, MP +2000, CP +3000, HP/MP Recovery Bonus +12. Has a chance to recover 7% of damage dealt to enemy as HP.\n<Caution>When Dragon's Special Elixir is used while having Dragon's Miracle Potion applied, the effect will change to that of the Dragon's Special Elixir. -->
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="71895" name="Battle Box Lv. 1" type="NONE" icon="icon.etc_treasure_box_i04">

@@ -2,10 +2,10 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<xs:element name="pets">
 		<xs:complexType>
-			<xs:sequence minOccurs="1" maxOccurs="1">
-				<xs:element name="pet" minOccurs="1" maxOccurs="unbounded">
+			<xs:sequence>
+				<xs:element name="pet" maxOccurs="unbounded">
 					<xs:complexType>
-						<xs:sequence minOccurs="1" maxOccurs="1">
+						<xs:sequence>
 							<xs:element name="set" minOccurs="0" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:attribute name="name" use="required">
@@ -22,10 +22,10 @@
 									<xs:attribute name="val" type="xs:token" use="required" />
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="skills" minOccurs="0" maxOccurs="1">
+							<xs:element name="skills" minOccurs="0">
 								<xs:complexType>
-									<xs:sequence minOccurs="1" maxOccurs="1">
-										<xs:element name="skill" minOccurs="1" maxOccurs="unbounded">
+									<xs:sequence>
+										<xs:element name="skill" maxOccurs="unbounded">
 											<xs:complexType>
 												<xs:attribute name="minLvl" type="xs:positiveInteger" use="required" />
 												<xs:attribute name="skillId" type="xs:positiveInteger" use="required" />
@@ -35,13 +35,13 @@
 									</xs:sequence>
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="stats" minOccurs="1" maxOccurs="1">
+							<xs:element name="stats">
 								<xs:complexType>
-									<xs:sequence minOccurs="1" maxOccurs="1">
-										<xs:element name="stat" minOccurs="1" maxOccurs="100">
+									<xs:sequence>
+										<xs:element name="stat" maxOccurs="100">
 											<xs:complexType>
-												<xs:sequence minOccurs="1" maxOccurs="1">
-													<xs:element name="set" minOccurs="1" maxOccurs="unbounded">
+												<xs:sequence>
+													<xs:element name="set" maxOccurs="unbounded">
 														<xs:complexType>
 															<xs:attribute name="name" use="required">
 																<xs:simpleType>

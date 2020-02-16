@@ -2,11 +2,11 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<xs:element name="list">
 		<xs:complexType>
-			<xs:sequence minOccurs="1" maxOccurs="1">
-				<xs:element name="henna" minOccurs="1" maxOccurs="unbounded">
+			<xs:sequence>
+				<xs:element name="henna" maxOccurs="unbounded">
 					<xs:complexType>
-						<xs:sequence minOccurs="1" maxOccurs="1">
-							<xs:element name="stats" minOccurs="0" maxOccurs="1">
+						<xs:sequence>
+							<xs:element name="stats" minOccurs="0">
 								<xs:complexType>
 									<xs:attribute name="str" type="xs:integer" />
 									<xs:attribute name="con" type="xs:integer" />
@@ -18,19 +18,19 @@
 									<xs:attribute name="cha" type="xs:integer" />
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="wear" minOccurs="1" maxOccurs="1">
+							<xs:element name="wear">
 								<xs:complexType>
 									<xs:attribute name="count" type="xs:positiveInteger" use="required" />
 									<xs:attribute name="fee" type="xs:integer" use="required" />
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="cancel" minOccurs="1" maxOccurs="1">
+							<xs:element name="cancel">
 								<xs:complexType>
 									<xs:attribute name="count" type="xs:integer" use="required" />
 									<xs:attribute name="fee" type="xs:integer" use="required" />
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="duration" minOccurs="0" maxOccurs="1">
+							<xs:element name="duration" minOccurs="0">
 								<xs:complexType>
 									<xs:attribute name="time" type="xs:positiveInteger" use="required" />
 								</xs:complexType>

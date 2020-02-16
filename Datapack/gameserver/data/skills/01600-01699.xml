@@ -130,7 +130,7 @@
 
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="true" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack ignore-shield="true" critical-chance="0.0" over-hit="true">
 				<power initial="801.0">
 					<value level="2">1002.0</value>
 					<value level="3">1234.0</value>
@@ -391,7 +391,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="true" critical-chance="15.0" over-hit="true" attack-mod="1.0" defense-mod="0.2">
+			<physical-attack ignore-shield="true" critical-chance="15.0" over-hit="true" defense-mod="0.2">
 				<power initial="465.0">
 					<value level="2">494.0</value>
 					<value level="3">525.0</value>
@@ -505,20 +505,20 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK">
 				<power initial="40.0">
 					<value level="2">50.0</value>
 					<value level="3">60.0</value>
 					<value level="4">90.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED">
 				<power initial="30.0">
 					<value level="2">40.0</value>
 					<value level="3">50.0</value>
@@ -773,7 +773,7 @@
 					<value level="6">25.0</value>
 				</power>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="-10.0">
 					<value level="2">-11.0</value>
 					<value level="3">-12.0</value>
@@ -784,7 +784,7 @@
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="1612" name="Slow Force" max-level="1" debuff="true" action="A1">
+	<skill id="1612" name="Slow Force" debuff="true" action="A1">
 	<!-- Movement Speed -20%% for 15 seconds. -->
 		<icon initial="icon.skill0210"/>
 		<attributes property="PHYSIC" auto-use="ACTIVE">
@@ -889,7 +889,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="true" critical-chance="15.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack ignore-shield="true" critical-chance="15.0" over-hit="true">
 				<power initial="680.0">
 					<value level="2">850.0</value>
 					<value level="3">1047.0</value>
@@ -949,13 +949,13 @@
 				</power>
 				<weapon-type>BLUNT SPEAR DUAL_BLUNT </weapon-type>
 			</stat-modify>
-			<trigger-skill-by-damage skill="1616" attacker="Creature" target="ENEMY" min-damage="60">
+			<trigger-skill-by-damage skill="1616" target="ENEMY" min-damage="60">
 				<power initial="1.0"/>
 				<chance initial="10.0"/>
 			</trigger-skill-by-damage>
 		</effects>
 	</skill>
-	<skill id="1616" name="Physical Damage" max-level="1" debuff="true" action="A2">
+	<skill id="1616" name="Physical Damage" debuff="true" action="A2">
 	<!-- Atk. Spd./Casting Spd. -10%% for 15 seconds due to an injury. -->
 		<icon initial="icon.skill1615"/>
 		<attributes property="PHYSIC" triggered="true" auto-use="ACTIVE">
@@ -1026,7 +1026,7 @@
 				</power>
 				</trait>
 			</defence-trait>
-			<trigger-skill-by-damage skill="1618" attacker="Creature" target="SELF" min-damage="50">
+			<trigger-skill-by-damage skill="1618" min-damage="50">
 				<power initial="1.0"/>
 				<chance initial="10.0"/>
 			</trigger-skill-by-damage>
@@ -1183,7 +1183,7 @@
 			</call-skill>
 		</effects>
 	</skill>
-	<skill id="1622" name="Blood of Sacrifice" max-level="1" action="A2">
+	<skill id="1622" name="Blood of Sacrifice" action="A2">
 	<!-- Sacrificed. Max HP -20%%. -->
 		<icon initial="icon.skill1621"/>
 		<attributes property="PHYSIC" triggered="true" >
@@ -1201,7 +1201,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="-20.0"/>
 			</vital-stat-modify>
 		</effects>
@@ -1273,7 +1273,7 @@
 					<value level="5">20.0</value>
 				</power>
 			</stat-modify>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="4.0">
 					<value level="2">5.0</value>
 					<value level="3">6.0</value>
@@ -1350,7 +1350,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1625" name="Spear Shot" max-level="1" debuff="true" action="A2">
+	<skill id="1625" name="Spear Shot" debuff="true" action="A2">
 	<!-- Throws a spear to attack an enemy with bonus 801 Power added to P. Atk. Becomes immobilized for 10 seconds. Available when the distance is at least 300. Requires a spear. Ignores Shield Defense. Over-hit. -->
 		<icon initial="icon.skill1625"/>
 		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="20" auto-use="ACTIVE">
@@ -1378,13 +1378,13 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="true" critical-chance="30.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack ignore-shield="true" critical-chance="30.0" over-hit="true">
 				<power initial="801.0"/>
 			</physical-attack>
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="1626" name="Howl Spear" max-level="1" debuff="true" action="A1">
+	<skill id="1626" name="Howl Spear" debuff="true" action="A1">
 	<!-- Strikes with a spear to inflict damage on nearby enemies with bonus 2911 Power. Removes Movement Speed buffs. Requires a spear. -->
 		<icon initial="icon.skill1626"/>
 		<attributes next-action="ATTACK" magic-critical-rate="5.0" level-bonus-rate="20" >
@@ -1407,14 +1407,14 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="2911.0"/>
 			</physical-attack>
 			<dispel-probability abnormals="SPEED_UP IMPROVE_SPEED_AVOID_UP">				<power initial="100.0"/>
 			</dispel-probability>
 		</effects>
 	</skill>
-	<skill id="1627" name="Destroyer's Roar" max-level="1" debuff="true" action="A2">
+	<skill id="1627" name="Destroyer's Roar" debuff="true" action="A2">
 	<!-- Nearby targets' Movement Speed -90%%, and becomes inflicted with fear. Requires a sword, blunt weapon, or two-handed sword. -->
 		<icon initial="icon.skill1627"/>
 		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="20" >
@@ -1510,7 +1510,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="1629" name="Wrist Throw Dagger" max-level="1" debuff="true" action="A2">
+	<skill id="1629" name="Wrist Throw Dagger" debuff="true" action="A2">
 	<!-- Throws a dagger at an enemy with bonus 396 Power and injures their wrist. For 1 minute, there is a chance the wound will interrupt the target's skill casting. Requires a dagger. -->
 		<icon initial="icon.skill1629"/>
 		<attributes property="PHYSIC" static-reuse="true" next-action="ATTACK" magic-critical-rate="5.0" level-bonus-rate="20" auto-use="ACTIVE">
@@ -1538,14 +1538,14 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="396.0"/>
 			</physical-attack>
 			<effect name="PhysicalMute"/>
 			<effect name="Mute"/>
 		</effects>
 	</skill>
-	<skill id="1630" name="Throwing Blood Dagger" max-level="1" debuff="true" action="A2">
+	<skill id="1630" name="Throwing Blood Dagger" debuff="true" action="A2">
 	<!-- Throws a dagger at an enemy with bonus 396 Power. While in PvP for 40 seconds, there is a chance the target's HP decreases whenever they cast a hostile skill. Requires a dagger. Over-hit. -->
 		<icon initial="icon.skill1630"/>
 		<attributes property="PHYSIC" static-reuse="true" next-action="ATTACK" magic-critical-rate="5.0" level-bonus-rate="20" auto-use="ACTIVE">
@@ -1573,7 +1573,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="396.0"/>
 			</physical-attack>
 		</effects>
@@ -1688,7 +1688,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="2694.0">
 					<value level="2">2762.0</value>
 					<value level="3">2828.0</value>

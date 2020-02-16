@@ -4,8 +4,8 @@
 	<!-- estows blessing on its owner such that when the owner dies during a boss/raid war, their abilities will not be diminished. This item can only be used on self by a character level 19 or below. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="10" price="100" reuse-delay="10000" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2168" level="1" value="-1"/>  <!-- Lucky Charm -->
+		<skill-reducer>
+			<skill id="2168" value="-1"/>  <!-- Lucky Charm -->
 		</skill-reducer>
 	</item>
 
@@ -498,7 +498,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="1" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="SoulShots">
-			<skill id="2039" level="1" value="-1"/>  <!-- Soulshot (No-grade) -->
+			<skill id="2039" value="-1"/>  <!-- Soulshot (No-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -507,7 +507,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="1" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="SpiritShot">
-			<skill id="2047" level="1" value="-1"/>  <!-- Spiritshot (No-grade) -->
+			<skill id="2047" value="-1"/>  <!-- Spiritshot (No-grade) -->
 		</skill-reducer>
 	</item>
 

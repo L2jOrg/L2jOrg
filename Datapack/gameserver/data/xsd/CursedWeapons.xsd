@@ -2,11 +2,11 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<xs:element name="list">
 		<xs:complexType>
-			<xs:sequence minOccurs="1" maxOccurs="1">
+			<xs:sequence>
 				<xs:element name="item" minOccurs="2" maxOccurs="2">
 					<xs:complexType>
-						<xs:sequence minOccurs="1" maxOccurs="1">
-							<xs:element name="disapearChance" minOccurs="1" maxOccurs="1">
+						<xs:sequence>
+							<xs:element name="disapearChance">
 								<xs:complexType>
 									<xs:attribute name="val" use="required">
 										<xs:simpleType>
@@ -18,7 +18,7 @@
 									</xs:attribute>
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="dropRate" minOccurs="1" maxOccurs="1">
+							<xs:element name="dropRate">
 								<xs:complexType>
 									<xs:attribute name="val" use="required">
 										<xs:simpleType>
@@ -30,17 +30,17 @@
 									</xs:attribute>
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="duration" minOccurs="1" maxOccurs="1">
+							<xs:element name="duration">
 								<xs:complexType>
 									<xs:attribute name="val" type="xs:positiveInteger" use="required" />
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="durationLost" minOccurs="1" maxOccurs="1">
+							<xs:element name="durationLost">
 								<xs:complexType>
 									<xs:attribute name="val" type="xs:positiveInteger" use="required" />
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="stageKills" minOccurs="1" maxOccurs="1">
+							<xs:element name="stageKills">
 								<xs:complexType>
 									<xs:attribute name="val" use="required">
 										<xs:simpleType>

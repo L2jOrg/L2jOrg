@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="17608" name="Fantastical Energy" max-level="1" action="A2">
+	<skill id="17608" name="Fantastical Energy" action="A2">
 	<!-- Fantastical energy of the fishing dock. -->
 		<icon initial="icon.etc_dragons_blood_i03"/>
 		<attributes property="PHYSIC" >
@@ -10,7 +10,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="17613" name="Release Agathion Seal- Aries" max-level="1" action="A1">
+	<skill id="17613" name="Release Agathion Seal- Aries" action="A1">
 	<!-- Releases the seal on the Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -24,7 +24,7 @@
 			<summon-agathion id="13411"/>
 		</effects>
 	</skill>
-	<skill id="17619" name="Release Agathion's Seal - Pisces" max-level="1" action="A1">
+	<skill id="17619" name="Release Agathion's Seal - Pisces" action="A1">
 	<!-- Release Agathion's Seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -38,7 +38,7 @@
 			<summon-agathion id="13407"/>
 		</effects>
 	</skill>
-	<skill id="17621" name="Release Agathion's Seal - Cancer" max-level="1" action="A1">
+	<skill id="17621" name="Release Agathion's Seal - Cancer" action="A1">
 	<!-- Release Agathion's Seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -52,7 +52,7 @@
 			<summon-agathion id="13409"/>
 		</effects>
 	</skill>
-	<skill id="17625" name="Agathion Trick- Aries" max-level="1" action="A1">
+	<skill id="17625" name="Agathion Trick- Aries" action="A1">
 	<!-- Watch the Agathion's Trick. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes >
@@ -62,7 +62,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="17685" name="Uldie's Gift" max-level="1" action="A1">
+	<skill id="17685" name="Uldie's Gift" action="A1">
 	<!-- Watch the Agathion's Trick. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -91,7 +91,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="17689" name="Uldie's Valuable Gift" max-level="1" action="A1">
+	<skill id="17689" name="Uldie's Valuable Gift" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -101,7 +101,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="17695" name="Summon Squash" max-level="1" action="A1">
+	<skill id="17695" name="Summon Squash" action="A1">
 	<!-- A skill to summon a transparent NPC for the 10the anniversary event Summon Squash. -->
 		<icon initial="icon.skill17695"/>
 		<attributes >
@@ -113,7 +113,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="17696" name="Summon Large Squash" max-level="1" action="A1">
+	<skill id="17696" name="Summon Large Squash" action="A1">
 	<!-- A skill to summon a transparent NPC for the 10the anniversary event Summon Squash. -->
 		<icon initial="icon.skill17696"/>
 		<attributes >

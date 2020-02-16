@@ -1,4 +1,4 @@
-<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<xs:element name="list">
 		<xs:complexType>
 			<xs:sequence>
@@ -15,15 +15,15 @@
 								<xs:complexType>
 									<xs:simpleContent>
 										<xs:extension base="xs:string">
-											<xs:attribute type="xs:short" name="id" use="optional"/>
-											<xs:attribute type="xs:byte" name="price" use="optional"/>
-											<xs:attribute type="xs:string" name="desc" use="optional"/>
+											<xs:attribute type="xs:short" name="id"/>
+											<xs:attribute type="xs:byte" name="price"/>
+											<xs:attribute type="xs:string" name="desc"/>
 										</xs:extension>
 									</xs:simpleContent>
 								</xs:complexType>
 							</xs:element>
 						</xs:sequence>
-						<xs:attribute type="xs:string" name="type" use="optional"/>
+						<xs:attribute type="xs:string" name="type"/>
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>

@@ -123,49 +123,49 @@
 	<item id="93620" name="Fish Stew - Vampiric Rage Lv. 3" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. recovers as HP 8% of the physical damage inflicted on the enemy with a certain probability.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="93621" name="Fish Stew - Empower Lv. 3" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. M. Atk. +75%.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="93622" name="Fish Stew - Greater Might Lv. 1" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. P. Atk. +4%.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="93623" name="Fish Stew - Greater Shield Lv. 1" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. P. Def. +5%.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="93624" name="Fish Stew - Wild Magic Lv. 1" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. M. Critical Rate +10. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="93625" name="Fish Stew - Berserker Spirit Lv. 2" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. P. Def. -8%, M. Def. -16%, P. Evasion -4; P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, Speed +8.  -->
 		<restriction stackable="true" destroyable="false" dropable="false" sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="93626" name="Fish Stew - Decrease Weight Lv. 3" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. Weight limit +9000.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="93627" name="Fish Stew - Guildsman's Gratitude Lv. 2" type="SCROLL" icon="icon.ev_invasion_buff_box">
 	<!-- XP/SP gain +30% while hunting for 20 minutes when used.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="93628" name="1000 L2 Coins" type="NONE" icon="icon.bm_lcoin_box_i00">
@@ -533,25 +533,25 @@
 	<item id="93688" name="Honey Rice Cakes - Event" type="POTION" icon="icon.ev_honey_songpyeon_00">
 	<!-- Recovers 200 HP instantly when used. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="HEALING"/>
+		<attributes auto-use="HEALING"/>
 	</item>
 
 	<item id="93689" name="Bean Songpyeon - Event" type="POTION" icon="icon.ev_bean_songpyeon_00">
 	<!-- Recharges 35,000 Sayha's Grace Points. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="93690" name="Sesame Songpyeon - Event" type="NONE" icon="icon.ev_sesame_songpyeon_00">
 	<!-- For 20 min., XP/SP Gain +20%%.\n<Note>When Einhasad's Protection, Dandy's Home Run Ball/Golden Ball is used while the Sesame Songpyeon effect is applied, only the higher effect will be applied. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="93691" name="Five-colored Sweets - Event" type="NONE" icon="icon.ev_charge_scroll">
 	<!-- For 20 minutes, P. Atk. +200, M. Atk. +350, P. Critical/M. Skill Critical Rate +30, Atk. Spd./Casting Spd. +50, P. Def./M. Def. +200, Max HP/Max MP/Max CP +500. The effect remains active even after death. Cooldown 1 minute. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="93692" name="Chuseok Gift Set - Event" type="NONE" icon="icon.event_high_oriental_park_i00">

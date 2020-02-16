@@ -129,8 +129,8 @@
 	<!-- 300 compressed soulshots. No-grade. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="600" price="2300" commission-type="SOULSHOT" immediate-effect="true" action="CAPSULE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2078" level="1" value="-1"/>  <!-- Soulshot Compressed Package (No-grade) -->
+		<skill-reducer>
+			<skill id="2078" value="-1"/>  <!-- Soulshot Compressed Package (No-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -138,8 +138,8 @@
 	<!-- 300 compressed soulshots. D-grade. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="450" price="3300" commission-type="SOULSHOT" immediate-effect="true" action="CAPSULE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2079" level="1" value="-1"/>  <!-- Soulshot Compressed Package (D-grade) -->
+		<skill-reducer>
+			<skill id="2079" value="-1"/>  <!-- Soulshot Compressed Package (D-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -147,8 +147,8 @@
 	<!-- 300 compressed soulshots. C-grade. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="450" price="4950" commission-type="SOULSHOT" immediate-effect="true" action="CAPSULE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2080" level="1" value="-1"/>  <!-- Soulshot Compressed Package (C-grade) -->
+		<skill-reducer>
+			<skill id="2080" value="-1"/>  <!-- Soulshot Compressed Package (C-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -156,8 +156,8 @@
 	<!-- 300 compressed soulshots. B-grade. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="200" price="16500" commission-type="SOULSHOT" immediate-effect="true" action="CAPSULE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2081" level="1" value="-1"/>  <!-- Soulshot Compressed Package (B-grade) -->
+		<skill-reducer>
+			<skill id="2081" value="-1"/>  <!-- Soulshot Compressed Package (B-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -165,8 +165,8 @@
 	<!-- 300 compressed Soulshots. A-grade. Exchange for a new Soulshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="200" price="26400" commission-type="SOULSHOT" immediate-effect="true" action="CAPSULE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2082" level="1" value="-1"/>  <!-- Soulshot Compressed Package (A-grade) -->
+		<skill-reducer>
+			<skill id="2082" value="-1"/>  <!-- Soulshot Compressed Package (A-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -174,8 +174,8 @@
 	<!-- 300 compressed spiritshots. No-grade. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="750" price="4950" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2084" level="1" value="-1"/>  <!-- Spiritshot Compressed Package (No-grade) -->
+		<skill-reducer>
+			<skill id="2084" value="-1"/>  <!-- Spiritshot Compressed Package (No-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -183,8 +183,8 @@
 	<!-- 300 compressed spiritshots. D-grade. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="750" price="5940" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2085" level="1" value="-1"/>  <!-- Spiritshot Compressed Package (D-grade) -->
+		<skill-reducer>
+			<skill id="2085" value="-1"/>  <!-- Spiritshot Compressed Package (D-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -192,8 +192,8 @@
 	<!-- 300 compressed spiritshots. C-grade. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="450" price="11550" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2086" level="1" value="-1"/>  <!-- Spiritshot Compressed Package (C-grade) -->
+		<skill-reducer>
+			<skill id="2086" value="-1"/>  <!-- Spiritshot Compressed Package (C-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -201,8 +201,8 @@
 	<!-- 300 compressed spiritshots. B-grade. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="450" price="33000" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2087" level="1" value="-1"/>  <!-- Spiritshot Compressed Package (B-grade) -->
+		<skill-reducer>
+			<skill id="2087" value="-1"/>  <!-- Spiritshot Compressed Package (B-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -210,8 +210,8 @@
 	<!-- 300 compressed spiritshots. A-grade. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="200" price="39600" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2088" level="1" value="-1"/>  <!-- Spiritshot Compressed Package (A-grade) -->
+		<skill-reducer>
+			<skill id="2088" value="-1"/>  <!-- Spiritshot Compressed Package (A-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -219,8 +219,8 @@
 	<!-- 300 compressed blessed spiritshots. No-grade. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="750" price="11550" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2090" level="1" value="-1"/>  <!-- Blessed Spiritshot Compressed Package (No-grade) -->
+		<skill-reducer>
+			<skill id="2090" value="-1"/>  <!-- Blessed Spiritshot Compressed Package (No-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -228,8 +228,8 @@
 	<!-- 300 compressed blessed spiritshots. D-grade. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="750" price="14850" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2091" level="1" value="-1"/>  <!-- Blessed Spiritshot Compressed Package (D-grade) -->
+		<skill-reducer>
+			<skill id="2091" value="-1"/>  <!-- Blessed Spiritshot Compressed Package (D-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -237,8 +237,8 @@
 	<!-- 300 compressed blessed spiritshots. C-grade. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="450" price="29700" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2092" level="1" value="-1"/>  <!-- Blessed Spiritshot Compressed Package (C-grade) -->
+		<skill-reducer>
+			<skill id="2092" value="-1"/>  <!-- Blessed Spiritshot Compressed Package (C-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -246,8 +246,8 @@
 	<!-- 300 compressed blessed spiritshots. B-grade. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="450" price="80850" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2093" level="1" value="-1"/>  <!-- Blessed Spiritshot Compressed Package (B-grade) -->
+		<skill-reducer>
+			<skill id="2093" value="-1"/>  <!-- Blessed Spiritshot Compressed Package (B-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -255,8 +255,8 @@
 	<!-- 300 compressed blessed spiritshots. A-grade. Exchange for a new Spiritshot through the Dimensional Merchant. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="200" price="95700" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2094" level="1" value="-1"/>  <!-- Blessed Spiritshot Compressed Package (A-grade) -->
+		<skill-reducer>
+			<skill id="2094" value="-1"/>  <!-- Blessed Spiritshot Compressed Package (A-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -378,8 +378,8 @@
 	<!-- Opens a level 1 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="10" price="70" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2065" level="1" value="-1"/>  <!-- Box Key -->
+		<skill-reducer>
+			<skill id="2065" value="-1"/>  <!-- Box Key -->
 		</skill-reducer>
 	</item>
 
@@ -387,7 +387,7 @@
 	<!-- Opens a level 10 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="10" price="760" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="2065" level="2" value="-1"/>  <!-- Box Key -->
 		</skill-reducer>
 	</item>
@@ -396,7 +396,7 @@
 	<!-- Opens a level 20 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="10" price="1200" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="2065" level="3" value="-1"/>  <!-- Box Key -->
 		</skill-reducer>
 	</item>

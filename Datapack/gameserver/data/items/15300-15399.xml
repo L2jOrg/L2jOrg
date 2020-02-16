@@ -32,7 +32,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -125,8 +125,8 @@
 	<!-- Double-click to make a Growing Watermelon appear. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="9029" level="1" value="-1"/>  <!-- Watermelon Seed -->
+		<skill-reducer>
+			<skill id="9029" value="-1"/>  <!-- Watermelon Seed -->
 		</skill-reducer>
 	</item>
 
@@ -134,8 +134,8 @@
 	<!-- Double-click to make a Growing Honey Watermelon appear. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="9030" level="1" value="-1"/>  <!-- Honey Watermelon Seed -->
+		<skill-reducer>
+			<skill id="9030" value="-1"/>  <!-- Honey Watermelon Seed -->
 		</skill-reducer>
 	</item>
 

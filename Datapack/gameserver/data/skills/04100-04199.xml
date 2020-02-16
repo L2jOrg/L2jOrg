@@ -43,7 +43,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="18.0">
 					<value level="2">26.0</value>
 					<value level="3">38.0</value>
@@ -102,7 +102,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="150" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="46.0">
 					<value level="2">105.0</value>
 					<value level="3">219.0</value>
@@ -188,7 +188,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="20.0">
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="20.0">
 					<value level="2">25.0</value>
 				</power>
 			</stat-hp-based>
@@ -251,7 +251,7 @@
 			<chance initial="70"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="1" can-kill="false">
+			<damage-over-time ticks="1">
 				<power initial="18.0">
 					<value level="2">27.0</value>
 					<value level="3">39.0</value>
@@ -306,7 +306,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="18.0">
 					<value level="2">26.0</value>
 					<value level="3">38.0</value>
@@ -323,7 +323,7 @@
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="4106" name="Antharas Stun" max-level="1" debuff="true" action="A2">
+	<skill id="4106" name="Antharas Stun" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill4106"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" >
@@ -345,13 +345,13 @@
 		</abnormal>
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="28600.0"/>
 			</physical-attack>
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="4107" name="Antharas Tail Swipe" max-level="1" debuff="true" action="A1">
+	<skill id="4107" name="Antharas Tail Swipe" debuff="true" action="A1">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill4107"/>
 		<attributes property="PHYSIC" >
@@ -364,7 +364,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4108" name="Antharas Fear" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="4108" name="Antharas Fear" debuff="true" action="A2" type="MAGIC">
 	<!-- Afflicted with Fear and moving against own will momentarily. -->
 		<icon initial="icon.skill4108"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="DERANGEMENT" level-bonus-rate="1" >
@@ -390,7 +390,7 @@
 			<effect name="Fear"/>
 		</effects>
 	</skill>
-	<skill id="4109" name="Curse of Antharas" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="4109" name="Curse of Antharas" debuff="true" action="A2" type="MAGIC">
 	<!-- You have been touched by the curse of Antharas, which has temporarily decreased all your combat stats. -->
 		<icon initial="icon.skill4109"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="DERANGEMENT" hit-cancel-time="2.0" level-bonus-rate="1" >
@@ -427,9 +427,9 @@
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="-40.0"/>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="-19.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="-19.0"/>
 			</stat-hp-based>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="-19.0"/>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
@@ -466,12 +466,12 @@
 		</target>
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="650.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="4111" name="Antharas Petrify" max-level="1" debuff="true" action="A2">
+	<skill id="4111" name="Antharas Petrify" debuff="true" action="A2">
 	<!-- Petrified and unable to move temporarily. -->
 		<icon initial="icon.skill4111"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" >
@@ -493,7 +493,7 @@
 		</abnormal>
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="10.0"/>
 			</physical-attack>
 			<block-all-actions/>
@@ -502,7 +502,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4112" name="Antharas Attack" max-level="1" action="A1">
+	<skill id="4112" name="Antharas Attack" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -519,12 +519,12 @@
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="100" />
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="57200.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="4113" name="Antharas Attack" max-level="1" action="A1">
+	<skill id="4113" name="Antharas Attack" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -541,12 +541,12 @@
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="100" />
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="57200.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="4114" name="Aden Flame" max-level="1" action="A1" type="MAGIC">
+	<skill id="4114" name="Aden Flame" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -565,12 +565,12 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="47.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="4115" name="Aden Heal" max-level="1" action="A1" type="MAGIC">
+	<skill id="4115" name="Aden Heal" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -773,7 +773,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="-6.0">
 					<value level="2">-9.0</value>
 					<value level="3">-12.0</value>
@@ -837,7 +837,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="46.0">
 					<value level="2">105.0</value>
 					<value level="3">219.0</value>
@@ -885,7 +885,7 @@
 			</defence-trait>
 		</effects>
 	</skill>
-	<skill id="4122" name="Antharas" max-level="1" >
+	<skill id="4122" name="Antharas">
 	<!-- Vulnerable to Wind attacks but has a very powerful Earth Resistance. -->
 		<icon initial="icon.skillboss"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -1011,7 +1011,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="122.0">
 					<value level="2">279.0</value>
 					<value level="3">584.0</value>
@@ -1028,7 +1028,7 @@
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="4125" name="Antharas Recovery" max-level="1" action="A2">
+	<skill id="4125" name="Antharas Recovery" action="A2">
 	<!-- Antharas recovery stage 1. -->
 		<icon initial="icon.skill1044"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -1049,7 +1049,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4126" name="Reduce Delay" max-level="1" debuff="true" action="A2">
+	<skill id="4126" name="Reduce Delay" debuff="true" action="A2">
 	<!-- Skill Cooldown decreases for a set time. -->
 		<icon initial="icon.skill0164"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -1070,7 +1070,7 @@
 			</reuse>
 		</effects>
 	</skill>
-	<skill id="4127" name="Baium Attack" max-level="1" action="A1">
+	<skill id="4127" name="Baium Attack" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1084,12 +1084,12 @@
 		</attributes>
 		<target type="TARGET" scope="RANGE" object="NOT_FRIEND" range="200" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
-				<power initial="0.0"/>
+			<physical-attack critical-chance="0.0">
+				<power/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="4128" name="Wind Of Force" max-level="1" action="A1">
+	<skill id="4128" name="Wind Of Force" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1105,12 +1105,12 @@
 			<fan-range start-angle="0" radius="600" angle="100"/>
 		</target>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="14000.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="4129" name="Earthquake" max-level="1" action="A1">
+	<skill id="4129" name="Earthquake" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1124,12 +1124,12 @@
 		</attributes>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="250" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="4000.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="4130" name="Lightning" max-level="1" action="A1" type="MAGIC">
+	<skill id="4130" name="Lightning" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" hit-cancel-time="3.0" >
@@ -1143,12 +1143,12 @@
 		</attributes>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="300" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="367.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="4131" name="Paralysis" max-level="1" debuff="true" action="A2">
+	<skill id="4131" name="Paralysis" debuff="true" action="A2">
 	<!-- Paralyzed and unable to move temporarily. -->
 		<icon initial="icon.skill1170"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="PARALYZE" hit-cancel-time="1.5" level-bonus-rate="1" >
@@ -1170,7 +1170,7 @@
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="4132" name="Spear Attack" max-level="1" action="A1">
+	<skill id="4132" name="Spear Attack" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1183,12 +1183,12 @@
 		</attributes>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="150" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="3885.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="4133" name="Heal" max-level="1" action="A1">
+	<skill id="4133" name="Heal" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1207,7 +1207,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4134" name="Seal" max-level="1" action="A1">
+	<skill id="4134" name="Seal" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" hit-cancel-time="4.5" >
@@ -1220,7 +1220,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="4135" name="Baium Heal" max-level="1" action="A1">
+	<skill id="4135" name="Baium Heal" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1238,7 +1238,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4136" name="Baium's Gift" max-level="1" action="A1">
+	<skill id="4136" name="Baium's Gift" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1251,7 +1251,7 @@
 		</attributes>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="1.0E7"/>
 			</physical-attack>
 		</effects>
@@ -1305,7 +1305,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="10" affect-random="10" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="9.0">
 					<value level="2">13.0</value>
 					<value level="3">19.0</value>
@@ -1377,7 +1377,7 @@
 			<condition name="ConsumeBody"/>
 		</conditions>
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="9.0">
 					<value level="2">13.0</value>
 					<value level="3">19.0</value>
@@ -1423,7 +1423,7 @@
 		</attributes>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="150" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="52.0">
 					<value level="2">78.0</value>
 					<value level="3">112.0</value>
@@ -1521,8 +1521,8 @@
 		</attributes>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
-				<power initial="0.0"/>
+			<physical-attack critical-chance="0.0">
+				<power/>
 			</physical-attack>
 		</effects>
 	</skill>
@@ -1553,8 +1553,8 @@
 		</attributes>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
-				<power initial="0.0"/>
+			<physical-attack critical-chance="0.0">
+				<power/>
 			</physical-attack>
 		</effects>
 	</skill>
@@ -1581,7 +1581,7 @@
 		</attributes>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="350" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="2.0">
 					<value level="2">4.0</value>
 					<value level="3">8.0</value>
@@ -1688,7 +1688,7 @@
 		</attributes>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="1.0">
 					<value level="4">3.0</value>
 					<value level="5">6.0</value>
@@ -1891,7 +1891,7 @@
 			<chance initial="10"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="16.0">
 					<value level="2">24.0</value>
 					<value level="3">32.0</value>
@@ -1944,7 +1944,7 @@
 			<chance initial="10"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="18.0">
 					<value level="2">25.0</value>
 					<value level="3">34.0</value>
@@ -1999,7 +1999,7 @@
 			<chance initial="10"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="14.0">
 					<value level="2">21.0</value>
 					<value level="3">30.0</value>
@@ -2054,7 +2054,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="18.0">
 					<value level="2">26.0</value>
 					<value level="3">38.0</value>
@@ -2194,7 +2194,7 @@
 			<chance initial="60"/>
 		</abnormal>
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="11.0">
 					<value level="2">16.0</value>
 					<value level="3">23.0</value>
@@ -2253,7 +2253,7 @@
 		</consume>
 		<target type="ENEMY_ONLY" />
 		<effects>
-			<mp mode="DIFF">
+			<mp>
 				<power initial="-34.0">
 					<value level="2">-57.0</value>
 					<value level="3">-78.0</value>
@@ -2311,7 +2311,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="18.0">
 					<value level="2">26.0</value>
 					<value level="3">38.0</value>
@@ -2367,7 +2367,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="18.0">
 					<value level="2">26.0</value>
 					<value level="3">38.0</value>
@@ -2433,7 +2433,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="18.0">
 					<value level="2">26.0</value>
 					<value level="3">38.0</value>
@@ -2491,7 +2491,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="18.0">
 					<value level="2">26.0</value>
 					<value level="3">38.0</value>
@@ -2547,7 +2547,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="18.0">
 					<value level="2">26.0</value>
 					<value level="3">38.0</value>
@@ -2599,7 +2599,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="5.0">
 					<value level="2">7.0</value>
 					<value level="3">10.0</value>
@@ -2616,7 +2616,7 @@
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="4161" name="Summon" max-level="1" action="A1">
+	<skill id="4161" name="Summon" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2788,7 +2788,7 @@
 			<chance initial="70"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="1" can-kill="false">
+			<damage-over-time ticks="1">
 				<power initial="102.0">
 					<value level="4">125.0</value>
 					<value level="6">144.0</value>
@@ -2832,7 +2832,7 @@
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="4167" name="Curse of Fairy Mimyu" max-level="1" debuff="true" action="A2">
+	<skill id="4167" name="Curse of Fairy Mimyu" debuff="true" action="A2">
 	<!-- Fairy Mimyu's Curse reduces Speed and Atk. Speed. -->
 		<icon initial="icon.skill1206"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -2897,7 +2897,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="121.0">
 					<value level="2">325.0</value>
 					<value level="3">893.0</value>
@@ -2962,7 +2962,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="61.0">
 					<value level="2">163.0</value>
 					<value level="3">447.0</value>
@@ -3021,7 +3021,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<fatal-blow chance-boost="1150.0" critical-chance="0" over-hit="false">
+			<fatal-blow chance-boost="1150.0" over-hit="false">
 				<power initial="181.0">
 					<value level="2">487.0</value>
 					<value level="3">1339.0</value>
@@ -3079,7 +3079,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="61.0">
 					<value level="2">163.0</value>
 					<value level="3">447.0</value>
@@ -3142,8 +3142,8 @@
 			<chance initial="50"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
-				<power initial="0.0"/>
+			<physical-attack critical-chance="0.0">
+				<power/>
 			</physical-attack>
 			<block-all-actions/>
 		</effects>
@@ -3429,7 +3429,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="21.0">
 					<value level="2">31.0</value>
 					<value level="3">43.0</value>
@@ -3487,7 +3487,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="121.0">
 					<value level="2">325.0</value>
 					<value level="3">893.0</value>
@@ -3552,7 +3552,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="61.0">
 					<value level="2">163.0</value>
 					<value level="3">447.0</value>
@@ -3611,7 +3611,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<fatal-blow chance-boost="670.0" critical-chance="0" over-hit="false">
+			<fatal-blow chance-boost="670.0" over-hit="false">
 				<power initial="301.0">
 					<value level="2">812.0</value>
 					<value level="3">2231.0</value>
@@ -3682,7 +3682,7 @@
 			<chance initial="90"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="13.0">
 					<value level="2">18.0</value>
 					<value level="3">25.0</value>
@@ -4018,7 +4018,7 @@
 			<chance initial="90"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="19.0">
 					<value level="2">28.0</value>
 					<value level="3">38.0</value>
@@ -4188,7 +4188,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="21.0">
 					<value level="2">31.0</value>
 					<value level="3">43.0</value>
@@ -4361,7 +4361,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="13.0">
 					<value level="2">19.0</value>
 					<value level="3">26.0</value>
@@ -4420,7 +4420,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="21.0">
 					<value level="2">31.0</value>
 					<value level="3">43.0</value>
@@ -4485,7 +4485,7 @@
 			<chance initial="60"/>
 		</abnormal>
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="13.0">
 					<value level="2">19.0</value>
 					<value level="3">26.0</value>
@@ -4609,7 +4609,7 @@
 			<chance initial="90"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="13.0">
 					<value level="2">18.0</value>
 					<value level="3">25.0</value>

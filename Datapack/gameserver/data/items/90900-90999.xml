@@ -12,7 +12,7 @@
 		<attributes weight="100" duration="21600" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51025" level="1" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
+			<skill id="51025" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
 		</skills>
 	</armor>
 
@@ -116,8 +116,8 @@
 	<!-- XP +10,000,000. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51043" level="1" value="-1"/>  <!-- Scroll: 10,000,000 XP -->
+		<skill-reducer>
+			<skill id="51043" value="-1"/>  <!-- Scroll: 10,000,000 XP -->
 		</skill-reducer>
 	</item>
 
@@ -125,8 +125,8 @@
 	<!-- XP +50,000,000. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51044" level="1" value="-1"/>  <!-- Scroll: 50,000,000 XP -->
+		<skill-reducer>
+			<skill id="51044" value="-1"/>  <!-- Scroll: 50,000,000 XP -->
 		</skill-reducer>
 	</item>
 
@@ -134,8 +134,8 @@
 	<!-- XP +100,000,000. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51045" level="1" value="-1"/>  <!-- Scroll: 100,000,000 XP -->
+		<skill-reducer>
+			<skill id="51045" value="-1"/>  <!-- Scroll: 100,000,000 XP -->
 		</skill-reducer>
 	</item>
 
@@ -329,9 +329,9 @@
 	<item id="90949" name="Transformation Scroll: White Knight" type="POTION" icon="icon.etc_charm_of_courage_i00">
 	<!-- Transforms you into a White Knight for 20 minutes. Effect remains even after death. \nDuring White Knight Transformation: Max HP/MP +10%, PvE P. Atk. +5%, PvE P. Def +5%, Stun/Paralysis/MEN Attack Resistance +5%.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39369" level="1" value="-1"/>  <!-- White Knight Transformation -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39369" value="-1"/>  <!-- White Knight Transformation -->
 		</skill-reducer>
 	</item>
 
@@ -413,9 +413,9 @@
 	<item id="90960" name="Transformation Scroll: Teddy Bear" type="POTION" icon="icon.gomdori_chest_change">
 	<!-- Transforms you into Teddy Bear for 15 min. Effect remains after death. \n Teddy Bear Transform: Max HP/MP +20%. Sayha's Grace Hunting XP/SP +20%. Effect remains after death. \n<Warning>\n If used when Blue Dynasty/Cat the Cat/Cat/Panda Buff is applied, existing buff will be replaced. Cooldown 1 min. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39367" level="1" value="-1"/>  <!-- Teddy Bear Transformation -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39367" value="-1"/>  <!-- Teddy Bear Transformation -->
 		</skill-reducer>
 	</item>
 
@@ -423,8 +423,8 @@
 	<!-- Double-click to receive an A-grade Weapon +15. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39368" level="1" value="-1"/>  <!-- Weapon Supply Box +15 (A-grade) -->
+		<skill-reducer>
+			<skill id="39368" value="-1"/>  <!-- Weapon Supply Box +15 (A-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -444,7 +444,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -514,8 +514,8 @@
 	<!-- Double-click to receive an A-grade Weapon +8 exept high-level weapons. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51057" level="1" value="-1"/>  <!-- Weapon Supply Box +8 (A-grade) -->
+		<skill-reducer>
+			<skill id="51057" value="-1"/>  <!-- Weapon Supply Box +8 (A-grade) -->
 		</skill-reducer>
 	</item>
 

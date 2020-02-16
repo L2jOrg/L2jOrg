@@ -14,7 +14,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="48002" name="Little Pig's Luck - Reward" max-level="1" action="A1">
+	<skill id="48002" name="Little Pig's Luck - Reward" action="A1">
 	<!-- For $s1, appearances changes to Hanbok, Atk. Spd./Casting Spd. +$s2, Speed +$s3. Additionally, obtain items after 2, 5, 8 hours. Does not disappear after death / restarting.\n<Caution> If you are dead at the time the item is sent, or if you don't have enough space in the inventory, you cannot receive the gift. You also can't receive the next stage of the buff if you are dead. -->
 		<icon initial="icon.skill_piggy_bless"/>
 		<attributes >
@@ -25,7 +25,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="48011" name="Respectful Greeting" max-level="1" debuff="true" action="A1">
+	<skill id="48011" name="Respectful Greeting" debuff="true" action="A1">
 	<!-- Respectfully greet the Wild Orc. -->
 		<icon initial="icon.ev_greeting1"/>
 		<attributes property="PHYSIC" >
@@ -37,7 +37,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="48012" name="Wild Orc Stamp" max-level="1" debuff="true" action="A1">
+	<skill id="48012" name="Wild Orc Stamp" debuff="true" action="A1">
 	<!-- Flying away because of the impact. -->
 		<icon initial="icon.skill4107"/>
 		<attributes >
@@ -50,7 +50,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="48013" name="Wild Orc Stamp" max-level="1" debuff="true" action="A1">
+	<skill id="48013" name="Wild Orc Stamp" debuff="true" action="A1">
 	<!-- Flying away because of the impact. -->
 		<icon initial="icon.skill4107"/>
 		<attributes property="PHYSIC" >
@@ -63,7 +63,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="48014" name="Wild Orc Typhoon" max-level="1" debuff="true" action="A1">
+	<skill id="48014" name="Wild Orc Typhoon" debuff="true" action="A1">
 	<!-- Flying away because of the impact. -->
 		<icon initial="icon.skill3080"/>
 		<attributes >
@@ -76,7 +76,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="48015" name="Wild Orc Typhoon" max-level="1" debuff="true" action="A1">
+	<skill id="48015" name="Wild Orc Typhoon" debuff="true" action="A1">
 	<!-- Flying away because of the impact. -->
 		<icon initial="icon.skill3080"/>
 		<attributes property="PHYSIC" >
@@ -89,7 +89,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="48016" name="Dance Time" max-level="1" action="A1">
+	<skill id="48016" name="Dance Time" action="A1">
 	<!-- Presentation skill -->
 		<icon initial="icon.skill5008_psycho"/>
 		<attributes >
@@ -101,7 +101,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="48017" name="Dance Time" max-level="1" debuff="true" action="A1">
+	<skill id="48017" name="Dance Time" debuff="true" action="A1">
 	<!-- Dancing against your will and cannot move. -->
 		<icon initial="icon.skill5008_psycho"/>
 		<attributes property="PHYSIC" >
@@ -113,7 +113,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="48018" name="Recover Sayha's Grace" max-level="1" action="A1">
+	<skill id="48018" name="Recover Sayha's Grace" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -345,7 +345,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="48036" name="Einhasad's Protection" max-level="1" action="A1">
+	<skill id="48036" name="Einhasad's Protection" action="A1">
 	<!-- For 1 hour, XP/SP Gain +100%% with Einhasad's Grace. Einhasad's Grace does not disappear at death. -->
 		<icon initial="icon.etc_dragons_blood_i03"/>
 		<attributes property="PHYSIC" >
@@ -355,7 +355,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="48037" name="Lightning Strike" max-level="1" debuff="true" action="A1">
+	<skill id="48037" name="Lightning Strike" debuff="true" action="A1">
 	<!-- Strikes the enemy with a lightning bolt that inflicts damage with 2927 Power. Paralyzes for 3 seconds. -->
 		<icon initial="icon.skill0279"/>
 		<attributes property="PHYSIC" >
@@ -372,7 +372,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="48038" name="Explorer's Buff - Melee" max-level="1" action="A2">
+	<skill id="48038" name="Explorer's Buff - Melee" action="A2">
 	<!-- Buff given to those who explore the Tower of Insolence. For 5 minutes, P. Atk. +10%%, P. Critical Rate +10, Melee Weapon Value +10. -->
 		<icon initial="icon.skill5076_b"/>
 		<attributes property="PHYSIC" >
@@ -382,7 +382,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="48039" name="Explorer's Buff - Ranged" max-level="1" action="A2">
+	<skill id="48039" name="Explorer's Buff - Ranged" action="A2">
 	<!-- Buff given to those who explore the Tower of Insolence. For 5 minutes, M. Atk. +10%%, Ranged Weapon Value +10. -->
 		<icon initial="icon.skill5076_c"/>
 		<attributes property="PHYSIC" >
@@ -392,7 +392,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="48040" name="Heavenly Rift Explorer" max-level="1" action="A2">
+	<skill id="48040" name="Heavenly Rift Explorer" action="A2">
 	<!-- Buff given to those who explore Heavenly Rift. Receive it from the Dimensional Vortex in Tower of Insolence: 1st Floor. -->
 		<icon initial="icon.skill19222"/>
 		<attributes property="PHYSIC" >
@@ -402,7 +402,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="48041" name="Remove Blessing of Protection" max-level="1" action="A1">
+	<skill id="48041" name="Remove Blessing of Protection" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -414,7 +414,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="48042" name="Explorer’s Buff" max-level="1" action="A2">
+	<skill id="48042" name="Explorer’s Buff" action="A2">
 	<!-- A buff given to those who explore the Tower of Insolence. For 5 min, P. Atk. +10%%, M. Atk. +10%%, and P. Critical/M. Critical Rate +10. -->
 		<icon initial="icon.skill5076_a"/>
 		<attributes property="PHYSIC" >
@@ -424,7 +424,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="48043" name="Fatal Strike" max-level="1" action="A1">
+	<skill id="48043" name="Fatal Strike" action="A1">
 	<!-- A buff given to those who explore the Tower of Insolence. For 5 min, P. Atk. +10%%, M. Atk. +10%%, and P. Critical/M. Critical Rate +10. -->
 		<icon initial="icon.skill0190"/>
 		<attributes >
@@ -441,7 +441,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="48044" name="Fire Monster" max-level="1" >
+	<skill id="48044" name="Fire Monster">
 	<!-- Fire Monster. Water Attacks inflict additional damage on the monster. -->
 		<icon initial="icon.elemental_fire"/>
 		<attributes property="MAGIC" >
@@ -451,7 +451,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="48045" name="Water Monster" max-level="1" >
+	<skill id="48045" name="Water Monster">
 	<!-- Water Monster. Wind Attacks inflict additional damage on the monster. -->
 		<icon initial="icon.elemental_water"/>
 		<attributes property="MAGIC" >
@@ -461,7 +461,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="48046" name="Wind Monster" max-level="1" >
+	<skill id="48046" name="Wind Monster">
 	<!-- Wind Monster. Earth Attacks inflict additional damage on the monster. -->
 		<icon initial="icon.elemental_wind"/>
 		<attributes property="MAGIC" >
@@ -471,7 +471,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="48047" name="Earth Monster" max-level="1" >
+	<skill id="48047" name="Earth Monster">
 	<!-- Earth Monster. Fire Attacks inflict additional damage on the monster. -->
 		<icon initial="icon.elemental_earth"/>
 		<attributes property="MAGIC" >
@@ -505,7 +505,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="48050" name="Battle Aura" max-level="1" >
+	<skill id="48050" name="Battle Aura">
 	<!-- Summons NPC’s AU skill, Battle Zone within a distance of 1500. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -513,7 +513,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="48051" name="Battle Zone" max-level="1" >
+	<skill id="48051" name="Battle Zone">
 	<!-- When PK/PvP occurs while Battle Zone is in effect, the player that dies will not receive the XP penalty and the attacker won’t receive the Karma penalty. -->
 		<icon initial="icon.battlebuff"/>
 		<attributes property="PHYSIC" >
@@ -544,7 +544,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="48053" name="PC Cafe Battle Support Buff" max-level="1" >
+	<skill id="48053" name="PC Cafe Battle Support Buff">
 	<!-- For 20 minutes, Max CP +1000 -->
 		<icon initial="icon.soul_spirit2"/>
 		<attributes property="PHYSIC" >
@@ -553,7 +553,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="48054" name="Burning" max-level="1" >
+	<skill id="48054" name="Burning">
 	<!-- Attack a special monster and for 30 seconds, XP/SP Gain +50%. -->
 		<icon initial="icon.skill3238"/>
 		<attributes property="PHYSIC" >

@@ -41,8 +41,8 @@
 	<!-- Double-click to receive Talisman of Darkness for one hour.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39147" level="1" value="-1"/>  <!-- Talisman of Darkness Box -->
+		<skill-reducer>
+			<skill id="39147" value="-1"/>  <!-- Talisman of Darkness Box -->
 		</skill-reducer>
 	</item>
 
@@ -132,7 +132,7 @@
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3293" level="1" value="-1"/>  <!-- Talisman of Darkness - Healing Power -->
+			<skill id="3293" value="-1"/>  <!-- Talisman of Darkness - Healing Power -->
 		</skills>
 	</armor>
 
@@ -142,7 +142,7 @@
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3294" level="1" value="-1"/>  <!-- Talisman of Darkness - Power of Healing Magic -->
+			<skill id="3294" value="-1"/>  <!-- Talisman of Darkness - Power of Healing Magic -->
 		</skills>
 	</armor>
 
@@ -242,7 +242,7 @@
 		<attributes enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="35024" level="1" value="-1"/>  <!-- Talisman of Fate -->
+			<skill id="35024" value="-1"/>  <!-- Talisman of Fate -->
 		</skills>
 	</armor>
 
@@ -293,7 +293,7 @@
 		<crystal />
 		<skills>
 			<skill id="35024" level="6" value="-1"/>  <!-- Talisman of Fate -->
-			<skill id="35025" level="1" value="-1"/>  <!-- Fate Purification -->
+			<skill id="35025" value="-1"/>  <!-- Fate Purification -->
 		</skills>
 	</armor>
 
@@ -304,7 +304,7 @@
 		<crystal />
 		<skills>
 			<skill id="35024" level="7" value="-1"/>  <!-- Talisman of Fate -->
-			<skill id="35025" level="1" value="-1"/>  <!-- Fate Purification -->
+			<skill id="35025" value="-1"/>  <!-- Fate Purification -->
 		</skills>
 	</armor>
 
@@ -315,7 +315,7 @@
 		<crystal />
 		<skills>
 			<skill id="35024" level="8" value="-1"/>  <!-- Talisman of Fate -->
-			<skill id="35025" level="1" value="-1"/>  <!-- Fate Purification -->
+			<skill id="35025" value="-1"/>  <!-- Fate Purification -->
 		</skills>
 	</armor>
 
@@ -326,7 +326,7 @@
 		<crystal />
 		<skills>
 			<skill id="35024" level="9" value="-1"/>  <!-- Talisman of Fate -->
-			<skill id="35025" level="1" value="-1"/>  <!-- Fate Purification -->
+			<skill id="35025" value="-1"/>  <!-- Fate Purification -->
 		</skills>
 	</armor>
 
@@ -337,7 +337,7 @@
 		<crystal />
 		<skills>
 			<skill id="35024" level="10" value="-1"/>  <!-- Talisman of Fate -->
-			<skill id="35025" level="1" value="-1"/>  <!-- Fate Purification -->
+			<skill id="35025" value="-1"/>  <!-- Fate Purification -->
 		</skills>
 	</armor>
 
@@ -348,7 +348,7 @@
 		<crystal />
 		<skills>
 			<skill id="35024" level="11" value="-1"/>  <!-- Talisman of Fate -->
-			<skill id="35025" level="1" value="-1"/>  <!-- Fate Purification -->
+			<skill id="35025" value="-1"/>  <!-- Fate Purification -->
 		</skills>
 	</armor>
 
@@ -356,8 +356,8 @@
 	<!-- Double-click to get Blessed Talisman of Fate.  -->
 		<restriction freightable="false" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39148" level="1" value="-1"/>  <!-- Sealed Blessed Talisman of Fate -->
+		<skill-reducer>
+			<skill id="39148" value="-1"/>  <!-- Sealed Blessed Talisman of Fate -->
 		</skill-reducer>
 	</item>
 
@@ -366,7 +366,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="3" price="15" commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="SoulShots">
-			<skill id="8915" level="1" value="-1"/>  <!-- Blessed Soulshot (No-grade) -->
+			<skill id="8915" value="-1"/>  <!-- Blessed Soulshot (No-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -375,7 +375,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="2" price="25" commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="SoulShots">
-			<skill id="8916" level="1" value="-1"/>  <!-- Blessed Soulshot (D-grade) -->
+			<skill id="8916" value="-1"/>  <!-- Blessed Soulshot (D-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -384,7 +384,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="2" price="39" commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="SoulShots">
-			<skill id="8917" level="1" value="-1"/>  <!-- Blessed Soulshot (C-grade) -->
+			<skill id="8917" value="-1"/>  <!-- Blessed Soulshot (C-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -393,7 +393,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="1" price="135" commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="SoulShots">
-			<skill id="8918" level="1" value="-1"/>  <!-- Blessed Soulshot (B-grade) -->
+			<skill id="8918" value="-1"/>  <!-- Blessed Soulshot (B-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -402,7 +402,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="1" price="224" commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="SoulShots">
-			<skill id="8919" level="1" value="-1"/>  <!-- Blessed Soulshot (A-grade) -->
+			<skill id="8919" value="-1"/>  <!-- Blessed Soulshot (A-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -411,7 +411,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="BlessedSoulShots">
-			<skill id="8910" level="1" value="-1"/>  <!-- Mysterious Blessed Soulshot (No-grade) -->
+			<skill id="8910" value="-1"/>  <!-- Mysterious Blessed Soulshot (No-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -420,7 +420,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="BlessedSoulShots">
-			<skill id="8911" level="1" value="-1"/>  <!-- Mysterious Blessed Soulshot (D-grade) -->
+			<skill id="8911" value="-1"/>  <!-- Mysterious Blessed Soulshot (D-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -429,7 +429,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="BlessedSoulShots">
-			<skill id="8912" level="1" value="-1"/>  <!-- Mysterious Blessed Soulshot (C-grade) -->
+			<skill id="8912" value="-1"/>  <!-- Mysterious Blessed Soulshot (C-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -438,7 +438,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="BlessedSoulShots">
-			<skill id="8913" level="1" value="-1"/>  <!-- Mysterious Blessed Soulshot (B-grade) -->
+			<skill id="8913" value="-1"/>  <!-- Mysterious Blessed Soulshot (B-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -447,7 +447,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="BlessedSoulShots">
-			<skill id="8907" level="1" value="-1"/>  <!-- Mysterious Blessed Spiritshot (A-grade) -->
+			<skill id="8907" value="-1"/>  <!-- Mysterious Blessed Spiritshot (A-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -456,7 +456,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="SpiritShot">
-			<skill id="8908" level="1" value="-1"/>  <!-- Mysterious Spiritshot (B-grade) -->
+			<skill id="8908" value="-1"/>  <!-- Mysterious Spiritshot (B-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -465,7 +465,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="SpiritShot">
-			<skill id="8909" level="1" value="-1"/>  <!-- Mysterious Spiritshot (A-grade) -->
+			<skill id="8909" value="-1"/>  <!-- Mysterious Spiritshot (A-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -501,8 +501,8 @@
 	<!-- Double-click to receive one of the following items: Talisman of Baium, Baium’s Soul, Secret Book of Baggins’ Enchantments - IV, Secret Book of Baggins’ Enchantments - V, Energy of Insolence, Talisman Crystal, or Elemental Stone. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39149" level="1" value="-1"/>  <!-- Talisman of Baium Box -->
+		<skill-reducer>
+			<skill id="39149" value="-1"/>  <!-- Talisman of Baium Box -->
 		</skill-reducer>
 	</item>
 
@@ -515,9 +515,9 @@
 	<item id="49757" name="Sayha's Holy Water" type="POTION" icon="icon.etc_fruit_juice_glass_bottle_i09">
 	<!-- Sayha's Grace Points +20,000. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="30" price="110000" action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39150" level="1" value="-1"/>  <!-- Sayha's Holy Water -->
+		<attributes weight="30" price="110000" action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39150" value="-1"/>  <!-- Sayha's Holy Water -->
 		</skill-reducer>
 	</item>
 
@@ -543,8 +543,8 @@
 	<!-- Double-click to receive an A-grade Ornament. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39152" level="1" value="-1"/>  <!-- Ornament Supply Box (A-grade) -->
+		<skill-reducer>
+			<skill id="39152" value="-1"/>  <!-- Ornament Supply Box (A-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -569,9 +569,9 @@
 	<item id="49765" name="Life Control Tower's Scroll of Blessing - Exchangeable" type="SCROLL" icon="icon.etc_aidcharm_cancel_valbreath_i00">
 	<!-- When used, Max HP/MP +5%, Hunting XP/SP gain +30%, and MEN Attack/Paralysis Resistance for 60 minutes. Cooldown is 1 minute. \n<Note> The effect does not stack with Angel Cat's Blessing. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="30" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="9308" level="1" value="-1"/>  <!-- TODO Skill not found -->
+		<attributes weight="30" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="9308" value="-1"/>  <!-- TODO Skill not found -->
 		</skill-reducer>
 	</item>
 
@@ -602,9 +602,9 @@
 	<item id="49770" name="Sayha's Energy" type="POTION" icon="icon.etc_holy_water_i00">
 	<!-- Sayha's Grace Points +35,000. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39159" level="1" value="-1"/>  <!-- Sayha's Energy -->
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39159" value="-1"/>  <!-- Sayha's Energy -->
 		</skill-reducer>
 	</item>
 
@@ -617,27 +617,27 @@
 	<item id="49772" name="Scroll of Mood Melody" type="SCROLL" icon="icon.bm_magmeld">
 	<!-- Activates the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk, Death Whisper, and Vampiric Rage. Duration: 20 minutes.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="120" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39164" level="1" value="-1"/>  <!-- Mood Melody -->
+		<attributes weight="120" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39164" value="-1"/>  <!-- Mood Melody -->
 		</skill-reducer>
 	</item>
 
 	<item id="49773" name="Fighter Pirate Fruit - Attack" type="SCROLL" icon="icon.etc_codran_i09">
 	<!-- P./M. Atk. +7%, P./M. Def. +10%, Max. HP/CP/MP +15%, HP/MP Recovery +20%. At a certain chance converts 3% of the damage dealt into HP. Damage dealt in PvP +5%. Duration is 20 minutes. Cooldown is 1 minute. The effect persists through death.  Can be stored in a warehouse. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes reuse-delay="60000" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39162" level="1" value="-1"/>  <!-- Special Fruit Buff - Attack -->
+		<attributes reuse-delay="60000" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39162" value="-1"/>  <!-- Special Fruit Buff - Attack -->
 		</skill-reducer>
 	</item>
 
 	<item id="49774" name="Fighter Pirate Fruit - Defense" type="SCROLL" icon="icon.etc_codran_i09">
 	<!-- P./M. Atk. +7%, P./M. Def. +10%, Max. HP/CP/MP +15%, HP/MP Recovery +20%. At a certain chance converts 3% of the damage dealt into HP. Damage received in PvP -5%. Duration is +20 minutes. Cooldown is 1 minute. The effect persists through death.  Can be stored in a warehouse. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes reuse-delay="60000" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39163" level="1" value="-1"/>  <!-- Special Fruit Buff - Defense -->
+		<attributes reuse-delay="60000" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39163" value="-1"/>  <!-- Special Fruit Buff - Defense -->
 		</skill-reducer>
 	</item>
 
@@ -657,8 +657,8 @@
 	<!-- XP +1,000.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39180" level="1" value="-1"/>  <!-- Low-grade Scroll: XP -->
+		<skill-reducer>
+			<skill id="39180" value="-1"/>  <!-- Low-grade Scroll: XP -->
 		</skill-reducer>
 	</item>
 
@@ -666,8 +666,8 @@
 	<!-- XP +10,000.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39181" level="1" value="-1"/>  <!-- Mid-grade Scroll: XP -->
+		<skill-reducer>
+			<skill id="39181" value="-1"/>  <!-- Mid-grade Scroll: XP -->
 		</skill-reducer>
 	</item>
 
@@ -675,8 +675,8 @@
 	<!-- XP +100,000.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39182" level="1" value="-1"/>  <!-- High-grade Scroll: XP -->
+		<skill-reducer>
+			<skill id="39182" value="-1"/>  <!-- High-grade Scroll: XP -->
 		</skill-reducer>
 	</item>
 
@@ -684,8 +684,8 @@
 	<!-- XP +500,000.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39183" level="1" value="-1"/>  <!-- Top-grade Scroll: XP -->
+		<skill-reducer>
+			<skill id="39183" value="-1"/>  <!-- Top-grade Scroll: XP -->
 		</skill-reducer>
 	</item>
 
@@ -693,8 +693,8 @@
 	<!-- XP +1,000,000.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39184" level="1" value="-1"/>  <!-- Highest-grade Scroll: XP -->
+		<skill-reducer>
+			<skill id="39184" value="-1"/>  <!-- Highest-grade Scroll: XP -->
 		</skill-reducer>
 	</item>
 
@@ -702,8 +702,8 @@
 	<!-- Double-click to receive 6 Oriana's Disguised Clothing. For characaters Lv. 60 or higher. (Can only be used once a day) -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes reuse-delay="86400000" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39170" level="1" value="-1"/>  <!-- Oriana's Lucky Draw Supply -->
+		<skill-reducer>
+			<skill id="39170" value="-1"/>  <!-- Oriana's Lucky Draw Supply -->
 		</skill-reducer>
 	</item>
 
@@ -716,9 +716,9 @@
 	<item id="49784" name="Oriana's Disguised Clothing" type="SCROLL" icon="icon.ev_balthus_token">
 	<!-- Acquired XP/SP +10% for 1 hour. Intended for Lv. 40 and higher.   -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes reuse-delay="60000" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39171" level="1" value="-1"/>  <!-- Oriana's Disguise -->
+		<attributes reuse-delay="60000" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39171" value="-1"/>  <!-- Oriana's Disguise -->
 		</skill-reducer>
 	</item>
 
@@ -726,8 +726,8 @@
 	<!-- Double-click to receive an A-grade Weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39172" level="1" value="-1"/>  <!-- Weapon Supply Box (A-grade) -->
+		<skill-reducer>
+			<skill id="39172" value="-1"/>  <!-- Weapon Supply Box (A-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -735,8 +735,8 @@
 	<!-- Double-click to receive an A-grade Armor. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39173" level="1" value="-1"/>  <!-- A-grade Armor Supply Box -->
+		<skill-reducer>
+			<skill id="39173" value="-1"/>  <!-- A-grade Armor Supply Box -->
 		</skill-reducer>
 	</item>
 
@@ -756,8 +756,8 @@
 	<!-- Double-click to receive a +8 B-grade Weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39174" level="1" value="-1"/>  <!-- +8 Enchanted Weapon Supply Box (B-grade) -->
+		<skill-reducer>
+			<skill id="39174" value="-1"/>  <!-- +8 Enchanted Weapon Supply Box (B-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -765,8 +765,8 @@
 	<!-- Double-click to receive a +16 C-grade Weapon. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39175" level="1" value="-1"/>  <!-- +16 Enchanted Weapon Supply Box (C-grade) -->
+		<skill-reducer>
+			<skill id="39175" value="-1"/>  <!-- +16 Enchanted Weapon Supply Box (C-grade) -->
 		</skill-reducer>
 	</item>
 

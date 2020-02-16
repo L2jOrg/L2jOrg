@@ -149,7 +149,7 @@
 			<stat type="pDef" value="10.0"/>
 		</stats>
 		<skills>
-			<skill id="35040" level="1" value="-1"/>  <!-- Belt -->
+			<skill id="35040" value="-1"/>  <!-- Belt -->
 		</skills>
 	</armor>
 
@@ -162,7 +162,7 @@
 			<stat type="pDef" value="10.0"/>
 		</stats>
 		<skills>
-			<skill id="35041" level="1" value="-1"/>  <!-- Rag Belt -->
+			<skill id="35041" value="-1"/>  <!-- Rag Belt -->
 		</skills>
 	</armor>
 
@@ -175,7 +175,7 @@
 			<stat type="pDef" value="10.0"/>
 		</stats>
 		<skills>
-			<skill id="35042" level="1" value="-1"/>  <!-- Leather Belt -->
+			<skill id="35042" value="-1"/>  <!-- Leather Belt -->
 		</skills>
 	</armor>
 
@@ -188,7 +188,7 @@
 			<stat type="pDef" value="10.0"/>
 		</stats>
 		<skills>
-			<skill id="35043" level="1" value="-1"/>  <!-- Iron Belt -->
+			<skill id="35043" value="-1"/>  <!-- Iron Belt -->
 		</skills>
 	</armor>
 
@@ -201,7 +201,7 @@
 			<stat type="pDef" value="10.0"/>
 		</stats>
 		<skills>
-			<skill id="35044" level="1" value="-1"/>  <!-- Mithril Belt -->
+			<skill id="35044" value="-1"/>  <!-- Mithril Belt -->
 		</skills>
 	</armor>
 
@@ -251,8 +251,8 @@
 	<!-- Double-click to receive one of the following items: High/Medium/Average Quality Life Stone. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="CAPSULE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39203" level="1" value="-1"/>  <!-- Life Stone Pack -->
+		<skill-reducer>
+			<skill id="39203" value="-1"/>  <!-- Life Stone Pack -->
 		</skill-reducer>
 	</item>
 
@@ -262,7 +262,7 @@
 		<attributes weight="120" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="35038" level="1" value="-1"/>  <!-- Hero's Talisman - Attack -->
+			<skill id="35038" value="-1"/>  <!-- Hero's Talisman - Attack -->
 		</skills>
 	</armor>
 
@@ -272,7 +272,7 @@
 		<attributes weight="120" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="35039" level="1" value="-1"/>  <!-- Hero's Talisman - Defense -->
+			<skill id="35039" value="-1"/>  <!-- Hero's Talisman - Defense -->
 		</skills>
 	</armor>
 
@@ -309,9 +309,9 @@
 	<item id="90043" name="Dark Assassin Transformation Potion" type="POTION" icon="icon.empty_bottle">
 	<!-- For 15 minutes transforms you into Dark Assassin. \nTransformation into Dark Assassin: Max HP/MP +5%, P./M. Accuracy +1, P./M. Atk. +2%, P./M. Def. +2%, Atk. Spd. +3%, M. Critical Rate +1, Speed +4. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="5" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39205" level="1" value="-1"/>  <!-- Dark Assassin Transformation -->
+		<attributes weight="5" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39205" value="-1"/>  <!-- Dark Assassin Transformation -->
 		</skill-reducer>
 	</item>
 
@@ -319,8 +319,8 @@
 	<!-- Provides 37 million XP and 1.11 million SP.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39204" level="1" value="-1"/>  <!-- Dimensional Blessing -->
+		<skill-reducer>
+			<skill id="39204" value="-1"/>  <!-- Dimensional Blessing -->
 		</skill-reducer>
 	</item>
 

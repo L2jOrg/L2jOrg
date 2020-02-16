@@ -45,17 +45,17 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
-				<power initial="0.0"/>
+			<stat-modify stat="MAGICAL_DEFENCE">
+				<power/>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
-				<power initial="0.0"/>
+			<vital-stat-modify stat="MAX_HP">
+				<power/>
 			</vital-stat-modify>
-			<stat-modify stat="REGENERATE_MP_RATE" mode="DIFF">
-				<power initial="0.0"/>
+			<stat-modify stat="REGENERATE_MP_RATE">
+				<power/>
 			</stat-modify>
 			<stat-modify stat="DEFENCE_CRITICAL_DAMAGE" stat-add="DEFENCE_CRITICAL_DAMAGE_ADD" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="2">1.0</value>
 					<value level="3">2.0</value>
 					<value level="4">3.0</value>
@@ -69,7 +69,7 @@
 				</power>
 			</stat-modify>
 			<stat-modify stat="DEFENCE_MAGIC_CRITICAL_DAMAGE" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="2">1.0</value>
 					<value level="3">2.0</value>
 					<value level="4">3.0</value>

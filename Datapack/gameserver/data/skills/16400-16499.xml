@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="16400" name="Ferin's Recharge" max-level="1" action="A2" type="MAGIC">
+	<skill id="16400" name="Ferin's Recharge" action="A2" type="MAGIC">
 	<!-- Instantly recovers the target's MP with a maximum of 166 power depending on the target's Lv.. Also, for 10 seconds, recovers 12 MP per second. -->
 		<icon initial="icon.skill11760"/>
 		<attributes property="PHYSIC" >
@@ -14,7 +14,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16401" name="Dimensional Death Skin" max-level="1" action="A2" type="MAGIC">
+	<skill id="16401" name="Dimensional Death Skin" action="A2" type="MAGIC">
 	<!-- For 10 sec., received damage - 50%%. -->
 		<icon initial="icon.skill0340"/>
 		<attributes property="PHYSIC" >
@@ -25,7 +25,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16402" name="Dimensional Horror" max-level="1" action="A2" type="MAGIC">
+	<skill id="16402" name="Dimensional Horror" action="A2" type="MAGIC">
 	<!-- Inflicts Fear on nearby enemies for 5 sec. -->
 		<icon initial="icon.skill1169"/>
 		<attributes property="PHYSIC" >
@@ -38,7 +38,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16403" name="Dimensional Judgment" max-level="1" action="A1">
+	<skill id="16403" name="Dimensional Judgment" action="A1">
 	<!-- Sentence target to death. 150,000 damage. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -51,7 +51,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16404" name="Dimensional Wide Judgment" max-level="1" action="A1">
+	<skill id="16404" name="Dimensional Wide Judgment" action="A1">
 	<!-- Sentence enemies to the front to death. 150,000 damage. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -64,7 +64,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16405" name="Dimensional Mass Judgment" max-level="1" action="A1">
+	<skill id="16405" name="Dimensional Mass Judgment" action="A1">
 	<!-- Sentence all nearby enemies to death. 150,000 damage. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -77,7 +77,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16406" name="Dimensional Fear" max-level="1" action="A2">
+	<skill id="16406" name="Dimensional Fear" action="A2">
 	<!-- Inflicts Fear on target for 5 seconds. -->
 		<icon initial="icon.skill1169"/>
 		<attributes property="PHYSIC" >
@@ -90,7 +90,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16407" name="Dimensional Resurrection Block" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="16407" name="Dimensional Resurrection Block" debuff="true" action="A2" type="MAGIC">
 	<!-- Stops target from resurrecting for 60 sec. -->
 		<icon initial="icon.skill_resurrection"/>
 		<attributes property="PHYSIC" >
@@ -185,7 +185,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16414" name="Peace Zone Cure" max-level="1" action="A1">
+	<skill id="16414" name="Peace Zone Cure" action="A1">
 	<!-- Recover 10%% of Max HP and 30%% of Max MP of self and everyone within 200 grids. Cooldown is 10 seconds. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -261,7 +261,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16425" name="Appearance Stone: Santa Suit" max-level="1" action="A2">
+	<skill id="16425" name="Appearance Stone: Santa Suit" action="A2">
 	<!-- For 1 hr., changes the appearance of your armor into that of a Santa Suit. -->
 		<icon initial="BranchSys.icon.br_xmas_present_fun_i00"/>
 		<attributes property="PHYSIC" >
@@ -273,7 +273,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16426" name="Greater Abelius Cloak (20-day)" max-level="1" >
+	<skill id="16426" name="Greater Abelius Cloak (20-day)">
 	<!-- STR +1, CON +1, INT +1, MEN +1 -->
 		<icon initial="icon.vesper_cloack_i00"/>
 		<attributes property="MAGIC" >
@@ -283,7 +283,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16427" name="Greater Sapyros Cloak (20-day)" max-level="1" >
+	<skill id="16427" name="Greater Sapyros Cloak (20-day)">
 	<!-- STR +1, CON +1, INT +1, MEN +1 -->
 		<icon initial="icon.vesper_cloack_i00"/>
 		<attributes property="MAGIC" >
@@ -293,7 +293,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16428" name="Greater Ashagen Cloak (20-day)" max-level="1" >
+	<skill id="16428" name="Greater Ashagen Cloak (20-day)">
 	<!-- STR +1, CON +1, INT +1, MEN +1 -->
 		<icon initial="icon.vesper_cloack_i00"/>
 		<attributes property="MAGIC" >
@@ -303,7 +303,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16429" name="Greater Cranigg Cloak (20-day)" max-level="1" >
+	<skill id="16429" name="Greater Cranigg Cloak (20-day)">
 	<!-- STR +1, CON +1, INT +1, MEN +1 -->
 		<icon initial="icon.vesper_cloack_i00"/>
 		<attributes property="MAGIC" >
@@ -313,7 +313,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16430" name="Greater Soltkreig Cloak (20-day)" max-level="1" >
+	<skill id="16430" name="Greater Soltkreig Cloak (20-day)">
 	<!-- STR +1, CON +1, INT +1, MEN +1 -->
 		<icon initial="icon.vesper_cloack_i00"/>
 		<attributes property="MAGIC" >
@@ -323,7 +323,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16431" name="Greater Naviarope Cloak (20-day)" max-level="1" >
+	<skill id="16431" name="Greater Naviarope Cloak (20-day)">
 	<!-- STR +1, CON +1, INT +1, MEN +1 -->
 		<icon initial="icon.vesper_cloack_i00"/>
 		<attributes property="MAGIC" >
@@ -333,7 +333,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16432" name="Greater Leister Cloak (20-day)" max-level="1" >
+	<skill id="16432" name="Greater Leister Cloak (20-day)">
 	<!-- STR +1, CON +1, INT +1, MEN +1 -->
 		<icon initial="icon.vesper_cloack_i00"/>
 		<attributes property="MAGIC" >
@@ -343,7 +343,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16433" name="Greater Lakcis Cloak (20-day)" max-level="1" >
+	<skill id="16433" name="Greater Lakcis Cloak (20-day)">
 	<!-- STR +1, CON +1, INT +1, MEN +1 -->
 		<icon initial="icon.vesper_cloack_i00"/>
 		<attributes property="MAGIC" >
@@ -353,7 +353,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16434" name="Greater Sayha Cloak (20-day)" max-level="1" >
+	<skill id="16434" name="Greater Sayha Cloak (20-day)">
 	<!-- STR +1, CON +1, INT +1, MEN +1 -->
 		<icon initial="icon.vesper_cloack_i00"/>
 		<attributes property="MAGIC" >
@@ -363,7 +363,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16435" name="Greater Sayha Cloak (20-day)" max-level="1" >
+	<skill id="16435" name="Greater Sayha Cloak (20-day)">
 	<!-- STR +1, CON +1, INT +1, MEN +1 -->
 		<icon initial="icon.vesper_cloack_i00"/>
 		<attributes property="MAGIC" >

@@ -3,7 +3,7 @@
     <!-- Enchant Items Options Water Dragon Pendant Lv. 5 -->
     <option id="60100" name="w_d_p_e_5_1">
         <!-- Increases M. Atk. +13. M. Critical Damage +89. M. Critical Rate +2%. M. Atk +1.5%. M. Critical Damage +2% -->
-        <skill id="55109" level="1" type="PASSIVE"/>
+        <skill id="55109" type="PASSIVE"/>
     </option>
     <option id="60101" name="w_d_p_e_5_2">
         <!-- Increases M. Atk. +20. M. Critical Damage +134. M. Critical Rate +3%. M. Atk +2%. M. Critical Damage +3% -->
@@ -44,11 +44,11 @@
     <!-- Enchant Items Options Wind Dragon Pendant Lv. 1 -->
     <option id="60110" name="w_d_p_b_e_1_0">
         <!-- Increases Max MP +21. -->
-        <skill id="55110" level="1" type="PASSIVE"/>
+        <skill id="55110" type="PASSIVE"/>
     </option>
     <option id="60111" name="w_d_p_e_1_1">
         <!-- Increases Max MP +33. -->
-        <skill id="55111" level="1" type="PASSIVE"/>
+        <skill id="55111" type="PASSIVE"/>
     </option>
     <option id="60112" name="w_d_p_e_1_2">
         <!-- Increases Max MP +42. -->
@@ -89,11 +89,11 @@
     <!-- Enchant Items Options Wind Dragon Pendant Lv. 2 -->
     <option id="60121" name="w_d_p_b_e_2_0">
         <!-- Increases Max MP +21. Max HP +31. -->
-        <skill id="55112" level="1" type="PASSIVE"/>
+        <skill id="55112" type="PASSIVE"/>
     </option>
     <option id="60122" name="w_d_p_e_2_1">
         <!-- Increases Max MP +33. Max HP +50. -->
-        <skill id="55113" level="1" type="PASSIVE"/>
+        <skill id="55113" type="PASSIVE"/>
     </option>
     <option id="60123" name="w_d_p_e_2_2">
         <!-- Increases Max MP +42. Max HP +78. -->
@@ -134,11 +134,11 @@
     <!-- Enchant Items Options Wind Dragon Pendant Lv. 3 -->
     <option id="60132" name="w_d_p_b_e_3_0">
         <!-- Increases Max MP +21. Max HP +31. HP Recovery +1.8. MP Recovery +0.5. -->
-        <skill id="55114" level="1" type="PASSIVE"/>
+        <skill id="55114" type="PASSIVE"/>
     </option>
     <option id="60133" name="w_d_p_e_3_1">
         <!-- Increases Max MP +33. Max HP +50. HP Recovery +1.9. MP Recovery +0.7. -->
-        <skill id="55115" level="1" type="PASSIVE"/>
+        <skill id="55115" type="PASSIVE"/>
     </option>
     <option id="60134" name="w_d_p_e_3_2">
         <!-- Increases Max MP +42. Max HP +78. HP Recovery +2.1. MP Recovery +1. -->
@@ -179,11 +179,11 @@
     <!-- Enchant Items Options Wind Dragon Pendant Lv. 4 ( Missing 1% chance to restore 12 MP when using skills) -->
     <option id="60143" name="w_d_p_b_e_4_0">
         <!-- Increases Max MP +21. Max HP +31. HP Recovery +1.8. MP Recovery +0.5. -->
-        <skill id="55116" level="1" type="PASSIVE"/>
+        <skill id="55116" type="PASSIVE"/>
     </option>
     <option id="60144" name="w_d_p_e_4_1">
         <!-- Increases Max MP +33. Max HP +50. HP Recovery +1.9. MP Recovery +0.7. -->
-        <skill id="55117" level="1" type="PASSIVE"/>
+        <skill id="55117" type="PASSIVE"/>
     </option>
     <option id="60145" name="w_d_p_e_4_2">
         <!-- Increases Max MP +42. Max HP +78. HP Recovery +2.1. MP Recovery +1. -->
@@ -224,11 +224,11 @@
     <!-- Enchant Items Options Wind Dragon Pendant Lv. 5 ( Missing 1% chance to restore 12 MP when using skills) -->
     <option id="60154" name="w_d_p_b_e_5_0">
         <!-- Increases Max MP +21. Max HP +31. HP Recovery +1.8. MP Recovery +0.5. MP Skill Consumption -3%. -->
-        <skill id="55118" level="1" type="PASSIVE"/>
+        <skill id="55118" type="PASSIVE"/>
     </option>
     <option id="60155" name="w_d_p_e_5_1">
         <!-- Increases Max MP +33. Max HP +50. HP Recovery +1.9. MP Recovery +0.7. MP Skill Consumption -5%. -->
-        <skill id="55119" level="1" type="PASSIVE"/>
+        <skill id="55119" type="PASSIVE"/>
     </option>
     <option id="60156" name="w_d_p_e_5_2">
         <!-- Increases Max MP +42. Max HP +78. HP Recovery +2.1. MP Recovery +1. MP Skill Consumption -7%. -->
@@ -269,11 +269,11 @@
     <!-- Enchant Items Options Land Dragon Pendant Lv. 1 -->
     <option id="60165" name="l_d_p_b_e_1_0">
         <!-- Increases M. Def. +6. -->
-        <skill id="55121" level="1" type="PASSIVE"/>
+        <skill id="55121" type="PASSIVE"/>
     </option>
     <option id="60166" name="l_d_p_e_1_1">
         <!-- Increases M. Def. +8. -->
-        <skill id="55122" level="1" type="PASSIVE"/>
+        <skill id="55122" type="PASSIVE"/>
     </option>
     <option id="60167" name="l_d_p_e_1_2">
         <!-- Increases M. Def. +10. -->
@@ -314,11 +314,11 @@
     <!-- Enchant Items Options Land Dragon Pendant Lv. 2 -->
     <option id="60176" name="l_d_p_b_e_2_0">
         <!-- Increases M. Def. +6. P. Def. +11. Chance to block with a shield + 10%. -->
-        <skill id="55123" level="1" type="PASSIVE"/>
+        <skill id="55123" type="PASSIVE"/>
     </option>
     <option id="60177" name="l_d_p_e_2_1">
         <!-- Increases M. Def. +8. P. Def. +14 Chance to block with a shield + 15%. -->
-        <skill id="55124" level="1" type="PASSIVE"/>
+        <skill id="55124" type="PASSIVE"/>
     </option>
     <option id="60178" name="l_d_p_e_2_2">
         <!-- Increases M. Def. +10. P. Def. +18 Chance to block with a shield + 20%. -->
@@ -359,11 +359,11 @@
     <!-- Enchant Items Options Land Dragon Pendant Lv. 3 -->
     <option id="60187" name="l_d_p_b_e_3_0">
         <!-- Increases M. Def. +6. P. Def. +11. Chance to block with a shield + 10%. -->
-        <skill id="55125" level="1" type="PASSIVE"/>
+        <skill id="55125" type="PASSIVE"/>
     </option>
     <option id="60188" name="l_d_p_e_3_1">
         <!-- Increases M. Def. +8. P. Def. +14 Chance to block with a shield + 15%. -->
-        <skill id="55126" level="1" type="PASSIVE"/>
+        <skill id="55126" type="PASSIVE"/>
     </option>
     <option id="60189" name="l_d_p_e_3_2">
         <!-- Increases M. Def. +10. P. Def. +18 Chance to block with a shield + 20%. -->
@@ -404,10 +404,10 @@
     <!-- Enchant Items Options Land Dragon Pendant Lv. 4 ( Missing Chance to block with a shield) -->
     <option id="60198" name="l_d_p_b_e_4_0">
         <!-- Increases M. Def. +6. P. Def. +11. Chance to block with a shield + 10%. Shield Defense +3%. -->
-        <skill id="55127" level="1" type="PASSIVE"/>
+        <skill id="55127" type="PASSIVE"/>
     </option>
     <option id="60199" name="l_d_p_e_4_1">
         <!-- Increases M. Def. +8. P. Def. +14. Chance to block with a shield + 10%. Shield Defense +6%. -->
-        <skill id="55128" level="1" type="PASSIVE"/>
+        <skill id="55128" type="PASSIVE"/>
     </option>
 </list>

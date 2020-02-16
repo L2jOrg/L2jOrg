@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="3500" name="Set Effect - Wooden Light Armor, 3-piece" max-level="1" >
+	<skill id="3500" name="Set Effect - Wooden Light Armor, 3-piece">
 	<!-- Max HP +41 and P. Def +2%%. -->
 		<icon initial="icon.armor_t06_u_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -14,12 +14,12 @@
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="2.0"/>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="41.0"/>
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="3501" name="Set Effect - Robe of Devotion, 3-piece" max-level="1" >
+	<skill id="3501" name="Set Effect - Robe of Devotion, 3-piece">
 	<!-- Casting Spd. +15%%. -->
 		<icon initial="icon.armor_t55_u_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -49,7 +49,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="126.0"/>
 			</vital-stat-modify>
 			<defence-trait start-level="2">
@@ -73,7 +73,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="80.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD" start-level="2">
@@ -95,7 +95,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="40.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="MAGIC_ATTACK" mode="PER" start-level="2">
@@ -117,7 +117,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="92.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD" start-level="2">
@@ -139,7 +139,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="153.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER" start-level="2">
@@ -161,7 +161,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="7.0"/>
 			</speed>
 			<stat type="WIT" start-level="2">
@@ -183,7 +183,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="4.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="4.0"/>
 			</stat-hp-based>
 			<defence-trait start-level="2">
 				<trait type="BLEED">
@@ -209,7 +209,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="198.0"/>
 			</vital-stat-modify>
 			<defence-trait>
@@ -282,7 +282,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="3512" name="Set Effect - Compound Heavy Armor, 2-piece" max-level="1" >
+	<skill id="3512" name="Set Effect - Compound Heavy Armor, 2-piece">
 	<!-- Weight Limit +5795, M. Def. +5%%, and Paralysis Resistance +10%%. -->
 		<icon initial="icon.armor_t61_ul_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -293,7 +293,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="WEIGHT_LIMIT" mode="DIFF">
+			<stat-modify stat="WEIGHT_LIMIT">
 				<power initial="5795.0"/>
 			</stat-modify>
 			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
@@ -331,7 +331,7 @@
 			<stat type="INT" start-level="2">
 				<power initial="4.0"/>
 			</stat>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false" start-level="2">
+			<vital-stat-modify stat="MAX_HP" start-level="2">
 				<power initial="-270.0"/>
 			</vital-stat-modify>
 		</effects>
@@ -360,7 +360,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="3515" name="Set Effect - Drake Light Armor, 2-piece" max-level="1" >
+	<skill id="3515" name="Set Effect - Drake Light Armor, 2-piece">
 	<!-- M. Def. +5%% and Stun Resistance +10%%. -->
 		<icon initial="icon.armor_t45_ul_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -381,7 +381,7 @@
 			</defence-trait>
 		</effects>
 	</skill>
-	<skill id="3516" name="Set Effect - Full Plate Heavy Armor, 2-piece" max-level="1" >
+	<skill id="3516" name="Set Effect - Full Plate Heavy Armor, 2-piece">
 	<!-- Max HP +270, P. Def. +5%%, and Stun Resistance +10%%. -->
 		<icon initial="icon.armor_t62_ul_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -392,7 +392,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="270.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
@@ -427,7 +427,7 @@
 			<stat type="WIT" start-level="2">
 				<power initial="1.0"/>
 			</stat>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false" start-level="2">
+			<vital-stat-modify stat="MAX_MP" start-level="2">
 				<power initial="171.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER" start-level="2">
@@ -454,7 +454,7 @@
 			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
 				<power initial="5.24"/>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false" start-level="2">
+			<vital-stat-modify stat="MAX_HP" start-level="2">
 				<power initial="294.0"/>
 			</vital-stat-modify>
 			<defence-trait start-level="3">
@@ -483,7 +483,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="294.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER" start-level="2">
@@ -518,9 +518,9 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="4.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="4.0"/>
 			</stat-hp-based>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="DIFF" start-level="2">
+			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" start-level="2">
 				<power initial="10.0"/>
 			</stat-hp-based>
 			<defence-trait start-level="3">
@@ -548,7 +548,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="WEIGHT_LIMIT" mode="DIFF">
+			<stat-modify stat="WEIGHT_LIMIT">
 				<power initial="5795.0"/>
 			</stat-modify>
 			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD" start-level="2">
@@ -586,7 +586,7 @@
 			<stat-modify stat="REGENERATE_MP_RATE" mode="PER">
 				<power initial="5.26"/>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false" start-level="2">
+			<vital-stat-modify stat="MAX_MP" start-level="2">
 				<power initial="102.0"/>
 			</vital-stat-modify>
 			<defence-trait start-level="3">
@@ -649,7 +649,7 @@
 			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
 				<power initial="5.24"/>
 			</stat-modify>
-			<speed mode="DIFF" start-level="2">
+			<speed start-level="2">
 				<power initial="7.0"/>
 			</speed>
 			<defence-trait start-level="3">
@@ -677,7 +677,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="320.0"/>
 			</vital-stat-modify>
 			<defence-trait start-level="2">
@@ -783,7 +783,7 @@
 			<stat-modify stat="REGENERATE_MP_RATE" mode="PER">
 				<power initial="5.26"/>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false" start-level="2">
+			<vital-stat-modify stat="MAX_MP" start-level="2">
 				<power initial="206.0"/>
 			</vital-stat-modify>
 			<defence-trait start-level="3">
@@ -815,7 +815,7 @@
 			<stat-modify stat="REGENERATE_MP_RATE" mode="PER">
 				<power initial="5.26"/>
 			</stat-modify>
-			<speed mode="DIFF" start-level="2">
+			<speed start-level="2">
 				<power initial="7.0"/>
 			</speed>
 			<defence-trait start-level="3">
@@ -826,13 +826,13 @@
 					<power initial="0.5"/>
 				</trait>
 			</defence-trait>
-			<stat-modify stat="BREATH" mode="DIFF" start-level="3">
+			<stat-modify stat="BREATH" start-level="3">
 				<power initial="200.0"/>
 			</stat-modify>
 			<stat type="INT" start-level="4">
 				<power initial="2.0"/>
 			</stat>
-			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD" mode="DIFF" start-level="4">
+			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD" start-level="4">
 				<power initial="30.0"/>
 			</stat-modify>
 		</effects>
@@ -867,7 +867,7 @@
 			<stat type="STR" start-level="4">
 				<power initial="-2.0"/>
 			</stat>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false" start-level="4">
+			<vital-stat-modify stat="MAX_HP" start-level="4">
 				<power initial="238.0"/>
 			</vital-stat-modify>
 		</effects>
@@ -887,7 +887,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="WEIGHT_LIMIT" mode="DIFF">
+			<stat-modify stat="WEIGHT_LIMIT">
 				<power initial="5795.0"/>
 			</stat-modify>
 			<defence-trait start-level="2">
@@ -898,7 +898,7 @@
 					<power initial="0.800000011920929"/>
 				</trait>
 			</defence-trait>
-			<speed mode="DIFF" start-level="2">
+			<speed start-level="2">
 				<power initial="4.0"/>
 			</speed>
 			<stat type="STR" start-level="3">
@@ -925,7 +925,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="4.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="4.0"/>
 			</stat-hp-based>
 			<stat type="CON">
 				<power initial="-1.0">
@@ -967,7 +967,7 @@
 			<stat-modify stat="REGENERATE_MP_RATE" mode="PER">
 				<power initial="8.0"/>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false" start-level="2">
+			<vital-stat-modify stat="MAX_MP" start-level="2">
 				<power initial="222.0"/>
 			</vital-stat-modify>
 			<stat type="MEN" start-level="3">
@@ -1036,10 +1036,10 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="ATTACK_CANCEL" mode="DIFF">
+			<stat-modify stat="ATTACK_CANCEL">
 				<power initial="-50.0"/>
 			</stat-modify>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="7.0"/>
 			</speed>
 			<defence-trait start-level="2">
@@ -1073,7 +1073,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="3.0"/>
 			</stat-modify>
 			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
@@ -1113,7 +1113,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="3.0"/>
 			</stat-modify>
 			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
@@ -1122,7 +1122,7 @@
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER" start-level="2">
 				<power initial="4.0"/>
 			</stat-modify>
-			<speed mode="DIFF" start-level="2">
+			<speed start-level="2">
 				<power initial="7.0"/>
 			</speed>
 			<stat type="STR" start-level="3">
@@ -1190,14 +1190,14 @@
 			<stat-modify stat="WEIGHT_PENALTY">
 				<power initial="5795.0"/>
 			</stat-modify>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="3.0"/>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER" start-level="2">
 				<power initial="8.0"/>
 				<weapon-type>BOW CROSSBOW </weapon-type>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false" start-level="2">
+			<vital-stat-modify stat="MAX_MP" start-level="2">
 				<power initial="240.0"/>
 			</vital-stat-modify>
 			<stat type="DEX" start-level="3">
@@ -1236,7 +1236,7 @@
 					<power initial="0.699999988079071"/>
 				</trait>
 			</defence-trait>
-			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD" mode="DIFF" start-level="2">
+			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD" start-level="2">
 				<power initial="30.0"/>
 			</stat-modify>
 			<stat type="INT" start-level="3">
@@ -1270,7 +1270,7 @@
 					<value level="3">-1.0</value>
 				</power>
 			</stat>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false" start-level="2">
+			<vital-stat-modify stat="MAX_MP" start-level="2">
 				<power initial="240.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER" start-level="3">
@@ -1311,7 +1311,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="3543" name="Equip Shield" max-level="1" >
+	<skill id="3543" name="Equip Shield">
 	<!-- Additionally increases Shield Defense Rate. -->
 		<icon initial="icon.skill0091"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1327,7 +1327,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="3544" name="Equip Shield" max-level="1" >
+	<skill id="3544" name="Equip Shield">
 	<!-- Increases Max HP. -->
 		<icon initial="icon.skill0091"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1338,12 +1338,12 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="20.0"/>
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="3545" name="Equip Shield" max-level="1" >
+	<skill id="3545" name="Equip Shield">
 	<!-- Additionally increases Shield Defense Rate. -->
 		<icon initial="icon.skill0091"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1359,7 +1359,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="3546" name="Equip Shield" max-level="1" >
+	<skill id="3546" name="Equip Shield">
 	<!-- Additionally increases M. Atk. Resistance. -->
 		<icon initial="icon.skill0091"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1375,7 +1375,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="3547" name="Equip Shield" max-level="1" >
+	<skill id="3547" name="Equip Shield">
 	<!-- Additionally increases Shield Defense Rate. -->
 		<icon initial="icon.skill0091"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1391,7 +1391,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="3548" name="Equip Shield" max-level="1" >
+	<skill id="3548" name="Equip Shield">
 	<!-- Additionally increases Shield Defense Rate. -->
 		<icon initial="icon.skill0091"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1407,7 +1407,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="3549" name="Equip Shield" max-level="1" >
+	<skill id="3549" name="Equip Shield">
 	<!-- Additionally increases Shield Defense Rate. -->
 		<icon initial="icon.skill0091"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1423,7 +1423,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="3550" name="Equip Shield" max-level="1" >
+	<skill id="3550" name="Equip Shield">
 	<!-- Additionally increases Shield Defense Rate. -->
 		<icon initial="icon.skill0091"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1439,7 +1439,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="3551" name="Equip Shield" max-level="1" >
+	<skill id="3551" name="Equip Shield">
 	<!-- Additionally increases Shield Defense Rate. -->
 		<icon initial="icon.skill0091"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1488,12 +1488,12 @@
 			<stat type="STR" start-level="4">
 				<power initial="4.0"/>
 			</stat>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false" start-level="4">
+			<vital-stat-modify stat="MAX_HP" start-level="4">
 				<power initial="445.0"/>
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="3554" name="Equip Shield" max-level="1" >
+	<skill id="3554" name="Equip Shield">
 	<!-- Additionally increases Shield Defense Rate. -->
 		<icon initial="icon.skill0091"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1527,7 +1527,7 @@
 			<stat-modify stat="WEIGHT_PENALTY">
 				<power initial="5759.0"/>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="289.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER" start-level="2">
@@ -1559,7 +1559,7 @@
 			<stat-modify stat="WEIGHT_PENALTY">
 				<power initial="5759.0"/>
 			</stat-modify>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="7.0"/>
 			</speed>
 			<stat-modify stat="MAGIC_ATTACK" mode="PER" start-level="2">
@@ -1575,7 +1575,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="3557" name="Valakas' Necklace" max-level="1" >
+	<skill id="3557" name="Valakas' Necklace">
 	<!-- Increases Fire Resistance, Sleep Resistance, Sleep Atk. Rate, Max HP/P. Atk./M. Atk., and P. Critical Rate of damage-dealing magic. Decreases skill cooldown. Reflects some of the damage received back to the enemy. -->
 		<icon initial="icon.accessory_necklace_of_valakas_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1608,10 +1608,10 @@
 			<stat-modify stat="FIRE_RES">
 				<power initial="15.0"/>
 			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
 				<power initial="2.0"/>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="445.0"/>
 			</vital-stat-modify>
 			<reuse type="0">
@@ -1670,14 +1670,14 @@
 				</trait>
 			</defence-trait>
 			<vampiric-attack chance="0">
-				<power initial="0.0">
+				<power>
 					<value level="12">2.0</value>
 					<value level="13">3.0</value>
 					<value level="14">6.0</value>
 				</power>
 			</vampiric-attack>
 			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
-				<power initial="0.0">
+				<power>
 					<value level="9">2.0</value>
 					<value level="12">6.0</value>
 					<value level="13">10.0</value>
@@ -1688,7 +1688,7 @@
 				<power initial="15.0"/>
 			</stat-modify>
 			<magic-cost type="1">
-				<power initial="0.0">
+				<power>
 					<value level="10">-1.0</value>
 					<value level="12">-3.0</value>
 					<value level="13">-4.0</value>
@@ -1696,13 +1696,13 @@
 				</power>
 			</magic-cost>
 			<stat-modify stat="REFLECT_DAMAGE_PERCENT_DEFENSE">
-				<power initial="0.0">
+				<power>
 					<value level="13">7.0</value>
 					<value level="14">15.0</value>
 				</power>
 			</stat-modify>
 			<stat type="CON">
-				<power initial="0.0">
+				<power>
 					<value level="14">1.0</value>
 				</power>
 			</stat>
@@ -1775,7 +1775,7 @@
 				</power>
 			</stat-modify>
 			<stat-modify stat="DARK_RES">
-				<power initial="0.0">
+				<power>
 					<value level="2">15.0</value>
 				</power>
 			</stat-modify>
@@ -1970,13 +1970,13 @@
 				</power>
 				</trait>
 			</defence-trait>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="ACCURACY_MAGIC" mode="DIFF">
+			<stat-modify stat="ACCURACY_MAGIC">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -1995,12 +1995,12 @@
 				</power>
 			</stat-modify>
 			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
-				<power initial="0.0">
+				<power>
 					<value level="3">10.0</value>
 				</power>
 			</stat-modify>
 			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="3">10.0</value>
 				</power>
 			</stat-modify>
@@ -2042,12 +2042,12 @@
 				</power>
 				</trait>
 			</defence-trait>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="1.0">
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
 				</power>
 			</stat-hp-based>
-			<stat-modify stat="MAGIC_EVASION_RATE" mode="DIFF">
+			<stat-modify stat="MAGIC_EVASION_RATE">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -2167,7 +2167,7 @@
 			<effect name="Root"/>
 		</effects>
 	</skill>
-	<skill id="3578" name="Special Ability: Infinity Sword" max-level="1" >
+	<skill id="3578" name="Special Ability: Infinity Sword">
 	<!-- Max HP +20%%, Max MP +15%%, Max CP +30%%, P. Atk. +10%%, Atk. Speed +5%%, and PvP Damage +5%%. Can also uses weapon's special ability. -->
 		<icon initial="icon.weapon_the_sword_of_hero_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -2178,13 +2178,13 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="20.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="15.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_CP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_CP" mode="PER">
 				<power initial="30.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
@@ -2204,7 +2204,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="3579" name="Infinity Power - Reflect" max-level="1" action="A2">
+	<skill id="3579" name="Infinity Power - Reflect" action="A2">
 	<!-- For 5 minutes, returns 8% of damage received by the target back to the enemy. -->
 		<icon initial="icon.skill0086"/>
 		<attributes property="PHYSIC" >
@@ -2230,7 +2230,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="3580" name="Special Ability: Infinity Axe" max-level="1" >
+	<skill id="3580" name="Special Ability: Infinity Axe">
 	<!-- Max HP +20%%, Max MP +15%%, Max CP +30%%, P. Atk. +10%%, Atk. Speed +5%%, and PvP Damage +5%%. Can also uses weapon's special ability. -->
 		<icon initial="icon.weapon_the_axe_of_hero_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -2241,13 +2241,13 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="20.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="15.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_CP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_CP" mode="PER">
 				<power initial="30.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
@@ -2267,7 +2267,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="3581" name="Infinity Power - Tenacity" max-level="1" action="A2">
+	<skill id="3581" name="Infinity Power - Tenacity" action="A2">
 	<!-- For 2 minutes returns 10% of the received damage back to the enemy. Recovers 460 HP. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" >
@@ -2291,12 +2291,12 @@
 			<stat-modify stat="REFLECT_SKILL_PHYSIC">
 				<power initial="10.0"/>
 			</stat-modify>
-			<hp mode="DIFF">
+			<hp>
 				<power initial="460.0"/>
 			</hp>
 		</effects>
 	</skill>
-	<skill id="3582" name="Special Ability: Infinity Slasher" max-level="1" >
+	<skill id="3582" name="Special Ability: Infinity Slasher">
 	<!-- Max HP +20%%, Max MP +15%%, Max CP +30%%, P. Atk. +10%%, P. Critical Damage +10%%, and PvP Damage +5%%. Can also uses weapon's special ability. -->
 		<icon initial="icon.weapon_the_two_handed_sword_of_hero_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -2307,13 +2307,13 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="20.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="15.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_CP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_CP" mode="PER">
 				<power initial="30.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
@@ -2333,7 +2333,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="3584" name="Infinity Power - Protection" max-level="1" action="A2">
+	<skill id="3584" name="Infinity Power - Protection" action="A2">
 	<!-- For 2 minutes makes you immune to debuffs 5 times. -->
 		<icon initial="icon.skill0100"/>
 		<attributes property="PHYSIC" >
@@ -2355,7 +2355,7 @@
 			</dispel-by-category>
 		</effects>
 	</skill>
-	<skill id="3585" name="Special Ability: Infinity Dualsword" max-level="1" >
+	<skill id="3585" name="Special Ability: Infinity Dualsword">
 	<!-- Max HP +20%%, Max MP +15%%, Max CP +30%%, P. Atk. +5%%, P. Critical Damage +5%%, P. Atk. Spd. +5%%, and PvP Damage +5%%. Can also uses weapon's special ability. -->
 		<icon initial="icon.weapon_the_dualsword_of_hero_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -2366,13 +2366,13 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="20.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="15.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_CP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_CP" mode="PER">
 				<power initial="30.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
@@ -2395,7 +2395,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="3586" name="Set Effect - Full Plate Heavy Armor, 2-piece" max-level="1" action="A2">
+	<skill id="3586" name="Set Effect - Full Plate Heavy Armor, 2-piece" action="A2">
 	<!-- All Skill Cooldown -10% for 5 minutes. Does not apply to skills with fixed cooldowns. -->
 		<icon initial="icon.skill3123"/>
 		<attributes property="PHYSIC" >
@@ -2418,7 +2418,7 @@
 			</magic-cost>
 		</effects>
 	</skill>
-	<skill id="3587" name="Special Ability: Infinity Fighter" max-level="1" >
+	<skill id="3587" name="Special Ability: Infinity Fighter">
 	<!-- Max HP +20%%, Max MP +15%%, Max CP +30%%, P. Critical Rate +20, Atk. Spd. +5%%, and PvP Damage +5%%. Can also uses weapon's special ability. -->
 		<icon initial="icon.weapon_the_fist_of_hero_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -2429,16 +2429,16 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="20.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="15.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_CP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_CP" mode="PER">
 				<power initial="30.0"/>
 			</vital-stat-modify>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="DIFF">
+			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0">
 				<power initial="20.0"/>
 			</stat-hp-based>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
@@ -2455,7 +2455,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="3589" name="Special Ability: Infinity Dagger" max-level="1" >
+	<skill id="3589" name="Special Ability: Infinity Dagger">
 	<!-- Max HP +15%%, Max MP +25%%, Max CP +30%%, M. Critical Rate +20, P. Critical Damage +20%%, and PvP Damage +5%%. Can also uses weapon's special ability. -->
 		<icon initial="icon.weapon_the_dagger_of_hero_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -2466,16 +2466,16 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="15.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="25.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_CP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_CP" mode="PER">
 				<power initial="30.0"/>
 			</vital-stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
 				<power initial="20.0"/>
 			</stat-modify>
 			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
@@ -2492,7 +2492,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="3590" name="Infinity Power - Immortal" max-level="1" action="A2">
+	<skill id="3590" name="Infinity Power - Immortal" action="A2">
 	<!-- For 5 minutes, Deadly Stab Rate +20%. -->
 		<icon initial="icon.skill0410"/>
 		<attributes property="PHYSIC" >
@@ -2515,7 +2515,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="3591" name="Special Ability: Infinity Spear" max-level="1" >
+	<skill id="3591" name="Special Ability: Infinity Spear">
 	<!-- Max HP +20%%, Max MP +15%%, Max CP +30%%, P. Atk. +10%%, P. Critical Damage +10%%, and PvP Damage +5%%. Can also uses weapon's special ability. -->
 		<icon initial="icon.weapon_the_pole_of_hero_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -2526,13 +2526,13 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="20.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="15.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_CP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_CP" mode="PER">
 				<power initial="30.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
@@ -2552,7 +2552,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="3593" name="Special Ability: Infinity Bow" max-level="1" >
+	<skill id="3593" name="Special Ability: Infinity Bow">
 	<!-- Max HP +15%%, Max MP +25%%, Max CP +30%%, Atk. Spd. +10%%, PvP Damage +5%%, and Skills MP Consumptions -5%%. Can also uses weapon's special ability. -->
 		<icon initial="icon.weapon_the_bow_of_hero_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -2563,13 +2563,13 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="15.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="25.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_CP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_CP" mode="PER">
 				<power initial="30.0"/>
 			</vital-stat-modify>
 			<magic-cost type="0">
@@ -2589,7 +2589,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="3594" name="Infinity Power - Archery" max-level="1" action="A2">
+	<skill id="3594" name="Infinity Power - Archery" action="A2">
 	<!-- Movement Speed +15 and Max Range +100 for 5 minutes. -->
 		<icon initial="icon.skill0431"/>
 		<attributes property="PHYSIC" >
@@ -2611,13 +2611,13 @@
 				<power initial="15.0"/>
 				<weapon-type>BOW </weapon-type>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_ATTACK_RANGE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK_RANGE">
 				<power initial="100.0"/>
 				<weapon-type>BOW </weapon-type>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="3595" name="Special Ability: Infinity Scepter" max-level="1" >
+	<skill id="3595" name="Special Ability: Infinity Scepter">
 	<!-- Max HP +10%%, Max MP +25%%, Max CP +30%%, M. Atk. +10%%, M. Critical Damage +10%%, and PvP Damage +5%%. Can also uses weapon's special ability. -->
 		<icon initial="icon.weapon_the_staff_of_hero_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -2628,13 +2628,13 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="10.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="25.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_CP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_CP" mode="PER">
 				<power initial="30.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="MAGIC_ATTACK" mode="PER">
@@ -2654,7 +2654,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="3596" name="Infinity Power - Vampiric Mana" max-level="1" action="A2">
+	<skill id="3596" name="Infinity Power - Vampiric Mana" action="A2">
 	<!-- For 5 min. recovers MP, equal to the certain percent of inflicted damage with a certain probability. -->
 		<icon initial="icon.skill1268"/>
 		<attributes property="PHYSIC" >
@@ -2677,7 +2677,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="3597" name="Special Ability: Infinity Rod" max-level="1" >
+	<skill id="3597" name="Special Ability: Infinity Rod">
 	<!-- Max HP +10%%, Max MP +25%%, Max CP +30%%, M. Critical Rate +20, Casting Spd. +5%%, and PvP Damage +5%%. Can also uses weapon's special ability. -->
 		<icon initial="icon.weapon_the_mace_of_hero_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -2688,16 +2688,16 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="10.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="25.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_CP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_CP" mode="PER">
 				<power initial="30.0"/>
 			</vital-stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
 				<power initial="20.0"/>
 			</stat-modify>
 			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
@@ -2714,7 +2714,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="3598" name="Infinity Power - Mana Limit" max-level="1" action="A2">
+	<skill id="3598" name="Infinity Power - Mana Limit" action="A2">
 	<!-- For 30 sec. magic skills don't consume MP. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" >
@@ -2737,7 +2737,7 @@
 			</magic-cost>
 		</effects>
 	</skill>
-	<skill id="3599" name="Polearm Multi-attack" max-level="1" >
+	<skill id="3599" name="Polearm Multi-attack">
 	<!-- Enables the character to attack multiple opponents. -->
 		<icon initial="icon.skill0216"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >

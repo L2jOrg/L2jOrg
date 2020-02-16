@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="7100" name="Clan-exclusive Pet Stun" max-level="1" action="A2">
+	<skill id="7100" name="Clan-exclusive Pet Stun" action="A2">
 	<!-- Stuns the target for 3 seconds. -->
 		<icon initial="icon.skill5168"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" >
@@ -26,7 +26,7 @@
 			</block-all-actions>
 		</effects>
 	</skill>
-	<skill id="7101" name="Clan-exclusive Pet Aerial Thrust" max-level="1" action="A2" type="MAGIC">
+	<skill id="7101" name="Clan-exclusive Pet Aerial Thrust" action="A2" type="MAGIC">
 	<!-- Lifts and holds the target in the air for 3 seconds. -->
 		<icon initial="icon.skill11276"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="AIRBIND" >
@@ -79,7 +79,7 @@
 			</defence-trait>
 		</effects>
 	</skill>
-	<skill id="7102" name="Summon Clan Pet" max-level="1" action="A1">
+	<skill id="7102" name="Summon Clan Pet" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -97,7 +97,7 @@
 			<effect name="SummonPet"/>
 		</effects>
 	</skill>
-	<skill id="7103" name="Helping Tree CP Recovery Range" max-level="1" action="A1" type="MAGIC">
+	<skill id="7103" name="Helping Tree CP Recovery Range" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -110,7 +110,7 @@
 		</attributes>
 		<target scope="RANGE" object="FRIEND" range="1000" affect-min="5" affect-random="12" />
 	</skill>
-	<skill id="7104" name="Pa'agrio's Hand" max-level="1" action="A1">
+	<skill id="7104" name="Pa'agrio's Hand" action="A1">
 	<!-- Raise the temperature of the Draco Egg through Pa'agrio's Hand. It raises the temperature by 1 - 10 degrees on a Small Draco Egg and 0.1 - 1.0 degrees on a Large Draco Egg. The Fire Spirit Agathion must be summoned for it to be used. -->
 		<icon initial="icon.skill11775"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -125,7 +125,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="7105" name="Incubation Possible" max-level="1" action="A1">
+	<skill id="7105" name="Incubation Possible" action="A1">
 	<!-- Incubation Possible -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -146,7 +146,7 @@
 			</target>
 		</conditions>
 	</skill>
-	<skill id="7106" name="Optimal Temperature Incubation Success" max-level="1" action="A1">
+	<skill id="7106" name="Optimal Temperature Incubation Success" action="A1">
 	<!-- Optimal Temperature Incubation Success -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -168,7 +168,7 @@
 			</target>
 		</conditions>
 	</skill>
-	<skill id="7107" name="Incubation Success" max-level="1" action="A1">
+	<skill id="7107" name="Incubation Success" action="A1">
 	<!-- Incubation Success -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -190,7 +190,7 @@
 			</target>
 		</conditions>
 	</skill>
-	<skill id="7108" name="Incubation Failure" max-level="1" action="A1">
+	<skill id="7108" name="Incubation Failure" action="A1">
 	<!-- Incubation Failure -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -212,7 +212,7 @@
 			</target>
 		</conditions>
 	</skill>
-	<skill id="7113" name="Pet Invincibility Effect" max-level="1" action="A2" type="MAGIC">
+	<skill id="7113" name="Pet Invincibility Effect" action="A2" type="MAGIC">
 	<!-- Invincibility Effect -->
 		<icon initial="icon.skill0442"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -233,14 +233,14 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<damage-block block-hp="true" block-mp="false"/>
+			<damage-block block-hp="true"/>
 			<effect name="DebuffBlock"/>
 		</effects>
 	</skill>
-	<skill id="7115" name="Energy of Chaos" max-level="1" action="A2">
+	<skill id="7115" name="Energy of Chaos" action="A2">
 	<!-- Character's hair and cloak have been changed due to participation in the Ceremony of Chaos. -->
 		<icon initial="icon.skill0810"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" dispellable="false" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="85"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
@@ -255,7 +255,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="7122" name="Lv. 75 Raid Boss" max-level="1" >
+	<skill id="7122" name="Lv. 75 Raid Boss">
 	<!-- Enchanted by Shilen, enshrouded in darkness, Queen Ant's minion is guarding the lands near the Ant Nest. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -265,7 +265,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="7123" name="Lv. 75 Raid Boss" max-level="1" >
+	<skill id="7123" name="Lv. 75 Raid Boss">
 	<!-- Enchanted by Shilen, enshrouded in darkness, Giran is guarding the lands and praying about resurrection. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -275,7 +275,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="7124" name="Lv. 75 Raid Boss" max-level="1" >
+	<skill id="7124" name="Lv. 75 Raid Boss">
 	<!-- Enchanted by Shilen, enshrouded in darkness, minion of Core is guarding the lands around Cruma Tower. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -285,7 +285,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="7125" name="Lv. 75 Raid Boss" max-level="1" >
+	<skill id="7125" name="Lv. 75 Raid Boss">
 	<!-- Enchanted by Shilen, enshrouded in darkness, minion of Orfen is guarding the Plains of the Lizardmen. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >

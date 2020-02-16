@@ -2,21 +2,21 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<xs:element name="list">
 		<xs:complexType>
-			<xs:sequence minOccurs="1" maxOccurs="1">
-				<xs:element name="augmentation" minOccurs="1" maxOccurs="unbounded">
+			<xs:sequence>
+				<xs:element name="augmentation" maxOccurs="unbounded">
 					<xs:complexType>
-						<xs:sequence minOccurs="1" maxOccurs="1">
-							<xs:element name="skillId" minOccurs="1" maxOccurs="1">
+						<xs:sequence>
+							<xs:element name="skillId">
 								<xs:complexType>
 									<xs:attribute name="val" type="xs:positiveInteger" use="required" />
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="skillLevel" minOccurs="1" maxOccurs="1">
+							<xs:element name="skillLevel">
 								<xs:complexType>
 									<xs:attribute name="val" type="xs:positiveInteger" use="required" />
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="type" minOccurs="1" maxOccurs="1">
+							<xs:element name="type">
 								<xs:complexType>
 									<xs:attribute name="val" use="required">
 										<xs:simpleType>
@@ -33,6 +33,7 @@
 						<xs:attribute name="id" type="xs:positiveInteger" use="required" />
 					</xs:complexType>
 				</xs:element>
-			</xs:sequence>		</xs:complexType>
+			</xs:sequence>
+		</xs:complexType>
 	</xs:element>
 </xs:schema>

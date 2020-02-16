@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="18564" name="Shiny Jewelry Box" max-level="1" action="A1">
+	<skill id="18564" name="Shiny Jewelry Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -58,7 +58,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="18571" name="Hero's Basics - I" max-level="1" >
+	<skill id="18571" name="Hero's Basics - I">
 	<!-- XP/SP gain +3%%. -->
 		<icon initial="icon.skill18571"/>
 		<attributes property="PHYSIC" >
@@ -68,7 +68,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="18572" name="Hero's Basics - II" max-level="1" >
+	<skill id="18572" name="Hero's Basics - II">
 	<!-- XP/SP gain +7%%. -->
 		<icon initial="icon.skill18572"/>
 		<attributes property="PHYSIC" >
@@ -78,7 +78,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="18573" name="Hero's Basics - III" max-level="1" >
+	<skill id="18573" name="Hero's Basics - III">
 	<!-- XP/SP gain +3%% and XP penalty on death -20%%. -->
 		<icon initial="icon.skill18573"/>
 		<attributes property="PHYSIC" >
@@ -88,7 +88,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="18575" name="Call to Hunt - I" max-level="1" >
+	<skill id="18575" name="Call to Hunt - I">
 	<!-- Max HP/Max MP/Max CP +200, P. Atk./M. Atk. +5%%, and P. Def/M. Def +5%%. -->
 		<icon initial="icon.skill18575"/>
 		<attributes property="PHYSIC" >
@@ -98,7 +98,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="18576" name="Call to Hunt - II" max-level="1" >
+	<skill id="18576" name="Call to Hunt - II">
 	<!-- P. Critical Damage +45, M. Critical Damage +30, and P. Critical/M. Critical Rate +10. -->
 		<icon initial="icon.skill18576"/>
 		<attributes property="PHYSIC" >
@@ -108,7 +108,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="18577" name="Call to Battle" max-level="1" >
+	<skill id="18577" name="Call to Battle">
 	<!-- PvP Damage Received -5%%, Debuff Resistance +10%%. -->
 		<icon initial="icon.skill18577"/>
 		<attributes property="PHYSIC" >
@@ -118,7 +118,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="18578" name="Song Contest" max-level="1" >
+	<skill id="18578" name="Song Contest">
 	<!-- World Chat Points +20. -->
 		<icon initial="icon.skill18578"/>
 		<attributes property="PHYSIC" >
@@ -128,7 +128,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="18588" name="Fortune Brooch" max-level="1" action="A1">
+	<skill id="18588" name="Fortune Brooch" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >

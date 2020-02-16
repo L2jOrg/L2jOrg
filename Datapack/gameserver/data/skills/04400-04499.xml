@@ -98,7 +98,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="2.0">
 					<value level="2">3.0</value>
 					<value level="3">4.0</value>
@@ -179,7 +179,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="2.0">
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="2.0">
 					<value level="2">3.0</value>
 					<value level="3">4.0</value>
 				</power>
@@ -225,7 +225,7 @@
 		<target />
 		<effects>
 			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="2">10.0</value>
 					<value level="3">21.0</value>
 					<value level="4">33.0</value>
@@ -247,8 +247,8 @@
 					<value level="20">1100.0</value>
 				</power>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
-				<power initial="0.0">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
+				<power>
 					<value level="2">10.0</value>
 					<value level="3">21.0</value>
 					<value level="4">33.0</value>
@@ -297,8 +297,8 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
-				<power initial="0.0">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
+				<power>
 					<value level="2">10.0</value>
 					<value level="3">21.0</value>
 					<value level="4">33.0</value>
@@ -321,7 +321,7 @@
 				</power>
 			</vital-stat-modify>
 			<stat-modify stat="REGENERATE_MP_RATE" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="2">10.0</value>
 					<value level="3">21.0</value>
 					<value level="4">33.0</value>
@@ -536,7 +536,7 @@
 					<value level="3">-15.0</value>
 				</power>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="-10.0">
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="-10.0">
 					<value level="2">0.0</value>
 					<value level="3">10.0</value>
 				</power>
@@ -555,7 +555,7 @@
 		<target />
 		<effects>
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="2">38.0</value>
 					<value level="3">0.0</value>
 					<value level="4">38.0</value>
@@ -584,7 +584,7 @@
 				</power>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="2">-29.0</value>
 					<value level="3">0.0</value>
 					<value level="4">-29.0</value>
@@ -678,73 +678,73 @@
 		<effects>
 			<defence-trait>
 				<trait type="CONSTRUCT_WEAKNESS">
-					<power initial="0.0">
+					<power>
 					<value level="2">-0.15000000596046448</value>
 					<value level="3">0.0</value>
 				</power>
 				</trait>
 				<trait type="SHOCK">
-					<power initial="0.0">
+					<power>
 					<value level="11">0.15000000596046448</value>
 					<value level="12">0.0</value>
 				</power>
 				</trait>
 				<trait type="BOW">
-					<power initial="0.0">
+					<power>
 					<value level="4">-0.15000000596046448</value>
 					<value level="5">0.0</value>
 				</power>
 				</trait>
 				<trait type="DUAL">
-					<power initial="0.0">
+					<power>
 					<value level="10">-0.15000000596046448</value>
 					<value level="11">0.0</value>
 				</power>
 				</trait>
 				<trait type="PLANT_WEAKNESS">
-					<power initial="0.0">
+					<power>
 					<value level="5">-0.15000000596046448</value>
 					<value level="6">0.0</value>
 				</power>
 				</trait>
 				<trait type="SWORD">
-					<power initial="0.0">
+					<power>
 					<value level="10">-0.15000000596046448</value>
 					<value level="11">0.0</value>
 				</power>
 				</trait>
 				<trait type="DRAGON_WEAKNESS">
-					<power initial="0.0">
+					<power>
 					<value level="10">-0.15000000596046448</value>
 					<value level="11">0.0</value>
 				</power>
 				</trait>
 				<trait type="BLUNT">
-					<power initial="0.0">
+					<power>
 					<value level="9">-0.15000000596046448</value>
 					<value level="10">0.0</value>
 				</power>
 				</trait>
 				<trait type="GIANT_WEAKNESS">
-					<power initial="0.0">
+					<power>
 					<value level="11">-0.15000000596046448</value>
 					<value level="12">0.0</value>
 				</power>
 				</trait>
 				<trait type="ANIMAL_WEAKNESS">
-					<power initial="0.0">
+					<power>
 					<value level="4">-0.15000000596046448</value>
 					<value level="5">0.0</value>
 				</power>
 				</trait>
 				<trait type="BUG_WEAKNESS">
-					<power initial="0.0">
+					<power>
 					<value level="12">-0.15000000596046448</value>
 					<value level="13">0.0</value>
 				</power>
 				</trait>
 				<trait type="BEAST_WEAKNESS">
-					<power initial="0.0">
+					<power>
 					<value level="3">-0.15000000596046448</value>
 					<value level="4">0.0</value>
 				</power>
@@ -792,13 +792,13 @@
 		<effects>
 			<defence-trait>
 				<trait type="HOLD">
-					<power initial="0.0">
+					<power>
 					<value level="37">0.15000000596046448</value>
 					<value level="38">0.0</value>
 				</power>
 				</trait>
 				<trait type="BOW">
-					<power initial="0.0">
+					<power>
 					<value level="3">-0.15000000596046448</value>
 					<value level="6">0.0</value>
 					<value level="8">-0.15000000596046448</value>
@@ -810,7 +810,7 @@
 				</power>
 				</trait>
 				<trait type="BLEED">
-					<power initial="0.0">
+					<power>
 					<value level="10">0.15000000596046448</value>
 					<value level="11">0.0</value>
 					<value level="35">0.15000000596046448</value>
@@ -818,7 +818,7 @@
 				</power>
 				</trait>
 				<trait type="SLEEP">
-					<power initial="0.0">
+					<power>
 					<value level="13">0.15000000596046448</value>
 					<value level="14">0.0</value>
 					<value level="16">0.15000000596046448</value>
@@ -827,13 +827,13 @@
 				</power>
 				</trait>
 				<trait type="DAGGER">
-					<power initial="0.0">
+					<power>
 					<value level="36">0.15000000596046448</value>
 					<value level="37">0.0</value>
 				</power>
 				</trait>
 				<trait type="BLUNT">
-					<power initial="0.0">
+					<power>
 					<value level="10">-0.15000000596046448</value>
 					<value level="11">0.0</value>
 					<value level="17">0.15000000596046448</value>
@@ -843,7 +843,7 @@
 				</power>
 				</trait>
 				<trait type="POISON">
-					<power initial="0.0">
+					<power>
 					<value level="7">0.15000000596046448</value>
 					<value level="9">0.0</value>
 					<value level="10">0.15000000596046448</value>
@@ -853,7 +853,7 @@
 				</power>
 				</trait>
 				<trait type="DUAL_DAGGER">
-					<power initial="0.0">
+					<power>
 					<value level="36">0.15000000596046448</value>
 					<value level="37">0.0</value>
 				</power>
@@ -2169,14 +2169,14 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="20.0">
 					<value level="2">33.0</value>
 				</power>
 			</speed>
 		</effects>
 	</skill>
-	<skill id="4469" name="Potion Drinking" max-level="1" action="A1">
+	<skill id="4469" name="Potion Drinking" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2187,7 +2187,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4470" name="Spoil" max-level="1" action="A1">
+	<skill id="4470" name="Spoil" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2348,7 +2348,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="46.0">
 					<value level="2">105.0</value>
 					<value level="3">219.0</value>
@@ -2411,7 +2411,7 @@
 			<chance initial="50"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="46.0">
 					<value level="2">105.0</value>
 					<value level="3">219.0</value>
@@ -2457,7 +2457,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4475" name="Complete Bleed Resistance" max-level="1" action="A2" type="MAGIC">
+	<skill id="4475" name="Complete Bleed Resistance" action="A2" type="MAGIC">
 	<!-- Completely resistant to Bleed. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -2585,7 +2585,7 @@
 			<fan-range start-angle="0" radius="200" angle="180"/>
 		</target>
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="18.0">
 					<value level="2">26.0</value>
 					<value level="3">38.0</value>
@@ -2602,7 +2602,7 @@
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="4478" name="Aqua Splash" max-level="1" action="A1">
+	<skill id="4478" name="Aqua Splash" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2620,12 +2620,12 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="183.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="4479" name="Ice Fairy's Blessing" max-level="1" action="A2" type="MAGIC">
+	<skill id="4479" name="Ice Fairy's Blessing" action="A2" type="MAGIC">
 	<!-- Increases Water Resistance. -->
 		<icon initial="icon.skill1182"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -2653,7 +2653,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4480" name="Curse Gloom" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="4480" name="Curse Gloom" debuff="true" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -2681,7 +2681,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4481" name="Hex" max-level="1" debuff="true" action="A2">
+	<skill id="4481" name="Hex" debuff="true" action="A2">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -2709,7 +2709,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4482" name="Silence" max-level="1" debuff="true" action="A2">
+	<skill id="4482" name="Silence" debuff="true" action="A2">
 	<!-- none -->
 		<icon initial="icon.skill1064"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -2792,7 +2792,7 @@
 			<effect name="Root"/>
 		</effects>
 	</skill>
-	<skill id="4484" name="Devour Subordinate" max-level="1" action="A1">
+	<skill id="4484" name="Devour Subordinate" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2810,7 +2810,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4485" name="Devour Subordinate" max-level="1" action="A1">
+	<skill id="4485" name="Devour Subordinate" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -3126,7 +3126,7 @@
 			<fan-range start-angle="0" radius="200" angle="180"/>
 		</target>
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="18.0">
 					<value level="2">26.0</value>
 					<value level="3">38.0</value>
@@ -3180,7 +3180,7 @@
 			<chance initial="40"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="31.0">
 					<value level="2">70.0</value>
 					<value level="3">146.0</value>
@@ -3247,7 +3247,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="46.0">
 					<value level="2">105.0</value>
 					<value level="3">219.0</value>
@@ -3321,7 +3321,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<trigger-skill-by-damage skill="5022" attacker="Playable" target="ENEMY" min-damage="1">
+			<trigger-skill-by-damage skill="5022" attacker="Playable" target="ENEMY">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -3393,7 +3393,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="352.0">
 					<value level="2">949.0</value>
 					<value level="3">2607.0</value>
@@ -3457,7 +3457,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="176.0">
 					<value level="2">475.0</value>
 					<value level="3">1304.0</value>
@@ -3475,7 +3475,7 @@
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="4497" name="Treasure Chest (Lv. 21)" max-level="1" >
+	<skill id="4497" name="Treasure Chest (Lv. 21)">
 	<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon initial="icon.skill0042"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -3486,7 +3486,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4498" name="Treasure Chest (Lv. 22)" max-level="1" >
+	<skill id="4498" name="Treasure Chest (Lv. 22)">
 	<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon initial="icon.skill0042"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -3497,7 +3497,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4499" name="Treasure Chest (Lv. 25)" max-level="1" >
+	<skill id="4499" name="Treasure Chest (Lv. 25)">
 	<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon initial="icon.skill0042"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >

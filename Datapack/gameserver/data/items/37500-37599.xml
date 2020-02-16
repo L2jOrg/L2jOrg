@@ -25,8 +25,8 @@
 	<!-- Go to Santa to trade in for Snowy Squash Seed or Large Snowy Squash Seed. You can also use it to grow Snowy Squash and Large Snowy Squash. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="17110" level="1" value="-1"/>  <!-- Snowy Squash Nectar -->
+		<skill-reducer>
+			<skill id="17110" value="-1"/>  <!-- Snowy Squash Nectar -->
 		</skill-reducer>
 	</item>
 
@@ -82,8 +82,8 @@
 	<!-- Double-click to have a Young Snowy Squash appear. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="17111" level="1" value="-1"/>  <!-- Snowy Squash Seed -->
+		<skill-reducer>
+			<skill id="17111" value="-1"/>  <!-- Snowy Squash Seed -->
 		</skill-reducer>
 	</item>
 
@@ -91,8 +91,8 @@
 	<!-- Double-click to have a Young Large Snowy Squash appear. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="17112" level="1" value="-1"/>  <!-- Large Snowy Squash Seed -->
+		<skill-reducer>
+			<skill id="17112" value="-1"/>  <!-- Large Snowy Squash Seed -->
 		</skill-reducer>
 	</item>
 

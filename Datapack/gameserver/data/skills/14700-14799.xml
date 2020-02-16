@@ -10,7 +10,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="14767" name="Siege Punch" max-level="1" action="A1">
+	<skill id="14767" name="Siege Punch" action="A1">
 	<!-- Launches a powerful attack on the target around you -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -24,7 +24,7 @@
 		</attributes>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="300" affect-min="5" affect-random="12" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="31500.0"/>
 			</physical-attack>
 		</effects>

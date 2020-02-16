@@ -3,10 +3,10 @@
     <option id="20600" name="o_f_80_2g_84">
         <!-- MP Regen increases by 0.07. Accuracy increases by 0.68. -->
         <effects>
-            <stat-modify stat="REGENERATE_MP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_MP_RATE">
                 <power initial="0.067"/>
             </stat-modify>
-            <stat-modify stat="ACCURACY" mode="DIFF">
+            <stat-modify stat="ACCURACY">
                 <power initial="0.677"/>
             </stat-modify>
         </effects>
@@ -14,10 +14,10 @@
     <option id="20601" name="o_f_80_2g_85">
         <!-- MP Regen increases by 0.07. Critical increases by 5.3. -->
         <effects>
-            <stat-modify stat="REGENERATE_MP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_MP_RATE">
                 <power initial="0.067"/>
             </stat-modify>
-            <stat-modify stat="CRITICAL_RATE" mode="DIFF">
+            <stat-modify stat="CRITICAL_RATE">
                 <power initial="5.28"/>
             </stat-modify>
         </effects>
@@ -25,10 +25,10 @@
     <option id="20602" name="o_f_80_2g_86">
         <!-- CP Regen increases by 0.16. Evasion increases by 0.68. -->
         <effects>
-            <stat-modify stat="REGENERATE_CP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_CP_RATE">
                 <power initial="0.158"/>
             </stat-modify>
-            <stat-modify stat="EVASION_RATE" mode="DIFF">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="0.677"/>
             </stat-modify>
         </effects>
@@ -36,10 +36,10 @@
     <option id="20603" name="o_f_80_2g_87">
         <!-- CP Regen increases by 0.16. Accuracy increases by 0.68. -->
         <effects>
-            <stat-modify stat="REGENERATE_CP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_CP_RATE">
                 <power initial="0.158"/>
             </stat-modify>
-            <stat-modify stat="ACCURACY" mode="DIFF">
+            <stat-modify stat="ACCURACY">
                 <power initial="0.677"/>
             </stat-modify>
         </effects>
@@ -47,10 +47,10 @@
     <option id="20604" name="o_f_80_2g_88">
         <!-- CP Regen increases by 0.16. Critical increases by 5.28. -->
         <effects>
-            <stat-modify stat="REGENERATE_CP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_CP_RATE">
                 <power initial="0.158"/>
             </stat-modify>
-            <stat-modify stat="CRITICAL_RATE" mode="DIFF">
+            <stat-modify stat="CRITICAL_RATE">
                 <power initial="5.28"/>
             </stat-modify>
         </effects>
@@ -58,10 +58,10 @@
     <option id="20605" name="o_f_80_2g_89">
         <!-- Evasion increases by 0.79. Accuracy increases by 0.68. -->
         <effects>
-            <stat-modify stat="EVASION_RATE" mode="DIFF">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="0.79"/>
             </stat-modify>
-            <stat-modify stat="ACCURACY" mode="DIFF">
+            <stat-modify stat="ACCURACY">
                 <power initial="0.677"/>
             </stat-modify>
         </effects>
@@ -69,10 +69,10 @@
     <option id="20606" name="o_f_80_2g_90">
         <!-- Evasion increases by 0.79. Critical increases by 5.28. -->
         <effects>
-            <stat-modify stat="EVASION_RATE" mode="DIFF">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="0.79"/>
             </stat-modify>
-            <stat-modify stat="CRITICAL_RATE" mode="DIFF">
+            <stat-modify stat="CRITICAL_RATE">
                 <power initial="5.28"/>
             </stat-modify>
         </effects>
@@ -80,10 +80,10 @@
     <option id="20607" name="o_f_80_2g_91">
         <!-- Accuracy increases by 0.79. Critical increases by 5.28. -->
         <effects>
-            <stat-modify stat="ACCURACY" mode="DIFF">
+            <stat-modify stat="ACCURACY">
                 <power initial="0.79"/>
             </stat-modify>
-            <stat-modify stat="CRITICAL_RATE" mode="DIFF">
+            <stat-modify stat="CRITICAL_RATE">
                 <power initial="5.28"/>
             </stat-modify>
         </effects>

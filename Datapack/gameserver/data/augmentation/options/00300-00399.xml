@@ -3,10 +3,10 @@
     <option id="300" name="o_f_55_1g_27">
         <!-- M. Def. increases by 6.98. Max HP increases by 11.13. -->
         <effects>
-            <stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="MAGICAL_DEFENCE">
                 <power initial="6.981"/>
             </stat-modify>
-            <stat-modify stat="MAX_MP" mode="DIFF">
+            <stat-modify stat="MAX_MP">
                 <power initial="11.128"/>
             </stat-modify>
         </effects>
@@ -14,10 +14,10 @@
     <option id="301" name="o_f_55_1g_28">
         <!-- M. Def. increases by 6.98. Max CP increases by 48.4. -->
         <effects>
-            <stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="MAGICAL_DEFENCE">
                 <power initial="6.981"/>
             </stat-modify>
-            <stat-modify stat="MAX_CP" mode="DIFF">
+            <stat-modify stat="MAX_CP">
                 <power initial="48.4016"/>
             </stat-modify>
         </effects>
@@ -25,10 +25,10 @@
     <option id="302" name="o_f_55_1g_29">
         <!-- M. Def. increases by 6.98. P. Atk. increases by 4.46. -->
         <effects>
-            <stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="MAGICAL_DEFENCE">
                 <power initial="6.981"/>
             </stat-modify>
-            <stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+            <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="4.459"/>
             </stat-modify>
         </effects>
@@ -36,10 +36,10 @@
     <option id="303" name="o_f_55_1g_30">
         <!-- M. Def. increases by 6.98. M. Atk. increases by 5.12. -->
         <effects>
-            <stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="MAGICAL_DEFENCE">
                 <power initial="6.981"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+            <stat-modify stat="MAGIC_ATTACK">
                 <power initial="5.122"/>
             </stat-modify>
         </effects>
@@ -47,10 +47,10 @@
     <option id="304" name="o_f_55_1g_31">
         <!-- M. Def. increases by 6.98. HP Regen increases by 0.19. -->
         <effects>
-            <stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="MAGICAL_DEFENCE">
                 <power initial="6.981"/>
             </stat-modify>
-            <stat-modify stat="REGENERATE_HP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_HP_RATE">
                 <power initial="0.191646"/>
             </stat-modify>
         </effects>
@@ -58,10 +58,10 @@
     <option id="305" name="o_f_55_1g_32">
         <!-- M. Def. increases by 6.98. MP Regen increases by 0.09. -->
         <effects>
-            <stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="MAGICAL_DEFENCE">
                 <power initial="6.981"/>
             </stat-modify>
-            <stat-modify stat="REGENERATE_MP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_MP_RATE">
                 <power initial="0.087542"/>
             </stat-modify>
         </effects>
@@ -69,10 +69,10 @@
     <option id="306" name="o_f_55_1g_33">
         <!-- M. Def. increases by 6.98. CP Regen increases by 0.19. -->
         <effects>
-            <stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="MAGICAL_DEFENCE">
                 <power initial="6.981"/>
             </stat-modify>
-            <stat-modify stat="REGENERATE_CP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_CP_RATE">
                 <power initial="0.19162"/>
             </stat-modify>
         </effects>
@@ -80,10 +80,10 @@
     <option id="307" name="o_f_55_1g_34">
         <!-- M. Def. increases by 6.98. Evasion increases by 0.78. -->
         <effects>
-            <stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="MAGICAL_DEFENCE">
                 <power initial="6.981"/>
             </stat-modify>
-            <stat-modify stat="EVASION_RATE" mode="DIFF">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="0.777483"/>
             </stat-modify>
         </effects>
@@ -91,10 +91,10 @@
     <option id="308" name="o_f_55_1g_35">
         <!-- M. Def. increases by 6.98. Accuracy increases by 0.78. -->
         <effects>
-            <stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="MAGICAL_DEFENCE">
                 <power initial="6.981"/>
             </stat-modify>
-            <stat-modify stat="ACCURACY" mode="DIFF">
+            <stat-modify stat="ACCURACY">
                 <power initial="0.777483"/>
             </stat-modify>
         </effects>
@@ -102,10 +102,10 @@
     <option id="309" name="o_f_55_1g_36">
         <!-- M. Def. increases by 6.98. Critical increases by 8.42. -->
         <effects>
-            <stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="MAGICAL_DEFENCE">
                 <power initial="6.981"/>
             </stat-modify>
-            <stat-modify stat="CRITICAL_RATE" mode="DIFF">
+            <stat-modify stat="CRITICAL_RATE">
                 <power initial="8.418585924"/>
             </stat-modify>
         </effects>
@@ -113,10 +113,10 @@
     <option id="310" name="o_f_55_1g_37">
         <!-- Max HP increases by 35.05 Max HP increases by 11.13. -->
         <effects>
-            <stat-modify stat="MAX_HP" mode="DIFF">
+            <stat-modify stat="MAX_HP">
                 <power initial="35.048"/>
             </stat-modify>
-            <stat-modify stat="MAX_MP" mode="DIFF">
+            <stat-modify stat="MAX_MP">
                 <power initial="11.128"/>
             </stat-modify>
         </effects>
@@ -124,10 +124,10 @@
     <option id="311" name="o_f_55_1g_38">
         <!-- Max HP increases by 35.05 Max CP increases by 48.4. -->
         <effects>
-            <stat-modify stat="MAX_HP" mode="DIFF">
+            <stat-modify stat="MAX_HP">
                 <power initial="35.048"/>
             </stat-modify>
-            <stat-modify stat="MAX_CP" mode="DIFF">
+            <stat-modify stat="MAX_CP">
                 <power initial="48.4016"/>
             </stat-modify>
         </effects>
@@ -135,10 +135,10 @@
     <option id="312" name="o_f_55_1g_39">
         <!-- Max HP increases by 35.05 P. Atk. increases by 4.46. -->
         <effects>
-            <stat-modify stat="MAX_HP" mode="DIFF">
+            <stat-modify stat="MAX_HP">
                 <power initial="35.048"/>
             </stat-modify>
-            <stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+            <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="4.459"/>
             </stat-modify>
         </effects>
@@ -146,10 +146,10 @@
     <option id="313" name="o_f_55_1g_40">
         <!-- Max HP increases by 35.05 M. Atk. increases by 5.12. -->
         <effects>
-            <stat-modify stat="MAX_HP" mode="DIFF">
+            <stat-modify stat="MAX_HP">
                 <power initial="35.048"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+            <stat-modify stat="MAGIC_ATTACK">
                 <power initial="5.122"/>
             </stat-modify>
         </effects>
@@ -157,10 +157,10 @@
     <option id="314" name="o_f_55_1g_41">
         <!-- Max HP increases by 35.05 HP Regen increases by 0.19. -->
         <effects>
-            <stat-modify stat="MAX_HP" mode="DIFF">
+            <stat-modify stat="MAX_HP">
                 <power initial="35.048"/>
             </stat-modify>
-            <stat-modify stat="REGENERATE_HP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_HP_RATE">
                 <power initial="0.191646"/>
             </stat-modify>
         </effects>
@@ -168,10 +168,10 @@
     <option id="315" name="o_f_55_1g_42">
         <!-- Max HP increases by 35.05 MP Regen increases by 0.09. -->
         <effects>
-            <stat-modify stat="REGENERATE_MP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_MP_RATE">
                 <power initial="0.087542"/>
             </stat-modify>
-            <stat-modify stat="MAX_HP" mode="DIFF">
+            <stat-modify stat="MAX_HP">
                 <power initial="35.048"/>
             </stat-modify>
         </effects>
@@ -179,10 +179,10 @@
     <option id="316" name="o_f_55_1g_43">
         <!-- Max HP increases by 35.05 CP Regen increases by 0.19. -->
         <effects>
-            <stat-modify stat="REGENERATE_CP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_CP_RATE">
                 <power initial="0.19162"/>
             </stat-modify>
-            <stat-modify stat="MAX_HP" mode="DIFF">
+            <stat-modify stat="MAX_HP">
                 <power initial="35.048"/>
             </stat-modify>
         </effects>
@@ -190,10 +190,10 @@
     <option id="317" name="o_f_55_1g_44">
         <!-- Max HP increases by 35.05 Evasion increases by 0.78. -->
         <effects>
-            <stat-modify stat="EVASION_RATE" mode="DIFF">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="0.777483"/>
             </stat-modify>
-            <stat-modify stat="MAX_HP" mode="DIFF">
+            <stat-modify stat="MAX_HP">
                 <power initial="35.048"/>
             </stat-modify>
         </effects>
@@ -201,10 +201,10 @@
     <option id="318" name="o_f_55_1g_45">
         <!-- Max HP increases by 35.05 Accuracy increases by 0.78. -->
         <effects>
-            <stat-modify stat="ACCURACY" mode="DIFF">
+            <stat-modify stat="ACCURACY">
                 <power initial="0.777483"/>
             </stat-modify>
-            <stat-modify stat="MAX_HP" mode="DIFF">
+            <stat-modify stat="MAX_HP">
                 <power initial="35.048"/>
             </stat-modify>
         </effects>
@@ -212,10 +212,10 @@
     <option id="319" name="o_f_55_1g_46">
         <!-- Max HP increases by 35.05 Critical increases by 8.42. -->
         <effects>
-            <stat-modify stat="CRITICAL_RATE" mode="DIFF">
+            <stat-modify stat="CRITICAL_RATE">
                 <power initial="8.418585924"/>
             </stat-modify>
-            <stat-modify stat="MAX_HP" mode="DIFF">
+            <stat-modify stat="MAX_HP">
                 <power initial="35.048"/>
             </stat-modify>
         </effects>
@@ -223,10 +223,10 @@
     <option id="320" name="o_f_55_1g_47">
         <!-- Max HP increases by 11.13. Max CP increases by 48.4. -->
         <effects>
-            <stat-modify stat="MAX_CP" mode="DIFF">
+            <stat-modify stat="MAX_CP">
                 <power initial="48.4016"/>
             </stat-modify>
-            <stat-modify stat="MAX_MP" mode="DIFF">
+            <stat-modify stat="MAX_MP">
                 <power initial="11.128"/>
             </stat-modify>
         </effects>
@@ -234,10 +234,10 @@
     <option id="321" name="o_f_55_1g_48">
         <!-- Max HP increases by 11.13. P. Atk. increases by 4.46. -->
         <effects>
-            <stat-modify stat="MAX_MP" mode="DIFF">
+            <stat-modify stat="MAX_MP">
                 <power initial="11.128"/>
             </stat-modify>
-            <stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+            <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="4.459"/>
             </stat-modify>
         </effects>
@@ -245,10 +245,10 @@
     <option id="322" name="o_f_55_1g_49">
         <!-- Max HP increases by 11.13. M. Atk. increases by 5.12. -->
         <effects>
-            <stat-modify stat="MAX_MP" mode="DIFF">
+            <stat-modify stat="MAX_MP">
                 <power initial="11.128"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+            <stat-modify stat="MAGIC_ATTACK">
                 <power initial="5.122"/>
             </stat-modify>
         </effects>
@@ -256,10 +256,10 @@
     <option id="323" name="o_f_55_1g_50">
         <!-- Max HP increases by 11.13. HP Regen increases by 0.19. -->
         <effects>
-            <stat-modify stat="MAX_MP" mode="DIFF">
+            <stat-modify stat="MAX_MP">
                 <power initial="11.128"/>
             </stat-modify>
-            <stat-modify stat="REGENERATE_HP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_HP_RATE">
                 <power initial="0.191646"/>
             </stat-modify>
         </effects>
@@ -267,10 +267,10 @@
     <option id="324" name="o_f_55_1g_51">
         <!-- Max HP increases by 11.13. MP Regen increases by 0.09. -->
         <effects>
-            <stat-modify stat="REGENERATE_MP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_MP_RATE">
                 <power initial="0.087542"/>
             </stat-modify>
-            <stat-modify stat="MAX_MP" mode="DIFF">
+            <stat-modify stat="MAX_MP">
                 <power initial="11.128"/>
             </stat-modify>
         </effects>
@@ -278,10 +278,10 @@
     <option id="325" name="o_f_55_1g_52">
         <!-- Max HP increases by 11.13. CP Regen increases by 0.19. -->
         <effects>
-            <stat-modify stat="REGENERATE_CP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_CP_RATE">
                 <power initial="0.19162"/>
             </stat-modify>
-            <stat-modify stat="MAX_MP" mode="DIFF">
+            <stat-modify stat="MAX_MP">
                 <power initial="11.128"/>
             </stat-modify>
         </effects>
@@ -289,10 +289,10 @@
     <option id="326" name="o_f_55_1g_53">
         <!-- Max HP increases by 11.13. Evasion increases by 0.78. -->
         <effects>
-            <stat-modify stat="EVASION_RATE" mode="DIFF">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="0.777483"/>
             </stat-modify>
-            <stat-modify stat="MAX_MP" mode="DIFF">
+            <stat-modify stat="MAX_MP">
                 <power initial="11.128"/>
             </stat-modify>
         </effects>
@@ -300,10 +300,10 @@
     <option id="327" name="o_f_55_1g_54">
         <!-- Max HP increases by 11.13. Accuracy increases by 0.78. -->
         <effects>
-            <stat-modify stat="ACCURACY" mode="DIFF">
+            <stat-modify stat="ACCURACY">
                 <power initial="0.777483"/>
             </stat-modify>
-            <stat-modify stat="MAX_MP" mode="DIFF">
+            <stat-modify stat="MAX_MP">
                 <power initial="11.128"/>
             </stat-modify>
         </effects>
@@ -311,10 +311,10 @@
     <option id="328" name="o_f_55_1g_55">
         <!-- Max HP increases by 11.13. Critical increases by 8.42. -->
         <effects>
-            <stat-modify stat="CRITICAL_RATE" mode="DIFF">
+            <stat-modify stat="CRITICAL_RATE">
                 <power initial="8.418585924"/>
             </stat-modify>
-            <stat-modify stat="MAX_MP" mode="DIFF">
+            <stat-modify stat="MAX_MP">
                 <power initial="11.128"/>
             </stat-modify>
         </effects>
@@ -322,10 +322,10 @@
     <option id="329" name="o_f_55_1g_56">
         <!-- Max CP increases by 48.4. P. Atk. increases by 4.46. -->
         <effects>
-            <stat-modify stat="MAX_CP" mode="DIFF">
+            <stat-modify stat="MAX_CP">
                 <power initial="48.4016"/>
             </stat-modify>
-            <stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+            <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="4.459"/>
             </stat-modify>
         </effects>
@@ -333,10 +333,10 @@
     <option id="330" name="o_f_55_1g_57">
         <!-- Max CP increases by 48.4. M. Atk. increases by 5.12. -->
         <effects>
-            <stat-modify stat="MAX_CP" mode="DIFF">
+            <stat-modify stat="MAX_CP">
                 <power initial="48.4016"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+            <stat-modify stat="MAGIC_ATTACK">
                 <power initial="5.122"/>
             </stat-modify>
         </effects>
@@ -344,10 +344,10 @@
     <option id="331" name="o_f_55_1g_58">
         <!-- Max CP increases by 48.4. HP Regen increases by 0.19. -->
         <effects>
-            <stat-modify stat="MAX_CP" mode="DIFF">
+            <stat-modify stat="MAX_CP">
                 <power initial="48.4016"/>
             </stat-modify>
-            <stat-modify stat="REGENERATE_HP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_HP_RATE">
                 <power initial="0.191646"/>
             </stat-modify>
         </effects>
@@ -355,10 +355,10 @@
     <option id="332" name="o_f_55_1g_59">
         <!-- Max CP increases by 48.4. MP Regen increases by 0.09. -->
         <effects>
-            <stat-modify stat="REGENERATE_MP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_MP_RATE">
                 <power initial="0.087542"/>
             </stat-modify>
-            <stat-modify stat="MAX_CP" mode="DIFF">
+            <stat-modify stat="MAX_CP">
                 <power initial="48.4016"/>
             </stat-modify>
         </effects>
@@ -366,10 +366,10 @@
     <option id="333" name="o_f_55_1g_60">
         <!-- Max CP increases by 48.4. CP Regen increases by 0.19. -->
         <effects>
-            <stat-modify stat="REGENERATE_CP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_CP_RATE">
                 <power initial="0.19162"/>
             </stat-modify>
-            <stat-modify stat="MAX_CP" mode="DIFF">
+            <stat-modify stat="MAX_CP">
                 <power initial="48.4016"/>
             </stat-modify>
         </effects>
@@ -377,10 +377,10 @@
     <option id="334" name="o_f_55_1g_61">
         <!-- Max CP increases by 48.4. Evasion increases by 0.78. -->
         <effects>
-            <stat-modify stat="EVASION_RATE" mode="DIFF">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="0.777483"/>
             </stat-modify>
-            <stat-modify stat="MAX_CP" mode="DIFF">
+            <stat-modify stat="MAX_CP">
                 <power initial="48.4016"/>
             </stat-modify>
         </effects>
@@ -388,10 +388,10 @@
     <option id="335" name="o_f_55_1g_62">
         <!-- Max CP increases by 48.4. Accuracy increases by 0.78. -->
         <effects>
-            <stat-modify stat="ACCURACY" mode="DIFF">
+            <stat-modify stat="ACCURACY">
                 <power initial="0.777483"/>
             </stat-modify>
-            <stat-modify stat="MAX_CP" mode="DIFF">
+            <stat-modify stat="MAX_CP">
                 <power initial="48.4016"/>
             </stat-modify>
         </effects>
@@ -399,10 +399,10 @@
     <option id="336" name="o_f_55_1g_63">
         <!-- Max CP increases by 48.4. Critical increases by 8.42. -->
         <effects>
-            <stat-modify stat="CRITICAL_RATE" mode="DIFF">
+            <stat-modify stat="CRITICAL_RATE">
                 <power initial="8.418585924"/>
             </stat-modify>
-            <stat-modify stat="MAX_CP" mode="DIFF">
+            <stat-modify stat="MAX_CP">
                 <power initial="48.4016"/>
             </stat-modify>
         </effects>
@@ -410,10 +410,10 @@
     <option id="337" name="o_f_55_1g_64">
         <!-- P. Atk. increases by 4.46. M. Atk. increases by 5.12. -->
         <effects>
-            <stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+            <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="4.459"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+            <stat-modify stat="MAGIC_ATTACK">
                 <power initial="5.122"/>
             </stat-modify>
         </effects>
@@ -421,10 +421,10 @@
     <option id="338" name="o_f_55_1g_65">
         <!-- P. Atk. increases by 4.46. HP Regen increases by 0.19. -->
         <effects>
-            <stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+            <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="4.459"/>
             </stat-modify>
-            <stat-modify stat="REGENERATE_HP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_HP_RATE">
                 <power initial="0.191646"/>
             </stat-modify>
         </effects>
@@ -432,10 +432,10 @@
     <option id="339" name="o_f_55_1g_66">
         <!-- P. Atk. increases by 4.46. MP Regen increases by 0.09. -->
         <effects>
-            <stat-modify stat="REGENERATE_MP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_MP_RATE">
                 <power initial="0.087542"/>
             </stat-modify>
-            <stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+            <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="4.459"/>
             </stat-modify>
         </effects>
@@ -443,10 +443,10 @@
     <option id="340" name="o_f_55_1g_67">
         <!-- P. Atk. increases by 4.46. CP Regen increases by 0.19. -->
         <effects>
-            <stat-modify stat="REGENERATE_CP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_CP_RATE">
                 <power initial="0.19162"/>
             </stat-modify>
-            <stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+            <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="4.459"/>
             </stat-modify>
         </effects>
@@ -454,10 +454,10 @@
     <option id="341" name="o_f_55_1g_68">
         <!-- P. Atk. increases by 4.46. Evasion increases by 0.78. -->
         <effects>
-            <stat-modify stat="EVASION_RATE" mode="DIFF">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="0.777483"/>
             </stat-modify>
-            <stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+            <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="4.459"/>
             </stat-modify>
         </effects>
@@ -465,10 +465,10 @@
     <option id="342" name="o_f_55_1g_69">
         <!-- P. Atk. increases by 4.46. Accuracy increases by 0.78. -->
         <effects>
-            <stat-modify stat="ACCURACY" mode="DIFF">
+            <stat-modify stat="ACCURACY">
                 <power initial="0.777483"/>
             </stat-modify>
-            <stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+            <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="4.459"/>
             </stat-modify>
         </effects>
@@ -476,10 +476,10 @@
     <option id="343" name="o_f_55_1g_70">
         <!-- P. Atk. increases by 4.46. Critical increases by 8.42. -->
         <effects>
-            <stat-modify stat="CRITICAL_RATE" mode="DIFF">
+            <stat-modify stat="CRITICAL_RATE">
                 <power initial="8.418585924"/>
             </stat-modify>
-            <stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+            <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="4.459"/>
             </stat-modify>
         </effects>
@@ -487,10 +487,10 @@
     <option id="344" name="o_f_55_1g_71">
         <!-- M. Atk. increases by 5.12. HP Regen increases by 0.19. -->
         <effects>
-            <stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+            <stat-modify stat="MAGIC_ATTACK">
                 <power initial="5.122"/>
             </stat-modify>
-            <stat-modify stat="REGENERATE_HP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_HP_RATE">
                 <power initial="0.191646"/>
             </stat-modify>
         </effects>
@@ -498,10 +498,10 @@
     <option id="345" name="o_f_55_1g_72">
         <!-- M. Atk. increases by 5.12. MP Regen increases by 0.09. -->
         <effects>
-            <stat-modify stat="REGENERATE_MP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_MP_RATE">
                 <power initial="0.087542"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+            <stat-modify stat="MAGIC_ATTACK">
                 <power initial="5.122"/>
             </stat-modify>
         </effects>
@@ -509,10 +509,10 @@
     <option id="346" name="o_f_55_1g_73">
         <!-- M. Atk. increases by 5.12. CP Regen increases by 0.19. -->
         <effects>
-            <stat-modify stat="REGENERATE_CP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_CP_RATE">
                 <power initial="0.19162"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+            <stat-modify stat="MAGIC_ATTACK">
                 <power initial="5.122"/>
             </stat-modify>
         </effects>
@@ -520,10 +520,10 @@
     <option id="347" name="o_f_55_1g_74">
         <!-- M. Atk. increases by 5.12. Evasion increases by 0.78. -->
         <effects>
-            <stat-modify stat="EVASION_RATE" mode="DIFF">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="0.777483"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+            <stat-modify stat="MAGIC_ATTACK">
                 <power initial="5.122"/>
             </stat-modify>
         </effects>
@@ -531,10 +531,10 @@
     <option id="348" name="o_f_55_1g_75">
         <!-- M. Atk. increases by 5.12. Accuracy increases by 0.78. -->
         <effects>
-            <stat-modify stat="ACCURACY" mode="DIFF">
+            <stat-modify stat="ACCURACY">
                 <power initial="0.777483"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+            <stat-modify stat="MAGIC_ATTACK">
                 <power initial="5.122"/>
             </stat-modify>
         </effects>
@@ -542,10 +542,10 @@
     <option id="349" name="o_f_55_1g_76">
         <!-- M. Atk. increases by 5.12. Critical increases by 8.42. -->
         <effects>
-            <stat-modify stat="CRITICAL_RATE" mode="DIFF">
+            <stat-modify stat="CRITICAL_RATE">
                 <power initial="8.418585924"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+            <stat-modify stat="MAGIC_ATTACK">
                 <power initial="5.122"/>
             </stat-modify>
         </effects>
@@ -553,10 +553,10 @@
     <option id="350" name="o_f_55_1g_77">
         <!-- HP Regen increases by 0.19. MP Regen increases by 0.09. -->
         <effects>
-            <stat-modify stat="REGENERATE_MP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_MP_RATE">
                 <power initial="0.087542"/>
             </stat-modify>
-            <stat-modify stat="REGENERATE_HP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_HP_RATE">
                 <power initial="0.191646"/>
             </stat-modify>
         </effects>
@@ -564,10 +564,10 @@
     <option id="351" name="o_f_55_1g_78">
         <!-- HP Regen increases by 0.19. CP Regen increases by 0.19. -->
         <effects>
-            <stat-modify stat="REGENERATE_CP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_CP_RATE">
                 <power initial="0.19162"/>
             </stat-modify>
-            <stat-modify stat="REGENERATE_HP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_HP_RATE">
                 <power initial="0.191646"/>
             </stat-modify>
         </effects>
@@ -575,10 +575,10 @@
     <option id="352" name="o_f_55_1g_79">
         <!-- HP Regen increases by 0.19. Evasion increases by 0.78. -->
         <effects>
-            <stat-modify stat="EVASION_RATE" mode="DIFF">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="0.777483"/>
             </stat-modify>
-            <stat-modify stat="REGENERATE_HP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_HP_RATE">
                 <power initial="0.191646"/>
             </stat-modify>
         </effects>
@@ -586,10 +586,10 @@
     <option id="353" name="o_f_55_1g_80">
         <!-- HP Regen increases by 0.19. Accuracy increases by 0.78. -->
         <effects>
-            <stat-modify stat="ACCURACY" mode="DIFF">
+            <stat-modify stat="ACCURACY">
                 <power initial="0.777483"/>
             </stat-modify>
-            <stat-modify stat="REGENERATE_HP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_HP_RATE">
                 <power initial="0.191646"/>
             </stat-modify>
         </effects>
@@ -597,10 +597,10 @@
     <option id="354" name="o_f_55_1g_81">
         <!-- HP Regen increases by 0.19. Critical increases by 8.42. -->
         <effects>
-            <stat-modify stat="CRITICAL_RATE" mode="DIFF">
+            <stat-modify stat="CRITICAL_RATE">
                 <power initial="8.418585924"/>
             </stat-modify>
-            <stat-modify stat="REGENERATE_HP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_HP_RATE">
                 <power initial="0.191646"/>
             </stat-modify>
         </effects>
@@ -608,10 +608,10 @@
     <option id="355" name="o_f_55_1g_82">
         <!-- MP Regen increases by 0.09. CP Regen increases by 0.19. -->
         <effects>
-            <stat-modify stat="REGENERATE_MP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_MP_RATE">
                 <power initial="0.087542"/>
             </stat-modify>
-            <stat-modify stat="REGENERATE_CP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_CP_RATE">
                 <power initial="0.19162"/>
             </stat-modify>
         </effects>
@@ -619,10 +619,10 @@
     <option id="356" name="o_f_55_1g_83">
         <!-- MP Regen increases by 0.09. Evasion increases by 0.78. -->
         <effects>
-            <stat-modify stat="REGENERATE_MP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_MP_RATE">
                 <power initial="0.087542"/>
             </stat-modify>
-            <stat-modify stat="EVASION_RATE" mode="DIFF">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="0.777483"/>
             </stat-modify>
         </effects>
@@ -630,10 +630,10 @@
     <option id="357" name="o_f_55_1g_84">
         <!-- MP Regen increases by 0.09. Accuracy increases by 0.78. -->
         <effects>
-            <stat-modify stat="REGENERATE_MP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_MP_RATE">
                 <power initial="0.087542"/>
             </stat-modify>
-            <stat-modify stat="ACCURACY" mode="DIFF">
+            <stat-modify stat="ACCURACY">
                 <power initial="0.777483"/>
             </stat-modify>
         </effects>
@@ -641,10 +641,10 @@
     <option id="358" name="o_f_55_1g_85">
         <!-- MP Regen increases by 0.09. Critical increases by 8.42. -->
         <effects>
-            <stat-modify stat="REGENERATE_MP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_MP_RATE">
                 <power initial="0.087542"/>
             </stat-modify>
-            <stat-modify stat="CRITICAL_RATE" mode="DIFF">
+            <stat-modify stat="CRITICAL_RATE">
                 <power initial="8.418585924"/>
             </stat-modify>
         </effects>
@@ -652,10 +652,10 @@
     <option id="359" name="o_f_55_1g_86">
         <!-- CP Regen increases by 0.19. Evasion increases by 0.78. -->
         <effects>
-            <stat-modify stat="REGENERATE_CP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_CP_RATE">
                 <power initial="0.19162"/>
             </stat-modify>
-            <stat-modify stat="EVASION_RATE" mode="DIFF">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="0.777483"/>
             </stat-modify>
         </effects>
@@ -663,10 +663,10 @@
     <option id="360" name="o_f_55_1g_87">
         <!-- CP Regen increases by 0.19. Accuracy increases by 0.78. -->
         <effects>
-            <stat-modify stat="REGENERATE_CP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_CP_RATE">
                 <power initial="0.19162"/>
             </stat-modify>
-            <stat-modify stat="ACCURACY" mode="DIFF">
+            <stat-modify stat="ACCURACY">
                 <power initial="0.777483"/>
             </stat-modify>
         </effects>
@@ -674,10 +674,10 @@
     <option id="361" name="o_f_55_1g_88">
         <!-- CP Regen increases by 0.19. Critical increases by 8.42. -->
         <effects>
-            <stat-modify stat="REGENERATE_CP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_CP_RATE">
                 <power initial="0.19162"/>
             </stat-modify>
-            <stat-modify stat="CRITICAL_RATE" mode="DIFF">
+            <stat-modify stat="CRITICAL_RATE">
                 <power initial="8.418585924"/>
             </stat-modify>
         </effects>
@@ -685,10 +685,10 @@
     <option id="362" name="o_f_55_1g_89">
         <!-- Evasion increases by 0.78. Accuracy increases by 0.78. -->
         <effects>
-            <stat-modify stat="EVASION_RATE" mode="DIFF">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="0.777483"/>
             </stat-modify>
-            <stat-modify stat="ACCURACY" mode="DIFF">
+            <stat-modify stat="ACCURACY">
                 <power initial="0.777483"/>
             </stat-modify>
         </effects>
@@ -696,10 +696,10 @@
     <option id="363" name="o_f_55_1g_90">
         <!-- Evasion increases by 0.78. Critical increases by 8.42. -->
         <effects>
-            <stat-modify stat="EVASION_RATE" mode="DIFF">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="0.777483"/>
             </stat-modify>
-            <stat-modify stat="CRITICAL_RATE" mode="DIFF">
+            <stat-modify stat="CRITICAL_RATE">
                 <power initial="8.418585924"/>
             </stat-modify>
         </effects>
@@ -707,10 +707,10 @@
     <option id="364" name="o_f_55_1g_91">
         <!-- Accuracy increases by 0.78. Critical increases by 8.42. -->
         <effects>
-            <stat-modify stat="ACCURACY" mode="DIFF">
+            <stat-modify stat="ACCURACY">
                 <power initial="0.777483"/>
             </stat-modify>
-            <stat-modify stat="CRITICAL_RATE" mode="DIFF">
+            <stat-modify stat="CRITICAL_RATE">
                 <power initial="8.418585924"/>
             </stat-modify>
         </effects>
@@ -718,7 +718,7 @@
     <option id="365" name="o_f_58_1g_1">
         <!-- P. Def. increases by 18.33. -->
         <effects>
-            <stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="PHYSICAL_DEFENCE">
                 <power initial="18.325"/>
             </stat-modify>
         </effects>
@@ -726,7 +726,7 @@
     <option id="366" name="o_f_58_1g_2">
         <!-- M. Def. increases by 14.73. -->
         <effects>
-            <stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="MAGICAL_DEFENCE">
                 <power initial="14.725"/>
             </stat-modify>
         </effects>
@@ -734,7 +734,7 @@
     <option id="367" name="o_f_58_1g_3">
         <!-- Max HP increases by 73.6 -->
         <effects>
-            <stat-modify stat="MAX_HP" mode="DIFF">
+            <stat-modify stat="MAX_HP">
                 <power initial="73.6"/>
             </stat-modify>
         </effects>
@@ -742,7 +742,7 @@
     <option id="368" name="o_f_58_1g_4">
         <!-- Max HP increases by 23.5. -->
         <effects>
-            <stat-modify stat="MAX_MP" mode="DIFF">
+            <stat-modify stat="MAX_MP">
                 <power initial="23.5"/>
             </stat-modify>
         </effects>
@@ -750,7 +750,7 @@
     <option id="369" name="o_f_58_1g_5">
         <!-- Max CP increases by 101.63. -->
         <effects>
-            <stat-modify stat="MAX_CP" mode="DIFF">
+            <stat-modify stat="MAX_CP">
                 <power initial="101.625"/>
             </stat-modify>
         </effects>
@@ -758,7 +758,7 @@
     <option id="370" name="o_f_58_1g_6">
         <!-- P. Atk. increases by 9.78. -->
         <effects>
-            <stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+            <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="9.775"/>
             </stat-modify>
         </effects>
@@ -766,7 +766,7 @@
     <option id="371" name="o_f_58_1g_7">
         <!-- M. Atk. increases by 11.25. -->
         <effects>
-            <stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+            <stat-modify stat="MAGIC_ATTACK">
                 <power initial="11.25"/>
             </stat-modify>
         </effects>
@@ -774,7 +774,7 @@
     <option id="372" name="o_f_58_1g_8">
         <!-- HP Regen increases by 0.38. -->
         <effects>
-            <stat-modify stat="REGENERATE_HP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_HP_RATE">
                 <power initial="0.376"/>
             </stat-modify>
         </effects>
@@ -782,7 +782,7 @@
     <option id="373" name="o_f_58_1g_9">
         <!-- MP Regen increases by 0.17. -->
         <effects>
-            <stat-modify stat="REGENERATE_MP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_MP_RATE">
                 <power initial="0.1705"/>
             </stat-modify>
         </effects>
@@ -790,7 +790,7 @@
     <option id="374" name="o_f_58_1g_10">
         <!-- CP Regen increases by 0.38. -->
         <effects>
-            <stat-modify stat="REGENERATE_CP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_CP_RATE">
                 <power initial="0.376"/>
             </stat-modify>
         </effects>
@@ -798,7 +798,7 @@
     <option id="375" name="o_f_58_1g_11">
         <!-- Evasion increases by 1.74. -->
         <effects>
-            <stat-modify stat="EVASION_RATE" mode="DIFF">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="1.735566"/>
             </stat-modify>
         </effects>
@@ -806,7 +806,7 @@
     <option id="376" name="o_f_58_1g_12">
         <!-- Accuracy increases by 1.74. -->
         <effects>
-            <stat-modify stat="ACCURACY" mode="DIFF">
+            <stat-modify stat="ACCURACY">
                 <power initial="1.735566"/>
             </stat-modify>
         </effects>
@@ -814,7 +814,7 @@
     <option id="377" name="o_f_58_1g_13">
         <!-- Critical increases by 18.79. -->
         <effects>
-            <stat-modify stat="CRITICAL_RATE" mode="DIFF">
+            <stat-modify stat="CRITICAL_RATE">
                 <power initial="18.792708648"/>
             </stat-modify>
         </effects>
@@ -822,10 +822,10 @@
     <option id="378" name="o_f_58_1g_14">
         <!-- P. Def. increases by 9.53. M. Def. increases by 7.07. -->
         <effects>
-            <stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="PHYSICAL_DEFENCE">
                 <power initial="9.529"/>
             </stat-modify>
-            <stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="MAGICAL_DEFENCE">
                 <power initial="7.068"/>
             </stat-modify>
         </effects>
@@ -833,10 +833,10 @@
     <option id="379" name="o_f_58_1g_15">
         <!-- P. Def. increases by 9.53. Max HP increases by 35.33 -->
         <effects>
-            <stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="PHYSICAL_DEFENCE">
                 <power initial="9.529"/>
             </stat-modify>
-            <stat-modify stat="MAX_HP" mode="DIFF">
+            <stat-modify stat="MAX_HP">
                 <power initial="35.328"/>
             </stat-modify>
         </effects>
@@ -844,10 +844,10 @@
     <option id="380" name="o_f_58_1g_16">
         <!-- P. Def. increases by 9.53. Max HP increases by 11.28. -->
         <effects>
-            <stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="PHYSICAL_DEFENCE">
                 <power initial="9.529"/>
             </stat-modify>
-            <stat-modify stat="MAX_MP" mode="DIFF">
+            <stat-modify stat="MAX_MP">
                 <power initial="11.28"/>
             </stat-modify>
         </effects>
@@ -855,10 +855,10 @@
     <option id="381" name="o_f_58_1g_17">
         <!-- P. Def. increases by 9.53. Max CP increases by 48.78. -->
         <effects>
-            <stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="PHYSICAL_DEFENCE">
                 <power initial="9.529"/>
             </stat-modify>
-            <stat-modify stat="MAX_CP" mode="DIFF">
+            <stat-modify stat="MAX_CP">
                 <power initial="48.78"/>
             </stat-modify>
         </effects>
@@ -866,10 +866,10 @@
     <option id="382" name="o_f_58_1g_18">
         <!-- P. Def. increases by 9.53. P. Atk. increases by 4.69. -->
         <effects>
-            <stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="PHYSICAL_DEFENCE">
                 <power initial="9.529"/>
             </stat-modify>
-            <stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+            <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="4.692"/>
             </stat-modify>
         </effects>
@@ -877,10 +877,10 @@
     <option id="383" name="o_f_58_1g_19">
         <!-- P. Def. increases by 9.53. M. Atk. increases by 5.4. -->
         <effects>
-            <stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="PHYSICAL_DEFENCE">
                 <power initial="9.529"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+            <stat-modify stat="MAGIC_ATTACK">
                 <power initial="5.4"/>
             </stat-modify>
         </effects>
@@ -888,10 +888,10 @@
     <option id="384" name="o_f_58_1g_20">
         <!-- P. Def. increases by 9.53. HP Regen increases by 0.18. -->
         <effects>
-            <stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="PHYSICAL_DEFENCE">
                 <power initial="9.529"/>
             </stat-modify>
-            <stat-modify stat="REGENERATE_HP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_HP_RATE">
                 <power initial="0.18048"/>
             </stat-modify>
         </effects>
@@ -899,10 +899,10 @@
     <option id="385" name="o_f_58_1g_21">
         <!-- P. Def. increases by 9.53. MP Regen increases by 0.08. -->
         <effects>
-            <stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="PHYSICAL_DEFENCE">
                 <power initial="9.529"/>
             </stat-modify>
-            <stat-modify stat="REGENERATE_MP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_MP_RATE">
                 <power initial="0.08184"/>
             </stat-modify>
         </effects>
@@ -910,10 +910,10 @@
     <option id="386" name="o_f_58_1g_22">
         <!-- P. Def. increases by 9.53. CP Regen increases by 0.18. -->
         <effects>
-            <stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="PHYSICAL_DEFENCE">
                 <power initial="9.529"/>
             </stat-modify>
-            <stat-modify stat="REGENERATE_CP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_CP_RATE">
                 <power initial="0.18048"/>
             </stat-modify>
         </effects>
@@ -921,10 +921,10 @@
     <option id="387" name="o_f_58_1g_23">
         <!-- P. Def. increases by 9.53. Evasion increases by 0.82. -->
         <effects>
-            <stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="PHYSICAL_DEFENCE">
                 <power initial="9.529"/>
             </stat-modify>
-            <stat-modify stat="EVASION_RATE" mode="DIFF">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="0.824394"/>
             </stat-modify>
         </effects>
@@ -932,10 +932,10 @@
     <option id="388" name="o_f_58_1g_24">
         <!-- P. Def. increases by 9.53. Accuracy increases by 0.82. -->
         <effects>
-            <stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="PHYSICAL_DEFENCE">
                 <power initial="9.529"/>
             </stat-modify>
-            <stat-modify stat="ACCURACY" mode="DIFF">
+            <stat-modify stat="ACCURACY">
                 <power initial="0.824394"/>
             </stat-modify>
         </effects>
@@ -943,10 +943,10 @@
     <option id="389" name="o_f_58_1g_25">
         <!-- P. Def. increases by 9.53. Critical increases by 8.93. -->
         <effects>
-            <stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="PHYSICAL_DEFENCE">
                 <power initial="9.529"/>
             </stat-modify>
-            <stat-modify stat="CRITICAL_RATE" mode="DIFF">
+            <stat-modify stat="CRITICAL_RATE">
                 <power initial="8.926538232"/>
             </stat-modify>
         </effects>
@@ -954,10 +954,10 @@
     <option id="390" name="o_f_58_1g_26">
         <!-- M. Def. increases by 7.66. Max HP increases by 35.33 -->
         <effects>
-            <stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="MAGICAL_DEFENCE">
                 <power initial="7.657"/>
             </stat-modify>
-            <stat-modify stat="MAX_HP" mode="DIFF">
+            <stat-modify stat="MAX_HP">
                 <power initial="35.328"/>
             </stat-modify>
         </effects>
@@ -965,10 +965,10 @@
     <option id="391" name="o_f_58_1g_27">
         <!-- M. Def. increases by 7.66. Max HP increases by 11.28. -->
         <effects>
-            <stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="MAGICAL_DEFENCE">
                 <power initial="7.657"/>
             </stat-modify>
-            <stat-modify stat="MAX_MP" mode="DIFF">
+            <stat-modify stat="MAX_MP">
                 <power initial="11.28"/>
             </stat-modify>
         </effects>
@@ -976,10 +976,10 @@
     <option id="392" name="o_f_58_1g_28">
         <!-- M. Def. increases by 7.66. Max CP increases by 48.78. -->
         <effects>
-            <stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="MAGICAL_DEFENCE">
                 <power initial="7.657"/>
             </stat-modify>
-            <stat-modify stat="MAX_CP" mode="DIFF">
+            <stat-modify stat="MAX_CP">
                 <power initial="48.78"/>
             </stat-modify>
         </effects>
@@ -987,10 +987,10 @@
     <option id="393" name="o_f_58_1g_29">
         <!-- M. Def. increases by 7.66. P. Atk. increases by 4.69. -->
         <effects>
-            <stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="MAGICAL_DEFENCE">
                 <power initial="7.657"/>
             </stat-modify>
-            <stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+            <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="4.692"/>
             </stat-modify>
         </effects>
@@ -998,10 +998,10 @@
     <option id="394" name="o_f_58_1g_30">
         <!-- M. Def. increases by 7.66. M. Atk. increases by 5.4. -->
         <effects>
-            <stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="MAGICAL_DEFENCE">
                 <power initial="7.657"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+            <stat-modify stat="MAGIC_ATTACK">
                 <power initial="5.4"/>
             </stat-modify>
         </effects>
@@ -1009,10 +1009,10 @@
     <option id="395" name="o_f_58_1g_31">
         <!-- M. Def. increases by 7.66. HP Regen increases by 0.18. -->
         <effects>
-            <stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="MAGICAL_DEFENCE">
                 <power initial="7.657"/>
             </stat-modify>
-            <stat-modify stat="REGENERATE_HP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_HP_RATE">
                 <power initial="0.18048"/>
             </stat-modify>
         </effects>
@@ -1020,10 +1020,10 @@
     <option id="396" name="o_f_58_1g_32">
         <!-- M. Def. increases by 7.66. MP Regen increases by 0.08. -->
         <effects>
-            <stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="MAGICAL_DEFENCE">
                 <power initial="7.657"/>
             </stat-modify>
-            <stat-modify stat="REGENERATE_MP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_MP_RATE">
                 <power initial="0.08184"/>
             </stat-modify>
         </effects>
@@ -1031,10 +1031,10 @@
     <option id="397" name="o_f_58_1g_33">
         <!-- M. Def. increases by 7.66. CP Regen increases by 0.18. -->
         <effects>
-            <stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="MAGICAL_DEFENCE">
                 <power initial="7.657"/>
             </stat-modify>
-            <stat-modify stat="REGENERATE_CP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_CP_RATE">
                 <power initial="0.18048"/>
             </stat-modify>
         </effects>
@@ -1042,10 +1042,10 @@
     <option id="398" name="o_f_58_1g_34">
         <!-- M. Def. increases by 7.66. Evasion increases by 0.82. -->
         <effects>
-            <stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="MAGICAL_DEFENCE">
                 <power initial="7.657"/>
             </stat-modify>
-            <stat-modify stat="EVASION_RATE" mode="DIFF">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="0.824394"/>
             </stat-modify>
         </effects>
@@ -1053,10 +1053,10 @@
     <option id="399" name="o_f_58_1g_35">
         <!-- M. Def. increases by 7.66. Accuracy increases by 0.82. -->
         <effects>
-            <stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="MAGICAL_DEFENCE">
                 <power initial="7.657"/>
             </stat-modify>
-            <stat-modify stat="ACCURACY" mode="DIFF">
+            <stat-modify stat="ACCURACY">
                 <power initial="0.824394"/>
             </stat-modify>
         </effects>

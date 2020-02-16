@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="11316" name="Summon Soulshots" max-level="1" action="A1" type="MAGIC">
+	<skill id="11316" name="Summon Soulshots" action="A1" type="MAGIC">
 	<!-- With a 100%% probability summons 30 Beast Soulshots. Consumes 4 Soulstone(s). -->
 		<icon initial="icon.skill11316"/>
 		<attributes static-reuse="true" magic-critical-rate="5.0" >
@@ -21,10 +21,10 @@
 			<encumbered slots="10" weight="10"/>
 		</conditions>
 		<effects>
-			<restoration item="6645" count="20" enchant="0"/>
+			<restoration item="6645" count="20"/>
 		</effects>
 	</skill>
-	<skill id="11317" name="Summon Mass Soulshot" max-level="1" action="A1" type="MAGIC">
+	<skill id="11317" name="Summon Mass Soulshot" action="A1" type="MAGIC">
 	<!-- With a 100%% probability summons 300 Best Soulshots. Consumes 40 Soulstones. -->
 		<icon initial="BranchIcon.Icon.g_bm_antaras_pocket_i00"/>
 		<attributes >
@@ -38,7 +38,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="11318" name="Summon Spiritshots" max-level="1" action="A1" type="MAGIC">
+	<skill id="11318" name="Summon Spiritshots" action="A1" type="MAGIC">
 	<!-- With a 100%% probability summons 24 Beast Spiritshots. Consumes 4 Spirit Ore. -->
 		<icon initial="icon.skill11316"/>
 		<attributes static-reuse="true" magic-critical-rate="5.0" >
@@ -59,10 +59,10 @@
 			<encumbered slots="10" weight="10"/>
 		</conditions>
 		<effects>
-			<restoration item="6646" count="16" enchant="0"/>
+			<restoration item="6646" count="16"/>
 		</effects>
 	</skill>
-	<skill id="11319" name="Summon Mass Spiritshot" max-level="1" action="A1" type="MAGIC">
+	<skill id="11319" name="Summon Mass Spiritshot" action="A1" type="MAGIC">
 	<!-- With a 100%% probability summons 300 Best Spiritshots. Consumes 40 Spirit Ores. -->
 		<icon initial="BranchIcon.Icon.g_bm_antaras_pocket_i00"/>
 		<attributes >

@@ -295,7 +295,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54009" name="Agathion - Taurus" max-level="1" action="A1">
+	<skill id="54009" name="Agathion - Taurus" action="A1">
 	<!-- Releases the Agathion's seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -305,7 +305,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54010" name="Agathion - Leo" max-level="1" action="A1">
+	<skill id="54010" name="Agathion - Leo" action="A1">
 	<!-- Releases the Agathion's seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -315,7 +315,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54011" name="Agathion - Scorpio" max-level="1" action="A1">
+	<skill id="54011" name="Agathion - Scorpio" action="A1">
 	<!-- Releases the Agathion's seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -325,7 +325,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54012" name="Agathion - Sagittarius" max-level="1" action="A1">
+	<skill id="54012" name="Agathion - Sagittarius" action="A1">
 	<!-- Releases the Agathion's seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -335,7 +335,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54013" name="Agathion - Virgo" max-level="1" action="A1">
+	<skill id="54013" name="Agathion - Virgo" action="A1">
 	<!-- Releases the Agathion's seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -345,7 +345,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54014" name="Agathion - Aquarius" max-level="1" action="A1">
+	<skill id="54014" name="Agathion - Aquarius" action="A1">
 	<!-- Releases the Agathion's seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -355,7 +355,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54015" name="Agathion - Capricorn" max-level="1" action="A1">
+	<skill id="54015" name="Agathion - Capricorn" action="A1">
 	<!-- Releases the Agathion's seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -365,7 +365,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54016" name="Agathion - Libra" max-level="1" action="A1">
+	<skill id="54016" name="Agathion - Libra" action="A1">
 	<!-- Releases the Agathion's seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -375,7 +375,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54017" name="Agathion - Gemini" max-level="1" action="A1">
+	<skill id="54017" name="Agathion - Gemini" action="A1">
 	<!-- Releases the Agathion's seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -385,7 +385,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54018" name="Seal Agathion" max-level="1" action="A1">
+	<skill id="54018" name="Seal Agathion" action="A1">
 	<!-- Dismiss a summoned Agathion. -->
 		<icon initial="icon.etc_unsummon_aga_agit_i01"/>
 		<attributes >
@@ -410,7 +410,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54020" name="Bracelet of Power" max-level="1" >
+	<skill id="54020" name="Bracelet of Power">
 	<!-- HP Recovery Bonus/MP Recovery Bonus +15%%, P. Accuracy +2, M. Accuracy +2 and Weight Limit +10,000. -->
 		<icon initial="icon.ertheia_bracelet_i01"/>
 		<attributes property="MAGIC" >
@@ -612,7 +612,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="54028" name="Spirit's Blessing" max-level="1" action="A2">
+	<skill id="54028" name="Spirit's Blessing" action="A2">
 	<!-- For 20 minutes obtain extra Hunting XP +20%%. -->
 		<icon initial="icon.elemental_bless_scrl_i00"/>
 		<attributes property="PHYSIC" stay-after-death="true" >
@@ -675,7 +675,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="50.0">
 					<value level="3">100.0</value>
 					<value level="5">150.0</value>
@@ -685,7 +685,7 @@
 				</power>
 			</vital-stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="2">1.0</value>
 					<value level="4">2.0</value>
 					<value level="6">3.0</value>
@@ -719,7 +719,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="50.0">
 					<value level="3">100.0</value>
 					<value level="5">150.0</value>
@@ -729,7 +729,7 @@
 				</power>
 			</vital-stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="2">1.0</value>
 					<value level="4">2.0</value>
 					<value level="6">3.0</value>
@@ -763,7 +763,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="50.0">
 					<value level="3">100.0</value>
 					<value level="5">150.0</value>
@@ -773,7 +773,7 @@
 				</power>
 			</vital-stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="2">1.0</value>
 					<value level="4">2.0</value>
 					<value level="6">3.0</value>
@@ -807,7 +807,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="50.0">
 					<value level="3">100.0</value>
 					<value level="5">150.0</value>
@@ -817,7 +817,7 @@
 				</power>
 			</vital-stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="2">1.0</value>
 					<value level="4">2.0</value>
 					<value level="6">3.0</value>
@@ -909,7 +909,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54038" name="Sayha's Cloak" max-level="1" >
+	<skill id="54038" name="Sayha's Cloak">
 	<!-- Increases Max HP/MP +3%. -->
 		<icon initial="BranchSys2.br_wing_of_sylphide_i00"/>
 		<attributes property="MAGIC" >
@@ -978,7 +978,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54042" name="Frintezza's Necklace - Special Ability" max-level="1" debuff="true" action="A1">
+	<skill id="54042" name="Frintezza's Necklace - Special Ability" debuff="true" action="A1">
 	<!-- For 2 minutes, nearby enemies' P. Skill/M. Skill Cooldown +100%. -->
 		<icon initial="icon.accessory_necklace_of_frintessa_i05"/>
 		<attributes property="PHYSIC" >
@@ -991,7 +991,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54043" name="Rapid Wind" max-level="1" action="A1">
+	<skill id="54043" name="Rapid Wind" action="A1">
 	<!-- For 5 seconds, P. Def. +1000, M. Def. +1000, Movement Speed +50. -->
 		<icon initial="icon.skill30008"/>
 		<attributes property="PHYSIC" >
@@ -1002,7 +1002,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54044" name="Sayha's Supreme Cloak" max-level="1" >
+	<skill id="54044" name="Sayha's Supreme Cloak">
 	<!-- Max HP/Max MP +15%, XP/SP Gain +30%, P. Def. +11%, M. Def. +6%, P. Critical Damage/M. Critical Damage +15%, Critical Damage Taken -10%. -->
 		<icon initial="BranchSys2.br_wing_of_sylphide_i00"/>
 		<attributes property="MAGIC" >
@@ -1033,7 +1033,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54046" name="Aden Talisman" max-level="1" >
+	<skill id="54046" name="Aden Talisman">
 	<!-- Talisman for Aden Warriors -->
 		<icon initial="icon.bm_aden_talisman"/>
 		<attributes property="MAGIC" >
@@ -1085,7 +1085,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54049" name="Wish of Aden" max-level="1" action="A1">
+	<skill id="54049" name="Wish of Aden" action="A1">
 	<!-- none -->
 		<icon initial="icon.talisman_of_aden_fire"/>
 		<attributes >
@@ -1095,7 +1095,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54050" name="Scroll of Escape: High Priest Orven" max-level="1" action="A1">
+	<skill id="54050" name="Scroll of Escape: High Priest Orven" action="A1">
 	<!-- A magic scroll that teleports you to High Priest Orven in the Town of Aden. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1105,7 +1105,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54051" name="Magic Lamp Acceleration Potion - 1-hour" max-level="1" action="A1">
+	<skill id="54051" name="Magic Lamp Acceleration Potion - 1-hour" action="A1">
 	<!-- Magic Lamp recharge speed +20%% -->
 		<icon initial="icon.etc_recall_potion2"/>
 		<attributes property="PHYSIC" >
@@ -1116,7 +1116,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54052" name="Scroll: PK - Event" max-level="1" action="A1">
+	<skill id="54052" name="Scroll: PK - Event" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1128,7 +1128,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54053" name="Player Commendation Treasure Chest" max-level="1" action="A1">
+	<skill id="54053" name="Player Commendation Treasure Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1140,7 +1140,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54054" name="Player Commendation Points" max-level="1" action="A1">
+	<skill id="54054" name="Player Commendation Points" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1152,7 +1152,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54055" name="Player Commendation Points" max-level="1" action="A1">
+	<skill id="54055" name="Player Commendation Points" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1164,7 +1164,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54056" name="Player Commendation Points" max-level="1" action="A1">
+	<skill id="54056" name="Player Commendation Points" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1176,7 +1176,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54057" name="Player Commendation Points" max-level="1" action="A1">
+	<skill id="54057" name="Player Commendation Points" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1188,7 +1188,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54058" name="Player Commendation Points" max-level="1" action="A1">
+	<skill id="54058" name="Player Commendation Points" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1200,7 +1200,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54059" name="Player Commendation Points" max-level="1" action="A1">
+	<skill id="54059" name="Player Commendation Points" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1212,7 +1212,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54060" name="Player Commendation Points" max-level="1" action="A1">
+	<skill id="54060" name="Player Commendation Points" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1224,7 +1224,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54061" name="Player Commendation Points" max-level="1" action="A1">
+	<skill id="54061" name="Player Commendation Points" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1236,7 +1236,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54062" name="Player Commendation Points" max-level="1" action="A1">
+	<skill id="54062" name="Player Commendation Points" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1248,7 +1248,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54063" name="Player Commendation Points" max-level="1" action="A1">
+	<skill id="54063" name="Player Commendation Points" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1260,7 +1260,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54064" name="Player Commendation Points" max-level="1" action="A1">
+	<skill id="54064" name="Player Commendation Points" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1272,7 +1272,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54065" name="Sayha's Grace Kit" max-level="1" action="A1">
+	<skill id="54065" name="Sayha's Grace Kit" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1284,7 +1284,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54066" name="Red-Nosed Rudolph's Blessing" max-level="1" action="A1">
+	<skill id="54066" name="Red-Nosed Rudolph's Blessing" action="A1">
 	<!-- For 5 minutes, P. Atk./M. Atk. +150, P. Def./M. Def./Atk. Spd./Casting Spd. +100, Movement Speed +10, HP Recovery Bonus/MP Recovery Bonus +30%%. Changes appearance to Rudolph Outfit. The effect doesn't disappear upon death or restart. -->
 		<icon initial="BranchSys2.icon.event_lbracelet_rudolph"/>
 		<attributes property="PHYSIC" >
@@ -1294,7 +1294,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54067" name="Sayha's Storm Lv. 3 - 1-hour" max-level="1" action="A1">
+	<skill id="54067" name="Sayha's Storm Lv. 3 - 1-hour" action="A1">
 	<!-- Sayha's Grace Consumption +100%% and XP/SP Gain +200%% when hunting monsters. The effect remains active even after death. Duration 1 hour. Cooldown 1 minute. -->
 		<icon initial="icon.bm_sayha_storm"/>
 		<attributes property="PHYSIC" >
@@ -1305,7 +1305,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54068" name="Sayha's Gust - Event" max-level="1" action="A1">
+	<skill id="54068" name="Sayha's Gust - Event" action="A1">
 	<!-- Sayha's Grace Consumption +100%% and XP/SP Gain +300%% while hunting monsters. The effect remains active even after death. Duration 20 minutes. Cooldown 1 minute. -->
 		<icon initial="icon.ev_magic_flame_game_wind2"/>
 		<attributes property="PHYSIC" >
@@ -1316,7 +1316,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54069" name="Magic Flame - Event" max-level="1" action="A1">
+	<skill id="54069" name="Magic Flame - Event" action="A1">
 	<!-- Magic Lamp recharge speed +100%% -->
 		<icon initial="icon.bm_soul_of_shilen"/>
 		<attributes property="PHYSIC" >
@@ -1327,10 +1327,10 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54070" name="Sayha's Buff Scroll - Event" max-level="1" action="A2">
+	<skill id="54070" name="Sayha's Buff Scroll - Event" action="A2">
 	<!-- A mysterious scroll that triggers various buffs -->
 		<icon initial="icon.etc_ssq_i00"/>
-		<attributes magic-critical-rate="5.0" stay-after-death="true" dispellable="false" >
+		<attributes magic-critical-rate="5.0" stay-after-death="true">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
@@ -1353,10 +1353,10 @@
 			</call-skill>
 		</effects>
 	</skill>
-	<skill id="54071" name="Battle Scroll" max-level="1" action="A2">
+	<skill id="54071" name="Battle Scroll" action="A2">
 	<!-- For 20 minutes, P. Atk. +200, M. Atk. +350, P. Critical/M. Critical Rate +30, Atk. Spd./Casting Spd. +50, P. Def./M. Def. +200, Max HP/Max MP/Max CP +500. The effect remains active even after death. -->
 		<icon initial="icon.ev_charge_scroll"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" dispellable="false" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
@@ -1376,42 +1376,42 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK">
 				<power initial="200.0"/>
 			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK">
 				<power initial="350.0"/>
 			</stat-modify>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="DIFF">
+			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0">
 				<power initial="30.0"/>
 			</stat-hp-based>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
 				<power initial="30.0"/>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED">
 				<power initial="50.0"/>
 			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK_SPEED">
 				<power initial="50.0"/>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="200.0"/>
 			</stat-modify>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="200.0"/>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="500.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="500.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_CP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_CP">
 				<power initial="500.0"/>
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="54072" name="Treasure Chest of Aden" max-level="1" action="A1">
+	<skill id="54072" name="Treasure Chest of Aden" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1423,7 +1423,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54073" name="Nuia's Gift" max-level="1" action="A1">
+	<skill id="54073" name="Nuia's Gift" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1435,7 +1435,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54074" name="Einhasad's Spellbook Box" max-level="1" action="A1">
+	<skill id="54074" name="Einhasad's Spellbook Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1447,7 +1447,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54075" name="Eva's Spellbook Box" max-level="1" action="A1">
+	<skill id="54075" name="Eva's Spellbook Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1459,7 +1459,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54076" name="Shilen's Spellbook Box" max-level="1" action="A1">
+	<skill id="54076" name="Shilen's Spellbook Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1471,7 +1471,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54077" name="Pa'agrio's Spellbook Box" max-level="1" action="A1">
+	<skill id="54077" name="Pa'agrio's Spellbook Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1483,7 +1483,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54078" name="Maphr's Spellbook Box" max-level="1" action="A1">
+	<skill id="54078" name="Maphr's Spellbook Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1495,7 +1495,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54079" name="Dragon's Belt Box" max-level="1" action="A1">
+	<skill id="54079" name="Dragon's Belt Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1507,7 +1507,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54080" name="Dragon's Belt Ornament" max-level="1" action="A1">
+	<skill id="54080" name="Dragon's Belt Ornament" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1517,7 +1517,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54081" name="Dragon's Belt" max-level="1" >
+	<skill id="54081" name="Dragon's Belt">
 	<!-- Dragon's Belt. Weight Limit +1000, DEX +1, WIT +1. -->
 		<icon initial="icon.r2_belt_i01"/>
 		<attributes property="MAGIC" >
@@ -1548,7 +1548,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54083" name="Lucky Pouch" max-level="1" action="A1">
+	<skill id="54083" name="Lucky Pouch" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1560,7 +1560,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54084" name="Lucky Pouch" max-level="1" action="A1">
+	<skill id="54084" name="Lucky Pouch" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1572,7 +1572,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54085" name="Golden Lucky Pouch" max-level="1" action="A1">
+	<skill id="54085" name="Golden Lucky Pouch" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1584,7 +1584,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54086" name="Golden Lucky Pouch" max-level="1" action="A1">
+	<skill id="54086" name="Golden Lucky Pouch" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1596,7 +1596,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54087" name="Immortal Rare Accessory Box (15-day)" max-level="1" action="A1">
+	<skill id="54087" name="Immortal Rare Accessory Box (15-day)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1608,7 +1608,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54088" name="Lucky Pig Happiness Box" max-level="1" action="A1">
+	<skill id="54088" name="Lucky Pig Happiness Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.special_cube_i00"/>
 		<attributes >
@@ -1619,7 +1619,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54089" name="Lucky Pig Honey Buff" max-level="1" action="A1">
+	<skill id="54089" name="Lucky Pig Honey Buff" action="A1">
 	<!-- For 1 hour, Atk. Spd +100, Casting Spd. +100, Speed +20, XP/SP Gain +10%%. Does not disappear at death or when restarting. -->
 		<icon initial="icon.accessory_pig_cap_i00"/>
 		<attributes property="PHYSIC" >
@@ -1632,7 +1632,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54090" name="Lucky Pig Blessing Star Candy" max-level="1" action="A1">
+	<skill id="54090" name="Lucky Pig Blessing Star Candy" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1658,7 +1658,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54092" name="Lucky Pig's Regular Reward" max-level="1" action="A1">
+	<skill id="54092" name="Lucky Pig's Regular Reward" action="A1">
 	<!-- none -->
 		<icon initial="icon.special_cube_i00"/>
 		<attributes >
@@ -1669,7 +1669,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54093" name="Lucky Pig's Golden Reward" max-level="1" action="A1">
+	<skill id="54093" name="Lucky Pig's Golden Reward" action="A1">
 	<!-- none -->
 		<icon initial="icon.special_cube_i00"/>
 		<attributes >

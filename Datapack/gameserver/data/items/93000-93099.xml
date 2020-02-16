@@ -23,52 +23,52 @@
 	<item id="93003" name="Sayha's Protection" type="NONE" icon="icon.high_stone_i01">
 	<!-- For 20 min., reduces Sayha's Grace consumption by 10%. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="93004" name="Accessory: A-grade" type="NONE" icon="icon.accessory_group">
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="93005" name="Accessory: B-grade" type="NONE" icon="icon.accessory_group">
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="93006" name="Accessory: C-grade" type="NONE" icon="icon.accessory_group">
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="93007" name="Armor: A-grade" type="NONE" icon="icon.armor_group">
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="93008" name="Armor: B-grade" type="NONE" icon="icon.armor_group">
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="93009" name="Armor: C-grade" type="NONE" icon="icon.armor_group">
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="93010" name="Weapon: A-grade" type="NONE" icon="icon.weapon_group">
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="93011" name="Weapon: B-grade" type="NONE" icon="icon.weapon_group">
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="93012" name="Weapon: C-grade" type="NONE" icon="icon.weapon_group">
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="93013" name="Queen Ant Doll Lv. 1" type="RUNE" icon="icon.bm_queen_ant_doll_30d">
@@ -426,7 +426,7 @@
 	<item id="93067" name="Sayha's Protection" type="NONE" icon="icon.high_stone_i01">
 	<!-- For 20 min., reduces Sayha's Grace consumption by 10%. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="93068" name="Red Arc" type="SCROLL" icon="icon.r99_soul_stone_i00">
@@ -456,13 +456,13 @@
 	<item id="93072" name="Blessing Star Candy - Event" type="POTION" icon="BranchSys.icon.br_valentine_agathion_pack_i00">
 	<!-- Recharges 10,000 Sayha's Grace Points. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="93073" name="Sayha's Storm Lv. 3 - Event" type="NONE" icon="icon.bm_sayha_storm">
 	<!-- Sayha's Grace Consumption +100% and XP/SP Gain +200% while hunting monsters. The effect remains active even after death. Duration 20 minutes. Cooldown 1 minute. Available only when Sayha's Grace is 35,000 points or higher. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="93074" name="Blue Arc" type="SCROLL" icon="icon.r99_soul_stone_i02">
@@ -614,7 +614,7 @@
 	<item id="93098" name="Battle Scroll - Event" type="NONE" icon="icon.ev_charge_scroll">
 	<!-- For 20 minutes, P. Atk. +200, M. Atk. +350, P. Critical/M. Skill Critical Rate +30, Atk. Spd./Casting Spd. +50, P. Def./M. Def. +200, Max HP/Max MP/Max CP +500. The effect remains active even after death. Cooldown is 1 minute. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="93099" name="Common Life Stone - Shield/Sigil" type="NONE" icon="icon.r_mineral_special_i00">

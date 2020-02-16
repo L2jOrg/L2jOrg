@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="59100" name="Master's Scroll: Enchant Weapon (A-grade)" max-level="1" action="A1">
+	<skill id="59100" name="Master's Scroll: Enchant Weapon (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -10,7 +10,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59101" name="Holy Scroll: Enchant Weapon (A-grade)" max-level="1" action="A1">
+	<skill id="59101" name="Holy Scroll: Enchant Weapon (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -20,19 +20,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59102" name="Brilliant Jewelry Box" max-level="1" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes >
-			<cast-range initial="-1"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="59103" name="Brilliant Jewelry Box" max-level="1" action="A1">
+	<skill id="59102" name="Brilliant Jewelry Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -44,7 +32,19 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59104" name="Fortune Jewelry Box" max-level="1" action="A1">
+	<skill id="59103" name="Brilliant Jewelry Box" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="1000"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="59104" name="Fortune Jewelry Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -254,7 +254,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59114" name="Agathion - Taurus" max-level="1" action="A1">
+	<skill id="59114" name="Agathion - Taurus" action="A1">
 	<!-- Releases Agathion's Seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -264,7 +264,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59115" name="Agathion - Leo" max-level="1" action="A1">
+	<skill id="59115" name="Agathion - Leo" action="A1">
 	<!-- Releases Agathion's Seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -274,7 +274,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59116" name="Agathion - Scorpio" max-level="1" action="A1">
+	<skill id="59116" name="Agathion - Scorpio" action="A1">
 	<!-- Releases Agathion's Seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -284,7 +284,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59117" name="Agathion - Sagittarius" max-level="1" action="A1">
+	<skill id="59117" name="Agathion - Sagittarius" action="A1">
 	<!-- Releases Agathion's Seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -294,7 +294,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59118" name="Agathion - Virgo" max-level="1" action="A1">
+	<skill id="59118" name="Agathion - Virgo" action="A1">
 	<!-- Releases Agathion's Seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -304,7 +304,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59119" name="Agathion - Aquarius" max-level="1" action="A1">
+	<skill id="59119" name="Agathion - Aquarius" action="A1">
 	<!-- Releases Agathion's Seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -314,7 +314,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59120" name="Agathion - Capricorn" max-level="1" action="A1">
+	<skill id="59120" name="Agathion - Capricorn" action="A1">
 	<!-- Releases Agathion's Seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -324,7 +324,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59121" name="Agathion - Libra" max-level="1" action="A1">
+	<skill id="59121" name="Agathion - Libra" action="A1">
 	<!-- Releases Agathion's Seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -334,7 +334,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59122" name="Agathion - Gemini" max-level="1" action="A1">
+	<skill id="59122" name="Agathion - Gemini" action="A1">
 	<!-- Releases Agathion's Seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -344,7 +344,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59123" name="Seal Agathion" max-level="1" action="A1">
+	<skill id="59123" name="Seal Agathion" action="A1">
 	<!-- Dismiss a summoned Agathion. -->
 		<icon initial="icon.etc_unsummon_aga_agit_i01"/>
 		<attributes >
@@ -354,7 +354,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59124" name="Zodiac Agathion Box" max-level="1" action="A1">
+	<skill id="59124" name="Zodiac Agathion Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.star_agathion_cube"/>
 		<attributes >
@@ -365,7 +365,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59125" name="VIP Scroll - 800" max-level="1" action="A1">
+	<skill id="59125" name="VIP Scroll - 800" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_bm_vip_potion_i00"/>
 		<attributes >
@@ -376,7 +376,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59126" name="VIP Scroll - 2400" max-level="1" action="A1">
+	<skill id="59126" name="VIP Scroll - 2400" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_bm_vip_potion_i00"/>
 		<attributes >
@@ -387,7 +387,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59127" name="VIP Scroll - 80" max-level="1" action="A1">
+	<skill id="59127" name="VIP Scroll - 80" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_bm_vip_potion_i00"/>
 		<attributes >
@@ -398,7 +398,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59128" name="VIP Scroll - 240" max-level="1" action="A1">
+	<skill id="59128" name="VIP Scroll - 240" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_bm_vip_potion_i00"/>
 		<attributes >
@@ -409,7 +409,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59129" name="Transformation Sealbook: Kat the Cat" max-level="1" action="A1">
+	<skill id="59129" name="Transformation Sealbook: Kat the Cat" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -419,7 +419,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59130" name="Transform: Kat the Cat" max-level="1" action="A1">
+	<skill id="59130" name="Transform: Kat the Cat" action="A1">
 	<!-- Transforms into Kat the Cat. -->
 		<icon initial="icon.skilltransform1"/>
 		<attributes property="PHYSIC" >
@@ -431,7 +431,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59131" name="Angler's Fishing Box" max-level="1" action="A1">
+	<skill id="59131" name="Angler's Fishing Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -443,7 +443,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59132" name="Angler's Silver Box" max-level="1" action="A1">
+	<skill id="59132" name="Angler's Silver Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -455,7 +455,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59133" name="Angler's Gold Box" max-level="1" action="A1">
+	<skill id="59133" name="Angler's Gold Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -467,7 +467,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59134" name="Scroll: Enchant Fishing Weapon" max-level="1" action="A1">
+	<skill id="59134" name="Scroll: Enchant Fishing Weapon" action="A1">
 	<!-- Can only be used together with fishing weapons. Disappears after an unsuccessful Enchant. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -477,7 +477,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59135" name="Pumpkin Seed" max-level="1" action="A1">
+	<skill id="59135" name="Pumpkin Seed" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -488,7 +488,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59136" name="Honey Pumpkin Seed" max-level="1" action="A1">
+	<skill id="59136" name="Honey Pumpkin Seed" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -499,7 +499,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59137" name="Monster Energy" max-level="1" action="A1">
+	<skill id="59137" name="Monster Energy" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -512,7 +512,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59138" name="Halloween Pumpkin - Level Up" max-level="1" action="A1">
+	<skill id="59138" name="Halloween Pumpkin - Level Up" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -522,7 +522,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59139" name="Halloween Pumpkin - Poison" max-level="1" action="A1">
+	<skill id="59139" name="Halloween Pumpkin - Poison" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -532,7 +532,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59140" name="Halloween Gift" max-level="1" action="A1">
+	<skill id="59140" name="Halloween Gift" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -543,7 +543,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59141" name="Lingering Halloween" max-level="1" action="A1">
+	<skill id="59141" name="Lingering Halloween" action="A1">
 	<!-- Lingering Halloween. XP/SP Gain when hunting +10%, P./M. Atk. +5%, Atk. Spd./Casting Spd. +5%. Cannot use this item when having Pumpkinface's Halloween Curse, and these buff effects disappear when obtaining Pumpkinface's buff. -->
 		<icon initial="icon.event_halloween_pumpkin_i00"/>
 		<attributes property="PHYSIC" >
@@ -553,7 +553,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59142" name="Lingering Halloween" max-level="1" action="A1">
+	<skill id="59142" name="Lingering Halloween" action="A1">
 	<!-- Lingering Halloween. XP/SP Gain when hunting +20%, P./M. Atk. +5%, Atk. Spd./Casting Spd. +5%. Cannot use this item when having Pumpkinface's Halloween Curse, and these buff effects disappear when obtaining Pumpkinface's buff. -->
 		<icon initial="icon.event_halloween_pumpkin_i00"/>
 		<attributes property="PHYSIC" >
@@ -563,7 +563,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59143" name="Lingering Halloween" max-level="1" action="A1">
+	<skill id="59143" name="Lingering Halloween" action="A1">
 	<!-- Lingering Halloween. XP/SP Gain when hunting +30%, P./M. Atk. +5%, Atk. Spd./Casting Spd. +5%. Cannot use this item when having Pumpkinface's Halloween Curse, and these buff effects disappear when obtaining Pumpkinface's buff. -->
 		<icon initial="icon.event_halloween_pumpkin_i00"/>
 		<attributes property="PHYSIC" >
@@ -573,7 +573,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59144" name="Magic Trumpet" max-level="1" >
+	<skill id="59144" name="Magic Trumpet">
 	<!-- World Chat +20. Resets every day at 7:00 am. -->
 		<icon initial="icon.skill18578"/>
 		<attributes property="MAGIC" >
@@ -583,7 +583,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59145" name="Magic Warehouse Summoning SCroll" max-level="1" action="A1">
+	<skill id="59145" name="Magic Warehouse Summoning SCroll" action="A1">
 	<!-- Summons the Magic Warehouse. -->
 		<icon initial="BranchIcon.icon.g_bm_shop_add_i00"/>
 		<attributes >
@@ -594,7 +594,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59146" name="Magic Warehouse Summoning Scroll - Inventory +12" max-level="1" >
+	<skill id="59146" name="Magic Warehouse Summoning Scroll - Inventory +12">
 	<!-- Expands inventory by 12 slots. -->
 		<icon initial="BranchIcon.icon.g_bm_shop_add_i00"/>
 		<attributes property="MAGIC" >
@@ -604,7 +604,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59147" name="Party Member Scroll of Escape" max-level="1" action="A1">
+	<skill id="59147" name="Party Member Scroll of Escape" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -617,7 +617,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59148" name="Antharas' Cute Tricks" max-level="1" action="A1">
+	<skill id="59148" name="Antharas' Cute Tricks" action="A1">
 	<!-- See the summoned spirit perform cute tricks. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes >
@@ -627,7 +627,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59149" name="Summon Agathion - Antharas" max-level="1" action="A1">
+	<skill id="59149" name="Summon Agathion - Antharas" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -706,7 +706,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59153" name="Level 5 Brooch" max-level="1" >
+	<skill id="59153" name="Level 5 Brooch">
 	<!-- Can equip 6 gems. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i04"/>
 		<attributes property="MAGIC" >
@@ -716,7 +716,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59154" name="Level 5 Brooch Additional Effect" max-level="1" >
+	<skill id="59154" name="Level 5 Brooch Additional Effect">
 	<!-- Expands inventory by 15 slots. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i04"/>
 		<attributes property="MAGIC" >
@@ -726,7 +726,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59155" name="Greater Topaz - Special Ability" max-level="1" action="A1">
+	<skill id="59155" name="Greater Topaz - Special Ability" action="A1">
 	<!-- Cancels up to 3 buffs from the enemy. -->
 		<icon initial="icon.bm_jewel_absdmg_high_lv1_lavianrose"/>
 		<attributes >
@@ -740,7 +740,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59156" name="Greater Aquamarine - Special Ability" max-level="1" action="A1">
+	<skill id="59156" name="Greater Aquamarine - Special Ability" action="A1">
 	<!-- Recovers 10%% of MP right away. -->
 		<icon initial="icon.bm_jewel_castmpup_high_lv1_lavianrose"/>
 		<attributes >
@@ -751,7 +751,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59157" name="XP/SP Rune 50%" max-level="1" >
+	<skill id="59157" name="XP/SP Rune 50%">
 	<!-- XP/SP Gain from hunting +50%%. -->
 		<icon initial="icon.skill19226"/>
 		<attributes property="MAGIC" >
@@ -761,7 +761,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59158" name="Santa" max-level="1" action="A1">
+	<skill id="59158" name="Santa" action="A1">
 	<!-- Transformed into a standard transformation. XP gain +5%%. Transformation remains after death. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_santa"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -772,7 +772,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59159" name="Santa" max-level="1" action="A1">
+	<skill id="59159" name="Santa" action="A1">
 	<!-- Transformed into a high-grade transformation. XP gain +10%%, P. Atk. +5%%, M. Atk. +5%%. Transformation remains after death. \n\n<Special Ability>\n CON +1, MEN +1 -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_santa"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -783,7 +783,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59160" name="Santa" max-level="1" action="A1">
+	<skill id="59160" name="Santa" action="A1">
 	<!-- Transformed into a rare transformation. XP gain +20%%, P. Atk. +10%% M. Atk. +10%%, P. Critical Damage/M. Critical Damage +5%%, Movement Speed +5. Transformation remains after death. \n\n<Special Ability>\n CON +1, MEN +1, DEX +1 -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_santa"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -794,7 +794,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59161" name="Santa" max-level="1" action="A1">
+	<skill id="59161" name="Santa" action="A1">
 	<!-- Transformed into a legendary transformation. XP gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P. Critical Damage/M. Critical Damage +10%%, Movement Speed +10, PvP Damage Received -10%%. Transformation remains after death. \n\n<Special Ability>\n CON +2, MEN +2, DEX +2, WIT +1, STR +1, INT +1 -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_santa"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -805,7 +805,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59162" name="Santa" max-level="1" action="A1">
+	<skill id="59162" name="Santa" action="A1">
 	<!-- Transformed into a mythic transformation. XP gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P. Critical Damage/M. Critical Damage +15%%, Movement Speed +20, PvP Damage +10%%, PvP Damage Received -20%%. Transformation remains after death. \n\n<Special Ability>\n All stats +3 -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_santa"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -816,7 +816,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59163" name="School Uniform A" max-level="1" action="A1">
+	<skill id="59163" name="School Uniform A" action="A1">
 	<!-- Transformed into a standard transformation. XP gain +5%%. Transformation remains after death. -->
 		<icon initial="BranchSys3.icon1.Br_schoollook"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -827,7 +827,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59164" name="School Uniform A" max-level="1" action="A1">
+	<skill id="59164" name="School Uniform A" action="A1">
 	<!-- Transformed into a high-grade transformation. XP gain +10%%, P. Atk. +5%%, M. Atk. +5%%. Transformation remains after death. \n\n<Special Ability>\n CON +1, MEN +1 -->
 		<icon initial="BranchSys3.icon1.Br_schoollook"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -838,7 +838,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59165" name="School Uniform A" max-level="1" action="A1">
+	<skill id="59165" name="School Uniform A" action="A1">
 	<!-- Transformed into a rare transformation. XP gain +20%%, P. Atk. +10%% M. Atk. +10%%, P. Critical Damage/M. Critical Damage +5%%, Movement Speed +5. Transformation remains after death. \n\n<Special Ability>\n CON +1, MEN +1, DEX +1 -->
 		<icon initial="BranchSys3.icon1.Br_schoollook"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -849,7 +849,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59166" name="School Uniform A" max-level="1" action="A1">
+	<skill id="59166" name="School Uniform A" action="A1">
 	<!-- Transformed into a legendary transformation. XP gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P. Critical Damage/M. Critical Damage +10%%, Movement Speed +10, PvP Damage Received -10%%. Transformation remains after death. \n\n<Special Ability>\n CON +2, MEN +2, DEX +2, WIT +1, STR +1, INT +1 -->
 		<icon initial="BranchSys3.icon1.Br_schoollook"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -860,7 +860,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59167" name="School Uniform A" max-level="1" action="A1">
+	<skill id="59167" name="School Uniform A" action="A1">
 	<!-- Transformed into a mythic transformation. XP gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P. Critical Damage/M. Critical Damage +15%%, Movement Speed +20, PvP Damage +10%%, PvP Damage Received -20%%. Transformation remains after death. \n\n<Special Ability>\n All stats +3 -->
 		<icon initial="BranchSys3.icon1.Br_schoollook"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -871,7 +871,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59168" name="Beach Swimsuit" max-level="1" action="A1">
+	<skill id="59168" name="Beach Swimsuit" action="A1">
 	<!-- Transformed into a standard transformation. XP gain +5%%. Transformation remains after death. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_swimsuit_a"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -882,7 +882,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59169" name="Beach Swimsuit" max-level="1" action="A1">
+	<skill id="59169" name="Beach Swimsuit" action="A1">
 	<!-- Transformed into a high-grade transformation. XP gain +10%%, P. Atk. +5%%, M. Atk. +5%%. Transformation remains after death. \n\n<Special Ability>\n CON +1, MEN +1 -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_swimsuit_a"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -893,7 +893,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59170" name="Beach Swimsuit" max-level="1" action="A1">
+	<skill id="59170" name="Beach Swimsuit" action="A1">
 	<!-- Transformed into a rare transformation. XP gain +20%%, P. Atk. +10%% M. Atk. +10%%, P. Critical Damage/M. Critical Damage +5%%, Movement Speed +5. Transformation remains after death. \n\n<Special Ability>\n CON +1, MEN +1, DEX +1 -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_swimsuit_a"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -904,7 +904,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59171" name="Beach Swimsuit" max-level="1" action="A1">
+	<skill id="59171" name="Beach Swimsuit" action="A1">
 	<!-- Transformed into a legendary transformation. XP gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P. Critical Damage/M. Critical Damage +10%%, Movement Speed +10, PvP Damage Received -10%%. Transformation remains after death. \n\n<Special Ability>\n CON +2, MEN +2, DEX +2, WIT +1, STR +1, INT +1 -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_swimsuit_a"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -915,7 +915,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59172" name="Beach Swimsuit" max-level="1" action="A1">
+	<skill id="59172" name="Beach Swimsuit" action="A1">
 	<!-- Transformed into a mythic transformation. XP gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P. Critical Damage/M. Critical Damage +15%%, Movement Speed +20, PvP Damage +10%%, PvP Damage Received -20%%. Transformation remains after death. \n\n<Special Ability>\n All stats +3 -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_swimsuit_a"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -926,7 +926,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59173" name="Teddy Bear" max-level="1" action="A1">
+	<skill id="59173" name="Teddy Bear" action="A1">
 	<!-- Transformed into a standard transformation. XP gain +5%%. Transformation remains after death. -->
 		<icon initial="icon.gomdori_chest_change"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -937,7 +937,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59174" name="Teddy Bear" max-level="1" action="A1">
+	<skill id="59174" name="Teddy Bear" action="A1">
 	<!-- Transformed into a high-grade transformation. XP gain +10%%, P. Atk. +5%%, M. Atk. +5%%. Transformation remains after death. \n\n<Special Ability>\n CON +1, MEN +1 -->
 		<icon initial="icon.gomdori_chest_change"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -948,7 +948,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59175" name="Teddy Bear" max-level="1" action="A1">
+	<skill id="59175" name="Teddy Bear" action="A1">
 	<!-- Transformed into a rare transformation. XP gain +20%%, P. Atk. +10%% M. Atk. +10%%, P. Critical Damage/M. Critical Damage +5%%, Movement Speed +5. Transformation remains after death. \n\n<Special Ability>\n CON +1, MEN +1, DEX +1 -->
 		<icon initial="icon.gomdori_chest_change"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -959,7 +959,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59176" name="Teddy Bear" max-level="1" action="A1">
+	<skill id="59176" name="Teddy Bear" action="A1">
 	<!-- Transformed into a legendary transformation. XP gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P. Critical Damage/M. Critical Damage +10%%, Movement Speed +10, PvP Damage Received -10%%. Transformation remains after death. \n\n<Special Ability>\n CON +2, MEN +2, DEX +2, WIT +1, STR +1, INT +1 -->
 		<icon initial="icon.gomdori_chest_change"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -970,7 +970,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59177" name="Teddy Bear" max-level="1" action="A1">
+	<skill id="59177" name="Teddy Bear" action="A1">
 	<!-- Transformed into a mythic transformation. XP gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P. Critical Damage/M. Critical Damage +15%%, Movement Speed +20, PvP Damage +10%%, PvP Damage Received -20%%. Transformation remains after death. \n\n<Special Ability>\n All stats +3 -->
 		<icon initial="icon.gomdori_chest_change"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -981,7 +981,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59178" name="Kitty Plushy" max-level="1" action="A1">
+	<skill id="59178" name="Kitty Plushy" action="A1">
 	<!-- Transformed into a standard transformation. XP gain +5%%. Transformation remains after death. -->
 		<icon initial="icon.sayha2017_cat"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -992,7 +992,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59179" name="Kitty Plushy" max-level="1" action="A1">
+	<skill id="59179" name="Kitty Plushy" action="A1">
 	<!-- Transformed into a high-grade transformation. XP gain +10%%, P. Atk. +5%%, M. Atk. +5%%. Transformation remains after death. \n\n<Special Ability>\n CON +1, MEN +1 -->
 		<icon initial="icon.sayha2017_cat"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -1003,7 +1003,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59180" name="Kitty Plushy" max-level="1" action="A1">
+	<skill id="59180" name="Kitty Plushy" action="A1">
 	<!-- Transformed into a rare transformation. XP gain +20%%, P. Atk. +10%% M. Atk. +10%%, P. Critical Damage/M. Critical Damage +5%%, Movement Speed +5. Transformation remains after death. \n\n<Special Ability>\n CON +1, MEN +1, DEX +1 -->
 		<icon initial="icon.sayha2017_cat"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -1014,7 +1014,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59181" name="Kitty Plushy" max-level="1" action="A1">
+	<skill id="59181" name="Kitty Plushy" action="A1">
 	<!-- Transformed into a legendary transformation. XP gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P. Critical Damage/M. Critical Damage +10%%, Movement Speed +10, PvP Damage Received -10%%. Transformation remains after death. \n\n<Special Ability>\n CON +2, MEN +2, DEX +2, WIT +1, STR +1, INT +1 -->
 		<icon initial="icon.sayha2017_cat"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -1025,7 +1025,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59182" name="Kitty Plushy" max-level="1" action="A1">
+	<skill id="59182" name="Kitty Plushy" action="A1">
 	<!-- Transformed into a mythic transformation. XP gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P. Critical Damage/M. Critical Damage +15%%, Movement Speed +20, PvP Damage +10%%, PvP Damage Received -20%%. Transformation remains after death. \n\n<Special Ability>\n All stats +3 -->
 		<icon initial="icon.sayha2017_cat"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -1036,7 +1036,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59183" name="Panda Plushy" max-level="1" action="A1">
+	<skill id="59183" name="Panda Plushy" action="A1">
 	<!-- Transformed into a standard transformation. XP gain +5%%. Transformation remains after death. -->
 		<icon initial="icon.sayha2017_panda"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -1047,7 +1047,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59184" name="Panda Plushy" max-level="1" action="A1">
+	<skill id="59184" name="Panda Plushy" action="A1">
 	<!-- Transformed into a high-grade transformation. XP gain +10%%, P. Atk. +5%%, M. Atk. +5%%. Transformation remains after death. \n\n<Special Ability>\n CON +1, MEN +1 -->
 		<icon initial="icon.sayha2017_panda"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -1058,7 +1058,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59185" name="Panda Plushy" max-level="1" action="A1">
+	<skill id="59185" name="Panda Plushy" action="A1">
 	<!-- Transformed into a rare transformation. XP gain +20%%, P. Atk. +10%% M. Atk. +10%%, P. Critical Damage/M. Critical Damage +5%%, Movement Speed +5. Transformation remains after death. \n\n<Special Ability>\n CON +1, MEN +1, DEX +1 -->
 		<icon initial="icon.sayha2017_panda"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -1069,7 +1069,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59186" name="Panda Plushy" max-level="1" action="A1">
+	<skill id="59186" name="Panda Plushy" action="A1">
 	<!-- Transformed into a legendary transformation. XP gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P. Critical Damage/M. Critical Damage +10%%, Movement Speed +10, PvP Damage Received -10%%. Transformation remains after death. \n\n<Special Ability>\n CON +2, MEN +2, DEX +2, WIT +1, STR +1, INT +1 -->
 		<icon initial="icon.sayha2017_panda"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -1080,7 +1080,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59187" name="Panda Plushy" max-level="1" action="A1">
+	<skill id="59187" name="Panda Plushy" action="A1">
 	<!-- Transformed into a mythic transformation. XP gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P. Critical Damage/M. Critical Damage +15%%, Movement Speed +20, PvP Damage +10%%, PvP Damage Received -20%%. Transformation remains after death. \n\n<Special Ability>\n All stats +3 -->
 		<icon initial="icon.sayha2017_panda"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -1091,7 +1091,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59188" name="Baseball Uniform" max-level="1" action="A1">
+	<skill id="59188" name="Baseball Uniform" action="A1">
 	<!-- Transformed into a standard transformation. XP gain +5%%. Transformation remains after death. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_baseball"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -1102,7 +1102,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59189" name="Baseball Uniform" max-level="1" action="A1">
+	<skill id="59189" name="Baseball Uniform" action="A1">
 	<!-- Transformed into a high-grade transformation. XP gain +10%%, P. Atk. +5%%, M. Atk. +5%%. Transformation remains after death. \n\n<Special Ability>\n CON +1, MEN +1 -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_baseball"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -1113,7 +1113,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59190" name="Baseball Uniform" max-level="1" action="A1">
+	<skill id="59190" name="Baseball Uniform" action="A1">
 	<!-- Transformed into a rare transformation. XP gain +20%%, P. Atk. +10%% M. Atk. +10%%, P. Critical Damage/M. Critical Damage +5%%, Movement Speed +5. Transformation remains after death. \n\n<Special Ability>\n CON +1, MEN +1, DEX +1 -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_baseball"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -1124,7 +1124,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59191" name="Baseball Uniform" max-level="1" action="A1">
+	<skill id="59191" name="Baseball Uniform" action="A1">
 	<!-- Transformed into a legendary transformation. XP gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P. Critical Damage/M. Critical Damage +10%%, Movement Speed +10, PvP Damage Received -10%%. Transformation remains after death. \n\n<Special Ability>\n CON +2, MEN +2, DEX +2, WIT +1, STR +1, INT +1 -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_baseball"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -1135,7 +1135,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59192" name="Baseball Uniform" max-level="1" action="A1">
+	<skill id="59192" name="Baseball Uniform" action="A1">
 	<!-- Transformed into a mythic transformation. XP gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P. Critical Damage/M. Critical Damage +15%%, Movement Speed +20, PvP Damage +10%%, PvP Damage Received -20%%. Transformation remains after death. \n\n<Special Ability>\n All stats +3 -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_baseball"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -1146,7 +1146,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59193" name="Seductive Swimsuit" max-level="1" action="A1">
+	<skill id="59193" name="Seductive Swimsuit" action="A1">
 	<!-- Transformed into a standard transformation. XP gain +5%%. Transformation remains after death. -->
 		<icon initial="BranchSys3.icon1.g_co_swimsuit_event_03"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -1157,7 +1157,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59194" name="Seductive Swimsuit" max-level="1" action="A1">
+	<skill id="59194" name="Seductive Swimsuit" action="A1">
 	<!-- Transformed into a high-grade transformation. XP gain +10%%, P. Atk. +5%%, M. Atk. +5%%. Transformation remains after death. \n\n<Special Ability>\n CON +1, MEN +1 -->
 		<icon initial="BranchSys3.icon1.g_co_swimsuit_event_03"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -1168,7 +1168,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59195" name="Seductive Swimsuit" max-level="1" action="A1">
+	<skill id="59195" name="Seductive Swimsuit" action="A1">
 	<!-- Transformed into a rare transformation. XP gain +20%%, P. Atk. +10%% M. Atk. +10%%, P. Critical Damage/M. Critical Damage +5%%, Movement Speed +5. Transformation remains after death. \n\n<Special Ability>\n CON +1, MEN +1, DEX +1 -->
 		<icon initial="BranchSys3.icon1.g_co_swimsuit_event_03"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -1179,7 +1179,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59196" name="Seductive Swimsuit" max-level="1" action="A1">
+	<skill id="59196" name="Seductive Swimsuit" action="A1">
 	<!-- Transformed into a legendary transformation. XP gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P. Critical Damage/M. Critical Damage +10%%, Movement Speed +10, PvP Damage Received -10%%. Transformation remains after death. \n\n<Special Ability>\n CON +2, MEN +2, DEX +2, WIT +1, STR +1, INT +1 -->
 		<icon initial="BranchSys3.icon1.g_co_swimsuit_event_03"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -1190,7 +1190,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59197" name="Seductive Swimsuit" max-level="1" action="A1">
+	<skill id="59197" name="Seductive Swimsuit" action="A1">
 	<!-- Transformed into a mythic transformation. XP gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P. Critical Damage/M. Critical Damage +15%%, Movement Speed +20, PvP Damage +10%%, PvP Damage Received -20%%. Transformation remains after death. \n\n<Special Ability>\n All stats +3 -->
 		<icon initial="BranchSys3.icon1.g_co_swimsuit_event_03"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -1201,7 +1201,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59198" name="School Uniform B" max-level="1" action="A1">
+	<skill id="59198" name="School Uniform B" action="A1">
 	<!-- Transformed into a standard transformation. XP gain +5%%. Transformation remains after death. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_schoollook_b"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -1212,7 +1212,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59199" name="School Uniform B" max-level="1" action="A1">
+	<skill id="59199" name="School Uniform B" action="A1">
 	<!-- Transformed into a high-grade transformation. XP gain +10%%, P. Atk. +5%%, M. Atk. +5%%. Transformation remains after death. \n\n<Special Ability>\n CON +1, MEN +1 -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_schoollook_b"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">

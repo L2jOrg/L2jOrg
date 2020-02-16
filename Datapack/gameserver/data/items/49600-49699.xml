@@ -411,9 +411,9 @@
 	<item id="49663" name="Special HP Potion - Exchangeable" type="POTION" icon="BranchSys.icon.br_vitality_potion_i01">
 	<!-- After instant 500 HP Recovery, CP Recovery with remaining points. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="HEALING"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39123" level="1" value="-1"/>  <!-- Special HP Potion -->
+		<attributes action="SKILL_REDUCE" auto-use="HEALING"/>
+		<skill-reducer>
+			<skill id="39123" value="-1"/>  <!-- Special HP Potion -->
 		</skill-reducer>
 	</item>
 
@@ -421,8 +421,8 @@
 	<!-- Double-click to receive one of B-grade Weapons. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39125" level="1" value="-1"/>  <!-- Weapon Supply Box (B-grade) -->
+		<skill-reducer>
+			<skill id="39125" value="-1"/>  <!-- Weapon Supply Box (B-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -430,8 +430,8 @@
 	<!-- Double-click to receive one of B-grade Armor. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39127" level="1" value="-1"/>  <!-- B-grade Armor Supply Box -->
+		<skill-reducer>
+			<skill id="39127" value="-1"/>  <!-- B-grade Armor Supply Box -->
 		</skill-reducer>
 	</item>
 
@@ -439,8 +439,8 @@
 	<!-- Double-click to receive one of B-grade Accessories. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39129" level="1" value="-1"/>  <!-- Ornament Supply Box - B-grade -->
+		<skill-reducer>
+			<skill id="39129" value="-1"/>  <!-- Ornament Supply Box - B-grade -->
 		</skill-reducer>
 	</item>
 
@@ -448,8 +448,8 @@
 	<!-- Double-click to receive one of C-grade Weapons. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39124" level="1" value="-1"/>  <!-- Weapon Supply Box (C-grade) -->
+		<skill-reducer>
+			<skill id="39124" value="-1"/>  <!-- Weapon Supply Box (C-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -457,8 +457,8 @@
 	<!-- Double-click to receive one of C-grade Armor. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39126" level="1" value="-1"/>  <!-- C-grade Armor Supply Box -->
+		<skill-reducer>
+			<skill id="39126" value="-1"/>  <!-- C-grade Armor Supply Box -->
 		</skill-reducer>
 	</item>
 
@@ -466,8 +466,8 @@
 	<!-- Double-click to receive one of C-grade Accessories. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39128" level="1" value="-1"/>  <!-- Ornament Supply Box (C-grade) -->
+		<skill-reducer>
+			<skill id="39128" value="-1"/>  <!-- Ornament Supply Box (C-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -498,9 +498,9 @@
 	<item id="49674" name="XP Boost Scroll" type="NONE" icon="icon.etc_recall_exp_scroll">
 	<!-- When used, XP/SP Gain when hunting +30% for 20 minutes. The effect remains active even after death. Cooldown 1 minute. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="50134" level="1" value="-1"/>  <!-- XP Boost Scroll - Event -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="50134" value="-1"/>  <!-- XP Boost Scroll - Event -->
 		</skill-reducer>
 	</item>
 
@@ -516,7 +516,7 @@
 		<attributes weight="120" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="35017" level="1" value="-1"/>  <!-- Talisman of Insolence -->
+			<skill id="35017" value="-1"/>  <!-- Talisman of Insolence -->
 		</skills>
 	</armor>
 
@@ -566,8 +566,8 @@
 		<attributes weight="120" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="35019" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Unequip Talisman of Insolence Lv. 6 -->
-			<skill id="35018" level="1" type="ON_EQUIP" value="-1"/>  <!-- Equip Talisman of Insolence Lv. 6 -->
+			<skill id="35019" type="ON_UNEQUIP" value="-1"/>  <!-- Unequip Talisman of Insolence Lv. 6 -->
+			<skill id="35018" type="ON_EQUIP" value="-1"/>  <!-- Equip Talisman of Insolence Lv. 6 -->
 			<skill id="35017" level="6" value="-1"/>  <!-- Talisman of Insolence -->
 		</skills>
 	</armor>
@@ -584,8 +584,8 @@
 		<attributes weight="120" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="35020" level="1" type="ON_EQUIP" value="-1"/>  <!-- Talisman of Baium -->
-			<skill id="35021" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Talisman of Baium - Removal -->
+			<skill id="35020" type="ON_EQUIP" value="-1"/>  <!-- Talisman of Baium -->
+			<skill id="35021" type="ON_UNEQUIP" value="-1"/>  <!-- Talisman of Baium - Removal -->
 			<skill id="35017" level="7" value="-1"/>  <!-- Talisman of Insolence -->
 		</skills>
 	</armor>
@@ -684,9 +684,9 @@
 	<item id="49697" name="Special Fruit Buff" type="SCROLL" icon="icon.etc_codran_i09">
 	<!-- For 20 minutes, P./M. Atk. +7%, P./M. Def. +10%, Max. HP/CP/MP +15%, HP/MP Regeneration +20%. At a certain chance absorbs 3% of the damage inflicted on target as HP. Increases XP/SP gain by +5%. Cooldown is 1 minute. Buff remains after death.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes reuse-delay="60000" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55160" level="1" value="-1"/>  <!-- Special Fruit Buff -->
+		<attributes reuse-delay="60000" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55160" value="-1"/>  <!-- Special Fruit Buff -->
 		</skill-reducer>
 	</item>
 

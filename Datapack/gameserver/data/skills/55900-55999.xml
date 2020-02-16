@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="55900" name="Match Girls' Gratitude" max-level="1" action="A1">
+	<skill id="55900" name="Match Girls' Gratitude" action="A1">
 	<!-- For 20 min., P./ M. Atk. +12%%, P./ M. Def +15%%, Max HP/ MP/ CP +25%%, P./ M. Critical Rate +10, P./ M. Critical Damage +5%%, HP/ MP Recovery Bonus +30%%. At a certain chance absorbs 5%% of the melee damage inflicted on target as HP. -->
 		<icon initial="icon.etc_candle_white_i00"/>
 		<attributes property="PHYSIC" >
@@ -27,7 +27,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55902" name="Match Girls' Blessing" max-level="1" action="A1">
+	<skill id="55902" name="Match Girls' Blessing" action="A1">
 	<!-- Blessing from helping the Match Girls. For 2 hr., acquired XP/SP +70%% and XP/SP from fishing +20%%.Cannot be stacked with Dandy's Home Run Ball and Fish Stew - Guild's Gratitude. Remains when moving to the Olympiad. -->
 		<icon initial="BranchSys.icon.br_xmas_miracle_i00"/>
 		<attributes property="PHYSIC" >
@@ -37,7 +37,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55903" name="Christmas Talisman: P. Skill Critical Damage" max-level="1" >
+	<skill id="55903" name="Christmas Talisman: P. Skill Critical Damage">
 	<!-- P. Skill Critical Damage +2%%. -->
 		<icon initial="icon.etc_talisman_i02"/>
 		<attributes property="MAGIC" >
@@ -47,7 +47,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55904" name="Christmas Talisman: M. Skill Critical Damage" max-level="1" >
+	<skill id="55904" name="Christmas Talisman: M. Skill Critical Damage">
 	<!-- M. Skill Critical Damage +2%%. -->
 		<icon initial="icon.etc_talisman_i02"/>
 		<attributes property="MAGIC" >
@@ -57,7 +57,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55905" name="Christmas Talisman: Ultimate Defense" max-level="1" action="A1">
+	<skill id="55905" name="Christmas Talisman: Ultimate Defense" action="A1">
 	<!-- For 15 sec., P. Def. +1800 and M. Def. +1620. -->
 		<icon initial="icon.etc_talisman_i01"/>
 		<attributes property="PHYSIC" >
@@ -73,7 +73,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="55906" name="Christmas Talisman: Debuff Resistance" max-level="1" action="A1">
+	<skill id="55906" name="Christmas Talisman: Debuff Resistance" action="A1">
 	<!-- For 15 sec., defends against debuffs 5 times. -->
 		<icon initial="icon.etc_talisman_i01"/>
 		<attributes property="PHYSIC" >
@@ -89,7 +89,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="55907" name="Christmas Talisman: P. Atk." max-level="1" >
+	<skill id="55907" name="Christmas Talisman: P. Atk.">
 	<!-- P. Atk. +5%%. -->
 		<icon initial="icon.etc_talisman_i02"/>
 		<attributes property="MAGIC" >
@@ -99,7 +99,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55908" name="Christmas Talisman: M. Atk." max-level="1" >
+	<skill id="55908" name="Christmas Talisman: M. Atk.">
 	<!-- M. Atk. +5%%. -->
 		<icon initial="icon.etc_talisman_i02"/>
 		<attributes property="MAGIC" >
@@ -109,7 +109,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55909" name="Christmas Talisman: P. Def." max-level="1" >
+	<skill id="55909" name="Christmas Talisman: P. Def.">
 	<!-- P. Def. +6%%. -->
 		<icon initial="icon.etc_talisman_i02"/>
 		<attributes property="MAGIC" >
@@ -119,7 +119,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55910" name="Christmas Talisman: M. Def." max-level="1" >
+	<skill id="55910" name="Christmas Talisman: M. Def.">
 	<!-- M. Def. +6%%. -->
 		<icon initial="icon.etc_talisman_i02"/>
 		<attributes property="MAGIC" >
@@ -129,7 +129,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55911" name="Sealbook: One-eyed ParaPara Cat" max-level="1" action="A1">
+	<skill id="55911" name="Sealbook: One-eyed ParaPara Cat" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -139,7 +139,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55912" name="Sealbook: Smiling ParaPara Cat" max-level="1" action="A1">
+	<skill id="55912" name="Sealbook: Smiling ParaPara Cat" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -149,7 +149,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55913" name="Sealbook: Charming ParaPara Cat" max-level="1" action="A1">
+	<skill id="55913" name="Sealbook: Charming ParaPara Cat" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -159,7 +159,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55914" name="Sealbook: Ferocious ParaPara Cat" max-level="1" action="A1">
+	<skill id="55914" name="Sealbook: Ferocious ParaPara Cat" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -169,7 +169,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55915" name="Sealbook: Merchant ParaPara Cat" max-level="1" action="A1">
+	<skill id="55915" name="Sealbook: Merchant ParaPara Cat" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -179,7 +179,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55916" name="Transform: One-eyed ParaPara Cat" max-level="1" action="A1">
+	<skill id="55916" name="Transform: One-eyed ParaPara Cat" action="A1">
 	<!-- For 1 hr., transforms into One-eyed ParaPara Cat. -->
 		<icon initial="icon.skilltransform1"/>
 		<attributes property="PHYSIC" >
@@ -191,7 +191,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55917" name="Transform: Smiling ParaPara Cat" max-level="1" action="A1">
+	<skill id="55917" name="Transform: Smiling ParaPara Cat" action="A1">
 	<!-- For 1 hr., transforms into Smiling ParaPara Cat. -->
 		<icon initial="icon.skilltransform1"/>
 		<attributes property="PHYSIC" >
@@ -203,7 +203,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55918" name="Transform: Charming ParaPara Cat" max-level="1" action="A1">
+	<skill id="55918" name="Transform: Charming ParaPara Cat" action="A1">
 	<!-- For 1 hr., transforms into Charming ParaPara Cat. -->
 		<icon initial="icon.skilltransform1"/>
 		<attributes property="PHYSIC" >
@@ -215,7 +215,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55919" name="Transform: Ferocious ParaPara Cat" max-level="1" action="A1">
+	<skill id="55919" name="Transform: Ferocious ParaPara Cat" action="A1">
 	<!-- For 1 hr., transforms into Ferocious ParaPara Cat. -->
 		<icon initial="icon.skilltransform1"/>
 		<attributes property="PHYSIC" >
@@ -227,7 +227,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55920" name="Transform: Merchant ParaPara Cat" max-level="1" action="A1">
+	<skill id="55920" name="Transform: Merchant ParaPara Cat" action="A1">
 	<!-- For 1 hr., transforms into Merchant ParaPara Cat. -->
 		<icon initial="icon.skilltransform1"/>
 		<attributes property="PHYSIC" >
@@ -256,7 +256,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55922" name="Christmas Surprise Sox" max-level="1" action="A1">
+	<skill id="55922" name="Christmas Surprise Sox" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -267,7 +267,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55923" name="Rudolph's Blessed Resurrection" max-level="1" action="A1">
+	<skill id="55923" name="Rudolph's Blessed Resurrection" action="A1">
 	<!-- Resurrects a dead character and fully restores its XP. Consumes 1 Spirit Ore. -->
 		<icon initial="icon.skill5662"/>
 		<attributes >
@@ -281,7 +281,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55924" name="Rudolph's Blessing" max-level="1" action="A1">
+	<skill id="55924" name="Rudolph's Blessing" action="A1">
 	<!-- For 20 minutes, acquired XP/SP +5%%. -->
 		<icon initial="icon.skill19226"/>
 		<attributes property="PHYSIC" >
@@ -295,7 +295,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55925" name="Rudolph's Power" max-level="1" action="A1">
+	<skill id="55925" name="Rudolph's Power" action="A1">
 	<!-- Buff/ debuff effects remain after death, but Power of Rudolph is consumed. -->
 		<icon initial="BranchSys2.icon.event_lbracelet_rudolph"/>
 		<attributes property="PHYSIC" >
@@ -308,7 +308,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55926" name="Summon Agathion - Rudolph" max-level="1" action="A1">
+	<skill id="55926" name="Summon Agathion - Rudolph" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -318,7 +318,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55927" name="Blessing of Protection" max-level="1" >
+	<skill id="55927" name="Blessing of Protection">
 	<!-- Has a high chance of resisting debuffs and keeps you safe from damage by chaotic characters who are more than 10 levels apart from you. In addition, has a high chance of resisting debuffs from normal characters who are more than 10 levels apart from you. -->
 		<icon initial="icon.skill0194"/>
 		<attributes property="PHYSIC" >
@@ -328,7 +328,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55928" name="Glittering Enchant Scroll of Fate" max-level="1" action="A1">
+	<skill id="55928" name="Glittering Enchant Scroll of Fate" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -338,7 +338,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55929" name="Highest Grade Talisman of Fate Sealed Case" max-level="1" action="A1">
+	<skill id="55929" name="Highest Grade Talisman of Fate Sealed Case" action="A1">
 	<!-- Double click to obtain +10 Talisman of Fate - Lv. 5. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -349,7 +349,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55930" name="Talisman of Fate Lucky Chest" max-level="1" action="A1">
+	<skill id="55930" name="Talisman of Fate Lucky Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -360,7 +360,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55931" name="Fire Dragon Pendant Lucky Chest" max-level="1" action="A1">
+	<skill id="55931" name="Fire Dragon Pendant Lucky Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -371,7 +371,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55932" name="Water Dragon Pendant Lucky Chest" max-level="1" action="A1">
+	<skill id="55932" name="Water Dragon Pendant Lucky Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -382,7 +382,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55933" name="Wind Dragon Pendant Lucky Chest" max-level="1" action="A1">
+	<skill id="55933" name="Wind Dragon Pendant Lucky Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -393,7 +393,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55934" name="Earth Dragon Pendant Lucky Chest" max-level="1" action="A1">
+	<skill id="55934" name="Earth Dragon Pendant Lucky Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -404,7 +404,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55935" name="Highest Grade Fire Dragon Pendant Sealed Case" max-level="1" action="A1">
+	<skill id="55935" name="Highest Grade Fire Dragon Pendant Sealed Case" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -415,7 +415,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55936" name="Highest Grade Water Dragon Pendant Sealed Case" max-level="1" action="A1">
+	<skill id="55936" name="Highest Grade Water Dragon Pendant Sealed Case" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -426,7 +426,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55937" name="Highest Grade Wind Dragon Pendant Sealed Case" max-level="1" action="A1">
+	<skill id="55937" name="Highest Grade Wind Dragon Pendant Sealed Case" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -437,7 +437,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55938" name="Highest Grade Earth Dragon Pendant Sealed Case" max-level="1" action="A1">
+	<skill id="55938" name="Highest Grade Earth Dragon Pendant Sealed Case" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -465,7 +465,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55990" name="Bracelet of Power" max-level="1" >
+	<skill id="55990" name="Bracelet of Power">
 	<!-- HP/ MP Recovery +15%%, Accuracy +2, M. Accuracy +2, Weight Limit +10,000. -->
 		<icon initial="icon.ertheia_bracelet_i01"/>
 		<attributes property="MAGIC" >
@@ -532,7 +532,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55993" name="Summon Big Wedding Cake" max-level="1" action="A1">
+	<skill id="55993" name="Summon Big Wedding Cake" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -542,7 +542,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55994" name="Summon Your Spouse" max-level="1" action="A1">
+	<skill id="55994" name="Summon Your Spouse" action="A1">
 	<!-- Summons your spouse. Target of summoning must be in your party and have same ring equipped. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -555,7 +555,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55995" name="Agathion Cute Trick" max-level="1" action="A1">
+	<skill id="55995" name="Agathion Cute Trick" action="A1">
 	<!-- See Agathion's cute trick. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes >
@@ -565,7 +565,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55996" name="Summon Agathion - Bugbear" max-level="1" action="A1">
+	<skill id="55996" name="Summon Agathion - Bugbear" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -575,7 +575,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55997" name="Summon Agathion - Dryad" max-level="1" action="A1">
+	<skill id="55997" name="Summon Agathion - Dryad" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -585,7 +585,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55998" name="Summon Agathion - Griffin" max-level="1" action="A1">
+	<skill id="55998" name="Summon Agathion - Griffin" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -595,7 +595,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55999" name="XP/SP Hourglass - 1 Hour" max-level="1" action="A1">
+	<skill id="55999" name="XP/SP Hourglass - 1 Hour" action="A1">
 	<!-- XP/SP gain +50%% for the duration of the effect -->
 		<icon initial="icon.etc_dragons_blood_i03"/>
 		<attributes property="PHYSIC" auto-use="BUFF">

@@ -376,10 +376,10 @@
 		<attributes weight="100" duration="10080" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
-			<skill id="55543" level="1" value="-1"/>  <!-- Summon Agathion - Minion Eye -->
-			<skill id="55552" level="1" value="-1"/>  <!-- Minion Eye's Courage -->
-			<skill id="55553" level="1" value="-1"/>  <!-- Minion Eye's Blessed Resurrection -->
+			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
+			<skill id="55543" value="-1"/>  <!-- Summon Agathion - Minion Eye -->
+			<skill id="55552" value="-1"/>  <!-- Minion Eye's Courage -->
+			<skill id="55553" value="-1"/>  <!-- Minion Eye's Blessed Resurrection -->
 		</skills>
 	</armor>
 
@@ -471,27 +471,27 @@
 	<item id="70574" name="Strawberry Juice" type="SCROLL" icon="icon.etc_fruit_cocktail_i01">
 	<!-- For 5 min. activates Prophecy of Fire - Lv. 1, when used.\n<Note> The effect does not stack with Strawberry Juice, Cherry Juice, or any of the Prophecies.\n  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55679" level="1" value="-1"/>  <!-- Strawberry Juice -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55679" value="-1"/>  <!-- Strawberry Juice -->
 		</skill-reducer>
 	</item>
 
 	<item id="70575" name="Mango Juice" type="SCROLL" icon="icon.etc_fruit_cocktail_i03">
 	<!-- For 5 min. activates Prophecy of Water - Lv. 1, when used.\n<Note> The effect does not stack with Strawberry Juice, Cherry Juice, or any of the Prophecies.\n  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55680" level="1" value="-1"/>  <!-- Mango Juice -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55680" value="-1"/>  <!-- Mango Juice -->
 		</skill-reducer>
 	</item>
 
 	<item id="70576" name="Cherry Juice" type="SCROLL" icon="icon.etc_fruit_cocktail_i02">
 	<!-- For 5 min. activates Prophecy of Wind - Lv. 1, when used.\n<Note> The effect does not stack with Mango Juice, Strawberry Juice, or any of the Prophecies.\n  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55681" level="1" value="-1"/>  <!-- Cherry Juice -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55681" value="-1"/>  <!-- Cherry Juice -->
 		</skill-reducer>
 	</item>
 
@@ -527,7 +527,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 

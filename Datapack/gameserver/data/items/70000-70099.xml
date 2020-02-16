@@ -4,8 +4,8 @@
 	<!-- Double-click to receive one Stage 1 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55193" level="1" value="-1"/>  <!-- Sealed Rune Lvl 1 -->
+		<skill-reducer>
+			<skill id="55193" value="-1"/>  <!-- Sealed Rune Lvl 1 -->
 		</skill-reducer>
 	</item>
 
@@ -13,8 +13,8 @@
 	<!-- Double-click to receive one Stage 2 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55194" level="1" value="-1"/>  <!-- Sealed Rune Lvl 2 -->
+		<skill-reducer>
+			<skill id="55194" value="-1"/>  <!-- Sealed Rune Lvl 2 -->
 		</skill-reducer>
 	</item>
 
@@ -22,8 +22,8 @@
 	<!-- Double-click to receive one Stage 3 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55195" level="1" value="-1"/>  <!-- Sealed Rune Lvl 3 -->
+		<skill-reducer>
+			<skill id="55195" value="-1"/>  <!-- Sealed Rune Lvl 3 -->
 		</skill-reducer>
 	</item>
 
@@ -31,8 +31,8 @@
 	<!-- Double-click to receive one Stage 4 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55196" level="1" value="-1"/>  <!-- Sealed Rune Lvl 4 -->
+		<skill-reducer>
+			<skill id="55196" value="-1"/>  <!-- Sealed Rune Lvl 4 -->
 		</skill-reducer>
 	</item>
 
@@ -40,8 +40,8 @@
 	<!-- Double-click to receive one Stage 5 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55197" level="1" value="-1"/>  <!-- Sealed Rune Lvl 5 -->
+		<skill-reducer>
+			<skill id="55197" value="-1"/>  <!-- Sealed Rune Lvl 5 -->
 		</skill-reducer>
 	</item>
 
@@ -49,8 +49,8 @@
 	<!-- Double-click to receive one Stage 6 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55198" level="1" value="-1"/>  <!-- Sealed Rune Lvl 6 -->
+		<skill-reducer>
+			<skill id="55198" value="-1"/>  <!-- Sealed Rune Lvl 6 -->
 		</skill-reducer>
 	</item>
 
@@ -58,8 +58,8 @@
 	<!-- Double-click to receive one Stage 7 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55199" level="1" value="-1"/>  <!-- Sealed Rune Lvl 7 -->
+		<skill-reducer>
+			<skill id="55199" value="-1"/>  <!-- Sealed Rune Lvl 7 -->
 		</skill-reducer>
 	</item>
 
@@ -67,8 +67,8 @@
 	<!-- Double-click to receive one Stage 8 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55200" level="1" value="-1"/>  <!-- Sealed Rune Lvl 8 -->
+		<skill-reducer>
+			<skill id="55200" value="-1"/>  <!-- Sealed Rune Lvl 8 -->
 		</skill-reducer>
 	</item>
 
@@ -76,8 +76,8 @@
 	<!-- Double-click to receive one Stage 9 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55201" level="1" value="-1"/>  <!-- Sealed Rune Lvl 9 -->
+		<skill-reducer>
+			<skill id="55201" value="-1"/>  <!-- Sealed Rune Lvl 9 -->
 		</skill-reducer>
 	</item>
 
@@ -85,8 +85,8 @@
 	<!-- Double-click to receive one Stage 10 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55202" level="1" value="-1"/>  <!-- Sealed Rune Lv. 10 -->
+		<skill-reducer>
+			<skill id="55202" value="-1"/>  <!-- Sealed Rune Lv. 10 -->
 		</skill-reducer>
 	</item>
 
@@ -94,8 +94,8 @@
 	<!-- Double-click to receive one Stage 11 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55203" level="1" value="-1"/>  <!-- Sealed Rune Lv. 11 -->
+		<skill-reducer>
+			<skill id="55203" value="-1"/>  <!-- Sealed Rune Lv. 11 -->
 		</skill-reducer>
 	</item>
 
@@ -103,8 +103,8 @@
 	<!-- Double-click to receive one Stage 12 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55204" level="1" value="-1"/>  <!-- Sealed Rune Lv. 12 -->
+		<skill-reducer>
+			<skill id="55204" value="-1"/>  <!-- Sealed Rune Lv. 12 -->
 		</skill-reducer>
 	</item>
 
@@ -112,8 +112,8 @@
 	<!-- Double-click to receive one Stage 13 Rune that can be equipped to your weapon. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55205" level="1" value="-1"/>  <!-- Sealed Rune Lv. 13 -->
+		<skill-reducer>
+			<skill id="55205" value="-1"/>  <!-- Sealed Rune Lv. 13 -->
 		</skill-reducer>
 	</item>
 
@@ -209,8 +209,8 @@
 	<!-- Double-click to obtain one of several various clan rewards. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="10" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55172" level="1" value="-1"/>  <!-- Clan's Special Supplies -->
+		<skill-reducer>
+			<skill id="55172" value="-1"/>  <!-- Clan's Special Supplies -->
 		</skill-reducer>
 	</item>
 
@@ -218,8 +218,8 @@
 	<!-- Double-click to obtain one of several various clan rewards. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="10" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55173" level="1" value="-1"/>  <!-- Clan's Special Supplies -->
+		<skill-reducer>
+			<skill id="55173" value="-1"/>  <!-- Clan's Special Supplies -->
 		</skill-reducer>
 	</item>
 
@@ -227,8 +227,8 @@
 	<!-- Double-click to obtain one of several various clan rewards. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="10" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55174" level="1" value="-1"/>  <!-- Clan's Special Supplies -->
+		<skill-reducer>
+			<skill id="55174" value="-1"/>  <!-- Clan's Special Supplies -->
 		</skill-reducer>
 	</item>
 
@@ -236,8 +236,8 @@
 	<!-- Double-click to obtain one of several various clan rewards. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="10" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55175" level="1" value="-1"/>  <!-- Clan's Special Supplies -->
+		<skill-reducer>
+			<skill id="55175" value="-1"/>  <!-- Clan's Special Supplies -->
 		</skill-reducer>
 	</item>
 
@@ -247,7 +247,7 @@
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55176" level="1" value="-1"/>  <!-- Yellow Talisman - P. Atk. -->
+			<skill id="55176" value="-1"/>  <!-- Yellow Talisman - P. Atk. -->
 		</skills>
 	</armor>
 
@@ -257,7 +257,7 @@
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55177" level="1" value="-1"/>  <!-- Yellow Talisman - Atk. Spd. -->
+			<skill id="55177" value="-1"/>  <!-- Yellow Talisman - Atk. Spd. -->
 		</skills>
 	</armor>
 
@@ -267,7 +267,7 @@
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55178" level="1" value="-1"/>  <!-- Yellow Talisman - M. Def. -->
+			<skill id="55178" value="-1"/>  <!-- Yellow Talisman - M. Def. -->
 		</skills>
 	</armor>
 
@@ -277,7 +277,7 @@
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55179" level="1" value="-1"/>  <!-- Yellow Talisman - M. Atk. -->
+			<skill id="55179" value="-1"/>  <!-- Yellow Talisman - M. Atk. -->
 		</skills>
 	</armor>
 
@@ -287,7 +287,7 @@
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55180" level="1" value="-1"/>  <!-- Yellow Talisman - Casting Spd. -->
+			<skill id="55180" value="-1"/>  <!-- Yellow Talisman - Casting Spd. -->
 		</skills>
 	</armor>
 
@@ -297,7 +297,7 @@
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55181" level="1" value="-1"/>  <!-- Yellow Talisman - P. Accuracy -->
+			<skill id="55181" value="-1"/>  <!-- Yellow Talisman - P. Accuracy -->
 		</skills>
 	</armor>
 
@@ -307,7 +307,7 @@
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55182" level="1" value="-1"/>  <!-- Yellow Talisman - P. Def. -->
+			<skill id="55182" value="-1"/>  <!-- Yellow Talisman - P. Def. -->
 		</skills>
 	</armor>
 
@@ -317,7 +317,7 @@
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55183" level="1" value="-1"/>  <!-- Yellow Talisman - Speed -->
+			<skill id="55183" value="-1"/>  <!-- Yellow Talisman - Speed -->
 		</skills>
 	</armor>
 
@@ -327,7 +327,7 @@
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55184" level="1" value="-1"/>  <!-- Yellow Talisman - P. Evasion -->
+			<skill id="55184" value="-1"/>  <!-- Yellow Talisman - P. Evasion -->
 		</skills>
 	</armor>
 
@@ -337,7 +337,7 @@
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55185" level="1" value="-1"/>  <!-- Yellow Talisman - Healing -->
+			<skill id="55185" value="-1"/>  <!-- Yellow Talisman - Healing -->
 		</skills>
 	</armor>
 
@@ -347,61 +347,61 @@
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55186" level="1" value="-1"/>  <!-- Blue Talisman - Invisibility -->
+			<skill id="55186" value="-1"/>  <!-- Blue Talisman - Invisibility -->
 		</skills>
 	</armor>
 
 	<item id="70040" name="Roast Blue Mackerel - STR" type="SCROLL" icon="BranchIcon.Icon.roasted_mackerel_buff">
 	<!-- For 20 min. STR +1.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55187" level="1" value="-1"/>  <!-- Roast Blue Mackerel - STR -->
+		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55187" value="-1"/>  <!-- Roast Blue Mackerel - STR -->
 		</skill-reducer>
 	</item>
 
 	<item id="70041" name="Roast Blue Mackerel - INT" type="SCROLL" icon="BranchIcon.Icon.roasted_mackerel_buff">
 	<!-- For 20 min. INT +1.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55188" level="1" value="-1"/>  <!-- Roast Blue Mackerel - INT -->
+		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55188" value="-1"/>  <!-- Roast Blue Mackerel - INT -->
 		</skill-reducer>
 	</item>
 
 	<item id="70042" name="Roast Blue Mackerel - CON" type="SCROLL" icon="BranchIcon.Icon.roasted_mackerel_buff">
 	<!-- For 20 min. CON +1.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55189" level="1" value="-1"/>  <!-- Roast Blue Mackerel - CON -->
+		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55189" value="-1"/>  <!-- Roast Blue Mackerel - CON -->
 		</skill-reducer>
 	</item>
 
 	<item id="70043" name="Roast Blue Mackerel - DEX" type="SCROLL" icon="BranchIcon.Icon.roasted_mackerel_buff">
 	<!-- For 20 min. DEX +1.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55190" level="1" value="-1"/>  <!-- Roast Blue Mackerel - DEX -->
+		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55190" value="-1"/>  <!-- Roast Blue Mackerel - DEX -->
 		</skill-reducer>
 	</item>
 
 	<item id="70044" name="Roast Blue Mackerel - MEN" type="SCROLL" icon="BranchIcon.Icon.roasted_mackerel_buff">
 	<!-- For 20 min. MEN +1.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55191" level="1" value="-1"/>  <!-- Roast Blue Mackerel - MEN -->
+		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55191" value="-1"/>  <!-- Roast Blue Mackerel - MEN -->
 		</skill-reducer>
 	</item>
 
 	<item id="70045" name="Roast Blue Mackerel - WIT" type="SCROLL" icon="BranchIcon.Icon.roasted_mackerel_buff">
 	<!-- For 20 min. WIT +1.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55192" level="1" value="-1"/>  <!-- Roast Blue Mackerel - WIT -->
+		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55192" value="-1"/>  <!-- Roast Blue Mackerel - WIT -->
 		</skill-reducer>
 	</item>
 
@@ -547,8 +547,8 @@
 	<!-- Inflicts physical damage by using the intense power of spirit.  Intended for Lv. 20 and higher. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="14826" level="1" value="-1"/>  <!-- Intense Slash -->
+		<skill-reducer>
+			<skill id="14826" value="-1"/>  <!-- Intense Slash -->
 		</skill-reducer>
 	</item>
 
@@ -556,7 +556,7 @@
 	<!-- Inflicts physical damage by using the intense power of spirit.  Intended for Lv. 20 and higher. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="14826" level="2" value="-1"/>  <!-- Intense Slash -->
 		</skill-reducer>
 	</item>
@@ -565,7 +565,7 @@
 	<!-- Inflicts physical damage by using the intense power of spirit.  Intended for Lv. 20 and higher. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="14826" level="3" value="-1"/>  <!-- Intense Slash -->
 		</skill-reducer>
 	</item>
@@ -574,7 +574,7 @@
 	<!-- Inflicts physical damage by using the intense power of spirit.  Intended for Lv. 20 and higher. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="14826" level="4" value="-1"/>  <!-- Intense Slash -->
 		</skill-reducer>
 	</item>
@@ -583,7 +583,7 @@
 	<!-- Inflicts physical damage by using the intense power of spirit.  Intended for Lv. 20 and higher. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="14826" level="5" value="-1"/>  <!-- Intense Slash -->
 		</skill-reducer>
 	</item>
@@ -592,7 +592,7 @@
 	<!-- Inflicts physical damage by using the intense power of spirit.  Intended for Lv. 20 and higher. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="14826" level="6" value="-1"/>  <!-- Intense Slash -->
 		</skill-reducer>
 	</item>
@@ -601,8 +601,8 @@
 	<!-- Inflicts magical damage by using the power of holy magic.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="14828" level="1" value="-1"/>  <!-- Purity Blast -->
+		<skill-reducer>
+			<skill id="14828" value="-1"/>  <!-- Purity Blast -->
 		</skill-reducer>
 	</item>
 
@@ -610,7 +610,7 @@
 	<!-- Inflicts magical damage by using the power of holy magic.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="14828" level="2" value="-1"/>  <!-- Purity Blast -->
 		</skill-reducer>
 	</item>
@@ -619,7 +619,7 @@
 	<!-- Inflicts magical damage by using the power of holy magic.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="14828" level="3" value="-1"/>  <!-- Purity Blast -->
 		</skill-reducer>
 	</item>
@@ -628,7 +628,7 @@
 	<!-- Inflicts magical damage by using the power of holy magic.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="14828" level="4" value="-1"/>  <!-- Purity Blast -->
 		</skill-reducer>
 	</item>
@@ -637,7 +637,7 @@
 	<!-- Inflicts magical damage by using the power of holy magic.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="14828" level="5" value="-1"/>  <!-- Purity Blast -->
 		</skill-reducer>
 	</item>
@@ -646,7 +646,7 @@
 	<!-- Inflicts magical damage by using the power of holy magic.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="14828" level="6" value="-1"/>  <!-- Purity Blast -->
 		</skill-reducer>
 	</item>
@@ -655,8 +655,8 @@
 	<!-- Inflicts physical damage by using the power of a devout heart.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="14830" level="1" value="-1"/>  <!-- Grey Explosion -->
+		<skill-reducer>
+			<skill id="14830" value="-1"/>  <!-- Grey Explosion -->
 		</skill-reducer>
 	</item>
 
@@ -664,7 +664,7 @@
 	<!-- Inflicts physical damage by using the power of a devout heart.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="14830" level="2" value="-1"/>  <!-- Grey Explosion -->
 		</skill-reducer>
 	</item>
@@ -673,7 +673,7 @@
 	<!-- Inflicts physical damage by using the power of a devout heart.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="14830" level="3" value="-1"/>  <!-- Grey Explosion -->
 		</skill-reducer>
 	</item>
@@ -682,7 +682,7 @@
 	<!-- Inflicts physical damage by using the power of a devout heart.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="14830" level="4" value="-1"/>  <!-- Grey Explosion -->
 		</skill-reducer>
 	</item>
@@ -691,7 +691,7 @@
 	<!-- Inflicts physical damage by using the power of a devout heart.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="14830" level="5" value="-1"/>  <!-- Grey Explosion -->
 		</skill-reducer>
 	</item>
@@ -700,7 +700,7 @@
 	<!-- Inflicts physical damage by using the power of a devout heart.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="14830" level="6" value="-1"/>  <!-- Grey Explosion -->
 		</skill-reducer>
 	</item>
@@ -709,8 +709,8 @@
 	<!-- Inflicts magical damage to nearby enemies by entirely focusing on holy magic.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="14832" level="1" value="-1"/>  <!-- Platonic Blizzard -->
+		<skill-reducer>
+			<skill id="14832" value="-1"/>  <!-- Platonic Blizzard -->
 		</skill-reducer>
 	</item>
 
@@ -718,7 +718,7 @@
 	<!-- Inflicts magical damage to nearby enemies by entirely focusing on holy magic.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="14832" level="2" value="-1"/>  <!-- Platonic Blizzard -->
 		</skill-reducer>
 	</item>
@@ -727,7 +727,7 @@
 	<!-- Inflicts magical damage to nearby enemies by entirely focusing on holy magic.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="14832" level="3" value="-1"/>  <!-- Platonic Blizzard -->
 		</skill-reducer>
 	</item>
@@ -736,7 +736,7 @@
 	<!-- Inflicts magical damage to nearby enemies by entirely focusing on holy magic.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="14832" level="4" value="-1"/>  <!-- Platonic Blizzard -->
 		</skill-reducer>
 	</item>
@@ -745,7 +745,7 @@
 	<!-- Inflicts magical damage to nearby enemies by entirely focusing on holy magic.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="14832" level="5" value="-1"/>  <!-- Platonic Blizzard -->
 		</skill-reducer>
 	</item>
@@ -754,7 +754,7 @@
 	<!-- Inflicts magical damage to nearby enemies by entirely focusing on holy magic.  Intended for Lv. 20+. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="14832" level="6" value="-1"/>  <!-- Platonic Blizzard -->
 		</skill-reducer>
 	</item>
@@ -769,8 +769,8 @@
 	<!-- A 2-hour item. When in inventory, your XP and SP gain is increased by 100%.  -->
 		<restriction freightable="false" olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="120" immediate-effect="true"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55234" level="1" value="-1"/>  <!-- XP Rune 100% -->
+		<skill-reducer>
+			<skill id="55234" value="-1"/>  <!-- XP Rune 100% -->
 		</skill-reducer>
 	</item>
 

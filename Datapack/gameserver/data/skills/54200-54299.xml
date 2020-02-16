@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="54200" name="Mount Winner’s Glory" max-level="1" >
+	<skill id="54200" name="Mount Winner’s Glory">
 	<!-- Mounts a Winner’s Glory. -->
 		<icon initial="icon.warhorse_vehicle"/>
 		<attributes property="PHYSIC" >
@@ -10,7 +10,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54201" name="Summon White Wing" max-level="1" >
+	<skill id="54201" name="Summon White Wing">
 	<!-- Ride White Wings. -->
 		<icon initial="icon.skill8605"/>
 		<attributes property="PHYSIC" >
@@ -20,7 +20,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54202" name="Summon Silver Saint" max-level="1" >
+	<skill id="54202" name="Summon Silver Saint">
 	<!-- Mounts Silver Saint. -->
 		<icon initial="icon.skill8607"/>
 		<attributes property="PHYSIC" >
@@ -30,7 +30,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54203" name="Silent Riding" max-level="1" >
+	<skill id="54203" name="Silent Riding">
 	<!-- For 30 seconds, protected from preemptive attacks from monsters. Speed -20%%. Can only use while mounted on a mount. Skill is cancelled when dismounted. -->
 		<icon initial="icon.skill0221"/>
 		<attributes property="PHYSIC" >
@@ -41,7 +41,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54204" name="Ranker Transformation" max-level="1" >
+	<skill id="54204" name="Ranker Transformation">
 	<!-- Benefits for Race Ranking 1st-3rd.\n\nBrings out the Ancient Demon’s original power and transforms into a demon.\n\nMax HP +300. -->
 		<icon initial="icon.skill14220"/>
 		<attributes property="PHYSIC" auto-use="BUFF">
@@ -53,7 +53,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="54205" name="Ranker Transformation" max-level="1" >
+	<skill id="54205" name="Ranker Transformation">
 	<!-- Benefits for Race Ranking 1st-3rd.\n\nBrings out Jin Kamael’s original power and pulls out black wings.\n\nMax HP +300. -->
 		<icon initial="icon.skill1926"/>
 		<attributes property="PHYSIC" auto-use="BUFF">

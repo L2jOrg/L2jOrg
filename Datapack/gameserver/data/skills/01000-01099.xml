@@ -42,7 +42,7 @@
 			<effect name="ManaDamOverTime" ticks="5">
 				<power initial="1.0"/>
 			</effect>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK">
 				<power initial="2.0">
 					<value level="2">5.0</value>
 					<value level="3">10.0</value>
@@ -58,7 +58,7 @@
 				</power>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="5">5.0</value>
 					<value level="9">7.0</value>
 					<value level="10">10.0</value>
@@ -67,7 +67,7 @@
 				</power>
 			</stat-modify>
 			<stat-modify stat="MAGIC_ATTACK" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="6">5.0</value>
 					<value level="9">7.0</value>
 					<value level="10">10.0</value>
@@ -76,7 +76,7 @@
 				</power>
 			</stat-modify>
 			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="7">5.0</value>
 					<value level="9">7.0</value>
 					<value level="10">10.0</value>
@@ -85,12 +85,12 @@
 				</power>
 			</stat-modify>
 			<stat-modify stat="MAGICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="8">5.0</value>
 				</power>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="8">5.0</value>
 				</power>
 			</stat-modify>
@@ -995,7 +995,7 @@
 		</consume>
 		<target type="TARGET" />
 		<conditions>
-			<skill id="1013" learned="false"/>
+			<skill id="1013"/>
 		</conditions>
 		<effects>
 			<effect name="ManaHeal">
@@ -1245,7 +1245,7 @@
 		</conditions>
 		<effects>
 			<effect name="Resurrection">
-				<power initial="0.0">
+				<power>
 					<value level="2">20.0</value>
 					<value level="3">30.0</value>
 					<value level="4">40.0</value>
@@ -1812,7 +1812,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="29.0">
 					<value level="2">31.0</value>
 					<value level="3">33.0</value>
@@ -1912,7 +1912,7 @@
 			</target>
 		</conditions>
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="19.0">
 					<value level="2">21.0</value>
 					<value level="3">24.0</value>
@@ -2426,7 +2426,7 @@
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="1043" name="Holy Weapon" max-level="1" action="A2" type="MAGIC">
+	<skill id="1043" name="Holy Weapon" action="A2" type="MAGIC">
 	<!-- Increases a party member's holy P. Atk. by 20 for 20 minutes. -->
 		<icon initial="icon.skill1043"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -2438,7 +2438,7 @@
 			<hit-time initial="243000"/>
 			<activate-rate initial="-1"/>
 
-			<element type="HOLY" value="0"/>
+			<element type="HOLY"/>
 		</attributes>
 		<consume>
 			<mana-init initial="5"/>
@@ -2452,7 +2452,7 @@
 		</abnormal>
 		<conditions>
 			<target>
-				<party include-caster="true"/>
+				<party/>
 			</target>
 		</conditions>
 		<effects>
@@ -2729,7 +2729,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="REGENERATE_MP_RATE" mode="DIFF">
+			<stat-modify stat="REGENERATE_MP_RATE">
 				<power initial="1.72">
 					<value level="2">2.16</value>
 					<value level="3">2.74</value>
@@ -2847,7 +2847,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="10.0">
 					<value level="2">15.0</value>
 					<value level="3">20.0</value>
@@ -3170,7 +3170,7 @@
 		</abnormal>
 		<conditions>
 			<target>
-				<party include-caster="true"/>
+				<party/>
 			</target>
 		</conditions>
 		<effects>
@@ -3184,7 +3184,7 @@
 					<value level="2">16.0</value>
 				</power>
 			</stat-modify>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="5.0">
 					<value level="2">8.0</value>
 				</power>
@@ -3199,7 +3199,7 @@
 					<value level="2">-8.0</value>
 				</power>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="-2.0">
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="-2.0">
 					<value level="2">-4.0</value>
 				</power>
 			</stat-hp-based>
@@ -4086,7 +4086,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ATTACK_CANCEL" mode="DIFF">
+			<stat-modify stat="ATTACK_CANCEL">
 				<power initial="-18.0">
 					<value level="2">-25.0</value>
 					<value level="3">-36.0</value>
@@ -4358,7 +4358,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="2.0">
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="2.0">
 					<value level="2">3.0</value>
 					<value level="3">4.0</value>
 					<value level="4">2.0</value>
@@ -4619,7 +4619,7 @@
 			<chance initial="70"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="11.0">
 					<value level="2">16.0</value>
 					<value level="3">24.0</value>
@@ -4739,7 +4739,7 @@
 			<chance initial="60"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="-9.0">
 					<value level="3">-12.0</value>
 				</power>

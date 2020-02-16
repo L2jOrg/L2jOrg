@@ -111,14 +111,14 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="30.0">
 					<value level="2">35.0</value>
 				</power>
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="305" name="Song of Vengeance" max-level="1" action="A2" type="DANCE">
+	<skill id="305" name="Song of Vengeance" action="A2" type="DANCE">
 	<!-- For 5 minutes, gives a party member the ability to transfer 20%% of received damage back to the enemy. Additionally increases MP Consumption when singing while song/dance is in effect. -->
 		<icon initial="icon.skill0305"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -145,7 +145,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="310" name="Dance of the Vampire" max-level="1" action="A2" type="DANCE">
+	<skill id="310" name="Dance of the Vampire" action="A2" type="DANCE">
 	<!-- For 5 minutes, grants the chance to recover physical damage inflicted on the enemy as 8%% HP to all party members. Also increases MP Consumption when dancing while song/dance is in effect. Requires a dualsword. -->
 		<icon initial="icon.skill0310"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -408,7 +408,7 @@
 		</conditions>
 		<effects>
 			<effect name="BlockMove" stop-level="3"/>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK">
 				<power initial="124.0">
 					<value level="2">134.0</value>
 					<value level="3">145.0</value>
@@ -421,7 +421,7 @@
 				</power>
 				<weapon-type>BOW </weapon-type>
 			</stat-modify>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="3.0">
 					<value level="3">4.0</value>
 					<value level="5">5.0</value>
@@ -429,7 +429,7 @@
 				</power>
 				<weapon-type>BOW </weapon-type>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_ATTACK_RANGE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK_RANGE">
 				<power initial="50.0">
 					<value level="3">100.0</value>
 					<value level="5">150.0</value>
@@ -441,8 +441,8 @@
 				<power initial="20.0"/>
 				<weapon-type>BOW </weapon-type>
 			</stat-hp-based>
-			<speed mode="DIFF">
-				<power initial="0.0">
+			<speed>
+				<power>
 					<value level="3">-100.0</value>
 					<value level="5">-80.0</value>
 					<value level="7">-60.0</value>
@@ -593,7 +593,7 @@
 			</physical-attack-hp-link>
 		</effects>
 	</skill>
-	<skill id="316" name="Aegis" max-level="1" >
+	<skill id="316" name="Aegis">
 	<!-- Shield defense becomes possible in all directions. -->
 		<icon initial="icon.skill0316"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -641,7 +641,7 @@
 		<target type="NONE" />
 		<effects>
 			<effect name="PolearmSingleTarget"/>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="2.0">
 					<value level="2">3.0</value>
 					<value level="3">4.0</value>
@@ -698,7 +698,7 @@
 			<effect name="MpConsumePerLevel" ticks="5">
 				<power initial="0.8"/>
 			</effect>
-			<stat-modify stat="SHIELD_DEFENCE" mode="DIFF">
+			<stat-modify stat="SHIELD_DEFENCE">
 				<power initial="446.0">
 					<value level="2">469.0</value>
 					<value level="3">491.0</value>
@@ -709,7 +709,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="326" name="Build Advanced Headquarters" max-level="1" action="A1">
+	<skill id="326" name="Build Advanced Headquarters" action="A1">
 	<!-- Constructs a high quality encampment that possesses double HP of a standard encampment and assist clan member recovery and battle additions during castle sieges. Consumes 600 B-grade Gemstones. -->
 		<icon initial="icon.skill0326"/>
 		<attributes magic-critical-rate="5.0" hit-cancel-time="4.0" >
@@ -734,7 +734,7 @@
 			<headquarter advanced="true"/>
 		</effects>
 	</skill>
-	<skill id="328" name="Dignity of Kamael" max-level="1" >
+	<skill id="328" name="Dignity of Kamael">
 	<!-- With the original power of Kamael, Speed +20, Atk. Spd. +20, Casting Spd. +20. -->
 		<icon initial="icon.skill1923"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -745,18 +745,18 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED">
 				<power initial="20.0"/>
 			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK_SPEED">
 				<power initial="20.0"/>
 			</stat-modify>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="20.0"/>
 			</speed>
 		</effects>
 	</skill>
-	<skill id="329" name="Pride of Kamael" max-level="1" >
+	<skill id="329" name="Pride of Kamael">
 	<!-- With the original power of Kamael, Poison/Bleed/Hold/Sleep/Stun/Mental Attack Resistance +20. -->
 		<icon initial="icon.skill1925"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -789,7 +789,7 @@
 			</defence-trait>
 		</effects>
 	</skill>
-	<skill id="335" name="Fortitude" max-level="1" action="T">
+	<skill id="335" name="Fortitude" action="T">
 	<!-- Paralysis/Stun Attack Resistance +30. Consumes MP over time depending on your level. -->
 		<icon initial="icon.skill0335"/>
 		<attributes magic-critical-rate="5.0" >
@@ -866,7 +866,7 @@
 			</magic-cost>
 		</effects>
 	</skill>
-	<skill id="341" name="Touch of Life" max-level="1" action="A2">
+	<skill id="341" name="Touch of Life" action="A2">
 	<!-- Gives a divine blessing by sacrificing oneself. Recovers 30%% HP, and for 2 minutes, Buff-canceling Attack Resistance +4%%, Debuff Resistance +10%%, Heal Received +10%%, and recovers 30 HP per second. -->
 		<icon initial="icon.skill0341"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -907,7 +907,7 @@
 			</resist-abnormal-by-category>
 		</effects>
 	</skill>
-	<skill id="342" name="Touch of Death" max-level="1" debuff="true" action="A2">
+	<skill id="342" name="Touch of Death" debuff="true" action="A2">
 	<!-- Casts a dark curse on the enemy by sacrificing oneself. Has a 25%% chance to remove up to 3 buffs and consume 50%% CP. For 2 minutes, Max CP -50%%, Heal Received -10%% and Debuff Resistance -10%%. -->
 		<icon initial="icon.skill0342"/>
 		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="DEATH" level-bonus-rate="20" auto-use="ACTIVE">
@@ -931,7 +931,7 @@
 		<effects>
 			<dispel-by-category category="BUFF" max="3">				<power initial="25.0"/>
 			</dispel-by-category>
-			<vital-stat-modify stat="MAX_CP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_CP" mode="PER">
 				<power initial="-50.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
@@ -1014,7 +1014,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="15.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="15.0" over-hit="true">
 				<power initial="6503.0">
 					<value level="2">6698.0</value>
 					<value level="3">6898.0</value>
@@ -1027,7 +1027,7 @@
 				</power>
 			</physical-attack>
 			<lethal>
-				<power initial="0.0"/>
+				<power/>
 				<half-power initial="10.0"/>
 			</lethal>
 		</effects>
@@ -1072,7 +1072,7 @@
 				</power>
 			</fatal-blow>
 			<lethal>
-				<power initial="0.0"/>
+				<power/>
 				<half-power initial="15.0"/>
 			</lethal>
 		</effects>
@@ -1130,7 +1130,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="10.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="10.0" over-hit="true">
 				<power initial="195.0">
 					<value level="2">205.0</value>
 					<value level="3">215.0</value>
@@ -1194,7 +1194,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="195.0">
 					<value level="2">205.0</value>
 					<value level="3">215.0</value>
@@ -1294,7 +1294,7 @@
 			<effect name="TargetCancel">
 				<power initial="60.0"/>
 			</effect>
-			<physical-attack ignore-shield="true" critical-chance="20.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack ignore-shield="true" critical-chance="20.0" over-hit="true">
 				<power initial="3878.0">
 					<value level="2">3903.0</value>
 					<value level="3">3928.0</value>
@@ -1372,7 +1372,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="20.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="20.0" over-hit="true">
 				<power initial="5.0"/>
 			</physical-attack>
 			<effect name="Spoil"/>
@@ -1502,7 +1502,7 @@
 			<condition name="EquipShield"/>
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="1425.0">
 					<value level="2">1525.0</value>
 					<value level="3">1626.0</value>
@@ -1521,7 +1521,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="353" name="Shield Slam" max-level="1" debuff="true" action="A2">
+	<skill id="353" name="Shield Slam" debuff="true" action="A2">
 	<!-- Hits the enemy with a shield, blocking the enemy's physical skills for 1 minute. Requires a shield. Cancel target. -->
 		<icon initial="icon.skill0353"/>
 		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="20" >
@@ -1552,7 +1552,7 @@
 			<effect name="PhysicalMute"/>
 		</effects>
 	</skill>
-	<skill id="354" name="Hamstring Shot" max-level="1" debuff="true" action="A2">
+	<skill id="354" name="Hamstring Shot" debuff="true" action="A2">
 	<!-- Shoots an arrow at the enemy with bonus 1973 Power. Enemy's Movement Speed -30%% for 1 minute. Requires a bow. Critical. Over-hit. -->
 		<icon initial="icon.skill0354"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="20" auto-use="ACTIVE">
@@ -1579,7 +1579,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="15.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="15.0" over-hit="true">
 				<power initial="1973.0"/>
 			</physical-attack>
 			<speed mode="PER">
@@ -1587,7 +1587,7 @@
 			</speed>
 		</effects>
 	</skill>
-	<skill id="355" name="Focus Death" max-level="1" action="A2">
+	<skill id="355" name="Focus Death" action="A2">
 	<!-- For 20 minutes minutes, P. Critical Rate -20% and Frontal P. Critical Damage -30%. Deadly Stab Rate +40% and Rear P. Critical Damage +90%. Requires a dagger. -->
 		<icon initial="icon.skill0355"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
@@ -1624,7 +1624,7 @@
 			</stat-hp-based>
 		</effects>
 	</skill>
-	<skill id="356" name="Focus Chance" max-level="1" action="A2">
+	<skill id="356" name="Focus Chance" action="A2">
 	<!-- For 20 minutes minutes, Frontal P. Critical Rate -30%. Deadly Stab Rate +20% and Side P. Critical Rate +30% and Rear P. Critical Rate +60%. Requires a dagger. -->
 		<icon initial="icon.skill0356"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
@@ -1655,7 +1655,7 @@
 			</stat-position-based>
 		</effects>
 	</skill>
-	<skill id="357" name="Focus Power" max-level="1" action="A2">
+	<skill id="357" name="Focus Power" action="A2">
 	<!-- For 20 minutes minutes, Frontal P. Critical Damage -30%. Side P. Critical Damage +30% and Rear P. Critical Damage +60%. Requires a dagger. -->
 		<icon initial="icon.skill0357"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
@@ -1790,7 +1790,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="true" critical-chance="20.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack ignore-shield="true" critical-chance="20.0" over-hit="true">
 				<power initial="2486.0">
 					<value level="2">2731.0</value>
 					<value level="3">2991.0</value>
@@ -1883,7 +1883,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="true" critical-chance="20.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack ignore-shield="true" critical-chance="20.0" over-hit="true">
 				<power initial="3077.0">
 					<value level="2">3143.0</value>
 					<value level="3">3209.0</value>
@@ -1903,7 +1903,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="364" name="Champion Song" max-level="1" action="A2" type="DANCE">
+	<skill id="364" name="Champion Song" action="A2" type="DANCE">
 	<!-- For 5 minutes, MP Consumption -20% and Cooldown -10% for physical/sing/dance skills of all party members. Also increases MP Consumption when singing while song/dance is in effect. -->
 		<icon initial="icon.skill0364"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -2031,7 +2031,7 @@
 				<power initial="1.0"/>
 				<types>0 1 2 3 4 22</types>
 			</trigger-skill-by-magic>
-			<trigger-skill-by-attack skill="7097" target="MY_PARTY" critical="false">
+			<trigger-skill-by-attack skill="7097" target="MY_PARTY">
 				<power initial="1.0"/>
 				<chance initial="100.0"/>
 				<min-damage initial="1.0"/>
@@ -2093,7 +2093,7 @@
 			<block-all-actions>
 				<allowed-skills>35016</allowed-skills>
 			</block-all-actions>
-			<damage-block block-hp="true" block-mp="false"/>
+			<damage-block block-hp="true"/>
 			<effect name="BuffBlock"/>
 			<effect name="DebuffBlock"/>
 			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
@@ -2106,7 +2106,7 @@
 			</defence-trait>
 		</effects>
 	</skill>
-	<skill id="368" name="Vengeance" max-level="1" action="A3">
+	<skill id="368" name="Vengeance" action="A3">
 	<!-- Provokes nearby enemies with 8784 Power to switch targets. For 30 seconds, P. Def. +5400, M. Def. +4050, and Buff-canceling Attack Resistance +50%%. Movement Speed -40%%. Requires a shield. -->
 		<icon initial="icon.skill0368"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -2137,10 +2137,10 @@
 			<effect name="TargetMeProbability" scope="SELF">
 				<power initial="40.0"/>
 			</effect>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF" scope="SELF">
+			<stat-modify stat="MAGICAL_DEFENCE" scope="SELF">
 				<power initial="4050.0"/>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF" scope="SELF">
+			<stat-modify stat="PHYSICAL_DEFENCE" scope="SELF">
 				<power initial="5400.0"/>
 			</stat-modify>
 			<resist-dispel-by-category category="BUFF" scope="SELF">
@@ -2168,7 +2168,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="100.0">
 					<value level="2">200.0</value>
 					<value level="3">400.0</value>
@@ -2195,7 +2195,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_CP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_CP">
 				<power initial="200.0">
 					<value level="2">400.0</value>
 					<value level="3">600.0</value>
@@ -2222,7 +2222,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="70.0">
 					<value level="2">140.0</value>
 					<value level="3">280.0</value>
@@ -2438,7 +2438,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -2465,7 +2465,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="1.0">
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
 					<value level="4">4.0</value>
@@ -2684,7 +2684,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="3.0">
 					<value level="2">5.0</value>
 					<value level="3">6.0</value>
@@ -2692,7 +2692,7 @@
 			</speed>
 		</effects>
 	</skill>
-	<skill id="390" name="Clan Luck" max-level="1" >
+	<skill id="390" name="Clan Luck">
 	<!-- When killed by a monster, item dos not drop. Does not apply to chaotic characters. -->
 		<icon initial="icon.skill1510"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -2709,7 +2709,7 @@
 			</reduce-drop-penalty>
 		</effects>
 	</skill>
-	<skill id="391" name="Clan Imperium" max-level="1" >
+	<skill id="391" name="Clan Imperium">
 	<!-- Grants the privilege of Command Channel formation. -->
 		<icon initial="icon.skill0391"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -2742,7 +2742,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="BONUS_EXP" mode="DIFF">
+			<stat-modify stat="BONUS_EXP">
 				<power initial="3.0">
 					<value level="2">6.0</value>
 					<value level="3">10.0</value>
@@ -2752,7 +2752,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="393" name="Shine Soul Finding" max-level="1" action="A1">
+	<skill id="393" name="Shine Soul Finding" action="A1">
 	<!-- Obtain 2 Shine Souls. -->
 		<icon initial="icon.skill55474"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
@@ -2767,7 +2767,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="394" name="Shadow Soul Finding" max-level="1" action="A1">
+	<skill id="394" name="Shadow Soul Finding" action="A1">
 	<!-- Obtain 2 Shadow Souls. -->
 		<icon initial="icon.skill55475"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
@@ -2782,7 +2782,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="395" name="Heroic Miracle" max-level="1" action="A2">
+	<skill id="395" name="Heroic Miracle" action="A2">
 	<!-- For 30 sec., increases P. Def. by 5400, M. Def. by 4050, Buff-canceling Attack Resistance by 80, and Speed by 5. Consumes 40 Soulstone. -->
 		<icon initial="icon.skill0395"/>
 		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" blocked-on-olympiad="true" >
@@ -2806,21 +2806,21 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="5400.0"/>
 			</stat-modify>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="4050.0"/>
 			</stat-modify>
 			<resist-dispel-by-category category="BUFF">
 				<power initial="-80.0"/>
 			</resist-dispel-by-category>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="5.0"/>
 			</speed>
 		</effects>
 	</skill>
-	<skill id="396" name="Heroic Berserker" max-level="1" action="A2">
+	<skill id="396" name="Heroic Berserker" action="A2">
 	<!-- For 2 minutes, P. Accuracy +8, P. Atk. +500, M. Atk. +500, Atk. Spd. +100, Casting Spd. +100, Movement Speed +20, Buff-canceling Attack Resistance +80, and Heal Received +100%%. Bestows complete Debuff Resistance. P. Def. -25%%, M. Def. -25%%, and P. Evasion -8. Consumes 40 Soulstones. -->
 		<icon initial="icon.skill0396"/>
 		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" blocked-on-olympiad="true" >
@@ -2844,22 +2844,22 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="8.0"/>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK">
 				<power initial="500.0"/>
 			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK">
 				<power initial="500.0"/>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED">
 				<power initial="100.0"/>
 			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK_SPEED">
 				<power initial="100.0"/>
 			</stat-modify>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="20.0"/>
 			</speed>
 			<resist-dispel-by-category category="BUFF">
@@ -2875,7 +2875,7 @@
 			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
 				<power initial="-25.0"/>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="-8.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="-8.0"/>
 			</stat-hp-based>
 		</effects>
 	</skill>
@@ -2929,7 +2929,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="10.0">
 					<value level="2">20.0</value>
 					<value level="3">30.0</value>
@@ -2942,7 +2942,7 @@
 					<value level="10">180.0</value>
 				</power>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="20.0">
 					<value level="2">40.0</value>
 					<value level="3">60.0</value>

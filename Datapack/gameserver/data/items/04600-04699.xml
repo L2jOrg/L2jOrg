@@ -182,8 +182,8 @@
 	<!-- Red crystal containing the light of absorbed souls. Stage 1. Bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2096" level="1" value="-1"/>  <!-- Soul Crystal -->
+		<skill-reducer>
+			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -191,8 +191,8 @@
 	<!-- Red crystal containing the light of absorbed souls. Stage 2. Bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2096" level="1" value="-1"/>  <!-- Soul Crystal -->
+		<skill-reducer>
+			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -200,8 +200,8 @@
 	<!-- Red crystal containing the light of absorbed souls. Stage 3. Bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2096" level="1" value="-1"/>  <!-- Soul Crystal -->
+		<skill-reducer>
+			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -209,8 +209,8 @@
 	<!-- Red crystal containing the light of absorbed souls. stage 4. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2096" level="1" value="-1"/>  <!-- Soul Crystal -->
+		<skill-reducer>
+			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -218,8 +218,8 @@
 	<!-- Red crystal containing the light of absorbed souls. stage 5. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2096" level="1" value="-1"/>  <!-- Soul Crystal -->
+		<skill-reducer>
+			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -227,8 +227,8 @@
 	<!-- Red crystal containing the light of absorbed souls. stage 6. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2096" level="1" value="-1"/>  <!-- Soul Crystal -->
+		<skill-reducer>
+			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -236,8 +236,8 @@
 	<!-- Red crystal containing the light of absorbed souls. stage 7. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2096" level="1" value="-1"/>  <!-- Soul Crystal -->
+		<skill-reducer>
+			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -245,8 +245,8 @@
 	<!-- Red crystal containing the light of absorbed souls. stage 8. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2096" level="1" value="-1"/>  <!-- Soul Crystal -->
+		<skill-reducer>
+			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -254,8 +254,8 @@
 	<!-- Red crystal containing the light of absorbed souls. stage 9. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2096" level="1" value="-1"/>  <!-- Soul Crystal -->
+		<skill-reducer>
+			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -263,8 +263,8 @@
 	<!-- Red crystal containing the light of absorbed souls. stage 10. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2096" level="1" value="-1"/>  <!-- Soul Crystal -->
+		<skill-reducer>
+			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -272,8 +272,8 @@
 	<!-- Green crystal containing the light of absorbed souls. Stage 1. Bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2096" level="1" value="-1"/>  <!-- Soul Crystal -->
+		<skill-reducer>
+			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -281,8 +281,8 @@
 	<!-- Green crystal containing the light of absorbed souls. Stage 2. Bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2096" level="1" value="-1"/>  <!-- Soul Crystal -->
+		<skill-reducer>
+			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -290,8 +290,8 @@
 	<!-- Green crystal containing the light of absorbed souls. Stage 3. Bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2096" level="1" value="-1"/>  <!-- Soul Crystal -->
+		<skill-reducer>
+			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -299,8 +299,8 @@
 	<!-- Green crystal containing the light of absorbed souls. stage 4. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2096" level="1" value="-1"/>  <!-- Soul Crystal -->
+		<skill-reducer>
+			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -308,8 +308,8 @@
 	<!-- Green crystal containing the light of absorbed souls. stage 5. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2096" level="1" value="-1"/>  <!-- Soul Crystal -->
+		<skill-reducer>
+			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -317,8 +317,8 @@
 	<!-- Green crystal containing the light of absorbed souls. stage 6. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2096" level="1" value="-1"/>  <!-- Soul Crystal -->
+		<skill-reducer>
+			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -326,8 +326,8 @@
 	<!-- Green crystal containing the light of absorbed souls. stage 7. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2096" level="1" value="-1"/>  <!-- Soul Crystal -->
+		<skill-reducer>
+			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -335,8 +335,8 @@
 	<!-- Green crystal containing the light of absorbed souls. stage 8. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2096" level="1" value="-1"/>  <!-- Soul Crystal -->
+		<skill-reducer>
+			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -344,8 +344,8 @@
 	<!-- Green crystal containing the light of absorbed souls. stage 9. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2096" level="1" value="-1"/>  <!-- Soul Crystal -->
+		<skill-reducer>
+			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -353,8 +353,8 @@
 	<!-- Green crystal containing the light of absorbed souls. stage 10. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2096" level="1" value="-1"/>  <!-- Soul Crystal -->
+		<skill-reducer>
+			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -362,8 +362,8 @@
 	<!-- Blue crystal containing the light of absorbed souls. Stage 1. Bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2096" level="1" value="-1"/>  <!-- Soul Crystal -->
+		<skill-reducer>
+			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -371,8 +371,8 @@
 	<!-- Blue crystal containing the light of absorbed souls. Stage 2. Bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2096" level="1" value="-1"/>  <!-- Soul Crystal -->
+		<skill-reducer>
+			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -380,8 +380,8 @@
 	<!-- Blue crystal containing the light of absorbed souls. Stage 3. Bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2096" level="1" value="-1"/>  <!-- Soul Crystal -->
+		<skill-reducer>
+			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -389,8 +389,8 @@
 	<!-- Blue crystal containing the light of absorbed souls. stage 4. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2096" level="1" value="-1"/>  <!-- Soul Crystal -->
+		<skill-reducer>
+			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -398,8 +398,8 @@
 	<!-- Blue crystal containing the light of absorbed souls. stage 5. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2096" level="1" value="-1"/>  <!-- Soul Crystal -->
+		<skill-reducer>
+			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -407,8 +407,8 @@
 	<!-- Blue crystal containing the light of absorbed souls. stage 6. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2096" level="1" value="-1"/>  <!-- Soul Crystal -->
+		<skill-reducer>
+			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -416,8 +416,8 @@
 	<!-- Blue crystal containing the light of absorbed souls. stage 7. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2096" level="1" value="-1"/>  <!-- Soul Crystal -->
+		<skill-reducer>
+			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -425,8 +425,8 @@
 	<!-- Blue crystal containing the light of absorbed souls. stage 8. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2096" level="1" value="-1"/>  <!-- Soul Crystal -->
+		<skill-reducer>
+			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -434,8 +434,8 @@
 	<!-- Blue crystal containing the light of absorbed souls. stage 9. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2096" level="1" value="-1"/>  <!-- Soul Crystal -->
+		<skill-reducer>
+			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -443,8 +443,8 @@
 	<!-- Blue crystal containing the light of absorbed souls. stage 10. Once saturated, it bestows special abilities to a weapon. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="20" commission-type="SOUL_CRYSTAL" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2096" level="1" value="-1"/>  <!-- Soul Crystal -->
+		<skill-reducer>
+			<skill id="2096" value="-1"/>  <!-- Soul Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -467,8 +467,8 @@
 	<!-- Misdirects enemy attack, inhibits Speed of user. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="120" price="120" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2074" level="1" value="-1"/>  <!-- Potion of Critical Escape -->
+		<skill-reducer>
+			<skill id="2074" value="-1"/>  <!-- Potion of Critical Escape -->
 		</skill-reducer>
 	</item>
 
@@ -476,8 +476,8 @@
 	<!-- Decreases one's level of Aggression. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="180" price="5000" commission-type="SCROLL_OTHER" reuse-delay="10000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2075" level="1" value="-1"/>  <!-- Scroll: Decrease Hate -->
+		<skill-reducer>
+			<skill id="2075" value="-1"/>  <!-- Scroll: Decrease Hate -->
 		</skill-reducer>
 	</item>
 
@@ -485,8 +485,8 @@
 	<!-- Allows one to breathe under water for extended periods. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="180" price="500" commission-type="SCROLL_OTHER" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2076" level="1" value="-1"/>  <!-- Eva's Blessing -->
+		<skill-reducer>
+			<skill id="2076" value="-1"/>  <!-- Eva's Blessing -->
 		</skill-reducer>
 	</item>
 
@@ -494,8 +494,8 @@
 	<!-- Reduces P. Def. and reflects damage back upon enemy. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="180" price="150" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2077" level="1" value="-1"/>  <!-- Potion of Revenge -->
+		<skill-reducer>
+			<skill id="2077" value="-1"/>  <!-- Potion of Revenge -->
 		</skill-reducer>
 	</item>
 
@@ -515,8 +515,8 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3026" level="1" value="-1"/>  <!-- Special Ability: Critical Anger -->
-			<skill id="3025" level="1" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Special Ability: Critical Anger -->
+			<skill id="3026" value="-1"/>  <!-- Special Ability: Critical Anger -->
+			<skill id="3025" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Special Ability: Critical Anger -->
 		</skills>
 	</weapon>
 
@@ -536,7 +536,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3010" level="1" value="-1"/>  <!-- Special Ability: Focus -->
+			<skill id="3010" value="-1"/>  <!-- Special Ability: Focus -->
 		</skills>
 	</weapon>
 
@@ -556,7 +556,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3498" level="1" value="-1"/>  <!-- Special Ability: Light -->
+			<skill id="3498" value="-1"/>  <!-- Special Ability: Light -->
 		</skills>
 	</weapon>
 

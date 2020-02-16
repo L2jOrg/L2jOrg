@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="56000" name="Stable Scroll: Enchant Cloak" max-level="1" action="A1">
+	<skill id="56000" name="Stable Scroll: Enchant Cloak" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -10,18 +10,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56001" name="High-grade Life Stone Pack - Legendary" max-level="1" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes >
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56002" name="High-grade Life Stone Pack - Cloak" max-level="1" action="A1">
+	<skill id="56001" name="High-grade Life Stone Pack - Legendary" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -32,7 +21,18 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56003" name="XP/SP Rune - 50%" max-level="1" >
+	<skill id="56002" name="High-grade Life Stone Pack - Cloak" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="56003" name="XP/SP Rune - 50%">
 	<!-- XP/SP +50%%, while hunting. -->
 		<icon initial="icon.skill19226"/>
 		<attributes property="MAGIC" >
@@ -42,7 +42,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56004" name="Summon Agathion - Mermaid" max-level="1" action="A1">
+	<skill id="56004" name="Summon Agathion - Mermaid" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -52,7 +52,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56005" name="Mermaid Agathion Enchant Scroll" max-level="1" action="A1">
+	<skill id="56005" name="Mermaid Agathion Enchant Scroll" action="A1">
 	<!-- none -->
 		<icon initial="icon.star_scrl_of_ench_ag"/>
 		<attributes >
@@ -62,7 +62,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56006" name="Master's Fishing Potion" max-level="1" action="A1">
+	<skill id="56006" name="Master's Fishing Potion" action="A1">
 	<!-- Increases XP/SP for successful fishing by 50% for 1 hour. Does not disappear upon death and cannot be forcefully removed. -->
 		<icon initial="BranchIcon.etc_sign_agathion_feed_blue_i00"/>
 		<attributes property="PHYSIC" >
@@ -74,7 +74,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56007" name="Shining Fishing Box" max-level="1" action="A1">
+	<skill id="56007" name="Shining Fishing Box" action="A1">
 	<!-- Double-click to get a random item. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -85,7 +85,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56008" name="Scroll: Fishing XP" max-level="1" action="A1">
+	<skill id="56008" name="Scroll: Fishing XP" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -136,7 +136,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56011" name="Full Load Support Pack" max-level="1" action="A1">
+	<skill id="56011" name="Full Load Support Pack" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -147,7 +147,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56012" name="Cloak of the Chosen" max-level="1" >
+	<skill id="56012" name="Cloak of the Chosen">
 	<!-- Max HP/MP/CP +5%%, P. Atk. +3%%, Magic Resistance +5%%, and Speed +10. -->
 		<icon initial="icon.vesper_cloack_i00"/>
 		<attributes property="MAGIC" >
@@ -157,7 +157,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56013" name="Greater Blessing of Castle Scroll - Party" max-level="1" action="A1">
+	<skill id="56013" name="Greater Blessing of Castle Scroll - Party" action="A1">
 	<!-- Gives the Blessing of Castle effect to all party members. Buffs and debuffs do not disappear upon death, but Noblesse Blessing and Lucky Charm disappear. -->
 		<icon initial="icon.etc_scroll_white_i00"/>
 		<attributes property="PHYSIC" >
@@ -170,7 +170,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56014" name="Castle Enchant Buff Scroll - Party" max-level="1" action="A1">
+	<skill id="56014" name="Castle Enchant Buff Scroll - Party" action="A1">
 	<!-- Bestows all party members with the effects of Might Lv. 2, Empower Lv. 2, Acumen Lv. 1, and Haste Lv. 1. -->
 		<icon initial="icon.etc_scroll_white_i00"/>
 		<attributes property="PHYSIC" >
@@ -181,7 +181,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56015" name="Castle Wind Walk Scroll - Party" max-level="1" action="A1">
+	<skill id="56015" name="Castle Wind Walk Scroll - Party" action="A1">
 	<!-- Increases Speed of all party members by 33. -->
 		<icon initial="icon.etc_scroll_white_i00"/>
 		<attributes property="PHYSIC" >
@@ -191,7 +191,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56016" name="Enchanted Castle Ring" max-level="1" >
+	<skill id="56016" name="Enchanted Castle Ring">
 	<!-- Increases P./M. Atk. and Max HP. -->
 		<icon initial="icon.ev_11th_rare_acc_ring"/>
 		<attributes property="MAGIC" >
@@ -201,7 +201,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56017" name="Enchanted Castle Earring" max-level="1" >
+	<skill id="56017" name="Enchanted Castle Earring">
 	<!-- Increases MP Recovery, Healing Effect and Max MP. Decreases Skill MP Cost. -->
 		<icon initial="icon.ev_11th_rare_acc_earing"/>
 		<attributes property="MAGIC" >
@@ -211,7 +211,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56018" name="Enchanted Castle Necklace" max-level="1" >
+	<skill id="56018" name="Enchanted Castle Necklace">
 	<!-- Increases P./M. Def., MEN Attack and Resistance, and Max MP. Decreases Skill MP Cost. -->
 		<icon initial="icon.ev_11th_rare_acc_necklace"/>
 		<attributes property="MAGIC" >
@@ -221,7 +221,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56019" name="+7 Elmoreden Cloak Box" max-level="1" action="A1">
+	<skill id="56019" name="+7 Elmoreden Cloak Box" action="A1">
 	<!-- Double-click to obtain a +7 Elmoreden Cloak. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -232,7 +232,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56020" name="+7 Aden Cloak Box" max-level="1" action="A1">
+	<skill id="56020" name="+7 Aden Cloak Box" action="A1">
 	<!-- Double-click to obtain a +7 Aden Cloak. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -243,7 +243,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56021" name="+7 Elmore Cloak Box" max-level="1" action="A1">
+	<skill id="56021" name="+7 Elmore Cloak Box" action="A1">
 	<!-- Double-click to obtain a +7 Elmore Cloak. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -254,7 +254,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56022" name="+7 Ferios Cloak Box" max-level="1" action="A1">
+	<skill id="56022" name="+7 Ferios Cloak Box" action="A1">
 	<!-- Double-click to obtain a +7 Ferios Cloak. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -265,7 +265,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56023" name="Summon  Gnosian Agathion" max-level="1" action="A1">
+	<skill id="56023" name="Summon  Gnosian Agathion" action="A1">
 	<!-- Summons  Agathion - Gnosian. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -275,7 +275,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56024" name="Summon  Orodriel Agathion" max-level="1" action="A1">
+	<skill id="56024" name="Summon  Orodriel Agathion" action="A1">
 	<!-- Summons  Agathion - Orodriel. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -285,7 +285,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56025" name="Summon Penalty Kick Agathion" max-level="1" action="A1">
+	<skill id="56025" name="Summon Penalty Kick Agathion" action="A1">
 	<!-- Summons Agathion - Penalty Kick. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -295,7 +295,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56026" name="Seven Signs Miracle Box" max-level="1" action="A1">
+	<skill id="56026" name="Seven Signs Miracle Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -306,7 +306,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56027" name="VIP Level 1" max-level="1" >
+	<skill id="56027" name="VIP Level 1">
 	<!-- Receives the VIP 1 Daily Gift once a day. XP/SP +5%%, Item Drop Rate +15%%, and World Chat +1. -->
 		<icon initial="BranchIcon.Icon.g_skill_vip1"/>
 		<attributes property="MAGIC" >
@@ -316,7 +316,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56028" name="VIP Level 2" max-level="1" >
+	<skill id="56028" name="VIP Level 2">
 	<!-- Receives the VIP 2 Daily Gift once a day. XP/SP +10%%, Item Drop Rate +25%%, and World Chat +2. -->
 		<icon initial="BranchIcon.Icon.g_skill_vip2"/>
 		<attributes property="MAGIC" >
@@ -326,7 +326,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56029" name="VIP Level 3" max-level="1" >
+	<skill id="56029" name="VIP Level 3">
 	<!-- Receives the VIP 3 Daily Gift once a day. XP/SP +15%%, Item Drop Rate +35%%, World Chat +2, XP/SP when fishing +5%%, PvE Damage +3%%, XP Reduction at Death -5%%. Can obtain Silver Coins when hunting. -->
 		<icon initial="BranchIcon.Icon.g_skill_vip3"/>
 		<attributes property="MAGIC" >
@@ -336,7 +336,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56030" name="VIP Level 4" max-level="1" >
+	<skill id="56030" name="VIP Level 4">
 	<!-- Receives the VIP 4 Daily Gift once a day. XP/SP +20%%, Item Drop Rate +55%%, World Chat +3, XP/SP when fishing +20%%, PvE Damage +10%%, XP Reduction at Death -20%%. Can obtain Silver Coins when hunting. -->
 		<icon initial="BranchIcon.Icon.g_skill_vip4"/>
 		<attributes property="MAGIC" >
@@ -346,7 +346,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56031" name="VIP Level 5" max-level="1" >
+	<skill id="56031" name="VIP Level 5">
 	<!-- Receives the VIP 5 Daily Gift once a day. XP/SP +30%%, Item Drop Rate +70%%, World Chat +4, XP/SP when fishing +20%%, PvE Damage +12%%, XP Reduction at Death -20%%. Can obtain Silver Coins when hunting. -->
 		<icon initial="BranchIcon.Icon.g_skill_vip5"/>
 		<attributes property="MAGIC" >
@@ -356,7 +356,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56032" name="VIP Level 6" max-level="1" >
+	<skill id="56032" name="VIP Level 6">
 	<!-- Receives the VIP 6 Daily Gift once a day. XP/SP +35%%, Item Drop Rate +100%%, World Chat +10, XP/SP when fishing +20%%, PvE Damage +15%%, STR +1, INT +1, DEX +1, WIT +1, CON +1, MEN +1, XP Reduction at Death -20%%. Can obtain Silver Coins when hunting. -->
 		<icon initial="BranchIcon.Icon.g_skill_vip6"/>
 		<attributes property="MAGIC" >
@@ -366,7 +366,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56033" name="VIP Level 7" max-level="1" >
+	<skill id="56033" name="VIP Level 7">
 	<!-- Receives the VIP 7 Daily Gift once a day. XP/SP +35%%, Item Drop Rate +200%%, World Chat +20, XP/SP when fishing +20%%, PvE Damage +15%%, STR +2, INT +2, DEX +2, WIT +2, CON +2, MEN +2, XP Reduction at Death -20%%. Can obtain Silver Coins when hunting. -->
 		<icon initial="BranchIcon.Icon.g_skill_vip7"/>
 		<attributes property="MAGIC" >
@@ -376,7 +376,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56034" name="Agathion Summon - Meliodas" max-level="1" action="A1">
+	<skill id="56034" name="Agathion Summon - Meliodas" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -386,7 +386,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56035" name="Agathion Summon - Elizabeth" max-level="1" action="A1">
+	<skill id="56035" name="Agathion Summon - Elizabeth" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -396,7 +396,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56036" name="Agathion Summon - Hawk" max-level="1" action="A1">
+	<skill id="56036" name="Agathion Summon - Hawk" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -406,7 +406,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56037" name="Agathion Summon - Ban" max-level="1" action="A1">
+	<skill id="56037" name="Agathion Summon - Ban" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -416,7 +416,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56038" name="Agathion Summon - Diane" max-level="1" action="A1">
+	<skill id="56038" name="Agathion Summon - Diane" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -426,7 +426,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56039" name="Agathion Summon - King" max-level="1" action="A1">
+	<skill id="56039" name="Agathion Summon - King" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -436,7 +436,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56040" name="Agathion Summon - Merlin" max-level="1" action="A1">
+	<skill id="56040" name="Agathion Summon - Merlin" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -446,7 +446,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56041" name="Agathion Summon - Gowther" max-level="1" action="A1">
+	<skill id="56041" name="Agathion Summon - Gowther" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -456,7 +456,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56042" name="Agathion Summon - Escanor" max-level="1" action="A1">
+	<skill id="56042" name="Agathion Summon - Escanor" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -984,7 +984,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56070" name="Power of Twin Bow Herritt" max-level="1" action="A1">
+	<skill id="56070" name="Power of Twin Bow Herritt" action="A1">
 	<!-- Received P. Critical Damage -$s1. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -994,7 +994,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56071" name="Meriln's Magic Bracelet" max-level="1" >
+	<skill id="56071" name="Meriln's Magic Bracelet">
 	<!-- Activates 1 main Agathion slot and 2 side slots. -->
 		<icon initial="BranchIcon.icon.g_bm_7th_sins_lbracelet_30d_jp"/>
 		<attributes property="MAGIC" >
@@ -1004,7 +1004,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56072" name="Seven Deadly Sins: Might" max-level="1" action="A1" type="MAGIC">
+	<skill id="56072" name="Seven Deadly Sins: Might" action="A1" type="MAGIC">
 	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For. For 20 min, P. Atk. +15%. -->
 		<icon initial="icon.skill1068"/>
 		<attributes property="PHYSIC" >
@@ -1016,7 +1016,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56073" name="Seven Deadly Sins: Haste" max-level="1" action="A1" type="MAGIC">
+	<skill id="56073" name="Seven Deadly Sins: Haste" action="A1" type="MAGIC">
 	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Atk. Spd. +33%. -->
 		<icon initial="icon.skill1086"/>
 		<attributes property="PHYSIC" >
@@ -1028,7 +1028,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56074" name="Seven Deadly Sins: Empower" max-level="1" action="A1" type="MAGIC">
+	<skill id="56074" name="Seven Deadly Sins: Empower" action="A1" type="MAGIC">
 	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, M. Atk. +75%. -->
 		<icon initial="icon.skill1059"/>
 		<attributes property="PHYSIC" >
@@ -1040,7 +1040,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56075" name="Seven Deadly Sins: Acument" max-level="1" action="A1" type="MAGIC">
+	<skill id="56075" name="Seven Deadly Sins: Acument" action="A1" type="MAGIC">
 	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Casting Spd. +30%. -->
 		<icon initial="icon.skill1085"/>
 		<attributes property="PHYSIC" >
@@ -1052,7 +1052,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56076" name="Seven Deadly Sins: Wind Walk" max-level="1" action="A1" type="MAGIC">
+	<skill id="56076" name="Seven Deadly Sins: Wind Walk" action="A1" type="MAGIC">
 	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Speed +33. -->
 		<icon initial="icon.skill1204"/>
 		<attributes property="PHYSIC" >
@@ -1064,7 +1064,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56077" name="Seven Deadly Sins: Vampiric Rage" max-level="1" action="A1" type="MAGIC">
+	<skill id="56077" name="Seven Deadly Sins: Vampiric Rage" action="A1" type="MAGIC">
 	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, recovers 9% P. Damage dealt to enemy as HP at a certain rate. -->
 		<icon initial="icon.skill1268"/>
 		<attributes property="PHYSIC" >
@@ -1076,7 +1076,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56078" name="Seven Deadly Sins: Berserler Spirit" max-level="1" action="A1" type="MAGIC">
+	<skill id="56078" name="Seven Deadly Sins: Berserler Spirit" action="A1" type="MAGIC">
 	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Party members' Defense +8%, M. Def. +16%, Evasion -4, P. Atk. +8%, M. Atk. +16%, Speed +8%, Casting Spd. +8%, Speed +8. -->
 		<icon initial="icon.skill1062"/>
 		<attributes property="PHYSIC" >
@@ -1088,7 +1088,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56079" name="Seven Deadly Sins: Shield" max-level="1" action="A1" type="MAGIC">
+	<skill id="56079" name="Seven Deadly Sins: Shield" action="A1" type="MAGIC">
 	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, P. Def. +15%. -->
 		<icon initial="icon.skill1040"/>
 		<attributes property="PHYSIC" >
@@ -1100,7 +1100,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56080" name="Seven Deadly Sins: Focus" max-level="1" action="A1" type="MAGIC">
+	<skill id="56080" name="Seven Deadly Sins: Focus" action="A1" type="MAGIC">
 	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Critical Atk. Rate +30%. -->
 		<icon initial="icon.skill1077"/>
 		<attributes property="PHYSIC" >
@@ -1112,7 +1112,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56081" name="Seven Deadly Sins: Death Whisper" max-level="1" action="A1" type="MAGIC">
+	<skill id="56081" name="Seven Deadly Sins: Death Whisper" action="A1" type="MAGIC">
 	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Critical Atk. Power +35%. -->
 		<icon initial="icon.skill1242"/>
 		<attributes property="PHYSIC" >
@@ -1124,7 +1124,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56082" name="Seven Deadly Sins: Guidance" max-level="1" action="A1" type="MAGIC">
+	<skill id="56082" name="Seven Deadly Sins: Guidance" action="A1" type="MAGIC">
 	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Accuracy +4. -->
 		<icon initial="icon.skill1240"/>
 		<attributes property="PHYSIC" >
@@ -1136,7 +1136,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56083" name="Seven Deadly Sins: Clarity" max-level="1" action="A1" type="MAGIC">
+	<skill id="56083" name="Seven Deadly Sins: Clarity" action="A1" type="MAGIC">
 	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, P. Skill MP Consumption -20%, M. Skill MP Consumption -10%, MP Consumption of Song / Dance Skills -20%. Uses 3 Spiritshots. -->
 		<icon initial="icon.skill1397"/>
 		<attributes property="PHYSIC" >
@@ -1148,7 +1148,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56084" name="Seven Deadly Sins: Wild Magic" max-level="1" action="A1" type="MAGIC">
+	<skill id="56084" name="Seven Deadly Sins: Wild Magic" action="A1" type="MAGIC">
 	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, increases critical rate of magic damage by 20. -->
 		<icon initial="icon.skill1303"/>
 		<attributes property="PHYSIC" >
@@ -1160,7 +1160,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56085" name="Seven Deadly Sins: Concentration" max-level="1" action="A1" type="MAGIC">
+	<skill id="56085" name="Seven Deadly Sins: Concentration" action="A1" type="MAGIC">
 	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, damage with cancelled magic -53. -->
 		<icon initial="icon.skill1078"/>
 		<attributes property="PHYSIC" >
@@ -1172,7 +1172,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56086" name="Seven Deadly Sins: Blessed Body" max-level="1" action="A1" type="MAGIC">
+	<skill id="56086" name="Seven Deadly Sins: Blessed Body" action="A1" type="MAGIC">
 	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Max HP +35%. -->
 		<icon initial="icon.skill1045"/>
 		<attributes property="PHYSIC" >
@@ -1184,7 +1184,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56087" name="Seven Deadly Sins: Blessed Soul" max-level="1" action="A1" type="MAGIC">
+	<skill id="56087" name="Seven Deadly Sins: Blessed Soul" action="A1" type="MAGIC">
 	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Max MP +35%. -->
 		<icon initial="icon.skill1048"/>
 		<attributes property="PHYSIC" >
@@ -1196,7 +1196,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56088" name="Seven Deadly Sins: Magic Barrier" max-level="1" action="A1" type="MAGIC">
+	<skill id="56088" name="Seven Deadly Sins: Magic Barrier" action="A1" type="MAGIC">
 	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, M. Def. +30%. -->
 		<icon initial="icon.skill1036"/>
 		<attributes property="PHYSIC" >
@@ -1208,7 +1208,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56089" name="Seven Deadly Sins Special Beer - Victory" max-level="1" action="A1" type="MAGIC">
+	<skill id="56089" name="Seven Deadly Sins Special Beer - Victory" action="A1" type="MAGIC">
 	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, HP / MP Recovery Bonus + 20%, Accuracy / Evasion +4, P./M. Atk. +15%, P./M. Atk. Spd. +10%, P./M. Critical Rate +15%, P./M. Critical Damage +15%. -->
 		<icon initial="BranchSys3.icon1.g_beerfestival_octoberfest_beer"/>
 		<attributes property="PHYSIC" auto-use="BUFF">
@@ -1221,7 +1221,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56090" name="Snake's Blessing" max-level="1" action="A1">
+	<skill id="56090" name="Snake's Blessing" action="A1">
 	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For $s1, HP / MP Recovery Bonus + $s2, Accuracy / Evasion +$s3, P./M. Atk. +$s4, P./M. Atk. Spd. +$s5, P./M. Critical Rate +$s6, P./M. Critical Damage +$s7. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1247,7 +1247,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56092" name="Seven Deadly Sins Card Pouch" max-level="1" action="A1">
+	<skill id="56092" name="Seven Deadly Sins Card Pouch" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1257,7 +1257,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56093" name="Agathion Cute Trick" max-level="1" action="A1">
+	<skill id="56093" name="Agathion Cute Trick" action="A1">
 	<!-- See Agathion's cute trick. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes >
@@ -1267,7 +1267,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56094" name="Legendary Knights Card: Seven Deadly Sins" max-level="1" >
+	<skill id="56094" name="Legendary Knights Card: Seven Deadly Sins">
 	<!-- For 2 hours, Bonus XP /SP +10%, P. Atk. /M. Atk. /P. Def. /M. Def. +3%. -->
 		<icon initial="BranchIcon.icon.icon_card_sin_meli_legend"/>
 		<attributes property="MAGIC" >
@@ -1277,7 +1277,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56095" name="+5 Hawk Agathion - Stage 3 (7-day) Box" max-level="1" action="A1">
+	<skill id="56095" name="+5 Hawk Agathion - Stage 3 (7-day) Box" action="A1">
 	<!-- For $s1, Bonus XP /SP +$s2, P. Atk. /M. Atk. /P. Def. /M. Def. +$s3. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1288,7 +1288,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56096" name="VIP Scroll" max-level="1" action="A1">
+	<skill id="56096" name="VIP Scroll" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_bm_vip_potion_i00"/>
 		<attributes >
@@ -1299,7 +1299,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="56097" name="Greater VIP Scroll" max-level="1" action="A1">
+	<skill id="56097" name="Greater VIP Scroll" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_bm_vip_potion_i00"/>
 		<attributes >

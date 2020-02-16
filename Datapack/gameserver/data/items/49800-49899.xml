@@ -282,27 +282,27 @@
 	<item id="49845" name="Sayha's Blessing - Exchangeable" type="POTION" icon="icon.etc_wind_potion_i00">
 	<!-- Recharges 35,000 Sayha's Grace Points. -->
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39191" level="1" value="-1"/>  <!-- Sayha's Blessing -->
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39191" value="-1"/>  <!-- Sayha's Blessing -->
 		</skill-reducer>
 	</item>
 
 	<item id="49846" name="Sayha's Silver Light Blessing" type="POTION" icon="icon.bm_sayha_silver_blessed">
 	<!-- Sayha Grace points +70,000 (2 slots). -->
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39192" level="1" value="-1"/>  <!-- Sayha's Silver Light Blessing -->
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39192" value="-1"/>  <!-- Sayha's Silver Light Blessing -->
 		</skill-reducer>
 	</item>
 
 	<item id="49847" name="Sayha's Golden Light Blessing" type="POTION" icon="icon.bm_sayha_gold_blessed">
 	<!-- Sayha Grace points +105,000 (3 slots). -->
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39193" level="1" value="-1"/>  <!-- Sayha's Golden Light Blessing -->
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39193" value="-1"/>  <!-- Sayha's Golden Light Blessing -->
 		</skill-reducer>
 	</item>
 
@@ -325,17 +325,17 @@
 	<!-- Double-click to get an A-grade Ornament.  -->
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39187" level="1" value="-1"/>  <!-- Ornament Supply Box (A-grade) -->
+		<skill-reducer>
+			<skill id="39187" value="-1"/>  <!-- Ornament Supply Box (A-grade) -->
 		</skill-reducer>
 	</item>
 
 	<item id="49851" name="Sayha's Storm Lv. 1 - Exchangeable" type="NONE" icon="icon.bm_sayha_storm">
 	<!-- Sayha's Grace Consumption +100% and XP/SP Gain +100% while hunting monsters. The effect remains active even after death. Duration 20 minutes. Cooldown 1 minute. Available only when Sayha's Grace is 35,000 or higher. -->
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39194" level="1" value="-1"/>  <!-- Sayha's Gust Lv. 1 -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39194" value="-1"/>  <!-- Sayha's Gust Lv. 1 -->
 		</skill-reducer>
 	</item>
 
@@ -355,8 +355,8 @@
 	<!-- Instantly recovers MP. -->
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes commission-type="POTION" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39198" level="1" value="-1"/>  <!-- Maliss's MP Potion -->
+		<skill-reducer>
+			<skill id="39198" value="-1"/>  <!-- Maliss's MP Potion -->
 		</skill-reducer>
 	</item>
 

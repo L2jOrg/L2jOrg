@@ -15,8 +15,8 @@
 	<!-- Magic scroll that moves you to the nearest village. Item for beginner adventurers.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2531" level="1" value="-1"/>  <!-- Adventurer's Scroll of Escape -->
+		<skill-reducer>
+			<skill id="2531" value="-1"/>  <!-- Adventurer's Scroll of Escape -->
 		</skill-reducer>
 	</item>
 

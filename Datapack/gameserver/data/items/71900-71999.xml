@@ -129,13 +129,13 @@
 	<item id="71921" name="Black Ticket" type="NONE" icon="icon.bm_royal_black_ticket_all">
 	<!-- Luxurious black ticket. XP/SP Gain +20% for 20 minutes. Collect the tickets to exchange for various items through the Store Manager. -->
 		<restriction stackable="true" sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="71922" name="Dragon's Special Elixir Lv. 2" type="SCROLL" icon="icon.bm_dragon_posion">
 	<!-- When used, XP/SP Gain +50%, P. Atk. +300, M. Atk. +450, P. Def. +400, M. Def. +550, P/M. Critical Rate +40, P./M. Critical Damage +12%, Atk. Spd./Casting Spd. +70, HP +3000, MP +2000, CP +3000, HP/MP Recovery Bonus +12 for 20 minutes. Has a chance to recover 7% of damage dealt to enemy as HP.\n<Caution>When Dragon's Special Elixir is used while having Dragon's Miracle Potion applied, the effect will change to that of the Dragon's Special Elixir. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="71923" name="Ice Queen's Collection" type="NONE" icon="icon.bm_circlet_upgrade_box">

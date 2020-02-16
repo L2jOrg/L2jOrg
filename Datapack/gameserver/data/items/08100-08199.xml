@@ -36,7 +36,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3013" level="1" value="-1"/>  <!-- Special Ability: Health -->
+			<skill id="3013" value="-1"/>  <!-- Special Ability: Health -->
 		</skills>
 	</weapon>
 
@@ -96,7 +96,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3013" level="1" value="-1"/>  <!-- Special Ability: Health -->
+			<skill id="3013" value="-1"/>  <!-- Special Ability: Health -->
 		</skills>
 	</weapon>
 
@@ -116,7 +116,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3055" level="1" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Special Ability: Critical Bleed -->
+			<skill id="3055" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Special Ability: Critical Bleed -->
 		</skills>
 	</weapon>
 
@@ -190,7 +190,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3047" level="1" value="-1"/>  <!-- Special Ability: Acumen -->
+			<skill id="3047" value="-1"/>  <!-- Special Ability: Acumen -->
 		</skills>
 	</weapon>
 
@@ -210,7 +210,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3077" level="1" value="-1"/>  <!-- Special Ability: Magic Power -->
+			<skill id="3077" value="-1"/>  <!-- Special Ability: Magic Power -->
 		</skills>
 	</weapon>
 
@@ -310,7 +310,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3047" level="1" value="-1"/>  <!-- Special Ability: Acumen -->
+			<skill id="3047" value="-1"/>  <!-- Special Ability: Acumen -->
 		</skills>
 	</weapon>
 
@@ -350,7 +350,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3048" level="1" value="-1"/>  <!-- Special Ability: Conversion -->
+			<skill id="3048" value="-1"/>  <!-- Special Ability: Conversion -->
 		</skills>
 	</weapon>
 
@@ -371,7 +371,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3013" level="1" value="-1"/>  <!-- Special Ability: Health -->
+			<skill id="3013" value="-1"/>  <!-- Special Ability: Health -->
 		</skills>
 	</weapon>
 
@@ -539,7 +539,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3059" level="1" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Special Ability: Critical Drain -->
+			<skill id="3059" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Special Ability: Critical Drain -->
 		</skills>
 	</weapon>
 
@@ -623,7 +623,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3013" level="1" value="-1"/>  <!-- Special Ability: Health -->
+			<skill id="3013" value="-1"/>  <!-- Special Ability: Health -->
 		</skills>
 	</weapon>
 
@@ -746,7 +746,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3048" level="1" value="-1"/>  <!-- Special Ability: Conversion -->
+			<skill id="3048" value="-1"/>  <!-- Special Ability: Conversion -->
 		</skills>
 	</weapon>
 
@@ -809,7 +809,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3047" level="1" value="-1"/>  <!-- Special Ability: Acumen -->
+			<skill id="3047" value="-1"/>  <!-- Special Ability: Acumen -->
 		</skills>
 	</weapon>
 
@@ -872,7 +872,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3014" level="1" value="-1"/>  <!-- Special Ability: Mana Up -->
+			<skill id="3014" value="-1"/>  <!-- Special Ability: Mana Up -->
 		</skills>
 	</weapon>
 
@@ -914,7 +914,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3048" level="1" value="-1"/>  <!-- Special Ability: Conversion -->
+			<skill id="3048" value="-1"/>  <!-- Special Ability: Conversion -->
 		</skills>
 	</weapon>
 
@@ -957,7 +957,7 @@
 		</stats>
 		<skills>
 			<skill id="1168" level="6" type="ON_MAGIC_SKILL" chance="8" value="-1"/>  <!-- Curse Poison -->
-			<skill id="3552" level="1" value="-1"/>  <!-- TODO Skill not found -->
+			<skill id="3552" value="-1"/>  <!-- TODO Skill not found -->
 		</skills>
 	</weapon>
 

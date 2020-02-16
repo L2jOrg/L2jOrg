@@ -43,7 +43,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="18.0">
 					<value level="2">26.0</value>
 					<value level="3">38.0</value>
@@ -120,7 +120,7 @@
 			</hp-drain>
 		</effects>
 	</skill>
-	<skill id="4003" name="Golem Body" max-level="1" >
+	<skill id="4003" name="Golem Body">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -147,7 +147,7 @@
 			</defence-trait>
 		</effects>
 	</skill>
-	<skill id="4004" name="Fragile Skull" max-level="1" >
+	<skill id="4004" name="Fragile Skull">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -165,7 +165,7 @@
 			</defence-trait>
 		</effects>
 	</skill>
-	<skill id="4005" name="Floating Target" max-level="1" >
+	<skill id="4005" name="Floating Target">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -186,7 +186,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4006" name="Burning Wood" max-level="1" >
+	<skill id="4006" name="Burning Wood">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -207,7 +207,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4007" name="Immortal Life" max-level="1" >
+	<skill id="4007" name="Immortal Life">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -226,7 +226,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4008" name="Insect Skin" max-level="1" >
+	<skill id="4008" name="Insect Skin">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -286,7 +286,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4013" name="Strong against Fire attack and vulnerable to Water attack" max-level="1" >
+	<skill id="4013" name="Strong against Fire attack and vulnerable to Water attack">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -297,7 +297,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4014" name="Strong against Water attack and vulnerable to Fire attack" max-level="1" >
+	<skill id="4014" name="Strong against Water attack and vulnerable to Fire attack">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -308,7 +308,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4015" name="Strong against Wind attack and vulnerable to Earth attack" max-level="1" >
+	<skill id="4015" name="Strong against Wind attack and vulnerable to Earth attack">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -319,7 +319,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4016" name="Strong against Earth attack and vulnerable to Wind attack" max-level="1" >
+	<skill id="4016" name="Strong against Earth attack and vulnerable to Wind attack">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -330,7 +330,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4017" name="Queen Ant's Blow" max-level="1" action="A1">
+	<skill id="4017" name="Queen Ant's Blow" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -344,12 +344,12 @@
 		</attributes>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="250" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="271.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="4018" name="Decrease Speed" max-level="1" debuff="true" action="A2">
+	<skill id="4018" name="Decrease Speed" debuff="true" action="A2">
 	<!-- Movement Speed has momentarily decreased by 30%%. -->
 		<icon initial="icon.skill4018"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="3" >
@@ -368,7 +368,7 @@
 			<chance initial="70"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="542.0"/>
 			</physical-attack>
 			<speed mode="PER">
@@ -376,7 +376,7 @@
 			</speed>
 		</effects>
 	</skill>
-	<skill id="4019" name="Decrease Speed" max-level="1" debuff="true" action="A2">
+	<skill id="4019" name="Decrease Speed" debuff="true" action="A2">
 	<!-- Momentarily decreases Movement Speed by 30%% and continuously decreases HP. -->
 		<icon initial="icon.skill4019"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="3" >
@@ -395,7 +395,7 @@
 			<chance initial="40"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="3" can-kill="false">
+			<damage-over-time ticks="3">
 				<power initial="30.0"/>
 			</damage-over-time>
 			<speed mode="PER">
@@ -403,7 +403,7 @@
 			</speed>
 		</effects>
 	</skill>
-	<skill id="4020" name="Recovery" max-level="1" action="A1" type="MAGIC">
+	<skill id="4020" name="Recovery" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -421,7 +421,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4021" name="Queen Ant" max-level="1" >
+	<skill id="4021" name="Queen Ant">
 	<!-- The prohibited magic used by the Ivory Tower Wizards to seal Beleth also affected the monsters near the area. The Queen Ant absorbed the prohibited power of chaos, produced the giant ants forming a big army and went underground in the Wasteland. -->
 		<icon initial="icon.skillboss"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -439,7 +439,7 @@
 			</defence-trait>
 		</effects>
 	</skill>
-	<skill id="4022" name="Body of Nurse Ant" max-level="1" >
+	<skill id="4022" name="Body of Nurse Ant">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -450,7 +450,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4023" name="Body of Royal Guard Ant" max-level="1" >
+	<skill id="4023" name="Body of Royal Guard Ant">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -461,7 +461,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4024" name="Recovery" max-level="1" action="A1" type="MAGIC">
+	<skill id="4024" name="Recovery" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -567,7 +567,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4026" name="Gludio Flame" max-level="1" action="A1" type="MAGIC">
+	<skill id="4026" name="Gludio Flame" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -586,12 +586,12 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="43.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="4027" name="Gludio Heal" max-level="1" action="A1" type="MAGIC">
+	<skill id="4027" name="Gludio Heal" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -830,7 +830,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="46.0">
 					<value level="2">105.0</value>
 					<value level="3">219.0</value>
@@ -888,7 +888,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="18.0">
 					<value level="2">26.0</value>
 					<value level="3">38.0</value>
@@ -954,7 +954,7 @@
 			<chance initial="60"/>
 		</abnormal>
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="11.0">
 					<value level="2">16.0</value>
 					<value level="3">23.0</value>
@@ -1030,7 +1030,7 @@
 			<chance initial="70"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="3" can-kill="false">
+			<damage-over-time ticks="3">
 				<power initial="16.0">
 					<value level="2">24.0</value>
 					<value level="3">32.0</value>
@@ -1099,7 +1099,7 @@
 			<chance initial="35"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="3" can-kill="false">
+			<damage-over-time ticks="3">
 				<power initial="16.0">
 					<value level="2">24.0</value>
 					<value level="3">32.0</value>
@@ -1236,7 +1236,7 @@
 		</consume>
 		<target type="ENEMY_ONLY" />
 		<effects>
-			<mp mode="DIFF">
+			<mp>
 				<power initial="-34.0">
 					<value level="2">-57.0</value>
 					<value level="3">-78.0</value>
@@ -1294,7 +1294,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="122.0">
 					<value level="2">279.0</value>
 					<value level="3">584.0</value>
@@ -1333,14 +1333,14 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="60.0">
 					<value level="2">68.0</value>
 				</power>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="4042" name="Nurka Blaze" max-level="1" action="A1" type="MAGIC">
+	<skill id="4042" name="Nurka Blaze" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1358,12 +1358,12 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="60.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="4043" name="Partisan Flame" max-level="1" action="A1" type="MAGIC">
+	<skill id="4043" name="Partisan Flame" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1382,12 +1382,12 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="30.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="4044" name="Partisan Heal" max-level="1" action="A1" type="MAGIC">
+	<skill id="4044" name="Partisan Heal" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1679,7 +1679,7 @@
 		</attributes>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="436.0">
 					<value level="2">645.0</value>
 					<value level="3">936.0</value>
@@ -1923,7 +1923,7 @@
 			<chance initial="70"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="3" can-kill="false">
+			<damage-over-time ticks="3">
 				<power initial="41.0">
 					<value level="2">50.0</value>
 					<value level="3">58.0</value>
@@ -2119,7 +2119,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4056" name="Immortal Attack" max-level="1" >
+	<skill id="4056" name="Immortal Attack">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -2130,7 +2130,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4057" name="Insect Vulnerability" max-level="1" >
+	<skill id="4057" name="Insect Vulnerability">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -2148,7 +2148,7 @@
 			</defence-trait>
 		</effects>
 	</skill>
-	<skill id="4058" name="Animal Vulnerability" max-level="1" >
+	<skill id="4058" name="Animal Vulnerability">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -2166,7 +2166,7 @@
 			</defence-trait>
 		</effects>
 	</skill>
-	<skill id="4059" name="Plant Vulnerability" max-level="1" >
+	<skill id="4059" name="Plant Vulnerability">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -2184,7 +2184,7 @@
 			</defence-trait>
 		</effects>
 	</skill>
-	<skill id="4060" name="Beast Vulnerability" max-level="1" >
+	<skill id="4060" name="Beast Vulnerability">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -2202,7 +2202,7 @@
 			</defence-trait>
 		</effects>
 	</skill>
-	<skill id="4061" name="Dragon Vulnerability" max-level="1" >
+	<skill id="4061" name="Dragon Vulnerability">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -2220,7 +2220,7 @@
 			</defence-trait>
 		</effects>
 	</skill>
-	<skill id="4062" name="Orfen" max-level="1" >
+	<skill id="4062" name="Orfen">
 	<!-- The youngest of the 3 Nerupa sisters. Ambitious unlike her sisters, she is amassing her power in the Sea of Spores. She threads the web of the Future. -->
 		<icon initial="icon.skillboss"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -2238,7 +2238,7 @@
 			</defence-trait>
 		</effects>
 	</skill>
-	<skill id="4063" name="Paralysis" max-level="1" debuff="true" action="A2">
+	<skill id="4063" name="Paralysis" debuff="true" action="A2">
 	<!-- Paralyzed and unable to move temporarily. -->
 		<icon initial="icon.skill1170"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="PARALYZE" >
@@ -2256,13 +2256,13 @@
 			<chance initial="90"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="916.0"/>
 			</physical-attack>
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="4064" name="Paralysis" max-level="1" debuff="true" action="A2">
+	<skill id="4064" name="Paralysis" debuff="true" action="A2">
 	<!-- Paralyzed and unable to move temporarily. -->
 		<icon initial="icon.skill1170"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="PARALYZE" >
@@ -2394,7 +2394,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="18.0">
 					<value level="2">26.0</value>
 					<value level="3">38.0</value>
@@ -2453,7 +2453,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<fatal-blow chance-boost="200.0" critical-chance="0" over-hit="false">
+			<fatal-blow chance-boost="200.0" over-hit="false">
 				<power initial="137.0">
 					<value level="2">314.0</value>
 					<value level="3">656.0</value>
@@ -2515,7 +2515,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="46.0">
 					<value level="2">105.0</value>
 					<value level="3">219.0</value>
@@ -2573,7 +2573,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="18.0">
 					<value level="2">26.0</value>
 					<value level="3">38.0</value>
@@ -2590,7 +2590,7 @@
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="4070" name="Decrease Atk. Spd." max-level="1" debuff="true" action="A2">
+	<skill id="4070" name="Decrease Atk. Spd." debuff="true" action="A2">
 	<!-- Atk. Spd. has momentarily decreased by 23%%. -->
 		<icon initial="icon.skill1206"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" >
@@ -2695,7 +2695,7 @@
 			<chance initial="30"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="16.0">
 					<value level="2">35.0</value>
 					<value level="3">73.0</value>
@@ -2764,7 +2764,7 @@
 			<chance initial="50"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="16.0">
 					<value level="2">35.0</value>
 					<value level="3">73.0</value>
@@ -2961,7 +2961,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="14.0">
 					<value level="2">21.0</value>
 					<value level="3">30.0</value>
@@ -3021,7 +3021,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="9.0">
 					<value level="2">13.0</value>
 					<value level="3">19.0</value>
@@ -3038,7 +3038,7 @@
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="4079" name="Siege Hammer" max-level="1" action="A1">
+	<skill id="4079" name="Siege Hammer" action="A1">
 	<!-- Powerfully attacks castle gates, castle walls, etc. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -3052,12 +3052,12 @@
 		</attributes>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="665060.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="4080" name="Dark Heal" max-level="1" action="A1" type="MAGIC">
+	<skill id="4080" name="Dark Heal" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -3078,7 +3078,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4081" name="Pretending to steal" max-level="1" action="A1" type="MAGIC">
+	<skill id="4081" name="Pretending to steal" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -3091,10 +3091,10 @@
 		</attributes>
 		<target type="ENEMY_ONLY" />
 	</skill>
-	<skill id="4082" name="Poison of Death" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="4082" name="Poison of Death" debuff="true" action="A2" type="MAGIC">
 	<!-- You have been infected by a fatal poison. -->
 		<icon initial="icon.skill4082"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" dispellable="false" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="-1"/>
 			<cast-range initial="600"/>
 			<effect-point initial="-100"/>
@@ -3115,7 +3115,7 @@
 			<effect name="Root"/>
 		</effects>
 	</skill>
-	<skill id="4083" name="Kalis' Poison" max-level="1" action="A1" type="MAGIC">
+	<skill id="4083" name="Kalis' Poison" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -3128,7 +3128,7 @@
 		</attributes>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="90000.0"/>
 			</physical-attack>
 		</effects>
@@ -3163,7 +3163,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4085" name="Critical Damage" max-level="1" >
+	<skill id="4085" name="Critical Damage">
 	<!-- Deals significant P. Critical Damage. -->
 		<icon initial="icon.skill4085"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -3179,7 +3179,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4086" name="Critical Chance" max-level="1" >
+	<skill id="4086" name="Critical Chance">
 	<!-- Has a high chance of P. Critical Rate. -->
 		<icon initial="icon.skill4086"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -3238,7 +3238,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="18.0">
 					<value level="2">26.0</value>
 					<value level="3">38.0</value>
@@ -3312,7 +3312,7 @@
 			<chance initial="100"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="3" can-kill="false">
+			<damage-over-time ticks="3">
 				<power initial="18.0">
 					<value level="2">25.0</value>
 					<value level="3">34.0</value>
@@ -3326,7 +3326,7 @@
 			</damage-over-time>
 		</effects>
 	</skill>
-	<skill id="4089" name="Spirit Bear" max-level="1" action="A2">
+	<skill id="4089" name="Spirit Bear" action="A2">
 	<!-- P. Atk. + 15%% and Speed + 15%%. -->
 		<icon initial="icon.skill0076"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -3356,7 +3356,7 @@
 			</speed>
 		</effects>
 	</skill>
-	<skill id="4090" name="Spirit Wolf" max-level="1" action="A2">
+	<skill id="4090" name="Spirit Wolf" action="A2">
 	<!-- Increases Movement Speed +40. -->
 		<icon initial="icon.skill0083"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -3435,18 +3435,18 @@
 					<value level="2">30.0</value>
 				</power>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="-10.0">
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="-10.0">
 					<value level="3">-5.0</value>
 				</power>
 			</stat-hp-based>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="3.0">
 					<value level="2">7.0</value>
 				</power>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4092" name="Spirit Puma" max-level="1" action="A2">
+	<skill id="4092" name="Spirit Puma" action="A2">
 	<!-- Increases Atk. Spd. +30%% and P. evasion +4. Decreases P. Def. -20%%. -->
 		<icon initial="icon.skill0282"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -3471,14 +3471,14 @@
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="-20.0"/>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="4.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="4.0"/>
 			</stat-hp-based>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="30.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4093" name="Evasion" max-level="1" >
+	<skill id="4093" name="Evasion">
 	<!-- P. Evasion +4. -->
 		<icon initial="icon.skill4093"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -3489,7 +3489,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="4.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="4.0"/>
 			</stat-hp-based>
 		</effects>
 	</skill>
@@ -3547,7 +3547,7 @@
 			<effect name="DispelAll"/>
 		</effects>
 	</skill>
-	<skill id="4095" name="Damage Shield" max-level="1" >
+	<skill id="4095" name="Damage Shield">
 	<!-- Reflects back a portion of damage inflicted by the enemy P. Atk. -->
 		<icon initial="icon.skill4095"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -3601,7 +3601,7 @@
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="-10.0"/>
 			</stat-modify>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="6.0">
 					<value level="2">8.0</value>
 					<value level="3">10.0</value>
@@ -3773,7 +3773,7 @@
 					<value level="2">16.0</value>
 				</power>
 			</stat-modify>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="5.0">
 					<value level="2">8.0</value>
 				</power>
@@ -3788,7 +3788,7 @@
 					<value level="2">-8.0</value>
 				</power>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="-5.0">
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="-5.0">
 					<value level="2">-8.0</value>
 				</power>
 			</stat-hp-based>

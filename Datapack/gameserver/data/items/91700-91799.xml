@@ -75,18 +75,18 @@
 	<item id="91712" name="Sayha's Storm Lv. 3" type="NONE" icon="icon.bm_sayha_storm">
 	<!-- Sayha's Grace Consumption +100% and XP/SP Gain +200% while hunting monsters. The effect remains active even after death. Duration 20 minutes. Cooldown 1 minute. Available only when Sayha's Grace is 35,000 points or higher. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51437" level="1" value="-1"/>  <!-- Sayha's Storm Lv. 3 -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51437" value="-1"/>  <!-- Sayha's Storm Lv. 3 -->
 		</skill-reducer>
 	</item>
 
 	<item id="91713" name="Sayha's Storm Lv. 3 - Exchangeable" type="NONE" icon="icon.bm_sayha_storm">
 	<!-- Sayha's Grace Consumption +100% and XP/SP Gain +200% while hunting monsters. The effect remains active even after death. Duration 20 minutes. Cooldown 1 minute. Available only when Sayha's Grace is 35,000 points or higher. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51437" level="1" value="-1"/>  <!-- Sayha's Storm Lv. 3 -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51437" value="-1"/>  <!-- Sayha's Storm Lv. 3 -->
 		</skill-reducer>
 	</item>
 
@@ -260,9 +260,9 @@
 	<item id="91741" name="Einhasad's Protection" type="SCROLL" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, Hunting XP/SP Gain +100% for 1 hour. Cooldown 1 minute. The effect remains active even after death. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="50135" level="1" value="-1"/>  <!-- Einhasad's Protection -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="50135" value="-1"/>  <!-- Einhasad's Protection -->
 		</skill-reducer>
 	</item>
 
@@ -361,9 +361,9 @@
 	<item id="91757" name="Magic Lamp Acceleration Potion" type="NONE" icon="icon.etc_recall_potion2">
 	<!-- 20% Magic Lamp gauge recharge for 1 hour when used. Cooldown 1 minute. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="54051" level="1" value="-1"/>  <!-- Magic Lamp Acceleration Potion - 1-hour -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="54051" value="-1"/>  <!-- Magic Lamp Acceleration Potion - 1-hour -->
 		</skill-reducer>
 	</item>
 
@@ -489,24 +489,24 @@
 	<item id="91776" name="Sayha's Gust" type="NONE" icon="icon.ev_magic_flame_game_wind2">
 	<!-- Only for Lv. 75 or lower level characters. Sayha's Grace Consumption +100% and XP/SP Gain +300% while hunting monsters. The effect remains active even after death. Duration 20 minutes. Cooldown 1 minute. Available only when Sayha's Grace is 35,000 or higher. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39194" level="1" value="-1"/>  <!-- Sayha's Gust Lv. 1 -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39194" value="-1"/>  <!-- Sayha's Gust Lv. 1 -->
 		</skill-reducer>
 	</item>
 
 	<item id="91777" name="Magic Flame" type="NONE" icon="icon.bm_soul_of_shilen">
 	<!-- Only for Lv. 75 or lower level characters. 100% Magic Lamp gauge recharge for 1 hour when used. Cooldown 1 minute. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 	</item>
 
 	<item id="91778" name="Sayha's Storm Lv. 3 - 1-hour" type="NONE" icon="icon.bm_sayha_storm">
 	<!-- Sayha's Grace Consumption +100% and XP/SP Gain +200% while hunting monsters. The effect remains active even after death. Duration 1 hour. Cooldown 1 minute. Available only when Sayha's Grace is 35,000 points or higher. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes duration="60" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51437" level="1" value="-1"/>  <!-- Sayha's Storm Lv. 3 -->
+		<attributes duration="60" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51437" value="-1"/>  <!-- Sayha's Storm Lv. 3 -->
 		</skill-reducer>
 	</item>
 
@@ -519,18 +519,18 @@
 	<item id="91780" name="Battle Scroll" type="NONE" icon="icon.ev_charge_scroll">
 	<!-- For 20 minutes, P. Atk. +200, M. Atk. +350, P. Critical/M. Skill Critical Rate +30, Atk. Spd./Casting Spd. +50, P. Def./M. Def. +200, Max HP/Max MP/Max CP +500. The effect remains active even after death. Cooldown 1 minute. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="54071" level="1" value="-1"/>  <!-- Battle Scroll -->
+		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="54071" value="-1"/>  <!-- Battle Scroll -->
 		</skill-reducer>
 	</item>
 
 	<item id="91781" name="Sayha's Buff Scroll" type="NONE" icon="icon.etc_ssq_i00">
 	<!-- For 20 minutes, applies the following effects: Sayha's Shield, Sayha's Magic Barrier, Sayha's Decrease Weight, Sayha's Clarity, Sayha's Berserker Spirit, Sayha's Wind Walk, Sayha's Might, Sayha's Focus, Sayha's Haste, Sayha's Death Whisper, Sayha's Empower, Sayha's Wild Magic, Sayha's Acumen, Sayha's Concentration, Sayha's Prophecy, Sayha's Restore HP, Sayha's Restore MP. If Sayha's Restore MP is in effect, cannot use items right away. Cooldown 1 minute. Caution: Sayha’s Victory buff will not be applied while Battleground Scroll is in effect. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="54070" level="1" value="-1"/>  <!-- Sayha's Buff Scroll - Event -->
+		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="54070" value="-1"/>  <!-- Sayha's Buff Scroll - Event -->
 		</skill-reducer>
 	</item>
 
@@ -615,18 +615,18 @@
 	<item id="91794" name="Lucky Pig Honey Buff" type="NONE" icon="icon.accessory_pig_cap_i00">
 	<!-- When used, Atk. Spd. +100, Casting Spd. +100, Speed +20, XP/SP Gain when hunting +10 for 1 hour. Does not disappear when dying or restarting. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="54089" level="1" value="-1"/>  <!-- Lucky Pig Honey Buff -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="54089" value="-1"/>  <!-- Lucky Pig Honey Buff -->
 		</skill-reducer>
 	</item>
 
 	<item id="91795" name="Greater Blessing Star Candy - Event" type="POTION" icon="icon.etc_whiteday_candy_i04">
 	<!-- Recharges 140,000 Sayha's Grace Points. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="50163" level="1" value="-1"/>  <!-- Blessing Star Candy -->
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="50163" value="-1"/>  <!-- Blessing Star Candy -->
 		</skill-reducer>
 	</item>
 

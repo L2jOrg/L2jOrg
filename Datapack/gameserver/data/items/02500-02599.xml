@@ -111,7 +111,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="4" price="15" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="SpiritShot">
-			<skill id="2047" level="1" value="-1"/>  <!-- Spiritshot (No-grade) -->
+			<skill id="2047" value="-1"/>  <!-- Spiritshot (No-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -120,7 +120,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="4" price="18" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="SpiritShot">
-			<skill id="2155" level="1" value="-1"/>  <!-- Spiritshot (D-grade) -->
+			<skill id="2155" value="-1"/>  <!-- Spiritshot (D-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -129,7 +129,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="2" price="35" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="SpiritShot">
-			<skill id="2156" level="1" value="-1"/>  <!-- Spiritshot (C-grade) -->
+			<skill id="2156" value="-1"/>  <!-- Spiritshot (C-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -138,7 +138,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="2" price="100" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="SpiritShot">
-			<skill id="2157" level="1" value="-1"/>  <!-- Spiritshot (B-grade) -->
+			<skill id="2157" value="-1"/>  <!-- Spiritshot (B-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -147,7 +147,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="1" price="120" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="SpiritShot">
-			<skill id="2158" level="1" value="-1"/>  <!-- Spiritshot (A-grade) -->
+			<skill id="2158" value="-1"/>  <!-- Spiritshot (A-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -156,7 +156,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="1" price="150" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="SpiritShot">
-			<skill id="2159" level="1" value="-1"/>  <!-- Spiritshot (S-grade) -->
+			<skill id="2159" value="-1"/>  <!-- Spiritshot (S-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -896,7 +896,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3013" level="1" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
+			<skill id="3013" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
 		</skills>
 	</weapon>
 
@@ -996,7 +996,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3013" level="1" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
+			<skill id="3013" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
 		</skills>
 	</weapon>
 
@@ -1096,7 +1096,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3013" level="1" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
+			<skill id="3013" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
 		</skills>
 	</weapon>
 
@@ -1216,7 +1216,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3013" level="1" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
+			<skill id="3013" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
 		</skills>
 	</weapon>
 
@@ -1296,7 +1296,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3013" level="1" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
+			<skill id="3013" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
 		</skills>
 	</weapon>
 
@@ -1476,7 +1476,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3013" level="1" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
+			<skill id="3013" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
 		</skills>
 	</weapon>
 
@@ -1556,7 +1556,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3013" level="1" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
+			<skill id="3013" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
 		</skills>
 	</weapon>
 
@@ -1636,7 +1636,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3013" level="1" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
+			<skill id="3013" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
 		</skills>
 	</weapon>
 
@@ -1696,7 +1696,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3013" level="1" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
+			<skill id="3013" type="ON_ENCHANT" value="-1"/>  <!-- Special Ability: Health -->
 		</skills>
 	</weapon>
 

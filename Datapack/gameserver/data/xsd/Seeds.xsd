@@ -2,11 +2,11 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<xs:element name="list">
 		<xs:complexType>
-			<xs:sequence maxOccurs="1" minOccurs="1">
-				<xs:element name="castle" maxOccurs="9" minOccurs="1">
+			<xs:sequence>
+				<xs:element name="castle" maxOccurs="9">
 					<xs:complexType>
-						<xs:sequence maxOccurs="1" minOccurs="1">
-							<xs:element name="crop" maxOccurs="unbounded" minOccurs="1">
+						<xs:sequence>
+							<xs:element name="crop" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:simpleContent>
 										<xs:extension base="xs:string">

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="700" name="Divine Healer Group Heal" max-level="1" action="A2" type="MAGIC">
+	<skill id="700" name="Divine Healer Group Heal" action="A2" type="MAGIC">
 	<!-- Recovers a party member's HP with 400 Power, and additionally recovers 27 HP per second for 15 seconds. -->
 		<icon initial="icon.skill_transform_buff"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -28,7 +28,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="701" name="Divine Healer Resurrection" max-level="1" action="A1" type="MAGIC">
+	<skill id="701" name="Divine Healer Resurrection" action="A1" type="MAGIC">
 	<!-- Resurrects a corpse. Additionally restores approximately 70%% XP. -->
 		<icon initial="icon.skill_transform_etc"/>
 		<attributes magic-critical-rate="5.0" >
@@ -53,7 +53,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="702" name="Divine Healer Clans" max-level="1" action="A1" type="MAGIC">
+	<skill id="702" name="Divine Healer Clans" action="A1" type="MAGIC">
 	<!-- Cancel all the debuffs of the target. -->
 		<icon initial="icon.skill_transform_etc"/>
 		<attributes magic-critical-rate="5.0" >
@@ -74,7 +74,7 @@
 			</dispel-by-category>
 		</effects>
 	</skill>
-	<skill id="703" name="Sacrifice Healer" max-level="1" action="A1" type="MAGIC">
+	<skill id="703" name="Sacrifice Healer" action="A1" type="MAGIC">
 	<!-- Regenerate party member's HP and MP by sacrificing yourself. Usable only when MP is under 10 percent. -->
 		<icon initial="icon.skill_transform_etc"/>
 		<attributes static-reuse="true" magic-critical-rate="5.0" >
@@ -88,7 +88,7 @@
 		</attributes>
 		<target scope="PARTY" object="FRIEND" range="300" />
 		<conditions>
-			<remain-status stat="MP" amount="10" lower="true"/>
+			<remain-status stat="MP" amount="10"/>
 		</conditions>
 		<effects>
 			<effect name="HealPercent">
@@ -102,7 +102,7 @@
 			</call-skill>
 		</effects>
 	</skill>
-	<skill id="704" name="Divine Enchanter Water Spirit" max-level="1" action="A2" type="MAGIC">
+	<skill id="704" name="Divine Enchanter Water Spirit" action="A2" type="MAGIC">
 	<!-- A selected party member's M. Critical Rate +2, MP Recovery Bonus +20%%, P. Atk. +10%%, P. Def +20%%, Atk. Spd. +20%%, M. Atk. +20%%, M. Def +20%%, Casting Spd. +20%%, Debuff Resistance +10%%, Movement Speed +20%%, and Skill MP Consumption -5%% for 2 minutes with the help of a great spirit. Consumes 10 Spirit Ore. -->
 		<icon initial="icon.skill_transform_buff"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -127,7 +127,7 @@
 		</abnormal>
 		<conditions>
 			<target>
-				<party include-caster="true"/>
+				<party/>
 			</target>
 		</conditions>
 		<effects>
@@ -158,7 +158,7 @@
 			<resist-abnormal-by-category category="DEBUFF">
 				<power initial="-10.0"/>
 			</resist-abnormal-by-category>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
 				<power initial="2.0"/>
 			</stat-modify>
 			<magic-cost type="1">
@@ -166,7 +166,7 @@
 			</magic-cost>
 		</effects>
 	</skill>
-	<skill id="705" name="Divine Enchanter Fire Spirit" max-level="1" action="A2" type="MAGIC">
+	<skill id="705" name="Divine Enchanter Fire Spirit" action="A2" type="MAGIC">
 	<!-- A party member's Max MP +20%%, HP Recovery Bonus +20%%, M. Critical Rate +2%%, P. Critical Damage +20%%, P. Atk. +10%%, P. Def. +20%%, Atk. Spd. +20%%, M. Atk. +20%%, M. Def +20%%, Casting Spd. +20%%, Debuff Resistance +10%%, and Movement Speed -20%% for 2 minutes with the hlpe of a great spirit. Consumes 10 Spirit Ore. -->
 		<icon initial="icon.skill_transform_buff"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -191,7 +191,7 @@
 		</abnormal>
 		<conditions>
 			<target>
-				<party include-caster="true"/>
+				<party/>
 			</target>
 		</conditions>
 		<effects>
@@ -210,7 +210,7 @@
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="20.0"/>
 			</stat-modify>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="4.0"/>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
@@ -219,7 +219,7 @@
 			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
 				<power initial="20.0"/>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="20.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
@@ -231,12 +231,12 @@
 			<resist-abnormal-by-category category="DEBUFF">
 				<power initial="-10.0"/>
 			</resist-abnormal-by-category>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
 				<power initial="2.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="706" name="Divine Enchanter Wind Spirit" max-level="1" action="A2" type="MAGIC">
+	<skill id="706" name="Divine Enchanter Wind Spirit" action="A2" type="MAGIC">
 	<!-- A party member's Max HP +20%%, P. Critical Rate +20%%, M. Critical Damage +20%%, P. Atk. +10%%, P. Def +20%%, Atk. Spd. +20%%, M. Atk. +20%%, M. Def +20%%, Casting Spd. +20%%, Debuff Resistance +10%%, and Movement Speed -20%% for 2 minutes with the help of a great spirit. Has a chance to absorb 5%% of physical damage dealt to enemies as HP. Consumes 10 Spirit Ore. -->
 		<icon initial="icon.skill_transform_buff"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -261,11 +261,11 @@
 		</abnormal>
 		<conditions>
 			<target>
-				<party include-caster="true"/>
+				<party/>
 			</target>
 		</conditions>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="20.0"/>
 			</vital-stat-modify>
 			<vampiric-attack chance="30">
@@ -303,7 +303,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="707" name="Divine Enchanter Hero Spirit" max-level="1" action="A2" type="MAGIC">
+	<skill id="707" name="Divine Enchanter Hero Spirit" action="A2" type="MAGIC">
 	<!-- A party member's Max HP +20%%, M. Critical Rate +2%%, P. Critical Damage +20%%, P. Atk. +10%%, P. Def. +20%%, Atk. Spd. +20%%, M. Atk. +20%%, M. Def +20%%, Casting Spd. +20%%, Debuff Resistance +10%%, and Movement Speed -20%% for 2 minutes with the help of a great spirit. Consumes 10 Spirit Ore. -->
 		<icon initial="icon.skill_transform_buff"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -328,11 +328,11 @@
 		</abnormal>
 		<conditions>
 			<target>
-				<party include-caster="true"/>
+				<party/>
 			</target>
 		</conditions>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="20.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
@@ -350,7 +350,7 @@
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="20.0"/>
 			</stat-modify>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="4.0"/>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
@@ -365,12 +365,12 @@
 			<resist-abnormal-by-category category="DEBUFF">
 				<power initial="-10.0"/>
 			</resist-abnormal-by-category>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
 				<power initial="2.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="708" name="Divine Enchanter Mass Binding" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="708" name="Divine Enchanter Mass Binding" debuff="true" action="A2" type="MAGIC">
 	<!-- Momentarily apply Hold to surrounding enemies. Additional Hold is not available while effects last. -->
 		<icon initial="icon.skill_transform_debuff"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="HOLD" level-bonus-rate="30" >
@@ -400,7 +400,7 @@
 			</defence-trait>
 		</effects>
 	</skill>
-	<skill id="709" name="Sacrifice Enchanter" max-level="1" action="A2" type="MAGIC">
+	<skill id="709" name="Sacrifice Enchanter" action="A2" type="MAGIC">
 	<!-- Increase all the party member's abilities by sacrificing yourself. Usable only when MP is under 10 percent. -->
 		<icon initial="icon.skill_transform_buff"/>
 		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" >
@@ -419,7 +419,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<conditions>
-			<remain-status stat="MP" amount="10" lower="true"/>
+			<remain-status stat="MP" amount="10"/>
 		</conditions>
 		<effects>
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
@@ -428,7 +428,7 @@
 			<stat-modify stat="MAGIC_ATTACK" mode="PER">
 				<power initial="10.0"/>
 			</stat-modify>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="10.0"/>
 			</speed>
 			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
@@ -437,7 +437,7 @@
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="10.0"/>
 			</stat-modify>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="2.0"/>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
@@ -457,7 +457,7 @@
 			</call-skill>
 		</effects>
 	</skill>
-	<skill id="710" name="Divine Summoner Summon Divine Beast" max-level="1" action="A1" type="MAGIC">
+	<skill id="710" name="Divine Summoner Summon Divine Beast" action="A1" type="MAGIC">
 	<!-- Summons a Holy Beast. Requires 2 A-grade Crystals. -->
 		<icon initial="icon.skill_transform_etc"/>
 		<attributes magic-critical-rate="5.0" >
@@ -484,7 +484,7 @@
 			</summon>
 		</effects>
 	</skill>
-	<skill id="711" name="Divine Summoner Transfer Pain" max-level="1" action="T">
+	<skill id="711" name="Divine Summoner Transfer Pain" action="T">
 	<!-- Transfers some of the player's damage to the summoner. Consumes MP continuously. -->
 		<icon initial="icon.skill_transform_etc"/>
 		<attributes magic-critical-rate="5.0" >
@@ -507,7 +507,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="712" name="Divine Summoner Final Servitor" max-level="1" action="A2" type="MAGIC">
+	<skill id="712" name="Divine Summoner Final Servitor" action="A2" type="MAGIC">
 	<!-- Temporarily causes the Servitor to be possessed with the spirit of an ancient hero. Consumes 20 Spirit Ore. -->
 		<icon initial="icon.skill_transform_buff"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -550,7 +550,7 @@
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="20.0"/>
 			</stat-modify>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="4.0"/>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
@@ -570,7 +570,7 @@
 			</stat-hp-based>
 		</effects>
 	</skill>
-	<skill id="713" name="Divine Summoner Servitor Hill" max-level="1" action="A1" type="MAGIC">
+	<skill id="713" name="Divine Summoner Servitor Hill" action="A1" type="MAGIC">
 	<!-- Recovers the Servitor's HP with 991 power. -->
 		<icon initial="icon.skill_transform_etc"/>
 		<attributes magic-critical-rate="5.0" >
@@ -592,7 +592,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="714" name="Sacrifice Summoner" max-level="1" action="A2" type="MAGIC">
+	<skill id="714" name="Sacrifice Summoner" action="A2" type="MAGIC">
 	<!-- Increase the party member's P. Critical abilities by sacrificing yourself. Available only when MP is at 10%% or below. -->
 		<icon initial="icon.skill_transform_buff"/>
 		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" >
@@ -611,7 +611,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<conditions>
-			<remain-status stat="MP" amount="10" lower="true"/>
+			<remain-status stat="MP" amount="10"/>
 		</conditions>
 		<effects>
 			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
@@ -668,7 +668,7 @@
 					<value level="4">160.0</value>
 				</power>
 			</hp-drain>
-			<mp mode="DIFF">
+			<mp>
 				<power initial="-274.0">
 					<value level="2">-348.0</value>
 					<value level="3">-422.0</value>
@@ -758,7 +758,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="2751.0">
 					<value level="2">3252.0</value>
 					<value level="3">3752.0</value>
@@ -806,7 +806,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="100" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="1651.0">
 					<value level="2">1951.0</value>
 					<value level="3">2251.0</value>
@@ -815,7 +815,7 @@
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="719" name="Zaken Vampiric Rage" max-level="1" action="A2" type="MAGIC">
+	<skill id="719" name="Zaken Vampiric Rage" action="A2" type="MAGIC">
 	<!-- Has a chance to temporarily absorb some of the physical damage dealt to enemies as HP. -->
 		<icon initial="icon.skill_transform_buff"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -874,7 +874,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="3189.0">
 					<value level="2">3590.0</value>
 				</power>
@@ -911,7 +911,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="186.0">
 					<value level="2">197.0</value>
 				</power>
@@ -948,14 +948,14 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="186.0">
 					<value level="2">197.0</value>
 				</power>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="723" name="Anakim Sunshine" max-level="1" action="A1" type="MAGIC">
+	<skill id="723" name="Anakim Sunshine" action="A1" type="MAGIC">
 	<!-- Instantly recover the party member's HP. Power 1340. -->
 		<icon initial="icon.skill_transform_etc"/>
 		<attributes magic-critical-rate="5.0" hit-cancel-time="0.2" >
@@ -978,7 +978,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="724" name="Anakim Clans" max-level="1" action="A1" type="MAGIC">
+	<skill id="724" name="Anakim Clans" action="A1" type="MAGIC">
 	<!-- Cancel all of your debuffs. -->
 		<icon initial="icon.skill_transform_etc"/>
 		<attributes magic-critical-rate="5.0" >
@@ -1023,7 +1023,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="2626.0">
 					<value level="2">2957.0</value>
 				</power>
@@ -1052,14 +1052,14 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="150" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="1576.0">
 					<value level="2">1774.0</value>
 				</power>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="727" name="Venom Disillusion" max-level="1" action="A2" type="MAGIC">
+	<skill id="727" name="Venom Disillusion" action="A2" type="MAGIC">
 	<!-- P. Atk. +8%% for a set time. -->
 		<icon initial="icon.skill_transform_s_attack"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -1087,7 +1087,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="728" name="Gordon Beast Attack" max-level="1" action="A1">
+	<skill id="728" name="Gordon Beast Attack" action="A1">
 	<!-- Inflicts a beast attack. Over-hit. Power: 2957. -->
 		<icon initial="icon.skill_transform_s_attack"/>
 		<attributes magic-critical-rate="5.0" >
@@ -1105,12 +1105,12 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="2957.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="729" name="Gordon Sword Stab" max-level="1" action="A1">
+	<skill id="729" name="Gordon Sword Stab" action="A1">
 	<!-- Attacks frontal enemies. Over-hit. Power: 2957. -->
 		<icon initial="icon.skill_transform_s_attack"/>
 		<attributes magic-critical-rate="5.0" >
@@ -1127,12 +1127,12 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="150" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="1774.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="730" name="Gordon Press" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="730" name="Gordon Press" debuff="true" action="A2" type="MAGIC">
 	<!-- Surrounding enemies' Movement Speed, Atk. Spd., Casting Spd. -23%%. -->
 		<icon initial="icon.skill_transform_debuff"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="20" >
@@ -1166,7 +1166,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="731" name="Ranku Dark Explosion" max-level="1" action="A1" type="MAGIC">
+	<skill id="731" name="Ranku Dark Explosion" action="A1" type="MAGIC">
 	<!-- Attack by detonating the evil energy. Power: 162. -->
 		<icon initial="icon.skill_transform_s_attack"/>
 		<attributes magic-critical-rate="5.0" >
@@ -1185,12 +1185,12 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="300" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="162.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="732" name="Ranku Stun Attack" max-level="1" debuff="true" action="A2">
+	<skill id="732" name="Ranku Stun Attack" debuff="true" action="A2">
 	<!-- Inflicts damage and briefly stuns the enemy. Over-hit. Power: 1. -->
 		<icon initial="icon.skill_transform_debuff"/>
 		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="20" >
@@ -1213,13 +1213,13 @@
 			<chance initial="50"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="1479.0"/>
 			</physical-attack>
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="733" name="Kechi Double Cutter" max-level="1" action="A1">
+	<skill id="733" name="Kechi Double Cutter" action="A1">
 	<!-- Criss-crosses swords to attack. Over-hit. Power: 2957. -->
 		<icon initial="icon.skill_transform_s_attack"/>
 		<attributes magic-critical-rate="5.0" >
@@ -1237,12 +1237,12 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="2957.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="734" name="Kechi Air Blade" max-level="1" action="A1">
+	<skill id="734" name="Kechi Air Blade" action="A1">
 	<!-- Strikes an enemy at a distance by using Momentum. Critical. Over-hit. Power: 1812. -->
 		<icon initial="icon.skill_transform_s_attack"/>
 		<attributes magic-critical-rate="5.0" >
@@ -1259,12 +1259,12 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="1812.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="735" name="Devil Spinning Weapon" max-level="1" action="A1" type="MAGIC">
+	<skill id="735" name="Devil Spinning Weapon" action="A1" type="MAGIC">
 	<!-- Attack surrounding enemies by swinging the weapon. Power 162. -->
 		<icon initial="icon.skill_transform_s_attack"/>
 		<attributes magic-critical-rate="5.0" >
@@ -1284,12 +1284,12 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="162.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="736" name="Devil Seed" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="736" name="Devil Seed" debuff="true" action="A2" type="MAGIC">
 	<!-- Momentarily decreases HP. Serious damage will be caused by the fully grown seed if not canceled. -->
 		<icon initial="icon.skill_transform_debuff"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="30" >
@@ -1314,7 +1314,7 @@
 			<chance initial="100"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="351.0"/>
 			</damage-over-time>
 			<call-skill skill="5248" scope="END">
@@ -1322,7 +1322,7 @@
 			</call-skill>
 		</effects>
 	</skill>
-	<skill id="737" name="Devil Ultimate Defense" max-level="1" action="A2">
+	<skill id="737" name="Devil Ultimate Defense" action="A2">
 	<!-- Spontaneously increases P. Def/M. Def, Buff-canceling Attack Resistance significantly. The caster cannot move while the effect lasts. -->
 		<icon initial="icon.skill_transform_buff"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -1345,10 +1345,10 @@
 		</abnormal>
 		<effects>
 			<effect name="BlockMove"/>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="1350.0"/>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="1800.0"/>
 			</stat-modify>
 			<resist-dispel-by-category category="BUFF">
@@ -1520,7 +1520,7 @@
 			<chance initial="70"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="52.0"/>
 			</damage-over-time>
 		</effects>
@@ -1605,7 +1605,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="5" affect-random="12" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="56.0">
 					<value level="2">59.0</value>
 					<value level="3">61.0</value>
@@ -1646,7 +1646,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="150" affect-min="5" affect-random="12" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="112.0">
 					<value level="2">117.0</value>
 					<value level="3">122.0</value>
@@ -1719,7 +1719,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="1789.0">
 					<value level="2">1955.0</value>
 					<value level="3">2117.0</value>
@@ -1765,7 +1765,7 @@
 			<chance initial="60"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="895.0">
 					<value level="2">978.0</value>
 					<value level="3">1059.0</value>
@@ -1775,7 +1775,7 @@
 			<effect name="Fear"/>
 		</effects>
 	</skill>
-	<skill id="748" name="Saber Tooth Tiger Sprint" max-level="1" action="A2" type="MAGIC">
+	<skill id="748" name="Saber Tooth Tiger Sprint" action="A2" type="MAGIC">
 	<!-- Movement Speed +33 for a set time. -->
 		<icon initial="icon.skill_transform_buff"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -1798,7 +1798,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="33.0"/>
 			</speed>
 		</effects>
@@ -1842,7 +1842,7 @@
 			<chance initial="50"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="895.0">
 					<value level="2">978.0</value>
 					<value level="3">1059.0</value>
@@ -1851,7 +1851,7 @@
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="750" name="Oel Mahum Ultimate Defense" max-level="1" action="A2">
+	<skill id="750" name="Oel Mahum Ultimate Defense" action="A2">
 	<!-- Spontaneously increases P. Def/M. Def, Buff-canceling Attack Resistance significantly. The caster cannot move while the effect lasts. -->
 		<icon initial="icon.skill_transform_buff"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -1874,10 +1874,10 @@
 		</abnormal>
 		<effects>
 			<effect name="BlockMove"/>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="1350.0"/>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="1800.0"/>
 			</stat-modify>
 			<resist-dispel-by-category category="BUFF">
@@ -1921,7 +1921,7 @@
 			<fan-range start-angle="0" radius="80" angle="150"/>
 		</target>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="1073.0">
 					<value level="2">1173.0</value>
 					<value level="3">1271.0</value>
@@ -1964,13 +1964,13 @@
 			<chance initial="50"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="1193.0">
 					<value level="2">1303.0</value>
 					<value level="3">1412.0</value>
 				</power>
 			</physical-attack>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="134.0"/>
 			</damage-over-time>
 		</effects>
@@ -2009,7 +2009,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="4769.0">
 					<value level="2">5211.0</value>
 					<value level="3">5645.0</value>
@@ -2017,7 +2017,7 @@
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="754" name="Doll Blader Clairvoyance" max-level="1" action="A2" type="MAGIC">
+	<skill id="754" name="Doll Blader Clairvoyance" action="A2" type="MAGIC">
 	<!-- P. Critical Rate +30%% for a set time. -->
 		<icon initial="icon.skill_transform_buff"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -2045,7 +2045,7 @@
 			</stat-hp-based>
 		</effects>
 	</skill>
-	<skill id="762" name="Insane Crusher" max-level="1" debuff="true" action="A2">
+	<skill id="762" name="Insane Crusher" debuff="true" action="A2">
 	<!-- Unleashes rage to deal a powerful strike with bonus 8409 Power and cast a dark curse to surrounding enemies. Cancels at least one of the enemy's buffs, and temporarily decreases Max CP significantly. Decreases Debuff Resistance and Heal Received. Requires a sword or blunt weapon. Ignores Shield Defense. Critical. Over-hit. -->
 		<icon initial="icon.skill0762"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DEATH" level-bonus-rate="20" >
@@ -2073,7 +2073,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="true" critical-chance="50.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack ignore-shield="true" critical-chance="50.0" over-hit="true">
 				<power initial="8409.0"/>
 			</physical-attack>
 			<dispel-by-category category="BUFF" max="1">				<power initial="10.0"/>
@@ -2111,12 +2111,12 @@
 		</attributes>
 		<target />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
-				<power initial="0.0"/>
+			<physical-attack critical-chance="0.0">
+				<power/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="768" name="Exciting Adventure" max-level="1" action="A2">
+	<skill id="768" name="Exciting Adventure" action="A2">
 	<!-- Feels extreme excitement during a skirmish. For 30 seconds, Movement Speed +10, P. Evasion +10, Deadly Stab Atk. Rate +15%%, P. Evasion Rate +40%%, and Buff-canceling Attack Resistance +90%%. -->
 		<icon initial="icon.skill0768"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
@@ -2141,10 +2141,10 @@
 			<skill-evasion type="0">
 				<power initial="40.0"/>
 			</skill-evasion>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="10.0"/>
 			</speed>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="10.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="10.0"/>
 			</stat-hp-based>
 			<stat-modify stat="BLOW_RATE" mode="PER">
 				<power initial="15.0"/>
@@ -2154,7 +2154,7 @@
 			</resist-dispel-by-category>
 		</effects>
 	</skill>
-	<skill id="769" name="Wind Riding" max-level="1" action="A2">
+	<skill id="769" name="Wind Riding" action="A2">
 	<!-- Storms the battleground while riding the wind. For 30 seconds, Movement Speed +30, P. Evasion +15, Deadly Stab Atk. Rate +10%%, P. Evasion Rate +60%%, and Buff-canceling Attack Resistance +80%%. -->
 		<icon initial="icon.skill0769"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
@@ -2179,10 +2179,10 @@
 			<skill-evasion type="0">
 				<power initial="60.0"/>
 			</skill-evasion>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="30.0"/>
 			</speed>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="15.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="15.0"/>
 			</stat-hp-based>
 			<stat-modify stat="BLOW_RATE" mode="PER">
 				<power initial="10.0"/>
@@ -2192,7 +2192,7 @@
 			</resist-dispel-by-category>
 		</effects>
 	</skill>
-	<skill id="770" name="Ghost Walking" max-level="1" action="A2">
+	<skill id="770" name="Ghost Walking" action="A2">
 	<!-- Infiltrates the battleground like a ghost. For 30 seconds, Movement Speed +20, P. Evasion +10, Deadly Stab Atk. Rate +20%%, P. Evasion Rate +50%%, and Buff-canceling Attack Resistance +80%%. -->
 		<icon initial="icon.skill0770"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
@@ -2217,10 +2217,10 @@
 			<skill-evasion type="0">
 				<power initial="10.0"/>
 			</skill-evasion>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="20.0"/>
 			</speed>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="50.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="50.0"/>
 			</stat-hp-based>
 			<stat-modify stat="BLOW_RATE" mode="PER">
 				<power initial="20.0"/>
@@ -2230,7 +2230,7 @@
 			</resist-dispel-by-category>
 		</effects>
 	</skill>
-	<skill id="771" name="Flame Hawk" max-level="1" action="A1">
+	<skill id="771" name="Flame Hawk" action="A1">
 	<!-- Fires an arrow instilled with the power of the flame hawk to attack frontal enemies with bonus 8049 Power. For 10 seconds, inflicts 250 damage per second. Ignores 10%% of enemy's defense. Requires a bow. Critical. Over-hit. -->
 		<icon initial="icon.skill0771"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
@@ -2255,7 +2255,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="15.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="15.0" over-hit="true">
 				<power initial="8049.0"/>
 			</physical-attack>
 			<call-skill skill="23298">
@@ -2263,7 +2263,7 @@
 			</call-skill>
 		</effects>
 	</skill>
-	<skill id="772" name="Arrow Rain" max-level="1" action="A1">
+	<skill id="772" name="Arrow Rain" action="A1">
 	<!-- Fires a volley of arrows to attack the enemy's surroundings with bonus 7043 Power. For 10 seconds, inflicts 250 damage per second. Ignores 10%% of enemy's defense. Requires a bow. Critical. Over-hit. -->
 		<icon initial="icon.skill0772"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
@@ -2286,7 +2286,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="15.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="15.0" over-hit="true">
 				<power initial="7043.0"/>
 			</physical-attack>
 			<call-skill skill="23299">
@@ -2294,7 +2294,7 @@
 			</call-skill>
 		</effects>
 	</skill>
-	<skill id="773" name="Ghost Piercing" max-level="1" action="A1">
+	<skill id="773" name="Ghost Piercing" action="A1">
 	<!-- Shoots an arrow mixed with the energy of a ghost to attack frontal enemies with bonus 8452 Power. For 10 seconds, inflicts 300 damage per second. Ignores 5%% of enemy's defense. Requires a bow. Critical. Over-hit. -->
 		<icon initial="icon.skill0773"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
@@ -2319,7 +2319,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="15.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="15.0" over-hit="true">
 				<power initial="8452.0"/>
 			</physical-attack>
 			<call-skill skill="23300">
@@ -2327,7 +2327,7 @@
 			</call-skill>
 		</effects>
 	</skill>
-	<skill id="777" name="Demolition Impact" max-level="1" debuff="true" action="A2">
+	<skill id="777" name="Demolition Impact" debuff="true" action="A2">
 	<!-- Unleashes a shock of destruction to attack a frontal enemy with bonus 5980 Power. P. Def. -30%% and M. Def. -30%%. Requires a sword or blunt weapon. Critical. Over-hit. -->
 		<icon initial="icon.skill0777"/>
 		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="SHOCK" auto-use="ACTIVE">
@@ -2356,7 +2356,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="15.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="15.0" over-hit="true">
 				<power initial="5980.0"/>
 			</physical-attack>
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
@@ -2428,7 +2428,7 @@
 			<chance initial="50"/>
 		</abnormal>
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="149.0">
 					<value level="2">158.0</value>
 					<value level="3">169.0</value>
@@ -2527,7 +2527,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="DIFF">
+			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0">
 				<power initial="10.0">
 					<value level="2">20.0</value>
 					<value level="3">30.0</value>
@@ -2535,7 +2535,7 @@
 			</stat-hp-based>
 		</effects>
 	</skill>
-	<skill id="795" name="Divine Knight Brandish" max-level="1" action="A1">
+	<skill id="795" name="Divine Knight Brandish" action="A1">
 	<!-- Attacks frontal enemies by brandishing an ax. Over-hit. Power: 2322. -->
 		<icon initial="icon.skill_transform_s_attack"/>
 		<attributes magic-critical-rate="5.0" >
@@ -2555,12 +2555,12 @@
 			<fan-range start-angle="0" radius="200" angle="180"/>
 		</target>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="2322.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="796" name="Divine Knight Explosion Attack" max-level="1" action="A1">
+	<skill id="796" name="Divine Knight Explosion Attack" action="A1">
 	<!-- Detonates the floor by striking it hard. Power 1900. -->
 		<icon initial="icon.skill_transform_s_attack"/>
 		<attributes magic-critical-rate="5.0" >
@@ -2578,12 +2578,12 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="5" affect-random="12" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="1900.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="797" name="Divine Rogue Piercing Attack" max-level="1" action="A1">
+	<skill id="797" name="Divine Rogue Piercing Attack" action="A1">
 	<!-- Thrusts strongly to attack the target and enemies behind the target. Over-hit. Power: 2111. -->
 		<icon initial="icon.skill_transform_s_attack"/>
 		<attributes magic-critical-rate="5.0" >
@@ -2603,12 +2603,12 @@
 			<fan-range start-angle="0" radius="250" angle="60"/>
 		</target>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="2111.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="798" name="Divine Warrior Crippling Attack" max-level="1" debuff="true" action="A2">
+	<skill id="798" name="Divine Warrior Crippling Attack" debuff="true" action="A2">
 	<!-- Unexpectedly stabs with a poisoned needle to poison the enemy. -->
 		<icon initial="icon.skill_transform_s_attack"/>
 		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="POISON" level-bonus-rate="20" >
@@ -2631,10 +2631,10 @@
 			<chance initial="50"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="1689.0"/>
 			</physical-attack>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="69.0"/>
 			</damage-over-time>
 		</effects>

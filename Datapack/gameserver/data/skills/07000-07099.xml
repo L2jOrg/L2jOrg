@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="7000" name="NPC Default" max-level="1" action="A1">
+	<skill id="7000" name="NPC Default" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -9,7 +9,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="7001" name="Dispel Buff" max-level="1" action="A1">
+	<skill id="7001" name="Dispel Buff" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -26,7 +26,7 @@
 			</dispel-by-category>
 		</effects>
 	</skill>
-	<skill id="7002" name="Dispel Debuff" max-level="1" action="A1">
+	<skill id="7002" name="Dispel Debuff" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -43,7 +43,7 @@
 			</dispel-by-category>
 		</effects>
 	</skill>
-	<skill id="7003" name="Dispel All" max-level="1" action="A1">
+	<skill id="7003" name="Dispel All" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -166,7 +166,7 @@
 			<chance initial="35"/>
 		</abnormal>
 	</skill>
-	<skill id="7008" name="Feather of Blessing" max-level="1" debuff="true" action="A2">
+	<skill id="7008" name="Feather of Blessing" debuff="true" action="A2">
 	<!-- Once used, the Feather of Blessing cannot be reused for another 5 minutes. -->
 		<icon initial="icon.blessed_feather_i00"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -184,7 +184,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="7009" name="not_used" max-level="1" >
+	<skill id="7009" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -195,7 +195,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="7010" name="not_used" max-level="1" >
+	<skill id="7010" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -206,7 +206,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="7011" name="not_used" max-level="1" >
+	<skill id="7011" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -217,7 +217,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="7012" name="not_used" max-level="1" >
+	<skill id="7012" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -228,7 +228,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="7013" name="not_used" max-level="1" >
+	<skill id="7013" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -239,7 +239,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="7014" name="Test - P. Critical Damage Up" max-level="1" action="T">
+	<skill id="7014" name="Test - P. Critical Damage Up" action="T">
 	<!-- Received P. Critical Damage by +10%%. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -250,7 +250,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="7015" name="Test - P. Critical Damage Down" max-level="1" action="T">
+	<skill id="7015" name="Test - P. Critical Damage Down" action="T">
 	<!-- Received P. Critical Damage by -50%%. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -261,7 +261,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="7016" name="Test - P. Critical Damage Up" max-level="1" action="T">
+	<skill id="7016" name="Test - P. Critical Damage Up" action="T">
 	<!-- Received P. Critical Damage by +100. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -272,7 +272,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="7017" name="Test - P. Critical Damage Down" max-level="1" action="T">
+	<skill id="7017" name="Test - P. Critical Damage Down" action="T">
 	<!-- Received P. Critical Damage by +200. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -283,7 +283,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="7018" name="Test - P. Critical Damage Up" max-level="1" action="T">
+	<skill id="7018" name="Test - P. Critical Damage Up" action="T">
 	<!-- Received P. Critical Rate +10%%. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -294,7 +294,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="7019" name="Test - P. Critical Down" max-level="1" action="T">
+	<skill id="7019" name="Test - P. Critical Down" action="T">
 	<!-- Received P. Critical Rate -50%%. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -305,7 +305,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="7020" name="Test - P. Critical Damage Up" max-level="1" action="T">
+	<skill id="7020" name="Test - P. Critical Damage Up" action="T">
 	<!-- Received P. Critical Rate +100. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -316,7 +316,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="7021" name="Test - P. CriticalDown" max-level="1" action="T">
+	<skill id="7021" name="Test - P. CriticalDown" action="T">
 	<!-- Received P. Critical Rate -200. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -327,7 +327,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="7022" name="Test - Find Hidden Door" max-level="1" action="A1">
+	<skill id="7022" name="Test - Find Hidden Door" action="A1">
 	<!-- Look for hidden door. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -340,7 +340,7 @@
 		</attributes>
 		<target scope="STATIC_OBJECT_SCOPE" object="HIDDEN_PLACE" range="1000" affect-min="6" affect-random="12" />
 	</skill>
-	<skill id="7023" name="not_used" max-level="1" >
+	<skill id="7023" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -351,7 +351,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="7024" name="not_used" max-level="1" >
+	<skill id="7024" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -362,7 +362,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="7025" name="not_used" max-level="1" >
+	<skill id="7025" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -373,7 +373,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="7026" name="not_used" max-level="1" >
+	<skill id="7026" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -384,7 +384,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="7027" name="not_used" max-level="1" >
+	<skill id="7027" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -395,7 +395,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="7028" name="Stationary NPCs" max-level="1" >
+	<skill id="7028" name="Stationary NPCs">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -435,7 +435,7 @@
 				<power initial="1.0E-4"/>
 			</effect>
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="3">999900.0</value>
 					<value level="4">999999.0</value>
 				</power>
@@ -458,18 +458,18 @@
 					<value level="4">300.0</value>
 				</power>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
-				<power initial="0.0">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
+				<power>
 					<value level="4">100.0</value>
 				</power>
 			</vital-stat-modify>
 			<stat-modify stat="REGENERATE_MP_RATE" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="4">100.0</value>
 				</power>
 			</stat-modify>
 			<stat-modify stat="WEIGHT_LIMIT" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="4">100.0</value>
 				</power>
 			</stat-modify>
@@ -477,14 +477,14 @@
 				<power initial="-99.0"/>
 			</reuse>
 			<stat-modify stat="MAGIC_ATTACK" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="3">999900.0</value>
 					<value level="4">999999.0</value>
 				</power>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="7030" name="Summon King Bugbear" max-level="1" action="A1" type="MAGIC">
+	<skill id="7030" name="Summon King Bugbear" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -501,13 +501,13 @@
 		</consume>
 		<target />
 		<effects>
-			<summon consume-item="0" experience-multiplier="1.0" life-time="1200000">
+			<summon consume-item="0" life-time="1200000">
 				<npc initial="20150.0"/>
 				<consume-count initial="1.0"/>
 			</summon>
 		</effects>
 	</skill>
-	<skill id="7031" name="Summon Skeleton Royal Guard" max-level="1" action="A1" type="MAGIC">
+	<skill id="7031" name="Summon Skeleton Royal Guard" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -524,7 +524,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="7032" name="Summon Hunter Gargoyle" max-level="1" action="A1" type="MAGIC">
+	<skill id="7032" name="Summon Hunter Gargoyle" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -541,13 +541,13 @@
 		</consume>
 		<target />
 		<effects>
-			<summon consume-item="0" experience-multiplier="1.0" life-time="1200000">
+			<summon consume-item="0" life-time="1200000">
 				<npc initial="20241.0"/>
 				<consume-count initial="1.0"/>
 			</summon>
 		</effects>
 	</skill>
-	<skill id="7033" name="not_used" max-level="1" >
+	<skill id="7033" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -558,7 +558,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="7034" name="not_used" max-level="1" >
+	<skill id="7034" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -569,7 +569,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="7035" name="not_used" max-level="1" >
+	<skill id="7035" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -580,7 +580,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="7036" name="not_used" max-level="1" >
+	<skill id="7036" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -591,7 +591,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="7037" name="not_used" max-level="1" >
+	<skill id="7037" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -602,7 +602,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="7038" name="not_used" max-level="1" >
+	<skill id="7038" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -613,7 +613,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="7039" name="not_used" max-level="1" >
+	<skill id="7039" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -624,7 +624,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="7040" name="not_used" max-level="1" >
+	<skill id="7040" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -754,7 +754,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="4.0"/>
 			</stat-modify>
 		</effects>
@@ -785,7 +785,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="35.0"/>
 			</vital-stat-modify>
 		</effects>
@@ -816,7 +816,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="35.0"/>
 			</vital-stat-modify>
 		</effects>
@@ -847,7 +847,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="4.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="4.0"/>
 			</stat-hp-based>
 		</effects>
 	</skill>
@@ -1094,7 +1094,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="33.0"/>
 			</speed>
 		</effects>
@@ -1131,7 +1131,7 @@
 			<stat-modify stat="MAGIC_ATTACK" mode="PER">
 				<power initial="16.0"/>
 			</stat-modify>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="8.0"/>
 			</speed>
 			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
@@ -1140,7 +1140,7 @@
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="-8.0"/>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="-4.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="-4.0"/>
 			</stat-hp-based>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="8.0"/>
@@ -1238,7 +1238,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
 				<power initial="2.0"/>
 			</stat-modify>
 		</effects>
@@ -1328,7 +1328,7 @@
 			<resist-abnormal-by-category category="DEBUFF">
 				<power initial="-10.0"/>
 			</resist-abnormal-by-category>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
 				<power initial="2.0"/>
 			</stat-modify>
 			<magic-cost type="1">
@@ -1377,7 +1377,7 @@
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="20.0"/>
 			</stat-modify>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="4.0"/>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
@@ -1386,7 +1386,7 @@
 			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
 				<power initial="20.0"/>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="20.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
@@ -1398,7 +1398,7 @@
 			<resist-abnormal-by-category category="DEBUFF">
 				<power initial="-10.0"/>
 			</resist-abnormal-by-category>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
 				<power initial="2.0"/>
 			</stat-modify>
 		</effects>
@@ -1459,7 +1459,7 @@
 			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="PER">
 				<power initial="20.0"/>
 			</stat-hp-based>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="20.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD" mode="PER">
@@ -1511,7 +1511,7 @@
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="20.0"/>
 			</stat-modify>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="4.0"/>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
@@ -1526,12 +1526,12 @@
 			<resist-abnormal-by-category category="DEBUFF">
 				<power initial="-10.0"/>
 			</resist-abnormal-by-category>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
 				<power initial="2.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="7065" name="Test - Charge" max-level="1" action="DA1">
+	<skill id="7065" name="Test - Charge" action="DA1">
 	<!-- Charges into the enemy. -->
 		<icon initial="icon.skill0000"/>
 		<attributes next-action="ATTACK" magic-critical-rate="-5.0" >
@@ -1546,7 +1546,7 @@
 		</consume>
 		<target type="ENEMY" />
 	</skill>
-	<skill id="7066" name="Test Stun Charge" max-level="1" debuff="true" action="DA2">
+	<skill id="7066" name="Test Stun Charge" debuff="true" action="DA2">
 	<!-- Charges into enemy and Stuns. -->
 		<icon initial="icon.skill0000"/>
 		<attributes next-action="ATTACK" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" >
@@ -1572,7 +1572,7 @@
 			</block-all-actions>
 		</effects>
 	</skill>
-	<skill id="7067" name="Test Range Charge" max-level="1" debuff="true" action="DA2">
+	<skill id="7067" name="Test Range Charge" debuff="true" action="DA2">
 	<!-- Charges into enemy and causes bleeding -->
 		<icon initial="icon.skill0000"/>
 		<attributes next-action="ATTACK" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2" >
@@ -1593,7 +1593,7 @@
 		</abnormal>
 
 	</skill>
-	<skill id="7068" name="Test Steal Abnormal State" max-level="1" action="A1" type="MAGIC">
+	<skill id="7068" name="Test Steal Abnormal State" action="A1" type="MAGIC">
 	<!-- Steals enemy's abnormal state. -->
 		<icon initial="icon.skill0000"/>
 		<attributes next-action="ATTACK" magic-critical-rate="-5.0" >
@@ -1609,7 +1609,7 @@
 		<target type="ENEMY" />
 
 	</skill>
-	<skill id="7069" name="Test Abnormal State DD" max-level="1" action="A1" type="MAGIC">
+	<skill id="7069" name="Test Abnormal State DD" action="A1" type="MAGIC">
 	<!-- Inflicts damage according to the enemy's number of abnormal states. -->
 		<icon initial="icon.skill0000"/>
 		<attributes next-action="ATTACK" magic-critical-rate="-5.0" >
@@ -1625,7 +1625,7 @@
 		<target type="ENEMY" />
 
 	</skill>
-	<skill id="7070" name="Test - Soul Eating Passive" max-level="1" >
+	<skill id="7070" name="Test - Soul Eating Passive">
 	<!-- Absorbs soul. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -1636,7 +1636,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="7071" name="Test - Soul Transfer" max-level="1" action="A1">
+	<skill id="7071" name="Test - Soul Transfer" action="A1">
 	<!-- Transfers soul to party member. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1653,7 +1653,7 @@
 		<target type="TARGET" />
 
 	</skill>
-	<skill id="7075" name="Test - Distance DD" max-level="1" action="A1" type="MAGIC">
+	<skill id="7075" name="Test - Distance DD" action="A1" type="MAGIC">
 	<!-- Magic damage changes by distance. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1672,7 +1672,7 @@
 		</consume>
 		<target type="ENEMY" />
 	</skill>
-	<skill id="7076" name="Test - Delay Debuff" max-level="1" debuff="true" action="A2">
+	<skill id="7076" name="Test - Delay Debuff" debuff="true" action="A2">
 	<!-- Bleeds for 20 seconds and gets Stunned. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2" >
@@ -1694,7 +1694,7 @@
 			<chance initial="100"/>
 		</abnormal>
 	</skill>
-	<skill id="7077" name="Test - Delay Debuff - Call" max-level="1" debuff="true" action="A2">
+	<skill id="7077" name="Test - Delay Debuff - Call" debuff="true" action="A2">
 	<!-- Currently stunned. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" >
@@ -1710,7 +1710,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="7079" name="Test - Party Damage Absorb" max-level="1" action="A2">
+	<skill id="7079" name="Test - Party Damage Absorb" action="A2">
 	<!-- Transfers party damage to tanker. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -1731,7 +1731,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="7080" name="Test - General Attack Prohibited" max-level="1" debuff="true" action="A2">
+	<skill id="7080" name="Test - General Attack Prohibited" debuff="true" action="A2">
 	<!-- Cannot perform general attack. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -1752,7 +1752,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="7081" name="Effect Test - Land Shot" max-level="1" action="A1">
+	<skill id="7081" name="Effect Test - Land Shot" action="A1">
 	<!-- Shoots toward ground. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1770,7 +1770,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="5" affect-random="12" />
 	</skill>
-	<skill id="7082" name="Effect Test - Chain Lightning" max-level="1" action="A1" type="MAGIC">
+	<skill id="7082" name="Effect Test - Chain Lightning" action="A1" type="MAGIC">
 	<!-- Chain Lightning -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1789,7 +1789,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="5" affect-random="12" />
 	</skill>
-	<skill id="7083" name="Test - Trap Skill" max-level="1" action="A1" type="MAGIC">
+	<skill id="7083" name="Test - Trap Skill" action="A1" type="MAGIC">
 	<!-- Trap Range Skill -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1804,7 +1804,7 @@
 		</attributes>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12" />
 	</skill>
-	<skill id="7084" name="Test - Trap Skill" max-level="1" action="CA1" type="MAGIC">
+	<skill id="7084" name="Test - Trap Skill" action="CA1" type="MAGIC">
 	<!-- Trap Range Skill -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1818,9 +1818,9 @@
 			<element type="FIRE" value="20"/>
 		</attributes>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12" />
-		<channeling skill="0" mp-consume="0" initial-delay="1000" interval="0"/>
+		<channeling skill="0" initial-delay="1000" interval="0"/>
 	</skill>
-	<skill id="7085" name="Self-Destruct Explosion" max-level="1" action="A1" type="MAGIC">
+	<skill id="7085" name="Self-Destruct Explosion" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1838,7 +1838,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="300" />
 	</skill>
-	<skill id="7086" name="Last Stand_test" max-level="1" action="A1">
+	<skill id="7086" name="Last Stand_test" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1851,7 +1851,7 @@
 		</attributes>
 		<target type="ENEMY" />
 	</skill>
-	<skill id="7087" name="Chain Magic - Dark Explosion_test" max-level="1" action="A1" type="MAGIC">
+	<skill id="7087" name="Chain Magic - Dark Explosion_test" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1999,10 +1999,10 @@
 			<block-abnormal>
 				<abnormals>MAX_HP_UP MAX_MP_UP</abnormals>
 			</block-abnormal>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="35.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="35.0"/>
 			</vital-stat-modify>
 		</effects>
@@ -2137,10 +2137,10 @@
 			<block-abnormal>
 				<abnormals>SPEED_UP AVOID_UP</abnormals>
 			</block-abnormal>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="33.0"/>
 			</speed>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="4.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="4.0"/>
 			</stat-hp-based>
 		</effects>
 	</skill>
@@ -2219,7 +2219,7 @@
 		level 3: The GM is always by your side. You feel the Fire Dragon's energy for 8 hours.\n\nBlessing of Fire Dragon: Buff/debuff effects remain after death, but Blessing of Fire Dragon disappears.
 	 -->
 		<icon initial="icon.bm_blessing_dragon"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" dispellable="false" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
@@ -2241,7 +2241,7 @@
 			<effect name="NoblesseBless"/>
 		</effects>
 	</skill>
-	<skill id="7097" name="Cancel Shadow Move" max-level="1" action="A1">
+	<skill id="7097" name="Cancel Shadow Move" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill01702"/>
 		<attributes magic-critical-rate="-5.0" triggered="true" auto-use="ACTIVE">
@@ -2263,7 +2263,7 @@
 			</dispel>
 		</effects>
 	</skill>
-	<skill id="7098" name="Clan-exclusive Pet Heal" max-level="1" action="A1" type="MAGIC">
+	<skill id="7098" name="Clan-exclusive Pet Heal" action="A1" type="MAGIC">
 	<!-- Recovers all of your HP. Power 3000 -->
 		<icon initial="icon.skill1401"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2284,7 +2284,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7099" name="Clan-exclusive Pet Fear" max-level="1" action="A2" type="MAGIC">
+	<skill id="7099" name="Clan-exclusive Pet Fear" action="A2" type="MAGIC">
 	<!-- Inflicts fear on the target for 3 seconds. -->
 		<icon initial="icon.skill4108"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="DERANGEMENT" >

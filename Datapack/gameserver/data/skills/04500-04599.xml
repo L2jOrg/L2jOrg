@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="4500" name="Treasure Chest (Lv. 27)" max-level="1" >
+	<skill id="4500" name="Treasure Chest (Lv. 27)">
 	<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon initial="icon.skill0042"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -11,7 +11,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4501" name="Treasure Chest (Lv. 29)" max-level="1" >
+	<skill id="4501" name="Treasure Chest (Lv. 29)">
 	<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon initial="icon.skill0042"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -22,7 +22,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4502" name="Treasure Chest (Lv. 31)" max-level="1" >
+	<skill id="4502" name="Treasure Chest (Lv. 31)">
 	<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon initial="icon.skill0042"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -33,7 +33,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4503" name="Treasure Chest (Lv. 32)" max-level="1" >
+	<skill id="4503" name="Treasure Chest (Lv. 32)">
 	<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon initial="icon.skill0042"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -44,7 +44,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4504" name="Treasure Chest (Lv. 33)" max-level="1" >
+	<skill id="4504" name="Treasure Chest (Lv. 33)">
 	<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon initial="icon.skill0042"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -55,7 +55,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4505" name="Treasure Chest (Lv. 35)" max-level="1" >
+	<skill id="4505" name="Treasure Chest (Lv. 35)">
 	<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon initial="icon.skill0042"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -66,7 +66,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4506" name="Treasure Chest (Lv. 39)" max-level="1" >
+	<skill id="4506" name="Treasure Chest (Lv. 39)">
 	<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon initial="icon.skill0042"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -77,7 +77,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4507" name="Treasure Chest (Lv. 42)" max-level="1" >
+	<skill id="4507" name="Treasure Chest (Lv. 42)">
 	<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon initial="icon.skill0042"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -88,7 +88,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4508" name="Treasure Chest (Lv. 43)" max-level="1" >
+	<skill id="4508" name="Treasure Chest (Lv. 43)">
 	<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon initial="icon.skill0042"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -99,7 +99,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4509" name="Treasure Chest (Lv. 45)" max-level="1" >
+	<skill id="4509" name="Treasure Chest (Lv. 45)">
 	<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon initial="icon.skill0042"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -110,7 +110,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4510" name="Treasure Chest (Lv. 47)" max-level="1" >
+	<skill id="4510" name="Treasure Chest (Lv. 47)">
 	<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon initial="icon.skill0042"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -121,7 +121,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4511" name="Treasure Chest (Lv. 49)" max-level="1" >
+	<skill id="4511" name="Treasure Chest (Lv. 49)">
 	<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon initial="icon.skill0042"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -132,7 +132,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4512" name="Treasure Chest (Lv. 52)" max-level="1" >
+	<skill id="4512" name="Treasure Chest (Lv. 52)">
 	<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon initial="icon.skill0042"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -143,7 +143,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="4513" name="Squash - Level Up" max-level="1" action="A1">
+	<skill id="4513" name="Squash - Level Up" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -154,7 +154,7 @@
 		</attributes>
 		<target scope="NONE" />
 	</skill>
-	<skill id="4514" name="Squash - Poisoned" max-level="1" action="A1">
+	<skill id="4514" name="Squash - Poisoned" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -165,10 +165,10 @@
 		</attributes>
 		<target scope="NONE" />
 	</skill>
-	<skill id="4515" name="Raid Curse" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="4515" name="Raid Curse" debuff="true" action="A2" type="MAGIC">
 	<!-- The curse of the Raid Boss guardian spirit temporarily petrifies the target, immobilizing it like a stone. This curse befalls those who attempt to challenge a raid boss who is 9 or more Lv.s below their own, or those who do not meet the requirements for the raid. The curse is irreversible. -->
 		<icon initial="icon.skill4111"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" dispellable="false" irreplacable="true" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
 			<magic-level initial="-1"/>
 			<cast-range initial="1500"/>
 			<effect-point initial="-100"/>
@@ -186,7 +186,7 @@
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="4516" name="Orfen Heal" max-level="1" action="A1" type="MAGIC">
+	<skill id="4516" name="Orfen Heal" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -209,7 +209,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4517" name="Shield" max-level="1" action="T">
+	<skill id="4517" name="Shield" action="T">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -231,7 +231,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4518" name="Might" max-level="1" action="T">
+	<skill id="4518" name="Might" action="T">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -253,7 +253,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4519" name="Shield" max-level="1" action="T">
+	<skill id="4519" name="Shield" action="T">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -274,7 +274,7 @@
 			</speed>
 		</effects>
 	</skill>
-	<skill id="4520" name="Might" max-level="1" action="T">
+	<skill id="4520" name="Might" action="T">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -295,7 +295,7 @@
 			</speed>
 		</effects>
 	</skill>
-	<skill id="4521" name="Bow Attack Resistance" max-level="1" >
+	<skill id="4521" name="Bow Attack Resistance">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -331,7 +331,7 @@
 			</defence-trait>
 		</effects>
 	</skill>
-	<skill id="4522" name="Eye of Assassin" max-level="1" action="A2" type="MAGIC">
+	<skill id="4522" name="Eye of Assassin" action="A2" type="MAGIC">
 	<!-- Assassin's senses are greatly heightened. Greatly increases the P. Crit. Rate when attacking from behind. -->
 		<icon initial="icon.skill0016"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -353,7 +353,7 @@
 			</stat-position-based>
 		</effects>
 	</skill>
-	<skill id="4523" name="Ultimate Evasion" max-level="1" action="A2" type="MAGIC">
+	<skill id="4523" name="Ultimate Evasion" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -370,11 +370,11 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="30.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="30.0"/>
 			</stat-hp-based>
 		</effects>
 	</skill>
-	<skill id="4524" name="Bluff" max-level="1" action="A2" type="MAGIC">
+	<skill id="4524" name="Bluff" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -391,7 +391,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="4525" name="Shield" max-level="1" action="T">
+	<skill id="4525" name="Shield" action="T">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -415,7 +415,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4526" name="Summon" max-level="1" action="A1" type="MAGIC">
+	<skill id="4526" name="Summon" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -431,7 +431,7 @@
 			</hp>
 		</effects>
 	</skill>
-	<skill id="4527" name="Restore" max-level="1" action="A2" type="MAGIC">
+	<skill id="4527" name="Restore" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -454,7 +454,7 @@
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="4528" name="Wind Walk" max-level="1" action="A2" type="MAGIC">
+	<skill id="4528" name="Wind Walk" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -472,12 +472,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="33.0"/>
 			</speed>
 		</effects>
 	</skill>
-	<skill id="4529" name="Self-destruction" max-level="1" action="A1" type="MAGIC">
+	<skill id="4529" name="Self-destruction" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -491,12 +491,12 @@
 		</attributes>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="56.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="4530" name="Heal" max-level="1" action="A1" type="MAGIC">
+	<skill id="4530" name="Heal" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -515,7 +515,7 @@
 			</hp>
 		</effects>
 	</skill>
-	<skill id="4531" name="Heal" max-level="1" action="A1" type="MAGIC">
+	<skill id="4531" name="Heal" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -534,7 +534,7 @@
 			</mp>
 		</effects>
 	</skill>
-	<skill id="4532" name="Reflect Damage" max-level="1" action="T">
+	<skill id="4532" name="Reflect Damage" action="T">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -553,7 +553,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4533" name="Dance of Resistance" max-level="1" debuff="true" action="A2">
+	<skill id="4533" name="Dance of Resistance" debuff="true" action="A2">
 	<!-- Momentarily decreases Movement Speed and P. Accuracy significantly. Dance of Inspiration can remove the curse. -->
 		<icon initial="icon.skill0272"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -574,12 +574,12 @@
 			<speed mode="PER">
 				<power initial="-50.0"/>
 			</speed>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="-40.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4534" name="Nihilistic Dance" max-level="1" debuff="true" action="A2">
+	<skill id="4534" name="Nihilistic Dance" debuff="true" action="A2">
 	<!-- Atk. Spd. decreases momentarily. and P. Evasion significantly. Dance of Fury can remove the curse. -->
 		<icon initial="icon.skill0275"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -597,14 +597,14 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="-40.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="-40.0"/>
 			</stat-hp-based>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="-30.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4535" name="Dance of Weakness" max-level="1" debuff="true" action="A2">
+	<skill id="4535" name="Dance of Weakness" debuff="true" action="A2">
 	<!-- P. Def. decreases momentarily. and P. Atk. significantly. Dance of the Vampire can remove the curse. -->
 		<icon initial="icon.skill0310"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -630,7 +630,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4536" name="Song of Seduction" max-level="1" debuff="true" action="A2">
+	<skill id="4536" name="Song of Seduction" debuff="true" action="A2">
 	<!-- Momentarily decreases Movement Speed and P. Accuracy significantly. Song of Wind can remove the curse. -->
 		<icon initial="icon.skill0268"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -651,12 +651,12 @@
 			<speed mode="PER">
 				<power initial="-50.0"/>
 			</speed>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="-40.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4537" name="Song of Sweet Whispers" max-level="1" debuff="true" action="A2">
+	<skill id="4537" name="Song of Sweet Whispers" debuff="true" action="A2">
 	<!-- Atk. Spd. decreases momentarily. and P. Evasion significantly. Song of Water can remove the curse. -->
 		<icon initial="icon.skill0266"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -674,14 +674,14 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="-40.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="-40.0"/>
 			</stat-hp-based>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="-30.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4538" name="Song of Temptation" max-level="1" debuff="true" action="A2">
+	<skill id="4538" name="Song of Temptation" debuff="true" action="A2">
 	<!-- P. Def. decreases momentarily. and P. Atk. significantly. Song of Vengeance can remove the curse. -->
 		<icon initial="icon.skill0305"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -707,7 +707,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4539" name="Vague Curse" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="4539" name="Vague Curse" debuff="true" action="A2" type="MAGIC">
 	<!-- Momentarily decreases Movement Speed and P. Accuracy significantly. Guidance spell can remove the curse. -->
 		<icon initial="icon.skill1240"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -728,12 +728,12 @@
 			<speed mode="PER">
 				<power initial="-50.0"/>
 			</speed>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="-40.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4540" name="Curse of Weakness" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="4540" name="Curse of Weakness" debuff="true" action="A2" type="MAGIC">
 	<!-- P. Def. decreases momentarily. and Movement Speed significantly. Shield spell can remove the curse. -->
 		<icon initial="icon.skill1040"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -759,7 +759,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4541" name="Nihilistic Curse" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="4541" name="Nihilistic Curse" debuff="true" action="A2" type="MAGIC">
 	<!-- P. Atk. decreases momentarily., M. Atk. and Atk. Spd. significantly. Might spell can remove the curse. -->
 		<icon initial="icon.skill1068"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -788,7 +788,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4542" name="Sleep/Stun Resistance" max-level="1" >
+	<skill id="4542" name="Sleep/Stun Resistance">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -809,7 +809,7 @@
 			</defence-trait>
 		</effects>
 	</skill>
-	<skill id="4543" name="Weakened Stun" max-level="1" >
+	<skill id="4543" name="Weakened Stun">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -866,7 +866,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4545" name="Reflect Damage" max-level="1" action="T">
+	<skill id="4545" name="Reflect Damage" action="T">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -888,7 +888,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4546" name="Consume Slate" max-level="1" action="A1">
+	<skill id="4546" name="Consume Slate" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -899,7 +899,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="4547" name="Watchman's Gaze" max-level="1" debuff="true" action="A2">
+	<skill id="4547" name="Watchman's Gaze" debuff="true" action="A2">
 	<!-- none -->
 		<icon initial="icon.skill0131"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -915,7 +915,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="4548" name="Annulment" max-level="1" action="A1">
+	<skill id="4548" name="Annulment" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -933,7 +933,7 @@
 			</dispel>
 		</effects>
 	</skill>
-	<skill id="4549" name="Quest - Unsealed Altar" max-level="1" action="A1">
+	<skill id="4549" name="Quest - Unsealed Altar" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -944,7 +944,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="4550" name="Quest - Cursed Altar" max-level="1" action="A1">
+	<skill id="4550" name="Quest - Cursed Altar" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -992,14 +992,14 @@
 		</abnormal>
 		<effects>
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="2">-4.0</value>
 					<value level="5">-8.0</value>
 					<value level="8">-12.0</value>
 					<value level="10">-15.0</value>
 				</power>
 			</stat-modify>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="DIFF">
+			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0">
 				<power initial="30.0">
 					<value level="2">50.0</value>
 					<value level="3">80.0</value>
@@ -1046,14 +1046,14 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="-0.0">
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="-0.0">
 					<value level="2">-3.0</value>
 					<value level="5">-5.0</value>
 					<value level="8">-8.0</value>
 					<value level="10">-10.0</value>
 				</power>
 			</stat-hp-based>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="3.0">
 					<value level="2">6.0</value>
 					<value level="3">8.0</value>
@@ -1101,7 +1101,7 @@
 		</abnormal>
 		<effects>
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="2">-4.0</value>
 					<value level="5">-8.0</value>
 					<value level="8">-12.0</value>
@@ -1165,7 +1165,7 @@
 				</power>
 			</stat-modify>
 			<magic-cost type="1">
-				<power initial="0.0">
+				<power>
 					<value level="2">-4.0</value>
 					<value level="5">-8.0</value>
 					<value level="8">-12.0</value>
@@ -1174,7 +1174,7 @@
 			</magic-cost>
 		</effects>
 	</skill>
-	<skill id="4555" name="Mutation Resistance" max-level="1" >
+	<skill id="4555" name="Mutation Resistance">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -1204,7 +1204,7 @@
 			</defence-trait>
 		</effects>
 	</skill>
-	<skill id="4556" name="Dispel Hot Spring Disease A D" max-level="1" action="A1" type="MAGIC">
+	<skill id="4556" name="Dispel Hot Spring Disease A D" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1229,7 +1229,7 @@
 			</dispel>
 		</effects>
 	</skill>
-	<skill id="4557" name="Dispel Hot Spring Disease B D" max-level="1" action="A1" type="MAGIC">
+	<skill id="4557" name="Dispel Hot Spring Disease B D" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1254,7 +1254,7 @@
 			</dispel>
 		</effects>
 	</skill>
-	<skill id="4558" name="Dispel Hot Spring Disease C D" max-level="1" action="A1" type="MAGIC">
+	<skill id="4558" name="Dispel Hot Spring Disease C D" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1279,7 +1279,7 @@
 			</dispel>
 		</effects>
 	</skill>
-	<skill id="4559" name="Hot Spring Illusion" max-level="1" action="A2">
+	<skill id="4559" name="Hot Spring Illusion" action="A2">
 	<!-- Temporary optical illusion caused by the Hot Spring. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -1336,7 +1336,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="13.0">
 					<value level="2">15.0</value>
 					<value level="3">18.0</value>
@@ -1390,7 +1390,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="13.0">
 					<value level="2">15.0</value>
 					<value level="3">18.0</value>
@@ -1461,7 +1461,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="22.0">
 					<value level="2">33.0</value>
 					<value level="3">47.0</value>
@@ -1530,7 +1530,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="22.0">
 					<value level="2">33.0</value>
 					<value level="3">47.0</value>
@@ -1600,7 +1600,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="11.0">
 					<value level="2">17.0</value>
 					<value level="3">24.0</value>
@@ -1660,7 +1660,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="100" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="37.0">
 					<value level="2">39.0</value>
 					<value level="3">41.0</value>
@@ -1718,7 +1718,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="100" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="37.0">
 					<value level="2">39.0</value>
 					<value level="3">41.0</value>
@@ -1777,7 +1777,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="100" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="37.0">
 					<value level="2">39.0</value>
 					<value level="3">41.0</value>
@@ -1849,7 +1849,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="11.0">
 					<value level="2">17.0</value>
 					<value level="3">24.0</value>
@@ -1919,7 +1919,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="11.0">
 					<value level="2">17.0</value>
 					<value level="3">24.0</value>
@@ -1990,7 +1990,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="6.0">
 					<value level="2">9.0</value>
 					<value level="3">12.0</value>
@@ -2050,7 +2050,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="42.0">
 					<value level="2">44.0</value>
 					<value level="3">46.0</value>
@@ -2108,7 +2108,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="true" critical-chance="15.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack ignore-shield="true" critical-chance="15.0">
 				<power initial="92.0">
 					<value level="2">210.0</value>
 					<value level="3">438.0</value>
@@ -2166,7 +2166,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="15.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="15.0">
 				<power initial="46.0">
 					<value level="2">105.0</value>
 					<value level="3">219.0</value>
@@ -2224,7 +2224,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="150" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="15.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="15.0">
 				<power initial="31.0">
 					<value level="2">70.0</value>
 					<value level="3">146.0</value>
@@ -2378,7 +2378,7 @@
 			<chance initial="40"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="-1.0">
 					<value level="2">-2.0</value>
 					<value level="3">-3.0</value>
@@ -2395,7 +2395,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4578" name="Petrify" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="4578" name="Petrify" debuff="true" action="A2" type="MAGIC">
 	<!-- Petrified and unable to move momentarily. -->
 		<icon initial="icon.skill4111"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -2422,7 +2422,7 @@
 			<block-all-actions>
 				<allowed-skills>35016</allowed-skills>
 			</block-all-actions>
-			<damage-block block-hp="true" block-mp="false"/>
+			<damage-block block-hp="true"/>
 			<effect name="BuffBlock"/>
 			<effect name="DebuffBlock"/>
 			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
@@ -2485,7 +2485,7 @@
 			<chance initial="100"/>
 		</abnormal>
 		<effects>
-			<fatal-blow chance-boost="200.0" critical-chance="0" over-hit="false">
+			<fatal-blow chance-boost="200.0" over-hit="false">
 				<power initial="137.0">
 					<value level="2">314.0</value>
 					<value level="3">656.0</value>
@@ -2500,7 +2500,7 @@
 					<value level="12">7850.0</value>
 				</power>
 			</fatal-blow>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="18.0">
 					<value level="2">25.0</value>
 					<value level="3">34.0</value>
@@ -2675,7 +2675,7 @@
 			<chance initial="70"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="16.0">
 					<value level="2">24.0</value>
 					<value level="3">32.0</value>
@@ -2798,8 +2798,8 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
-				<power initial="0.0"/>
+			<physical-attack critical-chance="0.0">
+				<power/>
 			</physical-attack>
 			<block-all-actions/>
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
@@ -2861,7 +2861,7 @@
 					<value level="3">16.0</value>
 				</power>
 			</stat-modify>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="5.0">
 					<value level="3">8.0</value>
 				</power>
@@ -2937,7 +2937,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="-1.0">
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="-1.0">
 					<value level="2">-2.0</value>
 					<value level="3">-3.0</value>
 					<value level="4">-4.0</value>
@@ -3051,7 +3051,7 @@
 					<value level="2">16.0</value>
 				</power>
 			</stat-modify>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="5.0">
 					<value level="2">8.0</value>
 				</power>
@@ -3532,7 +3532,7 @@
 			<chance initial="100"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="18.0">
 					<value level="2">25.0</value>
 					<value level="3">34.0</value>
@@ -3600,7 +3600,7 @@
 			<chance initial="100"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="18.0">
 					<value level="2">25.0</value>
 					<value level="3">34.0</value>
@@ -3668,7 +3668,7 @@
 			<chance initial="100"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="18.0">
 					<value level="2">25.0</value>
 					<value level="3">34.0</value>

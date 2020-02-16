@@ -13,9 +13,9 @@
 		<attributes weight="30" duration="10080" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="5763" level="1" value="-1"/>  <!-- Wink -->
-			<skill id="8245" level="1" value="-1"/>  <!-- TODO Skill not found -->
-			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
+			<skill id="5763" value="-1"/>  <!-- Wink -->
+			<skill id="8245" value="-1"/>  <!-- TODO Skill not found -->
+			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 		</skills>
 	</armor>
 

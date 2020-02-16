@@ -55,9 +55,9 @@
 	<item id="71107" name="Irene' Hourglass - 1 Hour" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 1~19.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55999" level="1" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55999" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
 		</skill-reducer>
 	</item>
 
@@ -359,7 +359,7 @@
 		<crystal />
 		<skills>
 			<skill id="51025" level="4" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
-			<skill id="55885" level="1" value="-1"/>  <!-- Agathion Bracelet Stats Increase -->
+			<skill id="55885" value="-1"/>  <!-- Agathion Bracelet Stats Increase -->
 		</skills>
 	</armor>
 
@@ -370,8 +370,8 @@
 		<crystal />
 		<skills>
 			<skill id="51025" level="4" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
-			<skill id="55885" level="1" value="-1"/>  <!-- Agathion Bracelet Stats Increase -->
-			<skill id="55886" level="1" value="-1"/>  <!-- Agathion Bracelet Resistance Increase -->
+			<skill id="55885" value="-1"/>  <!-- Agathion Bracelet Stats Increase -->
+			<skill id="55886" value="-1"/>  <!-- Agathion Bracelet Resistance Increase -->
 		</skills>
 	</armor>
 

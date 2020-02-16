@@ -164,7 +164,7 @@
 			<stat type="pAtkRange" value="500.0"/>
 		</stats>
 		<skills>
-			<skill id="3008" level="1" value="-1"/>  <!-- Special Ability: Guidance -->
+			<skill id="3008" value="-1"/>  <!-- Special Ability: Guidance -->
 		</skills>
 	</weapon>
 
@@ -185,7 +185,7 @@
 			<stat type="pAtkRange" value="500.0"/>
 		</stats>
 		<skills>
-			<skill id="3009" level="1" value="-1"/>  <!-- Special Ability: Evasion -->
+			<skill id="3009" value="-1"/>  <!-- Special Ability: Evasion -->
 		</skills>
 	</weapon>
 
@@ -572,7 +572,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3600" level="1" value="-1"/>  <!-- Special Ability: Anger -->
+			<skill id="3600" value="-1"/>  <!-- Special Ability: Anger -->
 		</skills>
 	</weapon>
 
@@ -593,8 +593,8 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
-			<skill id="3016" level="1" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Special Ability: Critical Stun -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3016" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Special Ability: Critical Stun -->
 		</skills>
 	</weapon>
 
@@ -615,8 +615,8 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3498" level="1" value="-1"/>  <!-- Special Ability: Light -->
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3498" value="-1"/>  <!-- Special Ability: Light -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -637,7 +637,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3600" level="1" value="-1"/>  <!-- Special Ability: Anger -->
+			<skill id="3600" value="-1"/>  <!-- Special Ability: Anger -->
 		</skills>
 	</weapon>
 
@@ -658,8 +658,8 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
-			<skill id="3016" level="1" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Special Ability: Critical Stun -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3016" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Special Ability: Critical Stun -->
 		</skills>
 	</weapon>
 
@@ -681,7 +681,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -702,8 +702,8 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
-			<skill id="3016" level="1" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Special Ability: Critical Stun -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3016" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Special Ability: Critical Stun -->
 		</skills>
 	</weapon>
 
@@ -725,7 +725,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -746,7 +746,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -767,7 +767,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 			<skill id="3016" level="2" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Special Ability: Critical Stun -->
 		</skills>
 	</weapon>
@@ -790,7 +790,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -811,8 +811,8 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3498" level="1" value="-1"/>  <!-- Special Ability: Light -->
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3498" value="-1"/>  <!-- Special Ability: Light -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -854,7 +854,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 			<skill id="3016" level="3" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Special Ability: Critical Stun -->
 		</skills>
 	</weapon>
@@ -877,7 +877,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -898,7 +898,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 			<skill id="3016" level="3" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Special Ability: Critical Stun -->
 		</skills>
 	</weapon>
@@ -921,7 +921,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -942,7 +942,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -963,7 +963,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 			<skill id="3016" level="4" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Special Ability: Critical Stun -->
 		</skills>
 	</weapon>
@@ -986,7 +986,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -1007,7 +1007,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -1049,7 +1049,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 			<skill id="3016" level="5" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Special Ability: Critical Stun -->
 		</skills>
 	</weapon>
@@ -1071,8 +1071,8 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3498" level="1" value="-1"/>  <!-- Special Ability: Light -->
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3498" value="-1"/>  <!-- Special Ability: Light -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -1114,7 +1114,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 			<skill id="3016" level="6" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Special Ability: Critical Stun -->
 		</skills>
 	</weapon>
@@ -1137,7 +1137,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -1158,7 +1158,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="1044" level="1" type="ON_MAGIC_SKILL" chance="30" value="-1"/>  <!-- Regeneration -->
+			<skill id="1044" type="ON_MAGIC_SKILL" chance="30" value="-1"/>  <!-- Regeneration -->
 		</skills>
 	</weapon>
 
@@ -1221,7 +1221,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3031" level="1" value="-1"/>  <!-- Special Ability: Risk Evasion -->
+			<skill id="3031" value="-1"/>  <!-- Special Ability: Risk Evasion -->
 		</skills>
 	</weapon>
 
@@ -1242,7 +1242,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3014" level="1" value="-1"/>  <!-- Special Ability: Mana Up -->
+			<skill id="3014" value="-1"/>  <!-- Special Ability: Mana Up -->
 		</skills>
 	</weapon>
 
@@ -1599,7 +1599,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3014" level="1" value="-1"/>  <!-- Special Ability: Mana Up -->
+			<skill id="3014" value="-1"/>  <!-- Special Ability: Mana Up -->
 		</skills>
 	</weapon>
 
@@ -1746,7 +1746,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3014" level="1" value="-1"/>  <!-- Special Ability: Mana Up -->
+			<skill id="3014" value="-1"/>  <!-- Special Ability: Mana Up -->
 		</skills>
 	</weapon>
 

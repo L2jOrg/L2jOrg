@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="5500" name="Black Dragon Claw" max-level="1" debuff="true" action="A2">
+	<skill id="5500" name="Black Dragon Claw" debuff="true" action="A2">
 	<!-- HP has been momentarily decreased due to Bleed. -->
 		<icon initial="icon.skill0096"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="1" >
@@ -10,8 +10,7 @@
 			<effect-range initial="600"/>
 			<hit-time initial="-100000"/>
 			<activate-rate initial="90"/>
-
-			<element type="DARK" value="0"/>
+			<element type="DARK"/>
 		</attributes>
 		<target type="ENEMY" scope="FAN" object="NOT_FRIEND" range="600" >
 			<fan-range start-angle="0" radius="600" angle="60"/>
@@ -22,15 +21,15 @@
 			<chance initial="90"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="2616.0"/>
 			</physical-attack>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="52.0"/>
 			</damage-over-time>
 		</effects>
 	</skill>
-	<skill id="5501" name="Stun" max-level="1" debuff="true" action="A2">
+	<skill id="5501" name="Stun" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0100"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" >
@@ -56,7 +55,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5502" name="Stun" max-level="1" debuff="true" action="A2">
+	<skill id="5502" name="Stun" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0100"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" >
@@ -80,7 +79,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5503" name="Ultimate Guard" max-level="1" action="A2">
+	<skill id="5503" name="Ultimate Guard" action="A2">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -100,10 +99,10 @@
 		</abnormal>
 		<effects>
 			<effect name="BlockMove"/>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="1350.0"/>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="1800.0"/>
 			</stat-modify>
 			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
@@ -114,7 +113,7 @@
 			</resist-dispel-by-category>
 		</effects>
 	</skill>
-	<skill id="5504" name="Shield Defense" max-level="1" >
+	<skill id="5504" name="Shield Defense">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -130,7 +129,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5505" name="Fire Blossom" max-level="1" debuff="true" action="A1">
+	<skill id="5505" name="Fire Blossom" debuff="true" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -148,12 +147,12 @@
 		</consume>
 		<target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="300" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="2319.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="5506" name="Water Blossom" max-level="1" debuff="true" action="A1">
+	<skill id="5506" name="Water Blossom" debuff="true" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -171,12 +170,12 @@
 		</consume>
 		<target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="300" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="2319.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="5507" name="Wind Blossom" max-level="1" debuff="true" action="A1">
+	<skill id="5507" name="Wind Blossom" debuff="true" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -194,12 +193,12 @@
 		</consume>
 		<target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="300" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="2319.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="5508" name="Earth Blossom" max-level="1" debuff="true" action="A1">
+	<skill id="5508" name="Earth Blossom" debuff="true" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -217,12 +216,12 @@
 		</consume>
 		<target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="300" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="2319.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="5509" name="Fire Power" max-level="1" debuff="true" action="A2">
+	<skill id="5509" name="Fire Power" debuff="true" action="A2">
 	<!-- Fire resistance decreases. -->
 		<icon initial="icon.skill1083"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" >
@@ -249,7 +248,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5510" name="Water Power" max-level="1" debuff="true" action="A2">
+	<skill id="5510" name="Water Power" debuff="true" action="A2">
 	<!-- Water resistance decreases. -->
 		<icon initial="icon.skill1071"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" >
@@ -276,7 +275,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5511" name="Wind Power" max-level="1" debuff="true" action="A2">
+	<skill id="5511" name="Wind Power" debuff="true" action="A2">
 	<!-- Wind resistance decreases. -->
 		<icon initial="icon.skill1074"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" >
@@ -303,7 +302,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5512" name="Earth Power" max-level="1" debuff="true" action="A2">
+	<skill id="5512" name="Earth Power" debuff="true" action="A2">
 	<!-- Earth resistance decreases. -->
 		<icon initial="icon.skill1223"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" >
@@ -330,7 +329,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5513" name="Fire Taint" max-level="1" action="CA1">
+	<skill id="5513" name="Fire Taint" action="CA1">
 	<!-- Continuously damaged by the fire attribute. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -347,14 +346,14 @@
 			<mana initial="85"/>
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="250" />
-		<channeling skill="0" mp-consume="85" initial-delay="1000" interval="2000"/>
+		<channeling skill="0" mp-consume="85" initial-delay="1000"/>
 		<effects>
-			<magical-attack over-hit="false" scope="CHANNELING">
+			<magical-attack scope="CHANNELING">
 				<power initial="100.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="5514" name="Water Taint" max-level="1" action="CA1">
+	<skill id="5514" name="Water Taint" action="CA1">
 	<!-- Continuously damaged by the water attribute. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -371,14 +370,14 @@
 			<mana initial="85"/>
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="250" />
-		<channeling skill="0" mp-consume="85" initial-delay="1000" interval="2000"/>
+		<channeling skill="0" mp-consume="85" initial-delay="1000"/>
 		<effects>
-			<magical-attack over-hit="false" scope="CHANNELING">
+			<magical-attack scope="CHANNELING">
 				<power initial="30.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="5515" name="Wind Taint" max-level="1" action="CA1">
+	<skill id="5515" name="Wind Taint" action="CA1">
 	<!-- Continuously damaged by the wind attribute. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -395,14 +394,14 @@
 			<mana initial="85"/>
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="250" />
-		<channeling skill="0" mp-consume="85" initial-delay="1000" interval="2000"/>
+		<channeling skill="0" mp-consume="85" initial-delay="1000"/>
 		<effects>
-			<magical-attack over-hit="false" scope="CHANNELING">
+			<magical-attack scope="CHANNELING">
 				<power initial="30.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="5516" name="Earth Taint" max-level="1" action="CA1">
+	<skill id="5516" name="Earth Taint" action="CA1">
 	<!-- Continuously damaged by the Earth attribute. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -419,14 +418,14 @@
 			<mana initial="85"/>
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="250" />
-		<channeling skill="0" mp-consume="85" initial-delay="1000" interval="2000"/>
+		<channeling skill="0" mp-consume="85" initial-delay="1000"/>
 		<effects>
-			<magical-attack over-hit="false" scope="CHANNELING">
+			<magical-attack scope="CHANNELING">
 				<power initial="30.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="5517" name="Nurture" max-level="1" action="A2">
+	<skill id="5517" name="Nurture" action="A2">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -452,7 +451,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5518" name="Last Stand" max-level="1" action="A1">
+	<skill id="5518" name="Last Stand" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -465,7 +464,7 @@
 		</attributes>
 		<target type="ENEMY" />
 	</skill>
-	<skill id="5519" name="Chain Buff - Power Up" max-level="1" action="A2" type="MAGIC">
+	<skill id="5519" name="Chain Buff - Power Up" action="A2" type="MAGIC">
 	<!-- Made the contract of greed with the devil. Cannot wait to take every soul. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -489,7 +488,7 @@
 			<stat-modify stat="MAGIC_ATTACK" mode="PER">
 				<power initial="75.0"/>
 			</stat-modify>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="33.0"/>
 			</speed>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
@@ -497,7 +496,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5520" name="Chain Buff - Vampiric Shield" max-level="1" action="A2" type="MAGIC">
+	<skill id="5520" name="Chain Buff - Vampiric Shield" action="A2" type="MAGIC">
 	<!-- Made the contract of desire with the devil. The pain feels like pleasure. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" triggered="true" >
@@ -523,7 +522,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5521" name="Chain Buff - Critical Sense" max-level="1" action="A2" type="MAGIC">
+	<skill id="5521" name="Chain Buff - Critical Sense" action="A2" type="MAGIC">
 	<!-- Made the contract of wrath with the devil. Every enemy will fear your wrath. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -552,7 +551,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5522" name="Chain Magic - Dark Explosion" max-level="1" action="A1" type="MAGIC">
+	<skill id="5522" name="Chain Magic - Dark Explosion" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -572,7 +571,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5523" name="Chain Magic - Unholy Castle" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="5523" name="Chain Magic - Unholy Castle" debuff="true" action="A2" type="MAGIC">
 	<!-- The devil gave you the curse of jealousy. You cannot be stronger than this. -->
 		<icon initial="icon.skill1056"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" >
@@ -598,7 +597,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5524" name="Chain Buff - Bow/Magic Resistance" max-level="1" action="A2" type="MAGIC">
+	<skill id="5524" name="Chain Buff - Bow/Magic Resistance" action="A2" type="MAGIC">
 	<!-- You have made the contract of arrogance with the devil. No one can stop you. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -629,7 +628,7 @@
 			</resist-dispel-by-category>
 		</effects>
 	</skill>
-	<skill id="5525" name="Chain Buff - Melee Resistance" max-level="1" action="A2" type="MAGIC">
+	<skill id="5525" name="Chain Buff - Melee Resistance" action="A2" type="MAGIC">
 	<!-- You have made the contract of gluttony with the devil. Everything you eat is good for your strength. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -678,7 +677,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5526" name="Challenger's Blessing" max-level="1" action="A2" type="MAGIC">
+	<skill id="5526" name="Challenger's Blessing" action="A2" type="MAGIC">
 	<!-- P. Def., Shield Defense Probability and Dark Attack Resistance are greatly increased. -->
 		<icon initial="icon.skill1442"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -700,7 +699,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="1000.0"/>
 			</stat-modify>
 			<stat-modify stat="SHIELD_DEFENCE_RATE" mode="PER">
@@ -711,7 +710,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5527" name="Overflow" max-level="1" action="A1" type="MAGIC">
+	<skill id="5527" name="Overflow" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -728,12 +727,12 @@
 		</consume>
 		<target type="ENEMY" scope="PARTY" object="NOT_FRIEND" range="2000" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="971.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="5528" name="Self-Destruct" max-level="1" action="A1" type="MAGIC">
+	<skill id="5528" name="Self-Destruct" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -869,7 +868,7 @@
 			<chance initial="100"/>
 		</abnormal>
 	</skill>
-	<skill id="5531" name="Presentation - Beleth Magic Skill 1" max-level="1" action="A1" type="MAGIC">
+	<skill id="5531" name="Presentation - Beleth Magic Skill 1" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -880,7 +879,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="5532" name="Presentation - Beleth Summon Skill 1" max-level="1" action="A1" type="MAGIC">
+	<skill id="5532" name="Presentation - Beleth Summon Skill 1" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -893,7 +892,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="5533" name="Presentation - Beleth Self-destruction Skill 1" max-level="1" action="A1" type="MAGIC">
+	<skill id="5533" name="Presentation - Beleth Self-destruction Skill 1" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -904,7 +903,7 @@
 		</attributes>
 		<target scope="POINT_BLANK" range="150" />
 	</skill>
-	<skill id="5534" name="Presentation - Beleth Transformation Skill 1" max-level="1" action="A1" type="MAGIC">
+	<skill id="5534" name="Presentation - Beleth Transformation Skill 1" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -915,7 +914,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="5535" name="Little Angel Agathion Cute Trick" max-level="1" action="A1">
+	<skill id="5535" name="Little Angel Agathion Cute Trick" action="A1">
 	<!-- See the summoned spirit perform cute tricks. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -929,7 +928,7 @@
 			<condition name="OpNeedAgathion"/>
 		</conditions>
 	</skill>
-	<skill id="5536" name="Little Devil Agathion Cute Trick" max-level="1" action="A1">
+	<skill id="5536" name="Little Devil Agathion Cute Trick" action="A1">
 	<!-- See the summoned spirit perform cute tricks. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -943,7 +942,7 @@
 			<condition name="OpNeedAgathion"/>
 		</conditions>
 	</skill>
-	<skill id="5537" name="Rudolph Cuteness Trick" max-level="1" action="A1">
+	<skill id="5537" name="Rudolph Cuteness Trick" action="A1">
 	<!-- See the summoned spirit perform cute tricks. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -957,7 +956,7 @@
 			<condition name="OpNeedAgathion"/>
 		</conditions>
 	</skill>
-	<skill id="5538" name="Little Angel Agathion Special Skill: Firecrackers" max-level="1" action="A1">
+	<skill id="5538" name="Little Angel Agathion Special Skill: Firecrackers" action="A1">
 	<!-- Set off firecrackers. -->
 		<icon initial="icon.skill_agathion_special"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -969,7 +968,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="5539" name="Little Angel Agathion Special Skill: Mysterious Power" max-level="1" action="A2">
+	<skill id="5539" name="Little Angel Agathion Special Skill: Mysterious Power" action="A2">
 	<!-- Mysterious power with no explanation. Be careful when using! -->
 		<icon initial="icon.skill_agathion_special"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="ETC" >
@@ -983,7 +982,7 @@
 			<time initial="600"/>
 		</abnormal>
 	</skill>
-	<skill id="5540" name="Little Angel Agathion Special Skill: Blessed Escape" max-level="1" action="A1">
+	<skill id="5540" name="Little Angel Agathion Special Skill: Blessed Escape" action="A1">
 	<!-- Blessed Escape is available. -->
 		<icon initial="icon.skill_agathion_special"/>
 		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true" >
@@ -1001,7 +1000,7 @@
 			<escape location="TOWN"/>
 		</effects>
 	</skill>
-	<skill id="5541" name="Little Angel Agathion Special Skill: Blessed Resurrection" max-level="1" action="A1">
+	<skill id="5541" name="Little Angel Agathion Special Skill: Blessed Resurrection" action="A1">
 	<!-- Blessed Resurrection is available. -->
 		<icon initial="icon.skill_agathion_special"/>
 		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true" >
@@ -1023,7 +1022,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5542" name="Little Devil Agathion Special Skill: Firecrackers" max-level="1" action="A1">
+	<skill id="5542" name="Little Devil Agathion Special Skill: Firecrackers" action="A1">
 	<!-- Set off firecrackers. -->
 		<icon initial="icon.skill_agathion_special"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1035,7 +1034,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="5543" name="Little Devil  Agathion Special Skill: Mysterious Power" max-level="1" action="A2">
+	<skill id="5543" name="Little Devil  Agathion Special Skill: Mysterious Power" action="A2">
 	<!-- Mysterious power with no explanation. Be careful when using! -->
 		<icon initial="icon.skill_agathion_special"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="ETC" >
@@ -1049,7 +1048,7 @@
 			<time initial="600"/>
 		</abnormal>
 	</skill>
-	<skill id="5544" name="Little Devil Agathion Special Skill: Ability of Blessed Escape" max-level="1" action="A1">
+	<skill id="5544" name="Little Devil Agathion Special Skill: Ability of Blessed Escape" action="A1">
 	<!-- Blessed Escape is available. -->
 		<icon initial="icon.skill_agathion_special"/>
 		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true" >
@@ -1067,7 +1066,7 @@
 			<escape location="TOWN"/>
 		</effects>
 	</skill>
-	<skill id="5545" name="Little Devil Agathion Special Skill: Blessed Resurrection" max-level="1" action="A1">
+	<skill id="5545" name="Little Devil Agathion Special Skill: Blessed Resurrection" action="A1">
 	<!-- Blessed Resurrection is available. -->
 		<icon initial="icon.skill_agathion_special"/>
 		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true" >
@@ -1089,7 +1088,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5546" name="Alert" max-level="1" action="A1" type="MAGIC">
+	<skill id="5546" name="Alert" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1102,7 +1101,7 @@
 		</attributes>
 		<target type="ENEMY" />
 	</skill>
-	<skill id="5547" name="Maximum Ability" max-level="1" action="A2">
+	<skill id="5547" name="Maximum Ability" action="A2">
 	<!-- Increases P. Atk., M. Atk., and received heal amount. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" triggered="true" >
@@ -1157,7 +1156,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5549" name="Melee Attack Vulnerability" max-level="1" >
+	<skill id="5549" name="Melee Attack Vulnerability">
 	<!-- NPC Physical weakness -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -1219,7 +1218,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<trigger-skill-by-attack skill="5551" target="TARGET" critical="false">
+			<trigger-skill-by-attack skill="5551" target="TARGET">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -1438,7 +1437,7 @@
 			</defence-trait>
 		</effects>
 	</skill>
-	<skill id="5566" name="Force of Destruction" max-level="1" debuff="true" action="A1">
+	<skill id="5566" name="Force of Destruction" debuff="true" action="A1">
 	<!-- none -->
 		<icon initial="Icon.skill1050"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1451,7 +1450,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="5579" name="Cubic Cure" max-level="1" action="A1" type="MAGIC">
+	<skill id="5579" name="Cubic Cure" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1468,7 +1467,7 @@
 			</dispel-by-category>
 		</effects>
 	</skill>
-	<skill id="5580" name="Divine Beast Bite" max-level="1" action="A1">
+	<skill id="5580" name="Divine Beast Bite" action="A1">
 	<!-- Bite ferociously with sharp teeth. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1486,12 +1485,12 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="916.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="5581" name="Divine Beast Stun Attack" max-level="1" debuff="true" action="A1">
+	<skill id="5581" name="Divine Beast Stun Attack" debuff="true" action="A1">
 	<!-- Damages and stuns the target simultaneously. Over-hit. Power 704. -->
 		<icon initial="icon.skill0100"/>
 		<attributes next-action="ATTACK" magic-critical-rate="-5.0" trait="SHOCK" >
@@ -1509,13 +1508,13 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="704.0"/>
 			</physical-attack>
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="5582" name="Divine Beast Fire Breath" max-level="1" action="A1">
+	<skill id="5582" name="Divine Beast Fire Breath" action="A1">
 	<!-- Attack the enemy by breathing fire. Power 875. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1537,12 +1536,12 @@
 			<fan-range start-angle="0" radius="250" angle="60"/>
 		</target>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="875.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="5583" name="Divine Beast Roar" max-level="1" debuff="true" action="A2">
+	<skill id="5583" name="Divine Beast Roar" debuff="true" action="A2">
 	<!-- Dominate nearby enemies with a mighty roar. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2" >
@@ -1569,7 +1568,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5584" name="Wolf Howl" max-level="1" debuff="true" action="A2">
+	<skill id="5584" name="Wolf Howl" debuff="true" action="A2">
 	<!-- Dominate nearby enemies with a mighty roar. Decrease P. Atk. and M. Atk. -->
 		<icon initial="icon.action109"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2" >
@@ -1599,7 +1598,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5585" name="Strider Roar" max-level="1" debuff="true" action="A2">
+	<skill id="5585" name="Strider Roar" debuff="true" action="A2">
 	<!-- Scare the enemies with a mighty roar. Decrease the attacking speed and Casting Spd. -->
 		<icon initial="icon.action109"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2" >
@@ -1974,7 +1973,7 @@
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="5593" name="Vampiric Mana Burn" max-level="1" action="A1" type="MAGIC">
+	<skill id="5593" name="Vampiric Mana Burn" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2000,7 +1999,7 @@
 			</magical-attack-mp>
 		</effects>
 	</skill>
-	<skill id="5594" name="Poison" max-level="1" debuff="true" action="A2">
+	<skill id="5594" name="Poison" debuff="true" action="A2">
 	<!-- HP has been momentarily decreased due to Poison. -->
 		<icon initial="icon.skill4036"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1" >
@@ -2018,7 +2017,7 @@
 			<chance initial="11"/>
 		</abnormal>
 	</skill>
-	<skill id="5595" name="Bleed" max-level="1" debuff="true" action="A2">
+	<skill id="5595" name="Bleed" debuff="true" action="A2">
 	<!-- HP has been momentarily decreased due to Bleed. -->
 		<icon initial="icon.skill0096"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="1" >
@@ -2036,7 +2035,7 @@
 			<chance initial="11"/>
 		</abnormal>
 	</skill>
-	<skill id="5596" name="Flame" max-level="1" debuff="true" action="A2">
+	<skill id="5596" name="Flame" debuff="true" action="A2">
 	<!-- HP decreases momentarily from burning flame. -->
 		<icon initial="icon.skill1100"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" >
@@ -2056,12 +2055,12 @@
 			<chance initial="11"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="1" can-kill="false">
+			<damage-over-time ticks="1">
 				<power initial="200.0"/>
 			</damage-over-time>
 		</effects>
 	</skill>
-	<skill id="5597" name="Cancel Invalid Skill" max-level="1" >
+	<skill id="5597" name="Cancel Invalid Skill">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -2072,7 +2071,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="ATTACK_CANCEL" mode="DIFF">
+			<stat-modify stat="ATTACK_CANCEL">
 				<power initial="-10000.0"/>
 			</stat-modify>
 		</effects>

@@ -129,7 +129,7 @@
 			</reuse>
 		</effects>
 	</skill>
-	<skill id="3203" name="Item Skill: Mystery Skill" max-level="1" action="A2">
+	<skill id="3203" name="Item Skill: Mystery Skill" action="A2">
 	<!-- Active: Increases your head size. -->
 		<icon initial="icon.skill3123"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="ETC" >
@@ -263,7 +263,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<trigger-skill-by-damage skill="5146" attacker="Creature" target="SELF" min-damage="1">
+			<trigger-skill-by-damage skill="5146">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -300,7 +300,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<trigger-skill-by-damage skill="5147" attacker="Creature" target="SELF" min-damage="1">
+			<trigger-skill-by-damage skill="5147">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -337,7 +337,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<trigger-skill-by-damage skill="5148" attacker="Creature" target="SELF" min-damage="1">
+			<trigger-skill-by-damage skill="5148">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -374,7 +374,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<trigger-skill-by-damage skill="5149" attacker="Creature" target="SELF" min-damage="1">
+			<trigger-skill-by-damage skill="5149">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -411,7 +411,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<trigger-skill-by-damage skill="5150" attacker="Creature" target="SELF" min-damage="1">
+			<trigger-skill-by-damage skill="5150">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -453,7 +453,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<trigger-skill-by-damage skill="5151" attacker="Creature" target="SELF" min-damage="1">
+			<trigger-skill-by-damage skill="5151">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -495,7 +495,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<trigger-skill-by-damage skill="5152" attacker="Creature" target="SELF" min-damage="1">
+			<trigger-skill-by-damage skill="5152">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -532,7 +532,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<trigger-skill-by-damage skill="5153" attacker="Creature" target="SELF" min-damage="1">
+			<trigger-skill-by-damage skill="5153">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -574,7 +574,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<trigger-skill-by-damage skill="5154" attacker="Creature" target="SELF" min-damage="1">
+			<trigger-skill-by-damage skill="5154">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -621,7 +621,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<trigger-skill-by-damage skill="5156" attacker="Creature" target="SELF" min-damage="1">
+			<trigger-skill-by-damage skill="5156">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -663,7 +663,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<trigger-skill-by-damage skill="5157" attacker="Playable" target="SELF" min-damage="1">
+			<trigger-skill-by-damage skill="5157" attacker="Playable">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -705,7 +705,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<trigger-skill-by-damage skill="5158" attacker="Creature" target="SELF" min-damage="1">
+			<trigger-skill-by-damage skill="5158">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -752,7 +752,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<trigger-skill-by-damage skill="5159" attacker="Creature" target="SELF" min-damage="1">
+			<trigger-skill-by-damage skill="5159">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -794,7 +794,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<trigger-skill-by-damage skill="5160" attacker="Creature" target="ENEMY" min-damage="1">
+			<trigger-skill-by-damage skill="5160" target="ENEMY">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -836,7 +836,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<trigger-skill-by-damage skill="5161" attacker="Creature" target="SELF" min-damage="1">
+			<trigger-skill-by-damage skill="5161">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -883,7 +883,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<trigger-skill-by-damage skill="5162" attacker="Creature" target="SELF" min-damage="1">
+			<trigger-skill-by-damage skill="5162">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -925,7 +925,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<trigger-skill-by-damage skill="5163" attacker="Creature" target="SELF" min-damage="1">
+			<trigger-skill-by-damage skill="5163">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -962,7 +962,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<trigger-skill-by-damage skill="5164" attacker="Creature" target="SELF" min-damage="1">
+			<trigger-skill-by-damage skill="5164">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -1004,7 +1004,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<trigger-skill-by-damage skill="5165" attacker="Creature" target="ENEMY" min-damage="1">
+			<trigger-skill-by-damage skill="5165" target="ENEMY">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -1051,7 +1051,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<trigger-skill-by-damage skill="5166" attacker="Creature" target="ENEMY" min-damage="1">
+			<trigger-skill-by-damage skill="5166" target="ENEMY">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -1098,7 +1098,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<trigger-skill-by-damage skill="5167" attacker="Creature" target="ENEMY" min-damage="1">
+			<trigger-skill-by-damage skill="5167" target="ENEMY">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -1140,7 +1140,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<trigger-skill-by-damage skill="5168" attacker="Creature" target="ENEMY" min-damage="1">
+			<trigger-skill-by-damage skill="5168" target="ENEMY">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -1177,7 +1177,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<trigger-skill-by-damage skill="5169" attacker="Creature" target="ENEMY" min-damage="1">
+			<trigger-skill-by-damage skill="5169" target="ENEMY">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -1214,7 +1214,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<trigger-skill-by-damage skill="5170" attacker="Creature" target="ENEMY" min-damage="1">
+			<trigger-skill-by-damage skill="5170" target="ENEMY">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -1251,7 +1251,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<trigger-skill-by-damage skill="5171" attacker="Creature" target="ENEMY" min-damage="1">
+			<trigger-skill-by-damage skill="5171" target="ENEMY">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -1288,7 +1288,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<trigger-skill-by-damage skill="5172" attacker="Creature" target="ENEMY" min-damage="1">
+			<trigger-skill-by-damage skill="5172" target="ENEMY">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -1325,7 +1325,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<trigger-skill-by-damage skill="5173" attacker="Creature" target="ENEMY" min-damage="1">
+			<trigger-skill-by-damage skill="5173" target="ENEMY">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -1367,7 +1367,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<trigger-skill-by-damage skill="5174" attacker="Creature" target="ENEMY" min-damage="1">
+			<trigger-skill-by-damage skill="5174" target="ENEMY">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -1414,7 +1414,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<trigger-skill-by-damage skill="5175" attacker="Creature" target="ENEMY" min-damage="1">
+			<trigger-skill-by-damage skill="5175" target="ENEMY">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -1456,7 +1456,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<trigger-skill-by-damage skill="5176" attacker="Creature" target="ENEMY" min-damage="1">
+			<trigger-skill-by-damage skill="5176" target="ENEMY">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -1493,7 +1493,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<trigger-skill-by-damage skill="5177" attacker="Creature" target="ENEMY" min-damage="1">
+			<trigger-skill-by-damage skill="5177" target="ENEMY">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -1592,7 +1592,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK">
 				<power initial="10.26">
 					<value level="2">11.22</value>
 					<value level="3">11.94</value>
@@ -1633,7 +1633,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK">
 				<power initial="55.0"/>
 			</stat-modify>
 		</effects>
@@ -1693,7 +1693,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="12.78">
 					<value level="2">13.73</value>
 					<value level="3">14.14</value>
@@ -1734,7 +1734,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="10.8">
 					<value level="2">11.62</value>
 					<value level="3">11.96</value>
@@ -1811,7 +1811,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="2.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="2.0"/>
 			</stat-hp-based>
 		</effects>
 	</skill>
@@ -1841,7 +1841,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="2.0"/>
 			</stat-modify>
 		</effects>
@@ -1893,7 +1893,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
 				<power initial="4.0"/>
 			</stat-modify>
 		</effects>
@@ -1971,7 +1971,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="FALL" mode="DIFF">
+			<stat-modify stat="FALL">
 				<power initial="-100.0"/>
 			</stat-modify>
 		</effects>
@@ -2130,7 +2130,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="3261" name="Forgiveness" max-level="1" action="A1">
+	<skill id="3261" name="Forgiveness" action="A1">
 	<!-- Taps into the magic of the bow to fire a harmless bolt. Warning: If you use this skill against a monster, it will flag you for PvP. -->
 		<icon initial="icon.skill3260"/>
 		<attributes static-reuse="true" magic-critical-rate="5.0" >
@@ -2148,7 +2148,7 @@
 		</consume>
 		<target type="TARGET" />
 	</skill>
-	<skill id="3263" name="Blessed Resurrection" max-level="1" action="A1">
+	<skill id="3263" name="Blessed Resurrection" action="A1">
 	<!-- Blessed Resurrection is available. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" blocked-on-olympiad="true" >
@@ -2173,7 +2173,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3264" name="Blessed Escape" max-level="1" action="A1">
+	<skill id="3264" name="Blessed Escape" action="A1">
 	<!-- Blessed Escape is available. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" blocked-on-olympiad="true" >
@@ -2194,7 +2194,7 @@
 			<escape location="TOWN"/>
 		</effects>
 	</skill>
-	<skill id="3265" name="Mysterious Ability" max-level="1" action="A2">
+	<skill id="3265" name="Mysterious Ability" action="A2">
 	<!-- Increases the size of your head. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="ETC" >
@@ -2208,7 +2208,7 @@
 			<time initial="600"/>
 		</abnormal>
 	</skill>
-	<skill id="3266" name="Large Firecracker's Ability" max-level="1" action="A1">
+	<skill id="3266" name="Large Firecracker's Ability" action="A1">
 	<!-- Allows the use of Large Fireworks. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -2223,7 +2223,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="3267" name="Seal Agathion" max-level="1" action="A1">
+	<skill id="3267" name="Seal Agathion" action="A1">
 	<!-- Dismiss a summoned Agathion. -->
 		<icon initial="icon.etc_unsummon_aga_agit_i01"/>
 		<attributes magic-critical-rate="5.0" >
@@ -2237,7 +2237,7 @@
 			<effect name="UnsummonAgathion"/>
 		</effects>
 	</skill>
-	<skill id="3268" name="Release Agathion's Seal - Castle" max-level="1" action="A1">
+	<skill id="3268" name="Release Agathion's Seal - Castle" action="A1">
 	<!-- Removes the Agathion's seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -2251,7 +2251,7 @@
 			<summon-agathion id="16028"/>
 		</effects>
 	</skill>
-	<skill id="3269" name="Release Agathion's Seal - Rainbow Clan Hall" max-level="1" action="A1">
+	<skill id="3269" name="Release Agathion's Seal - Rainbow Clan Hall" action="A1">
 	<!-- Removes the Agathion's seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -2265,7 +2265,7 @@
 			<summon-agathion id="16027"/>
 		</effects>
 	</skill>
-	<skill id="3270" name="Release Agathion's Seal - Beast Farm" max-level="1" action="A1">
+	<skill id="3270" name="Release Agathion's Seal - Beast Farm" action="A1">
 	<!-- Removes the Agathion's seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -2295,7 +2295,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="DIFF">
+			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0">
 				<power initial="10.0">
 					<value level="2">20.0</value>
 				</power>
@@ -2395,7 +2395,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
 				<power initial="10.0">
 					<value level="2">20.0</value>
 				</power>
@@ -2498,7 +2498,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="3.0">
 					<value level="2">5.0</value>
 					<value level="3">7.0</value>
@@ -2524,7 +2524,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="3.0">
 					<value level="2">5.0</value>
 					<value level="3">7.0</value>
@@ -2532,7 +2532,7 @@
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="3281" name="Grey Talisman Box - Guard" max-level="1" action="A2">
+	<skill id="3281" name="Grey Talisman Box - Guard" action="A2">
 	<!-- For 10 sec., can protect from debuffs 5 times, when used. Effects from two such Talismans do not stack. Cooldown - 5 min. -->
 		<icon initial="icon.etc_talisman_i07"/>
 		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" >
@@ -2556,7 +2556,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3282" name="Grey Talisman - Denial" max-level="1" action="A2">
+	<skill id="3282" name="Grey Talisman - Denial" action="A2">
 	<!-- Removes a debuff when used. Effects from two such Talismans do not stack. Cooldown - 5 min. -->
 		<icon initial="icon.etc_talisman_i07"/>
 		<attributes magic-critical-rate="5.0" cast-disabled="true">
@@ -2570,11 +2570,11 @@
 		</attributes>
 		<target />
 		<effects>
-			<dispel-by-category category="DEBUFF" max="-1">				<power initial="100.0"/>
+			<dispel-by-category category="DEBUFF">				<power initial="100.0"/>
 			</dispel-by-category>
 		</effects>
 	</skill>
-	<skill id="3283" name="Grey Talisman - Benefaction" max-level="1" action="A2">
+	<skill id="3283" name="Grey Talisman - Benefaction" action="A2">
 	<!-- For 10 sec., P. Def. +1800 and M. Def. +1620. Buff-canceling Attack Resistance +80%%. Effects from two such Talismans do not stack. Cooldown - 15 min. -->
 		<icon initial="icon.etc_talisman_i07"/>
 		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" >
@@ -2593,10 +2593,10 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="1800.0"/>
 			</stat-modify>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="1620.0"/>
 			</stat-modify>
 			<resist-dispel-by-category category="BUFF">
@@ -2604,7 +2604,7 @@
 			</resist-dispel-by-category>
 		</effects>
 	</skill>
-	<skill id="3284" name="Grey Talisman - Block" max-level="1" debuff="true" action="A2">
+	<skill id="3284" name="Grey Talisman - Block" debuff="true" action="A2">
 	<!-- For 15 seconds, restricts the target's HP recovery to 70%% when used during PvP. When two or more Talismans of identical effects are equipped, the effect of only one Talisman will be applied. Can only be used on a PC. Cooldown is 4 minutes. -->
 		<icon initial="icon.etc_talisman_i07"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -2628,7 +2628,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="3285" name="Grey Talisman - Gravity" max-level="1" debuff="true" action="A2">
+	<skill id="3285" name="Grey Talisman - Gravity" debuff="true" action="A2">
 	<!-- For 15 seconds, target's Atk. Spd. and Casting Spd. -20%% when used. When two or more Talismans of identical effects are equipped, the effect of only one Talisman will be applied. Cooldown is 4 minutes. -->
 		<icon initial="icon.etc_talisman_i07"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -2655,7 +2655,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="3286" name="Grey Talisman - Bond" max-level="1" debuff="true" action="A2">
+	<skill id="3286" name="Grey Talisman - Bond" debuff="true" action="A2">
 	<!-- For 15 seconds, target's Movement Speed -30%% when used. When two or more Talismans of identical effects are equipped, the effect of only one Talisman will be applied. Cooldown is 4 minutes. -->
 		<icon initial="icon.etc_talisman_i07"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -2679,7 +2679,7 @@
 			</speed>
 		</effects>
 	</skill>
-	<skill id="3287" name="Yellow Talisman - Guard" max-level="1" action="A2">
+	<skill id="3287" name="Yellow Talisman - Guard" action="A2">
 	<!-- For 10 sec., can protect from debuffs 5 times, when used. Effects from two such Talismans do not stack. Cooldown - 4 min. -->
 		<icon initial="icon.etc_talisman_i02"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -2703,7 +2703,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3288" name="Yellow Talisman - Denial" max-level="1" action="A2">
+	<skill id="3288" name="Yellow Talisman - Denial" action="A2">
 	<!-- Removes a debuff when used. Effects from two such Talismans do not stack. Cooldown - 4 min. -->
 		<icon initial="icon.etc_talisman_i02"/>
 		<attributes magic-critical-rate="5.0" cast-disabled="true">
@@ -2717,11 +2717,11 @@
 		</attributes>
 		<target />
 		<effects>
-			<dispel-by-category category="DEBUFF" max="-1">				<power initial="100.0"/>
+			<dispel-by-category category="DEBUFF">				<power initial="100.0"/>
 			</dispel-by-category>
 		</effects>
 	</skill>
-	<skill id="3289" name="Yellow Talisman - Benefaction" max-level="1" action="A2">
+	<skill id="3289" name="Yellow Talisman - Benefaction" action="A2">
 	<!-- For 10 seconds, P. Def. +3600 and M. Def. +3240, when used. Buff-canceling Attack Resistance +80%%. Effects from two such Talismans do not stack. Cooldown - 15 min. -->
 		<icon initial="icon.etc_talisman_i02"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -2740,10 +2740,10 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="3600.0"/>
 			</stat-modify>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="3240.0"/>
 			</stat-modify>
 			<resist-dispel-by-category category="BUFF">
@@ -2751,7 +2751,7 @@
 			</resist-dispel-by-category>
 		</effects>
 	</skill>
-	<skill id="3290" name="Yellow Talisman - Block" max-level="1" debuff="true" action="A2">
+	<skill id="3290" name="Yellow Talisman - Block" debuff="true" action="A2">
 	<!-- For 15 seconds, restricts the target's HP recovery to 70%% when used during PvP. When two or more Talismans of identical effects are equipped, the effect of only one Talisman will be applied. Can only be used on a PC. Cooldown is 3 minutes. -->
 		<icon initial="icon.etc_talisman_i02"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -2775,7 +2775,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="3291" name="Yellow Talisman - Gravity" max-level="1" debuff="true" action="A2">
+	<skill id="3291" name="Yellow Talisman - Gravity" debuff="true" action="A2">
 	<!-- For 15 seconds, target's Atk. Spd. and Casting Spd. -20%% when used. When two or more Talismans of identical effects are equipped, the effect of only one Talisman will be applied. Cooldown is 3 minutes. -->
 		<icon initial="icon.etc_talisman_i02"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -2802,7 +2802,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="3292" name="Yellow Talisman - Bond" max-level="1" debuff="true" action="A2">
+	<skill id="3292" name="Yellow Talisman - Bond" debuff="true" action="A2">
 	<!-- For 15 seconds, target's Movement Speed -30%% when used. When two or more Talismans of identical effects are equipped, the effect of only one Talisman will be applied. Cooldown is 4 minutes -->
 		<icon initial="icon.etc_talisman_i02"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -2826,7 +2826,7 @@
 			</speed>
 		</effects>
 	</skill>
-	<skill id="3293" name="Talisman of Darkness - Healing Power" max-level="1" >
+	<skill id="3293" name="Talisman of Darkness - Healing Power">
 	<!-- Healing Power +4%%. Effects from two such Talismans do not stack. -->
 		<icon initial="icon.etc_wise_man_stone_i04"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -2838,11 +2838,11 @@
 		<target />
 		<effects>
 			<effect name="Heal">
-				<power initial="0.0"/>
+				<power/>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3294" name="Talisman of Darkness - Power of Healing Magic" max-level="1" >
+	<skill id="3294" name="Talisman of Darkness - Power of Healing Magic">
 	<!-- Power of healing magic +43. Effects from two such Talismans do not stack. -->
 		<icon initial="icon.etc_wise_man_stone_i04"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >

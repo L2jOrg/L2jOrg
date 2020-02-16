@@ -22,8 +22,8 @@
 	<!-- Starlight Festival Event - Gift from the sky. When it is thrown, it creates a small explosion. Can be used as an ingredient to make other types of fireworks. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2023" level="1" value="-1"/>  <!-- Star Shard -->
+		<skill-reducer>
+			<skill id="2023" value="-1"/>  <!-- Star Shard -->
 		</skill-reducer>
 	</item>
 
@@ -43,8 +43,8 @@
 	<!-- Explosive device that brilliantly lights up the sky. -->
 		<restriction freightable="false" coc-restricted="true" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2024" level="1" value="-1"/>  <!-- Firecracker -->
+		<skill-reducer>
+			<skill id="2024" value="-1"/>  <!-- Firecracker -->
 		</skill-reducer>
 	</item>
 
@@ -52,8 +52,8 @@
 	<!-- Large explosive device that ignites to light up the sky. -->
 		<restriction freightable="false" coc-restricted="true" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2025" level="1" value="-1"/>  <!-- Large Firecracker -->
+		<skill-reducer>
+			<skill id="2025" value="-1"/>  <!-- Large Firecracker -->
 		</skill-reducer>
 	</item>
 

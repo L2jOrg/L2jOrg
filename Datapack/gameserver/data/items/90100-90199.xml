@@ -224,8 +224,8 @@
 	<!-- Double-click to receive one of the following items: Scroll of Mood Melody, Scroll: Enchant Armor/Weapon (C), Accessory/Weapon/Armor Box (C), Spellbook Chest, Angel Cat's Blessing, Dark Assassin Transformation Potion, or Dimensional Blessing. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39207" level="1" value="-1"/>  <!-- Dimensional Gift -->
+		<skill-reducer>
+			<skill id="39207" value="-1"/>  <!-- Dimensional Gift -->
 		</skill-reducer>
 	</item>
 
@@ -271,18 +271,18 @@
 	<item id="90143" name="XP/SP Hourglass (100%) - 1 Hour" type="SCROLL" icon="icon.etc_dragons_blood_i03">
 	<!-- Increases XP/SP gain by 100% for 1 hour. Cooldown: 1 hour. The effect persists through death. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55360" level="1" value="-1"/>  <!-- XP/SP Rune - 100% -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55360" value="-1"/>  <!-- XP/SP Rune - 100% -->
 		</skill-reducer>
 	</item>
 
 	<item id="90144" name="Transformation Scroll: White Assassin" type="POTION" icon="icon.scroll_of_verification_i06">
 	<!-- For 15 minutes transforms you into White Assassin. Will not be deleted upon death. \nTransformation into White Assassin: Max HP/MP +7%, P./M. Accuracy +2, P./M. Atk. +3%, P./M. Def. +3%, Atk. Spd. +5%, M. Critical Rate +20, Speed +5.  -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39210" level="1" value="-1"/>  <!-- White Assassin Transformation -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39210" value="-1"/>  <!-- White Assassin Transformation -->
 		</skill-reducer>
 	</item>
 
@@ -408,7 +408,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -431,7 +431,7 @@
 		<attributes weight="120" duration="10080" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="35036" level="1" value="-1"/>  <!-- Warrior's Talisman - Attack -->
+			<skill id="35036" value="-1"/>  <!-- Warrior's Talisman - Attack -->
 		</skills>
 	</armor>
 
@@ -454,7 +454,7 @@
 		<attributes weight="120" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="35045" level="1" value="-1"/>  <!-- Talisman of Battle - Liberate -->
+			<skill id="35045" value="-1"/>  <!-- Talisman of Battle - Liberate -->
 		</skills>
 	</armor>
 
@@ -464,7 +464,7 @@
 		<attributes weight="120" duration="10080" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="35037" level="1" value="-1"/>  <!-- Warrior's Talisman - Defense -->
+			<skill id="35037" value="-1"/>  <!-- Warrior's Talisman - Defense -->
 		</skills>
 	</armor>
 
@@ -514,8 +514,8 @@
 	<!-- For 5 minutes, XP and SP gained through hunting +10%, P./M. Atk. +15%, P./M. Def. +15%, Atk. Spd./Casting Spd. +10%, Speed +10. Deleted when entering the Olympiad. Deleted upon logout. Can be stacked with all XP/SP bonuses. -->
 		<restriction freightable="false" destroyable="false" tradable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39223" level="1" value="-1"/>  <!-- Monkey Banana -->
+		<skill-reducer>
+			<skill id="39223" value="-1"/>  <!-- Monkey Banana -->
 		</skill-reducer>
 	</item>
 
@@ -523,8 +523,8 @@
 	<!-- Activates Strawberry Banana Shake effect for 5 minutes (Scroll: Prophecy of Fire - Lv. 1).\n<Note>Effects do not stack if two shakes are used. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes reuse-delay="3000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39224" level="1" value="-1"/>  <!-- Strawberry-Banana Cocktail -->
+		<skill-reducer>
+			<skill id="39224" value="-1"/>  <!-- Strawberry-Banana Cocktail -->
 		</skill-reducer>
 	</item>
 
@@ -532,8 +532,8 @@
 	<!-- Activates Mango Banana Shake effect for 5 minutes (Scroll: Prophecy of Water - Lv. 1).\n<Note>Effects do not stack if two shakes are used. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes reuse-delay="3000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39225" level="1" value="-1"/>  <!-- Mango-Banana Cocktail -->
+		<skill-reducer>
+			<skill id="39225" value="-1"/>  <!-- Mango-Banana Cocktail -->
 		</skill-reducer>
 	</item>
 
@@ -541,8 +541,8 @@
 	<!-- Activates Cherry Banana Shake effect for 5 minutes (Scroll: Prophecy of Wind - Lv. 1).\n<Note>Effects do not stack if two shakes are used. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes reuse-delay="3000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39226" level="1" value="-1"/>  <!-- Cherry Banana Shake -->
+		<skill-reducer>
+			<skill id="39226" value="-1"/>  <!-- Cherry Banana Shake -->
 		</skill-reducer>
 	</item>
 
@@ -621,36 +621,36 @@
 	<item id="90183" name="Chef's Fish Stew - Victory - Exchangeable" type="SCROLL" icon="icon.fish_stew_residence_cha">
 	<!-- For 20 min. activates Prophecy of Victory Lv. 1. \n<Note> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39253" level="1" value="-1"/>  <!-- Chef's Fish Stew - Victory -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39253" value="-1"/>  <!-- Chef's Fish Stew - Victory -->
 		</skill-reducer>
 	</item>
 
 	<item id="90184" name="Chef's Fish Stew - Fire - Exchangeable" type="SCROLL" icon="icon.fish_stew_residence_cha">
 	<!-- For 20 min. activates Prophecy of Fire Lv. 1. \n<Note> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39254" level="1" value="-1"/>  <!-- Chef's Fish Stew - Fire -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39254" value="-1"/>  <!-- Chef's Fish Stew - Fire -->
 		</skill-reducer>
 	</item>
 
 	<item id="90185" name="Chef's Fish Stew - Water - Exchangeable" type="SCROLL" icon="icon.fish_stew_residence_cha">
 	<!-- For 20 min. activates Prophecy of Water Lv. 1. \n<Note> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39255" level="1" value="-1"/>  <!-- Chef's Fish Stew - Water -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39255" value="-1"/>  <!-- Chef's Fish Stew - Water -->
 		</skill-reducer>
 	</item>
 
 	<item id="90186" name="Chef's Fish Stew - Wind - Exchangeable" type="SCROLL" icon="icon.fish_stew_residence_cha">
 	<!-- For 20 min. activates Prophecy of Wind Lv. 1. \n<Note> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39256" level="1" value="-1"/>  <!-- Artisan's Fish Stew - Wind -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39256" value="-1"/>  <!-- Artisan's Fish Stew - Wind -->
 		</skill-reducer>
 	</item>
 

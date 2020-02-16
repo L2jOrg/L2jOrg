@@ -3,7 +3,7 @@
 	<!-- Doors related -->
 	<xs:complexType name="door">
 		<xs:sequence>
-			<xs:element name="nodes" minOccurs="0" maxOccurs="1">
+			<xs:element name="nodes" minOccurs="0">
 				<xs:complexType>
 					<xs:sequence>
 						<xs:element name="node" maxOccurs="4" minOccurs="4">
@@ -123,7 +123,7 @@
 	</xs:complexType>
 
 	<xs:complexType name="parameters">
-		<xs:choice minOccurs="1" maxOccurs="unbounded">
+		<xs:choice maxOccurs="unbounded">
 			<xs:element name="param">
 				<xs:complexType>
 					<xs:attribute name="name" type="xs:token" use="required" />
@@ -140,7 +140,7 @@
 			<xs:element name="minions">
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="npc" minOccurs="1" maxOccurs="unbounded">
+						<xs:element name="npc" maxOccurs="unbounded">
 							<xs:complexType>
 								<xs:attribute name="id" type="xs:positiveInteger" use="required" />
 								<xs:attribute name="count" type="xs:positiveInteger" use="required" />
@@ -156,14 +156,14 @@
 	</xs:complexType>
 
 	<xs:complexType name="territories">
-		<xs:choice minOccurs="1" maxOccurs="unbounded">
+		<xs:choice maxOccurs="unbounded">
 			<xs:element name="territory" type="territory" />
 			<xs:element name="banned_territory" type="territory" />
 		</xs:choice>
 	</xs:complexType>
 
 	<xs:complexType name="territory">
-		<xs:choice minOccurs="1" maxOccurs="unbounded">
+		<xs:choice maxOccurs="unbounded">
 			<xs:element name="node">
 				<xs:complexType>
 					<xs:attribute name="x" type="xs:integer" use="required" />

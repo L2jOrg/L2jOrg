@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="50000" name="Haste" max-level="1" action="A1" type="MAGIC">
+	<skill id="50000" name="Haste" action="A1" type="MAGIC">
 	<!-- Increases Atk. Spd. +50%%. -->
 		<icon initial="icon.skill1086"/>
 		<attributes property="PHYSIC" >
@@ -16,7 +16,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="50001" name="Transform: Pirate Costume" max-level="1" action="A1">
+	<skill id="50001" name="Transform: Pirate Costume" action="A1">
 	<!-- Transformation ability, granted to the player by an NPC. Transforms you into an Undead Pirate to make an ambush as a part of a quest. -->
 		<icon initial="icon.skilltransform1"/>
 		<attributes property="PHYSIC" >
@@ -26,7 +26,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50002" name="Curse Zaken" max-level="1" debuff="true" action="A1">
+	<skill id="50002" name="Curse Zaken" debuff="true" action="A1">
 	<!-- Cursed by Zaken. Movement Speed decreased by 30%% and HP momentarily decreased. -->
 		<icon initial="icon.skill0096"/>
 		<attributes property="PHYSIC" >
@@ -177,7 +177,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="50013" name="Hold" max-level="1" debuff="true" action="A1">
+	<skill id="50013" name="Hold" debuff="true" action="A1">
 	<!-- Inflicted with Hold and unable to move. -->
 		<icon initial="icon.skill4047"/>
 		<attributes property="PHYSIC" >
@@ -193,7 +193,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="50014" name="Christmas Blessing" max-level="1" action="A1">
+	<skill id="50014" name="Christmas Blessing" action="A1">
 	<!-- For 1 hour activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Purity, Wild Magic, Concentration. Cannot be used together with Scroll of Mood Melody. -->
 		<icon initial="icon.etc_x_mas_tree_i00"/>
 		<attributes property="PHYSIC" >
@@ -291,7 +291,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="50020" name="Berserk" max-level="1" action="A1">
+	<skill id="50020" name="Berserk" action="A1">
 	<!-- Increases Atk. Spd. And P. Atk. -->
 		<icon initial="icon.skill1062"/>
 		<attributes property="PHYSIC" >
@@ -323,7 +323,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="50022" name="Head Enlargement" max-level="1" action="A1">
+	<skill id="50022" name="Head Enlargement" action="A1">
 	<!-- Increases the size of the head. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" >
@@ -368,7 +368,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="50025" name="Aggression" max-level="1" debuff="true" action="A1">
+	<skill id="50025" name="Aggression" debuff="true" action="A1">
 	<!-- Provokes target into attacking you by forcefully changing their target. -->
 		<icon initial="icon.skill10027"/>
 		<attributes property="PHYSIC" >
@@ -429,7 +429,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50029" name="Dancing Bard" max-level="1" debuff="true" action="A1" type="MAGIC">
+	<skill id="50029" name="Dancing Bard" debuff="true" action="A1" type="MAGIC">
 	<!-- Performs a dance. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -441,7 +441,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50030" name="Dandy's Precise Swing" max-level="1" action="A1">
+	<skill id="50030" name="Dandy's Precise Swing" action="A1">
 	<!-- Throws the target back and inflicts heavy physical damage. -->
 		<icon initial="icon.skill0003"/>
 		<attributes >
@@ -453,7 +453,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50031" name="Orc Thunder" max-level="1" debuff="true" action="A1">
+	<skill id="50031" name="Orc Thunder" debuff="true" action="A1">
 	<!-- Pulls the target into your reach. -->
 		<icon initial="icon.skill10015"/>
 		<attributes >
@@ -467,7 +467,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50032" name="Blizzard" max-level="1" debuff="true" action="A1">
+	<skill id="50032" name="Blizzard" debuff="true" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill6274"/>
 		<attributes >
@@ -481,7 +481,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50033" name="Frozen Crystal" max-level="1" debuff="true" action="A1">
+	<skill id="50033" name="Frozen Crystal" debuff="true" action="A1">
 	<!-- Actions prohibited for 5 seconds, -50 HP per second. -->
 		<icon initial="icon.skill6274"/>
 		<attributes property="PHYSIC" >
@@ -509,7 +509,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50035" name="Aqua Arrow" max-level="1" action="A1">
+	<skill id="50035" name="Aqua Arrow" action="A1">
 	<!-- Delivers damage to enemy with extra M. Atk. +260 and inflicts frostbite for 30 sec. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" >
@@ -580,7 +580,7 @@
 					<value level="5">0.0</value>
 				</power>
 			</stat-modify>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="-20.0">
 					<value level="2">-40.0</value>
 					<value level="3">-60.0</value>
@@ -590,7 +590,7 @@
 			</speed>
 		</effects>
 	</skill>
-	<skill id="50037" name="Aqua Summon" max-level="1" action="A1">
+	<skill id="50037" name="Aqua Summon" action="A1">
 	<!-- Summons water drops. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -617,7 +617,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50039" name="Aqua Destruction" max-level="1" action="A2">
+	<skill id="50039" name="Aqua Destruction" action="A2">
 	<!-- Clears Aqua Rage state at 50%% Chance. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -669,7 +669,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50042" name="Summon Hurricane" max-level="1" action="A1">
+	<skill id="50042" name="Summon Hurricane" action="A1">
 	<!-- Summon Cyclone Skill -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -705,7 +705,7 @@
 		</abnormal>
 		<effects>
 			<block-all-actions/>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="138.0"/>
 			</magical-attack>
 		</effects>
@@ -759,8 +759,8 @@
 		</attributes>
 		<target />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
-				<power initial="0.0"/>
+			<physical-attack critical-chance="0.0">
+				<power/>
 			</physical-attack>
 		</effects>
 	</skill>
@@ -808,8 +808,8 @@
 		</attributes>
 		<target />
 		<effects>
-			<magical-attack over-hit="false">
-				<power initial="0.0"/>
+			<magical-attack>
+				<power/>
 			</magical-attack>
 		</effects>
 	</skill>
@@ -871,7 +871,7 @@
 			<chance initial="100"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="25.0">
 					<value level="2">34.0</value>
 					<value level="3">44.0</value>
@@ -905,7 +905,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50052" name="Freya's Safety Zone" max-level="1" action="A1">
+	<skill id="50052" name="Freya's Safety Zone" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -917,7 +917,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50053" name="Fire Curse" max-level="1" debuff="true" action="A1">
+	<skill id="50053" name="Fire Curse" debuff="true" action="A1">
 	<!-- Cursed by King Ignis' Flame, decreases Heal received by 100%%. -->
 		<icon initial="icon.skill11365"/>
 		<attributes property="PHYSIC" >
@@ -945,14 +945,14 @@
 		</attributes>
 		<target />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="30000.0">
 					<value level="2">100000.0</value>
 				</power>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="50055" name="Stone Conversion - Long Distance" max-level="1" action="A1">
+	<skill id="50055" name="Stone Conversion - Long Distance" action="A1">
 	<!-- Increases Long Distance Attack Resistance +100%%, drastically raises M. Def -->
 		<icon initial="icon.skill30515"/>
 		<attributes property="PHYSIC" >
@@ -965,7 +965,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50056" name="Stone Conversion - Short Distance" max-level="1" action="A1">
+	<skill id="50056" name="Stone Conversion - Short Distance" action="A1">
 	<!-- Increases Short Distance Attack Resistance +100%%. -->
 		<icon initial="icon.skill1062"/>
 		<attributes property="PHYSIC" >
@@ -1010,7 +1010,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="10000.0">
 					<value level="2">100000.0</value>
 				</power>
@@ -1033,12 +1033,12 @@
 		</attributes>
 		<target />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="10000.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="50060" name="Stone Annihilation" max-level="1" debuff="true" action="A1">
+	<skill id="50060" name="Stone Annihilation" debuff="true" action="A1">
 	<!-- Fall into Paralyzed state for 1 minute, P./M. Def. -50%%. -->
 		<icon initial="icon.skill1062"/>
 		<attributes property="PHYSIC" >
@@ -1079,7 +1079,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50063" name="Energy of Fire" max-level="1" action="A1" type="MAGIC">
+	<skill id="50063" name="Energy of Fire" action="A1" type="MAGIC">
 	<!-- King Ignis' power. Decreases HP per tick, more HP decreases per stack. Effect can be cleared by speaking to Freya. -->
 		<icon initial="icon.skill1083"/>
 		<attributes >
@@ -1091,7 +1091,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50064" name="Energy of Water" max-level="1" action="A1" type="MAGIC">
+	<skill id="50064" name="Energy of Water" action="A1" type="MAGIC">
 	<!-- King Ignis' power. Decreases HP per tick, more HP decreases per stack. Effect can be cleared by speaking to Freya. -->
 		<icon initial="icon.skill1071"/>
 		<attributes >
@@ -1103,7 +1103,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50065" name="Energy of Wind" max-level="1" action="A1" type="MAGIC">
+	<skill id="50065" name="Energy of Wind" action="A1" type="MAGIC">
 	<!-- King Ignis' power. Decreases HP per tick, more HP decreases per stack. Effect can be cleared by speaking to Freya. -->
 		<icon initial="icon.skill1074"/>
 		<attributes >
@@ -1115,7 +1115,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50066" name="Earth Energy" max-level="1" action="A1" type="MAGIC">
+	<skill id="50066" name="Earth Energy" action="A1" type="MAGIC">
 	<!-- King Ignis' power. Decreases HP per tick, more HP decreases per stack. Effect can be cleared by speaking to Freya. -->
 		<icon initial="icon.skill1223"/>
 		<attributes >
@@ -1127,7 +1127,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50067" name="Stone Earthquake" max-level="1" debuff="true" action="A1" type="MAGIC">
+	<skill id="50067" name="Stone Earthquake" debuff="true" action="A1" type="MAGIC">
 	<!-- Stunned from a powerful strike. -->
 		<icon initial="icon.skill0100"/>
 		<attributes property="PHYSIC" >
@@ -1141,7 +1141,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50068" name="Stone Crusher" max-level="1" action="A1" type="MAGIC">
+	<skill id="50068" name="Stone Crusher" action="A1" type="MAGIC">
 	<!-- Deals damage to the targets around the boss. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1155,7 +1155,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50069" name="Fire Breath" max-level="1" action="A1" type="MAGIC">
+	<skill id="50069" name="Fire Breath" action="A1" type="MAGIC">
 	<!-- Deals fire damage to the targets around the boss. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1173,12 +1173,12 @@
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="150" />
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="250.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="50070" name="Tears of Fire" max-level="1" action="A1" type="MAGIC">
+	<skill id="50070" name="Tears of Fire" action="A1" type="MAGIC">
 	<!-- Affects the area. Deals a lot of damage. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -1198,12 +1198,12 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="138.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="50071" name="Aqua Arrow" max-level="1" action="A1" type="MAGIC">
+	<skill id="50071" name="Aqua Arrow" action="A1" type="MAGIC">
 	<!-- Deals M. Damage to a random target. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1217,7 +1217,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50072" name="Aqua Wave" max-level="1" action="A1" type="MAGIC">
+	<skill id="50072" name="Aqua Wave" action="A1" type="MAGIC">
 	<!-- Affects the area. Deals a lot of damage. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1231,7 +1231,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50073" name="Hurricane Bolt" max-level="1" action="A1" type="MAGIC">
+	<skill id="50073" name="Hurricane Bolt" action="A1" type="MAGIC">
 	<!-- Deals damage with a powerful lightning and paralizes for 5 seconds. -->
 		<icon initial="icon.skill0791"/>
 		<attributes property="PHYSIC" >
@@ -1245,7 +1245,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50074" name="Hurricane" max-level="1" action="A1" type="MAGIC">
+	<skill id="50074" name="Hurricane" action="A1" type="MAGIC">
 	<!-- Affects the area. Deals a lot of damage. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1259,7 +1259,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50075" name="Physical Hot Spring" max-level="1" action="A1">
+	<skill id="50075" name="Physical Hot Spring" action="A1">
 	<!-- Warmed by energy of Hot Springs Water. For 5 minutes P. Atk. +5%% and P. Atk. Spd. +5%%. -->
 		<icon initial="icon.skill1062"/>
 		<attributes property="PHYSIC" >
@@ -1272,7 +1272,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50076" name="Fatal Hot Spring" max-level="1" action="A1">
+	<skill id="50076" name="Fatal Hot Spring" action="A1">
 	<!-- Warmed by energy of Hot Springs Water. For 5 minutes P. Critical Rate +30 and P. Accuracy +6. -->
 		<icon initial="icon.skill1062"/>
 		<attributes property="PHYSIC" >
@@ -1285,7 +1285,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50077" name="Magical Hot Spring" max-level="1" action="A1">
+	<skill id="50077" name="Magical Hot Spring" action="A1">
 	<!-- Warmed by energy of Hot Springs Water. For 5 minutes M. Atk. +5%% and M. Atk. Spd. +5%%. -->
 		<icon initial="icon.skill1062"/>
 		<attributes property="PHYSIC" >
@@ -1298,7 +1298,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50078" name="Magic Weakness" max-level="1" debuff="true" action="A1" type="MAGIC">
+	<skill id="50078" name="Magic Weakness" debuff="true" action="A1" type="MAGIC">
 	<!-- Inflicts damage with bonus 85 M. Atk. Power to surrounding enemies, and M. Atk. -20%%. -->
 		<icon initial="icon.skill1333"/>
 		<attributes property="PHYSIC" >
@@ -1311,7 +1311,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50079" name="Lv. 82 Raid Boss" max-level="1" >
+	<skill id="50079" name="Lv. 82 Raid Boss">
 	<!-- King Ignis who rules over the Flame Spirits that have invaded the continent of Aden. Possesses a fiery flaming power and grows his strength while hidden in his abode, waiting for the day he will emerge in the continent of Aden. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1321,7 +1321,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50080" name="Lv. 82 Raid Boss" max-level="1" >
+	<skill id="50080" name="Lv. 82 Raid Boss">
 	<!-- Queen Nebula who rules over the Water Spirits that have invaded the continent of Aden. Possesses the breathtaking power of Water and grows her strength while hidden in her abode, waiting for the day she will emerge in the continent of Aden. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1331,7 +1331,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50081" name="Lv. 82 Raid Boss" max-level="1" >
+	<skill id="50081" name="Lv. 82 Raid Boss">
 	<!-- King Procella who rules over the Wind Spirits that have invaded the continent of Aden. Possesses the fierce and piercing power of Wind and grows his strength while hidden in his abode, waiting for the day he will emerge in the continent of Aden. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1341,7 +1341,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50082" name="Lv. 82 Raid Boss" max-level="1" >
+	<skill id="50082" name="Lv. 82 Raid Boss">
 	<!-- King Petram who rules over the Earth Spirits that have invaded the continent of Aden. Possesses the solid and colossal power of Earth and grows his strength while hidden in his abode, waiting for the day he will emerge in the continent of Aden. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1351,7 +1351,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50083" name="Lv. 84 Raid Boss" max-level="1" >
+	<skill id="50083" name="Lv. 84 Raid Boss">
 	<!-- King Ignis who rules over the Flame Spirits that have invaded the continent of Aden. Possesses a fiery flaming power and grows his strength while hidden in his abode, waiting for the day he will emerge in the continent of Aden. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1361,7 +1361,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50084" name="Lv. 84 Raid Boss" max-level="1" >
+	<skill id="50084" name="Lv. 84 Raid Boss">
 	<!-- Queen Nebula who rules over the Water Spirits that have invaded the continent of Aden. Possesses the breathtaking power of Water and grows her strength while hidden in her abode, waiting for the day she will emerge in the continent of Aden. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1371,7 +1371,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50085" name="Lv. 84 Raid Boss" max-level="1" >
+	<skill id="50085" name="Lv. 84 Raid Boss">
 	<!-- King Procella who rules over the Wind Spirits that have invaded the continent of Aden. Possesses the fierce and piercing power of Wind and grows his strength while hidden in his abode, waiting for the day he will emerge in the continent of Aden. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1381,7 +1381,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="50086" name="Lv. 84 Raid Boss" max-level="1" >
+	<skill id="50086" name="Lv. 84 Raid Boss">
 	<!-- King Petram who rules over the Earth Spirits that have invaded the continent of Aden. Possesses the solid and colossal power of Earth and grows his strength while hidden in his abode, waiting for the day he will emerge in the continent of Aden. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1483,7 +1483,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="88.0">
 					<value level="2">98.0</value>
 				</power>
@@ -1506,7 +1506,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="55.0">
 					<value level="2">61.0</value>
 				</power>
@@ -1529,7 +1529,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="542.0">
 					<value level="2">774.0</value>
 				</power>

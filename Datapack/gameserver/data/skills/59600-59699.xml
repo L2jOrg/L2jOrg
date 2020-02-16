@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="59600" name="Transformation Sealbook: Devil - Legendary" max-level="1" action="A1">
+	<skill id="59600" name="Transformation Sealbook: Devil - Legendary" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_devil"/>
 		<attributes >
@@ -10,7 +10,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59601" name="Transformation Sealbook: Devil - Mythic" max-level="1" action="A1">
+	<skill id="59601" name="Transformation Sealbook: Devil - Mythic" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_devil"/>
 		<attributes >
@@ -20,7 +20,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59602" name="Shadow Master" max-level="1" action="A1">
+	<skill id="59602" name="Shadow Master" action="A1">
 	<!-- Legendary transformation. XP Gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P./M. Critical Damage +10%%, Speed +10, PvP Received Damage -10%%. Transformation remains after death. \n\n<Special Ability>\nEvery time you are attacked while transformed into Shadow Master, summons a clone that provokes every 120 seconds and hides into the shadows for 10 seconds. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_thief"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -31,7 +31,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59603" name="Shadow Master" max-level="1" action="A1">
+	<skill id="59603" name="Shadow Master" action="A1">
 	<!-- Mystic transformation. XP Gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P./M. Critical Damage +15%%, Speed +20,PvP Damage +10%%, PvP Received Damage -20%%. Transformation remains after death. \n\n<Special Ability>\nEvery time you are attacked while transformed into Shadow Master, summons a clone that provokes every 60 seconds and hides into the shadows for 20 seconds. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_thief"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -68,7 +68,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59606" name="Shadow Master - Decoy Provocation" max-level="1" action="A2">
+	<skill id="59606" name="Shadow Master - Decoy Provocation" action="A2">
 	<!-- Borrows the power of the Shadow Master and hides for $s1. Effect is canceled if you perform an action other than just moving. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_thief"/>
 		<attributes >
@@ -78,7 +78,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59607" name="Navy Admiral" max-level="1" action="A1">
+	<skill id="59607" name="Navy Admiral" action="A1">
 	<!-- Legendary transformation. XP Gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P./M. Critical Damage +10%%, Speed +10, PvP Received Damage -10%%. Transformation remains after death. \n\n<Special Ability>\nEvery time you attack or use a skill while transformed into Navy Admiral, an attack buff that increases P. Atk./M. Atk. +150%% is activated and when hit, a defense buff that increases P./M. Def. +150%% is activated. Cooldown is 100 seconds.\nOnly one of the Attack or Defense buffs is activated within the cooldown. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_navy"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -89,7 +89,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59608" name="Navy Admiral" max-level="1" action="A1">
+	<skill id="59608" name="Navy Admiral" action="A1">
 	<!-- Mythic transformation. XP Gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P./M. Critical Damage +15%%, Speed +20,PvP Damage +10%%, PvP Received Damage -20%%. Transformation remains after death. \n\n<Special Ability>\nEvery time you attack or use a skill while transformed into Navy Admiral, an attack buff that increases P. Atk./M. Atk. +200%% is activated and when hit, a defense buff that increases P./M. Def. +200%% is activated. Cooldown is 600 seconds.\nOnly one of the Attack or Defense buffs is activated within the cooldown. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_navy"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -152,7 +152,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59613" name="Nymph" max-level="1" action="A1">
+	<skill id="59613" name="Nymph" action="A1">
 	<!-- Legendary transformation. XP Gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P./M. Critical Damage +10%%, Speed +10, PvP Received Damage -10%%. Transformation remains after death. \n\n<Special Ability>\nAdena Gain, Item Drop Rate, Spoil Item Amount +50%%.\nEvery time you attack or use a skill while transformed into Nymph, Temptation debuff that seduces the opponent is activated every 100 seconds. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_nymph"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -163,7 +163,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59614" name="Nymph" max-level="1" action="A1">
+	<skill id="59614" name="Nymph" action="A1">
 	<!-- Mythic transformation. XP Gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P./M. Critical Damage +15%%, Speed +20,PvP Damage +10%%, PvP Received Damage -20%%. Transformation remains after death. \n\n<Special Ability>\nAdena Gain, Item Drop Rate, Spoil Item Amount +100%%.\nEvery time you attack or use a skill while transformed into Nymph, Temptation debuff that seduces the opponent is activated every 60 seconds. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_nymph"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -174,7 +174,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59615" name="Nymph - Temptation" max-level="1" action="A2">
+	<skill id="59615" name="Nymph - Temptation" action="A2">
 	<!-- Borrows the power of the Nymph and seduces the opponent for 3 seconds. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_nymph"/>
 		<attributes property="PHYSIC" >
@@ -187,7 +187,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59616" name="Nymph - Temptation" max-level="1" action="A2">
+	<skill id="59616" name="Nymph - Temptation" action="A2">
 	<!-- Borrows the power of the Nymph and seduces the opponent for 5 seconds. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_nymph"/>
 		<attributes property="PHYSIC" >
@@ -200,7 +200,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59617" name="Devil" max-level="1" action="A1">
+	<skill id="59617" name="Devil" action="A1">
 	<!-- Mythic transformation. XP Gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P./M. Critical Damage +15%%, Speed +20,PvP Damage +10%%, PvP Received Damage -20%%. Transformation remains after death. \n\n<Special Ability>\nEvery 60 seconds, a barrier is activated for 20 seconds, and after it disappears, activates an inferno that inflicts 1000 damage for 10 seconds to a target that attacks you -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_devil"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -211,7 +211,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59618" name="Devil - Barrier" max-level="1" action="A2">
+	<skill id="59618" name="Devil - Barrier" action="A2">
 	<!-- Borrows the power of the Devil and all damage is set to 1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_devil"/>
 		<attributes property="PHYSIC" >
@@ -224,7 +224,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59619" name="Devil - Inferno" max-level="1" action="A2">
+	<skill id="59619" name="Devil - Inferno" action="A2">
 	<!-- Inflicts 1000 real damage to all targets that attack you. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_devil"/>
 		<attributes property="PHYSIC" >
@@ -234,7 +234,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59620" name="Devil - Inferno" max-level="1" action="A2">
+	<skill id="59620" name="Devil - Inferno" action="A2">
 	<!-- Inflicts 1000 real damage to all targets that attack you. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_devil"/>
 		<attributes >
@@ -244,7 +244,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59631" name="+8 S-grade Weapon Pack" max-level="1" action="A1">
+	<skill id="59631" name="+8 S-grade Weapon Pack" action="A1">
 	<!-- none -->
 		<icon initial="icon_bm_gold_lure_special_box"/>
 		<attributes >
@@ -256,7 +256,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59632" name="+5 Dragon Pendant Lv. 4 Pack" max-level="1" action="A1">
+	<skill id="59632" name="+5 Dragon Pendant Lv. 4 Pack" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -268,7 +268,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59633" name="Fire Dragon Pendant Chest +6" max-level="1" action="A1">
+	<skill id="59633" name="Fire Dragon Pendant Chest +6" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -280,10 +280,10 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59634" name="Dragon Scroll - Event" max-level="1" action="A2">
+	<skill id="59634" name="Dragon Scroll - Event" action="A2">
 	<!-- For 20 min., P./M. Atk. +150, P./M. Critical Rate +30, Atk. Spd./Casting Spd. +50, P./M. Def. +200, Max HP/MP/CP +500. The effect remains active even after death. -->
 		<icon initial="icon.ev_charge_scroll"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" dispellable="false" auto-use="BUFF">
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" auto-use="BUFF">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
@@ -303,37 +303,37 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK">
 				<power initial="150.0"/>
 			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK">
 				<power initial="150.0"/>
 			</stat-modify>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="DIFF">
+			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0">
 				<power initial="30.0"/>
 			</stat-hp-based>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
 				<power initial="30.0"/>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED">
 				<power initial="50.0"/>
 			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK_SPEED">
 				<power initial="50.0"/>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="200.0"/>
 			</stat-modify>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="200.0"/>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="500.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="500.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_CP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_CP">
 				<power initial="500.0"/>
 			</vital-stat-modify>
 		</effects>
@@ -385,7 +385,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="59637" name="Dimensional Barrier" max-level="1" action="A1">
+	<skill id="59637" name="Dimensional Barrier" action="A1">
 	<!-- Opens the dimensional curtain to block enemy attack 10 times for 15 seconds. -->
 		<icon initial="icon.skill11621"/>
 		<attributes property="PHYSIC" >
@@ -400,7 +400,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="59638" name="Box Full of Blessing" max-level="1" action="A1">
+	<skill id="59638" name="Box Full of Blessing" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -412,7 +412,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59639" name="Aden Supply Box" max-level="1" action="A1">
+	<skill id="59639" name="Aden Supply Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -424,7 +424,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59640" name="Jin Kamael's Gift" max-level="1" action="A1">
+	<skill id="59640" name="Jin Kamael's Gift" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -436,7 +436,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59641" name="Baium's Mystery Box" max-level="1" action="A1">
+	<skill id="59641" name="Baium's Mystery Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -448,7 +448,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59642" name="Sealed Samurai Long Sword Box" max-level="1" action="A1">
+	<skill id="59642" name="Sealed Samurai Long Sword Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -460,7 +460,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59643" name="Sealed Mace of Underworld Box" max-level="1" action="A1">
+	<skill id="59643" name="Sealed Mace of Underworld Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -472,7 +472,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59644" name="Sealed Demon's Staff Box" max-level="1" action="A1">
+	<skill id="59644" name="Sealed Demon's Staff Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -484,7 +484,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59645" name="Sealed Crystal Dagger Box" max-level="1" action="A1">
+	<skill id="59645" name="Sealed Crystal Dagger Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -496,7 +496,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59646" name="Sealed Eminence Bow Box" max-level="1" action="A1">
+	<skill id="59646" name="Sealed Eminence Bow Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -508,7 +508,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59647" name="Sealed Orcish Poleaxe Box" max-level="1" action="A1">
+	<skill id="59647" name="Sealed Orcish Poleaxe Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -520,7 +520,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59648" name="Sealed Katana*Katana Box" max-level="1" action="A1">
+	<skill id="59648" name="Sealed Katana*Katana Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -532,7 +532,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59649" name="Sealed Yaksa Mace Box" max-level="1" action="A1">
+	<skill id="59649" name="Sealed Yaksa Mace Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -544,7 +544,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59650" name="Sealed Berserker Blade Box" max-level="1" action="A1">
+	<skill id="59650" name="Sealed Berserker Blade Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -556,7 +556,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59651" name="Sealed Great Pata Box" max-level="1" action="A1">
+	<skill id="59651" name="Sealed Great Pata Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -568,7 +568,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59652" name="Sealed Admiral's Estoc Box" max-level="1" action="A1">
+	<skill id="59652" name="Sealed Admiral's Estoc Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -580,7 +580,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59653" name="Sealed Saber Tooth Box" max-level="1" action="A1">
+	<skill id="59653" name="Sealed Saber Tooth Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -592,7 +592,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59654" name="Sealed Samurai Long Sword Box" max-level="1" action="A1">
+	<skill id="59654" name="Sealed Samurai Long Sword Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -604,7 +604,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59655" name="Sealed Mace of Underworld Box" max-level="1" action="A1">
+	<skill id="59655" name="Sealed Mace of Underworld Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -616,7 +616,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59656" name="Sealed Demon's Staff Box" max-level="1" action="A1">
+	<skill id="59656" name="Sealed Demon's Staff Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -628,7 +628,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59657" name="Sealed Crystal Dagger Box" max-level="1" action="A1">
+	<skill id="59657" name="Sealed Crystal Dagger Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -640,7 +640,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59658" name="Sealed Eminence Bow Box" max-level="1" action="A1">
+	<skill id="59658" name="Sealed Eminence Bow Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -652,7 +652,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59659" name="Sealed Orcish Poleaxe Box" max-level="1" action="A1">
+	<skill id="59659" name="Sealed Orcish Poleaxe Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -664,7 +664,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59660" name="Sealed Katana*Katana Box" max-level="1" action="A1">
+	<skill id="59660" name="Sealed Katana*Katana Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -676,7 +676,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59661" name="Sealed Yaksa Mace Box" max-level="1" action="A1">
+	<skill id="59661" name="Sealed Yaksa Mace Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -688,7 +688,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59662" name="Sealed Berserker Blade Box" max-level="1" action="A1">
+	<skill id="59662" name="Sealed Berserker Blade Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -700,7 +700,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59663" name="Sealed Great Pata Box" max-level="1" action="A1">
+	<skill id="59663" name="Sealed Great Pata Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -712,7 +712,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59664" name="Sealed Admiral's Estoc Box" max-level="1" action="A1">
+	<skill id="59664" name="Sealed Admiral's Estoc Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -724,7 +724,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59665" name="Sealed Saber Tooth Box" max-level="1" action="A1">
+	<skill id="59665" name="Sealed Saber Tooth Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -736,7 +736,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59666" name="Sealed Samurai Long Sword Box" max-level="1" action="A1">
+	<skill id="59666" name="Sealed Samurai Long Sword Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -748,7 +748,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59667" name="Sealed Mace of Underworld Box" max-level="1" action="A1">
+	<skill id="59667" name="Sealed Mace of Underworld Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -760,7 +760,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59668" name="Sealed Demon's Staff Box" max-level="1" action="A1">
+	<skill id="59668" name="Sealed Demon's Staff Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -772,7 +772,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59669" name="Sealed Crystal Dagger Box" max-level="1" action="A1">
+	<skill id="59669" name="Sealed Crystal Dagger Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -784,7 +784,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59670" name="Sealed Eminence Bow Box" max-level="1" action="A1">
+	<skill id="59670" name="Sealed Eminence Bow Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -796,7 +796,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59671" name="Sealed Orcish Poleaxe Box" max-level="1" action="A1">
+	<skill id="59671" name="Sealed Orcish Poleaxe Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -808,7 +808,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59672" name="Sealed Katana*Katana Box" max-level="1" action="A1">
+	<skill id="59672" name="Sealed Katana*Katana Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -820,7 +820,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59673" name="Sealed Yaksa Mace Box" max-level="1" action="A1">
+	<skill id="59673" name="Sealed Yaksa Mace Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -832,7 +832,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59674" name="Sealed Berserker Blade Box" max-level="1" action="A1">
+	<skill id="59674" name="Sealed Berserker Blade Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -844,7 +844,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59675" name="Sealed Great Pata Box" max-level="1" action="A1">
+	<skill id="59675" name="Sealed Great Pata Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -856,7 +856,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59676" name="Sealed Admiral's Estoc Box" max-level="1" action="A1">
+	<skill id="59676" name="Sealed Admiral's Estoc Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -868,7 +868,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59677" name="Sealed Saber Tooth Box" max-level="1" action="A1">
+	<skill id="59677" name="Sealed Saber Tooth Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -880,7 +880,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59678" name="Chronicle Box" max-level="1" action="A1">
+	<skill id="59678" name="Chronicle Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -892,7 +892,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59679" name="15th Anniversary Gift Box" max-level="1" action="A1">
+	<skill id="59679" name="15th Anniversary Gift Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
 		<attributes >
@@ -904,7 +904,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59680" name="XP Scroll - Lv. 1" max-level="1" action="A1">
+	<skill id="59680" name="XP Scroll - Lv. 1" action="A1">
 	<!-- XP +20,000. -->
 		<icon initial="icon.bm_elmoaden_exp_scrl"/>
 		<attributes >
@@ -915,7 +915,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59681" name="XP Scroll - Lv. 2" max-level="1" action="A1">
+	<skill id="59681" name="XP Scroll - Lv. 2" action="A1">
 	<!-- XP +4,000,000. -->
 		<icon initial="icon.bm_elmoaden_exp_scrl"/>
 		<attributes >
@@ -926,7 +926,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59682" name="XP Scroll - Lv. 3" max-level="1" action="A1">
+	<skill id="59682" name="XP Scroll - Lv. 3" action="A1">
 	<!-- XP +100,000,000. -->
 		<icon initial="icon.bm_elmoaden_exp_scrl"/>
 		<attributes >
@@ -937,7 +937,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59683" name="XP Scroll - Lv. 4" max-level="1" action="A1">
+	<skill id="59683" name="XP Scroll - Lv. 4" action="A1">
 	<!-- XP +200,000,000. -->
 		<icon initial="icon.bm_elmoaden_exp_scrl"/>
 		<attributes >
@@ -948,7 +948,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59684" name="XP Scroll - Lv. 5" max-level="1" action="A1">
+	<skill id="59684" name="XP Scroll - Lv. 5" action="A1">
 	<!-- XP +250,000,000. -->
 		<icon initial="icon.bm_elmoaden_exp_scrl"/>
 		<attributes >
@@ -959,7 +959,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59685" name="XP Scroll - Lv. 6" max-level="1" action="A1">
+	<skill id="59685" name="XP Scroll - Lv. 6" action="A1">
 	<!-- XP +400,000,000. -->
 		<icon initial="icon.bm_elmoaden_exp_scrl"/>
 		<attributes >
@@ -970,7 +970,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59686" name="Hardin's Magic Bag" max-level="1" >
+	<skill id="59686" name="Hardin's Magic Bag">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -980,7 +980,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59687" name="Storm's Energy" max-level="1" action="A1">
+	<skill id="59687" name="Storm's Energy" action="A1">
 	<!-- XP/SP Gain +50%% for 2 hours due to the storm's energy. Cooldown is 2 hours. Storm's energy remains after death. -->
 		<icon initial="icon.power_of_storm"/>
 		<attributes property="PHYSIC" auto-use="BUFF">
@@ -1015,7 +1015,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59690" name="Cute Animal Friends" max-level="1" >
+	<skill id="59690" name="Cute Animal Friends">
 	<!-- Max CP +80 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
 		<attributes property="MAGIC" >
@@ -1023,7 +1023,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59691" name="Special Season" max-level="1" >
+	<skill id="59691" name="Special Season">
 	<!-- Max HP +80 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
 		<attributes property="MAGIC" >
@@ -1031,7 +1031,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59692" name="Striking Elegance" max-level="1" >
+	<skill id="59692" name="Striking Elegance">
 	<!-- P. Atk./M. Atk. +50 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
 		<attributes property="MAGIC" >
@@ -1039,7 +1039,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59693" name="Wow! It’s Summer!" max-level="1" >
+	<skill id="59693" name="Wow! It’s Summer!">
 	<!-- Max HP/CP/MP +200 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
 		<attributes property="MAGIC" >
@@ -1047,7 +1047,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59694" name="Uncontrollable Power" max-level="1" >
+	<skill id="59694" name="Uncontrollable Power">
 	<!-- P. Atk. +150 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
 		<attributes property="MAGIC" >
@@ -1055,7 +1055,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59695" name="Overflowing Magic" max-level="1" >
+	<skill id="59695" name="Overflowing Magic">
 	<!-- M. Atk. +150 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
 		<attributes property="MAGIC" >
@@ -1063,7 +1063,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59696" name="Rarity Collector" max-level="1" >
+	<skill id="59696" name="Rarity Collector">
 	<!-- P. Atk./M. Atk. +30 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
 		<attributes property="MAGIC" >
@@ -1071,7 +1071,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59697" name="Highly Durable!" max-level="1" >
+	<skill id="59697" name="Highly Durable!">
 	<!-- P. Atk./M. Atk. +300, Damage Received -5%% -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
 		<attributes property="MAGIC" >
@@ -1079,7 +1079,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59698" name="Very Strong!" max-level="1" >
+	<skill id="59698" name="Very Strong!">
 	<!-- P. Atk./M. Atk. +300, Damage Received -3%% -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
 		<attributes property="MAGIC" >
@@ -1087,7 +1087,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59699" name="Very Quick!" max-level="1" >
+	<skill id="59699" name="Very Quick!">
 	<!-- P. Atk./M. Atk. +350, Damage Received -3%% -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
 		<attributes property="MAGIC" >

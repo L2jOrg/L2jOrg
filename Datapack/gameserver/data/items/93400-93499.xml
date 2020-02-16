@@ -378,7 +378,7 @@
 	<item id="93458" name="Magic Lamp Acceleration Potion - Event" type="NONE" icon="icon.etc_recall_potion2">
 	<!-- 20% Magic Lamp gauge recharge for 1 hour when used. Cooldown 1 minute. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="93459" name="A-grade Armor Pack - Majestic" type="NONE" icon="icon.etc_box_of_adventure_3_i00">
@@ -546,7 +546,7 @@
 	<item id="93486" name="Battleground Scroll" type="NONE" icon="icon.etc_ssq_i00">
 	<!-- For 20 minutes, Max HP/Max MP/Max CP +300, P. Atk./M. Atk. +200, Atk. Spd./Casting Spd. +60, P. Critical/M. Skill Critical Rate+20, P. Critical/M. Skill Critical Damage +10%. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="93487" name="Character Creation Package - Orc Shaman" type="NONE" icon="icon.etc_equip_item_box_i01">

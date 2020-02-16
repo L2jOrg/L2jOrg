@@ -2,14 +2,14 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<xs:element name="list">
 		<xs:complexType>
-			<xs:sequence minOccurs="1" maxOccurs="1">
+			<xs:sequence>
 				<xs:element name="instance" minOccurs="0" maxOccurs="unbounded">
 					<xs:complexType>
-						<xs:sequence minOccurs="1" maxOccurs="1">
-							<xs:element name="item" minOccurs="1" maxOccurs="unbounded">
+						<xs:sequence>
+							<xs:element name="item" maxOccurs="unbounded">
 								<xs:complexType>
-									<xs:sequence minOccurs="1" maxOccurs="1">
-										<xs:element name="extra" minOccurs="0" maxOccurs="1">
+									<xs:sequence>
+										<xs:element name="extra" minOccurs="0">
 											<xs:complexType>
 												<xs:attribute name="augmentation_id" type="xs:positiveInteger" use="required" />
 												<xs:attribute name="augmentation_skill_id" type="xs:positiveInteger" use="required" />

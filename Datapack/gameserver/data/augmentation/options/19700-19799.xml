@@ -3,7 +3,7 @@
     <option id="19789" name="o_f_80_1g_1">
         <!-- P. Def. increases by 22.23. -->
         <effects>
-            <stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="PHYSICAL_DEFENCE">
                 <power initial="22.229"/>
             </stat-modify>
         </effects>
@@ -11,7 +11,7 @@
     <option id="19790" name="o_f_80_1g_2">
         <!-- M. Def. increases by 17.54. -->
         <effects>
-            <stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+            <stat-modify stat="MAGICAL_DEFENCE">
                 <power initial="17.54"/>
             </stat-modify>
         </effects>
@@ -19,7 +19,7 @@
     <option id="19791" name="o_f_80_1g_3">
         <!-- Max HP increases by 83.68 -->
         <effects>
-            <stat-modify stat="MAX_HP" mode="DIFF">
+            <stat-modify stat="MAX_HP">
                 <power initial="83.675"/>
             </stat-modify>
         </effects>
@@ -27,7 +27,7 @@
     <option id="19792" name="o_f_80_1g_4">
         <!-- Max HP increases by 27.4. -->
         <effects>
-            <stat-modify stat="MAX_MP" mode="DIFF">
+            <stat-modify stat="MAX_MP">
                 <power initial="27.401"/>
             </stat-modify>
         </effects>
@@ -35,7 +35,7 @@
     <option id="19793" name="o_f_80_1g_5">
         <!-- Max CP increases by 150.61. -->
         <effects>
-            <stat-modify stat="MAX_CP" mode="DIFF">
+            <stat-modify stat="MAX_CP">
                 <power initial="150.614"/>
             </stat-modify>
         </effects>
@@ -43,7 +43,7 @@
     <option id="19794" name="o_f_80_1g_6">
         <!-- P. Atk. increases by 14.04. -->
         <effects>
-            <stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+            <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="14.037"/>
             </stat-modify>
         </effects>
@@ -51,7 +51,7 @@
     <option id="19795" name="o_f_80_1g_7">
         <!-- M. Atk. increases by 17.3. -->
         <effects>
-            <stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+            <stat-modify stat="MAGIC_ATTACK">
                 <power initial="17.301"/>
             </stat-modify>
         </effects>
@@ -59,7 +59,7 @@
     <option id="19796" name="o_f_80_1g_8">
         <!-- HP Regen increases by 0.38. -->
         <effects>
-            <stat-modify stat="REGENERATE_HP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_HP_RATE">
                 <power initial="0.38"/>
             </stat-modify>
         </effects>
@@ -67,7 +67,7 @@
     <option id="19797" name="o_f_80_1g_9">
         <!-- MP Regen increases by 0.16. -->
         <effects>
-            <stat-modify stat="REGENERATE_MP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_MP_RATE">
                 <power initial="0.163"/>
             </stat-modify>
         </effects>
@@ -75,7 +75,7 @@
     <option id="19798" name="o_f_80_1g_10">
         <!-- CP Regen increases by 0.39. -->
         <effects>
-            <stat-modify stat="REGENERATE_CP_RATE" mode="DIFF">
+            <stat-modify stat="REGENERATE_CP_RATE">
                 <power initial="0.385"/>
             </stat-modify>
         </effects>
@@ -83,7 +83,7 @@
     <option id="19799" name="o_f_80_1g_11">
         <!-- Evasion increases by 1.92. -->
         <effects>
-            <stat-modify stat="EVASION_RATE" mode="DIFF">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="1.919"/>
             </stat-modify>
         </effects>

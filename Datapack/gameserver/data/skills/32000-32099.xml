@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="32000" name="Rice Cake of Fighting Spirit" max-level="1" action="A2">
+	<skill id="32000" name="Rice Cake of Fighting Spirit" action="A2">
 	<!-- XP/SP Gain +20%% for 20 minutes. Cooldown is 1 minute. Effect remains even after death. -->
 		<icon initial="icon.bm_rice_cake_i00"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" >
@@ -17,7 +17,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<conditions>
-			<level affect="CASTER" min-level="1" max-level="85" scope="PASSIVE"/>
+			<level max-level="85" scope="PASSIVE"/>
 		</conditions>
 		<effects>
 			<stat-modify stat="BONUS_EXP" mode="PER">
@@ -28,7 +28,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="32001" name="Rice Cake of Fighting Spirit - Event" max-level="1" action="A2">
+	<skill id="32001" name="Rice Cake of Fighting Spirit - Event" action="A2">
 	<!-- XP/SP Gain +20%% for 20 minutes. Cooldown is 1 minute. Effect remains even after death. -->
 		<icon initial="icon.bm_rice_cake_i00"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" >
@@ -45,7 +45,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<conditions>
-			<level affect="CASTER" min-level="1" max-level="85" scope="PASSIVE"/>
+			<level max-level="85" scope="PASSIVE"/>
 		</conditions>
 		<effects>
 			<stat-modify stat="BONUS_EXP" mode="PER">
@@ -56,7 +56,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="32002" name="XP Boost Scroll - Exchangeable" max-level="1" action="A2">
+	<skill id="32002" name="XP Boost Scroll - Exchangeable" action="A2">
 	<!-- XP/SP Gain +30%% for 20 minutes. Cooldown is 1 minute. Effect remains even after death. -->
 		<icon initial="icon.etc_recall_exp_scroll"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" >
@@ -73,18 +73,18 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<conditions>
-			<level affect="CASTER" min-level="1" max-level="85" scope="PASSIVE"/>
+			<level max-level="85" scope="PASSIVE"/>
 		</conditions>
 		<effects>
-			<stat-modify stat="BONUS_EXP" mode="DIFF">
+			<stat-modify stat="BONUS_EXP">
 				<power initial="30.0"/>
 			</stat-modify>
-			<stat-modify stat="BONUS_SP" mode="DIFF">
+			<stat-modify stat="BONUS_SP">
 				<power initial="30.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="32003" name="Get-Rich-Quick Supply Chest" max-level="1" action="A1">
+	<skill id="32003" name="Get-Rich-Quick Supply Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.event_high_oriental_park_i00"/>
 		<attributes >
@@ -94,7 +94,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="32004" name="Greater Scroll of Resurrection" max-level="1" action="A1">
+	<skill id="32004" name="Greater Scroll of Resurrection" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_scroll_of_resurrection_i01"/>
 		<attributes >
@@ -107,7 +107,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="32005" name="Battle Support Chest" max-level="1" action="A1">
+	<skill id="32005" name="Battle Support Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_marguene_collection_box_i00"/>
 		<attributes >
@@ -117,7 +117,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="32006" name="Power of Commander" max-level="1" action="A1">
+	<skill id="32006" name="Power of Commander" action="A1">
 	<!-- Deals a fixed amount of damage with 50 Power to the target. Can only be used against a PC. -->
 		<icon initial="icon.weapon_shining_knife_i00"/>
 		<attributes >
@@ -145,7 +145,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="32010" name="Beauty Chest" max-level="1" action="A1">
+	<skill id="32010" name="Beauty Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_box_of_adventure_2_i00"/>
 		<attributes >
@@ -155,7 +155,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="32011" name="Buff Scrolls Chest" max-level="1" action="A1">
+	<skill id="32011" name="Buff Scrolls Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_box_of_adventure_3_i00"/>
 		<attributes >
@@ -165,7 +165,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="32012" name="High-grade Dye Chest" max-level="1" action="A1">
+	<skill id="32012" name="High-grade Dye Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_box_of_adventure_4_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -183,22 +183,22 @@
 			<encumbered slots="10" weight="20"/>
 		</conditions>
 		<effects>
-			<random-restoration><item id="4592" count="1" chance="8.300000190734863"/>
-<item id="4591" count="1" chance="8.300000190734863"/>
-<item id="4594" count="1" chance="8.300000190734863"/>
-<item id="4593" count="1" chance="8.300000190734863"/>
-<item id="4595" count="1" chance="8.300000190734863"/>
-<item id="4596" count="1" chance="8.300000190734863"/>
-<item id="4597" count="1" chance="8.300000190734863"/>
-<item id="4598" count="1" chance="8.300000190734863"/>
-<item id="4589" count="1" chance="8.300000190734863"/>
-<item id="4590" count="1" chance="8.300000190734863"/>
-<item id="4599" count="1" chance="8.300000190734863"/>
-<item id="4600" count="1" chance="8.300000190734863"/>
+			<random-restoration><item id="4592" chance="8.300000190734863"/>
+<item id="4591" chance="8.300000190734863"/>
+<item id="4594" chance="8.300000190734863"/>
+<item id="4593" chance="8.300000190734863"/>
+<item id="4595" chance="8.300000190734863"/>
+<item id="4596" chance="8.300000190734863"/>
+<item id="4597" chance="8.300000190734863"/>
+<item id="4598" chance="8.300000190734863"/>
+<item id="4589" chance="8.300000190734863"/>
+<item id="4590" chance="8.300000190734863"/>
+<item id="4599" chance="8.300000190734863"/>
+<item id="4600" chance="8.300000190734863"/>
 			</random-restoration>
 		</effects>
 	</skill>
-	<skill id="32013" name="Dye Chest" max-level="1" action="A1">
+	<skill id="32013" name="Dye Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_box_of_adventure_5_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -216,22 +216,22 @@
 			<encumbered slots="10" weight="20"/>
 		</conditions>
 		<effects>
-			<random-restoration><item id="4469" count="1" chance="8.300000190734863"/>
-<item id="4470" count="1" chance="8.300000190734863"/>
-<item id="4471" count="1" chance="8.300000190734863"/>
-<item id="4472" count="1" chance="8.300000190734863"/>
-<item id="4473" count="1" chance="8.300000190734863"/>
-<item id="4474" count="1" chance="8.300000190734863"/>
-<item id="4475" count="1" chance="8.300000190734863"/>
-<item id="4476" count="1" chance="8.300000190734863"/>
-<item id="4477" count="1" chance="8.300000190734863"/>
-<item id="4478" count="1" chance="8.300000190734863"/>
-<item id="4479" count="1" chance="8.300000190734863"/>
-<item id="4480" count="1" chance="8.300000190734863"/>
+			<random-restoration><item id="4469" chance="8.300000190734863"/>
+<item id="4470" chance="8.300000190734863"/>
+<item id="4471" chance="8.300000190734863"/>
+<item id="4472" chance="8.300000190734863"/>
+<item id="4473" chance="8.300000190734863"/>
+<item id="4474" chance="8.300000190734863"/>
+<item id="4475" chance="8.300000190734863"/>
+<item id="4476" chance="8.300000190734863"/>
+<item id="4477" chance="8.300000190734863"/>
+<item id="4478" chance="8.300000190734863"/>
+<item id="4479" chance="8.300000190734863"/>
+<item id="4480" chance="8.300000190734863"/>
 			</random-restoration>
 		</effects>
 	</skill>
-	<skill id="32014" name="Staff Chest" max-level="1" action="A1">
+	<skill id="32014" name="Staff Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i02"/>
 		<attributes >
@@ -241,7 +241,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="32015" name="Fist Weapon Chest" max-level="1" action="A1">
+	<skill id="32015" name="Fist Weapon Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i03"/>
 		<attributes >
@@ -251,7 +251,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="32016" name="Spear Chest" max-level="1" action="A1">
+	<skill id="32016" name="Spear Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i04"/>
 		<attributes >
@@ -261,7 +261,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="32017" name="Blunt Weapon Chest" max-level="1" action="A1">
+	<skill id="32017" name="Blunt Weapon Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i05"/>
 		<attributes >
@@ -271,7 +271,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="32018" name="Dagger Chest" max-level="1" action="A1">
+	<skill id="32018" name="Dagger Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i06"/>
 		<attributes >
@@ -281,7 +281,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="32019" name="One-handed Sword Chest" max-level="1" action="A1">
+	<skill id="32019" name="One-handed Sword Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i07"/>
 		<attributes >
@@ -291,7 +291,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="32020" name="Bow Chest" max-level="1" action="A1">
+	<skill id="32020" name="Bow Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i08"/>
 		<attributes >
@@ -301,7 +301,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="32021" name="Souvenir Box" max-level="1" action="A1">
+	<skill id="32021" name="Souvenir Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.new_user_box"/>
 		<attributes >
@@ -311,7 +311,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="32022" name="Beginner Venezia's Rune" max-level="1" >
+	<skill id="32022" name="Beginner Venezia's Rune">
 	<!-- Hunting XP/SP +22%%. Only for Lv. 40 and below characters. -->
 		<icon initial="icon.skill19226"/>
 		<attributes property="MAGIC" >
@@ -321,7 +321,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="32023" name="Ring of Macken" max-level="1" >
+	<skill id="32023" name="Ring of Macken">
 	<!-- Increases P. Atk./M. Atk. and Max HP. -->
 		<icon initial="icon.ev_11th_rare_acc_ring"/>
 		<attributes property="MAGIC" >
@@ -331,7 +331,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="32024" name="Earring of Macken" max-level="1" >
+	<skill id="32024" name="Earring of Macken">
 	<!-- Increases MP Recovery Bonus and Heal Received. -->
 		<icon initial="icon.ev_11th_rare_acc_earing"/>
 		<attributes property="MAGIC" >
@@ -341,7 +341,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="32025" name="Necklace of Macken" max-level="1" >
+	<skill id="32025" name="Necklace of Macken">
 	<!-- Increases P. Def./M. Def. -->
 		<icon initial="icon.ev_11th_rare_acc_necklace"/>
 		<attributes property="MAGIC" >
@@ -351,7 +351,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="32026" name="Ring of Macken" max-level="1" >
+	<skill id="32026" name="Ring of Macken">
 	<!-- Increases P. Atk./M. Atk. and Max HP. -->
 		<icon initial="icon.ev_11th_rare_acc_ring"/>
 		<attributes property="MAGIC" >
@@ -361,7 +361,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="32027" name="Earring of Macken" max-level="1" >
+	<skill id="32027" name="Earring of Macken">
 	<!-- Increases MP Recovery Bonus and Heal Received. -->
 		<icon initial="icon.ev_11th_rare_acc_earing"/>
 		<attributes property="MAGIC" >
@@ -371,7 +371,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="32028" name="Necklace of Macken" max-level="1" >
+	<skill id="32028" name="Necklace of Macken">
 	<!-- Increases P. Def./M. Def. -->
 		<icon initial="icon.ev_11th_rare_acc_necklace"/>
 		<attributes property="MAGIC" >
@@ -381,7 +381,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="32029" name="Advanced Venezia's Rune" max-level="1" >
+	<skill id="32029" name="Advanced Venezia's Rune">
 	<!-- Hunting XP/SP Gain +11%% -->
 		<icon initial="icon.skill19226"/>
 		<attributes property="MAGIC" >
@@ -391,7 +391,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="32030" name="Dandy's Homerun Ball" max-level="1" action="A1">
+	<skill id="32030" name="Dandy's Homerun Ball" action="A1">
 	<!-- XP/SP Gain +100%% for 1 hour. Armor appearance changes to that of an NC Dinos uniform. -->
 		<icon initial="BranchIcon.icon.g_ev_homerunball"/>
 		<attributes property="PHYSIC" auto-use="BUFF">
@@ -402,7 +402,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="32031" name="Scroll of Escape: Talking Island Village" max-level="1" action="A1">
+	<skill id="32031" name="Scroll of Escape: Talking Island Village" action="A1">
 	<!-- Teleport to Talking Island Village. Cooldown is 60 minutes. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -423,11 +423,11 @@
 		</conditions>
 		<effects>
 			<teleport>
-				<location level="1" x="-84200" y="244566" z="-3728"/>
+				<location x="-84200" y="244566" z="-3728"/>
 			</teleport>
 		</effects>
 	</skill>
-	<skill id="32032" name="Scroll of Escape: Elven Village" max-level="1" action="A1">
+	<skill id="32032" name="Scroll of Escape: Elven Village" action="A1">
 	<!-- Teleport to Elven Village. Cooldown is 60 minutes. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -448,11 +448,11 @@
 		</conditions>
 		<effects>
 			<teleport>
-				<location level="1" x="46915" y="51441" z="-2976"/>
+				<location x="46915" y="51441" z="-2976"/>
 			</teleport>
 		</effects>
 	</skill>
-	<skill id="32033" name="Scroll of Escape: Dark Elf Village" max-level="1" action="A1">
+	<skill id="32033" name="Scroll of Escape: Dark Elf Village" action="A1">
 	<!-- Teleport to Dark Elf Village. Cooldown is 60 minutes. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -473,11 +473,11 @@
 		</conditions>
 		<effects>
 			<teleport>
-				<location level="1" x="9723" y="15576" z="-4568"/>
+				<location x="9723" y="15576" z="-4568"/>
 			</teleport>
 		</effects>
 	</skill>
-	<skill id="32034" name="Scroll of Escape: Orc Village" max-level="1" action="A1">
+	<skill id="32034" name="Scroll of Escape: Orc Village" action="A1">
 	<!-- Teleport to Orc Village. Cooldown is 60 minutes. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -498,11 +498,11 @@
 		</conditions>
 		<effects>
 			<teleport>
-				<location level="1" x="-45208" y="-112502" z="-240"/>
+				<location x="-45208" y="-112502" z="-240"/>
 			</teleport>
 		</effects>
 	</skill>
-	<skill id="32035" name="Scroll of Escape: Dwarven Village" max-level="1" action="A1">
+	<skill id="32035" name="Scroll of Escape: Dwarven Village" action="A1">
 	<!-- Teleport to Dwarven Village. Cooldown is 60 minutes. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -523,11 +523,11 @@
 		</conditions>
 		<effects>
 			<teleport>
-				<location level="1" x="115158" y="-178170" z="-880"/>
+				<location x="115158" y="-178170" z="-880"/>
 			</teleport>
 		</effects>
 	</skill>
-	<skill id="32036" name="Scroll of Escape: Gludin Village" max-level="1" action="A1">
+	<skill id="32036" name="Scroll of Escape: Gludin Village" action="A1">
 	<!-- Teleport to Gludin Village. Cooldown is 60 minutes. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -548,11 +548,11 @@
 		</conditions>
 		<effects>
 			<teleport>
-				<location level="1" x="-80831" y="149808" z="-3040"/>
+				<location x="-80831" y="149808" z="-3040"/>
 			</teleport>
 		</effects>
 	</skill>
-	<skill id="32037" name="Scroll of Escape: Town of Gludio" max-level="1" action="A1">
+	<skill id="32037" name="Scroll of Escape: Town of Gludio" action="A1">
 	<!-- Teleport to Town of Gludio. Cooldown is 60 minutes. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -573,11 +573,11 @@
 		</conditions>
 		<effects>
 			<teleport>
-				<location level="1" x="-12728" y="122726" z="-3112"/>
+				<location x="-12728" y="122726" z="-3112"/>
 			</teleport>
 		</effects>
 	</skill>
-	<skill id="32038" name="Scroll of Espcape: Dion" max-level="1" action="A1">
+	<skill id="32038" name="Scroll of Espcape: Dion" action="A1">
 	<!-- Teleport to Dion. Cooldown is 60 minutes. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -588,7 +588,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="32039" name="Scroll of Espcape: Floran" max-level="1" action="A1">
+	<skill id="32039" name="Scroll of Espcape: Floran" action="A1">
 	<!-- Teleport to Floran. Cooldown is 60 minutes. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -599,7 +599,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="32040" name="Scroll of Espcape: Giran" max-level="1" action="A1">
+	<skill id="32040" name="Scroll of Espcape: Giran" action="A1">
 	<!-- Teleport to Giran. Cooldown is 60 minutes. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -610,7 +610,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="32041" name="Scroll of Espcape: Oren" max-level="1" action="A1">
+	<skill id="32041" name="Scroll of Espcape: Oren" action="A1">
 	<!-- Teleport to Oren. Cooldown is 60 minutes. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -621,7 +621,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="32042" name="Scroll of Espcape: Ivory Tower" max-level="1" action="A1">
+	<skill id="32042" name="Scroll of Espcape: Ivory Tower" action="A1">
 	<!-- Teleport to Ivory Tower. Cooldown is 60 minutes. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -632,7 +632,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="32043" name="Scroll of Espcape: Hunter's Village" max-level="1" action="A1">
+	<skill id="32043" name="Scroll of Espcape: Hunter's Village" action="A1">
 	<!-- Teleport to Hunter's Village. Cooldown is 60 minutes. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -643,7 +643,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="32044" name="Scroll of Espcape: Entrance to Cruma Tower" max-level="1" action="A1">
+	<skill id="32044" name="Scroll of Espcape: Entrance to Cruma Tower" action="A1">
 	<!-- Teleport to Entrance to Cruma Tower. Cooldown is 60 minutes. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -664,11 +664,11 @@
 		</conditions>
 		<effects>
 			<teleport>
-				<location level="1" x="17192" y="114178" z="-3434"/>
+				<location x="17192" y="114178" z="-3434"/>
 			</teleport>
 		</effects>
 	</skill>
-	<skill id="32045" name="Scroll of Espcape: Entrance to Dragon Valley" max-level="1" action="A1">
+	<skill id="32045" name="Scroll of Espcape: Entrance to Dragon Valley" action="A1">
 	<!-- Teleport to Entrance to Dragon Valley. Cooldown is 60 minutes. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -689,11 +689,11 @@
 		</conditions>
 		<effects>
 			<teleport>
-				<location level="1" x="73024" y="118485" z="-3715"/>
+				<location x="73024" y="118485" z="-3715"/>
 			</teleport>
 		</effects>
 	</skill>
-	<skill id="32046" name="Scroll of Espcape: Dragon Valley Bridge" max-level="1" action="A1">
+	<skill id="32046" name="Scroll of Espcape: Dragon Valley Bridge" action="A1">
 	<!-- Teleport to Dragon Valley Bridge. Cooldown is 60 minutes. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -714,11 +714,11 @@
 		</conditions>
 		<effects>
 			<teleport>
-				<location level="1" x="117368" y="113192" z="-3056"/>
+				<location x="117368" y="113192" z="-3056"/>
 			</teleport>
 		</effects>
 	</skill>
-	<skill id="32047" name="Sayha's Cube (30-day" max-level="1" action="A1">
+	<skill id="32047" name="Sayha's Cube (30-day" action="A1">
 	<!-- none -->
 		<icon initial="icon.sa_cube"/>
 		<attributes >
@@ -729,7 +729,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="32048" name="Sayha's Cube (90-day" max-level="1" action="A1">
+	<skill id="32048" name="Sayha's Cube (90-day" action="A1">
 	<!-- none -->
 		<icon initial="icon.sa_cube"/>
 		<attributes >
@@ -740,7 +740,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="32049" name="Storm's Energy" max-level="1" action="A1">
+	<skill id="32049" name="Storm's Energy" action="A1">
 	<!-- XP/SP Gain +50%% for 2 hours due to the storm's energy. Cooldown is 2 hours. Storm's energy remains after death. -->
 		<icon initial="icon.power_of_storm"/>
 		<attributes property="PHYSIC" >
@@ -751,7 +751,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="32050" name="Sayha's Treasure Chest" max-level="1" action="A1">
+	<skill id="32050" name="Sayha's Treasure Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_pi_gift_box_i00"/>
 		<attributes >
@@ -761,7 +761,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="32051" name="Berserker Spirit" max-level="1" action="A1">
+	<skill id="32051" name="Berserker Spirit" action="A1">
 	<!-- For 20 minutes, P. Def. -5%%, M. Def. -10%%, P. Evasion -2, P. Atk. +5%%, M. Atk. +10%%, Atk. Spd. +5%%, Casting Spd. +5%%, and Movement Speed +5. -->
 		<icon initial="icon.etc_scroll_white_i00"/>
 		<attributes property="PHYSIC" >

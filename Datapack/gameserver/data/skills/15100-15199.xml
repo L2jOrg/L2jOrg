@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="15127" name="Equip Weapon" max-level="1" action="A2" type="MAGIC">
+	<skill id="15127" name="Equip Weapon" action="A2" type="MAGIC">
 	<!-- Continuously receives new weapons from the weapon stand to increase P. Atk. -->
 		<icon initial="icon.skill1068"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -25,7 +25,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="15128" name="Equip Armor" max-level="1" action="A2" type="MAGIC">
+	<skill id="15128" name="Equip Armor" action="A2" type="MAGIC">
 	<!-- Continuously receives new armor from the armor stand to increase P. Def. -->
 		<icon initial="icon.skill1040"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -50,7 +50,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="15141" name="Super CP Lv. 1" max-level="1" action="A2" type="MAGIC">
+	<skill id="15141" name="Super CP Lv. 1" action="A2" type="MAGIC">
 	<!-- For test. Wizard Full Buff stage 1. Increases abilities through Kyu's power. -->
 		<icon initial="icon.skill11065"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -68,7 +68,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="15142" name="Super CP Lv. 2" max-level="1" action="A2" type="MAGIC">
+	<skill id="15142" name="Super CP Lv. 2" action="A2" type="MAGIC">
 	<!-- For test. Wizard Full Buff stage 2. Increases abilities through Kyu's power. -->
 		<icon initial="icon.skill11065"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -86,7 +86,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="15143" name="Super CP Lv. 3" max-level="1" action="A2" type="MAGIC">
+	<skill id="15143" name="Super CP Lv. 3" action="A2" type="MAGIC">
 	<!-- For test. Wizard Full Buff stage 3. Increases abilities through Kyu's power. -->
 		<icon initial="icon.skill11065"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -104,7 +104,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="15144" name="Super CP Lv. 4" max-level="1" action="A2" type="MAGIC">
+	<skill id="15144" name="Super CP Lv. 4" action="A2" type="MAGIC">
 	<!-- For test. Wizard Full Buff stage 4. Increases abilities through Kyu's power. -->
 		<icon initial="icon.skill11065"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -122,7 +122,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="15147" name="Overheat" max-level="1" action="A2">
+	<skill id="15147" name="Overheat" action="A2">
 	<!-- The machine is overheated. Inflicts continuous damage on the target that harms you. -->
 		<icon initial="icon.skill1492"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" stay-after-death="true" hit-cancel-time="10.0" irreplacable="true" >
@@ -142,7 +142,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="15148" name="Coolant Leak" max-level="1" action="A2">
+	<skill id="15148" name="Coolant Leak" action="A2">
 	<!-- The machine is overheated. Inflicts a speed decreasing effect on the target that harms you. -->
 		<icon initial="icon.skill0102"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" stay-after-death="true" hit-cancel-time="10.0" irreplacable="true" >
@@ -162,7 +162,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="15149" name="Self Recovery" max-level="1" action="A2" type="MAGIC">
+	<skill id="15149" name="Self Recovery" action="A2" type="MAGIC">
 	<!-- Recovers your HP. -->
 		<icon initial="icon.skill1216"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" hit-cancel-time="10.0" irreplacable="true" >
@@ -182,7 +182,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="15150" name="Self Defense" max-level="1" action="A2" type="MAGIC">
+	<skill id="15150" name="Self Defense" action="A2" type="MAGIC">
 	<!-- The machine is protecting itself. Increases your P. Def. -->
 		<icon initial="icon.skill1389"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" hit-cancel-time="10.0" irreplacable="true" >
@@ -202,7 +202,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="15151" name="Overheat" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="15151" name="Overheat" debuff="true" action="A2" type="MAGIC">
 	<!-- The machine is burning from overheating and HP is wearing away. -->
 		<icon initial="icon.skill1492"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -220,7 +220,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="15152" name="Coolant Leak" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="15152" name="Coolant Leak" debuff="true" action="A2" type="MAGIC">
 	<!-- Movement Speed is decreased due to the machine's coolant leak. -->
 		<icon initial="icon.skill0102"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -238,7 +238,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="15153" name="Attention to Draco Incubation" max-level="1" action="A2" type="MAGIC">
+	<skill id="15153" name="Attention to Draco Incubation" action="A2" type="MAGIC">
 	<!-- You are concentrating on incubating the summoned Draco Egg. Other Draco Eggs cannot be summoned. -->
 		<icon initial="icon.skill11507"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -256,7 +256,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="15154" name="Attention to Draco Incubation" max-level="1" action="A2" type="MAGIC">
+	<skill id="15154" name="Attention to Draco Incubation" action="A2" type="MAGIC">
 	<!-- You are concentrating on incubating the summoned Draco Egg. Other Draco Eggs cannot be summoned. -->
 		<icon initial="icon.skill11507"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -274,7 +274,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="15155" name="Petrify" max-level="1" debuff="true" action="A2">
+	<skill id="15155" name="Petrify" debuff="true" action="A2">
 	<!-- Petrify status. -->
 		<icon initial="icon.skill1540"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -300,7 +300,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="15165" name="Tauti Shock Wave" max-level="1" debuff="true" action="A2">
+	<skill id="15165" name="Tauti Shock Wave" debuff="true" action="A2">
 	<!-- Cannot move due to shock. -->
 		<icon initial="icon.skill0100"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" >
@@ -321,7 +321,7 @@
 			<chance initial="80"/>
 		</abnormal>
 	</skill>
-	<skill id="15167" name="Tauti Leap Attack" max-level="1" debuff="true" action="A2">
+	<skill id="15167" name="Tauti Leap Attack" debuff="true" action="A2">
 	<!-- Takes hold of Tauti and throws him up. Uses falling damage to inflict tremendous harm. -->
 		<icon initial="icon.skill3080"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" >
@@ -340,7 +340,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="15169" name="Tauti Great Shout" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="15169" name="Tauti Great Shout" debuff="true" action="A2" type="MAGIC">
 	<!-- HP is cut down from the roar. HP is decreased by the energy of fire in the roar. -->
 		<icon initial="icon.skill0102"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" stay-after-death="true" irreplacable="true" >
@@ -359,7 +359,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="15170" name="Chaos Shield" max-level="1" action="A2" type="MAGIC">
+	<skill id="15170" name="Chaos Shield" action="A2" type="MAGIC">
 	<!-- P. Def. and M. Def. increased. -->
 		<icon initial="icon.skill1418"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" hit-cancel-time="4.5" irreplacable="true" >
@@ -377,7 +377,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="15171" name="Tauti Boomerang" max-level="1" action="A1">
+	<skill id="15171" name="Tauti Boomerang" action="A1">
 	<!-- Skill where Tauti throws crossways and receives back again. -->
 		<icon initial="icon.skill0003"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -393,7 +393,7 @@
 			<fan-range start-angle="0" radius="200" angle="200"/>
 		</target>
 	</skill>
-	<skill id="15172" name="Tauti Air Binding" max-level="1" debuff="true" action="A2">
+	<skill id="15172" name="Tauti Air Binding" debuff="true" action="A2">
 	<!-- Bound in the air from Tauti's gaze. Cannot be removed with a de-buff removing skill. -->
 		<icon initial="icon.skill11276"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -412,7 +412,7 @@
 		</abnormal>
 		<resist-abnormals>STUN TURN_FLEE</resist-abnormals>
 	</skill>
-	<skill id="15173" name="Tauti Air Binding" max-level="1" debuff="true" action="A2">
+	<skill id="15173" name="Tauti Air Binding" debuff="true" action="A2">
 	<!-- Bound in the air from Tauti's gaze. Cannot be removed with a de-buff removing skill. -->
 		<icon initial="icon.skill11276"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -431,7 +431,7 @@
 		</abnormal>
 		<resist-abnormals>STUN TURN_FLEE</resist-abnormals>
 	</skill>
-	<skill id="15174" name="Petra Injection - Enhance HP Recovery Bonus" max-level="1" debuff="true" action="CA2">
+	<skill id="15174" name="Petra Injection - Enhance HP Recovery Bonus" debuff="true" action="CA2">
 	<!-- none -->
 		<icon initial="icon.skill1434"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -444,9 +444,9 @@
 		</attributes>
 		<target type="TARGET" />
 		<resist-abnormals>STUN TURN_FLEE</resist-abnormals>
-		<channeling skill="15175" mp-consume="0" initial-delay="1200" interval="2000"/>
+		<channeling skill="15175" initial-delay="1200"/>
 	</skill>
-	<skill id="15175" name="Petra Injection - Enhance HP Recovery Bonus" max-level="1" action="A2">
+	<skill id="15175" name="Petra Injection - Enhance HP Recovery Bonus" action="A2">
 	<!-- Zahak has used its Petra to increase Tauti's HP Recovery Bonus -->
 		<icon initial="icon.skill1434"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -464,7 +464,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="15176" name="Petra Injection - Enhance P. Def." max-level="1" debuff="true" action="CA2">
+	<skill id="15176" name="Petra Injection - Enhance P. Def." debuff="true" action="CA2">
 	<!-- none -->
 		<icon initial="icon.skill1434"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -477,9 +477,9 @@
 		</attributes>
 		<target type="TARGET" />
 		<resist-abnormals>STUN TURN_FLEE</resist-abnormals>
-		<channeling skill="15177" mp-consume="0" initial-delay="1200" interval="2000"/>
+		<channeling skill="15177" initial-delay="1200"/>
 	</skill>
-	<skill id="15177" name="Petra Injection - Enhance P. Def." max-level="1" action="A2">
+	<skill id="15177" name="Petra Injection - Enhance P. Def." action="A2">
 	<!-- Zahak has used its Petra to increase Tauti's P. Def -->
 		<icon initial="icon.skill1434"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -497,7 +497,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="15178" name="Petra Injection - Enhance M. Def." max-level="1" debuff="true" action="CA2">
+	<skill id="15178" name="Petra Injection - Enhance M. Def." debuff="true" action="CA2">
 	<!-- none -->
 		<icon initial="icon.skill1434"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -510,9 +510,9 @@
 		</attributes>
 		<target type="TARGET" />
 		<resist-abnormals>STUN TURN_FLEE</resist-abnormals>
-		<channeling skill="15179" mp-consume="0" initial-delay="1200" interval="2000"/>
+		<channeling skill="15179" initial-delay="1200"/>
 	</skill>
-	<skill id="15179" name="Petra Injection - Enhance M. Def." max-level="1" action="A2">
+	<skill id="15179" name="Petra Injection - Enhance M. Def." action="A2">
 	<!-- Zahak has used its Petra to increase Tauti's M. Def. -->
 		<icon initial="icon.skill1434"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -530,7 +530,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="15180" name="Petra Injection - Enhance P. Atk." max-level="1" debuff="true" action="CA2">
+	<skill id="15180" name="Petra Injection - Enhance P. Atk." debuff="true" action="CA2">
 	<!-- none -->
 		<icon initial="icon.skill1434"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -543,9 +543,9 @@
 		</attributes>
 		<target type="TARGET" />
 		<resist-abnormals>STUN TURN_FLEE</resist-abnormals>
-		<channeling skill="15181" mp-consume="0" initial-delay="1200" interval="2000"/>
+		<channeling skill="15181" initial-delay="1200"/>
 	</skill>
-	<skill id="15181" name="Petra Injection - Enhance P. Atk." max-level="1" action="A2">
+	<skill id="15181" name="Petra Injection - Enhance P. Atk." action="A2">
 	<!-- Zahak has used its Petra to increase Tauti's P. Skill Power. -->
 		<icon initial="icon.skill1434"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -563,7 +563,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="15182" name="Adolph's Superior Aggression Aura" max-level="1" debuff="true" action="A1">
+	<skill id="15182" name="Adolph's Superior Aggression Aura" debuff="true" action="A1">
 	<!-- Provokes nearby enemies into attacking you. -->
 		<icon initial="icon.skill10027"/>
 		<attributes static-reuse="true" magic-critical-rate="-5.0" >
@@ -582,7 +582,7 @@
 			<effect name="GetAgro"/>
 		</effects>
 	</skill>
-	<skill id="15183" name="Adolph's Superior Aggression Aura" max-level="1" debuff="true" action="A1">
+	<skill id="15183" name="Adolph's Superior Aggression Aura" debuff="true" action="A1">
 	<!-- Provokes nearby enemies into attacking you. -->
 		<icon initial="icon.skill10027"/>
 		<attributes static-reuse="true" magic-critical-rate="-5.0" >
@@ -601,7 +601,7 @@
 			<effect name="GetAgro"/>
 		</effects>
 	</skill>
-	<skill id="15184" name="Adolph's Superior Aggression Aura" max-level="1" debuff="true" action="A1">
+	<skill id="15184" name="Adolph's Superior Aggression Aura" debuff="true" action="A1">
 	<!-- Provokes nearby enemies into attacking you. -->
 		<icon initial="icon.skill10027"/>
 		<attributes static-reuse="true" magic-critical-rate="-5.0" >
@@ -620,7 +620,7 @@
 			<effect name="GetAgro"/>
 		</effects>
 	</skill>
-	<skill id="15185" name="Adolph's Shield Wave" max-level="1" action="A2">
+	<skill id="15185" name="Adolph's Shield Wave" action="A2">
 	<!-- Attacks targets at the front and inflicts Stun for 9 second(s). -->
 		<icon initial="icon.skill10012"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="30" >
@@ -642,7 +642,7 @@
 			<chance initial="70"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="9516.0"/>
 			</physical-attack>
 			<block-all-actions>
@@ -650,7 +650,7 @@
 			</block-all-actions>
 		</effects>
 	</skill>
-	<skill id="15186" name="Adolph's Shield Wave" max-level="1" action="A2">
+	<skill id="15186" name="Adolph's Shield Wave" action="A2">
 	<!-- Attacks targets at the front and inflicts Stun for 9 second(s). -->
 		<icon initial="icon.skill10012"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="30" >
@@ -672,7 +672,7 @@
 			<chance initial="70"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="11162.0"/>
 			</physical-attack>
 			<block-all-actions>
@@ -680,7 +680,7 @@
 			</block-all-actions>
 		</effects>
 	</skill>
-	<skill id="15187" name="Adolph's Shield Wave" max-level="1" action="A2">
+	<skill id="15187" name="Adolph's Shield Wave" action="A2">
 	<!-- Attacks targets at the front and inflicts Stun for 9 second(s). -->
 		<icon initial="icon.skill10012"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="30" >
@@ -702,7 +702,7 @@
 			<chance initial="70"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="12809.0"/>
 			</physical-attack>
 			<block-all-actions>
@@ -710,7 +710,7 @@
 			</block-all-actions>
 		</effects>
 	</skill>
-	<skill id="15188" name="Hayuk's Multiple Arrow" max-level="1" action="A1">
+	<skill id="15188" name="Hayuk's Multiple Arrow" action="A1">
 	<!-- Focuses on a target at the front and inflicts a long range attack. Attacks the target with 23391 power added to P. Atk. -->
 		<icon initial="icon.skill10771"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -727,12 +727,12 @@
 			<fan-range start-angle="0" radius="900" angle="90"/>
 		</target>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="23391.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="15189" name="Hayuk's Multiple Arrow" max-level="1" action="A1">
+	<skill id="15189" name="Hayuk's Multiple Arrow" action="A1">
 	<!-- Focuses on a target at the front and inflicts a long range attack. Attacks the target with 27459 power added to P. Atk. -->
 		<icon initial="icon.skill10771"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -749,12 +749,12 @@
 			<fan-range start-angle="0" radius="900" angle="90"/>
 		</target>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="27459.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="15190" name="Hayuk's Multiple Arrow" max-level="1" action="A1">
+	<skill id="15190" name="Hayuk's Multiple Arrow" action="A1">
 	<!-- Focuses on a target at the front and inflicts a long range attack. Attacks the target with 31527 power added to P. Atk. -->
 		<icon initial="icon.skill10771"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -771,12 +771,12 @@
 			<fan-range start-angle="0" radius="900" angle="90"/>
 		</target>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="31527.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="15191" name="Hayuk's Heavy Arrow Rain" max-level="1" action="A1">
+	<skill id="15191" name="Hayuk's Heavy Arrow Rain" action="A1">
 	<!-- Rains down arrows like rain on the target and its surrounding area with 22526 power added to P. Atk. -->
 		<icon initial="icon.skill10772"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -791,12 +791,12 @@
 		</attributes>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="10" affect-random="10" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="22526.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="15192" name="Hayuk's Heavy Arrow Rain" max-level="1" action="A1">
+	<skill id="15192" name="Hayuk's Heavy Arrow Rain" action="A1">
 	<!-- Rains down arrows like rain on the target and its surrounding area with 26448 power added to P. Atk. -->
 		<icon initial="icon.skill10772"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -811,12 +811,12 @@
 		</attributes>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="10" affect-random="10" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="26448.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="15193" name="Hayuk's Heavy Arrow Rain" max-level="1" action="A1">
+	<skill id="15193" name="Hayuk's Heavy Arrow Rain" action="A1">
 	<!-- Rains down arrows like rain on the target and its surrounding area with 30371 power added to P. Atk. -->
 		<icon initial="icon.skill10772"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -831,12 +831,12 @@
 		</attributes>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="10" affect-random="10" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="30371.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="15194" name="Eliyah's Mass Exile" max-level="1" action="A2" type="MAGIC">
+	<skill id="15194" name="Eliyah's Mass Exile" action="A2" type="MAGIC">
 	<!-- Banishes enemies near the target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases 282 HP per second. -->
 		<icon initial="icon.skill11296"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="DEPORT" hit-cancel-time="1.0" >
@@ -859,15 +859,15 @@
 			<block-all-actions>
 				<allowed-skills>35016</allowed-skills>
 			</block-all-actions>
-			<damage-over-time ticks="1" can-kill="false">
+			<damage-over-time ticks="1">
 				<power initial="282.0"/>
 			</damage-over-time>
-			<damage-block block-hp="true" block-mp="false"/>
+			<damage-block block-hp="true"/>
 			<effect name="BuffBlock"/>
 			<effect name="DebuffBlock"/>
 		</effects>
 	</skill>
-	<skill id="15195" name="Eliyah's Mass Exile" max-level="1" action="A2" type="MAGIC">
+	<skill id="15195" name="Eliyah's Mass Exile" action="A2" type="MAGIC">
 	<!-- Banishes enemies near the target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases 296 HP per second. -->
 		<icon initial="icon.skill11296"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="DEPORT" hit-cancel-time="1.0" >
@@ -890,15 +890,15 @@
 			<block-all-actions>
 				<allowed-skills>35016</allowed-skills>
 			</block-all-actions>
-			<damage-over-time ticks="1" can-kill="false">
+			<damage-over-time ticks="1">
 				<power initial="296.0"/>
 			</damage-over-time>
-			<damage-block block-hp="true" block-mp="false"/>
+			<damage-block block-hp="true"/>
 			<effect name="BuffBlock"/>
 			<effect name="DebuffBlock"/>
 		</effects>
 	</skill>
-	<skill id="15196" name="Eliyah's Mass Exile" max-level="1" action="A2" type="MAGIC">
+	<skill id="15196" name="Eliyah's Mass Exile" action="A2" type="MAGIC">
 	<!-- Banishes enemies near the target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases 313 HP per second. -->
 		<icon initial="icon.skill11296"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="DEPORT" hit-cancel-time="1.0" >
@@ -921,15 +921,15 @@
 			<block-all-actions>
 				<allowed-skills>35016</allowed-skills>
 			</block-all-actions>
-			<damage-over-time ticks="1" can-kill="false">
+			<damage-over-time ticks="1">
 				<power initial="313.0"/>
 			</damage-over-time>
-			<damage-block block-hp="true" block-mp="false"/>
+			<damage-block block-hp="true"/>
 			<effect name="BuffBlock"/>
 			<effect name="DebuffBlock"/>
 		</effects>
 	</skill>
-	<skill id="15197" name="Guardian Spirit's Wrath" max-level="1" action="A1">
+	<skill id="15197" name="Guardian Spirit's Wrath" action="A1">
 	<!-- Attacks nearby enemies with the wrath of the guardian spirit. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -944,7 +944,7 @@
 		</attributes>
 		<target scope="RANGE" object="NOT_FRIEND" range="150" affect-min="10" affect-random="10" />
 	</skill>
-	<skill id="15198" name="Guardian Spirit's Wrath" max-level="1" action="A1">
+	<skill id="15198" name="Guardian Spirit's Wrath" action="A1">
 	<!-- Attacks nearby enemies with the wrath of the guardian spirit. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -959,7 +959,7 @@
 		</attributes>
 		<target scope="RANGE" object="NOT_FRIEND" range="150" affect-min="10" affect-random="10" />
 	</skill>
-	<skill id="15199" name="Guardian Spirit's Wrath" max-level="1" action="A1">
+	<skill id="15199" name="Guardian Spirit's Wrath" action="A1">
 	<!-- Attacks nearby enemies with the wrath of the guardian spirit. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >

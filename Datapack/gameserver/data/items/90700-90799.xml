@@ -388,7 +388,7 @@
 			<stat type="maxMp" value="22.0"/>
 		</stats>
 		<skills>
-			<skill id="45017" level="1" value="-1"/>  <!-- Orfen's Earring - Special Ability -->
+			<skill id="45017" value="-1"/>  <!-- Orfen's Earring - Special Ability -->
 		</skills>
 	</armor>
 
@@ -636,17 +636,17 @@
 	<!-- Double-click to receive one of each of the following items: Chef's Fish Stew - Victory/Fire/Wind/Water.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55715" level="1" value="-1"/>  <!-- Chef's Fish Stew Box -->
+		<skill-reducer>
+			<skill id="55715" value="-1"/>  <!-- Chef's Fish Stew Box -->
 		</skill-reducer>
 	</item>
 
 	<item id="90794" name="Shining Scroll of Mood Melody" type="SCROLL" icon="icon.bm_magmeld">
 	<!-- For 20 minutes activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Purity, Wild Magic, Concentration. Cannot be used together with Scroll of Mood Melody.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39298" level="1" value="-1"/>  <!-- Shining Mood Melody -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39298" value="-1"/>  <!-- Shining Mood Melody -->
 		</skill-reducer>
 	</item>
 

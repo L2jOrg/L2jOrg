@@ -3,27 +3,27 @@
 	<item id="70800" name="Transformation Scroll: White Assassin" type="POTION" icon="icon.etc_charm_of_courage_i00">
 	<!-- Transforms you into White Assassin for 30 minutes. P./ M. Atk. +3%, P./ M. Def. +3%, Atk. Spd. +5%, Max. HP/MP +7%, Speed +5, P./ M. Accuracy +2, M. Critical Rate +20. The effect persists through death. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55692" level="1" value="-1"/>  <!-- Transformation Scroll: White Assassin -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55692" value="-1"/>  <!-- Transformation Scroll: White Assassin -->
 		</skill-reducer>
 	</item>
 
 	<item id="70801" name="Blue Dynasty Transformation Scroll" type="POTION" icon="icon.etc_charm_of_courage_i01">
 	<!-- Makes you armor look like Blue Dynasty one. P./ M. Atk. +3%, P./ M. Def. +3%, Atk. Spd. +5%, Max. HP/MP +7%, Speed +5, P./ M. Accuracy +2, M. Critical Rate +20. Duration: 60 minutes. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55693" level="1" value="-1"/>  <!-- Blue Dynasty Transformation Scroll -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55693" value="-1"/>  <!-- Blue Dynasty Transformation Scroll -->
 		</skill-reducer>
 	</item>
 
 	<item id="70802" name="Red Zubei Transformation Scroll" type="POTION" icon="icon.etc_charm_of_courage_i04">
 	<!-- Makes you armor look like Red Zubei one. P./ M. Atk. +2%, P./ M. Def. +2%, Atk. Spd. +3%, Max. HP/MP +5%, Speed +4, P./ M. Accuracy +1, M. Critical Rate +10. Duration: 60 minutes. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55694" level="1" value="-1"/>  <!-- Red Zubei Transformation Scroll -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55694" value="-1"/>  <!-- Red Zubei Transformation Scroll -->
 		</skill-reducer>
 	</item>
 
@@ -51,9 +51,9 @@
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55701" level="1" value="-1"/>  <!-- Release Agathion's Seal - Sin Eater -->
-			<skill id="3267" level="1" value="-1"/>  <!-- Seal Agathion -->
-			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
+			<skill id="55701" value="-1"/>  <!-- Release Agathion's Seal - Sin Eater -->
+			<skill id="3267" value="-1"/>  <!-- Seal Agathion -->
+			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 		</skills>
 	</armor>
 
@@ -217,10 +217,10 @@
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55710" level="1" type="ON_EQUIP" value="-1"/>  <!-- Equip Lv. 4 Brooch -->
-			<skill id="55711" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Remove Lv. 4 Brooch -->
-			<skill id="55712" level="1" value="-1"/>  <!-- Lv. 4 Brooch -->
-			<skill id="55713" level="1" value="-1"/>  <!-- Lv. 4 Brooch - Additional Effect -->
+			<skill id="55710" type="ON_EQUIP" value="-1"/>  <!-- Equip Lv. 4 Brooch -->
+			<skill id="55711" type="ON_UNEQUIP" value="-1"/>  <!-- Remove Lv. 4 Brooch -->
+			<skill id="55712" value="-1"/>  <!-- Lv. 4 Brooch -->
+			<skill id="55713" value="-1"/>  <!-- Lv. 4 Brooch - Additional Effect -->
 		</skills>
 	</armor>
 
@@ -387,16 +387,16 @@
 	<item id="70858" name="Irene' Hourglass - 1 Hour" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP and SP bonus for 1 hour while hunting.\nIntended for Lv. 1 - 60 characters. Can be combined with XP/SP Runeeffect. Effect remains after death.\n  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55720" level="1" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55720" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
 		</skill-reducer>
 	</item>
 
 	<item id="70859" name="Scroll: Summon Storm" type="NONE" icon="icon.scrl_of_storm">
 	<!-- Fills you with Storm Energy, granting +50% XP and SP gain bonus for 2 hours. Cooldown: 2 hours. Intended for Lv. 40 - 51 characters. Storm Energy does not disappear after character's death. Can be combined with Irene' Hourglass and XP/SP Runeeffect.\n -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 	</item>
 
 	<item id="70860" name="Name Change Ticket" type="NONE" icon="icon.etc_exchange_ticket_i01">

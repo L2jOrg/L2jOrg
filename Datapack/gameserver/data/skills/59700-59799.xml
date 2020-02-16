@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="59700" name="I Am Legend" max-level="1" >
+	<skill id="59700" name="I Am Legend">
 	<!-- Max HP/CP/MP +1000, P. Atk./M. Atk. +500, Damage Received -7%% -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
 		<attributes property="MAGIC" >
@@ -8,7 +8,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59701" name="No Pain, No Gain" max-level="1" >
+	<skill id="59701" name="No Pain, No Gain">
 	<!-- Max HP/CP/MP +1200, P. Atk./M. Atk. +700, Damage Received -10%% -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
 		<attributes property="MAGIC" >
@@ -16,7 +16,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59702" name="Transformation Sealbook: Standard/High-grade" max-level="1" >
+	<skill id="59702" name="Transformation Sealbook: Standard/High-grade">
 	<!-- Max HP/CP/MP +1200, P. Atk./M. Atk. +700, Damage Received -10%% -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_book_i00"/>
 		<attributes >
@@ -24,7 +24,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59703" name="Radiant Jewel Box" max-level="1" >
+	<skill id="59703" name="Radiant Jewel Box">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -34,7 +34,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59704" name="Halloween Candy" max-level="1" >
+	<skill id="59704" name="Halloween Candy">
 	<!-- For 20 min., XP/SP Gain while hunting +20%%, P. Atk./M. Atk. +5%%, Atk. Spd./Casting Spd. +5%%. -->
 		<icon initial="BranchSys.br_hallowinday_candy_i00"/>
 		<attributes property="PHYSIC" >
@@ -42,7 +42,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59705" name="Silver Armor Riding Strider" max-level="1" >
+	<skill id="59705" name="Silver Armor Riding Strider">
 	<!-- Mount Silver Armor Strider. -->
 		<icon initial="icon.skill1373"/>
 		<attributes property="PHYSIC" >
@@ -52,7 +52,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59706" name="Black Armor Riding Strider" max-level="1" >
+	<skill id="59706" name="Black Armor Riding Strider">
 	<!-- Mount Black Armor Strider. -->
 		<icon initial="icon.skill1373"/>
 		<attributes property="PHYSIC" >
@@ -62,7 +62,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59707" name="Steel Armor Riding Strider" max-level="1" >
+	<skill id="59707" name="Steel Armor Riding Strider">
 	<!-- Mount Steel Armor Strider. -->
 		<icon initial="icon.skill1373"/>
 		<attributes property="PHYSIC" >
@@ -72,7 +72,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59708" name="Silver Armor Riding Strider Spellbook" max-level="1" >
+	<skill id="59708" name="Silver Armor Riding Strider Spellbook">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -80,7 +80,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59709" name="Black Armor Riding Strider Spellbook" max-level="1" >
+	<skill id="59709" name="Black Armor Riding Strider Spellbook">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -88,7 +88,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59710" name="Steel Armor Riding Strider Spellbook" max-level="1" >
+	<skill id="59710" name="Steel Armor Riding Strider Spellbook">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -96,7 +96,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59711" name="Black Ticket" max-level="1" >
+	<skill id="59711" name="Black Ticket">
 	<!-- For 20 minutes, XP/SP Gain +20%. Cooldown 1 miunte. The Black Ticket effect does not disappear upon death. -->
 		<icon initial="icon.bm_royal_black_ticket_all"/>
 		<attributes property="PHYSIC" >
@@ -107,7 +107,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59712" name="Spellbook: Ninja" max-level="1" >
+	<skill id="59712" name="Spellbook: Ninja">
 	<!-- Spellbook to transform into a Ninja. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -115,7 +115,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59713" name="Spellbook: Cowboy" max-level="1" >
+	<skill id="59713" name="Spellbook: Cowboy">
 	<!-- Spellbook to transform into a Cowboy. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -123,7 +123,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59714" name="Spellbook: Steampunk" max-level="1" >
+	<skill id="59714" name="Spellbook: Steampunk">
 	<!-- Spellbook to transform into a Steampunk. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -131,7 +131,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59715" name="Spellbook: Chipao" max-level="1" >
+	<skill id="59715" name="Spellbook: Chipao">
 	<!-- Spellbook to transform into Chipao. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -139,7 +139,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59716" name="Spellbook: Traditional Taiwanese Native Outfit" max-level="1" >
+	<skill id="59716" name="Spellbook: Traditional Taiwanese Native Outfit">
 	<!-- Spellbook to transform into a Traditional Taiwanese Native Outfit. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -147,7 +147,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59717" name="Ninja Transformation" max-level="1" >
+	<skill id="59717" name="Ninja Transformation">
 	<!-- For 20 min., Max HP/MP +5%%, P. Accuracy/M. Accuracy +1, P. Atk./M. Atk./P. Def./M. Def. +2%%, Atk. Spd. +3%%, M. Skill Critical Rate +10, Speed +4. \n\n<Item Consumption>\n1 Elemental Stone. -->
 		<icon initial="icon.bm2018_ninja_i01"/>
 		<attributes property="PHYSIC" auto-use="BUFF">
@@ -159,7 +159,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59718" name="Cowboy Transformation" max-level="1" >
+	<skill id="59718" name="Cowboy Transformation">
 	<!-- For 20 min., Max HP/MP +5%%, P. Accuracy/M. Accuracy +1, P. Atk./M. Atk./P. Def./M. Def. +2%%, Atk. Spd. +3%%, M. Skill Critical Rate +10, Speed +4. \n\n<Item Consumption>\n1 Elemental Stone. -->
 		<icon initial="icon.bm2018_cowboy_i01"/>
 		<attributes property="PHYSIC" auto-use="BUFF">
@@ -171,7 +171,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59719" name="Steampunk Transformation" max-level="1" >
+	<skill id="59719" name="Steampunk Transformation">
 	<!-- For 20 min., Max HP/MP +5%%, P. Accuracy/M. Accuracy +1, P. Atk./M. Atk./P. Def./M. Def. +2%%, Atk. Spd. +3%%, M. Skill Critical Rate +10, Speed +4. \n\n<Item Consumption>\n1 Elemental Stone. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_steampunk"/>
 		<attributes property="PHYSIC" auto-use="BUFF">
@@ -183,7 +183,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59720" name="Chipao Transformation" max-level="1" >
+	<skill id="59720" name="Chipao Transformation">
 	<!-- For 20 min., Max HP/MP +5%%, P. Accuracy/M. Accuracy +1, P. Atk./M. Atk./P. Def./M. Def. +2%%, Atk. Spd. +3%%, M. Skill Critical Rate +10, Speed +4. \n\n<Item Consumption>\n1 Elemental Stone. -->
 		<icon initial="L2Icon_CN.qipao_armor_u_i00"/>
 		<attributes property="PHYSIC" auto-use="BUFF">
@@ -195,7 +195,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59721" name="Traditional Taiwanese Native Outfit Transformation" max-level="1" >
+	<skill id="59721" name="Traditional Taiwanese Native Outfit Transformation">
 	<!-- For 20 min., Max HP/MP +5%%, P. Accuracy/M. Accuracy +1, P. Atk./M. Atk./P. Def./M. Def. +2%%, Atk. Spd. +3%%, M. Skill Critical Rate +10, Speed +4. \n\n<Item Consumption>\n1 Elemental Stone. -->
 		<icon initial="BranchSys3.icon1.g_co_paiwan_u"/>
 		<attributes property="PHYSIC" auto-use="BUFF">

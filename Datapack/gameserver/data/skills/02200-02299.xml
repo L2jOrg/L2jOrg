@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="2209" name="Blessed Scroll: Enchant Armor (A-grade)" max-level="1" action="A1">
+	<skill id="2209" name="Blessed Scroll: Enchant Armor (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -11,7 +11,7 @@
 		</attributes>
 		<target type="ITEM" />
 	</skill>
-	<skill id="2210" name="Blessed Scroll: Enchant Armor (B-grade)" max-level="1" action="A1">
+	<skill id="2210" name="Blessed Scroll: Enchant Armor (B-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -22,7 +22,7 @@
 		</attributes>
 		<target type="ITEM" />
 	</skill>
-	<skill id="2211" name="Blessed Scroll: Enchant Armor (C-grade)" max-level="1" action="A1">
+	<skill id="2211" name="Blessed Scroll: Enchant Armor (C-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -33,7 +33,7 @@
 		</attributes>
 		<target type="ITEM" />
 	</skill>
-	<skill id="2212" name="Blessed Scroll: Enchant Armor (D-grade)" max-level="1" action="A1">
+	<skill id="2212" name="Blessed Scroll: Enchant Armor (D-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -79,7 +79,7 @@
 		</conditions>
 		<effects>
 			<teleport>
-				<location level="1" x="-84200" y="244566" z="-3728"/>
+				<location x="-84200" y="244566" z="-3728"/>
 				<location level="2" x="-84200" y="244566" z="-3728"/>
 				<location level="3" x="-84200" y="244566" z="-3728"/>
 				<location level="4" x="-84200" y="244566" z="-3728"/>

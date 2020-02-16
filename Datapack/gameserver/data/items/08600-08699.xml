@@ -10,8 +10,8 @@
 	<!-- Item needed to acquire Increase of Divinity Lv. 1. -->
 		<restriction freightable="false" sellable="false" depositable="false"/>
 		<attributes weight="120" commission-type="SPELLBOOK" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="1405" level="1" value="-1"/>  <!-- Divine Inspiration -->
+		<skill-reducer>
+			<skill id="1405" value="-1"/>  <!-- Divine Inspiration -->
 		</skill-reducer>
 	</item>
 
@@ -19,7 +19,7 @@
 	<!-- Item needed to acquire Increase of Divinity Lv. 2. -->
 		<restriction freightable="false" sellable="false" depositable="false"/>
 		<attributes weight="120" commission-type="SPELLBOOK" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="1405" level="2" value="-1"/>  <!-- Divine Inspiration -->
 		</skill-reducer>
 	</item>
@@ -28,7 +28,7 @@
 	<!-- Item needed to acquire Increase of Divinity Lv. 3. -->
 		<restriction freightable="false" sellable="false" depositable="false"/>
 		<attributes weight="120" commission-type="SPELLBOOK" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="1405" level="3" value="-1"/>  <!-- Divine Inspiration -->
 		</skill-reducer>
 	</item>
@@ -37,7 +37,7 @@
 	<!-- Item needed to acquire Increase of Divinity Lv. 4. -->
 		<restriction freightable="false" sellable="false" depositable="false"/>
 		<attributes weight="120" commission-type="SPELLBOOK" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="1405" level="4" value="-1"/>  <!-- Divine Inspiration -->
 		</skill-reducer>
 	</item>
@@ -141,7 +141,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 

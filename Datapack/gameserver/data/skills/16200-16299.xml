@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="16200" name="Empty Cry" max-level="1" action="A1" type="MAGIC">
+	<skill id="16200" name="Empty Cry" action="A1" type="MAGIC">
 	<!-- Magical AoE attack. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -511,7 +511,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16226" name="Battle Recovery" max-level="1" action="A1" type="MAGIC">
+	<skill id="16226" name="Battle Recovery" action="A1" type="MAGIC">
 	<!-- HP has been momentarily decreased due to Bleed. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -527,7 +527,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16227" name="Greater Recovery" max-level="1" action="A1" type="MAGIC">
+	<skill id="16227" name="Greater Recovery" action="A1" type="MAGIC">
 	<!-- HP has been momentarily decreased due to Bleed. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -644,7 +644,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16236" name="88Lv. Raid Boss" max-level="1" >
+	<skill id="16236" name="88Lv. Raid Boss">
 	<!-- Laum the monster is an Enhanced Mahum created from a common Mahum creature. Disciple Lavidos has kidnapped the creature and infused it with the power of darkness, resulting in a bigger and stronger Mahum type. Now Laum is on an indiscriminate killing rampage in Gludio to activate the magic circle made of monsters. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -654,7 +654,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16237" name="88Lv. Raid Boss" max-level="1" >
+	<skill id="16237" name="88Lv. Raid Boss">
 	<!-- Minorta the monster is an enhancement from a minotaur created for fun by Hardin's disciple. Disciple Lavidos has kidnapped the creature and infused it with the power of darkness, resulting in a bigger and stronger Minotaur. Amused by his success after Laum's creation, Lavidos has even created a circle of minions for Minotaur. Now Minotaur is on an indiscriminate killing rampage in Gludio to activate the magic circle made of monsters. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -664,7 +664,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16238" name="88Lv. Raid Boss" max-level="1" >
+	<skill id="16238" name="88Lv. Raid Boss">
 	<!-- Sarga the monster is an enhancement from a minotaur created for fun by Hardin's disciple. Disciple Lavidos has kidnapped the creature and infused it with the power of darkness, resulting in a bigger and stronger Minotaur with greater intellect. Amused by his success after Laum's creation, Lavidos has even created a circle of minions for Sarga. Now Sarga is on an indiscriminate killing rampage in Gludio to activate the magic circle made of monsters. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -674,7 +674,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16239" name="88Lv. Raid Boss" max-level="1" >
+	<skill id="16239" name="88Lv. Raid Boss">
 	<!-- Hogliff the monster is an enhancement from a minotaur created for fun by Hardin's disciple. Disciple Lavidos has kidnapped the creature and infused it with the power of darkness, resulting in a bigger and stronger Minotaur. Amused by his success after Laum's creation, Lavidos has even created a circle of minions for Hogliff. Now Hogliff is on an indiscriminate killing rampage in Gludio to activate the magic circle made of monsters. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -684,7 +684,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16240" name="88Lv. Raid Boss" max-level="1" >
+	<skill id="16240" name="88Lv. Raid Boss">
 	<!-- Artarot the monster is an enhancement from a minotaur created for fun by Hardin's disciple. Disciple Lavidos has kidnapped the creature and infused it with the power of darkness, resulting in a bigger and stronger Minotaur with greater intellect. Amused by his success after Laum's creation, Lavidos has even created a circle of minions for Artarot. Now Artarot is on an indiscriminate killing rampage in Gludio to activate the magic circle made of monsters. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -694,7 +694,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16241" name="88Lv. Raid Boss" max-level="1" >
+	<skill id="16241" name="88Lv. Raid Boss">
 	<!-- Excited by his success in enhancing Mahum and Minotaur, Disciple Lavidos began creating his own monsters, and successfully created the Centaur by merging an orc with a Dark Pegasus with the power of darkness. Centaur brings around minions ranging up to tens of thousands, and is on an indiscriminate killing rampage in Gludio to activate the magic circle made of monsters. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -704,7 +704,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16242" name="88Lv. Raid Boss" max-level="1" >
+	<skill id="16242" name="88Lv. Raid Boss">
 	<!-- The release of Punishment, the 6th Seal, renewed activity at the Altar of Shilen, from which rose Gagia the Bloody Earth Dragon. Borne of the essence of Shilen's blood, Gagia has the greatest resemblance to a true Earth Dragon among all of Shilen's offspring, and has an insatiable thirst for blood that spurs an instinctive attack on all living things in sight. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -714,7 +714,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16243" name="88Lv. Raid Boss" max-level="1" >
+	<skill id="16243" name="88Lv. Raid Boss">
 	<!-- The release of Punishment, the 6th Seal, renewed activity at the Altar of Shilen, from which rose Fardune the demon. Borne of the essence of Shilen's blood, Fardune has a close resemblance to Shilen's children, and has an insatiable thirst for blood. His first action upon waking was to gather up monsters in the Bloody Swampland and Altar of Evil areas and rule over the strong ones while slaughtering the rest to drink their blood. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -724,7 +724,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16244" name="88Lv. Raid Boss" max-level="1" >
+	<skill id="16244" name="88Lv. Raid Boss">
 	<!-- The release of Punishment, the 6th Seal, renewed activity at the Altar of Shilen, from which rose Harsia the demon. Borne of the essence of Shilen's blood, Harsia has a close resemblance to Shilen's children, and has an insatiable thirst for blood. Her first action upon waking was to gather up monsters in the Bloody Swampland and Altar of Evil areas and rule over the strong ones while slaughtering the rest to drink their blood. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -734,7 +734,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16245" name="88Lv. Raid Boss" max-level="1" >
+	<skill id="16245" name="88Lv. Raid Boss">
 	<!-- The release of Punishment, the 6th Seal, renewed activity at the Altar of Shilen, from which rose Bedukel the demon. Borne of the essence of Shilen's blood, Bedukel has a close resemblance to Shilen's children, and has an insatiable thirst for blood. His first action upon waking was to gather up monsters in the Bloody Swampland and Altar of Evil areas and rule over the strong ones while slaughtering the rest to drink their blood. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -744,7 +744,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16246" name="88Lv. Raid Boss" max-level="1" >
+	<skill id="16246" name="88Lv. Raid Boss">
 	<!-- The release of Punishment, the 6th Seal, renewed activity at the Altar of Shilen, from which rose Bloody Witch Rumilla. Borne of the essence of Shilen's blood, Rudmilla has a close resemblance to Shilen's children, and has an insatiable thirst for blood. Her first action upon waking was to gather up monsters in the Bloody Swampland and Altar of Evil areas and rule over the strong ones while slaughtering the rest to drink their blood. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -754,7 +754,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16247" name="88Lv. Raid Boss" max-level="1" >
+	<skill id="16247" name="88Lv. Raid Boss">
 	<!-- The release of Punishment, the 6th Seal, renewed activity at the Altar of Shilen. Having come into the material world through the blood flowing in the Altar of Blood, Shilen's Priest Sasia carries out the goddess' orders to watch the newly-created demons and guard a point in the great magic circle of living monsters. Sasia commands a circle of small dragons, given as gifts from Shilen's dragons. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -764,7 +764,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16248" name="88Lv. Raid Boss" max-level="1" >
+	<skill id="16248" name="88Lv. Raid Boss">
 	<!-- One of the 3 Hell Weapons created by the 5 Hell Lords of Avarice, Earth Terakan is a voracious eater of souls, regardless of alliance. Though originally of no color or attribute, it absorbed a part of Antharas' soul and was reborn with the power of the earth. Earth Terakan can be summoned through Apparition Stones made of fake souls. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -774,7 +774,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16249" name="92Lv. Raid Boss" max-level="1" >
+	<skill id="16249" name="92Lv. Raid Boss">
 	<!-- Due to their tradition of carrying dead enemy parts as marks of victory, the great tribe of Amden Orcs have been cursed by Shilen's Disciples, whose influence was amplified by the victory relics' link with death. Controlled by Disciple Nemis, Turahot has come to the Turek Orc Campsite to be a part of the magic circle created by monsters. Though cursed, Turahot retains the tribe's aggression and stamina. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -784,7 +784,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16250" name="92Lv. Raid Boss" max-level="1" >
+	<skill id="16250" name="92Lv. Raid Boss">
 	<!-- Due to their tradition of carrying dead enemy parts as marks of victory, the great tribe of Amden Orcs have been cursed by Shilen's Disciples, whose influence was amplified by the victory relics' link with death. Controlled by Disciple Nemis, Turation has come to the Turek Orc Campsite to be a part of the magic circle created by monsters. Though cursed, Turation retains the tribe's aggression and stamina. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -794,7 +794,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16251" name="92Lv. Raid Boss" max-level="1" >
+	<skill id="16251" name="92Lv. Raid Boss">
 	<!-- Due to their tradition of carrying dead enemy parts as marks of victory, the great tribe of Amden Orcs have been cursed by Shilen's Disciples, whose influence was amplified by the victory relics' link with death. Controlled by Disciple Nemis, Turation has come to the Turek Orc Campsite to be a part of the magic circle created by monsters. Though cursed, Turamathia retains the tribe's aggression and stamina. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -804,7 +804,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16252" name="92Lv. Raid Boss" max-level="1" >
+	<skill id="16252" name="92Lv. Raid Boss">
 	<!-- Due to their tradition of carrying dead enemy parts as marks of victory, the great tribe of Amden Orcs have been cursed by Shilen's Disciples, whose influence was amplified by the victory relics' link with death. Controlled by Disciple Nemis, Turation has come to the Turek Orc Campsite to be a part of the magic circle created by monsters. Though cursed, Turabait retains the tribe's aggression and stamina. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -814,7 +814,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16253" name="92Lv. Raid Boss" max-level="1" >
+	<skill id="16253" name="92Lv. Raid Boss">
 	<!-- Disciple Nemis revealed the construction of a magic circle to Demon Triol, asking for more monsters to fill the circle. Triol smiled in amusement to see some of the proud Amden Orcs under control of darkness, and took Pa'agrio's form to control a number of Nermion, specialized wizard warrior class within the ranks of Nerva Orc, to be used for Nemis' cause. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -824,7 +824,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16254" name="92Lv. Raid Boss" max-level="1" >
+	<skill id="16254" name="92Lv. Raid Boss">
 	<!-- Disciple Nemis revealed the construction of a magic circle to Demon Triol, asking for more monsters to fill the circle. Triol smiled in amusement to see some of the proud Amden Orcs under control of darkness, and took Pa'agrio's form to control a number of Nergatt, specialized physical warrior class within the ranks of Nerva Orc, to be used for Nemis' cause. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -834,7 +834,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16255" name="93Lv. Raid Boss" max-level="1" >
+	<skill id="16255" name="93Lv. Raid Boss">
 	<!-- Tarstan was a sculpture in Orbis Temple, among the many that stylized male beauty. Ekidna, the disciple who symbolizes Shilen's masculine beauty, enslaved Tarstan and set him loose in Fairy Settlement, where he had snuck in under the guise of a beautiful Elf. Now a cursed puppet with glowing red eyes shedding tears of blood, Tarstan is a part of the magic circle of monsters, creating havoc in Magmeld. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -844,7 +844,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16256" name="93Lv. Raid Boss" max-level="1" >
+	<skill id="16256" name="93Lv. Raid Boss">
 	<!-- Abelsnif was a sculpture in Orbis Temple, among the many that stylized male beauty. Ekidna, the disciple who symbolizes Shilen's masculine beauty, enslaved Abelsnif and set him loose in Fairy Settlement, where he had snuck in under the guise of a beautiful Elf. Now a cursed puppet with glowing red eyes shedding tears of blood, Abelsnif is a part of the magic circle of monsters, creating havoc in Magmeld. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -854,7 +854,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16257" name="93Lv. Raid Boss" max-level="1" >
+	<skill id="16257" name="93Lv. Raid Boss">
 	<!-- Kimesis was a sculpture in Orbis Temple, among the many that stylized male beauty. Ekidna, the disciple who symbolizes Shilen's masculine beauty, enslaved Kimesis and set him loose in Fairy Settlement, where he had snuck in under the guise of a beautiful Elf. Now a cursed puppet with glowing red eyes shedding tears of blood, Kimesis is a part of the magic circle of monsters, creating havoc in Magmeld. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -864,7 +864,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16258" name="93Lv. Raid Boss" max-level="1" >
+	<skill id="16258" name="93Lv. Raid Boss">
 	<!-- Kathargon was a sculpture in Orbis Temple, among the many that stylized male beauty. Ekidna, the disciple who symbolizes Shilen's masculine beauty, enslaved Kathargon and set him loose in Fairy Settlement, where he had snuck in under the guise of a beautiful Elf. Now a cursed puppet with glowing red eyes shedding tears of blood, Kathargon is a part of the magic circle of monsters, creating havoc in Magmeld. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -874,7 +874,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16259" name="93Lv. Raid Boss" max-level="1" >
+	<skill id="16259" name="93Lv. Raid Boss">
 	<!-- Pantasaus was a sculpture in Orbis Temple when Ekidna, the disciple who symbolizes Shilen's masculine beauty, mistook her for a sculpture of male beauty and set her loose in Fairy Settlement, where he had snuck in under the guise of a beautiful Elf. Now a cursed puppet with glowing red eyes shedding tears of blood, Pantasaus is a part of the magic circle of monsters, creating havoc in Magmeld. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -884,7 +884,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16260" name="93Lv. Raid Boss" max-level="1" >
+	<skill id="16260" name="93Lv. Raid Boss">
 	<!-- Ixignon was a sculpture in Orbis Temple, among the many that stylized male beauty. Ekidna, the disciple who symbolizes Shilen's masculine beauty, enslaved Ixignon and set him loose in Fairy Settlement, where he had snuck in under the guise of a beautiful Elf. Now a cursed puppet with glowing red eyes shedding tears of blood, Ixignon is a part of the magic circle of monsters, creating havoc in Magmeld. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -894,7 +894,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16261" name="93Lv. Raid Boss" max-level="1" >
+	<skill id="16261" name="93Lv. Raid Boss">
 	<!-- A clone of Harp created by Embryo, whom Disciple Nemis tricked under the guise of Etis van Etina. With Nemis bestowing the power of darkness from the sidelines, the clone is more powerful than Harp. It is currently partaking in the monster magic circle with members of Embryo and their other creations. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -904,7 +904,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16262" name="93Lv. Raid Boss" max-level="1" >
+	<skill id="16262" name="93Lv. Raid Boss">
 	<!-- A clone of Isadora created by Embryo, whom Disciple Nemis tricked under the guise of Etis van Etina. With Nemis bestowing the power of darkness from the sidelines, the clone is more powerful than Isadora. It is currently partaking in the monster magic circle with members of Embryo and their other creations. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -914,7 +914,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16263" name="93Lv. Raid Boss" max-level="1" >
+	<skill id="16263" name="93Lv. Raid Boss">
 	<!-- A clone of Maliss created by Embryo, whom Disciple Nemis tricked under the guise of Etis van Etina. With Nemis bestowing the power of darkness from the sidelines, the clone is more powerful than Maliss. It is currently partaking in the monster magic circle with members of Embryo and their other creations. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -924,7 +924,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16264" name="93Lv. Raid Boss" max-level="1" >
+	<skill id="16264" name="93Lv. Raid Boss">
 	<!-- A weapon for the Embryo, Garron was tricked by Disciple Nemis, then disguised as Etis van Etina, into believing that the dying Mother Tree is the key to unlocking the power of the Seal of Punishment. Along with other clones created by Embryo, Garron now partakes in the monster magic circle. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -934,7 +934,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16265" name="93Lv. Raid Boss" max-level="1" >
+	<skill id="16265" name="93Lv. Raid Boss">
 	<!-- A weapon for the Embryo, Nigel was tricked by Disciple Nemis, then disguised as Etis van Etina, into believing that the dying Mother Tree is the key to unlocking the power of the Seal of Punishment. Along with other clones created by Embryo, Nigel now partakes in the monster magic circle. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -944,7 +944,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16266" name="93Lv. Raid Boss" max-level="1" >
+	<skill id="16266" name="93Lv. Raid Boss">
 	<!-- A weapon for the Embryo, Dabos was tricked by Disciple Nemis, then disguised as Etis van Etina, into believing that the dying Mother Tree is the key to unlocking the power of the Seal of Punishment. Along with other clones created by Embryo, Dabos now partakes in the monster magic circle. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -954,7 +954,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16267" name="93Lv. Raid Boss" max-level="1" >
+	<skill id="16267" name="93Lv. Raid Boss">
 	<!-- One of the 3 Hell Weapons created by the 5 Hell Lords of Avarice, Wind Cassius is a voracious eater of souls, regardless of alliance. Though originally of no color or attribute, it absorbed a part of Lindvior's soul and was reborn with the power of wind. Wind Cassius can be summoned through Apparition Stones made of fake souls. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -964,7 +964,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16268" name="94Lv. Raid Boss" max-level="1" >
+	<skill id="16268" name="94Lv. Raid Boss">
 	<!-- An enhanced monster created by Disciple Lavidos using Enhanced Mahum, Radium was sent to the Garden of Beasts with 4 Tayga bosses to take a part in the monster magic circle. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -974,7 +974,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16269" name="94Lv. Raid Boss" max-level="1" >
+	<skill id="16269" name="94Lv. Raid Boss">
 	<!-- A race of enhanced monsters created by DIsciple Lavidos using Kel Mahum, axe-wielding Typheron is one of the 4 bosses of the Tayga, and takes a part in the monster magic circle with the other Tayga bosses and Enhanced Mahum. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -984,7 +984,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16270" name="94Lv. Raid Boss" max-level="1" >
+	<skill id="16270" name="94Lv. Raid Boss">
 	<!-- A race of enhanced monsters created by DIsciple Lavidos using Kel Mahum, staff-wielding Timarga is one of the 4 bosses of the Tayga, and takes a part in the monster magic circle with the other Tayga bosses and Enhanced Mahum. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -994,7 +994,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16271" name="94Lv. Raid Boss" max-level="1" >
+	<skill id="16271" name="94Lv. Raid Boss">
 	<!-- A race of enhanced monsters created by DIsciple Lavidos using Kel Mahum, sword-wielding Tycepton is one of the 4 bosses of the Tayga, and takes a part in the monster magic circle with the other Tayga bosses and Enhanced Mahum. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1004,7 +1004,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16272" name="94Lv. Raid Boss" max-level="1" >
+	<skill id="16272" name="94Lv. Raid Boss">
 	<!-- A race of enhanced monsters created by DIsciple Lavidos using Kel Mahum, staff-wielding Tiverga is one of the 4 bosses of the Tayga, and takes a part in the monster magic circle with the other Tayga bosses and Enhanced Mahum. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1014,7 +1014,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16273" name="94Lv. Raid Boss" max-level="1" >
+	<skill id="16273" name="94Lv. Raid Boss">
 	<!-- An enhanced monster created by Disciple Lavidos using Enhanced Mahum, Supercium was sent to the Garden of Beasts with 4 Tayga bosses to take a part in the monster magic circle. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1024,7 +1024,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16274" name="97Lv. Raid Boss" max-level="1" >
+	<skill id="16274" name="97Lv. Raid Boss">
 	<!-- Garamor sent Gariott the herald to keep an eye on Cruma Marshlands, a point belonging to the magic circle of monsters. Gariott, who has a giant tail, has been helping Garamor's minions find bodies to inhabit. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1034,7 +1034,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16275" name="97Lv. Raid Boss" max-level="1" >
+	<skill id="16275" name="97Lv. Raid Boss">
 	<!-- A mechanical minion for Shilen's Disciple Garamor, Varvacion has landed in the material world by devouring the resentful soul and stealing the body of a peasant revolutionary in Dion. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1044,7 +1044,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16276" name="97Lv. Raid Boss" max-level="1" >
+	<skill id="16276" name="97Lv. Raid Boss">
 	<!-- A mechanical minion for Shilen's Disciple Garamor, Varmoni has landed in the material world by devouring the resentful soul and stealing the body of a peasant revolutionary in Dion. Varmoni has a dedicated circle of android minions. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1054,7 +1054,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16277" name="97Lv. Raid Boss" max-level="1" >
+	<skill id="16277" name="97Lv. Raid Boss">
 	<!-- A mechanical minion for Shilen's Disciple Garamor, Varvinos has landed in the material world by devouring the resentful soul and stealing the body of a peasant revolutionary in Dion. Varvinos can command a large number of minions. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1064,7 +1064,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16278" name="97Lv. Raid Boss" max-level="1" >
+	<skill id="16278" name="97Lv. Raid Boss">
 	<!-- A mechanical minion for Shilen's Disciple Garamor, Varmonia has landed in the material world by devouring the resentful soul and stealing the body of a peasant revolutionary in Dion. Varmonia can command a large number of minions. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1074,7 +1074,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16279" name="97Lv. Raid Boss" max-level="1" >
+	<skill id="16279" name="97Lv. Raid Boss">
 	<!-- A mechanical minion for Shilen's Disciple Garamor, Varkaron has landed in the material world by devouring the resentful soul and stealing the body of a peasant revolutionary in Dion. Varkaron can command an infinite number of minions. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1084,7 +1084,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16280" name="97Lv. Raid Boss" max-level="1" >
+	<skill id="16280" name="97Lv. Raid Boss">
 	<!-- Having found the hidden Lachik Dwelling, Disciple Lavidos gained hold of the minds of some of the Lachikios, and turned them into Magikus. The Magikus now stand with the Centaur created by Lavidos at the reed fields, playing a part in the magic circle made of monsters. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1094,7 +1094,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16281" name="97Lv. Raid Boss" max-level="1" >
+	<skill id="16281" name="97Lv. Raid Boss">
 	<!-- Kerfaus was one of the 4 Centaurs created by Disciple Lavidos to be named as bosses of the new race. With other creatures controlled by Lavidos, Kerfaus takes a part in the monster magic circle. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1104,7 +1104,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16282" name="97Lv. Raid Boss" max-level="1" >
+	<skill id="16282" name="97Lv. Raid Boss">
 	<!-- Milinaus was one of the 4 Centaurs created by Disciple Lavidos to be named as bosses of the new race. With other creatures controlled by Lavidos, Milinaus takes a part in the monster magic circle. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1114,7 +1114,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16283" name="97Lv. Raid Boss" max-level="1" >
+	<skill id="16283" name="97Lv. Raid Boss">
 	<!-- Sarkaus was one of the 4 Centaurs created by Disciple Lavidos to be named as bosses of the new race. With other creatures controlled by Lavidos, Sarkaus takes a part in the monster magic circle. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1124,7 +1124,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16284" name="97Lv. Raid Boss" max-level="1" >
+	<skill id="16284" name="97Lv. Raid Boss">
 	<!-- Shimeus was one of the 4 Centaurs created by Disciple Lavidos to be named as bosses of the new race. With other creatures controlled by Lavidos, Shimeus takes a part in the monster magic circle. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1134,7 +1134,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16285" name="97Lv. Raid Boss" max-level="1" >
+	<skill id="16285" name="97Lv. Raid Boss">
 	<!-- Having found the hidden Lachik Dwelling, Disciple Lavidos gained hold of the minds of some of the Lachikios, and turned them into Kinigos. The Kinigos now stand with the Centaur created by Lavidos at the reed fields, playing a part in the magic circle made of monsters. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1144,7 +1144,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16286" name="97Lv. Raid Boss" max-level="1" >
+	<skill id="16286" name="97Lv. Raid Boss">
 	<!-- Zetahl is one of the Half-Devil Avataria given from Triol, who was impressed with Shilen's Disciples' success in controlling some of the proud Amden Orcs. Zetahl resides in an area between the Brekka Orc Hideout and Gorgon Garden, and play a part in creating the monster magic circle. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1154,7 +1154,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16287" name="97Lv. Raid Boss" max-level="1" >
+	<skill id="16287" name="97Lv. Raid Boss">
 	<!-- Tabris is one of the Half-Devil Avataria given from Triol, who was impressed with Shilen's Disciples' success in controlling some of the proud Amden Orcs. Tabris resides in an area between the Brekka Orc Hideout and Gorgon Garden, and play a part in creating the monster magic circle. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1164,7 +1164,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16288" name="97Lv. Raid Boss" max-level="1" >
+	<skill id="16288" name="97Lv. Raid Boss">
 	<!-- Stelos is one of the Half-Devil Avataria given from Triol, who was impressed with Shilen's Disciples' success in controlling some of the proud Amden Orcs. Stelos resides in an area between the Brekka Orc Hideout and Gorgon Garden, and play a part in creating the monster magic circle. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1174,7 +1174,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16289" name="97Lv. Raid Boss" max-level="1" >
+	<skill id="16289" name="97Lv. Raid Boss">
 	<!-- Ravolas is one of the Half-Devil Avataria given from Triol, who was impressed with Shilen's Disciples' success in controlling some of the proud Amden Orcs. Ravolas resides in an area between the Brekka Orc Hideout and Gorgon Garden, and play a part in creating the monster magic circle. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1184,7 +1184,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16290" name="97Lv. Raid Boss" max-level="1" >
+	<skill id="16290" name="97Lv. Raid Boss">
 	<!-- Stelo Soma is one of the Half-Devil Avataria given from Triol, who was impressed with Shilen's Disciples' success in controlling some of the proud Amden Orcs. Stelo Soma resides in an area between the Brekka Orc Hideout and Gorgon Garden, and play a part in creating the monster magic circle. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1194,7 +1194,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16291" name="97Lv. Raid Boss" max-level="1" >
+	<skill id="16291" name="97Lv. Raid Boss">
 	<!-- Dephracor is one of the Half-Devil Avataria given from Triol, who was impressed with Shilen's Disciples' success in controlling some of the proud Amden Orcs. Dephracor resides in an area between the Brekka Orc Hideout and Gorgon Garden, and play a part in creating the monster magic circle. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1204,7 +1204,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16292" name="98Lv. Raid Boss" max-level="1" >
+	<skill id="16292" name="98Lv. Raid Boss">
 	<!-- Having fallen prey to Disciple Lamia's whispers, Tiera the angel became a fallen angel, and proceeded to descend upon the Valley of Saints with other fallen angels. It is said that upon this descent, bodies of angels that had been guarding the heavens above rained down from the sky. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1214,7 +1214,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16293" name="98Lv. Raid Boss" max-level="1" >
+	<skill id="16293" name="98Lv. Raid Boss">
 	<!-- Having fallen prey to Disciple Lamia's whispers, Goblier the angel awoke to darkness. As a full-fledged demon, Goblier opened Hell's Gate to summon demons unto the world to claim them as minions, and proceeded to descend upon the Valley of Saints with other fallen angels. It is said that upon this descent, bodies of angels that had been guarding the heavens above rained down from the sky. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1224,7 +1224,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16294" name="98Lv. Raid Boss" max-level="1" >
+	<skill id="16294" name="98Lv. Raid Boss">
 	<!-- Having fallen prey to Disciple Lamia's whispers, Cherkia the angel awoke to darkness. As a full-fledged demon, Cherkia opened Hell's Gate to summon demons unto the world to claim them as minions, and proceeded to descend upon the Valley of Saints with other fallen angels. It is said that upon this descent, bodies of angels that had been guarding the heavens above rained down from the sky. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1234,7 +1234,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16295" name="98Lv. Raid Boss" max-level="1" >
+	<skill id="16295" name="98Lv. Raid Boss">
 	<!-- Having fallen prey to Disciple Lamia's whispers, Harthemon the angel awoke to darkness. As a full-fledged demon, Harthemon opened Hell's Gate to summon demons unto the world to claim them as minions, and proceeded to descend upon the Valley of Saints with other fallen angels. It is said that upon this descent, bodies of angels that had been guarding the heavens above rained down from the sky. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1244,7 +1244,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16296" name="98Lv. Raid Boss" max-level="1" >
+	<skill id="16296" name="98Lv. Raid Boss">
 	<!-- Having fallen prey to Disciple Lamia's whispers, Sarboth the angel awoke to darkness. As a full-fledged demon, Sarboth opened Hell's Gate to summon demons unto the world to claim them as minions, and proceeded to descend upon the Valley of Saints with other fallen angels. During the descent, Sarboth lost both legs in a battle with angels guarding the gateway between the heavenly sphere and the material world, and has since then been merged with a chair made from Hell. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1254,7 +1254,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16297" name="98Lv. Raid Boss" max-level="1" >
+	<skill id="16297" name="98Lv. Raid Boss">
 	<!-- Having fallen prey to Disciple Lamia's whispers, Eloule the archangel spread darkness among the Pentominos, the wings of angels, to retain their loyalty, and proceeded to descend upon the Valley of Saints with other fallen angels. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1264,7 +1264,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16298" name="98Lv. Raid Boss" max-level="1" >
+	<skill id="16298" name="98Lv. Raid Boss">
 	<!-- Nemis manipulated the vengeance embedded in the weapons of the Giants, turning the Spicula into puppets called Vengeful Eligos, who since then have taken a place in the magic circle within Kamael Village and the Isle of Souls. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >
@@ -1274,7 +1274,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16299" name="98Lv. Raid Boss" max-level="1" >
+	<skill id="16299" name="98Lv. Raid Boss">
 	<!-- Nemis manipulated the vengeance embedded in the weapons of the Giants, turning the Spicula into puppets called Vengeful Agarez, who since then have taken a place in the magic circle within Kamael Village and the Isle of Souls. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" >

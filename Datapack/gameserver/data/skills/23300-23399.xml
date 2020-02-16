@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="23300" name="Ghost Piercing" max-level="1" debuff="true" action="A2">
+	<skill id="23300" name="Ghost Piercing" debuff="true" action="A2">
 	<!-- For 10 seconds, becomes haunted by a ghost to receive 300 damage per second. -->
 		<icon initial="icon.skill0773"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" triggered="true" >
@@ -18,7 +18,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="150.0"/>
 			</damage-over-time>
 		</effects>

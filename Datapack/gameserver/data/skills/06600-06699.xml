@@ -2214,7 +2214,7 @@
 			<chance initial="30"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="1832.0">
 					<value level="2">2272.0</value>
 					<value level="3">2751.0</value>
@@ -2265,7 +2265,7 @@
 			<chance initial="30"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="1832.0">
 					<value level="2">2272.0</value>
 					<value level="3">2751.0</value>
@@ -2303,7 +2303,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK">
 				<power initial="100.0">
 					<value level="2">150.0</value>
 					<value level="3">200.0</value>
@@ -2313,7 +2313,7 @@
 					<value level="7">400.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK">
 				<power initial="5.0">
 					<value level="2">10.0</value>
 					<value level="3">15.0</value>
@@ -2348,7 +2348,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK">
 				<power initial="200.0">
 					<value level="2">250.0</value>
 					<value level="3">300.0</value>
@@ -2358,7 +2358,7 @@
 					<value level="7">500.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK">
 				<power initial="15.0">
 					<value level="2">20.0</value>
 					<value level="3">25.0</value>
@@ -2370,7 +2370,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6622" name="Stun" max-level="1" debuff="true" action="A2">
+	<skill id="6622" name="Stun" debuff="true" action="A2">
 	<!-- Stunned and unable to move for 20 seconds. The chance of receiving P. Critical Damage +50%%. -->
 		<icon initial="icon.skill0100"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" >
@@ -2391,7 +2391,7 @@
 			<chance initial="98"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="2748.0"/>
 			</physical-attack>
 			<block-all-actions/>
@@ -2400,7 +2400,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6623" name="Fungus Herb" max-level="1" action="A1" type="MAGIC">
+	<skill id="6623" name="Fungus Herb" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2414,7 +2414,7 @@
 		</consume>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6624" name="Stun" max-level="1" debuff="true" action="A2">
+	<skill id="6624" name="Stun" debuff="true" action="A2">
 	<!-- Stunned and unable to move for 9 seconds. The chance of receiving P. Critical Damage +50%%. -->
 		<icon initial="icon.skill0100"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" >
@@ -2433,7 +2433,7 @@
 			<chance initial="98"/>
 		</abnormal>
 	</skill>
-	<skill id="6625" name="Energy of Life" max-level="1" action="A1">
+	<skill id="6625" name="Energy of Life" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2452,7 +2452,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6626" name="Major Energy of Life" max-level="1" action="A1">
+	<skill id="6626" name="Major Energy of Life" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2471,7 +2471,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6627" name="Superior Energy of Life" max-level="1" action="A1">
+	<skill id="6627" name="Superior Energy of Life" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2490,7 +2490,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6628" name="Energy of Mana" max-level="1" action="A1">
+	<skill id="6628" name="Energy of Mana" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2509,7 +2509,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6629" name="Major Energy of Mana" max-level="1" action="A1">
+	<skill id="6629" name="Major Energy of Mana" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2528,7 +2528,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6630" name="Superior Energy of Mana" max-level="1" action="A1">
+	<skill id="6630" name="Superior Energy of Mana" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2547,7 +2547,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6631" name="Energy of Power" max-level="1" action="A2">
+	<skill id="6631" name="Energy of Power" action="A2">
 	<!-- Increases P. Atk. +15%% for a set time. -->
 		<icon initial="icon.etc_herb_red_i00"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -2571,7 +2571,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6632" name="Energy of Magic" max-level="1" action="A2">
+	<skill id="6632" name="Energy of Magic" action="A2">
 	<!-- Temporarily increases M. Atk. +75%%. -->
 		<icon initial="icon.etc_herb_blue_i00"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -2590,7 +2590,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6633" name="Energy of Atk. Spd." max-level="1" action="A2">
+	<skill id="6633" name="Energy of Atk. Spd." action="A2">
 	<!-- Increases Atk. Spd. +33%% for a set time. -->
 		<icon initial="icon.etc_attack_sp_herb_i00"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -2614,7 +2614,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6634" name="Energy of Casting Spd." max-level="1" action="A2">
+	<skill id="6634" name="Energy of Casting Spd." action="A2">
 	<!-- Increases Casting Spd. +30%% for a set time. -->
 		<icon initial="icon.etc_magic_sp_herb_i00"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -2633,7 +2633,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6635" name="Energy of Crtical Attack" max-level="1" action="A2">
+	<skill id="6635" name="Energy of Crtical Attack" action="A2">
 	<!-- P. Critical Rate +30%% for a set time. -->
 		<icon initial="icon.etc_critical_herb_i00"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -2657,7 +2657,7 @@
 			</stat-hp-based>
 		</effects>
 	</skill>
-	<skill id="6636" name="Energy of Movement Speed" max-level="1" action="A2">
+	<skill id="6636" name="Energy of Movement Speed" action="A2">
 	<!-- Increases Movement Speed +33 for a set time. -->
 		<icon initial="icon.etc_move_herb_i00"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -2676,12 +2676,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="33.0"/>
 			</speed>
 		</effects>
 	</skill>
-	<skill id="6637" name="Energy of HP Drain" max-level="1" action="A2">
+	<skill id="6637" name="Energy of HP Drain" action="A2">
 	<!-- Momentarily restores HP using damage inflicted upon the enemy with a certain probability. -->
 		<icon initial="icon.skill6637"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -2708,7 +2708,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6638" name="Mysterious Aura" max-level="1" action="A2">
+	<skill id="6638" name="Mysterious Aura" action="A2">
 	<!-- You've got a big head. -->
 		<icon initial="icon.skill2513"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="ETC" >
@@ -2734,7 +2734,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6639" name="Energy of Crtical Rate: Damage" max-level="1" action="A2">
+	<skill id="6639" name="Energy of Crtical Rate: Damage" action="A2">
 	<!-- P. Critical Damage increased for a set time. -->
 		<icon initial="icon.skill2514"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -2758,7 +2758,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6641" name="Holy Ball" max-level="1" action="A1" type="MAGIC">
+	<skill id="6641" name="Holy Ball" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2780,12 +2780,12 @@
 		<target type="ENEMY_ONLY" />
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="122.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="6642" name="Dash" max-level="1" action="DA1">
+	<skill id="6642" name="Dash" action="DA1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2805,12 +2805,12 @@
 		<target type="ENEMY" />
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="2319.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6643" name="Holy Strike" max-level="1" action="A1">
+	<skill id="6643" name="Holy Strike" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2830,12 +2830,12 @@
 		<target type="ENEMY" />
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="2319.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6644" name="Ice Queen Freya" max-level="1" >
+	<skill id="6644" name="Ice Queen Freya">
 	<!-- Once known as friendly and kind, Princess Felicia was the darling of the kingdom. until she was betrayed and exiled for crimes she did not commit. Through the trickery of those rebels who would see her kingdom fall, Felicia was touched by the power of ice and was henceforth known as Freya. Fueled by hatred, she now maliciously wields the power of ice in hopes of destroying the land she once called home. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -2846,7 +2846,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6645" name="Cooker Invincibility On" max-level="1" action="A2">
+	<skill id="6645" name="Cooker Invincibility On" action="A2">
 	<!-- Invincible against normal attacks, skills, and debuff cancel/debuffs. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -2864,7 +2864,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6646" name="Cooker Invincibility Off" max-level="1" action="A1">
+	<skill id="6646" name="Cooker Invincibility Off" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2877,7 +2877,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6647" name="Presentation - Ice Knight" max-level="1" action="A1">
+	<skill id="6647" name="Presentation - Ice Knight" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2888,7 +2888,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6648" name="Komodo Heal" max-level="1" action="A1" type="MAGIC">
+	<skill id="6648" name="Komodo Heal" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2902,7 +2902,7 @@
 		</consume>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6650" name="Tacrakahn's Alienation" max-level="1" debuff="true" action="A2">
+	<skill id="6650" name="Tacrakahn's Alienation" debuff="true" action="A2">
 	<!-- All actions are sealed by Tacrakahn's special ability. Impossible to dispel. -->
 		<icon initial="icon.skill4111"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -2918,7 +2918,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6651" name="Dopagen's Alienation" max-level="1" debuff="true" action="A2">
+	<skill id="6651" name="Dopagen's Alienation" debuff="true" action="A2">
 	<!-- All actions are sealed by Dopagen's special ability. Impossible to dispel. -->
 		<icon initial="icon.skill4111"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -2934,7 +2934,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6652" name="Lv. 89 Raid Boss" max-level="1" >
+	<skill id="6652" name="Lv. 89 Raid Boss">
 	<!-- Head of the Bistakon, a race that is one of Istina's numerous descendants. He became the head of the race through physical strength and superior power. They are enemies with the Kokracon and Reptilikon races, maintaining the balance of power. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -2945,7 +2945,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6653" name="Lv. 89 Raid Boss" max-level="1" >
+	<skill id="6653" name="Lv. 89 Raid Boss">
 	<!-- Head of the Leptilikon, a race that is one of Istina's numerous descendants. He boasts perfect defense, but is weak against Treykan. They are enemies with the Kokracon and Bistakon races, maintaining the balance of power. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -2956,7 +2956,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6654" name="Lv. 89 Raid Boss" max-level="1" >
+	<skill id="6654" name="Lv. 89 Raid Boss">
 	<!-- Head of the Kokracon, a race that is one of Istina's numerous descendants. He has exceptional intelligence among his race. They are enemies with the Bistakon and Leptilikon races, maintaining the balance of power. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -2967,7 +2967,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6655" name="Tarask Carapace" max-level="1" >
+	<skill id="6655" name="Tarask Carapace">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -2978,7 +2978,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6656" name="Lavasaurus Alpha Attack" max-level="1" action="A1">
+	<skill id="6656" name="Lavasaurus Alpha Attack" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2996,7 +2996,7 @@
 		</consume>
 		<target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="300" />
 	</skill>
-	<skill id="6657" name="Lavasaurus Alpha Heal" max-level="1" action="A1" type="MAGIC">
+	<skill id="6657" name="Lavasaurus Alpha Heal" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -3012,7 +3012,7 @@
 		</consume>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6658" name="Lv. 84 Raid Boss" max-level="1" >
+	<skill id="6658" name="Lv. 84 Raid Boss">
 	<!-- Raid Boss Darnel -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -3023,7 +3023,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6659" name="Lv. 84 Raid Boss" max-level="1" >
+	<skill id="6659" name="Lv. 84 Raid Boss">
 	<!-- Raid Boss Kechi -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -3034,7 +3034,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6660" name="Lv. 84 Raid Boss" max-level="1" >
+	<skill id="6660" name="Lv. 84 Raid Boss">
 	<!-- Raid Boss Tears -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -3045,7 +3045,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6661" name="Lv. 85 Raid Boss" max-level="1" >
+	<skill id="6661" name="Lv. 85 Raid Boss">
 	<!-- Ice warrior created by blowing life into Freya's crystal fragment. It has no understanding of self and only obeys the commands of its master Freya. It will even walk into death if it is her will. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -3089,7 +3089,7 @@
 			<block-all-actions>
 				<allowed-skills>35016</allowed-skills>
 			</block-all-actions>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="115.0"/>
 			</damage-over-time>
 			<call-skill skill="6302" scope="END">
@@ -3097,7 +3097,7 @@
 			</call-skill>
 		</effects>
 	</skill>
-	<skill id="6663" name="Lv. 76 Raid Boss" max-level="1" >
+	<skill id="6663" name="Lv. 76 Raid Boss">
 	<!-- Powerful gigantic golem created by Dr. Kaos using the Pael ruins star stone. Dr. Chaos was once the Golem Maestro for all guilds, but he tried to steal the Leader's Blueprints. Was assigned to obtaining revenge for the Black Anvil Guild, and he led the golem army that he made to Pavel's Ruins. When an outsider is found, in order to punish himself, consider it troops from the Black Anvil Guild, and just attack. His ultimate goal is world domination. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -3108,7 +3108,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6664" name="Lv. 84 Raid Boss" max-level="1" >
+	<skill id="6664" name="Lv. 84 Raid Boss">
 	<!-- Though it appears human, it is actually an archangel who speaks directly with Einhasad. The ancient religious text discovered at the Tower of Insolence gave evidence that the grail was hidden somewhere in the Monastery of Silence. Afterward, extensive searches for the grail took place in the Temple of Bishop, but no one could escape the judgment of the Master of Splendor. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -3119,7 +3119,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6665" name="Aggression" max-level="1" action="A1">
+	<skill id="6665" name="Aggression" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -3132,7 +3132,7 @@
 		</attributes>
 		<target type="ENEMY_ONLY" />
 	</skill>
-	<skill id="6666" name="Feral Shield" max-level="1" action="A2" type="MAGIC">
+	<skill id="6666" name="Feral Shield" action="A2" type="MAGIC">
 	<!-- Increases P. Def. by 18%% by 5 minutes. -->
 		<icon initial="icon.skill1040"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -3159,7 +3159,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6667" name="Feral Wind Walk" max-level="1" action="A2" type="MAGIC">
+	<skill id="6667" name="Feral Wind Walk" action="A2" type="MAGIC">
 	<!-- Increases Speed. by 33 for 5 minutes. -->
 		<icon initial="icon.skill1204"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -3181,12 +3181,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="33.0"/>
 			</speed>
 		</effects>
 	</skill>
-	<skill id="6668" name="Feral Death Whisper" max-level="1" action="A2" type="MAGIC">
+	<skill id="6668" name="Feral Death Whisper" action="A2" type="MAGIC">
 	<!-- Increases P. Critical Damage +35%% for 5 minutes. -->
 		<icon initial="icon.skill1242"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -3213,7 +3213,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6669" name="Feral Blessed Body" max-level="1" action="A2" type="MAGIC">
+	<skill id="6669" name="Feral Blessed Body" action="A2" type="MAGIC">
 	<!-- Increases Max HP by 35%% for 5 minutes. -->
 		<icon initial="icon.skill1045"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -3235,12 +3235,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="35.0"/>
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="6670" name="Feral Vampiric Rage" max-level="1" action="A2" type="MAGIC">
+	<skill id="6670" name="Feral Vampiric Rage" action="A2" type="MAGIC">
 	<!-- For 5 minutes, 9%% of the physical damage inflicted on the enemy is recovered as HP with a certain probability. -->
 		<icon initial="icon.skill1268"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -3267,7 +3267,7 @@
 			</vampiric-attack>
 		</effects>
 	</skill>
-	<skill id="6671" name="Feral Berserker Spirit" max-level="1" action="A2" type="MAGIC">
+	<skill id="6671" name="Feral Berserker Spirit" action="A2" type="MAGIC">
 	<!-- P. Def. decreases momentarily. -8%%, M. Def. -16%%,P.  Evasion -4 and increases P. Atk. +8%%, M. Atk. +16%%, Atk. Spd. +8%%, Casting Spd. +8%%, and Movement Speed. +8 for 5 minutes. -->
 		<icon initial="icon.skill1062"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -3295,7 +3295,7 @@
 			<stat-modify stat="MAGIC_ATTACK" mode="PER">
 				<power initial="16.0"/>
 			</stat-modify>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="8.0"/>
 			</speed>
 			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
@@ -3304,7 +3304,7 @@
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="-8.0"/>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="-4.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="-4.0"/>
 			</stat-hp-based>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="8.0"/>
@@ -3314,7 +3314,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6672" name="Feral Blessed Shield" max-level="1" action="A2" type="MAGIC">
+	<skill id="6672" name="Feral Blessed Shield" action="A2" type="MAGIC">
 	<!-- Increases Shield defense rate +5%% for 30 minutes. -->
 		<icon initial="icon.skill1243"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -3341,7 +3341,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6673" name="Presentation - Attain Noblesse" max-level="1" action="A1">
+	<skill id="6673" name="Presentation - Attain Noblesse" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -3354,7 +3354,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6674" name="Energy of Range Increment" max-level="1" action="A2">
+	<skill id="6674" name="Energy of Range Increment" action="A2">
 	<!-- Increases Bow Attack Range +50 for a set time. -->
 		<icon initial="icon.etc_magic_sp_herb_i00"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -3372,13 +3372,13 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_RANGE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK_RANGE">
 				<power initial="50.0"/>
 				<weapon-type>BOW CROSSBOW </weapon-type>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6675" name="Lavasaurus Alpha Attack" max-level="1" action="A1">
+	<skill id="6675" name="Lavasaurus Alpha Attack" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -3396,7 +3396,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="300" />
 	</skill>
-	<skill id="6676" name="Magician's Perversity" max-level="1" action="A1">
+	<skill id="6676" name="Magician's Perversity" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -3415,12 +3415,12 @@
 		</consume>
 		<target type="ENEMY_ONLY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="120.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="6677" name="Hold" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="6677" name="Hold" debuff="true" action="A2" type="MAGIC">
 	<!-- Afflicted with Hold and unable to move temporarily. -->
 		<icon initial="icon.skill4047"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="HOLD" level-bonus-rate="2" >
@@ -3439,7 +3439,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6678" name="Cancel Hold" max-level="1" action="A1" type="MAGIC">
+	<skill id="6678" name="Cancel Hold" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -3453,7 +3453,7 @@
 		</attributes>
 		<target type="ENEMY_ONLY" />
 	</skill>
-	<skill id="6679" name="Summoner's Blow" max-level="1" action="A1">
+	<skill id="6679" name="Summoner's Blow" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -3472,12 +3472,12 @@
 		</consume>
 		<target type="ENEMY_ONLY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="120.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="6680" name="Faint Plus" max-level="1" action="A1">
+	<skill id="6680" name="Faint Plus" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -3494,7 +3494,7 @@
 		</consume>
 		<target type="ENEMY_ONLY" />
 	</skill>
-	<skill id="6681" name="Maguen Wind Walk" max-level="1" action="A2" type="MAGIC">
+	<skill id="6681" name="Maguen Wind Walk" action="A2" type="MAGIC">
 	<!-- Speed. increases by 40 for 20 minutes. -->
 		<icon initial="icon.skill1204"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -3517,12 +3517,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="40.0"/>
 			</speed>
 		</effects>
 	</skill>
-	<skill id="6682" name="Elite Maguen Wind Walk" max-level="1" action="A2" type="MAGIC">
+	<skill id="6682" name="Elite Maguen Wind Walk" action="A2" type="MAGIC">
 	<!-- Speed. increases by 45 for 20 minutes. -->
 		<icon initial="icon.skill1204"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -3545,12 +3545,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="45.0"/>
 			</speed>
 		</effects>
 	</skill>
-	<skill id="6683" name="Maguen Return" max-level="1" action="A1">
+	<skill id="6683" name="Maguen Return" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -3567,11 +3567,11 @@
 		</conditions>
 		<effects>
 			<teleport>
-				<location level="1" x="-178244" y="153389" z="2472"/>
+				<location x="-178244" y="153389" z="2472"/>
 			</teleport>
 		</effects>
 	</skill>
-	<skill id="6684" name="Maguen Party Return" max-level="1" action="A1">
+	<skill id="6684" name="Maguen Party Return" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -3588,11 +3588,11 @@
 		</conditions>
 		<effects>
 			<teleport>
-				<location level="1" x="-178244" y="153389" z="2472"/>
+				<location x="-178244" y="153389" z="2472"/>
 			</teleport>
 		</effects>
 	</skill>
-	<skill id="6686" name="Cancel Holy Protection" max-level="1" action="A1">
+	<skill id="6686" name="Cancel Holy Protection" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -3615,7 +3615,7 @@
 			</dispel>
 		</effects>
 	</skill>
-	<skill id="6688" name="Awful Soup" max-level="1" debuff="true" action="A2">
+	<skill id="6688" name="Awful Soup" debuff="true" action="A2">
 	<!-- Atk. Spd. increases by 20%% and HP decreases 0.5%% per second for 3 minutes. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -3634,7 +3634,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false" mode="PER">
+			<damage-over-time ticks="5" mode="PER">
 				<power initial="0.02"/>
 			</damage-over-time>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
@@ -3642,7 +3642,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6689" name="HP/MP Drain" max-level="1" action="A1">
+	<skill id="6689" name="HP/MP Drain" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -3658,12 +3658,12 @@
 		</attributes>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="100" />
 		<effects>
-			<mp mode="DIFF">
+			<mp>
 				<power initial="-491.0"/>
 			</mp>
 		</effects>
 	</skill>
-	<skill id="6690" name="Hold" max-level="1" debuff="true" action="A2">
+	<skill id="6690" name="Hold" debuff="true" action="A2">
 	<!-- Afflicted with Hold and unable to move temporarily. -->
 		<icon initial="icon.skill1201"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="HOLD" >
@@ -3682,7 +3682,7 @@
 			<chance initial="95"/>
 		</abnormal>
 	</skill>
-	<skill id="6691" name="Dualsword Deadly Move" max-level="1" action="A1">
+	<skill id="6691" name="Dualsword Deadly Move" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -3696,7 +3696,7 @@
 		</attributes>
 		<target type="ENEMY" />
 	</skill>
-	<skill id="6692" name="Dualsword Range Deadly Move" max-level="1" action="A1">
+	<skill id="6692" name="Dualsword Range Deadly Move" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -3834,7 +3834,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
 	</skill>
-	<skill id="6696" name="Presentation - Quest Done" max-level="1" action="A1">
+	<skill id="6696" name="Presentation - Quest Done" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" trait="HOLD" >
@@ -3845,7 +3845,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6697" name="Eternal Blizzard" max-level="1" debuff="true" action="A1">
+	<skill id="6697" name="Eternal Blizzard" debuff="true" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill6274"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -3866,7 +3866,7 @@
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="3000" />
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="45257.0"/>
 			</physical-attack>
 			<call-skill skill="6698">
@@ -3874,7 +3874,7 @@
 			</call-skill>
 		</effects>
 	</skill>
-	<skill id="6698" name="Freeze - Eternal Ice" max-level="1" debuff="true" action="A2">
+	<skill id="6698" name="Freeze - Eternal Ice" debuff="true" action="A2">
 	<!-- Actions prohibited for 15 seconds. HP decreases by 115 and MP decreases by 5%% per second. -->
 		<icon initial="icon.skill6274"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" triggered="true" >
@@ -3894,7 +3894,7 @@
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 		<effects>
 			<block-all-actions/>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="115.0"/>
 			</damage-over-time>
 			<effect name="ManaDamOverTime" ticks="5">
@@ -3905,7 +3905,7 @@
 			</call-skill>
 		</effects>
 	</skill>
-	<skill id="6699" name="Ball Trapping Gnosian Agathion Cute Trick" max-level="1" action="A1">
+	<skill id="6699" name="Ball Trapping Gnosian Agathion Cute Trick" action="A1">
 	<!-- See the summoned spirit perform cute tricks. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >

@@ -2,20 +2,20 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<xs:element name="list">
 		<xs:complexType>
-			<xs:sequence minOccurs="1" maxOccurs="1">
-				<xs:element name="weapon" minOccurs="1" maxOccurs="unbounded">
+			<xs:sequence>
+				<xs:element name="weapon" maxOccurs="unbounded">
 					<xs:complexType>
-						<xs:sequence minOccurs="1" maxOccurs="1">
-							<xs:element name="stone" minOccurs="1" maxOccurs="unbounded">
+						<xs:sequence>
+							<xs:element name="stone" maxOccurs="unbounded">
 								<xs:complexType>
-									<xs:sequence minOccurs="1" maxOccurs="1">
-										<xs:element name="variation" minOccurs="1" maxOccurs="unbounded">
+									<xs:sequence>
+										<xs:element name="variation" maxOccurs="unbounded">
 											<xs:complexType>
-												<xs:sequence minOccurs="1" maxOccurs="1">
-													<xs:element name="category" minOccurs="1" maxOccurs="unbounded">
+												<xs:sequence>
+													<xs:element name="category" maxOccurs="unbounded">
 														<xs:complexType>
-															<xs:sequence minOccurs="1" maxOccurs="1">
-																<xs:element name="augment" minOccurs="1" maxOccurs="unbounded">
+															<xs:sequence>
+																<xs:element name="augment" maxOccurs="unbounded">
 																	<xs:complexType>
 																		<xs:attribute name="id" type="xs:positiveInteger" use="required" />
 																		<xs:attribute name="chance" type="xs:decimal" use="required" />
@@ -37,6 +37,7 @@
 						<xs:attribute name="type" type="xs:string" use="required" />
 					</xs:complexType>
 				</xs:element>
-			</xs:sequence>		</xs:complexType>
+			</xs:sequence>
+		</xs:complexType>
 	</xs:element>
 </xs:schema>

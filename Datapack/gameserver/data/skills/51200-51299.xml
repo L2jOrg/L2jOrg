@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="51200" name="High Priest's Energy" max-level="1" action="A1">
+	<skill id="51200" name="High Priest's Energy" action="A1">
 	<!-- Transforms into High Priest through the scroll. For 20 min., XP Gain +10%%, P. Atk. +7%%, M. Atk. + 7%%. Cooldown is 1 minute. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as High Priest there's a chance to recover party members' HP by 1000 and MP by 200. -->
 		<icon initial="icon.bm2018_healer_i01"/>
 		<attributes property="PHYSIC" >
@@ -11,7 +11,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51201" name="Blood Noblesse's Energy" max-level="1" action="A1">
+	<skill id="51201" name="Blood Noblesse's Energy" action="A1">
 	<!-- Transforms into Blood Noblesse through the scroll. For 20 min., XP Gain +10%%, P. Atk. +7%%, M. Atk. + 7%%. Cooldown is 1 minute. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as Blood Noblesse there's a chance to inflict an additional 145 magic attack. -->
 		<icon initial="icon.bm2018_rednoblesse_i01"/>
 		<attributes property="PHYSIC" >
@@ -22,7 +22,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51202" name="White Noblesse's Energy" max-level="1" action="A1">
+	<skill id="51202" name="White Noblesse's Energy" action="A1">
 	<!-- Transforms into White Noblesse through the scroll. For 20 min., XP Gain +10%%, P. Atk. +7%%, M. Atk. + 7%%. Cooldown is 1 minute. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as White Noblesse there's a chance to reduce the enemy's M. Def. by 23%%. -->
 		<icon initial="icon.bm2018_whitenoblesse_i01"/>
 		<attributes property="PHYSIC" >
@@ -33,7 +33,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51203" name="Berserker Soul" max-level="1" action="A1">
+	<skill id="51203" name="Berserker Soul" action="A1">
 	<!-- Has gone berserk through the power of the armor. While in berserker mode, the equipper's P. Atk. +50%%, M. Atk. + 50%%, Atk. Spd. +50%%, Casting Spd. +50%%, and reflects 15%% of damage received to the enemy. -->
 		<icon initial="icon.bm2018_dragon_i02"/>
 		<attributes property="PHYSIC" >
@@ -46,7 +46,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51204" name="Ninja Assassin - Cancel Target" max-level="1" action="A1">
+	<skill id="51204" name="Ninja Assassin - Cancel Target" action="A1">
 	<!-- Cancels enemy's target. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -57,7 +57,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51205" name="Blue Musketeer - Stun" max-level="1" debuff="true" action="A1">
+	<skill id="51205" name="Blue Musketeer - Stun" debuff="true" action="A1">
 	<!-- A temporary Stun that prevents movement. -->
 		<icon initial="icon.skill0100"/>
 		<attributes property="PHYSIC" >
@@ -70,7 +70,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51206" name="Valkyrie - Paralyze" max-level="1" debuff="true" action="A1">
+	<skill id="51206" name="Valkyrie - Paralyze" debuff="true" action="A1">
 	<!-- Paralyzed and unable to move temporarily. -->
 		<icon initial="icon.skill1170"/>
 		<attributes property="PHYSIC" >
@@ -83,7 +83,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51207" name="Wild Wolf - Hex" max-level="1" debuff="true" action="A1">
+	<skill id="51207" name="Wild Wolf - Hex" debuff="true" action="A1">
 	<!-- P. Def. -23%%. -->
 		<icon initial="icon.skill0122"/>
 		<attributes property="PHYSIC" >
@@ -96,7 +96,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51208" name="Caravan's Blessing" max-level="1" action="A1">
+	<skill id="51208" name="Caravan's Blessing" action="A1">
 	<!-- Party members' P./M. Atk. +10%%. -->
 		<icon initial="icon.bm2018_pirate_i02"/>
 		<attributes property="PHYSIC" >
@@ -109,7 +109,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51209" name="Purple Cowboy - P. Atk." max-level="1" action="A1">
+	<skill id="51209" name="Purple Cowboy - P. Atk." action="A1">
 	<!-- Deals a powerful physical attack to the target. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -122,7 +122,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51210" name="High Priest - Blessing of Eva" max-level="1" action="A1">
+	<skill id="51210" name="High Priest - Blessing of Eva" action="A1">
 	<!-- Recovers party mebmers' HP by 1000 and MP by 200 with sacred power. -->
 		<icon initial="icon.skill1506"/>
 		<attributes >
@@ -135,7 +135,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51211" name="Blood Noblesse - M. Atk." max-level="1" action="A1">
+	<skill id="51211" name="Blood Noblesse - M. Atk." action="A1">
 	<!-- Deals a powerful magic attack to the target. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -148,7 +148,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51212" name="White Noblesse - Curse Gloom" max-level="1" debuff="true" action="A1">
+	<skill id="51212" name="White Noblesse - Curse Gloom" debuff="true" action="A1">
 	<!-- M. Def. -23%%. -->
 		<icon initial="icon.skill1263"/>
 		<attributes property="PHYSIC" >
@@ -161,7 +161,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51213" name="Mysterious Transformation Box" max-level="1" action="A1">
+	<skill id="51213" name="Mysterious Transformation Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -173,7 +173,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51214" name="Transformation Sealbook: Dragon Berserker" max-level="1" action="A1">
+	<skill id="51214" name="Transformation Sealbook: Dragon Berserker" action="A1">
 	<!-- Sealbook to learn Dragon Berserker transformation skill. Disappears when used. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -183,7 +183,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51215" name="Transformation Sealbook: Ninja Assassin" max-level="1" action="A1">
+	<skill id="51215" name="Transformation Sealbook: Ninja Assassin" action="A1">
 	<!-- Sealbook to learn Ninja Assassin transformation skill. Disappears when used. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -193,7 +193,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51216" name="Transformation Sealbook: Blue Musketeer" max-level="1" action="A1">
+	<skill id="51216" name="Transformation Sealbook: Blue Musketeer" action="A1">
 	<!-- Sealbook to learn Blue Musketeer transformation skill. Disappears when used. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -203,7 +203,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51217" name="Transformation Sealbook: Valkyrie" max-level="1" action="A1">
+	<skill id="51217" name="Transformation Sealbook: Valkyrie" action="A1">
 	<!-- Sealbook to learn Valkyrie transformation skill. Disappears when used. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -213,7 +213,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51218" name="Transformation Sealbook: Wild Wolf" max-level="1" action="A1">
+	<skill id="51218" name="Transformation Sealbook: Wild Wolf" action="A1">
 	<!-- Sealbook to learn Wild Wolf transformation skill. Disappears when used. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -223,7 +223,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51219" name="Transformation Sealbook: Caravan" max-level="1" action="A1">
+	<skill id="51219" name="Transformation Sealbook: Caravan" action="A1">
 	<!-- Sealbook to learn Caravan transformation skill. Disappears when used. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -233,7 +233,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51220" name="Transformation Sealbook: Purple Cowboy" max-level="1" action="A1">
+	<skill id="51220" name="Transformation Sealbook: Purple Cowboy" action="A1">
 	<!-- Sealbook to learn Purple Cowboy transformation skill. Disappears when used. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -243,7 +243,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51221" name="Transformation Sealbook: High Priest" max-level="1" action="A1">
+	<skill id="51221" name="Transformation Sealbook: High Priest" action="A1">
 	<!-- Sealbook to learn High Priest transformation skill. Disappears when used. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -253,7 +253,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51222" name="Transformation Sealbook: Blood Noblesse" max-level="1" action="A1">
+	<skill id="51222" name="Transformation Sealbook: Blood Noblesse" action="A1">
 	<!-- Sealbook to learn Blood Noblesse transformation skill. Disappears when used. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -263,7 +263,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51223" name="Transformation Sealbook: White Noblesse" max-level="1" action="A1">
+	<skill id="51223" name="Transformation Sealbook: White Noblesse" action="A1">
 	<!-- Sealbook to learn White Noblesse transformation skill. Disappears when used. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -302,7 +302,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51226" name="Mysterious Transformation Sealbook Box" max-level="1" action="A1">
+	<skill id="51226" name="Mysterious Transformation Sealbook Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -331,7 +331,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51228" name="Sayha's Spring Breeze" max-level="1" action="A1">
+	<skill id="51228" name="Sayha's Spring Breeze" action="A1">
 	<!-- Momentum consumption speed while hunting +100%%, XP/SP gain +150%% for 10 minutes Buff does not disappear after death. Cooldown: 20 minutes -->
 		<icon initial="icon.ev_magic_flame_game_wind1"/>
 		<attributes property="PHYSIC" >
@@ -342,7 +342,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51229" name="Spring's Blessing Box" max-level="1" action="A1">
+	<skill id="51229" name="Spring's Blessing Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -380,7 +380,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51232" name="Gem - Greater Ruby" max-level="1" action="A1">
+	<skill id="51232" name="Gem - Greater Ruby" action="A1">
 	<!-- Beast Soulshot damage +20% -->
 		<icon initial="icon.bm_jewel_ssdmg_high_lv1_lavianrose"/>
 		<attributes >
@@ -416,7 +416,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51235" name="Gem - Greater Sapphire" max-level="1" action="A1">
+	<skill id="51235" name="Gem - Greater Sapphire" action="A1">
 	<!-- Increases Beast Spiritshot Damage +20%. -->
 		<icon initial="icon.bm_jewel_spsdmg_high_lv1_lavianrose"/>
 		<attributes >
@@ -465,7 +465,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51238" name="Brilliant Jewelry Box" max-level="1" action="A1">
+	<skill id="51238" name="Brilliant Jewelry Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_special_jewelbox_lv5"/>
 		<attributes >
@@ -491,7 +491,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51240" name="Night Goblin Liquor" max-level="1" action="A1">
+	<skill id="51240" name="Night Goblin Liquor" action="A1">
 	<!-- For 5 minutes, P. Atk. +15%, M. Atk. +23%, P. Def./M. Def. +15%, Atk. Spd./Casting Spd. +15%, and HP Recovery Bonus/MP Recovery Bonus +30%. -->
 		<icon initial="icon.bm_goblin_buff_herong"/>
 		<attributes property="PHYSIC" >
@@ -503,7 +503,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51241" name="Codex - Disarm" max-level="1" action="A1">
+	<skill id="51241" name="Codex - Disarm" action="A1">
 	<!-- A book that teaches Disarm. Removed after use. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -513,7 +513,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51242" name="Codex - Armor Breaker" max-level="1" action="A1">
+	<skill id="51242" name="Codex - Armor Breaker" action="A1">
 	<!-- A book that teaches Armor Breaker. Removed after use. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -523,7 +523,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51243" name="Codex - Spell Break" max-level="1" action="A1">
+	<skill id="51243" name="Codex - Spell Break" action="A1">
 	<!-- A book that teaches Spell Breaker. Removed after use. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -533,7 +533,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51244" name="Codex - Warp" max-level="1" action="A1">
+	<skill id="51244" name="Codex - Warp" action="A1">
 	<!-- A book that teaches Warp. Removed after use. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -543,7 +543,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51245" name="Codex - Flash" max-level="1" action="A1">
+	<skill id="51245" name="Codex - Flash" action="A1">
 	<!-- A book that teaches Flash. Removed after use. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -553,7 +553,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51246" name="Codex - Berserker Mode" max-level="1" action="A1">
+	<skill id="51246" name="Codex - Berserker Mode" action="A1">
 	<!-- A book that teaches Berserker. Removed after use. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -563,7 +563,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51247" name="Disarm" max-level="1" debuff="true" action="A1">
+	<skill id="51247" name="Disarm" debuff="true" action="A1">
 	<!-- Removes weapons of the target and nearby enemies reducing their P. Atk/M. Atk. and Movement by 30% and decreases HP by 1000 for 5 seconds. -->
 		<icon initial="icon.skill0485"/>
 		<attributes property="PHYSIC" auto-use="ACTIVE">
@@ -580,7 +580,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="51248" name="Armor Breaker" max-level="1" debuff="true" action="A1">
+	<skill id="51248" name="Armor Breaker" debuff="true" action="A1">
 	<!-- Removes armor of the target and nearby enemies reducing their P. Atk/M. Atk. and Movement by 30% and decreases HP by 1000 for 5 seconds. -->
 		<icon initial="icon.skill10703"/>
 		<attributes property="PHYSIC" auto-use="ACTIVE">
@@ -597,7 +597,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="51249" name="Spell Break" max-level="1" debuff="true" action="A1">
+	<skill id="51249" name="Spell Break" debuff="true" action="A1">
 	<!-- Has a chance to cancel skills of the target and nearby enemies for 10 seconds. -->
 		<icon initial="icon.skill1412"/>
 		<attributes property="PHYSIC" auto-use="ACTIVE">
@@ -614,7 +614,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="51250" name="Warp" max-level="1" action="A1">
+	<skill id="51250" name="Warp" action="A1">
 	<!-- Gives Cancel Target to nearby enemies and Teleports them to the front. -->
 		<icon initial="icon.skill11057"/>
 		<attributes >
@@ -631,7 +631,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="51251" name="Flash" max-level="1" action="A1" type="MAGIC">
+	<skill id="51251" name="Flash" action="A1" type="MAGIC">
 	<!-- Cancels targeting of nearby enemies, and makes them unable to target for 5 seconds. -->
 		<icon initial="icon.skill1417"/>
 		<attributes property="PHYSIC" >
@@ -648,7 +648,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="51252" name="Berserker Mode" max-level="1" action="A1">
+	<skill id="51252" name="Berserker Mode" action="A1">
 	<!-- Increases P. Atk./M. Atk./Atk. Spd./Casting Spd. +50%% for 20 seconds and reflects damaged received by 15%%. The effect does not stack with Berserker Soul which is the transformed state of Dragon Berserker. -->
 		<icon initial="icon.skill10274"/>
 		<attributes property="PHYSIC" auto-use="BUFF">
@@ -664,7 +664,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="51253" name="Elmoreden Scroll of Experience" max-level="1" action="A1">
+	<skill id="51253" name="Elmoreden Scroll of Experience" action="A1">
 	<!-- 500,000 XP. -->
 		<icon initial="icon.bm_elmoaden_exp_scrl"/>
 		<attributes >
@@ -675,7 +675,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51254" name="High-grade Elmoreden Scroll of Experience" max-level="1" action="A1">
+	<skill id="51254" name="High-grade Elmoreden Scroll of Experience" action="A1">
 	<!-- 20,000,000 XP. -->
 		<icon initial="icon.bm_elmoaden_exp_scrl"/>
 		<attributes >
@@ -686,7 +686,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51255" name="Elmoreden Treasure Chest" max-level="1" action="A1">
+	<skill id="51255" name="Elmoreden Treasure Chest" action="A1">
 	<!-- none -->
 		<icon initial="[icon.bm_elmoaden_box]"/>
 		<attributes >
@@ -698,7 +698,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51256" name="Elmoreden Relic Pouch" max-level="1" action="A1">
+	<skill id="51256" name="Elmoreden Relic Pouch" action="A1">
 	<!-- none -->
 		<icon initial="[icon.bm_elmoaden_pocket]"/>
 		<attributes >
@@ -710,7 +710,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51257" name="Elmoreden Golden Box" max-level="1" action="A1">
+	<skill id="51257" name="Elmoreden Golden Box" action="A1">
 	<!-- none -->
 		<icon initial="[icon.bm_elmoaden_gold_box]"/>
 		<attributes >
@@ -722,7 +722,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51258" name="Elmoreden Silver Box" max-level="1" action="A1">
+	<skill id="51258" name="Elmoreden Silver Box" action="A1">
 	<!-- none -->
 		<icon initial="[icon.bm_elmoaden_silver_box]"/>
 		<attributes >
@@ -734,7 +734,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51259" name="+10 Sayha's Cloak Box - White" max-level="1" action="A1">
+	<skill id="51259" name="+10 Sayha's Cloak Box - White" action="A1">
 	<!-- none -->
 		<icon initial="[icon.etc_treasure_box_i00]"/>
 		<attributes >
@@ -746,7 +746,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51260" name="+10 Sayha's Cloak Box - Black" max-level="1" action="A1">
+	<skill id="51260" name="+10 Sayha's Cloak Box - Black" action="A1">
 	<!-- none -->
 		<icon initial="[icon.etc_treasure_box_i00]"/>
 		<attributes >
@@ -758,7 +758,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51261" name="+10 Sayha's Cloak Box - Red" max-level="1" action="A1">
+	<skill id="51261" name="+10 Sayha's Cloak Box - Red" action="A1">
 	<!-- none -->
 		<icon initial="[icon.etc_treasure_box_i00]"/>
 		<attributes >
@@ -770,7 +770,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51262" name="Soccer Ball Herb of Victory" max-level="1" action="A1">
+	<skill id="51262" name="Soccer Ball Herb of Victory" action="A1">
 	<!-- For 5 minutes, P. Atk. +15%, M. Atk. +23%, P. Def./M. Def. +15%, Atk. Spd./Casting Spd. +15%, and HP Recovery Bonus/MP Recovery Bonus +30%. -->
 		<icon initial="BranchSys2.icon.br_soccer_ball_i00"/>
 		<attributes property="PHYSIC" >
@@ -782,7 +782,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51263" name="Greater Solid Scroll: Enchant Weapon (D-grade)" max-level="1" action="A1">
+	<skill id="51263" name="Greater Solid Scroll: Enchant Weapon (D-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.giant_scrl_of_ench_wp_d"/>
 		<attributes >
@@ -792,7 +792,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51264" name="Greater Solid Scroll: Enchant Armor (D-grade)" max-level="1" action="A1">
+	<skill id="51264" name="Greater Solid Scroll: Enchant Armor (D-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.giant_scrl_of_ench_am_d"/>
 		<attributes >
@@ -802,7 +802,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51265" name="Greater Solid Scroll: Enchant Weapon (C-grade)" max-level="1" action="A1">
+	<skill id="51265" name="Greater Solid Scroll: Enchant Weapon (C-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.giant_scrl_of_ench_wp_c"/>
 		<attributes >
@@ -812,7 +812,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51266" name="Greater Solid Scroll: Enchant Armor (C-grade)" max-level="1" action="A1">
+	<skill id="51266" name="Greater Solid Scroll: Enchant Armor (C-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.giant_scrl_of_ench_am_c"/>
 		<attributes >
@@ -822,7 +822,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51267" name="Greater Solid Scroll: Enchant Weapon (B-grade)" max-level="1" action="A1">
+	<skill id="51267" name="Greater Solid Scroll: Enchant Weapon (B-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.giant_scrl_of_ench_wp_b"/>
 		<attributes >
@@ -832,7 +832,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51268" name="Greater Solid Scroll: Enchant Armor (B-grade)" max-level="1" action="A1">
+	<skill id="51268" name="Greater Solid Scroll: Enchant Armor (B-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.giant_scrl_of_ench_am_b"/>
 		<attributes >
@@ -842,7 +842,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51269" name="Greater Solid Scroll: Enchant Weapon (A-grade)" max-level="1" action="A1">
+	<skill id="51269" name="Greater Solid Scroll: Enchant Weapon (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -852,7 +852,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51270" name="Greater Solid Scroll: Enchant Armor (A-grade)" max-level="1" action="A1">
+	<skill id="51270" name="Greater Solid Scroll: Enchant Armor (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1032,7 +1032,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51282" name="+5 Sealed Agathion - Virgo" max-level="1" action="A1">
+	<skill id="51282" name="+5 Sealed Agathion - Virgo" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i04"/>
 		<attributes >
@@ -1044,7 +1044,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51283" name="+5 Sealed Agathion - Capricorn" max-level="1" action="A1">
+	<skill id="51283" name="+5 Sealed Agathion - Capricorn" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i04"/>
 		<attributes >
@@ -1056,7 +1056,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51284" name="+5 Sealed Agathion - Libra" max-level="1" action="A1">
+	<skill id="51284" name="+5 Sealed Agathion - Libra" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i04"/>
 		<attributes >
@@ -1068,7 +1068,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51285" name="+5 Sealed Agathion - Taurus" max-level="1" action="A1">
+	<skill id="51285" name="+5 Sealed Agathion - Taurus" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i04"/>
 		<attributes >
@@ -1080,7 +1080,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51286" name="+5 Sealed Agathion - Leo" max-level="1" action="A1">
+	<skill id="51286" name="+5 Sealed Agathion - Leo" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i04"/>
 		<attributes >
@@ -1092,7 +1092,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51287" name="+5 Sealed Agathion - Gemini" max-level="1" action="A1">
+	<skill id="51287" name="+5 Sealed Agathion - Gemini" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i04"/>
 		<attributes >
@@ -1104,7 +1104,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51288" name="+5 Sealed Agathion - Scorpio" max-level="1" action="A1">
+	<skill id="51288" name="+5 Sealed Agathion - Scorpio" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i04"/>
 		<attributes >
@@ -1116,7 +1116,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51289" name="+5 Sealed Agathion - Aquarius" max-level="1" action="A1">
+	<skill id="51289" name="+5 Sealed Agathion - Aquarius" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i04"/>
 		<attributes >
@@ -1128,7 +1128,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51290" name="+5 Sealed Agathion - Sagittarius" max-level="1" action="A1">
+	<skill id="51290" name="+5 Sealed Agathion - Sagittarius" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i04"/>
 		<attributes >
@@ -1140,7 +1140,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51291" name="Blessed Scroll: Enchant Weapon (S-grade)" max-level="1" action="A1">
+	<skill id="51291" name="Blessed Scroll: Enchant Weapon (S-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -1151,7 +1151,7 @@
 		</attributes>
 		<target type="ITEM" />
 	</skill>
-	<skill id="51292" name="Blessed Scroll: Enchant Armor (S-grade)" max-level="1" action="A1">
+	<skill id="51292" name="Blessed Scroll: Enchant Armor (S-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -1162,7 +1162,7 @@
 		</attributes>
 		<target type="ITEM" />
 	</skill>
-	<skill id="51293" name="Stable Scroll: Enchant Weapon (S-grade)" max-level="1" action="A1">
+	<skill id="51293" name="Stable Scroll: Enchant Weapon (S-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1172,7 +1172,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51294" name="Stable Scroll: Enchant Armor (S-grade)" max-level="1" action="A1">
+	<skill id="51294" name="Stable Scroll: Enchant Armor (S-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1182,7 +1182,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51295" name="Greater Scroll: Enchant Weapon (S-grade)" max-level="1" action="A1">
+	<skill id="51295" name="Greater Scroll: Enchant Weapon (S-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1192,7 +1192,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51296" name="Greater Scroll: Enchant Armor (S-grade)" max-level="1" action="A1">
+	<skill id="51296" name="Greater Scroll: Enchant Armor (S-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1215,7 +1215,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51298" name="Dimensional Barrier" max-level="1" action="A1">
+	<skill id="51298" name="Dimensional Barrier" action="A1">
 	<!-- Opens the dimensional curtain to block enemy attack 10 times for 15 seconds. -->
 		<icon initial="icon.skill11621"/>
 		<attributes property="PHYSIC" >

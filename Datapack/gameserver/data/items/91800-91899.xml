@@ -178,36 +178,36 @@
 	<item id="91824" name="Chef's Fish Stew - Victory" type="SCROLL" icon="icon.fish_stew_residence_cha">
 	<!-- When used, Prophecy of Victory Lv. 1 is applied for 3 hours. \n<Caution> Prophecy effects can only be applied one at a time. Effect remains even after death.\n -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="54119" level="1" value="-1"/>  <!-- Chef's Fish Stew - Victory -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="54119" value="-1"/>  <!-- Chef's Fish Stew - Victory -->
 		</skill-reducer>
 	</item>
 
 	<item id="91825" name="Adventurer's High Priest Transformation Scroll" type="POTION" icon="icon.bm2018_healer_i01">
 	<!-- Transforms you into High Priest for 20 minutes. Effect remains even after death.\n\n<High Priest's Energy> P. Atk. +63, M. Atk. +70, XP/SP Gain when hunting +5%. Has a chance to recover party members' HP/MP when attacking or using skills. Cooldown 1 minute. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51457" level="1" value="-1"/>  <!-- Adventurer's High Priest Transformation Scroll -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51457" value="-1"/>  <!-- Adventurer's High Priest Transformation Scroll -->
 		</skill-reducer>
 	</item>
 
 	<item id="91826" name="Adventurer's Valkyrie Transformation Scroll" type="POTION" icon="icon.bm2018_valkyrie_i01">
 	<!-- Transforms you into Valkyrie for 20 minutes. Effect remains even after death.\n\n<Valkyrie's Energy> P. Atk. +63, M. Atk. +70, Atk. Spd./Casting Spd. +50, P./M. Critical Rate +20, Speed +10, Sayha's Grace Consumption Speed -5%. Has a chance to inflict additional damage when attacking and using skills. Cooldown 1 minute. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51458" level="1" value="-1"/>  <!-- Adventurer's Valkyrie Transformation Scroll -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51458" value="-1"/>  <!-- Adventurer's Valkyrie Transformation Scroll -->
 		</skill-reducer>
 	</item>
 
 	<item id="91827" name="Adventurer's Dragon Berserker Transformation Scroll" type="POTION" icon="icon.bm2018_dragon_i01">
 	<!-- Transforms you into Dragon Berserker for 20 minutes. Effect remains even after death.\n\n<Dragon Berserker's Energy> P. Atk. +135, M. Atk. +150, Atk. Spd./Casting Spd. +100, P./M. Critical Rate +50, Speed +15, Sayha's Grace Consumption Speed -10%. When attacking and using skills there's a chance for P. Atk. +300, M. Atk. +300, Atk. Spd +100, Casting Spd +100, P./M. Critical Damage +135, and returns 15% of received damage back to the enemy. Cooldown 1 minute. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51459" level="1" value="-1"/>  <!-- Adventurer's Dragon Berserker Transformation Scroll -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51459" value="-1"/>  <!-- Adventurer's Dragon Berserker Transformation Scroll -->
 		</skill-reducer>
 	</item>
 
@@ -226,36 +226,36 @@
 	<item id="91830" name="Greater Fire Attack Potion" type="POTION" icon="icon.etc_fire_potion_i00">
 	<!-- Increases Fire Attack +80 for 20 min. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="54122" level="1" value="-1"/>  <!-- Greater Fire Attack Potion -->
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="54122" value="-1"/>  <!-- Greater Fire Attack Potion -->
 		</skill-reducer>
 	</item>
 
 	<item id="91831" name="Greater Water Attack Potion" type="POTION" icon="icon.etc_water_potion_i00">
 	<!-- Increases Water Attack +80 for 20 min. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="54123" level="1" value="-1"/>  <!-- Greater Water Attack Potion -->
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="54123" value="-1"/>  <!-- Greater Water Attack Potion -->
 		</skill-reducer>
 	</item>
 
 	<item id="91832" name="Greater Wind Attack Potion" type="POTION" icon="icon.etc_wind_potion_i00">
 	<!-- Increases Wind Attack +80 for 20 min. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="54124" level="1" value="-1"/>  <!-- Greater Wind Attack Potion -->
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="54124" value="-1"/>  <!-- Greater Wind Attack Potion -->
 		</skill-reducer>
 	</item>
 
 	<item id="91833" name="Greater Earth Attack Potion" type="POTION" icon="icon.etc_earth_potion_i00">
 	<!-- Increases Earth Attack +80 for 20 min. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="54125" level="1" value="-1"/>  <!-- Greater Earth Attack Potion -->
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="54125" value="-1"/>  <!-- Greater Earth Attack Potion -->
 		</skill-reducer>
 	</item>
 
@@ -298,36 +298,36 @@
 	<item id="91840" name="XP Boost Scroll - Event" type="NONE" icon="icon.etc_recall_exp_scroll">
 	<!-- When used, XP/SP Gain when hunting +30% for 20 minutes. The effect remains active even after death. Cooldown 1 minute. \n -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="32002" level="1" value="-1"/>  <!-- XP Boost Scroll - Exchangeable -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="32002" value="-1"/>  <!-- XP Boost Scroll - Exchangeable -->
 		</skill-reducer>
 	</item>
 
 	<item id="91841" name="White Assassin Transformation Scroll" type="POTION" icon="icon.scroll_of_verification_i06">
 	<!-- Transforms you into White Assassin for 20 min. Effect remains after death. \nWhite Assassin Transformation: Max HP/MP +7%, P../M. Accuracy +2, P./M. Atk. +3%, P./M. Def. +3%, Atk. Spd. +5%, M. Critical Rate +20, Speed +5. \n -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55414" level="1" value="-1"/>  <!-- White Assassin Transformation Scroll -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55414" value="-1"/>  <!-- White Assassin Transformation Scroll -->
 		</skill-reducer>
 	</item>
 
 	<item id="91842" name="Einhasad's Protection" type="SCROLL" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, Hunting XP/SP Gain when hunting +100% for 1 hour. Cooldown 1 minute. The effect remains active even after death.\n -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="50135" level="1" value="-1"/>  <!-- Einhasad's Protection -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="50135" value="-1"/>  <!-- Einhasad's Protection -->
 		</skill-reducer>
 	</item>
 
 	<item id="91843" name="Hero’s HP Potion - Event" type="POTION" icon="icon.etc_lesser_potion_red_i00">
 	<!-- After instant 500 HP Recovery, CP Recovery with remaining points. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="HEALING"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39103" level="1" value="-1"/>  <!-- Hero HP Potion -->
+		<attributes action="SKILL_REDUCE" auto-use="HEALING"/>
+		<skill-reducer>
+			<skill id="39103" value="-1"/>  <!-- Hero HP Potion -->
 		</skill-reducer>
 	</item>
 
@@ -382,9 +382,9 @@
 	<item id="91852" name="Little Pig Blessing Star Candy" type="POTION" icon="icon.etc_whiteday_candy_i03">
 	<!-- Recharges 30,000 Sayha's Grace Points. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="50127" level="1" value="-1"/>  <!-- Little Pig Blessing Star Candy -->
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="50127" value="-1"/>  <!-- Little Pig Blessing Star Candy -->
 		</skill-reducer>
 	</item>
 
@@ -409,18 +409,18 @@
 	<item id="91856" name="Dragon's Special Elixir Lv. 1 - Exchangeable" type="SCROLL" icon="icon.bm_dragon_posion">
 	<!-- When used, XP/SP Gain +50%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, P/M. Critical Rate +30, P./M. Critical Damage +10%, Atk. Spd./Casting Spd. +50, HP +2500, MP +1500, CP +2500, HP/MP Recovery Bonus +10, Sayha's Grace Consumption Speed -20% for 20 minutes. Has a chance to recover 5% of damage dealt to enemy as HP.\n<Caution>When Dragon's Special Elixir is used while having Dragon's Miracle Potion applied, the effect will change to that of the Dragon's Special Elixir. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="50170" level="1" value="-1"/>  <!-- Dragon's Special Elixir -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="50170" value="-1"/>  <!-- Dragon's Special Elixir -->
 		</skill-reducer>
 	</item>
 
 	<item id="91857" name="Intermediate HP Potion" type="POTION" icon="icon.etc_lesser_potion_red_i00">
 	<!-- After instant 100 HP Recovery, CP Recovery with remaining points. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="1" price="2000" action="SKILL_REDUCE" auto-use-type="HEALING"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="50134" level="1" value="-1"/>  <!-- XP Boost Scroll - Event -->
+		<attributes weight="1" price="2000" action="SKILL_REDUCE" auto-use="HEALING"/>
+		<skill-reducer>
+			<skill id="50134" value="-1"/>  <!-- XP Boost Scroll - Event -->
 		</skill-reducer>
 	</item>
 

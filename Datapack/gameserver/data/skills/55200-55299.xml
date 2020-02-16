@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="55200" name="Sealed Rune Lvl 8" max-level="1" action="A1">
+	<skill id="55200" name="Sealed Rune Lvl 8" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_blue_sealed_rune"/>
 		<attributes magic-critical-rate="5.0" >
@@ -19,18 +19,18 @@
 			<encumbered slots="10" weight="20"/>
 		</conditions>
 		<effects>
-			<random-restoration><item id="29825" count="1" chance="12.5"/>
-<item id="29845" count="1" chance="12.5"/>
-<item id="29865" count="1" chance="12.5"/>
-<item id="29885" count="1" chance="12.5"/>
-<item id="29905" count="1" chance="12.5"/>
-<item id="29925" count="1" chance="12.5"/>
-<item id="29945" count="1" chance="12.5"/>
-<item id="29965" count="1" chance="12.5"/>
+			<random-restoration><item id="29825" chance="12.5"/>
+<item id="29845" chance="12.5"/>
+<item id="29865" chance="12.5"/>
+<item id="29885" chance="12.5"/>
+<item id="29905" chance="12.5"/>
+<item id="29925" chance="12.5"/>
+<item id="29945" chance="12.5"/>
+<item id="29965" chance="12.5"/>
 			</random-restoration>
 		</effects>
 	</skill>
-	<skill id="55201" name="Sealed Rune Lvl 9" max-level="1" action="A1">
+	<skill id="55201" name="Sealed Rune Lvl 9" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_blue_sealed_rune"/>
 		<attributes magic-critical-rate="5.0" >
@@ -49,18 +49,18 @@
 			<encumbered slots="10" weight="20"/>
 		</conditions>
 		<effects>
-			<random-restoration><item id="29826" count="1" chance="12.5"/>
-<item id="29846" count="1" chance="12.5"/>
-<item id="29866" count="1" chance="12.5"/>
-<item id="29886" count="1" chance="12.5"/>
-<item id="29906" count="1" chance="12.5"/>
-<item id="29926" count="1" chance="12.5"/>
-<item id="29946" count="1" chance="12.5"/>
-<item id="29966" count="1" chance="12.5"/>
+			<random-restoration><item id="29826" chance="12.5"/>
+<item id="29846" chance="12.5"/>
+<item id="29866" chance="12.5"/>
+<item id="29886" chance="12.5"/>
+<item id="29906" chance="12.5"/>
+<item id="29926" chance="12.5"/>
+<item id="29946" chance="12.5"/>
+<item id="29966" chance="12.5"/>
 			</random-restoration>
 		</effects>
 	</skill>
-	<skill id="55202" name="Sealed Rune Lv. 10" max-level="1" action="A1">
+	<skill id="55202" name="Sealed Rune Lv. 10" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_blue_sealed_rune"/>
 		<attributes magic-critical-rate="5.0" >
@@ -79,18 +79,18 @@
 			<encumbered slots="10" weight="20"/>
 		</conditions>
 		<effects>
-			<random-restoration><item id="29827" count="1" chance="12.5"/>
-<item id="29847" count="1" chance="12.5"/>
-<item id="29867" count="1" chance="12.5"/>
-<item id="29887" count="1" chance="12.5"/>
-<item id="29907" count="1" chance="12.5"/>
-<item id="29927" count="1" chance="12.5"/>
-<item id="29947" count="1" chance="12.5"/>
-<item id="29967" count="1" chance="12.5"/>
+			<random-restoration><item id="29827" chance="12.5"/>
+<item id="29847" chance="12.5"/>
+<item id="29867" chance="12.5"/>
+<item id="29887" chance="12.5"/>
+<item id="29907" chance="12.5"/>
+<item id="29927" chance="12.5"/>
+<item id="29947" chance="12.5"/>
+<item id="29967" chance="12.5"/>
 			</random-restoration>
 		</effects>
 	</skill>
-	<skill id="55203" name="Sealed Rune Lv. 11" max-level="1" action="A1">
+	<skill id="55203" name="Sealed Rune Lv. 11" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_red_sealed_rune_01"/>
 		<attributes magic-critical-rate="5.0" >
@@ -109,18 +109,18 @@
 			<encumbered slots="10" weight="20"/>
 		</conditions>
 		<effects>
-			<random-restoration><item id="29828" count="1" chance="12.5"/>
-<item id="29848" count="1" chance="12.5"/>
-<item id="29868" count="1" chance="12.5"/>
-<item id="29888" count="1" chance="12.5"/>
-<item id="29908" count="1" chance="12.5"/>
-<item id="29928" count="1" chance="12.5"/>
-<item id="29948" count="1" chance="12.5"/>
-<item id="29968" count="1" chance="12.5"/>
+			<random-restoration><item id="29828" chance="12.5"/>
+<item id="29848" chance="12.5"/>
+<item id="29868" chance="12.5"/>
+<item id="29888" chance="12.5"/>
+<item id="29908" chance="12.5"/>
+<item id="29928" chance="12.5"/>
+<item id="29948" chance="12.5"/>
+<item id="29968" chance="12.5"/>
 			</random-restoration>
 		</effects>
 	</skill>
-	<skill id="55204" name="Sealed Rune Lv. 12" max-level="1" action="A1">
+	<skill id="55204" name="Sealed Rune Lv. 12" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_red_sealed_rune_01"/>
 		<attributes magic-critical-rate="5.0" >
@@ -139,18 +139,18 @@
 			<encumbered slots="10" weight="20"/>
 		</conditions>
 		<effects>
-			<random-restoration><item id="29829" count="1" chance="12.5"/>
-<item id="29849" count="1" chance="12.5"/>
-<item id="29869" count="1" chance="12.5"/>
-<item id="29889" count="1" chance="12.5"/>
-<item id="29909" count="1" chance="12.5"/>
-<item id="29929" count="1" chance="12.5"/>
-<item id="29949" count="1" chance="12.5"/>
-<item id="29969" count="1" chance="12.5"/>
+			<random-restoration><item id="29829" chance="12.5"/>
+<item id="29849" chance="12.5"/>
+<item id="29869" chance="12.5"/>
+<item id="29889" chance="12.5"/>
+<item id="29909" chance="12.5"/>
+<item id="29929" chance="12.5"/>
+<item id="29949" chance="12.5"/>
+<item id="29969" chance="12.5"/>
 			</random-restoration>
 		</effects>
 	</skill>
-	<skill id="55205" name="Sealed Rune Lv. 13" max-level="1" action="A1">
+	<skill id="55205" name="Sealed Rune Lv. 13" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_red_sealed_rune_01"/>
 		<attributes magic-critical-rate="5.0" >
@@ -169,18 +169,18 @@
 			<encumbered slots="10" weight="20"/>
 		</conditions>
 		<effects>
-			<random-restoration><item id="29830" count="1" chance="12.5"/>
-<item id="29850" count="1" chance="12.5"/>
-<item id="29870" count="1" chance="12.5"/>
-<item id="29890" count="1" chance="12.5"/>
-<item id="29910" count="1" chance="12.5"/>
-<item id="29930" count="1" chance="12.5"/>
-<item id="29950" count="1" chance="12.5"/>
-<item id="29970" count="1" chance="12.5"/>
+			<random-restoration><item id="29830" chance="12.5"/>
+<item id="29850" chance="12.5"/>
+<item id="29870" chance="12.5"/>
+<item id="29890" chance="12.5"/>
+<item id="29910" chance="12.5"/>
+<item id="29930" chance="12.5"/>
+<item id="29950" chance="12.5"/>
+<item id="29970" chance="12.5"/>
 			</random-restoration>
 		</effects>
 	</skill>
-	<skill id="55206" name="Sealed Rune Lv. 14" max-level="1" action="A1">
+	<skill id="55206" name="Sealed Rune Lv. 14" action="A1">
 	<!-- none -->
 		<icon initial="icon.card_event_black_box"/>
 		<attributes >
@@ -191,7 +191,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55207" name="Sealed Rune Lv. 15" max-level="1" action="A1">
+	<skill id="55207" name="Sealed Rune Lv. 15" action="A1">
 	<!-- none -->
 		<icon initial="icon.card_event_black_box"/>
 		<attributes >
@@ -202,7 +202,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55208" name="Sealed Rune Lv. 16" max-level="1" action="A1">
+	<skill id="55208" name="Sealed Rune Lv. 16" action="A1">
 	<!-- none -->
 		<icon initial="icon.card_event_black_box"/>
 		<attributes >
@@ -213,7 +213,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55209" name="Sealed Rune Lv. 17" max-level="1" action="A1">
+	<skill id="55209" name="Sealed Rune Lv. 17" action="A1">
 	<!-- none -->
 		<icon initial="icon.card_event_black_box"/>
 		<attributes >
@@ -224,7 +224,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55210" name="Sealed Rune Lv. 18" max-level="1" action="A1">
+	<skill id="55210" name="Sealed Rune Lv. 18" action="A1">
 	<!-- none -->
 		<icon initial="icon.card_event_black_box"/>
 		<attributes >
@@ -235,7 +235,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55211" name="Sealed Rune Lv. 19" max-level="1" action="A1">
+	<skill id="55211" name="Sealed Rune Lv. 19" action="A1">
 	<!-- none -->
 		<icon initial="icon.card_event_black_box"/>
 		<attributes >
@@ -246,7 +246,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55212" name="Sealed Rune Lv. 20" max-level="1" action="A1">
+	<skill id="55212" name="Sealed Rune Lv. 20" action="A1">
 	<!-- none -->
 		<icon initial="icon.card_event_black_box"/>
 		<attributes >
@@ -257,7 +257,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55213" name="Instant Acceleration Potion" max-level="1" action="A1">
+	<skill id="55213" name="Instant Acceleration Potion" action="A1">
 	<!-- Greatly increases Speed for a short period of time. -->
 		<icon initial="icon.etc_potion_green_i00"/>
 		<attributes property="PHYSIC" >
@@ -267,7 +267,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55214" name="Teleport: Entrance to Mithril Mines" max-level="1" action="A1">
+	<skill id="55214" name="Teleport: Entrance to Mithril Mines" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -277,7 +277,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55215" name="Teleport: Entrance to the School of Dark Arts" max-level="1" action="A1">
+	<skill id="55215" name="Teleport: Entrance to the School of Dark Arts" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -287,7 +287,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55216" name="Teleport: Entrance to Orc Barracks" max-level="1" action="A1">
+	<skill id="55216" name="Teleport: Entrance to Orc Barracks" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -297,7 +297,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55217" name="Teleport: Entrance to Ruins of Agony" max-level="1" action="A1">
+	<skill id="55217" name="Teleport: Entrance to Ruins of Agony" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -307,7 +307,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55218" name="Teleport: Entrance to Ruins of Despair" max-level="1" action="A1">
+	<skill id="55218" name="Teleport: Entrance to Ruins of Despair" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -317,7 +317,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55219" name="Teleport: Abandoned Camp" max-level="1" action="A1">
+	<skill id="55219" name="Teleport: Abandoned Camp" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -327,7 +327,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55220" name="Teleport: Entrance to Ant Nest" max-level="1" action="A1">
+	<skill id="55220" name="Teleport: Entrance to Ant Nest" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -337,7 +337,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55221" name="Teleport: Entrance to Cruma Tower" max-level="1" action="A1">
+	<skill id="55221" name="Teleport: Entrance to Cruma Tower" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -347,7 +347,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55222" name="Teleport: Death Pass" max-level="1" action="A1">
+	<skill id="55222" name="Teleport: Death Pass" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -357,7 +357,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55223" name="Teleport: Three-way crossroads at Dragon Valley" max-level="1" action="A1">
+	<skill id="55223" name="Teleport: Three-way crossroads at Dragon Valley" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -367,7 +367,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55224" name="Teleport: Entrance to Antharas' Lair" max-level="1" action="A1">
+	<skill id="55224" name="Teleport: Entrance to Antharas' Lair" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -377,7 +377,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55225" name="Teleport: Outlaw Forest" max-level="1" action="A1">
+	<skill id="55225" name="Teleport: Outlaw Forest" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -387,7 +387,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55226" name="Teleport: Alligator Island" max-level="1" action="A1">
+	<skill id="55226" name="Teleport: Alligator Island" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -397,7 +397,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55227" name="Teleport: Entrance to Forgotten Temple" max-level="1" action="A1">
+	<skill id="55227" name="Teleport: Entrance to Forgotten Temple" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -407,7 +407,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55228" name="Scroll of Escape: Talking Island Village" max-level="1" action="A1">
+	<skill id="55228" name="Scroll of Escape: Talking Island Village" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -423,11 +423,11 @@
 		<target />
 		<effects>
 			<teleport>
-				<location level="1" x="147540" y="24661" z="-1984"/>
+				<location x="147540" y="24661" z="-1984"/>
 			</teleport>
 		</effects>
 	</skill>
-	<skill id="55229" name="Scroll of Escape: Talking Island Village" max-level="1" action="A1">
+	<skill id="55229" name="Scroll of Escape: Talking Island Village" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -437,7 +437,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55230" name="Scroll of Escape: Talking Island Village" max-level="1" action="A1">
+	<skill id="55230" name="Scroll of Escape: Talking Island Village" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -447,7 +447,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55231" name="Scroll of Escape: Talking Island Village" max-level="1" action="A1">
+	<skill id="55231" name="Scroll of Escape: Talking Island Village" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -457,7 +457,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55232" name="Scroll of Escape: Talking Island Village" max-level="1" action="A1">
+	<skill id="55232" name="Scroll of Escape: Talking Island Village" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -467,7 +467,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55233" name="Scroll of Escape: Talking Island Village" max-level="1" action="A1">
+	<skill id="55233" name="Scroll of Escape: Talking Island Village" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -477,7 +477,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55234" name="XP Rune 100%" max-level="1" >
+	<skill id="55234" name="XP Rune 100%">
 	<!-- XP/SP Gain from hunting +100%% -->
 		<icon initial="icon.skill19226"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" stay-after-death="true" >
@@ -488,18 +488,18 @@
 		</attributes>
 		<target />
 		<conditions>
-			<level affect="CASTER" min-level="1" max-level="85" scope="PASSIVE"/>
+			<level max-level="85" scope="PASSIVE"/>
 		</conditions>
 		<effects>
-			<stat-modify stat="BONUS_EXP" mode="DIFF">
+			<stat-modify stat="BONUS_EXP">
 				<power initial="100.0"/>
 			</stat-modify>
-			<stat-modify stat="BONUS_SP" mode="DIFF">
+			<stat-modify stat="BONUS_SP">
 				<power initial="100.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55235" name="Adventurer's Haste Potion" max-level="1" action="A2">
+	<skill id="55235" name="Adventurer's Haste Potion" action="A2">
 	<!-- Increases Atk. Spd. -->
 		<icon initial="icon.etc_reagent_green_i00"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -520,12 +520,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED">
 				<power initial="20.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55236" name="Adventurer's Potion - Casting Spd." max-level="1" action="A2">
+	<skill id="55236" name="Adventurer's Potion - Casting Spd." action="A2">
 	<!-- Increases Casting Spd. -->
 		<icon initial="icon.etc_potion_of_acumen2_i00"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -545,12 +545,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK_SPEED">
 				<power initial="20.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55237" name="Scroll: Vampiric Rage" max-level="1" action="A2">
+	<skill id="55237" name="Scroll: Vampiric Rage" action="A2">
 	<!-- For 20 minutes, recovers as HP 6%% of the physical damage inflicted on the enemy with a certain probability. -->
 		<icon initial="icon.etc_scroll_white_i00"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -576,7 +576,7 @@
 			</vampiric-attack>
 		</effects>
 	</skill>
-	<skill id="55238" name="Side Effect" max-level="1" action="A1">
+	<skill id="55238" name="Side Effect" action="A1">
 	<!-- Head has been enlarged for 10 minutes due to a side effect. Cooldown is 30 minutes. -->
 		<icon initial="icon.skill2513"/>
 		<attributes property="PHYSIC" >
@@ -587,7 +587,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55239" name="Holiday Hat" max-level="1" action="A1">
+	<skill id="55239" name="Holiday Hat" action="A1">
 	<!-- Resurrects a corpse and restores 50%% XP. Consumes 1 Spirit Ore. Cooldown is 30 minutes. -->
 		<icon initial="icon.bm_romantic_chaperon_gold"/>
 		<attributes >
@@ -601,7 +601,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55240" name="Overwhelming Power of a Holiday Hat" max-level="1" action="A1">
+	<skill id="55240" name="Overwhelming Power of a Holiday Hat" action="A1">
 	<!-- For 20 minutes, XP/SP Gain +5%%. Effect remains even after death. -->
 		<icon initial="icon.skill19226"/>
 		<attributes property="PHYSIC" >
@@ -614,7 +614,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55241" name="Scroll: Mana Regeneration" max-level="1" action="A2">
+	<skill id="55241" name="Scroll: Mana Regeneration" action="A2">
 	<!-- MP Recovery Bonus has been increased. -->
 		<icon initial="icon.etc_scroll_white_i00"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -634,12 +634,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="REGENERATE_MP_RATE" mode="DIFF">
+			<stat-modify stat="REGENERATE_MP_RATE">
 				<power initial="4.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55242" name="Scroll: Berserker Spirit" max-level="1" action="A2">
+	<skill id="55242" name="Scroll: Berserker Spirit" action="A2">
 	<!-- For 20 minutes, P. Def. -5%%, M. Def. -10%%, P. Evasion -2, P. Atk. +5%%, M. Atk. +10%%, Atk. Spd. +5%%, Casting Spd. +5%%, and Movement Speed +5. -->
 		<icon initial="icon.etc_scroll_white_i00"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true" block-action-skill="true" >
@@ -665,7 +665,7 @@
 			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
 				<power initial="-10.0"/>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="-2.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="-2.0"/>
 			</stat-hp-based>
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
 				<power initial="5.0"/>
@@ -673,7 +673,7 @@
 			<stat-modify stat="MAGIC_ATTACK" mode="PER">
 				<power initial="10.0"/>
 			</stat-modify>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="5.0"/>
 			</speed>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
@@ -756,7 +756,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55246" name="Rune of Boost" max-level="1" >
+	<skill id="55246" name="Rune of Boost">
 	<!-- When in inventory STR +1, INT +1, CON +1, MEN +1, DEX +1, WIT +1. -->
 		<icon initial="BranchSys3.lcon.g_rune_itemdrop_up"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -771,7 +771,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="55247" name="Refined Romantic Chapeau" max-level="1" >
+	<skill id="55247" name="Refined Romantic Chapeau">
 	<!-- P. Atk. +33, M. Atk. +41. -->
 		<icon initial="icon.accessory_archer_hat2_i00"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -789,7 +789,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55248" name="Bracelet of Duty - Lv. 1" max-level="1" >
+	<skill id="55248" name="Bracelet of Duty - Lv. 1">
 	<!-- Opens up 1 Talisman slot. -->
 		<icon initial="BranchIcon.Icon.g_pledge_bracelet_01"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -805,7 +805,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55249" name="Bracelet of Duty - Lv. 2" max-level="1" >
+	<skill id="55249" name="Bracelet of Duty - Lv. 2">
 	<!-- Opens up one Talisman slot. CON +1. -->
 		<icon initial="BranchIcon.Icon.g_pledge_bracelet_02"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -824,7 +824,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="55250" name="Bracelet of Duty - Lv. 3" max-level="1" >
+	<skill id="55250" name="Bracelet of Duty - Lv. 3">
 	<!-- Opens up two Talisman slots. CON +1, MEN +1. -->
 		<icon initial="BranchIcon.Icon.g_pledge_bracelet_03"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -843,7 +843,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="55251" name="Bracelet of Duty - Lv. 4" max-level="1" >
+	<skill id="55251" name="Bracelet of Duty - Lv. 4">
 	<!-- Opens up two Talisman slots. DEX +1, WIT +1, CON +1, MEN +1. -->
 		<icon initial="BranchIcon.Icon.g_pledge_bracelet_04"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -862,7 +862,7 @@
 			</stat>
 		</effects>
 	</skill>
-	<skill id="55252" name="Bracelet of Duty - Lv. 5" max-level="1" >
+	<skill id="55252" name="Bracelet of Duty - Lv. 5">
 	<!-- Opens up three Talisman slots. STR +1, INT +1, DEX +1, WIT +1, CON +1, MEN +1. -->
 		<icon initial="BranchIcon.Icon.g_pledge_bracelet_05"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -910,7 +910,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="20.2">
 					<value level="2">24.6</value>
 					<value level="3">29.8</value>
@@ -958,7 +958,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="73.0">
 					<value level="2">94.0</value>
 					<value level="3">129.0</value>
@@ -1006,7 +1006,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK">
 				<power initial="2.8">
 					<value level="2">3.8</value>
 					<value level="3">5.1</value>
@@ -1072,7 +1072,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="DIFF">
+			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0">
 				<power initial="75.0">
 					<value level="2">100.0</value>
 					<value level="3">125.0</value>
@@ -1167,7 +1167,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="4.0">
 					<value level="2">4.5</value>
 					<value level="3">5.0</value>
@@ -1214,7 +1214,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="2.47">
 					<value level="2">2.67</value>
 					<value level="3">2.87</value>
@@ -1247,7 +1247,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK">
 				<power initial="15.94">
 					<value level="2">19.84</value>
 					<value level="3">24.31</value>
@@ -1283,7 +1283,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK">
 				<power initial="20.0">
 					<value level="2">27.0</value>
 					<value level="3">34.0</value>
@@ -1363,7 +1363,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="3.89">
 					<value level="2">5.0</value>
 					<value level="3">6.1</value>
@@ -1429,7 +1429,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="WEIGHT_LIMIT" mode="DIFF">
+			<stat-modify stat="WEIGHT_LIMIT">
 				<power initial="1000.0">
 					<value level="2">1400.0</value>
 					<value level="3">1800.0</value>
@@ -1462,7 +1462,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="REGENERATE_HP_RATE" mode="DIFF">
+			<stat-modify stat="REGENERATE_HP_RATE">
 				<power initial="0.57">
 					<value level="2">0.88</value>
 					<value level="3">0.92</value>
@@ -1514,7 +1514,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55269" name="Valakas Treasure Chest" max-level="1" action="A1">
+	<skill id="55269" name="Valakas Treasure Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_sheep_agathion_30d_box"/>
 		<attributes >
@@ -1525,7 +1525,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55270" name="Agathion - Dance of Fury" max-level="1" action="A2">
+	<skill id="55270" name="Agathion - Dance of Fury" action="A2">
 	<!-- For 20 minutes, Atk. Spd. +5%%. -->
 		<icon initial="icon.bm_agathion_fury"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -1548,7 +1548,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55271" name="Agathion - Dance of Concentration" max-level="1" action="A2">
+	<skill id="55271" name="Agathion - Dance of Concentration" action="A2">
 	<!-- For 20 minutes, Casting Spd. +5%%. -->
 		<icon initial="icon.bm_agathion_concentration"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -1571,7 +1571,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55272" name="Agathion - Song of Wind" max-level="1" action="A2">
+	<skill id="55272" name="Agathion - Song of Wind" action="A2">
 	<!-- For 5 min., Speed +20. -->
 		<icon initial="icon.bm_agathion_wind"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -1590,7 +1590,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="20.0"/>
 			</speed>
 		</effects>
@@ -1618,7 +1618,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="BONUS_EXP" mode="DIFF">
+			<stat-modify stat="BONUS_EXP">
 				<power initial="5.0">
 					<value level="2">7.0</value>
 					<value level="3">10.0</value>
@@ -1649,7 +1649,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="2.0">
 					<value level="2">3.0</value>
 					<value level="3">5.0</value>
@@ -1680,7 +1680,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">4.0</value>
@@ -1688,7 +1688,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55282" name="Buff for the Hero of Ruins of Agony" max-level="1" action="A1">
+	<skill id="55282" name="Buff for the Hero of Ruins of Agony" action="A1">
 	<!-- A Buff for a warrior fighting in the Ruins of Agony. P. Atk. and M. Atk. +10%%. You can receive a Box of Tears when the Buff is no longer in effect. <Warning> You cannot receive the item if your character dies when receiving or if there is no empty slot in your Inventory. -->
 		<icon initial="BranchIcon.Icon.skill_g_field_special_buff_i00"/>
 		<attributes property="PHYSIC" >
@@ -1700,7 +1700,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55283" name="Box of Tears Acquisition Effect" max-level="1" action="A1">
+	<skill id="55283" name="Box of Tears Acquisition Effect" action="A1">
 	<!-- You can receive a Box of Tears when the Buff is no longer in effect. -->
 		<icon initial="BranchIcon.Icon.skill_g_field_special_buff_i00"/>
 		<attributes property="PHYSIC" >
@@ -1712,7 +1712,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55284" name="Box of Tears Acquisition Effect" max-level="1" action="A1">
+	<skill id="55284" name="Box of Tears Acquisition Effect" action="A1">
 	<!-- You can receive a Box of Tears when the Buff is no longer in effect. -->
 		<icon initial="BranchIcon.Icon.skill_g_field_special_buff_i00"/>
 		<attributes >
@@ -1724,7 +1724,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55285" name="Box of Tears" max-level="1" action="A1">
+	<skill id="55285" name="Box of Tears" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1735,7 +1735,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55286" name="Decayed Box" max-level="1" action="A1">
+	<skill id="55286" name="Decayed Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1746,7 +1746,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55287" name="Shabby Box" max-level="1" action="A1">
+	<skill id="55287" name="Shabby Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1757,7 +1757,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55288" name="Crude Box" max-level="1" action="A1">
+	<skill id="55288" name="Crude Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1768,7 +1768,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55289" name="Old Box" max-level="1" action="A1">
+	<skill id="55289" name="Old Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1779,7 +1779,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55290" name="Devi's Ring" max-level="1" >
+	<skill id="55290" name="Devi's Ring">
 	<!-- Increases P. Atk./M. Atk. and Max HP. -->
 		<icon initial="icon.ev_11th_rare_acc_ring"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1790,18 +1790,18 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK">
 				<power initial="3.0"/>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK">
 				<power initial="5.0"/>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="20.0"/>
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="55291" name="Devi's Ring" max-level="1" >
+	<skill id="55291" name="Devi's Ring">
 	<!-- Increases P. Atk./M. Atk. and Max HP. -->
 		<icon initial="icon.ev_11th_rare_acc_ring"/>
 		<attributes property="MAGIC" >
@@ -1811,7 +1811,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55292" name="Devi's Earring" max-level="1" >
+	<skill id="55292" name="Devi's Earring">
 	<!-- Increases MP Recovery Bonus and Heal Received. -->
 		<icon initial="icon.ev_11th_rare_acc_earing"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1822,7 +1822,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="REGENERATE_MP_RATE" mode="DIFF">
+			<stat-modify stat="REGENERATE_MP_RATE">
 				<power initial="0.2"/>
 			</stat-modify>
 			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
@@ -1830,7 +1830,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55293" name="Devi's Earring" max-level="1" >
+	<skill id="55293" name="Devi's Earring">
 	<!-- Increases MP Recovery Bonus and Heal Received. -->
 		<icon initial="icon.ev_11th_rare_acc_earing"/>
 		<attributes property="MAGIC" >
@@ -1840,7 +1840,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55294" name="Devi's Necklace" max-level="1" >
+	<skill id="55294" name="Devi's Necklace">
 	<!-- Increases P. Def./M. Def. -->
 		<icon initial="icon.ev_11th_rare_acc_necklace"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1851,18 +1851,18 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="3.0"/>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="3.0"/>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="20.0"/>
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="55295" name="Devi's Necklace" max-level="1" >
+	<skill id="55295" name="Devi's Necklace">
 	<!-- Increases P. Def./M. Def. -->
 		<icon initial="icon.ev_11th_rare_acc_necklace"/>
 		<attributes property="MAGIC" >
@@ -1872,7 +1872,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55296" name="Scroll of Invisibility" max-level="1" action="A1">
+	<skill id="55296" name="Scroll of Invisibility" action="A1">
 	<!-- Makes the player invisible and invincible to enemy's attacks. Speed -40%%. The effect fades upon attack. -->
 		<icon initial="icon.etc_aidcharm_cancel_valbreath_i00"/>
 		<attributes property="PHYSIC" >
@@ -1885,7 +1885,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55297" name="Buff for the Hero of Ruins of Despair" max-level="1" action="A1">
+	<skill id="55297" name="Buff for the Hero of Ruins of Despair" action="A1">
 	<!-- A Buff for a warrior fighting in the Ruins of Despair. P. Atk. and M. Atk. +10%%. You can receive a Decayed Box when the Buff is no longer in effect. <Warning> You cannot receive the item if your character dies when receiving or if there is no empty slot in your Inventory. -->
 		<icon initial="BranchIcon.Icon.skill_g_field_special_buff_i01"/>
 		<attributes property="PHYSIC" >
@@ -1897,7 +1897,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55298" name="Decayed Box Acquisition Effect" max-level="1" action="A1">
+	<skill id="55298" name="Decayed Box Acquisition Effect" action="A1">
 	<!-- You can receive a Decayed Box when the Buff is no longer in effect. -->
 		<icon initial="BranchIcon.Icon.skill_g_field_special_buff_i01"/>
 		<attributes property="PHYSIC" >
@@ -1909,7 +1909,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55299" name="Decayed Box Acquisition Effect" max-level="1" action="A1">
+	<skill id="55299" name="Decayed Box Acquisition Effect" action="A1">
 	<!-- You can receive a Decayed Box when the Buff is no longer in effect. -->
 		<icon initial="BranchIcon.Icon.skill_g_field_special_buff_i01"/>
 		<attributes >

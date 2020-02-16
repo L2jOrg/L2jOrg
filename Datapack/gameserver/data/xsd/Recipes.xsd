@@ -2,11 +2,11 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<xs:element name="list">
 		<xs:complexType>
-			<xs:sequence minOccurs="1" maxOccurs="1">
-				<xs:element name="item" minOccurs="1" maxOccurs="unbounded">
+			<xs:sequence>
+				<xs:element name="item" maxOccurs="unbounded">
 					<xs:complexType>
-						<xs:sequence minOccurs="1" maxOccurs="1">
-							<xs:element name="altStatChange" minOccurs="0" maxOccurs="1">
+						<xs:sequence>
+							<xs:element name="altStatChange" minOccurs="0">
 								<xs:complexType>
 									<xs:attribute name="name" use="required">
 										<xs:simpleType>
@@ -20,26 +20,26 @@
 									<xs:attribute name="value" type="xs:positiveInteger" use="required" />
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="ingredient" minOccurs="1" maxOccurs="unbounded">
+							<xs:element name="ingredient" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:attribute name="count" type="xs:positiveInteger" use="required" />
 									<xs:attribute name="id" type="xs:positiveInteger" use="required" />
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="production" minOccurs="1" maxOccurs="1">
+							<xs:element name="production">
 								<xs:complexType>
 									<xs:attribute name="count" type="xs:positiveInteger" use="required" />
 									<xs:attribute name="id" type="xs:positiveInteger" use="required" />
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="productionRare" minOccurs="0" maxOccurs="1">
+							<xs:element name="productionRare" minOccurs="0">
 								<xs:complexType>
 									<xs:attribute name="count" type="xs:positiveInteger" use="required" />
 									<xs:attribute name="id" type="xs:positiveInteger" use="required" />
 									<xs:attribute name="rarity" type="xs:positiveInteger" use="required" />
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="statUse" minOccurs="1" maxOccurs="1">
+							<xs:element name="statUse">
 								<xs:complexType>
 									<xs:attribute name="name" use="required">
 										<xs:simpleType>

@@ -7,11 +7,11 @@
 						<xs:sequence>
 							<xs:element name="function" maxOccurs="unbounded" minOccurs="0">
 								<xs:complexType>
-									<xs:attribute type="xs:byte" name="level" use="optional" />
-									<xs:attribute type="xs:byte" name="costId" use="optional" />
+									<xs:attribute type="xs:byte" name="level"/>
+									<xs:attribute type="xs:byte" name="costId"/>
 									<xs:attribute type="xs:int" name="costCount" use="required" />
 									<xs:attribute type="xs:string" name="duration" use="required" />
-									<xs:attribute type="xs:float" name="value" use="optional" />
+									<xs:attribute type="xs:float" name="value"/>
 								</xs:complexType>
 							</xs:element>
 						</xs:sequence>

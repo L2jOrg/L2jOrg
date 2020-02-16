@@ -83,17 +83,17 @@
 	<item id="29008" name="Scroll: Low-grade XP/SP Boost" type="POTION" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- For 20 min., XP/SP gain + 30% when hunting. Effect remains even after death. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55000" level="1" value="-1"/>  <!-- XP/SP Boost -->
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55000" value="-1"/>  <!-- XP/SP Boost -->
 		</skill-reducer>
 	</item>
 
 	<item id="29009" name="Scroll: Regular XP/SP Boost" type="POTION" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- For 20 min., XP/SP gain + 30% when hunting. Effect remains even after death. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
 			<skill id="55000" level="3" value="-1"/>  <!-- XP/SP Boost -->
 		</skill-reducer>
 	</item>
@@ -101,8 +101,8 @@
 	<item id="29010" name="Scroll: High-grade XP/SP Boost" type="POTION" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- For 20 min., XP/SP gain + 100% when hunting. Effect remains even after death. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
 			<skill id="55000" level="4" value="-1"/>  <!-- XP/SP Boost -->
 		</skill-reducer>
 	</item>
@@ -110,17 +110,17 @@
 	<item id="29011" name="1st Class Transfer Buff Scroll" type="SCROLL" icon="BranchIcon.Icon.etc_g_bm_buff_scroll_i00">
 	<!-- Bestows the following effects for 20 min.: Shield Lv. 2, Might Lv. 2, Concentration Lv. 2, Acumen Lv. 1, Wind Walk Lv. 1, Focus Lv. 1, Agility Lv. 1, Empower Lv. 1. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55003" level="1" value="-1"/>  <!-- 1st Class Transfer Buff Scroll -->
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55003" value="-1"/>  <!-- 1st Class Transfer Buff Scroll -->
 		</skill-reducer>
 	</item>
 
 	<item id="29012" name="2nd Class Transfer Buff Scroll" type="SCROLL" icon="BranchIcon.Icon.etc_g_bm_buff_scroll_i01">
 	<!-- Bestows the following effects for 20 min.: Shield Lv. 3, Might Lv. 3, Acumen Lv. 2, Wind Walk Lv. 2, Focus Lv. 2, Regeneration Lv. 1, Guidance Lv. 1, Death Whisper Lv. 1, Magic Barrier Lv. 1, Blessed Body Lv. 1, Blessed Soul Lv. 1, Haste Lv. 1, Agility Lv. 2, Empower Lv. 2. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
 			<skill id="55004" level="2" value="-1"/>  <!-- 2nd Class Transfer Buff Scroll -->
 		</skill-reducer>
 	</item>
@@ -128,18 +128,18 @@
 	<item id="29013" name="Scroll: Hunter's Song" type="SCROLL" icon="BranchIcon.Icon.etc_g_bm_song_scroll_i00">
 	<!-- Grants the effect of the Hunter's Song for 10 minutes. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55699" level="1" value="-1"/>  <!-- Song: Hunter's Song -->
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55699" value="-1"/>  <!-- Song: Hunter's Song -->
 		</skill-reducer>
 	</item>
 
 	<item id="29014" name="Scroll: Dance of Fire" type="SCROLL" icon="BranchIcon.Icon.etc_g_bm_dance_scroll_i00">
 	<!-- Grants the effect of the Dance of Fire for 10 minutes. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55700" level="1" value="-1"/>  <!-- Scroll: Dance of Fire -->
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55700" value="-1"/>  <!-- Scroll: Dance of Fire -->
 		</skill-reducer>
 	</item>
 
@@ -196,7 +196,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="SoulShots">
-			<skill id="9293" level="1" value="-1"/>  <!-- Mysterious Soulshot (No-grade) -->
+			<skill id="9293" value="-1"/>  <!-- Mysterious Soulshot (No-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -205,7 +205,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="BlessedSpiritShot">
-			<skill id="9300" level="1" value="-1"/>  <!-- Blessed Mysterious Spiritshot (No-grade) -->
+			<skill id="9300" value="-1"/>  <!-- Blessed Mysterious Spiritshot (No-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -214,7 +214,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="SoulShots">
-			<skill id="9294" level="1" value="-1"/>  <!-- Mysterious Soulshot (D-grade) -->
+			<skill id="9294" value="-1"/>  <!-- Mysterious Soulshot (D-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -223,7 +223,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="BlessedSpiritShot">
-			<skill id="9301" level="1" value="-1"/>  <!-- Blessed Mysterious Spiritshot (D-grade) -->
+			<skill id="9301" value="-1"/>  <!-- Blessed Mysterious Spiritshot (D-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -232,7 +232,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="SoulShots">
-			<skill id="9295" level="1" value="-1"/>  <!-- Mysterious Soulshot (C-grade) -->
+			<skill id="9295" value="-1"/>  <!-- Mysterious Soulshot (C-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -241,7 +241,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="BlessedSpiritShot">
-			<skill id="9302" level="1" value="-1"/>  <!-- Blessed Mysterious Spiritshot (C-grade) -->
+			<skill id="9302" value="-1"/>  <!-- Blessed Mysterious Spiritshot (C-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -261,8 +261,8 @@
 	<!-- Magic potion that instantly restores HP. Instant effect with no duration. Cannot be used when HP is full. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55015" level="1" value="-1"/>  <!-- Quick Healing Potion -->
+		<skill-reducer>
+			<skill id="55015" value="-1"/>  <!-- Quick Healing Potion -->
 		</skill-reducer>
 	</item>
 
@@ -270,8 +270,8 @@
 	<!-- Magic potion that instantly restores HP. Instant effect with no duration. Cannot be used when HP is full.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55016" level="1" value="-1"/>  <!-- Greater Quick Healing Potion -->
+		<skill-reducer>
+			<skill id="55016" value="-1"/>  <!-- Greater Quick Healing Potion -->
 		</skill-reducer>
 	</item>
 

@@ -17,7 +17,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="360.0"/>
 			</vital-stat-modify>
 			<stat-by-move-type stat="REGENERATE_HP_RATE" type="STANDING">
@@ -31,8 +31,8 @@
 					<value level="5">4.0</value>
 				</power>
 			</stat-by-move-type>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="PHYSICAL_DEFENCE">
+				<power>
 					<value level="2">47.0</value>
 					<value level="2">0.0</value>
 					<value level="3">47.0</value>
@@ -44,18 +44,18 @@
 					<value level="5">6.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="MAGICAL_DEFENCE">
+				<power>
 					<value level="2">28.0</value>
 				</power>
 			</stat-modify>
 			<vampiric-attack chance="0">
-				<power initial="0.0">
+				<power>
 					<value level="3">2.0</value>
 				</power>
 			</vampiric-attack>
 			<reuse type="0">
-				<power initial="0.0">
+				<power>
 					<value level="3">4.0</value>
 				</power>
 			</reuse>
@@ -83,10 +83,10 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="200.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="80.0"/>
 			</vital-stat-modify>
 			<stat-by-move-type stat="REGENERATE_HP_RATE" type="STANDING">
@@ -100,13 +100,13 @@
 					<value level="5">4.0</value>
 				</power>
 			</stat-by-move-type>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="PHYSICAL_DEFENCE">
+				<power>
 					<value level="2">47.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="MAGICAL_DEFENCE">
+				<power>
 					<value level="2">28.0</value>
 					<value level="2">0.0</value>
 					<value level="3">28.0</value>
@@ -117,23 +117,23 @@
 					<value level="5">7.0</value>
 				</power>
 			</stat-modify>
-			<speed mode="DIFF">
-				<power initial="0.0">
+			<speed>
+				<power>
 					<value level="3">4.0</value>
 				</power>
 			</speed>
 			<stat-modify stat="PHYSICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="3">7.0</value>
 				</power>
 			</stat-modify>
 			<stat-modify stat="MAGICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="3">7.0</value>
 				</power>
 			</stat-modify>
 			<stat-modify stat="MAGIC_SUCCESS_RES" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="5">15.0</value>
 				</power>
 			</stat-modify>
@@ -167,7 +167,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="140.0"/>
 			</vital-stat-modify>
 			<stat-by-move-type stat="REGENERATE_HP_RATE" type="STANDING">
@@ -181,33 +181,33 @@
 					<value level="5">6.0</value>
 				</power>
 			</stat-by-move-type>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="PHYSICAL_DEFENCE">
+				<power>
 					<value level="2">47.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
-				<power initial="0.0">
+			<stat-modify stat="MAGICAL_DEFENCE">
+				<power>
 					<value level="2">28.0</value>
 				</power>
 			</stat-modify>
 			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
-				<power initial="0.0">
+				<power>
 					<value level="3">52.0</value>
 				</power>
 			</stat-modify>
 			<magic-cost type="1">
-				<power initial="0.0">
+				<power>
 					<value level="3">-4.0</value>
 				</power>
 			</magic-cost>
 			<resist-abnormal-by-category category="DEBUFF">
-				<power initial="0.0">
+				<power>
 					<value level="5">7.0</value>
 				</power>
 			</resist-abnormal-by-category>
 			<stat-modify stat="DEFENCE_CRITICAL_RATE" stat-add="DEFENCE_CRITICAL_RATE_ADD" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="5">20.0</value>
 				</power>
 			</stat-modify>

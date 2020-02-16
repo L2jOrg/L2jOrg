@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="55700" name="Scroll: Dance of Fire" max-level="1" action="A2">
+	<skill id="55700" name="Scroll: Dance of Fire" action="A2">
 	<!-- Increases P. Critical Damage +35%% for 10 minutes. -->
 		<icon initial="icon.skill0274"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -26,7 +26,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55701" name="Release Agathion's Seal - Sin Eater" max-level="1" action="A1">
+	<skill id="55701" name="Release Agathion's Seal - Sin Eater" action="A1">
 	<!-- Summon Sin Eater Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -44,7 +44,7 @@
 			<summon-agathion id="9021"/>
 		</effects>
 	</skill>
-	<skill id="55702" name="Hour of Penitence" max-level="1" action="A2">
+	<skill id="55702" name="Hour of Penitence" action="A2">
 	<!-- Hour of Penitence - 1 hour. Within this time monsters must be defeated and Crumbs of Penitence must be collected. Activates when Sin Eater is summoned. <Warning!> Removing the bracelet will end the Hour of Penitence. Crumbs of Penitence can not be obtained when belonging to the union. Remains after death. -->
 		<icon initial="icon.etc_leash_i00"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -62,7 +62,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="55703" name="Blessed Scroll: Enchant Weapon (A-grade)" max-level="1" action="A1">
+	<skill id="55703" name="Blessed Scroll: Enchant Weapon (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -72,7 +72,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55704" name="Blessed Scroll: Enchant Armor (A-grade)" max-level="1" action="A1">
+	<skill id="55704" name="Blessed Scroll: Enchant Armor (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -128,7 +128,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55707" name="Fortune Red Cat's Eye Chest" max-level="1" action="A1">
+	<skill id="55707" name="Fortune Red Cat's Eye Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -140,7 +140,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55708" name="Fortune Blue Cat's Eye Chest" max-level="1" action="A1">
+	<skill id="55708" name="Fortune Blue Cat's Eye Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -152,7 +152,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55709" name="Shining Jewelry Box" max-level="1" action="A1">
+	<skill id="55709" name="Shining Jewelry Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -164,7 +164,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55710" name="Equip Lv. 4 Brooch" max-level="1" action="A1">
+	<skill id="55710" name="Equip Lv. 4 Brooch" action="A1">
 	<!-- The brooch radiates bright light. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i03"/>
 		<attributes property="PHYSIC" >
@@ -174,7 +174,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55711" name="Remove Lv. 4 Brooch" max-level="1" action="A1">
+	<skill id="55711" name="Remove Lv. 4 Brooch" action="A1">
 	<!-- The bright light fades. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -193,7 +193,7 @@
 			</dispel>
 		</effects>
 	</skill>
-	<skill id="55712" name="Lv. 4 Brooch" max-level="1" >
+	<skill id="55712" name="Lv. 4 Brooch">
 	<!-- Activates 5 jewel slots. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i03"/>
 		<attributes property="MAGIC" >
@@ -208,7 +208,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55713" name="Lv. 4 Brooch - Additional Effect" max-level="1" >
+	<skill id="55713" name="Lv. 4 Brooch - Additional Effect">
 	<!-- Inventory Slot +12. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i03"/>
 		<attributes property="MAGIC" >
@@ -222,7 +222,7 @@
 			</enlarge-slot>
 		</effects>
 	</skill>
-	<skill id="55714" name="Shining Golden Boot" max-level="1" action="A1">
+	<skill id="55714" name="Shining Golden Boot" action="A1">
 	<!-- none -->
 		<icon initial="icon.card_event_blue_box"/>
 		<attributes >
@@ -233,7 +233,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55715" name="Chef's Fish Stew Box" max-level="1" action="A1">
+	<skill id="55715" name="Chef's Fish Stew Box" action="A1">
 	<!-- none -->
 		<icon initial="BranchSys.icon.br_silver_box_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -253,11 +253,11 @@
 			<encumbered slots="10" weight="10"/>
 		</conditions>
 		<effects>
-			<random-restoration><item id="90407" count="1" chance="100.0"/>
+			<random-restoration><item id="90407" chance="100.0"/>
 			</random-restoration>
 		</effects>
 	</skill>
-	<skill id="55716" name="Letter Collector Spell" max-level="1" action="A1">
+	<skill id="55716" name="Letter Collector Spell" action="A1">
 	<!-- Grants the power of the Letter Collector. For 1 hour Max. HP +5%%, Max. MP +5%%, Max. CP +5%%, Speed +10, P. Atk. +8%%, M. Atk. +10%%. -->
 		<icon initial="icon.etc_candle_yellow_i00"/>
 		<attributes property="PHYSIC" >
@@ -269,7 +269,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55717" name="Shilen's Treasure Chest" max-level="1" action="A1">
+	<skill id="55717" name="Shilen's Treasure Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -280,7 +280,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55718" name="XP Rune 50%" max-level="1" >
+	<skill id="55718" name="XP Rune 50%">
 	<!-- XP/SP +50%%, while hunting. -->
 		<icon initial="icon.skill19226"/>
 		<attributes property="MAGIC" >
@@ -290,7 +290,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55719" name="Feather Rune" max-level="1" >
+	<skill id="55719" name="Feather Rune">
 	<!-- Increases weight limit by 20%%. -->
 		<icon initial="br_cashtex.item.br_cash_rune_of_feather_i00"/>
 		<attributes property="MAGIC" >
@@ -300,7 +300,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55720" name="XP/SP Hourglass - 1 Hour" max-level="1" action="A1">
+	<skill id="55720" name="XP/SP Hourglass - 1 Hour" action="A1">
 	<!-- XP/SP gain +50%% for the duration of the effect -->
 		<icon initial="icon.etc_dragons_blood_i03"/>
 		<attributes property="PHYSIC" auto-use="BUFF">
@@ -310,7 +310,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55721" name="Storm Power" max-level="1" action="A1">
+	<skill id="55721" name="Storm Power" action="A1">
 	<!-- XP/SP Gain +50%% for 2 hours due to the storm's energy. Cooldown is 2 hours. Storm's energy remains after death. -->
 		<icon initial="icon.power_of_storm"/>
 		<attributes property="PHYSIC" auto-use="BUFF">
@@ -321,7 +321,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55722" name="Facelifting Potion" max-level="1" action="A1">
+	<skill id="55722" name="Facelifting Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -331,7 +331,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55723" name="Facelifting Potion" max-level="1" action="A1">
+	<skill id="55723" name="Facelifting Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -341,7 +341,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55724" name="Facelifting Potion" max-level="1" action="A1">
+	<skill id="55724" name="Facelifting Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -351,7 +351,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55725" name="Dye Potion" max-level="1" action="A1">
+	<skill id="55725" name="Dye Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -361,7 +361,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55726" name="Dye Potion" max-level="1" action="A1">
+	<skill id="55726" name="Dye Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -371,7 +371,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55727" name="Dye Potion" max-level="1" action="A1">
+	<skill id="55727" name="Dye Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -381,7 +381,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55728" name="Dye Potion" max-level="1" action="A1">
+	<skill id="55728" name="Dye Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -391,7 +391,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55729" name="Hair Style Change Potion" max-level="1" action="A1">
+	<skill id="55729" name="Hair Style Change Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -401,7 +401,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55730" name="Hair Style Change Potion" max-level="1" action="A1">
+	<skill id="55730" name="Hair Style Change Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -411,7 +411,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55731" name="Hair Style Change Potion" max-level="1" action="A1">
+	<skill id="55731" name="Hair Style Change Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -421,7 +421,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55732" name="Hair Style Change Potion" max-level="1" action="A1">
+	<skill id="55732" name="Hair Style Change Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -431,7 +431,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55733" name="Hair Style Change Potion" max-level="1" action="A1">
+	<skill id="55733" name="Hair Style Change Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -441,7 +441,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55734" name="Hair Style Change Potion" max-level="1" action="A1">
+	<skill id="55734" name="Hair Style Change Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -451,7 +451,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55735" name="Hair Style Change Potion" max-level="1" action="A1">
+	<skill id="55735" name="Hair Style Change Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -461,7 +461,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55736" name="Elmoreden Cloak Basic Effect" max-level="1" >
+	<skill id="55736" name="Elmoreden Cloak Basic Effect">
 	<!-- Increases PvP Attack Damage when enchanted and bestows various passive and active skills. -->
 		<icon initial="BranchIcon.icon.g_bm_elmoreden_cloak_normal"/>
 		<attributes property="MAGIC" >
@@ -558,7 +558,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55738" name="Aden Cloak Basic Effect" max-level="1" >
+	<skill id="55738" name="Aden Cloak Basic Effect">
 	<!-- Increases Magic Attack PvE Damage when enchanted and bestows various passive and active skills. -->
 		<icon initial="BranchIcon.icon.g_bm_aden_cloak_normal"/>
 		<attributes property="MAGIC" >
@@ -629,7 +629,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55740" name="Elmore Cloak Basic Effect" max-level="1" >
+	<skill id="55740" name="Elmore Cloak Basic Effect">
 	<!-- Increases Physical Attack PvE Damage when enchanted and bestows various passive and active skills. -->
 		<icon initial="BranchIcon.icon.g_bm_elmore_cloak_normal"/>
 		<attributes property="MAGIC" >
@@ -726,7 +726,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="55742" name="Ferios Cloak Basic Effect" max-level="1" >
+	<skill id="55742" name="Ferios Cloak Basic Effect">
 	<!-- Decreases received damage when enchanted and bestows various passive and active skills. -->
 		<icon initial="BranchIcon.icon.g_bm_perios_cloak_normal"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -795,7 +795,7 @@
 			</damage-by-attack>
 		</effects>
 	</skill>
-	<skill id="55744" name="Blessing of Elmoreden" max-level="1" action="A1">
+	<skill id="55744" name="Blessing of Elmoreden" action="A1">
 	<!-- Makes you invincible for 10 sec and increases Speed by 100. -->
 		<icon initial="BranchIcon.icon.g_bm_elmoreden_cloak_normal"/>
 		<attributes property="PHYSIC" >
@@ -808,7 +808,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55745" name="Spirit of Aden" max-level="1" action="A1">
+	<skill id="55745" name="Spirit of Aden" action="A1">
 	<!-- Increases PvE Damage by 100% when dealing magic attack. -->
 		<icon initial="BranchIcon.icon.g_bm_aden_cloak_normal"/>
 		<attributes property="PHYSIC" >
@@ -822,7 +822,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55746" name="Spirit of Elmore" max-level="1" action="A1">
+	<skill id="55746" name="Spirit of Elmore" action="A1">
 	<!-- Increases PvE Damage by 100% when dealing physical attack. -->
 		<icon initial="BranchIcon.icon.g_bm_elmore_cloak_normal"/>
 		<attributes property="PHYSIC" >
@@ -836,7 +836,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55747" name="Blessing of Ferios" max-level="1" action="A1">
+	<skill id="55747" name="Blessing of Ferios" action="A1">
 	<!-- Makes you invincible for 20 sec. -->
 		<icon initial="BranchIcon.icon.g_bm_perios_cloak_normal"/>
 		<attributes property="PHYSIC" >

@@ -105,7 +105,7 @@
                 <xs:attribute name="infinite" type="xs:boolean" default="false"/>
                 <xs:attribute name="commission-type" type="CommissionType" default="OTHER_ITEM"/>
                 <xs:attribute name="action" type="ActionType" default="NONE"/>
-                <xs:attribute name="auto-use-type" type="AutoUseType" default="NONE"/>
+                <xs:attribute name="auto-use" type="AutoUseType" default="NONE"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>

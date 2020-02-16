@@ -250,16 +250,16 @@
 	<item id="5342" name="Echo Crystal - Sad Song" type="NONE" icon="icon.etc_echo_crystal_i03">
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="10" price="1" reuse-delay="44000" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2584" level="1" value="-1"/>  <!-- Item - Special Sound Crystal -->
+		<skill-reducer>
+			<skill id="2584" value="-1"/>  <!-- Item - Special Sound Crystal -->
 		</skill-reducer>
 	</item>
 
 	<item id="5343" name="Echo Crystal - Holy Song" type="NONE" icon="icon.etc_echo_crystal_i04">
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="10" price="1" reuse-delay="44000" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2585" level="1" value="-1"/>  <!-- Item - Special Sound Crystal -->
+		<skill-reducer>
+			<skill id="2585" value="-1"/>  <!-- Item - Special Sound Crystal -->
 		</skill-reducer>
 	</item>
 

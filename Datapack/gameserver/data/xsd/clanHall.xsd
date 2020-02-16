@@ -18,15 +18,15 @@
 									<xs:sequence>
 										<xs:element name="npc" maxOccurs="unbounded" minOccurs="0">
 											<xs:complexType>
-												<xs:attribute type="xs:int" name="id" use="optional" />
+												<xs:attribute type="xs:int" name="id"/>
 											</xs:complexType>
 										</xs:element>
 									</xs:sequence>
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="doorlist" minOccurs="0" maxOccurs="1">
+							<xs:element name="doorlist" minOccurs="0">
 								<xs:complexType>
-									<xs:sequence maxOccurs="1">
+									<xs:sequence>
 										<xs:element name="door" maxOccurs="unbounded">
 											<xs:complexType>
 												<xs:attribute name="id" type="xs:positiveInteger" use="required" />

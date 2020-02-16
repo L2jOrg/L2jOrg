@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="913" name="Deflect Magic" max-level="1" action="A2">
+	<skill id="913" name="Deflect Magic" action="A2">
 	<!-- Magic Attack Resistance +50%% for 20 minutes. -->
 		<icon initial="icon.skill0913"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
@@ -27,7 +27,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="914" name="Song of Purification" max-level="1" action="A2" type="DANCE">
+	<skill id="914" name="Song of Purification" action="A2" type="DANCE">
 	<!-- Has a 50%% chance of removing a party member's debuffs. For 5 minutes, Debuff Resistance +80%% and Heal Received +30%%. -->
 		<icon initial="icon.skill0914"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -59,7 +59,7 @@
 			</resist-abnormal-by-category>
 		</effects>
 	</skill>
-	<skill id="915" name="Dance of Berserker" max-level="1" action="A2" type="DANCE">
+	<skill id="915" name="Dance of Berserker" action="A2" type="DANCE">
 	<!-- For 5 minutes, a party member's P. Def. -4%%, M. Def. -8%%, P. Evasion -2; P. Atk. +4%%, M. Atk. +8%%, Atk. Spd. +4%%, Casting Spd. +4%%, and Movement Speed +4. Requires a dualsword. -->
 		<icon initial="icon.skill0915"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -92,7 +92,7 @@
 			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
 				<power initial="-8.0"/>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="-2.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="-2.0"/>
 			</stat-hp-based>
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
 				<power initial="4.0"/>
@@ -106,7 +106,7 @@
 			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
 				<power initial="4.0"/>
 			</stat-modify>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="4.0"/>
 			</speed>
 		</effects>
@@ -151,7 +151,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="917" name="Final Secret" max-level="1" action="A2">
+	<skill id="917" name="Final Secret" action="A2">
 	<!-- P. Skill Power +10%%, and normal attack damage during PvP +8%% for 30 seconds by using a secret scroll. -->
 		<icon initial="icon.skill0917"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
@@ -181,7 +181,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="918" name="Maximum Force Focus" max-level="1" action="A1">
+	<skill id="918" name="Maximum Force Focus" action="A1">
 	<!-- Immediately increases Momentum to its maximum level. Can be used when Momentum is below 8. Requires a fist weapon. -->
 		<icon initial="icon.skill0918"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
@@ -208,7 +208,7 @@
 			<effect name="FocusMaxMomentum"/>
 		</effects>
 	</skill>
-	<skill id="919" name="Maximum Sonic Focus" max-level="1" action="A1">
+	<skill id="919" name="Maximum Sonic Focus" action="A1">
 	<!-- Immediately increases Momentum to its maximum level. Can be used when Momentum is below 8. Requires a dualsword. -->
 		<icon initial="icon.skill0919"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
@@ -235,7 +235,7 @@
 			<effect name="FocusMaxMomentum"/>
 		</effects>
 	</skill>
-	<skill id="921" name="Cursed Pierce" max-level="1" action="A1">
+	<skill id="921" name="Cursed Pierce" action="A1">
 	<!-- Attacks the enemy with bonus 3849 Power. Ignores Shield Defense. Requires a Spear. Critical. Over-hit. -->
 		<icon initial="icon.skill0921"/>
 		<attributes next-action="ATTACK" magic-critical-rate="5.0" auto-use="ACTIVE">
@@ -258,7 +258,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="true" critical-chance="30.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack ignore-shield="true" critical-chance="30.0" over-hit="true">
 				<power initial="3849.0"/>
 			</physical-attack>
 		</effects>
@@ -361,7 +361,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK">
 				<power initial="565.79">
 					<value level="2">566.08</value>
 					<value level="3">565.89</value>
@@ -411,7 +411,7 @@
 					<value level="47">0.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK">
 				<power initial="707.24">
 					<value level="2">718.68</value>
 					<value level="3">729.65</value>
@@ -461,7 +461,7 @@
 					<value level="47">0.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="549.56">
 					<value level="2">549.89</value>
 					<value level="3">549.87</value>
@@ -511,7 +511,7 @@
 					<value level="47">0.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="693.67">
 					<value level="2">693.41</value>
 					<value level="3">692.68</value>
@@ -624,7 +624,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK">
 				<power initial="586.22">
 					<value level="2">586.76</value>
 					<value level="3">586.82</value>
@@ -674,7 +674,7 @@
 					<value level="47">0.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK">
 				<power initial="732.77">
 					<value level="2">744.85</value>
 					<value level="3">756.46</value>
@@ -724,7 +724,7 @@
 					<value level="47">0.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="574.06">
 					<value level="2">574.7</value>
 					<value level="3">574.97</value>
@@ -774,7 +774,7 @@
 					<value level="47">0.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="725.49">
 					<value level="2">725.63</value>
 					<value level="3">725.29</value>
@@ -824,7 +824,7 @@
 					<value level="47">0.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_ATTACK_RANGE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK_RANGE">
 				<power initial="200.0"/>
 				<weapon-type>BOW </weapon-type>
 			</stat-modify>
@@ -891,7 +891,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK">
 				<power initial="625.43">
 					<value level="2">626.46</value>
 					<value level="3">627.01</value>
@@ -941,7 +941,7 @@
 					<value level="47">0.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK">
 				<power initial="781.79">
 					<value level="2">795.09</value>
 					<value level="3">807.93</value>
@@ -991,7 +991,7 @@
 					<value level="47">0.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="621.1">
 					<value level="2">622.32</value>
 					<value level="3">623.18</value>
@@ -1041,7 +1041,7 @@
 					<value level="47">0.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="786.59">
 					<value level="2">787.48</value>
 					<value level="3">787.89</value>
@@ -1096,7 +1096,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="959" name="Frog Jump" max-level="1" action="A2" type="MAGIC">
+	<skill id="959" name="Frog Jump" action="A2" type="MAGIC">
 	<!-- Increases Speed by 33 for 15 seconds. -->
 		<icon initial="icon.skill_transform_buff"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -1118,12 +1118,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="33.0"/>
 			</speed>
 		</effects>
 	</skill>
-	<skill id="960" name="Race Running" max-level="1" action="A2" type="MAGIC">
+	<skill id="960" name="Race Running" action="A2" type="MAGIC">
 	<!-- Increases Speed by 33 for 15 seconds. -->
 		<icon initial="icon.skill_transform_buff"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -1145,12 +1145,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="33.0"/>
 			</speed>
 		</effects>
 	</skill>
-	<skill id="961" name="Swift Dash" max-level="1" action="A2" type="MAGIC">
+	<skill id="961" name="Swift Dash" action="A2" type="MAGIC">
 	<!-- Increases Speed by 33 for 15 seconds. -->
 		<icon initial="icon.skill_transform_buff"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -1172,12 +1172,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="33.0"/>
 			</speed>
 		</effects>
 	</skill>
-	<skill id="962" name="Guard's March" max-level="1" action="A2" type="MAGIC">
+	<skill id="962" name="Guard's March" action="A2" type="MAGIC">
 	<!-- Increases Speed by 33 for 5 seconds. -->
 		<icon initial="icon.skill_transform_buff"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -1200,12 +1200,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="33.0"/>
 			</speed>
 		</effects>
 	</skill>
-	<skill id="963" name="Guard's Ambush" max-level="1" action="A2">
+	<skill id="963" name="Guard's Ambush" action="A2">
 	<!-- Hides the user. Decreases Speed by 30%%, and the effect is canceled if any action other than movement is initiated. -->
 		<icon initial="icon.skill_transform_buff"/>
 		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" >
@@ -1234,7 +1234,7 @@
 			</speed>
 		</effects>
 	</skill>
-	<skill id="964" name="Children of Shilen" max-level="1" >
+	<skill id="964" name="Children of Shilen">
 	<!-- Casting Spd. +13 and MP Recovery Bonus +2%%. -->
 		<icon initial="icon.skill0294"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1245,7 +1245,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK_SPEED">
 				<power initial="13.0"/>
 			</stat-modify>
 			<stat-modify stat="REGENERATE_MP_RATE" mode="PER">
@@ -1253,7 +1253,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="965" name="Fake Attack" max-level="1" action="A1">
+	<skill id="965" name="Fake Attack" action="A1">
 	<!-- Pretends to attack. -->
 		<icon initial="icon.skill_transform_s_attack"/>
 		<attributes magic-critical-rate="5.0" >
@@ -1264,7 +1264,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="966" name="Special Motion" max-level="1" action="A1">
+	<skill id="966" name="Special Motion" action="A1">
 	<!-- Plays the Harp. -->
 		<icon initial="icon.skill_transform_s_attack"/>
 		<attributes magic-critical-rate="5.0" >
@@ -1277,7 +1277,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="967" name="Cursed Body" max-level="1" >
+	<skill id="967" name="Cursed Body">
 	<!-- Cursed body. Recovery is not possible. -->
 		<icon initial="icon.skill0967"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1288,7 +1288,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="968" name="Treykan Claw" max-level="1" action="A1">
+	<skill id="968" name="Treykan Claw" action="A1">
 	<!-- Attack targets with 6960 Power added to P. Atk. -->
 		<icon initial="icon.skill_transform_s_attack"/>
 		<attributes static-reuse="true" next-action="ATTACK" magic-critical-rate="5.0" >
@@ -1306,12 +1306,12 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="6960.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="969" name="Treykan Dash" max-level="1" action="A2" type="MAGIC">
+	<skill id="969" name="Treykan Dash" action="A2" type="MAGIC">
 	<!-- Increases your Speed by 100%% for 5 seconds. -->
 		<icon initial="icon.skill_transform_buff"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -1339,7 +1339,7 @@
 			</speed>
 		</effects>
 	</skill>
-	<skill id="970" name="Dash" max-level="1" action="A2">
+	<skill id="970" name="Dash" action="A2">
 	<!-- Movement Speed +66 for 15 seconds. -->
 		<icon initial="icon.skill0004"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -1361,12 +1361,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="66.0"/>
 			</speed>
 		</effects>
 	</skill>
-	<skill id="971" name="Acumen" max-level="1" action="A2" type="MAGIC">
+	<skill id="971" name="Acumen" action="A2" type="MAGIC">
 	<!-- Casting Spd. +30%% for 20 minutes. -->
 		<icon initial="icon.skill1085"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -1394,7 +1394,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="972" name="Snipe" max-level="1" action="A2">
+	<skill id="972" name="Snipe" action="A2">
 	<!-- For 2 minutes, P. Accuracy +6, P. Atk. +199, Range +200, and P. Critical Rate +20%% when equipped with a bow. Cannot move while the effect lasts. -->
 		<icon initial="icon.skill0313"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -1417,15 +1417,15 @@
 		</abnormal>
 		<effects>
 			<effect name="BlockMove"/>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK">
 				<power initial="199.0"/>
 				<weapon-type>BOW </weapon-type>
 			</stat-modify>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="6.0"/>
 				<weapon-type>BOW </weapon-type>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_ATTACK_RANGE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK_RANGE">
 				<power initial="200.0"/>
 				<weapon-type>BOW </weapon-type>
 			</stat-modify>
@@ -1497,7 +1497,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="455.0">
 					<value level="2">651.0</value>
 					<value level="3">845.0</value>
@@ -1552,7 +1552,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="1951.0">
 					<value level="2">2534.0</value>
 					<value level="3">2588.0</value>
@@ -1683,7 +1683,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="102.0">
 					<value level="2">116.0</value>
 					<value level="3">117.0</value>
@@ -1749,7 +1749,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="93.0">
 					<value level="2">94.0</value>
 					<value level="3">95.0</value>
@@ -1810,7 +1810,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-soul-attack over-hit="true" critical-chance="0" ignore-shield="false">				<power initial="1.0"/>
+			<physical-soul-attack over-hit="true">				<power initial="1.0"/>
 			</physical-soul-attack>
 			<block-all-actions/>
 		</effects>
@@ -2109,7 +2109,7 @@
 			<condition name="EquipShield"/>
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="833.0">
 					<value level="2">992.0</value>
 					<value level="3">1171.0</value>
@@ -2138,7 +2138,7 @@
 			<effect name="GetAgro"/>
 		</effects>
 	</skill>
-	<skill id="990" name="Death Sting" max-level="1" debuff="true" action="A2">
+	<skill id="990" name="Death Sting" debuff="true" action="A2">
 	<!-- Shoots an arrow that is aimed to kill. Attacks the enemy with bonus 13006 Power. Blocks the enemy from using magic skills for 10 seconds Over-hit. -->
 		<icon initial="icon.skill0990"/>
 		<attributes property="PHYSIC" static-reuse="true" next-action="ATTACK" magic-critical-rate="5.0" trait="DERANGEMENT" auto-use="ACTIVE">
@@ -2166,7 +2166,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="30.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="30.0" over-hit="true">
 				<power initial="13006.0"/>
 			</physical-attack>
 			<effect name="Mute"/>
@@ -2216,7 +2216,7 @@
 					<value level="8">8.0</value>
 				</power>
 			</stat-modify>
-			<trigger-skill-by-attack skill="6813" target="SELF" critical="false">
+			<trigger-skill-by-attack skill="6813">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -2285,7 +2285,7 @@
 					<value level="8">8.0</value>
 				</power>
 			</stat-modify>
-			<trigger-skill-by-attack skill="6814" target="SELF" critical="false">
+			<trigger-skill-by-attack skill="6814">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>

@@ -377,7 +377,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3005" level="1" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Bleed -->
+			<skill id="3005" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Bleed -->
 		</skills>
 	</weapon>
 

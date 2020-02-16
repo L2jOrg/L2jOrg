@@ -596,7 +596,7 @@
 	<item id="92991" name="Scroll: Einhasad's Blessing" type="SCROLL" icon="icon.exp_bottle_scroll">
 	<!-- When used, Hunting XP/SP Gain +50% for 20 minutes. Cooldown 1 minute. The effect remains active even after death.\n<Warning>When Einhasad's Protection, Dandy's Home Run Ball/Golden Ball is used while Scroll: Einhasad's Blessing is applied, only the higher effect will be applied. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="92992" name="Full Buff Package" type="NONE" icon="BranchSys.icon.br_lucky_bag_box_i00">

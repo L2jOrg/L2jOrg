@@ -64,8 +64,8 @@
 	<!-- Double-click to get one of the following: Greater STR Dye / Greater CON Dye / Greater DEX Dye / Greater INT Dye / Greater WIT Dye / Greater MEN Dye. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="32012" level="1" value="-1"/>  <!-- High-grade Dye Chest -->
+		<skill-reducer>
+			<skill id="32012" value="-1"/>  <!-- High-grade Dye Chest -->
 		</skill-reducer>
 	</item>
 
@@ -73,8 +73,8 @@
 	<!-- Double-click to get one of the following: STR Dye / CON Dye / DEX Dye / INT Dye / WIT Dye / MEN Dye. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="32013" level="1" value="-1"/>  <!-- Dye Chest -->
+		<skill-reducer>
+			<skill id="32013" value="-1"/>  <!-- Dye Chest -->
 		</skill-reducer>
 	</item>
 

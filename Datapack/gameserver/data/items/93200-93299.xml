@@ -447,7 +447,7 @@
 	<item id="93274" name="Grace Cookie" type="POTION" icon="BranchSys.icon.br_valentine_cookie_i00">
 	<!-- Recharges 35,000 Sayha's Grace Points. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes auto-use-type="SUPPLY"/>
+		<attributes auto-use="SUPPLY"/>
 	</item>
 
 	<item id="93275" name="Samurai Long Sword Random Enchant Crafting" type="NONE" icon="icon.weapon_samurai_old_longsword_i00">

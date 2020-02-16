@@ -2,8 +2,8 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<xs:element name="table">
 		<xs:complexType>
-			<xs:sequence minOccurs="1" maxOccurs="1">
-				<xs:element name="experience" minOccurs="1" maxOccurs="108">
+			<xs:sequence>
+				<xs:element name="experience" maxOccurs="108">
 					<xs:complexType>
 						<xs:attribute name="level" use="required">
 							<xs:simpleType>

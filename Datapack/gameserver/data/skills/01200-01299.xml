@@ -266,7 +266,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="20.0">
 					<value level="2">33.0</value>
 					<value level="3">20.0</value>
@@ -647,7 +647,7 @@
 			<chance initial="60"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="14.0">
 					<value level="2">19.0</value>
 					<value level="3">24.0</value>
@@ -810,7 +810,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1216" name="Self Heal" max-level="1" action="A1" type="MAGIC">
+	<skill id="1216" name="Self Heal" action="A1" type="MAGIC">
 	<!-- Restores HP with 42 Power. -->
 		<icon initial="icon.skill1216"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
@@ -2035,7 +2035,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="-9.0">
 					<value level="2">-12.0</value>
 				</power>
@@ -2372,7 +2372,7 @@
 			<condition name="CanSummon"/>
 		</conditions>
 		<effects>
-			<summon consume-item="0" experience-multiplier="1.0" life-time="-1">
+			<summon consume-item="0" life-time="-1">
 				<npc initial="14295.0">
 					<value level="2">14300.0</value>
 					<value level="3">14296.0</value>
@@ -3271,7 +3271,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="39.0">
 					<value level="2">42.0</value>
 					<value level="3">44.0</value>
@@ -3356,7 +3356,7 @@
 		</abnormal>
 		<conditions>
 			<target>
-				<party include-caster="true"/>
+				<party/>
 			</target>
 		</conditions>
 		<effects>
@@ -3422,7 +3422,7 @@
 			<chance initial="70"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="1" can-kill="false">
+			<damage-over-time ticks="1">
 				<power initial="102.0">
 					<value level="2">125.0</value>
 					<value level="3">144.0</value>
@@ -3891,7 +3891,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="49.0">
 					<value level="2">52.0</value>
 					<value level="3">55.0</value>
@@ -4073,7 +4073,7 @@
 			<chance initial="60"/>
 		</abnormal>
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="30.0">
 					<value level="2">31.0</value>
 					<value level="3">33.0</value>
@@ -4257,7 +4257,7 @@
 					<value level="19">57.0</value>
 				</power>
 			</magical-attack-range>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="44.0">
 					<value level="5">54.0</value>
 					<value level="10">62.0</value>
@@ -4313,7 +4313,7 @@
 		</abnormal>
 		<conditions>
 			<target>
-				<party include-caster="true"/>
+				<party/>
 			</target>
 		</conditions>
 		<effects>
@@ -4636,7 +4636,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="2.0">
 					<value level="2">3.0</value>
 					<value level="3">4.0</value>
@@ -4915,7 +4915,7 @@
 			<chance initial="70"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="1" can-kill="false" scope="PVP">
+			<damage-over-time ticks="1" scope="PVP">
 				<power initial="132.0">
 					<value level="2">162.0</value>
 					<value level="3">187.0</value>
@@ -4931,7 +4931,7 @@
 					<value level="13">520.0</value>
 				</power>
 			</damage-over-time>
-			<damage-over-time ticks="1" can-kill="false" scope="PVE">
+			<damage-over-time ticks="1" scope="PVE">
 				<power initial="112.0">
 					<value level="2">137.0</value>
 					<value level="3">158.0</value>
@@ -5480,7 +5480,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="2.0">
 					<value level="2">3.0</value>
 					<value level="3">4.0</value>
@@ -5631,7 +5631,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="2.0">
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="2.0">
 					<value level="2">3.0</value>
 					<value level="3">4.0</value>
 				</power>
@@ -5751,7 +5751,7 @@
 		</conditions>
 		<effects>
 			<effect name="Resurrection">
-				<power initial="0.0">
+				<power>
 					<value level="2">20.0</value>
 					<value level="3">30.0</value>
 					<value level="4">40.0</value>
@@ -6193,7 +6193,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="2.0">
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="2.0">
 					<value level="2">3.0</value>
 					<value level="3">4.0</value>
 				</power>
@@ -6248,7 +6248,7 @@
 					<value level="2">16.0</value>
 				</power>
 			</stat-modify>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="5.0">
 					<value level="2">8.0</value>
 				</power>
@@ -6263,7 +6263,7 @@
 					<value level="2">-8.0</value>
 				</power>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="-2.0">
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="-2.0">
 					<value level="2">-4.0</value>
 				</power>
 			</stat-hp-based>
@@ -6978,7 +6978,7 @@
 		</consume>
 		<target scope="PARTY" object="FRIEND" range="2000" />
 		<conditions>
-			<remain-status stat="MP" amount="30" lower="true"/>
+			<remain-status stat="MP" amount="30"/>
 		</conditions>
 		<effects>
 			<effect name="HealPercent">
@@ -7193,7 +7193,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="13.0">
 					<value level="2">16.0</value>
 					<value level="3">19.0</value>
@@ -7293,7 +7293,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="26.0">
 					<value level="2">29.0</value>
 					<value level="3">33.0</value>
@@ -7388,7 +7388,7 @@
 			<condition name="CanSummon"/>
 		</conditions>
 		<effects>
-			<summon consume-item="0" experience-multiplier="1.0" life-time="-1">
+			<summon consume-item="0" life-time="-1">
 				<npc initial="14207.0">
 					<value level="2">14208.0</value>
 					<value level="3">14209.0</value>
@@ -7484,7 +7484,7 @@
 			<condition name="CanSummon"/>
 		</conditions>
 		<effects>
-			<summon consume-item="0" experience-multiplier="1.0" life-time="-1">
+			<summon consume-item="0" life-time="-1">
 				<npc initial="14391.0">
 					<value level="2">14392.0</value>
 					<value level="3">14393.0</value>
@@ -7580,7 +7580,7 @@
 			<condition name="CanSummon"/>
 		</conditions>
 		<effects>
-			<summon consume-item="0" experience-multiplier="1.0" life-time="-1">
+			<summon consume-item="0" life-time="-1">
 				<npc initial="14575.0">
 					<value level="2">14576.0</value>
 					<value level="3">14577.0</value>
@@ -7898,7 +7898,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="20.0">
 					<value level="2">33.0</value>
 				</power>
@@ -7970,7 +7970,7 @@
 					<value level="12">10.0</value>
 				</power>
 			</effect>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="293.3">
 					<value level="2">333.2</value>
 					<value level="3">375.9</value>
@@ -8041,7 +8041,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="1288" name="Aura Symphony" max-level="1" action="A1" type="MAGIC">
+	<skill id="1288" name="Aura Symphony" action="A1" type="MAGIC">
 	<!-- Inflicts damage on the enemy with bonus 150 M. Atk. Power. -->
 		<icon initial="icon.skill1288"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
@@ -8059,7 +8059,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="150.0"/>
 			</magical-attack>
 		</effects>
@@ -8120,7 +8120,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="150.0">
 					<value level="2">155.0</value>
 					<value level="3">160.0</value>
@@ -8138,7 +8138,7 @@
 					<value level="6">10.0</value>
 				</power>
 			</magical-attack-mp>
-			<damage-over-time ticks="1" can-kill="false">
+			<damage-over-time ticks="1">
 				<power initial="60.0">
 					<value level="2">80.0</value>
 					<value level="3">100.0</value>
@@ -8205,7 +8205,7 @@
 			<chance initial="40"/>
 		</abnormal>
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="150.0">
 					<value level="2">155.0</value>
 					<value level="3">160.0</value>
@@ -8275,7 +8275,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="150.0">
 					<value level="2">155.0</value>
 					<value level="3">160.0</value>
@@ -8295,7 +8295,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="1292" name="Elemental Assault" max-level="1" action="A1" type="MAGIC">
+	<skill id="1292" name="Elemental Assault" action="A1" type="MAGIC">
 	<!-- Inflicts damage on the enemy with bonus 200 M. Atk. Power. Over-hit. -->
 		<icon initial="icon.skill1292"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
@@ -8318,7 +8318,7 @@
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="1293" name="Elemental Symphony" max-level="1" action="A1" type="MAGIC">
+	<skill id="1293" name="Elemental Symphony" action="A1" type="MAGIC">
 	<!-- Inflicts damage on the enemy with bonus 200 M. Atk. Power. Over-hit. -->
 		<icon initial="icon.skill1293"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
@@ -8341,7 +8341,7 @@
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="1294" name="Elemental Storm" max-level="1" action="A1" type="MAGIC">
+	<skill id="1294" name="Elemental Storm" action="A1" type="MAGIC">
 	<!-- Inflicts damage on the enemy with bonus 200 M. Atk. Power. Over-hit. -->
 		<icon initial="icon.skill1294"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
@@ -8359,7 +8359,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="200.0"/>
 			</magical-attack>
 		</effects>
@@ -8475,7 +8475,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="5" affect-random="12" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="41.0">
 					<value level="2">43.0</value>
 					<value level="3">45.0</value>
@@ -8608,7 +8608,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="100" affect-min="5" affect-random="12" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="60.0">
 					<value level="2">62.0</value>
 					<value level="3">64.0</value>
@@ -8807,12 +8807,12 @@
 		</abnormal>
 		<effects>
 			<effect name="ImmobilePetBuff"/>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="1350.0">
 					<value level="2">2700.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="1800.0">
 					<value level="2">3600.0</value>
 				</power>

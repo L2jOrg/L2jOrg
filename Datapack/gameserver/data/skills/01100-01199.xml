@@ -40,7 +40,7 @@
 			<chance initial="70"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="1" can-kill="false">
+			<damage-over-time ticks="1">
 				<power initial="27.0">
 					<value level="2">40.0</value>
 				</power>
@@ -87,7 +87,7 @@
 			<chance initial="35"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="1" can-kill="false">
+			<damage-over-time ticks="1">
 				<power initial="58.0">
 					<value level="2">79.0</value>
 				</power>
@@ -452,7 +452,7 @@
 			<chance initial="70"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="1" can-kill="false">
+			<damage-over-time ticks="1">
 				<power initial="58.0">
 					<value level="2">79.0</value>
 				</power>
@@ -508,7 +508,7 @@
 			<chance initial="60"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="1" can-kill="false">
+			<damage-over-time ticks="1">
 				<power initial="60.0">
 					<value level="2">73.0</value>
 					<value level="3">84.0</value>
@@ -611,7 +611,7 @@
 			<condition name="CanSummon"/>
 		</conditions>
 		<effects>
-			<summon consume-item="0" experience-multiplier="1.0" life-time="-1">
+			<summon consume-item="0" life-time="-1">
 				<npc initial="14111.0">
 					<value level="2">14116.0</value>
 					<value level="3">14112.0</value>
@@ -1388,7 +1388,7 @@
 			<condition name="CanSummon"/>
 		</conditions>
 		<effects>
-			<summon consume-item="0" experience-multiplier="1.0" life-time="-1">
+			<summon consume-item="0" life-time="-1">
 				<npc initial="14479.0">
 					<value level="2">14484.0</value>
 					<value level="3">14480.0</value>
@@ -1470,7 +1470,7 @@
 			<condition name="CanSummon"/>
 		</conditions>
 		<effects>
-			<summon consume-item="0" experience-multiplier="1.0" life-time="-1">
+			<summon consume-item="0" life-time="-1">
 				<npc initial="14001.0">
 					<value level="2">14002.0</value>
 					<value level="3">14003.0</value>
@@ -1665,7 +1665,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="20.0">
 					<value level="2">33.0</value>
 				</power>
@@ -2290,7 +2290,7 @@
 			<condition name="ConsumeBody"/>
 		</conditions>
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="61.0">
 					<value level="2">65.0</value>
 					<value level="3">68.0</value>
@@ -2441,7 +2441,7 @@
 		</consume>
 		<target />
 		<effects>
-			<mp mode="DIFF">
+			<mp>
 				<power initial="60.0">
 					<value level="2">90.0</value>
 					<value level="3">123.0</value>
@@ -3088,7 +3088,7 @@
 			<chance initial="35"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="24.0">
 					<value level="2">32.0</value>
 					<value level="3">41.0</value>
@@ -3173,7 +3173,7 @@
 			<chance initial="70"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="11.0">
 					<value level="2">24.0</value>
 					<value level="3">32.0</value>
@@ -3576,7 +3576,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="29.0">
 					<value level="2">30.0</value>
 					<value level="3">32.0</value>
@@ -3670,7 +3670,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="19.0">
 					<value level="2">21.0</value>
 					<value level="3">24.0</value>
@@ -3872,7 +3872,7 @@
 			<fan-range start-angle="0" radius="200" angle="180"/>
 		</target>
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="48.0">
 					<value level="2">50.0</value>
 					<value level="3">53.0</value>
@@ -4287,7 +4287,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="5" affect-random="12" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="31.0">
 					<value level="2">33.0</value>
 					<value level="3">34.0</value>
@@ -4362,7 +4362,7 @@
 		</consume>
 		<target type="ENEMY_ONLY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="12.0">
 					<value level="2">13.0</value>
 					<value level="3">15.0</value>
@@ -4571,7 +4571,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="23.0">
 					<value level="2">26.0</value>
 					<value level="3">29.0</value>
@@ -4648,7 +4648,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="5" affect-random="12" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="13.0">
 					<value level="2">16.0</value>
 					<value level="3">19.0</value>
@@ -4710,7 +4710,7 @@
 			<chance initial="70"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="1" can-kill="false">
+			<damage-over-time ticks="1">
 				<power initial="102.0">
 					<value level="2">125.0</value>
 					<value level="3">144.0</value>
@@ -4779,7 +4779,7 @@
 			<chance initial="60"/>
 		</abnormal>
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="8.0">
 					<value level="2">9.0</value>
 					<value level="3">11.0</value>

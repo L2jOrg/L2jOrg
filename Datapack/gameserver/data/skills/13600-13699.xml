@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="13648" name="Equip Lv. 5 Brooch" max-level="1" action="A1">
+	<skill id="13648" name="Equip Lv. 5 Brooch" action="A1">
 	<!-- A radiant light is emanating from the brooch. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i06"/>
 		<attributes property="PHYSIC" >
@@ -10,7 +10,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="13649" name="Unequip Lv. 5 Brooch" max-level="1" action="A1">
+	<skill id="13649" name="Unequip Lv. 5 Brooch" action="A1">
 	<!-- The brooch's radiant light fades. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -22,7 +22,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="13650" name="Equip Lv. 4 Brooch" max-level="1" action="A1">
+	<skill id="13650" name="Equip Lv. 4 Brooch" action="A1">
 	<!-- A radiant light is emanating from the brooch. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i05"/>
 		<attributes property="PHYSIC" >
@@ -32,7 +32,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="13651" name="Unequip Lv. 4 Brooch" max-level="1" action="A1">
+	<skill id="13651" name="Unequip Lv. 4 Brooch" action="A1">
 	<!-- The brooch’s brilliant light fades. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -44,7 +44,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="13652" name="Equip Lv. 3 Brooch" max-level="1" action="A1">
+	<skill id="13652" name="Equip Lv. 3 Brooch" action="A1">
 	<!-- A radiant light is emanating from the brooch. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i03"/>
 		<attributes property="PHYSIC" >
@@ -54,7 +54,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="13653" name="Unequip Lv. 3 Brooch" max-level="1" action="A1">
+	<skill id="13653" name="Unequip Lv. 3 Brooch" action="A1">
 	<!-- The brooch’s brilliant light fades. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -66,7 +66,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="13654" name="Equip Lv. 2 Brooch" max-level="1" action="A1">
+	<skill id="13654" name="Equip Lv. 2 Brooch" action="A1">
 	<!-- A radiant light is emanating from the brooch. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i01"/>
 		<attributes property="PHYSIC" >
@@ -76,7 +76,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="13655" name="Unequip Lv. 2 Brooch" max-level="1" action="A1">
+	<skill id="13655" name="Unequip Lv. 2 Brooch" action="A1">
 	<!-- The brooch’s brilliant light fades. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -88,7 +88,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="13656" name="Brooch Lv. 1" max-level="1" >
+	<skill id="13656" name="Brooch Lv. 1">
 	<!-- 2 Gems can be equipped. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i00"/>
 		<attributes property="MAGIC" >
@@ -103,7 +103,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="13657" name="Brooch Lv. 2" max-level="1" >
+	<skill id="13657" name="Brooch Lv. 2">
 	<!-- 3 Gems can be equipped. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i01"/>
 		<attributes property="MAGIC" >
@@ -118,7 +118,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="13658" name="Brooch Lv. 3" max-level="1" >
+	<skill id="13658" name="Brooch Lv. 3">
 	<!-- 4 Gems can be equipped. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i03"/>
 		<attributes property="MAGIC" >
@@ -133,7 +133,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="13659" name="Brooch Lv. 4" max-level="1" >
+	<skill id="13659" name="Brooch Lv. 4">
 	<!-- 5 Gems can be equipped. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i05"/>
 		<attributes property="MAGIC" >
@@ -148,7 +148,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="13660" name="Brooch Lv. 5" max-level="1" >
+	<skill id="13660" name="Brooch Lv. 5">
 	<!-- 6 Gems can be equipped. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i06"/>
 		<attributes property="MAGIC" >

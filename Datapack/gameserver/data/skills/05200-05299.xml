@@ -129,7 +129,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ATTACK_CANCEL" mode="DIFF">
+			<stat-modify stat="ATTACK_CANCEL">
 				<power initial="-18.0">
 					<value level="2">-25.0</value>
 					<value level="3">-36.0</value>
@@ -239,7 +239,7 @@
 			<effect name="Fear"/>
 		</effects>
 	</skill>
-	<skill id="5204" name="Presentation - First Gigantic Pig Combination" max-level="1" action="A1">
+	<skill id="5204" name="Presentation - First Gigantic Pig Combination" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -250,7 +250,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="5205" name="Heal" max-level="1" action="A1">
+	<skill id="5205" name="Heal" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -266,7 +266,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5206" name="Decrease Speed" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="5206" name="Decrease Speed" debuff="true" action="A2" type="MAGIC">
 	<!-- Mutant Curse: Movement Speed momentarily decreased by 15%%. -->
 		<icon initial="icon.skill1160"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" hit-cancel-time="1.5" level-bonus-rate="2" >
@@ -294,7 +294,7 @@
 			</speed>
 		</effects>
 	</skill>
-	<skill id="5207" name="Decrease Atk. Spd." max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="5207" name="Decrease Atk. Spd." debuff="true" action="A2" type="MAGIC">
 	<!-- Mutant Curse: Atk. Spd. momentarily decreased by 15%%. -->
 		<icon initial="icon.skill4038"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" >
@@ -322,7 +322,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5208" name="Wind Walk (Event)" max-level="1" action="A2" type="MAGIC">
+	<skill id="5208" name="Wind Walk (Event)" action="A2" type="MAGIC">
 	<!-- Movement Speed temporarily increased by 33. -->
 		<icon initial="icon.skill1204"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -338,12 +338,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="33.0"/>
 			</speed>
 		</effects>
 	</skill>
-	<skill id="5209" name="Shield (Event)" max-level="1" action="A2" type="MAGIC">
+	<skill id="5209" name="Shield (Event)" action="A2" type="MAGIC">
 	<!-- Movement Speed temporarily increased by 15%%. -->
 		<icon initial="icon.skill1040"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -364,7 +364,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5210" name="Blessed Body (Event)" max-level="1" action="A2" type="MAGIC">
+	<skill id="5210" name="Blessed Body (Event)" action="A2" type="MAGIC">
 	<!-- Max HP temporarily increased by 35%% -->
 		<icon initial="icon.skill1045"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -380,12 +380,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="35.0"/>
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="5211" name="Vampiric Rage (Event)" max-level="1" action="A2" type="MAGIC">
+	<skill id="5211" name="Vampiric Rage (Event)" action="A2" type="MAGIC">
 	<!-- Momentarily restores HP using damage inflicted upon the enemy with a certain probability. -->
 		<icon initial="icon.skill1268"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -406,7 +406,7 @@
 			</vampiric-attack>
 		</effects>
 	</skill>
-	<skill id="5212" name="Regeneration (Event)" max-level="1" action="A2" type="MAGIC">
+	<skill id="5212" name="Regeneration (Event)" action="A2" type="MAGIC">
 	<!-- HP Recovery Bonus temporarily increased by 20%%. -->
 		<icon initial="icon.skill1044"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -427,7 +427,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5213" name="Haste (Event)" max-level="1" action="A2" type="MAGIC">
+	<skill id="5213" name="Haste (Event)" action="A2" type="MAGIC">
 	<!-- Atk. Spd. temporarily increased. -->
 		<icon initial="icon.skill1086"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -448,7 +448,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5214" name="Blessed Soul (Event)" max-level="1" action="A2" type="MAGIC">
+	<skill id="5214" name="Blessed Soul (Event)" action="A2" type="MAGIC">
 	<!-- Momentarily increases maximum MP. -->
 		<icon initial="icon.skill1048"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -464,12 +464,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="35.0"/>
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="5215" name="Acumen (Event)" max-level="1" action="A2" type="MAGIC">
+	<skill id="5215" name="Acumen (Event)" action="A2" type="MAGIC">
 	<!-- Casting Spd. temporarily increased by 30%%. -->
 		<icon initial="icon.skill1085"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -490,7 +490,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5216" name="Concentration (Event)" max-level="1" action="A2" type="MAGIC">
+	<skill id="5216" name="Concentration (Event)" action="A2" type="MAGIC">
 	<!-- Momentarily lowers the probability of magic being canceled due to damage taken. -->
 		<icon initial="icon.skill1078"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -506,12 +506,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ATTACK_CANCEL" mode="DIFF">
+			<stat-modify stat="ATTACK_CANCEL">
 				<power initial="-18.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5217" name="Empower (Event)" max-level="1" action="A2" type="MAGIC">
+	<skill id="5217" name="Empower (Event)" action="A2" type="MAGIC">
 	<!-- M. Atk. temporarily increased by 55%%. -->
 		<icon initial="icon.skill1059"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -532,7 +532,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5218" name="Teleport" max-level="1" action="A1">
+	<skill id="5218" name="Teleport" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -543,7 +543,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="5219" name="Giant Mutant Stun" max-level="1" debuff="true" action="A2">
+	<skill id="5219" name="Giant Mutant Stun" debuff="true" action="A2">
 	<!-- Curse of giant mutated animal: Stunned and unable to move momentarily. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" >
@@ -569,7 +569,7 @@
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="5220" name="Giant Mutant Fear" max-level="1" debuff="true" action="A2">
+	<skill id="5220" name="Giant Mutant Fear" debuff="true" action="A2">
 	<!-- Curse of giant mutated animal: Afflicted with Fear and moving against own will momentarily. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="DERANGEMENT" >
@@ -596,7 +596,7 @@
 			<effect name="Fear"/>
 		</effects>
 	</skill>
-	<skill id="5221" name="Baylor - Physical Close Range Vulnerability" max-level="1" action="T">
+	<skill id="5221" name="Baylor - Physical Close Range Vulnerability" action="T">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -632,7 +632,7 @@
 			</defence-trait>
 		</effects>
 	</skill>
-	<skill id="5222" name="Baylor - Physical Long Range Vulnerability" max-level="1" action="T">
+	<skill id="5222" name="Baylor - Physical Long Range Vulnerability" action="T">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -650,7 +650,7 @@
 			</defence-trait>
 		</effects>
 	</skill>
-	<skill id="5223" name="Baylor - Magic Vulnerability" max-level="1" action="T">
+	<skill id="5223" name="Baylor - Magic Vulnerability" action="T">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -666,7 +666,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5224" name="Berserk" max-level="1" action="A2">
+	<skill id="5224" name="Berserk" action="A2">
 	<!-- Increases P. Atk. and P. Def. -->
 		<icon initial="icon.skill1062"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -696,7 +696,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5225" name="Invincibility" max-level="1" action="A2">
+	<skill id="5225" name="Invincibility" action="A2">
 	<!-- Invincible against normal attacks, skills, and debuff cancel/debuffs. -->
 		<icon initial="icon.skill1427"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -714,14 +714,14 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<damage-block block-hp="true" block-mp="false"/>
+			<damage-block block-hp="true"/>
 			<effect name="DebuffBlock"/>
 			<resist-dispel-by-category category="ALL">
 				<power initial="-100.0"/>
 			</resist-dispel-by-category>
 		</effects>
 	</skill>
-	<skill id="5226" name="Imprison" max-level="1" action="A1" type="MAGIC">
+	<skill id="5226" name="Imprison" action="A1" type="MAGIC">
 	<!-- Transfers to prison. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -739,7 +739,7 @@
 		<target type="ENEMY" />
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 	</skill>
-	<skill id="5230" name="Stun" max-level="1" debuff="true" action="A2">
+	<skill id="5230" name="Stun" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0100"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" >
@@ -760,13 +760,13 @@
 			<chance initial="50"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="2784.0"/>
 			</physical-attack>
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="5231" name="Stun" max-level="1" debuff="true" action="A2">
+	<skill id="5231" name="Stun" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0100"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" >
@@ -787,13 +787,13 @@
 			<chance initial="50"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="5704.0"/>
 			</physical-attack>
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="5232" name="Stun" max-level="1" debuff="true" action="A2">
+	<skill id="5232" name="Stun" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0100"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" >
@@ -814,13 +814,13 @@
 			<chance initial="50"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="11407.0"/>
 			</physical-attack>
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="5233" name="Weight Spin Attack - Weak" max-level="1" action="A1">
+	<skill id="5233" name="Weight Spin Attack - Weak" action="A1">
 	<!-- Powerful attack on surrounding area. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -836,12 +836,12 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="300" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="4563.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="5234" name="Weight Spin Attack - Mid" max-level="1" action="A1">
+	<skill id="5234" name="Weight Spin Attack - Mid" action="A1">
 	<!-- Powerful attack on surrounding area. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -857,12 +857,12 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="300" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="7685.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="5235" name="Weight Spin Attack - Strong" max-level="1" action="A1">
+	<skill id="5235" name="Weight Spin Attack - Strong" action="A1">
 	<!-- Powerful attack on surrounding area. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -878,12 +878,12 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="300" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="13688.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="5236" name="Speed Up" max-level="1" action="A2">
+	<skill id="5236" name="Speed Up" action="A2">
 	<!-- Movement Speed has been increased by 33. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -904,12 +904,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="33.0"/>
 			</speed>
 		</effects>
 	</skill>
-	<skill id="5237" name="Speed Down" max-level="1" action="A2">
+	<skill id="5237" name="Speed Down" action="A2">
 	<!-- Decreases Movement Speed by 20%%. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -935,7 +935,7 @@
 			</speed>
 		</effects>
 	</skill>
-	<skill id="5238" name="Freezing" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="5238" name="Freezing" debuff="true" action="A2" type="MAGIC">
 	<!-- Instantly freezes and immobilizes. -->
 		<icon initial="icon.skill1174"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" hit-cancel-time="2.5" level-bonus-rate="2" >
@@ -962,7 +962,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="298.0"/>
 			</magical-attack>
 			<block-all-actions/>
@@ -971,7 +971,7 @@
 	<skill id="5239" name="Event Timer" max-level="5" action="A2">
 	<!-- Battle cannot be continued when the corresponding effect disappears. Corresponding effects will disappear even if you ride a vehicle. -->
 		<icon initial="icon.skill5239"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" dispellable="false" irreplacable="true" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
 			<magic-level initial="-1"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="100"/>
@@ -991,7 +991,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="5240" name="Stun" max-level="1" debuff="true" action="A2">
+	<skill id="5240" name="Stun" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0100"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="2" >
@@ -1014,13 +1014,13 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="6723.0"/>
 			</physical-attack>
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="5241" name="Stun" max-level="1" debuff="true" action="A2">
+	<skill id="5241" name="Stun" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0100"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="2" >
@@ -1041,13 +1041,13 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="11205.0"/>
 			</physical-attack>
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="5242" name="Sickness" max-level="1" debuff="true" action="A2">
+	<skill id="5242" name="Sickness" debuff="true" action="A2">
 	<!-- Temporary illness that makes you queasy and blurs your vision. -->
 		<icon initial="icon.skill5242"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2" >
@@ -1068,7 +1068,7 @@
 			<chance initial="80"/>
 		</abnormal>
 	</skill>
-	<skill id="5243" name="Blind" max-level="1" debuff="true" action="A2">
+	<skill id="5243" name="Blind" debuff="true" action="A2">
 	<!-- Momentarily cannot see. -->
 		<icon initial="icon.skill5243"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2" >
@@ -1089,7 +1089,7 @@
 			<chance initial="80"/>
 		</abnormal>
 	</skill>
-	<skill id="5244" name="Physical Up" max-level="1" action="A2">
+	<skill id="5244" name="Physical Up" action="A2">
 	<!-- Increases P. Atk. and P. Def. -->
 		<icon initial="icon.skill1068"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -1115,7 +1115,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5245" name="Magical Up" max-level="1" action="A2">
+	<skill id="5245" name="Magical Up" action="A2">
 	<!-- Increases M. Atk. and M. Def. -->
 		<icon initial="icon.skill1059"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -1183,7 +1183,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="300" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="21.0">
 					<value level="2">31.0</value>
 					<value level="3">43.0</value>
@@ -1256,7 +1256,7 @@
 			<chance initial="100"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="60.0">
 					<value level="2">91.0</value>
 					<value level="3">131.0</value>
@@ -1312,7 +1312,7 @@
 		</attributes>
 		<target range="300" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="81.0">
 					<value level="2">121.0</value>
 					<value level="3">171.0</value>
@@ -1383,7 +1383,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="21.0">
 					<value level="2">31.0</value>
 					<value level="3">43.0</value>
@@ -1400,7 +1400,7 @@
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="5250" name="Stun" max-level="1" debuff="true" action="A2">
+	<skill id="5250" name="Stun" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0100"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="2" >
@@ -1479,7 +1479,7 @@
 			<chance initial="70"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="32.0">
 					<value level="2">47.0</value>
 					<value level="3">63.0</value>
@@ -1597,7 +1597,7 @@
 			<chance initial="100"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="35.0">
 					<value level="2">50.0</value>
 					<value level="3">68.0</value>
@@ -1678,7 +1678,7 @@
 			<chance initial="90"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="4.0">
 					<value level="2">6.0</value>
 					<value level="3">8.0</value>
@@ -1750,7 +1750,7 @@
 			</magical-attack-mp>
 		</effects>
 	</skill>
-	<skill id="5256" name="Announcement of Death" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="5256" name="Announcement of Death" debuff="true" action="A2" type="MAGIC">
 	<!-- Announcement of Death. Dead after 30 seconds. -->
 		<icon initial="icon.skill5239"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -1794,7 +1794,7 @@
 				<power initial="99.0">
 					<value level="2">5.0</value>
 				</power>
-				<half-power initial="0.0"/>
+				<half-power/>
 			</lethal>
 		</effects>
 	</skill>
@@ -2016,7 +2016,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="150" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="31.0">
 					<value level="2">70.0</value>
 					<value level="3">146.0</value>
@@ -2086,7 +2086,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="21.0">
 					<value level="2">31.0</value>
 					<value level="3">43.0</value>
@@ -2217,7 +2217,7 @@
 			<fan-range start-angle="0" radius="200" angle="180"/>
 		</target>
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="21.0">
 					<value level="2">31.0</value>
 					<value level="3">43.0</value>
@@ -2293,7 +2293,7 @@
 		</abnormal>
 		<effects>
 			<magic-cost type="1">
-				<power initial="0.0">
+				<power>
 					<value level="2">50.0</value>
 					<value level="4">600.0</value>
 				</power>
@@ -2336,7 +2336,7 @@
 		</attributes>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="35.0">
 					<value level="2">46.0</value>
 					<value level="3">57.0</value>
@@ -2397,7 +2397,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="18.0">
 					<value level="2">22.0</value>
 					<value level="3">26.0</value>
@@ -2642,7 +2642,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="13066.0">
 					<value level="2">18040.0</value>
 					<value level="3">18486.0</value>
@@ -2688,7 +2688,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="34842.0">
 					<value level="2">48105.0</value>
 					<value level="3">49294.0</value>
@@ -2734,7 +2734,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="150" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="13066.0">
 					<value level="2">18040.0</value>
 					<value level="3">18486.0</value>
@@ -2781,7 +2781,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="150" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="8711.0">
 					<value level="2">12027.0</value>
 					<value level="3">12324.0</value>
@@ -2829,7 +2829,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="13066.0">
 					<value level="2">18040.0</value>
 					<value level="3">18486.0</value>
@@ -2877,7 +2877,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="34842.0">
 					<value level="2">48105.0</value>
 					<value level="3">49294.0</value>
@@ -2925,7 +2925,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="150" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="13066.0"/>
 			</physical-attack>
 		</effects>
@@ -2967,7 +2967,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="150" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="8711.0">
 					<value level="2">12027.0</value>
 					<value level="3">12324.0</value>
@@ -3015,7 +3015,7 @@
 		</consume>
 		<target type="ENEMY" range="150" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="13066.0">
 					<value level="2">18040.0</value>
 					<value level="3">18486.0</value>
@@ -3063,7 +3063,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="34842.0">
 					<value level="2">48105.0</value>
 					<value level="3">49294.0</value>
@@ -3111,7 +3111,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="150" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="13066.0"/>
 			</physical-attack>
 		</effects>
@@ -3153,7 +3153,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="150" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="8711.0">
 					<value level="2">12027.0</value>
 					<value level="3">12324.0</value>
@@ -3201,7 +3201,7 @@
 		</consume>
 		<target type="ENEMY" range="150" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="13066.0">
 					<value level="2">18040.0</value>
 					<value level="3">18486.0</value>
@@ -3249,7 +3249,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="34842.0">
 					<value level="2">48105.0</value>
 					<value level="3">49294.0</value>
@@ -3297,7 +3297,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="150" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="13066.0"/>
 			</physical-attack>
 		</effects>
@@ -3339,7 +3339,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="150" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="8711.0">
 					<value level="2">12027.0</value>
 					<value level="3">12324.0</value>
@@ -3387,7 +3387,7 @@
 		</consume>
 		<target type="ENEMY" range="150" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="13066.0">
 					<value level="2">18040.0</value>
 					<value level="3">18486.0</value>
@@ -3435,7 +3435,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="34842.0">
 					<value level="2">48105.0</value>
 					<value level="3">49294.0</value>
@@ -3483,7 +3483,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="150" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="13066.0"/>
 			</physical-attack>
 		</effects>
@@ -3525,7 +3525,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="150" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="8711.0">
 					<value level="2">12027.0</value>
 					<value level="3">12324.0</value>
@@ -3573,7 +3573,7 @@
 		</consume>
 		<target type="ENEMY" range="150" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="13066.0">
 					<value level="2">18040.0</value>
 					<value level="3">18486.0</value>
@@ -3621,7 +3621,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="34842.0">
 					<value level="2">48105.0</value>
 					<value level="3">49294.0</value>
@@ -3669,7 +3669,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="150" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="13066.0"/>
 			</physical-attack>
 		</effects>
@@ -3711,7 +3711,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="150" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="8711.0">
 					<value level="2">12027.0</value>
 					<value level="3">12324.0</value>
@@ -3759,7 +3759,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="13066.0">
 					<value level="2">18040.0</value>
 					<value level="3">18486.0</value>
@@ -3807,7 +3807,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="34842.0">
 					<value level="2">48105.0</value>
 					<value level="3">49294.0</value>
@@ -3855,7 +3855,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="150" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="13066.0"/>
 			</physical-attack>
 		</effects>

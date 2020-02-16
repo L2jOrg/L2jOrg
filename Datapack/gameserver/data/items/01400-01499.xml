@@ -359,7 +359,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="2" price="10" commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="SoulShots">
-			<skill id="2150" level="1" value="-1"/>  <!-- Soulshot (D-grade) -->
+			<skill id="2150" value="-1"/>  <!-- Soulshot (D-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -368,7 +368,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="2" price="15" commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="SoulShots">
-			<skill id="2151" level="1" value="-1"/>  <!-- Soulshot (C-grade) -->
+			<skill id="2151" value="-1"/>  <!-- Soulshot (C-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -377,7 +377,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="1" price="50" commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="SoulShots">
-			<skill id="2152" level="1" value="-1"/>  <!-- Soulshot (B-grade) -->
+			<skill id="2152" value="-1"/>  <!-- Soulshot (B-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -386,7 +386,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="1" price="80" commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="SoulShots">
-			<skill id="2153" level="1" value="-1"/>  <!-- Soulshot (A-grade) -->
+			<skill id="2153" value="-1"/>  <!-- Soulshot (A-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -395,7 +395,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="1" price="100" commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="SoulShots">
-			<skill id="2154" level="1" value="-1"/>  <!-- Soulshot (S-grade) -->
+			<skill id="2154" value="-1"/>  <!-- Soulshot (S-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -432,7 +432,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 

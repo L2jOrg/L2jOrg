@@ -325,8 +325,8 @@
 	<!-- Magical potion that slowly restores HP. Lasts 15 sec. -->
 		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="5" price="90" commission-type="POTION" reuse-delay="10000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2031" level="1" value="-1"/>  <!-- HP Potion -->
+		<skill-reducer>
+			<skill id="2031" value="-1"/>  <!-- HP Potion -->
 		</skill-reducer>
 	</item>
 
@@ -334,8 +334,8 @@
 	<!-- Magical potion that slowly restores HP. Lasts 15 sec. -->
 		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="5" price="330" commission-type="POTION" reuse-delay="10000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2032" level="1" value="-1"/>  <!-- Greater HP Potion -->
+		<skill-reducer>
+			<skill id="2032" value="-1"/>  <!-- Greater HP Potion -->
 		</skill-reducer>
 	</item>
 
@@ -379,8 +379,8 @@
 	<!-- Magical potion that slowly restores HP. Short-lasting.  -->
 		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" commission-type="POTION" reuse-delay="10000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2031" level="1" value="-1"/>  <!-- HP Potion -->
+		<skill-reducer>
+			<skill id="2031" value="-1"/>  <!-- HP Potion -->
 		</skill-reducer>
 	</item>
 

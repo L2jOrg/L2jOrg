@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="51001" name="Sayha's Storm Lv. 2 - Event" max-level="1" action="A1">
+	<skill id="51001" name="Sayha's Storm Lv. 2 - Event" action="A1">
 	<!-- Sayha's Grace Consumption +100%% and XP/SP Gain +150%% when hunting monsters. Effect remains even after death. Duration is 20 minutes. Cooldown is 1 minute. -->
 		<icon initial="icon.bm_sayha_storm"/>
 		<attributes property="PHYSIC" >
@@ -11,7 +11,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51002" name="Sayha's Storm Lv. 2" max-level="1" action="A1">
+	<skill id="51002" name="Sayha's Storm Lv. 2" action="A1">
 	<!-- Sayha's Grace Consumption +100%% and XP/SP Gain +150%% when hunting monsters. Effect remains even after death. Duration is 20 minutes. Cooldown is 1 minute. -->
 		<icon initial="icon.bm_sayha_storm"/>
 		<attributes property="PHYSIC" >
@@ -22,7 +22,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51003" name="Sayha Grace Box" max-level="1" action="A1">
+	<skill id="51003" name="Sayha Grace Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_nebit_box"/>
 		<attributes >
@@ -34,7 +34,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51004" name="Sayha's Golden Treasure" max-level="1" action="A1">
+	<skill id="51004" name="Sayha's Golden Treasure" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_sayha_gold_present"/>
 		<attributes >
@@ -46,7 +46,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51005" name="Sayha's Silver Treasure" max-level="1" action="A1">
+	<skill id="51005" name="Sayha's Silver Treasure" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_sayha_silver_present"/>
 		<attributes >
@@ -58,7 +58,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51006" name="Sayha Grace Maintaining Potion" max-level="1" action="A1">
+	<skill id="51006" name="Sayha Grace Maintaining Potion" action="A1">
 	<!-- Maintains Sayha's Grace for 10 minutes. Cooldown: 1 minute. Effect remains even after death. -->
 		<icon initial="icon.bm_freya_potion"/>
 		<attributes property="PHYSIC" >
@@ -69,7 +69,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51007" name="Sayha's XP Charm" max-level="1" >
+	<skill id="51007" name="Sayha's XP Charm">
 	<!-- XP/SP gain +20%%. Sayha's Grace Consumption -10%%. -->
 		<icon initial="icon.bm_sayha_rune"/>
 		<attributes property="MAGIC" >
@@ -79,7 +79,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51008" name="Lucky Enchant Stone Chest - A-grade" max-level="1" action="A1">
+	<skill id="51008" name="Lucky Enchant Stone Chest - A-grade" action="A1">
 	<!-- none -->
 		<icon initial="icon.scroll_of_unidentify_am_s"/>
 		<attributes >
@@ -89,7 +89,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51009" name="Golden Relic Box" max-level="1" action="A1">
+	<skill id="51009" name="Golden Relic Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -101,7 +101,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51010" name="Armor Gem Box (A-grade)" max-level="1" action="A1">
+	<skill id="51010" name="Armor Gem Box (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -113,7 +113,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51011" name="Armor Gem Box (B-grade)" max-level="1" action="A1">
+	<skill id="51011" name="Armor Gem Box (B-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -125,7 +125,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51012" name="Refined Rare Accessory Pack" max-level="1" action="A1">
+	<skill id="51012" name="Refined Rare Accessory Pack" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -137,7 +137,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51013" name="Rare Accessory Box" max-level="1" action="A1">
+	<skill id="51013" name="Rare Accessory Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -149,7 +149,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51014" name="Blessing of Fire Dragon Scroll" max-level="1" action="A1" type="MAGIC">
+	<skill id="51014" name="Blessing of Fire Dragon Scroll" action="A1" type="MAGIC">
 	<!-- Grants you Blessing of Fire Dragon for 20 minutes: Buff/ debuff effects remain after death, but Blessing of Fire Dragon is consumed. -->
 		<icon initial="icon.bm_blessing_dragon"/>
 		<attributes property="PHYSIC" >
@@ -162,7 +162,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51015" name="Shining Mood Melody" max-level="1" action="A1">
+	<skill id="51015" name="Shining Mood Melody" action="A1">
 	<!-- For 20 minutes activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. Cooldown 1 minute. This effect will not be removed after death.\n\n<Warning>\nThe buff from the Shining Scroll of Mood Melody will not be removed after death, and the Shining Scroll of Mood Melody cannot be used while the buff remains. -->
 		<icon initial="icon.bm_magmeld"/>
 		<attributes property="PHYSIC" >
@@ -175,7 +175,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51016" name="Clan Bonus XP Boost - Stage 1" max-level="1" action="A1">
+	<skill id="51016" name="Clan Bonus XP Boost - Stage 1" action="A1">
 	<!-- XP/SP gain +3%% for 4 hours thanks to the clan members' activities. (Available when 7 or more clan members have logged in.) -->
 		<icon initial="icon.skill19011"/>
 		<attributes property="PHYSIC" >
@@ -187,7 +187,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51017" name="Clan Bonus XP Boost - Stage 2" max-level="1" action="A1">
+	<skill id="51017" name="Clan Bonus XP Boost - Stage 2" action="A1">
 	<!-- XP/SP gain +6%% for 4 hours thanks to the clan members' activities. (Available when 14 or more clan members have logged in.) -->
 		<icon initial="icon.skill19011"/>
 		<attributes property="PHYSIC" >
@@ -199,7 +199,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51018" name="Clan Bonus XP Boost - Stage 3" max-level="1" action="A1">
+	<skill id="51018" name="Clan Bonus XP Boost - Stage 3" action="A1">
 	<!-- XP/SP gain +10%% for 4 hours thanks to the clan members' activities. (Available when 21 or more clan members have logged in.) -->
 		<icon initial="icon.skill19011"/>
 		<attributes property="PHYSIC" >
@@ -211,7 +211,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51019" name="Clan Bonus XP Boost - Stage 4" max-level="1" action="A1">
+	<skill id="51019" name="Clan Bonus XP Boost - Stage 4" action="A1">
 	<!-- XP/SP gain +20%% for 4 hours thanks to the clan members' activities. (Available when 28 or more clan members have logged in.) -->
 		<icon initial="icon.skill19011"/>
 		<attributes property="PHYSIC" >
@@ -223,7 +223,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51020" name="Clan Bonus Increase P. Atk. - Stage 1" max-level="1" action="A1">
+	<skill id="51020" name="Clan Bonus Increase P. Atk. - Stage 1" action="A1">
 	<!-- By Clan Members' activity, power of unity applied. For 4 hours PVE Damage +5%%. (Obtained when Clan Hunting status exceeds 3,267,000 points.) -->
 		<icon initial="icon.skill19011"/>
 		<attributes property="PHYSIC" >
@@ -235,7 +235,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51021" name="Clan Bonus Increase P. Atk. - Stage 2" max-level="1" action="A1">
+	<skill id="51021" name="Clan Bonus Increase P. Atk. - Stage 2" action="A1">
 	<!-- By Clan Members' activity, power of unity applied. For 4 hours PVE Damage +10%%. (Obtained when Clan Hunting status exceeds 6,534,000 points.) -->
 		<icon initial="icon.skill19011"/>
 		<attributes property="PHYSIC" >
@@ -247,7 +247,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51022" name="Clan Bonus Increase P. Atk. - Stage 3" max-level="1" action="A1">
+	<skill id="51022" name="Clan Bonus Increase P. Atk. - Stage 3" action="A1">
 	<!-- By Clan Members' activity, power of unity applied. For 4 hours PVE Damage +15%%. (Obtained when Clan Hunting status exceeds 9,801,000 points.) -->
 		<icon initial="icon.skill19011"/>
 		<attributes property="PHYSIC" >
@@ -259,7 +259,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51023" name="Clan Bonus Increase P. Atk. - Stage 4" max-level="1" action="A1">
+	<skill id="51023" name="Clan Bonus Increase P. Atk. - Stage 4" action="A1">
 	<!-- By Clan Members' activity, power of unity applied. For 4 hours PVE Damage +15%%, PVP Damage +10%%. (Obtained when Clan Hunting status exceeds 13,068,000 points.) -->
 		<icon initial="icon.skill19011"/>
 		<attributes property="PHYSIC" >
@@ -271,7 +271,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51024" name="Expand Primary and Secondary Agathion Slots" max-level="1" >
+	<skill id="51024" name="Expand Primary and Secondary Agathion Slots">
 	<!-- Does not add Agathion Slots. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i04"/>
 		<attributes property="MAGIC" >
@@ -309,7 +309,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="51026" name="Summon Aries Agathion" max-level="1" action="A1">
+	<skill id="51026" name="Summon Aries Agathion" action="A1">
 	<!-- Release Agathion's Seal - Aries. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -319,7 +319,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51027" name="Summon Joy Agathion" max-level="1" action="A1">
+	<skill id="51027" name="Summon Joy Agathion" action="A1">
 	<!-- Release Agathion's Seal - Joy. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -329,7 +329,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51028" name="Summon Pisces Agathion" max-level="1" action="A1">
+	<skill id="51028" name="Summon Pisces Agathion" action="A1">
 	<!-- Release Agathion's Seal - Pisces. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -339,7 +339,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51029" name="Summon Cancer Agathion" max-level="1" action="A1">
+	<skill id="51029" name="Summon Cancer Agathion" action="A1">
 	<!-- Release Agathion's Seal - Cancer. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -349,7 +349,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51030" name="Teleport: Gludio" max-level="1" action="A1">
+	<skill id="51030" name="Teleport: Gludio" action="A1">
 	<!-- Teleports to Gludio. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -360,7 +360,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51031" name="Teleport: Dion" max-level="1" action="A1">
+	<skill id="51031" name="Teleport: Dion" action="A1">
 	<!-- Teleports to Dion. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -371,7 +371,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51032" name="Teleport: Giran" max-level="1" action="A1">
+	<skill id="51032" name="Teleport: Giran" action="A1">
 	<!-- Teleports to Giran. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -382,7 +382,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51033" name="Teleport: Oren" max-level="1" action="A1">
+	<skill id="51033" name="Teleport: Oren" action="A1">
 	<!-- Teleports to Oren. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -393,7 +393,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51034" name="Teleport: Hunter's Village" max-level="1" action="A1">
+	<skill id="51034" name="Teleport: Hunter's Village" action="A1">
 	<!-- Teleports to Hunter's Village. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -404,7 +404,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51035" name="Summon Rudolph Agathion" max-level="1" action="A1">
+	<skill id="51035" name="Summon Rudolph Agathion" action="A1">
 	<!-- Release Agathion's Seal - Rudolph. -->
 		<icon initial="BranchSys2.icon.event_lbracelet_rudolph"/>
 		<attributes >
@@ -414,7 +414,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51036" name="Rudolph's Blessing" max-level="1" >
+	<skill id="51036" name="Rudolph's Blessing">
 	<!-- Atk. Spd./Casting Spd. +5%%, XP/SP gain +10%%. -->
 		<icon initial="BranchSys2.icon.event_lbracelet_rudolph"/>
 		<attributes property="MAGIC" >
@@ -424,7 +424,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51037" name="Release Agathion" max-level="1" action="A1">
+	<skill id="51037" name="Release Agathion" action="A1">
 	<!-- Release summoned Agathion. -->
 		<icon initial="icon.etc_unsummon_aga_agit_i01"/>
 		<attributes >
@@ -434,7 +434,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51038" name="Battle Box Lv. 1" max-level="1" action="A1">
+	<skill id="51038" name="Battle Box Lv. 1" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -454,13 +454,13 @@
 			<encumbered slots="10" weight="10"/>
 		</conditions>
 		<effects>
-			<random-restoration><item id="70024" count="1" chance="33.0"/>
-<item id="1419" count="1" chance="33.0"/>
-<item id="29648" count="1" chance="34.0"/>
+			<random-restoration><item id="70024" chance="33.0"/>
+<item id="1419" chance="33.0"/>
+<item id="29648" chance="34.0"/>
 			</random-restoration>
 		</effects>
 	</skill>
-	<skill id="51039" name="Battle Box Lv. 2" max-level="1" action="A1">
+	<skill id="51039" name="Battle Box Lv. 2" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -480,15 +480,15 @@
 			<encumbered slots="10" weight="10"/>
 		</conditions>
 		<effects>
-			<random-restoration><item id="49758" count="1" chance="20.0"/>
-<item id="90012" count="1" chance="20.0"/>
+			<random-restoration><item id="49758" chance="20.0"/>
+<item id="90012" chance="20.0"/>
 <item id="70024" count="2" chance="20.0"/>
 <item id="1419" count="2" chance="20.0"/>
 <item id="29648" count="2" chance="20.0"/>
 			</random-restoration>
 		</effects>
 	</skill>
-	<skill id="51040" name="Battle Box Lv. 3" max-level="1" action="A1">
+	<skill id="51040" name="Battle Box Lv. 3" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -508,14 +508,14 @@
 			<encumbered slots="10" weight="10"/>
 		</conditions>
 		<effects>
-			<random-restoration><item id="90012" count="1" chance="25.0"/>
+			<random-restoration><item id="90012" chance="25.0"/>
 <item id="70024" count="3" chance="25.0"/>
 <item id="29649" count="4" chance="25.0"/>
 <item id="29648" count="4" chance="25.0"/>
 			</random-restoration>
 		</effects>
 	</skill>
-	<skill id="51041" name="Battle Box Lv. 4" max-level="1" action="A1">
+	<skill id="51041" name="Battle Box Lv. 4" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -535,19 +535,19 @@
 			<encumbered slots="10" weight="10"/>
 		</conditions>
 		<effects>
-			<random-restoration><item id="49756" count="1" chance="11.0"/>
-<item id="90012" count="1" chance="11.0"/>
+			<random-restoration><item id="49756" chance="11.0"/>
+<item id="90012" chance="11.0"/>
 <item id="70024" count="5" chance="11.0"/>
-<item id="90013" count="1" chance="11.0"/>
-<item id="730" count="1" chance="11.0"/>
-<item id="948" count="1" chance="11.0"/>
-<item id="729" count="1" chance="11.0"/>
-<item id="947" count="1" chance="11.0"/>
-<item id="29649" count="1" chance="11.0"/>
+<item id="90013" chance="11.0"/>
+<item id="730" chance="11.0"/>
+<item id="948" chance="11.0"/>
+<item id="729" chance="11.0"/>
+<item id="947" chance="11.0"/>
+<item id="29649" chance="11.0"/>
 			</random-restoration>
 		</effects>
 	</skill>
-	<skill id="51042" name="Battle Box" max-level="1" action="A1">
+	<skill id="51042" name="Battle Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -559,7 +559,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51043" name="Scroll: 10,000,000 XP" max-level="1" action="A1">
+	<skill id="51043" name="Scroll: 10,000,000 XP" action="A1">
 	<!-- XP +10,000,000. -->
 		<icon initial="icon.etc_recall_exp_scroll"/>
 		<attributes magic-critical-rate="5.0" >
@@ -580,7 +580,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="51044" name="Scroll: 50,000,000 XP" max-level="1" action="A1">
+	<skill id="51044" name="Scroll: 50,000,000 XP" action="A1">
 	<!-- XP +50,000,000. -->
 		<icon initial="icon.etc_recall_exp_scroll"/>
 		<attributes magic-critical-rate="5.0" >
@@ -601,7 +601,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="51045" name="Scroll: 100,000,000 XP" max-level="1" action="A1">
+	<skill id="51045" name="Scroll: 100,000,000 XP" action="A1">
 	<!-- XP +100,000,000. -->
 		<icon initial="icon.etc_recall_exp_scroll"/>
 		<attributes magic-critical-rate="5.0" >
@@ -622,7 +622,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="51046" name="Zodiac Agathion Box" max-level="1" action="A1">
+	<skill id="51046" name="Zodiac Agathion Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.star_agathion_cube"/>
 		<attributes >
@@ -633,7 +633,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51047" name="Agathion Enchant Scroll" max-level="1" action="A1">
+	<skill id="51047" name="Agathion Enchant Scroll" action="A1">
 	<!-- none -->
 		<icon initial="icon.star_scrl_of_ench_ag"/>
 		<attributes >
@@ -643,7 +643,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51048" name="Quality Agathion Enchant Scroll" max-level="1" action="A1">
+	<skill id="51048" name="Quality Agathion Enchant Scroll" action="A1">
 	<!-- none -->
 		<icon initial="icon.star_giantscrl_of_ench_ag"/>
 		<attributes >
@@ -653,7 +653,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51049" name="Solid Scroll: Enchant Agathion" max-level="1" action="A1">
+	<skill id="51049" name="Solid Scroll: Enchant Agathion" action="A1">
 	<!-- none -->
 		<icon initial="icon.star_giantscrl_of_ench_ag"/>
 		<attributes >
@@ -663,7 +663,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51050" name="Raid Lucky Charm" max-level="1" >
+	<skill id="51050" name="Raid Lucky Charm">
 	<!-- XP/Item Drop Rate -50%% upon death. Cannot be used by chaotic characters. -->
 		<icon initial="icon.etc_cross_of_einhasad_i00"/>
 		<attributes property="MAGIC" >
@@ -673,7 +673,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51051" name="Sealed Doll of Border Box" max-level="1" action="A1">
+	<skill id="51051" name="Sealed Doll of Border Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.star_agathion_cube"/>
 		<attributes >
@@ -684,7 +684,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51052" name="Raid Lucky Charm Box" max-level="1" action="A1">
+	<skill id="51052" name="Raid Lucky Charm Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -695,19 +695,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51053" name="GM Repi Gift Box" max-level="1" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes >
-			<cast-range initial="-1"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51054" name="High-grade Shining Pendant Polish Box" max-level="1" action="A1">
+	<skill id="51053" name="GM Repi Gift Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -719,7 +707,19 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51055" name="Items Seal Scroll" max-level="1" action="A1">
+	<skill id="51054" name="High-grade Shining Pendant Polish Box" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="1000"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="51055" name="Items Seal Scroll" action="A1">
 	<!-- none -->
 		<icon initial="icon.scrl_item_lock"/>
 		<attributes >
@@ -729,7 +729,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51056" name="Item Unseal Scroll" max-level="1" action="A1">
+	<skill id="51056" name="Item Unseal Scroll" action="A1">
 	<!-- none -->
 		<icon initial="icon.scrl_item_unlock"/>
 		<attributes >
@@ -739,7 +739,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51057" name="Weapon Supply Box +8 (A-grade)" max-level="1" action="A1">
+	<skill id="51057" name="Weapon Supply Box +8 (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i07"/>
 		<attributes magic-critical-rate="5.0" >
@@ -759,32 +759,32 @@
 			<encumbered slots="10" weight="20"/>
 		</conditions>
 		<effects>
-			<random-restoration><item id="235" count="1" chance="4.5"/>
-<item id="236" count="1" chance="4.5"/>
-<item id="80" count="1" chance="4.5"/>
-<item id="2500" count="1" chance="4.5"/>
-<item id="7884" count="1" chance="4.5"/>
-<item id="81" count="1" chance="4.5"/>
-<item id="288" count="1" chance="4.5"/>
-<item id="289" count="1" chance="4.5"/>
-<item id="2504" count="1" chance="4.5"/>
-<item id="164" count="1" chance="4.5"/>
-<item id="7899" count="1" chance="4.5"/>
-<item id="7902" count="1" chance="4.5"/>
-<item id="98" count="1" chance="4.5"/>
-<item id="305" count="1" chance="4.5"/>
-<item id="269" count="1" chance="4.5"/>
-<item id="270" count="1" chance="4.5"/>
-<item id="150" count="1" chance="4.5"/>
-<item id="151" count="1" chance="4.5"/>
-<item id="212" count="1" chance="4.5"/>
-<item id="213" count="1" chance="4.5"/>
-<item id="7894" count="1" chance="4.5"/>
-<item id="7895" count="1" chance="4.5"/>
+			<random-restoration><item id="235" chance="4.5"/>
+<item id="236" chance="4.5"/>
+<item id="80" chance="4.5"/>
+<item id="2500" chance="4.5"/>
+<item id="7884" chance="4.5"/>
+<item id="81" chance="4.5"/>
+<item id="288" chance="4.5"/>
+<item id="289" chance="4.5"/>
+<item id="2504" chance="4.5"/>
+<item id="164" chance="4.5"/>
+<item id="7899" chance="4.5"/>
+<item id="7902" chance="4.5"/>
+<item id="98" chance="4.5"/>
+<item id="305" chance="4.5"/>
+<item id="269" chance="4.5"/>
+<item id="270" chance="4.5"/>
+<item id="150" chance="4.5"/>
+<item id="151" chance="4.5"/>
+<item id="212" chance="4.5"/>
+<item id="213" chance="4.5"/>
+<item id="7894" chance="4.5"/>
+<item id="7895" chance="4.5"/>
 			</random-restoration>
 		</effects>
 	</skill>
-	<skill id="51058" name="Lucky Cube of Growth - 30 days" max-level="1" action="A1">
+	<skill id="51058" name="Lucky Cube of Growth - 30 days" action="A1">
 	<!-- none -->
 		<icon initial="icon.sa_cube"/>
 		<attributes >
@@ -795,7 +795,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51059" name="Scroll: Enchant Savior's Earring" max-level="1" action="A1">
+	<skill id="51059" name="Scroll: Enchant Savior's Earring" action="A1">
 	<!-- Enchants Savior's Earring. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -805,7 +805,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51060" name="Savior's Earring Box" max-level="1" action="A1">
+	<skill id="51060" name="Savior's Earring Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i07"/>
 		<attributes >
@@ -817,7 +817,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51061" name="Lucky Fortune" max-level="1" action="A1">
+	<skill id="51061" name="Lucky Fortune" action="A1">
 	<!-- For 5 minutes, a party member's XP/SP Gain +10%% and XP/SP Gain +20%% during Sayha's Grace. -->
 		<icon initial="icon.Accessary_middle_ages_i00"/>
 		<attributes property="PHYSIC" >
@@ -830,7 +830,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51062" name="Balthus Knights Varnish" max-level="1" action="A1">
+	<skill id="51062" name="Balthus Knights Varnish" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -840,7 +840,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51063" name="Balthus Knights Matte Varnish" max-level="1" action="A1">
+	<skill id="51063" name="Balthus Knights Matte Varnish" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -850,7 +850,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51064" name="Balthus Knights Shining Varnish" max-level="1" action="A1">
+	<skill id="51064" name="Balthus Knights Shining Varnish" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -860,7 +860,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51065" name="Balthus Knights Glittering Varnish" max-level="1" action="A1">
+	<skill id="51065" name="Balthus Knights Glittering Varnish" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -870,19 +870,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51066" name="Rush's Supplies - Antharas" max-level="1" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes >
-			<cast-range initial="-1"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51067" name="Rush's Supplies - Baium" max-level="1" action="A1">
+	<skill id="51066" name="Rush's Supplies - Antharas" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -894,7 +882,19 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51068" name="Summon Sin Eater Agathion" max-level="1" action="A1">
+	<skill id="51067" name="Rush's Supplies - Baium" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<reuse initial="1000"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="51068" name="Summon Sin Eater Agathion" action="A1">
 	<!-- Release Agathion's Seal - Sin Eater. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
 		<attributes >
@@ -904,7 +904,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51069" name="Hour of Penitence" max-level="1" action="A1">
+	<skill id="51069" name="Hour of Penitence" action="A1">
 	<!-- For 2 hours, has a chance of obtaining Proof of Penitence while hunting. -->
 		<icon initial="icon.etc_leash_i00"/>
 		<attributes property="PHYSIC" >
@@ -932,7 +932,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51071" name="Dragon's Relic Chest" max-level="1" action="A1">
+	<skill id="51071" name="Dragon's Relic Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_special_pendant_abradant_box"/>
 		<attributes >
@@ -944,7 +944,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51072" name="Fire Dragon's Relic Chest" max-level="1" action="A1">
+	<skill id="51072" name="Fire Dragon's Relic Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -956,7 +956,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51073" name="Earth Dragon's Relic Chest" max-level="1" action="A1">
+	<skill id="51073" name="Earth Dragon's Relic Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -968,7 +968,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51074" name="Dragon's Dye Box" max-level="1" action="A1">
+	<skill id="51074" name="Dragon's Dye Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -980,7 +980,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51075" name="Weapon Supply Box (Best A-grade)" max-level="1" action="A1">
+	<skill id="51075" name="Weapon Supply Box (Best A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -992,7 +992,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51076" name="Weapon Ingredient/Recipe Box (Best A-grade)" max-level="1" action="A1">
+	<skill id="51076" name="Weapon Ingredient/Recipe Box (Best A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1004,7 +1004,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51077" name="Weapon Recipe Box (Best A-grade)" max-level="1" action="A1">
+	<skill id="51077" name="Weapon Recipe Box (Best A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1016,7 +1016,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51078" name="Rash's Supply Items - Zaken" max-level="1" action="A1">
+	<skill id="51078" name="Rash's Supply Items - Zaken" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1028,7 +1028,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51079" name="Hidden Box" max-level="1" action="A1">
+	<skill id="51079" name="Hidden Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1040,7 +1040,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51080" name="Golden Fishery Fishing Supply Items" max-level="1" action="A1">
+	<skill id="51080" name="Golden Fishery Fishing Supply Items" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1052,7 +1052,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51081" name="Gold Big Catch Box" max-level="1" action="A1">
+	<skill id="51081" name="Gold Big Catch Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1064,7 +1064,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51082" name="Silver Big Catch Box" max-level="1" action="A1">
+	<skill id="51082" name="Silver Big Catch Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1076,7 +1076,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51083" name="Maliss's High-grade HP Potion" max-level="1" action="A1">
+	<skill id="51083" name="Maliss's High-grade HP Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_bm_hero_red_potion"/>
 		<attributes >
@@ -1086,7 +1086,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51084" name="Luxury Flanchard Enhancement Stone - B-grade" max-level="1" action="A1">
+	<skill id="51084" name="Luxury Flanchard Enhancement Stone - B-grade" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1096,7 +1096,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51085" name="Luxury Flanchard Enhancement Stone - A-grade" max-level="1" action="A1">
+	<skill id="51085" name="Luxury Flanchard Enhancement Stone - A-grade" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1106,7 +1106,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51086" name="Abundance Wind Cube - 30-day" max-level="1" action="A1">
+	<skill id="51086" name="Abundance Wind Cube - 30-day" action="A1">
 	<!-- none -->
 		<icon initial="icon.sa_cube"/>
 		<attributes >
@@ -1117,7 +1117,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51087" name="Abundance Wind Cube - 90-day" max-level="1" action="A1">
+	<skill id="51087" name="Abundance Wind Cube - 90-day" action="A1">
 	<!-- none -->
 		<icon initial="icon.sa_cube"/>
 		<attributes >
@@ -1128,7 +1128,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51088" name="Wind Amulet" max-level="1" >
+	<skill id="51088" name="Wind Amulet">
 	<!-- XP/SP Gain from hunting +20%%, XP/SP Gain from fishing +50%%, STR +1, CON +1, DEX +1, INT +1, WIT +1 and MEN +1. -->
 		<icon initial="icon.bm_sayha_rune"/>
 		<attributes property="MAGIC" >
@@ -1138,7 +1138,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51089" name="Teleport - Forge of the Gods" max-level="1" action="A1">
+	<skill id="51089" name="Teleport - Forge of the Gods" action="A1">
 	<!-- Teleport to Forge of the Gods. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1149,7 +1149,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51090" name="Teleport - Garden of Eva" max-level="1" action="A1">
+	<skill id="51090" name="Teleport - Garden of Eva" action="A1">
 	<!-- Teleport to Garden of Eva. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1160,7 +1160,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51091" name="Teleport - Wind Plateau" max-level="1" action="A1">
+	<skill id="51091" name="Teleport - Wind Plateau" action="A1">
 	<!-- Teleport to Wind Plateau. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1171,7 +1171,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51092" name="Teleport - Wall of Argos" max-level="1" action="A1">
+	<skill id="51092" name="Teleport - Wall of Argos" action="A1">
 	<!-- Teleport to Wall of Argos. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1182,7 +1182,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51093" name="Fire Attack Strength" max-level="1" >
+	<skill id="51093" name="Fire Attack Strength">
 	<!-- Increases Fire Attack Strength +100. -->
 		<icon initial="icon.agathion_fire_1"/>
 		<attributes property="MAGIC" stay-after-death="true" >
@@ -1203,7 +1203,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="51094" name="Water Attack Strength" max-level="1" >
+	<skill id="51094" name="Water Attack Strength">
 	<!-- Water Attack Power +100. -->
 		<icon initial="icon.agathion_water_1"/>
 		<attributes property="MAGIC" stay-after-death="true" >
@@ -1224,7 +1224,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="51095" name="Wind Attack Strength" max-level="1" >
+	<skill id="51095" name="Wind Attack Strength">
 	<!-- Wind Attack Power +100. -->
 		<icon initial="icon.agathion_wind_1"/>
 		<attributes property="MAGIC" stay-after-death="true" >
@@ -1245,7 +1245,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="51096" name="Earth Attack Strength" max-level="1" >
+	<skill id="51096" name="Earth Attack Strength">
 	<!-- Increases Earth Attack +100. -->
 		<icon initial="icon.agathion_earth_1"/>
 		<attributes property="MAGIC" stay-after-death="true" >
@@ -1266,7 +1266,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="51097" name="Brilliant Spirits Varnish" max-level="1" action="A1">
+	<skill id="51097" name="Brilliant Spirits Varnish" action="A1">
 	<!-- none -->
 		<icon initial="icon.ev_charge_scroll"/>
 		<attributes >
@@ -1276,7 +1276,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51098" name="Blue Dynasty's Energy" max-level="1" action="A1">
+	<skill id="51098" name="Blue Dynasty's Energy" action="A1">
 	<!-- Transforms to Blue Dynasty. Max HP/Max MP +20%%, Sayha's Grace Bonus Hunting XP/SP +20%%. Effect remains even after death. -->
 		<icon initial="icon.armor_t91_u_i00"/>
 		<attributes property="PHYSIC" >
@@ -1289,7 +1289,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="51099" name="Cat the Cat Transformation" max-level="1" action="A1">
+	<skill id="51099" name="Cat the Cat Transformation" action="A1">
 	<!-- Transforms to Cat the Cat. Max HP/Max MP +20%%, Sayha's Grace Bonus Hunting XP/SP +20%%. Effect remains even after death. -->
 		<icon initial="icon.cat_the_cat_change_0"/>
 		<attributes property="PHYSIC" >

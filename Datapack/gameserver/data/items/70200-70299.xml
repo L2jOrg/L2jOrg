@@ -122,8 +122,8 @@
 	<!-- Allows obtaining a vast variety of items. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55317" level="1" value="-1"/>  <!-- Chronicle Chest -->
+		<skill-reducer>
+			<skill id="55317" value="-1"/>  <!-- Chronicle Chest -->
 		</skill-reducer>
 	</item>
 
@@ -172,7 +172,7 @@
 		</stats>
 		<skills>
 			<skill id="3563" level="3" value="-1"/>  <!-- Ring of Core -->
-			<skill id="35016" level="1" value="-1"/>  <!-- Ring of Core - Special Ability -->
+			<skill id="35016" value="-1"/>  <!-- Ring of Core - Special Ability -->
 		</skills>
 	</armor>
 
@@ -239,27 +239,27 @@
 	<item id="70233" name="Strawberry Juice" type="SCROLL" icon="icon.etc_fruit_cocktail_i01">
 	<!-- When used, activates Prophecy of Fire - Lv. 1 for 5 minutes.\n<Note> The effect does not stack with Mango Juice, Cherry Juice, or any of the Prophecies. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
-		<attributes reuse-delay="3000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55329" level="1" value="-1"/>  <!-- Strawberry Juice -->
+		<attributes reuse-delay="3000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55329" value="-1"/>  <!-- Strawberry Juice -->
 		</skill-reducer>
 	</item>
 
 	<item id="70234" name="Mango Juice" type="SCROLL" icon="icon.etc_fruit_cocktail_i03">
 	<!-- When used, activates Prophecy of Water - Lv. 1 for 5 minutes.\n<Note> The effect does not stack with Strawberry Juice, Cherry Juice, or any of the Prophecies. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
-		<attributes reuse-delay="3000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55330" level="1" value="-1"/>  <!-- Mango Juice -->
+		<attributes reuse-delay="3000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55330" value="-1"/>  <!-- Mango Juice -->
 		</skill-reducer>
 	</item>
 
 	<item id="70235" name="Cherry Juice" type="SCROLL" icon="icon.etc_fruit_cocktail_i02">
 	<!-- When used, activates Prophecy of Wind - Lv. 1 for 5 minutes.\n<Note> The effect does not stack with Mango Juice, Strawberry Juice, or any of the Prophecies. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
-		<attributes reuse-delay="3000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55331" level="1" value="-1"/>  <!-- Cherry Juice -->
+		<attributes reuse-delay="3000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55331" value="-1"/>  <!-- Cherry Juice -->
 		</skill-reducer>
 	</item>
 
@@ -284,225 +284,225 @@
 	<item id="70239" name="XP/SP Hourglass - 1 Hour" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 1~19.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55335" level="1" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55335" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
 		</skill-reducer>
 	</item>
 
 	<item id="70240" name="XP/SP Hourglass - 2 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 1~19.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55336" level="1" value="-1"/>  <!-- XP/SP Hourglass - 2 Hours -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55336" value="-1"/>  <!-- XP/SP Hourglass - 2 Hours -->
 		</skill-reducer>
 	</item>
 
 	<item id="70241" name="XP/SP Hourglass - 3 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 1~19.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55337" level="1" value="-1"/>  <!-- XP/SP Hourglass - 3 Hours -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55337" value="-1"/>  <!-- XP/SP Hourglass - 3 Hours -->
 		</skill-reducer>
 	</item>
 
 	<item id="70242" name="XP/SP Hourglass - 1 Hour" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 20~39.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55338" level="1" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55338" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
 		</skill-reducer>
 	</item>
 
 	<item id="70243" name="XP/SP Hourglass - 2 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 20~39.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55339" level="1" value="-1"/>  <!-- XP/SP Hourglass - 2 Hours -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55339" value="-1"/>  <!-- XP/SP Hourglass - 2 Hours -->
 		</skill-reducer>
 	</item>
 
 	<item id="70244" name="XP/SP Hourglass - 3 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 20~39.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55340" level="1" value="-1"/>  <!-- XP/SP Hourglass - 3 Hours -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55340" value="-1"/>  <!-- XP/SP Hourglass - 3 Hours -->
 		</skill-reducer>
 	</item>
 
 	<item id="70245" name="XP/SP Hourglass - 1 Hour" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 40~51.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55341" level="1" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55341" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
 		</skill-reducer>
 	</item>
 
 	<item id="70246" name="XP/SP Hourglass - 2 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 40~51.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55342" level="1" value="-1"/>  <!-- XP/SP Hourglass - 2 Hours -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55342" value="-1"/>  <!-- XP/SP Hourglass - 2 Hours -->
 		</skill-reducer>
 	</item>
 
 	<item id="70247" name="XP/SP Hourglass - 3 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 40~51.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55343" level="1" value="-1"/>  <!-- XP/SP Hourglass - 3 Hours -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55343" value="-1"/>  <!-- XP/SP Hourglass - 3 Hours -->
 		</skill-reducer>
 	</item>
 
 	<item id="70248" name="XP/SP Hourglass - 1 Hour" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 52~60.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55344" level="1" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55344" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
 		</skill-reducer>
 	</item>
 
 	<item id="70249" name="XP/SP Hourglass - 2 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 52~60.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55345" level="1" value="-1"/>  <!-- XP/SP Hourglass - 2 Hours -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55345" value="-1"/>  <!-- XP/SP Hourglass - 2 Hours -->
 		</skill-reducer>
 	</item>
 
 	<item id="70250" name="XP/SP Hourglass - 3 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 52~60.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55346" level="1" value="-1"/>  <!-- XP/SP Hourglass - 3 Hours -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55346" value="-1"/>  <!-- XP/SP Hourglass - 3 Hours -->
 		</skill-reducer>
 	</item>
 
 	<item id="70251" name="XP/SP Hourglass - 1 Hour" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 61~75.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55347" level="1" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55347" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
 		</skill-reducer>
 	</item>
 
 	<item id="70252" name="XP/SP Hourglass - 2 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 61~75.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55348" level="1" value="-1"/>  <!-- XP/SP Hourglass - 2 Hours -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55348" value="-1"/>  <!-- XP/SP Hourglass - 2 Hours -->
 		</skill-reducer>
 	</item>
 
 	<item id="70253" name="XP/SP Hourglass - 3 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 61~75.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55349" level="1" value="-1"/>  <!-- XP/SP Hourglass - 3 Hours -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55349" value="-1"/>  <!-- XP/SP Hourglass - 3 Hours -->
 		</skill-reducer>
 	</item>
 
 	<item id="70254" name="XP/SP Hourglass - 1 Hour" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 76~79.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55350" level="1" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55350" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
 		</skill-reducer>
 	</item>
 
 	<item id="70255" name="XP/SP Hourglass - 2 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 76~79.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55351" level="1" value="-1"/>  <!-- XP/SP Hourglass - 2 Hours -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55351" value="-1"/>  <!-- XP/SP Hourglass - 2 Hours -->
 		</skill-reducer>
 	</item>
 
 	<item id="70256" name="XP/SP Hourglass - 3 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 76~79.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55352" level="1" value="-1"/>  <!-- XP/SP Hourglass - 3 Hours -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55352" value="-1"/>  <!-- XP/SP Hourglass - 3 Hours -->
 		</skill-reducer>
 	</item>
 
 	<item id="70257" name="XP/SP Hourglass - 1 Hour" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 80~85.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55353" level="1" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55353" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
 		</skill-reducer>
 	</item>
 
 	<item id="70258" name="XP/SP Hourglass - 2 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 80~85.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55354" level="1" value="-1"/>  <!-- XP/SP Hourglass - 2 Hours -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55354" value="-1"/>  <!-- XP/SP Hourglass - 2 Hours -->
 		</skill-reducer>
 	</item>
 
 	<item id="70259" name="XP/SP Hourglass - 3 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 80~85.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55355" level="1" value="-1"/>  <!-- XP/SP Hourglass - 3 Hours -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55355" value="-1"/>  <!-- XP/SP Hourglass - 3 Hours -->
 		</skill-reducer>
 	</item>
 
 	<item id="70260" name="XP/SP Hourglass - 1 Hour" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- Increases XP/SP gain by 50% for 1 hour.\nIntended for Lv. 1~99.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55356" level="1" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55356" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
 		</skill-reducer>
 	</item>
 
 	<item id="70261" name="XP/SP Hourglass - 2 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 1~99.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55357" level="1" value="-1"/>  <!-- XP/SP Hourglass - 2 Hours -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55357" value="-1"/>  <!-- XP/SP Hourglass - 2 Hours -->
 		</skill-reducer>
 	</item>
 
 	<item id="70262" name="XP/SP Hourglass - 3 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 1~99.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55358" level="1" value="-1"/>  <!-- XP/SP Hourglass - 3 Hours -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55358" value="-1"/>  <!-- XP/SP Hourglass - 3 Hours -->
 		</skill-reducer>
 	</item>
 
 	<item id="70263" name="XP/SP Hourglass - 4 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
 	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 1~99.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55359" level="1" value="-1"/>  <!-- XP/SP Hourglass - 4 Hours -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55359" value="-1"/>  <!-- XP/SP Hourglass - 4 Hours -->
 		</skill-reducer>
 	</item>
 
@@ -606,8 +606,8 @@
 	<!-- Double-click to add 10 bonus points to your Clan Reputation. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="1440" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55362" level="1" value="-1"/>  <!-- Clan Reputation Score - 10 -->
+		<skill-reducer>
+			<skill id="55362" value="-1"/>  <!-- Clan Reputation Score - 10 -->
 		</skill-reducer>
 	</item>
 
@@ -615,8 +615,8 @@
 	<!-- Double-click to add 50 bonus points to your Clan Reputation. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="1440" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55363" level="1" value="-1"/>  <!-- Clan Reputation Score - 50 -->
+		<skill-reducer>
+			<skill id="55363" value="-1"/>  <!-- Clan Reputation Score - 50 -->
 		</skill-reducer>
 	</item>
 
@@ -624,8 +624,8 @@
 	<!-- Double-click to add 150 bonus points to your Clan Reputation. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="1440" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55364" level="1" value="-1"/>  <!-- Clan Reputation Score - 150 -->
+		<skill-reducer>
+			<skill id="55364" value="-1"/>  <!-- Clan Reputation Score - 150 -->
 		</skill-reducer>
 	</item>
 
@@ -633,8 +633,8 @@
 	<!-- Increases Speed to its maximum for 15 seconds. Cooldown is 3 minutes. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="20" price="1200" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55361" level="1" value="-1"/>  <!-- Superspeed Potion -->
+		<skill-reducer>
+			<skill id="55361" value="-1"/>  <!-- Superspeed Potion -->
 		</skill-reducer>
 	</item>
 

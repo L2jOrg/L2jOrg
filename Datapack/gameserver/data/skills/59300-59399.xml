@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="59300" name="Noblesse - White" max-level="1" action="A1">
+	<skill id="59300" name="Noblesse - White" action="A1">
 	<!-- Transformed into a legendary transformation. XP gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P. Critical Damage/M. Critical Damage +10%%, Movement Speed +10, PvP Damage Received -10%%. Transformation remains after death. \n\n<Special Ability>\nAttack or cast malevolent skills while transformed as a Noblesse - White to reduce the enemy's M. Def by 30%% every 80 seconds. -->
 		<icon initial="icon.bm2018_whitenoblesse_i01"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -11,7 +11,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59301" name="Noblesse - White" max-level="1" action="A1">
+	<skill id="59301" name="Noblesse - White" action="A1">
 	<!-- Transformed into a mythic transformation. XP gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P. Critical Damage/M. Critical Damage +15%%, Movement Speed +20, PvP Damage +10%%, PvP Damage Received -20%%. Transformation remains after death. \n\n<Special Ability>\nAttack or cast malevolent skills while transformed as a Noblesse - White to reduce the enemy's M. Def by 40%% every 30 seconds. -->
 		<icon initial="icon.bm2018_whitenoblesse_i01"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -38,7 +38,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59303" name="Cowboy - Purple" max-level="1" action="A1">
+	<skill id="59303" name="Cowboy - Purple" action="A1">
 	<!-- Transformed into a rare transformation. XP gain +20%%, P. Atk. +10%% M. Atk. +10%%, P. Critical Damage/M. Critical Damage +5%%, Movement Speed +5. Transformation remains after death. \n\n<Special Ability>\nAttack or cast malevolent skills while transformed as a Cowboy - Purple to deal an additional 3939 P. Atk. every 180 seconds. -->
 		<icon initial="icon.bm2018_cowboy_i01"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -49,7 +49,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59304" name="Cowboy - Purple" max-level="1" action="A1">
+	<skill id="59304" name="Cowboy - Purple" action="A1">
 	<!-- Transformed into a legendary transformation. XP gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P. Critical Damage/M. Critical Damage +10%%, Movement Speed +10, PvP Damage Received -10%%. Transformation remains after death. \n\n<Special Ability>\nAttack or cast malevolent skills while transformed as a Cowboy - Purple to deal an additional 6000 P. Atk. every 80 seconds. -->
 		<icon initial="icon.bm2018_cowboy_i01"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -60,7 +60,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59305" name="Cowboy - Purple" max-level="1" action="A1">
+	<skill id="59305" name="Cowboy - Purple" action="A1">
 	<!-- Transformed into a mythic transformation. XP gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P. Critical Damage/M. Critical Damage +15%%, Movement Speed +20, PvP Damage +10%%, PvP Damage Received -20%%. Transformation remains after death. \n\n<Special Ability>\nAttack or cast malevolent skills while transformed as a Cowboy - Purple to deal an additional 8000 P. Atk. every 30 seconds. -->
 		<icon initial="icon.bm2018_cowboy_i01"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -87,7 +87,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59307" name="Musketeer - Blue" max-level="1" action="A1">
+	<skill id="59307" name="Musketeer - Blue" action="A1">
 	<!-- Transformed into a rare transformation. XP gain +20%%, P. Atk. +10%% M. Atk. +10%%, P. Critical Damage/M. Critical Damage +5%%, Movement Speed +5. Transformation remains after death. \n\n<Special Ability>\nAttack or cast malevolent skills while transformed as a Musketeer - Blue to stun the enemy for 5 seconds every 180 seconds. -->
 		<icon initial="icon.bm2018_bluemusketeer_i01"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -98,7 +98,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59308" name="Musketeer - Blue" max-level="1" action="A1">
+	<skill id="59308" name="Musketeer - Blue" action="A1">
 	<!-- Transformed into a legendary transformation. XP gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P. Critical Damage/M. Critical Damage +10%%, Movement Speed +10, PvP Damage Received -10%%. Transformation remains after death. \n\n<Special Ability>\nAttack or cast malevolent skills while transformed as a Musketeer - Blue to stun the enemy for 5 seconds every 80 seconds. -->
 		<icon initial="icon.bm2018_bluemusketeer_i01"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -109,7 +109,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59309" name="Musketeer - Blue" max-level="1" action="A1">
+	<skill id="59309" name="Musketeer - Blue" action="A1">
 	<!-- Transformed into a mythic transformation. XP gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P. Critical Damage/M. Critical Damage +15%%, Movement Speed +20, PvP Damage +10%%, PvP Damage Received -20%%. Transformation remains after death. \n\n<Special Ability>\nAttack or cast malevolent skills while transformed as a Musketeer - Blue to stun the enemy for 5 seconds every 30 seconds. -->
 		<icon initial="icon.bm2018_bluemusketeer_i01"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -136,7 +136,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59311" name="Dragon Berserker" max-level="1" action="A1">
+	<skill id="59311" name="Dragon Berserker" action="A1">
 	<!-- Transformed into a legendary transformation. XP gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P. Critical Damage/M. Critical Damage +10%%, Movement Speed +10, PvP Damage Received -10%%. Transformation remains after death. \n<Special Ability>\nAttack or cast skills while transformed as a Dragon Berserker to trigger the Berserker Soul buff that increases P. Atk./M. Atk. by 50%% and Atk. Spd./Casting Spd. by 50%% and reflects 15%% of received damage to the enemy every 290 seconds. -->
 		<icon initial="icon.bm2018_dragon_i01"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -147,7 +147,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59312" name="Dragon Berserker" max-level="1" action="A1">
+	<skill id="59312" name="Dragon Berserker" action="A1">
 	<!-- Transformed into a mythic transformation. XP gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P. Critical Damage/M. Critical Damage +15%%, Movement Speed +20, PvP Damage +10%%, PvP Damage Received -20%%. Transformation remains after death. \n<Special Ability>\nAttack or cast skills while transformed as a Dragon Berserker to trigger the Berserker Soul buff that increases P. Atk./M. Atk. by 70%% and Atk. Spd./Casting Spd. by 70%% and reflects 20%% of received damage to the enemy every 190 seconds. -->
 		<icon initial="icon.bm2018_dragon_i01"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -176,7 +176,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59314" name="Zaken" max-level="1" action="A1">
+	<skill id="59314" name="Zaken" action="A1">
 	<!-- Transformed into a legendary transformation. XP gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P. Critical Damage/M. Critical Damage +10%%, Movement Speed +10, PvP Damage Received -10%%. Transformation remains after death. \n<Special Ability>\nP. Def +25%%, M. Def +25%%.\nAttack or cast skills while transformed as Zaken to trigger the Zaken Soul buff on you and your party members that increases Atk. Spd./Casting Spd./Movement Speed by 30%% every 100 seconds. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_zaken"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -187,7 +187,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59315" name="Zaken" max-level="1" action="A1">
+	<skill id="59315" name="Zaken" action="A1">
 	<!-- Transformed into a mythic transformation. XP gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P. Critical Damage/M. Critical Damage +15%%, Movement Speed +20, PvP Damage +10%%, PvP Damage Received -20%%. Transformation remains after death. \n<Special Ability>\nP. Def +40%%, M. Def +40%%.\nAttack or cast skills while transformed as Zaken to trigger the Zaken Soul buff on you and your party members that increases Atk. Spd./Casting Spd./Movement Speed by 50%% every 60 seconds. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_zaken"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -216,7 +216,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59317" name="Anakim" max-level="1" action="A1">
+	<skill id="59317" name="Anakim" action="A1">
 	<!-- Transformed into a legendary transformation. XP gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P. Critical Damage/M. Critical Damage +10%%, Movement Speed +10, PvP Damage Received -10%%. Transformation remains after death. \n<Special Ability>\nHas a chance to recover 15%% of the physical damage inflicted on the enemy as HP. \nAttack or cast skills while transformed as Anakim to trigger the Anakim Soul buff that silences the enemy for 3 seconds every 100 seconds. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_anakim"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -227,7 +227,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59318" name="Anakim" max-level="1" action="A1">
+	<skill id="59318" name="Anakim" action="A1">
 	<!-- Transformed into a mythic transformation. XP gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P. Critical Damage/M. Critical Damage +15%%, Movement Speed +20, PvP Damage +10%%, PvP Damage Received -20%%. Transformation remains after death. \n<Special Ability>\nHas a chance to recover 25%% of the physical damage inflicted on the enemy as HP. \nAttack or cast skills while transformed as Anakim to trigger the Anakim Soul buff that silences the enemy for 5 seconds every 60 seconds. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_anakim"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -253,7 +253,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59320" name="Lilith" max-level="1" action="A1">
+	<skill id="59320" name="Lilith" action="A1">
 	<!-- Transformed into a legendary transformation. XP gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P. Critical Damage/M. Critical Damage +10%%, Movement Speed +10, PvP Damage Received -10%%. Transformation remains after death. \n<Special Ability> MP Consumption -25%%.\nAttack or cast skills while transformed as Lilith to trigger the Lilith Soul buff on you and your party members that increases P. Critical Damage by 30%% and M. Critical Damage by 30%% for 5 seconds every 100 seconds. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_lilith"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -264,7 +264,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59321" name="Lilith" max-level="1" action="A1">
+	<skill id="59321" name="Lilith" action="A1">
 	<!-- Transformed into a mythic transformation. XP gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P. Critical Damage/M. Critical Damage +15%%, Movement Speed +20, PvP Damage +10%%, PvP Damage Received -20%%. Transformation remains after death. \n<Special Ability>\nMP Consumption -40%%\nAttack or cast skills while transformed as Lilith to trigger the Lilith Soul buff on you and your party members that increases P. Critical Damage by 50%% and M. Critical Damage by 50%% for 10 seconds every 60 seconds. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_lilith"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -293,7 +293,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59323" name="Freya" max-level="1" action="A1">
+	<skill id="59323" name="Freya" action="A1">
 	<!-- Transformed into a legendary transformation. XP gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P. Critical Damage/M. Critical Damage +10%%, Movement Speed +10, PvP Damage Received -10%%. Transformation remains after death. \n<Special Ability>\nDrains damage delivered to enemy as HP 10%%/MP 5%%.\nAttack or cast skills while transformed as Freya to trigger the Freya Soul buff that removes 1 buff from the target every 100 seconds. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_freya"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -304,7 +304,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59324" name="Freya" max-level="1" action="A1">
+	<skill id="59324" name="Freya" action="A1">
 	<!-- Transformed into a mythic transformation. XP gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P. Critical Damage/M. Critical Damage +15%%, Movement Speed +20, PvP Damage +10%%, PvP Damage Received -20%%. Transformation remains after death. \n<Special Ability>\nDrains damage delivered to enemy as HP 15%%/MP 10%%.\nAttack or cast skills while transformed as Freya to trigger the Freya Soul buff that removes 1 buff from the target every 60 seconds. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_freya"/>
 		<attributes property="PHYSIC" auto-use="TRANSFORM">
@@ -330,7 +330,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59326" name="Brilliant Jewelry Box" max-level="1" action="A1">
+	<skill id="59326" name="Brilliant Jewelry Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -342,7 +342,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59327" name="Shining Jewel Box" max-level="1" action="A1">
+	<skill id="59327" name="Shining Jewel Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -369,7 +369,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59329" name="Cute Animal Friends" max-level="1" action="A1">
+	<skill id="59329" name="Cute Animal Friends" action="A1">
 	<!-- Max CP +80 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
 		<attributes property="MAGIC" >
@@ -379,7 +379,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59330" name="Special Season" max-level="1" action="A1">
+	<skill id="59330" name="Special Season" action="A1">
 	<!-- Max HP +80 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
 		<attributes property="MAGIC" >
@@ -389,7 +389,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59331" name="Striking Elegance" max-level="1" action="A1">
+	<skill id="59331" name="Striking Elegance" action="A1">
 	<!-- P. Atk./M. Atk. +10 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
 		<attributes property="MAGIC" >
@@ -399,7 +399,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59332" name="Wow! It's Summer!" max-level="1" action="A1">
+	<skill id="59332" name="Wow! It's Summer!" action="A1">
 	<!-- Increases Max HP/CP/MP +200 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
 		<attributes property="MAGIC" >
@@ -409,7 +409,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59333" name="Uncontrollable Power" max-level="1" action="A1">
+	<skill id="59333" name="Uncontrollable Power" action="A1">
 	<!-- P. Atk. +50 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
 		<attributes property="MAGIC" >
@@ -419,7 +419,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59334" name="Overflowing Magic" max-level="1" action="A1">
+	<skill id="59334" name="Overflowing Magic" action="A1">
 	<!-- M. Atk. +50 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
 		<attributes property="MAGIC" >
@@ -429,7 +429,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59335" name="Rarity Collector" max-level="1" action="A1">
+	<skill id="59335" name="Rarity Collector" action="A1">
 	<!-- P. Atk./M. Atk. +100 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
 		<attributes property="MAGIC" >
@@ -439,7 +439,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59336" name="Highly Durable!" max-level="1" action="A1">
+	<skill id="59336" name="Highly Durable!" action="A1">
 	<!-- Activates the Collector Power that creates a barrier which absorbs up to 1500 damage for 10 seconds -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
 		<attributes property="MAGIC" >
@@ -449,7 +449,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59337" name="Very Strong!" max-level="1" action="A1">
+	<skill id="59337" name="Very Strong!" action="A1">
 	<!-- Activates the Collector Power that ignores CP in PvP and inflicts a fixed damage of 1350 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
 		<attributes property="MAGIC" >
@@ -459,7 +459,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59338" name="Very Quick!" max-level="1" action="A1">
+	<skill id="59338" name="Very Quick!" action="A1">
 	<!-- Activates the Collector Power that cancels nearby enemies' targets and teleports the caster to the rear -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
 		<attributes property="MAGIC" >
@@ -469,7 +469,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59339" name="I Am Legend" max-level="1" action="A1">
+	<skill id="59339" name="I Am Legend" action="A1">
 	<!-- Increases Max HP/CP/MP +200 and P. Atk./M. Atk. +250 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
 		<attributes property="MAGIC" >
@@ -479,7 +479,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59340" name="No Pain, No Gain" max-level="1" action="A1">
+	<skill id="59340" name="No Pain, No Gain" action="A1">
 	<!-- Activates the Collector Power that fully recovers HP/CP/MP and makes you invincible for 10 seconds -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
 		<attributes property="MAGIC" >
@@ -489,7 +489,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59341" name="Collector Power" max-level="1" action="A1">
+	<skill id="59341" name="Collector Power" action="A1">
 	<!-- Creates a barrier that absorbs up to 1500 damage for 10 seconds. -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_active"/>
 		<attributes property="PHYSIC" >
@@ -501,7 +501,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59342" name="Collector Power" max-level="1" action="A1">
+	<skill id="59342" name="Collector Power" action="A1">
 	<!-- Ignores CP in PvP and inflicts a fixed damage of 1350. Can only be used in PvP. -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_active"/>
 		<attributes >
@@ -515,7 +515,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59343" name="Collector Power" max-level="1" action="A1" type="MAGIC">
+	<skill id="59343" name="Collector Power" action="A1" type="MAGIC">
 	<!-- Cancels nearby enemies' targets and teleports the caster to the rear. -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_active"/>
 		<attributes >
@@ -609,7 +609,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59349" name="Santa Sealbook - Standard" max-level="1" action="A1">
+	<skill id="59349" name="Santa Sealbook - Standard" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_santa"/>
 		<attributes >
@@ -619,7 +619,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59350" name="Santa Sealbook - High-grade" max-level="1" action="A1">
+	<skill id="59350" name="Santa Sealbook - High-grade" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_santa"/>
 		<attributes >
@@ -629,7 +629,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59351" name="Santa Sealbook - Rare" max-level="1" action="A1">
+	<skill id="59351" name="Santa Sealbook - Rare" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_santa"/>
 		<attributes >
@@ -639,7 +639,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59352" name="Santa Sealbook - Legendary" max-level="1" action="A1">
+	<skill id="59352" name="Santa Sealbook - Legendary" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_santa"/>
 		<attributes >
@@ -649,7 +649,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59353" name="Santa Sealbook - Mythic" max-level="1" action="A1">
+	<skill id="59353" name="Santa Sealbook - Mythic" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_santa"/>
 		<attributes >
@@ -659,7 +659,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59354" name="School Uniform A Sealbook - Standard" max-level="1" action="A1">
+	<skill id="59354" name="School Uniform A Sealbook - Standard" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchSys3.icon1.Br_schoollook"/>
 		<attributes >
@@ -669,7 +669,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59355" name="School Uniform A Sealbook - High-grade" max-level="1" action="A1">
+	<skill id="59355" name="School Uniform A Sealbook - High-grade" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchSys3.icon1.Br_schoollook"/>
 		<attributes >
@@ -679,7 +679,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59356" name="School Uniform A Sealbook - Rare" max-level="1" action="A1">
+	<skill id="59356" name="School Uniform A Sealbook - Rare" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchSys3.icon1.Br_schoollook"/>
 		<attributes >
@@ -689,7 +689,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59357" name="School Uniform A Sealbook - Legendary" max-level="1" action="A1">
+	<skill id="59357" name="School Uniform A Sealbook - Legendary" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchSys3.icon1.Br_schoollook"/>
 		<attributes >
@@ -699,7 +699,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59358" name="School Uniform A Sealbook - Mythic" max-level="1" action="A1">
+	<skill id="59358" name="School Uniform A Sealbook - Mythic" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchSys3.icon1.Br_schoollook"/>
 		<attributes >
@@ -709,7 +709,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59359" name="Beach Swimsuit Sealbook - Standard" max-level="1" action="A1">
+	<skill id="59359" name="Beach Swimsuit Sealbook - Standard" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_swimsuit_a"/>
 		<attributes >
@@ -719,7 +719,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59360" name="Beach Swimsuit Sealbook - High-grade" max-level="1" action="A1">
+	<skill id="59360" name="Beach Swimsuit Sealbook - High-grade" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_swimsuit_a"/>
 		<attributes >
@@ -729,7 +729,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59361" name="Beach Swimsuit Sealbook - Rare" max-level="1" action="A1">
+	<skill id="59361" name="Beach Swimsuit Sealbook - Rare" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_swimsuit_a"/>
 		<attributes >
@@ -739,7 +739,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59362" name="Beach Swimsuit Sealbook - Legendary" max-level="1" action="A1">
+	<skill id="59362" name="Beach Swimsuit Sealbook - Legendary" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_swimsuit_a"/>
 		<attributes >
@@ -749,7 +749,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59363" name="Beach Swimsuit Sealbook - Mythic" max-level="1" action="A1">
+	<skill id="59363" name="Beach Swimsuit Sealbook - Mythic" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_swimsuit_a"/>
 		<attributes >
@@ -759,7 +759,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59364" name="Teddy Bear Sealbook - Standard" max-level="1" action="A1">
+	<skill id="59364" name="Teddy Bear Sealbook - Standard" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="icon.gomdori_chest_change"/>
 		<attributes >
@@ -769,7 +769,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59365" name="Teddy Bear Sealbook - High-grade" max-level="1" action="A1">
+	<skill id="59365" name="Teddy Bear Sealbook - High-grade" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="icon.gomdori_chest_change"/>
 		<attributes >
@@ -779,7 +779,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59366" name="Teddy Bear Sealbook - Rare" max-level="1" action="A1">
+	<skill id="59366" name="Teddy Bear Sealbook - Rare" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="icon.gomdori_chest_change"/>
 		<attributes >
@@ -789,7 +789,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59367" name="Teddy Bear Sealbook - Legendary" max-level="1" action="A1">
+	<skill id="59367" name="Teddy Bear Sealbook - Legendary" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="icon.gomdori_chest_change"/>
 		<attributes >
@@ -799,7 +799,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59368" name="Teddy Bear Sealbook - Mythic" max-level="1" action="A1">
+	<skill id="59368" name="Teddy Bear Sealbook - Mythic" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="icon.gomdori_chest_change"/>
 		<attributes >
@@ -809,7 +809,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59369" name="Kitty Plushy Sealbook - Standard" max-level="1" action="A1">
+	<skill id="59369" name="Kitty Plushy Sealbook - Standard" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="icon.sayha2017_cat"/>
 		<attributes >
@@ -819,7 +819,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59370" name="Kitty Plushy Sealbook - High-grade" max-level="1" action="A1">
+	<skill id="59370" name="Kitty Plushy Sealbook - High-grade" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="icon.sayha2017_cat"/>
 		<attributes >
@@ -829,7 +829,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59371" name="Kitty Plushy Sealbook - Rare" max-level="1" action="A1">
+	<skill id="59371" name="Kitty Plushy Sealbook - Rare" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="icon.sayha2017_cat"/>
 		<attributes >
@@ -839,7 +839,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59372" name="Kitty Plushy Sealbook - Legendary" max-level="1" action="A1">
+	<skill id="59372" name="Kitty Plushy Sealbook - Legendary" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="icon.sayha2017_cat"/>
 		<attributes >
@@ -849,7 +849,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59373" name="Kitty Plushy Sealbook - Mythic" max-level="1" action="A1">
+	<skill id="59373" name="Kitty Plushy Sealbook - Mythic" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="icon.sayha2017_cat"/>
 		<attributes >
@@ -859,7 +859,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59374" name="Panda Plushy Sealbook - Standard" max-level="1" action="A1">
+	<skill id="59374" name="Panda Plushy Sealbook - Standard" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="icon.sayha2017_panda"/>
 		<attributes >
@@ -869,7 +869,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59375" name="Panda Plushy Sealbook - High-grade" max-level="1" action="A1">
+	<skill id="59375" name="Panda Plushy Sealbook - High-grade" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="icon.sayha2017_panda"/>
 		<attributes >
@@ -879,7 +879,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59376" name="Panda Plushy Sealbook - Rare" max-level="1" action="A1">
+	<skill id="59376" name="Panda Plushy Sealbook - Rare" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="icon.sayha2017_panda"/>
 		<attributes >
@@ -889,7 +889,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59377" name="Panda Plushy Sealbook - Legendary" max-level="1" action="A1">
+	<skill id="59377" name="Panda Plushy Sealbook - Legendary" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="icon.sayha2017_panda"/>
 		<attributes >
@@ -899,7 +899,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59378" name="Panda Plushy Sealbook - Mythic" max-level="1" action="A1">
+	<skill id="59378" name="Panda Plushy Sealbook - Mythic" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="icon.sayha2017_panda"/>
 		<attributes >
@@ -909,7 +909,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59379" name="Baseball Uniform Sealbook - Standard" max-level="1" action="A1">
+	<skill id="59379" name="Baseball Uniform Sealbook - Standard" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_baseball"/>
 		<attributes >
@@ -919,7 +919,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59380" name="Baseball Uniform Sealbook - High-grade" max-level="1" action="A1">
+	<skill id="59380" name="Baseball Uniform Sealbook - High-grade" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_baseball"/>
 		<attributes >
@@ -929,7 +929,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59381" name="Baseball Uniform Sealbook - Rare" max-level="1" action="A1">
+	<skill id="59381" name="Baseball Uniform Sealbook - Rare" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_baseball"/>
 		<attributes >
@@ -939,7 +939,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59382" name="Baseball Uniform Sealbook - Legendary" max-level="1" action="A1">
+	<skill id="59382" name="Baseball Uniform Sealbook - Legendary" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_baseball"/>
 		<attributes >
@@ -949,7 +949,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59383" name="Baseball Uniform Sealbook - Mythic" max-level="1" action="A1">
+	<skill id="59383" name="Baseball Uniform Sealbook - Mythic" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_baseball"/>
 		<attributes >
@@ -959,7 +959,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59384" name="Seductive Swimsuit Sealbook - Standard" max-level="1" action="A1">
+	<skill id="59384" name="Seductive Swimsuit Sealbook - Standard" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchSys3.icon1.g_co_swimsuit_event_03"/>
 		<attributes >
@@ -969,7 +969,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59385" name="Seductive Swimsuit Sealbook - High-grade" max-level="1" action="A1">
+	<skill id="59385" name="Seductive Swimsuit Sealbook - High-grade" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchSys3.icon1.g_co_swimsuit_event_03"/>
 		<attributes >
@@ -979,7 +979,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59386" name="Seductive Swimsuit Sealbook - Rare" max-level="1" action="A1">
+	<skill id="59386" name="Seductive Swimsuit Sealbook - Rare" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchSys3.icon1.g_co_swimsuit_event_03"/>
 		<attributes >
@@ -989,7 +989,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59387" name="Seductive Swimsuit Sealbook - Legendary" max-level="1" action="A1">
+	<skill id="59387" name="Seductive Swimsuit Sealbook - Legendary" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchSys3.icon1.g_co_swimsuit_event_03"/>
 		<attributes >
@@ -999,7 +999,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59388" name="Seductive Swimsuit Sealbook - Mythic" max-level="1" action="A1">
+	<skill id="59388" name="Seductive Swimsuit Sealbook - Mythic" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchSys3.icon1.g_co_swimsuit_event_03"/>
 		<attributes >
@@ -1009,7 +1009,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59389" name="School Uniform B Sealbook - Standard" max-level="1" action="A1">
+	<skill id="59389" name="School Uniform B Sealbook - Standard" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_schoollook_b"/>
 		<attributes >
@@ -1019,7 +1019,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59390" name="School Uniform B Sealbook - High-grade" max-level="1" action="A1">
+	<skill id="59390" name="School Uniform B Sealbook - High-grade" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_schoollook_b"/>
 		<attributes >
@@ -1029,7 +1029,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59391" name="School Uniform B Sealbook - Rare" max-level="1" action="A1">
+	<skill id="59391" name="School Uniform B Sealbook - Rare" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_schoollook_b"/>
 		<attributes >
@@ -1039,7 +1039,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59392" name="School Uniform B Sealbook - Legendary" max-level="1" action="A1">
+	<skill id="59392" name="School Uniform B Sealbook - Legendary" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_schoollook_b"/>
 		<attributes >
@@ -1049,7 +1049,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59393" name="School Uniform B Sealbook - Mythic" max-level="1" action="A1">
+	<skill id="59393" name="School Uniform B Sealbook - Mythic" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_schoollook_b"/>
 		<attributes >
@@ -1059,7 +1059,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59394" name="Hanbok Sealbook - Standard" max-level="1" action="A1">
+	<skill id="59394" name="Hanbok Sealbook - Standard" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_korea_traditional"/>
 		<attributes >
@@ -1069,7 +1069,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59395" name="Hanbok Sealbook - High-grade" max-level="1" action="A1">
+	<skill id="59395" name="Hanbok Sealbook - High-grade" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_korea_traditional"/>
 		<attributes >
@@ -1079,7 +1079,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59396" name="Hanbok Sealbook - Rare" max-level="1" action="A1">
+	<skill id="59396" name="Hanbok Sealbook - Rare" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_korea_traditional"/>
 		<attributes >
@@ -1089,7 +1089,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59397" name="Hanbok Sealbook - Legendary" max-level="1" action="A1">
+	<skill id="59397" name="Hanbok Sealbook - Legendary" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_korea_traditional"/>
 		<attributes >
@@ -1099,7 +1099,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59398" name="Hanbok Sealbook - Mythic" max-level="1" action="A1">
+	<skill id="59398" name="Hanbok Sealbook - Mythic" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_korea_traditional"/>
 		<attributes >
@@ -1109,7 +1109,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="59399" name="Metal Suit Sealbook - Standard" max-level="1" action="A1">
+	<skill id="59399" name="Metal Suit Sealbook - Standard" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchSys3.icon1.g_co_sf_u"/>
 		<attributes >

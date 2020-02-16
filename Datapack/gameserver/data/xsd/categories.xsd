@@ -2,7 +2,7 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<xs:element name="list">
 		<xs:complexType>
-			<xs:sequence minOccurs="1" maxOccurs="1">
+			<xs:sequence>
 				<xs:element name="category" minOccurs="0" maxOccurs="unbounded">
 					<xs:complexType>
 						<xs:sequence>

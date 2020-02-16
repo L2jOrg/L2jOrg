@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="5000" name="Alfred Strike" max-level="1" action="A1">
+	<skill id="5000" name="Alfred Strike" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -16,12 +16,12 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="1.0E7"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="5001" name="Alfred Life Drain" max-level="1" action="A1">
+	<skill id="5001" name="Alfred Life Drain" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -42,7 +42,7 @@
 			</hp-drain>
 		</effects>
 	</skill>
-	<skill id="5002" name="Giselle Vampiric Rage" max-level="1" action="A2">
+	<skill id="5002" name="Giselle Vampiric Rage" action="A2">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -69,7 +69,7 @@
 			</vampiric-attack>
 		</effects>
 	</skill>
-	<skill id="5003" name="Giselle Tempest" max-level="1" action="A1">
+	<skill id="5003" name="Giselle Tempest" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -88,12 +88,12 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="111.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="5004" name="Dimensional Stun" max-level="1" debuff="true" action="A1">
+	<skill id="5004" name="Dimensional Stun" debuff="true" action="A1">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0100"/>
 		<attributes property="PHYSIC" >
@@ -105,7 +105,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="5005" name="Frintezza Pose" max-level="1" action="A2" type="MAGIC">
+	<skill id="5005" name="Frintezza Pose" action="A2" type="MAGIC">
 	<!-- Frintezza is in temporary state of paralysis. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -126,7 +126,7 @@
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="5006" name="Frintezza Music" max-level="1" action="A1">
+	<skill id="5006" name="Frintezza Music" action="A1">
 	<!-- A general performance. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" hit-cancel-time="34.0" >
@@ -200,37 +200,37 @@
 				<power initial="3.0"/>
 			</effect>
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="3">20.0</value>
 					<value level="4">0.0</value>
 				</power>
 			</stat-modify>
 			<stat-modify stat="MAGIC_ATTACK" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="3">20.0</value>
 					<value level="4">0.0</value>
 				</power>
 			</stat-modify>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="1.0">
 					<value level="3">1.2</value>
 					<value level="4">1.0</value>
 				</power>
 			</speed>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="3">20.0</value>
 					<value level="4">0.0</value>
 				</power>
 			</stat-modify>
 			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="3">20.0</value>
 					<value level="4">0.0</value>
 				</power>
 			</stat-modify>
 			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
-				<power initial="0.0">
+				<power>
 					<value level="4">-50.0</value>
 					<value level="5">0.0</value>
 				</power>
@@ -242,7 +242,7 @@
 			</block-all-actions>
 		</effects>
 	</skill>
-	<skill id="5009" name="Frintezza Ghost Fighter" max-level="1" action="A1">
+	<skill id="5009" name="Frintezza Ghost Fighter" action="A1">
 	<!-- A portrait ghost that can make physical attacks. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -257,12 +257,12 @@
 		</attributes>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="150" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="6400.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="5010" name="Frintezza Ghost Mage" max-level="1" action="A1" type="MAGIC">
+	<skill id="5010" name="Frintezza Ghost Mage" action="A1" type="MAGIC">
 	<!-- A portrait ghost that can make magical attacks. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -277,12 +277,12 @@
 		</attributes>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="150" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="106.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="5011" name="Frintezza Ghost Bomb" max-level="1" action="A1">
+	<skill id="5011" name="Frintezza Ghost Bomb" action="A1">
 	<!-- A portrait ghost who can create a suicide explosion. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" suicide="true" >
@@ -297,12 +297,12 @@
 		</attributes>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="150" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="364.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="5012" name="Breath of Scarlet" max-level="1" debuff="true" action="A2">
+	<skill id="5012" name="Breath of Scarlet" debuff="true" action="A2">
 	<!-- Unable to move momentarily. -->
 		<icon initial="icon.skill5012"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="2" >
@@ -323,7 +323,7 @@
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="5013" name="Frintezza Energy Drain" max-level="1" action="A1" type="MAGIC">
+	<skill id="5013" name="Frintezza Energy Drain" action="A1" type="MAGIC">
 	<!-- Portrait ghost drains HP. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -367,7 +367,7 @@
 			<fan-range start-angle="0" radius="150" angle="150"/>
 		</target>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="6.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="6.0">
 				<power initial="15835.0">
 					<value level="2">19096.0</value>
 					<value level="3">16176.0</value>
@@ -375,7 +375,7 @@
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="5016" name="Yoke of Scarlet" max-level="1" debuff="true" action="A2">
+	<skill id="5016" name="Yoke of Scarlet" debuff="true" action="A2">
 	<!-- Unable to move momentarily. -->
 		<icon initial="icon.skill5016"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="DERANGEMENT" level-bonus-rate="2" >
@@ -397,7 +397,7 @@
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="5017" name="Demon" max-level="1" action="A2">
+	<skill id="5017" name="Demon" action="A2">
 	<!-- Demon Transformation -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -442,14 +442,14 @@
 		</attributes>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="700" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="607.0">
 					<value level="2">754.0</value>
 				</power>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="5019" name="Frintezza Demon Energy Drain" max-level="1" action="A1">
+	<skill id="5019" name="Frintezza Demon Energy Drain" action="A1">
 	<!-- Demon 3 HP drain range. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -470,7 +470,7 @@
 			</hp-drain>
 		</effects>
 	</skill>
-	<skill id="5020" name="Forced Action" max-level="1" debuff="true" action="A2">
+	<skill id="5020" name="Forced Action" debuff="true" action="A2">
 	<!-- Crumples to the ground because of unknown power. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="HOLD" >
@@ -622,7 +622,7 @@
 			<chance initial="80"/>
 		</abnormal>
 	</skill>
-	<skill id="5025" name="Lv. 30 Raid Boss" max-level="1" >
+	<skill id="5025" name="Lv. 30 Raid Boss">
 	<!-- His exploits are famous among Wererats. After assigning the South to the Sukar Wererats, he and a group of followers journeyed north in search of wealth. Unlike other Wererats, he possesses an enterprising spirit and began plundering the tombs of Orc tribal chiefs. Chased away by vengeful spirits, now he and his band rob unwary travelers passing through the region. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -633,7 +633,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="5026" name="Lv. 39 Raid Boss" max-level="1" >
+	<skill id="5026" name="Lv. 39 Raid Boss">
 	<!-- Once a human magician with an almost Dwarven interest in machinery, he heard about Lesser Giant Age Sky Wagon Relic and theorized that a combination of Dwarven skills and magic could reproduce the flying wagon. He died without succeeding in his goal, but his spirit still wanders the area. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -644,7 +644,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="5027" name="Lv. 37 Raid Boss" max-level="1" >
+	<skill id="5027" name="Lv. 37 Raid Boss">
 	<!-- This villain preys on adventurers who travel between the Dwarven Village and the Town of Schuttgart. He summoned all the northern Goblin powers to create a great bandit force and rule over them, but he made a serious mistake by stealing tribute intended for Schuttgart. Hearing rumors that the lord was preparing an army to clear out the bandits, he and his followers fled to the mountains. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -655,7 +655,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="5028" name="Lv. 53 Raid Boss" max-level="1" >
+	<skill id="5028" name="Lv. 53 Raid Boss">
 	<!-- Originally worshiped Pa'agrio, but he is a shaman who tries to rule Orcs and Elmoaden by using the evil power of Kasha. They are extending their territory by using evil spirits, insects and Ragna Orcs who follow them. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -666,7 +666,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="5029" name="Lv. 52 Raid Boss" max-level="1" >
+	<skill id="5029" name="Lv. 52 Raid Boss">
 	<!-- This powerful Chaos Golem was made from Star Stones gathered from the Ruins of Pavel by the mad scientist Dr. Chaos, who styles himself the Emperor of Evil. Once a Golem Maestro, Dr. Chaos was expelled from the Black Anvil Guild for trying to steal the blueprint from the elders. He swore revenge on the Black Anvil Guild, conquering the Ruins of Pavel with the Horrifying Golem Army he created. He views all outsiders as assassins sent by the Guild and will attack immediately. His ultimate goal is “world domination.” -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -677,7 +677,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="5030" name="Lv. 59 Raid Boss" max-level="1" >
+	<skill id="5030" name="Lv. 59 Raid Boss">
 	<!-- This captain secretly loved the Princess Felicia. Saddened by her disappearance, he set out to learn her fate. Finding her transformed into the Ice Queen, Freya, he was turned into a Gargoyle and now protects the Frozen Labyrinth from interlopers. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -688,7 +688,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="5031" name="Lv. 80 Raid Boss" max-level="1" >
+	<skill id="5031" name="Lv. 80 Raid Boss">
 	<!-- This Queen of Spike Stakatos conducts breeding experiments using top-ranking Spike Stakatos. She knows that her life running out and is desperately trying to grow a new Stakato queen in her nest, despite the low chances for success. Nursing her power, she dreams of a resurgence of her weakened race. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -699,7 +699,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="5032" name="Lv. 80 Raid Boss" max-level="1" >
+	<skill id="5032" name="Lv. 80 Raid Boss">
 	<!-- Although he appears human, he is actually a high-ranking Angel who directly interacts with Einhasad and worships the Grail. Recently an ancient religious document found in the Tower of Insolence provided proof that the Grail is hidden in the Monastery of Silence. Since then, adherents of the Pagan Temple have frequently tried to steal it, but none has avoided the judgment of the Lord of Splendor. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -710,7 +710,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="5033" name="Lv. 99 Raid Boss" max-level="1" >
+	<skill id="5033" name="Lv. 99 Raid Boss">
 	<!-- This aristocrat of Rune secretly worships Triol, even conducting the occasional bloody worship ceremony in the Temple. Despite her claims of nobility, much of her background is still unknown. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -721,7 +721,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="5034" name="Lv. 73 Raid Boss" max-level="1" >
+	<skill id="5034" name="Lv. 73 Raid Boss">
 	<!-- This Golem was originally a follower of Argos during the war between Giants and Humans. He remained with his master after Argos' imprisonment by Einhasad into the cliff wall. He has devolved to the point that he no longer resembles a Lesser Giant and isn't sure why he is still there. Even Daimon the White-eyed cannot harm him in the Wall of Argos. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -732,7 +732,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="5035" name="Lv. 76 Raid Boss" max-level="1" >
+	<skill id="5035" name="Lv. 76 Raid Boss">
 	<!-- Artificial creature made from Hardin's magic experiment. Although it has the body of a monster erupting lava all over, it used to be an obedient golem that followed Hardin like a father. It went crazy after Hardin left this Swamp of Flames with the thought that it was deserted. When King Astaire invaded Aden Kingdom, some Elmore soldiers trapped in the Swamp of Flames witnessed a giant covered with lava. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -743,7 +743,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="5036" name="Lv. 60 Raid Boss" max-level="1" >
+	<skill id="5036" name="Lv. 60 Raid Boss">
 	<!-- The Ice Fairy who came to Freya after Princess Felicia was turned, she oversees everything in the Frozen Labyrinth on behalf of Freya. She has watched the movements of the Zinnia Guild ever since the Order of Canna Knights disappeared. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -775,7 +775,7 @@
 			<chance initial="10"/>
 		</abnormal>
 	</skill>
-	<skill id="5039" name="Ultra Bomb" max-level="1" action="A1">
+	<skill id="5039" name="Ultra Bomb" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -861,7 +861,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5041" name="Charm of Courage" max-level="1" >
+	<skill id="5041" name="Charm of Courage">
 	<!-- If you die on the battleground during a castle siege/fortress siege/clan hall siege, you can resurrect from the same stop. -->
 		<icon initial="icon.skill5041"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -912,7 +912,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="150" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="52.0">
 					<value level="2">78.0</value>
 					<value level="3">112.0</value>
@@ -971,7 +971,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="137.0">
 					<value level="2">314.0</value>
 					<value level="3">656.0</value>
@@ -1023,13 +1023,13 @@
 		</abnormal>
 		<effects>
 			<effect name="BlockMove"/>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="1350.0">
 					<value level="2">2700.0</value>
 					<value level="3">9000.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="1800.0">
 					<value level="2">3600.0</value>
 					<value level="3">9000.0</value>
@@ -1080,7 +1080,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="65.0">
 					<value level="2">164.0</value>
 					<value level="3">451.0</value>
@@ -1137,7 +1137,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="65.0">
 					<value level="2">164.0</value>
 					<value level="3">451.0</value>
@@ -1364,7 +1364,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="31.0">
 					<value level="2">36.0</value>
 					<value level="3">41.0</value>
@@ -1430,7 +1430,7 @@
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="26.0">
 					<value level="2">30.0</value>
 					<value level="3">34.0</value>
@@ -1488,7 +1488,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="18.0">
 					<value level="2">26.0</value>
 					<value level="3">38.0</value>
@@ -1636,7 +1636,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="52.0">
 					<value level="2">60.0</value>
 					<value level="3">68.0</value>
@@ -2022,7 +2022,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="18.0">
 					<value level="2">26.0</value>
 					<value level="3">38.0</value>
@@ -2373,7 +2373,7 @@
 		</attributes>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="18.0">
 					<value level="2">26.0</value>
 					<value level="3">38.0</value>
@@ -2390,7 +2390,7 @@
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="5074" name="The Victor of War" max-level="1" >
+	<skill id="5074" name="The Victor of War">
 	<!-- Maximum CP is increased. -->
 		<icon initial="icon.skill5074"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -2401,12 +2401,12 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_CP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_CP" mode="PER">
 				<power initial="10.0"/>
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="5075" name="The Vanquished of War" max-level="1" >
+	<skill id="5075" name="The Vanquished of War">
 	<!-- Maximum CP is decreased. -->
 		<icon initial="icon.skill5075"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -2417,7 +2417,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_CP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_CP" mode="PER">
 				<power initial="-10.0"/>
 			</vital-stat-modify>
 		</effects>
@@ -2526,7 +2526,7 @@
 					<value level="15">-60.0</value>
 				</power>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="-5.0">
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="-5.0">
 					<value level="2">-9.0</value>
 					<value level="3">-13.0</value>
 					<value level="4">-17.0</value>
@@ -2543,7 +2543,7 @@
 					<value level="15">-50.0</value>
 				</power>
 			</stat-hp-based>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="-5.0">
 					<value level="2">-9.0</value>
 					<value level="3">-13.0</value>
@@ -2599,7 +2599,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5077" name="Remove Death Penalty" max-level="1" action="A1">
+	<skill id="5077" name="Remove Death Penalty" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2610,7 +2610,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="5078" name="Frintezza Critical Damage" max-level="1" >
+	<skill id="5078" name="Frintezza Critical Damage">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -2626,7 +2626,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5079" name="Haste Focus" max-level="1" action="A2">
+	<skill id="5079" name="Haste Focus" action="A2">
 	<!-- none -->
 		<icon initial="icon.skill0100"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -2657,7 +2657,7 @@
 			</stat-hp-based>
 		</effects>
 	</skill>
-	<skill id="5080" name="Haste Might" max-level="1" action="A2">
+	<skill id="5080" name="Haste Might" action="A2">
 	<!-- none -->
 		<icon initial="icon.skill0100"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -2709,7 +2709,7 @@
 			<time initial="15"/>
 		</abnormal>
 		<effects>
-			<fatal-blow chance-boost="200.0" critical-chance="0" over-hit="false">
+			<fatal-blow chance-boost="200.0" over-hit="false">
 				<power initial="1715.0">
 					<value level="2">3540.0</value>
 					<value level="3">7306.0</value>
@@ -2738,7 +2738,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="150" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="2112.0"/>
 			</physical-attack>
 		</effects>
@@ -2769,7 +2769,7 @@
 			<chance initial="50"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="1715.0">
 					<value level="2">3540.0</value>
 					<value level="3">7305.0</value>
@@ -2804,15 +2804,15 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<fatal-blow chance-boost="150.0" critical-chance="0" over-hit="false">
+			<fatal-blow chance-boost="150.0" over-hit="false">
 				<power initial="6335.0"/>
 			</fatal-blow>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="40.0"/>
 			</speed>
 		</effects>
 	</skill>
-	<skill id="5085" name="Anesthesia" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="5085" name="Anesthesia" debuff="true" action="A2" type="MAGIC">
 	<!-- Momentarily stunned and immobilized. -->
 		<icon initial="icon.skill5085"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -2836,7 +2836,7 @@
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="5086" name="Deadly Poison" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="5086" name="Deadly Poison" debuff="true" action="A2" type="MAGIC">
 	<!-- HP decreases from poison momentarily. If HP falls to 0, death will ensue. -->
 		<icon initial="icon.skill5086"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1" >
@@ -2879,7 +2879,7 @@
 				</power>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
-				<power initial="0.0">
+				<power>
 					<value level="2">180.0</value>
 				</power>
 			</stat-modify>
@@ -2890,7 +2890,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5088" name="Signal" max-level="1" action="A1">
+	<skill id="5088" name="Signal" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2903,7 +2903,7 @@
 		</attributes>
 		<target scope="POINT_BLANK" object="FRIEND" range="300" />
 	</skill>
-	<skill id="5089" name="Presentation -  Enter the Sailren Nest Quest" max-level="1" action="A1">
+	<skill id="5089" name="Presentation -  Enter the Sailren Nest Quest" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2916,7 +2916,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="5090" name="Sailren Production" max-level="1" action="A1">
+	<skill id="5090" name="Sailren Production" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2929,7 +2929,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="5091" name="Sailren Production" max-level="1" action="A1">
+	<skill id="5091" name="Sailren Production" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2940,7 +2940,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="5092" name="Antharas Fear" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="5092" name="Antharas Fear" debuff="true" action="A2" type="MAGIC">
 	<!-- Inflicted with Fear and moving against own will momentarily. -->
 		<icon initial="icon.skill4108"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="DERANGEMENT" level-bonus-rate="1" >
@@ -2963,7 +2963,7 @@
 			<effect name="Fear"/>
 		</effects>
 	</skill>
-	<skill id="5093" name="Antharas Meteor" max-level="1" action="A1" type="MAGIC">
+	<skill id="5093" name="Antharas Meteor" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2980,12 +2980,12 @@
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="150" />
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="1084.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="5094" name="Antharas Self-destruction" max-level="1" action="A1">
+	<skill id="5094" name="Antharas Self-destruction" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" suicide="true" >
@@ -3001,12 +3001,12 @@
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="250" />
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="473.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="5095" name="Antharas Strike" max-level="1" action="A1">
+	<skill id="5095" name="Antharas Strike" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -3022,12 +3022,12 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="30215.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="5096" name="Antharas Power Shot" max-level="1" action="A1">
+	<skill id="5096" name="Antharas Power Shot" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -3043,12 +3043,12 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="88254.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="5097" name="Antharas Self-destruction" max-level="1" action="A1">
+	<skill id="5097" name="Antharas Self-destruction" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" suicide="true" >
@@ -3063,7 +3063,7 @@
 		</attributes>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="150" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="473.0"/>
 			</magical-attack>
 		</effects>
@@ -3096,7 +3096,7 @@
 			</defence-trait>
 		</effects>
 	</skill>
-	<skill id="5099" name="Cancel Capture A" max-level="1" action="A1" type="MAGIC">
+	<skill id="5099" name="Cancel Capture A" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >

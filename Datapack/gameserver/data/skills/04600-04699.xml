@@ -49,7 +49,7 @@
 			<chance initial="40"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="16.0"/>
 			</physical-attack>
 			<block-all-actions/>
@@ -157,7 +157,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="18.0">
 					<value level="2">26.0</value>
 					<value level="3">38.0</value>
@@ -288,7 +288,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="9.0">
 					<value level="2">13.0</value>
 					<value level="3">19.0</value>
@@ -362,7 +362,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="46.0">
 					<value level="2">106.0</value>
 					<value level="3">219.0</value>
@@ -460,7 +460,7 @@
 			<chance initial="35"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="46.0">
 					<value level="2">106.0</value>
 					<value level="3">219.0</value>
@@ -475,7 +475,7 @@
 					<value level="12">2617.0</value>
 				</power>
 			</physical-attack>
-			<damage-over-time ticks="3" can-kill="false">
+			<damage-over-time ticks="3">
 				<power initial="16.0">
 					<value level="2">24.0</value>
 					<value level="3">32.0</value>
@@ -489,7 +489,7 @@
 			</damage-over-time>
 		</effects>
 	</skill>
-	<skill id="4607" name="Magma Attack" max-level="1" action="A1">
+	<skill id="4607" name="Magma Attack" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -504,7 +504,7 @@
 		</attributes>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="187.0"/>
 			</magical-attack>
 		</effects>
@@ -547,7 +547,7 @@
 					<value level="2">16.0</value>
 				</power>
 			</stat-modify>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="5.0">
 					<value level="2">8.0</value>
 				</power>
@@ -738,7 +738,7 @@
 			<fan-range start-angle="0" radius="1000" angle="180"/>
 		</target>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="46.0">
 					<value level="2">105.0</value>
 					<value level="3">216.0</value>
@@ -851,7 +851,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="150" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="52.0">
 					<value level="2">78.0</value>
 					<value level="3">112.0</value>
@@ -923,7 +923,7 @@
 			<chance initial="50"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="3" can-kill="false">
+			<damage-over-time ticks="3">
 				<power initial="18.0">
 					<value level="2">25.0</value>
 					<value level="3">34.0</value>
@@ -937,7 +937,7 @@
 			</damage-over-time>
 		</effects>
 	</skill>
-	<skill id="4616" name="Fake Petrification" max-level="1" action="A2" type="MAGIC">
+	<skill id="4616" name="Fake Petrification" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -964,7 +964,7 @@
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="4617" name="Dispel Petrification" max-level="1" action="A1" type="MAGIC">
+	<skill id="4617" name="Dispel Petrification" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -988,7 +988,7 @@
 			</dispel>
 		</effects>
 	</skill>
-	<skill id="4618" name="Target Cancellation" max-level="1" action="A1" type="MAGIC">
+	<skill id="4618" name="Target Cancellation" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1010,7 +1010,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4619" name="Dispel Sleep" max-level="1" action="A1" type="MAGIC">
+	<skill id="4619" name="Dispel Sleep" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1485,7 +1485,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4628" name="Mysterious Aura" max-level="1" action="A1">
+	<skill id="4628" name="Mysterious Aura" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1599,7 +1599,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="18.0">
 					<value level="2">26.0</value>
 					<value level="3">38.0</value>
@@ -1762,7 +1762,7 @@
 					<value level="3">103.0</value>
 				</power>
 			</stat-modify>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="5.0">
 					<value level="3">8.0</value>
 				</power>
@@ -1882,7 +1882,7 @@
 					<value level="3">16.0</value>
 				</power>
 			</stat-modify>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="5.0">
 					<value level="3">8.0</value>
 				</power>
@@ -1956,7 +1956,7 @@
 					<value level="3">16.0</value>
 				</power>
 			</stat-modify>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="5.0">
 					<value level="3">8.0</value>
 				</power>
@@ -2132,7 +2132,7 @@
 					<value level="3">103.0</value>
 				</power>
 			</stat-modify>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="5.0">
 					<value level="3">8.0</value>
 				</power>
@@ -2250,7 +2250,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="137.0">
 					<value level="2">314.0</value>
 					<value level="3">656.0</value>
@@ -2350,7 +2350,7 @@
 			<chance initial="40"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="46.0">
 					<value level="2">105.0</value>
 					<value level="3">219.0</value>
@@ -2584,7 +2584,7 @@
 			<chance initial="35"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="3" can-kill="false">
+			<damage-over-time ticks="3">
 				<power initial="16.0">
 					<value level="2">24.0</value>
 					<value level="3">32.0</value>
@@ -2598,7 +2598,7 @@
 			</damage-over-time>
 		</effects>
 	</skill>
-	<skill id="4650" name="Dispel Hold" max-level="1" action="A1" type="MAGIC">
+	<skill id="4650" name="Dispel Hold" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2658,7 +2658,7 @@
 			</dispel>
 		</effects>
 	</skill>
-	<skill id="4652" name="Dispel Silence" max-level="1" action="A1" type="MAGIC">
+	<skill id="4652" name="Dispel Silence" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2724,7 +2724,7 @@
 			<condition name="ConsumeBody"/>
 		</conditions>
 		<effects>
-			<hp mode="DIFF">
+			<hp>
 				<power initial="131.0">
 					<value level="2">201.0</value>
 					<value level="3">271.0</value>
@@ -3368,7 +3368,7 @@
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="4663" name="Aggression" max-level="1" action="A1">
+	<skill id="4663" name="Aggression" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -3856,7 +3856,7 @@
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="4671" name="Teleport" max-level="1" action="A1">
+	<skill id="4671" name="Teleport" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -3871,7 +3871,7 @@
 			<effect name="TargetMe"/>
 		</effects>
 	</skill>
-	<skill id="4672" name="Corpse Remove" max-level="1" action="A1">
+	<skill id="4672" name="Corpse Remove" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -4227,7 +4227,7 @@
 			</dispel-probability>
 		</effects>
 	</skill>
-	<skill id="4679" name="Valakas" max-level="1" >
+	<skill id="4679" name="Valakas">
 	<!-- Vulnerable to water, impervious to fire. -->
 		<icon initial="icon.skillboss"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -4247,7 +4247,7 @@
 			<effect name="DebuffBlock"/>
 		</effects>
 	</skill>
-	<skill id="4680" name="Valakas Lava Skin" max-level="1" action="A2">
+	<skill id="4680" name="Valakas Lava Skin" action="A2">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -4271,7 +4271,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4681" name="Valakas Trample" max-level="1" action="A1">
+	<skill id="4681" name="Valakas Trample" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" trait="VALAKAS" >
@@ -4290,12 +4290,12 @@
 		</target>
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="10.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="10.0">
 				<power initial="30416.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="4682" name="Valakas Trample" max-level="1" action="A1">
+	<skill id="4682" name="Valakas Trample" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" trait="VALAKAS" >
@@ -4313,12 +4313,12 @@
 		</target>
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="10.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="10.0">
 				<power initial="30416.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="4683" name="Valakas Dragon Breath" max-level="1" debuff="true" action="A2">
+	<skill id="4683" name="Valakas Dragon Breath" debuff="true" action="A2">
 	<!-- HP decreases rapidly from flame momentarily. -->
 		<icon initial="icon.skill4683"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2" >
@@ -4342,15 +4342,15 @@
 		</abnormal>
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="648.0"/>
 			</magical-attack>
-			<damage-over-time ticks="3" can-kill="false">
+			<damage-over-time ticks="3">
 				<power initial="216.0"/>
 			</damage-over-time>
 		</effects>
 	</skill>
-	<skill id="4684" name="Valakas Dragon Breath" max-level="1" debuff="true" action="A2">
+	<skill id="4684" name="Valakas Dragon Breath" debuff="true" action="A2">
 	<!-- HP decreases rapidly from flame momentarily. -->
 		<icon initial="icon.skill4683"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2" >
@@ -4374,15 +4374,15 @@
 		</abnormal>
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="648.0"/>
 			</magical-attack>
-			<damage-over-time ticks="3" can-kill="false">
+			<damage-over-time ticks="3">
 				<power initial="216.0"/>
 			</damage-over-time>
 		</effects>
 	</skill>
-	<skill id="4685" name="Valakas Tail Stamp" max-level="1" action="A1">
+	<skill id="4685" name="Valakas Tail Stamp" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -4401,12 +4401,12 @@
 		</target>
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="10.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="10.0">
 				<power initial="48391.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="4686" name="Valakas Tail Stamp" max-level="1" action="A1">
+	<skill id="4686" name="Valakas Tail Stamp" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -4424,12 +4424,12 @@
 		</target>
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="157.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="4687" name="Valakas Tail Stamp" max-level="1" action="A1">
+	<skill id="4687" name="Valakas Tail Stamp" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -4473,7 +4473,7 @@
 			<effect name="Fear"/>
 		</effects>
 	</skill>
-	<skill id="4690" name="Valakas Meteor Storm" max-level="1" action="A1">
+	<skill id="4690" name="Valakas Meteor Storm" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -4490,7 +4490,7 @@
 		<target scope="VALAKAS_SCOPE" object="NOT_FRIEND" range="300" />
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="1084.0"/>
 			</magical-attack>
 		</effects>
@@ -4532,7 +4532,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4692" name="Body Enlargement" max-level="1" action="A2" type="MAGIC">
+	<skill id="4692" name="Body Enlargement" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -4553,7 +4553,7 @@
 			<effect name="Grow"/>
 		</effects>
 	</skill>
-	<skill id="4693" name="Annul Enlargement" max-level="1" action="A1" type="MAGIC">
+	<skill id="4693" name="Annul Enlargement" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -4573,7 +4573,7 @@
 			</dispel>
 		</effects>
 	</skill>
-	<skill id="4694" name="Absolute Curse" max-level="1" debuff="true" action="A2">
+	<skill id="4694" name="Absolute Curse" debuff="true" action="A2">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -4600,9 +4600,9 @@
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="-45.0"/>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="-4.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="-4.0"/>
 			</stat-hp-based>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="-4.0"/>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
@@ -4613,7 +4613,7 @@
 			</stat-hp-based>
 		</effects>
 	</skill>
-	<skill id="4695" name="Absolute Curse" max-level="1" debuff="true" action="A2">
+	<skill id="4695" name="Absolute Curse" debuff="true" action="A2">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -4636,7 +4636,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="4696" name="Absolute Curse" max-level="1" debuff="true" action="A2">
+	<skill id="4696" name="Absolute Curse" debuff="true" action="A2">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >

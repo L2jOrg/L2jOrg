@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="6416" name="Reptilikon Poison Breath" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="6416" name="Reptilikon Poison Breath" debuff="true" action="A2" type="MAGIC">
 	<!-- Decreases 4 MP per second for 20 seconds. -->
 		<icon initial="icon.skill1102"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2" >
@@ -31,7 +31,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6417" name="Reptilikon Poison Shot" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="6417" name="Reptilikon Poison Shot" debuff="true" action="A2" type="MAGIC">
 	<!-- Decreases 4 MP per second for 20 seconds. -->
 		<icon initial="icon.skill1102"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2" >
@@ -60,7 +60,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6418" name="Reptilikon Fury Poison Bomb" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="6418" name="Reptilikon Fury Poison Bomb" debuff="true" action="A2" type="MAGIC">
 	<!-- Decreases 69 HP and 4 MP per second for 20 seconds. -->
 		<icon initial="icon.skill1102"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2" >
@@ -84,7 +84,7 @@
 			<chance initial="100"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="69.0"/>
 			</damage-over-time>
 			<effect name="ManaDamOverTime" ticks="5">
@@ -92,7 +92,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6419" name="Light of Scout" max-level="1" action="A1">
+	<skill id="6419" name="Light of Scout" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -108,12 +108,12 @@
 		</consume>
 		<target type="ENEMY_ONLY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="6844.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6420" name="Lizard Blow" max-level="1" action="A1">
+	<skill id="6420" name="Lizard Blow" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -129,12 +129,12 @@
 		</consume>
 		<target type="ENEMY_ONLY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="6844.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6421" name="Warrior's Rage" max-level="1" action="A1">
+	<skill id="6421" name="Warrior's Rage" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -150,12 +150,12 @@
 		</consume>
 		<target type="ENEMY_ONLY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="6844.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6422" name="Resistance Explosion" max-level="1" action="A1">
+	<skill id="6422" name="Resistance Explosion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -171,12 +171,12 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="6844.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6423" name="Stun" max-level="1" debuff="true" action="A2">
+	<skill id="6423" name="Stun" debuff="true" action="A2">
 	<!-- Momentarily stunned and rendered immobile for 3 seconds. -->
 		<icon initial="icon.skill0100"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" >
@@ -198,13 +198,13 @@
 			<chance initial="100"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="2738.0"/>
 			</physical-attack>
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="6424" name="Double Shot" max-level="1" action="A1">
+	<skill id="6424" name="Double Shot" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -221,12 +221,12 @@
 		</consume>
 		<target type="ENEMY_ONLY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="6844.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6425" name="Demotivation Hex" max-level="1" action="A2">
+	<skill id="6425" name="Demotivation Hex" action="A2">
 	<!-- P. Def. decreases by 90%% for 10 seconds. -->
 		<icon initial="icon.skill0122"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2" >
@@ -249,7 +249,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6426" name="Priest's Ire" max-level="1" action="A1" type="MAGIC">
+	<skill id="6426" name="Priest's Ire" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -265,12 +265,12 @@
 		</attributes>
 		<target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="200" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="120.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="6427" name="Medicinal Mushroom 1" max-level="1" action="A1">
+	<skill id="6427" name="Medicinal Mushroom 1" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0100"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -282,7 +282,7 @@
 		</attributes>
 		<target scope="POINT_BLANK" object="FRIEND" range="300" />
 	</skill>
-	<skill id="6428" name="Restore HP" max-level="1" debuff="true" action="A2">
+	<skill id="6428" name="Restore HP" debuff="true" action="A2">
 	<!-- Recovers HP by 90%%. -->
 		<icon initial="icon.skill1201"/>
 		<attributes magic-critical-rate="-5.0" trait="HOLD" level-bonus-rate="2" >
@@ -315,7 +315,7 @@
 			</hp>
 		</effects>
 	</skill>
-	<skill id="6429" name="Cozy Mucus" max-level="1" action="A2" type="MAGIC">
+	<skill id="6429" name="Cozy Mucus" action="A2" type="MAGIC">
 	<!-- Bow P. Atk. increase by 15%% and HP recovers. -->
 		<icon initial="icon.skill6429"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -345,7 +345,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6430" name="Roar Hip Heal" max-level="1" action="A1" type="MAGIC">
+	<skill id="6430" name="Roar Hip Heal" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -366,7 +366,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6431" name="Feral Might" max-level="1" action="A2" type="MAGIC">
+	<skill id="6431" name="Feral Might" action="A2" type="MAGIC">
 	<!-- P. Atk. increases by 19%% for 5 minutes. -->
 		<icon initial="icon.skill1068"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -393,7 +393,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6432" name="Feral Focus" max-level="1" action="A2" type="MAGIC">
+	<skill id="6432" name="Feral Focus" action="A2" type="MAGIC">
 	<!-- Increases P. Critical Rate +35%% for 5 minutes. -->
 		<icon initial="icon.skill1077"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -420,7 +420,7 @@
 			</stat-hp-based>
 		</effects>
 	</skill>
-	<skill id="6433" name="Feral Guidance" max-level="1" action="A2" type="MAGIC">
+	<skill id="6433" name="Feral Guidance" action="A2" type="MAGIC">
 	<!-- Increases P. Accuracy +7 for 5 minutes. -->
 		<icon initial="icon.skill1240"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -442,12 +442,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="7.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6434" name="Feral Haste" max-level="1" action="A2" type="MAGIC">
+	<skill id="6434" name="Feral Haste" action="A2" type="MAGIC">
 	<!-- Atk. Spd. increases by 38%% for 5 minutes. -->
 		<icon initial="icon.skill1086"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -504,7 +504,7 @@
 			</class>
 		</conditions>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false" mode="PER">
+			<damage-over-time ticks="5" mode="PER">
 				<power initial="0.005">
 					<value level="2">0.01</value>
 					<value level="3">0.02</value>
@@ -526,7 +526,7 @@
 			</stat-hp-based>
 		</effects>
 	</skill>
-	<skill id="6436" name="Curse of the Dark Abyss" max-level="1" debuff="true" action="A2">
+	<skill id="6436" name="Curse of the Dark Abyss" debuff="true" action="A2">
 	<!-- Decreases Max HP -5%% per second, and increases Bow P. Critical Rate +90%% and Bow P. Critical Damage +50%%. -->
 		<icon initial="icon.skill6435"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" >
@@ -544,7 +544,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false" mode="PER">
+			<damage-over-time ticks="5" mode="PER">
 				<power initial="0.05"/>
 			</damage-over-time>
 			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
@@ -585,7 +585,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="30.0">
 					<value level="2">60.0</value>
 					<value level="3">90.0</value>
@@ -597,7 +597,7 @@
 			</damage-over-time>
 		</effects>
 	</skill>
-	<skill id="6438" name="Penalty Area" max-level="1" debuff="true" action="A2">
+	<skill id="6438" name="Penalty Area" debuff="true" action="A2">
 	<!-- Decreases 1000 HP. -->
 		<icon initial="icon.skill4036"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1" >
@@ -615,7 +615,7 @@
 			<chance initial="80"/>
 		</abnormal>
 	</skill>
-	<skill id="6439" name="Energy of Wisdom" max-level="1" debuff="true" action="A2">
+	<skill id="6439" name="Energy of Wisdom" debuff="true" action="A2">
 	<!-- none -->
 		<icon initial="icon.skill6439"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1" >
@@ -670,7 +670,7 @@
 			</defence-trait>
 		</effects>
 	</skill>
-	<skill id="6440" name="Energy of Strength" max-level="1" debuff="true" action="A2">
+	<skill id="6440" name="Energy of Strength" debuff="true" action="A2">
 	<!-- none -->
 		<icon initial="icon.skill6440"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1" >
@@ -725,7 +725,7 @@
 			</defence-trait>
 		</effects>
 	</skill>
-	<skill id="6441" name="Energy of Agility" max-level="1" debuff="true" action="A2">
+	<skill id="6441" name="Energy of Agility" debuff="true" action="A2">
 	<!-- none -->
 		<icon initial="icon.skill6441"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1" >
@@ -780,7 +780,7 @@
 			</defence-trait>
 		</effects>
 	</skill>
-	<skill id="6442" name="Energy of Wisdom" max-level="1" action="A2">
+	<skill id="6442" name="Energy of Wisdom" action="A2">
 	<!-- A special location buff that allows the user to inflict magic damage on monsters in the Seed of Annihilation. -->
 		<icon initial="icon.skill6439"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1" >
@@ -803,7 +803,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6443" name="Energy of Strength" max-level="1" action="A2">
+	<skill id="6443" name="Energy of Strength" action="A2">
 	<!-- A special location buff that allows the user to inflict melee damage on monsters in the Seed of Annihilation. -->
 		<icon initial="icon.skill6440"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1" >
@@ -826,7 +826,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6444" name="Energy of Agility" max-level="1" action="A2">
+	<skill id="6444" name="Energy of Agility" action="A2">
 	<!-- A special location buff that allows the user to inflict ranged physical damage on monsters in the Seed of Annihilation. -->
 		<icon initial="icon.skill6441"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1" >
@@ -849,7 +849,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6445" name="Presentation - Freya's Message 1" max-level="1" action="A1">
+	<skill id="6445" name="Presentation - Freya's Message 1" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -862,7 +862,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6446" name="Presentation - Freya's Message 2" max-level="1" action="A1">
+	<skill id="6446" name="Presentation - Freya's Message 2" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -875,7 +875,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6447" name="Presentation - Freya's Message 3" max-level="1" action="A1">
+	<skill id="6447" name="Presentation - Freya's Message 3" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -888,7 +888,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6448" name="Presentation - Freya's Message 4" max-level="1" action="A1">
+	<skill id="6448" name="Presentation - Freya's Message 4" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -901,7 +901,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6449" name="Presentation - Freya's Message 5" max-level="1" action="A1">
+	<skill id="6449" name="Presentation - Freya's Message 5" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -914,7 +914,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6450" name="Presentation - Freya Nova" max-level="1" action="A1">
+	<skill id="6450" name="Presentation - Freya Nova" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -927,7 +927,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6451" name="Presentation - Freya Move" max-level="1" action="A1">
+	<skill id="6451" name="Presentation - Freya Move" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -940,7 +940,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6452" name="Presentation - Freya Space Change" max-level="1" action="A1">
+	<skill id="6452" name="Presentation - Freya Space Change" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -953,7 +953,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6453" name="Presentation - Freya Death" max-level="1" action="A1">
+	<skill id="6453" name="Presentation - Freya Death" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -966,7 +966,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6454" name="Presentation - Freya Frustration" max-level="1" action="A1">
+	<skill id="6454" name="Presentation - Freya Frustration" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -979,7 +979,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6455" name="Presentation - Freya Destroy" max-level="1" action="A1">
+	<skill id="6455" name="Presentation - Freya Destroy" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -992,7 +992,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6456" name="Presentation - Freya Eternal Blizzard" max-level="1" action="A1">
+	<skill id="6456" name="Presentation - Freya Eternal Blizzard" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1005,7 +1005,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6457" name="Presentation - Absorption of Sirr" max-level="1" action="A1">
+	<skill id="6457" name="Presentation - Absorption of Sirr" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1018,7 +1018,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6458" name="Presentation - Transform of Sirr" max-level="1" action="A1">
+	<skill id="6458" name="Presentation - Transform of Sirr" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1031,7 +1031,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6459" name="Presentation - Kegor Super Buff" max-level="1" action="A1">
+	<skill id="6459" name="Presentation - Kegor Super Buff" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1044,7 +1044,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6460" name="Presentation - Jinia Super Buff" max-level="1" action="A1">
+	<skill id="6460" name="Presentation - Jinia Super Buff" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1057,7 +1057,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6461" name="Presentation - Kegor's Message 1" max-level="1" action="A1">
+	<skill id="6461" name="Presentation - Kegor's Message 1" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1070,7 +1070,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6462" name="Presentation - Kegor's Message 1" max-level="1" action="A1">
+	<skill id="6462" name="Presentation - Kegor's Message 1" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1083,7 +1083,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6463" name="Presentation - Transfer Achievement" max-level="1" action="A1">
+	<skill id="6463" name="Presentation - Transfer Achievement" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1096,7 +1096,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6464" name="Three Siblings' Trickery" max-level="1" action="A2">
+	<skill id="6464" name="Three Siblings' Trickery" action="A2">
 	<!-- By the three sibling's trickery, Max HP/Max MP/Max CP are increased by 40%% for 10 seconds. -->
 		<icon initial="icon.ev_rotten_jack_ghost_i00"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="ETC" >
@@ -1112,7 +1112,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6465" name="Jack O'Lantern Card" max-level="1" action="A1">
+	<skill id="6465" name="Jack O'Lantern Card" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true" >
@@ -1124,7 +1124,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6466" name="Rotten Jack O'Lantern Card" max-level="1" action="A1">
+	<skill id="6466" name="Rotten Jack O'Lantern Card" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true" >
@@ -1136,7 +1136,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6467" name="Jack O'Lantern Card - Confirm Skill" max-level="1" action="A1">
+	<skill id="6467" name="Jack O'Lantern Card - Confirm Skill" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true" >
@@ -1149,7 +1149,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6468" name="Rotten Jack O'Lantern Card - Confirm Skill" max-level="1" action="A1">
+	<skill id="6468" name="Rotten Jack O'Lantern Card - Confirm Skill" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true" >
@@ -1162,7 +1162,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6469" name="Halloween Defeat" max-level="1" action="A1">
+	<skill id="6469" name="Halloween Defeat" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true" >
@@ -1175,7 +1175,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6470" name="First Win" max-level="1" action="A1">
+	<skill id="6470" name="First Win" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true" >
@@ -1188,7 +1188,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6471" name="2nd Consecutive Win" max-level="1" action="A1">
+	<skill id="6471" name="2nd Consecutive Win" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true" >
@@ -1201,7 +1201,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6472" name="3rd Consecutive Win" max-level="1" action="A1">
+	<skill id="6472" name="3rd Consecutive Win" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true" >
@@ -1214,7 +1214,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6473" name="4th Consecutive Win" max-level="1" action="A1">
+	<skill id="6473" name="4th Consecutive Win" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true" >
@@ -1227,7 +1227,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6474" name="5th Consecutive Win" max-level="1" action="A1">
+	<skill id="6474" name="5th Consecutive Win" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true" >
@@ -1240,7 +1240,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6475" name="6th Consecutive Win" max-level="1" action="A1">
+	<skill id="6475" name="6th Consecutive Win" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true" >
@@ -1253,7 +1253,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6476" name="7th Consecutive Win" max-level="1" action="A1">
+	<skill id="6476" name="7th Consecutive Win" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true" >
@@ -1266,7 +1266,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6477" name="8th Consecutive Win" max-level="1" action="A1">
+	<skill id="6477" name="8th Consecutive Win" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true" >
@@ -1279,7 +1279,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6478" name="9th Consecutive Win" max-level="1" action="A1">
+	<skill id="6478" name="9th Consecutive Win" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true" >
@@ -1292,7 +1292,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6479" name="10th Consecutive Win" max-level="1" action="A1">
+	<skill id="6479" name="10th Consecutive Win" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true" >
@@ -1305,7 +1305,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6480" name="11th Consecutive Win" max-level="1" action="A1">
+	<skill id="6480" name="11th Consecutive Win" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true" >
@@ -1318,7 +1318,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6481" name="12th Consecutive Win" max-level="1" action="A1">
+	<skill id="6481" name="12th Consecutive Win" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true" >
@@ -1331,7 +1331,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6482" name="13th Consecutive Win" max-level="1" action="A1">
+	<skill id="6482" name="13th Consecutive Win" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true" >
@@ -1344,7 +1344,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6483" name="14th Consecutive Win" max-level="1" action="A1">
+	<skill id="6483" name="14th Consecutive Win" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true" >
@@ -1357,7 +1357,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6484" name="15th Consecutive Win" max-level="1" action="A1">
+	<skill id="6484" name="15th Consecutive Win" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true" >
@@ -1370,7 +1370,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6485" name="16th Consecutive Win" max-level="1" action="A1">
+	<skill id="6485" name="16th Consecutive Win" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true" >
@@ -1383,7 +1383,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6486" name="17th Consecutive Win" max-level="1" action="A1">
+	<skill id="6486" name="17th Consecutive Win" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true" >
@@ -1396,7 +1396,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6487" name="18th Consecutive Win" max-level="1" action="A1">
+	<skill id="6487" name="18th Consecutive Win" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true" >
@@ -1409,7 +1409,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6488" name="19th Consecutive Win" max-level="1" action="A1">
+	<skill id="6488" name="19th Consecutive Win" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true" >
@@ -1422,7 +1422,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6489" name="20th Consecutive Win" max-level="1" action="A1">
+	<skill id="6489" name="20th Consecutive Win" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true" >
@@ -1435,7 +1435,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6490" name="Jack's game - Gauge" max-level="1" action="A1">
+	<skill id="6490" name="Jack's game - Gauge" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true" >
@@ -1448,7 +1448,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6491" name="Jack's game - Target" max-level="1" action="A1">
+	<skill id="6491" name="Jack's game - Target" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true" >

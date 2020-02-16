@@ -16,8 +16,8 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3578" level="1" value="-1"/>  <!-- Special Ability: Infinity Sword -->
-			<skill id="3579" level="1" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Infinity Power - Reflect -->
+			<skill id="3578" value="-1"/>  <!-- Special Ability: Infinity Sword -->
+			<skill id="3579" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Infinity Power - Reflect -->
 		</skills>
 	</weapon>
 
@@ -37,8 +37,8 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3582" level="1" value="-1"/>  <!-- Special Ability: Infinity Slasher -->
-			<skill id="3584" level="1" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Infinity Power - Protection -->
+			<skill id="3582" value="-1"/>  <!-- Special Ability: Infinity Slasher -->
+			<skill id="3584" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Infinity Power - Protection -->
 		</skills>
 	</weapon>
 
@@ -59,8 +59,8 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3580" level="1" value="-1"/>  <!-- Special Ability: Infinity Axe -->
-			<skill id="3581" level="1" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Infinity Power - Tenacity -->
+			<skill id="3580" value="-1"/>  <!-- Special Ability: Infinity Axe -->
+			<skill id="3581" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Infinity Power - Tenacity -->
 		</skills>
 	</weapon>
 
@@ -81,8 +81,8 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3597" level="1" value="-1"/>  <!-- Special Ability: Infinity Rod -->
-			<skill id="3598" level="1" type="ON_MAGIC_SKILL" value="-1"/>  <!-- Infinity Power - Mana Limit -->
+			<skill id="3597" value="-1"/>  <!-- Special Ability: Infinity Rod -->
+			<skill id="3598" type="ON_MAGIC_SKILL" value="-1"/>  <!-- Infinity Power - Mana Limit -->
 		</skills>
 	</weapon>
 
@@ -103,8 +103,8 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3595" level="1" value="-1"/>  <!-- Special Ability: Infinity Scepter -->
-			<skill id="3596" level="1" type="ON_MAGIC_SKILL" value="-1"/>  <!-- Infinity Power - Vampiric Mana -->
+			<skill id="3595" value="-1"/>  <!-- Special Ability: Infinity Scepter -->
+			<skill id="3596" type="ON_MAGIC_SKILL" value="-1"/>  <!-- Infinity Power - Vampiric Mana -->
 		</skills>
 	</weapon>
 
@@ -125,8 +125,8 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3589" level="1" value="-1"/>  <!-- Special Ability: Infinity Dagger -->
-			<skill id="3590" level="1" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Infinity Power - Immortal -->
+			<skill id="3589" value="-1"/>  <!-- Special Ability: Infinity Dagger -->
+			<skill id="3590" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Infinity Power - Immortal -->
 		</skills>
 	</weapon>
 
@@ -147,8 +147,8 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3587" level="1" value="-1"/>  <!-- Special Ability: Infinity Fighter -->
-			<skill id="3584" level="1" value="-1"/>  <!-- Infinity Power - Protection -->
+			<skill id="3587" value="-1"/>  <!-- Special Ability: Infinity Fighter -->
+			<skill id="3584" value="-1"/>  <!-- Infinity Power - Protection -->
 		</skills>
 	</weapon>
 
@@ -169,8 +169,8 @@
 			<stat type="pAtkRange" value="500.0"/>
 		</stats>
 		<skills>
-			<skill id="3593" level="1" value="-1"/>  <!-- Special Ability: Infinity Bow -->
-			<skill id="3594" level="1" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Infinity Power - Archery -->
+			<skill id="3593" value="-1"/>  <!-- Special Ability: Infinity Bow -->
+			<skill id="3594" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Infinity Power - Archery -->
 		</skills>
 	</weapon>
 
@@ -190,8 +190,8 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3585" level="1" value="-1"/>  <!-- Special Ability: Infinity Dualsword -->
-			<skill id="3586" level="1" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Set Effect - Full Plate Heavy Armor, 2-piece -->
+			<skill id="3585" value="-1"/>  <!-- Special Ability: Infinity Dualsword -->
+			<skill id="3586" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Set Effect - Full Plate Heavy Armor, 2-piece -->
 		</skills>
 	</weapon>
 
@@ -212,8 +212,8 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3591" level="1" value="-1"/>  <!-- Special Ability: Infinity Spear -->
-			<skill id="3581" level="1" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Infinity Power - Tenacity -->
+			<skill id="3591" value="-1"/>  <!-- Special Ability: Infinity Spear -->
+			<skill id="3581" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Infinity Power - Tenacity -->
 		</skills>
 	</weapon>
 
@@ -222,7 +222,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes price="20" commission-type="PET_SUPPLIES" for-npc="true" immediate-effect="true" action="SUMMON_SOULSHOT"/>
 		<skill-reducer type="BeastSoulShot">
-			<skill id="2033" level="1" value="-1"/>  <!-- Item - Beast Soul Shot -->
+			<skill id="2033" value="-1"/>  <!-- Item - Beast Soul Shot -->
 		</skill-reducer>
 	</item>
 
@@ -231,7 +231,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes price="50" commission-type="PET_SUPPLIES" for-npc="true" immediate-effect="true" action="SUMMON_SPIRITSHOT"/>
 		<skill-reducer type="BeastSpiritShot">
-			<skill id="2008" level="1" value="-1"/>  <!-- Item - Beast Spirit Shot -->
+			<skill id="2008" value="-1"/>  <!-- Item - Beast Spirit Shot -->
 		</skill-reducer>
 	</item>
 
@@ -240,7 +240,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes price="100" commission-type="PET_SUPPLIES" for-npc="true" immediate-effect="true" action="SUMMON_SPIRITSHOT"/>
 		<skill-reducer type="BeastSpiritShot">
-			<skill id="2009" level="1" value="-1"/>  <!-- Item - Blessed Beast Spirit Shot -->
+			<skill id="2009" value="-1"/>  <!-- Item - Blessed Beast Spirit Shot -->
 		</skill-reducer>
 	</item>
 
@@ -254,7 +254,7 @@
 			<stat type="maxMp" value="21.0"/>
 		</stats>
 		<skills>
-			<skill id="3562" level="1" value="-1"/>  <!-- Queen Ant's Ring -->
+			<skill id="3562" value="-1"/>  <!-- Queen Ant's Ring -->
 		</skills>
 	</armor>
 
@@ -268,7 +268,7 @@
 			<stat type="maxMp" value="19.0"/>
 		</stats>
 		<skills>
-			<skill id="3560" level="1" value="-1"/>  <!-- Orfen's Earring -->
+			<skill id="3560" value="-1"/>  <!-- Orfen's Earring -->
 		</skills>
 	</armor>
 
@@ -282,7 +282,7 @@
 			<stat type="maxMp" value="9.0"/>
 		</stats>
 		<skills>
-			<skill id="3563" level="1" value="-1"/>  <!-- Ring of Core -->
+			<skill id="3563" value="-1"/>  <!-- Ring of Core -->
 		</skills>
 	</armor>
 

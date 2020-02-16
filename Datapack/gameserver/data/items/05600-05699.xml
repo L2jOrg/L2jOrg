@@ -17,7 +17,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3052" level="1" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Special Ability: Critical Bleed -->
+			<skill id="3052" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Special Ability: Critical Bleed -->
 		</skills>
 	</weapon>
 
@@ -182,7 +182,7 @@
 			<stat type="pAtkRange" value="500.0"/>
 		</stats>
 		<skills>
-			<skill id="3498" level="1" value="-1"/>  <!-- Special Ability: Light -->
+			<skill id="3498" value="-1"/>  <!-- Special Ability: Light -->
 		</skills>
 	</weapon>
 
@@ -203,7 +203,7 @@
 			<stat type="pAtkRange" value="500.0"/>
 		</stats>
 		<skills>
-			<skill id="3053" level="1" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Special Ability: Critical Bleed -->
+			<skill id="3053" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Special Ability: Critical Bleed -->
 		</skills>
 	</weapon>
 
@@ -338,7 +338,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3054" level="1" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Special Ability: Critical Bleed -->
+			<skill id="3054" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Special Ability: Critical Bleed -->
 		</skills>
 	</weapon>
 
@@ -473,7 +473,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3069" level="1" value="-1"/>  <!-- Special Ability: Risk Evasion -->
+			<skill id="3069" value="-1"/>  <!-- Special Ability: Risk Evasion -->
 		</skills>
 	</weapon>
 
@@ -554,7 +554,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3070" level="1" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Special Ability: Critical Stun -->
+			<skill id="3070" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Special Ability: Critical Stun -->
 		</skills>
 	</weapon>
 
@@ -652,7 +652,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3061" level="1" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Special Ability: Critical Poison -->
+			<skill id="3061" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Special Ability: Critical Poison -->
 		</skills>
 	</weapon>
 
@@ -726,7 +726,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3075" level="1" type="ON_MAGIC_SKILL" chance="5" value="-1"/>  <!-- Special Ability: Magic Paralyze -->
+			<skill id="3075" type="ON_MAGIC_SKILL" chance="5" value="-1"/>  <!-- Special Ability: Magic Paralyze -->
 		</skills>
 	</weapon>
 

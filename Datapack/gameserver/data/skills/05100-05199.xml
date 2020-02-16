@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="5100" name="Cancel Capture B" max-level="1" action="A1" type="MAGIC">
+	<skill id="5100" name="Cancel Capture B" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -16,7 +16,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="5101" name="Cancel Capture C" max-level="1" action="A1" type="MAGIC">
+	<skill id="5101" name="Cancel Capture C" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -32,7 +32,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="5102" name="Cancel All Capture" max-level="1" action="A1" type="MAGIC">
+	<skill id="5102" name="Cancel All Capture" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -48,7 +48,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="5103" name="" max-level="1" action="A1">
+	<skill id="5103" name="" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -185,7 +185,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="5109" name="Presentation -  Clan Gate" max-level="1" action="A1" type="MAGIC">
+	<skill id="5109" name="Presentation -  Clan Gate" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -198,7 +198,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="5110" name="Cannon Fodder" max-level="1" action="A1">
+	<skill id="5110" name="Cannon Fodder" action="A1">
 	<!-- Bombards enemies that are either above you or protected by structures such as castle walls or doors. Consumes 4 Flash Gunpowder. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -223,12 +223,12 @@
 			</target>
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="68.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="5111" name="Big Bang" max-level="1" action="A1">
+	<skill id="5111" name="Big Bang" action="A1">
 	<!-- Bombards enemies that are either above you or protected by structures such as castle walls or doors. Consumes 5 Flash Gunpowder. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -253,7 +253,7 @@
 			</target>
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="68.0"/>
 			</physical-attack>
 		</effects>
@@ -486,7 +486,7 @@
 			</defence-trait>
 		</effects>
 	</skill>
-	<skill id="5117" name="Stun" max-level="1" debuff="true" action="A2">
+	<skill id="5117" name="Stun" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0100"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" >
@@ -509,13 +509,13 @@
 			<chance initial="30"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="829.0"/>
 			</physical-attack>
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="5118" name="Cancel Sailren Use" max-level="1" action="A1">
+	<skill id="5118" name="Cancel Sailren Use" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -533,7 +533,7 @@
 			</dispel-by-category>
 		</effects>
 	</skill>
-	<skill id="5119" name="Bleed" max-level="1" action="A1">
+	<skill id="5119" name="Bleed" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0245"/>
 		<attributes next-action="ATTACK" magic-critical-rate="-5.0" >
@@ -553,12 +553,12 @@
 			<fan-range start-angle="0" radius="80" angle="150"/>
 		</target>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="2487.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="5120" name="Stun" max-level="1" debuff="true" action="A2">
+	<skill id="5120" name="Stun" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0100"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" >
@@ -581,13 +581,13 @@
 			<chance initial="50"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="703.0"/>
 			</physical-attack>
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="5121" name="Presentation -  Corpse Revival" max-level="1" action="A1">
+	<skill id="5121" name="Presentation -  Corpse Revival" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -598,7 +598,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="5122" name="Sailren Use Might" max-level="1" action="A2">
+	<skill id="5122" name="Sailren Use Might" action="A2">
 	<!-- Increases P. Atk. by 50%%. -->
 		<icon initial="icon.skill4028"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -622,7 +622,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5123" name="Maximum Defense" max-level="1" action="A2">
+	<skill id="5123" name="Maximum Defense" action="A2">
 	<!-- Momentarily Maximizes P. Def./M. Def. and Shield Defense and increases Buff-canceling Attack Resistance. -->
 		<icon initial="icon.skill0454"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -638,10 +638,10 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="800.0"/>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="1000.0"/>
 			</stat-modify>
 			<resist-dispel-by-category category="BUFF">
@@ -649,7 +649,7 @@
 			</resist-dispel-by-category>
 		</effects>
 	</skill>
-	<skill id="5124" name="Anti-music" max-level="1" action="A1">
+	<skill id="5124" name="Anti-music" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -664,7 +664,7 @@
 			</dispel-probability>
 		</effects>
 	</skill>
-	<skill id="5125" name="Maximum Resist Status" max-level="1" action="A2">
+	<skill id="5125" name="Maximum Resist Status" action="A2">
 	<!-- Maximizes Debuff Resistance. -->
 		<icon initial="icon.skill0456"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -685,7 +685,7 @@
 			</resist-abnormal-by-category>
 		</effects>
 	</skill>
-	<skill id="5126" name="Maximum Recovery Bonus" max-level="1" action="A2">
+	<skill id="5126" name="Maximum Recovery Bonus" action="A2">
 	<!-- HP and CP recovery bonus are maximized. -->
 		<icon initial="icon.skill0457"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -709,7 +709,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5127" name="Recover Momentum" max-level="1" action="A2">
+	<skill id="5127" name="Recover Momentum" action="A2">
 	<!-- Maximizes P. Atk. and increases Momentum by 1 every 5 seconds. -->
 		<icon initial="icon.skill0458"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -733,7 +733,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5128" name="Maximize long-range weapon use" max-level="1" action="A2">
+	<skill id="5128" name="Maximize long-range weapon use" action="A2">
 	<!-- Maximizes bow proficiency. -->
 		<icon initial="icon.skill0459"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -753,13 +753,13 @@
 				<power initial="20.0"/>
 				<weapon-type>BOW CROSSBOW </weapon-type>
 			</stat-modify>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="10.0"/>
 				<weapon-type>BOW CROSSBOW </weapon-type>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5129" name="Smokescreen" max-level="1" action="A2">
+	<skill id="5129" name="Smokescreen" action="A2">
 	<!-- Smokescreen maximizes P. Evasion and assassination skills. -->
 		<icon initial="icon.skill0460"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -775,14 +775,14 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="15.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="15.0"/>
 			</stat-hp-based>
 			<stat-modify stat="BLOW_RATE" mode="PER">
 				<power initial="20.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="5130" name="Volcano" max-level="1" action="A1">
+	<skill id="5130" name="Volcano" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -795,12 +795,12 @@
 		</attributes>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="300" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="300.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="5131" name="Tsunami" max-level="1" action="A1">
+	<skill id="5131" name="Tsunami" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -813,12 +813,12 @@
 		</attributes>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="300" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="300.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="5132" name="Cyclone" max-level="1" action="A1">
+	<skill id="5132" name="Cyclone" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -831,12 +831,12 @@
 		</attributes>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="300" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="300.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="5133" name="Gehenna" max-level="1" action="A1">
+	<skill id="5133" name="Gehenna" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -849,12 +849,12 @@
 		</attributes>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="300" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="300.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="5134" name="Anti-summoning Field" max-level="1" debuff="true" action="A2">
+	<skill id="5134" name="Anti-summoning Field" debuff="true" action="A2">
 	<!-- Through distorted space and segmented time, the servitor disappears and all speeds are decreased. All buffs that increase speed also disappear. -->
 		<icon initial="icon.skill1424"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2" >
@@ -916,7 +916,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="8264.0"/>
 			</physical-attack>
 		</effects>
@@ -952,7 +952,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="150" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="4132.0"/>
 			</physical-attack>
 		</effects>
@@ -1022,7 +1022,7 @@
 			<chance initial="60"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="6198.0"/>
 			</physical-attack>
 			<block-all-actions/>
@@ -1095,7 +1095,7 @@
 			<chance initial="60"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="109.0"/>
 			</damage-over-time>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
@@ -1128,7 +1128,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="8264.0"/>
 			</physical-attack>
 		</effects>
@@ -1168,12 +1168,12 @@
 		</conditions>
 		<effects>
 			<effect name="ConsumeBody"/>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="228.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="5143" name="Sailren Use Blow" max-level="1" action="A1">
+	<skill id="5143" name="Sailren Use Blow" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1190,12 +1190,12 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<fatal-blow chance-boost="1150.0" critical-chance="0" over-hit="false">
+			<fatal-blow chance-boost="1150.0" over-hit="false">
 				<power initial="39544.0"/>
 			</fatal-blow>
 		</effects>
 	</skill>
-	<skill id="5145" name="Day of Doom" max-level="1" debuff="true" action="A2">
+	<skill id="5145" name="Day of Doom" debuff="true" action="A2">
 	<!-- Decreases P. Atk., P. Def., Speed, HP Recovery Rate, and Attribute Resistance. Increases MP Consumption for physical/magic skills. Prevents from receiving buff. -->
 		<icon initial="icon.skill1422"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="30" >
@@ -1296,7 +1296,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_HP">
 				<power initial="24.0">
 					<value level="2">48.0</value>
 					<value level="3">72.0</value>
@@ -1433,7 +1433,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_MP">
 				<power initial="16.0">
 					<value level="2">32.0</value>
 					<value level="3">48.0</value>
@@ -1518,7 +1518,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<cp mode="DIFF">
+			<cp>
 				<power initial="264.0">
 					<value level="2">289.0</value>
 					<value level="3">313.0</value>
@@ -1571,7 +1571,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_CP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_CP">
 				<power initial="24.0">
 					<value level="2">48.0</value>
 					<value level="3">72.0</value>
@@ -1618,7 +1618,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK">
 				<power initial="23.64">
 					<value level="2">27.96</value>
 					<value level="3">32.76</value>
@@ -1670,7 +1670,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK" mode="DIFF">
+			<stat-modify stat="MAGIC_ATTACK">
 				<power initial="15.9">
 					<value level="2">18.65</value>
 					<value level="3">21.6</value>
@@ -1757,7 +1757,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="30.2">
 					<value level="2">33.72</value>
 					<value level="3">37.4</value>
@@ -1809,7 +1809,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="MAGICAL_DEFENCE">
 				<power initial="37.0">
 					<value level="2">40.0</value>
 					<value level="3">44.0</value>
@@ -1896,7 +1896,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="1.0">
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="1.0">
 					<value level="4">2.0</value>
 					<value level="7">3.0</value>
 					<value level="10">4.0</value>
@@ -1939,7 +1939,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="1.0">
 					<value level="4">2.0</value>
 					<value level="7">3.0</value>
@@ -2014,7 +2014,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
 				<power initial="1.0">
 					<value level="4">2.0</value>
 					<value level="7">3.0</value>
@@ -2389,7 +2389,7 @@
 			<chance initial="40"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="41.0">
 					<value level="3">50.0</value>
 					<value level="6">58.0</value>
@@ -2439,7 +2439,7 @@
 			<chance initial="40"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="44.0">
 					<value level="3">54.0</value>
 					<value level="6">62.0</value>
@@ -2514,7 +2514,7 @@
 			<effect name="PhysicalMute"/>
 		</effects>
 	</skill>
-	<skill id="5178" name="NPC Burn" max-level="1" action="A1" type="MAGIC">
+	<skill id="5178" name="NPC Burn" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.action102"/>
 		<attributes magic-critical-rate="-5.0" hit-cancel-time="3.5" >
@@ -2531,12 +2531,12 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="116.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="5179" name="Lv. 80 Raid Boss" max-level="1" >
+	<skill id="5179" name="Lv. 80 Raid Boss">
 	<!-- The younger brother of the Elrokian chief, Mushika, he is notoriously ambitious, jealous and prone to fits of violence. Where his legendary brother is concerned, he also suffers from something of an inferiority complex. He currently leads the Elrokian faction opposed to Mushika's policies and is scheming to depose his brother and make himself chief. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -2547,7 +2547,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="5180" name="Lv. 80 Raid Boss" max-level="1" >
+	<skill id="5180" name="Lv. 80 Raid Boss">
 	<!-- Sailren, an enormous, vicious and dangerous dinosaur who inhabits the Primeval Isle, was sealed inside the Lost Nest ages ago by Shilen and the ancient Elrokian warriors. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -2558,7 +2558,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="5181" name="Lv. 80 Raid Boss" max-level="1" >
+	<skill id="5181" name="Lv. 80 Raid Boss">
 	<!-- Wandering near Goddard Castle, this seemingly ordinary Human knight is actually a demon searching for a powerful weapon to increase its strength. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -2569,10 +2569,10 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="5182" name="Blessing of Protection" max-level="1" action="A2">
+	<skill id="5182" name="Blessing of Protection" action="A2">
 	<!-- Keeps you safe from an attack by a chaotic character who is more than 10 Lv.s apart from you.\n\nNote: If you attack the character or cast a skill the Blessing of Protection will be lifted. -->
 		<icon initial="icon.skill0194"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" dispellable="false" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="-1"/>
 			<cast-range initial="700"/>
 			<effect-range initial="1200"/>
@@ -2588,7 +2588,7 @@
 			<effect name="ProtectionBlessing"/>
 		</effects>
 	</skill>
-	<skill id="5184" name="Dragon Breath" max-level="1" action="A1">
+	<skill id="5184" name="Dragon Breath" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2604,7 +2604,7 @@
 			<fan-range start-angle="0" radius="1200" angle="35"/>
 		</target>
 	</skill>
-	<skill id="5185" name="Presentation - Magic-type Guard" max-level="1" action="A1">
+	<skill id="5185" name="Presentation - Magic-type Guard" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -2620,7 +2620,7 @@
 		</attributes>
 		<target type="ENEMY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="54.0"/>
 			</magical-attack>
 		</effects>
@@ -2816,7 +2816,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="10.0">
 					<value level="2">15.0</value>
 					<value level="3">20.0</value>
@@ -2884,7 +2884,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="10.0">
 					<value level="2">15.0</value>
 					<value level="3">20.0</value>
@@ -2935,7 +2935,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="2.0">
 					<value level="2">3.0</value>
 					<value level="3">4.0</value>
@@ -2978,7 +2978,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="20.0">
 					<value level="2">33.0</value>
 				</power>

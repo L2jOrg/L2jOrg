@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="2100" name="Escape (1-second)" max-level="1" action="A1">
+	<skill id="2100" name="Escape (1-second)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" blocked-on-olympiad="true" >
@@ -17,7 +17,7 @@
 			<escape location="TOWN"/>
 		</effects>
 	</skill>
-	<skill id="2103" name="Mysterious Potion" max-level="1" action="A2">
+	<skill id="2103" name="Mysterious Potion" action="A2">
 	<!-- Enlarges the user's head. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="ETC" >
@@ -33,7 +33,7 @@
 			<non-transformed id="103"/>
 		</conditions>
 	</skill>
-	<skill id="2104" name="Greater Soulshot Compressed Package (No-grade)" max-level="1" action="A1">
+	<skill id="2104" name="Greater Soulshot Compressed Package (No-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -47,10 +47,10 @@
 			<encumbered slots="10" weight="10"/>
 		</conditions>
 		<effects>
-			<restoration item="1835" count="1000" enchant="0"/>
+			<restoration item="1835" count="1000"/>
 		</effects>
 	</skill>
-	<skill id="2105" name="Greater Soulshot Compressed Package (D-grade)" max-level="1" action="A1">
+	<skill id="2105" name="Greater Soulshot Compressed Package (D-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -64,10 +64,10 @@
 			<encumbered slots="10" weight="10"/>
 		</conditions>
 		<effects>
-			<restoration item="1463" count="1000" enchant="0"/>
+			<restoration item="1463" count="1000"/>
 		</effects>
 	</skill>
-	<skill id="2106" name="Greater Soulshot Compressed Package (C-grade)" max-level="1" action="A1">
+	<skill id="2106" name="Greater Soulshot Compressed Package (C-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -81,10 +81,10 @@
 			<encumbered slots="10" weight="10"/>
 		</conditions>
 		<effects>
-			<restoration item="1464" count="1000" enchant="0"/>
+			<restoration item="1464" count="1000"/>
 		</effects>
 	</skill>
-	<skill id="2107" name="Greater Soulshot Compressed Package (B-grade)" max-level="1" action="A1">
+	<skill id="2107" name="Greater Soulshot Compressed Package (B-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -98,10 +98,10 @@
 			<encumbered slots="10" weight="10"/>
 		</conditions>
 		<effects>
-			<restoration item="1465" count="1000" enchant="0"/>
+			<restoration item="1465" count="1000"/>
 		</effects>
 	</skill>
-	<skill id="2108" name="Greater Soulshot Compressed Package (A-grade)" max-level="1" action="A1">
+	<skill id="2108" name="Greater Soulshot Compressed Package (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -115,10 +115,10 @@
 			<encumbered slots="10" weight="10"/>
 		</conditions>
 		<effects>
-			<restoration item="1466" count="1000" enchant="0"/>
+			<restoration item="1466" count="1000"/>
 		</effects>
 	</skill>
-	<skill id="2110" name="Greater Spiritshot Compressed Package (No-grade)" max-level="1" action="A1">
+	<skill id="2110" name="Greater Spiritshot Compressed Package (No-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -132,10 +132,10 @@
 			<encumbered slots="10" weight="10"/>
 		</conditions>
 		<effects>
-			<restoration item="2509" count="1000" enchant="0"/>
+			<restoration item="2509" count="1000"/>
 		</effects>
 	</skill>
-	<skill id="2111" name="Greater Spiritshot Compressed Package (D-grade)" max-level="1" action="A1">
+	<skill id="2111" name="Greater Spiritshot Compressed Package (D-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -149,10 +149,10 @@
 			<encumbered slots="10" weight="10"/>
 		</conditions>
 		<effects>
-			<restoration item="2510" count="1000" enchant="0"/>
+			<restoration item="2510" count="1000"/>
 		</effects>
 	</skill>
-	<skill id="2112" name="Greater Spiritshot Compressed Package (C-grade)" max-level="1" action="A1">
+	<skill id="2112" name="Greater Spiritshot Compressed Package (C-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -166,10 +166,10 @@
 			<encumbered slots="10" weight="10"/>
 		</conditions>
 		<effects>
-			<restoration item="2511" count="1000" enchant="0"/>
+			<restoration item="2511" count="1000"/>
 		</effects>
 	</skill>
-	<skill id="2113" name="Greater Spiritshot Compressed Package (B-grade)" max-level="1" action="A1">
+	<skill id="2113" name="Greater Spiritshot Compressed Package (B-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -183,10 +183,10 @@
 			<encumbered slots="10" weight="10"/>
 		</conditions>
 		<effects>
-			<restoration item="2512" count="1000" enchant="0"/>
+			<restoration item="2512" count="1000"/>
 		</effects>
 	</skill>
-	<skill id="2114" name="Greater Spiritshot Compressed Package (A-grade)" max-level="1" action="A1">
+	<skill id="2114" name="Greater Spiritshot Compressed Package (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -200,10 +200,10 @@
 			<encumbered slots="10" weight="10"/>
 		</conditions>
 		<effects>
-			<restoration item="2513" count="1000" enchant="0"/>
+			<restoration item="2513" count="1000"/>
 		</effects>
 	</skill>
-	<skill id="2116" name="Greater Blessed Spiritshot Compressed Package (No-grade)" max-level="1" action="A1">
+	<skill id="2116" name="Greater Blessed Spiritshot Compressed Package (No-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -217,10 +217,10 @@
 			<encumbered slots="10" weight="10"/>
 		</conditions>
 		<effects>
-			<restoration item="3947" count="1000" enchant="0"/>
+			<restoration item="3947" count="1000"/>
 		</effects>
 	</skill>
-	<skill id="2117" name="Greater Blessed Spiritshot Compressed Package (D-grade)" max-level="1" action="A1">
+	<skill id="2117" name="Greater Blessed Spiritshot Compressed Package (D-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -234,10 +234,10 @@
 			<encumbered slots="10" weight="10"/>
 		</conditions>
 		<effects>
-			<restoration item="3948" count="1000" enchant="0"/>
+			<restoration item="3948" count="1000"/>
 		</effects>
 	</skill>
-	<skill id="2118" name="Greater Blessed Spiritshot Compressed Package (C-grade)" max-level="1" action="A1">
+	<skill id="2118" name="Greater Blessed Spiritshot Compressed Package (C-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -251,10 +251,10 @@
 			<encumbered slots="10" weight="10"/>
 		</conditions>
 		<effects>
-			<restoration item="3949" count="1000" enchant="0"/>
+			<restoration item="3949" count="1000"/>
 		</effects>
 	</skill>
-	<skill id="2119" name="Greater Blessed Spiritshot Compressed Package (B-grade)" max-level="1" action="A1">
+	<skill id="2119" name="Greater Blessed Spiritshot Compressed Package (B-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -268,10 +268,10 @@
 			<encumbered slots="10" weight="10"/>
 		</conditions>
 		<effects>
-			<restoration item="3950" count="1000" enchant="0"/>
+			<restoration item="3950" count="1000"/>
 		</effects>
 	</skill>
-	<skill id="2120" name="Greater Blessed Spiritshot Compressed Package (A-grade)" max-level="1" action="A1">
+	<skill id="2120" name="Greater Blessed Spiritshot Compressed Package (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -285,10 +285,10 @@
 			<encumbered slots="10" weight="10"/>
 		</conditions>
 		<effects>
-			<restoration item="3951" count="1000" enchant="0"/>
+			<restoration item="3951" count="1000"/>
 		</effects>
 	</skill>
-	<skill id="2122" name="Facelifting Potion" max-level="1" action="A1">
+	<skill id="2122" name="Facelifting Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -304,11 +304,11 @@
 		<target />
 		<effects>
 			<effect name="ChangeFace">
-				<power initial="0.0"/>
+				<power/>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2123" name="Facelifting Potion" max-level="1" action="A1">
+	<skill id="2123" name="Facelifting Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -328,7 +328,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2124" name="Facelifting Potion" max-level="1" action="A1">
+	<skill id="2124" name="Facelifting Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -348,7 +348,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2125" name="Dye Potion" max-level="1" action="A1">
+	<skill id="2125" name="Dye Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -364,11 +364,11 @@
 		<target />
 		<effects>
 			<effect name="ChangeHairColor">
-				<power initial="0.0"/>
+				<power/>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2126" name="Dye Potion" max-level="1" action="A1">
+	<skill id="2126" name="Dye Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -388,7 +388,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2127" name="Dye Potion" max-level="1" action="A1">
+	<skill id="2127" name="Dye Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -408,7 +408,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2128" name="Dye Potion" max-level="1" action="A1">
+	<skill id="2128" name="Dye Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -428,7 +428,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2129" name="Hair Style Change Potion" max-level="1" action="A1">
+	<skill id="2129" name="Hair Style Change Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -444,11 +444,11 @@
 		<target />
 		<effects>
 			<effect name="ChangeHairStyle">
-				<power initial="0.0"/>
+				<power/>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2130" name="Hair Style Change Potion" max-level="1" action="A1">
+	<skill id="2130" name="Hair Style Change Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -468,7 +468,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2131" name="Hair Style Change Potion" max-level="1" action="A1">
+	<skill id="2131" name="Hair Style Change Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -488,7 +488,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2132" name="Hair Style Change Potion" max-level="1" action="A1">
+	<skill id="2132" name="Hair Style Change Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -508,7 +508,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2133" name="Hair Style Change Potion" max-level="1" action="A1">
+	<skill id="2133" name="Hair Style Change Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -528,7 +528,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2134" name="Hair Style Change Potion" max-level="1" action="A1">
+	<skill id="2134" name="Hair Style Change Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -551,7 +551,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2135" name="Hair Style Change Potion" max-level="1" action="A1">
+	<skill id="2135" name="Hair Style Change Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -574,7 +574,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2136" name="Rice Cake" max-level="1" action="A1">
+	<skill id="2136" name="Rice Cake" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -593,7 +593,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2140" name="Item - Carol Sound Crystal" max-level="1" action="A1">
+	<skill id="2140" name="Item - Carol Sound Crystal" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -604,7 +604,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="2141" name="Item - Carol Sound Crystal" max-level="1" action="A1">
+	<skill id="2141" name="Item - Carol Sound Crystal" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -615,7 +615,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="2142" name="Item - Carol Sound Crystal" max-level="1" action="A1">
+	<skill id="2142" name="Item - Carol Sound Crystal" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -626,7 +626,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="2143" name="Item - Carol Sound Crystal" max-level="1" action="A1">
+	<skill id="2143" name="Item - Carol Sound Crystal" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -637,7 +637,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="2144" name="Item - Carol Sound Crystal" max-level="1" action="A1">
+	<skill id="2144" name="Item - Carol Sound Crystal" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -648,7 +648,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="2145" name="Item - Carol Sound Crystal" max-level="1" action="A1">
+	<skill id="2145" name="Item - Carol Sound Crystal" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -659,7 +659,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="2146" name="Item - Carol Sound Crystal" max-level="1" action="A1">
+	<skill id="2146" name="Item - Carol Sound Crystal" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -670,7 +670,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="2147" name="Item - Carol Sound Crystal" max-level="1" action="A1">
+	<skill id="2147" name="Item - Carol Sound Crystal" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -681,7 +681,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="2148" name="Item - Carol Sound Crystal" max-level="1" action="A1">
+	<skill id="2148" name="Item - Carol Sound Crystal" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -692,7 +692,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="2149" name="Item - Carol Sound Crystal" max-level="1" action="A1">
+	<skill id="2149" name="Item - Carol Sound Crystal" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -703,7 +703,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="2150" name="Soulshot (D-grade)" max-level="1" action="A1">
+	<skill id="2150" name="Soulshot (D-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -714,7 +714,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="2151" name="Soulshot (C-grade)" max-level="1" action="A1">
+	<skill id="2151" name="Soulshot (C-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -725,7 +725,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="2152" name="Soulshot (B-grade)" max-level="1" action="A1">
+	<skill id="2152" name="Soulshot (B-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -736,7 +736,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="2153" name="Soulshot (A-grade)" max-level="1" action="A1">
+	<skill id="2153" name="Soulshot (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -747,7 +747,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="2154" name="Soulshot (S-grade)" max-level="1" action="A1">
+	<skill id="2154" name="Soulshot (S-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_spirit_bullet_white_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -758,7 +758,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="2155" name="Spiritshot (D-grade)" max-level="1" action="A1">
+	<skill id="2155" name="Spiritshot (D-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -769,7 +769,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="2156" name="Spiritshot (C-grade)" max-level="1" action="A1">
+	<skill id="2156" name="Spiritshot (C-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -780,7 +780,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="2157" name="Spiritshot (B-grade)" max-level="1" action="A1">
+	<skill id="2157" name="Spiritshot (B-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -791,7 +791,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="2158" name="Spiritshot (A-grade)" max-level="1" action="A1">
+	<skill id="2158" name="Spiritshot (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -802,7 +802,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="2159" name="Spiritshot (S-grade)" max-level="1" action="A1">
+	<skill id="2159" name="Spiritshot (S-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_spirit_bullet_white_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -813,7 +813,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="2160" name="Blessed Spiritshot (D-grade)" max-level="1" action="A1">
+	<skill id="2160" name="Blessed Spiritshot (D-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -824,7 +824,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="2161" name="Blessed Spiritshot (C-grade)" max-level="1" action="A1">
+	<skill id="2161" name="Blessed Spiritshot (C-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -835,7 +835,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="2162" name="Blessed Spiritshot (B-grade)" max-level="1" action="A1">
+	<skill id="2162" name="Blessed Spiritshot (B-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -846,7 +846,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="2163" name="Blessed Spiritshot (A-grade)" max-level="1" action="A1">
+	<skill id="2163" name="Blessed Spiritshot (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -857,7 +857,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="2164" name="Blessed Spiritshot (S-grade)" max-level="1" action="A1">
+	<skill id="2164" name="Blessed Spiritshot (S-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_spirit_bullet_white_i00"/>
 		<attributes magic-critical-rate="5.0" >
@@ -868,7 +868,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="2165" name="Momentum Stone" max-level="1" action="A1">
+	<skill id="2165" name="Momentum Stone" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -895,7 +895,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<cp mode="DIFF">
+			<cp>
 				<power initial="50.0">
 					<value level="2">200.0</value>
 				</power>
@@ -960,11 +960,11 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<conditions>
-			<level affect="CASTER" min-level="1" max-level="19"/>
+			<level max-level="19"/>
 		</conditions>
 		<effects>
 			<reduce-drop-penalty type="RAID">
-				<experience initial="0.0"/>
+				<experience/>
 				<death-penalty initial="-100.0"/>
 			</reduce-drop-penalty>
 		</effects>
@@ -1001,7 +1001,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="2170" name="Scroll: Cancel Sleep" max-level="1" action="A1">
+	<skill id="2170" name="Scroll: Cancel Sleep" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -1026,7 +1026,7 @@
 			</dispel>
 		</effects>
 	</skill>
-	<skill id="2171" name="Spellbook Paper" max-level="1" action="A1">
+	<skill id="2171" name="Spellbook Paper" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -1044,15 +1044,15 @@
 			<encumbered slots="10" weight="10"/>
 		</conditions>
 		<effects>
-			<random-restoration><item id="5917" count="1" chance="10.0"/>
-<item id="5918" count="1" chance="10.0"/>
-<item id="5919" count="1" chance="10.0"/>
-<item id="5920" count="1" chance="10.0"/>
-<item id="736" count="1" chance="60.0"/>
+			<random-restoration><item id="5917" chance="10.0"/>
+<item id="5918" chance="10.0"/>
+<item id="5919" chance="10.0"/>
+<item id="5920" chance="10.0"/>
+<item id="736" chance="60.0"/>
 			</random-restoration>
 		</effects>
 	</skill>
-	<skill id="2172" name="Scroll of Giants" max-level="1" action="A1">
+	<skill id="2172" name="Scroll of Giants" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -1070,32 +1070,32 @@
 			<encumbered slots="10" weight="10"/>
 		</conditions>
 		<effects>
-			<random-restoration><item id="5922" count="1" chance="2.5"/>
-<item id="5923" count="1" chance="2.5"/>
-<item id="5924" count="1" chance="2.5"/>
-<item id="5925" count="1" chance="2.5"/>
-<item id="5926" count="1" chance="2.5"/>
-<item id="5927" count="1" chance="2.5"/>
-<item id="5928" count="1" chance="2.5"/>
-<item id="5929" count="1" chance="2.5"/>
-<item id="5930" count="1" chance="2.5"/>
-<item id="5931" count="1" chance="2.5"/>
-<item id="5932" count="1" chance="2.5"/>
-<item id="5933" count="1" chance="2.5"/>
-<item id="5934" count="1" chance="2.5"/>
-<item id="5935" count="1" chance="2.5"/>
-<item id="5936" count="1" chance="2.5"/>
-<item id="5937" count="1" chance="2.5"/>
-<item id="5938" count="1" chance="2.5"/>
-<item id="5939" count="1" chance="2.5"/>
-<item id="5940" count="1" chance="2.5"/>
-<item id="5941" count="1" chance="2.5"/>
-<item id="5942" count="1" chance="25.0"/>
-<item id="5943" count="1" chance="25.0"/>
+			<random-restoration><item id="5922" chance="2.5"/>
+<item id="5923" chance="2.5"/>
+<item id="5924" chance="2.5"/>
+<item id="5925" chance="2.5"/>
+<item id="5926" chance="2.5"/>
+<item id="5927" chance="2.5"/>
+<item id="5928" chance="2.5"/>
+<item id="5929" chance="2.5"/>
+<item id="5930" chance="2.5"/>
+<item id="5931" chance="2.5"/>
+<item id="5932" chance="2.5"/>
+<item id="5933" chance="2.5"/>
+<item id="5934" chance="2.5"/>
+<item id="5935" chance="2.5"/>
+<item id="5936" chance="2.5"/>
+<item id="5937" chance="2.5"/>
+<item id="5938" chance="2.5"/>
+<item id="5939" chance="2.5"/>
+<item id="5940" chance="2.5"/>
+<item id="5941" chance="2.5"/>
+<item id="5942" chance="25.0"/>
+<item id="5943" chance="25.0"/>
 			</random-restoration>
 		</effects>
 	</skill>
-	<skill id="2173" name="Book of Giants" max-level="1" action="A1">
+	<skill id="2173" name="Book of Giants" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -1113,22 +1113,22 @@
 			<encumbered slots="10" weight="10"/>
 		</conditions>
 		<effects>
-			<random-restoration><item id="5945" count="1" chance="5.0"/>
-<item id="5946" count="1" chance="5.0"/>
-<item id="5947" count="1" chance="5.0"/>
-<item id="5948" count="1" chance="5.0"/>
-<item id="5949" count="1" chance="5.0"/>
-<item id="5950" count="1" chance="5.0"/>
-<item id="5951" count="1" chance="5.0"/>
-<item id="5952" count="1" chance="5.0"/>
-<item id="5953" count="1" chance="5.0"/>
-<item id="5954" count="1" chance="5.0"/>
-<item id="5942" count="1" chance="25.0"/>
-<item id="5943" count="1" chance="25.0"/>
+			<random-restoration><item id="5945" chance="5.0"/>
+<item id="5946" chance="5.0"/>
+<item id="5947" chance="5.0"/>
+<item id="5948" chance="5.0"/>
+<item id="5949" chance="5.0"/>
+<item id="5950" chance="5.0"/>
+<item id="5951" chance="5.0"/>
+<item id="5952" chance="5.0"/>
+<item id="5953" chance="5.0"/>
+<item id="5954" chance="5.0"/>
+<item id="5942" chance="25.0"/>
+<item id="5943" chance="25.0"/>
 			</random-restoration>
 		</effects>
 	</skill>
-	<skill id="2177" name="Blessed Scroll of Escape: Clan Hall" max-level="1" action="A1">
+	<skill id="2177" name="Blessed Scroll of Escape: Clan Hall" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -1150,7 +1150,7 @@
 			<escape location="CLANHALL"/>
 		</effects>
 	</skill>
-	<skill id="2178" name="Blessed Scroll of Escape: Castle" max-level="1" action="A1">
+	<skill id="2178" name="Blessed Scroll of Escape: Castle" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -1172,7 +1172,7 @@
 			<escape location="CASTLE"/>
 		</effects>
 	</skill>
-	<skill id="2180" name="Wyvern Food" max-level="1" action="A1">
+	<skill id="2180" name="Wyvern Food" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >

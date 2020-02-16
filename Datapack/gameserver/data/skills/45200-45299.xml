@@ -3747,7 +3747,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="45234" name="Glory Expand Inventory" max-level="1" >
+	<skill id="45234" name="Glory Expand Inventory">
 	<!-- Inventory slots +10. -->
 		<icon initial="icon.skill0332"/>
 		<attributes property="MAGIC" >
@@ -3755,7 +3755,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="45235" name="Glory Expand Limit Weight" max-level="1" >
+	<skill id="45235" name="Glory Expand Limit Weight">
 	<!-- Weight Limit +10000. -->
 		<icon initial="icon.skill0418"/>
 		<attributes property="MAGIC" >

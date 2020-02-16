@@ -924,7 +924,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55858" name="Empire Legendary Cloak Augmentation" max-level="1" >
+	<skill id="55858" name="Empire Legendary Cloak Augmentation">
 	<!-- When using a single attack skill, there's a chance for Silence to be activated. -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
 		<attributes property="MAGIC" >
@@ -934,7 +934,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55859" name="Legendary Cloak - Silence" max-level="1" action="A1">
+	<skill id="55859" name="Legendary Cloak - Silence" action="A1">
 	<!-- Skills are sealed momentarily because of Silence. Ignores debuff immunity. -->
 		<icon initial="icon.skill1064"/>
 		<attributes property="PHYSIC" >
@@ -996,7 +996,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55863" name="Empire Legendary Cloak Augmentation" max-level="1" action="A1" type="MAGIC">
+	<skill id="55863" name="Empire Legendary Cloak Augmentation" action="A1" type="MAGIC">
 	<!-- Resurrects from death with full recovery. Buffs/ debuffs stay when dying. However, the Noblesse Blessing and Lucky Charms disappear. -->
 		<icon initial="icon.skill11826"/>
 		<attributes property="PHYSIC" >
@@ -1009,7 +1009,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55864" name="Empire Legendary Cloak Augmentation" max-level="1" >
+	<skill id="55864" name="Empire Legendary Cloak Augmentation">
 	<!-- Invincibility activated for 5 seconds if damage received when HP is below 30%%. This effect is only activated once every 5 minutes. -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
 		<attributes property="MAGIC" >
@@ -1019,7 +1019,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55865" name="Legendary Cloak - Invincibility" max-level="1" action="A1">
+	<skill id="55865" name="Legendary Cloak - Invincibility" action="A1">
 	<!-- Become invincible. -->
 		<icon initial="icon.skill1917"/>
 		<attributes property="PHYSIC" >
@@ -1058,7 +1058,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55868" name="Scroll: Enchant Cloak" max-level="1" action="A1">
+	<skill id="55868" name="Scroll: Enchant Cloak" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1068,7 +1068,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55869" name="Scroll: Enchant Cloak - Legendary" max-level="1" action="A1">
+	<skill id="55869" name="Scroll: Enchant Cloak - Legendary" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1078,7 +1078,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55870" name="Scroll: Ancient Cloak" max-level="1" action="A1">
+	<skill id="55870" name="Scroll: Ancient Cloak" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1088,18 +1088,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55871" name="Life Stone Pack - Legendary" max-level="1" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes >
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55872" name="Iron Gate Guild Treasure Chest" max-level="1" action="A1">
+	<skill id="55871" name="Life Stone Pack - Legendary" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1110,17 +1099,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55873" name="Stable Scroll: Enchant Cloak - Legendary" max-level="1" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes >
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55874" name="Ancient Cloak (Legendary) Scroll Pack" max-level="1" action="A1">
+	<skill id="55872" name="Iron Gate Guild Treasure Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1131,7 +1110,28 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55875" name="+10 Elmoreden Cloak - Legendary Box" max-level="1" action="A1">
+	<skill id="55873" name="Stable Scroll: Enchant Cloak - Legendary" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="55874" name="Ancient Cloak (Legendary) Scroll Pack" action="A1">
+	<!-- none -->
+		<icon initial="icon.skill0000"/>
+		<attributes >
+			<cast-range initial="-1"/>
+			<cool-time initial="500"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
+		<target />
+	</skill>
+	<skill id="55875" name="+10 Elmoreden Cloak - Legendary Box" action="A1">
 	<!-- Double-click to obtain a +10 Elmoreden Cloak - Legendary. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1142,7 +1142,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55876" name="+10 Aden Cloak - Legendary Box" max-level="1" action="A1">
+	<skill id="55876" name="+10 Aden Cloak - Legendary Box" action="A1">
 	<!-- Double-click to obtain a +10 Aden Cloak - Legendary. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1153,7 +1153,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55877" name="+10 Elmore Cloak - Legendary Box" max-level="1" action="A1">
+	<skill id="55877" name="+10 Elmore Cloak - Legendary Box" action="A1">
 	<!-- Double-click to obtain a +10 Elmore Cloak - Legendary. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1164,7 +1164,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55878" name="+10 Ferios Cloak - Legendary Box" max-level="1" action="A1">
+	<skill id="55878" name="+10 Ferios Cloak - Legendary Box" action="A1">
 	<!-- Double-click to obtain a +10 Ferios Cloak - Legendary. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1175,7 +1175,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55879" name="Battle Box Lv. 1" max-level="1" action="A1">
+	<skill id="55879" name="Battle Box Lv. 1" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1187,7 +1187,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55880" name="Battle Box Lv. 2" max-level="1" action="A1">
+	<skill id="55880" name="Battle Box Lv. 2" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1199,7 +1199,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55881" name="Battle Box Lv. 3" max-level="1" action="A1">
+	<skill id="55881" name="Battle Box Lv. 3" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1211,7 +1211,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55882" name="Battle Box Lv. 4" max-level="1" action="A1">
+	<skill id="55882" name="Battle Box Lv. 4" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1223,7 +1223,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55883" name="Valor Box" max-level="1" action="A1">
+	<skill id="55883" name="Valor Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1235,7 +1235,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55884" name="Bracelet of Duty - Lv. 6" max-level="1" >
+	<skill id="55884" name="Bracelet of Duty - Lv. 6">
 	<!-- Up to 4 Talismans can be equipped. Additionally STR/ INT/ DEX/ WIT/ CON/ MEN +1. -->
 		<icon initial="BranchIcon.Icon.g_pledge_bracelet_05"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -1344,7 +1344,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55889" name="Halloween Blessing" max-level="1" action="A1">
+	<skill id="55889" name="Halloween Blessing" action="A1">
 	<!-- Rico's Halloween buff. -->
 		<icon initial="icon.event_halloween_pumpkin_i00"/>
 		<attributes >
@@ -1356,7 +1356,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55890" name="Halloween Gift" max-level="1" action="A1">
+	<skill id="55890" name="Halloween Gift" action="A1">
 	<!-- Rico's Halloween buff. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1367,7 +1367,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55891" name="Treasure Chest of Forgotten Island" max-level="1" action="A1">
+	<skill id="55891" name="Treasure Chest of Forgotten Island" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1378,7 +1378,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55892" name="Dragon's Miracle Potion" max-level="1" action="A1">
+	<skill id="55892" name="Dragon's Miracle Potion" action="A1">
 	<!-- For 20 min. XP and SP gain +50%%, P./ M. Atk. +18%%, P./ M. Def. +22%%, Atk. Spd./ Casting Spd. +5%%, P./ M. Crirical Rate +30, P./ M. Critical Damage +10%%, HP/ MP/ CP +25%%, HP/ MP Recovery +30%%. At a certain chance absorbs 5%% of the damage inflicted on target as HP. Buff remains after death. -->
 		<icon initial="icon.bm_dragon_posion_brave"/>
 		<attributes property="PHYSIC" >
@@ -1389,7 +1389,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55893" name="Balthus Knights Trophy Chest" max-level="1" action="A1">
+	<skill id="55893" name="Balthus Knights Trophy Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1400,7 +1400,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55894" name="Transformation Into Teddy Bear" max-level="1" action="A1">
+	<skill id="55894" name="Transformation Into Teddy Bear" action="A1">
 	<!-- Transforms into teddy bear. During transformation HP/ MP +20%%, P./ M. Def. +3%%, acquired XP/ SP during hunt +5%%. Effect remains after death. -->
 		<icon initial="icon.gomdori_chest_change"/>
 		<attributes property="PHYSIC" auto-use="BUFF">
@@ -1413,7 +1413,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55895" name="Transformation Into Panda" max-level="1" action="A1">
+	<skill id="55895" name="Transformation Into Panda" action="A1">
 	<!-- Transforms into panda. During transformation HP/ MP +20%%, P./ M. Def. +3%%, acquired XP/ SP during hunt +5%%. Effect remains after death. -->
 		<icon initial="icon.sayha2017_panda"/>
 		<attributes property="PHYSIC" auto-use="BUFF">
@@ -1426,7 +1426,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55896" name="Transformation Into Cat" max-level="1" action="A1">
+	<skill id="55896" name="Transformation Into Cat" action="A1">
 	<!-- Transforms into cat. During transformation HP/ MP +20%%, P./ M. Def. +3%%, acquired XP/ SP during hunt +5%%. Effect remains after death. -->
 		<icon initial="icon.sayha2017_cat"/>
 		<attributes property="PHYSIC" auto-use="BUFF">
@@ -1439,7 +1439,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55897" name="Bonfire" max-level="1" action="A1">
+	<skill id="55897" name="Bonfire" action="A1">
 	<!-- Transforms into cat. During transformation HP/ MP +20%%, P./ M. Def. +3%%, acquired XP/ SP during hunt +5%%. Effect remains after death. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1453,7 +1453,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55898" name="Regular Dish" max-level="1" action="A1">
+	<skill id="55898" name="Regular Dish" action="A1">
 	<!-- For 30 minutes, STR/DEX/CON/INT/WIT/MEN +1. Additionally, XP/SP Gain +5%%. -->
 		<icon initial="icon.etc_food_dish_i00"/>
 		<attributes property="PHYSIC" >
@@ -1464,7 +1464,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55899" name="Match Girls' Gift" max-level="1" action="A1">
+	<skill id="55899" name="Match Girls' Gift" action="A1">
 	<!-- For 30 minutes, STR/DEX/CON/INT/WIT/MEN +1. Additionally, XP/SP Gain +5%%. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >

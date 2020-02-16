@@ -51,7 +51,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6104" name="Event Cancel" max-level="1" action="A1">
+	<skill id="6104" name="Event Cancel" action="A1">
 	<!-- Reset score. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -64,7 +64,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6105" name="Turkey's Mistake" max-level="1" action="A2">
+	<skill id="6105" name="Turkey's Mistake" action="A2">
 	<!-- Stupid Turkey's Mistake. For 1 hour, increases Max HP +10%%, Max MP +10%%, Max CP +10%%, Movement Speed +15%%, P. Atk. +10%%, M. Atk. +15%%, P. Critical Rate +5, P. Critical Damage +15%%, and M. Critical Rate +20. -->
 		<icon initial="icon.turkey_buff_i00"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -82,7 +82,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6106" name="Winter Holiday Festival" max-level="1" action="A2">
+	<skill id="6106" name="Winter Holiday Festival" action="A2">
 	<!-- Holiday festival. For 1 hour, increases Max HP by 5%%, Max MP by 5%%, Max CP by 5%%, Speed by 10, P. Atk. by 8%%, and M. Atk. by 10%%. -->
 		<icon initial="icon.xmas_miracle_i00"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -100,7 +100,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6107" name="Winter Holiday Blessing - Gludio" max-level="1" action="A2">
+	<skill id="6107" name="Winter Holiday Blessing - Gludio" action="A2">
 	<!-- Holiday Blessing - Registered in Gludio territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa. -->
 		<icon initial="icon.skill5762"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -118,7 +118,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6108" name="Winter Holiday Blessing - Dion" max-level="1" action="A2">
+	<skill id="6108" name="Winter Holiday Blessing - Dion" action="A2">
 	<!-- Holiday Blessing - Registered in Dion territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa. -->
 		<icon initial="icon.skill5762"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -136,7 +136,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6109" name="Winter Holiday Blessing - Giran" max-level="1" action="A2">
+	<skill id="6109" name="Winter Holiday Blessing - Giran" action="A2">
 	<!-- Holiday Blessing - Registered in Giran territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa. -->
 		<icon initial="icon.skill5762"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -154,7 +154,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6110" name="Winter Holiday Blessing - Oren" max-level="1" action="A2">
+	<skill id="6110" name="Winter Holiday Blessing - Oren" action="A2">
 	<!-- Holiday Blessing - Registered in Oren territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa. -->
 		<icon initial="icon.skill5762"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -172,7 +172,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6111" name="Winter Holiday Blessing - Aden" max-level="1" action="A2">
+	<skill id="6111" name="Winter Holiday Blessing - Aden" action="A2">
 	<!-- Holiday Blessing - Registered in Aden territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa. -->
 		<icon initial="icon.skill5762"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -190,7 +190,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6112" name="Winter Holiday Blessing - Innadril" max-level="1" action="A2">
+	<skill id="6112" name="Winter Holiday Blessing - Innadril" action="A2">
 	<!-- Holiday Blessing - Registered in Innadril territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa. -->
 		<icon initial="icon.skill5762"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -208,7 +208,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6113" name="Winter Holiday Blessing - Goddard" max-level="1" action="A2">
+	<skill id="6113" name="Winter Holiday Blessing - Goddard" action="A2">
 	<!-- Holiday Blessing - Registered in Goddard territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa. -->
 		<icon initial="icon.skill5762"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -226,7 +226,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6114" name="Winter Holiday Blessing - Rune" max-level="1" action="A2">
+	<skill id="6114" name="Winter Holiday Blessing - Rune" action="A2">
 	<!-- Holiday Blessing - Registered in Rune territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa. -->
 		<icon initial="icon.skill5762"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -244,7 +244,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6115" name="Winter Holiday Blessing - Schuttgart" max-level="1" action="A2">
+	<skill id="6115" name="Winter Holiday Blessing - Schuttgart" action="A2">
 	<!-- Holiday Blessing - Registered in Schuttgart territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa. -->
 		<icon initial="icon.skill5762"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -262,7 +262,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6116" name="Attack Turkey" max-level="1" action="A1">
+	<skill id="6116" name="Attack Turkey" action="A1">
 	<!-- Attacks the Turkey -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -303,7 +303,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6118" name="Holiday Blessing" max-level="1" action="A1">
+	<skill id="6118" name="Holiday Blessing" action="A1">
 	<!-- For 1 hr., Might, Shield, Focus, Heist, Acumen, Empower, and Wind Walk are applied. -->
 		<icon initial="icon.etc_x_mas_tree_i00"/>
 		<attributes property="PHYSIC" >
@@ -316,7 +316,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6119" name="Blessing of Abundance" max-level="1" action="A1">
+	<skill id="6119" name="Blessing of Abundance" action="A1">
 	<!-- Applies Might, Shield, Focus, Haste, Acumen, Empower, and Wind Walk effects for 1 hour. -->
 		<icon initial="icon.skill5662"/>
 		<attributes property="PHYSIC" >
@@ -327,7 +327,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6120" name="Santa's Reward" max-level="1" action="A2">
+	<skill id="6120" name="Santa's Reward" action="A2">
 	<!-- Santa's Reward. For 1 hour, increases Max HP +10%%, Max MP +10%%, Max CP +10%%, Movement Speed +15%%, P. Atk. +10%%, M. Atk. +15%%, P. Critical Rate +5, P. Critical Damage +15%%, and M. Critical Rate +20. -->
 		<icon initial="icon.etc_pi_gift_box_i04"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -351,30 +351,30 @@
 			<stat-modify stat="MAGIC_ATTACK" mode="PER">
 				<power initial="15.0"/>
 			</stat-modify>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="15.0"/>
 			</speed>
-			<vital-stat-modify stat="MAX_CP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_CP" mode="PER">
 				<power initial="10.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="10.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
 				<power initial="15.0"/>
 			</stat-modify>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="DIFF">
+			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0">
 				<power initial="50.0"/>
 			</stat-hp-based>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
 				<power initial="2.0"/>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="10.0"/>
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="6124" name="Agathion Cute Trick - Neolithica" max-level="1" action="A1">
+	<skill id="6124" name="Agathion Cute Trick - Neolithica" action="A1">
 	<!-- See the summoned spirit perform cute tricks. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -388,7 +388,7 @@
 			<condition name="OpNeedAgathion"/>
 		</conditions>
 	</skill>
-	<skill id="6125" name="Paralysis" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="6125" name="Paralysis" debuff="true" action="A2" type="MAGIC">
 	<!-- Paralyzed and unable to move momentarily. -->
 		<icon initial="icon.skill1170"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="PARALYZE" triggered="true" >
@@ -407,7 +407,7 @@
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="6126" name="Paralysis" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="6126" name="Paralysis" debuff="true" action="A2" type="MAGIC">
 	<!-- Paralyzed and unable to move momentarily. -->
 		<icon initial="icon.skill1170"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="PARALYZE" triggered="true" >
@@ -426,7 +426,7 @@
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="6127" name="Anti-limit" max-level="1" >
+	<skill id="6127" name="Anti-limit">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -442,7 +442,7 @@
 			</block-abnormal>
 		</effects>
 	</skill>
-	<skill id="6128" name="Presentation - Cow Rage" max-level="1" action="A1">
+	<skill id="6128" name="Presentation - Cow Rage" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -453,7 +453,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6129" name="Stun" max-level="1" debuff="true" action="A2">
+	<skill id="6129" name="Stun" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0092"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="2" >
@@ -476,7 +476,7 @@
 			<chance initial="80"/>
 		</abnormal>
 	</skill>
-	<skill id="6130" name="Mutant Curse" max-level="1" debuff="true" action="A2">
+	<skill id="6130" name="Mutant Curse" debuff="true" action="A2">
 	<!-- Mutant Curse: Stunned and unable to move momentarily. -->
 		<icon initial="icon.skill0092"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" >
@@ -499,7 +499,7 @@
 			<chance initial="50"/>
 		</abnormal>
 	</skill>
-	<skill id="6131" name="Decrease Speed" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="6131" name="Decrease Speed" debuff="true" action="A2" type="MAGIC">
 	<!-- Mutant Curse: Movement Speed momentarily decreased by 8%%. -->
 		<icon initial="icon.skill1160"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" hit-cancel-time="1.5" level-bonus-rate="2" >
@@ -521,7 +521,7 @@
 			<chance initial="80"/>
 		</abnormal>
 	</skill>
-	<skill id="6132" name="Decrease Atk. Spd." max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="6132" name="Decrease Atk. Spd." debuff="true" action="A2" type="MAGIC">
 	<!-- Mutant Curse: Atk. Spd. momentarily decreased by 8%%. -->
 		<icon initial="icon.skill4038"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" >
@@ -543,7 +543,7 @@
 			<chance initial="80"/>
 		</abnormal>
 	</skill>
-	<skill id="6133" name="Mysterious Effect" max-level="1" debuff="true" action="A2">
+	<skill id="6133" name="Mysterious Effect" debuff="true" action="A2">
 	<!-- Head is enlarged. -->
 		<icon initial="icon.skill2513"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="ETC" >
@@ -559,7 +559,7 @@
 			<time initial="1800"/>
 		</abnormal>
 	</skill>
-	<skill id="6134" name="Mutant Curse" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="6134" name="Mutant Curse" debuff="true" action="A2" type="MAGIC">
 	<!-- Mutant Curse: Atk. Spd. and Movement Speed are decreased by 30%% momentarily. -->
 		<icon initial="icon.skill4038"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" >
@@ -581,7 +581,7 @@
 			<chance initial="80"/>
 		</abnormal>
 	</skill>
-	<skill id="6135" name="Mutant Curse" max-level="1" debuff="true" action="A2">
+	<skill id="6135" name="Mutant Curse" debuff="true" action="A2">
 	<!-- Mutant Curse: Stunned and unable to move momentarily. -->
 		<icon initial="icon.skill0092"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" >
@@ -601,7 +601,7 @@
 			<chance initial="50"/>
 		</abnormal>
 	</skill>
-	<skill id="6136" name="Agathion Cute Trick - Juju" max-level="1" action="A1">
+	<skill id="6136" name="Agathion Cute Trick - Juju" action="A1">
 	<!-- See the summoned spirit perform cute tricks. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -616,7 +616,7 @@
 			<condition name="OpNeedAgathion"/>
 		</conditions>
 	</skill>
-	<skill id="6137" name="Agathion Juju - Mysterious Effect" max-level="1" action="A2">
+	<skill id="6137" name="Agathion Juju - Mysterious Effect" action="A2">
 	<!-- Makes the head enlarge. -->
 		<icon initial="icon.skill2513"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="ETC" >
@@ -630,7 +630,7 @@
 			<time initial="1200"/>
 		</abnormal>
 	</skill>
-	<skill id="6138" name="Agathion Juju - Large Firecracker" max-level="1" action="A1">
+	<skill id="6138" name="Agathion Juju - Large Firecracker" action="A1">
 	<!-- Can set off large firecrackers. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -642,7 +642,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6139" name="Fake Tears" max-level="1" action="A2">
+	<skill id="6139" name="Fake Tears" action="A2">
 	<!-- For 10 minutes, weapon appearances change through the effect of the "Fake Tears" that were scattered by "Pierre Baguette." But, weapons don't change their abilities. -->
 		<icon initial="icon.etc_water_of_silen_i00"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -683,7 +683,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6141" name="Source of Marsh" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="6141" name="Source of Marsh" debuff="true" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" >
@@ -706,7 +706,7 @@
 		level 3: You are covered in hot and sticky tar. Your Movement Speed is decreased by 90% for 5 minutes. P. Def. and P. evasion are decreased by 30%.
 	 -->
 		<icon initial="icon.skill0770"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2" dispellable="false" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2">
 			<magic-level initial="-1"/>
 			<cast-range initial="300"/>
 			<reuse initial="30000"/>
@@ -748,7 +748,7 @@
 			</stat-hp-based>
 		</effects>
 	</skill>
-	<skill id="6143" name="Ancient Beam" max-level="1" action="A1" type="MAGIC">
+	<skill id="6143" name="Ancient Beam" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -765,7 +765,7 @@
 		</consume>
 		<target type="ENEMY" />
 	</skill>
-	<skill id="6144" name="Ancient Beam" max-level="1" action="A1" type="MAGIC">
+	<skill id="6144" name="Ancient Beam" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -782,7 +782,7 @@
 		</consume>
 		<target type="ENEMY" />
 	</skill>
-	<skill id="6145" name="Earth Wyrm's Evil Aura" max-level="1" action="A2" type="MAGIC">
+	<skill id="6145" name="Earth Wyrm's Evil Aura" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -801,7 +801,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6146" name="Forfeiture of Will" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="6146" name="Forfeiture of Will" debuff="true" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" hit-cancel-time="1.5" >
@@ -818,7 +818,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6147" name="Kasha's Divine Protection" max-level="1" action="A2" type="MAGIC">
+	<skill id="6147" name="Kasha's Divine Protection" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" hit-cancel-time="1.5" >
@@ -850,7 +850,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6148" name="Altar's Curse" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="6148" name="Altar's Curse" debuff="true" action="A2" type="MAGIC">
 	<!-- You have been weakened by the Altar's Curse. You probably can't fight in this condition. -->
 		<icon initial="icon.skill1064"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="DERANGEMENT" hit-cancel-time="1.5" >
@@ -877,7 +877,7 @@
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
 				<power initial="-99.0"/>
 			</stat-modify>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="-99.0"/>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
@@ -885,10 +885,10 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6149" name="Kasha's Brand" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="6149" name="Kasha's Brand" debuff="true" action="A2" type="MAGIC">
 	<!-- Kasha's Brand. For 5 minutes, P. Def. -30%%. -->
 		<icon initial="icon.skill0122"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" dispellable="false" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="-1"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="-100"/>
@@ -921,7 +921,7 @@
 			<value level="3">icon.skill6151_3</value>
 			<value level="4">icon.skill6151_4</value>
 		</icon>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" dispellable="false" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="-1"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="-100"/>
@@ -974,7 +974,7 @@
 			<value level="3">icon.skill6152_3</value>
 			<value level="4">icon.skill6152_4</value>
 		</icon>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" dispellable="false" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="-1"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="-100"/>
@@ -1027,7 +1027,7 @@
 			<value level="3">icon.skill6154_3</value>
 			<value level="4">icon.skill6154_4</value>
 		</icon>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" dispellable="false" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED">
 			<magic-level initial="-1"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="-100"/>
@@ -1042,7 +1042,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="DIFF">
+			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0">
 				<power initial="150.0">
 					<value level="2">200.0</value>
 					<value level="3">520.0</value>
@@ -1073,7 +1073,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6156" name="Mood Melody" max-level="1" action="A2">
+	<skill id="6156" name="Mood Melody" action="A2">
 	<!-- For 1hour, grants the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk, Death Whisper, and Vampiric Rage. -->
 		<icon initial="icon.bm_magmeld"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" blocked-on-olympiad="true" >
@@ -1108,7 +1108,7 @@
 			<stat-modify stat="MAGIC_ATTACK" mode="PER">
 				<power initial="75.0"/>
 			</stat-modify>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="33.0"/>
 			</speed>
 			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
@@ -1119,7 +1119,7 @@
 			</vampiric-attack>
 		</effects>
 	</skill>
-	<skill id="6166" name="Hold" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="6166" name="Hold" debuff="true" action="A2" type="MAGIC">
 	<!-- Afflicted with Hold and unable to move momentarily. -->
 		<icon initial="icon.skill4047"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="HOLD" level-bonus-rate="2" >
@@ -1233,7 +1233,7 @@
 			<chance initial="50"/>
 		</abnormal>
 	</skill>
-	<skill id="6169" name="Shyeed's Fury" max-level="1" debuff="true" action="A2">
+	<skill id="6169" name="Shyeed's Fury" debuff="true" action="A2">
 	<!-- Shyeed's cries continue to be heard. Nearby monsters seem to get stronger. -->
 		<icon initial="icon.skill6169"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -1251,7 +1251,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6170" name="Shyeed's Fury" max-level="1" action="A2">
+	<skill id="6170" name="Shyeed's Fury" action="A2">
 	<!-- none -->
 		<icon initial="icon.skill6169"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -1286,7 +1286,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6171" name="Full Authority" max-level="1" action="A2">
+	<skill id="6171" name="Full Authority" action="A2">
 	<!-- It feels like something will escape the mouth. The predecessor's strength is full. Overall abilities are increased. -->
 		<icon initial="icon.skill6171"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -1321,7 +1321,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6172" name="Presentation - Tyranno" max-level="1" action="A2">
+	<skill id="6172" name="Presentation - Tyranno" action="A2">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -1339,12 +1339,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="2320.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6173" name="Presentation - Memorial Service for Repose" max-level="1" action="A1">
+	<skill id="6173" name="Presentation - Memorial Service for Repose" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1355,7 +1355,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6174" name="Presentation - Incense for Relic" max-level="1" action="A1">
+	<skill id="6174" name="Presentation - Incense for Relic" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1366,7 +1366,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6175" name="Presentation - High Ranking Dawn Priest's Prayer" max-level="1" action="A1">
+	<skill id="6175" name="Presentation - High Ranking Dawn Priest's Prayer" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1377,7 +1377,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6176" name="Presentation - Dawn's Seal Stone" max-level="1" action="A1">
+	<skill id="6176" name="Presentation - Dawn's Seal Stone" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1388,7 +1388,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6177" name="Presentation - Anakim's Message" max-level="1" action="A1">
+	<skill id="6177" name="Presentation - Anakim's Message" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1399,7 +1399,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6178" name="Presentation - Ultimate Seal Motion1" max-level="1" action="A1">
+	<skill id="6178" name="Presentation - Ultimate Seal Motion1" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1410,7 +1410,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6179" name="Presentation - Ultimate Seal Motion2" max-level="1" action="A1">
+	<skill id="6179" name="Presentation - Ultimate Seal Motion2" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1421,7 +1421,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6180" name="Presentation - Lilith Presentation1" max-level="1" action="A1">
+	<skill id="6180" name="Presentation - Lilith Presentation1" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1432,7 +1432,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6181" name="Presentation - Lilith Presentation2" max-level="1" action="A1">
+	<skill id="6181" name="Presentation - Lilith Presentation2" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1443,7 +1443,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6182" name="Presentation - Lilith Presentation3" max-level="1" action="A1">
+	<skill id="6182" name="Presentation - Lilith Presentation3" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1454,7 +1454,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6183" name="Presentation - Lilith Presentation4" max-level="1" action="A1">
+	<skill id="6183" name="Presentation - Lilith Presentation4" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1465,7 +1465,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6184" name="Presentation - Anakim's Presentation1" max-level="1" action="A1">
+	<skill id="6184" name="Presentation - Anakim's Presentation1" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1476,7 +1476,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6185" name="Presentation - Anakim's Presentation2" max-level="1" action="A1">
+	<skill id="6185" name="Presentation - Anakim's Presentation2" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1487,7 +1487,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6186" name="Presentation - Anakim's Presentation3" max-level="1" action="A1">
+	<skill id="6186" name="Presentation - Anakim's Presentation3" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1498,7 +1498,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6187" name="Presentation - Lilith Battle" max-level="1" debuff="true" action="A1">
+	<skill id="6187" name="Presentation - Lilith Battle" debuff="true" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1511,7 +1511,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6188" name="Presentation - Lilith' Steward Battle1" max-level="1" action="A1">
+	<skill id="6188" name="Presentation - Lilith' Steward Battle1" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1524,7 +1524,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6189" name="Presentation - Lilith' Steward Battle2" max-level="1" debuff="true" action="A1">
+	<skill id="6189" name="Presentation - Lilith' Steward Battle2" debuff="true" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" trait="POISON" >
@@ -1537,7 +1537,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6190" name="Presentation - Lilith' Bodyguards Battle1" max-level="1" debuff="true" action="A1">
+	<skill id="6190" name="Presentation - Lilith' Bodyguards Battle1" debuff="true" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" trait="HOLD" >
@@ -1550,7 +1550,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6191" name="Presentation - Anakim Battle" max-level="1" action="A1">
+	<skill id="6191" name="Presentation - Anakim Battle" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1563,7 +1563,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6192" name="Presentation - Anakim's Guardian Battle1" max-level="1" action="A1">
+	<skill id="6192" name="Presentation - Anakim's Guardian Battle1" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1577,7 +1577,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6193" name="Presentation - Anakim's Guardian Battle2" max-level="1" action="A1">
+	<skill id="6193" name="Presentation - Anakim's Guardian Battle2" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1591,7 +1591,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6194" name="Presentation - Anakim's Royal Guard Battle" max-level="1" action="A1">
+	<skill id="6194" name="Presentation - Anakim's Royal Guard Battle" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1605,7 +1605,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6195" name="Presentation - Anakim's Executor Battle" max-level="1" action="A1">
+	<skill id="6195" name="Presentation - Anakim's Executor Battle" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1619,7 +1619,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="6197" name="Agathion Cute Trick - Oink Oink" max-level="1" action="A1">
+	<skill id="6197" name="Agathion Cute Trick - Oink Oink" action="A1">
 	<!-- See the summoned spirit perform cute tricks. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1633,7 +1633,7 @@
 			<condition name="OpNeedAgathion"/>
 		</conditions>
 	</skill>
-	<skill id="6198" name="Agathion Cute Trick - Light of the Dawn" max-level="1" action="A1">
+	<skill id="6198" name="Agathion Cute Trick - Light of the Dawn" action="A1">
 	<!-- See the summoned spirit perform cute tricks. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1692,7 +1692,7 @@
 			<fan-range start-angle="0" radius="150" angle="60"/>
 		</target>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="1832.0">
 					<value level="2">2272.0</value>
 					<value level="3">2751.0</value>

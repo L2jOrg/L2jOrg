@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="9487" name="Angel Cat's Blessing" max-level="1" action="A2">
+	<skill id="9487" name="Angel Cat's Blessing" action="A2">
 	<!-- For 60 minutes, Max HP/Max MP +5%% and Hunting XP/SP Gain +20%%. Effect remains even after death. -->
 		<icon initial="icon.skilltransform4"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" >
@@ -18,19 +18,19 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<conditions>
-			<level affect="CASTER" min-level="1" max-level="85" scope="PASSIVE"/>
+			<level max-level="85" scope="PASSIVE"/>
 		</conditions>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="5.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="5.0"/>
 			</vital-stat-modify>
-			<stat-modify stat="BONUS_EXP" mode="DIFF">
+			<stat-modify stat="BONUS_EXP">
 				<power initial="20.0"/>
 			</stat-modify>
-			<stat-modify stat="BONUS_SP" mode="DIFF">
+			<stat-modify stat="BONUS_SP">
 				<power initial="20.0"/>
 			</stat-modify>
 		</effects>

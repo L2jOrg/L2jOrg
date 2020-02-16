@@ -40,8 +40,8 @@
 	<!-- XP/SP Gain +20% and a chance to get Special Supplies for 2 hour. Intended for Lv. 20 and higher.   -->
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39272" level="1" value="-1"/>  <!-- Officer of Balthus Knights -->
+		<skill-reducer>
+			<skill id="39272" value="-1"/>  <!-- Officer of Balthus Knights -->
 		</skill-reducer>
 	</item>
 
@@ -54,9 +54,9 @@
 	<item id="90508" name="Golden Fruit Buff Lv. 1" type="SCROLL" icon="icon.bm_dragon_fruit">
 	<!-- For 20 minutes, P./M. Atk. +12%, P./M. Def. +15%, Max. HP/CP/MP +25%, P./M. Critical Rate +10, P./M. Critical Damage +5%, HP/MP Recovery Bonus +30%. At a certain chance absorbs 5% of the damage inflicted on target as HP. XP and SP gained through hunting +10%. Cooldown is 1 minute. Buff remains after death. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55682" level="1" value="-1"/>  <!-- Golden Fruit Buff -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="55682" value="-1"/>  <!-- Golden Fruit Buff -->
 		</skill-reducer>
 	</item>
 
@@ -123,18 +123,18 @@
 	<item id="90519" name="Shining Scroll of Mood Melody - Exchangeable" type="SCROLL" icon="icon.bm_magmeld">
 	<!-- Activates Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration effects for 20 min. The buff effect doesn't disappear upon death\n\n<Note>\n1. Shining Scroll of Mood Melody cannot be stacked with Scroll of Mood Melody.\n\n2. Its duration is equal to that of the last used item. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39298" level="1" value="-1"/>  <!-- Shining Mood Melody -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39298" value="-1"/>  <!-- Shining Mood Melody -->
 		</skill-reducer>
 	</item>
 
 	<item id="90520" name="Fire Dragon's Blessing Scroll" type="SCROLL" icon="icon.bm_blessing_dragon">
 	<!-- For 20 minutes.\n\nBlessing Of Fire Dragon: Buff/ debuff effects remain after death, but Blessing of Fire Dragon is consumed. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51014" level="1" value="-1"/>  <!-- Blessing of Fire Dragon Scroll -->
+		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="51014" value="-1"/>  <!-- Blessing of Fire Dragon Scroll -->
 		</skill-reducer>
 	</item>
 

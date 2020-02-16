@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="6300" name="Self-destruction" max-level="1" debuff="true" action="A1">
+	<skill id="6300" name="Self-destruction" debuff="true" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" suicide="true" >
@@ -19,7 +19,7 @@
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="350" />
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="3194.0"/>
 			</physical-attack>
 			<call-skill skill="6662">
@@ -62,7 +62,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6302" name="Icy Air" max-level="1" action="A2" type="MAGIC">
+	<skill id="6302" name="Icy Air" action="A2" type="MAGIC">
 	<!-- Increase P. Def. and M. Def. by 15%%. -->
 		<icon initial="icon.skill6302"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" triggered="true" >
@@ -89,7 +89,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6303" name="Trial of the Coup" max-level="1" action="A1">
+	<skill id="6303" name="Trial of the Coup" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -109,12 +109,12 @@
 		</consume>
 		<target type="ENEMY_ONLY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="4563.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6304" name="Stun" max-level="1" debuff="true" action="A2">
+	<skill id="6304" name="Stun" debuff="true" action="A2">
 	<!-- Momentarily stunned and rendered immobile for 2 seconds. -->
 		<icon initial="icon.skill0100"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" >
@@ -142,7 +142,7 @@
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="6305" name="Divine Gnosis" max-level="1" action="A1">
+	<skill id="6305" name="Divine Gnosis" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -162,12 +162,12 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="4563.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6306" name="Solina Strike" max-level="1" debuff="true" action="A2">
+	<skill id="6306" name="Solina Strike" debuff="true" action="A2">
 	<!-- Causes profuse bleeding for 10 seconds, causing 139 HP damage per second. -->
 		<icon initial="icon.skill0096"/>
 		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2" >
@@ -192,12 +192,12 @@
 			<chance initial="100"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="139.0"/>
 			</damage-over-time>
 		</effects>
 	</skill>
-	<skill id="6307" name="Opus of the Hand" max-level="1" debuff="true" action="A1" type="MAGIC">
+	<skill id="6307" name="Opus of the Hand" debuff="true" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -218,12 +218,12 @@
 		</consume>
 		<target type="ENEMY_ONLY" range="180" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="120.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="6308" name="Opus of the Wave" max-level="1" debuff="true" action="A1" type="MAGIC">
+	<skill id="6308" name="Opus of the Wave" debuff="true" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -244,12 +244,12 @@
 		</consume>
 		<target type="ENEMY_ONLY" range="270" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="120.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="6309" name="Pain of the Ascetic" max-level="1" debuff="true" action="A1" type="MAGIC">
+	<skill id="6309" name="Pain of the Ascetic" debuff="true" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -270,12 +270,12 @@
 		</consume>
 		<target type="ENEMY_ONLY" range="180" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="120.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="6310" name="Loss of Quest" max-level="1" action="A1" type="MAGIC">
+	<skill id="6310" name="Loss of Quest" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -300,7 +300,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6311" name="Solina Thrust" max-level="1" action="A1">
+	<skill id="6311" name="Solina Thrust" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -320,12 +320,12 @@
 		</consume>
 		<target type="ENEMY_ONLY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="4563.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6312" name="Launch Holy Sword Energy" max-level="1" debuff="true" action="A1">
+	<skill id="6312" name="Launch Holy Sword Energy" debuff="true" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -345,12 +345,12 @@
 		</consume>
 		<target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="180" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="4563.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6313" name="Solina Bless" max-level="1" action="A2" type="MAGIC">
+	<skill id="6313" name="Solina Bless" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" >
@@ -379,7 +379,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6314" name="Divine Judgment" max-level="1" debuff="true" action="A1" type="MAGIC">
+	<skill id="6314" name="Divine Judgment" debuff="true" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -402,12 +402,12 @@
 			<fan-range start-angle="0" radius="100" angle="0"/>
 		</target>
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="125.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="6315" name="Divine Blow" max-level="1" action="A1">
+	<skill id="6315" name="Divine Blow" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -427,12 +427,12 @@
 		</consume>
 		<target type="ENEMY_ONLY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="4563.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6316" name="Execution of Authority" max-level="1" action="A1" type="MAGIC">
+	<skill id="6316" name="Execution of Authority" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -453,7 +453,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6317" name="Divinity Tacit" max-level="1" action="A1" type="MAGIC">
+	<skill id="6317" name="Divinity Tacit" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -474,12 +474,12 @@
 		</consume>
 		<target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="180" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="128.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="6318" name="Holy Shield Defense" max-level="1" action="A2" type="MAGIC">
+	<skill id="6318" name="Holy Shield Defense" action="A2" type="MAGIC">
 	<!-- Increases P. Def. by 10%% for 3 seconds. -->
 		<icon initial="icon.skill1040"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -507,7 +507,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6319" name="Divine Magic Protection" max-level="1" action="A2" type="MAGIC">
+	<skill id="6319" name="Divine Magic Protection" action="A2" type="MAGIC">
 	<!-- Increases M. Def. by 10%% for 3 seconds. -->
 		<icon initial="icon.skill6319"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -535,7 +535,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6320" name="Summon Holy Magic Circle" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="6320" name="Summon Holy Magic Circle" debuff="true" action="A2" type="MAGIC">
 	<!-- Decreases enemy's P. Def. by 23%% for 15 seconds. -->
 		<icon initial="icon.skill6320"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2" >
@@ -566,7 +566,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6321" name="Divine Flash" max-level="1" action="A1" type="MAGIC">
+	<skill id="6321" name="Divine Flash" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -587,12 +587,12 @@
 		</consume>
 		<target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="150" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="121.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="6322" name="Divine Impact" max-level="1" action="A1" type="MAGIC">
+	<skill id="6322" name="Divine Impact" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -613,12 +613,12 @@
 		</consume>
 		<target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="150" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="121.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="6323" name="Divine Bolt" max-level="1" action="A1" type="MAGIC">
+	<skill id="6323" name="Divine Bolt" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -633,12 +633,12 @@
 		</attributes>
 		<target type="ENEMY_ONLY" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="85.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="6324" name="Divine Strike" max-level="1" action="A1" type="MAGIC">
+	<skill id="6324" name="Divine Strike" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -655,12 +655,12 @@
 		</attributes>
 		<target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="270" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="121.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="6325" name="Divine Nova" max-level="1" action="A1" type="MAGIC">
+	<skill id="6325" name="Divine Nova" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -677,12 +677,12 @@
 		</attributes>
 		<target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="270" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="85.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="6326" name="Martyr's Happiness" max-level="1" debuff="true" action="A1">
+	<skill id="6326" name="Martyr's Happiness" debuff="true" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -701,12 +701,12 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="20531.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6327" name="Divinity Worship" max-level="1" action="A1">
+	<skill id="6327" name="Divinity Worship" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -726,12 +726,12 @@
 		</consume>
 		<target type="ENEMY_ONLY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="11407.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6328" name="Fighter Judgement" max-level="1" debuff="true" action="A1" type="MAGIC">
+	<skill id="6328" name="Fighter Judgement" debuff="true" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -752,12 +752,12 @@
 		</consume>
 		<target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="270" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="205.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="6329" name="Fighter Blow" max-level="1" action="A1">
+	<skill id="6329" name="Fighter Blow" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -777,12 +777,12 @@
 		</consume>
 		<target type="ENEMY_ONLY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="4563.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6330" name="Salmon Porridge Attack" max-level="1" action="A1">
+	<skill id="6330" name="Salmon Porridge Attack" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -802,7 +802,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6331" name="Campfire Tired" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="6331" name="Campfire Tired" debuff="true" action="A2" type="MAGIC">
 	<!-- Atk. Spd. decreases. -->
 		<icon initial="icon.skill1206"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" >
@@ -824,7 +824,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6332" name="Campfire Full" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="6332" name="Campfire Full" debuff="true" action="A2" type="MAGIC">
 	<!-- Movement Speed and Atk. Spd. decreased. -->
 		<icon initial="icon.skill1206"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" >
@@ -849,7 +849,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6333" name="Electric Bolt 1" max-level="1" debuff="true" action="A2">
+	<skill id="6333" name="Electric Bolt 1" debuff="true" action="A2">
 	<!-- Causes bleeding for 3 seconds, draining 200 HP per second. -->
 		<icon initial="icon.skill0096"/>
 		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2" >
@@ -872,15 +872,15 @@
 			<chance initial="1"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="4563.0"/>
 			</physical-attack>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="200.0"/>
 			</damage-over-time>
 		</effects>
 	</skill>
-	<skill id="6334" name="Stun" max-level="1" debuff="true" action="A2">
+	<skill id="6334" name="Stun" debuff="true" action="A2">
 	<!-- Momentarily stunned and rendered immobile for 4 seconds. -->
 		<icon initial="icon.skill0100"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" >
@@ -903,13 +903,13 @@
 			<chance initial="40"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="4563.0"/>
 			</physical-attack>
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="6335" name="Electric Rain 1" max-level="1" debuff="true" action="A1" type="MAGIC">
+	<skill id="6335" name="Electric Rain 1" debuff="true" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -927,12 +927,12 @@
 		</consume>
 		<target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="200" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="120.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="6336" name="Electric Rain 2" max-level="1" debuff="true" action="A1" type="MAGIC">
+	<skill id="6336" name="Electric Rain 2" debuff="true" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -950,12 +950,12 @@
 		</consume>
 		<target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="200" />
 		<effects>
-			<magical-attack over-hit="false">
+			<magical-attack>
 				<power initial="121.0"/>
 			</magical-attack>
 		</effects>
 	</skill>
-	<skill id="6337" name="Red Slash 1" max-level="1" action="A1">
+	<skill id="6337" name="Red Slash 1" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -973,12 +973,12 @@
 		</consume>
 		<target type="ENEMY_ONLY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="4563.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6338" name="Red Slash 2" max-level="1" action="A1">
+	<skill id="6338" name="Red Slash 2" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -996,12 +996,12 @@
 		</consume>
 		<target type="ENEMY_ONLY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="4563.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6339" name="Divine Hammer Attack" max-level="1" debuff="true" action="A2">
+	<skill id="6339" name="Divine Hammer Attack" debuff="true" action="A2">
 	<!-- Causes bleeding for 3 seconds, draining 200 HP per second. -->
 		<icon initial="icon.skill0096"/>
 		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2" >
@@ -1024,15 +1024,15 @@
 			<chance initial="1"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="4563.0"/>
 			</physical-attack>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="200.0"/>
 			</damage-over-time>
 		</effects>
 	</skill>
-	<skill id="6340" name="Stun" max-level="1" debuff="true" action="A2">
+	<skill id="6340" name="Stun" debuff="true" action="A2">
 	<!-- Momentarily stunned and rendered immobile for 4 seconds. -->
 		<icon initial="icon.skill0100"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" >
@@ -1053,13 +1053,13 @@
 			<time initial="4"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="4563.0"/>
 			</physical-attack>
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="6342" name="Trap Over Steam" max-level="1" debuff="true" action="A1">
+	<skill id="6342" name="Trap Over Steam" debuff="true" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1076,7 +1076,7 @@
 		</consume>
 		<target scope="POINT_BLANK" range="400" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="4563.0"/>
 			</physical-attack>
 		</effects>
@@ -1149,7 +1149,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="5.0">
 					<value level="2">10.0</value>
 				</power>
@@ -1298,7 +1298,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6370" name="Thunderbolt" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="6370" name="Thunderbolt" debuff="true" action="A2" type="MAGIC">
 	<!-- Receive damage is amplified. -->
 		<icon initial="icon.skill0122"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" >
@@ -1321,7 +1321,7 @@
 		</abnormal>
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 	</skill>
-	<skill id="6371" name="Invincibility" max-level="1" action="A2">
+	<skill id="6371" name="Invincibility" action="A2">
 	<!-- Invincible against normal attacks, skills, and debuff cancel/debuffs. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -1384,7 +1384,7 @@
 		</abnormal>
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 	</skill>
-	<skill id="6373" name="Thunderbolt" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="6373" name="Thunderbolt" debuff="true" action="A2" type="MAGIC">
 	<!-- Receive damage is amplified. -->
 		<icon initial="icon.skill0122"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" >
@@ -1407,7 +1407,7 @@
 		</abnormal>
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 	</skill>
-	<skill id="6374" name="Notification - Thunderbolts" max-level="1" debuff="true" action="A1" type="MAGIC">
+	<skill id="6374" name="Notification - Thunderbolts" debuff="true" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1422,7 +1422,7 @@
 		<target />
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 	</skill>
-	<skill id="6375" name="Notification - Thunderbolts" max-level="1" debuff="true" action="A1" type="MAGIC">
+	<skill id="6375" name="Notification - Thunderbolts" debuff="true" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1522,7 +1522,7 @@
 		</abnormal>
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 	</skill>
-	<skill id="6378" name="Earth Shift" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="6378" name="Earth Shift" debuff="true" action="A2" type="MAGIC">
 	<!-- The ground below your feet shakes, making concentration difficult. -->
 		<icon initial="icon.skill0347"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -1543,7 +1543,7 @@
 			<chance initial="50"/>
 		</abnormal>
 	</skill>
-	<skill id="6379" name="Critical Hit" max-level="1" debuff="true" action="A2">
+	<skill id="6379" name="Critical Hit" debuff="true" action="A2">
 	<!-- Profuse bleeding causes you to loss 93 HP per second for 15 seconds. -->
 		<icon initial="icon.skill0096"/>
 		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2" >
@@ -1568,7 +1568,7 @@
 			<chance initial="100"/>
 		</abnormal>
 	</skill>
-	<skill id="6380" name="Bistakon Roar" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="6380" name="Bistakon Roar" debuff="true" action="A2" type="MAGIC">
 	<!-- Blocks all the enemy's physical/magic skills for 20 seconds. -->
 		<icon initial="icon.skill1336"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="DERANGEMENT" level-bonus-rate="2" >
@@ -1624,7 +1624,7 @@
 			<effect name="PhysicalMute"/>
 		</effects>
 	</skill>
-	<skill id="6382" name="Bistakon Rolling Claw" max-level="1" debuff="true" action="A2">
+	<skill id="6382" name="Bistakon Rolling Claw" debuff="true" action="A2">
 	<!-- Profuse bleeding causes you to loss 93 HP per second for 15 seconds. -->
 		<icon initial="icon.skill0096"/>
 		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2" >
@@ -1649,12 +1649,12 @@
 			<chance initial="100"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="93.0"/>
 			</damage-over-time>
 		</effects>
 	</skill>
-	<skill id="6383" name="Bistakon Deadly Roar" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="6383" name="Bistakon Deadly Roar" debuff="true" action="A2" type="MAGIC">
 	<!-- Blocks all the enemy's physical/magic skills for 20 seconds. -->
 		<icon initial="icon.skill1336"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="DERANGEMENT" level-bonus-rate="2" >
@@ -1698,14 +1698,14 @@
 		</consume>
 		<target type="ENEMY_ONLY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="9125.0">
 					<value level="2">13688.0</value>
 				</power>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6385" name="Bistakon Critical Klaus" max-level="1" debuff="true" action="A2">
+	<skill id="6385" name="Bistakon Critical Klaus" debuff="true" action="A2">
 	<!-- Profuse bleeding causes you to lose 95 HP per second for 15 seconds. -->
 		<icon initial="icon.skill0096"/>
 		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2" >
@@ -1730,12 +1730,12 @@
 			<chance initial="100"/>
 		</abnormal>
 		<effects>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="95.0"/>
 			</damage-over-time>
 		</effects>
 	</skill>
-	<skill id="6386" name="Bistakon Earth Rise" max-level="1" debuff="true" action="A2">
+	<skill id="6386" name="Bistakon Earth Rise" debuff="true" action="A2">
 	<!-- Momentarily stunned and rendered immobile for 3 seconds. -->
 		<icon initial="icon.skill0100"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" >
@@ -1758,13 +1758,13 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="9125.0"/>
 			</physical-attack>
 			<block-all-actions/>
 		</effects>
 	</skill>
-	<skill id="6387" name="Bistakon Earthquake" max-level="1" action="A1">
+	<skill id="6387" name="Bistakon Earthquake" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1784,7 +1784,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
 		<effects>
-			<physical-attack ignore-shield="true" critical-chance="15.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack ignore-shield="true" critical-chance="15.0">
 				<power initial="13688.0"/>
 			</physical-attack>
 		</effects>

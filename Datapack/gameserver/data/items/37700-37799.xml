@@ -63,8 +63,8 @@
 	<!-- Herb to change the appearance of a Valentine's Day weapon. -->
 		<restriction freightable="false" depositable="false"/>
 		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="17154" level="1" value="-1"/>  <!-- Elixir of Life -->
+		<skill-reducer>
+			<skill id="17154" value="-1"/>  <!-- Elixir of Life -->
 		</skill-reducer>
 	</item>
 

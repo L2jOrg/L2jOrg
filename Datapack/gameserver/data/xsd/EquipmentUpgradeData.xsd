@@ -1,4 +1,4 @@
-<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="list">
         <xs:complexType>
             <xs:sequence>
@@ -7,9 +7,9 @@
                         <xs:simpleContent>
                             <xs:extension base="xs:string">
                                 <xs:attribute type="xs:short" name="id" use="required"/>
-                                <xs:attribute type="xs:string" name="item" use="optional"/>
-                                <xs:attribute type="xs:string" name="materials" use="optional"/>
-                                <xs:attribute type="xs:long" name="adena" use="optional"/>
+                                <xs:attribute type="xs:string" name="item"/>
+                                <xs:attribute type="xs:string" name="materials"/>
+                                <xs:attribute type="xs:long" name="adena"/>
                                 <xs:attribute type="xs:string" name="result" use="required"/>
                             </xs:extension>
                         </xs:simpleContent>

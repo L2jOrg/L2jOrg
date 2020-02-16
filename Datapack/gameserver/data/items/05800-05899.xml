@@ -52,7 +52,7 @@
 	<!-- Bestows blessing on its owner such that when the owner dies during a boss/raid war, their abilities will not be diminished. This item can only be used on self by a character level 20-39. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="10" price="330" reuse-delay="10000" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="2168" level="2" value="-1"/>  <!-- Lucky Charm -->
 		</skill-reducer>
 	</item>
@@ -61,7 +61,7 @@
 	<!-- Bestows blessing on its owner such that when the owner dies during a boss/raid war, their abilities will not be diminished. This item can only be used on self by a character level 40-51. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="10" price="660" reuse-delay="10000" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="2168" level="3" value="-1"/>  <!-- Lucky Charm -->
 		</skill-reducer>
 	</item>
@@ -70,7 +70,7 @@
 	<!-- Bestows blessing on its owner such that when the owner dies during a boss/raid war, their abilities will not be diminished. This item can only be used on self by a character level 52-60. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="10" price="1300" reuse-delay="10000" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
+		<skill-reducer>
 			<skill id="2168" level="4" value="-1"/>  <!-- Lucky Charm -->
 		</skill-reducer>
 	</item>
@@ -147,7 +147,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -155,8 +155,8 @@
 	<!-- Magical scroll that transports you to your clan hall. If you don't belong to a clan that possesses a clan hall, this scroll will have no effect. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2177" level="1" value="-1"/>  <!-- Blessed Scroll of Escape: Clan Hall -->
+		<skill-reducer>
+			<skill id="2177" value="-1"/>  <!-- Blessed Scroll of Escape: Clan Hall -->
 		</skill-reducer>
 	</item>
 
@@ -164,8 +164,8 @@
 	<!-- Magical scroll that transports you to your castle. If you don't belong to a clan that controls a castle, this scroll will have no effect. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="120" price="80000" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2178" level="1" value="-1"/>  <!-- Blessed Scroll of Escape: Castle -->
+		<skill-reducer>
+			<skill id="2178" value="-1"/>  <!-- Blessed Scroll of Escape: Castle -->
 		</skill-reducer>
 	</item>
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="1800" name="Pirate Transformation" max-level="1" action="A2">
+	<skill id="1800" name="Pirate Transformation" action="A2">
 	<!-- For 20 min., Max HP/MP +3%%, P./M. Accuracy +1, P./M. Atk./P./M. Def. +2%%, Atk. Spd. +3%%, M. Critical Rate +10, Speed +3.\n\n<Item Consumption>\n1 Elemental Stone.\n\n<Story>\nPirates used to dominate the Giran area. Pirate King Zaken became a vampire and started to kill other pirates. His crew rose in mutiny against Zaken only to lead him to acquire the Power of Darkness. Surviving pirates had no choice but to run away... -->
 		<icon initial="icon.skill1800"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
@@ -24,25 +24,25 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="3.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="3.0"/>
 			</vital-stat-modify>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="3.0"/>
 			</speed>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="3.0"/>
 			</stat-modify>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="1.0"/>
 			</stat-modify>
-			<stat-modify stat="ACCURACY_MAGIC" mode="DIFF">
+			<stat-modify stat="ACCURACY_MAGIC">
 				<power initial="1.0"/>
 			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
 				<power initial="10.0"/>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
@@ -59,7 +59,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="1801" name="Dark Assassin Transformation" max-level="1" action="A2">
+	<skill id="1801" name="Dark Assassin Transformation" action="A2">
 	<!-- For 20 min., Max HP/MP +5%%, P./M. Accuracy +1, P./M. Atk./P./M. Def. +2%%, Atk. Spd. +3%%, M. Critical Rate +10, Speed +4.\n\n<Item Consumption>\n1 Elemental Stone.\n\n<Story>\nA clandestine organization founded by Mercenary Captain Sieghardt Ein. Sieghardt Ein joined the Lords of Dawn and disappeared without a trace. However, his organization still leads its shadowy deals… -->
 		<icon initial="icon.skill1801"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
@@ -83,25 +83,25 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="5.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="5.0"/>
 			</vital-stat-modify>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="4.0"/>
 			</speed>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="3.0"/>
 			</stat-modify>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="1.0"/>
 			</stat-modify>
-			<stat-modify stat="ACCURACY_MAGIC" mode="DIFF">
+			<stat-modify stat="ACCURACY_MAGIC">
 				<power initial="1.0"/>
 			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
 				<power initial="10.0"/>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
@@ -118,7 +118,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="1802" name="White Assassin Transformation" max-level="1" action="A2">
+	<skill id="1802" name="White Assassin Transformation" action="A2">
 	<!-- For 20 min., Max HP/MP +7%%, P./M. Accuracy +2, P./M. Atk./P./M. Def. +3%%, Atk. Spd. +5%%, M. Critical Rate +20, Speed +5.\n\n<Item Consumption>\n2 Elemental Stones.\n\n<Story>\nA Rune noblewoman, Erica Ken Weber, is the right hand of Sieghardt Ein. She created the White Assassins to distract attention from the Dark Assassins and help it carry out secret missions... -->
 		<icon initial="icon.skill1802"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
@@ -142,25 +142,25 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="7.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="7.0"/>
 			</vital-stat-modify>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="5.0"/>
 			</speed>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="5.0"/>
 			</stat-modify>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="2.0"/>
 			</stat-modify>
-			<stat-modify stat="ACCURACY_MAGIC" mode="DIFF">
+			<stat-modify stat="ACCURACY_MAGIC">
 				<power initial="2.0"/>
 			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
 				<power initial="20.0"/>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
@@ -177,7 +177,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="1810" name="Cadmus - Might" max-level="1" action="A2" type="MAGIC">
+	<skill id="1810" name="Cadmus - Might" action="A2" type="MAGIC">
 	<!-- Increases P. Atk. by 15%% for 20 minutes -->
 		<icon initial="icon.skill1068"/>
 		<attributes property="PHYSIC" >
@@ -198,11 +198,11 @@
 		</abnormal>
 		<effects>
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="1811" name="Cadmus - Shield" max-level="1" action="A2" type="MAGIC">
+	<skill id="1811" name="Cadmus - Shield" action="A2" type="MAGIC">
 	<!-- For 20 minutes, P. Def. +15%%. -->
 		<icon initial="icon.skill1040"/>
 		<attributes property="PHYSIC" >
@@ -223,11 +223,11 @@
 		</abnormal>
 		<effects>
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="1812" name="Cadmus - Wind Walk" max-level="1" action="A2" type="MAGIC">
+	<skill id="1812" name="Cadmus - Wind Walk" action="A2" type="MAGIC">
 	<!-- Speed +33 for 20 minutes. -->
 		<icon initial="icon.skill1204"/>
 		<attributes property="PHYSIC" >
@@ -247,12 +247,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<speed mode="DIFF">
-				<power initial="0.0"/>
+			<speed>
+				<power/>
 			</speed>
 		</effects>
 	</skill>
-	<skill id="1813" name="Cadmus - Return" max-level="1" action="A1" type="MAGIC">
+	<skill id="1813" name="Cadmus - Return" action="A1" type="MAGIC">
 	<!-- Teleports to a town. Cannot be used in a specially designated place such as the GM Consultation Service. -->
 		<icon initial="Icon.skill1050"/>
 		<attributes >
@@ -269,7 +269,7 @@
 			<escape location="TOWN"/>
 		</effects>
 	</skill>
-	<skill id="1814" name="Cadmus - Focus" max-level="1" action="A2" type="MAGIC">
+	<skill id="1814" name="Cadmus - Focus" action="A2" type="MAGIC">
 	<!-- For 20 minutes, P. Critical Rate +30%%. -->
 		<icon initial="icon.skill1077"/>
 		<attributes property="PHYSIC" >
@@ -290,11 +290,11 @@
 		</abnormal>
 		<effects>
 			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-hp-based>
 		</effects>
 	</skill>
-	<skill id="1815" name="Cadmus - Death Whisper" max-level="1" action="A2" type="MAGIC">
+	<skill id="1815" name="Cadmus - Death Whisper" action="A2" type="MAGIC">
 	<!-- For 20 minutes, P. Critical Damage +35%%. -->
 		<icon initial="icon.skill1242"/>
 		<attributes property="PHYSIC" >
@@ -315,11 +315,11 @@
 		</abnormal>
 		<effects>
 			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="1816" name="Cadmus - Guidance" max-level="1" action="A2" type="MAGIC">
+	<skill id="1816" name="Cadmus - Guidance" action="A2" type="MAGIC">
 	<!-- For 20 minutes, P. Accuracy +4. -->
 		<icon initial="icon.skill1240"/>
 		<attributes property="PHYSIC" >
@@ -339,12 +339,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ACCURACY" mode="DIFF">
-				<power initial="0.0"/>
+			<stat-modify stat="ACCURACY">
+				<power/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="1817" name="Cadmus - Heal" max-level="1" action="A1" type="MAGIC">
+	<skill id="1817" name="Cadmus - Heal" action="A1" type="MAGIC">
 	<!-- Recovers the target's HP with 301 Power. -->
 		<icon initial="icon.skill1011"/>
 		<attributes auto-use="ACTIVE">
@@ -365,7 +365,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1818" name="Cadmus - Haste" max-level="1" action="A2" type="MAGIC">
+	<skill id="1818" name="Cadmus - Haste" action="A2" type="MAGIC">
 	<!-- Increases Atk. Spd. by 33%% for 20 minutes. -->
 		<icon initial="icon.skill1086"/>
 		<attributes property="PHYSIC" >
@@ -386,11 +386,11 @@
 		</abnormal>
 		<effects>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="1819" name="Cadmus - Acumen" max-level="1" action="A2" type="MAGIC">
+	<skill id="1819" name="Cadmus - Acumen" action="A2" type="MAGIC">
 	<!-- For 20 minutes, Casting Spd. +30%%. -->
 		<icon initial="icon.skill1085"/>
 		<attributes property="PHYSIC" >
@@ -411,11 +411,11 @@
 		</abnormal>
 		<effects>
 			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
-				<power initial="0.0"/>
+				<power/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="1820" name="Cadmus - Vampiric Rage" max-level="1" action="A2" type="MAGIC">
+	<skill id="1820" name="Cadmus - Vampiric Rage" action="A2" type="MAGIC">
 	<!-- For 20 minutes, recovers as HP 9%% of the physical damage inflicted on the enemy with a certain probability. -->
 		<icon initial="icon.skill1268"/>
 		<attributes property="PHYSIC" >
@@ -440,7 +440,7 @@
 			</vampiric-attack>
 		</effects>
 	</skill>
-	<skill id="1821" name="Cadmus - Empower" max-level="1" action="A2" type="MAGIC">
+	<skill id="1821" name="Cadmus - Empower" action="A2" type="MAGIC">
 	<!-- Increases M. Atk. power by 75%% for 20 minutes. -->
 		<icon initial="icon.skill1059"/>
 		<attributes property="PHYSIC" >
@@ -465,7 +465,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="1822" name="Cadmus - Clarity" max-level="1" action="A2" type="MAGIC">
+	<skill id="1822" name="Cadmus - Clarity" action="A2" type="MAGIC">
 	<!-- For 20 minutes, P. Skill MP Consumption -20%%, M. Skill MP Consumption -10%%, and song/dance skill MP Consumption -20%%. -->
 		<icon initial="icon.skill1397"/>
 		<attributes property="PHYSIC" >
@@ -490,7 +490,7 @@
 			</magic-cost>
 		</effects>
 	</skill>
-	<skill id="1823" name="Cadmus - Agility" max-level="1" action="A2" type="MAGIC">
+	<skill id="1823" name="Cadmus - Agility" action="A2" type="MAGIC">
 	<!-- For 20 minutes, P. Evasion +4. -->
 		<icon initial="icon.skill1087"/>
 		<attributes property="PHYSIC" >
@@ -510,11 +510,11 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="4.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="4.0"/>
 			</stat-hp-based>
 		</effects>
 	</skill>
-	<skill id="1824" name="Cadmus - Lightness" max-level="1" action="A2" type="MAGIC">
+	<skill id="1824" name="Cadmus - Lightness" action="A2" type="MAGIC">
 	<!-- For 20 minutes, Weight Penalty Segment +9000 -->
 		<icon initial="icon.skill1257"/>
 		<attributes property="PHYSIC" >
@@ -534,12 +534,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="WEIGHT_LIMIT" mode="DIFF">
+			<stat-modify stat="WEIGHT_LIMIT">
 				<power initial="9000.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="1825" name="Cadmus - Recharge" max-level="1" action="A1" type="MAGIC">
+	<skill id="1825" name="Cadmus - Recharge" action="A1" type="MAGIC">
 	<!-- Recovers MP up to 94 power depending on the target's Lv.. -->
 		<icon initial="icon.skill1013"/>
 		<attributes >
@@ -560,7 +560,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1826" name="Cadmus - Greater Heal" max-level="1" action="A1" type="MAGIC">
+	<skill id="1826" name="Cadmus - Greater Heal" action="A1" type="MAGIC">
 	<!-- Immediately restores the target's HP with 506 Power. -->
 		<icon initial="icon.skill1217"/>
 		<attributes auto-use="ACTIVE">
@@ -581,7 +581,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1827" name="Transformation Block" max-level="1" >
+	<skill id="1827" name="Transformation Block">
 	<!-- Transformed state attack unavailable. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" >
@@ -602,7 +602,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="1829" name="Spell Master" max-level="1" >
+	<skill id="1829" name="Spell Master">
 	<!-- Casting Spd. +10%%, M. Critical Rate +10. -->
 		<icon initial="icon.skill1901"/>
 		<attributes property="MAGIC" >
@@ -616,12 +616,12 @@
 			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
 				<power initial="10.0"/>
 			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
 				<power initial="10.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="1830" name="Spell Master" max-level="1" >
+	<skill id="1830" name="Spell Master">
 	<!-- Casting Spd. +13%%, M. Critical Rate +10. -->
 		<icon initial="icon.skill1908"/>
 		<attributes property="MAGIC" >
@@ -635,12 +635,12 @@
 			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
 				<power initial="13.0"/>
 			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
 				<power initial="10.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="1831" name="Spell Master" max-level="1" >
+	<skill id="1831" name="Spell Master">
 	<!-- Casting Spd. +9%%, M. Critical Rate +10. -->
 		<icon initial="icon.skill1911"/>
 		<attributes property="MAGIC" >
@@ -654,12 +654,12 @@
 			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
 				<power initial="9.0"/>
 			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
 				<power initial="10.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="1832" name="Spell Master" max-level="1" >
+	<skill id="1832" name="Spell Master">
 	<!-- Casting Spd. +5%%, M. Critical Rate +10. -->
 		<icon initial="icon.skill1916"/>
 		<attributes property="MAGIC" >
@@ -673,12 +673,12 @@
 			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
 				<power initial="5.0"/>
 			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
 				<power initial="10.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="1833" name="Mount - Gold Maned Lion" max-level="1" action="A2">
+	<skill id="1833" name="Mount - Gold Maned Lion" action="A2">
 	<!-- Allows to mount a Golden Lion. -->
 		<icon initial="icon.skill1833"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true" >
@@ -701,7 +701,7 @@
 			<transformation id="160"/>
 		</effects>
 	</skill>
-	<skill id="1834" name="Mount Pegasus" max-level="1" action="A2">
+	<skill id="1834" name="Mount Pegasus" action="A2">
 	<!-- Allows to mount a Pegasus. -->
 		<icon initial="icon.skill1834"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true" >
@@ -724,7 +724,7 @@
 			<transformation id="161"/>
 		</effects>
 	</skill>
-	<skill id="1835" name="Mount Saber Tooth Cougar" max-level="1" action="A2">
+	<skill id="1835" name="Mount Saber Tooth Cougar" action="A2">
 	<!-- Allows to mount a Saber Tooth Cougar. -->
 		<icon initial="icon.skill1835"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true" >
@@ -747,7 +747,7 @@
 			<transformation id="162"/>
 		</effects>
 	</skill>
-	<skill id="1836" name="Mount Kukuru" max-level="1" action="A2">
+	<skill id="1836" name="Mount Kukuru" action="A2">
 	<!-- Mount Kukuru -->
 		<icon initial="icon.skill1836"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true" >
@@ -770,7 +770,7 @@
 			<transformation id="163"/>
 		</effects>
 	</skill>
-	<skill id="1837" name="Mount Black Bear" max-level="1" action="A2">
+	<skill id="1837" name="Mount Black Bear" action="A2">
 	<!-- Allows to mount a Black Bear. -->
 		<icon initial="icon.skill1837"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true" >
@@ -793,7 +793,7 @@
 			<transformation id="164"/>
 		</effects>
 	</skill>
-	<skill id="1838" name="PC Cadmus - Prophecy of Water" max-level="1" action="A1" type="MAGIC">
+	<skill id="1838" name="PC Cadmus - Prophecy of Water" action="A1" type="MAGIC">
 	<!-- PC-exclusive. A party member's MP Recovery bonus +10%%, M. Atk. +10%%, M. Def +10%%, Casting Spd. +5%%, Debuff Resistance +10%%, and Skill MP Consumption -3%% for 10 minutes with the help of a great spirit. Consumes 10 Spirit Ore. -->
 		<icon initial="icon.skill1355"/>
 		<attributes property="PHYSIC" >
@@ -809,7 +809,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="1839" name="PC Cadmus - Prophecy of Fire" max-level="1" action="A1" type="MAGIC">
+	<skill id="1839" name="PC Cadmus - Prophecy of Fire" action="A1" type="MAGIC">
 	<!-- PC-exclusive. A party member's Max HP +10%%, HP Recovery Bonus +10%%, P. Atk. +10%%, P. Def +10%%, Atk. Spd. +5%%, and Debuff Resistance +10%% for 10 minutes with the help of a great spirit. Consumes 10 Spirit Ore. -->
 		<icon initial="icon.skill1356"/>
 		<attributes property="PHYSIC" >
@@ -825,7 +825,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="1840" name="PC Room Chapa - Prophecy of Wind" max-level="1" action="A1" type="MAGIC">
+	<skill id="1840" name="PC Room Chapa - Prophecy of Wind" action="A1" type="MAGIC">
 	<!-- PC-exclusive. A party member's P. Accuracy/M. Accuracy +3, P. Evasion/M. Evasion +3, P. Critical/M. Critical Rate +10%%, P. Critical/M. Critical Damage +15%%, Movement Speed +10%%, Debuff Resistance +10%%, and P. Atk. against Raid Boss +15%% for 10 minutes with the help of a great spirit. Consumes 10 Spirit Ore. -->
 		<icon initial="icon.skill1357"/>
 		<attributes property="PHYSIC" >
@@ -841,7 +841,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="1841" name="PC Cadmus - Might" max-level="1" action="A1" type="MAGIC">
+	<skill id="1841" name="PC Cadmus - Might" action="A1" type="MAGIC">
 	<!-- For 20 minutes, P. Atk +15%%. PC-exclusive. -->
 		<icon initial="icon.skill1068"/>
 		<attributes property="PHYSIC" >
@@ -857,7 +857,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="1842" name="PC Cadmus - Shield" max-level="1" action="A1" type="MAGIC">
+	<skill id="1842" name="PC Cadmus - Shield" action="A1" type="MAGIC">
 	<!-- For 20 minutes, P. Def. +15%%. PC-exclusive. -->
 		<icon initial="icon.skill1040"/>
 		<attributes property="PHYSIC" >
@@ -873,7 +873,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="1843" name="PC Cadmus - Wind Walk" max-level="1" action="A1" type="MAGIC">
+	<skill id="1843" name="PC Cadmus - Wind Walk" action="A1" type="MAGIC">
 	<!-- For 20 minutes, Movement Speed +33. PC-exclusive. -->
 		<icon initial="icon.skill1204"/>
 		<attributes property="PHYSIC" >
@@ -889,7 +889,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="1844" name="PC Cadmus - Return" max-level="1" action="A1" type="MAGIC">
+	<skill id="1844" name="PC Cadmus - Return" action="A1" type="MAGIC">
 	<!-- Teleports to a town. Cannot be used in a special locations such as the GM Consultation Service. PC-exclusive. -->
 		<icon initial="Icon.skill1050"/>
 		<attributes >
@@ -903,7 +903,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="1845" name="PC Cadmus - Focus" max-level="1" action="A1" type="MAGIC">
+	<skill id="1845" name="PC Cadmus - Focus" action="A1" type="MAGIC">
 	<!-- For 20 minutes, P. Critical Rate +30%%. PC-exclusive. -->
 		<icon initial="icon.skill1077"/>
 		<attributes property="PHYSIC" >
@@ -919,7 +919,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="1846" name="PC Cadmus - Death Whisper" max-level="1" action="A1" type="MAGIC">
+	<skill id="1846" name="PC Cadmus - Death Whisper" action="A1" type="MAGIC">
 	<!-- For 20 minutes, P. Critical Damage +35%%. PC-exclusive. -->
 		<icon initial="icon.skill1242"/>
 		<attributes property="PHYSIC" >
@@ -935,7 +935,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="1847" name="PC Cadmus - Guidance" max-level="1" action="A1" type="MAGIC">
+	<skill id="1847" name="PC Cadmus - Guidance" action="A1" type="MAGIC">
 	<!-- For 20 minutes, P. Accuracy +4. PC-exclusive. -->
 		<icon initial="icon.skill1240"/>
 		<attributes property="PHYSIC" >
@@ -951,7 +951,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="1848" name="PC Cadmus - Heal" max-level="1" action="A1" type="MAGIC">
+	<skill id="1848" name="PC Cadmus - Heal" action="A1" type="MAGIC">
 	<!-- Recovers the target's HP with 301 Power. PC-exclusive. -->
 		<icon initial="icon.skill1011"/>
 		<attributes >
@@ -967,7 +967,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="1849" name="PC Cadmus - Haste" max-level="1" action="A1" type="MAGIC">
+	<skill id="1849" name="PC Cadmus - Haste" action="A1" type="MAGIC">
 	<!-- For 20 minutes, Atk. Spd. +33%%. PC-exclusive. -->
 		<icon initial="icon.skill1086"/>
 		<attributes property="PHYSIC" >
@@ -983,7 +983,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="1850" name="PC Cadmus - Acumen" max-level="1" action="A1" type="MAGIC">
+	<skill id="1850" name="PC Cadmus - Acumen" action="A1" type="MAGIC">
 	<!-- For 20 minutes, Casting Spd. +30%%. PC-exclusive. -->
 		<icon initial="icon.skill1085"/>
 		<attributes property="PHYSIC" >
@@ -999,7 +999,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="1851" name="PC Cadmus - Vampiric Rage" max-level="1" action="A1" type="MAGIC">
+	<skill id="1851" name="PC Cadmus - Vampiric Rage" action="A1" type="MAGIC">
 	<!-- For 20 minutes, has a chance to absorb 9%% of physical damage dealt to enemies as HP. PC-exclusive. -->
 		<icon initial="icon.skill1268"/>
 		<attributes property="PHYSIC" >
@@ -1015,7 +1015,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="1852" name="PC Cadmus - Empower" max-level="1" action="A1" type="MAGIC">
+	<skill id="1852" name="PC Cadmus - Empower" action="A1" type="MAGIC">
 	<!-- For 20 minutes, M. Atk +75%%. PC-exclusive. -->
 		<icon initial="icon.skill1059"/>
 		<attributes property="PHYSIC" >
@@ -1031,7 +1031,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="1853" name="PC Cadmus - Clarity" max-level="1" action="A1" type="MAGIC">
+	<skill id="1853" name="PC Cadmus - Clarity" action="A1" type="MAGIC">
 	<!-- For 20 minutes, P. Skill MP Consumption -20%%, M. Skill MP Consumption -10%%, and song/dance skill MP Consumption -20%%. PC-exclusive. -->
 		<icon initial="icon.skill1397"/>
 		<attributes property="PHYSIC" >
@@ -1047,7 +1047,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="1854" name="PC Cadmus - Agility" max-level="1" action="A1" type="MAGIC">
+	<skill id="1854" name="PC Cadmus - Agility" action="A1" type="MAGIC">
 	<!-- For 20 minutes, P. Evasion +4. PC-exclusive. -->
 		<icon initial="icon.skill1087"/>
 		<attributes property="PHYSIC" >
@@ -1063,7 +1063,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="1855" name="PC Cadmus - Lightness" max-level="1" action="A1" type="MAGIC">
+	<skill id="1855" name="PC Cadmus - Lightness" action="A1" type="MAGIC">
 	<!-- For 20 minutes, Weight Penalty Segment +9000. PC-exclusive. -->
 		<icon initial="icon.skill1257"/>
 		<attributes property="PHYSIC" >
@@ -1079,7 +1079,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="1856" name="PC Cadmus - Recharge" max-level="1" action="A1" type="MAGIC">
+	<skill id="1856" name="PC Cadmus - Recharge" action="A1" type="MAGIC">
 	<!-- Recovers MP with up to 94 Power depending on the target's level. PC-exclusive. -->
 		<icon initial="icon.skill1013"/>
 		<attributes >
@@ -1095,7 +1095,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="1857" name="PC Cadmus - Greater Heal" max-level="1" action="A1" type="MAGIC">
+	<skill id="1857" name="PC Cadmus - Greater Heal" action="A1" type="MAGIC">
 	<!-- Recovers the target's HP with 506 Power. PC-exclusive. -->
 		<icon initial="icon.skill1217"/>
 		<attributes >
@@ -1111,7 +1111,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="1858" name="PC Cadmus - Blessed Body" max-level="1" action="A1" type="MAGIC">
+	<skill id="1858" name="PC Cadmus - Blessed Body" action="A1" type="MAGIC">
 	<!-- For 20 minutes, Max HP +25%. PC-exclusive. -->
 		<icon initial="icon.skill1045"/>
 		<attributes property="PHYSIC" >
@@ -1127,7 +1127,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="1859" name="PC Cadmus - Blessed Soul" max-level="1" action="A1" type="MAGIC">
+	<skill id="1859" name="PC Cadmus - Blessed Soul" action="A1" type="MAGIC">
 	<!-- For 20 minutes, Max MP +25%. PC-exclusive. -->
 		<icon initial="icon.skill1048"/>
 		<attributes property="PHYSIC" >
@@ -1143,7 +1143,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="1860" name="PC Cadmus - Stun Resistance" max-level="1" action="A1" type="MAGIC">
+	<skill id="1860" name="PC Cadmus - Stun Resistance" action="A1" type="MAGIC">
 	<!-- For 20 minutes, Stun Resistance +15%. PC-exclusive. -->
 		<icon initial="icon.skill1259"/>
 		<attributes property="PHYSIC" >
@@ -1159,7 +1159,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="1861" name="PC Cadmus - Advanced Block" max-level="1" action="A1" type="MAGIC">
+	<skill id="1861" name="PC Cadmus - Advanced Block" action="A1" type="MAGIC">
 	<!-- For 20 minutes, Shield Def. +20%. PC-exclusive. -->
 		<icon initial="icon.skill1304"/>
 		<attributes property="PHYSIC" >
@@ -1175,7 +1175,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="1862" name="PC Cadmus - Wild Magic" max-level="1" action="A1" type="MAGIC">
+	<skill id="1862" name="PC Cadmus - Wild Magic" action="A1" type="MAGIC">
 	<!-- For 20 minutes, M. Critical Rate +10. PC-exclusive. -->
 		<icon initial="icon.skill1303"/>
 		<attributes property="PHYSIC" >
@@ -1191,7 +1191,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="1863" name="PC Cadmus - Stigma of Shilen" max-level="1" debuff="true" action="A1" type="MAGIC">
+	<skill id="1863" name="PC Cadmus - Stigma of Shilen" debuff="true" action="A1" type="MAGIC">
 	<!-- For 30 seconds, Melee Weapon Resistance -24. M. Def. -12. PC-exclusive. -->
 		<icon initial="icon.skill1539"/>
 		<attributes property="PHYSIC" >
@@ -1207,7 +1207,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="1864" name="PC Cadmus - Berserker Spirit" max-level="1" action="A1" type="MAGIC">
+	<skill id="1864" name="PC Cadmus - Berserker Spirit" action="A1" type="MAGIC">
 	<!-- For 20 minutes, a party member's P. Def. -8%, M. Def. -16%, P. Evasion -4, P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, and Movement Speed +8. PC-exclusive -->
 		<icon initial="icon.skill1062"/>
 		<attributes property="PHYSIC" >
@@ -1223,7 +1223,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="1865" name="Transformation Attack" max-level="1" >
+	<skill id="1865" name="Transformation Attack">
 	<!-- Transformed state P. Atk. Boost. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" >
@@ -1248,7 +1248,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="1893" name="Cat's Potential" max-level="1" >
+	<skill id="1893" name="Cat's Potential">
 	<!-- Unravels Cat's true potential. Damage to raid bosses +5%%, Damage received from raid bosses -10%%. -->
 		<icon initial="icon.skill1406"/>
 		<attributes property="MAGIC" >
@@ -1258,7 +1258,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="1894" name="Unicorn's Potential" max-level="1" >
+	<skill id="1894" name="Unicorn's Potential">
 	<!-- Unravels Unicorn's true potential. Damage to raid bosses +10%%, Damage received from raid bosses -5%%. -->
 		<icon initial="icon.skill1407"/>
 		<attributes property="MAGIC" >
@@ -1268,7 +1268,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="1895" name="Spectral Potential" max-level="1" >
+	<skill id="1895" name="Spectral Potential">
 	<!-- Unravels true spectral potential. Damage to raid bosses +15%%. -->
 		<icon initial="icon.skill1408"/>
 		<attributes property="MAGIC" >
@@ -1327,7 +1327,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<physical-attack ignore-shield="true" critical-chance="15.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack ignore-shield="true" critical-chance="15.0" over-hit="true">
 				<power initial="4937.0">
 					<value level="2">5046.0</value>
 					<value level="3">5154.0</value>
@@ -1559,7 +1559,7 @@
 			<block-all-actions>
 				<allowed-skills>35016</allowed-skills>
 			</block-all-actions>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="2191.0">
 					<value level="2">2244.0</value>
 					<value level="3">2296.0</value>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="6200" name="Dispel NPC Transformation" max-level="1" action="A1">
+	<skill id="6200" name="Dispel NPC Transformation" action="A1">
 	<!-- Cancels transformation. -->
 		<icon initial="icon.skilltransform2"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -137,7 +137,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="true" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0" over-hit="true">
 				<power initial="1649.0">
 					<value level="2">2045.0</value>
 					<value level="3">2476.0</value>
@@ -159,7 +159,7 @@
 					<value level="19">4477.0</value>
 				</power>
 			</physical-attack>
-			<damage-over-time ticks="5" can-kill="false">
+			<damage-over-time ticks="5">
 				<power initial="65.0">
 					<value level="2">75.0</value>
 					<value level="4">82.0</value>
@@ -272,7 +272,7 @@
 			<effect name="Fear"/>
 		</effects>
 	</skill>
-	<skill id="6207" name="Strider Dash" max-level="1" action="A2">
+	<skill id="6207" name="Strider Dash" action="A2">
 	<!-- Movement Speed +66 for 15 seconds. -->
 		<icon initial="icon.action108"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -294,12 +294,12 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="66.0"/>
 			</speed>
 		</effects>
 	</skill>
-	<skill id="6208" name="Blessed Guidance" max-level="1" action="A2">
+	<skill id="6208" name="Blessed Guidance" action="A2">
 	<!-- Blessed Guidance. For 10 seconds, increases P. Accuracy +2. -->
 		<icon initial="icon.skill1240"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -342,7 +342,7 @@
 					<value level="4">-40.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="-16.0"/>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
@@ -395,7 +395,7 @@
 					<value level="4">-51.77</value>
 				</power>
 			</speed>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="-2.5">
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="-2.5">
 					<value level="2">-5.0</value>
 					<value level="3">-7.5</value>
 					<value level="4">-10.0</value>
@@ -417,7 +417,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6217" name="Lv. 81 Raid Boss" max-level="1" >
+	<skill id="6217" name="Lv. 81 Raid Boss">
 	<!-- Evil existence trying to invade the real world along the border between dreams and reality. It is recognized differently by different people, as if it were created by a collection of nightmares. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -428,7 +428,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6218" name="Lv. 81 Raid Boss" max-level="1" >
+	<skill id="6218" name="Lv. 81 Raid Boss">
 	<!-- Evil existence trying to invade the real world along the border between dreams and reality. It is recognized differently by different people, as if it were created by a collection of nightmares. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -439,7 +439,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6219" name="Lv. 81 Raid Boss" max-level="1" >
+	<skill id="6219" name="Lv. 81 Raid Boss">
 	<!-- Evil existence trying to invade the real world along the border between dreams and reality. It is recognized differently by different people, as if it were created by a collection of nightmares. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -450,7 +450,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6220" name="Lv. 81 Raid Boss" max-level="1" >
+	<skill id="6220" name="Lv. 81 Raid Boss">
 	<!-- Evil existence trying to invade the real world along the border between dreams and reality. It is recognized differently by different people, as if it were created by a collection of nightmares. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -461,7 +461,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6221" name="Lv. 82 Raid Boss" max-level="1" >
+	<skill id="6221" name="Lv. 82 Raid Boss">
 	<!-- Evil existence trying to invade the real world along the border between dreams and reality. It is recognized differently by different people, as if it were created by a collection of nightmares. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -472,7 +472,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6222" name="Lv. 84 Raid Boss" max-level="1" >
+	<skill id="6222" name="Lv. 84 Raid Boss">
 	<!-- Evil existence trying to invade the real world along the border between dreams and reality. It is recognized differently by different people, as if it were created by a collection of nightmares. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -483,7 +483,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6223" name="Lv. 84 Raid Boss" max-level="1" >
+	<skill id="6223" name="Lv. 84 Raid Boss">
 	<!-- Leader of the Cannibalistic Stakatos appointed by the Stakato Queen Shyeed to guard their nest. Unlike other Stakatos, it has the ability to jump through invisible space. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -494,7 +494,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6224" name="Lv. 84 Raid Boss" max-level="1" >
+	<skill id="6224" name="Lv. 84 Raid Boss">
 	<!-- Leader of the Cannibalistic Stakatos appointed by the Stakato Queen Shyeed to guard their nest. Unlike other Stakatos, it has the ability to jump through invisible space. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -505,7 +505,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6225" name="Lv. 84 Raid Boss" max-level="1" >
+	<skill id="6225" name="Lv. 84 Raid Boss">
 	<!-- Leader of the Cannibalistic Stakatos appointed by the Stakato Queen Shyeed to guard their nest. Unlike other Stakatos, it has the ability to jump through invisible space. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -516,7 +516,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6226" name="Lv. 84 Raid Boss" max-level="1" >
+	<skill id="6226" name="Lv. 84 Raid Boss">
 	<!-- Leader of the Cannibalistic Stakatos appointed by the Stakato Queen Shyeed to guard their nest. Unlike other Stakatos, it has the ability to jump through invisible space. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -527,7 +527,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6227" name="Lv. 84 Raid Boss" max-level="1" >
+	<skill id="6227" name="Lv. 84 Raid Boss">
 	<!-- Queen of the Spike Stakatos who commands and propagates the Spike Stakatos. It knows that its life is coming to an end, and it orders the nest guarded so that it is a good environment for the next Stakato Queen to grow up. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -538,7 +538,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6228" name="Lv. 83 Raid Boss" max-level="1" >
+	<skill id="6228" name="Lv. 83 Raid Boss">
 	<!-- One of the monsters born of the Goddess Shilen. When the Great Spirit Gildor is weakened, it leads the Tasaba Lizardmen into the Reed Field, but when the Tasaba Lizardmen are wiped out by the appearance of the Mucrokians, it spews tremendous anger. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -549,7 +549,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6229" name="Lv. 84 Raid Boss" max-level="1" >
+	<skill id="6229" name="Lv. 84 Raid Boss">
 	<!-- Water spirit born from the powerful waters of Innadril. It is greatly beloved by the Goddess Eva. It's a trickster that does whatever it wants, like snatching babies or causing floods in the middle of the night. Eva fears retaliation one day because of Lian's severe tricks, and she puts him in the care of guardian spirits. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -560,7 +560,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6230" name="Lv. 82 Raid Boss" max-level="1" >
+	<skill id="6230" name="Lv. 82 Raid Boss">
 	<!-- Because of the item that was made in the image of the giants by the Ivory Tower magicians, it believes it is a giant itself. It is controlled by Hekaton Prime, and it guards the cave that was once the fortress of the giants. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -571,7 +571,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6231" name="Lv. 82 Raid Boss" max-level="1" >
+	<skill id="6231" name="Lv. 82 Raid Boss">
 	<!-- Lifeform created by the giants that were fleeing by night the wrath of Einhasad. It was improved with a Monster Eye as its foundation and it was created to exterminate the pursuers of the gods. At one time, it broke free from the control of the giants and fought against them. Its mind is now controlled by Hekaton prime, and it again protects the giants. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -582,7 +582,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6232" name="Lv. 83 Raid Boss" max-level="1" >
+	<skill id="6232" name="Lv. 83 Raid Boss">
 	<!-- Last Lesser Giant hiding deep inside the Giant's Cave. Though it is physically the same as the other Lesser Giants, it contains the secret of the ancient lesser giant civilization, and it protects this secret. It is currently controlled by Hekaton Prime. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -593,7 +593,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6233" name="Lv. 83 Raid Boss" max-level="1" >
+	<skill id="6233" name="Lv. 83 Raid Boss">
 	<!-- Control device created by the ancient giants civilization. It has outgrown its original research goal. It's only goal now is to protect the cave. It is transforming it into a powerful protected fortress by controlling the minds of the other races and by maintaining the Giant's Cave. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -604,7 +604,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6234" name="Presentation - Adena Firecracker" max-level="1" action="A1">
+	<skill id="6234" name="Presentation - Adena Firecracker" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -615,7 +615,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6235" name="Blessed Focus" max-level="1" action="A2">
+	<skill id="6235" name="Blessed Focus" action="A2">
 	<!-- Blessing's Focus. Increases P. Critical Rate for 1 minute. -->
 		<icon initial="icon.skill1077"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -631,7 +631,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6236" name="Presentation - Party Return" max-level="1" action="A1">
+	<skill id="6236" name="Presentation - Party Return" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -642,7 +642,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6237" name="Decrease Speed" max-level="1" debuff="true" action="A2">
+	<skill id="6237" name="Decrease Speed" debuff="true" action="A2">
 	<!-- Speed is reduced by 80%% for 10 seconds. -->
 		<icon initial="icon.skill1160"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" >
@@ -665,7 +665,7 @@
 			</speed>
 		</effects>
 	</skill>
-	<skill id="6238" name="Decrease Speed" max-level="1" debuff="true" action="A2">
+	<skill id="6238" name="Decrease Speed" debuff="true" action="A2">
 	<!-- Movement Speed/Casting Spd./Atk. Spd. are reduced by 50%% for 20 seconds. -->
 		<icon initial="icon.skill1160"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" >
@@ -685,7 +685,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="18162.0"/>
 			</physical-attack>
 			<speed mode="PER">
@@ -732,7 +732,7 @@
 			<abnormal type="EVENT_TERRITORY" level="1" affected="true" affect="TARGET" scope="TARGET"/>
 		</conditions>
 	</skill>
-	<skill id="6241" name="Heatstroke Prevention Effect - Gludio" max-level="1" action="A2">
+	<skill id="6241" name="Heatstroke Prevention Effect - Gludio" action="A2">
 	<!-- Heatstroke Prevention Effect - Prevention effect received in the Gludio region. Effect that minimizes the damage incurred from heatstroke. -->
 		<icon initial="icon.skill1184"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -750,7 +750,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6242" name="Heatstroke Prevention Effect - Dion" max-level="1" action="A2">
+	<skill id="6242" name="Heatstroke Prevention Effect - Dion" action="A2">
 	<!-- Heatstroke Prevention Effect - Prevention effect received in the Dion region. Effect that minimizes the damage incurred from heatstroke. -->
 		<icon initial="icon.skill1184"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -768,7 +768,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6243" name="Heatstroke Prevention Effect - Giran" max-level="1" action="A2">
+	<skill id="6243" name="Heatstroke Prevention Effect - Giran" action="A2">
 	<!-- Heatstroke Prevention Effect - Prevention effect received in the Giran region. Effect that minimizes the damage incurred from heatstroke. -->
 		<icon initial="icon.skill1184"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -786,7 +786,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6244" name="Heatstroke Prevention Effect - Oren" max-level="1" action="A2">
+	<skill id="6244" name="Heatstroke Prevention Effect - Oren" action="A2">
 	<!-- Heatstroke Prevention Effect - Prevention effect received in the Oren region. Effect that minimizes the damage incurred from heatstroke. -->
 		<icon initial="icon.skill1184"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -804,7 +804,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6245" name="Heatstroke Prevention Effect - Aden" max-level="1" action="A2">
+	<skill id="6245" name="Heatstroke Prevention Effect - Aden" action="A2">
 	<!-- Heatstroke Prevention Effect - Prevention effect received in the Aden region. Effect that minimizes the damage incurred from heatstroke. -->
 		<icon initial="icon.skill1184"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -822,7 +822,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6246" name="Heatstroke Prevention Effect - Innadril" max-level="1" action="A2">
+	<skill id="6246" name="Heatstroke Prevention Effect - Innadril" action="A2">
 	<!-- Heatstroke Prevention Effect - Prevention effect received in the Innadril region. Effect that minimizes the damage incurred from heatstroke. -->
 		<icon initial="icon.skill1184"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -840,7 +840,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6247" name="Heatstroke Prevention Effect - Goddard" max-level="1" action="A2">
+	<skill id="6247" name="Heatstroke Prevention Effect - Goddard" action="A2">
 	<!-- Heatstroke Prevention Effect - Prevention effect received in the Goddard region. Effect that minimizes the damage incurred from heatstroke. -->
 		<icon initial="icon.skill1184"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -858,7 +858,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6248" name="Heatstroke Prevention Effect - Rune" max-level="1" action="A2">
+	<skill id="6248" name="Heatstroke Prevention Effect - Rune" action="A2">
 	<!-- Heatstroke Prevention Effect - Prevention effect received in the Rune region. Effect that minimizes the damage incurred from heatstroke. -->
 		<icon initial="icon.skill1184"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -876,7 +876,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6249" name="Heatstroke Prevention Effect -Schuttgart" max-level="1" action="A2">
+	<skill id="6249" name="Heatstroke Prevention Effect -Schuttgart" action="A2">
 	<!-- Heatstroke Prevention Effect - Prevention effect received in the Schuttgart region. Effect that minimizes the damage incurred from heatstroke. -->
 		<icon initial="icon.skill1184"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -894,7 +894,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6250" name="Severe Heatstroke" max-level="1" debuff="true" action="A2">
+	<skill id="6250" name="Severe Heatstroke" debuff="true" action="A2">
 	<!-- Severe heatstroke. Sultriness is summoned. -->
 		<icon initial="icon.etc_ashes_red_i00"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" >
@@ -913,7 +913,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6251" name="Summon Sultriness" max-level="1" action="A1">
+	<skill id="6251" name="Summon Sultriness" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -929,7 +929,7 @@
 			</summon-npc>
 		</effects>
 	</skill>
-	<skill id="6252" name="Sultriness Attack" max-level="1" action="A1">
+	<skill id="6252" name="Sultriness Attack" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -943,7 +943,7 @@
 		</attributes>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
 	</skill>
-	<skill id="6253" name="Heatstroke Prevention Effect - Gludio" max-level="1" action="A2">
+	<skill id="6253" name="Heatstroke Prevention Effect - Gludio" action="A2">
 	<!-- Heatstroke Prevention Effect - Prevention effect received in the Gludio region. Effect that minimizes the damage incurred from heatstroke. -->
 		<icon initial="icon.skill1184"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -961,7 +961,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6254" name="Heatstroke Prevention Effect - Dion" max-level="1" action="A2">
+	<skill id="6254" name="Heatstroke Prevention Effect - Dion" action="A2">
 	<!-- Heatstroke Prevention Effect - Prevention effect received in the Dion region. Effect that minimizes the damage incurred from heatstroke. -->
 		<icon initial="icon.skill1184"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -979,7 +979,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6255" name="Heatstroke Prevention Effect - Giran" max-level="1" action="A2">
+	<skill id="6255" name="Heatstroke Prevention Effect - Giran" action="A2">
 	<!-- Heatstroke Prevention Effect - Prevention effect received in the Giran region. Effect that minimizes the damage incurred from heatstroke. -->
 		<icon initial="icon.skill1184"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -997,7 +997,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6256" name="Heatstroke Prevention Effect - Oren" max-level="1" action="A2">
+	<skill id="6256" name="Heatstroke Prevention Effect - Oren" action="A2">
 	<!-- Heatstroke Prevention Effect - Prevention effect received in the Oren region. Effect that minimizes the damage incurred from heatstroke. -->
 		<icon initial="icon.skill1184"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -1015,7 +1015,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6257" name="Heatstroke Prevention Effect - Aden" max-level="1" action="A2">
+	<skill id="6257" name="Heatstroke Prevention Effect - Aden" action="A2">
 	<!-- Heatstroke Prevention Effect - Prevention effect received in the Aden region. Effect that minimizes the damage incurred from heatstroke. -->
 		<icon initial="icon.skill1184"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -1033,7 +1033,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6258" name="Heatstroke Prevention Effect - Innadril" max-level="1" action="A2">
+	<skill id="6258" name="Heatstroke Prevention Effect - Innadril" action="A2">
 	<!-- Heatstroke Prevention Effect - Prevention effect received in the Innadril region. Effect that minimizes the damage incurred from heatstroke. -->
 		<icon initial="icon.skill1184"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -1051,7 +1051,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6259" name="Heatstroke Prevention Effect - Goddard" max-level="1" action="A2">
+	<skill id="6259" name="Heatstroke Prevention Effect - Goddard" action="A2">
 	<!-- Heatstroke Prevention Effect - Prevention effect received in the Goddard region. Effect that minimizes the damage incurred from heatstroke. -->
 		<icon initial="icon.skill1184"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -1069,7 +1069,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6260" name="Heatstroke Prevention Effect - Rune" max-level="1" action="A2">
+	<skill id="6260" name="Heatstroke Prevention Effect - Rune" action="A2">
 	<!-- Heatstroke Prevention Effect - Prevention effect received in the Rune region. Effect that minimizes the damage incurred from heatstroke. -->
 		<icon initial="icon.skill1184"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -1087,7 +1087,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6261" name="Heatstroke Prevention Effect -Schuttgart" max-level="1" action="A2">
+	<skill id="6261" name="Heatstroke Prevention Effect -Schuttgart" action="A2">
 	<!-- Heatstroke Prevention Effect - Prevention effect received in the Schuttgart region. Effect that minimizes the damage incurred from heatstroke. -->
 		<icon initial="icon.skill1184"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
@@ -1105,7 +1105,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6262" name="EMP Power" max-level="1" action="A1">
+	<skill id="6262" name="EMP Power" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1123,7 +1123,7 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="150" />
 	</skill>
-	<skill id="6263" name="EMP Shock" max-level="1" debuff="true" action="A2">
+	<skill id="6263" name="EMP Shock" debuff="true" action="A2">
 	<!-- Momentarily stunned and rendered immobile for 2 seconds. -->
 		<icon initial="icon.skill0100"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" >
@@ -1146,7 +1146,7 @@
 			<chance initial="80"/>
 		</abnormal>
 	</skill>
-	<skill id="6264" name="Golem Boom" max-level="1" action="A1">
+	<skill id="6264" name="Golem Boom" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1161,7 +1161,7 @@
 		</attributes>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="150" />
 	</skill>
-	<skill id="6265" name="Smokescreen" max-level="1" action="A1">
+	<skill id="6265" name="Smokescreen" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1176,7 +1176,7 @@
 		</attributes>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="50" />
 	</skill>
-	<skill id="6266" name="Stun" max-level="1" debuff="true" action="A2">
+	<skill id="6266" name="Stun" debuff="true" action="A2">
 	<!-- Momentarily stunned and rendered immobile for 30 seconds. -->
 		<icon initial="icon.skill0100"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" >
@@ -1198,7 +1198,7 @@
 			<chance initial="80"/>
 		</abnormal>
 	</skill>
-	<skill id="6267" name="Soul Drain" max-level="1" debuff="true" action="CA2">
+	<skill id="6267" name="Soul Drain" debuff="true" action="CA2">
 	<!-- Absorbs the target's stamina and makes it your own. -->
 		<icon initial="icon.skill1042"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1211,9 +1211,9 @@
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="ENEMY" />
-		<channeling skill="14559" mp-consume="0" initial-delay="1200" interval="2000"/>
+		<channeling skill="14559" initial-delay="1200"/>
 	</skill>
-	<skill id="6268" name="Jump Attack" max-level="1" action="A1">
+	<skill id="6268" name="Jump Attack" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1233,12 +1233,12 @@
 		<target scope="RANGE" object="NOT_FRIEND" range="500" />
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="150000.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6269" name="Trojan Poison" max-level="1" debuff="true" action="A2">
+	<skill id="6269" name="Trojan Poison" debuff="true" action="A2">
 	<!-- Poisons the enemy for 10 seconds and inflicts 345 HP damage per second. -->
 		<icon initial="icon.skill4036"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" hit-cancel-time="1.5" level-bonus-rate="1" >
@@ -1259,7 +1259,7 @@
 			<chance initial="80"/>
 		</abnormal>
 	</skill>
-	<skill id="6270" name="Poison Gas" max-level="1" action="A1">
+	<skill id="6270" name="Poison Gas" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill4036"/>
 		<attributes magic-critical-rate="-5.0" trait="POISON" >
@@ -1301,7 +1301,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6272" name="Underbug Defense Up" max-level="1" action="A2" type="MAGIC">
+	<skill id="6272" name="Underbug Defense Up" action="A2" type="MAGIC">
 	<!-- Increase each of P. Def. and M. Def. by 30%%. -->
 		<icon initial="icon.skill1040"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -1319,7 +1319,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6273" name="Underbug Self Blasting" max-level="1" debuff="true" action="A1">
+	<skill id="6273" name="Underbug Self Blasting" debuff="true" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" trait="POISON" >
@@ -1333,7 +1333,7 @@
 		</attributes>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
 	</skill>
-	<skill id="6274" name="Eternal Blizzard" max-level="1" debuff="true" action="A1">
+	<skill id="6274" name="Eternal Blizzard" debuff="true" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill6274"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1354,7 +1354,7 @@
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="3000" />
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="38976.0"/>
 			</physical-attack>
 			<call-skill skill="6662">
@@ -1362,7 +1362,7 @@
 			</call-skill>
 		</effects>
 	</skill>
-	<skill id="6275" name="Eternal Blizzard" max-level="1" debuff="true" action="A1">
+	<skill id="6275" name="Eternal Blizzard" debuff="true" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill6274"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1383,7 +1383,7 @@
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="3000" />
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="45256.0"/>
 			</physical-attack>
 			<call-skill skill="6662">
@@ -1391,7 +1391,7 @@
 			</call-skill>
 		</effects>
 	</skill>
-	<skill id="6276" name="Eternal Blizzard" max-level="1" debuff="true" action="A1">
+	<skill id="6276" name="Eternal Blizzard" debuff="true" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill6274"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1409,7 +1409,7 @@
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="3000" />
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 	</skill>
-	<skill id="6277" name="Summon Spirits" max-level="1" action="A1">
+	<skill id="6277" name="Summon Spirits" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1425,7 +1425,7 @@
 		<target type="ENEMY_ONLY" />
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 	</skill>
-	<skill id="6278" name="Ice Ball" max-level="1" action="A1">
+	<skill id="6278" name="Ice Ball" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1445,12 +1445,12 @@
 		<target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="250" />
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="18560.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6279" name="Attack Nearby Range" max-level="1" action="A1">
+	<skill id="6279" name="Attack Nearby Range" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1470,12 +1470,12 @@
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="450" />
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="18560.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6280" name="Announcement of Death" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="6280" name="Announcement of Death" debuff="true" action="A2" type="MAGIC">
 	<!-- Freya's Cruel Sentence. Verdict will be made after 10 seconds. -->
 		<icon initial="icon.skill6280"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -1503,7 +1503,7 @@
 			</call-skill>
 		</effects>
 	</skill>
-	<skill id="6281" name="Cold Judgement" max-level="1" debuff="true" action="A1" type="MAGIC">
+	<skill id="6281" name="Cold Judgement" debuff="true" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" triggered="true" >
@@ -1515,12 +1515,12 @@
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="300" />
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="18560.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6282" name="Reflect Magic" max-level="1" action="A2">
+	<skill id="6282" name="Reflect Magic" action="A2">
 	<!-- Reflects magic damage back to the enemy for 10 seconds. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -1548,7 +1548,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6283" name="Ice Storm" max-level="1" debuff="true" action="A1">
+	<skill id="6283" name="Ice Storm" debuff="true" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1565,12 +1565,12 @@
 		<target type="ENEMY_ONLY" />
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="18560.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6284" name="Freya's Blessing" max-level="1" action="A2" type="MAGIC">
+	<skill id="6284" name="Freya's Blessing" action="A2" type="MAGIC">
 	<!-- Increases P. Atk./P. Def./Atk. Spd. +15%%. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -1601,7 +1601,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6285" name="Rage of Ice" max-level="1" action="A2" type="MAGIC">
+	<skill id="6285" name="Rage of Ice" action="A2" type="MAGIC">
 	<!-- Increases Casting Spd. +15%% for 20 minutes. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -1625,7 +1625,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6286" name="Divine Protection of Sword" max-level="1" action="A2" type="MAGIC">
+	<skill id="6286" name="Divine Protection of Sword" action="A2" type="MAGIC">
 	<!-- Increase HP Recovery Bonus by 15%% and P. Def. by 10%% for 20 minutes. -->
 		<icon initial="icon.skill6286"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -1653,7 +1653,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6287" name="Divine Protection of Sword" max-level="1" action="A1" type="MAGIC">
+	<skill id="6287" name="Divine Protection of Sword" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill6286"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1676,7 +1676,7 @@
 			</cp>
 		</effects>
 	</skill>
-	<skill id="6288" name="Jinia's Prayer" max-level="1" action="A2">
+	<skill id="6288" name="Jinia's Prayer" action="A2">
 	<!-- Increase P. Def. and M. Def. by 300%%. -->
 		<icon initial="icon.skill6288"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -1703,7 +1703,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6289" name="Kegor's Courage" max-level="1" action="A2">
+	<skill id="6289" name="Kegor's Courage" action="A2">
 	<!-- Increase P. Atk. by 300%%, M. Atk. by 300%%, Atk. Spd. by 25%% and Casting Spd. by 25%%. -->
 		<icon initial="icon.skill6289"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -1736,7 +1736,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6290" name="Power Strike" max-level="1" action="A1">
+	<skill id="6290" name="Power Strike" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1754,12 +1754,12 @@
 		</consume>
 		<target type="ENEMY_ONLY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="4563.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6291" name="Power Strike" max-level="1" action="A1">
+	<skill id="6291" name="Power Strike" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1777,12 +1777,12 @@
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="300" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="4563.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6292" name="Rush" max-level="1" action="DA1">
+	<skill id="6292" name="Rush" action="DA1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes next-action="ATTACK" magic-critical-rate="-5.0" >
@@ -1802,12 +1802,12 @@
 		</consume>
 		<target type="ENEMY_ONLY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="4563.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6293" name="Power Strike" max-level="1" action="A1">
+	<skill id="6293" name="Power Strike" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1827,12 +1827,12 @@
 			<fan-range start-angle="0" radius="250" angle="60"/>
 		</target>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="4563.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6294" name="Leader's Roar" max-level="1" action="A2" type="MAGIC">
+	<skill id="6294" name="Leader's Roar" action="A2" type="MAGIC">
 	<!-- Increase P. Atk. by 15%%. -->
 		<icon initial="icon.skill1040"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -1859,7 +1859,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="6295" name="Point Target" max-level="1" action="A1">
+	<skill id="6295" name="Point Target" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1873,7 +1873,7 @@
 		</attributes>
 		<target type="ENEMY_ONLY" />
 	</skill>
-	<skill id="6296" name="Rush" max-level="1" action="DA1">
+	<skill id="6296" name="Rush" action="DA1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes next-action="ATTACK" magic-critical-rate="-5.0" >
@@ -1893,12 +1893,12 @@
 		</consume>
 		<target type="ENEMY_ONLY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="4563.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6297" name="Cylinder Throw" max-level="1" action="A1">
+	<skill id="6297" name="Cylinder Throw" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1917,12 +1917,12 @@
 		</consume>
 		<target type="ENEMY_ONLY" />
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="4563.0"/>
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="6298" name="Summon Subordinate Knight" max-level="1" action="A1">
+	<skill id="6298" name="Summon Subordinate Knight" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1936,7 +1936,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6299" name="Icy Breath - Ice Storm" max-level="1" debuff="true" action="A1">
+	<skill id="6299" name="Icy Breath - Ice Storm" debuff="true" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -1954,7 +1954,7 @@
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
 		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
 		<effects>
-			<physical-attack ignore-shield="false" critical-chance="0.0" over-hit="false" attack-mod="1.0" defense-mod="1.0">
+			<physical-attack critical-chance="0.0">
 				<power initial="1547.0"/>
 			</physical-attack>
 			<call-skill skill="6662">

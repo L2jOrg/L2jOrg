@@ -46,8 +46,8 @@
 	<!-- Echo crystal that plays the theme music of a journey. May only be used once. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="10" reuse-delay="20000" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2069" level="1" value="-1"/>  <!-- Item - Race Sound Crystal -->
+		<skill-reducer>
+			<skill id="2069" value="-1"/>  <!-- Item - Race Sound Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -55,8 +55,8 @@
 	<!-- Echo crystal that plays the theme music of a battle. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="10" reuse-delay="24000" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2068" level="1" value="-1"/>  <!-- Item - Race Sound Crystal -->
+		<skill-reducer>
+			<skill id="2068" value="-1"/>  <!-- Item - Race Sound Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -64,8 +64,8 @@
 	<!-- Echo crystal that plays the theme music of love. May only be used once. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="10" reuse-delay="24000" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2070" level="1" value="-1"/>  <!-- Item - Race Sound Crystal -->
+		<skill-reducer>
+			<skill id="2070" value="-1"/>  <!-- Item - Race Sound Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -73,8 +73,8 @@
 	<!-- Echo crystal that plays the theme music of solitude. May only be used once. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="10" reuse-delay="20000" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2072" level="1" value="-1"/>  <!-- Item - Race Sound Crystal -->
+		<skill-reducer>
+			<skill id="2072" value="-1"/>  <!-- Item - Race Sound Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -82,8 +82,8 @@
 	<!-- Echo crystal that plays the theme music of a feast. May only be used once. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="10" reuse-delay="3000" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2071" level="1" value="-1"/>  <!-- Item - Race Sound Crystal -->
+		<skill-reducer>
+			<skill id="2071" value="-1"/>  <!-- Item - Race Sound Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -91,8 +91,8 @@
 	<!-- Echo crystal that plays the theme music of a celebration. May only be used once. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="10" reuse-delay="3000" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2073" level="1" value="-1"/>  <!-- Item - Fight Song Crystal -->
+		<skill-reducer>
+			<skill id="2073" value="-1"/>  <!-- Item - Fight Song Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -100,8 +100,8 @@
 	<!-- Echo crystal that plays the theme music of a comedy. May only be used once. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="10" reuse-delay="3000" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="2067" level="1" value="-1"/>  <!-- Item - Fight Song Crystal -->
+		<skill-reducer>
+			<skill id="2067" value="-1"/>  <!-- Item - Fight Song Crystal -->
 		</skill-reducer>
 	</item>
 

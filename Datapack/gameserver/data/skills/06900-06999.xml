@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="6900" name="Lv. 84 Raid Boss" max-level="1" >
+	<skill id="6900" name="Lv. 84 Raid Boss">
 	<!-- In order to gather monsters that would protect its territory, Antharas created countless sacrifice victims. The Bleeding Fly was enchanted by the stench of corpses and came up above ground. This nobility of purgatory, who feeds on the blood of hatred and fear, called itself the Gatekeeper of Antharas, and it took its place on one side of the Valley where there is an endless stream of reckless challengers. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -11,7 +11,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6901" name="Lv. 84 Raid Boss" max-level="1" >
+	<skill id="6901" name="Lv. 84 Raid Boss">
 	<!-- A Drake warrior that was once called the right wing of Antharas in battle. During the war against the gods, it lost two of its wings to injury and fell into a deep part of Purgatory. However, it was recently awakened by Antharas' call. It hold a deep grudge against the gods, especially Einhasad, and it believes that only the darkness of Shilen can bring rest to the world. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -22,7 +22,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6902" name="Lv. 84 Raid Boss" max-level="1" >
+	<skill id="6902" name="Lv. 84 Raid Boss">
 	<!-- It was once the subordinate of the Dark Dragon Skelus. It was one of the nobility of Purgatory who resided deep inside. But it came above ground at Antharas' calling. It protects the Antharas' Nest, and it also informs Skelus about the area's developments. When it was in Purgatory, it was called "Hell's Corpse Detonator" because of its sinister pleasure in making its comrades explode. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -33,7 +33,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6903" name="Lv. 84 Raid Boss" max-level="1" >
+	<skill id="6903" name="Lv. 84 Raid Boss">
 	<!-- A monsters summoned from Purgatory by the demon Maluk in exchange for one finger. As part of their agreement, Maluk presented an endless supply of hunting prey. The Spike Slasher accepted the proposal and came above ground with its subordinates in tow from Purgatory. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -44,7 +44,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6904" name="Lv. 84 Raid Boss" max-level="1" >
+	<skill id="6904" name="Lv. 84 Raid Boss">
 	<!-- The monster was created by the demon Maluk by joining a high-Lv. demon with a dragon. It possesses the advantages of both demons and dragons. Maluk offered this exceptional creature to Antharas. Antharas fed its blood to the Muscle Bomber and appointed it as the Valley's Watcher. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -55,7 +55,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6905" name="Lv. 85 Raid Boss" max-level="1" >
+	<skill id="6905" name="Lv. 85 Raid Boss">
 	<!-- They say that this monster was created through the fusion of a Human hero's body, who opened the Gate of Purgatory, and the spitefulness of countless monsters. However, this rumor is not confirmed. In any case, it has come above ground at Shilen's command, and it watches over the dragon's dungeon as an aide of Antharas. It possess exceptional abilities, and it is uniquely rational and cold-hearted. As such, it supposedly gives good assistance to the tyrant Antharas. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -66,7 +66,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6906" name="Lv. 85 Raid Boss" max-level="1" >
+	<skill id="6906" name="Lv. 85 Raid Boss">
 	<!-- A purgatory monster sent to Antharas by Shilen. The Behemoth Leader who came above ground was filled with uncontrollable madness as soon as it was unshackled. It killed countless monsters and eventually even tore off some of the flesh of Antharas, its master. Antharas burst into laughter at its foolish actions, and he cast a spell so that it would guard the Essence of Antharas, which maintains the dungeon's barrier. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -77,7 +77,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6907" name="Lv. 85 Raid Boss" max-level="1" >
+	<skill id="6907" name="Lv. 85 Raid Boss">
 	<!-- A Knight of Purgatory who has long assisted Antharas, together with the Black Dagger Wing. During the war against the gods, it broke both arms and fell into a deep slumber within Purgatory. It recently awakened at Antharas' call. When the Dragon Beast appeared above ground, Antharas sliced off his own flesh in order to create its two arms. Then, he made it guard the dragon's dungeon. -->
 		<icon initial="icon.skillraid"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -88,7 +88,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6909" name="Charming" max-level="1" action="A1">
+	<skill id="6909" name="Charming" action="A1">
 	<!-- Shows the game master's charming actions. -->
 		<icon initial="icon.skilltransform1"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -99,7 +99,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6910" name="Dance" max-level="1" action="A1">
+	<skill id="6910" name="Dance" action="A1">
 	<!-- Shows the game master's dancing skills. -->
 		<icon initial="icon.skilltransform2"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -110,7 +110,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6911" name="Greeting" max-level="1" action="A1">
+	<skill id="6911" name="Greeting" action="A1">
 	<!-- Shows the game master's greeting. -->
 		<icon initial="icon.skilltransform3"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -121,7 +121,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6912" name="Stigma Aftermath" max-level="1" debuff="true" action="A2">
+	<skill id="6912" name="Stigma Aftermath" debuff="true" action="A2">
 	<!-- Antharas' Stigma Aftermath. For 10 seconds, decreases 500 HP and 300 MP per second. -->
 		<icon initial="icon.skill5860"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
@@ -191,7 +191,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="6916" name="Antharas' Cute Tricks" max-level="1" action="A1">
+	<skill id="6916" name="Antharas' Cute Tricks" action="A1">
 	<!-- See the summoned spirit perform cute tricks. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -205,7 +205,7 @@
 			<condition name="OpNeedAgathion"/>
 		</conditions>
 	</skill>
-	<skill id="6917" name="Kanna's Splendor" max-level="1" action="A1">
+	<skill id="6917" name="Kanna's Splendor" action="A1">
 	<!-- Able to see the summoned spirit's splendor. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -219,7 +219,7 @@
 			<condition name="OpNeedAgathion"/>
 		</conditions>
 	</skill>
-	<skill id="6918" name="Kallesin's Splendor" max-level="1" action="A1">
+	<skill id="6918" name="Kallesin's Splendor" action="A1">
 	<!-- Able to see the summoned spirit's splendor. -->
 		<icon initial="icon.skill_agathion_cute"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -233,7 +233,7 @@
 			<condition name="OpNeedAgathion"/>
 		</conditions>
 	</skill>
-	<skill id="6919" name="Challenge Acceptance" max-level="1" action="A2" type="MAGIC">
+	<skill id="6919" name="Challenge Acceptance" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2" >
@@ -601,7 +601,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6939" name="Equip Shield" max-level="1" >
+	<skill id="6939" name="Equip Shield">
 	<!-- Additionally increases Shield Defense Rate. -->
 		<icon initial="icon.skill0091"/>
 		<attributes property="MAGIC" >
@@ -611,7 +611,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6940" name="Set Effect - Medium's Robe, 2-piece" max-level="1" >
+	<skill id="6940" name="Set Effect - Medium's Robe, 2-piece">
 	<!-- Casting Spd. +5%% -->
 		<icon initial="icon.armor_t58_u_i00"/>
 		<attributes property="MAGIC" >
@@ -621,7 +621,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6941" name="Set Effect - Warrior's Heavy Armor, 2-piece" max-level="1" >
+	<skill id="6941" name="Set Effect - Warrior's Heavy Armor, 2-piece">
 	<!-- P. Def. +3%%. -->
 		<icon initial="icon.armor_t33_u_i00"/>
 		<attributes property="MAGIC" >
@@ -631,7 +631,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6942" name="Set Effect - Warrior's Heavy Armor, 4-piece" max-level="1" >
+	<skill id="6942" name="Set Effect - Warrior's Heavy Armor, 4-piece">
 	<!-- Max HP +270, P. Def. +5%%, and Stun Resistance +10%%. -->
 		<icon initial="icon.armor_t62_ul_i00"/>
 		<attributes property="MAGIC" >
@@ -641,7 +641,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6943" name="Set Effect - Warrior's Light Armor, 4-piece" max-level="1" >
+	<skill id="6943" name="Set Effect - Warrior's Light Armor, 4-piece">
 	<!-- M. Def. +5%% and Stun Resistance +10%%. -->
 		<icon initial="icon.armor_t45_ul_i00"/>
 		<attributes property="MAGIC" >
@@ -651,7 +651,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6944" name="Set Effect - Warrior's Robe, 5-piece" max-level="1" >
+	<skill id="6944" name="Set Effect - Warrior's Robe, 5-piece">
 	<!-- WIT +1, Max MP +171, P. Def +5.26%%, and Paralysis Resistance +10%%. -->
 		<icon initial="icon.armor_t57_u_i00"/>
 		<attributes property="MAGIC" >
@@ -661,7 +661,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6945" name="Master's Blessing - GM's Protection" max-level="1" action="A1">
+	<skill id="6945" name="Master's Blessing - GM's Protection" action="A1">
 	<!-- The GM is always by your side. Makes you invulnerable to Raid Debuffs for 5 min. -->
 		<icon initial="icon.skill5662"/>
 		<attributes property="PHYSIC" >
@@ -673,7 +673,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6946" name="Raid Shield" max-level="1" action="A1" type="MAGIC">
+	<skill id="6946" name="Raid Shield" action="A1" type="MAGIC">
 	<!-- Defensive Shield cast by the Raid boss unto itself. Blocks additional damage for 1 h. -->
 		<icon initial="icon.skill0110"/>
 		<attributes property="PHYSIC" >
@@ -685,7 +685,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6950" name="Lucky Enchant Stone: Save Armor (D-grade)" max-level="1" action="A1">
+	<skill id="6950" name="Lucky Enchant Stone: Save Armor (D-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -695,7 +695,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6951" name="Lucky Enchant Stone: Save Armor (C-grade)" max-level="1" action="A1">
+	<skill id="6951" name="Lucky Enchant Stone: Save Armor (C-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -705,7 +705,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6952" name="Lucky Enchant Stone: Save Armor (B-grade)" max-level="1" action="A1">
+	<skill id="6952" name="Lucky Enchant Stone: Save Armor (B-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -715,7 +715,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6953" name="Lucky Enchant Stone: Save Armor (A-grade)" max-level="1" action="A1">
+	<skill id="6953" name="Lucky Enchant Stone: Save Armor (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -725,7 +725,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6954" name="Lucky Enchant Stone: Protect Armor (D-grade)" max-level="1" action="A1">
+	<skill id="6954" name="Lucky Enchant Stone: Protect Armor (D-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -735,7 +735,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6955" name="Lucky Enchant Stone: Protect Armor (C-grade)" max-level="1" action="A1">
+	<skill id="6955" name="Lucky Enchant Stone: Protect Armor (C-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -745,7 +745,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6956" name="Lucky Enchant Stone: Protect Armor (B-grade)" max-level="1" action="A1">
+	<skill id="6956" name="Lucky Enchant Stone: Protect Armor (B-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -755,7 +755,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6957" name="Lucky Enchant Stone: Protect Armor (A-grade)" max-level="1" action="A1">
+	<skill id="6957" name="Lucky Enchant Stone: Protect Armor (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -765,7 +765,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6958" name="Lucky Enchant Stone: Armor (D-grade)" max-level="1" action="A1">
+	<skill id="6958" name="Lucky Enchant Stone: Armor (D-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -775,7 +775,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6959" name="Lucky Enchant Stone: Armor (C-grade)" max-level="1" action="A1">
+	<skill id="6959" name="Lucky Enchant Stone: Armor (C-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -785,7 +785,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6960" name="Lucky Enchant Stone: Armor (B-grade)" max-level="1" action="A1">
+	<skill id="6960" name="Lucky Enchant Stone: Armor (B-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -795,7 +795,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6961" name="Lucky Enchant Stone: Armor (A-grade)" max-level="1" action="A1">
+	<skill id="6961" name="Lucky Enchant Stone: Armor (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -805,7 +805,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6962" name="Giant's Lucky Enchant Stone (A-grade)" max-level="1" action="A1">
+	<skill id="6962" name="Giant's Lucky Enchant Stone (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -815,7 +815,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6963" name="Blessed Lucky Enchant Stone (A-grade)" max-level="1" action="A1">
+	<skill id="6963" name="Blessed Lucky Enchant Stone (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -825,7 +825,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="6964" name="Scroll: Enchant Hair Accessory" max-level="1" action="A1">
+	<skill id="6964" name="Scroll: Enchant Hair Accessory" action="A1">
 	<!-- Enchants Hair Accessory. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >

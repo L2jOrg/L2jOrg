@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="16100" name="Presentation" max-level="1" action="A1">
+	<skill id="16100" name="Presentation" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0" >
@@ -13,7 +13,7 @@
 		</attributes>
 		<target type="TARGET" />
 	</skill>
-	<skill id="16101" name="Tauti" max-level="1" >
+	<skill id="16101" name="Tauti">
 	<!-- One of Bremnon's weapons, named by Shilen as the Lord of Hellfire. With its own ego and the ability to control living beings' emotions, Tauti is manipulating the class warfare among the races in the Seed in order to evolve itself and complete the sacrifices for Shilen. -->
 		<icon initial="icon.skillboss"/>
 		<attributes property="MAGIC" magic-critical-rate="-5.0" >
@@ -29,7 +29,7 @@
 			</block-abnormal>
 		</effects>
 	</skill>
-	<skill id="16102" name="Dark Storm" max-level="1" action="A1" type="MAGIC">
+	<skill id="16102" name="Dark Storm" action="A1" type="MAGIC">
 	<!-- Powerful magical attack on target and nearby enemies. -->
 		<icon initial="icon.skill1167"/>
 		<attributes >
@@ -161,7 +161,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16109" name="Heavy Armor Rise" max-level="1" action="A2" type="MAGIC">
+	<skill id="16109" name="Heavy Armor Rise" action="A2" type="MAGIC">
 	<!-- P. Critical Damage increased. -->
 		<icon initial="icon.m_class_heavy"/>
 		<attributes property="PHYSIC" >
@@ -177,7 +177,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16110" name="Light Armor Rise" max-level="1" action="A2" type="MAGIC">
+	<skill id="16110" name="Light Armor Rise" action="A2" type="MAGIC">
 	<!-- P. Atk. increased. -->
 		<icon initial="icon.m_class_light"/>
 		<attributes property="PHYSIC" >
@@ -193,7 +193,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16111" name="Robe Rise" max-level="1" action="A2" type="MAGIC">
+	<skill id="16111" name="Robe Rise" action="A2" type="MAGIC">
 	<!-- M. Atk. increased. -->
 		<icon initial="icon.m_class_robe"/>
 		<attributes property="PHYSIC" >
@@ -209,7 +209,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16112" name="Speed Rise" max-level="1" action="A2" type="MAGIC">
+	<skill id="16112" name="Speed Rise" action="A2" type="MAGIC">
 	<!-- Atk. Spd. and Casting Spd. increased. -->
 		<icon initial="icon.m_mystery_brain"/>
 		<attributes property="PHYSIC" >
@@ -225,7 +225,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16113" name="Tragic Bleed" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="16113" name="Tragic Bleed" debuff="true" action="A2" type="MAGIC">
 	<!-- HP has been momentarily decreased due to Bleed. -->
 		<icon initial="icon.m_mystery_blood"/>
 		<attributes property="PHYSIC" >
@@ -276,7 +276,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16117" name="Amplify Damage - Stage 1" max-level="1" action="A2" type="MAGIC">
+	<skill id="16117" name="Amplify Damage - Stage 1" action="A2" type="MAGIC">
 	<!-- Damage + 20%% toward normal monsters. -->
 		<icon initial="icon.skill6367_1"/>
 		<attributes property="PHYSIC" >
@@ -292,7 +292,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16118" name="Amplify Damage - Stage 2" max-level="1" action="A2" type="MAGIC">
+	<skill id="16118" name="Amplify Damage - Stage 2" action="A2" type="MAGIC">
 	<!-- Damage + 30%% toward normal monsters. -->
 		<icon initial="icon.skill6367_2"/>
 		<attributes property="PHYSIC" >
@@ -308,7 +308,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16119" name="Flare Chain" max-level="1" action="A1" type="MAGIC">
+	<skill id="16119" name="Flare Chain" action="A1" type="MAGIC">
 	<!-- Deals fire damage to target and nearby enemies. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -350,7 +350,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 	</skill>
-	<skill id="16122" name="Flare Breath" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="16122" name="Flare Breath" debuff="true" action="A2" type="MAGIC">
 	<!-- Powerful flame attack, draining HP for 5 sec. -->
 		<icon initial="icon.skill4452"/>
 		<attributes property="PHYSIC" >
@@ -367,7 +367,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16123" name="Flare Outburst" max-level="1" action="A1" type="MAGIC">
+	<skill id="16123" name="Flare Outburst" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -384,7 +384,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16124" name="Flare Life" max-level="1" action="A1" type="MAGIC">
+	<skill id="16124" name="Flare Life" action="A1" type="MAGIC">
 	<!-- Recovers Deathmoz' HP. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -401,7 +401,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16125" name="Volcano Sword Dance" max-level="1" action="A1">
+	<skill id="16125" name="Volcano Sword Dance" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -418,7 +418,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16126" name="Volcano Buster" max-level="1" action="A1">
+	<skill id="16126" name="Volcano Buster" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -435,7 +435,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16127" name="Blind Flame" max-level="1" action="A1" type="MAGIC">
+	<skill id="16127" name="Blind Flame" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -452,7 +452,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16128" name="Flame Bog" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="16128" name="Flame Bog" debuff="true" action="A2" type="MAGIC">
 	<!-- Powerful flame attack on target and nearby enemies, draining HP for 5 sec. -->
 		<icon initial="icon.skill4279_new"/>
 		<attributes property="PHYSIC" >
@@ -496,7 +496,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16130" name="Oasis Energy" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="16130" name="Oasis Energy" debuff="true" action="A2" type="MAGIC">
 	<!-- The Oasis has quenched your thirst, suddenly wearing you out. Atk./Atk. Spd. -25%%, and Movement Speed -50. -->
 		<icon initial="icon.oasis_feel"/>
 		<attributes property="PHYSIC" >
@@ -516,7 +516,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="-50.0"/>
 			</speed>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
@@ -527,7 +527,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="16131" name="Thirst Quench" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="16131" name="Thirst Quench" debuff="true" action="A2" type="MAGIC">
 	<!-- Your thirst has been quenched. P./M. Atk., and Atk./Casting Spd. + 50%%. -->
 		<icon initial="icon.release_thirst"/>
 		<attributes property="PHYSIC" >
@@ -543,7 +543,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16132" name="Oasis Mirage" max-level="1" action="A1" type="MAGIC">
+	<skill id="16132" name="Oasis Mirage" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -560,7 +560,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16133" name="Watery Grave" max-level="1" action="A1" type="MAGIC">
+	<skill id="16133" name="Watery Grave" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -577,7 +577,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16134" name="Doom Shrieker" max-level="1" action="A1">
+	<skill id="16134" name="Doom Shrieker" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -594,7 +594,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16135" name="Begin Research" max-level="1" action="A2" type="MAGIC">
+	<skill id="16135" name="Begin Research" action="A2" type="MAGIC">
 	<!-- Researching the Heroes' Power. -->
 		<icon initial="icon.etc_deco_star_i00"/>
 		<attributes property="PHYSIC" >
@@ -607,7 +607,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16136" name="Reward x 2" max-level="1" action="A2" type="MAGIC">
+	<skill id="16136" name="Reward x 2" action="A2" type="MAGIC">
 	<!-- Hero's powers give you x  2 the rewards. Disappears upon death or expiration. -->
 		<icon initial="icon.etc_deco_star_i00"/>
 		<attributes property="PHYSIC" >
@@ -620,7 +620,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16137" name="Reward x 4" max-level="1" action="A2" type="MAGIC">
+	<skill id="16137" name="Reward x 4" action="A2" type="MAGIC">
 	<!-- Hero's powers give you x  4 the rewards. Disappears upon death or expiration. -->
 		<icon initial="icon.etc_deco_star_i00"/>
 		<attributes property="PHYSIC" >
@@ -633,7 +633,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16138" name="Reward x 8" max-level="1" action="A2" type="MAGIC">
+	<skill id="16138" name="Reward x 8" action="A2" type="MAGIC">
 	<!-- Hero's powers give you x  8 the rewards. Disappears upon death or expiration. -->
 		<icon initial="icon.etc_deco_star_i00"/>
 		<attributes property="PHYSIC" >
@@ -646,7 +646,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16139" name="Reward x 16" max-level="1" action="A2" type="MAGIC">
+	<skill id="16139" name="Reward x 16" action="A2" type="MAGIC">
 	<!-- Hero's powers give you x  16 the rewards. Disappears upon death or expiration. -->
 		<icon initial="icon.etc_deco_star_i00"/>
 		<attributes property="PHYSIC" >
@@ -659,7 +659,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16140" name="Reward x 32" max-level="1" action="A2" type="MAGIC">
+	<skill id="16140" name="Reward x 32" action="A2" type="MAGIC">
 	<!-- Hero's powers give you x  32 the rewards. Disappears upon death or expiration. -->
 		<icon initial="icon.etc_deco_star_i00"/>
 		<attributes property="PHYSIC" >
@@ -672,7 +672,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16141" name="Research Success" max-level="1" action="A2">
+	<skill id="16141" name="Research Success" action="A2">
 	<!-- Researching the Heroes' Power. -->
 		<icon initial="icon.etc_deco_star_i00"/>
 		<attributes property="PHYSIC" >
@@ -684,7 +684,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16142" name="Research Success" max-level="1" action="A2">
+	<skill id="16142" name="Research Success" action="A2">
 	<!-- Researching the Heroes' Power. -->
 		<icon initial="icon.etc_deco_star_i00"/>
 		<attributes property="PHYSIC" >
@@ -696,7 +696,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16143" name="Research Success" max-level="1" action="A2">
+	<skill id="16143" name="Research Success" action="A2">
 	<!-- Researching the Heroes' Power. -->
 		<icon initial="icon.etc_deco_star_i00"/>
 		<attributes property="PHYSIC" >
@@ -708,7 +708,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16144" name="Research Success" max-level="1" action="A2">
+	<skill id="16144" name="Research Success" action="A2">
 	<!-- Researching the Heroes' Power. -->
 		<icon initial="icon.etc_deco_star_i00"/>
 		<attributes property="PHYSIC" >
@@ -720,7 +720,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16145" name="Research Success" max-level="1" action="A2">
+	<skill id="16145" name="Research Success" action="A2">
 	<!-- Researching the Heroes' Power. -->
 		<icon initial="icon.etc_deco_star_i00"/>
 		<attributes property="PHYSIC" >
@@ -732,7 +732,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16146" name="Research Fail" max-level="1" action="A2">
+	<skill id="16146" name="Research Fail" action="A2">
 	<!-- Researching the Heroes' Power. -->
 		<icon initial="icon.etc_deco_star_i00"/>
 		<attributes property="PHYSIC" >
@@ -898,7 +898,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16155" name="Charmed Kefensis" max-level="1" action="A1" type="MAGIC">
+	<skill id="16155" name="Charmed Kefensis" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -954,7 +954,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16158" name="Beleth's Volcano" max-level="1" action="A1" type="MAGIC">
+	<skill id="16158" name="Beleth's Volcano" action="A1" type="MAGIC">
 	<!-- Attacks the enemy with powerful Fire magic. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -971,7 +971,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16159" name="Beleth's Blaze" max-level="1" action="A1" type="MAGIC">
+	<skill id="16159" name="Beleth's Blaze" action="A1" type="MAGIC">
 	<!-- Deals powerful fire damage to nearby enemies. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -988,7 +988,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16160" name="Beleth's Flame" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="16160" name="Beleth's Flame" debuff="true" action="A2" type="MAGIC">
 	<!-- Powerful flames burn off HP. -->
 		<icon initial="icon.skill1101"/>
 		<attributes property="PHYSIC" >
@@ -1005,7 +1005,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16161" name="Darion's Bleed" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="16161" name="Darion's Bleed" debuff="true" action="A2" type="MAGIC">
 	<!-- HP has been momentarily decreased due to Bleed. -->
 		<icon initial="icon.skill0096"/>
 		<attributes property="PHYSIC" >
@@ -1022,7 +1022,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16162" name="Beleth's Meteor" max-level="1" action="A1" type="MAGIC">
+	<skill id="16162" name="Beleth's Meteor" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1039,7 +1039,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16163" name="Darion's Sword Storm" max-level="1" action="A1" type="MAGIC">
+	<skill id="16163" name="Darion's Sword Storm" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1056,7 +1056,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16164" name="Flame Blade" max-level="1" action="A1" type="MAGIC">
+	<skill id="16164" name="Flame Blade" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1073,7 +1073,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16165" name="Dark Blade" max-level="1" action="A1" type="MAGIC">
+	<skill id="16165" name="Dark Blade" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1129,7 +1129,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16168" name="Half-kill" max-level="1" action="A1">
+	<skill id="16168" name="Half-kill" action="A1">
 	<!-- Cute target's HP in half. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1146,7 +1146,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16171" name="Summon Poison Zone" max-level="1" debuff="true" action="A1">
+	<skill id="16171" name="Summon Poison Zone" debuff="true" action="A1">
 	<!-- Cute target's HP in half. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1162,7 +1162,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16172" name="Poisoned" max-level="1" debuff="true" action="A2">
+	<skill id="16172" name="Poisoned" debuff="true" action="A2">
 	<!-- HP drops by 75 per second due to a poisonous fog. -->
 		<icon initial="icon.skill1167"/>
 		<attributes property="PHYSIC" >
@@ -1177,7 +1177,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16173" name="Invincibility" max-level="1" action="A2">
+	<skill id="16173" name="Invincibility" action="A2">
 	<!-- Invincible. -->
 		<icon initial="icon.skill1418"/>
 		<attributes property="PHYSIC" >
@@ -1187,7 +1187,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16174" name="Herb of Growth" max-level="1" action="A1">
+	<skill id="16174" name="Herb of Growth" action="A1">
 	<!-- Hellbound's mysterious powers give you 10 min of SP/XP gain + 50%% through hunting. Entire party. -->
 		<icon initial="BranchSys2.icon.g_giant_gem"/>
 		<attributes property="PHYSIC" >
@@ -1200,7 +1200,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16175" name="Major Herb of Growth" max-level="1" >
+	<skill id="16175" name="Major Herb of Growth">
 	<!-- Hellbound's mysterious powers give you 10 min of SP/XP gain + 100%% through hunting. Entire party. -->
 		<icon initial="BranchSys2.icon.g_dawn_gem"/>
 		<attributes property="PHYSIC" >
@@ -1213,7 +1213,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16176" name="Superior Herb of Growth" max-level="1" >
+	<skill id="16176" name="Superior Herb of Growth">
 	<!-- Hellbound's mysterious powers give you 2 min of SP/XP gain + 300%% through hunting. Entire party. -->
 		<icon initial="icon.etc_str_symbol_i01"/>
 		<attributes property="PHYSIC" >
@@ -1236,7 +1236,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16178" name="Leona's Thunder Spear" max-level="1" debuff="true" action="A2">
+	<skill id="16178" name="Leona's Thunder Spear" debuff="true" action="A2">
 	<!-- Attacks enemies around the target and stuns them. -->
 		<icon initial="icon.skll10321"/>
 		<attributes property="PHYSIC" >
@@ -1252,7 +1252,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16179" name="Beleth" max-level="1" >
+	<skill id="16179" name="Beleth">
 	<!-- The greatest wizard in history, and also the most demonic. Through contact with the forbidden, he gained possession of a mysterious power unknown even to the gods. His most recent tracks have been through Hellbound, which underwent an astonishing transformation after he began experimenting with Chaos, a Human attribute. No one knows what he is thinking, or what he is after. -->
 		<icon initial="icon.skillboss"/>
 		<attributes property="MAGIC" >
@@ -1262,7 +1262,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16180" name="Darion" max-level="1" >
+	<skill id="16180" name="Darion">
 	<!-- Originally of the demon world, he was placed among the people by Beleth in order to rule Hellbound. He seeks to gain control over Hellbound whenever Beleth disappears for one of his experiments. -->
 		<icon initial="icon.skillboss"/>
 		<attributes property="MAGIC" >
@@ -1282,7 +1282,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="16183" name="Skill Reflect Barrier" max-level="1" action="A2" type="MAGIC">
+	<skill id="16183" name="Skill Reflect Barrier" action="A2" type="MAGIC">
 	<!-- Cast Petrify on an enemy that has used a skill. -->
 		<icon initial="icon.skill1062"/>
 		<attributes property="PHYSIC" >
@@ -1297,7 +1297,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16184" name="Vengeful Petrify" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="16184" name="Vengeful Petrify" debuff="true" action="A2" type="MAGIC">
 	<!-- Petrified for 5 seconds. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" >
@@ -1312,7 +1312,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16185" name="Sword Storm" max-level="1" action="A1">
+	<skill id="16185" name="Sword Storm" action="A1">
 	<!-- A powerful AoE attack with sword aura. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1327,7 +1327,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16186" name="Belly Cut" max-level="1" action="A1">
+	<skill id="16186" name="Belly Cut" action="A1">
 	<!-- A powerful physical attack near the target. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1342,7 +1342,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16187" name="Head-on Crash" max-level="1" action="A1">
+	<skill id="16187" name="Head-on Crash" action="A1">
 	<!-- Physical damage on a single target. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1357,7 +1357,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16188" name="Darkness" max-level="1" action="A1" type="MAGIC">
+	<skill id="16188" name="Darkness" action="A1" type="MAGIC">
 	<!-- Magical AoE attack to target and surrounding area. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1372,7 +1372,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16189" name="Disciple's Blow" max-level="1" action="A1" type="MAGIC">
+	<skill id="16189" name="Disciple's Blow" action="A1" type="MAGIC">
 	<!-- Magical damage on a single target. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1387,7 +1387,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16190" name="Recharge Fury" max-level="1" action="A2">
+	<skill id="16190" name="Recharge Fury" action="A2">
 	<!-- Increases P. Atk. +100%% for 5 seconds. -->
 		<icon initial="icon.skill0110"/>
 		<attributes property="PHYSIC" >
@@ -1402,7 +1402,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16191" name="Pandemonium" max-level="1" action="A1">
+	<skill id="16191" name="Pandemonium" action="A1">
 	<!-- Physical attck on target and surrounding area. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1417,7 +1417,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16192" name="Tyranny" max-level="1" action="A1" type="MAGIC">
+	<skill id="16192" name="Tyranny" action="A1" type="MAGIC">
 	<!-- Powerful magical AoE attack. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1432,7 +1432,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16193" name="Lurking Lunacy" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="16193" name="Lurking Lunacy" debuff="true" action="A2" type="MAGIC">
 	<!-- Casts Fear on target and nearby enemies for 2 sec. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" >
@@ -1447,7 +1447,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16194" name="Quiet Path to Death" max-level="1" action="A1" type="MAGIC">
+	<skill id="16194" name="Quiet Path to Death" action="A1" type="MAGIC">
 	<!-- A lethal magical AoE attack. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1462,7 +1462,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16195" name="Guided Death" max-level="1" action="A1" type="MAGIC">
+	<skill id="16195" name="Guided Death" action="A1" type="MAGIC">
 	<!-- A powerful magical AoE attack. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1477,7 +1477,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16196" name="Blood Shower" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="16196" name="Blood Shower" debuff="true" action="A2" type="MAGIC">
 	<!-- A magical AoE attack with Bleed. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" >
@@ -1492,7 +1492,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16197" name="Haughty Slaughter" max-level="1" action="A1">
+	<skill id="16197" name="Haughty Slaughter" action="A1">
 	<!-- Physical AoE attack. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1507,7 +1507,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16198" name="Continuing Pain" max-level="1" action="A1">
+	<skill id="16198" name="Continuing Pain" action="A1">
 	<!-- Physical AoE attack. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
@@ -1522,7 +1522,7 @@
 		</consume>
 		<target />
 	</skill>
-	<skill id="16199" name="Howling Abyss" max-level="1" action="A1" type="MAGIC">
+	<skill id="16199" name="Howling Abyss" action="A1" type="MAGIC">
 	<!-- Magical attack on a single target. -->
 		<icon initial="icon.skill0000"/>
 		<attributes >

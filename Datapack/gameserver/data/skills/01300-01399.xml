@@ -53,7 +53,7 @@
 			</dispel>
 		</effects>
 	</skill>
-	<skill id="1301" name="Servitor Blessing" max-level="1" action="A1" type="MAGIC">
+	<skill id="1301" name="Servitor Blessing" action="A1" type="MAGIC">
 	<!-- Frees servitor of Hold, paralysis and decreased Atk. Spd. or movement effects. -->
 		<icon initial="icon.skill1301"/>
 		<attributes magic-critical-rate="5.0" >
@@ -128,7 +128,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
 				<power initial="10.0">
 					<value level="2">20.0</value>
 				</power>
@@ -323,7 +323,7 @@
 		</consume>
 		<target scope="PARTY_PLEDGE" object="FRIEND" range="1000" affect-min="50" affect-random="50" />
 		<effects>
-			<cp mode="DIFF">
+			<cp>
 				<power initial="501.0">
 					<value level="2">526.0</value>
 					<value level="3">550.0</value>
@@ -462,7 +462,7 @@
 		</consume>
 		<target type="TARGET" />
 		<effects>
-			<cp mode="DIFF">
+			<cp>
 				<power initial="497.0">
 					<value level="2">563.0</value>
 					<value level="3">627.0</value>
@@ -583,7 +583,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="2.0">
 					<value level="2">3.0</value>
 					<value level="3">4.0</value>
@@ -729,7 +729,7 @@
 			</vital-stat-modify>
 		</effects>
 	</skill>
-	<skill id="1316" name="Fishing Expertise (C-grade)" max-level="1" >
+	<skill id="1316" name="Fishing Expertise (C-grade)">
 	<!-- C-grade Fishing Expertise. -->
 		<icon initial="icon.skill1316"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -740,7 +740,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="1317" name="Fishing Expertise (B-grade)" max-level="1" >
+	<skill id="1317" name="Fishing Expertise (B-grade)">
 	<!-- B-grade Fishing Expertise. -->
 		<icon initial="icon.skill1317"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -751,7 +751,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="1318" name="Fishing Expertise (A-grade)" max-level="1" >
+	<skill id="1318" name="Fishing Expertise (A-grade)">
 	<!-- A-grade Fishing Expertise. -->
 		<icon initial="icon.skill1318"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -762,7 +762,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="1319" name="Fishing Expertise (S-grade)" max-level="1" >
+	<skill id="1319" name="Fishing Expertise (S-grade)">
 	<!-- S-grade Fishing Expertise. -->
 		<icon initial="icon.skill1319"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -773,7 +773,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="1321" name="Dwarven Craft" max-level="1" action="A1">
+	<skill id="1321" name="Dwarven Craft" action="A1">
 	<!-- Can read Dwarven recipe books. -->
 		<icon initial="icon.skill0172"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
@@ -787,7 +787,7 @@
 			<effect name="OpenDwarfRecipeBook"/>
 		</effects>
 	</skill>
-	<skill id="1322" name="Common Craft" max-level="1" action="A1">
+	<skill id="1322" name="Common Craft" action="A1">
 	<!-- Can read common recipe books. -->
 		<icon initial="icon.skill0172"/>
 		<attributes magic-critical-rate="5.0" >
@@ -848,7 +848,7 @@
 			<condition name="CanSummon"/>
 		</conditions>
 		<effects>
-			<summon consume-item="3031" experience-multiplier="1.0" life-time="-1">
+			<summon consume-item="3031" life-time="-1">
 				<npc initial="14251.0">
 					<value level="2">14252.0</value>
 					<value level="3">14253.0</value>
@@ -909,7 +909,7 @@
 			<condition name="CanSummon"/>
 		</conditions>
 		<effects>
-			<summon consume-item="3031" experience-multiplier="1.0" life-time="-1">
+			<summon consume-item="3031" life-time="-1">
 				<npc initial="14435.0">
 					<value level="2">14436.0</value>
 					<value level="3">14437.0</value>
@@ -970,7 +970,7 @@
 			<condition name="CanSummon"/>
 		</conditions>
 		<effects>
-			<summon consume-item="3031" experience-multiplier="1.0" life-time="-1">
+			<summon consume-item="3031" life-time="-1">
 				<npc initial="14619.0">
 					<value level="2">14620.0</value>
 					<value level="3">14621.0</value>
@@ -1014,7 +1014,7 @@
 			<condition name="CanSummon"/>
 		</conditions>
 		<effects>
-			<summon consume-item="0" experience-multiplier="1.0" life-time="-1">
+			<summon consume-item="0" life-time="-1">
 				<npc initial="14080.0">
 					<value level="2">14081.0</value>
 				</npc>
@@ -1022,7 +1022,7 @@
 			</summon>
 		</effects>
 	</skill>
-	<skill id="1335" name="Balance Life" max-level="1" action="A1" type="MAGIC">
+	<skill id="1335" name="Balance Life" action="A1" type="MAGIC">
 	<!-- Equalizes HP of all party members. -->
 		<icon initial="icon.skill1335"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
@@ -1043,7 +1043,7 @@
 			<effect name="RebalanceHP"/>
 		</effects>
 	</skill>
-	<skill id="1336" name="Curse of Doom" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="1336" name="Curse of Doom" debuff="true" action="A2" type="MAGIC">
 	<!-- Blocks all the enemy's P. Skills/M. Skills for 24 seconds. -->
 		<icon initial="icon.skill1336"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="30" auto-use="ACTIVE">
@@ -1070,7 +1070,7 @@
 			<effect name="PhysicalMute"/>
 		</effects>
 	</skill>
-	<skill id="1337" name="Curse of Abyss" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="1337" name="Curse of Abyss" debuff="true" action="A2" type="MAGIC">
 	<!-- For 30 seconds, enemy's Movement Speed -10%%, P. Def. -30%%, P. Evasion -6, M. Atk. -30%%, Casting Spd. -20%% and Critical Rate of damage magic -30%%. -->
 		<icon initial="icon.skill1337"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DEATH" level-bonus-rate="30" auto-use="ACTIVE">
@@ -1099,7 +1099,7 @@
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="-30.0"/>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="-6.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="-6.0"/>
 			</stat-hp-based>
 			<stat-modify stat="MAGIC_ATTACK" mode="PER">
 				<power initial="-30.0"/>
@@ -1112,7 +1112,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="1338" name="Arcane Chaos" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="1338" name="Arcane Chaos" debuff="true" action="A2" type="MAGIC">
 	<!-- For 30 seconds, Buff-canceling Attack Resistance -30%%, Debuff Resistance -30%%, -24 MP per second, P. Skill MP consumption +10%%, and M. Skill MP Consumption +30%%. -->
 		<icon initial="icon.skill1338"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="20" auto-use="ACTIVE">
@@ -1388,15 +1388,15 @@
 					<value level="3">20.0</value>
 				</power>
 			</effect>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="DIFF">
+			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0">
 				<power initial="-10.0"/>
 			</stat-hp-based>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
 				<power initial="-10.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="1346" name="Warrior Servitor" max-level="1" action="A2" type="MAGIC">
+	<skill id="1346" name="Warrior Servitor" action="A2" type="MAGIC">
 	<!-- For 10 minutes, causes the Servitor to be possessed with the spirit of an ancient warrior. Max HP +30%%, HP Recovery Bonus +20%%, P. Atk. +25%%, P. Def. +25%%, Atk. Spd. +20%%, and Debuff Resistance +20%%. Consumes 20 Spirit Ore. -->
 		<icon initial="icon.skill1346"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
@@ -1421,7 +1421,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="10.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
@@ -1441,7 +1441,7 @@
 			</resist-abnormal-by-category>
 		</effects>
 	</skill>
-	<skill id="1347" name="Wizard Servitor" max-level="1" action="A2" type="MAGIC">
+	<skill id="1347" name="Wizard Servitor" action="A2" type="MAGIC">
 	<!-- For 10 minutes, causes the Servitor to be possessed with the spirit of an ancient wizard. MP Recovery Bonus +30%%, M. Def. +30%%, M. Atk. +25%%, Casting Spd. +20%%, Debuff Resistance +20%%, and Skill MP Consumption -5%%. Consumes 20 Spirit Ore. -->
 		<icon initial="icon.skill1347"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
@@ -1486,7 +1486,7 @@
 			</magic-cost>
 		</effects>
 	</skill>
-	<skill id="1348" name="Assassin Servitor" max-level="1" action="A2" type="MAGIC">
+	<skill id="1348" name="Assassin Servitor" action="A2" type="MAGIC">
 	<!-- For 10 minutes, causes the Servitor to be possessed with the spirit of an ancient assassin. P. Accuracy/M. Accuracy +4, P. Evasion/M. Evasion +4, P. Critical Rate/M. Critical Rate +20%%, P. Critical Damage/M. Critical Damage +25%%, Movement Speed +10%% and Debuff Attack Resistance +20%%. Consumes 20 Spirit Ore. -->
 		<icon initial="icon.skill1348"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
@@ -1514,9 +1514,9 @@
 			<vampiric-attack chance="30">
 				<power initial="5.0"/>
 			</vampiric-attack>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="3.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="3.0"/>
 			</stat-hp-based>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="3.0"/>
 			</stat-modify>
 			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="PER">
@@ -1533,7 +1533,7 @@
 			</resist-abnormal-by-category>
 		</effects>
 	</skill>
-	<skill id="1349" name="Final Servitor" max-level="1" action="A2" type="MAGIC">
+	<skill id="1349" name="Final Servitor" action="A2" type="MAGIC">
 	<!-- For 10 minutes, causes the Servitor to be possessed with the spirit of an ancient hero. Max HP/Max MP +20%%, P. Accuracy/M. Accuracy +4, P. Evasion/M. Evasion +4, P. Atk./M. Atk. +20%%, P. Def/M. Def +20%%, Atk. Spd./Casting Spd. +15%%, P. Critical/M. Critical Rate +15%%, P. Critical Damage/M. Critical Damage +15%%, and Debuff Resistance +20%%. Consumes 20 Spirit Ore. -->
 		<icon initial="icon.skill1349"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
@@ -1558,21 +1558,21 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="10.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="10.0"/>
 			</vital-stat-modify>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="4.0"/>
 			</stat-modify>
-			<stat-modify stat="ACCURACY_MAGIC" mode="DIFF">
+			<stat-modify stat="ACCURACY_MAGIC">
 				<power initial="4.0"/>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="4.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="4.0"/>
 			</stat-hp-based>
-			<stat-modify stat="MAGIC_EVASION_RATE" mode="DIFF">
+			<stat-modify stat="MAGIC_EVASION_RATE">
 				<power initial="4.0"/>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
@@ -1755,7 +1755,7 @@
 		</abnormal>
 		<conditions>
 			<target>
-				<party include-caster="true"/>
+				<party/>
 			</target>
 		</conditions>
 		<effects>
@@ -1828,11 +1828,11 @@
 		</abnormal>
 		<conditions>
 			<target>
-				<party include-caster="true"/>
+				<party/>
 			</target>
 		</conditions>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="10.0">
 					<value level="2">15.0</value>
 				</power>
@@ -1901,15 +1901,15 @@
 		</abnormal>
 		<conditions>
 			<target>
-				<party include-caster="true"/>
+				<party/>
 			</target>
 		</conditions>
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="3.0">
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="3.0">
 					<value level="2">4.0</value>
 				</power>
 			</stat-hp-based>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="3.0">
 					<value level="2">4.0</value>
 				</power>
@@ -1934,7 +1934,7 @@
 			</resist-abnormal-by-category>
 		</effects>
 	</skill>
-	<skill id="1358" name="Block Shield" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="1358" name="Block Shield" debuff="true" action="A2" type="MAGIC">
 	<!-- For 2 minutes, Defense -25%% and unable to receive P. Def. Boost buff. -->
 		<icon initial="icon.skill1358"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="30" auto-use="ACTIVE">
@@ -1967,7 +1967,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="1359" name="Block Wind Walk" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="1359" name="Block Wind Walk" debuff="true" action="A2" type="MAGIC">
 	<!-- For 2 minutes, Movement Speed -40 and unable to receive Movement Speed Boost buff. -->
 		<icon initial="icon.skill1359"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="30" auto-use="ACTIVE">
@@ -2000,7 +2000,7 @@
 			</speed>
 		</effects>
 	</skill>
-	<skill id="1362" name="Chant of Spirit" max-level="1" action="A2" type="MAGIC">
+	<skill id="1362" name="Chant of Spirit" action="A2" type="MAGIC">
 	<!-- For 20 minutes, increases all party members' Buff-canceling Attack Resistance by 30 and Debuff Resistance by 20. -->
 		<icon initial="icon.skill1362"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" >
@@ -2079,15 +2079,15 @@
 					<value level="2">40.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="4.0"/>
 			</stat-modify>
-			<stat-modify stat="ACCURACY_MAGIC" mode="DIFF">
+			<stat-modify stat="ACCURACY_MAGIC">
 				<power initial="4.0"/>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="4.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="4.0"/>
 			</stat-hp-based>
-			<stat-modify stat="MAGIC_EVASION_RATE" mode="DIFF">
+			<stat-modify stat="MAGIC_EVASION_RATE">
 				<power initial="4.0"/>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
@@ -2177,7 +2177,7 @@
 			<chance initial="40"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ACCURACY" mode="DIFF">
+			<stat-modify stat="ACCURACY">
 				<power initial="-6.0"/>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
@@ -2200,7 +2200,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="1367" name="Seal of Disease" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="1367" name="Seal of Disease" debuff="true" action="A2" type="MAGIC">
 	<!-- For 2 minutes, enemy clan member's Heal Received -50%%. -->
 		<icon initial="icon.skill1367"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="20" auto-use="ACTIVE">
@@ -2373,7 +2373,7 @@
 			</enlarge-slot>
 		</effects>
 	</skill>
-	<skill id="1374" name="Heroic Valor" max-level="1" action="A2" type="MAGIC">
+	<skill id="1374" name="Heroic Valor" action="A2" type="MAGIC">
 	<!-- For 2 minutes, increases nearby clan members' P. Atk. by 250, P. Def. by 500, and Buff-canceling Attack Resistance by 40. Consumes 80 Spirit Ore. -->
 		<icon initial="icon.skill1374"/>
 		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" hit-cancel-time="2.0" blocked-on-olympiad="true" >
@@ -2398,10 +2398,10 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="DIFF">
+			<stat-modify stat="PHYSICAL_ATTACK">
 				<power initial="250.0"/>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="DIFF">
+			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="500.0"/>
 			</stat-modify>
 			<resist-dispel-by-category category="BUFF">
@@ -2409,10 +2409,10 @@
 			</resist-dispel-by-category>
 		</effects>
 	</skill>
-	<skill id="1375" name="Heroic Grandeur" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="1375" name="Heroic Grandeur" debuff="true" action="A2" type="MAGIC">
 	<!-- For 15 seconds, nearby enemies' P. Def. -50%%, M. Def -50, P. Evasion -16, Shield Defense Rate -50%%, Magic Cancellation Damage +100, and blocks all P. Skills/M. Skills. Consumes 80 Spirit Ore. -->
 		<icon initial="icon.skill1375"/>
-		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" trait="DERANGEMENT" hit-cancel-time="2.0" level-bonus-rate="30" blocked-on-olympiad="true" dispellable="false" >
+		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" trait="DERANGEMENT" hit-cancel-time="2.0" level-bonus-rate="30" blocked-on-olympiad="true">
 			<magic-level initial="-1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="3600000"/>
@@ -2440,22 +2440,22 @@
 			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
 				<power initial="-50.0"/>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="DIFF">				<power initial="-16.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="-16.0"/>
 			</stat-hp-based>
 			<stat-modify stat="SHIELD_DEFENCE_RATE" mode="PER">
 				<power initial="-50.0"/>
 			</stat-modify>
-			<stat-modify stat="ATTACK_CANCEL" mode="DIFF">
+			<stat-modify stat="ATTACK_CANCEL">
 				<power initial="100.0"/>
 			</stat-modify>
 			<effect name="Mute"/>
 			<effect name="PhysicalMute"/>
 		</effects>
 	</skill>
-	<skill id="1376" name="Heroic Dread" max-level="1" debuff="true" action="A2" type="MAGIC">
+	<skill id="1376" name="Heroic Dread" debuff="true" action="A2" type="MAGIC">
 	<!-- For 8 seconds, instills nearby enemies with fear and causes them to flee with Speed increased by 66. Consumes 80 Spirit Ore. -->
 		<icon initial="icon.skill1376"/>
-		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" trait="DERANGEMENT" hit-cancel-time="2.0" level-bonus-rate="30" blocked-on-olympiad="true" dispellable="false" >
+		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" trait="DERANGEMENT" hit-cancel-time="2.0" level-bonus-rate="30" blocked-on-olympiad="true">
 			<magic-level initial="-1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="3600000"/>
@@ -2479,7 +2479,7 @@
 		<effects>
 			<effect name="BlockControl"/>
 			<effect name="Fear"/>
-			<speed mode="DIFF">
+			<speed>
 				<power initial="66.0"/>
 			</speed>
 		</effects>

@@ -149,7 +149,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="17825" name="Greater Aquamarine - Special Ability" max-level="1" action="A1">
+	<skill id="17825" name="Greater Aquamarine - Special Ability" action="A1">
 	<!-- Recovers 10%% MP upon using a skill. -->
 		<icon initial="icon.bm_jewel_castmpup_high_lv1_lavianrose"/>
 		<attributes >
@@ -173,7 +173,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="17889" name="Ruby" max-level="1" action="A1">
+	<skill id="17889" name="Ruby" action="A1">
 	<!-- Beast Soulshot damage +5% -->
 		<icon initial="icon.etc_bm_jewel_ruby_i00"/>
 		<attributes >
@@ -183,7 +183,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="17890" name="Ruby" max-level="1" action="A1">
+	<skill id="17890" name="Ruby" action="A1">
 	<!-- Beast Soulshot damage +8% -->
 		<icon initial="icon.etc_bm_jewel_ruby_i00"/>
 		<attributes >
@@ -211,7 +211,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="17896" name="Aquamarine - Mana Drain" max-level="1" >
+	<skill id="17896" name="Aquamarine - Mana Drain">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" >

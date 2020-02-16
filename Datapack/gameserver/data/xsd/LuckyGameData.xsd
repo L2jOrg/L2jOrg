@@ -1,4 +1,4 @@
-<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<xs:element name="list">
 		<xs:complexType>
 			<xs:sequence>
@@ -12,9 +12,9 @@
 											<xs:complexType>
 												<xs:simpleContent>
 													<xs:extension base="xs:string">
-														<xs:attribute type="xs:float" name="chance" use="optional" />
-														<xs:attribute type="xs:byte" name="count" use="optional" />
-														<xs:attribute type="xs:int" name="id" use="optional" />
+														<xs:attribute type="xs:float" name="chance"/>
+														<xs:attribute type="xs:byte" name="count"/>
+														<xs:attribute type="xs:int" name="id"/>
 													</xs:extension>
 												</xs:simpleContent>
 											</xs:complexType>
@@ -29,9 +29,9 @@
 											<xs:complexType>
 												<xs:simpleContent>
 													<xs:extension base="xs:string">
-														<xs:attribute type="xs:byte" name="count" use="optional" />
-														<xs:attribute type="xs:int" name="id" use="optional" />
-														<xs:attribute type="xs:short" name="points" use="optional" />
+														<xs:attribute type="xs:byte" name="count"/>
+														<xs:attribute type="xs:int" name="id"/>
+														<xs:attribute type="xs:short" name="points"/>
 													</xs:extension>
 												</xs:simpleContent>
 											</xs:complexType>
@@ -59,8 +59,8 @@
 								</xs:complexType>
 							</xs:element>
 						</xs:sequence>
-						<xs:attribute type="xs:int" name="turning_point" use="optional" />
-						<xs:attribute type="xs:byte" name="index" use="optional" />
+						<xs:attribute type="xs:int" name="turning_point"/>
+						<xs:attribute type="xs:byte" name="index"/>
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>

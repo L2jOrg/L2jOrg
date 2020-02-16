@@ -24,7 +24,7 @@
 		<attributes weight="100" duration="1440" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51025" level="1" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
+			<skill id="51025" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
 		</skills>
 	</armor>
 
@@ -180,9 +180,9 @@
 	<item id="91028" name="Maliss's High-grade HP Potion" type="POTION" icon="BranchSys.icon.br_vitality_potion_i01">
 	<!-- After instant 1000 HP Recovery, CP Recovery with remaining points. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use-type="HEALING"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51083" level="1" value="-1"/>  <!-- Maliss's High-grade HP Potion -->
+		<attributes action="SKILL_REDUCE" auto-use="HEALING"/>
+		<skill-reducer>
+			<skill id="51083" value="-1"/>  <!-- Maliss's High-grade HP Potion -->
 		</skill-reducer>
 	</item>
 
@@ -195,9 +195,9 @@
 	<item id="91030" name="Spirit's Blessing" type="NONE" icon="icon.elemental_bless_scrl_i00">
 	<!-- Activates a buff when the item is used. Attribute XP gain +20% for 20 minutes when hunting attribute monsters.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="54028" level="1" value="-1"/>  <!-- Spirit's Blessing -->
+		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="54028" value="-1"/>  <!-- Spirit's Blessing -->
 		</skill-reducer>
 	</item>
 
@@ -283,8 +283,8 @@
 			<stat type="maxMp" value="35.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="1" value="-1"/>  <!-- Increases Skill XP -->
-			<skill id="54023" level="1" value="-1"/>  <!-- Water Defense -->
+			<skill id="54027" value="-1"/>  <!-- Increases Skill XP -->
+			<skill id="54023" value="-1"/>  <!-- Water Defense -->
 		</skills>
 	</armor>
 
@@ -328,8 +328,8 @@
 			<stat type="maxMp" value="35.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="1" value="-1"/>  <!-- Increases Skill XP -->
-			<skill id="54024" level="1" value="-1"/>  <!-- Fire Defense -->
+			<skill id="54027" value="-1"/>  <!-- Increases Skill XP -->
+			<skill id="54024" value="-1"/>  <!-- Fire Defense -->
 		</skills>
 	</armor>
 
@@ -374,8 +374,8 @@
 			<stat type="windRes" value="20.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="1" value="-1"/>  <!-- Increases Skill XP -->
-			<skill id="54025" level="1" value="-1"/>  <!-- Wind Defense -->
+			<skill id="54027" value="-1"/>  <!-- Increases Skill XP -->
+			<skill id="54025" value="-1"/>  <!-- Wind Defense -->
 		</skills>
 	</armor>
 
@@ -419,8 +419,8 @@
 			<stat type="maxMp" value="35.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="1" value="-1"/>  <!-- Increases Skill XP -->
-			<skill id="54026" level="1" value="-1"/>  <!-- Earth Defense -->
+			<skill id="54027" value="-1"/>  <!-- Increases Skill XP -->
+			<skill id="54026" value="-1"/>  <!-- Earth Defense -->
 		</skills>
 	</armor>
 
@@ -464,8 +464,8 @@
 			<stat type="maxMp" value="35.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="1" value="-1"/>  <!-- Increases Skill XP -->
-			<skill id="54023" level="1" value="-1"/>  <!-- Water Defense -->
+			<skill id="54027" value="-1"/>  <!-- Increases Skill XP -->
+			<skill id="54023" value="-1"/>  <!-- Water Defense -->
 		</skills>
 	</armor>
 
@@ -479,8 +479,8 @@
 			<stat type="maxMp" value="35.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="1" value="-1"/>  <!-- Increases Skill XP -->
-			<skill id="54024" level="1" value="-1"/>  <!-- Fire Defense -->
+			<skill id="54027" value="-1"/>  <!-- Increases Skill XP -->
+			<skill id="54024" value="-1"/>  <!-- Fire Defense -->
 		</skills>
 	</armor>
 
@@ -494,8 +494,8 @@
 			<stat type="maxMp" value="35.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="1" value="-1"/>  <!-- Increases Skill XP -->
-			<skill id="54025" level="1" value="-1"/>  <!-- Wind Defense -->
+			<skill id="54027" value="-1"/>  <!-- Increases Skill XP -->
+			<skill id="54025" value="-1"/>  <!-- Wind Defense -->
 		</skills>
 	</armor>
 
@@ -509,8 +509,8 @@
 			<stat type="maxMp" value="35.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="1" value="-1"/>  <!-- Increases Skill XP -->
-			<skill id="54026" level="1" value="-1"/>  <!-- Earth Defense -->
+			<skill id="54027" value="-1"/>  <!-- Increases Skill XP -->
+			<skill id="54026" value="-1"/>  <!-- Earth Defense -->
 		</skills>
 	</armor>
 

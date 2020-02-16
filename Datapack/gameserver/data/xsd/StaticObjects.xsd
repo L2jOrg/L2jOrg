@@ -3,7 +3,7 @@
 	<xs:element name="list">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="object" maxOccurs="unbounded" minOccurs="1">
+				<xs:element name="object" maxOccurs="unbounded">
 					<xs:complexType>
 						<xs:simpleContent>
 							<xs:extension base="xs:string">

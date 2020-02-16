@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="19009" name="Clan Advent" max-level="1" action="A2">
+	<skill id="19009" name="Clan Advent" action="A2">
 	<!-- When the clan leader logs in, clan members' P./M. Atk. + 2%%. -->
 		<icon initial="icon.skill19009"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" dispellable="false" irreplacable="true" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" >
 			<magic-level initial="-2"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="100"/>
@@ -26,7 +26,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="19032" name="Ability of Light" max-level="1" >
+	<skill id="19032" name="Ability of Light">
 	<!-- Imbued with the Ability of Light. Increases Max CP by 2000. Effects do not apply when in Chaotic state. -->
 		<icon initial="icon.skill19008"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -40,7 +40,7 @@
 			<condition name="NonChaotic" scope="PASSIVE"/>
 		</conditions>
 		<effects>
-			<vital-stat-modify stat="MAX_CP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_CP">
 				<power initial="3000.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
@@ -54,7 +54,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="19033" name="Ability of Darkness" max-level="1" >
+	<skill id="19033" name="Ability of Darkness">
 	<!-- Imbued with the Ability of Darkness. Increases Max CP by 1000. -->
 		<icon initial="icon.skill19008"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -65,7 +65,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_CP" mode="DIFF" heal="false">
+			<vital-stat-modify stat="MAX_CP">
 				<power initial="3000.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
@@ -79,7 +79,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="19034" name="Seal of Ruler" max-level="1" action="A1">
+	<skill id="19034" name="Seal of Ruler" action="A1">
 	<!-- Engraves the Imprint of Light on the ancient relic that guards the castle. -->
 		<icon initial="icon.skill0246"/>
 		<attributes magic-critical-rate="5.0" >
@@ -101,7 +101,7 @@
 			<effect name="TakeCastleStart" scope="START"/>
 		</effects>
 	</skill>
-	<skill id="19035" name="Imprint of Darkness" max-level="1" action="A1">
+	<skill id="19035" name="Imprint of Darkness" action="A1">
 	<!-- Engraves the Imprint of Darkness on the ancient relic that guards the castle. -->
 		<icon initial="icon.skill0246"/>
 		<attributes magic-critical-rate="5.0" >
@@ -123,7 +123,7 @@
 			<effect name="TakeCastleStart" scope="START"/>
 		</effects>
 	</skill>
-	<skill id="19036" name="Blessing of Light" max-level="1" action="A2">
+	<skill id="19036" name="Blessing of Light" action="A2">
 	<!-- Acquires 3%% additional XP and SP through the blessing of the Guardian of Light. -->
 		<icon initial="icon.etc_pi_gift_box_i04"/>
 		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" >
@@ -139,15 +139,15 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="BONUS_EXP" mode="DIFF">
+			<stat-modify stat="BONUS_EXP">
 				<power initial="3.0"/>
 			</stat-modify>
-			<stat-modify stat="BONUS_SP" mode="DIFF">
+			<stat-modify stat="BONUS_SP">
 				<power initial="3.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="19039" name="Cloak of Light" max-level="1" >
+	<skill id="19039" name="Cloak of Light">
 	<!-- Max HP/Max MP/Max CP +5%%, P. Def. +3%%, M. Def. +5%%, Weapon Resistance +3, P. Critical Rate/M. Critical Rate +10 and damage reflection +3%%. Not available in a chaotic state. -->
 		<icon initial="icon.amor_goodness_cloak"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -161,13 +161,13 @@
 			<condition name="NonChaotic" scope="PASSIVE"/>
 		</conditions>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="5.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="5.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_CP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_CP" mode="PER">
 				<power initial="5.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
@@ -202,10 +202,10 @@
 					<power initial="0.029999999329447746"/>
 				</trait>
 			</defence-trait>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="DIFF">
+			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0">
 				<power initial="10.0"/>
 			</stat-hp-based>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
 				<power initial="10.0"/>
 			</stat-modify>
 			<stat-modify stat="REFLECT_DAMAGE_PERCENT">
@@ -213,7 +213,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="19040" name="Cloak of Darkness" max-level="1" >
+	<skill id="19040" name="Cloak of Darkness">
 	<!-- Max HP/Max MP/Max CP +5%%, P. Def. +3%%, M. Def. +5%%, Weapon Resistance +3, P. Critical Rate/M. Critical Rate +10 and damage reflection +3%%. -->
 		<icon initial="icon.amor_evilness_cloak"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0" >
@@ -224,13 +224,13 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_HP" mode="PER">
 				<power initial="5.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_MP" mode="PER">
 				<power initial="5.0"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_CP" mode="PER" heal="false">
+			<vital-stat-modify stat="MAX_CP" mode="PER">
 				<power initial="5.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
@@ -265,10 +265,10 @@
 					<power initial="0.029999999329447746"/>
 				</trait>
 			</defence-trait>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="DIFF">
+			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0">
 				<power initial="10.0"/>
 			</stat-hp-based>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="DIFF">
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
 				<power initial="10.0"/>
 			</stat-modify>
 			<stat-modify stat="REFLECT_DAMAGE_PERCENT">
@@ -276,7 +276,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="19041" name="Escape: Castle" max-level="1" action="A1">
+	<skill id="19041" name="Escape: Castle" action="A1">
 	<!-- Return to Castle. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
@@ -294,7 +294,7 @@
 			<escape location="CASTLE"/>
 		</effects>
 	</skill>
-	<skill id="19042" name="Blessed Scroll of Escape: Castle" max-level="1" action="A1">
+	<skill id="19042" name="Blessed Scroll of Escape: Castle" action="A1">
 	<!-- Return to Castle. -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0" >
