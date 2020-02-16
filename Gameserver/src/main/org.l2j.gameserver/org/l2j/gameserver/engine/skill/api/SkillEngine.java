@@ -297,9 +297,9 @@ public class SkillEngine extends EffectParser {
 
         forEach(node, "fan-range", fanRangeNode -> {
             var attrs = fanRangeNode.getAttributes();
-            skill.setFanRangeStartAngle(parseInt(attrs, "start-angle"));
-            skill.setFanRangeRadius(parseInt(attrs, "radius"));
-            skill.setFanRangeAngle(parseInt(attrs, "angle"));
+            skill.setFanStartAngle(parseInt(attrs, "start-angle"));
+            skill.setFanRadius(parseInt(attrs, "radius"));
+            skill.setFanAngle(parseInt(attrs, "angle"));
         });
     }
 
