@@ -6692,12 +6692,6 @@ public final class Player extends Playable {
             return false;
         }
 
-        // Support for wizard skills with stances (Fire, Water, Wind, Earth)
-        final Skill attachedSkill = skill.getAttachedSkill(this);
-        if (attachedSkill != null) {
-            skill = attachedSkill;
-        }
-
         // ************************************* Check Player State *******************************************
 
         // Abnormal effects(ex : Stun, Sleep...) are checked in Creature useMagic()

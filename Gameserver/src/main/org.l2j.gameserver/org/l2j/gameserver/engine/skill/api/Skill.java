@@ -112,8 +112,6 @@ public final class Skill implements IIdentifiable, Cloneable {
     private boolean deleteAbnormalOnLeave;
     private boolean irreplacableBuff;
     private boolean blockActionUseSkill;
-    private int _attachToggleGroupId;
-    private List<AttachSkillHolder> _attachSkills = Collections.emptyList();
     private Set<AbnormalType> abnormalResists;
     private double magicCriticalRate;
     private SkillBuffType buffType;
@@ -1289,36 +1287,6 @@ public final class Skill implements IIdentifiable, Cloneable {
         return false;
     }
 
-    /**
-     * @return alternative skill that has been attached due to the effect of toggle skills on the player (e.g Fire Stance, Water Stance).
-     */
-    public Skill getAttachedSkill(Creature activeChar) {
-        // Default toggle group ID, assume nothing attached.
-        if ((_attachToggleGroupId <= 0) || (_attachSkills == null)) {
-            return null;
-        }
-
-        //@formatter:off
-        final int toggleSkillId = activeChar.getEffectList().getEffects().stream()
-                .mapToInt(info -> info.getSkill().getId())
-                .findAny().orElse(0);
-        //@formatter:on
-
-        // No active toggles with this toggle group ID found.
-        if (toggleSkillId == 0) {
-            return null;
-        }
-
-        final AttachSkillHolder attachedSkill = _attachSkills.stream().filter(ash -> ash.getRequiredSkillId() == toggleSkillId).findAny().orElse(null);
-
-        // No attached skills for this toggle found.
-        if (attachedSkill == null) {
-            return null;
-        }
-
-        return SkillEngine.getInstance().getSkill(attachedSkill.getSkillId(), getLevel());
-    }
-
     public String getIcon() {
         return icon;
     }
@@ -1364,14 +1332,6 @@ public final class Skill implements IIdentifiable, Cloneable {
      */
     public boolean isBlockActionUseSkill() {
         return blockActionUseSkill;
-    }
-
-    public int getAttachToggleGroupId() {
-        return _attachToggleGroupId;
-    }
-
-    public List<AttachSkillHolder> getAttachSkills() {
-        return _attachSkills;
     }
 
     public Set<AbnormalType> getAbnormalResists() {
