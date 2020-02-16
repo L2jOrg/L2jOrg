@@ -68,10 +68,6 @@ public final class Skill implements IIdentifiable, Cloneable {
     private int itemConsumeId;
 
     /**
-     * Clan points consumed by this skill from caster's clan
-     */
-    private int _clanRepConsume;
-    /**
      * Effect range: how far the skill affect the target.
      */
     private int effectRange;
@@ -512,13 +508,6 @@ public final class Skill implements IIdentifiable, Cloneable {
      */
     public int getItemConsumeId() {
         return itemConsumeId;
-    }
-
-    /**
-     * @return Clan points consumed by this skill from caster's clan
-     */
-    public int getClanRepConsume() {
-        return _clanRepConsume;
     }
 
     /**

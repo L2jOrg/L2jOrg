@@ -427,15 +427,6 @@ public class SkillCaster implements Runnable {
                 return false;
             }
 
-            // Consume clan reputation points
-            if (skill.getClanRepConsume() > 0) {
-                final Clan clan = player.getClan();
-                if ((clan == null) || (clan.getReputationScore() < skill.getClanRepConsume())) {
-                    player.sendPacket(SystemMessageId.THE_CLAN_REPUTATION_IS_TOO_LOW);
-                    return false;
-                }
-            }
-
             // Check for skill reuse (fixes macro right click press exploit).
             if (caster.hasSkillReuse(skill.getReuseHashCode())) {
                 final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_IS_NOT_AVAILABLE_AT_THIS_TIME_BEING_PREPARED_FOR_REUSE);
@@ -578,24 +569,6 @@ public class SkillCaster implements Runnable {
             if (_skill.isBad() || (requiredItem.getTemplate().getDefaultAction() == ActionType.NONE)) // Non reagent items are removed at finishSkill or item handler.
             {
                 caster.destroyItem(_skill.toString(), requiredItem.getObjectId(), _skill.getItemConsumeCount(), caster, false);
-            }
-        }
-
-        if (isPlayer(caster)) {
-            final Player player = caster.getActingPlayer();
-
-            // Consume clan reputation points.
-            if (_skill.getClanRepConsume() > 0) {
-                final Clan clan = player.getClan();
-                if ((clan == null) || (clan.getReputationScore() < _skill.getClanRepConsume())) {
-                    player.sendPacket(SystemMessageId.THE_CLAN_REPUTATION_IS_TOO_LOW);
-                    return false;
-                }
-                clan.takeReputationScore(_skill.getClanRepConsume(), true);
-
-                final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.S1_CLAN_REPUTATION_HAS_BEEN_CONSUMED);
-                msg.addInt(_skill.getClanRepConsume());
-                player.sendPacket(msg);
             }
         }
 
